@@ -1,0 +1,1350 @@
+---
+author: TVO Today
+date: '2026-10-28'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=DuOKJD8jvAk
+speaker: TVO Today
+tags:
+  - municipal-governance
+  - voter-turnout
+  - provincial-power
+  - local-democracy
+title: 安大略省地方政府是否正在被边缘化？
+summary: 随着安大略省赋予部分市长“强市长权力”并设立省任命区域主席，节目探讨了地方政府权限、选民投票率与财政现实。前议员与学者讨论了地方自治的未来、选民认知及省政府接管的潜在边界。
+insight: ''
+draft: true
+series: ''
+category: politics-society
+area: society-thinking
+project: []
+people:
+  - Jeyan Jeganathan
+  - Bill Irwin
+  - Clifton van der Linden
+  - Lloyd Rang
+  - Rob Flack
+companies_orgs:
+  - TVO
+  - Ontario Land Tribunal
+  - Association of Municipalities of Ontario
+products_models: []
+media_books:
+  - The Rundown
+status: evergreen
+---
+### 导语：安省强市长与区域主席新权力引发的讨论
+
+>> 安大略省的市政选举现已尘埃落定，胜选者们将从竞选阶段转向执政。安省居民刚刚选出的人员，在为自身社区做决定时究竟实际拥有多少权力？因为尽管选民选出了地方代表，省政府对市政运作方式却拥有很大的发言权。以第100号法案《更完善的区域治理法》（Better Regional Governance Act）为例，该法案赋予省政府在安大略省若干地区任命区域主席的权力。省政府还赋予了这些主席更大的权力。这是市政事务厅长罗伯·弗莱克（Rob Flack）早在4月时的发言。
+<details><summary>Original English</summary>
+>> Ontario's municipal elections
+are now in the books, and the
+winners will be shifting from
+campaigning to governing.
+How much power do the people
+Ontarians just elected actually
+have to make decisions about
+their communities?
+Because while voters choose
+their local representatives, the
+province has a big say in how
+municipal governments operate.
+Take Bill 100, the Better
+Regional Governance Act.
+It gives the province the power
+to appoint regional chairs in
+several parts of Ontario.
+The province has also given
+these chairs stronger powers.
+Here's Minister of Municipal
+Affairs Rob Flack back in April.
+</details>
+
+>> 为配合这一点，这些主席将配备强主席权力，以协助他们落实区域职责。
+<details><summary>Original English</summary>
+>> The compliment this chairs
+will be equipped with strong
+chair power to help them deliver
+on their regional mandates.
+</details>
+
+>> 安大略省政府表示，其目标是加快决策、降低成本，并更快地建设住房和基础设施。但这是否意味着地方领导人将不再真正说了算？我们来审视市政政府目前以及未来将扮演的角色，以及这可能如何改变政客的竞选方式和安省选民的投票方式。我是杰扬·杰加纳森（Jeyan Jeganathan），欢迎收看《The Rundown》。省政府表示，强市长和强区域主席使政府更高效、更有成效。但一些地方领导人担心自己正在被边缘化或淘汰，而社区将为此付出代价。比尔·欧文（Bill Irwin），非常高兴你能做客《The Rundown》。首先，祝贺你昨晚获胜。你再次当选北米德尔塞克斯（North Middlesex）的市议员。请帮我了解一下，你这次在整个选举周期中的经历是怎样的？竞选期间基层的实况如何？
+<details><summary>Original English</summary>
+>> The Ontario government says
+the goal is to speed up decision
+making, reduce costs and get
+housing and infrastructure built
+faster.
+But does this mean local leaders
+won't really be calling the
+shots?
+We look at the role municipal
+governments will play now and
+going forward, and the ways it
+could change how politicians
+campaign and how Ontarians vote.
+I'm Jeyan Jeganathan welcome to
+"The Rundown".
+So the province says strong
+mayors and strong regional
+chairs make government more
+efficient and effective.
+But some local leaders worry
+they're becoming obsolete and
+communities will pay the price.
+Bill Irwin, it is great to have
+you on The Rundown.
+First off, congratulations on
+your win last night.
+You return as councillor for
+North Middlesex.
+Help me understand what was your
+experience on the election cycle
+this time around?
+On the ground during the
+campaign?
+</details>
+
+>> 怎么说呢，这是一个农村选区、一个村镇。所以我能够挨家挨户走访社区里的每一户人家，和大多数人交谈。我们只开了一次全体候选人见面会，这挺好的。我尽最大努力在那里与大家交谈。我不是个玩社交媒体的人，但这次不同于上次，我确实做了一个Facebook主页。所以那挺有意思的。我不得不赶紧学习怎么做这个，但反响很好。我觉得来自大多数人的反响都很正面，而且这里的政治，每个人都聚焦于议题。所以没有任何人身攻击，没有任何负面言论。从这个角度来看是非常积极的。
+<details><summary>Original English</summary>
+>> Well, you know, it's a rule
+writing a village.
+So I was able to go door to door
+to every house in the community,
+talk to most people.
+We only had one.
+All candidates meeting, which
+was fine.
+I did my best to talk to folks
+there.
+I'm not really a social media
+guy, but at this time, unlike
+last time, I actually did a
+Facebook site.
+So that was interesting.
+I had to kind of get my speed up
+on how to do that, but good
+reception.
+I thought from most people and
+politics here, everyone,
+everyone stuck to the issues.
+So there was no character
+assassinations, there was no
+negative comments.
+So it was very positive in that
+sense.
+</details>
+
+### 对话比尔·欧文：强市长权力与地方民主传统
+
+>> 自上届选举以来，已经发生了一些重大变化。一些市长被赋予了强市长权力。区域主席现在由省政府任命。在你看来，未来的地方政府可能会是什么样子？
+<details><summary>Original English</summary>
+>> Now, since the last election,
+some important changes have been
+made.
+Some mayors have been given
+strong powers.
+Regional chairs are now
+provincially appointed.
+In your opinion, what could
+local government of the future
+look like?
+</details>
+
+>> 我认为我们许多担任市议员的人都对安大略省地方市政治理的未来感到担忧，我相信我们将在这次选举后看到这种担忧显现出来，无论是否存在候选人实际参选时明确声明要使用强市长权力。所以，在许多社区中，市长传统的“同侪之首”地位现在已经不复存在了。我看到与员工之间的关系略有不同，甚至在我们这个社区也是如此，尽管我们的市长在自动当选时表示过不会使用强市长权力。但是员工与市长的关系还是不同了，因为针对高级员工，市长现在拥有绝对的雇佣和解雇权力，无需市议会参与；而在以前的某些情况下，涉及高级员工是首席行政官（CAO）的职权范围。市长现在可以直接介入。这令人担忧。我认为在预算时期也会有一些担忧。我们从市议会预算委员会变成了市长的工作小组或顾问小组。同样，在我们社区，我们的市长会把它当作一个委员会来对待，但我知道我们周围的一些社区，就在我们隔壁附近的，都在为未来的走向感到担忧。
+<details><summary>Original English</summary>
+>> I think many of us who are
+councillors are concerned about
+the future of local municipal
+governance in Ontario, and we're
+going to see that, I believe,
+come out after this election,
+whether we're candidates who
+actually ran stating they were
+going to use small mayor powers.
+So, you know, the traditional
+first among equals for mayors in
+a lot of communities now is
+gone.
+I see a little different
+relationship with staff, even
+staff in our community where our
+mayor, who was acclaimed, said
+he would he would not use strong
+mayor powers.
+But staff relationships are
+different with the mayor
+because, you know, for senior
+staff, he now has the absolute
+ability to hire and fire without
+council's involvement used to
+be, in certain cases, the
+purview of the Cao around senior
+staff.
+The mayor now can step in.
+That's a concern.
+I think there will be some
+concerns around budget time.
+We went from a committee of
+Council for budget to a working
+group advisory group for the
+mayor.
+Again, in our community, our
+mayor will treat it like a
+committee, but I, I know some of
+our surrounding communities,
+just some I almost next door to
+us are concerned about what the
+future's going to hold.
+</details>
+
+>> 现在的观点是，你认为市政政府在短短几个选举周期内就会不复存在吗？
+<details><summary>Original English</summary>
+>> Now, is the idea that you
+think government, municipal
+government will no longer exist
+in just a handful of election
+cycles.
+</details>
+
+>> 我确实非常担忧。我把学校教育局视作我们这里所谓的煤矿里的金丝雀，因为教育局经历的状况是，我们看到他们的权力日益削减，以至于现在基本上变成了橡皮图章。这次选举之后，他们在决策甚至预算方面都没有实质权力，因为如果他们否决了预算，教育局的行政长官现在可以直接向厅长提出申诉并使预算获得批准。教育局有权对预算投赞成票或反对票，但不能对其进行修改。看着这种情况，这对地方政府意味着什么？我们是否会废除它们，也许转向县或区域政府，彻底摆脱地方政府？这是个担忧。尤其令人担忧的是，在八个或者说许多案例中，区域政府的首脑，以及在某个案例中县政府的首脑，将由省政府任命，对此非常担忧。在这次会议之前，我复习了一下历史，回顾了安大略省1837年的叛乱，当时人们实际上反抗了任命制政府，这促成了1849年《鲍德温法案》（Baldwin Act）中我们的首批民选地方政府。所以，在安大略省，公众面对地方社区被安排任命制管理者时可能会作何反应，是有历史先例的。
+<details><summary>Original English</summary>
+>> I'm really concerned.
+I'm looking at school boards as
+kind of the the we call it the
+canary in the coal mine here,
+because what's happened to
+school boards is we're seeing
+their powers increasingly
+diminished to the point now
+where they're basically just
+rubber stamps.
+After this election.
+They have no real power in terms
+of decision making or even
+budget, because if they turn
+down a budget, the CEO of the
+board can now appeal directly to
+the minister and get that budget
+approved.
+The board school boards have the
+ability to say yes or no to a
+budget, but not make changes in
+it.
+Looking at that, what does that
+mean for local government?
+Are we going to abolish them, go
+to maybe county or regional
+governments and get rid of local
+governments altogether?
+That's a concern really
+concerned around the eight K or
+the many cases where the head of
+regional governments, and in one
+case, a county government will
+be appointed by the province,
+very concerned about that.
+I did a little bit of update on
+my history before this meeting,
+and I looked back to the
+rebellion of 1837 in Ontario,
+where we're actually people
+rebelled against appointed
+governments, which led to our
+first elected local governments
+in the Baldwin Act of 1849.
+So, you know, there's a history
+in Ontario of of how the public
+might react to having appointed
+administrators in their local
+communities.
+</details>
+
+>> 比尔，请帮我理解一下，因为你看，你谈到了确立的历史先例，但我们谈论的可是1800年代。未来的省政府有多大可能撤销其中的某些变动？
+<details><summary>Original English</summary>
+>> Well, Bill, help me
+understand here, because
+there's, you know, you talk
+about the historical precedent
+that was set, but we're talking
+about the 1800s here.
+How likely is it that, you know,
+future provincial governments
+could roll back some of these
+changes?
+</details>
+
+>> 直白地说，可能性不是很大。如果你看看安大略省历届省政府所做的改变，随后我们更换了执政党，新党派上台。这些变动中有多少被撤销了？对吧。我们谈到了教育局，它们没有被撤销。我们谈到哈里斯（Harris）政府把各种服务下放给地方社区，随后我们经历了15年的自由党政府，他们做出了任何改变吗？他们撤销了其中任何变动吗？绝对没有。在与我的同事和其他人交谈时，我们都有一种感觉，即强市长权力等举措是会长久保留下去的。所以我们效仿了美国制度。我们有了强市长，就像他们现在在美国那样。我认为这对民主不利。
+<details><summary>Original English</summary>
+>> Well, bluntly, not very.
+I if you look at the changes
+that previous provincial
+governments have made in
+Ontario, then we change
+political parties and they come
+into place.
+How many of these changes are
+rolled back?
+Right.
+We talked about school boards.
+They weren't rolled back.
+We talked about the Harris
+government, downloaded all kinds
+of services onto a local
+communities, and we had 15 years
+of Liberal government that they
+make any changes that they roll.
+Any of those changes back?
+Absolutely not.
+I we have the feeling, talking
+to my colleagues and others,
+that strong mayor powers, for
+example, are here to stay.
+So we've we've emulated the
+American system.
+We're strong mayors like they
+now have in the US.
+And I don't think that's good
+for democracy.
+</details>
+
+>> 这种关于市政政府是否会不复存在的担忧讨论，在城市环境与像你们这样的农村社区中，表现会有所不同吗？
+<details><summary>Original English</summary>
+>> Does this conversation about
+concerns about municipal
+governments not existing, does
+it play out differently in an
+urban setting versus rural
+communities like yourselves?
+</details>
+
+>> 很有意思的问题。我认为我们这里需要关注的一点是公众对地方政府给予了多少关注。因此，选民投票率相当糟糕。我想我们社区昨天总体的投票率是30%。我们邻近的一个社区达到了40%，他们非常兴奋，因为多年来都没见过这么高的投票率了。所以当你看到连多数人都没有为地方政府投票时，公众究竟是否关注这个问题，以及地方政府对影响他们日常生活的服务有多么重要？
+<details><summary>Original English</summary>
+>> Interesting question.
+I think the one thing we need to
+look at here is just how much
+attention the public is paying
+to local government.
+So voter turnout is pretty
+abysmal.
+I think we had 30% in our
+community overall yesterday.
+One community Neighbouring US
+got 40%, and they're excited
+because they haven't seen it
+that high in years.
+So when you see not even the
+majority voting for local
+governments, are the public even
+paying attention to the issue
+and how important local
+government is to the day to day
+services that impact them?
+</details>
+
+>> 比尔，是的。你谈到了这些数字，从局内人的角度看跳升到40%，有人会感到兴奋。但从整体情况来看，就出来投票的人而言，并不算太好。请帮我理解一下，这些新权力如何影响由谁来参选以及人们如何投票？
+<details><summary>Original English</summary>
+>> Well, Bill, yeah.
+You talk about sort of these
+numbers, you know, from the
+inside looking at a jump to 40%,
+some get excited.
+But when you look at the overall
+picture, not the greatest in
+terms of, you know, people
+coming out.
+Help me understand then how do
+these new powers influence who
+runs and how people vote?
+</details>
+
+>> 我认为坦白对你讲，这是一种心态问题。我是说，如果你过去有一些人，他们意识到自己作为议会、作为市长是在促进一个进程，他们是在协助推动决策，他们是整个进程的一部分；而与此相对的是，现在参选的人会说，我才是决策者，我拥有权力。因此，寻求担任市长的人可能存在两种截然不同的类型。如果你从这个角度去思考，那是令人不寒而栗的。
+<details><summary>Original English</summary>
+>> Well, I think as a mindset to
+be to be blunt with you, I mean,
+if you have people in the past
+who realise that they're they're
+facilitating a process as
+council, as mayor, they're,
+they're, they're helping to
+enable decision making.
+And they're part of the process
+versus people who are now
+running to say, I am the
+decision maker, I have the
+power.
+So you've got you got
+potentially two very different
+types of individuals who are
+seeking to be mayor.
+And that's chilling if you think
+about it in those terms.
+</details>
+
+>> 这两种人具体是什么样子的？
+<details><summary>Original English</summary>
+>> What do those two what do
+those look like?
+</details>
+
+>> 我不会想投票给一个认为自己、且仅凭自己就有能力为我的社区做决策的人。我们拥有代议制民主——在我这里是选区制度（ward system）——的原因，就是为了让我们能把各种多元视角带到桌面上。人们有机会投票选出他们的代表，投票选出市长，在我的地方甚至还能投票选副市长。因此他们有机会将几位不同的人带入所谓的决策圈。我认为那是截然不同的。你知道，你刚才提到的大型社区，它们并不特殊。如大型城市中心的人们所知，他们的特定街区可能与另一个街区截然不同。因此在议会桌上需要有妥协与互让，努力为每个人找到解决方案，而不是由某个人直接说“事情就按这个来办”。我认为那不是积极的。在我看来那不是民主。我在民主事业中投入了40年，辗转过很多不同的岗位。你可能知道我曾经是公务员工。后来我成了学者、顾问研究员、作家，现在是一名民选官员。我从许多不同角度见识过它，我不认为单一决策者是一个民主过程。
+<details><summary>Original English</summary>
+>> I wouldn't want to vote for
+someone who felt that they,
+they, and they alone had the
+ability to make decisions for my
+community.
+The reason we have
+representative democracy, in my
+case, a ward system, is that we
+can bring a variety of
+perspectives to the table.
+People have an opportunity to to
+vote for their representative
+and to vote for the mayor.
+And in my case, even the deputy
+mayor.
+So they have a chance to bring
+several different people to the
+decision making circle, so to
+speak.
+And I think that's that's
+profoundly different.
+You know, large communities you
+mentioned earlier, I mean,
+they're they're not unique.
+You know, there's, you know, as
+people in large urban centres
+know, their particular
+neighbourhood is may be very
+different than another
+neighbourhood.
+So there's a give and take at
+the council table to try to find
+a solution for everyone, as
+opposed to someone saying, this
+is what's going to happen.
+And I don't think that's positive.
+That's not democracy in my mind.
+And I've got 40 years invested
+in democracy and a lot of
+different in a lot of different
+places.
+You may know that I once was
+staff.
+Then I became an academic, a
+consultant researcher, writer,
+and now an elected official.
+I've seen it from many different
+angles, and I don't see a
+solitary decision maker as a
+democratic process.
+</details>
+
+>> 比尔，非常感谢你。再次祝贺你赢得席位。祝一切顺利。
+<details><summary>Original English</summary>
+>> Bill, I want to thank you so
+much.
+Congratulations again on winning
+your seat.
+All the best.
+</details>
+
+>> 非常感谢。
+<details><summary>Original English</summary>
+>> Thank you very much.
+</details>
+
+### 圆桌分析：选民投票率与地方政府认知
+
+>> 省政府改变了市政政府的运作方式。但那是否改变了选民对社区议题的看法呢？克利夫顿·范德林登（Clifton van der Linden）、劳埃德·朗（Lloyd Rang），非常欢迎两位来到《The Rundown》的演播室。你们好吗？
+<details><summary>Original English</summary>
+>> So the province has changed
+how municipal governments work.
+But has that changed the way
+voters think about issues in
+their community?
+Clifton van der Linden, Lloyd
+Ring, great to have you in our
+studios on The Rundown.
+How are you doing?
+</details>
+
+>> 我很好。谢谢。你好吗？
+<details><summary>Original English</summary>
+>> I'm good.
+Thanks.
+How are.
+</details>
+
+>> 你好，克里夫？你怎么样？
+<details><summary>Original English</summary>
+>> You, Cliff?
+How are you doing?
+</details>
+
+>> 很好。感谢邀请我。
+<details><summary>Original English</summary>
+>> Great.
+Thanks for having me.
+</details>
+
+>> 昨晚一直到今天早上都很忙碌，我知道每个人都紧盯着屏幕。克里夫，我想先从你开始。2022年安大略省市政选举的平均投票率是32.9%。并不算高。我知道你一直在分析昨晚选举的数据。基于你在Vote Compass以及麦克马斯特大学数字社会实验室（Digital Society Lab）的工作，请帮我们了解一下，对于这次的选民参与情况你能告诉我们些什么？
+<details><summary>Original English</summary>
+>> It's been a busy evening and
+into this morning, so I know
+it's everyone's been kind of
+glued to their screens.
+Cliff, I want to start with you.
+The Ontario municipal election
+turnout average in 2022 was
+32.9.
+Not great.
+And I know you've been crunching
+the numbers from last night's
+elections.
+So based on your work with Vote
+Compass and the Digital Society
+Lab at McMaster University, help
+us understand what can you tell
+us about voter participation
+this time around?
+</details>
+
+>> 确实，在多伦多，就趋势而言发生了一个显著的逆转。所以在多伦多以及密西沙加，我们看到选民参与度上升了，多伦多的参与度急剧增加。从历史上看，多伦多仅为市长选举亚军投票的人数，就超过了2022年整场市长竞选的全部参与人数。在全省范围内并非都是这种情况。像哈密尔顿和渥太华等地方，初步投票率结果显示出现了轻微下降，但总体而言，在整个安大略省，投票率明显要强劲得多。
+<details><summary>Original English</summary>
+>> Well, certainly in Toronto,
+it's been a remarkable reversal
+in terms of the trends.
+So in Toronto and also in
+Mississauga, we've seen voter
+participation, participation
+increase in Toronto
+dramatically.
+And historically, more
+Torontonians voted for the
+runner up in the mayoral
+election alone than participated
+in the entire 2022 race.
+This is not the case across the
+province.
+There are places such as
+Hamilton and Ottawa, where
+preliminary turnout results
+suggest that there's been a
+slight decline, but overall,
+across Ontario, turnout is much
+stronger.
+</details>
+
+>> 好的。劳埃德，你是大多伦多东部地区克拉灵顿（Clarington）的前市议员。你这次选择不参选。关于这里的投票参与度，我们已经讨论了相当一段时间了。对于低投票率你有什么看法？看起来我们可能正处于类似的趋势中。我认为根据我们从安大略省市政协会（Association of Municipalities of Ontario）获得的最初数据，报告的约313个市镇中，投票率在34%左右。所以与我们在上个选举周期看到的情况相差不远。你对此有什么想法？
+<details><summary>Original English</summary>
+>> All right, Lloyd, you're a
+former city councillor in
+Eastern GTA in Clarington.
+You chose not to run this time
+around.
+This is a conversation that we
+have been having for quite a
+while about participation here.
+What are your thoughts on low
+voter turnout?
+It looks like we might be on a
+similar trend.
+I think the earliest numbers
+that we have from the
+Association of Municipalities of
+Ontario, we've got it's about
+313 municipalities are
+reporting.
+We're at 34%.
+So not too far from what we're
+looking at from the last
+election cycle.
+What are your thoughts here?
+</details>
+
+>> 各地情况看起来很不均衡，正如克里夫所说，有些地方高，有些地方低。我认为这很大程度上取决于具体的选举、谁在竞选、现任优势，以及在当地是否属于求变的选举。所以总体上我认为这是一个有点喜忧参半的信息。我认为有些地方我们看到了现任者参选且投票率很高，也有些地方有现任者但投票率很低。就是，我也不知道，各地情况有点差异很大。
+<details><summary>Original English</summary>
+>> Looks really uneven across
+the board, like from, you know,
+as Cliff was saying, some places
+higher than others, some places
+low.
+I think it very much depends on
+the election, who's running
+incumbency, whether it's a
+change election locally or not.
+So it's it's I think it's a bit
+of a mixed message overall.
+I think there are some places
+where we saw incumbents where
+there was strong turnout.
+We saw some places where there
+was incumbents, there was low
+turnout.
+It just, I don't know, it's a
+bit all over the board.
+</details>
+
+>> 投票率数字如何反映满意度、脱节感，或者甚至是那种认为市政政府不一定有权力的信念？
+<details><summary>Original English</summary>
+>> How do turnout numbers
+reflect satisfaction,
+disengagement, or even this
+belief that municipal
+governments necessarily don't
+have the power?
+</details>
+
+>> 我想我会把“人们对市镇做什么不感兴趣”和“不知道市镇在做什么”区分开来。我认为他们非常感兴趣。如果你问人们关于他们从市镇获得的服务，他们非常感兴趣。如果你问人们关于他们的财产税，他们非常感兴趣。我认为地方议题，你知道，地方议题对选民来说吸引力很大；至于他们是否将这些地方议题与地方政府联系起来，那是另一回事。你这话是什么意思？我认为对于市镇做什么、对于各个层级政府通常负责什么，存在许多误解，对吧？我是说，从清雪到邮递，再到医疗卫生以及介于其间的所有事情，我都会接到电话。因此我认为关于谁负责什么存在很多困惑。而且我认为那在很大程度上导致了我们所看到的一些结果。
+<details><summary>Original English</summary>
+>> I think I would distinguish
+between people, not being
+interested in what
+municipalities do and not
+knowing what municipalities do.
+I think they're very interested.
+If you if you ask people about
+the services that they get from
+municipalities, they're very
+interested.
+If you ask people about their
+property taxes, they're very
+interested.
+I think local, you know, local
+issues are of great interest to
+voters, whether they connect
+those local issues with their
+local government or not is
+another question.
+What do you mean by that?
+I think there's a lot of
+misconceptions about what I
+mean, what municipalities do,
+what the various orders of
+government do generally, right?
+I mean, I would get calls from
+everything about snow clearing
+to, you know, mail delivery and
+and health care and everything
+in between.
+So I think there's a lot of, I
+think, confusion around who does
+what.
+And, and I think that
+contributes a lot to, to some of
+the results that we're seeing.
+</details>
+
+>> 克里夫，让我们拆解一下在审视投票率数据时可以如何解读这些数字：这属于政治冷感吗？我们是否必须从特定的选民群体出发，以区域视角来看待？我们应该如何解读所有这些数据？
+<details><summary>Original English</summary>
+>> Cliff, let's, let's break
+down, you know, how we can
+interpret some of these numbers
+when we look at turnout numbers,
+is it disengagement?
+Do we have to look at it from
+particular constituencies and
+look at it sort of from a with a
+regional lens, how do we
+interpret all this data?
+</details>
+
+>> 好的，正如劳埃德所言，我认为我们需要从多种不同方式和多种不同视角来审视投票率。因此我们不要把投票率一概视为满意的迹象，有迹象表明人们出来投票是出于各种不同的原因，并且有着不同的投票动机。因此我认为我们应该把投票率看作是不同驱动因素的函数，同时也把投票率的低下看作不同驱动因素的函数。正如劳埃德刚才所指出的，市政选举通常属于低信息量的选举，或者说低信息量的政治事件。所以有时人们只是没有把地方政治的重要性与市政政府可能拥有的权力联系起来。
+<details><summary>Original English</summary>
+>> Well, I think we, as Lloyd
+was saying, I think we need to
+look at turnout in a number of
+different ways and through a
+number of different lenses.
+So we don't want to think about
+turnout invariably as a.
+Sign of satisfaction, there are.
+Indications that people turn out
+for a variety of different
+reasons and have a different,
+different motivations to turn
+out.
+And so I think we want to think
+about turnout as a, a function
+of different drivers.
+So.
+And also look at lack of turnout
+as a function of different
+drivers.
+Municipal elections are
+typically low information
+elections or low information
+political events, as Lloyd was
+indicating.
+So sometimes people just don't
+connect.
+The importance of local politics
+to the powers that municipal
+governments can hold.
+</details>
+
+### 强市长权力：是实权还是财政制约下的装饰？
+
+>> 克里夫，我们在省议会（Queen's Park）听到了很多关于扩大市长权力的讨论。我们现在有了省任命的区域主席，我很好奇，这种影响是如何传导的？在竞选活动中，这是否成为了一个关于人们是否会因安省干预这些权力而出来投票的话题？
+<details><summary>Original English</summary>
+>> Now, Cliff, we heard a lot in
+Queen's Park about the increase
+of powers to mayors.
+We've got a provincially
+appointed regional chairs now,
+and I'm curious, how has that
+transcended?
+Has that been a conversation on
+the campaign trails in terms of,
+you know, whether people are
+going to be voting because of
+Ontario's intervention in some
+of these powers?
+</details>
+
+>> 这在媒体、智库和政治关注圈内部无疑是一个讨论议题；至于它是否转化为了在市政选举中驱动特定选票动态的决定性议题，我对这一点不太确定，实际上可能还有些怀疑。但尽管如此，依然存在这样一种观念，即市长们现在拥有了这一现实：他们比以往拥有更多权力来推行自己的议程。因此，毫无疑问，当人们考虑选择哪位市长或支持哪位市长时，他们可能会将此考虑在内。事实在于，市长现在可以否决市议会的某些决议，市长可以比以往受到地方议会共识约束时更有力地推行和落实议程。
+<details><summary>Original English</summary>
+>> So it's certainly a
+discussion in the media and
+among think tanks and
+politically interested circles,
+whether or not it's translating
+into a into a defining issue
+that drove certain vote dynamics
+in the municipal elections.
+I'm less I'm less certain about
+that.
+And in fact, perhaps somewhat
+sceptical.
+But there is nevertheless this
+idea that mayors now have this
+reality that mayors now have
+more power to implement their
+agendas than they did before.
+So certainly when people are
+looking at which mayor to select
+or which mayor to support, they,
+they could be taking this into
+account.
+The fact that the mayor mayors
+now can veto certain council
+decisions and the mayors can
+exert an exercise, an agenda
+more forcefully than they could
+when they were subject to the
+consensus of of local councils.
+</details>
+
+>> 劳埃德，你也有同样的怀疑吗？
+<details><summary>Original English</summary>
+>> Lloyd, do you share that
+scepticism?
+</details>
+
+>> 实际上我会更加怀疑。我认为强市长权力的耐人寻味之处在于它们很大程度上是装饰性的。我这么说并没有贬义。我的意思是，如果你看一下真正驱动市政决策的因素，是资金，是金钱。市长在任何预算中拥有的权力仍然受制于财政现实。所以如果我们看一下全面的绝对数字，例如在安大略省，市镇每年要承担价值57亿加元的工作，而这些在其他管辖区通常被认为是省级的责任。所以存在这种制约。另外在接下来的十年里，我们面临着2500亿加元的基础设施缺口，这是维持良好维修状态所需的，而且还是用于赋能增长的基础设施。因此我可以想象，今天早上整个安省会有很多这样的对话：新市长和议员们将与首席财务官（CFO）坐在一起，进行一场非常艰难的对话。这场关于预算现实的谈话会带有“请勿迁怒信使”的意味，因为你会看到预算中存在很多延期维护，看到很多为了平衡收支并不增加税收压力而在预算中做出的决定。因此，每个曾向选民承诺过“小狗和小马”（空头支票）的人——我是指在冻结税收或降低税收方面——都将……
+<details><summary>Original English</summary>
+>> I would deepen that
+scepticism, actually.
+I think I think what's
+interesting about strong mayor
+powers is that they're largely
+decorative.
+And I don't mean that
+pejoratively.
+I mean, if you look at what
+actually drives municipal
+decisions, it's funding, it's
+money.
+And and the powers that mayors
+have in any budget are still
+constrained by fiscal reality.
+So if we look at the absolute
+numbers across the board, so,
+for example, in the province of
+Ontario, municipalities do $5.7
+billion worth of work every
+year, that in other
+jurisdictions would be
+considered provincial
+responsibility.
+So there's that constraint.
+And then over the next ten
+years, we're looking at a $250
+billion infrastructure gap
+that's like state of good
+repair.
+And that's and that's
+infrastructure enabling growth.
+So when you're I imagine there
+are going to be a lot of
+conversations around Ontario
+this morning where new mayors
+and councils are going to be
+sitting down with their CFO and
+having a really tough
+conversation.
+And it's going to be like, you
+know, don't shoot the messenger
+kind of conversation around what
+their budget realities are going
+to be because you see a lot of
+deferred maintenance, you see a
+lot of those, those decisions
+being made in budgets right now
+to balance the books and not
+increase tax pressure.
+And so everybody who, you know,
+promised a puppy and a pony to,
+to the voters, you know, in
+terms of like freezing taxes or
+lowering taxes is going to.
+</details>
+
+>> 面临严峻的现实检验。
+<details><summary>Original English</summary>
+>> Have a tough reality check.
+</details>
+
+>> 今天早上要进行艰难的对话。
+<details><summary>Original English</summary>
+>> Have a tough conversation
+this morning.
+</details>
+
+>> 我很好奇，劳埃德，请帮我理解一下，正如我们提到的，你这次选择不参选。这是否与在任期间可能缺乏权力有关？这完全是个人的选择，还是？
+<details><summary>Original English</summary>
+>> I am curious, Lord, help me
+understand, as we mentioned, you
+chose not to run this time
+around.
+Did it have anything to do with
+sort of the perhaps the lack of
+power in office?
+Was it choice or.
+</details>
+
+>> 就我而言这是个人决定，因为我已经完成了一些我想做成的事情。而且我有一个残疾的女儿，家里有很多事情要处理。这不一定是由政治动机驱使的。只是我对自己的工作感到满意，但到了该翻篇的时候了。
+<details><summary>Original English</summary>
+>> In my case, it's personal
+decision because I got some
+things done that I wanted to get
+done.
+And I have a of a daughter with
+a disability.
+And so there's a lot of things
+going on there.
+It wasn't necessarily motivated
+by politics.
+It was just I'm satisfied with
+the job I did, but it's time to
+move on.
+</details>
+
+### 竞选策略演变：社交媒体、地面敲门与公民素养
+
+>> 好的。我想稍微谈谈我们在竞选活动中看到的情况。在这个选举周期中社交媒体被大量使用。我想展示一段简短的Instagram视频。这是来自前伯灵顿（Burlington）市长候选人丽莎·科恩斯（Lisa Kearns）的，请看。
+<details><summary>Original English</summary>
+>> All right.
+I want to talk a little bit
+about what we've seen on the
+campaign trails.
+Social media was used a lot on,
+on, on this election cycle.
+I want to show a short Instagram
+video.
+This is from former Burlington
+mayoral candidate Lisa Kearns.
+Have a look.
+</details>
+
+>> 嗨，伯灵顿。你们在城里经常看到我奔走竞选你们的下一任市长。点击下方链接，即可领取你的免费“如何在线投票”指南。
+<details><summary>Original English</summary>
+>> Hi, Burlington.
+You've seen me around town
+running to be your next mayor.
+Click the link below to sign up
+for your free How to Vote Online
+guide.
+</details>
+
+>> 好的。那当然是前伯灵顿市长候选人，她在这次选举中并未获胜。（轻笑）当你在数字时代观看一段视频剪辑时，在传统的扫街敲门与社交媒体广告、Reels短视频以及人们为了脱颖而出而真正必须采取的独特花样之间，可以达成怎样的平衡？
+<details><summary>Original English</summary>
+>> There you go.
+That's, of course, a former
+Burlington mayoral candidate,
+and she did not win.
+This election.
+But chuckles.
+When you're watching a video
+clip in the digital area in the
+digital era, rather, what
+balance can be struck between
+the traditional door knocking
+versus the social media ads,
+reels, and sort of the unique
+twists that people really have
+to do to stick out?
+</details>
+
+>> 我认为在整体竞选策略方面，它们扮演着不同但互补的角色。在社交媒体方面，你寻求的是通过核心信息以及可能对对手的批评，对潜在选民进行广泛的目标定位。而且我确实认为丽莎·科恩斯以及其他一些候选人在竞选中采取的方法——运用幽默和讽刺，其中有些人比科恩斯女士运用得更成功——这些方法可能展现出某种真实感，从而在社交媒体平台上建立起一种联系，尤其是年轻的数字原住民更容易觉得这具有吸引力。因此我认为就建立这种联系而言，这是一种有效的策略。但我们掌握的大多数关于竞选活动的实证数据表明，你需要对社交媒体竞选进行补充——因为社交媒体通常在这些信息茧房中运作，你只在与已经同意你信息的人对话——你需要走出去参与地面竞选，在地面上与选民真正建立联系，动员投票，尤其是确保人们在选举日真正走到投票箱前。
+<details><summary>Original English</summary>
+>> I think they play differing
+but complementary roles in terms
+of the overall campaign
+strategy.
+In the case of social media,
+you're looking at sort of a
+broad based targeting of of
+potential voters with your key
+messaging and also perhaps
+criticisms of your opponents.
+But and I do think that the
+approach that Lisa Kearns took
+and some other candidates took
+in the campaign in terms of
+employing humour and snark, some
+of them more successfully than
+than Miss Kearns, those
+approaches maybe demonstrate
+some level of authenticity,
+which creates a level of
+connection on across social
+media platforms that
+particularly younger digital
+natives are, are more likely to
+find appealing.
+And so I think that's an
+effective strategy in terms of
+building that connection.
+But most of the empirical data
+that we have on, on election
+campaigning shows that you need
+to complement your social media
+campaign, which often operates
+in these echo chambers where
+you're only talking to people
+who already agree with your
+message, you need to reach out
+and engage in a ground campaign
+in which you're actually
+connecting with voters,
+mobilising the vote, and
+particularly making sure that
+people actually do go out to the
+ballots, ballot boxes on
+Election Day.
+</details>
+
+>> 劳埃德，我想稍微谈谈竞争性。克里夫刚才提到了多伦多的选民投票率。那实际上是邹至蕙（Olivia Chow）和布拉德·布拉德福德（Brad Bradford）两位候选人之间的竞争。我们再看密西沙加，三位候选人之间展开了一些非常有意思的对话，而在安省其他一些地方也出现了一些大爆冷门。在选民终于（有人会说）拥有真正选择权的选区中，有竞争力的竞选或新候选人会如何提高选民参与度？
+<details><summary>Original English</summary>
+>> Lloyd, I want to talk a
+little bit about competition.
+Cliff had mentioned, you know,
+voter turnout in Toronto.
+That really was a race between
+two candidates, Olivia Chow and
+Brad Bradford.
+We look at Mississauga really
+some interesting conversations
+there with three candidates and
+some big upsets in some other
+parts of the province here.
+How could competitive races or
+even new candidates increase
+voter engagement in wards where
+voters finally, some would say,
+have real choice?
+</details>
+
+>> 我认为这是一个比单纯一场选举或一场竞选更长远的问题。我认为应该开展大量的公民教育。我认为我实际上会把它归结到学校和课堂上。从长远来看，我认为提高选民投票率的关键在于理解和参与，正如你所说，也正如克里夫所说，市政竞选是低信息量的竞选。由于没有政党，所以你无法迅速识别候选人的立场。因此你所尝试去做的，是你必须自己做功课。而这可能是非常耗时的。我认为如果我们能在学生还很年轻的时候就赋予他们所需的信息，这有助于他们日后成为知情的公民。而且我认为，这能帮助他们在家里与父母展开对话。多伦多在树木评选上做了一件绝妙的事。你看到了吗？是的。树木竞选活动，它是针对小学生的：选出你最喜欢的树。红橡树被黑掉了，我得说那是假新闻，被操纵的选举。但我想最后是银枫树赢了。这确实是让孩子们产生兴趣和参与感的一种极佳方式。我觉得太巧妙了。所以我希望看到更多这样的举措。
+<details><summary>Original English</summary>
+>> I think it's I think it's a
+longer term question than just
+one one election or one race.
+I think there's there's a lot of
+civic education that should be
+happening.
+I think I, I would actually pin
+it back on schools and on, on
+classrooms.
+I think over the long term, I
+think what's going to increase
+voter turnout is, is
+understanding and engagement,
+like you said, and like Cliff
+said, to like municipal races
+are low information races.
+There's no parties.
+So you can't quickly identify
+where a, you know, a, where a
+candidate stands.
+So what you try to do is you
+have to do your own homework.
+And that can be time consuming.
+I think if, if we arm students
+pretty young with, with the
+information that they need, that
+can help them to become more
+informed citizens down the line.
+And I think, you know, they can
+it can help them to have the
+conversations at home with their
+parents.
+Toronto did a genius thing with
+the trees.
+Did you see that?
+Yeah.
+The tree campaign or the.
+It was it was aimed at
+elementary school students.
+And pick your favourite tree.
+And the red oak was robbed.
+I have to say it was it was, it
+was it was fake news rigged,
+rigged election.
+But the silver maple won, I
+think.
+And and that's a really great
+way to get kids interested and
+engaged.
+I thought it was brilliant.
+So that's the kind of thing I'd
+like to see more of.
+</details>
+
+>> 我很好奇，当我们谈论数字原住民时，正如克里夫刚才提到的，社交媒体是否算得上这种新工具？它是一个主要工具，还是仅仅工具箱中的一个小工具？
+<details><summary>Original English</summary>
+>> I'm curious, you know, when
+we're talking about digital
+natives, as Cliff had mentioned,
+is social media sort of this new
+tool?
+That is it the big tool or is it
+just a small tool in the
+toolkit?
+</details>
+
+>> 我认为这取决于你身处何地。在一些较大的城市，比如多伦多，你拥有许多地方媒体和社区媒体，你有社区报纸，你有《多伦多星报》（Toronto Star），你有主流媒体，有你们电视台，环境是不同的。社交媒体在那些地方没有发挥那么大的作用。但在我们看到的一些较小的社区中，没有当地报纸，可能也没有电视台，或许只有一个广播电台，过去媒体为地方竞选所承担的调解传播功能缺失了。因此这一角色被Facebook社区主页和竞选页面等取代了。你在那些较小的市场中会看到对它的更大依赖。
+<details><summary>Original English</summary>
+>> I think it depends on where
+you are.
+I think in some of the bigger
+cities where you have a lot of
+local media and community media,
+for example, in Toronto, you
+have community newspapers, you
+have the Toronto Star, you have
+major, you have you guys, you
+have, you know, like, it's, it's
+a different it's a different
+environment.
+And social media doesn't play as
+big a role.
+But in some of the smaller
+communities that we're seeing
+where there are no local papers,
+maybe not a television station,
+there might be a radio station,
+the, the, the mediation that
+media used to do for local
+campaigns is missing.
+And so that's taken up by
+Facebook community pages and
+campaign pages and things like
+that.
+And you see a greater emphasis
+on it in those smaller markets.
+</details>
+
+### 投票机制信任与地方政府存续的边界
+
+>> 克里夫，当我们讨论社交媒体、讨论我们可用的数字工具时，有一点尚未提及。我们在上一个选举周期以及这次选举中看到，投票方式的普及度或多样性有了很大提升。我很好奇这是否属于各市镇需要研究的方面？如果他们具备基础设施，这是否有助于提高选民投票率？
+<details><summary>Original English</summary>
+>> Cliff, one thing that we
+haven't talked about when we
+talk about social media, we talk
+about sort of the digital tools
+that are available to us.
+We've seen in the last election
+cycle, and this one this time
+around, a lot more, I guess,
+availability or diversity of how
+you can cast your ballot.
+And I'm curious if that is
+something that municipalities
+need to be looking at.
+If they have the infrastructure,
+is that something that would
+increase voter turnout?
+</details>
+
+>> 关于一系列不同的选民动员机制，包括在线投票，已经有许多研究。迄今为止的证据表明，加拿大人对他们投票系统的完整性拥有相当高的信任度。而这导致我们的机构在涉足在线投票等领域时表现出一定的谨慎。因此，这在机动性、无障碍性、动员度与参与度之间存在权衡，但同时也必须确保我们在全球范围内对机构完整性的信任面临严峻挑战的时刻，维护对机构完整性的信任。
+<details><summary>Original English</summary>
+>> So there have been a number
+of studies on on a range of
+different voter mobilisation
+mechanisms, including even
+online voting.
+The evidence to date has
+indicated that the that
+Canadians have a fairly high
+level of trust in the integrity
+of their voting systems.
+And this has produced some
+reticence among our institutions
+in terms of moving into domains
+such as online voting.
+So there's a trade off in terms
+of mobility, accessibility,
+mobilisation and accessibility
+and engagement, but also
+ensuring that we maintain trust
+in the integrity of our
+institutions at a time when that
+trust is really being challenged
+around the world.
+</details>
+
+>> 在节目早些时候，我们采访了来自安大略省西南部的市议员比尔·欧文，他提出地方政府可能在几个选举周期内就会遭到淘汰。我很好奇，这是集市长被赋予的权力和从教育委员手中被剥夺的权力于一体的局面。克里夫，你对他的激烈观点怎么看？
+<details><summary>Original English</summary>
+>> Earlier in the show, we were
+talking to Bill Irwin, city
+councillor from southwestern
+Ontario, and he suggests that
+local government will
+potentially be obsolete within a
+few election cycles.
+And I'm just curious, this is a
+combination of powers being
+taken to mayors.
+We're talking about powers taken
+away from trustees.
+Cliff, what are your thoughts on
+his hot take?
+</details>
+
+>> 平心而论，或者说实话，我觉得这有点夸大其词了。我认为人们的担忧较少在于地方选举的彻底根除，而更多在于在当前这个时间节点，地方层面的治理会演变成什么样。强市长权力无疑给人一种省一级权力与权威集中的印象。但只要你还在选举市长，那些市长就可能以实际上违背省利益的方式使用强市长权力。我们看到，我相信是在马卡姆（Markham），市长在2026年否决了一项关于住房扩张的议会决定，而这我认为违背了省政府引入强市长权力的初衷。因此无法保证市长们在任何时候都会以推进省利益的方式使用强市长权力。而在教育局层面，这一机构在某些形式上可以追溯到200年前。我认为去审视它在当今时代是否仍然符合其设立宗旨总是值得的。我并不是建议应该废除民选学校董事教育委员，但我的确认为，我们应该审视治理架构该如何演变，以更好地在学校运作方式上反映地方居民的意愿。
+<details><summary>Original English</summary>
+>> I find that a bit hyperbolic.
+To be fair, or to be honest, I
+think that the concern is less
+about the complete eradication
+of sort of electoral or
+elections at the local level,
+and more about what governance
+at the local level will look
+like in, you know, in this
+moment in time, strong mayor
+powers certainly give the
+perception of the centralisation
+of power and authority at the
+provincial level.
+But as long as you're electing
+mayors, those mayors could use
+strong mayor powers in such a
+way that actually contravenes
+provincial interests.
+We saw this in, I believe it was
+Markham with the.
+With the mayor in 2026, vetoed a
+council decision around housing
+expansion, which would go
+against, I think, what the what
+the province implemented strong
+mayors powers for.
+So there's no guarantee that
+mayors are going to use strong
+mayor powers in ways that
+advance the interests of the
+province at any given time and
+at the school board level.
+I mean, there are this is an
+institution that dates back in
+some in some forms, 200 years.
+And it's always worth, I think,
+examining whether or not it's
+still fit for purpose in this
+day and age.
+I'm not suggesting that that.
+The election of school board
+trustees should be eradicated,
+but I am saying that we should
+look at at at how governance
+frameworks might evolve in order
+to better reflect the will of
+local residents in terms of how
+their schools are run.
+</details>
+
+>> 劳埃德，最后的时间留给你。
+<details><summary>Original English</summary>
+>> Lloyd, I'm going to give you
+the last word on here.
+</details>
+
+>> 好的。我的意思是，想当年市政机构作为省的下属产物被设立时，它们的职责要少得多，对吧？它们负责的事情很有限，而市镇的职责随着时间推移只增不减。正如我之前所说，每年57亿加元的职责在其他省份本属于市镇或本属于省级的职责，被下放给了市镇。因此如果你是省政府，我纯粹从政治角度考虑一秒钟，如果你是省政府，你有什么利益去取消那一级政府呢？坦率地说，它们提供了大量服务，如果取消，第一，你必须自己承担起责任；第二，你必须为这些服务的交付承担责任，选民的愤怒将直接发泄到你身上。所以如果我是省长，我能有什么利益去废除市政议会呢？这根本不是他们会去做的事情。
+<details><summary>Original English</summary>
+>> Yeah.
+I mean, I you know, when when
+municipalities were established
+as creatures of the province,
+you know, way back in the day,
+they had much fewer
+responsibilities, right?
+So they they were responsible
+for a limited amount of things
+and the responsibilities of
+municipalities has only grown
+over time.
+And like I said before, $5.7
+billion a year of responsibility
+to that and other provinces
+would be municipal or would be
+provincial responsibility or
+downloaded to the
+municipalities.
+So if you're the province, I'm
+just thinking politically for a
+second here, if you're the
+province, what interests do you
+have in eliminating that tier of
+government when, frankly, they
+deliver a lot of the services
+that you would then have to take
+responsibility over one and then
+two, you would hold
+responsibility over the delivery
+of those services, and voter
+anger would be taken out
+directly on you.
+So if I'm the Premier, what
+possible interest do I have
+getting rid of municipal
+councils?
+It's just a it's not a it's not
+a thing they would do.
+</details>
+
+>> 好的，两位先生，我们就谈到这里。克里夫、劳埃德，非常感谢你们来到《The Rundown》进行这场富有洞见的对话。
+<details><summary>Original English</summary>
+>> All right, gentlemen, we are
+going to leave it there.
+Cliff Lloyd, thank you so much
+for joining us on The Rundown
+for this insightful
+conversation.
+</details>
+
+>> 谢谢。
+<details><summary>Original English</summary>
+>> Thanks.
+</details>
+
+>> 非常感谢。
+<details><summary>Original English</summary>
+>> Thanks so much.
+</details>
+
+### 特别观察：无人参选的市镇与省政府接管机制
+
+>> 你看，我们经常讨论选民参与，并且理由充分。但是候选人参与的情况如何呢？听听这个：今年安大略省的一个乡镇似乎差一点出现无人竞选公职的局面。那么出现这种情况会发生什么？
+<details><summary>Original English</summary>
+>> Look, we talk about voter
+engagement a lot and for good
+reason.
+But what about candidate
+engagement?
+Get this.
+This year it looked like one
+Ontario Township might end up
+with no one running for office.
+So what happens then?
+</details>
+
+>> 如果他们举行了选举却没有人参选会怎样？这里是你的《OnPoli》。
+<details><summary>Original English</summary>
+>> What if they held an election
+and nobody ran?
+This is your OnPoli.
+</details>
+
+>> 市长。
+<details><summary>Original English</summary>
+>> Mayor.
+</details>
+
+>> 在安大略省北部的福基耶-斯特里克兰（Fauquier-Strickland）乡镇，周五下午提名截止时，我们差点没能迎来一场选举。当时他们没有市长或镇议会的注册候选人。在那样的状况下会发生什么？负责主持该镇选举的文书（clerk）依法被允许延长提名期。在这种情况下，他们最终确实找到了候选人。但如果他们当时没有找到呢？我们无法确切知晓。如果你想想教育局，有一个非常明确的先例，包括目前安大略省的许多教育局在内，都有省任命的督导员，他们可以做出决定，并且是听命于省政府来行事的。在安大略省法律中有一项条款看起来有点类似。当市政层面出现机能失常时，可以向安大略省土地法庭（Ontario Land Tribunal）提出调查。该法庭过去被称为安大略省市政委员会（Ontario Municipal Board），法庭可以认定由市政事务厅直接管理该议会符合省的利益。现在，我不知道有任何证据表明这种情况实际发生过，近几十年肯定没有。但是，如果你进行了多次尝试，却根本无法产生维持市镇运作所需的民选市政政府、即市长和议会，在那种情况下省政府就可能会介入并表示：好吧，看来现在得由我们来管事了。
+<details><summary>Original English</summary>
+>> In the township of
+Fauquier-strickland in northern
+Ontario, we almost didn't get an
+election when nominations closed
+on the Friday afternoon.
+They had no registered
+candidates for mayor or for the
+township council.
+What happens in that situation?
+The clerk who runs the election
+for the township is legally
+allowed to extend the nomination
+period.
+In this case, they did
+eventually find candidates.
+But what if they hadn't?
+Well, we don't know exactly.
+If you think about school
+boards, there's a very clear
+precedent, including many school
+boards in Ontario right now,
+where there's a provincially
+appointed supervisor who can
+make decisions and does so at
+the behest of the provincial
+government.
+There is a section in Ontario
+law that seems kind of
+analogous.
+When there's a dysfunction at
+the municipal level, there can
+be an inquiry to the Ontario
+Land Tribunal.
+It used to be called the Ontario
+Municipal Board, and the
+tribunal can find that it would
+be in the provincial interest
+for the council to be run
+directly by the Ministry of
+Municipal Affairs.
+Now, I don't know of any
+evidence that this has actually
+happened, certainly not in
+recent decades.
+But if you held multiple
+attempts and you just could not
+create the elected municipal
+government that mayor and
+council, that you sort of need
+to run a municipality, that's
+the kind of situation in which
+the province might step in and
+say, okay, well, I guess we're
+running things now.
+</details>
+
+>> 这次选举你看到了多少竞选广告？你觉得哪些是有效的，是否有任何广告改变了你的想法？请让我们知晓。发邮件至TheRundown@TVO.org。或者一如既往，你可以在我们的YouTube页面上留下评论。在此之前，我们明天见。
+<details><summary>Original English</summary>
+>> How much campaign advertising
+did you see this election?
+What did you think was effective
+and did anything change your
+mind?
+Let us know.
+Send us an email to
+TheRundown@TVO.org.
+Or as always, you can drop us a
+comment on our YouTube page.
+Until then, I will see you
+tomorrow.
+</details>

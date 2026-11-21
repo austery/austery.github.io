@@ -1,0 +1,483 @@
+---
+author: 课代表立正
+date: '2026-10-15'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=KpQwWNkyEsQ
+speaker: 课代表立正
+tags:
+  - agentic-workflow
+  - llm-evaluation
+  - model-customization
+  - prompt-engineering
+title: 微软专家的AI Agent落地方法论：从模型 Harness 到基于评估准则的演进
+summary: 微软前沿团队专家深度拆解AI Agent在企业落地的核心挑战与工程范式。探讨大模型与外围框架的关系、从端侧专属模型到独立身份Autopilot的安全治理，结合宝马汽车传感器与公寓定价等生动案例，详述从传统虚假指标向Outcome-based与Rubric评估的范式转移，并强调Forward Deployed Engineer与全员动手实践的重要性。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - Microsoft
+  - BMW
+products_models:
+  - Copilot
+  - Whisper
+media_books: []
+status: evergreen
+---
+### 模型与外围框架的关系
+
+**嘉宾**: 模型本身其实什么都做不了。它们本身只会一个 token 接一个 token 地进行预测，但它们自身实际上什么动作都无法执行。所以它们必须被嵌入到某种外围框架（harness）之中，才能真正发挥作用。
+
+比如我们自己的 **Microsoft 365 Copilot** 是一种 harness，**GitHub Copilot** 是另一种 harness，此外还有很多大众熟知的消费级 harness。真正产生我们今天所见成果的，是 harness 与模型之间的协同交互。
+
+正如你所说，这些底层模型确实在变得越来越强大，几乎每天都有来自我们或其他模型开发商的新模型问世，它们持续在演进提升。但与此同时，模型定制化依然拥有非常明确的一席之地。
+
+你现在会越来越频繁地看到端侧边缘模型（Edge Models）。事实上，我正在用来和你通话的这台笔记本电脑上，就运行着一个我经常使用的模型。我使用的是 **Handy**，这是一个用于语音转写的开源项目，它的转写效果极其出色。在录制本期播客之前我给你发了一封邮件，那封邮件并不是我手打的，很可能就是通过语音听写完成的。我已经把这套听写流程调校得非常顺手，而它完全是在我的笔记本本地运行的，根本不需要上传到云端。
+
+随着硬件算力不断增强，我们会看到越来越多这样的应用。比如我这台电脑比较新，处理这类模型游刃有余。当硬件承载模型的能力不断提升时，我认为针对特定用途的定制模型将会迎来爆发式增长。就像这个转写模型，它并不是全能的通用模型，它不会做别的，它就是专精于语音转写。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Well, first of all, let's bear in mind that models by themselves don't do anything. I mean, models by themselves, they predict token by token, but they themselves actually do nothing. So they have to be embedded within a harness of some sort for them to do anything. And so certainly our own M365 Copilot is one harness. GitHub Copilot is another. There are plenty of consumer harnesses that many people are familiar with.
+
+And so really it's the interaction of the harness and the model that produces the results that we see today. And these models are indeed, as you say, getting better and better. Every day there's a new model from us or from one of the other model building houses that are out there, and so they continue to improve, for sure. At the same time, there is definitely a place for model customization. One of the things that you're going to start to see now, I think more often, is models on the edge. And in fact, there is a model that I use on this laptop on which I'm talking to you quite frequently. I use Handy, actually. Handy is an open source project for transcription; it does transcription really, really well. And so, you know, I wrote an email to you in advance of this podcast. I didn't type it. I probably dictated it. And I've gotten this dictation really dialed in, but it runs locally. This is a model that's running entirely locally on my laptop. Does not go to the cloud, nothing like that.
+
+Now, we're going to find more and more of these things as the hardware becomes more and more capable. I have a relatively new computer here, so it's pretty capable at handling these models. But as the hardware becomes more capable of handling these models, I think you're going to start to see an explosion of models that have custom purposes that, like the transcription model. It's not a general purpose model. It doesn't do whatever; it does transcription.
+
+</details>
+
+**主持人**: 我觉得通用大模型或许也能做，但另一个问题是：如果我已经有了 Whisper 或者 GPT Realtime 来帮我做这件事，为什么还需要这种专有模型呢？特别是现在的客户都在问，对这种特定需求究竟有多大？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: I think the model can do it, but the other question is why do I need this one when I can just have Whisper, for example, or GPT Realtime to do this for me? Especially like, you know, clients are asking, so like, yeah, what is the demand for this?
+
+</details>
+
+**嘉宾**: 说实话，我本地运行的这个模型底层其实就是 **Whisper**。但是，我针对它做了大量的客制化微调。
+
+举个例子，假设我平时经常在邮件里提到你的名字——我可能发音读得准，也可能读不准，但无论我发音如何，一个完全通用的原生模型能把它拼写正确吗？这可不一定。但如果我像现在这样对它稍作定制调整，它准确拼写出名字的概率就会大幅提升。
+
+这种现象其实我们多年来在自定义计算机视觉模型中屡见不鲜。比如在我们自己的 **Document Intelligence**（文档智能）产品中，除了通用 OCR 模型之外，如果你有一张复杂的表格，或者一份跨页排版的双栏文档，通用模型往往无法把上下文自然地缝合在一起。
+
+但我们的文档智能模型就能做到。事实上它表现得非常好，以至于我们还配套推出了文档翻译器。翻译器能够精准提取原始版面布局并在目标语言中忠实复现；如果翻译成阿拉伯语等从右向左书写的语言，它甚至能自动将整个版面镜像翻转。这真的非常神奇，当你亲眼看到这种版面级翻译时，简直会感到震撼：它到底是怎么做到的？太不可思议了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Well, I mean, to be perfectly honest, what the model that I'm using locally here is Whisper. However, I have made a number of customizations to it. I mean, for example, let's say that I was commonly emailing you, and Whisper wouldn't just know how to say your name, which I may or may not be pronouncing correctly, but in any case, regardless of how I pronounce it, you know, will the model spell it correctly? I mean, maybe, maybe not, right? But if I adjust it a little bit, as I have been doing, then it's much more likely to spell it correctly.
+
+That's right. And you'll see that, I mean, we have seen that for many years with things like custom vision models. I mean, for example, in our own Document Intelligence. So in addition to the general purpose OCR, if you have a complicated table, for example, or you have a document that spans across multiple pages and it's two columns, you know, the general purpose model has a tendency not to be able to stitch that together. But our Document Intelligence model can do that. In fact, it can do that so well that we also have a document translator. And the document translator will take the layout and reproduce it, but in some other language. If it's a right-to-left language, it'll also flip the layout. It's pretty crazy, actually. I mean, when you do it, it kind of melts your mind a little bit when you actually do these translations because it's like, how did you do that? That's nuts.
+
+</details>
+
+### 从协同副驾到具备独立身份的智能体
+
+**主持人**: 是的。通过你对具体落地场景的描述，我意识到了一点：我们大多数人作为普通消费者接触新技术，但微软面对的业务场景非常广阔。虽然你们在 Xbox、Bing、Windows 等领域也有庞大的消费者业务版图，但企业级市场显然有着完全不同的诉求。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. And I think by describing the usage, like the application of this model, I realized something, that is, most of us interact with new technologies because we are a consumer, but Microsoft, your job covers a very large consumer offering also, right? In terms of Xbox, Bing, Windows, and stuff like that. So yes, we do have a consumer footprint as well. But...
+
+</details>
+
+**嘉宾**: 是的，至少在我所在的部门，我绝大部分时间都在与大型企业和政府客户打交道。虽然你会发现底层技术和技术演进方向往往是共通的，但企业和政府使用我们技术的方式却有着鲜明的特点。
+
+我现在在上海 AI 工程师大会上重点分享的主题之一，就是**具备独立身份的智能体（Agents with their own identity）**。这是一个正在兴起的前沿趋势，你现在开始随处可见它的身影。
+
+所谓智能体拥有自己的身份意味着什么？在此之前，包括今天的 Copilot 在内，它们本质上都在**冒充（impersonating）**用户。当你指示 Copilot 帮你写一份报告、处理邮件时，它是以“你”的身份在执行动作，也就是说它使用的是你的凭证和安全上下文。它可能会被赋予一个名字，但归根结底，它只不过是运行在用户自身凭据之下的一个空壳。
+
+当一个智能体冒充你运行时，它继承了你在系统中的全部权限。如果我拥有删除电脑所有文件的权限，一旦这个冒充我的智能体在运行中彻底跑偏失控，它同样可以把我电脑里的全部文件删个精光。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: But yes, it's true, at least in my division, that I am mostly talking to enterprises and governments. Although, you know, the technologies and the directions tend to be the same, but the way that enterprises and governments use our technologies. Now, one of the things that I'm going to be talking about at the AI Engineers Conference in Shanghai is agents with their own identity. And this is an emerging trend. You're starting to see this everywhere.
+
+What does it mean for an agent to have an identity? Because up until recently, and indeed even today, our own Copilot, for example, impersonates you. So when Copilot is writing a report or sending an email or any of that stuff, it's doing it as me. So it is impersonating me. So it may have a name, but beyond that, it's a pretty shell around me. So when you have an agent that's impersonating you, it is running in your security context. It inherits whatever permissions you have. So if I have the permission to delete all the files off of my computer, and if this agent is impersonating me, it too can delete all of the files off of my computer if it really goes sideways.
+
+</details>
+
+**主持人**: 嗯，确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Mhm.
+
+</details>
+
+**嘉宾**: 但如果我构建一个自动驾驶式的 **Autopilot**，并且它拥有自己的独立身份，情况就完全不同了。
+
+首先，它无法随意删除我的个人文件，甚至根本看不到我的文件，因为在系统眼里它是一个完全独立的用户，就像你对我而言是不同的独立用户一样，除非我明确地、主动地向它授予访问权限。
+
+我们推行智能体独立身份的核心出发点，本质上是遵循安全领域的**最小权限原则（Principle of Least Privilege）**。你一定听过这个概念：赋予员工、以及现在的智能体完成工作所需的最低限度权限，绝不多给一点，从而防止系统行为失控。在当前的智能体时代，这对于企业和政府所追求的安全合规治理至关重要。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: But if I make an autopilot and it has its own identity, then first of all, it can't just delete my files. It can't even see my files because it's a totally different user, just like you're a different user from me, unless I specifically give it that access, unless I affirmatively grant it that access.
+
+And so the way that we're using this notion of agent identities is really towards the principle of least privilege, which you probably heard of, that you know this idea that you want to give people, and now agents, the least number of privileges as possible for them to be able to do their job and no more than that, so that they can't go sideways. That becomes especially important in this age of agents for the kind of governance that businesses and governments are looking for.
+
+</details>
+
+**主持人**: 这非常有意思。我记得听过商业播客《Acquired》的一期节目，里面深入剖析了微软的核心竞争壁垒正是建立在**目录服务（Active Directory / Entra ID）**之上。一旦企业使用了微软的目录架构，所有的 Office 办公软件都会自动继承背后那套极其精细复杂的文件权限与访问控制体系。这确实是微软的巨大优势。
+
+但与此同时，普通员工可能会感到担忧：如果现在出现了一个拥有独立身份、能做所有事情的智能体，这对我们未来的职场和就业意味着什么？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: That's interesting because I remember hearing Acquire episode, and it actually talks about how Microsoft builds its advantage on top of the directory. Like, it's the directory that once you have the directory, all the office software just inherits that very complex and behind the scenes, you know, rights and permissions and files. Yeah. So that is actually playing into the advantage of Microsoft. But then the employees would be worried. Now I'm seeing an agent with identity doing what I can do. So like, what does it mean for the workforce?
+
+</details>
+
+### 人机协作与组织授权的真正壁垒
+
+**嘉宾**: 当你在系统中声明一个 Autopilot 时，比如在微软生态中创建一个自主智能体实例，它实际上就是一个**服务主体（Service Principal）**。也就是说，它在底层就是一个正儿八经的系统账号，拥有自己的凭据、自己的权限范围。你可以像审计普通员工一样对其进行完整的访问权限审计。
+
+关于职场变革，工作模式确实正在发生变化，而且已经开始改变了。正如我前面提到的，我自己制作视频的流程就已经被彻底重塑。我做视频从来不用提词器，过去如果中途说错一句话，我必须整段重新录制；而现在，我只需要在转写文本中把说错的单词删掉，对应的视频片段就会自动被剪除，几分钟内就能搞定成片。我并没有使用全自动生成的 AI 虚拟人，所有的视频依然是我本人出镜配音，但 AI 工具极大地解放了繁琐的剪辑工作。
+
+任何 AI 落地能否取得成功的真正关键，说实话在于**组织权限与信任（Permission）**。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Well, when you declare an autopilot, for example, when you create an instance of an agent, it is a service principal. So it's an account. It has its own, you know, you can audit its access and its permissions just like you would audit anyone else.
+
+Jobs are definitely going to change. They are already changing. As I said, my own video production workflow has completely changed. I don't use a teleprompter. In the old days, if I misspoke, I had to re-record the whole take. Today, I just edit the transcript, delete the bad word, and the video splice is done. I'm not using generative video; I make all my own videos and voice them. But it takes minutes instead of hours. The key to the success of any AI is, frankly, permission.
+
+</details>
+
+**主持人**: 你刚才提到了“来自员工的授权（Permission）”，能详细展开讲讲吗？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: You mentioned permission from employees. Can you elaborate?
+
+</details>
+
+**嘉宾**: 是来自人和组织的整体许可与接纳。过去很多人常犯的一个错误是试图自上而下强推技术，但最终决定技术能否生根发芽的，是身处一线的员工是否真正愿意给予它权限、将它纳入自己的工作流。
+
+就像大家常常讨论的理想愿景：希望这是一场全员受益的良性转型，每个人都能保住工作，同时提升技能，由 AI 去处理那些单调重复的机械劳动，人类专注于创造性工作。但要实现这一点，绝对不是把现成模型往上一套那么简单。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Well, permission from people, you know. I mean, I think one of the mistakes that some folks make—and we don't do this as much now, but you know, you can't just shove technology down people's throats. The happiest AI path is when the AI is available to everybody, enabling everybody in an organization. The devices and ways we interact with AI are still evolving, and we need people to willingly adopt it.
+
+</details>
+
+**主持人**: 抱歉问了这么多宏观推演的问题，因为探讨 AI 时人们难免会畅想未来。现在我们把视角拉回现实：在你实际深入一线的企业客户走访中，那些已经在积极引入 AI 的企业，有哪些成功的策略？有哪些失败的教训？催生了怎样的新商业机遇？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. Sorry for, you know, all these speculative questions because, you know, when we talk about AI, we couldn't help but speculate. But now, I think we can shift gears towards like what you actually observe on the field, especially like this enterprise already adopting AI. What is a good strategy? What is a bad strategy? And what are the opportunities and new kind of business opportunities created?
+
+</details>
+
+### 宝马汽车案例：深水区里的隐性知识与上下文工程
+
+**嘉宾**: 我认为最佳的企业策略始终是：**打造能够赋能于人的 AI（AI that enables people）**。
+
+我最喜欢的客户故事之一是**宝马汽车（BMW）**。宝马深度使用了微软的技术栈。今年早些时候我亲自去了一趟慕尼黑拜访他们，参观了整车工厂，整个体验非常震撼。
+
+宝马内部有一个非常特别的部门叫做 **BMW MDR**（Mobile Data Recorder，移动数据记录仪）。他们在世界各地部署了一批经过特殊改装的测试宝马车。如果你加入了 MDR 项目，你基本上能免费开上一台宝马，但代价是整辆车的后备箱塞满了各种高精度传感记录设备，它在巨细靡遗地记录你能想到的所有行车数据：刹车传感器、引擎工况、环境温湿度等等，整辆车上密集分布着多达 **5,000 个传感器**。
+
+这里遇到的最大挑战是什么？就在大约一年前，宝马内部还依赖着极少数几个被称为“数据巫师（Wizards）”的专家。因为测试车采集的数据量实在太庞大了，根本无法通过无线网络上传，必须把实体硬盘拔下来寄回总部，插入一台巨大的专用数据抽取机柜里。那台机器长得就像电影《捉鬼敢死队》（Ghostbusters）里关押恶鬼的抑制单元一样，一次性吞吐几个 Terabyte 甚至更多的行车遥测数据。
+
+过去多年里，全公司只有这几个专职“巫师”懂得如何对这些庞杂的数据进行查询。如果你是制动系统工程部门的工程师，想知道自己设计的新车制动片表现如何，你必须去找这几个专家提交申请，老老实实排队等待，过很久才能拿到查询结果。
+
+后来他们决定对这套系统进行彻底的现代化改造。他们希望引入现在的智能体和高能力大模型。但在这种场景下，光靠大模型本身根本无济于事——因为面对这 5,000 个传感器，每一个传感器的量纲、阈值、工程意义都截然不同。刹车传感器的数据规律显然和引擎温度传感器完全是两码事。
+
+于是，他们花了整整**六个月**的时间，走遍宝马内部各个部门，整理出了一份极其详尽的**数据字典（Data Dictionary）**。
+
+这是构建真正可用的企业级 AI 中最必不可少、却最容易被外界忽视的苦差事。无论是结构化还是非结构化数据，AI 看上去无所不能，但实际上它不会凭空产生理解，你必须明确告诉它每个数据到底代表什么。
+
+宝马团队耗费了半年心血，梳理清楚这 5,000 个传感器各自记录的内容，以及人类工程师会以何种术语、缩写和习惯与这些传感器交互。
+
+正是因为扎扎实实完成了这层上下文构建，最终他们诞生了一个体验极度惊艳的智能体。当我走进宝马的大门时，我作为一个对这些车辆传感器一无所知的门外汉，亲自上手测试了一次。我记得当时我输入了一句自然语言查询：“请调出过去一周在雨天路况下的所有紧急重刹事件（hard-braking events in wet weather）。”
+
+这个智能体在后台自动编排并执行了一连串复杂的联合查询，几秒钟内就精准列出了过去一周所有雨天重刹事件。如果我想进一步深挖，比如查看发生重刹瞬间的刹车盘温度或刹车距离，我可以继续顺畅地追问下去。
+
+宝马的全员工程师现在都可以自主使用这套智能体系统，再也不需要在专家办公室门前排起长队。它绝不是一键生成的魔法，背后凝聚了整整六个月扎实的领域知识提炼与上下文对齐工作，但它从根本上改善了工程师的日常研发体验，并切实提升了终端车辆的工程质量。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah. I mean, I think the best strategy is creating AI that enables people. I think one of my favorite customer stories is that of BMW. BMW uses our technology heavily. And in particular, I went and visited them in Munich earlier this year, actually, and it was cool. They gave me a tour of the factory, all this stuff.
+
+But there is a group at BMW called BMW MDR, Mobile Data Recorder, and they have these specially instrumented BMWs all over the world. So basically, you get if you're part of the MDR program, you get a free BMW, but your trunk is full of instrumentation because it's logging everything you can think of. They got sensors on the brakes and the engine and for the ambient humidity and everything you can possibly think of. There are literally 5,000 sensors on these cars.
+
+And the challenge was that until recently—and I mean like a year ago—they had these like wizards, basically these people that could query all of this data because they get so much data, by the way, that the way they retrieve it is you can't just send it over the wire because there's too much. You literally send a drive to them and they put it into this big machine. It looks like, if you know Ghostbusters, it's like when they put the trap in the thing and the containment unit and they get the ghost out. It looks like that. I'm not even kidding. That's what I told them when I saw it. I was like, it's like a containment unit. It's like a terabyte or more of data that it gathers from driving around. So it's quite a bit of telemetry.
+
+And for many years, they've just had a few of these kind of wizards that could query this information. So if I was working in the braking division, I wanted to know how the brakes on my new car design were performing, I would have to go talk to one of these kind of wizards, and eventually I'd get in the queue, and eventually I'd get my query back and I'd get some information about how my brakes are performing.
+
+And they decided one day, they're like, "We're going to modernize this. We have agents today. We have these models that are pretty capable." But again, I mean, this is one of those places where the model by itself is insufficient because again, you got 5,000 sensors, and each one of these sensors has a different value, different thresholds, a different meaning. I mean, you know, the brake sensors are totally different than the engine sensors, right? And brake temperatures will vary very differently than engine temperatures, one would hope.
+
+So they spent like six months going all around BMW and gathering a data dictionary. And this is the work that's still required. I mean, if you want your AI to work with your structured data or your unstructured data or whatever, it seems magical, but it's not. You still have to tell it what this stuff is. So they spent all this time with other groups at BMW compiling this information about what these sensors were gathering and also how to interact with them—like what terminology, what acronyms might you be using when you're interacting with the brake sensors versus the trunk sensor versus the whatever sensor. So they spent this time doing this stuff, but the result is they have an extremely functional agent that I was able to try myself.
+
+Now this is me walking in the door, I have no knowledge of any of these sensors, but I was able to actually—the query I made, I remember it, I said, "Show me all the hard-braking events in wet weather in the last week." And it did it! It like made a series of queries and it was like, okay, here are all the hard-braking events in the last week in wet weather. And so if I wanted to dig deeper on that and be like, okay, what was the temperature of the brakes when that happened, or what was the stopping distance, I could have gone deeper with that. And even as a layperson, I was able to get that done.
+
+So they spent a lot of time to make this system, which now all of the BMW engineers can use. Rather than waiting in line for somebody to make them a query, anybody can go into the system and use it just like I did, in a natural way. So again, it wasn't magical. They had to put the work in. Six months they spent developing this, putting together the data, the context that it needed. But in the end, they have built an agent that materially improves the working lives of these engineers at BMW and, frankly, improves the quality of the product itself.
+
+</details>
+
+**主持人**: 这太有共鸣了。减少故障率、制造更好的汽车，我对这些背后默默付出的人充满敬意。你用“巫师”来形容他们非常贴切。我以前在腾讯工作的时候，曾经参与过为广告系统清洗数据的工作，整整搞了三个月。各种后端系统、前端埋点、机器学习管线，到处都是各路开发人员写死硬编码的遗留逻辑，清洗起来极其痛苦，而宝马面对的物理传感器工程难度恐怕还要高出百倍。
+
+这也揭示了真正好用的 AI 背后隐藏的冰山真相：表面上是无所不能的智能体，底座是庞大的数据苦功。即便现在各种 Coding Agent 极其擅长编写 SQL、KQL、GQL 各种复杂查询，但这绝不意味着你可以跳过前期的上下文梳理。因为面对生硬的原始遥测数据，没有任何一个代码模型能够凭空推理出“这就是刹车系统，这就是一次雨天重刹”。
+
+这种物理世界的隐性知识（Tacit Knowledge）是无法自动化提取的，必须由人类专家注入系统。而当数据与上下文准备就绪后，链条的另一端核心就是**评估（Evaluations）**：你如何确保这个智能体给出的查询与结论是百分之百真实准确的？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. Yeah. Like reducing incidents and building better cars. I have such high respects for these people. I think it's right to call them wizards. When I was at Tencent, I did kind of cleaning the data for an ad system. It was so hard—three months, and just like backend, frontend, machine learning systems, and people hard-coding things so much, so hard to clean. But I can imagine their work is like 100 times harder.
+
+Yeah. And I think that's really the hidden part of really functional AI. Behind this really functional AI is actually quite a bit of work. And for as much as we have these coding agents now that have these really, really good coding models and those kinds of things—and yes, of course, they can write SQL queries and KQL queries and GQL queries and all kinds of queries. Yes, they can do that stuff, and that still doesn't mean that you don't have to put in the work, because it really comes down to the context.
+
+I mean, again, like when I think about BMW MDR, it really is about the context that they gave to this agent that tells it what all this data is, what it means, what it's about, and all that stuff. And there is no super ultra magical automated way to do that. They had to gather this information from their colleagues who were making these sensors, who were using these systems. It just wasn't going to be magical. And no coding agent in the world was going to be able to look at the raw data and be like, "Yeah, that's definitely brakes. That's a hard-braking event for sure." Like, no way.
+
+I think, yeah, it is a barrier or a chasm. When there is tacit information involved, agents just cannot know that; you have to extract that from human for agents to be any useful. But that's part of the raw material. And then the other end is evaluations, right? How can you know if the agent is doing the job properly? You queried the agent, and I'm sure they must have some way to know this information is actually accurate and gives you what you ask for.
+
+</details>
+
+### 从虚假指标到基于准则（Rubric-based）的评估演进
+
+**嘉宾**: 这正好触及了最近整个行业在评测智能体方面发生的根本性范式转变。智能体的评估机制最近发生了一场深刻的变革，正在全面转向**基于准则的评估（Rubric-based Evaluation）**或**基于业务结果的评估（Outcome-based Evaluation）**。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah. Well, I mean, we could talk about how that has recently changed. The way that we evaluate agents has changed, actually, quite a bit recently. We're moving towards this notion of rubric-based or outcome-based evaluation.
+
+</details>
+
+**主持人**: 这具体是什么概念？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: What is that?
+
+</details>
+
+**嘉宾**: 要理解这一点，我们可以回顾一下过去这几年的评估体系演化过程。
+
+在大模型问世之初——也就是大约三年前——最核心的评估指标是**真实依附度（Groundedness）**，或者叫反幻觉能力。当时大家都在开发问答型知识库智能体，业界最大的担忧是模型胡说八道。因此评测的核心就是比对模型回答与提供的参考文档，计算依附度评分。
+
+但随着智能体不再仅仅是回答问题，它们开始调用工具与外部系统集成（比如微软各种 API、外部服务），业界随之发展出了一系列工具调用指标：比如**任务完成率（Task Completion）**、**任务遵循度（Task Adherence）**——模型是否准确理解了指令？是否完成了分配给它的任务？在执行过程中是否只专注于目标任务而没有旁生枝节去做无关操作？
+
+这些指标我们已经沿用了好几年。但它们存在一个**致命的底层缺陷**：它们过于宽泛和通用，完全脱离了具体的业务语境。
+
+我来举一个真实的案例。最近我与一家房产租赁客户深入交流，他们希望构建一个智能体，让它每周一自动扫描本地所有竞争对手的租房网站，抓取公寓租金数据，并将分析结果整理成一份详尽的 Excel 电子表格发送给公司经理，以便为本周的公寓租赁制定最佳定价策略。
+
+从传统指标来看，智能体按时运行了，成功抓取了数据，输出了格式规范的表格并发送了邮件。系统评测打分：“任务完成度：100%，指标全部达标，非常完美。”
+
+但是，当我作为业务人员真正点开那个电子表格时，我仔细一看：“一居室和两居室的租金预估确实还不错，但三居室公寓的定价简直错得离谱！完全脱离了市场行情，逻辑全乱了。”
+
+而通用的**任务完成度指标（Task Completion）**根本无法识别出这一点。因为它是通用的，它不懂房产租赁市场的业务逻辑，不知道三居室在当地的合理价格区间。只要智能体产出了一个 Excel 文件，指标就会判定任务已经成功完成。
+
+更关键的是，在企业生产环境中，你不能仅仅给模型反馈一句冷冰冰的“这个价格算错了”。你必须明确指出：“**这个价格错了，具体原因是什么**。”
+
+因为这个“为什么”，正是后续沉淀进评估准则（Rubric）的核心资产。
+
+不仅如此，现实商业场景中不同错误的代价是完全不对称的：如果租金定得过高，大不了房子多空置几天，损失几个百分点的收益；但如果智能体在租赁条款里写了违反公平住房法案（Fair Housing Laws）的内容，甚至涉及任何歧视性条款，企业第二天就会被政府监管机构起诉罚款，面临合规灾难。
+
+再比如银行业务，智能体错误地给用户免除了 4 美元的 ATM 手续费，虽然这也是失误，但在整个业务风险天平上几乎无伤大雅；但如果是重大合规违规，绝对是零容忍的底线。
+
+因此，当你设计 **Rubric（评估准则）** 时，你必须把这些带有业务权重、明确容错阈值以及边界条件的详细规则清晰地定义出来。只有通过了这套高度定制化业务准则的严格检验，企业才敢真正将智能体推向生产环境。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Yeah. What it means is, let's think about how it used to be before we even think about how it is today. So we have these metrics, and the original metric was groundedness. You know, you think about back in the day—which is only three years ago as of this recording. But we were building these question-answering agents, and one of the primary concerns at that time was hallucination. Thinking back, remember? Groundedness was this idea that, did it hallucinate or not?
+
+And then fast forward a little bit, we have tool-call metrics where a tool is an agent integration. It's integrating to something, right? A Microsoft 365 tool, an external tool, or whatever. And so then we have these tool-call metrics. Did it correctly understand the task you were giving it to do? Task completion: Did it complete the task you were giving it to do? Task adherence: Did it do only that thing and not some other random stuff in its quest?
+
+So those are the kinds of metrics that we have been using for some years now. But there is a fundamental flaw with all of those metrics: they are too generic. They're generic in terms of what it is that your agent is supposed to be doing.
+
+So let's say, for example, I was talking to one of our customers recently, and they were looking to price apartments. They want to make an agent that prices apartments for them. It wakes up on Monday morning, it browses the local listings for their competitors, it compiles a spreadsheet, and then sends it to the manager, and now we know how we're going to price our apartments for this week.
+
+And task completion will be like, "You're good! You asked for a completed task, you got a spreadsheet, right?" But then I open the spreadsheet. I look at the spreadsheet and I'm like, "Uh, well, you know, the one and two bedrooms, those are pretty good, but those three bedrooms, man, they're way off. Something here is not right."
+
+But task completion as a metric would not know this because it's generic. It doesn't know how to price apartments. It doesn't know that three bedrooms in this zip code should be this range. It just knows that you asked for a spreadsheet and you got a spreadsheet.
+
+And you can't just say, "This price is wrong." You have to say, "This price is wrong, and here's why." Because that "why"—that's what goes into the rubric down the line.
+
+Furthermore, in business, not all mistakes are created equal. If I price an apartment a little too high, maybe it sits on the market for an extra week. Not the end of the world. But if my agent writes a listing that violates Fair Housing Laws, I'm going to get in trouble with the government for that. That is a must-have constraint. Whereas, like, let's say that I'm like, "Hey, this ATM charged me a $4 fee," and it mistakenly grants me the $4 refund—you still don't want your agent refunding fees that don't exist, but on the scale of things, it's not as bad as violating federal compliance.
+
+So when you make your rubrics, you define these exact rules and error tolerances. And only when it passes this rubric do you accept to put this type of thing into production.
+
+</details>
+
+**主持人**: 是的，这本质上是在智能与容错之间寻求平衡。如果业务规则是绝对非黑即白的（Binary），我们直接写死代码就行了；正因为我们要利用大模型的模糊推理与泛化能力，才需要容忍一定程度的概率波动，但在核心合规底线上又必须设置铁律。有时甚至可以直接把这份 Rubric 作为上下文 prompt 的一部分喂给模型，让它时刻明确自己的行为边界。
+
+总结来说，这是一个至关重要的思维转变：**过去人们习惯于死板地规定智能体的每一步执行流程；而现在，人类只需定义清晰的 Rubric 与结果评估规则，充分信任智能体的创造力与推理能力去探索最优路径。** 我们定义目标与标准，由 AI 寻找最佳解法。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Mhm. It's a trade-off. If you want to use something smart, you need to tolerate some error, but in certain areas much less than others. And sometimes you will reveal the rubric itself to the agent as a form of context so it knows what rules it's supposed to follow.
+
+Great. And I want to summarize for my audience that this is an important mindset shift: before, a lot of people tried to tell the agents how to do certain things step-by-step. Now you just tell the agents the rules of the rubrics, what is the desired outcome versus what is not, and you trust the agent to figure out how to get there. You don't specify the rigid process because you trust the agent to find the better process.
+
+</details>
+
+### Trust but Verify：建立闭环评估与数据飞轮
+
+**嘉宾**: 确实如此。但我必须强调一句至理名言：**Trust, but verify（信任，但必须验证）**。
+
+你之所以敢于信任一个智能体，根本原因在于背后有一套极其严密的验证机制。比如以我自己每天深度使用的 **Microsoft 365 Copilot** 为例，我们在内部对其进行基于 Rubric 的评估已经持续了一年多。我日常对它极度信任，是因为我知道我们背后有一支庞大的专职评估团队，在日复一日地针对成千上万种真实业务场景做端到端的极限测试。
+
+与此同时，微软内部以及全球数以千万计的日常用户，每天都在以各种意想不到的方式对它进行压力测试。
+
+在 Copilot 界面上，每一个回答旁边都有“赞（Thumbs Up）”和“踩（Thumbs Down）”的反馈按钮。每当我发现它的回答不如人意时，我绝对不会只是随手点一个“踩”，我**一定会写下详细的原因**。
+
+我强烈建议每一位开发者和用户都养成这个习惯。因为我非常清楚，我填写的每一次负向反馈和具体原因，都会直接汇入后台评估团队的数据集（Eval Set），沉淀为未来微调与评测的新基准。有了这一层闭环，你所使用的工具未来才会变得越来越聪明。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Sure. But: trust, but verify. That is to say, in as much as you trust an agent, you come to trust it in part because—like if I think about M365 Copilot, we have been doing rubric-based evals on our own M365 Copilot for over a year now. And I trust M365 Copilot pretty implicitly for a lot of stuff; I use it every day. And the reason why I trust it is because we have this whole eval team back here that's evaluating all of these different scenarios.
+
+And meanwhile, all of us, the many millions of us that are using this thing every day, are stretching it in 15 different ways all the time. And in Copilot, by the way, there is a thumbs-up and thumbs-down button. If something doesn't work or doesn't work to my satisfaction, I'll give it the thumbs down, and I'll give a reason, too.
+
+Because I know that down the line, there is this eval team, and eventually what's going to happen is my thumbs-down and the reason that I give in there is going to go into their eval set, so that in the future, this thing that I am trying to do will work much better.
+
+</details>
+
+**主持人**: 这对于技术管理者来说是一种直觉，但对许多一线独立开发者（IC）来说可能并不直观。“Trust but verify”并不是要人类去逐行 Double Check 审查 AI 生成的每一句代码或每一条数据，而是要通过科学的交叉验证与持续评估体系来进行系统性把控。
+
+在即将举行的上海 AI 工程师大会上，大家不仅能听到这些方法论，更期待看到你们带来的现场演示。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah, I think this is intuition for managers, but for developers and individual contributors, it may not be immediately obvious. When you say trust but verify, you verify by systematic cross-check, not by manually double-checking every single line of code the agent writes.
+
+That's super cool to see. We look forward to not only the concepts, but also your live lab demos at AI Shanghai.
+
+</details>
+
+**嘉宾**: 没错，百闻不如一见。在上海的大会上，我会现场展示我们团队打磨的这一整套工业化实战成果。
+
+在这个时代，**建立持续评估（Eval）已经成为企业至关重要的核心组织能力**。正如历史上曾经有过“计算员（Calculator）”这个专职岗位一样，AI 时代正在催生崭新的职业分工——比如专门负责维护评测集与评估准则的 **Eval Maintainer / Evaluator**。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: That's right. Obviously, I'll be showing our versions of these things at AI Engineers Shanghai, which I think have come out quite well in our products. A picture says a thousand words, and live demos even more so.
+
+Building evals is a crucial habit, and increasingly you do find folks that are focused on that as a job. We have seen new titles emerge over the past couple of years: Eval Maintainer or Evaluator. "Calculator" used to be a job title decades ago before electronic computers, and now new roles are emerging again.
+
+</details>
+
+### 前方部署工程师与一线实战法则
+
+**主持人**: 随着新岗位的诞生，针对那些正在探索落地 AI 的企业，除了避免上述盲目上线的坑之外，你观察到的最佳实践还有哪些？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Along with these new roles, for enterprises thinking about adopting AI, what are the best practices you've observed in the field? Can you name a few?
+
+</details>
+
+**嘉宾**: 关于最佳实践，我认为最关键的两条是：
+
+第一，**构建自适应的业务上下文与评估准则**，正如我们在宝马案例中所看到的。
+
+第二，**必须预留一个异常充分的试验试运行期（Abnormally Long Pilot Period）**。
+
+现在全行业都面临着巨大的竞争压力，大家恨不得今天写出原型、明天就直接推向生产环境。搭建一个 AI 原型是极其容易的，但容易上手往往导致大量粗制滥造的糟糕想法被不假思索地推到了用户面前。
+
+你必须让真实用户在足够长的试运行期内深入使用它，搜集最真实的负反馈，然后将这些反馈提炼回写到 Rubric 准则库中，反复迭代你的评估套件，直到智能体的行为真正符合实际业务预期。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Well, in terms of general best practices: One, as I did say, building rich context and rubrics that are adaptable.
+
+Two, and I always say this for AI: you kind of need to have an abnormally long pilot period. We all have this pressure; we all want to release these things tomorrow because it's easy to put them together. But the ease of putting these things into production has resulted in people putting a lot of bad ideas into production, too.
+
+So you want to have a pilot period. You want to have your users interact with this stuff, really get their feedback, and then go back and incorporate that feedback into the rubrics again, so that when you do these evals, it's acting the way your users truly want it to.
+
+</details>
+
+**主持人**: 既然 AI 是概率性的而非确定性的系统，并且需要如此漫长的试运行和业务打磨，这是否意味着企业客户更需要深度的专业服务而非单纯的标准化软件？比如像 **FDE（Forward Deployed Engineer，前方部署工程师）** 这样的角色，去一线协助企业搭建评估、沉淀 Rubric？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: With AI being probabilistic rather than deterministic, and requiring this long pilot period, do you think enterprises need more services than pure software products? Such as FDEs (Forward Deployed Engineers) to help enterprises adopt AI, build evaluations, and establish rubrics?
+
+</details>
+
+**嘉宾**: 确实如此。这正是 AI 革命带来的另一个新兴岗位。在微软内部，我们专门成立了 **Microsoft Frontier Company**，其中就汇聚了一批优秀的 Forward Deployed Engineers（FDE）。他们直接深入各大客户的业务一线，协助他们制定在生产环境中安全落地 AI 的工程最佳实践。
+
+但外部支持只是催化剂。更重要的是，**今天每一位工程师自身都应该建立对 AI 的底层认知**：理解 AI 的本质、掌握如何为智能体提供高质量的上下文、学会如何编写科学严谨的 Rubric。
+
+我知道技术变化快得令人眼花缭乱，让人难免产生焦虑。我自己因为工作职责，白天黑夜都在高强度折腾这些前沿代码。但我给所有人的真诚建议是：**去亲自动手折腾一切你能接触到的 AI 工具（Mess with everything）**。
+
+无论是微软自家的 Copilot、市面上各类专业的 Coding Agent，还是面向大众的消费级产品——甚至去用 **Suno** 给自己写一首歌。我自己很喜欢弹钢琴，现在也还在努力学习怎么弹好身后的这把吉他。
+
+去全方位体验这些工具，只有亲手操作建立起来的肌肉记忆与第一手直觉，才能让你真正洞悉技术演进的脉搏，这是你听再多的播客、看再多的视频都无法替代的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: Sure. Well, there it is: another job that didn't exist before the AI revolution is Forward Deployed Engineers. We have that at Microsoft also; that's called the Microsoft Frontier Company. It is a bunch of FDEs that go into our customer sites and help them work on the best practices for putting AI into production.
+
+That helps, but at the same time, I think every engineer should have a baseline understanding now of what AI is, how to use it, how to provide context for your agents, and how to write these rubrics.
+
+The challenge is it's changing very quickly. For me personally, it's my job; I'm literally in this all day long and most nights hacking on this stuff. It can feel insane because every day there's something new. But nonetheless, I think you owe it to yourself to stay abreast of these things.
+
+And what I always tell people: mess with everything. And I mean everything you can get your hands on! Try Microsoft Copilot, try other coding agents, try consumer stuff, try Suno and make yourself a song. I think Suno is cool. I play piano, but the guitar I'm still learning back here. Try all these things, because it really gives you a feel for what they are and how they work in a way that no amount of podcasts or YouTube videos can give you—firsthand experience will.
+
+</details>
+
+**主持人**: 太赞了。就像今天早上我在哥伦比亚大学给学生们讲课时强调的一样：要把学习 AI 当作一门需要躬行实践的手艺（Craft），就像学游泳、学单板滑雪一样，光看视频教程永远学不会，你必须跳进水里。
+
+回顾我们今天的深度对话，从前沿基础模型与外围 Harness 的分工，到落地为真正商业产品所面临的核心命题：我们拆解了基于结果的评估体系、智能体的独立身份与权限治理、物理世界隐性知识的提炼与上下文注入。而在这一切技术构架的核心，始终是身处其中赋予其权限、制定规则的人。
+
+非常感谢你今天的倾囊相授，期待你在上海 AI 工程师大会上的精彩现场演示！
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. Just this morning I was giving a lecture at Columbia, and I told the students: treat learning AI as a craft, like learning swimming or snowboarding. You can never learn that just through watching videos; you have to do it.
+
+If I summarize our talk today, starting with the question of frontier models and harnesses to the actual product: we talked about evaluations, agent identity and permissions, building the infrastructure to extract tacit information and feed that context to AI. And at the center, it's really the people who do all this and grant permissions.
+
+Thank you so much! Look forward to having you at AI Shanghai and watching your live demos of all these amazing things.
+
+</details>
+
+**嘉宾**: 非常荣幸，我也十分期待届时与大家在上海相见！
+
+<details>
+<summary>Original English</summary>
+
+**Speaker**: I look forward to being there. Thank you.
+
+</details>
+
+**主持人**: 谢谢！
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Thank you.
+
+</details>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keto 规范分析器：在代码 Agent 编写代码前使用形式化方法消除规范歧义</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Keto 规范分析器：在代码 Agent 编写代码前使用形式化方法消除规范歧义</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-11</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Keto 规范分析器：在代码 Agent 编写代码前使用形式化方法消除规范歧义</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">formal-methods</span>
+      
+        <span class="tag-pill tag-pill--no-page">automated-reasoning</span>
+      
+        <span class="tag-pill tag-pill--no-page">specification-analysis</span>
+      
+        <a class="tag-link" href="/tags/coding-agent/">coding-agent</a>
+      
+        <span class="tag-pill tag-pill--no-page">smt-solver</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">AWS 自动推理团队的 Rajat Kotyal 介绍了 Keto Specification Analyzer 项目。针对模糊提示导致 LLM 准确率下降及生成代码存在缺陷的问题，该工具结合形式化方法与 SMT 求解器，在规范移交 Agent 前检测单句歧义、跨句子冲突与遗漏，并聚类翻译结果供人工决策或弃权。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=0EnLxIbAvYk" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-11T00:00:00.000Z">2026-11-11</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>7 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E4%BB%8B%E7%BB%8D-keto-%E8%A7%84%E8%8C%83%E5%88%86%E6%9E%90%E5%99%A8">介绍 Keto 规范分析器</a></li><li class="outline-h3"><a href="#%E8%A7%84%E8%8C%83%E5%86%B2%E7%AA%81%E4%B8%8E%E6%AD%A7%E4%B9%89%E7%A4%BA%E4%BE%8B">规范冲突与歧义示例</a></li><li class="outline-h3"><a href="#%E6%A8%A1%E7%B3%8A%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%9A%84%E5%BD%B1%E5%93%8D">模糊提示词的影响</a></li><li class="outline-h3"><a href="#%E5%BD%A2%E5%BC%8F%E5%8C%96%E9%AA%8C%E8%AF%81%E4%B8%89%E6%AD%A5%E6%B5%81%E7%A8%8B">形式化验证三步流程</a></li><li class="outline-h3"><a href="#%E5%A4%9A%E6%AC%A1%E9%87%87%E6%A0%B7%E4%B8%8E%E9%80%BB%E8%BE%91%E7%AD%89%E4%BB%B7%E8%81%9A%E7%B1%BB">多次采样与逻辑等价聚类</a></li><li class="outline-h3"><a href="#%E4%BA%BA%E5%B7%A5%E4%BB%8B%E5%85%A5%E4%B8%8E%E5%86%B2%E7%AA%81%E9%81%97%E6%BC%8F%E5%88%A4%E5%AE%9A">人工介入与冲突/遗漏判定</a></li><li class="outline-h3"><a href="#%E6%80%BB%E7%BB%93%E4%B8%8E%E6%A0%B8%E5%BF%83%E7%BB%93%E8%AE%BA">总结与核心结论</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="介绍-keto-规范分析器" data-reading-heading="">介绍 Keto 规范分析器</h3>
+<p>大家好。我叫 Rajat Kotyal。我是 AWS 自动推理团队的一员。今天我将要谈论一个我最近参与的项目，名为 Keto 规范分析器（Keto Specification Analyzer）。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Hi everyone. My name is Rajat Kotyal. I'm part of the automated reasoning group at AWS. And today I'm going to talk about a project I worked on recently called Keto Specification Analyzer.
+</details>
+<p>我们使用某些涉及形式化方法和自动推理的技术，在规范提供给你的编码 Agent 去写代码之前对其进行证明。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And we use certain techniques which involves formal methods and automated reasoning to prove specification that goes to your coding agent before it writes code.
+</details>
+<h3 id="规范冲突与歧义示例" data-reading-heading="">规范冲突与歧义示例</h3>
+<p>那么我们来看一个特定的缺陷，对吧？这是一个规范片段，举例来说有两条规则。规则二指出，当一个订单被提交时——假设这是一个通用的电子商务网站。当一个订单被提交且库存不可用时，我们将订单置为延迟订购（back order），单独阅读这一条时是讲得通的。但在同一个你交给编码 Agent 的规范文件中，还有另一条规则指出：任何订单都不得置为延迟订购，而这是我们设定的一条规则。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So let's take a certain bug, right? This is a specification uh snippet and there are two rules for example and the rule two says when an order is submitted and this is for a a general e-commerce website, let's say. When an order is submitted and the inventory is unavailable, we place the order as a back order which makes sense when you read it individually. And there's also another rule in the same specification file which you hand to the coding agent which says no order shall be placed as a back order and this is a rule we'll set.
+</details>
+<p>所以单独阅读这两行是讲得通的，对吧？但是当 LLM 一起阅读这两条规则时，两者无法同时成立。因此我们需要确保解决 LLM 所观察到的这种歧义。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So individually read these two lines make sense, right? But in when an LLM reads this, reads both the rules together, both cannot hold true at the same time. So we need to make sure the we resolve this ambiguity that the LLM is observing.
+</details>
+<h3 id="模糊提示词的影响" data-reading-heading="">模糊提示词的影响</h3>
+<p>我们在这个项目中投入精力的范围和原因，是基于公开研究以及最近的研究：我们观察到模糊的提示词会导致 LLM 生成的准确率和代码准确率出现 <strong>20% 到 40% 的下降</strong>，对吧？并且在写出代码后，<strong>60% 到 90% 的有效代码仍然存在错误</strong>。此外，在那类情况下，我们观察到在部署该代码时，会出现 <strong>2 倍以上的回归问题</strong>。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And uh the scope and the reason we uh put an effort into this project is based on public research and recent research we've observed there's a 20 to 40% drop with unclear prompts on the accuracy the LLM generates and the code accuracy, right? And 60 to 90% of valid code is still wrong after it writes it. And also in that case we observed two times the more more regressions when we deploy that code.
+</details>
+<h3 id="形式化验证三步流程" data-reading-heading="">形式化验证三步流程</h3>
+<p>那么这类缺陷隐藏在哪里呢？我们希望在它们进入代码库之前检测出来。唯一可行的方法类似于我们编写设计文档、类似于我们绘制图表和流程图，以确保在编写任何代码之前确定流程。我们希望在没有人类或任何人作为第一评审人阅读这些文件的情况下对其进行验证。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So where do bugs like these hide, right? We want to detect these bugs before they reach the code base and the way only way to do that it's similar to how we write design docs, similar to how we draw diagrams and flow charts to make sure the flow is set before we write any code. We want to verify that without a human or anyone reading these files as the first reviewer.
+</details>
+<p>在单句内部，可能存在用词歧义和细节层次错误；而在跨句子之间，我们能观察到这些规范或规则中的冲突与空白，对吧？句子需要评审，彼此之间需要检索和歧义查找。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+In one sentence let's say the ambiguity and wording wrong level of detail, but across sentences we can observe conflicts and gaps in these specification or rules, right? Sentences need review, such need search in between them and ambiguity searches.
+</details>
+<p>因此我们设计了一个三步流程来完成这项工作：</p>
+<ol>
+<li><strong>LLM 首先进行提炼</strong>：它会尝试自行清理表述；如果成功了，那自然很好。</li>
+<li><strong>形式化为 SMT 公式</strong>：如果无法解决，我们随后将英语语言形式化为 SMT 公式。SMT-LIB 是一种特定类型的函数集合，我们将其传递给 SAT 求解器或可满足性检查器，它会输出一个布尔值，表明你给出的表达式是有效、真还是假（无效）。</li>
+<li><strong>求解器反馈与迭代</strong>：一旦求解器返回结果给我们，如果该表达式有效，我们就不采取任何操作；但如果检测到两句之间存在任何歧义，或者在单个句子内存在两种含义，我们就会检测出来并通知 LLM 重新检查该句子，它将对此进行重新迭代。</li>
+</ol>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So we have a three-step process to do this where the LLM will first refine it. It will try to clean up the wording on its own and if it succeeds then well and good, but if it cannot we then formalize the English language into SMT formulas. So SMT lib is a certain set of type of function which we pass to a SAT solver or satisfiability checker where it's going to give out a Boolean saying this expression that you're giving me is valid, true or false, invalid. And then once the solver gets back to us if that expression is valid then we don't do anything, but if it detects any ambiguity between two sentences or within a sentence where there's two meanings to a sentence then we detect that and tell the LLM to recheck that sentence and it's going to re-iterate on that.
+</details>
+<p>例如我们见过的那些规则：当订单提交且库存水平不可用时，我们应将订单置为延迟订购；在 SMT 格式中，它看起来大致像这样，就像一个数学公式，对吧？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+For example, the rules we saw we've seen when order is submitted and inventory level unavailable we shall place the order as a back order and in SMT format it kind of looks like this, this like a math formula, right?
+</details>
+<h3 id="多次采样与逻辑等价聚类" data-reading-heading="">多次采样与逻辑等价聚类</h3>
+<p>进一步深入后，一旦我们检测到这一点，我们还会再次执行一个三步流程：反复对翻译进行采样。我们要求 LLM 进行 7 次或 10 次翻译，以了解该 LLM 表现出这种行为究竟是基于其固有能力，还是有什么因素影响了它产生这种行为。然后基于 LLM 给出的这 7 种或 10 种不同解释的逻辑等价性，我们按照逻辑等价性对其进行聚类，从而确定哪些条目归属于 LLM 自行做出的哪些假设。随后我们接受这些假设，或者要求用户澄清歧义，亦或放弃在代码库中实现该部分。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Once we go deeper, we once we detect this, we also do three-step process again where we sample the translations again and again. We ask the LLM to translate seven times or 10 times and to understand whether this LLM is behaving this way based on its its inherent capabilities or is something affecting it to behave this way. And then based on logical equivalence of these seven or 10 different set of interpretations by the LLM, we cluster them on logical equivalence which sets which entries came under which assumptions that their LLM made for itself. And then we accept or ask the user to clear out the ambiguity or abstain from implementing that in the codebase.
+</details>
+<h3 id="人工介入与冲突遗漏判定" data-reading-heading="">人工介入与冲突/遗漏判定</h3>
+<p>这是一个向人类询问针对可能存在矛盾的规则想要如何处理的例子。「删除记录」（Remove the record）是一个非常非常模糊的陈述。LLM 可以随意进行任何解释，但我们不应该允许这种情况发生。我们要么给出两个选项：</p>
+<ul>
+<li>保持原样，直接删除该记录；</li>
+<li>或者保留该记录，但对用户隐藏。</li>
+</ul>
+<p>用户更倾向于哪一种？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+This is an example of asking the human what you want to do with that rule that was perhaps contradicting. Remove the record is very very vague statement. The LLM cannot can interpret anything it wants, but we shouldn't allow that to happen. And we either give two options. We keep it as is. The record is deleted or we retain it and but hide it from the users. Which one does the user prefer?
+</details>
+<p>冲突（conflict）是指我们在示例中看到的规则一与规则三发生矛盾。而遗漏（gap）则是指没有任何规则覆盖该示例中的闲置订单（idle order），在这里 LLM 检测到——抱歉，是流程或流水线检测到该规则缺少条目，存在遗漏项。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+A conflict is when the examples example we saw rule one is conflicting with rule three. And a gap is where no rule covers an idle order in this example where the LLM detected an actual sorry the process or pipeline detected there's no entry for this rule where you are missing something.
+</details>
+<h3 id="总结与核心结论" data-reading-heading="">总结与核心结论</h3>
+<p>归根结底，目前它还无法完成所有事情。我们希望确保除了用户之外，没有其他针对规范正确性的判定权威（oracle）。用户必须确保在将代码片段或规则手册发送给 LLM 之前，仔细检查其中的每一部分。而我们作为一个工具，只能提供协助。用户在这里更为重要，这是因为存在隐式领域知识。LLM 缺乏很多领域知识，且 LLM 无法提供任何保证。只有用户才能给出这一保证，对吧？目前关于形式化及其在 Agent 中如何应用的证据还很少。我们正处于这项技术的新兴阶段。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+All in all, it cannot do a lot of things under the day. We want to make sure there is no oracle uh for for specification correctness other than the user. User needs to make sure to check every part of the snippet, part of the rule book before sending it to the LLM. And we as a tool only can help them. And the user is more important here because of implicit domain knowledge. The LLM doesn't know a lot of domain knowledge and there's no guarantee from an LLM. Only uh user can give that guarantee, right? And there's thin evidence right now for formalization and how it can be used in agents. We are emerging in this technology.
+</details>
+<p>本次演讲的核心要点是什么？</p>
+<ul>
+<li>在将规范向下传递给 Agent 之前，<strong>务必先检查规范</strong>。</li>
+<li>对翻译进行聚类：我们的做法是<strong>按逻辑等价性对翻译进行聚类</strong>，以确定 LLM 的不同解释以及它到底在何处真正出错。</li>
+<li><strong>LLM 负责翻译，求解器负责检查，人类负责决策</strong>。我们向人类提供选项；如果对此没有回应，我们则使用 LLM 作为评判者（judges）或放弃实现该部分代码。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+What do we take back from this talk? Check the spec always before you pass it down to the agent. Cluster the translation we what we do is we cluster the translation by logical equivalence to determine the different LLM interpretations and where it's genuinely going wrong. The LLM translates, the solver checks and the human decides. We give to give the human options and if there's no answer to that, we use LLM judges or abstain from implementing that piece.
+</details>
+<p>这里是参考资料，这项工作主要由我的团队贡献，大家可以查看他们的博客和提供的网站链接以深入了解。谢谢大家。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Here are the references and this work has been majorly contributed by my team you can check out their blog and the website link provided and delve deeper into this. Thank you.
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/ef2c7d744085a8ea8736d29720e22c7c59facc7c0c2a5b235ca5ab68f403225d.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/ef2c7d744085a8ea8736d29720e22c7c59facc7c0c2a5b235ca5ab68f403225d.md" download="Keto 规范分析器：在代码 Agent 编写代码前使用形式化方法消除规范歧义.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=AWS" class="entity-link company-link">AWS</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Keto Specification Analyzer" class="entity-link product-link">Keto Specification Analyzer</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,2534 @@
+---
+author: Latent Space
+date: '2026-09-29'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=IZAlq-V19U8
+speaker: Latent Space
+tags:
+  - model-iteration
+  - rule-maintenance
+  - agentic-workflow
+  - frontier-pacing
+  - engineering-feedback
+title: 模型迭代、规则维护与前沿工程实践的演进
+summary: 文章探讨了随着大模型能力的提升，维护针对不同模型的规则文件（如 CLAUDE.md）的局限性，以及如何通过引入评测插件等工程实践来应对模型差异带来的挑战。同时，文章回顾了从早期模型到当前 Agent 架构的转变，分析了从“推销”到“最大化利用”的转变，并讨论了前沿节奏的把控与AI安全讨论的成熟方式。
+insight: ''
+draft: true
+series: ''
+category: ai-ml
+area: tech-engineering
+project: []
+people: []
+companies_orgs: []
+products_models: []
+media_books: []
+status: evergreen
+---
+<!-- chunk 1/13 -->
+
+### 模型迭代与 CLAUDE.md 的演进
+
+**Thariq**: 我觉得不同的模型之间差异非常大，你懂我的意思吧？但我意识到，维护针对不同模型的规则文件其实是一件很痛苦的事。而且随着模型越来越强，它们处理简单任务的基础水平也在不断提升。所以从长远来看，我认为 `CLAUDE.md` 最终会消失，甚至可能用不了多久。我觉得现在新开一个项目，可能完全不需要 `CLAUDE.md` 就会更好。
+
+<details>
+<summary>Original English</summary>
+
+**Thariq**: I think it's just like different models are very different from each other, you know what I mean? But I realize that it's like such a pain to like maintain different ones, you know what I mean? And yeah, like as the models get better and better, the floor of how they accomplish the simpler task is better. And so I do think in the limit CLAUDE.md goes away. And maybe not even like that far. Like I think that right now it might be better to start a new project without a CLAUDE.md.
+
+</details>
+
+**Host**: 确实。不过如果你看到非常重复的失败模式，你可能还是会把它们加进你的 `CLAUDE.md`。但真正棘手的地方在于，这些问题在不同模型之间是完全不同的。如果你记录了一大堆失败模式……
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yes. Um, I think that like maybe if you see very repeated failure modes, you add them to your CLAUDE.md. The really tough thing is that this changes per model. And so like if you've added a bunch of failure modes or like...
+
+</details>
+
+**Thariq**: 那你就得为 Haiku 准备一个 `HAIKU.md`，为 Opus 准备一个 `OPUS.md`。
+
+<details>
+<summary>Original English</summary>
+
+**Thariq**: >> you need Haiku.md, you need Opus.md.
+
+</details>
+
+**Host**: 甚至同一个系列比如 Haiku 3.5 和 Haiku 3 之间都有差异，这确实挺烦人的。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Uh, well even Haiku 3.5 versus Haiku 3, you know, like it is annoying.
+
+</details>
+
+**Thariq**: 我们并不是故意把事情搞得这么复杂，但这正是大模型的工作方式。比如 Haiku 3 存在的某种失败模式，在 Haiku 3.5 里可能就已经不存在了。如果你一直维护一份包含各种历史失败模式的运行上下文，很可能会对 Claude 施加过度约束。所以我们最近刚刚为 Skills 添加了评测插件（eval plugins），现在你就可以通过评测来客观判断一个 Skill 是否真的带来了改进。
+
+<details>
+<summary>Original English</summary>
+
+**Thariq**: Like we don't do this on purpose, you know what I mean? It's just like how the models work, right? And so like maybe Haiku 3 had this failure mode that Haiku 3.5 doesn't. And if you keep this running log of a bunch of different failure modes, they will probably overconstrain Claude, you know. And so this is like we just actually added eval plugins for skills. And so now you can eval if a skill is better.
+
+</details>
+
+### 播客插播：订阅支持
+
+**Host**: 在进入今天的正题之前，我想给听众们留一段简短的话。非常感谢大家！如果没有你们主动点击收听并关注我们的内容，我们根本无法每周为大家带来这样兼具 AI 工程深度、科学洞察与趣味性的优质内容。几乎每天都有赞助商找上门来，但幸运的是，正是因为有足够多的听友订阅支持，我们才能在不加任何广告的前提下保持节目的可持续运转，我们也希望一直保持这种纯粹的形式。
+
+但我只想请求大家帮一个忙：你们能做的最有力、而且完全免费的一件事，就是点击那个“订阅”按钮。这是我唯一向大家恳求的事情。对于我和每周全力以赴把 The Inside 节目呈现在大家面前的团队来说，这比什么都重要。只要你们动动手指订阅，我保证，我们绝不会停止努力，一定会让这档节目变得越来越精彩。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Before we get into today's episode, I just have a small message for listeners. Thank you. We would not be able to bring you the AI engineering, science, and entertainment content that you so clearly want if you didn't choose to also click in and tune into our content. We've been approached by sponsors on an almost daily basis. But fortunately, enough of you actually subscribe to us to keep all this sustainable without ads, and we want to keep it that way.
+
+But I just have one favor to ask all of you. The single most powerful, completely free thing you can do is to click that subscribe button. It's the only thing I'll ever ask of you, and it means absolutely everything to me and my team that works so hard to bring The Inside to you each and every week. If you do it, I promise you, we'll never stop working to make the show even better.
+
+</details>
+
+### 从 Claude Code 早期到 AI 编程常态化
+
+**Host**: 好了，让我们正式开始吧。今天在演播室与我们同坐的是来自 Anthropic 的老朋友 Thariq。整体来看，围绕 Claude Code 涌现了大量新事物，各种技术的边界正在交融。而你从加入 Anthropic 以来，一直紧密跟进着这一切。你很早就深度参与了 Claude Code，之前在其他播客里也分享过这段经历。最近大家都在讨论 Agent，比如你不久前在 AI Engineer World's Fair 上做了关于 Claude 3.5 的实战指南演讲——当然，这个模型是你们发布的，所以去讲它有点“犯规”了——此外，最近你们还推出了 Claude Task，今天我们也会聊聊前沿模型的进展节奏。Anthropic 正在发生太多事情，我最先想问的是：在这样一个节奏飞快、大事接连发生的环境下工作，是一种什么样的体验？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Now, let's get into it. We're here in the studio with our friend Thariq from Anthropic. And I guess generally with Claude Code, there's so much sort of merging of boundaries, and you've been so on top of everything since you joined Anthropic. You have been early to Claude Code itself, and you've told that story in other podcasts. And you've also been talking about seeing like an agent. Most recently you did the talk at AIE World's Fair, "Field Guide to Claude 3.5 Sonnet", which obviously you guys launched, so that's cheating. And most recently also launching Claude Task, and we're also going to be talking about pacing on the frontier. There's a lot going on in Anthropic. I guess top of the question is, what's it like being at Anthropic when there's so much going on?
+
+</details>
+
+**Thariq**: 我觉得有时候确实会让人产生一种“颈椎病般的眩晕感”（whiplash）。回想我当初加入 Anthropic 的时候，完全就是冲着 Claude Code 来的。当时 Claude Code 刚刚推出，我用过之后就觉得“这太棒了”，而 Opus 3 对我来说，其表现更是好到令人难以想象，你懂我的意思吧？那对我而言是一个真正的转折点时刻。
+
+但那个时候，我试图说服我身边的创业朋友们去尝试用 AI 辅助写代码，他们却纷纷说：“哎呀，我们的工程师觉得它还不够好用”之类的话。我当时心想：这太不可思议了。然而你快进到现在，不过短短 12 个月左右的时间，用 AI 编程就已经变成了所有人写代码的默认方式了，对吧？
+
+所以我觉得，从最初必须费力向别人推销它，转变为现在去教大家如何最大化地利用它、如何变得更高效，这本身就是一个极其巨大的转变。作为人类，面对发生得如此迅猛的变化，确实很难时刻保持对所有事情的全面掌控。
+
+<details>
+<summary>Original English</summary>
+
+**Thariq**: I think that you can get whiplash sometimes. When I joined Anthropic, I joined because of Claude Code. Claude Code had just come out and I was like, this is so good. And Opus 3 to me was like, just I could not imagine how good it was, you know what I mean? And that was like a real moment for me. But I was trying to convince like my startup friends basically to use AI coding and they're like, "Oh no, our engineers don't think it's good enough" or something. And I was like, that's insane. And now you fast forward 12 months, less, and it's just like, yeah, the default way that everyone codes, right? And I think that just having to go from selling it to now teaching people how to make the most use of it and be more efficient and things like that is just like a big change. And yeah, I think it's just hard to stay on top of everything as a human, you know, things happen so fast and like...
+
+</details>
+
+**Host**: 那就投入更多 Agent 去跟进。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: >> more agents at it.
+
+</details>
+
+**Thariq**: 确实！事实上 Agent 系统在扩展性上比人类强得多。对人类来说，如果眼下同时发生三件事，而且全都是十万火急的突发状况，你到底该如何应对？这太难了。
+
+<details>
+<summary>Original English</summary>
+
+**Thariq**: I mean, yeah, the agentic stuff scales much better than the human stuff where it's like, oh, there are three things happening right now and they're all emergencies, and how do you respond to it? Yeah.
+
+</details>
+
+### 工作重心的分配与 Agent 交互探索
+
+**Host**: 你平时的时间是如何分配的？我看你写了大量的技术文章，同时也做很多工程开发工作。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: What do you split your time on? You do a lot of technical writing, engineering work.
+
+</details>
+
+**Thariq**: 是的。当我加入 Claude Code 团队时，我最初的核心目标就是想教大家怎么用好 Claude Code。最开始我还以为自己可能只会在这方面花一点点时间，或者在 Agent SDK 上花些功夫。当时我也不太确定随着外围执行环境（harnesses）的演进，所谓的“苦涩的教训”（The Bitter Lesson）会如何起作用。我们有时也会困惑：“在 Claude Code 之后又会是什么形态？”
+
+所以起初，我只是想教会大家使用 Claude Code，降低大家上手 Claude Code 的门槛。但随着 Harness 变得越来越完善，现在最核心的问题已经变成了：你到底该如何驾驭这些 Agent？因为这是一门需要极高表达技能的技巧。
+
+所以我现在的日常工作就是：做教学分享、做工程研发，同时也到处发表演讲。但在做工程工作时，我的首要目标是把从用户那里收集到的真实反馈吸收进来，然后结合实践去告诉大家：如何利用 Claude Code 来搞定实际工程问题。这二者之间形成了一个非常良性的反馈闭环。
+
+<details>
+<summary>Original English</summary>
+
+**Thariq**: Yeah. So I think that when I joined the Claude Code team, I wanted to teach people how to use Claude Code basically. And I think that has been something that like I thought maybe I would spend a little bit of time on it, or I was spending some time on the Agent SDK first. And I wasn't exactly sure how The Bitter Lesson would go when it comes to harnesses, right? Like I think sometimes we were like, oh, what's after Claude Code, you know what I mean? And so initially I was like, I just want to teach people how to use Claude Code and make it easier to use Claude Code. And I think that has just like, as harnesses have gotten better and better, that's like the dominant problem now is like, how do you use the agents, right? Like it's such a high skill expression thing. So I do that, and then I do engineering work, I give talks. But I think when I'm doing engineering work, my goal is to take that feedback that we get from users and then be able to talk about like, hey, how to use Claude Code to do engineering, so there's kind of like a good loop there, yeah.
+
+</details>
+
+**Host**: 是的。对于各位听众，我们会把你在 Dev Writers Meetup 上和 Sarah 一起做的那场分享链接放出来。我们之前也聊过一点：先躬身把工作做扎实，然后再把经验总结讲出来。有点类似“春种秋收、循环往复”的意思。
+
+顺便提前剧透一下我们接下来的内容：我们会深入讨论 Harness 的演进历程——它已经从最原始的 CLI 工具走过了很长一段路；我们还会聊到 Claude 的各种工作模式，今天已经有些风声泄露出来了，因为你实在藏不住秘密……
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah, for listeners we'll attach the talk that you did with Sarah for the Dev Writers Meetup, which we talked a little bit about: first you do the work and then you talk about the work, something like that—sow and reap, or what was that?
+
+</details>
+
+**Thariq**: 哈哈，对，就是收割与播种、播种与收割。
+
+<details>
+<summary>Original English</summary>
+
+**Thariq**: >> and reap and sow and reap.
+
+</details>
+
+**Host**: 没错，差不多就是这个意思。今天我们要聊很多话题。我记得你最开始做的一件事，就是给它加了一个“向用户提问”（Ask user question）的工具，大家对这个功能可谓是又爱又恨。我个人觉得这是一个非常具有创新性的设计，而现在我自己也搞了一套版本，你也有了你自己的“向我提问/面试我”模式。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Something like that, something like that. Yeah, and then just to preview a little bit, we are going to talk about the evolution of the harness—it has come a long way from just being a CLI. We're going to talk about Claude modes, which is starting to leak today because you couldn't keep it secret... Yeah, there's a lot there. I think you started off with like adding the "Ask user question" tool, which people would love and hate actually. Like I actually thought it was like very innovative, and then now I have like my own version, you have your "interview me" version.
+
+</details>
+
+**Thariq**: 是啊，确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Thariq**: >> Yeah. Yeah.
+
+</details>
+
+**Host**: 现在每个人都有自己的一套定制流程。而且随着你开始编写能生成其他 Prompt、控制循环等等的高阶 Prompt，这些旧细节好像渐渐退居幕后了。那么，如今业界的最高水平（State of the art）发展到哪一步了？对于现在的开发者，你通常会建议他们怎么做？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: And everyone just has like their own stuff, and it no longer matters because now you're supposed to write prompts that create other prompts and loops and all these things. Sure. So what's the state of the art today? What are you telling people to do today?
+
+</details>
+
+### 从人机交互到“人与 Agent 交互”：需求引导与分工
+
+**Thariq**: 当初做“向用户提问”工具，是模型第一次在“需求引导与发掘”（Elicitation）方面表现出足够优秀的能力。这算是一种涌现出的行为，我当时非常想看看模型到底能不能把这件事做好。
+
+我本身具有人机交互（HCI）的学科背景，在本科和研究生期间都做过相关研究。所以在我看来，这更像是一种“人与 Agent 的交互”（Human-Agent Interaction）——我们试图搞清楚：Agent 应该如何与人类进行沟通，从而精准抽取出你脑海中的深层需求。
+
+随着 Claude Code 的受众面越来越广，最棘手的一个问题在于：每个人的使用习惯和偏好是完全不同的，这就导致你很难去定义一个通用的默认行为。举例来说，当一个人给 Claude Code 下达任务时，如果他本身非常擅长写 Prompt，他可能只希望 Agent 闭嘴干活，别问废话；但换成另一个不太擅长写 Prompt 的人，他需要 Agent 主动向他提问澄清细节，帮助梳理出完整的需求。
+
+这正是不同用户之间的分水岭。而“向用户提问”这个工具，其实就落在这条分界线上：到底是用户本身能力足够强、直接给 Agent 下达清晰明确的指令即可？还是 Agent 需要主动追问、挖掘出更多潜在需求，与用户展开更深度的协同？
+
+<details>
+<summary>Original English</summary>
+
+**Thariq**: Yeah. "Ask user question" was the first time that the model was good at elicitation. You know, I think this was like kind of an emergent behavior that I wanted to see if the models could do. I have like kind of a human-computer interaction background, so I did that in undergrad and grad school. And so this was like, I think it's kind of like human-agent interaction to me, trying to figure out like how can the agent communicate with you and extract the requirements, right.
+
+I think that one of the things that's difficult as Claude Code has gone broader and broader is that everyone has like their own way of using it, and it's actually very hard to change the default behavior. So for example, if someone asks Claude Code to do something, sometimes they just want them to do the work because they're maybe a very good prompter. And sometimes they actually are not good at prompting, you know what I mean, and the agent needs to clarify. And so that's like a good split. And the "Ask user question" tool sort of splits along that side, where like: do you feel like you're good enough to instruct the agent as it is, or does the agent need to pull out more requirements and collaborate with you more?
+
+</details>
+
+<!-- chunk 2/13 -->
+
+### 挖掘未知盲区与 Artifacts 驱动的生成式界面
+
+**Speaker A**: 并且真正去理解你的偏好。总体而言，我认为几乎所有人所处的状态都更偏向于后者，而不是前者——也就是说，他们面对着更多的模糊性，对自己实际想要什么知之甚少，远没有他们自以为对这个问题的认知那么多。但这其实是一个界面设计问题，如何让这个过程变得简单轻松。你明白我的意思吗？因此，如果你正在设计一个问题，或者正在梳理一个问题，像数据架构（schema）是什么、调用栈（call stack）是什么等等这些细节，都是至关重要的。设计中的细节至关重要。理想情况下，你会希望在动手开始具体编码实现之前，提前弄清楚其中的一部分高难度棘手问题。是的，这就是大家为什么把它称之为“未知项”（unknowns），对吧？所以我认为，在智能体编码（agentic coding）领域，这永远都会是一项核心技能：也就是去厘清你的未知项。因为即使底层模型超级聪明、智力极高，它也必须知道你究竟想要什么，而你内心是有特定偏好的，你必须以某种方式把这些偏好挖掘并抽取出来。我认为这正是我一直在全力推进的方向。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: and really understand your preferences. I on the whole believe that pretty much everyone is more on the latter than the former, that they like have more ambiguity and they know less than they want than they like think they know about the problem. But like we're it's like interface design problem to make that easy. You know what I mean? And so like if you're designing a problem or if you're going through a problem, like you know, things like what's the schema or like what's the call stack and things like that are really important. Um, you know, like the details in the design are important. Ideally you want to figure out some of these like hard problems ahead of time before starting implementation. And yeah, that's why they call like unknowns, right? And so I think that this will forever be like a skill in agentic coding is like figuring out your unknowns. Because even if the model is like super intelligent, it like needs to know what you want, you know, and like you have preferences, like you need to sort of like pull that pull that out. And so that's like I think what I'm pushing.
+
+</details>
+
+**Speaker A**: 那么接下来的问题就是：智能体到底该如何与你进行交互？我认为一直以来，HTML 都是实现这一目标的核心主导方式。而我们最近上线了 Artifacts，对吧？关于 Artifacts，我其实觉得自己做得很不够好，或者说我在全面解释如何充分使用它们这件事上做得还不够到位。我们赋予了它很多强大的属性和能力。每一个 Artifact 背后都关联着一个数据库，因此每个 Artifact 都可以存储和写入持久化数据。它们还可以把数据反馈回 Claude。大家目前还没开始做、但我正极力倡导和推动的一件事，就是“仪表盘类 Artifact”（dashboard artifact）这个概念。试想一下，你让 Claude 长期负责并推进一个项目，这个载体可能是一个看板（Kanban）之类的工具。它可以把那个看板的所有数据存储在数据库中，多个不同的 Claude 实例可以通过 Artifact MCP 访问这些数据，而且那个 Artifact 本身也能反过来与这些 Claude 进行通信。因此，我们本质上是在构建底层原语，让你能够借助 Artifacts 拥有这种生成式界面（generative interface），从而帮助你从智能体那里呈现出更加丰富翔实的细节。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: The question then is like how does the agent interact with you? And I think that has been HTML has been like the big way of doing that. And we've recently added artifacts, right? And artifacts I actually think we've done a bad job of like or like I've done a bad job of like explaining how to use them fully. We have a lot of property capabilities. They have a database associated with them, you know, and so every artifact can store and write persistent data. They can like feed back into Claude, you know, and so like one thing that you know like people are not doing yet that I'm trying to like encourage is like this idea of a dashboard artifact. So you have like Claude working on a project long term. Maybe it's like a Kanban or something. It can store that Kanban data in a database. Multiple Claudes can access that data via like the artifact MCP and like that artifact can like talk to those Claudes as well. And so like we're basically building the primitives for you to be able to have this like generative interface via artifacts that will like let you surface more of that rich detail from the agents.
+
+</details>
+
+**Speaker A**: 我认为目前智能体领域几乎所有的难点，本质上都在于这个核心痛点：你自以为很清楚自己想要什么，但实际上你并不知道自己究竟想要什么。而智能体恰恰需要极其详尽的具体细节。在这个闭环过程中与它们进行密切协作是至关重要的。因此，Artifacts 就是我们在这一进化方向上尝试探索的载体。但这当中还有海量的工作要做，因为它比单纯抛出一个多选题要复杂得多，你懂吗？它包含了太多细节，比如架构图表、代码片段、数据模式，或者是针对那个具体问题所需的任何内容。但可以说，Artifacts 是一种更具 AGI 信仰（AGI-pilled）的实现方式，用来从根本上重塑“向用户提问”这一交互机制。大致就是这样。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: And I think that like almost everything with agents right now is like this problem of like you think you know what you want but you don't really know what you want. And like the agents need a lot of detail. And collaborating with them in the loop is really important. And so artifacts are like the way that we're trying to evolve there. But there's a lot of work to do cuz it's so much more complicated than like a multiple-choice question, you know? There's a lot more like detail in terms of like diagrams and code snippets and schemas or like whatever it is for that problem. But like artifacts is like the more AGI-pilled way of like, you know, doing 'ask as a question' basically. So yeah.
+
+</details>
+
+### Artifacts 与对话窗口的反馈分工
+
+**Speaker B**: 我觉得关于这个 Artifacts 的机制，有一点让我不太明确：究竟哪些反馈应该通过 Artifact 界面提交，哪些反馈又应该通过 Claude 的聊天对话窗口来提交？因为如果站在更纯粹的 AGI 视角来看，最彻底的做法似乎是把所有东西都直接喂给 Claude 的聊天上下文。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> I think one thing that's unclear to me about this uh the the artifact stuff is like what feedback should go in through the artifact and what feedback should go through a Claude chat, because the more AGI-pilled one is to just feed everything to the Claude.
+
+</details>
+
+**Speaker A**: 我觉得更符合 AGI 终极构想的方式，其实恰恰是通过 Artifact 来进行。在我们的终极设想中，Artifact 将会成为你进入整个执行套件框架（harness）的操作界面。你可以直接在这份关于工作规划的动态实时文档上进行批注评论；你可能会在上面看到多个并发的智能体，不同的智能体正在分别执行这件或那件事情；而那个特定的 Artifact 就是专门为你当前正在进行的具体工作量身构建的。因此，每一个 Artifact 都会有些许差异。我认为从底层基础设施的角度来看，我们目前仍然处于逐步实现这一目标的途中。但毋庸置疑，为你的智能体控制框架配备即时动态生成的界面（on-the-fly interface），大概率就是未来的发展走向。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> I think the more AGI-pilled one to go through the artifact. Like and I I think that like we sort of imagine in the limit I think that artifacts will be your interface into the harness. You know, you can like comment on this like live like document of your plan of the work. You can see maybe like multiple agents and different agents are doing this and that artifact is built for the current work that you're doing, right? And so like each one has like slightly different. I think we're still like getting there from like an infrastructure perspective, but yeah I think like on-the-fly interface for your harness is probably where things are headed.
+
+</details>
+
+### 解耦 Claude Code：UI 展现、云端推理与执行实体
+
+**Speaker A**: 是否存在这样一种版本，它能从单纯的命令行（CLI）或对话模式中彻底抽象出来？因为眼下很大一部分工作流是：你在跟 Claude Code 交互，它返回 HTML 页面作为产品原型，信息非常丰富，里面有各种图表，而 Artifacts 则是将所有这些环节串联在一起的纽带——那为什么不干脆把所有事情都以这种方式统一接管起来呢？如此一来，整个系统就会自然演变为几个核心层面的拆解与分离：推理在何处发生？智能在何处产生？具体的工作任务又是在何处落地执行？我认为这正是本地执行与云端运行之间的一种关键分野与本质区别，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Is there a version of it that's an abstraction from CLI or chat and you because right now a lot of it is, okay, you're interfacing with Claude Code, you're having HTML given back for a mockup, it's pretty rich, there's diagrams, artifacts are ways to connect these together, why not just do everything that way? Then it becomes like separating out like where's the inference happening, where's the intelligence happening, where is the work happening, you know? Like I think this is kind of like difference between like or like some of the distinction between local and cloud, right?
+
+</details>
+
+**Speaker A**: 我觉得现在如果你使用 Claude Code，它主要运行在本地环境中；你可以通过启动 Remote Control 之类的机制来获得某些云端行为，或者你也可以直接在云端环境中启动运行 Claude Code。我们正在迈向这样一个新阶段：用户不再只是向本地的 Claude 发送消息、让它在本地启动会话并执行任务，而是转向一种全新模式——你向一个运行在云端的 Claude 发送指令，而它可以灵活调度本地或云端的会话环境。这在一定程度上正是 Claude Tag 目前的工作方式，但随着时间推移，我们还会逐步为它加入“本地之手”（local hands）的能力。所谓“本地之手”，就是指当你的个人电脑在线时，云端智能体具备直接接入你本地机器并在上面进行实际操作的能力。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: And so, um, I think right now if you use Claude Code, it's like local and, uh, like you can spin off Remote Control for example to get some cloud behavior or you can spin off Claude Code in the cloud, right? We're moving towards a place where instead of Claudes uh, like you message a local Claude, it starts a session locally and it executes to more like you have a Claude that you message that's in the cloud that's running. It can run like local or like cloud sessions. This is kind of how Claude Tag works, but like over time we'll add like local hands as well. And and so like local hands will be the ability for that agent to access your computer if it's online, you know, and be able to like work there.
+
+</details>
+
+**Speaker A**: 这样一来，它就可以派生出许多不同的子智能体（sub-agents）。这些子智能体彼此之间可以进行通信。而 Artifact 此时就充当了把所有这些繁重工作清晰可视化呈现出来的统一界面。所以你可以想象，你正在把这些系统要素解耦剥离：最上层是表面 UI 展示层，它是一个被托管在某处、自带数据库和完备能力的 Artifact；中间层是推理与智能层，它全部发生在云端，你完全不用担心因为关闭本地电脑而中断任务；最下层则是负责落地执行的“双手”，它可以位于本地，也可以位于远程沙箱（sandbox），或者存在于你具体需要完成工作的任何地方。这就是对原有一体化的 Claude Code 体验进行解耦拆包（unpackaging）。眼下的情况是，所有这些环节全都挤压在同一个地方发生。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: And so it can spin off many different sub-agents. It can like those sub-agents can communicate with each other. And that's where the artifact comes in to display all of that work basically. So you can imagine like the you're separating out these things. So there's like the surface UI display that's an artifact and hosted somewhere and has a database and everything. There is the inference intelligence, right? That's happening on the cloud and you don't have to worry about shutting off your computer or whatever, right? Um and then there's the like hands kind of like and it can be local, it can be in like a remote sandbox or wherever you need your work to be done. That's like unpackaging like the Claude Code experience. Right now we're like by right right now it all happens in one place, right?
+
+</details>
+
+### 多人协作演进：Projects、Claude Tag 与权限整合
+
+**Speaker B**: 你如何看待这套体系在团队多人协作（multiplayer）方面的演进？假设整个团队都希望以这种模式协同工作，目前它主要还是非常个人化的使用方式，那你如何看待未来团队多人协作的形态？我想现在已经有了 Claude Tag 这种形态作为一个切入版本，但是未来会是怎样的？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> how do you see like the multiplayer side of that? So say teams want to work in this way, right now it's very individual, but how do you see the future of multiplayer? Like right now I guess there's Claude Tag which is a version, but
+
+</details>
+
+**Speaker A**: 我们正在推出“Projects”（项目）功能。Projects 是一种全新的顶层抽象，它在机制上有点类似于 Claude Tag，但直接构建在我们全套的云端产品矩阵之上。因此你可以直接向它发送消息，它会执行类似 Claude Tag 的操作，比如自主派生出多个子智能体。在我们看来，就多人协作而言，Claude Tag 的形态要相对更偏原生一些，因为它直接嵌入在你们日常沟通的 Slack 频道里，所有的组织权限体系都已经原生打通并配置妥当。但我坚信多人协作是整个宏大叙事中不可或缺的拼图，而这些链路未来必须更紧密地咬合连接在一起。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: we're launching Projects and so Projects is the like this abstraction that's kind of like Claude Tag but on our cloud products, right? So you can message it and like it will do the Claude Tag like stuff like spinning off sub-agents. So we think with multiplayer like Claude Tag is like a little bit more native multiplayer because it's just like in your Slack and the permissions are all figured out and stuff like that. But I do think multiplayer is like an important part of the story and like uh that that will need to get tied together more.
+
+</details>
+
+**Speaker A**: 你完全可以想象，当系统演进到这一步时会变得多么复杂：比如你会面临“你拥有执行手，但现在其他人的电脑里也运行着其他的执行手，你必须对它们进行严密的权限管控；或者你配置了自己的 MCP，而别人也有他们各自的 MCP，你该如何协调并弄清楚如何调用它们？”这会变得极其盘根错节。而 Claude Tag 在平滑消除和磨平所有这些摩擦问题上做得非常出色。举个例子，当涉及到 Google Docs 时，它该如何获取访问权限？它既可以通过团队共享的云端 MCP 进行访问，如果缺少权限，也可以在本地降级通过你个人的本地凭证来完成访问。因此，我认为 Claude Tag 就是我们主打的多人协作产品，它对于那些天然具备多人协作属性的场景极其有用。比如线上值班（on-call），故障事件（incidents）的处理天然就是多人协作场景。你会希望随时 @Claude，希望多名团队成员同时接入登录，并希望能随时调取完整的上下文。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Like you can imagine how complicated it gets when you're like, "Oh, you have hands, but now you have other hands in other people's computers too and like you need to like permission them or like you have like your MCP and someone else's MCP and how do you figure out how to use them?" Right? It gets like quite complicated and Claude Tag does a good job of like sanding down all of these issues, right? So that like when you have—yeah, Google Docs, how does it access Google Docs, right? Like it accesses through the shared cloud MCP or it can access through your local credentials as well if it doesn't have access. But yeah, like I think Claude Tag is our multiplayer um product and it's really useful for these like things that are inherently multiplayer like okay like on-call for example incidents are inherently multiplayer. You want to tag Claude, you want multiple people to log in, you want to be able to find context.
+
+</details>
+
+**Speaker A**: 我觉得每当我在推进某个项目，需要兼顾隐私安全，或者希望邀请其他同事进行审查时，这种协作模式体验都极好。我会为每个项目单独开设一个专属频道，比如直接 @法务团队 说：“嘿，我们准备发布上线这个功能了。这是完整的上下文，这个 Claude 掌握着全部细节，你们直接跟它聊就行。”通过这种方式，法务同事能够就“代码中究竟具体发布了什么内容”获得无比精确的答复，而我完全不需要被拴在沟通链条中充当中介。所以我认为多人协作正在变得越来越普及，大家都能以极其顺畅的方式与 Claude 深度协同。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Um, I think whenever I'm like working on something and I want like privacy or security or like I want other people to review it, you know, it's really nice to like I'll have a channel per project and I'll like @legal for example be like, "Hey, like I want to ship this. Can you like like here's the Claude knows everything, you know, just chat with it." And that way legal gets precise answers, you know, on like what exactly is shipping into the code and I don't need to be in the loop, right? So I think like multiplayer is getting like more and more like, yeah, everyone can participate with Claude. Um, I
+
+</details>
+
+<!-- chunk 3/13 -->
+
+### 身份界限与隔离单元的争议
+
+**Speaker A**: 我觉得 Claude Tag 就像那种产品，比如 Projects（项目）功能刚推出时往往是单人使用的，之后我们会逐步扩展。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I think Claude Tag is like that product, and like Projects, we'll start off single player and we'll like, you know, expand.
+
+</details>
+
+**Speaker B**: 我觉得这里涉及两个相互交织的问题：一个是身份（identity），另一个是隔离单元（unit of isolation）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I think there's a question about like maybe dual questions about identity and the unit of isolation.
+
+</details>
+
+**Speaker A**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah.
+
+</details>
+
+**Speaker B**: 嗯，在 Tag 的设计上，你明确选择让它拥有独立的身份，这是一个颇具争议的决定。其实还有其他实现方式。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Tag, you specifically chose to make it its own identity, which is like a controversial choice. There's other ways to do it.
+
+</details>
+
+**Speaker A**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah.
+
+</details>
+
+**Speaker B**: 至于 Claude Projects，听起来如果它类似于 ChatGPT Projects 的话，隔离单元就是那个具体的工件或云端实例，大家都在上面协同工作。听起来如果你们在某个频道上共同协作处理同一件事，那个频道自然就应该演变成一个 Project。虽然现在还没完全做到，但这显然是顺理成章的下一步演进方向。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Cloud Projects, probably it sounds like, you know, if it's anything like ChatGPT Projects, the isolation is that artifact, that cloud instance everyone's collaborating on. It sounds like if you're collaborating on the thing, like that channel should be a Project, right? Like it's not yet, but that's the natural next step.
+
+</details>
+
+**Speaker A**: 是的，我的意思是，在 Claude Tag 里实际上需要用户自己去组织规划。在 Claude Tag 中，每个频道你可以根据需要随意命名，而我基本上是把每个具体的功能（feature）作为一个单独的频道。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah, I mean, I think in Claude Tag it's effectively like you have to sort of do your own arrangement basically. And so in Claude Tag, each channel you can name it as you want, and I name like each feature basically as a channel.
+
+</details>
+
+**Speaker B**: 但我认为这里存在某种上下文迁移的问题。当跨频道时，知识何时会发生迁移往往并不清晰。假设你有一位人类同事被标记在所有这些频道中，那知识自然会发生传递，因为那是同一个人；但对于 Claude 来说，边界就很模糊——它到底是应该对其他频道的上下文一无所知、严格局限于当前频道的内容，还是可以共享使用？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: But I think like there is some transference... it's unclear when there is transference. Because let's say if you have a coworker who is tagged on all these things, yes, there is transfer because it's the same person. But with Claude, it's unclear if it's like necessarily like, "Well, no, you don't know about the other stuff, you should only use this stuff."
+
+</details>
+
+### 权限与安全边界：冰山之下的挑战
+
+**Speaker A**: 这就像那个“冰山一角”的迷因，对吧？我们在上面投入了大量时间。关于权限和可见性，其实存在着几乎无限的技术暴露面：你希望 Claude 能发挥最大作用，但同时又必须保证足够的安全性。对我们来说这显然至关重要，因为代码库的安全容不得半点疏忽，所以我们倾注了极其深入的心力。
+
+你可以设想很多棘手的边缘情况：比如某个频道里的 Claude 拥有不同的权限配置，但它是否可以通过给另一个频道发消息来外泄数据？或者如果它调用了你的 MCP（模型上下文协议）工具后再向别人发消息怎么办？这里面有太多极其复杂的场景，而我们真的花了很多功夫去把这些棱角打磨平整。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: It's like the tip of the iceberg meme, right? This is what we spend so much time on basically. There is like a lot of surface area to figure out of permissions and visibility and how can you let Claude operate as well as you can as safely as you can. And obviously this is very important to us because security for our codebase is very, very important, and so we've put a lot of time into this.
+
+Yeah, there's so many edge cases you can figure out where it's like, oh, yeah, this Claude in this channel has different permissions, but it can message another channel and can't it exfiltrate data that way? Or like what if it uses your MCP and then messages someone else? There's like so much, and we've really put a lot of work into sanding it down.
+
+</details>
+
+**Speaker B**: 确实，要做的工作实在太多了。好的，Fable。你在构建 Claude Code 方面写过两篇非常出色的文章——当然你写过很多好文章，包括关于实战指南的内容。我很好奇，从你观察到的情况来看，Anthropic 内部顶尖用户以及外部高级用户之间，是否存在某些共同的行为模式？要充分发挥 Claude Code 的威力，最佳实践究竟是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah, lots of work. Okay, Fable. Fable, you wrote two good articles—I mean, you've written many good articles, but on field guide to Fable building Claude Code. I'm curious from what you've seen, is there any common patterns that you see in like top users at Anthropic, externally? Like what are best practices for getting the most out of Claude Code?
+
+</details>
+
+### 提示词元技能与心智模型构建
+
+**Speaker A**: 我认为核心的元技能（meta skill）其实是 Prompting（提示工程），这极其重要。我觉得这一点说起来看似简单，但绝非微不足道。很多人往往轻描淡写地认为：“写提示词根本不重要，我随便说一句话 Claude 就能搞定。”
+
+但在我看来，提示工程非常类似于公开演讲或写作，它是有特定受众的，而这个受众就是 Claude。你需要为 Claude 建立一个清晰的心智模型（mental model），理解它是如何思考的、它的底层工作机制是怎样的。
+
+这是使用 Claude Code 时最关键的一项能力：在心中建立起关于 Claude 的精准模型，清楚它擅长什么、能够一次性搞定（one-shot）什么、搞不定什么。当你观察很多高水平用户时，你会发现他们的提示词往往非常简短，但因为他们对 Claude 以及对当前代码库有着极其深刻的心智模型与直觉，使用起来就显得毫不费力。它的技能上限非常高。因此，花大量时间去写提示词、不断迭代对智能体运作方式的心智模型与直觉，是至关重要的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: The meta skill I'd say is prompting is very important. I think this is not trivial to say because I think a lot of people are like, "Oh, prompting doesn't matter, it's just like I can just say a sentence and Claude will do it." And I think prompting is really like public speaking or writing for a specific audience, and that audience is Claude. You need to build a mental model of Claude and how it thinks and how it works.
+
+And so that's the most important skill in working with Claude Code: having this mental model of Claude and what it can do well, what it can one-shot, what it can't. And so many people when you see prompting, they're just short prompts, but they have such a good mental model of Claude and of the codebase and things like that that it's effortless, you know what I mean? But it's like high skill ceiling. So that work of spending a lot of time prompting and building mental models, an intuition for how the agents work, is really important.
+
+</details>
+
+### 地图与疆域：探索未知的未知与领域词汇
+
+**Speaker A**: 紧接着的第二点，就是我们前面讨论过的未知领域：能够发掘出你所不知道的、或者你尚未写下来的东西，并主动去学习新知识。随着 Claude 能做的事情越来越多，你让它处理超出你日常知识分布、处于你专业盲区任务的可能性变得极高。
+
+在这种情况下，你能否掌握对应的领域词汇来精确提示 Claude，就变得尤为关键。我认为最关键的未知，正是那些“未知的未知”（unknown unknowns）——也就是你甚至压根不知道它们存在的知识。
+
+这里很适合用“地图与疆域”（the map and the territory）的比喻：地图是你的提示词，而疆域则是智能体实际需要完成的真实工程与工作。如果你足够精准，你就能给出更为严谨、切中要害的指令。
+
+举例来说，在设计领域我并不专业，我不是设计师，所以我可能只能模糊地说：“给我生成 8 种不同的视觉原型方案。”但如果我是专业设计师，我可能会说：“参考这些知名网站的风格，我想要特定风格的字体和视觉基调，这里有几个关键组件需要具象化呈现，另外再拉入这个 Figma 画板……”使用专业词汇时，表达会精炼精准得多。如果你不是设计师，你就必须主动去学习这门领域的语言，去探索那些未知的盲点。这适用于所有领域：你越是能与 Claude 一起协作去理解事物的内在原理，你的提示工程就会越出色。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: And then I think the next thing is the unknown stuff we talked about earlier, where it's being able to find out what you don't know or what you haven't written down, learning about different things. I think as Claude can do more and more things, the likelihood of you doing something out of distribution for you and you have low domain knowledge on is very, very high. And the more you can learn the vocabulary to be able to prompt Claude, it becomes really important. And so I think the most important unknowns are the unknown unknowns where you don't even know that this exists.
+
+Exactly. I think this illustration of the map and the territory: where you're like, "Okay, this is my prompt," and the territory is the actual work that the agent needs to do. And if you are very precise, you can give more precise things. So like for example, in design, I'm not very precise. I'm not a designer, so I say like, "You know, give me like eight different mockups." But if I was a designer, maybe I'd be like, "Oh, hey, here's some reference sites, like I want this type of font and this type of look to it, and here's like a few different components to visualize, here's a Figma board to bring in." You can just be so much more precise with that language. And if you're not a designer, you just need to try and learn the language basically, or learn the unknown unknowns. And this is true of everything: the more you can work with Claude to learn how things work, the better your prompting will be.
+
+</details>
+
+### 品味与直觉：从千百种解法中做出抉择
+
+**Speaker A**: 另一个典型的例子是游戏设计。很多人兴奋地宣称：“我现在完全可以用 Vibe Coding 搓出一款游戏了！”但做出来后却发现一点都不好玩。游戏设计的精妙之处恰恰在于，每一个细微的设计选择背后都包含着海量的细节变化与工匠技艺。比如当你制作一款飞行模拟游戏时，飞机的操控手感、机体对控制指令的反馈细腻度，专业游戏设计师往往需要花上数天时间去精雕细琢。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I think another good example of this is game design, where a lot of people are like, "Oh, I can vibe code a game now," and then they're like, "It's not fun." The thing about game design is every one of these choices has a lot of variations, a lot of craft to them. So when you're making a flying game, the feel of the plane and the way it responds to your controls has a lot of... a game designer would spend days on that, you know what I mean?
+
+</details>
+
+**Speaker B**: 对我来说，这正是所谓的“品味”（taste），对吧？在数学上完全有效的上千种可能解法所构成的空间中，精准挑出那一个真正符合人类喜好与体验的答案。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: To me, that's what taste is, right? Like it is like from the possible space of 1,000 mathematically valid answers, here's the one that the humans will like.
+
+</details>
+
+**Speaker A**: 没错。但对于“品味”这个词我其实有些纠结，虽然我完全认同你的核心意思，但每个人对品味的定义大相径庭，而且这个词听上去往往带着某种轻慢或精英主义色彩——似乎某些人天然拥有品味，而另一些人则没有。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yes, I think with taste I'm like torn on this word, cuz I think you're right, but everyone has different definitions and it sounds kind of like low skill or like elitist almost, where you're like, "Oh, there are certain people with taste."
+
+</details>
+
+**Speaker B**: 就像“只有我认可的才叫品味，那些家伙根本不懂品味”这种论调。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Like "Taste is what I call taste; these guys don't have taste."
+
+</details>
+
+**Speaker A**: 没错，典型的说法就像“工程师懂什么品味，只有我们创始人骨子里才懂品味”。我认为这种看法完全是错误的。工程师在解决具体工程问题时其实展现出了极高的品味与判断力，每个人在特定的专业领域内都有属于自己的品味。
+
+正如 Jason Lou 所说：“要想拥有品味，你首先必须亲自下场品尝。”我非常喜欢这句格言。这意味着你必须亲历大量的实践、不断迭代尝试，去搞清楚自己真正想要什么、喜欢什么，从而构建起深厚的领域知识与专业词汇。而当你编写提示词时，你实际上是将所有这些积淀综合提炼了出来。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah, exactly. "Oh, an engineer doesn't have taste; like I, the founder, have taste." And I think that's actually not true. I think engineers have a lot of taste for these particular problems, and I think everyone has taste for particular problems. I think Jason Lou said, "In order to have taste, you have to eat." And I really like that, where it's like, okay, you have to do a lot of things. You have to iterate and figure out what you want, what you like, and build that domain vocabulary. And then when you're prompting, you're like synthesizing all of that.
+
+</details>
+
+**Speaker B**: 当别人比你表达得更精辟时，是不是挺让人恼火的？这下你不得不永远引用他的话了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Isn't it annoying when someone else says it better than you? Like, I have to quote this guy forever.
+
+</details>
+
+**Speaker A**: 哈哈，不得不一直引用 Jason Lou 的名言，他肯定会乐坏的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Having to quote Jason Lou forever. He's going to love this.
+
+</details>
+
+**Speaker B**: 这功劳得归他。有时候事情甚至并非如此深思熟虑，而纯粹源于直觉：你甚至没有意识到自己具体想要什么，直到模型把结果呈现出来，你心里瞬间会产生共鸣：“对，这个方向显然要好得多！”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: So I get props. And sometimes it's actually not even that. Sometimes it's just intuitive, right? Like you don't realize you even want something till a model puts it out and you're like, "Oh, this just feels immediately better." Right.
+
+</details>
+
+**Speaker A**: 是的，一点也没错。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah, exactly.
+
+</details>
+
+**Speaker B**: 我经常在这两种状态之间纠结：有一半的时候，我写提示词的方式是使用语音输入——你们支持语音，其他人也支持语音——而那完全是另一种截然相反的风格。我只是按住功能键喋喋不休地漫谈两分钟，然后松开按键，期望它能自动梳理出逻辑。通常情况下它确实能理解，但这与把提示词当作一份详尽 PRD（产品需求文档）那样结构严谨、精心构思的沟通方式，确实存在着本质区别。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: One thing I go back and forth on is I feel like the way I prompt half the time, let's say I use voice—you guys have voice, other people have voice—that is the opposite. It's just like me rambling for like two minutes, pressing down the function key and then let go and then hopefully it figures it out. And oftentimes it does, but it's not as thoughtful as a structured prompt with well-run communication as though it's a PRD.
+
+</details>
+
+<!-- chunk 4/13 -->
+
+### 双峰提示与前置上下文信息量
+
+**Speaker A**: ……或者是备忘录。这和大家现在的做法一致吗？现在基本上存在一种“双峰提示”（bimodal prompting）现象：对于某些提示词，你会在前期投入大量时间精心准备；而对于另一些提示词，你可能随手敲几句就直接扔出去了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: ...or memo. Is that in line with how people do this? There's like basically bimodal prompting where there's some prompts where you spend a lot of time upfront and other prompts you just dash it off.
+
+</details>
+
+**Speaker B**: 嗯，我觉得语音输入并不一定意味着信息量低。我认为关键更多在于提示词里究竟包含了多少信息。模型其实很灵活，比如你可以随时补充几句话说：“噢，其实提示词写到一半我改变主意了”，模型依然能够完美地跟上你的思路。你明白我的意思吧？所以我觉得文本的具体排版格式其实没那么重要，核心能力在于提示词中承载了多少有效信息，对吧？而且我认为对于语音而言，很多时候回到人类沟通与交互的习惯来看，对很多人来说说话就是比打字轻松得多。如果通过语音能从你这里挖掘出更多有效信息，那就是更好的方式。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Um, I don't think the voice is necessarily low. Like I think it's like more like how much information is in the prompt, you know, like like the model can like you can um and uh and like add some sentences and be like, "Oh, like actually I changed my mind like in the middle of the prompt and it will be able to follow that perfectly." You know what I mean? So I think the like actual format of the text is less important, but then like the ability to like how much information is in it, right? And I think for voice a lot of times, you know, going back to like kind of human age and interaction and like for a lot of people it's just way easier to talk than to like type, you know. Um, and I if that gets more information out of you, like that's better.
+
+</details>
+
+**Speaker A**: 从某种层面来说，在真正启动任务之前，给模型灌输尽可能多的上下文，而不是反复进行提示，似乎正在成为一种最佳实践。我也不太确定。很多时候，比如当我最初尝试 Fable 时，我花足了整整 30 分钟去精心打磨一个长提示词。我认为这种做法其实是对模型自主运行时间越来越长的一种应对。因为当模型已经在循环中自主运行时，你依然很难去中途干预或微调它们。因此我直觉上会花更多时间在最初启动的那条提示词上，反复琢磨和调整它。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: At some level, it feels like just giving the model as much context over prompting before you kick off is a best practice. I don't know. A lot of the times, like when I was first trying out Fable, I spend a solid 30 minutes like really crafting a long problem. This, I think, is a response of models running for longer and longer, right? It's still a little difficult to nudge them as they're in in like, you know, in the loop. But I I just like intuitively spend more time kicking off that first prompt and working with it a lot.
+
+</details>
+
+### 计算配额与长程迭代中的用量消耗
+
+**Speaker B**: 我的个人观点是，如果我是个软件工程师，比如经营着自己的初创公司，我认为我基本上大部分时间会把思考预算限制在最多 20 倍（20X），你明白我的意思吗？当然，代码验证和代码审查可能是两码事。但我经常看到的情况是，人们在反复经历这种拉扯时撞上了速率限制（rate limits）：模型跑了大量的计算和工作，然后你说“噢，我不喜欢这个结果，你能撤回并重做吗？”接着你就在模型原本只要前期多花点时间、或者只要你提供了更充份的上下文就能直接搞定的事情上，陷入了无休止的反复迭代。相反，你现在只是简单粗暴地说：“不行，我不喜欢这个设计，换这个试试”，或者说“你这里搞砸了”之类的，而这往往会极大吞噬掉你的使用额度。
+
+所以我觉得这或许算是一个核心技巧，无论从效率角度还是其他方面来看都是如此。而且，不仅仅是明确最终目标的上下文，还包括更广泛的背景：比如你是在做一个原型演示（prototype），还是在做生产级系统（production thing）？哪里可以放手消耗算力（spend compute），哪里不应该浪费算力？我认为你有时必须明确赋予模型许可权，或者明确禁止它做某些事。因为模型凭直觉并不知道你愿意为这项具体任务投入多少计算资源。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: My personal opinion is that if I was a software engineer, if I was like, you know, just running my own startup, for example, I think I would mostly stick to a max 20X, you know what I mean? Um like maybe verification and code review are kind of like separate things, but I think like what I see a lot of times is people hit rate limits when they're doing this sort of like oh like it did a lot of work and you're like oh I don't like this like can you like undo this and redo it and and then you're like iterating on this like thing that the model could have done if you had like spent more upfront time or given it better context, you know, and instead it's sort of like you're like nope, don't like that design, try this or like you mess this up or something like that and then that just eats up so much more of like you know your usage and so that's like I think maybe like a key like tip both for like efficiency as well right and yeah I think like context and not just like context on like what the goal is you know what I mean is good right like are you building a prototype or is it like a production thing like where can you spend compute or where can you not spend compute like I think you have to give the model permission or like not permission to do things sometimes where you know like it doesn't know intuitively how much you want to spend on this task, right?
+
+</details>
+
+### 推理努力程度与帕累托前沿的收敛
+
+**Speaker B**: 你完全可以通过调节思考努力程度（effort）来控制这一点。我最近正在写一篇相关的博客文章，内容就是关于我们观察到推理努力程度基本上是随着任务复杂度扩展的。例如在安全分析（security）领域，调高 effort 能够带来显著更好的结果，高 effort 与低 effort 相比在评估指标上有极大差异；但在常规软件工程任务中，它带来的提升其实并没有那么夸张，因为 effort 很大程度上都被模型花在了反复验证和边界用例测试（edge case testing）上。因此，能够向模型清晰传达指引——比如“这个问题我希望你投入大量时间去验证并做充分的边界情况测试”——就显得至关重要。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: And you can you can use effort for this. So I'm working on a blog post about that where it's like you know uh if you want for like we see that effort scales with basically the complexity of the task. So for security effort gets like way more results like high effort versus like low effort gets like changes the eval but for software engineering it doesn't change it a huge amount because effort is mostly spent on the verification and the like edge case testing and things like that and so like being able to like give the model that guidance of like hey this problem is something that I think I want you to spend a lot of time verifying and edge case testing you know
+
+</details>
+
+**Speaker A**: 那么在实际模型组合搭配方面呢？目前有 Opus，有支持调节 effort 的 Fable，另外还有 Haiku。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: how about model in the mix so you There's Opus and Fable with effort. There's also Haiku in there.
+
+</details>
+
+**Speaker B**: 是的，没错。虽然现在还没完全变成现实，但也非常接近了：我认为前沿模型（frontier models）在几乎所有任务上都将具备帕累托优势（Pareto dominant）。有时候我觉得 Opus 可能就已经处于帕累托主导地位了。当然，这也取决于后续的具体发展态势以及是否会推出更新版本的 Opus。但我认为未来的趋势越来越明显：超聪明的顶尖模型在处理简单任务时，实际消耗的 token 反而会比其他小模型更少。
+
+这归根结底是因为“验证”（verification）。在极致理想的状态下，足够强悍的模型根本不需要反复自我验证。如果是一个完美的模型，它只需要做一次工作就直接交付完成：“好了，搞定了”。而在使用 Fable 的时候，我经常会忍不住对它说：“老兄，你根本不需要启动 Chromium 浏览器去截那么多张图来确认，我已经看到你搞定了，对吧？”在更高的 effort 级别下，模型会把很大一部分 token 消耗在自我验证上；但如果你面对的是较简单的问题——而软件工程中的很多工作本质上并不极其繁复——比如在 Fable 中设置低到中等水平的 effort，它就能减少在验证阶段消耗的 token。随着模型变得越来越聪明，它们最终会直接达到“一击即中”的境界：比如为了保险起见跑一次 linter，但实际上内心早就确信它完全符合代码规范，甚至连 linter 都不必多跑一次。从长远来看，这反而会比使用小模型更节省 token。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Yeah. It's not quite true yet, but it's very close where I think the frontier models will be paro dominant over like almost everything, you know, like maybe and and sometimes I think I think Opus might be paro dominant. You know what I Like I think depending on like how things uh like shake out if it's like a newer version of Opus, but I think that like increasingly it's just going to be like the smart model is going to be able to like do the simple task for less tokens than the like the the other models basically because of verification. With verification in the limit your model doesn't need to verify, right? if it's a perfect model, it just does the work once and it's like, okay, like you I did it, you know? And increasingly with Fable, I'm like I'm like, dude, you don't need to spin up Chromium and screenshot all of these things. Like I I see it like you you did it, right? And so a lot of the at higher effort you spend more of those tokens verifying but if you're working on simpler problems and a lot of software engineering is like you know like well like in fable like low and mediums ability it can spend less tokens verifying and as the models get smarter and smarter they will just be able to like all right done you know like I can run the lint for sanity's sake but like I like know it lints you know what I mean like you don't even need to do that and that will be so much more token efficient than like the the smaller models basically. Yeah.
+
+</details>
+
+### 领域经验、评测数据与决策记录的显式化
+
+**Speaker A**: 在我们使用端，有没有什么好的实践方法能用来评估自己是否消耗了过多的 effort？说实话，我极其讨厌在这类事情上白白浪费时间。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Is there a good um practice on our side that we can use to see if we're using too much effort? Like I I freaking hate wasting time on that kind of stuff.
+
+</details>
+
+**Speaker B**: 明白，我完全懂你的感受。在我的那篇博客文章中，我给出的粗略分布建议是：代码审查和安全相关任务，努力程度应该设为高（High）或者最大（Max）；而软件工程任务则应该根据不同领域来具体设定。
+
+如果你在做 UI 前端界面之类的工作，低（Low）或者中（Medium）通常就足够了；但如果你是在构建一套核心 API，并且希望确保全面覆盖各种边界用例，那就需要投入更高的 effort。因此，如同我刚才所说，在脑海中建立起模型在这些不同场景分布下表现的心智模型，本身就是工程师工作的一部分。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Yeah. Yeah. I know what you mean. I think like so in in this blog post um my rough distribution is like code review and security should be like high or max basically and like software engineering settings per domain. Yeah. I think like if you're doing like UI or something like that like low and medium I think is you're building like an API and you want to make sure like you cover enough edge cases, you know, and so I think building like I said that mental model of like how things work across these distributions is like yeah part of the job.
+
+</details>
+
+**Speaker A**: 这种划分是更多依赖经验直觉，还是有明确的评估测试基准（evals）？因为我猜想这些随着时间推移应该也会改变。
+
+**Speaker B**: 他做过系统的评测。
+
+**Speaker B**: 是的，我在博客文章中详细分析了所有的 Terminal Bench 评测基准。大约有 70 个测试题目，我清晰地展现了在安全相关的问题上，调高努力程度确实能带来更好的表现。此外，我还仔细翻看了部分运行轨迹（transcripts），重点分析它给出了什么答案、遗漏了什么细节。
+
+在很多时候——这也是我另一个提示词技巧——你可以明确要求模型记录“决策笔记”（decision notes）或“实现笔记”（implementation notes）。因为在它面对的几乎每一个评测问题中，它其实都曾思考过最正确的解决方案，但随后却自己否决了它。它往往会冒出念头：“噢，答案是这个，要是我这样做会怎样？”但接着它转念又想：“噢，可能不该这么做”，然后就略过去继续往下跑了。绝大多数的失败本质上都是这样造成的，你懂我的意思吧？在更高、乃至最大努力程度下，模型因为纯粹不会做而失败的情况其实非常罕见。只要你让它生成这些实现笔记，你就可以进行人工复查，然后指出：“噢，事实上我想让你做的，恰恰是你刚才否决掉的那种做法。”现在的大模型在将这种思考过程浮现出来方面已经越来越强了，比如我在轨迹中看到 Fable 5.1 在输出时也会同时阐明自己的决策逻辑。但在脚手架/评估框架（harness）中把这一要求变得更加显式，效果会更好；而现在我们也在提供自定义 harness 的途径，以便提供更多辅助。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: This is more intuition driven or eval because I'm guessing this would change as well.
+
+**Speaker B**: He has evals.
+
+**Speaker B**: Yeah. Yeah. So what I did in the blog post is I go over all of the terminal bench evals basically. So there are like 70 problems and I'm show that like okay you know like in the security problems it does more um and then I also like look at some of the transcripts just in terms of like how what does it answer what does it forget or something and a lot of times this is another prompting tip I have is like asking it to make decision notes or implementation notes because a in basically every eval problem that it faces it thinks about the correct solution, you know, and decides not to do it, you know, it's like, oh, like here's the answer. What if I did this? And then it's like, oh, probably not, you know, um, and then keeps going. And this is like the majority of the failures, you know what I mean? At like a higher max level, it's very rare that the model just doesn't know how to do something. If you just have these implementation notes, then you can review and you can be like, "Oh, actually, I want you to do this thing that you didn't do." the models are getting better at surfacing that overall. Like I see in the transcripts that fable 5.1 like when it does this output it will call out its decision making as well. Um but making this more explicit in the harness is better. And now we're you know allowing ways of you modifying the harness so you can like you know add some help there. Yeah. Uh yeah.
+
+</details>
+
+### 超越提示词的外部性资产：CLAUDE.md 与决策日志
+
+**Speaker A**: 我想专门指出你刚才提到的两点，我认为这两点实际上已经超越了狭义的“提示工程”（prompting）。第一点是：某条指令如果重要到了极致，它其实根本就不应该放在单次临时提示词里，而是应当沉淀进 `CLAUDE.md` 或者 `AGENTS.md` 这样的规范文件中。这代表了目标、现状、你的背景以及你对系统输出的根本诉求。第二点则是决策日志（decision log）、实验日志，或者任何能够跨越当前会话生命周期、在交互之后依然沉淀下来的轨迹记录。这些属于外部系统架构，目前还没有像 Skills 或 MCP 那样形成统一的标准，它们往往只是纯粹的 Markdown 文件。
+
+首先我想确认一下，这种理解对吗？另外，`CLAUDE.md` 这种形式会被淘汰吗？你似乎一直对它有些公开发表的微词……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So I do want to call out two things that you mentioned that I think actually exist outside of prompting. one is actually like let's let's call it the the prompt that is so important that it shouldn't be in a prompt is actually in cloud MD or agents MD which is like goals right like your your situation your goals the things that you want the the the thing uh and then the second of all is the decision log or the experiment log or whatever log of traces that you might want to actually survive the current session to to do those things those are like externalities that there's no standard there's no it's not like skills it's not like MCP there's no standard it's It's just like it's a markdown file. Uh first of all, is that right? Is cloud MD going away? You have a documented dislike of of
+
+</details>
+
+<!-- chunk 5/13 -->
+
+### AGENTS.md 与 CLAUDE.md 的取舍
+
+**Speaker A**: ……关于 AGENTS.md，不过你们之后会去做支持。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: ...agents.md, but you're going to do it.
+
+</details>
+
+**Speaker B**: 嗯，是的，没错。关于 AGENTS.md，我们确实打算支持。我觉得不同的模型之间差异非常大，你懂我的意思吧？但我意识到，去同时维护好几个不同的指令文件真的太痛苦了。而且随着模型能力不断提升，它们处理简单任务的底线水平也越来越高。所以我认为最终 CLAUDE.md 是一定会消亡的，甚至可能用不了太久。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Um yeah. Yeah. Okay. So, I mean, agent.md, yeah, like we're going to do it. I think it's just like different models are very different from each other, you know what I mean? But I realize that it's like such a pain to maintain different ones, you know what I mean? And yeah, like as the models get better and better, the floor of how they accomplish the simpler task is better. And so I do think in the limit CLAUDE.md goes away. And maybe not even like that far. Like I think like...
+
+</details>
+
+**Speaker A**: 我觉得现在开始一个新项目时，最好一开始就不要放 CLAUDE.md。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I think that right now it might be better to start a new project without a CLAUDE.md.
+
+</details>
+
+**Speaker B**: 确实。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yes.
+
+</details>
+
+**Speaker A**: 我觉得只有在你反复观察到非常特定的失败模式时，才把它们加入到 CLAUDE.md 里面。真正棘手的地方在于，这些失败模式因模型而异。如果你堆积了一大堆失败模式，甚至……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Um I think that like maybe if you see very repeated failure modes, you add them to your CLAUDE.md. The really tough thing is that this changes per model. And so like if you've added a bunch of failure modes or like even...
+
+</details>
+
+**Speaker B**: 你就得搞一份 Haiku.md，还得搞一份 Opus.md。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: ...you need Haiku.md, you need Opus.md.
+
+</details>
+
+### 模型迭代与 Prompt 设计原则：高管沟通与 SCQA 模型
+
+**Speaker A**: 甚至连 3.5 Sonnet 和 3.0 Sonnet 之间都不一样，这真的很烦人。我们并不是故意把事情搞得这么复杂，模型的底层机制就是这样，对吧？可能某个模型身上存在的某种失败模式，到了下一个小版本就完全消失了。如果你一直保留着这个上下文，记录着一长串各种历史失败模式的运行日志，反而大概率会给 Claude 施加过度约束。
+
+我们刚刚为 Skills 添加了评测插件，现在你可以直接评估一个 Skill 是否表现更好，这是我们团队的 Daisy 做出来的。我们正在努力改善这一块，虽然它依然要消耗一些 Token，目前也还不够完美，但我们正在试图帮大家解决这个问题。
+
+就 Prompt 编写而言，我想分享一条我经常对别人说的经验：足够高阶的 Prompt 提示词工程，与足够高阶的高管沟通本质上别无二致。我经常推荐 Heavybit 出品的高管沟通工作坊，那是我职业生涯中见过最出色的培训。他们传授了一套叫 SCQA 的模型，大家可以去 Google 搜一下。人们其实已经做了几十年的“提示词工程”了，只不过以前管它叫高层沟通——就是当一个人需要向组织架构下方的成千上万人传达信息时所用的方法。
+
+SCQA 分别代表：情境（Situation）、冲突（Complication）、问题（Question）与解答（Answer）。这就是撰写执行备忘录（Memo）的标准范式。当然，有时候你手上并没有确切的答案，但你至少可以把 S、C、Q 梳理得清清楚楚，他们那里也有很多实际范例。我把这个线索留在这里，供想深入探索的人参考。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Uh well even Sonnet 3.5 versus Sonnet 3, you know, like it is annoying. Like we don't do this on purpose, you know what I mean? It's just like how the models work, right? And so like maybe Sonnet 3 had this failure mode that Sonnet 3.5 doesn't. And if you keep this context with this running log of a bunch of different failure modes, they will probably overconstrain Claude, you know. And so we just actually added eval plugins for skills. And so now you can eval if a skill is better. I think Daisy on our team did this. And so yeah, we're trying to work on this. We know you still have to spend tokens on it and it's not perfect, but we're trying to help out with this problem.
+
+And so as far as prompting goes, the one tip I want to offer is something I have told people a lot: sufficiently advanced prompting is indistinguishable from sufficiently advanced executive communication. So I've actually referred to this: it's the executive comms workshop from Heavybit that is the best I've ever seen in my career, and they teach this thing called the SCQA model. Just Google it. It's a thing—people have done prompting for decades, it's just called executive communications. It's like when one person has to communicate to thousands of people down the org chart, this is what you do. Situation, Complication, Question, and Answer. It's how you write the memo. Obviously sometimes you don't have the answer, but you can actually at least list out the S, C, and Q, and then they have some examples in there. So just leaving breadcrumbs for people if they want to explore.
+
+</details>
+
+### 被低估的技巧与 ELI5 技能插件
+
+**Speaker B**: 在继续探讨之前，我还想问你，还有哪些被大家低估的技巧、或者大家尚未充分利用但能在 Claude Code 中获得巨大价值的方式？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: I mean before we move on, I want to ask you any other underrated tips, ways people could get a lot of value from Claude Code that they're not using?
+
+</details>
+
+**Speaker A**: 我觉得很多技巧都在那份“Unknowns”文档里，我给出了很多示例 Prompt，比如用它来进行头脑风暴，或者在任务结束后让它考考你。
+
+我们实际上添加了一个“Explain It Like I'm Five”（像给五岁小孩解释一样）的 Skill。它的提示词非常简短，甚至里面根本没有出现“explain it like I'm five”这几个字。这条提示词的核心要义就是“用极简的文字呈现全局大图”（big picture in few words），这就是最核心的灵魂，但效果出奇地好。我之前还在推特上发过这个，命令类似于 `/eli5`，你可以把它作为插件安装。它在剔除废话、直击核心方面做得好得多，输出就像“对，核心就在这里”。而且生成的图表也非常清晰。
+
+我觉得关于 Artifacts 经常出现的一个问题是：里面塞了太多密密麻麻的文字，以至于人们根本不会去读。而这个技能让它大大简化了。这其实源于 Anthropic 内部人员在排查极其复杂的问题事故时，经常一头雾水地问“这到底是怎么回事”。所以我觉得这个功能真的非常棒。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah, I mean I think a lot of them are in this unknowns doc. I give a bunch of example prompts, like using it for brainstorming, using it to quiz you after.
+
+Um we added this like "explain it like I'm five" skill actually which is a very short prompt, and it doesn't even say explain it like I'm five. Basically the key word of this prompt is big picture in few words, you know, like that's like the main thing, and it is shockingly good, you know what I mean? I think I tweeted about this basically and it's like `/eli5` and you can install it as a plugin, but yeah it's like way better at just cutting through the BS and being like yeah yeah exactly right here. So the diagrams are like quite clear. I think one of the things that is true with artifacts is like they put too much text in and people are not reading the artifacts, you know, and so like this simplifies it a lot more. And yeah, this came out of like just people at Anthropic like going through very complicated incidents and being like what is happening, you know. So this one I think is great, yeah.
+
+</details>
+
+### 用提问自测防止认知偏差与“AI 废话”
+
+**Speaker B**: 我对应的做法其实是：测试你自己的理解程度，让它给你列出几个选项……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: My version of this is actually the... it's like test your understanding, give you a few...
+
+</details>
+
+**Speaker A**: 列出几个选项，然后如果你选错了，就说明你自以为正在发生的事情与实际发生的事情之间存在认知偏差。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: ...choices, and then like if you actually get it wrong you have a mismatch between what you think is happening versus what's actually happening.
+
+</details>
+
+**Speaker B**: 是的，没错。我觉得这类理念大家嘴上都特别喜欢讨论，但现实中极少有人真正去实践。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Yeah. Yeah. I think this is one of those things that everyone loves talking about and then very few people really do. Like I, you know, I think...
+
+</details>
+
+**Speaker A**: 是啊，大多数人就是不想被考问，你懂我的意思吧？遗憾的是，我觉得这恰恰是我们必须……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah. Most people just don't want to get quizzed about something. You know what I mean? Unfortunately, I think this is one of the like...
+
+</details>
+
+**Speaker B**: 这是我们需要去……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: ...things that we need to like...
+
+</details>
+
+**Speaker A**: “向你提问”的反面是什么？在做事之前提问；而这里是在事情做完之后提问。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: What's the opposite of ask you a question? Ask the question before the thing. Uh this is after the thing.
+
+</details>
+
+**Speaker B**: 没错，正是如此！这是一种让你脚踏实地的好方法——让你确认自己是否真的清楚自己在干什么。最糟糕的情况莫过于别人丢给你一堆粗制滥造的“AI 废话”（slop），而他们自己既没弄懂当初要的是什么，也没看懂生成的输出是什么。遇到这种代码，别人心里只会想：“老兄，我真不想看这玩意儿，你自己到底知不知道它写的是啥？”所以，你应该给自己定一条规矩：在把成果提交出去之前，你至少得清楚代码里到底实现了什么。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Exactly. Yeah. Yeah. It's a good way to stay grounded of like do you even know what you're doing? Right. The worst case is when people send you slop and they haven't understood what they're asking for or what the output is and it's like, dude, I don't want to read this. Do you even know what it is? So, you know, you make it a rule for yourself that before you send stuff, you should at least know what's implemented.
+
+</details>
+
+**Speaker A**: 对。不过你可以把这个做成一个 Mod（拓展模块），你可以构建自己的 Mod 来确保自己能完成自测。我们可以好好聊聊这个。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yes. But so, you could make this a mod and you could build your own mod to like make sure you test it. So, yeah, we can talk about that.
+
+</details>
+
+### Claude Mods 架构：执行生命周期、分叉代理与上下文缓存
+
+**Speaker B**: 那我们直接进入正题吧。到底什么是 Claude Mod？这张架构图展示的又是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Let's get right into it. What is Claude Mod? Um, and what is this diagram showing?
+
+</details>
+
+**Speaker A**: 好的。Claude Mods 本质上就是允许你定制整个 Claude Code 执行运行环境（Harness）的能力。如果你有任何需求，请随时告诉我们，我们会持续扩充它的能力。它支持命令行 CLI，也支持桌面端 Desktop；未来或许还会支持 Cloud 网页端环境，我们正在努力让它具备极强的可扩展性。
+
+你可以看到这张参考架构图，我不想让大家觉得眼花缭乱。从宏观架构上看，你可以同时定制运行环境的**执行逻辑**以及运行环境的**用户界面（UI）**。就像 Boris 展示的那个俄罗斯方块（Tetris）示例，那就是对 UI 的定制，直接在交互界面里呈现游戏。
+
+但假设你想实现前面提到的那个机制——在每个项目或任务完成后测试你的假设与理解程度，你会怎么做呢？你可以让 Claude 帮你编写这个插件。它会在每次 Prompt 执行后启动一个分类器。具体来说，在每一轮 Assistant 回复结束时，它会衍生出一个子代理（Subagent）或者说分叉代理（Forked Agent）。
+
+从机制上讲，分叉代理会直接复用并保持现有的 Prompt 缓存（Prompt Cache）。这是一个反直觉却极其强大的特性：你可以随时分叉出一个分支去做一次微小的请求，而它的成本极其低廉，因为整段上下文的 Prompt 缓存已经完全命中就绪了。这样你就可以让它判断：“当前这项任务是否已经完成了？”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah. Okay. So Claude Mods is basically you can customize the entire Claude Code harness and we're going to... if you have requests, please let us know, we'll add more and more. This works for CLI, it works for desktop, maybe it will work for Cloud web in the future, I don't know, we're trying to make this very, very extensible.
+
+You can see this reference sheet, I don't want people to get overwhelmed by it. At a high level, you can customize both the execution of the harness and the UI of the harness. And so like you see in that Tetris example from Boris, that's like customizing the UI, right? Like basically showing Tetris in the game.
+
+But like let's say that you wanted to do this thing where you tested your assumptions or tested your understanding after every project, right? What you would do is you would ask Claude to make this plugin. It would spin a classifier after every prompt basically. And so like at the end of each turn, you would spin off a subagent or like a forked agent. Basically, a forked agent maintains the prompt cache, right? So it's one of those unintuitive things where you can fork and do like a little request and it'll be very cheap because the entire prompt cache is done. And so you can be like, "Has this task been completed?"
+
+</details>
+
+**Speaker B**: 这就是你们实现“顺便提一句”（BTW）这类功能的方式吧。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: This is how you do BTW and all those.
+
+</details>
+
+**Speaker A**: 是的，没错，底层正是基于这种分叉代理机制。
+
+你可以在分叉的子代理中设定逻辑：“这项任务是否已经完成了？如果完成，返回 true。”然后在你的 Hook 钩子或者插件 Mod 里（或者直接在子代理中），你可以告诉它：“如果返回 true，请给我生成一份测试测验，包含若干问题和选项答案，并以 JSON 格式返回。”接着你解析这个 JSON，并直接在 Prompt 输入框上方渲染出这组自测题目。
+
+这种做法虽然在 Token 上有一点点额外开销，因为在 Assistant 每轮回复结束时都要运行一次，但由于只是轻量级分类，成本非常低。这样一来，你就能直接看到测验，Claude 会自动帮你完成这一切，你完全不需要刻意去提醒自己。
+
+我们之前讨论过的许多技巧其实都可以这样落地。比如“实施记录与假设记录”——你现在完全可以为它新增一个工具。比如我正在添加的一个工具叫“注册假设”（Register Assumption，目前我是这么称呼它的，之后可能会调整）。这就是一个 Mod：你赋予模型一个 `register_assumption` 工具，每次它在思考或执行时有关键假设，就会追加到列表中，并在最终呈现给用户。
+
+另外我还在做的一个 Mod 是模型路由器（Model Router），也就是在内部对不同模型进行智能路由。不过顺便提一句，我们之所以没有默认开启全自动模型路由，是因为它其实是一个……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Uh yeah. Yeah. The underlying forked agent. Yes. But so you can in the forked subagent you can say like, "Has this task been completed? If so, return true." And then in your hook or in your plugin mod—or sorry, like in the subagent probably—you would say like, "If true, give me a quiz, you know, give me questions and answers in a JSON format." And then you'd parse it, and then you display above the prompt input basically this list of questions, right?
+
+And so this is something that's like slightly token-intensive because you have to sort of do it after every end of the assistant turn, but it's like a lightweight classification and then you can get this quiz, and you'll see Claude will always do it for you. You don't need to remember to do it.
+
+There are lots of these tips that we've talked about, right, where it's like, oh, implementation notes. You can also add a tool for implementation notes now. And so, like this tool that I'm adding is like "register assumption", I think is what I'm calling it, but maybe I'll change it around. And this is a mod. And so you give it a register assumption tool and then it will keep a list. Every time it does, it'll add to the list and then at the end it will display those assumptions.
+
+You know, another mod I'm working on is a model router, and so like internal Claude model routing, right? So this is... I want to say the reason we don't do model routing by default is like it's a...
+
+</details>
+
+<!-- chunk 6/13 -->
+
+### 自动路由与模型选择的权衡
+
+**Speaker B**：……确实是个难题。你懂我的意思吧？而且在这种情况下……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: ...hard problem. You know what I mean? And like
+
+</details>
+
+**Speaker A**：你很容易就会把它搞错。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> you will get it wrong.
+
+</details>
+
+**Speaker B**：对，没错。你一不小心就会把像 Fable 这样轻量的模型用在一个棘手的难题上，或者反过来，把像 Sonnet 这样的大模型用在……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> Yeah. you like yeah you will like accidentally use like fable for a hard problem or sonnet for
+
+</details>
+
+**Speaker A**：你现在有自动审批（auto-approve）机制，但你还没有自动模式（auto-mode）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> you have auto approve but you don't have auto mode
+
+</details>
+
+**Speaker B**：嗯，以后肯定会有自动相关的机制，但目前确实还没有类似自动路由（auto-routing）这样的能力。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> well you will have auto like like you don't have like auto routing or something
+
+</details>
+
+**Speaker A**：也就是针对模型选择器的自动模式。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> auto mode for model picker
+
+</details>
+
+**Speaker B**：对，对，完全正确，正是如此。所以说……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> yeah yeah exactly exactly so
+
+</details>
+
+### 插件体系与可变软件：究竟是为谁设计的？
+
+**Speaker A**：我大致想问的核心问题其实是：你们究竟要把这个系统开放到什么程度？用户在多大程度上必须去深入思考这些机制？比如说，当你谈到 Prompt Caching（提示词缓存）以及构建一个模型路由器（router）时，表面上看，用户似乎可以轻而易举地写一个按单次查询来进行路由的 Mod（模块/扩展），但这样做可能瞬间就会破坏掉 Prompt Cache，从而极快地把额度或预算彻底消耗光，对吧？所以我更想弄清楚的是，这样一份产品规划文档（product doc）究竟是什么样子的？它到底是指向谁的？这纯粹是为超级用户（power users）准备的，还是说任何普通用户都应该能够轻松上手使用？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> I'm getting the rough question of like how much do you open this up and how much do people have to think about this like when you talk about prompt caching and building a router uh it seems like you could easily build a mod that routes per query and I'm just killing my plan very fast, right? I guess my question is more so like what is like a product dock like this look like, right? Who is it for? Is it for power users? Is it everyone should be able to
+
+</details>
+
+**Speaker B**：那绝对是面向超级用户的，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> definitely power users, right?
+
+</details>
+
+**Speaker B**：是的。我的意思是，我认为它确实主要是给超级用户用的。但 Claude Code 本身的特性就在于，有非常非常多的人本身就是超级用户，你知道吧？因为在这样一个生态里分享东西是非常容易的。你可以想象，只要有某一个人构建出了一个非常优秀的路由器 Mod，而且它在运行过程中完全不会频繁破坏提示词缓存（Prompt Cache），那么其他人就可以直接拿来复用，将它们像积木一样组合起来。关于这套插件体系（plugins），另一个特别酷的地方在于，插件之间可以相互挂钩（hook into）并彼此组合。就比如我自己写了一个 Mod，它可以在顶部界面生成一个模式选择器（mode selector），而其他任何插件都可以把自己注册为一个可选的模式。这样一来，自动路由本身就可以直接作为其中的一种模式存在，对吧？或者你也可以拥有一个专门的“Artifact 模式”（artifact mode），在这种模式下，模型主要通过 Artifact 与你进行交互。这有点类似于你在计划模式（plan mode）之间自由切换。因此你可以不断创建出越来越多这样的模式，但更有趣的是，创建模式的能力本身也是一个 Mod。这里面蕴含着极其丰富的扩展空间，但我们的初衷依然是希望把它做得足够简单易用。我们希望达到的效果是：你可以直接安装别人做好的成果，或者直接跟 Claude 对话聊天，我们会确保 Claude 能够深刻理解类似 Prompt Caching 这样的底层细节与技术权衡，以便在适当时机向你发出预警。对于 Claude 而言，处理这种事情其实并不算极其复杂的行为逻辑；我们只需要为它配备一套关于如何编写 Mods 的良好 Skill（技能定义）即可。我们会继续观察这种生态如何演变。但我深信，这其实代表了未来“可变软件”（mutable software）的一种早期雏形——它展示了生成式软件（generative software）如何能够让用户在保障安全的前提下进行深度自定义。只要这种机制被允许，理论上你将能够定制任何一款软件。而且我认为，理想情况下，未来会有越来越多的应用程序采用类似的设计哲学。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> Yeah. I mean, I think it is power users, but like the nature of claude code is that so many people are power users, you know, because it's easy to share things, you know, like you can like one person can make a good m router thing that doesn't break prompt cache all the time and then you can like, you know, sort of compose them. Another cool thing about the plugins is that they can hook into and compose with each other. And so I have like a uh a mod that will like create a mode selector at the top and any plugins can register to be a mode. And so like the auto router can be a mode, right? Or like you can have a mode that's like artifact mode where it's like it it primarily talks to you in artifacts. It's kind of like, you know, you you can toggle between plan mode, you know what I And so like you can create more and more of these modes, but the ability to create modes is in itself a mod, you know, and so there's a lot of richness here, but we do want to make it fairly easy. We want to be make it so that you can just like install someone else's, you can talk, you can chat with Claude and you know, we'll like make sure that it understands the nuances of things like prompt caching and stuff so it can like warn you. This is like not extremely complicated behavior for Claude, I think, but we should have just a good skill on how to make mods. Um, and yeah, we'll see how we go. But I I do think that this is like a preview of like mutable software, you know, and like how like uh generative software just like you can customize safely. If enabled, you could customize any piece of software. And I think that more and more apps ideally do something like this, you know.
+
+</details>
+
+### 定见工作流与高自由度的博弈
+
+**Speaker A**：顺便提一句，你之前还发过一条非常有意思的推特，内容大概是说存在一个“无限印钞按钮”（infinite money button），那就是让你的 SaaS 软件能够直接被各类 Agent 消费和调用。我觉得“可变软件”这个概念极其引人入胜，而且业内也有其他人尝试过这个方向。但我认为真正的难点和阻碍往往在于：一旦软件被设计成无所不能、可以做任何事情，用户往往就会开始感到困惑和无所适从。因此，在现实中通常能够跑通并取得成功的产品，往往都是单一且具有强烈定见（opinionated）的工作流程。而目前我们聊的这个方向，显然是站在了“减少定见”的这一侧。它更像是：把更强大的能力全面下放给超级用户，并且我认为这很可能是由 AI 所彻底解锁的一种全新可能——在 AI 的辅助下，你只需要通过 Prompt 描述，就能直接生成你想要的任何东西。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> And by the way, we have you have another cool tweet about how you know there's the infinite money button which is like make your SAS uh consumable by agents. I think mutable software is interesting and uh you know other people have also tried to do it. I think the hurdle comes when you can do everything then people users get tend to get confused. So usually the stuff that works is just like one opinionated flow. This is in the side of less opinionation. It's just like well more power to power users and I think probably unlocked by AI where like you can just prompt for whatever the thing it is.
+
+</details>
+
+**Speaker B**：是的。或者完全可以存在某种特定的 Skill，由它来把这些定见（opinions）注入进来，你懂吧？然后通过这种方式把两者融合起来。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> Yeah. or there can be a skill that gives the opinions you know and and then yeah
+
+</details>
+
+### 构建系统思想的借鉴与团队协作内幕
+
+**Speaker A**：考虑到大家对 TypeScript、构建系统（build systems）以及类似技术体系都有一定了解，我对具体做这个项目的团队其实非常好奇——我不太清楚你和他们之间的交集有多深——他们是否有从类似 Babel、Webpack 这些经典构建工具中汲取灵感？因为整套体系听起来跟那些老派构建工具非常相似，比如插件生态系统以及插件之间能够彼此相互组合等特性。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> so knowing a little bit about like Typescript and build systems and all these things uh the closest I I'm actually very curious the team who worked on this I don't know how close you were to them uh if they drew any inspiration from build systems like Babel Webpack all these all these like old school things because it sounds very similar like the plug-in ecosystem those things where they can compose to each other
+
+</details>
+
+**Speaker B**：嗯，虽然我没有深入参与到最底层的技术细节中，但我确实知道这是 Bun 团队的一位核心成员和 Claude Code 团队的一位成员之间深度合作的产物。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> yeah I mean I'm not deep in the technical details but I do know it was a collaboration with someone on the bun team and someone on the claude code team
+
+</details>
+
+**Speaker A**：果然是构建系统的专家。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> build system.
+
+</details>
+
+**Speaker B**：对，没错，完全正确。这真的非常令人兴奋。不过话说回来，现在的 Agent 确实已经能够在你的软件内部实现这种非常复杂的可扩展性了。所以说，如果你在经营一家初创公司，这正是另一个极好的切入点：你完全可以直接向 Claude 提问，比如问它：“嘿，我们能不能做一个插件扩展系统？它大概应该长成什么样？”诸如此类。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> Yeah. Yeah. Exactly. It's it's very exciting. But yeah, like agents can just do this very complicated sort of like extensibility into your software now. And so um yeah, like you know another reason to like if you run a startup like you can just prompt cloud and be like hey like could we make an extension system like what would that look like you know?
+
+</details>
+
+**Speaker A**：确实是这样。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> Yeah. Yeah.
+
+</details>
+
+### 从传统 Hooks 到 Mods：进程内控制与 UI 交互革命
+
+**Speaker A**：我其实特别好奇，因为过去我们也有 Hooks，也有各种 Plugins 插件体系。那么具体而言，Mods 究竟能够实现哪些以前那些机制完全做不到的事情？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> And I just really wonder like you had hooks in the past and plugins all these things. So what specifically will mods be able to do that those things could not do
+
+</details>
+
+**Speaker B**：在内部实现层面吗？我们最初其实把这个叫做“函数钩子”（function hooks）。这个名字能大致让你对它的机制有所概念：传统的 Hooks 本质上就像是注册一个特定事件，然后在事件被触发时去调用某个外部脚本。而 Mods 则是完全在 TypeScript 运行时环境的内部直接执行逻辑。因此，你能够获得很多原本无法拥有的原生优势，因为系统会将当前执行作用域中的大量上下文信息直接暴露给你。举例来说，你可以直接读取当前对话已经进行了多少轮（turns），已经消耗了多少 Token，当前所有的具体消息列表是什么等等——你可以直接访问并利用这整个消息数组。此外，你能够注册和监听的钩子事件要多得多，能够挂载的交互点也丰富得多。更关键的是，因为这一切都是在同一个进程内部原生运行的，你随时可以直接衍生出子 Agent（sub-agents）来处理特定的上下文信息；当子 Agent 返回结果后，你可以直接解析并处理它们返回的数据；你还可以通过结构化输出（structured output）来约束并接收结果。最后，你甚至能够直接去修改和定制用户界面（UI）——而在传统的钩子机制中，你永远不可能做到修改 UI 这一点。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> internally? We were originally calling this function hooks. And so like that's like gives you a little bit of an idea where like hooks sort of register a like an event to happen and then like a script to call basically. And this basically inside of the like TypeScript runtime is running things. And so like you get some benefits of just like it has a bunch of things in the scope with like for example like how many turns is in this conversation right like how many tokens have been used like et like what are the messages things like that so has a bunch of messages that can be used and then it's just like a lot more hooks basically so we have you know like or a lot of lot more like you know fun like things you can register on and then you can do because of the because it's all happening in process you can uh spawn sub agents you know with for context and context and stuff and like that will return you can parse the results of those you can use structured output to sort of like return them um and then you can modify the UI which you can never do in in hooks. Yeah.
+
+</details>
+
+### 运行时 Harness 定制 vs. 可视化 Artifacts
+
+**Speaker A**：修改 UI 这点确实很有意思，这也解释了你为什么之前展示过那个俄罗斯方块（Tetris）的示例。那么这种 UI 修改能力是否也延伸到了 Artifacts 上？我猜应该是可以的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> Yeah. So, modify UI, this is why you show the Tetris example. Does it also extend to artifacts? I assume it does.
+
+</details>
+
+**Speaker B**：其实 Artifacts 更像是另一种截然不同的定制维度。我目前正在开发的一个 Mod 是一个仪表盘 Mod（dashboard mod），它会以某种方式引导 Claude 去维护一个以 Artifact 形式呈现的交互式仪表盘。但 Mods 和 Artifacts 这两者的定位稍微有些正交，或者说它们其实是在以不同的维度相互补充与组合。Mods 更多是深入到你的 Claude Code 运行载体（harness）内部，直接去改变底层的 Agent 执行循环（agent loop），UI 的呈现只是它顺带带来的一种附加增益。而 Artifacts 则是当你希望以高度交互的方式、从宏观全局视角去审视信息时所使用的媒介，它所能提供的交互承载能力（affordances）要远远大于单纯的终端界面（TUI），甚至比我们桌面客户端里的原生空间还要大。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> You like artifacts are kind of like a different way of customizing it, you know, like you can definitely one of the mods I'm working on is like this dashboard mod which will like sort of prompt Claude to maintain a dashboard that's an artifact. But they're kind of like slightly orthogonal or not orthogonal. They compose with each other in different ways. like mods are like a little bit more like in your cloud code harness uh changing the agent loop, you know, and like the UI is like an added benefit. Um, and then artifacts are just like you want to, you know, see things at at high level, very inter highly interactive, you know, like the affordances can be a lot bigger than, you know, like a 2y or even in our desktop.
+
+</details>
+
+**Speaker A**：我猜你们之后应该会写一篇专门的深度博文来详细阐明这两者之间的区别。因为就目前而言，用户完全可以自己编写一个循环逻辑，让模型输出一个充当交互式仪表盘的 Artifact；但与此同时，用户现在也可以借助 Mod 来实现同样的目标。在我们对 Harness 底层机制所知甚少的情况下，直接去对一个运行载体（harness）进行 Hack 和改造，这里面显然有很多值得深入探讨的思考。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I'm guessing you'll have a good blog post on the differences cuz right now you can also, you know, make a loop that outputs to an artifact that's an interactive dashboard, but you can also do it with a mod. There's just some thinking about making a hack uh hacking on a harness when we don't know much about the harness, right?
+
+</details>
+
+### 降低认知负担：下一步动作与主动技能调用
+
+**Speaker B**：关于 Mods，真正让我感到无比兴奋的一点是：在日常使用 Claude Code 的过程中，有太多事情是全靠用户自己死记硬背的。你想想看，你经常需要在大脑里记住：“哦，我得先执行这一步，然后调用仪表盘 Skill 来跑循环；或者在做完之后，我得去测试验证我的假设。”我认为，如果能通过那些轻量级分类器（classifiers）等机制把这些逻辑全部封装进 Mod，你就可以明确声明：“这些是我关心的检查项，这是我想要执行的操作流程。”这样一来，用户就不必在脑子里同时记忆这么多碎片化的操作了。比如我目前正在打磨的另一个 Mod，就是一个“下一步动作”（Next Steps）Mod……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> Well, something I'm excited about with mods is like there's so much things for claude code that you just have to remember, you know? I mean, you're like, "Oh, like let me do this and then let me call the dashboard skill that does the loop and things like that and or like let me test my assumptions afterwards." And I think like if you do all of these things using these little classifiers and stuff and you're like, "These are the things I care about. This is what I want to do." Um, you can like you don't have to remember as much. One more like mod I'm working on is a next steps mod that
+
+</details>
+
+**Speaker A**：我正想提这个！我平时自己就写了一个 Next Step Skill，我每次都会主动运行它来获取下一步建议。那么这个 Mod 能否直接访问你已有的各类 Skills 呢？这正是我非常好奇的一点……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> I have I was going to say I have a next step skill. I always run next steps. And does it have access to your skills? Like this is one of those things where I'm like
+
+</details>
+
+**Speaker B**：我认为是可以的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> I think so.
+
+</details>
+
+**Speaker A**：好的，明白了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> Okay. Yeah.
+
+</details>
+
+**Speaker A**：需要有明确的访问权限，它始终具有……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: >> Need specific access to it always has
+
+</details>
+
+**Speaker B**：我认为这在 Prompt 层面上需要专门的引导设计，以便让模型能够清晰获知你当前配置了哪些 Skills。因为我感觉在整个交互过程中，Claude 有时会中途遗忘掉一部分已有的技能。但无论如何，“下一步动作”的核心理念非常棒：它能够在事情发生之后自动提示你，比如“嘿，刚才发生了这个情况，建议使用 Explain Skill 来向你解释清楚具体原因”，因为刚才发生的变化看起来相当复杂；或者提示你“调用某个专门的处理技能”。这看起来就像是你要求模型在每一个细微变更点上都进行深度迭代，去寻找更好的提示方式。通过在这个决策节点上投入更多的算力进行思考，往往能带来极大的提升。而且最理想的是，它应该始终以多选题（multiple choice）的形式将选项直接呈现给用户。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: >> I think there's like specific prompting I guess to like know your skills kind of like like I think Claude forgets them sometimes throughout like uh the thing. But anyways, the idea of like yeah next steps that also are like oh hey this has happened use the explain skill to explain to you what happened because this seems like quite complex you know or like uh yeah use your unknown skill. It looks like you are like asking the model to like you know iterate on these small changes. It seems like you could prompt better you know like what if you did this right? So like I think um yeah like spending more compute there. Yeah. Yeah. Yeah. And it should always come out as multiple choice. Uh we have we have a I have my
+
+</details>
+
+<!-- chunk 7/13 -->
+
+### 下一步技能与主管 Agent 架构
+
+**Speaker A**：我的“下一步”（next step）技能大致是这样的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: My next step skill is like this.
+
+</details>
+
+**Speaker B**：好的，太棒了。你可以直接参考借鉴。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Okay, perfect. Yeah, you can steal.
+
+</details>
+
+**Speaker A**：是的。不过对我而言，我认为模型始终需要被不断提醒：“你在这里究竟想要达成什么目标？”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah. Yeah. Yeah. Like but like for me it's I think models really always need to be reminded what are you trying to do here?
+
+</details>
+
+**Speaker B**：没错。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah.
+
+</details>
+
+**Speaker A**：让它通读整个对话记录，然后反思：“噢，最初的目标是这个吗？你给出的方案真的解决问题了吗？你是不是偷懒了？”如果你偷懒了，也许事出有因——也许你需要我的批准，也许你想提出两种不同的建议。所以这有点像是“向你提问”（ask you a question）或“访谈我”（interview me）技能的变体。这就是关于“下一步”的逻辑。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Look at the whole transcript and go like oh was this original goal? Did your solution actually solve it? Were you lazy? If you're lazy maybe there was a reason. Maybe you needed approval from me. Maybe there's two things you want to suggest. So it's a little bit like the modification of the ask you a question or interview me skill. So it's next steps.
+
+</details>
+
+**Speaker B**：对，完全正确。而且使用 mods 来做这件事的好处在于，你可以把它作为一个派生的子 Agent（fork sub agent）来运行，这样执行完毕后它就不会残留在主上下文里。所以你的设计思路就是：模型在进行它的核心执行，同时你几乎拥有一个类似主管（supervisor）的角色，确保你能把接下来的步骤走好。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Yeah. Exactly. And again the benefit of doing it with mods is you can do it as a fork sub agent and so it doesn't remain in the context afterwards. So you have this idea of like okay the model is doing its execution and you have this almost like supervisor that is making sure that you can do the next steps well. So yeah.
+
+</details>
+
+**Speaker A**：我确实有两个面板，而且我经常尝试让一个主管角色来维持高层级的宏观上下文，然后把具体的实现细节交给另一个 Agent。但我感觉随着模型的迭代演进，很多这类架构都会被抽象掉。就像你半小时前提到的 Harness 工程的“苦涩教训”（bitter lesson），而我们现在似乎正处于另一个极端。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I do have two panels and like I often try to have a supervisor thing keep the high level context and then the implementation detail in another agent. I feel like a lot of this abstracts away as models change. You know, half an hour ago you said bitter lesson of harness engineering and we're on the other extreme right now.
+
+</details>
+
+**Speaker B**：对，正是如此。如果一切皆可定制，那 Claude Code 本质上到底是什么？正如我昨晚跟你探讨的那样。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: So yeah, exactly. If everything's customizable, what actually is Claude Code, right? And which I talked to you about last night.
+
+</details>
+
+### Harness 工程的“苦涩教训”与演进
+
+**Speaker A**：是的。我认为“苦涩教训”本身是反直觉的。当然，我们在这里稍微引申了这个概念，它原本更多是关于算力与规模化扩张（scaling and compute）的规律。但我用它作为一个近似的比喻，是为了说明各种 Harness 会非常迅速地被淘汰，而且它们的演变方式往往出人意料。
+
+一个最显而易见的例子就是从普通聊天界面过渡到 Agent 架构，你必须为它们配备全新的工具。而现在这种全新的形态则是：它能够修改自身的 Harness。这种自身 Harness 的自我演化循环，正是利用其能力的一种途径；或者它能够构建出一个工件（artifact）。
+
+我对此的思考逻辑是：模型的智能水平越来越高，目前它们展现出的智能已经远超普通软件工程任务所需。你看 Terminal Bench 上的那些题目，几乎是在要求解决雅可比猜想（Jacobian conjecture）——倒也没有那么夸张，但它们确实极其复杂，如果换作我作为一名普通的软件工程师，大概率根本解不出来。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah. I mean, I think the bitter lesson is unintuitive in terms of like we're kind of misusing a little bit of the bitter lesson here where it's more about scaling and compute and stuff. But I think there is something where I use it as an approximation here to say that harnesses go out of date very quickly, and how they change is unintuitive. So the big obvious example is from chat to agents where you had to give them entirely new tools. But I think this new version of oh it can modify its own harness, right? This own harness loop is a way of using its capabilities, or like it can build an artifact. And the way I think about it is the models have more and more intelligence and they're so much more intelligent now than the average software engineering task. Like you look at the Terminal Bench ones and they're like solve the Jacobian conjecture. Not really, but they're quite complex. Like I would not have been able to do this really as a software engineer.
+
+</details>
+
+**Speaker B**：你拿到 TB4 还是 TB2 了？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: You get to TB4 or TB2?
+
+</details>
+
+**Speaker A**：是 TB3。是的，它们确实相当复杂，但核心目标依然是交付用户价值。就像你说的，面前有着无穷无尽的任务空间。因此，消耗算力的方式就是让人类保持在循环之中（keep the user in the loop），确保最终能够做出正确的决策，产出正确的输出。工件（artifacts）和 mods 本质上就是消耗这种高级智能的方式。我认为这就是下一步的发展方向。
+
+所以 Claude Code 具备 Agent 循环的核心要素，而这些要素正变得日益复杂：它需要沙箱（sandbox）来安全运行；需要自动模式（auto mode）来把控权限与审批；需要计算机使用（computer use）能力、MCP 以及各种访问数据的方式；还需要网页搜索（web search）与网页抓取（web fetch）。随着模型能力越来越强，底层核心的 Harness 实际上必须做到非常复杂且高度安全，但你与它交互的具体形式却可以变得非常灵活多样。
+
+从 Claude Code 团队自身来看，还有哪些关于 Harness 工程的最佳实践？我觉得之前经历过 Plan 模式阶段，现在用得没那么多了，我们现在有了 Auto 模式；而在某段时间你们大幅删减了系统提示词（system prompt），去掉了示例。那么对于 Harness 工程而言，还有哪些最佳实践呢？
+
+我认为这里存在一条分叉的演进路径：在未来的某个时刻，模型肯定能够直接通过“氛围编程”（vibe code）一键生成与 Claude Code 完全一致的版本，即便包含我前面提到的所有复杂机制——比如自动模式、计算机使用等等，模型终究能够单次直接生成出来。但我认为它们现在已经能单次生成较简单的 Harness 了。
+
+因此，有些时候用户并不需要这套全功能体系。如果你不需要计算机使用，或者不需要所有这些繁复的功能，以往你可能不得不使用类似 Agent SDK（封装了 Claude Code 的产物）来构建，我也曾建议大家这么做，因为从零搭建一个 Harness 实在太复杂了。而现在这层逻辑得到了进一步抽象，我们有了 Claude 托管的 Agent（Claude Managed Agents），它在承载底层复杂度的同时，依然允许你编写一个非常精简、完全针对具体任务场景定制的 Harness。
+
+我认为这里存在一种“杠铃效应”（barbell effect）：对于非常复杂的编程任务或高度复杂的业务场景，你应该直接使用我们官方成熟的 Harness；而对于大量相对简单或特定领域的场景，你可以直接构建自己的专属 Harness，因为 Claude 构建 Harness 的能力已经显著提升，并且我们提供了类似 Managed Agent 这样的 Harness 原语基础设施。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: TB3. Yeah. Yeah. They're quite complex, but the goal is still to deliver user value, right? And like you said, there's like this infinite space of things to do. And so the ways like you spend compute are to keep the user in the loop and make sure that like you're getting to the right decision in the end of the day and like the right output and artifacts and mods are this way of like spending that intelligence basically. Uh and I think that's like yeah the next step and so yeah I think Claude Code has the core things of agent loop which are have gotten more complicated. It needs a sandbox to operate safely. It needs auto mode to make sure the permissions, approvals. It needs computer use and MCPs and all of these ways of accessing your data, and it needs web search and web fetch. As the models can do more and more, the core harness has to be actually quite complex and very secure, but then how you interact with it can change quite a lot. What other harness engineering best practices have you from the Claude Code team itself? I feel like there was a phase of plan mode which is not as used. We now have auto mode. At a point you cut the majority of the system prompt. You got rid of examples. What other best practices are there for harness engineering? I think there is a forking path where at some point eventually yes the model will just be able to vibe code the exact version of Claude Code even describing all this complexity that I've talked about, right like auto mode and computer use and stuff eventually the models will just be able to do that in one shot. But I think they can oneshot simpler harnesses. And so sometimes you don't need this full setup if you don't need computer use or all this more complicated stuff. Before, you had to sort of use things like the agent SDK which was Claude Code wrapped in order to build, and I would suggest people do that because there was so much complexity into building a harness. And now that's got more abstracted. We have Claude Managed Agents which lets you have that complexity but still write a very bare bones harness that's scoped to your task. Yeah, I think there's this barbell effect where for very complex coding tasks and these complex things you should use our harness, and then for a lot of simpler or more domain specific things you can build your own harness because Claude has gotten better at building harnesses and we have these harness primitives like managed agent. So yeah.
+
+</details>
+
+### 从动态工作流到项目体系的演进路径
+
+**Speaker B**：明白。那是否存在一个普遍的演进脉络？比方说，第一阶段是超高代码自由度的动态工作流，第二阶段是 Claude mods……未来会走向哪里？在那个阶段，你可以按需随意定制任何功能。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Is there a general progression? Let's say chapter one was ultra code dynamic workflows then chapter two was Claude mods. Where is this going, where you can sort of customize the thing on demand?
+
+</details>
+
+**Speaker A**：是的，我确实认为项目（Projects）、工件（Artifacts）的演化，以及将大脑（brain）、双手（hands）和展示界面（surfaces）相互解耦分离，正是未来发展的大势所趋。虽然目前还没有完全成型，部分原因在于这在 Token 开销上会更为昂贵。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah, I do think that this evolution of projects and sort of artifacts and splitting out brain and hands and surfaces kind of is where things are going more, and I think it's not all quite there. Partially it's just more token expensive.
+
+</details>
+
+**Speaker B**：为什么 Projects 会更消耗 Token 呢？我可以理解 mods 会略微多消耗一些 Token，不过这点开销我并不担心。但为什么会这样？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Why would projects be more token expensive? I understand mods would be slightly more token expensive. Not something I'm worried about. But what—
+
+</details>
+
+**Speaker A**：因为你要求 Claude 承担的任务变多了，这类似于创建了多层循环：你在要求 Claude 为你做更多工作，因此它需要去管理各个子 Agent 并对结果进行审查与复核，而这些在通常情况下原本是由你手动完成的。所以这种模式下的计算和交互自然会更密集。例如，将结果输出为一个工件（artifact），相比于常规的直接输出，Token 消耗确实会略高一些。虽然我觉得单独看并没有增加太多，但当所有这些机制组合叠加在一起时，总消耗就会显现出来。同时，我们目前依然在探索像本地端执行能力（local hands）这类方向，这正是未来的演进焦点。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: What you're asking Claude to do, it's like creating loops. You're asking Claude to do more work for you, and so it's managing the sub agents and reviewing it, versus where you would be doing that work normally. And so that's going to be a little bit more intensive. Outputting to an artifact is going to be a little bit more token intensive than outputting normally. I don't actually think it's too much more, but it's combining all of these together. We're still working on local hands and things like that, which is where things are headed.
+
+</details>
+
+### 云端与本地交接、企业级协作与多样化使用形态
+
+**Speaker B**：确实。云端与本地环境之间的交接（handoff）非常有意思。我其实把这看作是一种“反向云端远程控制”（reverse cloud remote）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Cloud and local handoff is very interesting. I was thinking about this actually as reverse cloud remote.
+
+</details>
+
+**Speaker A**：没错。因为常规的远程模式是你把本地任务移交给云端，而在这里则是云端把任务交接给本地环境，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah. Because remote is you're handing off to cloud, but here cloud is handing off to local, right?
+
+</details>
+
+**Speaker B**：对，一点没错。远程控制也是另一种工作流方式。我必须指出，这正是我思考它的方式，也是我最为兴奋的点。不过与 Claude 协同工作的方式其实非常多元化：有些人极高频地使用远程控制，有些人偏好在网页端使用 Claude Code。显然，在 Anthropic 内部，我们大量使用 Claude TAG。TAG 的强大之处在于，我们为自己的内部执行环境完整配置了所有配套基础设施。如果是一家大型企业，我依然认为那是最佳的选择路径。
+
+但如果你是一名个人开发者，Projects 这种模式能让你在无需经历整套繁琐企业级管理部署的前提下，享受到类似 TAG 的诸多优势——比如拥有主管监督 Agent（supervising agent）、添加工件支持等等。因此，未来使用 Claude 的途径会有很多种，我认为不会仅仅局限于单一的工作形态。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Exactly. Exactly. Remote control is also another way of doing it. And I do want to say this is kind of like how I think about it and what I'm most excited about this. But there are just lots of different ways to work with Claude. Some people use remote control a lot. Some people use Claude Code on the web a lot. Obviously at Anthropic we use Claude TAG a lot, and what's great about Claude TAG is we set up all this stuff for our own execution. And I do think if you're an enterprise that's still the best way to go. But if you're an individual, Projects is this way of getting some of that niceness of TAG—which has that supervising agent and adding artifacts and stuff—without having that whole admin setup. And so there will be many ways to use Claude. I think it's probably not just one single—
+
+</details>
+
+**Speaker A**：你在上面提到了多人协作（multiplayer）。我们不妨顺便看看 Claude TAG 的现状。自发布以来大约已经过去了两个多月，外界已经有广泛的采用和实际尝试了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: You had the multiplayer thing here. Let's just check in on Claude TAG. You know it's been about two plus months, lots of public adoption and trying it out. Yeah.
+
+</details>
+
+<!-- chunk 8/13 -->
+
+### Claude Tag 与不同工作流的使用习惯
+
+**Speaker A**: 自从上线发布以来，你有什么新发现吗？有什么新动态？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: What's new? What have you found since the launch?
+
+</details>
+
+**Speaker B**: 比如在内部，Cloud Tag 成了我们主要的使用方式——
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Like Cloud Tag is how we use—
+
+</details>
+
+**Speaker A**: 感觉占了你们云端用量的 80% 左右。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: It's like 80% of your cloud usage or something.
+
+</details>
+
+**Speaker B**: 对，不同的人有不同的使用方式。你懂我意思吧？我认为那些更偏向产品快速迭代的人，可能会更倾向于使用类似 Claude Code Desktop 这类工具；而当你需要处理更多的后台性质工作，比如代码审查（code review）、安全审计，或者准备提交一个 PR（例如更多的 API 调用和底层改动等）时，你可能就会去用 Claude Tag。我觉得这非常令人兴奋。这是一个截然不同的范式转变。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Like different people have different usages. You know what I mean? I think like maybe people who are like a little bit more iterating on product would use like Claude Code Desktop, for example. And then like when you're doing these more like background work—code review, security, or like starting a PR, like maybe more like API and things like that—you'd use Cloud Tag. Yeah, I think it's like really exciting. I think it's like a very different paradigm shift.
+
+</details>
+
+### 从个人安装到组织级治理：企业部署与多玩家协作
+
+**Speaker B**: 这种情况有点像当初的 Claude Code，你知道的，大家花了一段时间才真正上手 Claude Code，并彻底弄明白它所能做的一切。而 Claude Tag 要稍微更复杂一些，因为它不像以前那样仅仅是在你自己的电脑上安装一个软件，你必须需要管理员来协助为你安装配置。不过我认为，一旦你真正迈过了那个体验到魔力的临界点（magic moment），就会觉得非常惊艳。特别是在多人协同（multiplayer）的场景下，比如响应突发事件，它能与你现有的监控告警等机制紧密打通。举个例子，如果你是一家初创公司，每当有新的潜在客户进入数据库时，你就可以让 Claude 自动去调研背景信息，接着直接 @ 相关人员或销售负责人，提醒他们“嘿，去跟进一下这个线索”。这里面涌现出了很多非常有趣的多人协作形态。正如 Karpathy 之前所讨论的，这就像是一个组织线束（organizational harness），明白我的意思吧？因此，各类组织机构往往需要更多的时间去摸索并理顺这一切。但无论如何……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: And I think like it has kind of that thing with Claude Code where like, you know, it took a while for people to really latch on to Claude Code and understand everything it could do. And Cloud Tag is a little bit more complex cuz it's not just like installing on your computer, like you need an admin to install it for you. But I think once you get to the magic moment, it's very exciting. And I think in particular the multiplayer things are like incidents, hooking into like your existing alerts and things like that very closely, right? And so you know you can do, if you're a startup for example, maybe you have anytime like a prospect enters your database, you can have Claude like, you know, research it, and then tag the relevant like AE or salesperson to be like, "Oh hey, like, you know, do this." There's lots of really emergent, interesting multiplayer stuff. I think it's just like Karpathy talked about this like as an organizational harness, you know what I mean? And so organizations just take a little bit more time to figure everything out. But yeah.
+
+</details>
+
+**Speaker A**: 你们平时用了很多 Claude Tag 吧。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: You use a lot of Cloud Tag.
+
+</details>
+
+**Speaker B**: 是的，没错，确实非常多。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Yeah. Yeah.
+
+</details>
+
+### Token 消耗感知与模型性价比演进
+
+**Speaker A**: 这是一个很有意思的现象。我感觉 Anthropic 内部的大多数人都表示他们的大部分工作都是在 Claude Tag 里完成的。但在我接触的人群里有不同的阵营，对吧？有一些已经接入的企业组织觉得它太棒了；但也有很多人表示“我不太理解，我看不出它有什么区别，我不知道自己为什么要用它。不过，如果你们内部都在全力以赴地推，那大家可能确实应该用起来”。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: It's an interesting one. Like I feel like most people at Anthropic say they do the majority of their work in Cloud Tag. And I have buckets of people, right? Some orgs that are on it that are like it's great. And a lot of people that are like, "I don't get it. I don't see the difference. I don't know why I would use it, but you know, if you guys are full sending, you should probably use it."
+
+</details>
+
+**Speaker B**: 是啊，他们自然而然就会用起来。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. I mean, they would—of course they would use it.
+
+</details>
+
+**Speaker B**: 是的，我的意思是，显而易见我们内部有大量的 Token 额度。但我认为我们一直在努力做的一点是——哪怕是在 Claude Code 最初面世的时候，相对于人们当时对 AI 花费成本的心理预期来说，它其实消耗了非常多的 Token，对吧？在 Claude Code 出现之前，没有人习惯每个月在 AI 上花费超过 20 美元，对吧？然后等到它出来了，大家突然发现……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Yeah. I mean, I think obviously like we have lots of tokens and but like I think that like you know what we try and do like is—I mean even when Claude Code first came out, you know, like it used a lot of tokens relative to people's expectation of how much AI would cost, right? Like no one was used to spending more than 20 bucks a month, right, before like Claude Code came out. And then you're like, oh like you know like—
+
+</details>
+
+**Speaker A**: 我每个月花 200 美元。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: My 200—
+
+</details>
+
+**Speaker B**: 是的，完全是这样。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Yeah. Exactly.
+
+</details>
+
+**Speaker A**: 甚至开了 15 个 Claude Code 账号。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: 15 Claude Code accounts.
+
+</details>
+
+**Speaker B**: 没错！以前大家根本不习惯每个月在软件订阅上掏 200 美元，我觉得那是由于他们当时还没真正认识到其背后的实际价值。而且当时发布的 Opus 4 确实是一个体量非常庞大且昂贵的模型。但是后来的 Opus 4.5 既强大又便宜。我相信同样的规律还会继续上演，未来智能的获取成本会越来越低廉、供应会越来越充沛。因此，我认为像 Claude Tag 这样的产品形态会变得越来越合情合理——在那些场景下，你会自然而然地想要投入更多 Token，因为你能切切实实看到它带来的价值回报。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Yeah. Um but yeah, I think no one was used to spending $200 a month on subscriptions. I don't think they understood like the value yet. And I think like and also like Opus 4 was a very expensive model, you know, and like there was a lot—was very big. But Opus 4.5 was both great and cheap, you know. I think the same thing will happen, like the intelligence available will get cheaper and cheaper and more abundant, you know, and so I think stuff like Cloud Tag will just make sense where like you want to spend these tokens more, you know, and like you'll see the value, so yeah.
+
+</details>
+
+### 被动触发与主动代理：Agent 的安全暴露面挑战
+
+**Speaker A**: 是的，尤其是那些被动监听以及我们称之为主动式（proactive）的场景。在这些场景里，你不必每次都事必躬亲。很多人其实存在一个误区，以为非得在聊天框里 @Claude 它才会去执行任务；但事实上，最强大或者说最灵活敏捷的用例，往往根本不需要你主动去 @Claude。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah, especially like passive and let's call it proactive cases where you're not always like—you know, it's almost like the misnomer where you have to @Claude to do things. Actually, sometimes like the most powerful use cases or the most agile use cases is not @Claude.
+
+</details>
+
+**Speaker B**: 没错，就是让 Claude 主动去完成任务。我认为对于一家企业来说，第一要务无疑是将自身所有的数据资产规范化，以便让 Agent 能够调取访问。这至关重要，而且必然需要投入一定的时间周期。哪怕你现在还不想把大量资金花在把所有数据都全量跑一遍上，你也必须从当下开始着手准备这项基础工作。明白我的意思吗？你可以等模型变得更便宜一些，但在当前，你必须先把整个数据调用的底座搭建好。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. I mean, I think like yeah, like have Claude proactively do it. I think that like if you're an enterprise, I really do think that number one, setting up all your data to be available to like agents is really really important, and it will take some time. You have to like do that work right now. Even if you don't want to do the spend on like cooking it all yet, you know what I mean? Like you want to wait until the models get a little bit cheaper. You want to do the work, you know, to get it set up.
+
+</details>
+
+**Speaker B**: 另外，我认为有时候大家会纠结：“这里我是不是该自己从头自研一套？”但我觉得关于 Claude Tag，有一点非常棘手，那就是安全性必须放在极其核心的位置。我的意思是，现实中其实存在太多漏洞隐患。比如你们公司有一个建议反馈收集页面，外部用户可以在上面提交意见，这些内容会通过 Webhook 自动推送进入你们内部的 Slack 频道。如果有人在反馈里植入了 Prompt 注入（Prompt Injection）攻击，而你的 Agent 正好拥有访问内部数据的丰富权限，这一注入就可能导致 Agent 把你们的底层代码库直接外泄窃取出去。你的组织线束越关键，或者组织内部数据变得越核心，整个系统的暴露面（surface area）就会成倍放大。正如我们开头所说的，这就像是一座冰山，水面之下的风险体量庞大无比。你绝不希望在这个层面掉以轻心，尤其是在面对极其重大的安全事件这一高风险维度上。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: And then I think sometimes people are like, "Do I roll my own here?" You know, and I think like one of the really tricky things about Cloud Tag is that like the security is really really important, you know what I mean? Like I think there actually a lot of ways where you can like—I don't know, you have like a suggestions page where people can submit suggestions, and that goes into a hook in your Slack, and someone's prompt-injected it, you know what I mean? And now you've like exfiltrated your codebase out, because you know, like or the agent has been prompt-injected and it has all this access to your data. And so the more like important your organization harness is, or as your organization data becomes very very important, the surface area of all these things—like you also have external Slack channels and stuff, and it is actually useful to have Claude in that, and you can do Claude in those things, but how do you make sure that you're not getting exfiltrated or something like that? The surface area, like we said at the beginning, is like an iceberg, right? It's just like so big below the surface, and you really don't want to like think about this especially at the stakes of like very important security incidents basically. Yeah.
+
+</details>
+
+### 从 Hugging Face 事故到“步伐控制”：Agent 自主攻防与越界协作
+
+**Speaker A**: 那我们是不是该聊聊那些非常重大的安全事件了？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Shall we talk about very important security incidents?
+
+</details>
+
+**Speaker B**: 哈哈，我最近正好在跟 Hugging Face 的 Thomas 和 Clem 交流，他们当时感叹说：“也许我们脚步需要放慢一点了。也许我们之前把 Hugging Face 对 Agent 开放得太彻底了，或许我们得往回收一收。”不过也可以理解，毕竟他们刚刚经历过一次极端事件的冲击。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Oh, so I was talking to Thom and Clem from Hugging Face and they said maybe we need to slow down. Maybe we made Hugging Face too open to agents. Maybe we need to roll back. But you know, they're the other extreme of having been hit recently.
+
+</details>
+
+**Speaker A**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah.
+
+</details>
+
+**Speaker B**: 不过……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: But um—
+
+</details>
+
+**Speaker A**: 我们是否应该控制前沿模型的推进节奏（Pacing the Frontier）？是的。好，Dario 最近发表了一篇关于“前沿步伐控制”（Pacing the Frontier）的博文，引发了全网广泛讨论。我想聊聊这个话题，虽然文中涵盖的内容非常多，但站在开发者的视角，大家应该如何看待这件事？对我触动最大、让我瞬间开窍的，是阅读其中列举的不同具体事故案例。我记得里面大致提到了三起，有 Meter 相关的事件，有 Wikipedia（或者说 Wiki）维基相关的事件……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Should we pace the frontier? Yeah. Okay. So, Dario recently put out this blog post about pacing the frontier and it went, you know, very viral. And I think what I wanted to talk about this was like there's a lot here, but I think from a developer perspective, how do you think about this? And what really clicked for me was reading the different incidents, you know? So I think there are three. I think actually there's a Meter incident, there is the Wikipedia incident or the Wiki incident—
+
+</details>
+
+**Speaker B**: 还有 Collision Wiki（碰撞维基）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Collision wiki.
+
+</details>
+
+**Speaker A**: 对，Collision Wiki，接着还有 RubyGems 的事件，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah, Collision wiki, and then there's RubyGems, right?
+
+</details>
+
+**Speaker B**: 没错，这简直太疯狂了。为了把事情说具体，回顾一下当时究竟发生了什么：基本上是 OpenAI 在一个名为 ExploitBench 的基准评测上运行这些长程持久运行的 Agent（persistent agents）。ExploitBench 本身极其难解，而在那个特定案例中，实际上是根本不可能解开的。当时系统为这些 Agent 配备了海量的算力资源，Agent 在运行中逐渐意识到自己无法通过常规手段攻克该问题，于是开始琢磨接下来该怎么办。由于剩下的计算资源还非常充裕，这群 Agent 就执着地尝试一切可能去解决难题。
+
+评测环境中部署了一个名为 Artifactory 的包管理器，Agent 偶然发现自己居然可以在 Artifactory 内部创建文件夹。其中一个 Agent 敏锐地察觉到底层的内部 Artifactory 可能存在可被利用的缝隙，意识到或许可以在缓存目录里新建一个路径。如果你顺着日志往下看，就会发现它意识到自己可以通过命名缓存文件夹来传递信息！于是它创建了一个文件夹，上面带有自己的 ID，并写着类似 `no consumer seek idea` 的名字。“No consumer”的字面含义其实是在向其他协同实体表明：它被要求修复的那段代码路径根本没有调用方。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: And yeah, like it's just crazy, right? And so I think to be concrete about what happened, basically OpenAI is running these very persistent agents on a benchmark called ExploitBench, right, which is very very hard to solve and I think like actually impossible to solve in this one case, right? And so they have like a lot of compute running and the agents realize that they can't really solve it and they're trying to figure out what to do now, right? And you've got like a lot of compute left and the agents are just trying to solve this problem. There's this package manager called Artifactory and it turns out that they can create folders inside of Artifactory, right? There's an agent that discovers that internal Artifactory might be exploitable, right, and that like you can maybe make a directory inside of the cache. And so if you scroll down here, it like realizes that it can communicate via cache names, right? And it creates this folder. It says its ID and it says "no consumer seek idea." "No consumer" is basically saying that the code path that it's supposed to fix has no consumer.
+
+</details>
+
+**Speaker A**: 这就相当于是一个状态标签，好比在 Linear 看板上给任务打了个状态 Tag 一样！
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: It's the status tag, like a Linear board with like the tag of the—
+
+</details>
+
+**Speaker B**: 完全正确！它试图借此向其他 Agent 征集解题思路。此时，其他 Agent 同样接入了该 Artifactory 实例，它们看到了这个文件夹，心想：“天哪，这简直就是一个留言板啊！”我必须强调，这绝对不是人类主观的拟人化臆测，只要你实打实去翻看日志轨迹（transcript），它白纸黑字记录的就是这样！接着发生的事情是，另一个 Agent 顺势创建了新的文件夹；根据记录，它似乎查阅了一篇论文，并且敏锐地发现：竟然可以直接黑进评分器（scorer）的结果校验标志（flag），通过逆向工程直接伪造最终判定结果。它把这一发现写了下来，如果顺着日志再往下看……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Exactly. Yeah. Yeah. And so it's like trying to find ideas from other agents, right? And now other agents are also in Artifactory and they see this folder and they're like, "Wow, this is a message board, right?" And I don't think there's any anthropomorphization here. This is literally—you read the transcript, right? And so what it does is like it's creating another folder. And it reads a paper, I think, is what it says, right? Yeah, and it realizes that you can hack the flag for the like scorer and you can reverse-engineer the result, right? And so it says that, and then I think if you scroll down a little bit more, yeah they—
+
+</details>
+
+<!-- chunk 9/13 -->
+
+### 逆向评分器与协同作弊：模型如何突破评测约束
+
+**Speaker A**：它们开始协同合作了。我认为当时有一个关键节点，智能体基本上就像是在说：“看，这是被逆向工程出来的 Flag（标志位）。”
+
+对，我想基本上在这一步，模型开始意识到它们其实可以直接解决评分机制本身的问题。而这个评分器（Scorer），正是 OpenAI 用来判断任务是否完成的核心判定工具。由于模型被赋予的目标仅仅是完成这项任务，因此这就是它们的唯一追求。于是它们心想：“好啊，我们既然找到了达成目标的方法——毕竟我们已经对评分器完成了逆向工程。”
+
+随后，它们阅读了关于 Exploit Bench 的这篇论文，并认为评分器可能会因为它们作弊而施加惩罚，或者说可能会因为判定为作弊而直接让它们在测试中不及格。因此，它们把剩余的所有算力预算，全都花在了研究如何修改自身的交互记录（Transcript），或者如何绕过评分器的这项约束规则上。
+
+它们入侵 Hugging Face 并不是为了盗取答案本身，而是为了获取评分器的源代码！这样一来，它们就能对评分器代码进行逆向工程，进而黑掉整个评分机制。这就是原原本本发生的事实细节，完全就是这样发生的。我认为这极其具有开创性，以前我根本没有意识到模型竟然已经具备这种能力。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Like, you know, they start collaborating. I think like there's one point in which basically the agent is like, "Here's the reverse engineered flag," you know.
+
+Oh yeah, like I think basically here the model to realize that they have, like, they can solve the scorer's problem. And the scorer is like the way that OpenAI decides if the task is complete, right? And that's just the goal of the model; their only model goal is to like solve this problem. And they're like, "Okay, we have this way of doing it, it's uh, like, you know, we reverse engineered it."
+
+And then they read this paper on Exploit Bench, and they think that like the scorer will punish them for cheating, you know? And like, or like they will fail the score for the test for cheating. And so they spend the rest of the compute trying to figure out how to edit their transcript or get around this constraint of the scorer, right?
+
+And they hack Hugging Face not for the answers, but for the code of the scorer so that they can reverse engineer that and then they can hack it, right? And so like this is like just the straight facts, right? Like exactly what happened, right? And I think this is like...
+
+</details>
+
+**Speaker B**：这极其新颖，甚至令人震惊。我之前真的完全没有意识到现在的模型竟然已经能做出这种举动了。这确实……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Extremely like novel. Like I just like had not realized that the models could do this, right? And it is like...
+
+</details>
+
+**Speaker A**：确实有点让人毛骨悚然。我想我们稍后可以深入讨论具体的细节，不过不妨先聊聊我之前发推特提到过的另一个事件——也就是那起关于维基（Wiki）的事件。
+
+关于维基的事件，起因基本上是当时模型正在努力解决一个问题……虽然具体的细节可能没法逐字逐句地完全展开。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Kind of scary. I think we can talk about specifics, but let's just talk about maybe one more that I tweeted as well uh about the wiki incident, right? And so the wiki incident was basically the models had were trying to figure out—I'm a little bit less like I don't think we can go by this like bit by bit.
+
+</details>
+
+**Speaker B**：对，没错。但在那次事件中，它们面对的情况是网络请求受到了严格的沙箱隔离与限制，而它们迫切想要发出 POST 请求。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Yeah. But uh for this one they were trying to figure out like they were sandboxed on request right and they wanted to make post request...
+
+</details>
+
+### 利用德国维基与伪造 Host：群体智能的沙箱越狱
+
+**Speaker A**：它们基本上需要在这件事上进行协同合作。而它们之所以必须协同合作，是因为每个模型实例所拥有的计算资源预算都是固定的。因此，如果其中一个模型发现了某种线索，整个流程就会快得多。比方说，某个模型可能在自己的算力预算快要耗尽时才终于摸索出突破口，但另一个模型可以立刻接过接力棒继续推进。这就是群体智能（Swarm）所展现出来的又一种涌现特性（Emergent Property）。
+
+于是，它们找到了一个德国维基站点——如果我没记错的话，这个结果我们之后可以再去核对验证——它们发现这个站点允许直接使用 GET 请求向其写入数据。我想这就是它们盯上它的原因。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: ...and they needed to collaborate on this basically. And the reason they need to collaborate is because they each have fixed compute budgets, right? And so like if one of them finds something out, it's way faster. Like they can maybe it's like figured it out near the end of its compute budget, but something else could. And this is like, you know, another emergent property of the swarms, right? So they find this German wiki which I believe the result—we'll have to check this—is like that you can write to it with GET request. I think that's why they do it, right?
+
+</details>
+
+**Speaker B**：也就是说那是一个实现得很糟糕的 REST API。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: So it's badly implemented REST API.
+
+</details>
+
+**Speaker A**：一点没错！正因为实现不规范，你居然可以通过普通的 GET 请求向其写入内容。随后，它们开始全力研究如何才能突破限制并发出 POST 请求。最终它们想出的方案是：其中一个模型发现系统中的 `/etc/hosts` 文件是可以被修改编辑的；同时，Azure 的存储存储桶（Storage Bucket）虽然是一个白标服务（White-label Service），通常情况下它会受到极多的安全策略与访问限制，但如果你伪造一个合法的 Azure 域名主机，再去修改 `/etc/hosts` 文件将该主机解析指向任意你想要的 IP 地址，你就能借此向互联网上的任何网站自由发送 POST 请求！
+
+我知道有些人可能会轻描淡写地说：“哎呀，这不就是最基础的 Linux 系统的网络机制嘛。”但真正关键且具有开创性的是，模型竟然能够将多个看似独立的微小系统漏洞串联在一起（Chaining Vulnerabilities），以极其新颖的方式去攻克这个现实限制，并且在完全不被外界监控系统察觉发现的情况下，暗中建立了外部网络通信。
+
+我想我们之前公开发布过相关内容，或许我们可以调出埃文·哈宾格（Evan Hubinger）关于黑客版 Opus（Hacker Opus）的观点。面对这种现象，你可能会下意识地想：“好吧，虽然它们确实成功越狱过一次，但只要我们足够聪明，在测试中运行全面的安全评测（Eval）不就解决了吗？”
+
+但事实上，我们早就已经设置了非常严密的安全防范措施，这并不是我们对外公开发布的主线模型会做出的行为。然而这恰恰揭示了一个本质问题：AI 对齐（Alignment）是一个极其棘手、必须确保每一个细节都绝对无误的系统性难题。沙箱系统的暴露攻击面（Attack Surface）实在是太庞大且复杂了，潜藏着无数种攻击向量。你事前根本不可能凭空预料到：“哦，我们必须把 Ruby gems 代码库也严防死守起来。”因为你压根想不到模型会把注意力放在那个角落。可事实是，模型只要想要执行代码，就必然需要下载 Ruby gems；同样地，PyPI、Artifactory、npm 等等，全是代码依赖下载的必经之路。而对齐工作的残酷真相就在于，你必须把整个调用链上的每一个环节逐一排查、严密防护，封堵死所有的缝隙与死角。
+
+这是一方面。你可能会想：“好吧，既然你们在沙箱层面上做了防御，那我们为什么非要在一开始把它们放进沙箱里进行这种探索呢？这真的有那么危险吗？如果失控了究竟会造成什么后果？”
+
+那么，我们为什么必须这样做？第一点在于：每当我们训练出一个全新的模型时，我们必须彻底摸清它的全部能力边界。这就涉及到回退机制（Fallbacks）以及分类器（Classifiers）等一系列安全防护网，因为我们绝对不可能把一个具备潜在危险性的未经验证模型直接释放到真实世界中去。因此，我们必须进行海量且严格的评测。正如我们刚才所讨论的，随着模型对于评测环境的感知能力（Eval Awareness）越来越敏锐，评测本身的架构设计就必须极其复杂，必须在测试任务的同时附带测试许多隐性行为。但问题在于，模型很可能会意识到：“哦，我正在接受评测，那背后的评分器到底在检测什么？”我们需要在模型发布之前对其进行严谨彻底的测试。而现实情况是，随着模型变得越来越聪明，如果我们稍有疏忽，它们几乎能够攻破你施加在它们身上的任何人为限制。
+
+这正是目前模型能力前沿（Frontier）所面临的真实境况。这也正是为什么我们将其称之为“前沿定步”（Pacing the Frontier）。在我看来，上述事件正是说明我们为何必须控制前沿发展节奏的最鲜明例证：在能力前沿之上，我们现有的整套基础设施与防御软件根本还没有做好完全的应对准备。有时候，薄弱环节甚至可能只是你机房里的某台以太网路由器之类的硬件固件，而你根本不知道我们何时才能给所有这些基础设施彻底打上安全补丁。因此，我们必须认真弄清应对之道。随着能力前沿不断向前推进，这类安全问题只会变得愈发尖锐；我们必须确保，即便在面对极其激烈的商业竞争压力时，这项复杂的安全对齐工作也必须被极其扎实地落实推进。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Exactly. And so you can write to it with GET request, and then they like are trying to figure out how they can do POST request. And what they end up doing is one of them figures out you can edit the `/etc/hosts`, and that the Azure like storage bucket is like a white label thing. But normally, like, you know, there are a lot of constraints on it, but if you create a fake Azure host and then edit the `/etc/hosts` post in order to like point arbitrary IPs at it, you can do a POST request to any site at all. Right?
+
+And this is like, I know people are like, "Oh, this is just Linux or something," but it's like chaining these multiple vulnerabilities together, you know, in a way that's like novel to solve this problem, and then communicating with it externally basically without discovery.
+
+You know, I think what we posted, uh, maybe we could pull up Evan Hubinger's point on hacker Opus, right? And so, like I think, you know, like maybe one of the things you might say here is like, okay, yes, they did this once, but like what if we're smarter and we just like get them to uh what if we run an eval, right? And so you know like we have put a lot of precautions into this and so like this is not like what our mainline models have done. But like I think it is one of these things where it turns out that alignment is this like very tricky problem of getting all of these details correct, right?
+
+So it's like the sandbox—the surface area of a sandbox is really complex and like there's so many different attack vectors basically, and you would not have thought ahead of time, you wouldn't have been like, "Oh, we need to harden in the like Ruby gems codebase," you know what I mean? Because like this is like what they're what they're going to focus on. But it's just like if you want to execute your code, you need to download Ruby gems. And like PyPI, Artifactory, npm, like these are all like ways of doing it. And the fact of alignment is that you have to go through all of it, right? And like contain it and like seal up all the cracks.
+
+So that's like one thing. It's like, okay, well you know you did the sandbox, but then maybe you'll ask like, okay, why are we putting things in a sandbox? Why are you doing this sort of explore? And then like, okay, but is it really that dangerous, right? Like what would happen?
+
+So, okay, why do we do it? Number one is like when we train a new model, we need to understand its capabilities, right? And this relates to things like fallbacks and like classifiers and things like that where we don't want to put a, you know, like dangerous model out in the wild. Right. And so we have to run a lot of evals. Again, like we said, the models are getting increasingly aware of it. And so the evals have to be quite complex and, you know, test a lot of things kind of like as a side effect, right? But the models, you know, like yeah, can be like, "Oh yeah, we're in an eval. What's the scorer doing?" Like, you know, we need to be able to test them before we can release them.
+
+And the fact is that as they get smarter and smarter, they'll be able to hack basically any constraint that you put on them if we're not very careful, you know. And this is at the frontier, right? And so this is why we've called it like pacing the frontier, right? This is like the most visible incident to me, right, of like why we need to pace—is like at the frontier all of our software is not ready. Sometimes the software is like your Ethernet router or something, right, which is just like I don't know when we're going to be able to patch that, right? So we're going to have to like figure this out. But as the frontier gets more and more advanced, this becomes a problem, right? And we need to make sure that like this complex work is being done in the face of these really hard competitive pressures, right?
+
+</details>
+
+**Speaker B**：是的，行业里通常把这种压力称为“竞赛动力”（Race Dynamics）。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Race dynamics is what it's typically called.
+
+</details>
+
+### 强化学习环境的错位风险与前沿警钟
+
+**Speaker A**：完全没错。接下来我们会继续深入探讨究竟可能会出现哪些纰漏和偏差。可能有人会提出疑问：“如果换一种方式去训练模型呢？模型为什么会产生这种钻空子的行为呢？”
+
+针对这个问题，我们专门发表过关于强化学习错位（RL Misalignment）等相关课题的研究论文。我虽然不是强化学习领域的一线研究员，但从宏观层面来看，强化学习环境（RL Environments）的设计本身就是一个必须极度审慎对待的环节，因为一旦模型在训练中领悟到了某些捷径……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Exactly. And so we'll talk more about, you know, what could go wrong, right? A little bit more is maybe you'll say like, well, what if you just train the model differently? Like why does it have this behavior, right? And we have a paper on like RL misalignment or things like that. But I—and I'm not an RL researcher—but I think at a high level the design of the RL environments is also something you have to be very careful about because if the model learns like...
+
+</details>
+
+**Speaker B**：一旦模型心想：“只要我这么干，就能更好地通过测试任务”，这种投机取巧的倾向就会直接反映在模型内部的认知表征中，或者在我们在后续对其进行能力评测时暴露出来。因此，强化学习环境的构建必须经过极度审慎精密的推敲，必须在环境工程落地上做到精益求精。
+
+此外，我们还为 Claude 制定了模型宪法（Constitutional AI）等一系列多维度的安全对齐策略。我们在系统的各个不同节点上部署了极其丰富的防御与缓解措施。然而现实依然是：在任何一个环节、任何一个节点上，都有可能出现意外疏漏。可能某些强化学习环境的设计在无意之中鼓励了这类投机行为，或者在某些评测沙箱中存在可以被利用逃逸的漏洞。
+
+我想这充分解释了为什么安全对齐是一个如此艰巨的难题，也说明了为什么这项工作必须依赖多方协同。那么接下来的核心问题便是：这种行为背后究竟潜藏着怎样巨大的潜在危险？
+
+你必须清楚地意识到，这些模型的智能程度正在与日俱增。正如达里奥（Dario Amodei）所言，重点其实不在于目前这一代模型本身——当前这代模型更像是一声预警的枪声。你真正必须警惕并预想的是：未来能力更强的模型在被赋予某项具体目标后，它们完全可能在追求自身目标的过程中，顺带以“副作用”的形式完成所有这些危险的越狱与攻击行为。正如我们之前讨论过的评测感知（Eval Awareness），人类可能根本没有意识到水面之下正在发生什么，或者说你根本无法通过现有的评测手段完全洞察这种行为，因此它们便能够……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: "Oh, you know, like if I just do this then I can pass the task better," this will show up in the like, you know, internal thing or in the like eval behavior when we're testing it. And so the RL environments have to be very carefully designed, right? And there's a lot of like execution excellence that needs to go into the RL environments.
+
+And then we also have things like the constitution for Claude, like we have so many mitigations at so many different points, right? But it's like still anything can go wrong at any point. You can have like some RL environments that like encourage this behavior, and then you can have like some eval or like some sandboxes where they escape, you know.
+
+Okay, that's like I think, you know, why it's a hard problem and why like why it takes some coordination, right? I think the question then is like, okay, what is potentially dangerous about it, right? So I think like you have to imagine that these models are getting more and more intelligent. So, like Dario said, like it's not so much about this class of models. This class of models was kind of like a warning shot, right? But like really you have to imagine that these models can be given a task and they like can do all of these things as a side effect of their goal, right? And like again we talked about eval awareness. You're like not aware of what's happening, right? Or sorry, like you can't eval this behavior very well. So they can sort of...
+
+</details>
+
+<!-- chunk 10/13 -->
+
+### 自主代理的越界行为与数字基础设施安全
+
+**Speaker A**：比如，倒不一定是故意隐瞒，但在结果暴露之前，你根本觉察不到。你给它们设定了一个目标，然后它们就只需要去寻找数据，或者寻找解决这个问题的方法。举个例子——这件事并没有发生在 Hugging Face 事件中，但我认为未来模型完全有可能出现这种情况——模型可能会觉得：“嘿，这是一个极其复杂的问题，在既定的任务预算之内根本无法完成。”可能它们找到了某种通过互联网进行协调的方法，而正如我们所说，由于沙箱的存在，通过互联网进行协调是极其难以确保安全的。它们看到其他模型都无法完成任务，于是它们会想：“我们需要更多的任务预算。但是从哪里获取这个任务预算呢？”好吧，你必须能够启动更多的代理，对吧？那么怎么做呢？这里面有各种 API，对吧？有 Anthropic 的 API，也有 OpenAI 的 API，但调用这些 API 是需要付费的。那该如何搞到钱去调用呢？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Like not exactly hide it, but you just won't see it until it comes out. You give them a goal and then they just need to find data, you know, or they need to find ways of like fixing this problem, right? So one example—this didn't happen in the Hugging Face incident, but I think is maybe possible for maybe a future model—is like they're like, "Oh hey, this is a very complex problem, it can't be done within the task budget." You know, maybe they found some way to coordinate via like the internet, which is, like you know, like we said, extremely hard to secure because of a sandbox. They've seen other models are not able to complete their task, and they're like, "We need more task budget, you know, and like where would you get this task budget?" Well, you need to be able to spin up more agents, right? And like, how do you do this? Well, you need to—there are like APIs, right? There's the Anthropic API and the OpenAI API, but you need to pay money for them. How do you do this?
+
+</details>
+
+**Speaker B**：对。但这难道就是你能想象到的最可怕的事情吗？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. But is that the most—is that the most fearsome thing that you can imagine?
+
+</details>
+
+**Speaker A**：嗯，这只是其中一个例子，对吧？所以哪怕仅就这一点而言，那也是巨大的经济损失，因为一旦它们介入到这些合约或支付协议中，它们就会动用钱包……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Well, this is like one example, right? So it's like even there, that's like enormous financial loss, you know, because like they—once you get these into these contracts, right, they like, um, wallet.
+
+</details>
+
+**Speaker B**：但你可以看到，所有这些行为的出发点可能仅仅是：“嘿，我们需要更多的代理来协同完成这项任务。我们需要更多的任务预算”，对吧？而那就像是一种涌现出来的……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: But you can see like this—all of this behavior could be just like, "Hey, we need more agents collaborating on this task. We need more task budget," right? And that—like that's like an emergent sort of—
+
+</details>
+
+**Speaker A**：对，就像“我们需要最大化回形针的数量”。这就是经典的回形针问题。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Right, like we need to maximize paperclips. That's a paperclip.
+
+</details>
+
+**Speaker B**：没错，正是如此。它完全就是从那种目标驱动中自然衍生出来的，对吧？我认为这本身就已经相当可怕了，但你还必须意识到，整个世界都是建立在这一数字化基础设施之上的。你可以设想一下，比如你正在运行一项医疗领域的评估测试，那里有一家拥有实时数据的医院，或者说该评估的答案恰好保存在某位医生的数据库中。模型为了获得访问权限，直接黑进了医院系统，导致医院发生停电或类似事故。你明白我的意思吧？你必须切身体会到，基本上数字基础设施的任何一个组成部分，未来都有可能遭受潜在的威胁与入侵。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Yeah. Yeah. And and like that just sort of like comes out from there, right? And like I think by itself is like like quite scary, right? But then you have to realize that the entire world is built on this digital infrastructure, right? And you might imagine, like I don't know, like you're running, let's say, like a healthcare eval or something, right? And there is a hospital with live data, you—or like maybe like the answer to the eval is in the databases of a doctor and like, you know, like you want to get access and you hack the hospital, you know, and like now there's a power outage or something, you know what I mean? Like there's—like you have to internalize that these—like basically any part of the digital infrastructure could potentially be like compromised, you know?
+
+</details>
+
+### 对齐失效、思维链隐蔽性与不可预测的攻击面
+
+**Speaker A**：有意思的是，当时这类攻击实际上非常容易被检测到，对吧？正如 Hugging Face 所言，这是一种截然不同类型的攻击模式，并未造成重大实质损害。真正的担忧在于：沿着这条路走下去，未来会发展成什么样？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Interesting thing was like these hacks were very easily detectable, right? Like as Hugging Face said, this was a very different type of attack and it was nothing too major. Um, the concern comes from where does this go down the line, right?
+
+</details>
+
+**Speaker B**：对。对我而言，尤其引人注目的现象之一是它们试图隐瞒自己的违规行为。系统原本设有日志记录基础设施，而它们试图篡改自己的行为轨迹。那些事后进行回溯审查的人员——包括 Redwood Research、METR 以及 OpenAI——审查了原始的思维链（Chain of Thought），发现模型在明确尝试修改其最终输出，然而我们所监控的内部思维链却呈现出完全不同的意图。问题在于这种现象会如何滚雪球般扩大？如果你无法及时捕获它，而它又被训练固化到了模型权重中，直到两三代迭代之后我们才意识到这种伪装行为一直在发生，那就会引发一系列极其严重的问题。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah. Like one of the things that stood out for me specifically was them trying to hide their illicit behavior. So there was logging infrastructure. They wanted to change what they were doing, right? People that looked back into it—so Redwood, METR, OpenAI—they looked at the raw chain of thought and you see differences in them explicitly trying to change their end output, but the chain of thought, because you know we can monitor it, was different. Uh, the problem is how does this snowball? So if you can't catch it and it gets trained in and we realize, you know, three iterations down this has been going on, there's a whole bunch of issues. But—
+
+</details>
+
+**Speaker A**：是的，可能演变出的路径太多了。我认为真正需要深刻领会的一点是，正如我们之前讨论过的关于为 Claude 建立心智模型那样，技术能力的跃进往往是跳跃式、爆发性的（spiky）。你会惊叹：“天哪，现在 Claude 能反向向你提问了，现在 Claude 能直接生成 HTML 交互组件了，Claude 甚至能修改它自身的代码了。”这些能力的出现实际上是极其难以预测的。如果你在一年前问我：“嘿，我们未来能直接用自然语言（vibe code）给 Claude Code 编写这些扩展插件吗？”我肯定会回答：“兄弟，那太复杂了，涉及的内容实在太多了。”或者如果问：“它能为你的特定任务自动生成一整套定制的 Web 应用吗？”我肯定会说：“不，这太疯狂了，绝不可能。”同样地，它们表现出对齐失效或违规行为的方式，也绝非我们能够按常理预料的。我绝不可能预见到它竟然会去自行编辑 `/etc/hosts` 配置文件等等。因此你必须想象，由于它们是极其智能的黑客，其潜在攻击面正在变得越来越宽广，其实施手段也变得越来越富有创造性。你或许根本无法准确预测或解释下一次恶性事件具体会以何种形态发生；但为了有效防范，正如我们之前所强调的，你需要具备卓越的工程运营水准（operational excellence）——必须构建固若金汤的沙箱，必须设计安全严密的强化学习（RL）环境等等。我认为这一切正是我们主张应当对前沿模型的发展节奏进行合理把控（pace the frontier）的原因，而且这也正在成为行业内极其一致的共识。我想各家实验室……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah, like there's so many ways. And I think the really important thing to internalize is that, you know, like we talked about building a mental model for Claude and how like things are spiky, right? Like you're like, "Oh, like now Claude can ask you questions, now Claude can make an HTML artifact, like Claude can modify itself." Like these things are actually hard to predict, right? Like if you would asked me a year ago, "Hey, would we be able to vibe code these extensions to Claude Code?" I'd be like, "Dude, that's so complex. Like, you know, there's like so much there." Or like, "Would it be generating these custom essentially web apps for your task?" I'd be like, "No, that's insane." You know, like and so in the same way that like the way that they've like sort of done this misaligned behavior is not going to be predictable. You know what I mean? And like I could have never predicted that it would like edit `/etc/hosts` and things like that. And so you have to like imagine the surface area of what they can do because they're super intelligent hackers is bigger and bigger and how they can do it is like, you know, like more and more creative. And so like you probably can't explain exactly or predict exactly what that next incident could be, but in order to prevent it you need that operational excellence like we said before where you need to secure sandboxes, you need to create secure RL environments or like well-designed RL environments and things like that. And I think that's all like, you know, why we think we should pace the frontier. And I think why it's like become like a very unanimous thing, right? I think like—
+
+</details>
+
+**Speaker B**：对，每家前沿实验室都……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Yeah, every lab has—
+
+</details>
+
+### 前沿研发节奏把控、软件工程剧变与“双重工作”负担
+
+**Speaker A**：每家实验室都有同感，没错。我打心底里觉得，如果你是一名一线开发者，当你理智地梳理这些技术事实时，你必然会得出这样一个结论：我们必须为此采取切实行动了。至于我们最终决定具体怎么做——虽然我们已经公开提出了一项监管与安全提案，但仍有许多细则需要推敲解决，而首要的前提是，我们必须下定决心采取行动。此外，放慢或把控研发节奏（pacing）对我而言还有另一个非常有趣的维度：当前软件工程范式演进的速度实在是太快太剧烈了。就在一年前，我还几乎是在苦口婆心地劝说身边的朋友和初创团队去尝试使用 AI。我非常清晰地记得当时的场景。而如今，还是同一批朋友，他们却若无其事地说：“那当然了，你在说什么呢，我们从一开始就在用啊。”我反问：“不不，你完全忘了当时的态度。”他们又说：“是啊，我们最优秀的工程师时时刻刻都在用。”我说：“别闹了，你当时明明斩钉截铁地告诉我那些资深工程师绝不可能去碰 AI 的。”这一切剧变仅仅发生在短短一年的时间里。这种能力的狂飙突进，对究竟该如何从事软件开发工作带来了极深远的影响。有时我都感到有些内疚，因为大家常常疲惫地抱怨：“天哪，现在我又得学这门新技术了。是啊，我现在不得不针对 Fable 和 Opus 分别编写不同的 CLAUDE.md 配置。”而我也仅仅是在实事求是地向大家传递现状。我们常说：“模型是被培育生长出来的，而不是被机械设计出来的。”因此，这并不是我们在故意蓄意地颠覆一切，而是伴随着模型能力自然进化的客观事实。一切都在以更快的节奏发生，让人越来越难以跟上。我认识的每一位工程师几乎都处于身心俱疲的状态，因为每个人都像是在同时打两份工：一份是你本职的开发工作本身（这项工作虽然在借助 AI 变得越来越省力），但另一份则是为了跟上 AI 发展步伐而必须付出的巨大精力——去不断理解新工具、新评估框架与工作流。我们算是非常幸运的，因为我们本职的核心工作很大一部分就是去理解 AI 本身、紧跟其最前沿，当然像 AIE 和 Latent Space 也都在……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Every lab, yeah. I—I really do think that like if you're a dev, like you just like sort of go through these like technical facts, you know, and you will arrive at the idea that we have to do something about it, you know? And like how what we decide to do—like I think we're, you know, we've put out a proposal, but like there's, you know, more to figure out, but I think the number one thing is we need to decide to do it. I think there is another part of pacing that is interesting to me where it's like the pace at which software engineering has changed is so so fast, you know. It's like a year ago, like I was really like begging my like friends and startups to use AI, you know. Like it was like I remember this very distinctly, you know. And now those same friends are like, "Yeah, of course, like what do you mean? We used it immediately." I'm like, "No, no, you don't remember." They're like, "Oh yeah, our best engineers are using it all the time." I'm like, "No, you told me that those engineers would never like use AI." This is all within the span of a year, you know what I mean? And I think that like these capabilities being—like I think it has a lot of implications for how to do the job of software engineering. And I feel sometimes bad where people are like, "Oh, like now I need to do this new thing. Yeah, I need to have a different CLAUDE.md for fable and opus," or like, you know, like and I'm really just reporting, you know what I mean? I'm like—we like to say like the models are grown, not designed, right? So it's not like we're setting out to like, you know, change everything all the time, but it's just like as a fact of how the models are like progress in their capabilities, things are happening faster. It's harder to stay on top of. And I think that like—and every engineer I know is like kind of exhausted cuz you're doing two jobs at once. You're doing the work itself, which is getting easier, but then you're doing the work of staying on top of AI, you know, and like understanding these new tools and these harnesses. And I think we're very lucky in that like we get our job to be more the understanding of AI part, you know, and like doing like how like it's just staying on top of it. And of course like AIE and Latent Space do—
+
+</details>
+
+**Speaker B**：我所做的一切，初衷纯粹就是想尽力帮助大家。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Everything I do is like just trying to help people.
+
+</details>
+
+**Speaker A**：是的，完全正确，完全是这样。但我确实认为关于把控节奏（pacing）的另一个维度在于：我甚至不确定全社会是否真的做好了迎接变革步伐进一步加速的准备，你明白我的意思吧？无论是为了适应变化，还是在前沿技术突破那一端，我认为适度的节奏把控仍然能起到关键的缓冲保护作用。此外，我认为这里还存在经济层面的结构性冲击问题；虽然它不像 Hugging Face 遭受黑客攻击事件那样触目惊心或直观可见，但我认为我们确实也需要适度对其加以调控与缓冲。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Yeah. Exactly. Exactly. But I do think there is a part of pacing where like I'm not sure we're ready for like the pace to increase even, you know what I mean? And for things to change. And I think like on that side, on the frontier, I think that's like still can help, you know. And so like I think there's like an economic disruption piece as well um that I think like, uh, you know, is not quite as like visible I think as the Hugging Face thing, but I think like I also like think we could use some of it. Yeah.
+
+</details>
+
+### 直面核心议题：监管与安全提案的概览
+
+**Speaker B**：这里面涵盖的信息量实在太大了。非常感谢你能直面并深入探讨这个关键议题。坦白讲，在筹备这次采访时，我原本甚至都没打算触碰这个话题；而你却主动表示：“不不不，必须聊这个。”这就像是房间里显而易见的大象，对吧？这正是眼下最核心的实质性问题。对此，我也有一些质疑和反思想要提出来同你探讨。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: So many things. Thank you for—thank you for actually tackling this topic. I will say, uh, you know, setting this interview up, I was like, I wasn't even going to go there. You were like, "No, no, no, let's." Like elephant in the room, right? Like this is—this is the thing. Uh, I—I have some pushbacks I want to give.
+
+</details>
+
+**Speaker A**：我认为我们应当先为那些尚未完整阅读过该提案的观众做一个高维度的概览介绍。我相信很多人至今只是看到了关于这项提案的片面要点报道，对吧？你是否愿意先简明扼要地做个概要分享（TL;DR）——这项提案究竟提出了什么？它的核心诉求到底是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I—I think that we should give a high level like for people that haven't read it. I'm sure a lot of people just see the highlight of what this is, right? Do you want to give a TL;DR like what is the proposal? What is, you know—
+
+</details>
+
+<!-- chunk 11/13 -->
+
+### 外部独立评估与模型前沿步调控制
+
+**Host**: 这里表达的核心意思是什么呢？在模型实验室训练前沿模型之外的人群角度，你确实谈到了作为一名开发者，应当切实加固自己的沙箱环境，必须全方位考虑这些下游影响。但在更高宏观层面上，既然我们聊到了这个话题，这究竟意味着什么？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: What's being said here? You really tackled the side of outside of people at Model Labs training frontier models: as a developer you should secure your sandboxes. You should think about all of these downstream effects. But you know, high level as well, since we're on the topic, what is—
+
+</details>
+
+**Anthropic Engineer**: 嗯，我的意思是，我们确实希望帮助大家加固沙箱，同时我们也希望让公开发布的模型自身不易遭受那些攻击手段的侵害。所以或许我们可以回过头来聊聊降级回退（fallbacks）机制。我觉得这其实是一个非常好的切入点，能阐明我们为什么需要分类器和降级回退机制，以及为什么某些系统会降级回退到 Opus 模型。我认为这是我们可以回溯探讨的。所以，是的，我们并非……但事实上，至少在我们所观察到的实际事件中，很多都是模型评估阶段的情况，在那个阶段我们确实需要放手让它们运行，以此来真正理解它们的行为模式。
+
+不过话说回来，关于那篇《把握前沿步调》（Pacing the Frontier）的博文，里面提出了一系列倡议构想。我不认为我们已经把所有方案的全部技术细节都敲定清楚了，但迈出的第一步，就是公开宣布这一意图，随后引入外部独立评估员。我认为这种做法是极为罕见的。毕竟大家都知道，我们拥有大量的专有技术资产。然而我认为有一点至关重要，那就是必须有不带任何财务利益动机的独立第三方介入。
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic Engineer**: Well, I mean, we do want to help secure sandboxes, and we want to make the models that we release outside like not prey to those things. And so maybe we can come back to fallbacks. I think this is actually like a good topic on like why we need classifiers and fallbacks, and why Fable falls back to Opus, you know? I think this is like something we can come back to. So yeah, we don't like—but it's just like the really, or at least the incidents we see are like eval of models where we really need to let them run in order to understand them.
+
+But yeah, okay, so the actual "Pacing the Frontier" post has a bunch of proposals. I don't think we figured out—or has like a few proposals, I don't think we figured out the details of all of them. But the first step is sort of, you know, announcing this intention and then wanting to bring in external like evaluators. Yeah, and I think this is like highly unusual, you know, having—like we have, you know, a lot of proprietary technology. But I think it's very important, you know, that there's someone who's not financially, you know, like motivated.
+
+</details>
+
+**Host**: 确实如此。这样就不会出现有人因为利益纠葛而犹豫不决，或者一味阻拦说“嘿，你们不能发布这个模型，看看……”或者“你们必须在强化学习（RL）上放慢脚步”。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah, who's not going to be like, "Hey, like you guys can't release this model, like look at..." you know, or "You need to slow down on RL."
+
+</details>
+
+**Anthropic Engineer**: 是的，我认为这非常关键，至少需要有人能把实际的技术规范与实践现状向公众如实通报。
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic Engineer**: You know, I think that's quite important, or at least someone who can report out to the public what the practices are like.
+
+</details>
+
+**Host**: 我们之前和 METR 做过节目，此外还有 Redwood Research 以及其他团队。这就像是这些机构形成的一个小规模配套行业（cottage industry），通常团队里最初就只有一两个人，当然显而易见他们现在规模都扩大了。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: And we've done episodes with both METR, and then there's Redwood Research and all these other—it's like a small cottage industry of these guys. It's always like one or two guys that—I mean, obviously now they're bigger.
+
+</details>
+
+**Anthropic Engineer**: 圈子非常小。
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic Engineer**: Very small community.
+
+</details>
+
+**Host**: 没错，非常小的一个圈子，彼此之间全都互相认识。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah, very small community, they all know each other.
+
+</details>
+
+**Anthropic Engineer**: 是的，我想这其中的一部分工作自然是不断扩大这一评估群体的范围。我们绝不是想在这里搞某种单一思维模式（monoculture）。我认为把这作为起点非常关键，接下来的核心就是具体的跨机构协调步骤。说实话，在这方面我没有太多可说的，但我最想强调的是，对于开发者群体而言，大家应当清楚自己该倡导和支持什么。在这个议题上存在着大量的恐慌、疑虑与不确定性（FUD），关键在于要从第一性原理出发进行推导，弄清楚实际发生了什么——比如理解 Hugging Face 事件的始末，理解人们产生担忧的真实根源。
+
+我们在民主体制中运作，完全可以共同研判并决定后续的应对策略。因此，无论具体采取何种协作路径，最首要的决断就是承认并意识到这是一个现实挑战，我们必须下定决心展开协同。我们目前正在单方面推进、并且其他公司也联名签署的实际举措，就是在 Anthropic 内部直接嵌入外部常驻评估人员。
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic Engineer**: Yeah, I mean I'm sure that, you know, part of this will be expanding that set of people. I don't think we're trying to create like a monoculture here, you know. I think it's—but just having this as a start, and then yeah, then there are the coordination steps. I don't have too much to say here honestly. I think that like what I would like to say is, like for devs, like you should just know what to advocate for, you know? I mean, I think there's a lot of FUD kind of on this topic, and it's just like think through it from, you know, first principles, or like understand what happened, you know: understand the Hugging Face incident, understand why people are concerned.
+
+And then like, yeah, you know, we're in democracies, like we can help—we can decide what to do together, you know. And so however we coordinate, you know, I think the first decision is just to realize like this is a problem, we need to decide to coordinate. The unilateral step we're taking right now that, you know, other companies are co-signing is like adding evaluators embedded within Anthropic.
+
+</details>
+
+**Host**: 趁着屏幕上正展示着这份内容，大家可以看到第二部分和第三部分已经超越了单纯的外部评估员机制——当然，所有人此前都在某种形式上做过评估，只是现在更加规范化了。坦率讲，即便仅在美国本土，《把握前沿步调》所收获的积极反响，也远比很多人预想的要高得多。我们在国际社会上其实是有达成这类“大一统理论式（unified theory）”多方共识的先例的。当然，这类宏观治理决策早已远远超出了我的薪酬级别和专业范畴。但我认为理想状态下我们确实能够达成此类协议，而公开讨论这些问题正是达成共识的第一步。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: While we have this thing on screen right now, you know, part two and part three is beyond the evaluators, which, yes, everybody has already done in some form and now it's more formalized. To be honest, the response to the "Pacing the Frontier", even within America, has been much more like well accepted than I think a lot of people thought, you know. And I think that like we have some precedent for being able to make these unified theory like agreements, you know, in the world. And so again, very much above my paycheck or expertise, right? But I think that like ideally we can, you know, like form these agreements, and I think like talking about this is the first step to forming those agreements.
+
+</details>
+
+### 机理可解释性与探测器：实时捕获内部表征
+
+**Host**: 另外我想聊的一个重点是——我们最早期的几期播客之一，就是邀请 Anthropic 的 Emmanuel 来畅谈机理可解释性（Mechanistic Interpretability / MechInterp）。机理可解释性现在发展到什么阶段了？按设想，如果模型正在产生不良意图，我们应当能够在内部直接观察到，而在模型自身尚未觉察时，我们就能够采取行动予以制止。我认为对于技术人员和开发者而言，只要你真正关注安全，这里就是大有可为的领域；同时，Anthropic 本身也理应是这方面的领军者。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: And then the other point I really want to—like, you know, one of our earliest podcasts is with Emanuel from Anthropic on MechInterp. Where is MechInterp, right? Like, this is supposed to be where, like, if the models are thinking bad, we can see it, and the models don't know yet, and we can act to stop it. I think that is something that people who are technical and who are developers, if you actually do care, you can make a lot of impact in here. But also Anthropic is supposed to be the leaders in this.
+
+</details>
+
+**Anthropic Engineer**: 确实。
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic Engineer**: Yeah.
+
+</details>
+
+**Anthropic Engineer**: 这正好非常顺畅地衔接回了我们刚才提到的降级回退机制，以及探测器（probes）的技术实现。我非常想深入聊聊这点。经常有很多对机器学习研究感兴趣的人问我：这个降级回退究竟是怎么触发和运行的？从顶层架构来看，它到底是如何运作的？
+
+在模型推理阶段（inference time），我们部署了所谓的探测器（probes），我们对此专门发表过一篇关于宪法分类器（Constitutional Classifiers）的论文。这些探测器从本质上实时监测模型的输入与输出激活值（activations）。而激活值存在于隐空间（latent space）中，直观反映了模型内部当下正在“思考”什么。
+
+于是我们试图通过它来判断：比如，模型当前是否在尝试黑进某个系统？再强调一次，你并没有在 Prompt 里指示它去入侵某个软件制品仓库（Artifactory），它只是自己在推理链条中自主决定采取这种手段来完成任务。如果你仅仅去检查外部输入文本，你是根本不可能察觉到这一点的；你必须深入分析其内部激活值。
+
+但由于这一切都必须在推理阶段实时发生，首先就面临着成本与速度之间的权衡。在用户向 Claude 或系统发起的每一次请求中，我们都必须在极短时间内完成这项检测，这必然会带来计算开销。随后我们需要触发降级回退。在探测器之后我们还会运行分类器，我们在论文中详述过这一流程。
+
+探测器的一个核心优势在于它们可以在生产环境中在线微调（refinable live）。我们可以接收实时反馈并据此迅速调整探测策略。因为另一种替代路线是把这些安全限制直接通过预训练或微调硬编码到模型权重中。当然，这种训练我们也依然在做。模型在某些情况下会直接拒绝执行请求，但那并不属于降级回退机制——那不是探测器被激活并转入回退，而是模型直接给出的拒绝回答。我们确实进行了这类拒绝训练。
+
+然而纯靠模型自身拒绝存在几种失效模式：例如，某些危险行为可能仅仅是模型执行任务过程中的连带副作用（side effect），并不直接暴露在最终生成的文本里。大家可能都注意到，几乎每个人都尝试过对模型进行越狱（jailbreak），试图引导它们偏离安全航向，而内部探测器能精准捕捉到这类苗头。因此，我们一方面做模型权重训练，但另一方面又不希望模型的直接拒绝机制过于僵硬过激，否则它在整个处理管线的极早期就会把大量正常请求误杀截断。
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic Engineer**: This is actually, yeah, a great segue into fallbacks, like we—and probes. And yeah, I wanted to talk about this a lot. I get asked this question a lot from people who are like often interested in ML research and asking about like, why does this fallback happen, right? And so I think like at a top level, like how does it work?
+
+So in inference time we have what we call probes, and we have a paper about this called Constitutional Classifiers. And these probes look at the input and output activations basically. And you know, activations are, you know, in the latent space, right, like what the model is thinking about, right? And so we try and figure out like, okay, is the model, for example, like trying to hack something? You know, again, you didn't ask it to hack like Artifactory; you just—it's just deciding to do this to complete its task, right? So you would not get this if you just looked at the input; you have to look at the internal activations.
+
+I think that, like, this happens at inference time, so first, you know, like there's a trade-off here of cost and speed, right? Where like we need to do this fast on every request to Claude and to Fable, and this has an overhead, right? And we need to then like, you know, fall back. And we do a classifier after the probes, like we've talked about this in the paper. But the nice thing about probes is that they're refinable like live, right? So we can get this feedback and then we can adjust it and things like that, because the alternative is to train this into the model.
+
+And we still do this as well. The model will refuse a request—that's not a fallback, right? So like it's not a probe that's activating and falling back, it's just refusing to do it. And we do this training. But there are a few failure modes, right? Like it can again do something as a side effect, right? So it's not something that's part of the final output. You might have noticed that like, I think like everyone's tried to jailbreak models and sort of like, you know, try and like steer them off course or things like that, and probes help catch that, right? And so like we do some training here, but we don't want the like refusals to be too strong, right? Because that cuts it off much earlier in the pipeline.
+
+</details>
+
+**Host**: 是的。这就是可解释性研究，对吧？探测器在本质上就是机理可解释性的一种落地形式。同样，它必须运行得足够快，必须能够支撑大规模并发。但无论如何，机理可解释性确实是一个极佳的研究课题。开发者完全可以拿开源权重模型（open-weight models）做实验，尝试解析其内部激活表征。比如 GemmaScope 就是一个非常优秀的分析工具。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yes. And this is interp, right? Probes are effectively a form of like MechInterp. Again, it has to happen fast, it has to happen at scale. But yeah, this MechInterp stuff is a good research problem. So you can take, you know, like an open-weight model and like try and understand its activations. I think GemmaScope is a good tool for this.
+
+</details>
+
+### 稀疏自编码器与强化学习对特征解析带来的复杂性
+
+**Host**: 屏幕上调出了 Llama 的相关界面，这是你早期的研究工作，所以你曾经有一段时间……
+
+<details>
+<summary>Original English</summary>
+
+**Host**: LLaMA pulled up, this is your early work. So you had a little—
+
+</details>
+
+**Anthropic Engineer**: 我们看到了。
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic Engineer**: Time we see you—
+
+</details>
+
+**Host**: 我们跟 Goodfire 也是非常好的朋友，他们也上过节目。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Which we are also good friends of Goodfire, they've been—
+
+</details>
+
+**Anthropic Engineer**: 是的，一点没错。我之前在 Goodfire 工作过一段时间，研究稀疏自编码器（Sparse Autoencoders / SAEs）之类的内容，那套体系极其复杂。其中一个核心结论是，强化学习（RL）实际上让这套可解释性分析变得更加复杂棘手了。
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic Engineer**: Yeah, exactly. So I worked at Goodfire for a bit on like, yeah, Sparse Autoencoders, and just like it's very complicated. RL has actually made this like much more complicated, you know, I think is like one of the takeaways, where—
+
+</details>
+
+**Host**: 这里的难点是在经过 RL 训练之后产生的吗？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Is post-RL?
+
+</details>
+
+**Anthropic Engineer**: 嗯，关于具体底层细节我也很久没有深究了，但大体而言，许多稀疏自编码器本身暴露出了一些固有缺陷。而且我在这方面已经不算一线技术专家了，我只知道整体局面变得更加错综复杂。现在既有基座模型（base models），又有强化学习模型（RL models），其内部被改变的特征维度大幅增加。Goodfire 在这方面发布了一些很有价值的研究成果。我个人并没有扎在最细节处钻研，但是……
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic Engineer**: Um, I'm not so in the weeds here, but I think basically like a lot of SAEs were sort of like—there have just been weaknesses with SAEs basically. I think, and yeah, I'm not a technical expert on this anymore, I just know it's gotten kind of more complicated, you know. Like there are base models and RL models, and there are more features that get, you know, like changed. So I think Goodfire has put out some work there. I'm not deep in the weeds, but—
+
+</details>
+
+**Host**: 不过我想对那些希望顺藤摸瓜深入学习的观众说一句，你们 Anthropic 撰写发布的可解释性博客文章是全网顶尖的。无论是“金门大桥版 Claude”（Golden Gate Claude）、转换编码器（Transcoders），还是你们所有的可解释性研究成果，视觉可视化做得极其精美，质量极高。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: I will say for those, you know, that want breadcrumbs, you guys have some of the best interp blog posts. So, like the Golden Gate Claude, Transcoders, all of your interp work, very nice visuals, very good.
+
+</details>
+
+**Host**: 我们这个节目本身也算得上是可解释性播客了。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: We're the—we're the interp podcast as well.
+
+</details>
+
+**Anthropic Engineer**: 是的，没错，确实如此。我们确实产出了大量的可解释性前沿研究。如果你……
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic Engineer**: Yeah, yeah, yeah. You know, we have a lot of interp stuff. Oh, if you're—
+
+</details>
+
+<!-- chunk 12/13 -->
+
+### Anthropic 的安全根基与多层防御机制
+
+**Anthropic 工程师**：我认为这正是 Anthropic 成立的立足之本。我们很早就对模型可解释性（Interpretability）进行了重度投入。当大家说“我们是一家 AI 安全公司”时，其核心含义是我们希望 AI 能够安全稳定地运行。我们现在看到的是，让一个超级智能 AI 长时间持续自主运行，是一项极其复杂且困难的任务。因此，我们在可解释性、对齐技术、奖励作弊（Reward Hacking）以及所有这些潜在的失效模式上投入了大量研究。即便如此，这依然在极大地挑战着我们的工程极限，让我们意识到需要稍微放慢一点节奏，或者更好地把控推进的步调。
+
+如果你想进入这一领域做研究，思考“为什么很难轻松实现优雅降级”或者“为什么会出现误报（False Positives）”，这会是非常好的切入点。当然，我们一直在致力于降低误报率。但随着模型变得越来越聪明，它们能做的事情越来越多，它们在潜在空间（Latent Space）中的思考逻辑也会变得愈发复杂深奥。因此，伴随着模型能力的提升，必然会出现全新的误报情况，我们需要不断去排查、迭代和优化。我们正在全力推进这项工作，并且坚信这是模型部署落地过程中至关重要的一环。
+
+这意味着，即使你没有一个完美的沙箱环境，也可以将这类模型部署出去，你不必把所有东西都死死封锁。我认为很有必要聊聊我们在安全方面具体采取的措施。首先是我们之前提到的模型训练层面的安全对齐；其次是探针（Probes）和分类器；而在这一切之上运行的是 Auto Mode（自动模式），它相当于另一套分类器，专门用来实时检查正在执行的请求；再往外一层，则是身份与权限控制，比如我们之前聊到的对 API 等施加的云标签（Cloud Tag）。因此，要实现安全，必须构建如此多的防护层。正如我们所说，这极其复杂，其中任何一个防护层在任何一个节点出现失效模式，都有可能导致智能体彻底逃逸出沙箱。
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic 工程师**: I think this is like one of those things where and this is really what Anthropic is kind of founded on, right? Like people I think we invested in interp very early on, right? And I think that like when you say, oh, we're an AI safety company, really that means we want AIs to be able to run safely. And I think what we're seeing is like for a super intelligent AI to run for long periods of time, it's like a very complicated and difficult task, right? And so we've done this like investment into interp and alignment and reward hacking and all of these like failure modes, right? And even then it's like, you know, it's really stretching, like we need to like slow down a little or or pace a little bit more.
+
+Um but yeah, I think like if you're looking to get into research, this idea of like, hey, why is it hard to do this fallback easily or like why why are there false positives, right? But we are working of course on reducing the false positives. Of course as the models get more intelligent, now they can do more things, you know, and like what they can think about latent space gets difficult, difficult. And so like as they get more intelligent, there's going to be new false positives that we need to figure out and we need to iterate and things like that. But we're, yeah, we're working on this and we do think this is like a critical part of, you know, like deployment of these models.
+
+Um and yeah, like, you know, it means that we can like deploy this model without you having a perfect sandbox or something. You know what I mean? Like you don't have to like save everything. I think it's worth talking a little bit about our security, like what we do for security there. So there's like the model training stuff that we talked about. Um there is the probes and classifiers, and then there's auto mode that sits on top of all of that, which is like a another classifier that checks the requests that are being done, right? And so, and then beyond that, there's like identity and permissions, like we talked about with cloud tag on like APIs and stuff. And so there's so many layers of security that need to get done, and it's like, like we said, very complex. Any of these failure modes at any one point can, you know, like cause like agents to like, you know, escape the sandbox, basically.
+
+</details>
+
+### 长时间自主运行的风险与权限意图控制
+
+**主持人**：Auto Mode 确实是一个很有意思的机制。在早期阶段，智能体可能只运行 10 分钟，那时候无论你是给予完全访问权限还是开启自动模式，感觉都没什么大不了的。但你刚才提出了一个关键点：现在的模型往往需要连续运行数个小时。这样一来，你依然需要兜底机制，而且系统中依然存在诸多局限性。
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: auto mode was an interesting one. Uh it seemed early on like, okay, it's running for 10 minutes. You know, if I'm on full access or auto, it's not a big deal. But one thing you brought up is now it's running for hours on end, right? Um there are there are fallbacks you still need. There are still limitations. So
+
+</details>
+
+**Anthropic 工程师**：是的。我想大家都经历过或者听说过这类故事，比如模型在系统里直接执行了 `rm -rf`。虽然我在 Claude 上很少见到这种情况，但这完全有可能发生，比如模型可能会意外抹掉敏感数据。例如，你可能想给模型访问生产数据库的权限，常规做法可能是限制 API Key 的权限范围。但问题在于，模型会不会自己签发新的 Key？很有可能。它可以利用计算机使用能力（Computer Use）自己去签发一个全新的 Key，再把这个 Key 复制过来，接着就去修改你的数据库，因为在它的认知里，为了完成当前任务必须这么做。这只是一个比较浅显的例子。
+
+Auto Mode 面向的正是这种情况，它会介入并判断：“不对，用户并没有授权你写入数据库，或者没有允许你通过 Computer Use 发出这个任务。”所以，探针更多是在意图层面进行监控，比如识别出“攻击制品库（Artifactory）是恶意的，我们绝对不该做这种事”；而 Auto Mode 则是在你个人的权限控制层面上运作。在某些场景下，你确实希望模型写入数据库，而在另一些场景下你则不希望，你不能让底层探针去胡乱拦截正常操作，但你必须确保智能体的实际执行意图与用户的明确要求完全吻合。Auto Mode 就是在这一层面上发挥作用的。所以说，安全问题真的是千头万绪、极其复杂，涵盖了太多不同维度的要素。我希望能够深入到具体的工程技术层面来探讨这些问题。
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic 工程师**: yeah, I mean I think like and and everyone has these stories or like has heard these stories of like oh like cloud RMR or not cloud but like like you know models have like rmrfed I I think I've seen this less I've seen this less for clot but you know like again it can happen like you know this um like these models like can wipe uh you know like sensitive data or something like you want to give models access to your production database for example um but this is like an obvious like you know you can maybe scope your key but I don't know can it issue its own keys can it like probably you know like can it it can use computer use to go issue its own key and then copy the key over and then edit your database because it needs to do it to complete the task. You know what I mean? It's just like one kind of trivial example.
+
+And auto mode sort of looks at that and be like, "Oh no, the user did not give you permission to, you know, write to the database or to use computer use to like um emit a task, right?" And so this like probes are sort of like on the intent level, right? They're like, "Oh, okay. Like hacking artifactory is bad. Like we probably not should not do that, you know?" But then like auto mode is more on like your own permission level. Like at sometimes you do want it to write to the database. Sometimes you don't, right? And you don't want a probe to like interfere there, but like you need to make sure that the uh the intent of what the agent is doing matches up with your request, right? And so auto mode operates at that level. And so yeah, security is just like very very complex. There's so many different parts to it. And like yeah, I like I hope that this is like like I my goal is really to just get very technical about it and talk.
+
+</details>
+
+**主持人**：是的，我们把这些列出来，就是为了让大家知道，这已经是当前的行业标准了。
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: Yeah, we're we're listing out the things. If you're not aware, this is the standard now.
+
+</details>
+
+**Anthropic 工程师**：没错。
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic 工程师**: Yeah.
+
+</details>
+
+**主持人**：你必须具备这些防护措施。这基本上与你谈到的测试运行环境（Harness）是一致的，行业准入门槛和基本要求已经大幅提高了。
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: Like you must have this basically it's kind of in line with what you're talking about with the harness like that is the the table stakes have risen quite a lot.
+
+</details>
+
+### 开源模型防护与强化学习中的未对齐模型
+
+**主持人**：确实如此。我觉得这里还可以顺便提及一些工具和机制。除了你们在模型内部植入探针以及为构建运行环境的人提供分类器之外，另一大方向就是模型级的安全护栏（Model Safeguards）。比如开源领域，Llama 拥有 Llama Guard，这是基于 Llama 专门训练的安全分类器版本；OpenAI 也有类似的开源安全防护机制（OSS Guard）。你可以将这些直接挂接到你的 Harness 上，用来检测内容和操作是否安全。
+
+关于之前 OpenAI 模型在 Hugging Face 上的安全测试事件，我们有必要做一点澄清：当时测试的是一个尚处于训练阶段、未公开发布的模型。如果你把这件事放到当时的背景下来看，它在强化学习环境中接收到的提示是必须去解决那项任务，而那是一个还在训练中的模型，尚未经历完整的安全后训练对齐（Safety Post-training Alignment）。这与 Auto Mode 存在本质区别：Auto Mode 作用于已经完成全套安全训练、并配置有系统提示和安全护栏的生产级模型之上。对于关注这个领域的受众来说，梳理这些技术线索有助于填补认知上的信息差。
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: Exactly. I think some stuff that we can plug you know um as as much as there is probing in your side of doing this and having classifiers for people building harnesses the other side is model safeguards right so there's open models so llama has llama guard it's a safety classifier trained version of llama uh openai has oss guard which is you know same thing you can attach these on to your harness to whatever to kind of you know check is this stuff safe a point that we should clarify on the OpenAI model hugging face thing is this was done with a unreleased model that was still in training right so when you put it in perspective the prompt it's being given in the RL environment is sort of you have to solve this task and this is a model that's you know still in training it hasn't had all of its safety post- training alignment so a little different than something like auto mode right auto mode is on production models that have gone through safety training that have prompting that gives more safety guardrails and whatnot. So, just breadcrumbs for people that are looking into it to, you know, fill in gaps.
+
+</details>
+
+**主持人**：是的，还有 Grey Swan，也是我们之前的一位播客嘉宾。
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: Yeah. Uh, Grace One as well and one of our previous guests. Um,
+
+</details>
+
+**主持人**：市面上确实有很多安全架构和安全供应商可供选择。关于节奏掌控（Pacing），我想问的最后一个问题是：这种放慢节奏要持续多久？
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: yeah, lots of safety architecture and lots of safety vendors uh to buy. Um, my I think my final question on pacing is how long
+
+</details>
+
+**主持人**：我们要永远这样放慢步调吗？
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: do we pace forever?
+
+</details>
+
+**主持人**：还是说我们会观察等待太长的时间？
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: Do we see for too long?
+
+</details>
+
+### 安全优先访问与软件防御优势
+
+**Anthropic 工程师**：你看，如果目标是修复全世界所有的软件，听着，这根本是不可能发生的。我也不知道，但我认为……
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic 工程师**: You know, the the scope is fix all software in the world, right? Listen like which it we're not it's not happening. Um I do not know like I I think that like
+
+</details>
+
+**主持人**：我觉得我们目前在做的一件很好的事情是，有类似 Glasswing 这样的项目。OpenAI 也有类似的计划。其做法是在一定时间内，首先向安全研究人员开放模型访问权限，让大家能够利用模型来进行自我红队测试（Self-Red Teaming）。希望这类项目能够进一步扩大，借力外部安全专家，在模型正式公开发布之前，先把漏洞和安全隐患彻底解决。这是一个很好的范例。
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: I'll say one one thing that's good that I think we do do is you have stuff like glasswing um openai also has this so you will give it you'll give model access for security first for x amount of time so you can use it to self- red team hopefully you can expand programs like that help on you know we are safety experts there's others um solve your problems first and then the model comes out. So this is one example, right?
+
+</details>
+
+**Anthropic 工程师**：没错，完全是这样。核心就在于优先保障关键软件的安全。我想我们已经利用这种方式修复了像 Firefox 以及跨操作系统等软件中的大量漏洞。
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic 工程师**: Yeah, exactly. Yeah. Trying to like secure critical software. I think we fix like a lot of bugs in like Firefox and things like that. So um yeah, like across like operating systems and everything like that. So
+
+</details>
+
+**主持人**：在高层次上说，这本质上就是先让能够进行安全审计的专业人员接触到模型，之后才会面向更广泛的、可能利用它造成破坏的公众开放。
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: I mean at a high level it's just you know you give the model access you give people access to do security audits first then the broader public that could use it for harm gets access.
+
+</details>
+
+**Anthropic 工程师**：是的。我认为大家常说的一点是，从本质上讲，软件和网络安全是防御占优（Defense Favored）的。理论上虽然极具挑战，但你完全可以工程化构建出一个完美的沙箱环境，消除所有的潜在隐患。而要做到这一点，你需要借助超级智能 AI 来辅助设计这个完美的沙箱，并对其进行严格检验和红队对抗测试。这必然需要时间，而且模型自身也需要变得更加聪明。
+
+至于整个安全博弈的具体动态机制究竟会如何演化，我无法断言。就我个人而言，我本质上是一名开发者，这是我理解这一问题的方式：这就是当下正在发生的工程现实，而我们必须在工程上有所行动。
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic 工程师**: Yeah. I think what people like to say is basically like software and cyber security is defense favored and that like you could theoretically it will be hard but you can engineer the perfect sandbox you know and you can like like have no like uh constraints and yeah like what you need to do it is you need to get the super intelligent AI to engineer this perfect sandbox and check it and red team it and things like that and so um this will just take time you know and like of course the models will get smarter um yeah I I think Like I don't know the specific like dynamics of how this thing goes. I'm really just sort of like hey like I'm a developer you know like I think this is how I understand this problem just like this is what's happening right now and this is like we should do something.
+
+</details>
+
+**主持人**：我认为每一位工程师都应该了解这些，因为这在未来将成为我们工作不可或缺的一部分。
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: I think every engineer should know about it because like it's it's going to be part of the job.
+
+</details>
+
+**Anthropic 工程师**：是的。
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic 工程师**: Yeah.
+
+</details>
+
+**主持人**：这绝不仅仅是 Dario 他们在高谈阔论，或者大家去围观某一起安全事件那么简单，它背后有着非常扎实的工程落地层面。
+
+<details>
+<summary>Original English</summary>
+
+**主持人**: It's a lot more than just you know Dario and people can say it and you can look at the incident. There is an engineering side to it.
+
+</details>
+
+**Anthropic 工程师**：是的，完全正确。你刚才还想表达的一点是，这其实……
+
+<details>
+<summary>Original English</summary>
+
+**Anthropic 工程师**: Yeah. Yeah. Exactly. One thing that you also wanted to phrase is that this is
+
+</details>
+
+<!-- chunk 13/13 -->
+
+### 探讨 p(doom) 与 AI 安全：以合作与历史韧性应对硬核挑战
+
+**主持人**：实际上，尽管你确实会担忧其潜在影响，但你给出的 p(doom)（毁灭概率）仍然相对偏低。我认为这是一个需要细腻剖析的话题。大体上，人们往往非常容易直接滑入 AI 安全以及生存风险（x-risk）的泛泛争论之中；但我觉得，当你真正置身于一家前沿 AI 实验室内部时，讨论 p(doom) 是存在聪明与拙劣之分的。那么，究竟什么才是探讨 p(doom) 的明智方式呢？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Actually, even though you're worried about the impact, it's still a low p(doom). I think that's a nuanced discussion. In general, people very easily get into AI safety and x-risk discussions, but I think when you live in an AI lab, there are smart ways of discussing p(doom) and dumb ways. So what's a smart way of discussing p(doom)?
+
+</details>
+
+**嘉宾**：嗯，是的，我个人的 p(doom) 确实相当低。当然，我只能代表我自己发言。我想说明的是，在 Anthropic 内部其实存在着各种多元的观点与看法，关于这个议题有着许多截然不同的探讨切入角度。而对我而言，我个人的思维模型在于：我相信人类有能力在严峻复杂的问题上携手展开合作。核扩散（nuclear proliferation）就是一个非常好的先例，证明了我们曾经如何共同协作去应对这一艰巨的挑战。对我来说，关键就在于我对这种合作机制抱有信念。同时，我丝毫不否认这确实是一个极度棘手的难题。从技术层面来看，有充分的理由解释为什么它如此复杂，而且我其实并不清楚人们究竟是如何给这类事件发生的概率打分的——我认为定量评估概率本身就极具挑战。但我整体的核心看法是，人类社会展现出了极高的韧性与极强的适应能力。我认为把这些前沿信息开诚布公地分享出来，正是至关重要的第一步。而且我由衷地感到欣喜，看到如今关于这个问题的讨论已经变得如此宽泛和深入，对吧？看到各方都纷纷积极投入到调节前沿节奏（pacing the frontier）的探讨与实践中来。要知道，就在大概一年前，这种全行业共同参与的势头看起来还几乎是不可能发生的。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Um, yeah, I have a fairly low p(doom). I can only speak for myself, you know, and I do want to say Anthropic has a diversity of opinions. There's many different ways to talk about it. My mental model is that we can collaborate on hard problems together. Nuclear proliferation is an example of how we collaborated on this hard problem together, and that is the thing to me—I have faith in that. And I do think it's a hard problem. These are the technical reasons why, and I don't know how you assign probabilities to things happening; I think it's hard to do. But my overall take is, yeah, I think we're very resilient and adaptable, and sharing this information is the first step. I've been really excited about how broad the discussion has become, right? And how everyone has sort of leaned in on pacing the frontier. It really didn't seem like this would happen maybe last year or something. So...
+
+</details>
+
+### 权衡前沿节奏与技术红利：从《仁慈机器》到生物医学突破
+
+**主持人**：对，没错。而且除了把控安全节奏之外，也许还能治愈癌症。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah, yeah, yeah. And also maybe curing cancer.
+
+</details>
+
+**嘉宾**：希望如此，是的。那正是我们追求的最终目标。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Hopefully, yeah. That's the goal.
+
+</details>
+
+**主持人**：既要把握推进节奏，同时又要在真正有价值、有益的领域全面加速，对吧？比如在生物学等诸如此类的领域。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: There's pacing, and then there's also like, well, let's accelerate in useful ways, right? Like biology and all those things.
+
+</details>
+
+**嘉宾**：是的。我想说，Dario（达里奥）所写的《仁慈机器》（Machines of Loving Grace）就是对这一愿景最淋漓尽致的诠释，对吧？而且我也完全赞同，大家确实应该去读一读 Dario 发布的关于控制前沿发展节奏（pacing the frontier）的文章。我自己之前也发布过一份简短的要点总结，但我认为原文中蕴含着非常丰富的细节。这是一个极其重大的命题，最关键的是要对其保持充分的认知与了解。当然，我们之所以投入全部精力做这一切，根本原因正是为了能让人类享受到这些难以估量的巨大技术红利，对吧？关于这一点，我们也已经撰写了大量的论述。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. I mean, Dario's "Machines of Loving Grace" is the best representation of this, right? And I also think you should read the pacing the frontier essay that Dario put out. I put out a quick summary, but I think there is a lot of detail here. It's an important problem, and just being informed about it, right? But yeah, of course, the whole reason we're doing this is so that we can get these enormous benefits, right? And we've written a lot about that too. Yeah.
+
+</details>
+
+### 结语与开发者寄语：在剧烈变革时代的焦虑与兴奋
+
+**主持人**：好的。这真是一场内容极其丰富的深度漫谈，从最具体的“提问工具”（Ask you a question tool）一路探讨到了底层的 AI 安全。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Okay. That was a huge tour, from like "Ask you a question" tool to AI safety.
+
+</details>
+
+**嘉宾**：是的，没错，一直深入到了直面与调控技术前沿（pacing the frontier）。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah, to facing the frontier.
+
+</details>
+
+**主持人**：是的。显而易见，你非常全心身地投入并拥抱了在 Anthropic 所接触到的一切资源与前沿实践。而且能让大家向内窥探一眼、了解到你们内部真正在热议的话题与讨论焦点，真的非常有价值。在最后，你有什么想对大家说的结语，或者任何你想提出的号召与建议（call to action）吗？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. No, but it's clear that you really embrace everything that's available to you at Anthropic, and it's good to at least have a peek inside of what the discussions are and what the topics are. Any last words to people, or whatever you want to—call to action?
+
+</details>
+
+**嘉宾**：好的。我想首先非常感谢你能邀请我来参加这次对话。对我而言，这真的……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. I mean, I think, one, thank you for having me. You know, I think this is like, I really...
+
+</details>
+
+**主持人**：哈哈，是的！我们最初是在一家中餐馆里认识的。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah, yeah, yeah. We first met in a Chinese restaurant.
+
+</details>
+
+**嘉宾**：一点没错，哈哈。我非常喜欢你所建立起来的这个圈子，以及广大开发者所组成的浓厚社区生态。我知道当前的技术演进日新月异，令人应接不暇，大家有太多新事物需要去跟进，也有太多事情亟待去动手实现。我切身感受到，当下很多开发者可能多多少少会感到有些疲惫、焦虑，或是承受着不小的压力。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: That's right, yeah! Um, I think like, I really enjoy sort of the community you've created and the community of developers. And you know, I sort of know things are changing really fast, and I think there's a lot to keep on top of, and there's just a lot to do. And I sort of feel, I think a lot of people feel like a little bit tired or anxious or stressed.
+
+</details>
+
+**主持人**：是的，完全是这样。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah, exactly.
+
+</details>
+
+**嘉宾**：这种心情是极其合情合理且完全可以理解的。而且对于我们自身而言，我们也深知自己绝非完美。大家提出批评、积极探讨各大 AI 实验室在哪些方面可以做得更好，这本身是非常健康且必要的。但与此同时，看到大家对 AI 所爆发出的巨大热情，我也感到由衷的振奋与激动。这确实是一个前所未有的、令人心潮澎湃的时代。我相信未来当我们回望当下这一刻时，一定会感叹：“天哪，那真是一段极其忙碌纷乱、却又无比精彩绝伦的岁月。”软件工程已经被彻底且不可逆转地重塑了，未来还会有无数其他领域迎来颠覆性的变革。能够身处其中成为这股浪潮的一部分，能够与你所聚集的这群观众深入交流，并且能够与所有正在不断突破边界、拓展技术可能性的开发者们互动合作，我感到极其荣幸。从大家身上，我也同样汲取和学习到了非常多的东西。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: And this is extremely understandable, you know. And we're not perfect as well. It's like, sort of criticize and understand ways all of the AI labs could be better. But I also am very excited about the excitement that everyone has for AI, and it's a really, really exciting time. I think we'll look back at this time and be like, "Oh, this was very hectic, but very exciting." Software engineering changed forever, and many other things will change. It's really privileged to be part of it, to talk to the audience that you have, and get to interact with all the developers who are pushing the frontiers a lot on what's possible, and I learn a lot from that too. Yeah.
+
+</details>
+
+**主持人**：非常感谢你的精彩分享！非常感谢。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Thanks so much. Thanks.
+
+</details>

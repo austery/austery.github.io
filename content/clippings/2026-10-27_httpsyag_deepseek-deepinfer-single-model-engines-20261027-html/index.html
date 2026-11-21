@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeepSeek
+开源了自家推理引擎：单模型引擎为什么总能暴打通用引擎</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">DeepSeek
+开源了自家推理引擎：单模型引擎为什么总能暴打通用引擎</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-27</span>
+    
+
+    <header class="article-header">
+      
+      <h1>DeepSeek
+开源了自家推理引擎：单模型引擎为什么总能暴打通用引擎</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/inference-engine/">inference-engine</a>
+      
+        <span class="tag-pill tag-pill--no-page">deepseek</span>
+      
+        <span class="tag-pill tag-pill--no-page">vllm</span>
+      
+        <span class="tag-pill tag-pill--no-page">model-engine</span>
+      
+        <a class="tag-link" href="/tags/optimization/">optimization</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">DeepSeek开源了其推理引擎DeepInfer，该引擎在特定条件下（如离线批量推理）表现出比通用引擎更快的总吞吐量，但首字延迟可能更慢。文章指出，单模型引擎的快主要来源于硬件支持、权重包优化和投机解码，而真正难以复制的、与自家基础设施绑定的部分，如跨机器缓存和请求路由系统，并未开源。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/deepseek-deepinfer-single-model-engines-20261027.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-27T00:00:00.000Z">2026-10-27</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#deepinfer">DeepInfer</a></li><li class="outline-h2"><a href="#%E5%AE%83%E5%88%B0%E5%BA%95%E5%BF%AB%E4%B8%8D%E5%BF%AB">它到底快不快</a></li><li class="outline-h2"><a href="#%E5%8D%95%E6%A8%A1%E5%9E%8B%E5%BC%95%E6%93%8E%E7%9A%84%E5%BF%AB%E5%A4%9A%E5%8D%8A%E4%B8%8D%E6%98%AF%E5%BC%95%E6%93%8E%E7%9A%84%E5%8A%9F%E5%8A%B3">单模型引擎的快，多半不是引擎的功劳</a></li><li class="outline-h2"><a href="#%E7%9C%9F%E6%AD%A3%E9%9A%BE%E7%9A%84%E9%82%A3%E4%B8%80%E5%B1%82deepseek">真正难的那一层，DeepSeek</a></li><li class="outline-h2"><a href="#%E4%B8%8B%E6%AC%A1%E5%86%8D%E7%9C%8B%E5%88%B0%E8%BF%99%E7%B1%BB%E6%96%B0%E9%97%BB%E5%8F%AF%E4%BB%A5%E9%97%AE%E4%B8%89%E4%B8%AA%E9%97%AE%E9%A2%98">下次再看到这类新闻，可以问三个问题</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>最近几天在公众号和科技媒体上看到了一个新闻，DeepSeek开源了自己的推理引擎DeepInfer，各个标题主要强调这个东西有多快。推理引擎是什么东西呢？它指的是让大模型可以运行的底层软件，包括接受我们的提问，并且给出相应的回答。我们调用
+DeepSeek 的线上服务时，背后就是这套软件在提供服务。</p>
+<p>如果你只是今天看到这个消息，想在几分钟内理解它跟自己有没有关系，我的结论是：对大多数人来说，它不需要直接使用。但这件事可以揭示一个更有用的规律：为什么这些专门为某个模型定制的引擎，往往看起来比
+vLLM
+这样的通用引擎更快；而真正把模型服务做好的系统层，并不在这次开源的代码里。</p>
+<h2 id="deepinfer" data-reading-heading="">DeepInfer</h2>
+<p>是什么，跟你有没有关系</p>
+<p>想自己下载试试也行，运行门槛一目了然。DeepSeek
+在10月20日发布的代码只支持Linux系统，也只支持DeepSeek-V4.1-Flash这一个模型。硬件上只支持英伟达B200、GB200这一代数据中心显卡和华为昇腾950数据中心芯片，不支持普通游戏显卡和Mac电脑。</p>
+<p>即便你有数据中心显卡，也需要区分 DeepSeek
+自己的线上部署和这次开源的内容。推理引擎分两步，第一步是把整个输入提示词读进来算出中间状态，叫读入；第二步是一个字一个字往外吐出答案，叫生成。官方的部署问答说的是
+DeepSeek
+自己线上如何部署，把读入和生成分开在不同的卡上，建议的最小高效单元是 64
+张卡读入 + 64 张卡生成，共 128
+张卡。但这次开源的代码只提供离线批量推理，就是要把一批问题一次性喂进去、批量产出结果，不能装好就直接当在线服务用。线上那套分开部署的部分没有开源。所以真正可能直接用它的，是手里有一批新一代数据中心卡、又正好要离线跑这个模型的团队。</p>
+<h2 id="它到底快不快" data-reading-heading="">它到底快不快</h2>
+<p>新闻里面都说DeepInfer很快，但衡量推理引擎快慢有两个不同的指标，一个是总吞吐，看一批请求一起进来能多快吐完，决定机器的算力账单；另一个是首字延迟，看发出请求后要等多久才能见到第一个字，决定人的实际体感。日常觉得好不好用主要看首字延迟，但这两个指标经常打架。</p>
+<p>目前只有一份同机第三方测试来自 GPUStack
+的同机对比。因为开源版的 DeepInfer
+只能离线批量跑，测试方为了和通用引擎 vLLM
+比在线服务，得在外面包一层社区写的接口程序。他们在同一台八卡机器上跑同一个模型，发
+100 个请求、16 路并发，每条输入 8192 个词元、输出 1024
+个词元（词元就是模型处理文本的字词片段）。结果两个指标正好相反：DeepInfer
+的总吞吐高了 25.2%，是每秒 1392 对 1112 个词元；但首字延迟约是 vLLM
+的两倍，是 4.28 秒对 2.04
+秒。这次测试里两边都关了一项常用的提速功能，且双方都没有做充分的调优。</p>
+<p>在同一台八卡机器上，DeepInfer 的总吞吐比
+vLLM 高 25%，但首字延迟约是 vLLM 的两倍。</p>
+<p>DeepInfer
+开源后的三到四天里，两个通用引擎分别发了自己项目的自测报告。10月23日，vLLM
+发文说在 32 张同代数据中心卡上，每卡的生成吞吐和 DeepSeek
+官方公布的性能曲线相差不超过 6%（不是同机同配置对比）。10月24
+日，另一个通用引擎 SGLang
+发文说在与 DeepInfer 相同的硬件上用 DeepInfer 自带的测试，结果和
+DeepInfer 基本持平、有些步骤还略快。</p>
+<h2 id="单模型引擎的快多半不是引擎的功劳" data-reading-heading="">单模型引擎的快，多半不是引擎的功劳</h2>
+<p>GPUStack
+那次测试里两边都关掉的那项提速功能，叫做投机解码。它的原理是先让一个小模块猜几个词，然后一个大模型一次性核对，如果猜对了就可以省几步。DeepInfer
+只是一个例子，在 AI
+社区里面我们经常看到工程师给某个模型专门写一个引擎，比如面向英伟达游戏卡的
+NInfer，面向家用机的
+Strata，最初面向 Mac 的
+ds4。网上经常有人拿他们的数字说比 vLLM
+快几倍。如果你想在本地部署模型，或者想看懂这类新闻，需要了解这种优势常见的三个来源。</p>
+<p>第一是在某些硬件上装得下、跑得起来。比如 Strata
+把不常用的参数放到内存里面，就可以用 12GB 的游戏卡加大内存来装约 1250
+亿参数的模型。今年 5 月 ds4 发布的时候，通用的引擎 llama.cpp 还不支持
+DeepSeek V4 Flash，但是一个多月以后 llama.cpp 就支持了。</p>
+<p>第二是相关的权重包，即把同一个模型转换、压缩成某个引擎专用格式的文件。我对自己显卡用的同一个引擎，只换权重包（连同缓存的压缩格式），读入速度快了
+13% 到 46%；只升级引擎版本，读入只快 1% 到
+5%。换权重包的提速比升级引擎版本大一个量级。</p>
+<p>同一个引擎只换权重包（连同缓存格式），读入快 13% 到
+46%；只升级引擎版本，读入只快 1% 到 5%。</p>
+<p>第三是投机解码。通用引擎 SGLang
+的正式版曾经缺少一个关键组件，我机器上一个请求每秒约 90 个词元；合入补齐它的改动后，跑数学和代码题到了约
+230，这个改动两周多后进了正式版。单模型引擎领先的那一段，往往是这种时间差。我机器上这几组数字的测试条件不完全一样，只能看个大概。</p>
+<h2 id="真正难的那一层deepseek" data-reading-heading="">真正难的那一层，DeepSeek</h2>
+<p>没开源</p>
+<p>引擎层的提速不久就会被通用框架追上，那 DeepSeek
+线上服务最难复制的部分在哪？官方在社交媒体上的说法是完全开源的生产系统，但看
+DeepInfer
+的说明文档，它明确列出了没有开源的三块内容。第一块是长期保存、跨机器复用中间结果的缓存系统。第二块是把读入和生成放到不同机器上的分离部署，代码里对应函数在基类中是空的。第三块是在多个服务副本之间分配请求。官方说是和内部基础设施耦合太紧，暂未完整开源。</p>
+<p>一个直观的例子是，编程助手每轮都会把长历史发给模型，引擎用缓存上一轮的中间结果来省掉重读。我有一次用编程助手跑长会话，它超了上下文上限被拒，随即改写了中间的历史，缓存对不上，那一轮等了
+24 秒才出第一个字；下一轮缓存重新建好，不到 0.3
+秒。缓存和路由系统要处理的正是这类问题：让请求尽量命中缓存，并把请求派到存着它缓存的机器上。DeepInfer
+恰好没开源这一块。</p>
+<p>我在10月写过自建多卡路由为什么难，核心矛盾在于缓存复用要把会话固定在一张卡上，缩短排队又要把请求分散，两者冲突。这里可以做一个推断：引擎层面的优化迟早会被通用框架追上，真正和自家基础设施绑在一起的，可能是这套没有开源的缓存和路由系统。</p>
+<p>NInfer、Strata、DeepInfer
+都把力气花在单机算得快的引擎层，派请求、管缓存这一层要么由用户自己写，要么没有开源。</p>
+<h2 id="下次再看到这类新闻可以问三个问题" data-reading-heading="">下次再看到这类新闻，可以问三个问题</h2>
+<p>因此下次你看到一个新引擎比 vLLM
+快几倍，或大厂开源了一个新的推理框架，先别急着看跑分图，想想这三个问题，脉络就清了。第一，它指的是哪种快，是谁在什么条件下测的，总吞吐高只说明批量处理划算，不代表你等第一个字的时间更短。第二，这个优势来自引擎本身，还是来自装得下、权重包、投机解码，如果是投机解码或新模型支持，通用引擎往往几周到一两个月内就会追近。第三，它开源的是哪一层，单机引擎开源不等于整套服务开源，跨机器缓存和请求路由才是自建服务最费劲的部分。</p>
+<p>我在今年7月写过关于vLLM和特化推理的文章，结尾曾经问过一个问题：这类专门定制的推理引擎会长期独立存在，还是最终会被通用引擎吸收？看完这几个月从社区项目到DeepInfer的演变，我现在的回答是：投机解码这类提速上的领先会被通用引擎吸收，对新模型的支持也会在一两个月内跟上，但缓存和路由这一层不会自动跟过来。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/f9f69a454a042199c25e25578d21ab7cdc666b8651b4307ab4fdc8d0c6fb3c59.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/f9f69a454a042199c25e25578d21ab7cdc666b8651b4307ab4fdc8d0c6fb3c59.md" download="DeepSeek
+开源了自家推理引擎：单模型引擎为什么总能暴打通用引擎.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=DeepSeek" class="entity-link company-link">DeepSeek</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=DeepInfer" class="entity-link product-link">DeepInfer</a>, <a href="/search/?q=DeepSeek-V4.1-Flash" class="entity-link product-link">DeepSeek-V4.1-Flash</a>, <a href="/search/?q=vLLM" class="entity-link product-link">vLLM</a>, <a href="/search/?q=SGLang" class="entity-link product-link">SGLang</a>, <a href="/search/?q=NInfer" class="entity-link product-link">NInfer</a>, <a href="/search/?q=Strata" class="entity-link product-link">Strata</a>, <a href="/search/?q=ds4" class="entity-link product-link">ds4</a>, <a href="/search/?q=llama.cpp" class="entity-link product-link">llama.cpp</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

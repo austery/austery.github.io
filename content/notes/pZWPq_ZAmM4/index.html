@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>释放智能的基石：Lovable 的长程 Agent 架构演进</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">释放智能的基石：Lovable 的长程 Agent 架构演进</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-19</span>
+    
+
+    <header class="article-header">
+      
+      <h1>释放智能的基石：Lovable 的长程 Agent 架构演进</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <span class="tag-pill tag-pill--no-page">agent-runtime</span>
+      
+        <a class="tag-link" href="/tags/system-architecture/">system-architecture</a>
+      
+        <a class="tag-link" href="/tags/software-engineering/">software-engineering</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Lovable 联合创始人兼 CTO Fabian Hedin 回顾了从 GPT Engineer 到 Lovable 的演进历程，重点分享了支撑 Agent 长时间运行（超10小时）的三大底层架构：基于 Git 式可分叉日志的无状态 Runtime、支持瞬时快照与分叉的虚拟机沙箱、以及结合运行时与业务指标的内外双环验证系统。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=pZWPq_ZAmM4" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-19T00:00:00.000Z">2026-11-19</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BC%80%E5%9C%BA%E4%B8%8E%E8%83%8C%E6%99%AFagent-%E7%9A%84%E6%9B%B2%E6%8A%98%E6%BC%94%E8%BF%9B%E5%8E%86%E7%A8%8B">开场与背景：Agent 的曲折演进历程</a></li><li class="outline-h3"><a href="#lovable-%E7%9A%84%E5%AE%9A%E4%BD%8D%E5%85%B3%E6%B3%A8%E7%BB%93%E6%9E%9C%E4%B8%8E%E4%B8%9A%E5%8A%A1%E4%BA%A7%E5%87%BA">Lovable 的定位：关注结果与业务产出</a></li><li class="outline-h3"><a href="#%E9%95%BF%E7%A8%8B-agent-%E6%9E%B6%E6%9E%84%E7%9A%84%E4%B8%89%E5%A4%A7%E6%94%AF%E6%9F%B1">长程 Agent 架构的三大支柱</a></li><li class="outline-h3"><a href="#%E6%80%BB%E7%BB%93">总结</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="开场与背景agent-的曲折演进历程" data-reading-heading="">开场与背景：Agent 的曲折演进历程</h3>
+<p>大家好，很高兴来到这里。我是 Lovable 的联合创始人兼 CTO Fabian。在过去几年左右的时间里，我们一直在构建一个平台，让任何人都能创建软件，并对其进行运维和部署。</p>
+<p>今天的主题是“释放智能需要什么”。对我们而言，这实际上要追溯到三年前刚起步的时候。我得说，我和 Agent 之间有着相当复杂的关系。原因在于：我们作为一家公司差点倒闭，因为我们在 2023 年时认为“Agent 代表着未来，所以让我们现在就针对它们进行构建”。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+[music]
+<blockquote>
+<blockquote>
+<p>Welcome everyone. Glad to be here. I'm Fabian, co-founder and CTO of Lovable. And we spent the last few years or so building a platform to let anyone create software and then operate that and deploy that software.</p>
+</blockquote>
+</blockquote>
+<p>And the the topic of today is what it takes to set intelligence free. And really for us this takes us back to when we when we started three years ago. And I have to say I have a bit of a complicated relationship with agents. And I'll tell you why. We almost failed as a company because we thought back in 2023 that hey, we these agents are the future, so let's build for them now.</p>
+</details>
+<p>事实证明它们确实是未来，但在 2023 年谈“现在”显然是错的。那大概还是 GPT-4 的时期。当时的基础智能水平根本无法支撑更复杂的 Agent 系统。但现在不同了，对吧？现在的智能水平已经足以支撑在其周围构建更复杂的系统。</p>
+<p>我先简要分享一下我们在应用模型或这些 LLM 过程中的历程背景。在 2023 年，我们打造了第一版产品，当时叫 GPT Engineer。当时的界面其实与今天非常相似，左边是对话框，右边是预览区。但那时的 AI 极其简单：仅包含一个 Prompt，每次用户发送消息只调用一次 LLM。非常简单，运行得还行，但只能用来做单页应用和比较简易的程序。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I think they we kind of turned out to be true that they were the future, but we were definitely wrong on the now piece in 2023. So this was back in kind of GPT-4 days.
+<p>And at the at that time the intelligence was simply not there to have more of these kind of complex agentic systems. But now it is, right? Now now the intelligence is actually at a place where where you can really build out more complicated systems around them.</p>
+<p>And so I'll give you kind of a quick background story here of of our journey in in working with intelligence or or these LLMs. And so back in 2023 we built the first version of our product. We called it GPT Engineer back then. And really the UI was very similar to what it is today where you kind of have a chat and in this preview. But the AI at that point was quite simple. We just had a prompt and a one LLM call per user message. Very simple. It worked fine. But you could kind of build one page apps and and simpler applications with this.</p>
+</details>
+<p>后来我们觉得智能水平会不断进化，必须做好准备迎接它的演进。于是我们决定去打造一个 Agent 框架。我们构建了一个非常精密、甚至可以说相当优雅的 Agent 运行框架。我们设计了一个主 Agent 负责与用户交流，然后它会衍生出其他 Agent，比如这里的实现 Agent；每个 Agent 都有其专长，有的专门负责应用的初次生成，此外还有前端 Agent 和后端 Agent 等。它们彼此交流，来回传递消息。当时觉得这太漂亮了，市面上也有不少论文探讨这种模式的有效性。然而最终它根本行不通，反而把产品改差了。</p>
+<p>我们在这一点上彻底失败了。[轻咳][笑声] 但幸运的是，在资金耗尽之前，我们意识到应该退回更简单的系统。因此在 2024 年末，我们重构回一个简易得多的系统：用一些较小的模型进行知识检索，核心由一个主模型在同一条消息中与用户交流并编写代码。这套方案表现非常优异：在界面上的响应极为迅速且稳定，用户也能紧密地与模型互动迭代。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And then we thought, okay, this intelligence is going to keep on evolving, so we have to be ready for for it as it evolves. And so we thought, let's go out and build this agentic framework. And so we we went and we built this very sophisticated, dare I say, beautiful framework for for agents to work. And we had kind of this one main agent that would talk to the user, and that agent would spawn other agents, like an implementation agent here in the example. And each agent could have a speciality. This agent would kind of specialize in the first generation of an app, and then you would have like a front-end agent and a back-end agent. And they would all talk to each other, send messages back and forth. And we thought, oh, this is beautiful, and there was papers around this and how well this could work. And in the end it it didn't work at all. We just made the product worse.
+<p>We we definitely failed [clears throat] [laughter] on this one. But luckily, before we ran out of money, we figured out like, hey, let's go back to a simpler system again. So in late 24 we went back to a much simpler system where it was a bit of a shame where we had like some some smaller LLMs doing some knowledge retrieval and then really just one main LLM kind of writing to the user and and writing the code in the same message. And this worked great. It was very responsive for for users in the UI, and it was reliable, and users were kind of in it and in iterating with with the model.</p>
+</details>
+<h3 id="lovable-的定位关注结果与业务产出" data-reading-heading="">Lovable 的定位：关注结果与业务产出</h3>
+<p>先收回这个话题。但现在时机再次成熟了，我们回来了，彻底回归了。这一次 Agent 真正能够运作了。我们目前在生产环境中运行着这套即将介绍的系统，每分钟吞吐量超过十亿 Token。</p>
+<p>首先看一下：Lovable 到底是什么？如果将界面简化——这与 2023 年时一致——左侧是对话框，供用户进入并描述他们的构建意图或需求；右侧则是预览区，即构建内容的产出或最终结果。在 2023 年时，用它只能做简单的事情；而如今在这一抽象层工作，大家已经能够构建极其复杂的系统。我们甚至看到许多面向开发者的工具也开始转向这种交互界面：开发者不再每天盯在具体代码上，而是被抽象出来，专注于架构设计或关注工作产出。这是我们始终坚信的理念，也是 Lovable 背后的核心论点：你将不再需要像以前那样关注底层代码。</p>
+<p>业内现状似乎处于过渡期：有些人认为完全不必再关心代码，有些人则持有不同观点。对于像我这样从小写代码长大的人来说，难免会有情感依恋，但归根结底，重要的从来不是代码本身，而是最终的结果。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And so close that down. But now it's time again. We're back. We're so back. Agents this time, they work. And we're running them in production over a billion tokens per minute on on on these systems that I'm going to talk about.
+<p>But first, just looking at, okay, what is actually lovable? So uh if you simplify the UI, and this was same back in 2023 as it is today, uh to the left we have a chat where humans come in and they kind of describe their their intents to to build or whatever they want to do, and to the right you have a preview, uh which is the output or or the outcomes of of what you're building. Um and this back in 2023 you could do simpler things with, right? But now we've really seen working at this layer of abstraction you're able to build very complex things, right? And I think we've even seen uh a lot of tooling meant for for developers for example moving to this type of interface where you're not really looking at the code every day and so on and you're getting kind of abstracted and working on on be architecture or looking at some kind of output of of what you're doing. And um this is something that we've always believed in and it's been kind of a core thesis behind Lovable that you won't have to care about the code in in the same way uh that you had had to do before. And I think today we're kind of in this almost a bit in between I think in the industry where you know some people might say oh you don't have to care about code at all and some people might have different opinions um um I of course like growing up coding and these things you get a bit attached, uh but in the end what matters is is actually not the code. Um sorry I thought we removed that last part but what what matters is is the outcomes, right? Um</p>
+</details>
+<p>那么所谓的“结果”是什么呢？对我们的用户而言，结果是创建业务、实现变现，并以某种方式为他人创造价值。在深入讨论技术细节之前，我先简单介绍一下我们为实现这一目标所构建的平台能力。</p>
+<p>看一看 Lovable 平台，第一项核心是内置的 Agent。与同类 Agent 类似，它可以执行较为通用的任务，并且高度专注于软件构建；它拥有浏览器访问权限以便验证所构建的内容，可以连接 GitHub，编写的代码也可以由你自由处置。这是基础的编程 Agent 能力。</p>
+<p>第二块是云端与托管能力。这一部分旨在为 Agent 无缝提供各类托管原语。我们构建了数据库、身份验证、存储、各类型后端算力、安全扫描器、备份以及各类日志，所有这些都能被 Agent 直接检查。这使得构建应用变得无缝，你无需跳转到多个第三方服务拼凑基础设施，我们直接提供这些原语。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+and so um the outcomes what is that? Well for for our users the outcomes is um creating a business and monetizing and creating value for for others in in in some type of way. And I'll kind of quickly go over um what we build as a platform to to enable this before I go in kind of on the uh on the technical side of this talk. So if you if you look at Lovable the first thing that that you can say about the platform is that we have this agent and like any other agent it can do quite arbitrary things and it's quite specialized at at building software and it has access to a browser so it can verify what it's building and it connects to to GitHub and you know it writes code that and you can do whatever you want with that code. So so that's kind of your basic coding coding agent.
+<p>And the the other pieces of the platform is is kind of cloud and and business piece of the platform. And so the cloud part of the platform is is about just giving kind of these hosting primitives just seamlessly to to this agent. And so we we built out databases of authentication, storage, all the types of backend compute and security scanners and like backups and logs for all of these things and all of it can be inspected by by the agent. And this just makes it seamless to to build things. you don't have to kind of go to different services to set this together. We just kind of provide you these primitives.</p>
+</details>
+<p>平台最后的拼图是商业化能力。再次强调，我们并不将用户的产出简单视为代码，而是一个产品或一项业务。要实现商业成功，需要做的事情远不止编写代码。因此我们协助用户处理收款、发送邮件、SEO 优化、在 Google 和 Meta 上投放广告，并通过数据分析了解产品动态以优化转化率。Agent 贯穿整个环节并参与其中。这就是我们的整体能力组合。</p>
+<p>而这所有能力的核心，都是围绕 Agent 构建的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So that's still around building software and hosting this, right?
+<p>But then the last piece is around these business capabilities where again the output of what our users are doing on Lovable, we don't see that output as code. The output is is a product or or a business. And if you want to succeed as a business, you need to do more things than just write code, right? And so we we we we help our users with receiving payments, sending emails, optimizing SEO, doing ads on on Google and Meta, and kind of analyzing what is happening with the product through through analytics and you can look at kind of conversions and and optimize these sort of things. And the agent is in the loop in all of this, right? So that's kind of our capability offering, you could say. And again, the core part of this is an agent that all of these capabilities are built for.</p>
+</details>
+<h3 id="长程-agent-架构的三大支柱" data-reading-heading="">长程 Agent 架构的三大支柱</h3>
+<p>在 Lovable 过去的某个阶段，我们曾将 Agent 的运行时长限制在 30 分钟以内，因为当时认为它们无法稳定工作更长时间。但现在我们取消了时长限制，Agent 可以连续运行 10 个小时以上。</p>
+<p>接下来我将详细阐述支撑长程运行的底层架构改造。这主要涵盖三个部分：</p>
+<ol>
+<li><strong>Agent 运行时本身（Agent Runtime）</strong>：如何支持其长时间连续执行；</li>
+<li><strong>计算环境（Computer）</strong>：Agent 实际开展工作、启动开发服务器并验证行为的沙箱；</li>
+<li><strong>验证机制（Verification）</strong>：若要让 Agent 长时间工作，必须具备健全的反馈闭环，防止其偏离正确方向。</li>
+</ol>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And at some point in Lovable's history, we used to limit our agents to work for only 30 minutes because we thought they weren't reliable to to work for a longer amount of time. But now we've changed this to really be without any any sort of bound in terms of the length an agent can work. And so you can imagine agents working for for 10 hours plus.
+<p>Um, and so I'll I'll go into some of the things that we've done in our architecture to to enable this. And so the first piece is really around the agent runtime itself and how how we enable that to to run for a longer amount of time. And the second piece is the computer where each of these agents are actually doing their work, running a dev server, and actually verifying what it's doing. And so so the last piece then is the verification itself where if you want an agent to to work for a long amount of time, you need to make sure that you have these feedback loops in place so that it's not kind of going off in in in the wrong direction.</p>
+</details>
+<h4 id="支柱一agent-运行时与轨迹日志">支柱一：Agent 运行时与轨迹日志</h4>
+<p>首先探讨 Agent 运行时本身。通常有三种不同的信号源会与 Agent 交互：人类用户发起的 Prompt 交互、其他协同 Agent，或是按定时任务唤醒的系统机制。我们的架构设计是：为每个 Agent 维护独立的收件箱（Inbox），所有信号源均向该收件箱发送消息（例如一条询问“当前状态如何”的消息）。</p>
+<p>Agent 本身可被视为常驻运行的工作单元。假设它已执行了三个操作：一个请求、一次工具调用以及获得了相应结果，此时便准备好接收消息。由于任何实体都能向收件箱投递消息，Agent 随后会将消息写入自己的“轨迹”（Trajectory）中——本质上就是它的任务历史记录。普遍使用 Agent 的人对这种交互应该并不陌生。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, and so if we start by looking at the agent runtime itself, you can imagine that you have really three different sources that can interact with an agent. So it can be yourself kind of prompting this or a human. It could be other agents and it could also be just a system on on a schedule waking up. And the way we chose to architect this is that for for each agent we have a separate inbox where any of these sources would kind of send in messages. And so you might have a message here like what's the status. And you can imagine you have this agent and this agent is kind of an always on agent that that might be working, right? And so you can imagine it has done like three actions here, a request, a tool call, and it got some some result. And then at this point the agent is ready to actually receive messages. So since anyone can drop a message into this inbox, the agent then can copy that itself into its own what we call a trajectory. Basically it's a task history. And this is the type of interaction that I think you're familiar with if if you're using agents overall.
+</details>
+<p>这是该运行时的第一个设计原则。接下来再介绍几项特性。</p>
+<p>Agent 运作所依赖的“轨迹”，记录了截至目前发生的所有事情，是其所有记忆能力的基石。我们在设计该轨迹时深度参考了 Git 的理念。具体而言，该轨迹是一个<strong>仅追加日志（Append-only Log）</strong>，其中每个事件都指向其父节点（即前一个事件）。</p>
+<p>得益于这种结构，它获得了与 Git 类似的分叉能力（Fork）：两个独立事件可以指向同一个父节点，从而形成分叉。这意味着我们可以在历史记录的任意时间点启动并行 Agent，而无需复制底层的共享历史。从语义上看，合并这些分支的效果并不明确，因此与 Git 不同，我们并不合并 Agent 轨迹，但可以将其分叉派生出来，让各 Agent 彼此协同通信。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So that's kind of the the first design principle behind this agent runtime. I'll go through a few more here. And so um the the trajectory in which the the agent is working in, which is kind of the history of what has happened so far, um and really the basis for any sort of of memory for for for the agent, right? Um and we designed this trajectory with really Git as inspiration. And so the trajectory, what is it? It's an append-only log where each event points towards a parent, the previous event. Um and because of this, you get a nice capability just like in Git where you can fork things, right? So you can have two events pointing to the same parent, which essentially creates a fork. Um and because of that, you can kind of spin up parallel agents at at any point of time in the history without having to duplicate all of the kind of the shared history. Um and semantically, it's a bit unclear what would happen if you merge this. So unlike Git, we cannot merge agent directories, but we can kind of spawn them out, right? And these agents can can talk to each other.
+</details>
+<p>另一项设计关键在于：该轨迹忠实记录了 Agent 发生的一切完整历史，包括每一次工具调用、平台上的各类事件、调用成功或失败的状态等；其中不少信息可能并不适合直接放入 Prompt 中。</p>
+<p>基于这一仅追加日志，我们再按需提取并构建实际输入给 LLM 的 Prompt。为什么要把两者分离？原因之一在于：面对冗长的历史上下文，通常需要对早期步骤进行某种程度的压缩或摘要。但摘要策略因模型而异——面对不同上下文窗口长度的模型，需要采取不同的摘要时机与方案。将 Prompt 的组装与实际任务历史完全解耦后，我们便能够针对任意模型和任意任务类型，动态渲染出最适配、最优化的 Prompt。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um the other thing that we made sure to design for is that this agent trajectory, it includes kind of the full history and everything that happens with the agent. And so every tool call, a bunch of other things happening on the platform, if a tool call like failed or succeeded, um a bunch of things that might not be fully relevant for a prompt. But then what we've done is make sure that we have this append-only log. And and from that, we can actually build a prompt that we would feed into into the actual LLM. And you might ask, why why why would you want to do this? Well, one one reason is that when you build a prompt, you if you have a long history, you probably want to do some sort of compaction and you want to summarize part of that history in in the earlier steps, for example. But this summarization would differ. For example, if you use different models with different context lengths, you would probably think differently about when you should summarize and not. And so by separating the the prompt from the actual task history, we're able to render prompts for for any type of model or or any type of task that that we can kind of find the best and optimal prompt for.
+</details>
+<p>为了直观呈现事件历史的运作，我们在 UI 中提供了调试工具。录屏展示了我拖动滑动条的过程：随着拖动，右侧界面实时更新渲染出对应状态；当前显示有 156 个事件，每一个都对应事件历史中的一个节点。这展示了系统如何将历史上的任意时间点完整还原呈现，证明依托详尽记录历史的底层日志，我们在任何时刻都能对 UI 及平台发生的所有事情保持完全掌控。</p>
+<p>运行时部分的最后一项特性是：<strong>执行 Agent 的进程与实际任务历史完全分离</strong>。运行进程几乎是完全无状态的，在每次调用、每次工具执行和每个交互轮次之间，数据都会直接持久化到任务历史中。因此，后台进程可以随时创建和销毁。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So to show this event history in in progress, we have this debug tool here. So here it's just recording of me dragging this slider in our UI and you can see on the right that the UI is kind of updating as I'm as I'm dragging this along and you have 156 events here and one each of those is an event in this event history. And you can see how how the UI can render kind of any point in history and this is just showcasing that at any point in time we have full control of of say the UI or or anything else happening on the this platform thanks to this history kind of detailing everything that has happened.
+<p>Then the last piece I'll go over here on the on the on the runtime itself is that the process that is running these agents, they're separate from from the actual task history. And so the process is almost entirely stateless in that between each each call, each tool call, each turn, it will actually just persist into the task history. And so you can have a process come and go.</p>
+</details>
+<p>为什么需要做到进程无状态？因为在 Lovable，我们每天向这套系统部署 700 次，大约每两分钟部署一次。设想一个 Agent 正在为客户持续运行 10 个小时，你既不能打断它的工作，又必须确保它能运行在最新的部署版本上——这可能是为了引入新功能，也可能是为了紧急修复 Linux 内核的安全漏洞。</p>
+<p>由于任务历史与执行进程完全解耦，单一 Agent 在执行特定任务时，后台接管并提供算力的进程可以随时无缝轮换。即使任务持续运行 10 小时甚至更久，底层部署能够持续迭代更新而不产生中断。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And and then the question is why why do we care about this? Well, at Labbable this system we deploy to it 700 times per day. So that's about once every two minutes. And you can imagine if you have a agent working for for 10 hours, you want to not disrupt that agent when it's working, right? This this agent is doing something for for a customer. But at the same time we want to make sure that this agent is running on the latest deploy. And it might be a new feature or something like that, but it might also be like a security vulnerability in in the Linux kernel. And it's like okay, we need to update this ASAP.
+<p>And and so to do that thanks to this separation between the actual history and and the processes, we can actually make sure that we have one one agent that is working on one task, but we can have different processes taking up and actually doing the compute behind that work. So so this task can keep on working while we have different deploys working on it, be it for 10 hours or or even longer, right?</p>
+</details>
+<h4 id="支柱二计算沙箱快照与-rust-化开发服务器">支柱二：计算沙箱、快照与 Rust 化开发服务器</h4>
+<p>接下来介绍平台的第二块核心：计算环境（Computer）。这是 Agent 实际开展工作的环境。在探索为 Agent 提供工作沙箱的过程中，我们经历了大量的迭代并测试了众多供应商方案，最终落地了当前重点研发的系统——<strong>计算环境快照机制（Checkpointing）</strong>。</p>
+<p>当用户创建一个新项目时，系统会基于一个通用的“黄金快照”（Golden Checkpoint）进行初始化。它包含预装的操作系统、系统服务、常用开发工具以及就绪的开发服务器。该快照涵盖磁盘状态、内存数据以及运行中的进程。创建新项目时可直接获得这套环境，整体拷贝耗时仅约 <strong>230 毫秒</strong>。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So that's the agent runtime. The second piece of of this platform, right, is the is the computer. So this is where the work is actually happening. And we've been through a lot of iterations and a lot of vendors kind of working with providing these sandboxes for for the computer for for the agent to work in. And we've landed in in the system that we've worked really hard now to develop, which is checkpointing a computer. And so you can imagine you come to you start a new project. We have this common what we call a golden checkpoint, which contains the OS and the system services. It has common tools installed and a dev server that is ready to start. And this checkpoint it includes everything on disk, memory, and also running processes. And and so when you start a new project, you get all of that for free. And all of that is copied over in about 230 milliseconds.
+</details>
+<p>项目启动后，随着代码编写和特定依赖的安装，系统会随进度持续保存检查点。Agent 每完成一个执行轮次，我们都会对该计算环境生成一次快照。因此，我们可以在亚秒级极速重新拉起该环境。这意味着如果用户离开 10 分钟左右，我们可以安全地关停环境以节约资源；当用户返回时，系统可以在无感知的情况下秒级恢复，甚至传输中的网络请求都不会丢失。</p>
+<p>快照机制带来的另一项能力与 Agent 轨迹类似：我们可以直接<strong>分叉（Fork）计算环境</strong>。例如 Lovable 提供名为“草稿”（Drafts）的功能，允许用户在不同环境中进行并行尝试，这就依赖对当前工作计算环境的分叉。虽然示例展示了同时运行两个分叉，但实际可以扩展到成百上千个。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And so once you start a project, you you might have some specific code and and some dependencies within that project. And that is also checkpointed as you go. And and so each time the the agent is running and it finishes a turn, we will actually save a checkpoint of that computer. And and from that we're able to again like very quickly subsecond spin that computer up whenever you need it. That means we can save on on resources by kind of spinning this down if you leave for say 10 minutes or or so and come back, we can just spin it up extremely quickly so you don't even notice this. And even kind of requests in transit will will not even be dropped in in this setup.
+<p>The other thing we can do thanks to this checkpointing is that just like the trajectory itself in the aided runtime, we can also fork the computer. And when we do this, we have for example we have a feature in in level that is called drafts where you kind of work in different environments of what you're doing and and to support that we need to fork the computer that you're working in. And here we have kind of the example of doing two at the same time and you can imagine doing hundreds of these, right?</p>
+</details>
+<p>为了使该方案在大规模运行时切实可行，我们实施了多项系统优化：</p>
+<ul>
+<li><strong>内存写时复制（Copy-on-write on RAM）</strong>：分叉计算环境在内存消耗上几乎是零成本的；只有当进程实际向内存页写入数据时，才会复制该物理页并分配新内存。</li>
+<li><strong>内存流式加载（Memory Streaming）</strong>：每个沙箱需要数百兆内存。如果全量存放在冷对象存储中，经磁盘再读入虚拟机内存通常需要数秒。通过支持流式传输内存，系统在全部内存就绪前即可提前启动机器——操作系统核心内存优先到达，相关进程在对应内存加载后立即投入工作，从而削减了启动耗时。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And so we've we've had to do some optimizations to make this feasible to to actually run. So one of these optimizations is copy on write on the RAM itself. And so creating one of these forks of our computer is is basically free in terms of of the RAM that it's using. But as soon as you start writing in in a process to to RAM, we will kind kind of copy that page over and only then will you start having to allocate new memory.
+<p>And and there's another optimization here also which is that each of these sandboxes they require a few hundreds of megabytes of memory. But and that would take a few seconds to stream in if you have it in like cold object storage and then it has to go to disk and then then into memory of this this VM. But thanks to being able to stream the memory, we can actually boot up the the machine before all of the memory is is actually ready on it. So the the memory the OS uses comes first and then like some processes and so on will will start to work as soon as the memory gets here. And this also shapes off some some extra startup time.</p>
+</details>
+<p>在此基础上，我们进一步思考如何让速度更快、效率更高。许多人熟悉 JavaScript 生态中大多数元框架都在使用的优秀开发服务器 Vite。我们对 Vite 进行了分叉，并<strong>使用 Rust 进行了重写</strong>。</p>
+<p>这一改动带来了显著提升：</p>
+<ul>
+<li>冷启动速度提升至原来的 <strong>2 倍</strong>；</li>
+<li>预览生成耗时从 <strong>40 秒骤降至 3 秒</strong>；</li>
+<li>移除了原版 Vite 对 Node.js 的依赖，纯以单文件 Rust 二进制运行，使机器内的内存占用降低至原来的 <strong>1/6.5</strong>（减少 6.5 倍）。</li>
+</ul>
+<p>通过完全掌控沙箱内运行的应用程序，我们也得以精准控制写入内存的方式。结合之前提到的写时复制方案，我们在进行多环境分叉时实现了极致的资源利用效率。这使我们能够并行运行海量 Agent，让它们并发探索修复 Bug 的多种方案，或针对应用性能进行多维优化。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And then we started asking ourselves, how can we make this even more efficient and even more faster for our users? And so you might be familiar with V8. This is great dev server that most of the meta frameworks out there in the JavaScript ecosystem is using. And so we we took that and we forked it and we rewrote it in in Rust. And that made our code starts two times faster, and we went from getting this preview from 40 seconds to three seconds. And the main kind of thing that we made faster is that V2 uses Node.js, and we're able to like drop that dependency of V itself and just have this Rust binary. So that made the memory footprint be 6.5 times less in these machines.
+<p>And by taking control of the applications that we're running in these computers, we're also able to control kind of how we write to memory. And so when we control how we write to memory, we're even more optimizing, if you remember back to the kind of the copy-on-write solution when we're drafting different different computers. And so we're able to run this extremely efficiently so that we can run lots and lots of agents in in parallel and kind of have agents explore different solutions to solving a bug or improving the performance of of your applications and and so on. And so this has been fun. [laughter]</p>
+</details>
+<h4 id="支柱三双环验证机制与闭环反馈">支柱三：双环验证机制与闭环反馈</h4>
+<p>最后一项关键要素是验证机制。上述计算环境与开发服务器是验证 Agent 行为的核心载体。</p>
+<p>谈及验证，本质上是一套反馈回路：Agent 执行了一项操作后，需要明确该操作是有效还是无效。这可以拆分为<strong>内环（Inner Loop）<strong>与</strong>外环（Outer Loop）</strong>：</p>
+<ul>
+<li><strong>内环反馈（单轮交互内部）</strong>：在 Agent 单次轮次内完成。包括常规的基础校验：代码构建是否成功？是否存在语法报错（Lint Errors）或类型报错（Type Errors）？在运行的预览环境中是否存在运行时异常（Runtime Errors）？此外，计算环境中配备了无头浏览器，Agent 可以主动访问并探索其构建的 Web 应用，辅以多项工具在轮次内完成即时验证。</li>
+<li><strong>外环反馈（轮次之间及业务层面）</strong>：发生在各个交互轮次之间（即 Agent 将控制权交还给用户的阶段）。在此阶段可以引入来自生产环境和真实用户的反馈，例如观察访客的行为特征、收集线上用户反馈、执行自动化 A/B 测试调整文案并监测转化率变动。结合前文提及的商业化基础设施能力，我们可以将支付流水、转化数据等实际业务指标闭环输入给 Agent，使其不仅能优化代码逻辑，更能辅助优化产品的整体商业策略。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But the last piece now is is about verification. And of course this kind of computer and this dev service a big piece of being able to verify what an agent is doing. And if you look at verification, you can think of these feedback loops, right? That the agent needs to get information. It took an action. Was this a good action or was it a bad action? And you can think of it as this inner loop and this outer loop. So this inner loop is during the turn of the agent. And you have kind of obvious things such as like the is the build working? Do we have lint errors or type errors in the code that we're running? And then you can check for runtime errors in in the preview that you're running. You can also have within this computer a headless browser where the agent can go in and kind of explore the the web app it's it's building or whatever it's building, right?
+<p>And and a bunch of other things that we're using to help verify within the turn of an agent. But then you also have this outer loop which is kind of between each turn. And a turn you can think of like when the agent is yielding to you as a user. And between each turn you might get some info on on the product itself from production from your users, right? And so you can look at how your visitors are behavior behaving, what users are telling you online. You can do automatic A B tests and actually see change some copy and see if it's improving conversion and so on. And then you can also take these business metrics and remember this goes back to kind of the capabilities I showed you. By having control over these things we can make sure that we can optimize how the agent is is getting this outer feedback loop so we can make sure that if you're running payments we can actually track those transactions and conversions and make sure that the agent can actually help you optimize not only the the code, right? But the business strategy around around your product.</p>
+</details>
+<h3 id="总结" data-reading-heading="">总结</h3>
+<p>以上正是我们持续投入的三大核心技术方向。我们将继续围绕将 LLM 编排为 Agent 的体系，深化这些能力与架构。</p>
+<p>目前，我们构建的这套 Agent 系统每分钟处理数十亿 Token；每个 Agent 都可以调动专属的计算沙箱，多个 Agent 也能共享单套计算环境协同作业。得益于前述各项系统级优化，我们得以重构并落地多 Agent 相互协同、彼此编排的优雅架构，并真正实现了规模化生产运行。</p>
+<p>如果大家希望体验这项技术，可以访问 lovable.dev。你会看到预览环境瞬时拉起，在极简友好的交互界面下开展工作，完全无需操心上述底层复杂细节。非常感谢大家，希望有所收获！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And so those are really the the three things that that we've been working for and we'll continue to kind of build out these these capabilities and these architecture around really orchestrating these LLMs into into agents. And so this agentic system that we're building it's running billions of tokens per minute and these computers, right? We can spawn up with each agent and we can have multiple agents use one computer and now we're kind of back to this quite beautiful setup where you have agents talking to agents and they're orchestrating and and this time it's it's actually working and it's working at scale thanks to some of these optimizations.
+<p>And so if you're curious to try this out you can head to lab.dev and you'll you'll see our preview spinning up and so on but you'll get a very simple and a nice interface and you won't have to care about all of this stuff. Thank you so much. It's been pleasure and yeah hope you hope you learned something. Thanks so much.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/58389e94523a863e0d342d4aa34ec5c9e5c7b6778de3baa3589391f6d7f39cd7.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/58389e94523a863e0d342d4aa34ec5c9e5c7b6778de3baa3589391f6d7f39cd7.md" download="释放智能的基石：Lovable 的长程 Agent 架构演进.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Fabian Hedin" class="entity-link person-link">Fabian Hedin</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Lovable" class="entity-link company-link">Lovable</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=GPT Engineer" class="entity-link product-link">GPT Engineer</a>, <a href="/search/?q=GPT-4" class="entity-link product-link">GPT-4</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

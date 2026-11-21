@@ -1,0 +1,9220 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>与 OpenAI 首席研究官 Mark Chen 边做饭边聊：AGI、o1、模型评测与扩展定律</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">与 OpenAI 首席研究官 Mark Chen 边做饭边聊：AGI、o1、模型评测与扩展定律</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>Latent Space</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-06-25</span>
+    
+
+    <header class="article-header">
+      
+      <h1>与 OpenAI 首席研究官 Mark Chen 边做饭边聊：AGI、o1、模型评测与扩展定律</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/artificial-general-intelligence/">artificial-general-intelligence</a>
+      
+        <a class="tag-link" href="/tags/reinforcement-learning/">reinforcement-learning</a>
+      
+        <a class="tag-link" href="/tags/scaling-law/">scaling-law</a>
+      
+        <a class="tag-link" href="/tags/model-evaluation/">model-evaluation</a>
+      
+        <a class="tag-link" href="/tags/pre-training/">pre-training</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">OpenAI 首席研究官 Mark Chen 在烹饪对话中探讨了交易员背景对研究的影响、研究品味的培养、o1 等推理突破、计算资源分配机制，以及当前基准评测面临的饱和危机与未来研究范式。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/latent-space/">Latent Space</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=fpAthTtha8c" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-06-25T00:00:00.000Z">2026-06-25</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>18 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BC%80%E5%9C%BA%E4%B8%8E%E5%81%9A%E6%B1%A4%E8%BD%B6%E4%BA%8B">开场与做汤轶事</a></li><li class="outline-h3"><a href="#%E4%BA%A4%E6%98%93%E5%91%98%E8%83%8C%E6%99%AF%E4%B8%8E%E7%A0%94%E7%A9%B6%E8%83%BD%E5%8A%9B%E7%9A%84%E5%9F%B9%E5%85%BB">交易员背景与研究能力的培养</a></li><li class="outline-h3"><a href="#%E4%BB%8E%E7%AC%AC37%E6%89%8B%E5%88%B0%E9%95%BF%E7%A8%8B%E6%99%BA%E8%83%BD%E4%BD%93%E4%B8%8E%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E8%BE%B9%E7%95%8C">从“第37手”到长程智能体与强化学习边界</a></li><li class="outline-h3"><a href="#%E7%83%B9%E9%A5%AA%E7%BF%BB%E7%82%92%E4%B8%8E%E6%89%A9%E5%B1%95%E5%AE%9A%E5%BE%8B%E4%BF%A1%E4%BB%B0">烹饪翻炒与扩展定律信仰</a></li><li class="outline-h3"><a href="#%E6%8E%A8%E7%90%86%E6%8A%BC%E6%B3%A8%E4%B8%8E-o1-%E8%AF%9E%E7%94%9F%E5%86%85%E5%B9%95">推理押注与 o1 诞生内幕</a></li><li class="outline-h3"><a href="#%E7%A0%94%E7%A9%B6%E6%96%87%E5%8C%96%E4%B8%8E%E8%87%AA%E4%B8%8B%E8%80%8C%E4%B8%8A%E7%9A%84%E8%B7%AF%E7%BA%BF%E5%9B%BE">研究文化与自下而上的路线图</a></li><li class="outline-h3"><a href="#%E7%BB%84%E7%BB%87%E6%9E%B6%E6%9E%84%E4%B8%8E%E7%AE%97%E5%8A%9B%E5%88%86%E9%85%8D">组织架构与算力分配</a></li><li class="outline-h3"><a href="#%E7%A0%94%E7%A9%B6%E6%BD%9C%E8%B4%A8%E7%9A%84%E7%94%84%E5%88%AB%E4%B8%8E%E7%A0%94%E7%A9%B6%E4%BA%BA%E5%91%98%E7%9A%84%E5%A4%9A%E6%A0%B7%E6%80%A7">研究潜质的甄别与研究人员的多样性</a></li><li class="outline-h3"><a href="#%E5%9F%BA%E5%87%86%E5%88%B7%E6%A6%9C%E4%B8%8E%E8%AF%84%E6%B5%8B%E5%8D%B1%E6%9C%BA">基准刷榜与评测危机</a></li><li class="outline-h3"><a href="#%E8%AF%84%E6%B5%8B%E5%9B%A2%E9%98%9F%E4%B8%8E%E6%A8%A1%E5%9E%8B%E4%BC%98%E5%8C%96%E5%9B%A2%E9%98%9F%E7%9A%84%E6%9C%BA%E5%88%B6%E9%9A%94%E7%A6%BB">评测团队与模型优化团队的机制隔离</a></li><li class="outline-h3"><a href="#%E4%B8%8E-jakub-%E7%9A%84%E5%8D%8F%E4%BD%9C%E4%B8%8E%E5%8F%82%E5%B7%AE%E5%89%8D%E6%B2%BF">与 Jakub 的协作与“参差前沿”</a></li><li class="outline-h3"><a href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3%E4%B8%8E%E4%B8%8A%E4%B8%8B%E6%96%87%E5%8E%8B%E7%BC%A9">上下文窗口与上下文压缩</a></li><li class="outline-h3"><a href="#%E5%96%B7%E6%9E%AA%E7%82%99%E7%83%A4%E4%B8%8E%E9%80%9A%E5%BE%80-agi-%E7%9A%84%E9%87%8D%E5%A4%A7%E6%8A%BC%E6%B3%A8">喷枪炙烤与通往 AGI 的重大押注</a></li><li class="outline-h3"><a href="#%E5%A4%9A%E6%A8%A1%E6%80%81%E6%9E%B6%E6%9E%84%E4%B8%8E%E7%BB%9F%E4%B8%80%E6%A8%A1%E5%9E%8B">多模态架构与统一模型</a></li><li class="outline-h3"><a href="#%E6%B0%9B%E5%9B%B4%E6%84%9F%E7%A0%94%E7%A9%B6%E5%91%98%E4%B8%8E%E6%A8%A1%E5%9E%8B%E5%93%81%E5%91%B3%E7%9A%84%E6%BC%94%E8%BF%9B">“氛围感研究员”与模型品味的演进</a></li><li class="outline-h3"><a href="#%E9%AB%98%E9%A3%8E%E9%99%A9%E6%8A%BC%E6%B3%A8%E9%9D%A2%E5%AF%B9%E5%A4%B1%E8%B4%A5%E4%B8%8E%E7%BB%8F%E9%AA%8C%E6%B2%89%E6%B7%80">高风险押注、面对失败与经验沉淀</a></li><li class="outline-h3"><a href="#%E6%88%90%E6%9E%9C%E5%93%81%E5%B0%9D%E4%B8%8E%E8%A2%AB%E4%BD%8E%E4%BC%B0%E7%9A%84%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91">成果品尝与被低估的研究方向</a></li><li class="outline-h3"><a href="#%E5%A4%96%E9%83%A8%E8%AF%84%E6%B5%8B%E4%B8%8E%E6%9C%80%E7%BB%88%E7%9B%B2%E6%B5%8B%E8%A3%81%E5%86%B3">外部评测与最终盲测裁决</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="开场与做汤轶事" data-reading-heading="">开场与做汤轶事</h3>
+<p><strong>&gt;&gt;</strong>: 是啊，我当时就觉得……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ I
+ was
+ like
+</details>
+<p><strong>&gt;&gt;</strong>: 那一个是我知道的。[音乐]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: That
+ one
+ that
+ [music]
+ I
+ know.
+</details>
+<p><strong>&gt;&gt;</strong>: 那感觉就像 Corey，我所处的那种处境。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: That
+ feels
+ like
+ Corey,
+ the
+ situation
+ I'm
+<p>in.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: [笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: [laughter]
+</details>
+<p><strong>&gt;&gt;</strong>: 干杯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Cheers.
+</details>
+<p><strong>&gt;&gt;</strong>: 干杯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Cheers.
+</details>
+<p><strong>&gt;&gt;</strong>: 大家好，欢迎来到 Latent Space 烹饪系列，在这个系列中我们邀请创始人与研究人员，[音乐] 让他们尽情发挥厨艺。今天我们迎来了一位非常特别的嘉宾，OpenAI 的首席研究官 Mark Chen。[音乐] 欢迎你，Mark。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Hey
+ guys,
+ welcome
+ to
+ the
+ Latent
+ Space
+<p>cooking
+series
+where
+we
+invite
+founders</p>
+<p>and
+researchers
+[music]</p>
+<p>and
+just
+let
+them
+cook.
+Today,
+we
+have
+a</p>
+<p>very
+special
+guest,
+the
+chief
+research</p>
+<p>officer
+of
+OpenAI,
+Mark
+[music]
+Chen.</p>
+<p>Welcome,
+Mark.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 谢谢你的邀请，Alan。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Thanks for
+ inviting
+ me,
+ Alan.
+</details>
+<p><strong>&gt;&gt;</strong>: 好的，感谢你的到来。我想，首先这一切源于一个灵感，之前听说过一个故事，Mark Zuckerberg 会做汤试图挖走研究人员，作为回应，你也给研究人员送去了汤。这是真的吗？这事真的发生过吗？起作用了吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ thank
+ you
+ for
+ coming.
+ I
+ mean,
+ to
+<p>begin,
+this
+all
+started
+from
+the</p>
+<p>inspiration
+after
+hearing
+the
+story
+that</p>
+<p>Mark
+Zuckerberg
+would
+make
+soup
+to
+try</p>
+<p>to
+poke
+researchers
+and
+in
+response,
+you</p>
+<p>brought
+soup
+to
+researchers.
+Is
+this</p>
+<p>true?
+Did
+this
+happen?
+Did
+it
+work?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 哦，你知道的，这绝对是个真实的故事。我也确实给我们自己的研究人员送过汤。我认为那件事后来稍微平息了一些。我觉得我们最终占了上风，不过是的，在 AI 涉及的种种疯狂事情中，这依然是一个非常有趣的故事。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Oh,
+ you
+ know,
+ it's
+ absolutely
+ a
+ true
+<p>story.
+And
+I
+have
+brought
+soup
+to
+our</p>
+<p>own
+researchers.
+I
+think
+that
+matters</p>
+<p>calmed
+down
+a
+little
+bit.
+I
+think
+we</p>
+<p>came
+out
+on
+top,
+but</p>
+<p>yeah,
+still
+a
+very
+funny
+story
+in
+the</p>
+<p>craziness
+of
+how
+AI
+is
+involved.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 你平时经常做饭吗？这是你熟悉的事情吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: How
+ often
+ do
+ you
+ cook?
+ Is
+ it
+ something
+<p>you're
+familiar
+with?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 哎呀，你知道的，我确实喜欢做饭，但我没有经常做饭的奢侈条件。所以我平时工作日每天晚上基本上都有工作晚餐，而且，可能到了后 AGI 时代，这会成为我的爱好吧。我一直开玩笑说，一旦一切尘埃落定，我就要去开个面条摊。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Well,
+ you
+ know,
+ I
+ I
+ do
+ enjoy
+ cooking,
+<p>but
+I
+don't
+have
+the
+luxury
+of
+doing</p>
+<p>that
+so
+often.
+So,
+I
+uh
+usually
+have
+a</p>
+<p>work
+dinner
+every
+night
+of
+the
+week
+and,</p>
+<p>you
+know,
+maybe
+post
+AGI,
+this
+is
+going</p>
+<p>to
+be
+my
+hobby.
+I've
+always
+joked
+that</p>
+<p>I'm
+going
+to
+start
+a
+noodle
+stand
+once</p>
+<p>once
+it's
+it's
+all
+over.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是啊是啊，后 AGI 时代，希望那个摊位还能在。太好了。我想看着我们面前摆着的这些材料，你大致能猜到我们要做什么吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ yeah,
+ you
+ know,
+ post
+ AGI,
+<p>hopefully
+that'll,
+you
+know,
+still
+be</p>
+<p>there,
+but
+great.
+And
+I
+guess
+looking
+at</p>
+<p>what
+we
+have
+in
+front
+of
+us,
+do
+you
+have</p>
+<p>an
+idea
+generally
+of
+what
+we're
+probably</p>
+<p>making?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 呃，韩式豆腐汤，也许？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Uh
+ Korean
+ tofu
+ soup,
+ maybe?
+</details>
+<p><strong>&gt;&gt;</strong>: 对，对，大体上就是这个。我们就是从你给研究人员送汤的故事中获得的灵感。所以我们要煮一份韩式豆腐炖汤，而且还有我要煮的大虾。准备好开始了吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ yeah,
+ that's
+ that's
+ generally
+ what
+<p>it
+is.
+So,
+we
+inspired
+off
+of
+the
+story</p>
+<p>of
+you,
+you
+know,
+bringing
+soup
+to</p>
+<p>researchers.
+So,
+we're
+making
+a
+tofu</p>
+<p>Korean
+stew
+and
+we
+have
+prawns
+that
+I'll</p>
+<p>be
+cooking.
+Are
+you
+ready
+to
+go?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好啊，来吧。我们开始吧。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ let's
+ do
+ it.
+ Let's
+ do
+ it.
+</details>
+<p><strong>&gt;&gt;</strong>: 太好了。好的，我们可能应该做的第一件事是先把蔬菜分开，然后切开。基本上，我们想要做的就是把带有泥土的脏部分切掉，然后把它们分开放好。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+ Okay,
+ so
+ the
+ first
+ thing
+ we
+<p>should
+probably
+do
+is
+we'll
+separate
+the</p>
+<p>veggies
+and
+then
+we
+can
+cut
+them.
+And</p>
+<p>basically,
+what
+we
+want
+to
+do
+is
+just
+um</p>
+<p>cut
+the
+dirty
+part
+off
+with
+the
+dirt
+and</p>
+<p>then,
+yeah,
+separate
+that
+across.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这个我知道。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: that
+ I
+ know.
+</details>
+<p><strong>&gt;&gt;</strong>: [笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: [laughter]
+</details>
+<h3 id="交易员背景与研究能力的培养" data-reading-heading="">交易员背景与研究能力的培养</h3>
+<p><strong>&gt;&gt;</strong>: 好，行。然后就放在那里。你可以切那个。在切的同时，我想顺便多问问你的背景。在过去，你曾经做过交易员。甚至 Sam 我记得去年四月份也发过推文，说如果你是高频交易员，应该考虑加入 OpenAI 来构建 AGI。那么，你认为做交易员和做研究员之间有什么关联吗？还是说这只是一个非常硬核且竞争激烈的领域，能够涌现出很多优秀的员工？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ okay.
+ And
+ then
+ just
+ have
+ that
+<p>there.
+So,
+you
+can
+do
+that.
+And
+while</p>
+<p>that's
+going,
+I
+guess
+I
+could
+ask
+more</p>
+<p>about
+your
+background.
+So,
+in
+a
+previous</p>
+<p>life,
+you
+were
+once
+a
+trader.
+And
+even</p>
+<p>Sam,
+I
+think,
+last
+year
+in
+April
+also</p>
+<p>tweeted
+about
+how
+if
+you're
+a
+high</p>
+<p>frequency
+trader,
+you
+should
+consider</p>
+<p>joining
+OpenAI
+because,
+you
+know,
+build</p>
+<p>AGI.
+So,
+do
+you
+think
+there's
+a
+relation</p>
+<p>between,
+you
+know,
+being
+a
+trader
+and</p>
+<p>being
+a
+researcher,
+or
+do
+you
+think
+it's</p>
+<p>just
+like
+a
+very
+technical
+and</p>
+<p>competitive
+area
+where
+a
+lot
+of
+great</p>
+<p>employees
+can
+come
+from?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我觉得最重要的一点是，有很多研究人员最初并没有接受过机器学习或 AI 研究的正式训练。我们一直非常坚信可以通过培养来让人胜任这项工作。我认为真正困难的事情在于创造性地解决问题以及跳出框架思考的能力。并不一定非得去读个博士，尽管读博确实能带来宝贵的技能。至于交易这个特定行业，我的意思是，我不知道它算不算特别特殊的职业。我的理解是，我们有优秀的数学家加入，也有优秀的物理学家加入，但交易属于那种非常无法投机取巧的事情。[清嗓子] 你无法在现实世界中作弊，对吧？这是一个很难去优化的指标。而且它还具有很多特征，比如在这个领域细节真的非常重要。这是一种极其严酷的优化，要榨干系统中的每一滴汁水。其中的一些技能是可以迁移过来的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: I
+ think
+ really
+ the
+ most
+ important
+ thing
+<p>is
+there
+are
+a
+lot
+of
+researchers
+who</p>
+<p>just
+started
+out
+without
+a
+formal</p>
+<p>training
+in
+machine
+learning
+or
+AI</p>
+<p>research.
+Um</p>
+<p>we've
+very
+much
+believed
+in
+training</p>
+<p>people
+up
+to
+do
+this.
+I
+I
+think
+the
+real</p>
+<p>hard
+thing
+is
+the
+ability
+to
+creatively</p>
+<p>solve
+problems
+and
+think
+outside
+of
+the</p>
+<p>box.</p>
+<p>It's
+not
+so
+much,
+you
+know,
+you
+have
+to</p>
+<p>do
+a
+PhD,
+even
+though
+that
+does
+bring
+a</p>
+<p>valuable
+skill
+set.
+Um</p>
+<p>with
+trading
+in
+particular,
+I
+mean,
+I
+I</p>
+<p>don't
+know
+that
+it's
+that
+special
+of
+a</p>
+<p>profession.
+Like,</p>
+<p>I
+kind
+of
+think
+of
+it
+as,
+you
+know,</p>
+<p>we've
+had
+great
+mathematicians
+join,
+we</p>
+<p>already
+had
+great,
+you
+know,
+physicists</p>
+<p>join,
+but
+trading
+is
+something
+where,</p>
+<p>you
+know,
+it's
+like</p>
+<p>it's
+very
+unhackable.
+You're</p>
+<p>[clears throat]
+um</p>
+<p>how
+you
+you
+can't
+kind
+of
+cheat
+the
+real</p>
+<p>world,
+right?</p>
+<p>You
+know,
+it's</p>
+<p>it's
+a
+hard
+metric
+to
+optimize.</p>
+<p>And
+there's
+also
+a
+lot
+of</p>
+<p>characteristics
+like</p>
+<p>it's
+it's
+a
+field
+where
+attention
+to</p>
+<p>detail
+really
+matters.
+And</p>
+<p>um</p>
+<p>you
+know,
+it's
+kind
+of
+the
+brutal
+hard</p>
+<p>optimization
+and
+squeezing
+out
+the
+juice</p>
+<p>of
+a
+system.
+Um
+and
+some
+of
+those</p>
+<p>those
+skills
+transfer
+over.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 明白了。对于想要进入研究领域、比如说没有博士学位的人，你认为他们可以通过学习哪些主要特质或事物来培养“研究品味”？因为我认为对于想进入这个领域的人来说，这可能是他们感到非常陌生的一大核心部分。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Got
+ you.
+ Yeah,
+ and
+ I
+ guess
+ for
+ people
+<p>who
+want
+to
+get
+into
+research,
+who
+let's</p>
+<p>say
+don't
+have
+a
+PhD,
+what
+do
+you
+think</p>
+<p>are
+the
+main
+attributes
+or
+things
+that</p>
+<p>they
+can
+learn
+to
+develop
+research</p>
+<p>taste?
+Because
+I
+guess
+that's
+the
+main</p>
+<p>part
+of
+getting
+into
+this
+field
+that
+may</p>
+<p>be
+very
+foreign
+to
+them.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，我想说这其实有点被高估了。它确实是需要培养的东西，但我发现培养它的最好途径其实就是复现。你应该挑选那些你非常钦佩的论文，然后尝试去完整复现它。在我的记忆中有很多这样的实践脱颖而出。比如在 2018 年，有像 ResNet、PixelCNN 这样的工作，我仅仅通过尝试完全复现它们的训练曲线，达到论文所提示的精确训练损失或困惑度，就学到了非常多的东西。你会看到很多人们平时不怎么谈论的技巧，但一旦你往下深挖几层，就能掌握那些技巧。而且，最初带我进入这个领域的契机是……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ I
+ mean,
+ I
+ think
+ it's
+ a
+ little
+ bit
+<p>overrated.
+It
+is
+something
+you
+have
+to</p>
+<p>develop,
+but
+um
+the
+best
+mechanism
+I've</p>
+<p>found
+for
+developing
+that
+is
+really
+just</p>
+<p>replication.
+So,
+I
+think
+you
+should
+take</p>
+<p>papers
+that
+you</p>
+<p>really
+look
+up
+to
+and
+just
+try
+to
+fully</p>
+<p>replicate
+it.</p>
+<p>I
+like
+I
+I
+think
+a
+lot
+of
+applications</p>
+<p>stood
+out
+in
+my
+my
+mind.
+Um
+you
+know,</p>
+<p>back
+in</p>
+<p>2018,</p>
+<p>there
+is
+um</p>
+<p>you
+know,
+like
+ResNet,
+there
+were
+Pixel</p>
+<p>CNNs,
+and
+I
+I
+learned
+so
+much
+just
+um</p>
+<p>trying
+to
+replicate
+the
+training
+curves</p>
+<p>exactly,
+get
+to
+the
+exact
+amount
+of,
+you</p>
+<p>know,
+like
+training
+loss
+or
+perplexity</p>
+<p>that
+the
+papers
+um
+hinted
+towards.
+You</p>
+<p>just
+see
+a
+lot
+of
+techniques,
+right,</p>
+<p>that
+um
+people
+don't
+really</p>
+<p>kind
+of
+talk
+about,
+but
+you
+know,
+once</p>
+<p>once
+you
+dive
+in
+a
+couple
+of
+layers</p>
+<p>deeper,
+um
+you
+learn
+those
+techniques.</p>
+<p>And</p>
+<p>um
+yeah,
+I
+think
+really
+the
+first
+thing,</p>
+<p>too,
+that
+got
+me
+into
+the
+field
+was</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 当 AlphaGo 与李世乭对弈的时候。我觉得那对很多人来说都是一个转折点。它太令人鼓舞了。我真正全力以赴投入的第一个大项目，就是“我能不能把 DQN 跑通？”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: when
+ AlphaGo
+ played
+ Lee
+ Sedol.
+ And
+ you
+<p>know,
+I
+think
+that
+was
+a
+turning
+point</p>
+<p>for
+so
+many
+people.
+And
+yeah,
+I
+mean,
+it</p>
+<p>was
+it
+was
+it
+was
+inspirational.
+And
+it</p>
+<p>it
+the
+the
+first
+big
+project
+that
+I
+I</p>
+<p>really
+went
+after
+was
+um
+can
+I
+get
+a
+DQN</p>
+<p>working?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Mhm.
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<h3 id="从第37手到长程智能体与强化学习边界" data-reading-heading="">从“第37手”到长程智能体与强化学习边界</h3>
+<p><strong>&gt;&gt;</strong>: 是啊，确实如此。我想在那几盘棋里，好像是第 37 手，看着它发生以及见证所有那些进展真是太不可思议了，再看到我们今天所达到的位置，尤其是在研究方面。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ Yeah,
+ that's
+ true.
+ I
+ think
+ it
+ was
+<p>move
+37
+or
+something
+like
+one
+of
+the</p>
+<p>games
+that
+was
+pretty
+uh
+insane
+watching</p>
+<p>it
+happen
+and
+seeing
+all
+that</p>
+<p>development
+and
+seeing
+also
+where
+we</p>
+<p>have
+gotten
+to
+today,
+especially
+with</p>
+<p>the
+research.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 如今在几乎每一个领域都能看到类似“第 37 手”的表现，这难道不是很疯狂吗？数学领域有第 37 手，计算机科学和编程里也有。甚至感觉很多人在今年年初醒来时都惊呼：天哪，智能体已经在我的行业里起效了。他们基本上意识到，这些模型可以为他们完成长程且有意义的工作。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: I
+ mean,
+ isn't
+ it
+ crazy
+ that
+ you're
+<p>seeing
+move
+37s
+in
+almost
+every
+field</p>
+<p>now?
+It's
+like
+there's
+move
+37s
+in
+in</p>
+<p>math,
+there's
+uh
+in
+computer
+science
+and</p>
+<p>coding.
+Um</p>
+<p>I
+think</p>
+<p>even
+yeah,
+just
+it
+feels
+like
+a
+lot
+of</p>
+<p>people
+woke
+up
+at
+the
+start
+of
+this
+year</p>
+<p>and
+were
+like,
+man,
+agents
+are
+working</p>
+<p>in
+my
+profession.
+And
+um</p>
+<p>you
+know,
+they're
+they're
+essentially</p>
+<p>realizing
+that
+these
+models
+can
+just
+do</p>
+<p>long
+horizon
+meaningful
+work
+for
+them.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，一点没错。看到这些确实非常震撼，我自己工作里也都在用它。好的，我们接下来的步骤很简单，切洋葱就行。这里我们需要做的就是把它切成丁。你认为是否存在某些职业，强化学习（RL）可能更难切入？比如编程可能相对容易，因为无论是通过代码库还是你要完成的任务，大量上下文都是可以直接获取的；但如果要去做初级顾问的工作，所有的背景信息都有些分散，可能就会更困难。你怎么看待这些不同的场景？是否有某种评估正确途径的方法？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ no,
+ that's
+ true.
+ It
+ is
+ it
+ is
+ very
+<p>impressive
+to
+see,
+like
+I'm
+even
+just</p>
+<p>using
+it
+in
+my
+own
+work.
+But
+okay,
+the</p>
+<p>next
+thing
+we
+could
+do
+is
+just
+as
+simple</p>
+<p>as
+cutting
+the
+onion.
+So,
+what
+we
+have</p>
+<p>to
+do
+here
+is
+just
+like
+dicing
+it.
+Do</p>
+<p>you
+think
+um</p>
+<p>there's
+jobs
+that
+RL
+maybe
+will
+have</p>
+<p>like
+a
+much
+harder
+time
+to
+kind
+of
+break</p>
+<p>into?
+So,
+for
+example,
+coding
+maybe</p>
+<p>easier
+since
+a
+lot
+of
+context
+is</p>
+<p>accessible
+either
+through
+the
+code
+bases</p>
+<p>or
+even
+the
+work
+you're
+trying
+to
+do,</p>
+<p>but
+let's
+say
+if
+you're
+trying
+to
+do
+the</p>
+<p>job
+that
+a
+junior
+consultant
+may
+do,</p>
+<p>where
+all
+the
+context
+is
+a
+little</p>
+<p>scattered,
+maybe
+it
+more
+difficult.
+How</p>
+<p>do
+you
+view
+through
+like
+those
+different</p>
+<p>scenarios?
+Is
+there
+a
+way
+that
+you
+kind</p>
+<p>of
+assess
+what
+can
+be
+the
+right</p>
+<p>approach?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，我认为在传统意义上，当涉及到主观多于客观的领域时，RL 往往会遭遇阻力。如果想找一个例子，那就是创意写作。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ I
+ mean,
+ I
+ I
+ think
+ it's
+ RL's
+<p>traditionally
+had
+um</p>
+<p>headwinds
+when
+it's
+come
+to
+fields
+that,</p>
+<p>you
+know,
+it's
+more</p>
+<p>um</p>
+<p>kind
+of</p>
+<p>subjective
+than
+objective.
+So,
+if
+you</p>
+<p>kind
+of
+think
+of
+you
+know,
+one
+one
+kind</p>
+<p>of</p>
+<p>you
+know,
+uh</p>
+<p>example
+of
+this
+is
+creative
+writing.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 拿两篇创意写作作品来说，两位专家可能会有截然不同的看法。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Where,
+ you
+ know,
+ you
+ could
+ take
+ two
+<p>pieces
+of
+creative
+writing
+and
+two</p>
+<p>experts
+can
+have
+wildly
+different</p>
+<p>opinions.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 确实。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 所以在这些难以评分的领域，RL 直接应用的空间是最小的。我知道很多人正在开发将 RL 应用到这些场景的技术，但就目前而言，只有在存在不容置疑的事实依据的地方，比如数学和计算机科学，你可以明确证明对或错，在那些地方你才会看到它真正腾飞。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: So,
+ it's
+ these
+ fields
+ where
+ things
+ are
+<p>hard
+to
+grade.
+Um</p>
+<p>where</p>
+<p>you
+know,
+RL
+has
+the
+least
+amount
+of</p>
+<p>ability
+to
+kind
+of
+go
+and
+um
+and</p>
+<p>directly
+apply
+there.
+I
+know
+a
+lot
+of</p>
+<p>people
+are
+developing
+techniques
+to</p>
+<p>apply
+RL
+in
+these
+um
+these
+settings,
+but</p>
+<p>um
+for
+now,
+it's
+just
+where
+there's
+cold</p>
+<p>hard
+truth,
+things
+like
+math
+and</p>
+<p>computer
+science,
+where
+you
+can
+prove
+it</p>
+<p>correctly
+or
+wrong.
+Um
+that's
+where
+you</p>
+<p>kind
+of
+see
+it
+really
+taking
+off.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。这其实引出了一个关于评估这些领域的思考。随着模型变得越来越强大，甚至在诸如解决国际数学奥林匹克（IMO）竞赛题上达到饱和……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ No,
+ that
+ actually
+ brings
+ up
+ a
+<p>thought
+on
+in
+terms
+of
+evaluating
+those</p>
+<p>fields.
+So,
+um
+you
+know,
+as
+models
+get</p>
+<p>much
+much
+more
+powerful
+and
+even</p>
+<p>saturate,
+for
+example,
+solving
+like
+the</p>
+<p>IMO
+questions.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，对。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 你怎么看待评估超人类智能？比如当它变得如此厉害，甚至连前 0.01% 的顶尖人类都难以企及的时候，我们该如何拓展智能的前沿？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+ how
+ do
+ you
+ view
+ evaluating
+ like
+<p>superhuman
+intelligence?
+Like
+it
+gets
+to</p>
+<p>a
+point
+where
+it's
+so
+good
+at
+things</p>
+<p>that
+even
+the
+top
+what,
+0.01%
+of
+humans</p>
+<p>can
+do,
+that
+like,
+you
+know,
+how
+can
+we</p>
+<p>push
+past
+that
+frontier
+of
+intelligence?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这确实很不可思议，我觉得很多关键点集中在与真实世界的交互上。过去当我们思考如何超越编程竞赛这类测试时，我们最初采取的主要方向是转向真实世界的研究，对吧？我们看到模型在发现全新定理以及推进硬科学前沿方面做得越来越好了。但即使在今天，这也已经不再令人惊讶了。我们现在几乎觉得模型能解决极其困难的问题是理所当然的，它们能够做出贡献，甚至在不同领域之间建立新颖且深刻的联系。因此，我们把编程协同工作视作一个能检验模型是否能在高上下文环境和真实长程环境中学习的领域。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: No,
+ it's
+ kind
+ of
+ it's
+ kind
+ of
+ crazy,
+ and
+<p>I
+feel
+like
+um
+a
+lot
+of
+it
+centers
+in
+on</p>
+<p>in
+on
+kind
+of
+interfacing
+with
+the
+real</p>
+<p>world.
+And
+um
+when
+when
+we've
+thought</p>
+<p>about
+how
+to
+evolve
+past
+things
+like</p>
+<p>programming
+contests
+in
+the
+past,
+um</p>
+<p>I
+think
+a
+lot
+of
+the
+initial
+direction</p>
+<p>we
+took
+was
+you
+should
+move
+it
+to</p>
+<p>real-world
+research,
+right?
+And
+we've</p>
+<p>seen
+that
+the
+models
+uh
+they've
+gotten
+a</p>
+<p>lot
+better
+at
+uh
+just
+kind
+of</p>
+<p>discovering
+novel
+theorems
+and
+uh</p>
+<p>pushing
+the
+frontiers
+of
+of
+hard</p>
+<p>sciences.
+But
+even
+today,
+right?
+That's</p>
+<p>no
+longer
+a
+surprise.
+I
+think
+like
+you</p>
+<p>we
+almost
+take
+it
+for
+granted
+now
+that</p>
+<p>these
+these
+models
+can
+solve
+very
+very</p>
+<p>difficult
+problems.
+They
+can
+make</p>
+<p>contributions
+and
+even
+kind
+of
+draw</p>
+<p>relationships
+between</p>
+<p>um
+fields
+that,
+you
+know,
+that
+are
+that</p>
+<p>are
+novel
+and
+insightful.
+So,
+I
+think</p>
+<p>you
+know,
+we
+we
+think
+of
+coding</p>
+<p>co-working</p>
+<p>as
+really
+a
+domain
+for
+that
+that
+tests</p>
+<p>whether
+our
+models
+can
+learn
+in</p>
+<p>high-context
+settings
+and
+in
+real-world</p>
+<p>long-horizon
+settings.</p>
+</details>
+<h3 id="烹饪翻炒与扩展定律信仰" data-reading-heading="">烹饪翻炒与扩展定律信仰</h3>
+<p><strong>&gt;&gt;</strong>: 明白了。好的，这很有道理。既然你把所有蔬菜都切好了，我们现在可以进行下一步，也就是翻炒。我们可以用这个脉冲炉，之前见识过，非常强劲。我把它打开。我们倒点油炒一下。把锅放在前面的炉头上，然后……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Got
+ you.
+ Okay.
+ Yeah,
+ that
+ makes
+ sense.
+<p>And
+since
+you're
+done
+with
+all
+the</p>
+<p>vegetables,
+we
+can
+now
+do
+the
+next
+step,</p>
+<p>which
+is
+sauteing
+it.
+So,
+yeah,
+we
+can</p>
+<p>use
+the
+impulse
+stove,
+which
+we've
+seen</p>
+<p>before
+and
+very
+powerful.
+Let
+me
+just</p>
+<p>turn
+it
+on.
+Um
+and
+yeah,
+so
+we'll
+just</p>
+<p>saute
+it</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+</details>
+<p><strong>&gt;&gt;</strong>: 加点油。把锅放在前面的炉头上，然后……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: with
+ some
+ oil.
+ So,
+ yeah,
+ put
+ the
+ pan
+ in
+<p>the
+front
+burner
+and
+then</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这些炉子真酷。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: These
+ are
+ cool
+ stoves.
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，倒点油进去。倒一大勺就行。完美。然后我们可以打开炉子。按一下，然后转动旋钮。太棒了，完美。等锅热起来的时候，我们可以稍微等一下，[清嗓子] 然后把蔬菜放进去。不过回到对研究的看法上，是否存在一些普遍被接受、但你并不认同的观点？比如“预训练已死”，或者“语言模型永远无法带我们走向 AGI”。外面有许多观点非常含糊，显然也尚未得到证实。从你在 OpenAI 主导研究的角度来看，对于这类观点你怎么看？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ you
+ can
+ use
+ oil
+ to
+ pour
+ some
+ in.
+<p>And
+then,
+you
+can
+also</p>
+<p>Yeah,
+just
+a
+good
+dollop.
+Perfect.
+And</p>
+<p>yeah,
+and
+then
+we
+can
+turn
+on
+the
+stove.</p>
+<p>So,
+just
+press
+it.
+And
+then,</p>
+<p>yes,
+spin
+the
+knob.</p>
+<p>Great.
+Perfect.
+And
+then
+while
+that</p>
+<p>heats
+up,
+we
+can
+just
+wait
+and</p>
+<p>[clears throat]
+then
+add
+the
+vegetables.</p>
+<p>But
+yeah,
+I
+guess
+more
+so
+on
+views
+for</p>
+<p>research,
+are
+there
+I
+guess,
+you
+know,</p>
+<p>commonly
+accepted
+ideas
+that
+are,
+you</p>
+<p>know,
+you
+disagree
+with,
+whether
+it
+be</p>
+<p>like
+pre-training
+is
+dead
+or
+language</p>
+<p>models
+will
+never
+get
+us
+to
+AGI.
+I
+think</p>
+<p>there
+'s
+a
+lot
+of
+takes
+out
+there
+that</p>
+<p>are
+very
+ambiguous
+and
+obviously
+haven't</p>
+<p>proven
+out
+yet.
+And
+I
+guess
+from
+your</p>
+<p>perspective
+as
+like
+the
+research
+like</p>
+<p>leading
+things
+in
+OpenAI.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 比如像那些看法？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Like
+ things
+ like
+ those?
+</details>
+<p><strong>&gt;&gt;</strong>: 我坚信指数级增长和扩展定律（scaling laws）。所以对于任何看空的论调，我都相当强烈地反对。关于“预训练已死”，有趣的是这种论调在过去一两年左右才开始更广泛地传播开来，对吧？在大语言模型的发展历史中，很多人曾多次说过类似的话。大家总会指出某些瓶颈，说“因为这个瓶颈，你无法再扩大规模了”。但我们总能找到某种技术，无论是更好的工程实践，还是新的研究洞见，帮助我们冲破边界。因此我认为这只是在不断重复同样的事情：更精细的研究工程、更精细的数据工程、更精细的规模扩展。它总能解锁下一步扩展的能力。它已经持续适用了近 10 个数量级，没有任何理由认为它不会继续生效。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: I
+ mean,
+ I
+<p>I
+firmly
+believe
+in
+exponent
+being
+on</p>
+<p>the
+exponential
+and
+in
+scaling
+laws.
+So,</p>
+<p>I
+think
+any
+of
+these
+bear
+takes,</p>
+<p>I</p>
+<p>fairly
+strongly
+disagree
+with.
+Um
+you</p>
+<p>know,
+when
+when
+it
+comes
+to
+pre-training</p>
+<p>is
+dead,
+I
+I
+mean,
+I
+think
+the
+the
+funny</p>
+<p>thing
+is
+this
+narrative
+only
+started</p>
+<p>spreading
+more
+widely
+after,
+let's
+say,</p>
+<p>the
+last
+one
+or
+two
+years
+or
+so.
+Right?</p>
+<p>In
+many
+times
+uh</p>
+<p>in
+the
+history
+of
+uh
+developing
+LLMs,</p>
+<p>people
+have
+been
+saying
+this,
+right?
+And</p>
+<p>you
+know,</p>
+<p>um</p>
+<p>there
+there've
+always
+been
+some
+some</p>
+<p>bottlenecks
+that
+people
+will
+Well,
+you</p>
+<p>can't
+scale
+past
+this
+because
+of
+this</p>
+<p>bottleneck.
+Um
+and
+we've
+always
+found</p>
+<p>some
+kind
+of
+technique,
+whether
+it
+be</p>
+<p>better
+engineering
+or
+some
+new
+research</p>
+<p>insight
+that
+helps
+you
+break
+past
+the</p>
+<p>boundary.
+And
+so,
+I
+think
+it's
+just
+more</p>
+<p>and
+more
+of
+the
+same,
+right?
+Like
+more</p>
+<p>careful
+research
+engineering,
+more</p>
+<p>careful
+data
+engineering,
+more
+careful</p>
+<p>scaling.
+And
+it
+always
+unlocks
+that
+next</p>
+<p>ability
+to
+scale
+further.
+So,
+I
+I
+mean,</p>
+<p>it's
+held
+for,
+you
+know,
+almost
+10</p>
+<p>orders
+of
+magnitude,
+but
+there's
+no</p>
+<p>reason
+it
+should
+not
+keep
+keep
+holding.</p>
+</details>
+<h3 id="推理押注与-o1-诞生内幕" data-reading-heading="">推理押注与 o1 诞生内幕</h3>
+<p><strong>&gt;&gt;</strong>: 是的，非常有道理。在帮助你们实现超越的那些研究押注中，你是否还记得早期的某些具体想法，当时大家都在说“这根本行不通”？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah, that's
+ a
+ very
+ fair
+ point.
+ I
+ guess
+<p>on
+research
+bets
+that
+have
+helped
+you</p>
+<p>scale
+beyond,
+were
+there
+specific
+ideas</p>
+<p>that
+you
+can
+even
+remember
+in
+the
+early</p>
+<p>days
+that
+everyone
+was
+was
+saying
+that</p>
+<p>this
+is
+not
+going
+to
+work?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，我认为推理（reasoning）就是其中最大的例子之一。我们向全世界推出的第一个重大突破是 o1，但要让它启动并不容易，因为在当时我们所处的环境下，“预训练加后训练”给人的感觉是一条如此有前景的范式。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Well,
+ yeah,
+ I
+ mean,
+ I
+ think
+ of
+ reasoning
+<p>as
+one
+of
+the
+biggest
+examples
+of
+this.</p>
+<p>Yeah,
+and
+um
+you
+know,
+the
+the
+first</p>
+<p>breakthrough
+that
+we
+launched
+to
+the</p>
+<p>world
+here
+was
+O1,
+but
+it
+wasn't
+easy
+to</p>
+<p>get
+that
+off
+the
+ground
+cuz
+one
+the</p>
+<p>world
+we
+were
+back
+living
+in
+back
+then,</p>
+<p>it
+was
+one
+where
+pre-training
+plus</p>
+<p>post-training,
+right?
+That
+felt
+like</p>
+<p>such
+a
+promising
+paradigm.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 因此，即使在像 OpenAI 这样的公司里，人们自然也会质疑：既然眼前已经有一台运转良好的机器，为什么还要去做别的事？从根本上讲，这要归功于 Jakub、Ilya 以及许多在这一领域真正拥有信念和远见的人，我们才开始认真推进这项工作。即便如此，也花费了大量的引导与协调才让整个公司把这作为一项根本性的押注来全力支持。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+ and
+ so,
+ even
+ at
+ a
+ company
+ like
+<p>OpenAI,
+you
+would
+have
+people
+ask</p>
+<p>naturally,
+why
+do
+something
+when
+you</p>
+<p>have
+a
+machine
+that
+works?
+And</p>
+<p>fundamentally,
+you
+know,
+it's
+to
+the</p>
+<p>credit
+of</p>
+<p>you
+know,
+Yakub,
+Ilya,
+many
+of
+the</p>
+<p>people
+who
+really
+had
+conviction
+and</p>
+<p>vision
+in
+the
+space
+um
+that
+we
+started</p>
+<p>pushing
+on
+this
+in
+earnest.
+And
+even</p>
+<p>then,
+it
+took
+a
+lot
+of
+steering
+to
+get</p>
+<p>the
+whole
+company
+behind
+this
+as
+a
+as
+a</p>
+<p>fundamental
+bet.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 明白了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Got
+ you.
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<h3 id="研究文化与自下而上的路线图" data-reading-heading="">研究文化与自下而上的路线图</h3>
+<p><strong>&gt;&gt;</strong>: 你是如何培养激励研究人员的能力的？因为我认为做很多押注必然伴随着一些尝试的失败，但依然要在团队中建立信任，让他们知道最终某些押注会产生幂律效应。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: And
+ how
+ do
+ you
+ kind
+ of
+ develop
+ that
+<p>ability
+to
+motivate
+researchers?
+Cuz
+I</p>
+<p>assume
+that's
+a
+big
+part
+of
+you
+know,</p>
+<p>taking
+a
+lot
+of
+bets
+and
+some
+won't
+pan</p>
+<p>out,
+but
+still
+building
+the
+trust
+in
+the</p>
+<p>team
+to
+know
+that
+eventually
+some
+of</p>
+<p>these
+will
+actually
+have
+no
+power
+law</p>
+<p>effects.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: OpenAI 非常酷的一点在于，研究氛围让人感觉是一个英才体制（meritocracy）。很多时候，研究管理者本身就是过去做出最顶尖研究的人。所以我认为很多方向指引可以自顶向下推行。比如如果你的经理说：“看，我真的确信这是一条可行的道路”，大家通常都会认真考虑，毕竟这是一个你在研究品味和执行力上敬重了很久的人，而他现在对这个想法非常兴奋，这绝对是大家会重视的因素。所以存在良好的自上而下的引导。同时，OpenAI 另一个非常棒的地方是有自下而上的机制。我们很乐意被证明是我们错了，只要有人能拿出确凿的实证。很多类似的事情最终变成了我们研究路线图的核心部分。那些原本没有人在刻意主导的方向，某个一线研究员对其抱有强烈的信念，看到这样的突破也是一件非常令人欣喜的大事。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: You
+ know,
+ what's
+ what's
+ really
+ cool
+<p>about
+OpenAI
+is
+um
+research
+it
+feels</p>
+<p>like
+a
+meritocracy.
+So,
+um</p>
+<p>often
+times
+the
+research
+managers
+are</p>
+<p>the
+people
+who</p>
+<p>um</p>
+<p>do
+the
+actual
+have
+done
+the
+best</p>
+<p>research
+in
+the
+past.
+And
+so
+I
+think
+a</p>
+<p>lot
+of
+steering
+can
+come
+top-down,</p>
+<p>right?
+Like
+if
+your
+manager
+says,
+"Hey,</p>
+<p>you
+know,
+I'm
+like
+really
+convinced
+this</p>
+<p>is
+the
+path
+forward."
+Um,
+generally</p>
+<p>people
+will
+take
+that
+into
+heavy</p>
+<p>consideration,
+right?
+It's
+like,
+you</p>
+<p>know,
+this
+person
+who
+you've
+respected</p>
+<p>for
+their
+research
+taste
+and
+execution</p>
+<p>for
+so
+long
+is
+like
+now
+very
+excited
+by</p>
+<p>this
+idea.
+Um,
+it's
+it's
+definitely</p>
+<p>something
+that
+uh</p>
+<p>that
+um
+yeah,
+you
+you
+you</p>
+<p>people
+take
+into
+account.
+So,
+I
+think</p>
+<p>there
+there's
+good
+top-down
+steering.
+At</p>
+<p>the
+same
+time,
+you
+know,
+I
+think
+one</p>
+<p>really
+cool
+thing
+about
+OpenAI
+is
+um</p>
+<p>there
+bottom-up
+elements.
+Like
+we
+like</p>
+<p>to
+be
+convinced
+that
+um</p>
+<p>uh</p>
+<p>you
+know,
+that
+we're
+wrong,
+right?
+And</p>
+<p>and
+someone
+can
+just
+come
+with
+cold,</p>
+<p>hard
+evidence.
+And
+many
+things
+like
+that</p>
+<p>have
+turned
+into</p>
+<p>core
+parts
+of
+our
+research
+roadmap.
+Just</p>
+<p>things
+that
+no
+one
+was
+really
+kind
+of</p>
+<p>trying
+to
+steer,
+but
+some
+researcher
+on</p>
+<p>the
+ground
+had
+a
+heavy
+conviction
+in.</p>
+<p>Um,
+and
+and
+that's
+also
+a
+really
+good</p>
+<p>big
+delight
+to
+see.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，完全赞同。我最近在你接受的另一次采访中听到，即使在我们见证了模型发展以及其他公司的诸多动向之后，你们内部的研究路线图其实并没有真正改变。你们多长时间重新评估一次，甚至主动做出调整？我想随着周围的一切不断进步，这应该不是很多被动式的决策，但你们是如何思考这一过程的？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ no,
+ absolutely.
+ I
+ heard
+ in
+ a
+<p>recent
+interview
+that
+you
+gave
+that
+your</p>
+<p>internal
+research
+roadmap
+hasn't
+really</p>
+<p>changed
+um
+even
+through
+all
+that
+we've</p>
+<p>seen,
+you
+know,
+with
+model
+development</p>
+<p>and
+even
+other
+companies.
+Yeah.
+I
+guess</p>
+<p>how
+often
+do
+you
+guys
+assess
+that,</p>
+<p>reassess
+that,
+even
+like
+act</p>
+<p>proactively?
+I
+assume
+it's
+not
+a
+lot
+of</p>
+<p>reactive,
+you
+know,
+decision-making
+as</p>
+<p>like
+other
+models
+come
+out.
+But
+how
+do</p>
+<p>you
+like
+think
+through
+that
+process,</p>
+<p>especially
+as
+everything
+around
+you
+just</p>
+<p>continues
+to
+get
+better?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，我认为高层次的研究路线图应该是稳定的，人们需要有所依托，需要看到通向我们目标的路径。我很庆幸我们坚持了这个方向相当长的一段时间。但具体的实现细节会随着时间而变化。排期的先后顺序非常重要，相对资源的分配非常重要，一线具体的实施步骤也非常重要。我们会有促使我们重新审视这些问题的时间节点。其中一个例子就是进行算力分配的时候。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ so
+ I
+ think
+ the
+ thing
+ is
+ um
+ the
+<p>high-level
+research
+roadmap
+should
+be</p>
+<p>stable,
+right?
+I
+think
+people
+need</p>
+<p>something
+to
+ground
+in.
+People
+need
+to</p>
+<p>see
+a
+path
+to
+what
+we're
+building.
+Um,</p>
+<p>and
+I've
+been
+very
+happy
+that
+we
+stayed</p>
+<p>the
+course
+for
+for
+a
+while.
+But
+the</p>
+<p>implementation
+details
+can
+change
+over</p>
+<p>time,
+right?
+And
+I
+think
+um</p>
+<p>it's
+important
+to
+kind
+of
+like
+the
+the</p>
+<p>sequencing
+will
+matter,
+right?
+The</p>
+<p>relative
+resourcing
+will
+matter.
+And
+the</p>
+<p>kind
+of
+exact
+steps
+on
+the
+ground
+will</p>
+<p>matter.
+So,
+what
+we
+do
+is
+um
+I
+think
+we</p>
+<p>have</p>
+<p>kind
+of
+points
+in
+time
+that
+force
+us
+to</p>
+<p>reconsider
+these
+things.
+So,
+uh
+one</p>
+<p>example
+is
+when
+we
+do
+compute.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 明白。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 这份工作的一部分就是弄清楚如何给各个项目分配算力。这是一个质疑和反思的时刻：我们是否真的把算力和人力用在了最高优先级的押注上？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um,
+ one
+ of
+ the
+ parts
+ of
+ the
+ job
+ is
+ just
+<p>figuring
+out
+how
+to
+allocate
+computer</p>
+<p>projects.
+And
+um</p>
+<p>it's
+it's
+a
+time
+to
+kind
+of
+question</p>
+<p>like
+are
+we
+really
+putting
+compute
+to</p>
+<p>use
+and
+people's
+use
+at
+the
+highest</p>
+<p>priority
+bets?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。你能进一步澄清一下你所说的高层次与更具体的实现细节之间的区别吗？比如高层次是指像“AGI 是我们的北极星”这样宽泛，还是比这更具体一些？顺便说一句，我一直在不停加油。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+<p>And
+I
+guess
+could
+you
+clarify
+more
+what</p>
+<p>you
+mean
+by
+Oh
+yeah.
+Yeah,
+I
+was
+like</p>
+<p>I'm
+constantly
+adding
+oil.
+But
+clarify</p>
+<p>what
+you
+mean
+by
+higher
+level
+versus</p>
+<p>like
+the
+more
+implementation
+detail.</p>
+<p>Like
+is
+high
+level
+as
+general
+as
+like</p>
+<p>AGI?
+That's
+like
+our
+North
+Star
+or
+is
+it</p>
+<p>more
+like
+granular
+than
+that?</p>
+</details>
+<h3 id="组织架构与算力分配" data-reading-heading="">组织架构与算力分配</h3>
+<p><strong>&gt;&gt;</strong>: 在最高层面，我们有专注于预训练的组织，旨在赋予模型大量的世界知识；我们专注于 RL，教模型如何利用这些知识进行推理，把零散的洞见串联起来；最后是对齐和后训练。在这些领域中，我们始终在探索如何扩展主线，同时也在探索从根本上解锁不同扩展属性或更激进扩展属性的新押注。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+ well
+ yeah,
+ I
+ mean
+ at
+ the
+ very
+ highest
+<p>level,
+right?
+We
+have
+an
+org
+that</p>
+<p>focuses
+on
+pre-training,
+right?
+Which
+is</p>
+<p>you
+know
+giving
+models
+a
+lot
+of
+world</p>
+<p>knowledge.
+We
+focus
+on
+RL
+like
+teaching</p>
+<p>the
+models
+how
+to
+reason
+with
+that</p>
+<p>knowledge,
+how
+to
+chain
+the
+little</p>
+<p>insights
+together.
+Yeah.
+And
+then</p>
+<p>finally
+um
+alignment
+and
+post-training,</p>
+<p>right?
+And</p>
+<p>um</p>
+<p>we're
+always
+looking
+at
+both
+like
+how
+to</p>
+<p>scale
+the
+mainline
+in
+each
+of
+these</p>
+<p>domains
+and
+also
+new
+bets
+that</p>
+<p>fundamentally</p>
+<p>unlock
+either
+like
+different
+scaling</p>
+<p>properties
+or
+more
+aggressive
+scaling</p>
+<p>properties.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 明白了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Got
+ you.
+</details>
+<p><strong>&gt;&gt;</strong>: 嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Mhm.
+</details>
+<p><strong>&gt;&gt;</strong>: 我听说每隔一到两个月，你们就会梳理大约 300 个可以推进的研究项目？当你决定真正对哪些项目加码、对哪些不加码时，是否有某种方法来磨练决策能力？毕竟肯定有许多才华横溢的研究人员提出了各种可行的研究想法。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: And
+ so
+ even
+ in
+ that
+ I
+ heard
+ that
+ every
+<p>one
+to
+two
+months
+you
+go
+through
+what?</p>
+<p>Like
+300
+projects
+like
+research
+projects</p>
+<p>that
+could
+be</p>
+<p>uh
+you
+know
+followed
+through
+on.
+Is</p>
+<p>there
+a
+way
+that
+you
+kind
+of
+hone
+that</p>
+<p>decision
+making
+I
+assume
+as
+you
+like</p>
+<p>decide
+what
+to
+actually
+double
+down
+on</p>
+<p>and
+what
+not
+to
+since
+I
+assume
+there's
+a</p>
+<p>lot
+of
+talented
+researchers
+who
+provide</p>
+<p>possible
+ideas
+to
+pursue.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这完全是出于聚焦的精神。你可能听过这样一种说法，我们在 OpenAI 正在高度聚焦我们的押注，同时我们也在尝试进行更有针对性的指令式算力分配。我不喜欢对经理们进行微观管理。我认为赋予他们权力非常重要，直接把大块算力划拨给你想要支持的核心大押注。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: so
+ I
+ think
+ really
+ in
+ the
+ spirit
+ of
+<p>uh
+focus.
+So
+one
+one
+narrative
+you
+might</p>
+<p>have
+heard
+is
+you
+know
+we're
+we're</p>
+<p>really
+focusing
+our
+bets
+at
+OpenAI
+and</p>
+<p>um</p>
+<p>we're
+also
+trying
+to
+do
+a
+little
+bit</p>
+<p>more
+uh
+directive
+computer
+allocation
+as</p>
+<p>well.
+So
+um
+I
+don't
+like
+micromanaging</p>
+<p>my
+managers.
+I
+think
+one
+important
+thing</p>
+<p>is
+to
+empower
+them
+but
+to
+just
+kind
+of</p>
+<p>give
+compute
+big
+[clears throat]
+swaths</p>
+<p>of
+compute
+to
+the
+big
+bets
+you
+want
+to</p>
+<p>make.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这就是你说的指令式分配的意思吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: And
+ then
+ is
+ that
+ what
+ you
+ mean
+ by
+<p>directive
+like</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。但同时也给他们灵活的算力池，他们可以自由分配给他们相信的事情，或者根据我们规定的分配进行微调。我认为就是把每个组织少数几个（比如三到五个）押注绑定到核心研究路线图上，然后让经理和部门负责人放手去推进。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ yeah,
+ yeah.
+ But
+ but
+ then
+ also
+ give
+<p>them
+kind
+of
+flexible
+pools
+of
+compute</p>
+<p>which
+they
+can
+you
+know
+freely
+allocate</p>
+<p>to
+things
+that
+that
+they
+believe
+in
+or</p>
+<p>just
+kind
+of
+a
+fudge
+with
+the
+the</p>
+<p>allocations
+that</p>
+<p>that
+we
+prescribe.
+So,
+I
+think</p>
+<p>yeah,
+I
+I
+think
+it's
+just</p>
+<p>tying
+would
+say
+like
+a
+small
+number
+of</p>
+<p>bets,
+say
+three
+to
+five
+bets
+from
+each</p>
+<p>org</p>
+<p>into
+the
+main
+research
+roadmap
+and
+then</p>
+<p>really
+letting
+the
+the
+managers
+and
+org</p>
+<p>leads
+take
+things
+from
+there.</p>
+</details>
+<h3 id="研究潜质的甄别与研究人员的多样性" data-reading-heading="">研究潜质的甄别与研究人员的多样性</h3>
+<p><strong>&gt;&gt;</strong>: 明白了，这很有道理。对于有潜力的新生代研究人员，在面试场景中，是否有特定的信号或方法让你识别出“这个人有潜力成为对组织产生特定影响的研究员”？还是主要看他们之前做过的研究，以此来决定他们是否能继续走下去？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Got
+ you.
+ Okay,
+ that
+ makes
+ sense.
+ And
+ I
+<p>guess
+for
+rising
+researchers,
+so</p>
+<p>let's
+say
+in
+an
+interview
+setting,
+are</p>
+<p>there
+specific
+tells
+or
+ways
+that
+you</p>
+<p>can
+identify,
+okay,
+this
+person
+has</p>
+<p>some,
+you
+know,
+potential
+of
+becoming
+a</p>
+<p>researcher
+to
+impact
+an
+org
+in
+a</p>
+<p>specific
+way
+or
+is
+it
+like
+just
+looking</p>
+<p>at
+the
+previous
+research
+that
+they've</p>
+<p>done
+and
+then
+that
+is
+what
+heavily</p>
+<p>dictates
+whether
+they
+can
+actually</p>
+<p>continue
+on?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 在一个人来到 OpenAI 之前，这是一个很难判断的问题，确实如此。对于很多优秀的研究经理来说，他们随着时间推移与大量研究人员合作过，会形成一种直觉：比如他们说的话、他们提出的想法，是否切中要害，或者是否与你个人在思考的事情契合？所以存在这种直觉检验：他们的直觉是否与你的直觉一致？但一开始确实很难看准。通常在半年到一年内，谁的发展轨迹最强、谁能产生巨大影响力，就会变得非常清楚。所以老实说，这很难，但在 OpenAI 看到许多人经历研究成长之后，你就会对谁在哪些领域更有活力形成直觉。另外需要提到的一点是，并不是每个研究人员都是一样的，产生影响的方式有很多种。有的人拿到一个明确的想法，能比任何人都更快地落地实现；也有的人会提出那种看似过于疯狂、但其实又有道理的想法，能用全新的视角看待世界或开创完全不同的项目来打动你。产生影响力的方式有很多。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um,
+ it's
+ a
+ hard
+ problem
+ before
+ someone
+<p>comes
+to
+OpenAI.
+I
+think
+that's
+that's</p>
+<p>genuinely
+true.
+Um,</p>
+<p>I</p>
+<p>I
+think
+for
+a
+lot
+of
+the
+best
+research</p>
+<p>managers,
+you
+know,
+they</p>
+<p>work
+with
+so
+many
+researchers
+over
+time</p>
+<p>where
+you
+kind
+of
+develop
+an
+intuition</p>
+<p>like
+you
+know,
+the
+things
+that
+they
+say,</p>
+<p>the
+ideas
+that
+they
+bring
+up.</p>
+<p>Are
+are
+those
+kind
+of
+do
+they
+hit
+hit</p>
+<p>the
+same
+mark
+or
+like
+are
+they
+the</p>
+<p>things
+that
+you
+would
+be
+thinking
+about</p>
+<p>personally
+too?
+And
+so
+there's
+this
+gut</p>
+<p>check
+of
+like,
+you
+know,
+does
+their</p>
+<p>intuition
+match
+um</p>
+<p>the
+same
+intuition
+that
+you
+have?
+Um
+but</p>
+<p>it
+is
+really
+hard
+to
+tell
+out
+of
+the</p>
+<p>gate.
+Usually
+in,
+you
+know,
+let's
+say</p>
+<p>six
+months
+to
+a
+year,
+it's</p>
+<p>pretty
+clear
+who
+who's,
+you
+know,
+has</p>
+<p>the
+strongest
+trajectory
+and
+who's
+going</p>
+<p>to
+make
+a
+lot
+of
+impact.
+Um,
+so
+yeah,</p>
+<p>honestly
+um</p>
+<p>I
+I
+I
+think
+it's
+a
+hard
+problem,
+but</p>
+<p>just
+having
+seen
+a
+lot
+of
+people,
+you</p>
+<p>know,
+go
+through</p>
+<p>research
+development</p>
+<p>at
+OpenAI,
+you
+develop
+an
+intuition
+for</p>
+<p>you
+know,
+who's
+more
+peppy
+in
+different</p>
+<p>areas.
+Yeah.
+And
+one
+thing
+to
+kind
+of</p>
+<p>like
+just
+mention
+there
+is
+not
+every</p>
+<p>researcher
+is
+the
+same.
+I
+think
+there's</p>
+<p>a
+lot
+of
+different
+types
+of
+impact.</p>
+<p>Yeah.
+There
+are
+the
+people
+who
+just
+take</p>
+<p>an
+idea,
+it's
+very
+clear,
+and
+they'll</p>
+<p>just
+implement
+it
+before
+anyone
+else.</p>
+<p>They're
+also
+the
+people
+who
+just
+come
+up</p>
+<p>with
+the
+kind
+of
+like
+crazy</p>
+<p>almost
+too
+crazy,
+but</p>
+<p>yeah,
+but
+somehow
+not
+that
+crazy
+and
+and</p>
+<p>they
+they
+really
+convince
+you
+in
+a
+in
+a</p>
+<p>different
+way
+of
+seeing
+the
+world
+or
+or</p>
+<p>or
+another
+completely
+different
+type
+of</p>
+<p>project.
+So,
+there's
+a
+lot
+of
+ways
+to</p>
+<p>make
+an
+impact.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这很有帮助。进一步展开来说，你认为顶尖工程师与顶尖研究人员之间有相似之处吗？我常听说顶尖工程师（即使在小公司和初创企业）能把一个极其微小的想法一路推进到生产环境。我推测在研究中，是不是指把一个想法一路推进到通过产品交付给最终用户？还是说他们更纯粹地关注研究，而不考虑最终产品形态以及客户如何使用？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ No,
+ that's
+ helpful.
+ And
+ so,
+ I
+<p>guess
+elaborating
+on
+that,
+would
+you
+say</p>
+<p>there
+are
+similarities
+that
+you
+would</p>
+<p>see
+between,
+let's
+say,
+like
+top</p>
+<p>engineers</p>
+<p>and
+top
+researchers?
+Like
+I
+often
+hear</p>
+<p>top
+engineers,
+even
+at
+like
+small</p>
+<p>companies
+and
+startups,
+are
+ones
+who
+can</p>
+<p>take
+an
+iota
+of
+an
+idea
+all
+the
+way
+to</p>
+<p>production.
+I
+assume
+in
+research
+it's</p>
+<p>like
+coming
+up
+the
+idea
+all
+the
+way
+to</p>
+<p>how
+it's
+delivered
+to
+the
+end
+user</p>
+<p>through
+like
+the
+product.
+Or
+do
+you</p>
+<p>think
+it's
+more
+so
+they're
+focusing</p>
+<p>solely
+on
+the
+research
+and
+not</p>
+<p>considering
+like
+the
+end
+design,
+how</p>
+<p>it's
+used
+by
+the
+customer?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 研究的特点在于很多时候前方的道路是不明确的。区分研究人员的关键在于他们有多频繁地指向正确的方向，以及正如你所说的“品味”。在工程领域，有某些成熟的模式是行之有效的，比如想要构建一个某种形态的产品，工程原则通常非常相似。但对于研究而言，稍有不同的地方在于具备良好的研究品味、能够说服他人相信你所做的事情非常有前景，并将其整合进核心研究路线中。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Well,
+ I
+ yeah,
+ I
+ mean,
+ I
+ guess
+ the
+ thing
+<p>about
+research
+is</p>
+<p>many
+times
+the
+path
+forward
+is
+unclear.</p>
+<p>And
+so,
+what
+differentiates
+researchers</p>
+<p>is</p>
+<p>how</p>
+<p>often
+they're
+pointed
+in
+the
+right</p>
+<p>direction
+and
+how
+like
+like
+you
+say</p>
+<p>taste,
+right?
+I
+think
+in
+engineering</p>
+<p>there
+are
+certain
+patterns
+that
+work.</p>
+<p>Like,
+you
+know,
+if
+you
+want
+to
+build
+a</p>
+<p>product
+that
+looks
+this
+way,</p>
+<p>the
+engineering
+principles
+can
+be
+pretty</p>
+<p>similar.
+Yeah.</p>
+<p>But
+for
+research,
+I
+think
+the
+thing</p>
+<p>that's
+slightly
+different
+is
+just
+this</p>
+<p>ability
+to</p>
+<p>you
+know,
+have
+good
+research
+taste
+to</p>
+<p>convince
+other
+people
+that</p>
+<p>what
+you're
+doing
+is
+promising.
+Um</p>
+<p>and
+then,
+yeah,
+again,
+to
+just
+kind
+of</p>
+<p>integrate
+it
+into
+the
+core
+research</p>
+<p>room.
+Yeah.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 明白了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Got
+ you.
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<h3 id="基准刷榜与评测危机" data-reading-heading="">基准刷榜与评测危机</h3>
+<p><strong>&gt;&gt;</strong>: 太好了。看起来我们的蔬菜处理完了，现在需要同时进行多项操作了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+ Okay,
+ it
+ seems
+ like
+ we're
+ done
+<p>with
+the
+vegetables,
+so
+now
+we
+have
+to</p>
+<p>multitask.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+</details>
+<p><strong>&gt;&gt;</strong>: 我们要往锅里倒些水，作为汤的底汤。在右上角，对，就是这里。拧开盖子。我往这里倒一些。你也可以倒一些。在汤慢炖、加入蔬菜的同时，我们来煎大虾。好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: So,
+ we're
+ going
+ to
+ pour
+ some
+ water
+ into
+<p>our
+pots
+to
+get
+the
+base
+of
+the
+soup</p>
+<p>going.
+So,
+in
+the
+top
+right,
+yeah,
+here.</p>
+<p>And
+then
+just
+twisting
+this
+off.
+So,
+I'm</p>
+<p>going
+to
+pour
+some
+here.</p>
+<p>And
+you
+can
+use
+some
+as
+well.</p>
+<p>And
+while
+we
+have
+this
+simmer,
+and
+we'll</p>
+<p>add
+the
+veg,
+we'll
+cook
+our
+prawns
+here.</p>
+<p>Okay.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+</details>
+<p><strong>&gt;&gt;</strong>: 让我快速清理一下。目前看起来一切顺利。洋葱和蘑菇煎出了一些焦色。把这个打开。一个看起来非常有趣的领域是评测（evals）。具体来说，是否有过这样的情况：仅仅凭感觉测试（vibe checks）觉得模型表现非常好，但在实际基准测试中表现却非常糟糕？还是说这两者高度相关，比如 SWE-bench Verified 分数高，感觉上它处理编程任务的能力也必定非常强？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ so
+ let
+ me
+ clean
+ this
+ up
+ real
+<p>quick.</p>
+<p>Looks
+like
+it's
+going
+great
+so
+far.
+I</p>
+<p>feel
+like
+saute
+got
+some
+color
+on
+the</p>
+<p>onions
+and
+and
+mushrooms.
+So,
+yeah,</p>
+<p>let's
+turn
+this
+on.</p>
+<p>I
+guess
+one
+aspect
+or
+area
+that
+seems</p>
+<p>very
+interesting
+are
+evals.
+Um
+and
+more</p>
+<p>specifically,
+have
+there
+been
+instances</p>
+<p>where
+you've
+seen
+like
+through
+just
+vibe</p>
+<p>checks
+that
+it
+was
+a
+really
+good,
+but
+on</p>
+<p>the
+actual
+benchmark
+it
+like
+performs</p>
+<p>very
+poorly?
+Or
+do
+you
+think
+it's
+like</p>
+<p>heavily
+correlated
+that,
+you
+know,
+if</p>
+<p>your
+Sweet
+Bench
+Pro
+is
+,
+you
+know,
+a</p>
+<p>high
+number,
+then
+it's
+like
+your
+vibe</p>
+<p>check
+on
+it
+doing
+coding
+tasks
+is
+also</p>
+<p>really,
+really
+high?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 不，不是的，确实存在这种脱节的现象。在内部我们称之为“刷榜”（bench maxing），我不确定外界是否也这么用。你完全可以对某些特定分布过拟合，而这并不能反映真实的泛化能力。因为简单粗暴的做法就是针对基准找出一堆极为相似的样本，在这些样本上进行过度训练。除此以外，该领域另一个令人担忧的问题是，公认的黄金标准基准数量很少。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: No,
+ no.
+ I
+ mean,
+ I
+ think
+ there
+ is
+ this
+<p>phenomenon.
+Um
+you
+know,
+I
+I
+think</p>
+<p>internally,
+I'm
+not
+sure
+if
+this
+is
+a</p>
+<p>externally
+used
+word,
+but
+yeah,
+just</p>
+<p>like
+bench
+maxing,
+you
+know?
+Um
+yeah,
+I</p>
+<p>think
+I
+think
+you
+can
+kind
+of
+overfit</p>
+<p>onto
+certain
+distributions.
+Um
+and</p>
+<p>it
+won't
+be
+reflective
+how
+you
+how
+well</p>
+<p>you
+generalize,
+right?
+Because
+um
+I</p>
+<p>mean,
+easy
+ways
+to
+do
+this
+are,
+you</p>
+<p>know,
+you
+take
+a
+benchmark
+and
+you
+just</p>
+<p>find
+like
+very,
+very,
+very
+similar
+types</p>
+<p>of
+instances
+to
+the
+benchmark
+and
+you</p>
+<p>overtrain
+on
+these
+instances.
+Um
+So,
+I</p>
+<p>think
+um</p>
+<p>beyond
+that,
+the
+the
+other
+scary
+thing</p>
+<p>in
+the
+field
+is
+the
+the
+number
+of</p>
+<p>canonical
+gold
+standard
+benchmarks
+is</p>
+<p>low.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 我们确实处在一场评测危机中，大家耳熟能详的所有优秀评测，比如 SAT 等等，全部都被彻底饱和了。我们急需找到对模型进行基准测试的好方法。像 Codex 这类工具的一大优势就是极大加快了评测的迭代速度，一个人就能快速搭建出高质量的评测集。此外，将模型实际部署出去也是一种有趣的评测方式，可以在用户使用时直接观察评测效果。在数学、编程和软件工程领域，你可以从这种广泛的实际部署中感知到模型在何处崩溃、能承受多长的任务周期。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: And
+ we
+ really
+ are
+ kind
+ of
+ in
+ an
+ evals
+<p>crisis,
+right?
+Where
+all
+the
+really</p>
+<p>great</p>
+<p>uh
+evals
+that
+we
+we
+all
+know
+like</p>
+<p>growing
+up
+like
+taking
+the
+SAT
+or</p>
+<p>those
+those
+are
+all
+fully
+saturated.
+And</p>
+<p>um
+we
+really
+need
+to
+find
+good
+new
+ways</p>
+<p>to
+benchmark
+the
+models.
+I
+think
+one</p>
+<p>great
+thing
+about
+tools
+like
+Codex
+is</p>
+<p>they
+really
+enabled
+the
+fast
+iteration</p>
+<p>of
+of
+evals.
+Like
+we're
+able
+to
+just</p>
+<p>kind
+of
+have
+one
+person
+just
+very</p>
+<p>quickly
+put
+together
+a
+very
+high-quality</p>
+<p>eval.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Mhm.
+</details>
+<p><strong>&gt;&gt;</strong>: 另一个有趣之处就在于部署模型带来的直接反馈。在数学和编程这类任务中，你能了解它们执行任务的跨度上限。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+ another
+ kind
+ of
+ interesting
+ thing
+ of
+<p>just
+being
+able
+to
+deploy
+your
+models
+is</p>
+<p>you
+can
+just
+see
+them
+eval
+as
+people
+are</p>
+<p>doing
+things
+with
+them,
+right?
+Um,
+one</p>
+<p>of
+the
+great
+things
+is,
+you
+know,
+in</p>
+<p>math
+and
+coding
+and
+software,
+like</p>
+<p>you
+get
+a
+sense
+for
+like
+where
+where</p>
+<p>they
+fall
+over,
+what
+the
+task
+horizon</p>
+<p>they
+can
+do
+from
+from
+this
+like
+general</p>
+<p>very
+broad-based
+deployment.
+So.</p>
+</details>
+<h3 id="评测团队与模型优化团队的机制隔离" data-reading-heading="">评测团队与模型优化团队的机制隔离</h3>
+<p><strong>&gt;&gt;</strong>: 是的，这很有启发。现在把虾放入热油中煎上色。进一步追问一下，你如何在取得优异基准成绩的同时，又不陷入你所说的“刷榜”？因为你希望保持真诚、不投机取巧，但如果得分比竞品低，消费者可能会觉得“你的分数不高，模型可能就没那么好”。你如何平衡这两者的冲突？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ no,
+ that's
+ that's
+ helpful.
+ Now,
+<p>we'll
+just
+add
+the
+prawns
+to
+the
+oil
+and</p>
+<p>get
+some
+color
+on
+it.
+Um.
+Yeah,
+and
+so
+I</p>
+<p>guess
+double-clicking
+onto
+that
+um
+how</p>
+<p>do
+you
+balance
+both
+doing
+well
+on
+these</p>
+<p>benchmarks
+but
+also
+not,
+you
+know,
+like</p>
+<p>benchmark
+maxing
+as
+you
+said.
+Cuz
+I</p>
+<p>assume
+you
+want
+to
+be
+most
+honest
+and</p>
+<p>like
+not
+kind
+of
+cheat
+the
+system.
+But</p>
+<p>if
+you
+have
+like
+lower
+scores,
+let's</p>
+<p>say,
+than
+a
+competitor
+or
+from
+other</p>
+<p>models,
+to
+the
+consumer
+maybe
+like,</p>
+<p>"Wait,
+your
+score
+isn't
+that
+great,
+so</p>
+<p>the
+model
+just
+probably
+isn't
+that</p>
+<p>good."
+Like
+how
+do
+you
+balance
+both
+of</p>
+<p>those
+dichotomies?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 关键在于必须基于具有代表性的混合评测集来运作，并且持续投入创建新的评测。有一种理念是：一个评测一旦公开发布到世界上，它就不再是一个好的评测了。另外一点是与外部机构合作构建评测。在很多高难度的数理评测中，我们与外部组织合作，由他们为我们打造黄金标准。有一种非常有趣的理念，就是把构建评测的团队与负责优化……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ I
+ mean,
+ I
+ think
+ the
+ thing
+ is,
+ you
+<p>just
+really
+have
+to
+operate
+over</p>
+<p>representative
+mixtures
+of
+evals
+and</p>
+<p>always
+investing
+in
+creating
+new
+evals.</p>
+<p>And
+yeah,
+really
+just
+like
+there's
+this</p>
+<p>philosophy
+of
+once
+an
+eval
+is
+out
+in
+the</p>
+<p>world,</p>
+<p>then
+it's
+it's
+just
+already
+not
+a
+good</p>
+<p>eval.</p>
+<p>And
+I
+think
+one</p>
+<p>one
+thing
+is,
+also
+just
+kind
+of</p>
+<p>partnering
+with
+external
+organizations</p>
+<p>to
+create
+evals.
+So,
+you
+know,
+in
+in</p>
+<p>many
+of
+the
+kind
+of
+hard
+math
+and</p>
+<p>science
+evals,</p>
+<p>we've
+partnered
+with
+external</p>
+<p>organizations
+and
+they've
+been
+able
+to</p>
+<p>kind
+of
+craft
+gold
+standards
+there
+for</p>
+<p>us.
+So,
+yeah,
+I
+think
+um</p>
+<p>there's
+a
+kind
+of
+interesting
+philosophy</p>
+<p>of
+separate
+the
+teams
+that
+are
+creating</p>
+<p>the
+evals
+from
+the
+teams
+that
+are</p>
+<p>optimizing</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 构建，好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: building,
+ okay.
+</details>
+<p><strong>&gt;&gt;</strong>: ……模型本身的团队彻底分开。这样双方的利益动机就不会混在一起。评测团队的目标就是构建对模型来说极难的评测。这形成了一种天然的对抗机制，避免了自我欺骗，两个团队之间的激励机制得到了正确的对齐。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: the
+ models
+ themselves.
+ Because
+ that
+ way
+<p>you
+don't
+like
+coincentivize
+them,</p>
+<p>right?
+Like
+the
+the
+way
+the
+evals
+team</p>
+<p>can
+work
+is
+they're
+trying
+to
+build</p>
+<p>evals
+that
+are
+hard
+for
+the
+models.
+So,</p>
+<p>there's
+this
+inherently
+adversarial</p>
+<p>process
+where</p>
+<p>you're
+you're
+not
+kind
+of
+cheating</p>
+<p>yourself.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 两个团队之间的激励在某种程度上以正确的方式对齐了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: The
+ the
+ incentives
+ are
+ somewhat
+<p>aligned
+in
+the
+right
+way
+between
+the
+two</p>
+<p>teams.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 你们也会参与构思、甚至决定应该与第三方合作开发哪些评测吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ Yeah.
+ do
+ kind
+ of
+ also
+ contribute
+<p>and
+help
+in
+the
+ideation
+process
+or
+even</p>
+<p>deciding
+what
+Evals,
+you
+know,
+you</p>
+<p>should
+work
+with
+a
+third
+party
+on
+to</p>
+<p>develop.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。我和 Jakub 的很多工作也包括引导评测的发展方向。我们会发现某些能力缺陷或我们渴望拥有的能力，而每一种能力的背面都是一项评测：你需要某种评测来衡量是否准确激发了你想要的能力，且激发得足够好。这需要大量的引导，让所有人在评测上达成共识也是一项艰难的工作。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ Yeah.
+ So,
+ I
+ mean,
+ I
+ think
+ a
+ lot
+ of
+<p>the
+work
+that
+Yacoub
+and
+I
+do
+also</p>
+<p>involves
+just
+kind
+of
+uh
+steering
+the</p>
+<p>direction
+that
+Evals
+go.
+Yeah.
+I
+think</p>
+<p>we'll
+notice
+certain
+gaps,
+right?
+Or</p>
+<p>certain
+kind
+of
+capabilities
+um
+that
+we</p>
+<p>want.
+And
+every
+capability
+on
+the
+foot</p>
+<p>side
+is
+an
+Eval,
+right?
+You
+need
+some</p>
+<p>kind
+of
+Eval
+that
+measures
+if
+you</p>
+<p>elicited
+exactly
+what
+you
+want
+and
+you</p>
+<p>want
+it
+well.
+So,
+yeah,
+I
+think
+uh</p>
+<p>yeah,
+it's
+um</p>
+<p>it's
+takes
+a
+lot
+of
+steering
+and
+just
+to</p>
+<p>get
+everyone
+on
+the
+same
+page
+with
+Evals</p>
+<p>is
+also
+a
+lot
+of
+tough
+work.</p>
+</details>
+<h3 id="与-jakub-的协作与参差前沿" data-reading-heading="">与 Jakub 的协作与“参差前沿”</h3>
+<p><strong>&gt;&gt;</strong>: 确实如此。关于 Jakub，你在之前的采访中提到过他是一个非常幽默的人。关于和他共事，你有什么之前没分享过的趣事吗？你说过你们配合得非常默契，在研究上的讨论效率极高，推动前沿时帮助很大。除了幽默之外，还有其他趣事吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ No,
+ that's
+ that's
+ fair.
+ I
+ guess
+ on
+<p>Yacoub,
+you
+said
+in
+a
+previous
+interview</p>
+<p>that
+he's
+a
+very
+funny
+guy.</p>
+<p>Do
+you
+have
+any
+fun
+stories
+that
+maybe</p>
+<p>you
+haven't
+shared
+about
+working
+with</p>
+<p>him?
+Cuz
+you
+also
+state
+that
+you
+guys</p>
+<p>align
+very
+well.
+So,
+your
+discussions</p>
+<p>even
+on
+research
+are
+very
+efficient
+and</p>
+<p>help
+a
+lot
+when
+like
+driving
+towards
+the</p>
+<p>frontier.
+I
+guess
+like
+on
+the
+opposite</p>
+<p>side
+of
+being
+very
+funny,
+are
+there</p>
+<p>things
+that
+you're</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 你问到趣事，他昨天跟我讲了个笑话，我觉得非常好笑。在很多方面我们共同管理着研究工作。据说有个研究员来找他说：“感觉我现在手下就像有一支由非常愚蠢的 IOI 形式主义者组成的军队。”Jakub 回复说：“感觉那正是我目前的处境。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: You
+ you
+ asked
+ about
+ like
+ a
+ funny
+ story.
+<p>Well,
+he
+told
+me
+this
+joke
+yesterday,</p>
+<p>which
+I
+thought
+was
+very
+funny.
+I
+mean,</p>
+<p>in
+many
+ways
+we
+kind
+of
+jointly
+manage</p>
+<p>the
+the
+research
+efforts.
+And</p>
+<p>you
+know,
+apparently
+some
+researcher</p>
+<p>came
+up
+to
+him
+and
+was
+like,</p>
+<p>you
+know,
+um</p>
+<p>it
+feels
+like
+I
+now
+just
+have
+an
+army</p>
+<p>of,
+you
+know,
+really
+dumb
+I
+O
+I
+like</p>
+<p>formalists.
+Yeah.
+And
+Yacoub
+was
+like,</p>
+<p>that
+feels
+like
+already
+the
+situation</p>
+<p>I'm
+in.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: [笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: [laughter]
+</details>
+<p><strong>&gt;&gt;</strong>: 他就是有着极其犀利的讽刺和幽默感。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: You're
+ like,
+ so
+ uh
+ yeah,
+ no,
+ he's
+ he's
+<p>just
+like
+brutally
+sarcastic
+and
+funny.</p>
+<p>Yeah.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 职场中有幽默感真棒，尤其是在推动重大工作前沿时能起到很好的调节作用。这也让我想起了一种奇怪的现象：模型在 IMO 甚至 IOI 上表现极佳，但在人类能轻松完成的某些日常平淡任务上却表现挣扎。对此你怎么看？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ that's
+ great.
+ It's
+ great
+ to
+ have
+<p>humor
+in
+the
+workplace
+and
+it's
+good
+to</p>
+<p>bounce
+out,
+especially
+as
+you're
+pushing</p>
+<p>the
+frontier
+on
+very
+important
+work.
+Um</p>
+<p>but
+that
+also
+brings
+to
+mind
+one
+kind
+of</p>
+<p>weird
+scenario
+of
+how
+models
+can
+perform</p>
+<p>very
+well
+on,
+let's
+say,
+the
+IMO
+or
+even</p>
+<p>the
+I
+O
+I,
+but
+may
+struggle
+with
+some</p>
+<p>more
+mundane
+tasks
+that
+a
+human
+can</p>
+<p>easily
+do.
+So,
+I
+guess
+how
+do
+you
+feel</p>
+<p>about</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 对模型来说符合直觉的东西，往往对人类并不直观。关于“参差前沿”（jagged frontier）这个比喻讨论得很多，模型天然擅长某些事情，可能是基于它见过的数据，或者基于我们能更容易教会它的东西。我认为这很大程度上也归结为上下文。模型所拥有的上下文并不多。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ Yeah.
+ I
+ mean,
+<p>ultimately,
+I
+think</p>
+<p>what's
+intuitive
+for
+the
+models
+is
+often</p>
+<p>not</p>
+<p>um
+that
+intuitive
+for
+the
+humans.
+Like,</p>
+<p>uh
+there's
+there's
+a
+lot
+of
+this</p>
+<p>jagged
+frontier
+analogy
+where
+um
+there's</p>
+<p>some
+things
+that
+the
+models
+just</p>
+<p>inherently,
+you
+know,
+based
+on
+maybe
+the</p>
+<p>data
+it
+sees
+or
+um</p>
+<p>kind
+of
+the
+the
+things
+that
+we
+we
+can</p>
+<p>teach
+it
+more
+easily,
+yeah,
+it's
+just</p>
+<p>good
+at.
+Um
+I
+actually
+think,
+you
+know,</p>
+<p>a
+lot
+of
+a
+lot
+of
+it
+boils
+down
+to
+also</p>
+<p>just
+context,
+right?
+Um
+the
+models
+don't</p>
+<p>have
+a
+lot
+of
+context
+that
+it
+can</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Mhm.
+</details>
+<p><strong>&gt;&gt;</strong>: 当然，视觉对人类来说是更具生物学天然本能的。所以确实存在某些参差的能力是模型比人类更擅长的，反之亦然。但在上下文方面，能够从单一任务中吸取教训并应用到未来的任务中，这种能力是目前很多 AI 从业者正在努力攻克的，而对人类来说这非常自然。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+ vision,
+ of
+ course,
+ is
+ something
+<p>that's
+more
+naturally
+biologically
+wired</p>
+<p>for
+humans.
+Um</p>
+<p>and
+so,
+yeah,
+I
+think
+there
+are
+there's</p>
+<p>just
+certain
+kind
+of
+jagged
+capabilities</p>
+<p>that
+models
+are
+better
+at
+than
+humans</p>
+<p>and
+vice
+versa.
+Um
+but
+I
+also
+think,
+you</p>
+<p>know,
+context,
+just
+um
+being
+able
+to</p>
+<p>take
+a
+single
+task,
+learn
+lessons
+from</p>
+<p>it,
+and
+apply
+them
+to
+future
+tasks,
+um</p>
+<p>that
+capability
+is
+something
+that,
+you</p>
+<p>know,
+a
+lot
+of
+people
+are
+in
+AI
+working</p>
+<p>towards
+right
+now.
+Um</p>
+<p>but
+it's,
+yeah,
+very
+natural
+for
+humans.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Mhm.
+</details>
+<h3 id="上下文窗口与上下文压缩" data-reading-heading="">上下文窗口与上下文压缩</h3>
+<p><strong>&gt;&gt;</strong>: 关于上下文这一点，很多人常提到的唾手可得的方案就是单纯扩大上下文窗口，提供更多示例以提升模型表现。但实现它应该存在更多复杂性，因为即便有很大的上下文窗口和大量上下文，也可能会出现臃肿，甚至如大家所说的“上下文腐烂”（context rot）。你们是如何处理这个过程的？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: And
+ on
+ the
+ context
+ point,
+ um
+ a
+ very
+<p>low-hanging
+fruit
+example
+that
+many</p>
+<p>people
+will
+say
+is
+just
+to
+increase
+the</p>
+<p>context
+window
+to
+provide
+more
+um</p>
+<p>examples
+so
+the
+model
+can
+perform.
+But</p>
+<p>do
+you
+think
+I
+assume
+there's
+more</p>
+<p>complexity
+on
+how
+to
+actually
+enable,</p>
+<p>since
+even
+with
+a
+large
+context
+window</p>
+<p>and
+a
+lot
+of
+context,
+there
+could
+be</p>
+<p>bloat
+or
+even
+just
+a
+lot
+of
+like
+context</p>
+<p>rot,
+as
+people
+have
+said.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 你们如何经历这个过程……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: So,
+ how
+ do
+ you
+ go
+ through
+ that
+ process
+<p>of</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 解决超长任务期学习的标准方法，通常就是天真地扩大上下文窗口，这可以理解。但正如你所说，实现长上下文与“把长上下文做好”之间存在很大差异。有许多大海捞针式的评估来衡量这一点。但除此之外，在工程和研究层面上也可以采用许多巧妙的捷径。例如，现在的很多编程产品都具备压缩（compaction）功能，你可以压缩提炼出的洞见或工作状态，这规避了单纯依赖原生超长上下文所需构建的极其困难且昂贵的基础原语。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yes,
+ so
+ I
+ mean,
+ I
+ think
+ there's
+ kind
+ of
+<p>the
+canonical
+way
+you
+would</p>
+<p>solve
+for
+very
+long
+horizon
+learning,</p>
+<p>which
+is,
+you
+know,
+you
+just
+naively</p>
+<p>increase
+your
+context
+window,
+right?
+And</p>
+<p>um
+I
+mean,
+that
+makes
+sense.
+I
+think</p>
+<p>there's
+a
+difference
+between</p>
+<p>implementing
+long
+context
+and</p>
+<p>implementing
+long
+context
+well,
+like
+you</p>
+<p>said.
+Um
+and
+there
+is
+a
+lot
+of
+kind
+of</p>
+<p>like
+needle-in-a-haystack
+style</p>
+<p>evaluations
+to
+measure
+that.
+Um
+but
+I
+do</p>
+<p>think
+beyond
+that,
+um</p>
+<p>there
+are
+also
+a
+lot
+of,
+in
+some
+sense,</p>
+<p>like
+engineering
+and
+research
+shortcuts</p>
+<p>that
+you
+could
+take.
+Um
+so,
+you
+like,
+uh</p>
+<p>many
+many
+coding
+products
+today
+have</p>
+<p>features
+like
+compaction,
+right?
+Where</p>
+<p>um,
+you
+can
+compress
+kind
+of
+either</p>
+<p>insights
+or
+working
+state
+and</p>
+<p>stuff
+like
+that,
+you
+know,
+it
+just</p>
+<p>shortcuts
+a
+lot
+of
+the
+the
+very
+brutally</p>
+<p>difficult
+and
+expensive
+um,
+primitives</p>
+<p>that
+you
+have
+to
+build
+with
+just
+native</p>
+<p>long
+context.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 明白了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Got
+ you.
+</details>
+<p><strong>&gt;&gt;</strong>: 太好了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+</details>
+<h3 id="喷枪炙烤与通往-agi-的重大押注" data-reading-heading="">喷枪炙烤与通往 AGI 的重大押注</h3>
+<p><strong>&gt;&gt;</strong>: 好了，现在我们要进入有趣的部分了。我们稍微调小一点火，往锅里再添一点油，然后用火枪炙烤一下虾，让它增添更多风味。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay,
+ now
+ we're
+ going
+ to
+ do
+ the
+ fun
+<p>part.
+So,
+um,
+let's
+lower
+the
+heat
+a</p>
+<p>little
+bit
+and
+then
+add
+a
+little
+bit</p>
+<p>more
+oil
+to
+the
+pan.
+Um,
+and
+then
+we'll</p>
+<p>torch
+the
+the
+shrimp
+the
+prawns
+to
+get
+a</p>
+<p>little
+more
+flavor
+in
+there.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yep.
+</details>
+<p><strong>&gt;&gt;</strong>: 我先在我的锅里示范一下。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: So,
+ I'll
+ first
+ do
+ it
+ on
+ on
+ my
+ pan
+ to
+<p>show
+you
+what
+it
+looks
+like.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 但是……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: But
+</details>
+<p><strong>&gt;&gt;</strong>: 单样本学习（One-shot learning）。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: One shot
+ learning.
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 确实。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ indeed.
+</details>
+<p><strong>&gt;&gt;</strong>: 等等，我还没倒波旁威士忌呢。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Wait,
+ I
+ I
+ didn't
+ pour
+ any
+ bourbon.
+</details>
+<p><strong>&gt;&gt;</strong>: [笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: [laughter]
+</details>
+<p><strong>&gt;&gt;</strong>: 好的，等等。我们倒大约四分之一杯。好的。倒进去，关火，然后用喷枪炙烤。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay,
+ wait.
+ So,
+ let's
+ pour
+ like
+<p>a
+fourth.</p>
+<p>Okay.</p>
+<p>And
+then</p>
+<p>pour
+it
+in.
+Heat
+is
+off.</p>
+<p>And
+then
+torch
+it.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 太棒了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Awesome.
+</details>
+<p><strong>&gt;&gt;</strong>: 很好。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: All
+ right.
+</details>
+<p><strong>&gt;&gt;</strong>: 好了，我觉得我学会了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay,
+ I
+ think
+ I
+ got
+ this.
+</details>
+<p><strong>&gt;&gt;</strong>: 行，你想自己试试吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay,
+ yeah.
+ So,
+ do
+ you
+ want
+ to
+ do
+ it
+<p>your
+Yeah.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好啊，来。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ yeah.
+ And
+</details>
+<p><strong>&gt;&gt;</strong>: 倒大约四分之一杯的一半左右，弄好后我把喷枪递给你。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: So,
+ pour
+ it
+ to
+ like
+ half
+ of
+ the
+ fourth
+<p>cup
+and
+then
+once
+you
+have
+that,
+I
+can</p>
+<p>give
+this
+to
+you.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 完美。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Perfect.
+</details>
+<p><strong>&gt;&gt;</strong>: 很好。关火了。关火之后你可以再点火。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+ So,
+ it's
+ off.
+<p>And
+then
+once
+that's
+off,
+you
+can
+turn</p>
+<p>it
+back
+on.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 完美，好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Perfect.
+ Okay.
+</details>
+<p><strong>&gt;&gt;</strong>: 现在你拿着这个，按一下这个按钮点火。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: And
+ then
+ now,
+ do
+ you
+ want
+ to
+<p>hold
+on
+this
+and
+just
+press
+this
+button</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yep.
+</details>
+<p><strong>&gt;&gt;</strong>: 点着它。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: to
+ fire
+ it
+ up.
+ Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 酷。完美。很好。我正在炙烤它。火稍微有点小，不过挺好。太棒了，然后我们可以重新开火。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Cool.
+<p>Yeah,
+perfect.
+Great.
+Okay.</p>
+<p>I'm
+burning
+it.</p>
+<p>It's
+a
+little
+light,
+but
+yeah.</p>
+<p>Great.
+And
+then
+we
+can
+turn
+on
+the
+heat</p>
+<p>again.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+</details>
+<p><strong>&gt;&gt;</strong>: 然后我们把酒精煮挥发掉。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: And
+ then
+ we'll
+ just
+ cook
+ off
+ the
+<p>alcohol.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好的，太棒了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+ Great.
+ Great.
+ Great.
+</details>
+<p><strong>&gt;&gt;</strong>: 太好了。感觉如何？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+ How
+ How
+ are
+ you
+ feeling?
+</details>
+<p><strong>&gt;&gt;</strong>: 你知道的……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: You
+ know
+</details>
+<p><strong>&gt;&gt;</strong>: 太棒了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+ Great.
+</details>
+<p><strong>&gt;&gt;</strong>: 基本上所有东西都快煮好了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Basically
+ there
+ cooking
+ everything.
+ So
+<p>Okay.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 太棒了。关于研究方向与目标，你认为目前是否仍有大量唾手可得的成果，或者通过对现有工作进行细微优化就能获得很大提升？还是说现在必须做出大量完全全新的研究押注？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Awesome.
+<p>Yeah,
+and
+I
+guess
+in
+terms
+of
+research</p>
+<p>ideas
+and
+what
+to
+work
+towards,
+do
+you</p>
+<p>think
+there's
+still
+a
+lot
+of
+low-hanging</p>
+<p>fruit
+or
+ideas
+that
+can
+still
+be</p>
+<p>improved
+a
+lot
+through
+just
+optimizing</p>
+<p>small
+parts
+of
+already
+implemented
+work</p>
+<p>or
+do
+you
+think
+right
+now
+there
+has
+to</p>
+<p>be
+a
+lot
+of
+research
+that
+are
+completely</p>
+<p>new
+bets
+that
+people
+take?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这是个非常好的问题。我觉得会有新的押注，但可能不会很多。从某种意义上说，希望大家能感受到 AGI 很快就要到来了。每个人都看到这些模型变得极其强大。如果认真去想象其背后的影响，我们正越来越接近一个模型能够自主提出更多创新的世界。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+ yeah,
+ that's
+ a
+ really
+ great
+ question.
+<p>I
+feel
+like</p>
+<p>there
+are
+new
+bets,
+but
+probably
+not</p>
+<p>that
+many.
+Yeah,
+um
+in
+some
+sense
+like</p>
+<p>uh</p>
+<p>hopefully
+you
+feel
+like,
+you
+know,
+AGI</p>
+<p>is
+coming
+soon,
+right?
+And
+um
+I
+think</p>
+<p>everyone
+sees
+that
+these
+models
+are</p>
+<p>getting
+really
+capable,
+and</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 随着更多底层创新的涌现。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: with
+ more
+ of
+ the
+ innovation
+ funder
+ out.
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，如果它们能够进行自我维持的研究，这是我们为研究工作设定的重大组织目标之一。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ if
+ they
+ can
+ kind
+ of
+ do
+<p>self-sustaining
+research,
+this
+is
+one
+of</p>
+<p>the
+big
+or
+goals
+that
+we've
+set
+for
+for</p>
+<p>our
+research
+work.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Mhm.
+</details>
+<p><strong>&gt;&gt;</strong>: 所以我认为真正核心的是：在那一刻到来之前，是否存在重大的押注？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: And
+ and
+ so
+ I
+ think
+ like
+<p>you
+know,
+what
+really
+matters
+is
+are</p>
+<p>there
+big
+bets
+before
+that
+point
+in</p>
+<p>time?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 明白。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Got
+ it.
+</details>
+<p><strong>&gt;&gt;</strong>: 窗口期很短，但我们仍在尝试一些非常重要的想法。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: And
+ um
+ I
+ I
+ think
+ the
+ window
+ is
+ small,
+<p>but
+there
+are
+still
+like
+some
+pretty</p>
+<p>significant
+ideas
+we're
+trying
+out.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 有些研究人员表示，要实现 AGI，我们还需要两到三个重大突破，比如持续学习或其他构想。你赞同这一观点吗？还是认为过程并没有“提出三种完全不同的范式”那么激进？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ I
+ mean,
+ there've
+ been
+ some
+<p>researchers
+who
+have
+stated
+that
+to
+get</p>
+<p>to
+AGI,
+we
+still
+need,
+let's
+say
+like</p>
+<p>two
+or
+three
+more
+breakthroughs,
+if
+you</p>
+<p>like
+continual
+learning
+or
+some
+other</p>
+<p>ideas.
+Um
+do
+you
+follow
+that
+same
+view</p>
+<p>perspective,
+or
+do
+you
+think
+it's
+kind</p>
+<p>of
+more
+so
+like
+not
+as
+drastic
+as
+coming</p>
+<p>up
+with
+like
+three
+completely
+different</p>
+<p>paradigms?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我不知道我是否持有同样的认知框架。持续学习确实是一个必须解锁的基本原语。技术路径有很多，我不确定何种程度算作突破，何种不算，但显然有很多射门尝试的机会，我非常确信它们会起作用。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+<p>yeah,
+I
+mean,
+I
+I
+don't
+know.
+I
+I
+don't</p>
+<p>know
+if
+I
+have
+that
+same
+framing.
+Like</p>
+<p>continual
+learning
+is
+a
+a
+basic</p>
+<p>primitive
+that
+you
+have
+to
+unlock.
+Yeah.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 技术非常多，我们正在测试其局限性。我不知道什么才算作突破，但显然有很多射门尝试的机会，我非常确信它们会起效。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Uh
+ there's
+ so
+ many
+ different
+ techniques.
+<p>I
+I
+don't
+know
+um</p>
+<p>that
+yeah,
+I
+think,
+you
+know,
+we're</p>
+<p>we're
+trying
+a
+lot
+of
+in
+the
+limitations</p>
+<p>of
+it.
+I
+don't
+know
+what
+would
+consider</p>
+<p>as
+a
+breakthrough
+versus
+not,
+but
+I</p>
+<p>think
+there</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 显然有很多射门机会，我很确定它们会成功。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: clearly
+ many
+ shots
+ on
+ goal,
+ and
+ I
+ I
+ I'm
+<p>pretty
+sure
+they'll
+work.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 太好了，好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+ Okay.
+</details>
+<p><strong>&gt;&gt;</strong>: 嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Mhm.
+</details>
+<p><strong>&gt;&gt;</strong>: 虾基本煮好了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+ Okay,
+ so
+ the
+ shrimp
+ is
+ basically
+<p>done.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 太棒了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Awesome.
+</details>
+<p><strong>&gt;&gt;</strong>: 你想再炙烤一次让颜色更漂亮吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+ So,
+ do
+ you
+ want
+ to
+ do
+ the
+ flambé
+<p>thing
+again
+to
+get
+more
+color?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 来吧，好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Let's
+ do
+ it.
+ Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+</details>
+<p><strong>&gt;&gt;</strong>: 我来……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: I'll
+ I'll
+</details>
+<p><strong>&gt;&gt;</strong>: 把火稍微开大一点，我再加点油。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Turn
+ on
+ the
+ heat
+ a
+ little
+ bit,
+ and
+ then
+<p>let
+me
+get
+some
+more
+oil.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，因为想要上点深色。我的锅里已经上色了。给。太好了，希望这次能再来一个镜头。好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ cuz
+ you
+ want
+ to
+ get
+ like
+ some
+ dark
+<p>color.
+I
+think
+mine
+has.
+And
+here.</p>
+<p>Great.
+And
+then
+we
+can
+hopefully
+get</p>
+<p>another
+shot.</p>
+<p>Okay.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 完美。稍等一分钟。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Perfect.
+ minute.
+</details>
+<p><strong>&gt;&gt;</strong>: 好的，你想先来吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+<p>Do
+you
+want
+Do
+you
+want
+to
+go
+first?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 额……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+</details>
+<p><strong>&gt;&gt;</strong>: 一样多的酒？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Same
+ same
+ amount
+ of
+ beer.
+</details>
+<p><strong>&gt;&gt;</strong>: 对。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 一样的量。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Same
+ amount.
+</details>
+<p><strong>&gt;&gt;</strong>: 我们希望火能烧起来，刚才火候好像不够……是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: We
+ could
+ hopefully
+ get
+ cuz
+ I
+ think
+ the
+<p>heat
+wasn't
+as</p>
+<p>Yeah.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好的，我觉得可以倒进去了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+ I
+ think
+ we
+ put
+ it
+ in.
+</details>
+<p><strong>&gt;&gt;</strong>: 好的，成了，按按钮。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ I
+ think
+ There
+ we
+ go.
+<p>Let's
+press
+the
+button.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 太棒了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+</details>
+<p><strong>&gt;&gt;</strong>: 成了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: There
+ we
+ go.
+</details>
+<p><strong>&gt;&gt;</strong>: 出来了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: There
+ it
+ is.
+</details>
+<p><strong>&gt;&gt;</strong>: 质感很棒。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: It's
+ good
+ texture.
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，确实。增添了很好的风味。让我尝尝，味道会很棒的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+<p>Indeed.</p>
+<p>And
+it's
+like
+add
+some
+good
+flavor.</p>
+<p>Here,
+let
+me
+try
+it.
+It'll
+be
+good.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yep.
+</details>
+<p><strong>&gt;&gt;</strong>: 来看看。太棒了。来看看最终成品会是什么样。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ let's
+ see.
+<p>Great.</p>
+<p>All
+right,
+let's
+see
+what
+it's
+going
+to</p>
+<p>look
+like.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 哇，成了。好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Ooh.
+<p>There
+it
+is.</p>
+<p>All
+right.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我们进入最后冲刺阶段了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: But
+ we're
+ in
+ the
+ final
+ stretch.
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+</details>
+<p><strong>&gt;&gt;</strong>: 虾全煮熟了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: shrimp
+ all
+ cooked.
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yep.
+</details>
+<h3 id="多模态架构与统一模型" data-reading-heading="">多模态架构与统一模型</h3>
+<p><strong>&gt;&gt;</strong>: 过了火。现在稍微煮一下，然后我们应该把蔬菜加到汤水里。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Some
+ fire.
+ So,
+ now
+ we
+ can
+ kind
+ of
+<p>Yeah.
+Cook
+it
+off
+a
+little
+bit
+and
+then</p>
+<p>um
+we
+should
+add
+our
+veg
+to
+the
+water.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 你的多任务处理能力真让我佩服。我认为这也是我们希望模型能够改进的一点：它应该能够一边处理这样的任务线程，一边还能跟你聊天。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: I'm
+ impressed
+ by
+ your
+ multitasking
+<p>abilities.</p>
+<p>You
+know,
+I
+think
+that's
+actually
+one</p>
+<p>thing
+um
+we
+need
+our
+models
+to
+get</p>
+<p>better
+at.
+Like
+it
+should
+just
+be
+able</p>
+<p>to</p>
+<p>do
+some
+thread
+like
+this
+and
+also
+just</p>
+<p>have
+a
+conversation
+with
+you
+at
+the
+same</p>
+<p>time.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，对。这也让我想起一个问题：你认为图像、音频、视频甚至文本都应该收归在同一个模型之下，还是会分化出专门的音频模型等特定模型？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ Yeah.
+ Yeah.
+<p>No,
+I
+I
+That
+also
+reminds
+me.
+Do
+you</p>
+<p>think
+images
+and
+audio
+and
+video
+and</p>
+<p>even
+text
+like
+that
+should
+all
+be
+one</p>
+<p>under
+one
+model
+or
+do
+you
+think
+it'll</p>
+<p>like
+break
+through
+like
+specific</p>
+<p>specialized
+like
+audio
+model
+or</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 对一个研究实验室来说，统合在一个模型之下有很多优势。比如你只需要维护一套基础设施技术栈。同时维护并扩展多套基础设施技术栈的成本是不容低估的。因此只维护一套底层技术栈的好处很多，你在基础架构中所做的核心研究可以直接迁移到任何模态或任务中。所以我们有强烈的倾向，尽可能保持尽量少的基础架构种类。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Well,
+ yeah.
+ I
+ mean,
+ I
+ think
+<p>for
+for
+a
+research
+lab,
+I
+think
+there</p>
+<p>are
+a
+lot
+of
+advantages
+for
+it
+to
+be</p>
+<p>under
+one.</p>
+<p>Um
+you
+just
+have
+to
+maintain
+one</p>
+<p>infrastructure
+stack
+for
+instance.
+Um
+I</p>
+<p>think</p>
+<p>the
+cost
+of
+like
+maintaining
+and
+scaling</p>
+<p>many
+infrastructure
+stacks
+at
+once.
+Um
+I</p>
+<p>think
+that's
+something
+that</p>
+<p>you
+shouldn't
+underestimate.
+So,
+I
+think</p>
+<p>there
+are
+a
+lot
+of
+benefits
+to
+just
+like</p>
+<p>you
+know,
+you
+do
+some
+core
+research
+in</p>
+<p>in
+your
+like
+in
+your
+fundamental
+stack</p>
+<p>and
+that
+just
+carries
+over
+to
+whatever</p>
+<p>modality
+or
+whatever
+thing
+that
+you</p>
+<p>want.
+So,</p>
+<p>um</p>
+<p>I
+I
+think
+there's
+a
+strong
+bias
+for
+us</p>
+<p>to
+keep
+it
+in
+as
+as
+few
+different
+archi</p>
+<p>architectures
+as
+possible.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 明白了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Got
+ you.
+</details>
+<p><strong>&gt;&gt;</strong>: 嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yep.
+</details>
+<p><strong>&gt;&gt;</strong>: 太好了。这很有道理，架构确实是一个平时不常被充分考虑的极其重要的因素。另外一个经常出现的词，你之前也提到过的，就是“氛围感研究员”（vibe researcher）。我们当然已经有了“氛围感程序员”（vibe coders）。但对于氛围感研究，你认为终极形态是什么？其核心价值在于提出正确想法的研究品味，还是跟进并落实具体研究的执行力？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+<p>No,
+that
+that
+makes
+a
+lot
+of
+sense.
+I</p>
+<p>think
+like
+the
+architecture
+as
+well
+is</p>
+<p>something
+that
+isn't
+often
+considered.</p>
+<p>Yeah.</p>
+<p>It's very
+important.
+But
+one
+also
+term</p>
+<p>that
+I've
+been
+seeing
+a
+lot
+that
+you've</p>
+<p>also
+kind
+of
+mentioned
+is
+a
+vibe</p>
+<p>researcher.
+You
+know,
+we
+have
+vibe</p>
+<p>coders
+obviously.</p>
+<p>Yeah,
+yeah,
+yeah,
+yeah.</p>
+<p>But
+I
+guess
+on
+vibe
+researching,
+what
+do</p>
+<p>you
+think
+is
+like
+the
+end
+state?
+Do
+you</p>
+<p>think
+the
+main
+value
+out
+of
+a
+vibe</p>
+<p>researcher
+is
+just
+the
+research
+taste
+of</p>
+<p>coming
+up
+with
+the
+right
+idea
+or
+do
+you</p>
+<p>think
+it's
+more
+so
+the
+execution
+of</p>
+<p>going
+through
+and
+following
+through
+on</p>
+<p>the
+actual
+research?</p>
+</details>
+<h3 id="氛围感研究员与模型品味的演进" data-reading-heading="">“氛围感研究员”与模型品味的演进</h3>
+<p><strong>&gt;&gt;</strong>: 我觉得我们正非常迅速地迈向这个世界。无论在 OpenAI 还是其他实验室，你开始看到大量工作转变为以编排为中心：研究人员构思想法，而模型已经强大到可以独立完成实施与执行。在构思想法与执行的价值对比上，两者固然都很重要，但我感觉到市场正明显转向只要能提出大量想法、模型就能为你完成具体执行与编排的模式。这将是未来从事研究的常态。正如我们之前谈到的，模型目前还不完全具备良好的品味，所以依然需要研究人员来构思想法。教给模型出色的品味会很难，但就加速研究而言，实实在在的好处已经显现了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+ yeah,
+ so
+ I
+ I
+ I
+ think
+ we're
+ actually
+<p>moving
+towards
+this
+world
+very
+quickly,</p>
+<p>right?
+I
+think
+both
+that
+OpenAI
+and
+our</p>
+<p>other
+labs,</p>
+<p>you
+'re
+starting
+to
+see
+a
+lot
+of
+the
+work</p>
+<p>become
+mostly
+orchestration-focused,</p>
+<p>right?
+Like
+the
+researchers
+coming
+up</p>
+<p>with
+the
+ideas</p>
+<p>and
+the
+model's
+great
+enough
+to
+do
+the</p>
+<p>implementation
+execution
+by
+itself.</p>
+<p>So
+I
+think
+you
+know,
+when
+you
+when
+it</p>
+<p>comes
+down
+to
+like
+you
+know,
+is</p>
+<p>is
+the
+value
+of
+coming
+up
+with
+ideas</p>
+<p>versus
+execution?
+Um</p>
+<p>Yeah,
+both
+are
+still
+important,
+but
+I</p>
+<p>just
+feel
+like
+there's
+there's
+this</p>
+<p>market
+shift</p>
+<p>towards
+just
+kind
+of
+being
+able
+to
+come</p>
+<p>up
+with
+a
+lot
+of
+ideas
+and
+then</p>
+<p>the
+model
+can
+actually
+do
+the
+the</p>
+<p>execution
+and
+orchestration
+for
+you.
+So</p>
+<p>I
+think
+going
+to
+be
+the
+future
+of
+doing</p>
+<p>research.</p>
+<p>Um</p>
+<p>We
+also
+said
+earlier,
+you
+know,
+like
+the</p>
+<p>models
+don't
+quite
+have
+the
+taste
+yet.</p>
+<p>And
+um</p>
+<p>that's
+why
+you
+still
+need
+the</p>
+<p>researchers
+coming
+up
+with
+the
+ideas.</p>
+<p>It's
+going
+to
+be
+hard
+to
+teach
+the</p>
+<p>models
+good
+taste.
+We
+noticed
+that,
+but</p>
+<p>in
+terms
+of
+actually
+accelerating
+the</p>
+<p>research,
+there's
+clear
+tangible</p>
+<p>benefits
+already.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 你认为模型在研究品味上会有与人类并驾齐驱的一天吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ Do
+ you
+ think
+ they'll
+ ever
+ be
+<p>parity
+in
+terms
+of
+research
+taste
+with</p>
+<p>models?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我认为会的。审视我们的三年路线图，我们希望达到的最终目标就是模型可以进行端到端的研究。这个难题的一部分就在于让模型具备出色的品味，你指着某个通用的基准测试，它就能找到正确的解决方案。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: I
+ think
+ so.
+ I
+ mean,
+ when
+ we
+ look
+ at
+ our
+<p>kind
+of
+three-year
+roadmap,
+right?</p>
+<p>The
+end
+goal
+that
+we
+want
+to
+reach
+is</p>
+<p>one
+where</p>
+<p>you
+know,
+the
+the
+models
+are
+just
+doing</p>
+<p>end-to-end
+research
+and</p>
+<p>um</p>
+<p>I
+think
+a
+part
+of
+that
+problem
+is
+just</p>
+<p>being
+able
+to
+have
+the
+model
+come
+up</p>
+<p>with
+good
+taste.
+You
+point
+at
+some
+you</p>
+<p>know,
+just
+generic
+benchmark
+or</p>
+<p>something
+and
+it
+finds
+the
+right</p>
+<p>solutions.
+Yeah.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 很有启发。关于 OpenAI 人类研究员所做的研究，当一个研究押注结果不佳时，你们如何进行复盘？毕竟要承担如此多的重大押注，难免会有不顺利的时候。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ no,
+ that's
+ helpful.
+ And
+ in
+ terms
+<p>of
+research
+done
+by
+humans</p>
+<p>at
+OpenAI,</p>
+<p>how
+do
+you
+guys
+go
+about
+I
+guess
+the</p>
+<p>postmortem
+process
+of
+let's
+say
+a</p>
+<p>research
+bet
+that
+didn't
+turn
+out
+well?</p>
+<p>Cuz
+I
+assume
+that
+a
+lot
+of
+it
+is
+taking</p>
+<p>these,
+you
+know,
+vast
+bets
+and
+some</p>
+<p>don't
+turn
+out
+well.</p>
+</details>
+<h3 id="高风险押注面对失败与经验沉淀" data-reading-heading="">高风险押注、面对失败与经验沉淀</h3>
+<p><strong>&gt;&gt;</strong>: 这正是 OpenAI 的超额收益（alpha）的核心组成部分。我们与其他实验室的不同之处在于，我们承担了大量高风险押注，这也是我们能长期持续保持在最前沿的原因。但这同时也意味着部分押注注定不会成功。一个必然的推论是，当一个押注未能如愿时，你不能自欺欺人地认为它迟早会起效，而是必须果断抽身。因此需要做出决断：回头审视并承认“这在当时是个有前景的想法，但实际上没有我们想象的那么重要”，或者“有其他更好的方法”，又或者“我们有了新的发现”。但这些工作中很多也是非常有成果的。我们意识到，即使有时人们在验证某项技术时失败了，他们的书面总结也极其重要，因为那往往是一个非常自然的想法，总结记录可以避免许多人经历同样的痛苦。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Well,
+ I
+ would
+ say
+ that
+ is
+ a
+ big
+ part
+ of
+<p>OpenAI's
+alpha
+because
+I
+think
+one</p>
+<p>thing
+that
+differentiates
+us
+from
+other</p>
+<p>labs
+is
+we
+take
+a
+lot
+of
+high-risk
+bets.</p>
+<p>And
+I
+think
+that's
+what's
+allowed
+us
+to</p>
+<p>stay
+at
+the
+frontier
+uh
+so
+consistently</p>
+<p>over
+time.
+Um
+but
+it
+also
+means
+that</p>
+<p>some
+of
+the
+bets
+are
+not
+going
+to
+pan</p>
+<p>out.
+And
+um</p>
+<p>a
+hard
+corollary
+of
+that
+is
+when
+a</p>
+<p>when
+a
+bet
+doesn't
+pan
+out
+um</p>
+<p>you
+have
+to</p>
+<p>you
+know,
+not
+delude
+yourself
+into</p>
+<p>thinking
+that,
+you
+know,
+this
+is</p>
+<p>something
+that
+will
+work
+and
+and
+kind
+of</p>
+<p>uh
+disconnect
+from
+it.
+So,
+I
+think
+there</p>
+<p>are
+certain
+calls
+that
+you
+have
+to
+make,</p>
+<p>right?
+Like
+uh
+kind
+of
+look
+back
+and
+be</p>
+<p>like,
+well,
+um
+this
+was
+a
+promising
+idea</p>
+<p>at
+the
+time,
+but
+actually
+it's
+less</p>
+<p>important
+than
+we
+thought,
+you
+know,</p>
+<p>it's
+uh
+there's
+some
+other
+approach
+that</p>
+<p>works
+better
+or,
+you
+know,
+um</p>
+<p>there's
+some
+other
+kind
+of
+some</p>
+<p>something
+that
+we
+discovered.
+But
+I
+I</p>
+<p>think
+many
+of
+that</p>
+<p>much
+of
+that
+work
+is
+also
+very
+fruitful.</p>
+<p>So,
+what
+we
+realized
+is
+like
+even</p>
+<p>sometimes
+when
+people
+fail
+at
+um
+proving</p>
+<p>out
+a
+technique,
+uh
+their
+write-ups
+are</p>
+<p>very
+important
+important
+because
+um</p>
+<p>they'll
+kind
+of
+a
+lot
+it
+it'll
+often
+be</p>
+<p>a
+natural
+idea
+and
+you
+can
+perhaps
+save</p>
+<p>a
+lot
+of
+people
+from
+going
+through
+the</p>
+<p>same
+pain.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，很有帮助。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+<p>Well,
+that's
+helpful.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 既然对失败持有这种积极态度，那如何权衡这种情况：如果一个研究人员连续做了多次押注，结果全部落空怎么办？毕竟在某种程度上，相比于一直做出毫无成果的押注，你肯定希望研究员最终能做出真正有益的贡献。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ So,
+ I
+ guess
+ when
+ it
+ comes
+ to
+ this
+<p>positive
+view
+on
+failure,
+how
+do
+you</p>
+<p>balance
+that
+with,
+you
+know,
+a</p>
+<p>researcher,
+let's
+say,
+takes
+a
+lot
+of</p>
+<p>bets,
+consecutive
+bets,
+and
+none
+of
+them</p>
+<p>pan
+out?
+Cuz
+I
+assume
+at
+a
+certain
+point</p>
+<p>you'd
+want
+a
+researcher
+to
+eventually</p>
+<p>have
+contributions
+that
+are
+actually</p>
+<p>beneficial
+compared
+to
+only
+taking
+bets</p>
+<p>that
+maybe
+pan
+out
+to
+being
+not
+good</p>
+<p>space.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 从经验来看，我确实见过有人陷入这种困境。但我也经历过几次这样的情况：押注一个接一个地失败，就在你濒临沮丧的边缘时，突然迎来了一个超级大爆发。这种情况发生过多次，所以关键取决于想法本身是否站得住脚。它们可以雄心勃勃，但必须合乎逻辑。有这样一类人，他们会去尝试很多这类想法，这是可以接受的，因为他们处于风险更高的前沿。这可能很像交易员看世界的视角，但他们只要隔一段时间证明一次其价值就足够了。他们需要带来价值。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Just
+ through
+ experience,
+ I
+ I've
+<p>definitely
+seen
+some
+people
+fall
+into</p>
+<p>this.
+Um</p>
+<p>but
+I've
+also
+had
+several
+cases
+where,</p>
+<p>you
+know,
+like
+it's
+just
+like
+bet
+after</p>
+<p>bet,
+it
+doesn't
+pan
+out,
+and
+just
+when</p>
+<p>you're
+like
+at
+the
+brink
+of
+frustration,</p>
+<p>you
+have
+something
+that
+'s
+like
+a
+mega</p>
+<p>hit.
+And</p>
+<p>um
+this
+happened
+enough,
+so
+it
+really</p>
+<p>just
+depends
+on</p>
+<p>kind
+of
+are
+are
+the
+ideas
+themselves</p>
+<p>sound?
+Uh
+they
+could
+be
+ambitious,</p>
+<p>but
+they
+still
+have
+to
+be
+sound.
+And</p>
+<p>um
+there's
+a
+certain
+kind
+of
+person
+who</p>
+<p>will</p>
+<p>will
+just
+take
+a
+lot
+of
+those
+ideas,
+and</p>
+<p>it's
+okay
+because
+they're
+somewhat
+on</p>
+<p>the
+riskier
+frontier.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Mhm.
+</details>
+<p><strong>&gt;&gt;</strong>: 但他们只需要隔一段时间证明一次就合理了，对吧？这可能带有很强的交易视角，但归根结底取决于期望值，他们必须创造价值。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: But,
+ they
+ only
+ have
+ to
+ justify
+ it
+ once
+<p>in
+a
+while
+for
+it
+to
+make
+sense,
+right?</p>
+<p>It
+may
+be
+like
+a
+very
+trading</p>
+<p>like
+kind
+of
+lens
+on
+the
+world,
+but</p>
+<p>yeah,
+it's
+it's
+just
+on
+our
+expectation,</p>
+<p>right?
+Like
+they
+they
+need
+to
+add
+value.</p>
+</details>
+<h3 id="成果品尝与被低估的研究方向" data-reading-heading="">成果品尝与被低估的研究方向</h3>
+<p><strong>&gt;&gt;</strong>: 好的，太棒了。食材基本组装好了，现在做最后润色：你可以尝尝你的汤，如果不够咸就加点酱油；如果太咸，加点水调淡一点。来看看我们的最终成果。味道如何？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ no,
+ that's
+ that's
+ great.
+ Okay,
+ so
+<p>we're
+basically
+assembled,
+now
+it's
+the</p>
+<p>finishing
+touches,
+so
+you
+can
+taste
+your</p>
+<p>soup,
+and
+then
+we
+just
+add
+soy
+sauce
+if</p>
+<p>it's
+not
+salty
+enough,
+and
+if
+it's
+too</p>
+<p>salty,
+we
+can
+add
+some
+water
+to
+lower</p>
+<p>this
+down.</p>
+<p>But,
+let's
+see
+our
+final
+creation.</p>
+<p>How
+is
+it?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 相当不错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: It's
+ pretty
+ good.
+</details>
+<p><strong>&gt;&gt;</strong>: 还可以吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Good?
+</details>
+<p><strong>&gt;&gt;</strong>: 我觉得行，我的挺好。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: I'll
+ take
+ it.
+ Mine
+ is
+ good.
+</details>
+<p><strong>&gt;&gt;</strong>: 我的需要加点水。你能把水递给我吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ mine
+ needs
+ a
+ little
+ bit
+ of
+ water.
+<p>Could
+you
+pass
+me
+the
+water?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 没问题，给你。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: yeah,
+ absolutely.
+</details>
+<p><strong>&gt;&gt;</strong>: 感觉怎么样？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+ So,
+ how
+ was
+ that?
+ How
+ did
+ that
+<p>feel?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我觉得这是一次学生蒸馏过程。你在做饭上显然比我强多了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+ I
+ think
+ this
+ is
+ a
+ student
+<p>distillation.
+Um
+you're
+clearly
+better</p>
+<p>than
+I
+am
+at
+this.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 没有没有。[笑声] 我觉得你做得非常好，尤其是虾和棕榈芯的部分。闻起来真香。听起来很不错。更宽泛地讲，我有点好奇，你认为目前有哪些研究或主题是被高估或低估的？你会把什么归入其中？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: No,
+ no,
+ no.
+ [laughter]
+ I
+ feel
+ like
+ you
+<p>did
+a
+very
+good
+job,
+especially
+with</p>
+<p>even
+with
+the
+shrimp
+and
+palm
+hearts.</p>
+<p>Yeah.</p>
+<p>Smells
+great.</p>
+<p>Wow,
+okay,
+that
+sounds
+good.
+I
+guess</p>
+<p>just
+more
+generally,
+I'm
+kind
+of</p>
+<p>curious,
+are
+there
+any
+reason
+research</p>
+<p>or
+topics
+that
+you
+think
+are
+right
+now</p>
+<p>overrated
+and
+underrated?
+Like
+what</p>
+<p>would
+you
+categorize
+under?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 如果现在还持有“预训练已死”的世界观，我认为预训练绝对没有死，它是被低估的。坦白说，产品思维、思考最终用途，以及如何将研究中构建的所有原语与真实世界的智能体用例结合起来，这也是被低估的。你绝不能脱离实际、在真空中构建一切而不与实用性挂钩。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+<p>Well,
+I
+think
+if
+you
+still
+have
+a</p>
+<p>pre-training
+is
+dead
+view
+of
+the
+world,</p>
+<p>um</p>
+<p>I
+think
+I
+think
+uh
+pre-training
+is</p>
+<p>definitely
+uh
+yeah,
+yeah,
+yeah,
+not
+not</p>
+<p>dead.
+It's
+it's
+um
+it's
+underrated.
+Um</p>
+<p>Yeah,
+and
+honestly,
+um</p>
+<p>I
+think</p>
+<p>products
+and
+kind
+of
+thinking
+about
+end</p>
+<p>uses
+and
+you
+know
+how
+you
+tie
+all
+the</p>
+<p>primitives
+you
+build
+in
+research
+to</p>
+<p>you
+know
+real
+agentic
+use
+cases
+in
+the</p>
+<p>world.
+That's
+also
+underrated.
+I
+think</p>
+<p>um
+you
+really
+can't
+just
+kind
+of
+build</p>
+<p>everything
+in
+a
+vacuum
+and
+not
+connect</p>
+<p>things
+to
+utility.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 很好。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ No,
+ that's
+ great.
+</details>
+<h3 id="外部评测与最终盲测裁决" data-reading-heading="">外部评测与最终盲测裁决</h3>
+<p><strong>&gt;&gt;</strong>: 太棒了，我想我们可以品尝了。来试试看？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ Awesome.
+ I
+ think
+ we
+ are
+ ready
+ to
+<p>taste.
+So,
+do
+we
+want
+to
+give
+it
+a
+go?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 开动吧。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Let's
+ do
+ it.
+</details>
+<p><strong>&gt;&gt;</strong>: 我们可以把这个移开，应该准备装盘了。你想拿这个盘子过去吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: We can
+ move
+ this
+ and
+ I
+ think
+ there
+<p>should
+be
+some
+plating.
+Yeah,
+do
+you</p>
+<p>want
+to
+take
+this
+plate
+over
+here?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+</details>
+<p><strong>&gt;&gt;</strong>: 虾看起来很棒。其他东西都在这里。我们可以直接用这些锅。大虾有了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+ Shrimp
+ looks
+ great.
+<p>But
+everything
+else
+is
+here.</p>
+<p>Great.
+And
+then
+we
+could
+just
+use
+these</p>
+<p>pots.</p>
+<p>So,
+we
+have
+our
+shrimp.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yep.
+</details>
+<p><strong>&gt;&gt;</strong>: 你想尝尝吗？干杯。来看看。可能有点甜。有点太甜了。因为我们想办法调补了一下。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Do
+ you
+ want
+ to
+ try
+ it?
+ Cheers.
+ Cheers.
+<p>Let's
+see.
+Maybe
+a
+little
+sweet.</p>
+<p>That's
+a
+little
+too
+sweet.</p>
+<p>Cuz
+we
+found
+a
+way
+to
+make
+it
+up.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 对我来说刚好，我喜欢甜食。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: for
+ me.
+ I
+ like
+ sweet
+ things.
+</details>
+<p><strong>&gt;&gt;</strong>: 很好。Sean，你想过来尝尝我们的豆腐汤吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: It's
+ good.
+ Okay,
+ great.
+ Um
+ Sean,
+ do
+ you
+<p>want
+to
+come
+and
+taste
+our
+truffle
+soup?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 顺便说一句，味道太棒了。观众闻不到，但是……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: That
+ was
+ so
+ good
+ by
+ the
+ way.
+ You
+ guys
+<p>can't
+smell
+it,
+but
+um</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我们假装你是一位想要晋升的研究员。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: We'll
+ pretend
+ you're
+ a
+ um
+ researcher
+<p>that's
+trying
+to
+get
+a
+promotion.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我是 Zach，他想要……你想拿这边的勺子吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: And
+ I'm
+ Zach
+ and
+ he's
+ a
+ you
+ know
+ trying
+<p>to
+get
+you
+so
+do
+you
+want
+to
+grab
+the</p>
+<p>spoon
+over
+here?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 这碗汤的品质真的会动摇这里的晋升决定。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: soup
+ is
+ really
+ going
+ to
+ sway
+ the
+<p>decision
+here.
+The
+soup
+quality
+of
+soup.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，太好了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+<p>Great.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我来尝尝。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: I'll
+ do
+ it.
+</details>
+<p><strong>&gt;&gt;</strong>: 好的，这里的艺术指导方向是什么？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: All
+ right.
+ What
+ was
+ the
+ artistic
+<p>direction
+here?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 艺术指导方向？就是模仿。我认为模仿中有伟大的艺术。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+ artistic
+ direction.
+ Well,
+ it
+ was
+<p>mimicry.
+I
+think
+there's
+great
+art
+in</p>
+<p>mimicry.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，让他们尽情发挥。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ Just
+ letting
+ them
+ cook.
+</details>
+<p><strong>&gt;&gt;</strong>: 嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Mhm.
+</details>
+<p><strong>&gt;&gt;</strong>: 不错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Good.
+</details>
+<p><strong>&gt;&gt;</strong>: 哇，是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Wow.
+ Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 味道很浓郁。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Strong.
+</details>
+<p><strong>&gt;&gt;</strong>: 我觉得有一点我非常喜欢，就是咸鲜和香辣融为一体，同时还带着海鲜的风味。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: I
+ mean,
+ I
+ think
+ um
+ one
+ thing
+ I
+ I
+<p>definitely
+like
+like
+savory
+and
+spice</p>
+<p>that
+goes
+together,
+but
+then
+also
+like</p>
+<p>the
+sort
+of
+sea
+seafoodness.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 嗯。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Mhm.
+</details>
+<p><strong>&gt;&gt;</strong>: 确实很入味。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，很好地融入了进去。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ Kind
+ of
+ really
+ goes
+ into
+ it.
+</details>
+<p><strong>&gt;&gt;</strong>: 太好了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Great.
+</details>
+<p><strong>&gt;&gt;</strong>: 好的，我这碗味道非常浓烈。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+ Mine's
+ mine's
+ very
+ dominant.
+</details>
+<p><strong>&gt;&gt;</strong>: 选出赢家了吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: winner
+ or
+ what?
+</details>
+<p><strong>&gt;&gt;</strong>: 不不不，你得先尝尝然后……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: No,
+ no,
+ no.
+ You're
+ you're
+ supposed
+ to
+<p>try
+it
+and
+then</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 不，你得选一个赢家。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: No, you
+ do
+ pick
+ a
+ winner.
+</details>
+<p><strong>&gt;&gt;</strong>: [笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: [laughter]
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+</details>
+<p><strong>&gt;&gt;</strong>: 这就像是评测？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: This
+ is
+ like
+ evals?
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yes.
+</details>
+<p><strong>&gt;&gt;</strong>: 对。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 代价高昂。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: So,
+ it's
+ expensive.
+</details>
+<p><strong>&gt;&gt;</strong>: 外部评测。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: External
+ evals.
+</details>
+<p><strong>&gt;&gt;</strong>: 我得说，感觉这碗水放得有点多了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay,
+ I
+ got
+ to
+ say
+<p>I
+feel
+like
+there's
+too
+much
+water
+in</p>
+<p>this.
+I
+think
+like
+the
+the</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我觉得也是锅的原因，[笑声] 因为这是一个大锅。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: I
+ [laughter]
+ I
+ think
+ it's
+ also
+ a
+ pot.
+<p>Cuz
+this
+is
+a
+big
+pot.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的。等等，好吧。我得选这一碗。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ Wait,
+ okay.
+ Um
+ I
+ I
+ would
+ say
+ I
+ I
+<p>have
+to
+go
+for
+this.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 好的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+ Okay.
+</details>
+<p><strong>&gt;&gt;</strong>: 尽管你是我们尊贵的客人，但我必须保持客观。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Just
+ like
+ you're
+ our
+ respected
+ guest,
+<p>but
+I
+want
+to
+be
+objective.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 当然，当然，那是自然。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Of
+ course.
+ Of
+ course.
+ Yes.
+ Yes.
+ Yes.
+</details>
+<p><strong>&gt;&gt;</strong>: 这种浓郁的风味确实……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Um
+ and
+ like
+ yeah,
+ the
+ density
+ I
+ think
+<p>really
+a
+flavor
+really</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 我应该加一半的水？一半的水量？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: I'll
+ do
+ half
+ water?
+ Half
+ the
+ water?
+</details>
+<p><strong>&gt;&gt;</strong>: 大概是这样。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Probably.
+</details>
+<p><strong>&gt;&gt;</strong>: 好，听起来不错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+ That
+ sounds
+ good.
+</details>
+<p><strong>&gt;&gt;</strong>: 口味这东西其实是非常主观的，对吧？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: I
+ mean
+ I
+ think
+ it's
+ very
+ personal,
+<p>right?</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，口味非常个人化。正如你刚才提到的品味……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ I
+ think
+ it's
+ also
+ very
+ personal.
+<p>Taste,
+you
+know,
+you
+were
+mentioning</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 你平时经常做饭吧。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: You
+ do
+ a
+ lot
+ of
+ cooking.
+</details>
+<p><strong>&gt;&gt;</strong>: 品味。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Taste.
+</details>
+<p><strong>&gt;&gt;</strong>: 不不不。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: No.
+ No.
+ No.
+</details>
+<p><strong>&gt;&gt;</strong>: [笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: [laughter]
+</details>
+<p><strong>&gt;&gt;</strong>: 我就知道几个食谱，而且严格照着做。如果让我稍微做点改变，我完全不知道该怎么弄，会彻底找不着北。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Okay.
+ I
+ know
+ a
+ couple
+ recipes.
+ Um
+ I
+<p>follow
+them
+to
+the
+T.
+I
+can't
+Like
+if</p>
+<p>you
+tell
+me,
+"Oh,
+cook
+something</p>
+<p>slightly
+different."
+I
+have
+no
+idea.
+I'm</p>
+<p>completely
+lost.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 对，确实。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Right.
+ Right.
+</details>
+<p><strong>&gt;&gt;</strong>: 忙着做饭。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah.
+ There's
+ busy
+ cooking.
+</details>
+<p><strong>&gt;&gt;</strong>: GPT 可以教你。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: GPT
+ can
+ tell
+ you.
+</details>
+<p><strong>&gt;&gt;</strong>: 嗯，是的。实话说，我中途确实查了好几次 ChatGPT。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Mhm.
+ Yeah.
+ Yeah.
+ Oh,
+ I
+ I'm
+ not
+ going
+ to
+<p>lie.
+I
+kind
+of
+looked
+up
+in
+ChatGPT
+a</p>
+<p>couple
+of
+times.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: [笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: [laughter]
+</details>
+<p><strong>&gt;&gt;</strong>: 对你来说那就像是提前做备课。不过……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: So
+ for
+ you,
+ it's
+ like,
+ "Oh,
+ just
+ as
+<p>prep."
+But</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 没事，不过确实挺有意思。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: No
+ worries.
+ But
+ yeah.
+</details>
+<p><strong>&gt;&gt;</strong>: 非常高兴能邀请到你。你一直以卓越的研究品味引领着这个领域，见证你们的工作非常棒。希望你玩得开心。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: It
+ was
+ It
+ was
+ great
+ having
+ you.
+ I
+ feel
+<p>like
+you're
+always
+leading
+the
+field</p>
+<p>with
+a
+lot
+of
+research
+taste
+as
+well,</p>
+<p>and
+it's
+great
+seeing
+your
+work.
+So</p>
+<p>hopefully
+It
+was
+fun.</p>
+</details>
+<p><strong>&gt;&gt;</strong>: 是的，非常开心，太感谢了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+**&gt;&gt;**: Yeah,
+ a
+ lot
+ of
+ fun.
+ Thank
+ you
+ so
+ much.
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/eebe0187ed0c73d7d918df448d40fe03de485e6609e763e5581ae8a72e68cf13.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/eebe0187ed0c73d7d918df448d40fe03de485e6609e763e5581ae8a72e68cf13.md" download="与 OpenAI 首席研究官 Mark Chen 边做饭边聊：AGI、o1、模型评测与扩展定律.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Mark Chen" class="entity-link person-link">Mark Chen</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=o1" class="entity-link product-link">o1</a>, <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

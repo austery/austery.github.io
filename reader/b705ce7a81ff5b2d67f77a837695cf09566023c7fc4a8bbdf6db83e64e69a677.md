@@ -1,0 +1,77 @@
+---
+author: Big Think
+date: '2026-03-10'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=DeSbdS81xks
+speaker: Big Think
+tags:
+  - quantum-mechanics
+  - quantum-computing
+  - quantum-entanglement
+  - quantum-biology
+  - superposition
+title: 第二次量子革命：从科学理论到重塑现实的技术跃迁
+summary: 物理学家 Jim Al-Khalili 探讨了量子力学的演进，从支撑现代电子设备的第一次革命转向基于叠加和纠缠的第二次革命。文章详细介绍了量子传感、量子通信及量子成像的前沿进展，深入分析了量子计算机在硬件实现与退相干（De-coherence）方面的技术挑战，并揭示了生命系统可能早已利用量子效应的“量子生物学”奥秘。
+insight: ''
+draft: true
+series: ''
+category: tech-trends
+area: tech-engineering
+project: []
+people:
+  - Jim Al-Khalili
+companies_orgs:
+  - University of Surrey
+products_models: []
+media_books:
+  - On Time
+status: evergreen
+---
+### 现实的微观底层：从牛顿力学到量子概率
+
+我是 Jim Al-Khalili，萨里大学的物理学名誉教授。我的新书名为《关于时间》（On Time），探讨了让宇宙运转的物理学，以及即将到来的量子技术浪潮。站在 21 世纪第一个四分之一的时间节点上，我们正在庆祝人类历史上最强大、最成功的科学理论——**量子力学**（Quantum Mechanics: 描述原子及其组成粒子等微观物质行为的物理学理论）。量子力学起源于 20 世纪初，它所描述的原子和亚原子粒子的行为方式与我们日常世界的规律截然不同。
+
+在量子世界中，事物是模糊且具有概率性的。这与**牛顿力学**（Newton's Mechanics: 基于确定性和经典运动定律的物理体系）完全不同。在量子尺度下，电子可以同时处于多个状态，粒子可以同时向多个方向移动，表现得像弥散的波。它们甚至可以像幽灵穿过实体墙一样，通过**量子隧穿**（Quantum Tunneling: 粒子穿越能量壁垒的量子现象）跨越障碍。尽管这些现象在宏观世界中无法观察到，但量子领域的现实才是宇宙最真实的本质，一切事物最终都以量子方式运作。
+
+20 世纪量子力学的早期发现引发了我们现在所称的“第一次量子革命”。激光、晶体管、LED、集成电路、微芯片、计算机、GPS、智能手机以及互联网——几乎所有依赖电子设备的现代技术，都归功于我们对量子力学的掌握。而今天，我们正处于“第二次量子革命”的门槛上，这是一场基于量子力学中更具反直觉特质的技术革命，核心在于**量子叠加**（Quantum Superposition）与**量子纠缠**（Quantum Entanglement）。
+
+<details><summary>Original English Source</summary>
+My name is Jim Al-Khalili and I'm Emeritus Professor of Physics at the University of Surrey. My book is called "On Time", the physics that makes the universe tick. The next wave of quantum technology. Here we are a quarter of the way through the 21st century and celebrating the most, in my view, powerful and successful scientific theory. We have ever come up with quantum mechanics. Quantum mechanics was developed in the early decades of the 20th century and describes the way atoms and the particles that make up atoms, the tiniest building blocks of matter, how they behave. And they behave in a way very different from the way our everyday world behaves. Quantum mechanics as opposed to Newton's mechanics and Newton's laws of motion. So in the quantum world, things are fuzzy, they're probabilistic, an electron can be in more than one state at the same time. Particles can move in multiple directions at the same time. They behave like spread out waves. They can quantum tunnel through energy barriers, like a ghost passing through a solid wall. Things that we'd never see in our everyday world. And yet that reality down at the quantum realm is our true reality. Everything is built from that. Our whole universe ultimately behaves in a quantum way. Now, the early discoveries of quantum mechanics led throughout the 20th century to all sorts of technologies, what we now call the first quantum revolution. So the laser, the transistor, LEDs, the integrated circuits, the microchip, the computer, GPS, smartphones, the internet, almost all of our modern technology that we use today that relies on electronics is thanks to developing quantum mechanics. Today, we're on the threshold of a second quantum revolution. A revolution in technology based on even more counterintuitive ideas of quantum mechanics, things like quantum entanglement and quantum superposition.
+</details>
+
+### 第二次量子革命：重构传感、通信与成像的边界
+
+许多人可能通过“双缝实验”听说过**量子叠加**（Quantum Superposition: 粒子同时处于多种可能状态的性质），即粒子可以同时穿过两个狭缝并表现出波的干涉模式。而**量子纠缠**（Quantum Entanglement: 两个粒子之间超越空间的瞬时关联状态）则更为离奇。爱因斯坦曾对这一概念感到困扰，因为它暗示两个相互分离的粒子无论相距多远，都能瞬时保持联系，它们的命运交织在同一个量子态中。
+
+我们正在利用这些特性开发全新的技术。有些技术预计在一二十年内普及，比如量子计算机；而有些已经初现端倪。**量子传感**（Quantum Sensing）技术目前已发展出能够感知极微弱磁场的仪器。例如，通过佩戴一种类似自行车头盔的设备，我们可以利用量子纠缠测量单个神经元的放电，本质上是在读取脑电波。
+
+此外，**量子通信**（Quantum Communication）也正在开发中。目前的互联网通过光纤传输相干激光来连接全球节点，而**量子互联网**（Quantum Internet）则利用纠缠的光子在光纤中传输量子信息，将量子计算机全球联网。**量子成像**（Quantum Imaging）领域则诞生了“纠缠照相机”的奇妙构想：利用一对纠缠光子，其中一个是红外光子，擅长探测生物组织（如寻找肿瘤）；另一个是可见光子，擅长在相机中生成清晰图像。通过纠缠效应，可见光子即使从未接触过物理对象，也能“魔术般地”传递红外光子探测到的信息，从而实现高精度的医学影像。
+
+<details><summary>Original English Source</summary>
+So many people may have heard of quantum superposition in the context of the so-called two slit experiment, where you send particles through a screen with two slits, and it forms an interference pattern at the back. Somehow, the particle goes through both slits simultaneously and behaves like a wave. So superposition is strange. Quantum entanglement is even stranger. This is the notion that even Einstein famously didn't like when he first encountered it, that two separated particles can somehow be instantaneously in communication with each other. They're fate so intertwined because they have to be described by the same single quantum state. However far apart they are. Well, we're now using superposition and entanglement to develop whole new technologies. Some are coming. They will be with us in maybe in a decade or two, like the quantum computer. Others we already have. So we are now developing instruments that carry out what's called quantum sensing. We have even developed this way of sensing very weak magnetic fields. You wear a helmet, like a cycling helmet on your head, and thanks to quantum entanglement, we can measure the firing of single neurons. So essentially reading people's brainwaves. One other technology that's being developed at the moment is quantum communication. Now we know the way the internet is connected up through optical fibers. We send lasers through these fibers and it's coherent like that links different nodes around the world linking computers. What if we could use the notion of quantum entanglement? So photons that could be sent along optical fibers can nevertheless be quantum entangled with other photons very far away from them. You could use quantum information to communicate and link the world. What if we had quantum computers that are linked via quantum information? Now we would have something called the quantum internet. Quantum imaging is something that's developing that is this wonderful idea of what's called the entanglement camera whereby you have two particles of light, two photons. One is visible in the visible range of the spectrum and one is an infrared photon. These two photons are quantum entangled. So what happens to one influences the behavior of the other. The infrared photons, infrared light is very good at imaging, particularly imaging biological tissue whereas visible light is much better to create images in cameras. So much sharper images. So you send the infrared light to probe biological tissue, for example looking for cancer tumors and then the visible light will create an image of what the infrared light sees even though the visible light has never been near the physical object itself. It's magically transferring this information via quantum entanglement. So these are devices that are already being built and already being used to help in medical imaging for example.
+</details>
+
+### 终极并行处理：量子计算机的计算逻辑与技术瓶颈
+
+**量子计算机**（Quantum Computer）无疑是第二次量子革命的标志性成果。它与经典计算机有着本质区别：它不依赖 0 或 1 的比特（Bits），而是使用**量子比特**（Qubits: 能够同时处于 0 和 1 叠加态的计算单元）。这使得计算能力能够实现指数级增长，成为并行处理的巅峰。一台成熟的量子计算机将能够解决目前最强大的超级计算机需要数十亿年才能处理的问题，例如新药开发、气候建模、金融交易以及复杂的物理和化学研究。
+
+然而，前方仍有巨大挑战。量子计算不仅需要叠加态的量子比特，还需要许多量子比特相互纠缠形成量子处理器。但这些纠缠态极其脆弱，极易受到外界干扰，产生**退相干**（De-coherence: 量子特性随时间消散并转化为经典状态的过程）。就像把一杯热咖啡放进冷冻室，它无法长久保持热度；在量子世界中，退相干发生得极快。因此，如何长时间维持“量子性”以完成计算是核心难题。这涉及到**量子纠错**（Quantum Error Correction），需要建立冗余机制——例如，为了进行 100 个量子比特的有效计算，可能需要数千甚至数百万个量子比特来抵消退相干造成的损耗。
+
+另一个问题是硬件基底的选择。目前有多种方案在竞争：**超导电路**（Superconducting Circuits: 在绝对零度附近利用零电阻电流实现的量子单元）、基于光纤传输的光子方案、利用激光冷却到绝对零度并悬浮在磁场中的原子云方案，或者是利用电磁场捕获的带电**离子**（Ions）方案。目前尚不清楚哪种方案会胜出。此外，软件层面也需要开发更多类似 **Grover 算法**或 **Shor 算法**的量子算法。虽然有人吹嘘两三年内就能实现，但我认为现实的目标应该是未来一二十年。
+
+<details><summary>Original English Source</summary>
+The quantum computer of course is the poster child of the second quantum revolution. Quantum computers famously operate very differently from classical computers. They don't rely on bits of information that are zero or one, but rely on quantum bits of information, qubits, that are both zero and one at the same time. And this gives us scope for exponentially increasing the power of computations. They're the ultimate in parallel processing. A quantum computer, when we have it, will one day be able to solve problems that the most powerful supercomputers we have today would take billions of years to solve. Quantum computers we hope will be able to help us in new drug discoveries, in better climate models, in financial transactions, in studying the behavior of quantum systems in research labs, in physics and chemistry. They won't be able to do everything, but they will have specialized applications that are going to change the world. There are of course many challenges still ahead of us. For example, in a quantum computer it's not just about having a qubit that can be off and on at the same time. You have to have many qubits quantum entangled together, and together they form the quantum processor that can run quantum algorithms that can carry out computations down in the quantum realm. But of course linking these qubits together via entanglement is subject to disturbance from outside. What's called de-coherence. The idea that the quantum effects are very delicate and ephemeral, and they will dissipate very quickly. Like putting up a hot cup of coffee in the freezer, you know, it won't stay hot. Well in the quantum world, de-coherence happens very, very fast. And one of the biggest challenges is how do you maintain the quantumness of your computer for long enough for it to do the computations. This is related to what's called quantum error correction. You have to build in a certain redundancy. So if you need 100 qubits to carry out a computation, you probably need a thousand or million just to make sure that collectively you get an answer, even though some of them have are useless because of de-coherence. Another problem is of course what do you build a quantum computer with? There are multiple options for what's called the substrate would be. What is the hardware that the quantum computer would be? There are lots of candidates, and we don't know which is the best one. Maybe they will be using what's called superconducting circuits, electrical circuits that are at temperatures near absolute zero, such that this quantum effect called superconductivity suddenly appears, where you have electrical currents flowing through wires with zero resistance. Now you can start to use these superconducting wires to carry out quantum effect, quantum computations. They behave like qubits. You could build a quantum computer out of light, out of photons of light traveling through fibers. You can build it out of clouds of atoms that are suspended in a magnetic field and held in place and cooled down to near absolute zero by laser beams. And those atoms then, they can be pumped with energy with other lasers, such that you put them into a quantum superposition of being in two energy states at the same time. So now you have clouds of atoms that form your quantum computer. You can have strings of atoms that are missing or have extra electrons, so they're ions, they're electrically charged. They form the qubits. The fact they have electric charge means you can hold them in place using electric and magnetic fields. So there are lots of options. We don't know which is going to be the best one. And then even when you build a quantum computer, what do you run on it? What are the quantum algorithms? What's the code that you write that's going to carry out a quantum computation? We have a few already. What's called Grover's algorithm, Shaw's algorithm, named after the people who developed these software algorithms. We need more and there's still work being developed as to when you have the hardware, what is the software that's going to do it justice? Some will argue that a quantum computer will be with us in two or three years' time, if you believe the hype. I think realistically we're talking about a decade or two from now.
+</details>
+
+### 生命的量子智慧：自然演化与人工智能的终极汇合
+
+开发这些看似“扮演上帝”的技术，其影响和后果尚难预料，但我认为这依然是基于我们对宇宙运行规律和物理定律的深刻理解。更有趣的是，我们正试图构建的奇异量子技术，可能在自然界中早已存在。**量子生物学**（Quantum Biology: 研究生命系统是否利用量子力学效应来获取竞争优势的交叉学科）正试图回答：在数十亿年的进化中，生命是否已经掌握了量子的窍门？
+
+量子力学并非魔术。如果生命发现利用量子隧穿比经典的粒子转移更高效，它就会进化出这种机制。有人推测大脑是量子计算机，但这可能过于超前。但在**光合作用**等过程中，确实存在量子叠加机制的迹象。在温暖、嘈杂且充满化学反应的细胞内部，生命似乎进化出了某种技巧，能够将退相干挡在门外，维持足够长的时间来执行生物功能。如果我们能破解生命对抗退相干的奥秘，我们就能在量子计算机的研发上走捷径。
+
+我们今天常谈论人工智能的革命，但我相信第二次量子革命将同样具有深远的影响。想象一下，当量子技术与人工智能融合时，那将开启一个难以想象的新时代。
+
+<details><summary>Original English Source</summary>
+Are we here as it were playing God in developing technologies that are so outlandish, so far beyond anything that might occur naturally, that we don't even know what the implications or ramifications would be? I don't think so. I think we've always developed technologies that are based on our understanding of the workings of the universe, on the laws of physics. I think this isn't no different. More to the point, some of these very strange implications of the quantum realm, these new technologies that we're thinking of building, may in some sense already exist. Life may have hit upon the tricks of the quantum world and has used it to its advantage. So there's a new area of science called quantum biology, which uses the laws of physics to apply the laws of physics inside living cells. Asking the question, has life over the billions of years that it's been around, figured out how to use the tricks of the quantum world to give it an advantage? It's not magic. You know, quantum mechanics isn't magic. If life thinks that following a quantum process gives it an advantage, it will use that quantum process, whether it's tunneling of particles from A to B, is a more efficient way of transferring them to move a classical particle, it will use quantum tunneling. Some have argued that maybe our brains are quantum computers. I think that's going much too far. We don't understand the nature of consciousness as it is. Let's not bring in quantum mechanics there. But there may be processes in nature, such as photosynthesis, where there's the hint, the possibility that some sort of quantum mechanism is taking place, quantum superposition, maybe in our challenge to stave off the coherence, to build a quantum computer that can carry out a computation long enough before that entanglement disappears and decaheres. Maybe life has evolved the tricks inside the warm, hot, messy, noisy living cell, where thousands of chemical reactions are taking place. Nevertheless, it's been able to maintain quantum coherence long enough to have some biological function inside living cells and keep decaheras at bay for long enough for that to happen. That's something that I find very interesting, you know, has life figured out the tricks that we're trying to solve now to build a quantum computer. If so, life's had long enough to be able to figure it out, we can short-cout it, we can just copy what life has done. We talked today about the revolution in artificial intelligence. While the second quantum revolution, I believe, will be just as important and just as impactful. Never mind when quantum technologies merge with artificial intelligence, then wow, who knows what will come. Want to support the channel? Join the BigThink members community where you get access to videos early? Add free.
+</details>

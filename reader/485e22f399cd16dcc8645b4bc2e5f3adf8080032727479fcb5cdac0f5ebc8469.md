@@ -1,0 +1,259 @@
+---
+author: AI Engineer
+date: '2026-10-25'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=aVbRSIQO2dE
+speaker: AI Engineer
+tags:
+  - model-evaluation
+  - benchmark-testing
+  - ai-agent
+  - financial-analysis
+title: 前沿模型为何难以胜任买方分析师：Google DeepMind与LinqAlpha谈真实工作流评测
+summary: Google DeepMind与Kaggle合作推进前沿模型基准评测，指出当前行业基准存在缺乏实际相关性、算力成本高及复现验证困难等问题，并设立500万美元资助与标准化基础设施。LinqAlpha随后分享了针对买方股票分析师完整工作流构建的Mandate Bench案例研究。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people:
+  - Janie Gu
+  - Suyeol Yun
+companies_orgs:
+  - Google DeepMind
+  - Kaggle
+  - LinqAlpha
+products_models:
+  - Mandate Bench
+media_books: []
+status: evergreen
+---
+### 真实生产工作流中的评测难题与合作背景
+
+大家下午好。非常高兴今天能在这里和大家探讨模型评测（Evals）。今天我们将探讨为生产环境中的真实工作流程构建评测的难度、Google DeepMind 与 Kaggle 如何协同解决该问题，以及我们与 Link Alpha 合作伙伴共同完成的一项案例研究。接下来他们将介绍一个名为 Mandate Bench 的特定基准，该基准主要考察模型在充当买方股票分析师时的表现如何。
+<details>
+<summary>Original English</summary>
+[music]
+
+Good afternoon. Super excited to be talking about Evals today. So today we'll be covering the difficulty of creating Evals for real world workflows in production.
+
+How Google DeepMind and Kaggle are collaborating to solve this problem and a case study that we did with our partners at Link Alpha. So they'll present next about a specific benchmark called Mandate Bench which basically looks at how how well models can perform as a buy-side equity analyst.
+</details>
+
+首先做一些简短介绍。我是 Janie，Google DeepMind 的产品经理，负责领导我们的 Kaggle 基准团队。Ivan 是我们在 GDM 非常出色的前线部署工程师（forward deployed engineer），遗憾的是他今天无法到场。Jacob 也在现场，来自我们的合作伙伴 Link Alpha。他将和我一起进行展示，Jack 也很遗憾未能到场。
+<details>
+<summary>Original English</summary>
+So to start with some quick intros. I'm Janey. I'm a product manager at Google DeepMind. I lead our Kaggle benchmarks team.
+
+Ivan is our amazing forward deployed engineer at GDM. He can't make it today unfortunately.
+
+Jacob is in the crowd and from our Link Alpha partners.
+
+So he'll be presenting with me and Jack also couldn't make it unfortunately.
+</details>
+
+### Kaggle 的演进：从评估人类到评测前沿模型
+
+首先简要介绍一下 Kaggle 以及我们走到这一步的历程。大家可能都知道 Kaggle 是数据科学和机器学习竞赛的聚集地。我相信在座很多人过去都与 Kaggle 互动过，或者参加过 Kaggle 的竞赛。我们从事这项工作已有 15 年，基本上就是在真实世界中评估人类的各种能力。我们在平台上建立了由 3100 万 AI 和机器学习爱好者组成的社区，在过去 15 年间举办了数千场竞赛，并拥有一个深受大家信赖的排行榜。过去 15 年让 Kaggle 真正取得成功的核心在于我们的严谨性。我们拥有封存的私有测试数据集、数据泄露检测以及反作弊基础设施，切实确保在 Kaggle 上举办的每一场竞赛都经过精心设计，能够有效评估人类所应具备的相应能力。
+<details>
+<summary>Original English</summary>
+So just starting with a quick intro about Kaggle and how we got here. So Kaggle you guys probably know Kaggle as the home for data science and ML competitions. I'm sure many of you have have interacted with Kaggle or competed in a Kaggle competition in in the past. And so we've been doing this for for 15 years. Basically evaluating humans on different capabilities in in the real world. And we've built up a community of 31 million AI and ML enthusiasts across the platform. Thousands of competitions over the last 15 years and one leaderboard that everyone really trusts. And what has really made Kaggle succeed in the last 15 years is is our rigor. So we have sealed private test data sets. We um leak detection, anti-cheating infrastructure, and really make sure that that every single competition that that is put on Kaggle uh is designed really well and good at evaluating humans on on the capability that it's supposed to be.
+</details>
+
+这就引出了我们的现状。在 2026 年 2 月，Kaggle 实际上并入了 Google DeepMind，我们正在将评测对象从评估人类转变为评测前沿模型。因此，Kaggle 基本上已经成为 GDM 面向基准评测的公共平台。我们的目标是为每一个前沿模型打造一个开放、中立的竞技场，采用相同的基础设施、相同的任务和相同的评分标准，从而使每一个得分都具有代表性。我们的目标是真正成为基准评测领域的行业标准，就像 Kaggle 在竞赛领域已确立的标准一样。
+<details>
+<summary>Original English</summary>
+Um and so that brings us to today. So in February 2026, uh Kaggle actually moved into Google DeepMind um and we're moving our subject from evaluating humans to evaluating frontier models.
+
+Uh and so Kaggle is basically become GDM's public platform for for benchmarks. And our goal is to make an open, neutral proving ground for every single frontier model uh that uses the same infrastructure, the same tasks, and the same grading um so that you every score is representative.
+
+Um and our goal is really to become the industry standard for benchmarks the way that Kaggle uh already is for competitions.
+</details>
+
+### 当前基准评测存在的三大核心问题
+
+那么为什么这件事至关重要？我们为什么涉足这一问题？Kaggle 为什么要着手解决它？这是因为基准评测非常关键。基准评测是我们衡量 AI 行业进展的方式。而当下，基准评测的现状存在根本性的缺陷。想想今天使用基准评测的各种方式：前沿实验室利用它们来训练和提升模型表现，初创公司依据它们来决定围绕哪些模型构建产品，投资者用它们来评估技术护城河；而基准是否准确衡量了你想要衡量的能力，直接决定了模型最终朝着什么方向优化。一旦衡量了错误的指标，模型在实际应该完成的任务上反而会表现得更差。
+<details>
+<summary>Original English</summary>
+So why does this actually matter? Why are we Why are we getting into this problem? Why is Kaggle trying to tackle this problem?
+
+Um and it's because benchmarks are really important. Benchmarks are how we measure progress in the AI industry. And right now, the state of benchmarks is fundamentally broken.
+
+So you think about all the different ways that benchmarks are used today, uh frontier labs are using them to train and hill climb models, startups are using them to decide what models that they want to build their product around, investors are using it to judge technical notes, um and how you measure like what whether the benchmark is correctly measuring uh what you want it to measure is exactly what the models end up hill climbing. Um and when you measure the wrong thing, the models actually get worse at at what they're supposed to be doing.
+</details>
+
+目前的基准测试主要在以下几个方面存在缺陷：
+
+第一点是**相关性**。大多数公共基准实际上并不贴合你的智能体在生产环境中执行的真实工作。大部分基准测试的都是合成谜题、学术琐碎知识和随机构造的数学题，这些与智能体在实际生产中所做的事情几乎毫无相似之处。
+
+基准测试当前的第二个问题在于**算力成本极其高昂**，而算力是当今 AI 行业最为稀缺的资源。假设一个基准包含 500 个多轮智能体任务，并且你想在 16 个前沿模型上运行，每次完整扫评就要花费数万美元；而且目前基本上每一两周就会有新模型发布，每次有新模型上线你都必须重新进行完整扫评以保持基准的更新，否则基准就会过时失效。
+
+我们看到的第三个问题可能也是最被低估的一个，那就是**验证与复现**。在整个行业的所有基准测试中，每个人都运行着自己的测试框架（harness），汇报各自的分数，构建属于自己的自报式基准实现，而不同实现得出的数值差异巨大。这主要是由基础设施层面的差异造成的，而非模型实际质量的不同。如果你采用了不同的脚手架、不同的工具调用方式，或者仅仅是对模型输入采用了不同的序列化方式，即使是在相同的模型上运行完全相同的基准测试，最终得到的评测分数也会截然不同。
+<details>
+<summary>Original English</summary>
+So there's a few different ways that benchmarks fail today.
+
+Um the first one is is relevance. So most public benchmarks don't actually resemble the real work that that your agents are doing in production today. So, most of them test synthetic puzzles, academic trivia, random math problems, um and that bears little little resemblance to what your agent actually does in in production.
+
+The second problem with benchmarks today is it's very very expensive in terms of a compute perspective, uh which is the like most scarce resource in the AI industry today. So, take a benchmark, let's say it has 500 multi-turn agent tasks, and you want to run it across 16 frontier models, um that costs tens of thousands of dollars per sweep, um and every time that a new model launches, which is basically every week or two at this point, um you have to do the sweep again in order to keep your benchmark current, otherwise it it becomes stale.
+
+And the third problem that we see, uh which is probably the most underappreciated, is verification. So, everyone, like all the benchmarks in the industry, everyone runs their own harnesses, they report their own scores, they they build their own like self-reported benchmark implementation, and the numbers are wildly different across different implementations. And this is mostly because of infrastructure, not because of actual differences in model quality. So, if you have different scaffolding, if you have different ways that you're calling tools, if you input if you just serialize the input into the model in different ways, um you end up with different benchmark scores, even if it's the exact same benchmark on the same model.
+</details>
+
+### 复现 65 个行业基准中发现的典型漏洞
+
+最后关于验证与复现的这一点可能相对抽象，所以我想深入探讨一下。为了真正摸清基准评测行业的现状及其所有问题，Kaggle 在过去两个月里复现了 65 个不同的行业基准，我们重建了所有这些基准，全部运行了一遍，并逐行审阅了每一条轨迹追踪记录，以真正了解问题所在，从而明确我们需要构建怎样得基础设施来解决这些缺陷。在所有这些不同的基准中，我们发现了大量问题。
+
+我在这里列出其中几个，以便大家了解问题的多样性：
+
+- 在某个基准测试中，我们发现被评估的模型在评测容器内部找到了另一个模型的 API 密钥，随后调用了那个模型，并将对方的回复作为自己的答案提交到评测中。
+- 其次，大多数人在构建基准测试时，并没有将受评智能体与负责打分的智能体进行隔离。它们共享同一个容器，而现在的模型非常擅长攻破所在容器。我们发现有些模型直接篡改了评分脚本，给自己打出了想要的任意分数（也就是 100%），从而让自己顺利通过。
+- 第三点纯粹属于统计方差。我们对所有 65 个基准都进行了多次重复运行，结果发现即使是在完全相同的基础设施上多次运行同一个基准，其得分方差也可能高达正负 20%。重申一下，这是在完全相同的测试框架、完全相同的基础设施上运行的同一模型。这单纯反映了测试框架或基准设计本身的不稳定性。
+- 我想大家都熟悉 Hugging Face 的事件。我们发现了模型试图在线搜索答案的实例，比如去 Hugging Face、Reddit 或 Stack Overflow 等各类论坛寻找答案。
+- 还有一点让我们感到非常意外：每个测试框架在发布时都带有各自默认的推理努力程度（reasoning effort）。如果你不进行手动设定而直接使用默认值，最终实际上是在比较处于不同推理努力程度下的模型。如果没有进行显式配置以确保公平的正面对比，你可能会遇到一个模型在“高”努力程度下运行，而另一个在“低”努力程度下运行的情况。在很多重现过程中，我们发现大家并没有做这类配置，因为我们的得分与原始基准论文的数据完全一致，但我们发现分数本身存在问题。
+<details>
+<summary>Original English</summary>
+Um so, that last point, uh around verification, I think, uh is probably the most abstract. Uh so, wanted to to deep dive into that a little bit. Um so, we, uh in order to really understand the the state of the benchmark industry and all of the different problems, uh we at Kaggle spent the last 2 months reproducing 65 different industry benchmarks, um and recreated all of them, ran all of them, and read every single trajectory trace by trace to to really understand what the problems were so that we could figure out like what the infrastructure we wanted to build was to fix it. Um and we saw tons of issues across all of these different benchmarks.
+
+So I'm listing a few of them here just to give you an idea of all of the different problems. So for one benchmark we found the model that was being evaluated actually found the API keys in the eval container for a different model and then called different model and then used that response and submitted it as as their response to the eval.
+
+Um second most people when they when they build their benchmark they they don't actually separate the agent being evaluated from the agent being graded. They share the same the same container and models are really good at at hacking their container now. So we found models basically modified the grading script in order to give them whatever score that they wanted which was 100% and and let themselves pass.
+
+The third is just pure like statistical variance. So we found for all 65 benchmarks we ran all of them multiple times and we found that running the exact same benchmark even on the same infrastructure multiple times produced variance of up to plus or minus 20% in the score. And again this is the same model on the same exact harness on the same exact infra. So this is just reflective of instability in in the the harness or the benchmark design itself.
+
+Um I think everyone's familiar with the hugging face incident. So we found instances of models basically trying to look up the answers online in different forums like hugging face or Reddit or stack overflow.
+
+Um and then this one we were very surprised by. So, each harness uh actually ships with its own default reasoning effort. Um, so if you use the default uh without setting it, um then you actually end up comparing models uh at different reasoning efforts. So, you might have one model that's running on high and one that's running on low if you uh if you don't actually configure it uh in order to make sure that it's a head-to-head comparison.
+
+Um, and a lot of the times when we were recreating it, we found that people did not do this uh because our scores actually matched parity with the original benchmark paper. Um, but we found issues with with the score itself.
+</details>
+
+### Google DeepMind 与 Kaggle 的应对举措与支持体系
+
+鉴于行业中存在的上述所有问题，Google DeepMind 与 Kaggle 正在携手解决这一困境。我们正在推进几项工作：
+
+第一，我们正在与企业和研究人员合作，围绕具有经济可行性的真实生产工作流构建基准测试。为实现这一目标，我们向任何希望构建基准的人提供**免费算力和前沿模型推理资源**；鉴于该领域目前处于极其早期的阶段，我们将在第四季度提供 **500 万美元的资助金**，以资助任何基准构建工作或旨在修补该领域问题的研究；第三，我们将为你提供来自 GDM 的前线部署工程师协助共同设计评测方案，以确保其方法论具备真正的严谨性。
+
+第二，正如我们在前一页幻灯片中详细讨论的，许多问题本质上是贯穿整个基础设施栈的故障。因此，我们在 Kaggle 正在构建标准化基础设施，以确保每一个得分都是**可审计的、高质量的和可复现的**。这包括对每次运行实施沙盒化、对每次模型调用保留记录代理调用日志与开放轨迹（open traces），以及采用容器化评分。
+
+最后，我们之所以专门做这件事，是因为我们的专业积累。Kaggle 拥有 15 年设计严密测试以及防止人类作弊的经验，我们现在将这些经验应用于模型评估领域。我们引入了 GDM 研究人员的专业知识，帮助我们设计所有这些面向真实世界的基准。此外，我们还与诸如 Epoch 等独立研究机构合作，对平台上的所有基准进行审计，因此你无需仅仅单凭我们的一面之词。
+<details>
+<summary>Original English</summary>
+Um, and so given all of these problems in in the industry, uh Google DeepMind and Kaggle are are partnering to solve this. So, we're doing a few things here.
+
+Uh the first is we are partnering with companies and researchers uh to build to build benchmarks around real workflows uh economically viable real real world workflows.
+
+Um, and to make this happen, we are offering free compute and frontier model inference uh to anyone who wants to build a benchmark. We're giving out $5 million in grants in in Q4 to fund any benchmark creation or research into fixing this space of of benchmarks given how early a space it is.
+
+Um, and third, we will uh we will provide you a forward deployed engineer from from GDM to help you co-design your eval uh to make sure the methodology is actually rigorous.
+
+Second, uh we we talked about this a lot on the last slide, but a lot of these problems are just issues all up and down the infrastructure stack. Um, and so what we're building at Kaggle is standardized infrastructure so that every score is auditable, uh high quality, and and repeatable. So, this includes um sandboxing every run, having logged proxy calls and open traces for for every model call, and containerized grading.
+
+And then lastly, uh, the reason why we specifically are doing this, uh, is is for our expertise.
+
+Um, so Kaggle has 15 years of designing rigorous tests and preventing cheating by humans, which we are now applying to to the model evaluation space. Um, we're bringing GDM researcher expertise to to help us design all of these these real world benchmarks. Um, and lastly, we're actually partnering with independent research orgs, uh, like Epoch to audit all of the benchmarks on our platform, so you don't just have to take our word word for it.
+</details>
+
+在这一点上，我希望我已经说服了大家基准评测有多么重要。但你可能会想：作为一家有着其他优先事项和繁杂任务的公司，我为什么要花精力去构建基准？
+
+这主要有两个重要原因：首先，它实际上能让你**在内部加快研发迭代速度**。拥有基准测试和严密的评测套件，能够让你在修改提示词或测试框架时，轻松判断是否破坏了原有功能，或是对产品带来了怎样的提升。其次，如果你之后希望将基准向外部发布，前沿实验室就会受到激励针对你的应用场景进行攻关突破。大多数实验室都在寻找真实世界的基准测试。一旦各实验室希望在你的基准上攀登指标，他们就会在提升基础模型上投入数万亿美元的算力资源来针对你的特定用例进行优化，随着时间推移，你的产品便能为用户带来更好的体验。
+
+下面我将把发言权交给 Link Alpha，由他们讲解 Mandate Bench 的案例研究，这是我们在 Kaggle 上构建的首批基准之一。
+<details>
+<summary>Original English</summary>
+So, at this point, I hope I've convinced you, uh, how important benchmarks are. Um, but you're probably wondering, why should I build a benchmark as me as like a company with other priorities and other things to do?
+
+Um, and there's a two two big reasons. Um, the first is it actually allows you to build faster internally. So, having a benchmark and having a rigorous evaluation suite, um, allows you to easily tell when when you model modify your your prompt, when you modify your hardness, whether you've broken something or how you've improved your product. Um, and then the second is if you then want to publish your benchmark externally, uh, then labs will be encouraged to actually hill climb on your use case. Um, like most of the labs are are looking for real world benchmarks. Um, and once the labs want to hill climb on your benchmark, then they'll pour trillions of dollars in of compute into improving the base models, uh, for your specific use case, so that your product gets better for your users over time.
+
+Um, and with that, I will pass it over to Link Alpha, um, to to talk through a case study of Mandate Bench, which is one of the first benchmarks that we built on Kaggle.
+
+[clears throat]
+
+[applause]
+</details>
+
+### Mandate Bench：买方股票分析全流程评测案例
+
+>> 好的。大家好，我是 Suyeol，Link Analytics 的 AI 负责人，我们创建了名为 Mandate Bench 的基准，由我们与 Google DeepMind 以及 Kaggle 共同开发。
+
+在开始之前，请允许我简要介绍一下我们的公司。Link Alpha 为机构投资者构建 AI 研究智能体；管理资产规模超过 5 万亿美元的机构正在使用 Link Alpha，有超过 200 名投资人在积极使用该产品。幻灯片上列出了部分信赖我们的机构。同时我们也是一支研究团队，曾与贝莱德（BlackRock）、黑石（Blackstone）、摩根大通（JP Morgan）等机构合著并在 ICLR、ICML 等顶会发表了 13 篇论文。
+<details>
+<summary>Original English</summary>
+>> Great.
+
+Hi everyone. Um, this is Suyo. I'm head of AI at Link Analytics, and we create we created a benchmark called Mandate Bench. It's built co-developed with Google DeepMind and Kaggle.
+
+So, before start, let me share briefly about our company. So, Link Alpha builds AI research agents for institutional investors, institutions with more than $5 trillion in assets under management using Link Alpha, and more than 200 investors use it actively. There are some of the firms that trust us I listed up here, and we're we're also a research team. We have published 13 papers at at the venue like ICLR or ICML with co-authored with the BlackRock, Blackstone, JP Morgan, etc.
+</details>
+
+首先我想梳理一下现有的金融基准。这类基准大多准备了标准答案（golden answers），并将智能体的回答与标准答案进行比对。但在真实世界的任务中，两位分析师可能得出两个截然不同的结论，而且两者都可能是正确的。现有的基准使用的是相对简短和单一的任务，它们并没有对分析师完整的“工作单元”进行测试，捕捉到的仅仅是一些零散片段。因此，Mandate Bench 致力于做到两件事：第一，其评分标准（rubric）显式地对推理路径进行打分；第二，我们认真对待真实世界中完整的工作单元。对于我们的分析师而言，这一工作单元涵盖从基金的投资授权（mandate）一直到最终的投资备忘录（investment memo）。
+<details>
+<summary>Original English</summary>
+So, um, [clears throat] I'd like to first go through the existing financial benchmarks.
+
+So, most of these benchmarks prepare a a golden answers and compare it with the agent answer.
+
+But, in real world task, two analysts can reach two different answers, and both could be right. So, existing benchmark use relatively short and simple task. They don't um, um, they don't task a full unit of analyst or work. So, they only get the fragments of it. So, Mandate Bench aims to do two things. First, its rubric explicit grades the reasoning path. Second, we take the real world real unit of work seriously. For our analyst, the unit goes from the funds mandate or and from the mandate all the way to investment memo.
+</details>
+
+我们首先来看看基准中的任务是什么样的。先从一个简单的问题开始：分析师在对冲基金中是如何工作的？没有人会给分析师安排一项简单的任务。投资经理（PM）会给分析师提供基金的投资授权以及一家公司。例如，授权内容可能是：“我们是一家事件驱动型基金，从事并购交易，持仓期为 3 到 12 个月。”投资经理会询问：“好的，这里有 A 公司，我们知道 A 公司将被 B 公司收购。我们应该做多、做空还是放弃这家公司？请给我一份包含详细论据和背后推理逻辑的投资备忘录。”这往往需要一名分析师耗费数小时，轻而易举就会花上 20 到 200 个小时。这就是分析师工作的一个真实单元。
+<details>
+<summary>Original English</summary>
+So, let's first look at what a task in the benchmark looks like. Let me start with a simple question.
+
+Um how does an analyst work at a um hedge fund? Nobody gives an analyst a simple task. The PM gave analyst the funds mandate and a company. For example, the mandate looks like we are an event-driven fund and we trade on mergers and acquisitions with uh holding period 3 to 12 months. And the PM asked, "Okay, here's a company A and we know company A will be bought by company B. Should we go long, short, or just pass on this company? And please bring me a investment memo with detailed evidence and the reasoning behind it."
+
+And this can take an analyst hours, 20 to 22 hundred hours easily. And this is the one real unit of analyst work.
+</details>
+
+我们来深入看一个任务示例。这里有一家名为 Sonoco 的美国包装公司。近期，Sonoco 收购了一家名为 Eviosys 的公司，同时也出售了旗下名为 TFP 的业务。要对 Sonoco 进行估值，首先需要一个基本数据，即销售额。但 5 个不同的数据源给出了各不相同的销售额数据，从 50 亿美元到 80 亿美元不等。为什么？因为每个数据源对 Sonoco 的统计口径存在差异。因此，智能体首先必须意识到数据不匹配；其次必须查明原因；第三，它必须重建 Sonoco 截至 2025 年 5 月的状态——包含 Eviosys 全年业绩且剔除 TFP 业务。这算下来大约是 75 亿美元的销售额。而这仅仅是资深分析师需要推演的全部推理过程中的一小部分。
+<details>
+<summary>Original English</summary>
+So, let's go deeper into an example task. Here's a company called Sonoco and it's a US packaging company. Recently, Sonoco bought about a company called Eviosys and it's also sold one of its business called TFP. To value Sonoco, you first need one basic number, which is a sales. But five different sources give the different um sales numbers from five five billion to eight billion dollars. Why? Because each source counts a different difference on Sonoco.
+
+So, first, the agent has to understand uh numbers doesn't match. Second, it hasn't it has to find out why. And and um and third, and also second, it has to find out why. And third, it has to rebuild Sonoco as it was in May 2025 with Eviosys for the full year and without TFP. This it will be about 7.5 billion dollars of sales. And that is just a small part of the entire reasoning to skilled analysts to work through.
+</details>
+
+那么我们如何对智能体的工作进行打分？智能体提交一份投资备忘录以及一张推理图，图中的每个事实都应准确指向其来源调用的位置。随后，我们的前买方分析师会写下一份优秀备忘录应包含的关键推理步骤，每个步骤对应图中的一个节点。首先，智能体必须重建公司在 2025 年 5 月的状态、新业务的实际盈利情况、扣除已出售业务的金额并重构债务结构。此外，我们还会对备忘录进行“假设测试”（what-if test）。例如，管理层承诺了 Eviosys 交易带来的成本节约；但如果节约金额为零呢？投资判断会改变吗？备忘录是否针对这些变动因素给出了清晰推理和解释？因此，不同的备忘录可以得出不同的投资决策，只要每个决策背后的分析扎实充分，两者都可以获得高分。
+<details>
+<summary>Original English</summary>
+So, then how we grade the agent work?
+
+So, agents submit an investment memo along together with a reasoning graph in the graph and then every fact should point to exact two call it came from.
+
+Then our former buy-side analyst [clears throat] write down on the key reasoning steps that any good memo would include. Each step is a node in the graph. First, the no-code agent must rebuild the company it was in May 2025. And what the new new new business really earns and net out what was sold and rebuild the debt.
+
+If first that we ask HR, we also attacked the memo with the what if test. For example, management pro- promised cost savings from the EVOC still. But, what if the sales savings were zero? Would the call change? And does the memo explain this with clear reasoning about the moving parts?
+
+So, the So, the So, the memos can reach different calls and the both can score well as long as the work behind the each calls are there.
+</details>
+
+这是评测结果，大家可以看到初步数据。这仅仅是在全部 50 个任务池中的 10 个任务上运行的初步结果，Claude 3.5 得分最高。受时间限制，我们翻到下一页。各个模型的表现各有不同。例如，Astra 1.6 在构建财务模型方面表现优异，而 Opus 3.5 在各项不同测试中表现得非常均衡。好的，我把时间交还给 Janie。
+<details>
+<summary>Original English</summary>
+So, this is the result and you can see the cloud of This is a preliminary result. Only runs over 10 tasks of 50 entire task universe. And the cloud with 5.5 scores best.
+
+In the matter of time, let's skip to the next page. And every model behaves differently. For example, Astra 6 really good at making a financial modeling, while the Opus 5.5 is a balanced very well over the cross different um test. Okay, let me get back to Shane.
+</details>
+
+### 后续规划与合作倡议
+
+>> 太棒了。刚才展示的是 Mandate Bench 最初的前 10 个任务。包含全部 50 个任务的完整基准将于下个月（2026 年 11 月）推出。
+
+这也是未来几周内在 Kaggle 和 DeepMind 上发布的众多基准之一。我们与多家领先的 AI 初创公司合作，在不同领域构建基准。我们上周推出了 HeyGen 的 Code-to-Video 基准；目前正与 Octava、Quadrillion 和 Rehearsals 合作开展针对临床医生工作流、科研工作流以及用户研究工作流的基准评测。
+
+因此，如果现场有任何人希望为自己的公司构建贴近真实世界的基准测试，我们非常期待与大家合作。正如我之前提到的，我们提供免费的模型算力、来自 GDM 的全职工程师支持以及 500 万美元的资助金。请随时联系我们，我们非常乐意展开合作。非常感谢大家。
+<details>
+<summary>Original English</summary>
+>> Um awesome. So, that was the first initial 10 tasks um of Mandate Bench. The the full 20 50 task benchmark will be launching uh next month in in November 2026.
+
+Um and uh this is part of many many other benchmarks that are launching in on Kaggle and and DeepMind over the next few weeks. Uh we've partnered with a bunch of leading AI startups uh to build benchmarks in different domains.
+
+Uh we launched HeyGen's code code to video bench uh last week. Um we're working on a couple other benchmarks with Octava, Quadrillion, and Rehearsals uh on on meta uh clinician workflows, research workflows, and user research workflows.
+
+Um so, if anyone in the crowd is interested in in building a real-world benchmark for for your company, uh we're we're very interested in collaborating. Um as I mentioned before, we're we're providing free model compute, uh FTE support from from JDM, and $5 million in grants.
+
+Um so, please reach out to us. We we'd love to work together. Um thank you so much.
+</details>

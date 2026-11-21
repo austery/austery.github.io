@@ -1,0 +1,397 @@
+---
+author: TVO Today
+date: '2026-10-23'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=oASJqGv1IM8
+speaker: TVO Today
+tags:
+  - trade-war
+  - tariff-impact
+  - municipal-governance
+  - supply-chain
+  - local-election
+title: 贸易战冲击下的安大略市镇应对与市政政党化之争
+summary: 本期节目探讨美加贸易摩擦对安大略省各市镇基础设施、中小企业及关键供应链带来的深层压力与本地韧性应对策略，并就安大略省市政选举是否应当引入政党制度展开深入辩论。
+insight: ''
+draft: true
+series: ''
+category: macro-economy
+area: geopolitics
+project: []
+people: []
+companies_orgs:
+  - Federation of Canadian Municipalities
+  - Association of Municipalities of Ontario
+  - Rural Ontario Municipal Association
+products_models: []
+media_books: []
+status: evergreen
+---
+### 贸易战前线的安大略市镇：财政支持与地方挑战
+
+**>>**: 面对持续发酵的贸易战，渥太华联邦政府与安大略省政府宣布对钢铁和汽车行业提供新的支持。这不是政府第一次出手支持工人和企业。早在八月份，联邦财政部长弗朗索瓦-菲利普·商鹏飞（Francois-Philippe Champagne）宣布加拿大将对美国关税进行反击时，曾表示“按每一美元对一美元、每一税率对一税率全额反制”。当时他还表示，加拿大将拨款75亿加元，用于支持受贸易战影响的工人和企业。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Ottawa and Ontario have announced new supports for the steel and auto sectors in the face of the ongoing trade war. It's not the first move governments have made to support workers and businesses. When Federal Finance Minister Francois-philippe Champagne announced that Canada would counter American tariffs. Quote, dollar for dollar rate for rate. Back in August. He also said that Canada would dedicate $7.5 billion to support workers and businesses affected by the trade war.
+
+</details>
+
+**>>**: “我们将共同应对这一时刻。正如总理所言，我们将不惜一切代价、无论需要多久，坚定支持我们的工人、我们的企业和我们的产业。”
+
+<details>
+<summary>Original English</summary>
+
+**>>**: We will meet the moment together. And as the Prime Minister has said, we will support our workers, our businesses and our industry with whatever it takes for as long as it takes.
+
+</details>
+
+**>>**: 那么，这究竟需要付出什么代价？不同社区的需求是否一致？我们将深入探视处于贸易战最前线的安大略省各市镇现状。此外，谈到选举时，各市镇也是独树一帜——在地方选举投票时，你投给的是具体的候选人，而不是政党。现在是时候改变这一点了吗？我是 Jeyan Jeganathan，这里是《The Rundown》。总理一直在倡导以“加拿大团队”（Team Canada）的联合姿态来应对贸易战。那么，各市镇在这个团队中应当扮演什么角色？他们又是如何应对这一切经济不确定性的？Ermal Mustafa、Graham Henderson，以及 Krista Lowry 市长，非常高兴各位做客《The Rundown》。Ermal，我想先从你开始。你与加拿大市政联合会（FCM）以及伦敦市合作牵头了这项研究，调查了涵盖九个省份的31个市镇。请帮我们了解一下，对于美国贸易冲击正在如何影响这些地方，各方达成了怎样的共识？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: So what will it take? And do different communities need the same things? We look at what it's like for Ontario municipalities on the front lines of the trade war. Then municipalities also stand apart when it comes to elections. I'm talking about the fact when you cast your ballot in a local election, you just vote for a candidate, not for a party. Is it time to change that? I'm Jeyan Jeganathan and this is The Rundown. The Prime Minister has championed a Team Canada response to the trade war. So what role should municipalities be playing on that team, and how are they dealing with all this economic uncertainty? Ermal Mustafa Graham Henderson Mayor Krista Lowry, great to have you on The Rundown. I'm going to start with you. You spearheaded this study in collaboration with the FCM Federation of Canadian Municipalities and the City of London. You surveyed 31 municipalities across nine provinces. Help us understand what's the consensus on how the U.S. trade disruptions are impacting these places?
+
+</details>
+
+**>>**: 好的。谢谢你，Jen，邀请我来。这份调查实际上提供了很多关于基层实际情况的有趣事实。其中非常突出的一点是，大体上存在三个受影响最深的渠道，冲击就是通过这些渠道传导进来的。其一是企业面临的成本压力。这体现在很多方面，不仅包括关税和非关税壁垒，还包含了不确定性溢价，对吧？因为你基本上会预料到关税即将出台，结果某些供应商可能就会提高给你的价格，这种压力随后在供应链内层层传导。因此这些问题来势非常凶猛，甚至在我们从全国统计数据中看到迹象之前就已经出现了。我认为这正说明了市镇情报所具备的预警价值，能够提前反映正在发生的情况。而且根据产业结构和多元化程度的不同，不同行政辖区受到的冲击差异很大。我们稍后可以深入探讨这一点。核心结论是：每个社区感受到的压力可能与其他社区大不相同，因此我们在考虑这些影响时必须切实考虑这种异质性。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yeah. And thank you, Jen, for having me. And, you know, the survey actually provides a lot of interesting facts about what's happening in the ground. And one other thing that really jumps out is essentially that there are three, you know, most affected channels through which we see, you know, the impact, you know, essentially pass through. So one of them is, if you think about it, cost, you know, pressures that, you know, companies are facing. And that comes from various ways in terms of if you think about not only, you know, tariffs non-tariff, but there's also premium in terms of uncertainty, right? Because essentially you could anticipate tariffs coming in. And as a result, some supplier might increase your increase prices. And that then propagates within the supply chain. Right. And so those issues come in very strongly. And and they come in even before we see in the national data. So I think that that tells you something about, you know, the municipal intelligence that is providing some early warnings in terms of, you know, what is happening and the impact varies across different jurisdictions depending on the industry, makeup, how diversified they are. And we can go more into it. The key takeaway is that, you know, each community probably feels very differently than, you know, a, the others. And so we have to really take into account of these heterogeneity in terms of the impact.
+
+</details>
+
+**>>**: 谈到受影响的社区，温莎、密西沙加、伦敦在贸易冲击排名中居高不下。但我想强调的另一点是，一些社区在不确定性面前也展现出了一定的韧性。能否请你简要列举几个具体例子，说明在当前不确定的贸易环境中，这种韧性究竟体现在哪些方面？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Now, ROMA, some of those communities that we'll be talking about, you know, we're talking Windsor, Mississauga, London, who reported highest ranking in terms of trade impact. But one thing I want to highlight as well is some communities also are showing some resilience in the face of uncertainty. Very quickly. Can you give us a few examples of what that actually looks like when we talk about resilience in this uncertain trade environment?
+
+</details>
+
+**>>**: 当然可以。各市镇确实推出了很多项目。其中之一就是“购买加拿大货”（Buy Canadian）倡议，以此来促进在加拿大本地采购和本地投资。许多市镇还与企业合作，指导他们如何利用正在推出的各项支持计划；也有项目致力于帮助企业思考多元化发展，甚至应对贸易合规等问题。因此这些是其中的具体方面。此外还有创新创意的做法。以伦敦市为例，他们采取的一项举措就是通过举办各类活动来大力提振本地旅游业，实际上我们看到去年旅游业实现了逆势增长。再比如苏圣玛丽（Sault Ste. Marie）的社区合力：当 Algoma 钢厂停工时，工会、当地政府和苏学院（Soo College）共同制定了一项行动方案来支持工人。这不仅涉及心理健康支持，还包括再培训以及所需转型的其他领域。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Absolutely. Right. I mean, there are, you know, lots of programs that municipalities have rolled out, right? One of them is through the Buy Canadian initiatives, right? In order to source things from Canada and invest, you know, locally. There are, you know, municipalities that have worked with businesses in terms of, you know, how to navigate through the various programs that are being rolled out. There are, you know, essentially a, you know, programs about how how to think about diversification and how even deal with compliances with trade, etcetera. So, so there are those elements to it. And then there's also creativity. If you think about in London itself, you know, one of the initiatives that was taken was to really ramp up local tourism with events. And what we've seen is actually, you know, tourism actually grew, you know, last year, there's also community, you know, coming together in Sault Ste. Marie, for example, right? When the Algoma plant shut down, what you see essentially is, you know, the union, the, the local government and Soo College developed, you know, an action plan in order to support the workers. So this this goes into not only in terms of mental health, but also, you know, retraining and other areas of, you know, transition that is needed.
+
+</details>
+
+**>>**: 我想深入了解一下基层的实际动向。Krista，我想请教你。你是密西西比米尔斯（Mississippi Mills）的市长，同时作为安大略省农村市镇协会（ROMA）的主席代表广大农村社区。当你与这些社区沟通时，除了像 Romel 刚才提到的 Algoma 钢铁厂这类工矿企业，在工厂之外，这些压力具体是以怎样的形式显现出来的？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: I want to get a pulse on the ground. So, Krista, I'm coming to you. You are the mayor of Mississippi Mills. You represent rural communities as the chair of ROMA. When you are talking to these communities, what are they seeing in terms of those pressures showing up outside of the, you know, as Romel mentioned, we have Algoma Steel, we're talking about factories, but outside of those factories, what is what are those pressures look like.
+
+</details>
+
+**>>**: 这并非某一个市镇所独有，而是我们所有社区都切实感受到的痛点——那就是对基础设施的影响。每个社区都在应对要么与增长相关的基础设施需求，要么与老化相关的基础设施改造。根据安大略省市政联合会（AMO）在2025年所做研究和模型收集的数据（虽然过去大约一年间数据发生了一些变化），我们清楚地知道，从2025年3月到2027年3月，全省范围内规划的资本项目价值高达510亿加元，涉及27,000个不同的工程项目和19,000套社会住房。这在每个社区的具体落实方式各有不同。但我们也知道，关税将对这一大批项目造成高达18亿加元的负面资金冲击。这非常棘手，因为这个缺口该如何填补？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Something that is not not unique to any one municipality, but is certainly felt by all of our communities. Is the impact on infrastructure every community is is dealing with either growth related infrastructure, ageing related infrastructure, and some of the data that Amo was able to gather in their research and modelling back in 2025. So some of that data is has changed. We've changed a lot in about a year, but we know that there's $51 billion worth of capital projects between March of 2025 and March of 2027 being planned across the province, and that's 27,000 different projects. That's 19,000 social housing units. And so that looks different in every single community. And how that would be realised. But we also know that the tariffs would impact that that bucket of projects to the tune of 1.8 billion. So a negative impact. And that's hard because how does that how does that gap get filled?
+
+</details>
+
+### 中小企业的生存困境与地方救助机制
+
+**>>**: 我想专门聚焦其中一个市镇。Graham，我想问问你。作为伦敦商会的首席执行官，你的团队编制的报告表明，伦敦可能正在通过其劳动力市场间接承受贸易摩擦带来的影响。希望你能帮我们厘清一下：这里发生的情况不一定表现为工厂倒闭或直接裁员，这与你在基层的观察一致吗？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Well, well, I actually want to hone in on one of those municipalities. So Graham, I'm coming to you. You were the CEO of the London Chamber of Commerce, the report that his team put together suggests that London may be experiencing some of the effects of trade disruption indirectly through its labour market. So I'm hoping you can help us understand a little bit. This is not necessarily through plant closures or job losses here, but does that line up with what you're seeing on the ground?
+
+</details>
+
+**>>**: 我想举几个具体的例子，因为这样能让大家有更直观的切身体会。我最近走访了伦敦本地一家非常小的店铺，名叫 The Cookie Airy。它是由两位创业者几年前创办的。起初他们制作定制糖霜饼干，随后结合了自身的创业创意和工程技术，通过生产3D打印的饼干模具建立起了这门小生意。如今他们正向包括美国在内的其他创业者销售烘焙用品和设备。这是一家极具创新力的小型市场制造商，但他们正竭力应对关税以及关税带来的种种复杂问题。他们不得不改变对美国的运输发货安排：过去他们提供包邮免运费，现在无法承受了；如今他们不得不将关税成本计入产品定价中。这是加拿大创业精神的一个极佳范例，但也提醒我们：哪怕是技术上最精良的小微企业，面对国际贸易的后果与复杂性，同样会举步维艰。我还能再举两个例子：一个是著名的本地企业 Vaughan Custom Sports，生产曲棍球运动装备；另一个是生产定制即饮酒精饮料的 Black Fly。这些企业在应对上都遇到了实实在在的困难。政府对此并非不知情。我稍后很想聊聊我们该如何应对这个问题，因为在伦敦，我们一直在协同筹建一项关税应对服务（tariff response service），以协助企业渡过难关。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Well, I'd like to give concrete examples here because I think that'll bring it home to folks I recently visited a little tiny store here in London. It's called the Cookie Airy. It was founded by two entrepreneurs several years ago. They started out making custom sugar cookies, and they combined their sort of entrepreneurial creativity, their engineering enterprise, to build this little business based on making 3D printed cookie cutters. And they're now selling baking supplies and equipment to entrepreneurs. Other entrepreneurs, including in the United States. So they have this. It's a very innovative little market manufacturer, but they are wrestling with the tariffs and tariff complications. They've had to change their shipping arrangements to the United States. They used to ship free. Now they can't. Now they've had to build tariff into their pricing. And this is a wonderful example of Canadian entrepreneurship and a reminder that even the most technologically sophisticated small businesses can struggle with the consequences, the complexities of international trade. I could give you two other examples. We don't have time, but one of them is kind of the famous one. It's the Vaughan Vaughan hockey custom sports here in, in, in London. And then there's Black Fly, which which does custom made, ready to drink alcoholic beverages. So these businesses are having real difficulty navigating. The government is aware of this. And what I'd like to talk about at some point is how we're going to deal with this, because here in London, we've been working to put together a tariff response service that will help businesses navigate this.
+
+</details>
+
+**>>**: 好的，Krista，我们看到……我想稍微转换一下话题，谈谈渥太华方面针对关税所做的回应。Krista，我们看到像圣托马斯（St. Thomas）的动力电池工厂项目被推迟了两年。当这些时间表发生变动时，社区围绕这些投资进行规划的难度有多大？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: All right, Krista, we are seeing I want to shift gears a little bit. Talk a little bit about Ottawa's response to tariffs here. Krista. We're seeing projects like power EV power battery plant in Saint Thomas being delayed by two years. How difficult is it for communities to plan around investments when these timelines shift?
+
+</details>
+
+**>>**: 极其困难。外部环境变化得太快了，充满了巨大的不确定性。当然，危险之处在于，如果我们不推进这些项目，就会引发一系列全新的挑战。项目被推迟、延期或停滞不前，都会带来严重后果。从我们的成员单位——也就是安大略省市政联合会（AMO）——收到的反馈中，大家面临的部分挑战源于《购买安大略法案》（Buy Ontario Act）出台后所带来的政策框架不确定性。增强经济实力、巩固国内供应链的目标，无疑是各市镇、AMO 以及 ROMA 所高度认同的。然而，对于政策指导的具体含义，以及如何与参与项目的供应商、竞标方有效协作，都需要清晰的指引。有时延期的根源恰恰在于此——立法到底意味着什么？工作人员在评估打分时该如何解读这些条文？最近，AMO 已经与一些行业协会联名致信，就如何让市镇、行业协会及相关机构更易于操作提出了一些指引与建议，以避免出现项目延误，确保我们能够向前推进。因为拖延项目对市镇不利，对企业不利，对整个安大略省也毫无益处。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: It's really difficult. The environment is shifting very quickly. There's a lot of uncertainty in the environment. The danger, of course, is if we don't move forward with with projects, that creates a whole other set of challenges. If projects are deferred or delayed or they don't go forward. And part of the challenge that we have been hearing from our members, we being Amo, the Association of Ontario, is uncertainty around some of the the framework with the. Buy Ontario Act that has come into play and certainly the goal of strengthening the economy, the goal of strengthening the domestic supply chain is, is something that municipalities share, AMO shares ROMA shares. But having a clear understanding of what that guidance means, having a clear understanding of how to work with suppliers, our our bidders and whatnot who are working on projects. Sometimes those are what those delays are about is challenges of what the the legislation means, how staff should be interpreting scoring, looking at some of these these pieces, and more recently, we have AMO Association Municipalities of Ontario have written a joint letter with some of the. The industry sector associations as well, with some some guidance and some suggestions on how that could become easier for municipalities to work with, as well as industry associations and, and organisations, so that we're not seeing delays so that we are able to move forward because delaying projects is not going to be good for municipalities. It's not good for business. It's not good for Ontario.
+
+</details>
+
+**>>**: Rommel，这种不确定性是否暴露了各市镇在规划重大投资时存在的更大脆弱性？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Rommel does this kind of uncertainty expose a bigger vulnerability in the way municipalities plan for major investments?
+
+</details>
+
+**>>**: 确实如此。从 Graham 和 Krista 刚才分享的见解来看，这些问题在安大略省乃至我们调查过的全国其他地方同样具有代表性。在某些情况下，如果一个市镇面临高度单一集中的产业受到冲击，它所需要的应对策略就完全不同，需要更多考虑产业重组和稳定；而如果当地产业结构相对多元化，则可能更需要转型支持、吸引更多投资并拉动增长。因此，当我们考虑市镇层面的应对方案时，必须兼顾这些差异性。与此同时，时间至关重要。如果我们无法维持经济活动的运转，将对整体抗风险韧性产生严重影响。随着时间推移，我们可以逐步厘清正在进行的一些贸易磋商，因此保持经济运转无疑是未来的重中之重。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: It does. Right. I mean, if you think about it in, you know, the insights that we're getting from both Gram and Krista is that, you know, those are actually basically are represented in other parts of Ontario. And, you know, in the country that we've surveyed. Right. And essentially, you know, if we think about in certain cases, if you have, you know, municipalities that are facing if you have one highly concentrated industry that that's got affected, that requires a different type of response, more thinking about, you know, industrialisation and stabilisation, then maybe if you have a diversified kind of industry makeup that would require more transitional support and getting more investments and, you know, growth going, right. So these are variations that we need to think about in ways in which when we think about, you know, responses within the municipalities and at the same time, you know, time is of the essence because, you know, if we can't keep the economic activities going, then that would have, you know, implications for bigger resilience, right? If you think about it within these communities, and we can, over time sort out some of the trade, you know, discussions that are going on. Right. And so that becomes really an important priority going forward.
+
+</details>
+
+### 联邦支持措施与“加拿大团队”协同机制
+
+**>>**: 谈到应对措施，我想提一下，我们此前联系了联邦财政部，询问他们对这些投资在电动汽车领域能否精准达标有多大信心。我们收到了他们的一份声明，其中部分内容写道：“2026年2月，政府推出了一项汽车战略，对生产加拿大制造的汽车给予奖励，并利用加拿大的技术专长打造未来汽车。该战略包括从战略响应基金中拨款30亿加元，以及从区域关税应对倡议中拨款1亿加元，用于支持汽车制造业投资。这些投资将帮助该行业适应、发展并实现新市场的多元化。”我需要说明的是，总理马克·卡尼（Mark Carney）与道格·福特（Doug Ford）省长定于周三下午宣布对钢铁和汽车工人的支持举措。我们在周三上午录制本期专访，截稿录制时具体细节尚未公布。你会如何评价渥太华方面的应对？还有哪些欠缺？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: All right. Speaking of responses, I did want to mention that we did reach out to the Federal Ministry of Finance and asked how confident that they were that these investments were hitting the mark when it comes to EVs. Specifically, we received a statement from them, which reads in part, in February 2026, the government introduced an auto strategy that rewards the production of Made in Canada vehicles and harnesses Canada's technology expertise to build the cars of the future. The strategy includes allocating $3 billion from the Strategic Response Fund and $100 million from the Regional Tariff Response Initiative to support investments in automotive manufacturing. These investments will help the industry adapt, grow and diversify in new markets. I should mention that Prime Minister Mark Carney and Premier Doug Ford are set to announce supports for steel and auto workers on Wednesday afternoon. We are filming this interview Wednesday morning, and those details have not been released in time of this taping. How would you characterise Ottawa's response here? What's missing?
+
+</details>
+
+**>>**: 这些都是良好的第一步。我认为关键在于细节。随着这些细节逐步明朗，各市镇将能够利用这些细则调动地方层面的投资应对。我认为关键建议在于：当我们考虑在受重创的社区进行投资时——特别是那些以先进制造业为主的社区——我们固然需要考虑电动汽车，但也需要考虑如何让这些零部件制造商开辟路径，多元化拓展到其他领域，尤其是有国内增长机会的领域，包括国防、航空航天等。这需要在新供应链的培训、设备改造等方面建立广泛的合作关系。我认为这些政策工具需要进一步充实细化，但从构建“加拿大团队”应对思路的角度来看，这些都是良好的开端。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Well, I mean, these are good. You know, first steps, right. And I think the devil is in the details as we get more of these details and enable, you know, municipalities to work through those details in terms of mobilising, you know, local response in terms of investments, I think the key thing I would suggest is that as we think about, you know, investments in communities, especially that are hard hit with advanced manufacturing, yes, we need to think about EV, but we also need to think about pathways in which we can create enable some of these component manufacturers to diversify into other sectors, and especially in areas where there are domestic growth opportunities, including defence, aerospace, etc. Right. And so that requires a lot of, you know, partnership into new supply chain in terms of training, retooling, and those, I think, you know, policy instruments needs to be fleshed out a bit more, but these are good first steps, you know, going into in terms of thinking about how, how should we think about the, you know, the Team Canada response.
+
+</details>
+
+**>>**: 好的，Graham，我想请你参与进来。谈到应对方案，显然前述讨论侧重于电动汽车，而你刚才提到的例子都是中小型企业。这些是伦敦有效应对所需要的工具吗？或者说，到底需要什么样的工具？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: All right, Graham, I want to get you into the fold here. When we talk about response, obviously, this is EV specifically, you know, your examples. We're talking small and medium businesses here. Are these the tools that London needs to respond effectively? What what are they?
+
+</details>
+
+**>>**: 我们往往又习惯性地把焦点集中在钢铁、Algoma 这样庞大的跨国企业上。政府也确实给出了关税应对措施。而问题在于……我们一直与联邦南部安大略经济发展署（FedDev）合作打造关税应对服务，就目前而言，我们认为这是独创的方案。我们向所罗门（Solomon）部长提交了这项提案。在我们的讨论中令人振奋的是，他承认在应对贸易冲击时确实存在真正的盲区，这尤其对中小型企业造成冲击，也影响了那些在繁琐的救助申请流程中摸不清门道的企业。因此我们提出的服务包含两个核心组成部分：首先是提供一名“领航员”（navigator），为企业提供点对点的实操援助——面临关税问题、海关清关阻碍、客户流失或成本飙升的企业将能获得具体的指导求助渠道；其次是专注于供应链的多元化——你的供应商遇到了麻烦吗？这家供应商是在美国吗？你想寻找一家加拿大本土的替代供应商吗？贯穿整项倡议以及我们正在伦敦开发的关税应对服务背后的，是另一项至关重要的核心要素，我知道穆斯塔法博士此前也提到过：那就是情报信息的重要性。通过直接与企业打交道，我们能够及时识别萌芽中的问题，了解压力正在何处聚集，并将这些信息共享给各级政府，使其能够作出更有效的响应。但至关重要的一点是，企业和其他机构必须紧密联合起来——我们正与伦敦经济发展公司（LEDC）、TechAlliance 合作，市政府本身也拨出了专款——我们必须团结一致，协助政府将这些解决方案切实交付给真正需要帮助的企业和民众。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Well, again, we're sort of defaulting to talking about steel. Algoma massive. You know, transnational businesses. The government has also responded with its you know, it has a tariff response. The problem that. And we've so we've been working with the federal with Feddev to create a tariff response service. We think it's sort of a one of its kind. So far. We presented this proposal to Minister Solomon. What was encouraging about our discussion was his recognition that there has. There is a real. There are real gaps in our in in the response to trade disruption. And it particularly affects smaller businesses. And it also affects businesses who have difficulty simply navigating the available resistance. The. The available assistance. So what we've proposed is a service that has two components. You get a navigator, it's hands on assistance to business, a custom, a company that is facing tariff issues, customs problems, losing a customer, struggling with rising costs would have somewhere to turn for practical advice. The second thing is to focus on diversification of supply chains. Are you having a problem with the supplier? Is that supplier located in the United States? Do you want to find a Canadian supplier? So running through the whole initiative, the tariff response service we're developing here is something else that's critically important. And I know that Doctor Mustafa has talked about this as well. And that's the importance of intelligence. By working directly with businesses, we're going to be able to identify emerging problems, understand where the pressures are building and share that information with governments so they can respond more effectively. But but it's critical that business and other organisations were working with the Ledc here in London and Tech Alliance, and the city itself has put money forward, is that we have to come together to assist the government in delivering these problems to the businesses and folks that need help.
+
+</details>
+
+**>>**: 很好。我正好接着这个话题继续。我们确实向财政部询问了其高达75亿加元的关税纾困综合措施是否能够足够迅速地覆盖到受影响最严重的社区。我想简要念一下他们回复的一部分内容。声明称：“作为强化支持的一部分，区域关税应对倡议的资金规模扩大了15亿加元。该倡议通过加拿大的七个区域发展署落实，向应对关税相关压力的中小企业提供支持，包括应对经过验证的流动性需求。政府还通过加拿大商业发展银行（BDC）引入额外的流动性支持，并在新的‘加拿大强盛多元化基金’（Canada Strong Diversification Fund）下设立快速通道的一站式审批流程，以推动项目更快落地。”这与 Graham 刚才谈到的有相通之处。Krista，请帮我梳理一下你的看法：资金审批发放提速究竟能带来多大改变？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: All right. Actually, I'm going to pick up on that. We did ask the Ministry of Finance whether it's $7.5 million billion dollar package rather of new tariff relief measures. We're reaching the communities most affected and quickly enough. And so I want to read quickly part of their response. It reads part of this enhanced support is the strengthening of the regional Tariff response initiative by $1.5 billion. The initiative is delivered through Canada's seven regional development agencies and provides support to small and medium sized businesses dealing with tariff related pressures, including demonstrated liquidity needs. The government is also introducing additional liquidity support through the Business Development Bank of Canada and a fast track, one step review and approval process under the new Canada, Strong Diversification Fund to help get projects moving faster. So a little bit of what Graham was talking about there, Krista, help me understand here. Give me give me some of your thoughts. But how much of a difference could faster access to funds make.
+
+</details>
+
+**>>**: 对我们从 AMO 听取诉求的那些社区来说，这完全能产生天壤之别。目前有许多处于“万事俱备、只待动工”（shovel ready）的项目，它们迫切需要投资落地才能推进施工。我刚才提到，AMO 此前进行了研究与建模：模型测算显示，在我们的社区投资34.5亿加元用于基础设施，将直接保住14,000个工作岗位。但这还只是故事的一部分，因为这还关乎供应链运转、关乎扶持商业、关乎在我们社区创造就业并支持本地企业。我们所熟知的一项历史经验是，在社区层面支持市政基础设施建设是刺激经济最有效的途径之一。因此，这里蕴藏着巨大的机遇：让民众继续拥有工作，支持本地社区，支持并扩充那些供应链——抱歉口误——并切实让我们的社区与企业在经历了当前各行各业所承受的艰难挣扎之后，以更强大的姿态走出来。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Make all the difference in the world for, for the communities that that, that we're hearing from, with, with Amo, there are shovel ready projects ready to go. They're needing the investment to be able to, to move forward in some of that work. I had mentioned earlier that Amo had done the research and modelling. They had modelled that a $3.45 billion investment in infrastructure in our communities. That would translate to a saving of 14,000 jobs. And that only tells part of the story because it's also about supply chains. It's also about supporting business. It's also about creating jobs in our community, supporting the businesses in our communities. And one of the things that we know is that, you know, historically support in communities supporting municipal infrastructure is one of the most effective ways to stimulate the economy. And so there is there's great opportunity here to keep people working to support local communities to, to support those supply chains, chains. Pardon me. Expand upon those supply chains and really leave our leave our communities, but leave our businesses in a stronger position at the end of the struggles that we are currently currently feeling across so many sectors.
+
+</details>
+
+**>>**: Rommel，省政府和联邦政府应该从你的报告中汲取什么经验？你们希望通过这份报告唤起怎样的关注？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Rommel, what should provincial and federal governments take away from your report? What what is it that you are trying to drum up with this?
+
+</details>
+
+**>>**: 我认为我们传达了三个明确的讯息。第一，市政情报至关重要，因为各市镇与当地企业和社区保持着一线互动，能够提前向高层发出预警信号，从而使大家能够针对显现出的压力节点迅速调整应对策略。这是第一点。第二，我们看到各市镇正在自发联合并紧密协作，调动资源以响应实际需求。第三点在于，存在着巨大的协同机遇——在思考“加拿大团队”路径时，我们必须抓住这些机遇。如果存在改善各级协调、扶持中小微企业和区域经济、并在这一进程中变得更加强大的机会，我们就应当果断把握。这是最明确的呼吁。而且我认为，在现有的各级政府职责分工框架内就可以完成这一工作，并不需要重构一套行政基础设施，核心在于加强协作联动与贯彻“加拿大团队”机制。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: You know, I think we have three clear messages. One is, you know, if you think about it, a, you know, municipal intelligence matters because, you know, the interactions that municipalities have with the local business and communities, they actually provide you, you know, signals ahead of time, right? And that allows you then to really, you know, navigate quickly in some of the pressure points that you see. Right? So that's number one. Number two, what we're seeing is also municipalities, you know, essentially coming together and working right and mobilising resources and responding to the need. And the third part is that, you know, it. There are coordination opportunities. We think that we should seize, you know, in terms of thinking about Team Canada approach, right? If there is an opportunity to improve coordination and improve these small businesses, regional economies, right. And in, in, you know, come ahead stronger through this process, we should, you know, jump on to it. And so that's the clear message. And I think we can work within, within the responsibilities that are there right across the orders of government. Right. I don't think we need a different infrastructure there, but it's more in terms of coordination. And Team Canada approach.
+
+</details>
+
+**>>**: Graham，最后的总结发言交给你。众所周知，贸易不确定性不幸已成为新常态。正如我们所讨论的，我们可以优化供应链，可以筹集更多资金并更快拨付给社区。但我们该如何确保各个社区最终做好长远准备以抵御这场风暴？我们不知道何时才能走出困境，他们究竟该怎么做？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Graham, you're getting the last word here. As we know, trade uncertainty is is unfortunately the new normal. As we talked about. You know, we can look at supply chains, we can get more money and get it to communities faster. But how do we make sure communities are ultimately prepared to weather the storm going forward? We don't know when we are going to get out of this, but how do they do it?
+
+</details>
+
+**>>**: 我认为，让更完善的信息上传给各级政府非常重要。但我很高兴我们在结束时落脚在“不确定性”这个概念上，因为社区遭受痛苦并不一定要等到某家工厂或企业彻底倒闭关门。有时候，伤害是从一项从未落地的投资开始的。政府可以宣布提供数十亿加元的援助，这很好，我们对此表示赞赏；但确保一家只有20名员工的小微企业或社区能够真正获取并享受到这些援助，那是另一码事。这正是我们认为商会和经济发展机构大有可为、能够发挥桥梁作用的地方。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Well, I think that better, better information getting to our governments is important. But, you know, I'm glad we're ending on the on the note of uncertainty, because a, a factory or a business doesn't have to close for a community to suffer. Sometimes the damage begins with an investment that never gets made. And governments can announce billions of dollars in assistance. That's one thing. It's important we applaud it. But making sure that a business or a community with 20 employees can actually access that help, that is another issue, and that is where we feel organisations like Chambers of Commerce and economic development organisations can step in.
+
+</details>
+
+**>>**: Rommel、Graham、Krista，非常感谢各位的深刻见解。非常感谢你们抽出时间接受我的采访。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Rommel, Graham, Krista, I want to thank you so much for your insights. Thank you so much for taking the time to chat with me.
+
+</details>
+
+**>>**: 谢谢。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Thank you.
+
+</details>
+
+**>>**: 谢谢，谢谢。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Thank you, thank you.
+
+</details>
+
+### 市政选举是否应引入政党政治？
+
+**>>**: 各市镇确实面临着独特的挑战和身份定位，但它们在选举方式上真的应该独树一帜、完全不设政党吗？TVO Today 的《Nerds on Politics》栏目将为大家抽丝剥茧。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: So yeah, municipalities have their own specific challenges and unique identities, but should they really have their own unique way of doing elections? You know, without parties? TVO Today's nerds on politics breaks it all down.
+
+</details>
+
+**>>**: 地方选举应该设立政党吗？不应该。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Should local elections have political parties? No.
+
+</details>
+
+**>>**: 政党是我们组织几乎所有重大选举的基本方式。自联邦成立以来，我们在省和联邦层面一直实行政党制。而且，加拿大在治理水平上优于大多数国家，我认为这绝非偶然。我们在安大略省市政层面所实行的机制，某种程度上算是一种特例。多伦多喜欢将自己与巴黎、纽约、伦敦等全球城市相提并论，而这些城市都是由正式组织、明确公开的政党来进行治理的。因此，从全球大背景来看，安省的现行做法其实相当反常。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Political parties are the way we Organize basically all of our important elections. We've had political parties at the provincial and federal level since Confederation. And, you know, Canada is governed better than most countries. And I don't think that's an accident. What we have in Ontario at the municipal level is kind of an aberration. Other global cities that a city like Toronto likes to compare itself to Paris, New York, London, these are all cities that are governed by formally Organised, explicit political parties. So it's kind of weird, actually, in a global context.
+
+</details>
+
+**>>**: 我倒是挺喜欢多伦多市政厅的政治保持这种奇特与反常。他刚才列举的在联邦议会和省议会设立政党的所有理由，恰恰是你不希望在市政厅看到政党的原因。当前政治中存在的一个顽疾，就是在太多时候都充斥着极端的党派偏见。我认为完全没有必要把这种风气引入多伦多市政厅。此外我还可以告诉你另一件事：我们过去曾经走过这条路。比对方多了几根白发的好处之一，就是我清楚地记得早在1970年代初的多伦多市政厅，候选人实际上是以政党候选人名单（party slates）参选的。当年被称为“小巧完美市长”的大卫·克龙比（David Crombie）就是凭借政党名单参选的。你知道后来发生了什么吗？经历了一两次或三次选举之后，这些政党名单就彻底消失了。人们逐渐意识到，他们不希望把政党政治和党派内耗引入多伦多市政厅。从本质上讲，这种模式像渡渡鸟一样走向了灭绝。这期间曾有一个例外：新民主党（NDP）过去常以正式的党派政纲推举新民主党候选人参选，这在当时让市政厅里的许多人感到极其恼火。现在让我再补充一点：事实上，40年来我们已经形成了一种“准政党”（quasi parties）结构。市长及其政治盟友构成了某种意义上的“执政党”；市议会中总是存在另一群议员，扮演着类似“官方反对党”的角色；而在中间地带，还有第三群可被称为“可争取游说对象”（Persuadables）的中间派议员。我觉得这种现状挺好，我们不妨踩下刹车，维持现状就好。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: I kind of like my politics at Toronto City Hall to be weird and anomalous. All the reasons he just gave for having political parties in the federal parliament and at Queen's Park are exactly the reasons you don't want to have them at City Hall. We have a problem in politics right now of being far too partisan. Far too much of the time. I don't think we need to export that to Toronto City Hall. I'll tell you the other thing. We've been down this road before. One of the advantages of having a few more grey hairs than the other guy is that I remember back in the early 1970s at Toronto City Hall, they actually ran on party slates. David Crombie, the tiny, perfect mayor of Toronto, ran on a party slate. And you know what happened? One or 2 or 3 elections later, those party slates disappeared. People came to realise that they did not want party slash partisan politics exported to Toronto City Hall. And essentially they went the way of the dodo bird. Now, there's been one exception. The NDP used to run on a formal partisan platform. New Democratic candidates. It used to tick a lot of people off at City Hall. Now, let me make one additional point here. We kind of have quasi parties already, and it's been that way for 40 years. The mayor and his or her allies constitutes kind of a party in power. There's also always another group of city councillors who form kind of an official opposition. And then there's a third group in the middle you might call Persuadables. I'm good with that. Let's pump the brakes and just keep it there.
+
+</details>
+
+**>>**: 我同意我们在市政层面确实存在某种形式的政党雏形。事实上，我还想补充一点：现在出现了第三方广告团体，比如“进步多伦多”（Progress Toronto）或“更美好的多伦多”（A Better City Toronto），它们的运作方式越来越像正式的政党。它们进行协调一致的公开背书，并为其政治纲领招募志同道合的候选人。既然无论如何我们已经拥有了某种事实上的政党，又有第三方组织在筹集和花费资金，那我们干脆坦诚面对现实、把事情挑明——建立真正的政党。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: I agree that we do have political parties of a kind at the municipal level, and in fact, I would add to that we have these now third party advertisers, groups like Progress Toronto or a Better City Toronto, that are starting to function more and more like formal political parties. They make coordinated endorsements, and they recruit like minded candidates for their platforms. If we've got parties of a kind anyway, and we've got third party groups raising and spending money, let's just be honest and do the thing. Let's just have actual political parties.
+
+</details>
+
+**>>**: 在这种情况下，我宁愿选择这种不透明的妥协。不过，让我带你回顾一下历史，让我们回到40多年前。当时多伦多的市长名叫阿特·埃格尔顿（Art Eggleton）。在每次市议会开会之前，埃格尔顿先生常常会在办公室里与那些在各项议题上立场相近的多伦多市议员举行某种非正式碰头会。他们会达成非常默契的非正式共识：市长希望通过这些议案，如果你们这些志同道合的人能跟我步调一致支持这些提案，岂不是皆大欢喜？你投桃报李，我也投桃报李。我更喜欢这种方式。如果有人决定采取不同立场，不会面临党纪惩罚，这让他们能够保持独立自主的外在形象。不管怎么说都是如此。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: I'll go for dishonesty in this case, mind you, I'm going to take you back here. Let's go back 40 plus years. The mayor of Toronto was a guy named Art Eggleton. And before every council meeting, Mr. Eggleton used to have in his office a kind of informal meeting with the members of Toronto City Council, who kind of felt the same way he did about the issues. And they would have a very sort of informal understanding that these were the issues that the mayor wanted to get past. And wouldn't it be wonderful if all of you like minded people went along with me on those issues? You give me a little something, I'll give you a little something. I like this better. There's no punishing people if they decide to go a different direction. It allows them to keep the appearance of independence. Anyway.
+
+</details>
+
+**>>**: 如果我们真想推行政党化，具体该如何操作？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: If we wanted to do this, how would it work?
+
+</details>
+
+**>>**: 根本行不通。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: It wouldn't.
+
+</details>
+
+**>>**: 只要存在民选议会，政党往往就会自然而然地有机形成。安大略省市政层面之所以没有形成政党，不仅仅是因为部分人不赞成这个想法，而是因为它在法律上实际上是非法的。在安大略省，一个政党必须能够募集资金，然后代表其成员支出这笔资金。而目前，安大略省的市政选举资金法规并不允许团体与其他候选人协同开支或代表他人支出资金。如果我在市政选举中捐款给某位候选人——无论对方是竞选市长还是市议员——这笔款项只能用于该候选人自己的竞选活动。这笔钱不能上缴给更高级别的政党，也不能花费在任何其他候选人身上。我们必须修订安省的选举法，允许民众向政党捐款，并允许政党将这些资金用于协调其他选区的竞选。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Political parties tend to form organically and naturally. Whenever you've got elected assemblies. The reason we don't have that at the municipal level in Ontario is not just because some people don't like the idea, it's because it's actually illegal. In Ontario, a political party has to be able to raise money and then spend that money on behalf of its members. And currently, Ontario's municipal election financing laws do not allow groups to spend or coordinate their spending with other candidates. If I give money to a candidate in a municipal election, whether that's a mayor or a councillor or whatever, they can only spend that money on their campaign. That money can't go to a higher party. It cannot be spent on any other candidate. We'd have to amend Ontario's election laws to allow people to give money to political parties, and then have that money spent in other races.
+
+</details>
+
+**>>**: 我还有最后一句话要说。政治已经因为取消了党代表大会（delegated conventions）而让我伤透了心。那种制度是最棒的，历来都是最精彩的，却因为糟糕透顶的理由不复存在了。千万别再把党派政治带进市政厅来让我心碎一次了，我们不需要它。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: I got one more thing to say. Politics has already broken my heart by taking away delegated conventions. They are the best. They always have been the best, and they don't exist anymore for terrible reasons. Don't break my heart again by bringing partisan politics to City Hall. We don't need it.
+
+</details>
+
+**>>**: 我想，在制定政策时，除了考虑是否会让史蒂夫·佩金（Steve Paikin）伤心之外，我们或许还可以考虑一些更高尚的价值或更深层的理由。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: I think that there might be some higher virtues or higher reasons we might consider in policy making, beyond just whether we break Steve Paikin heart or not.
+
+</details>
+
+**>>**: 不，我认为那才是最重要的衡量标准。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: No, I think that's the most important consideration.
+
+</details>
+
+**>>**: 贸易战对你的社区造成了怎样的影响？你希望看到政党在地方选举中扮演正式角色吗？欢迎分享你的观点。请发送电子邮件至 TheRundown@TVO.org，或在我们的 YouTube 页面留言。下周再见！
+
+<details>
+<summary>Original English</summary>
+
+**>>**: How is the trade war affecting your community, and would you like to see parties play an official role in local elections? I want to know. Send us an email to TheRundown@TVO.org or drop us a comment on our YouTube page. Until then, I will see you next week.
+
+</details>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>为什么用了 git worktree，Agent
+合代码时还是会删掉你的新逻辑</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">为什么用了 git worktree，Agent
+合代码时还是会删掉你的新逻辑</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-29</span>
+    
+
+    <header class="article-header">
+      
+      <h1>为什么用了 git worktree，Agent
+合代码时还是会删掉你的新逻辑</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">git-worktree</span>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <span class="tag-pill tag-pill--no-page">code-merging</span>
+      
+        <span class="tag-pill tag-pill--no-page">testing-failure</span>
+      
+        <a class="tag-link" href="/tags/workflow-automation/">workflow-automation</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章讨论了在使用 git worktree 隔离目录来运行 AI agent 任务时，在代码合并阶段可能遇到的问题，即 agent 会因为迁就旧计划而删除主分支的新代码，导致单元测试通过但新逻辑丢失。研究通过对比静止环境和变动环境下的任务成功率发现，在任务后期引入变动会导致成功率大幅下降。文章提出了解决该问题的三步策略：使用 git worktree 隔离执行期，并在合并时清空旧对话历史，只保留主分支最新改动和当前分支的差异，以帮助 agent 在合并期正确理解现场。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/git-worktree-agent-merge-flush-20261029.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-29T00:00:00.000Z">2026-10-29</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%BA%BA%E5%9C%A8%E7%AD%89">人在等</a></li><li class="outline-h2"><a href="#%E7%94%A8-git">用 git</a></li><li class="outline-h2"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B6%8A%E6%8E%A5%E8%BF%91%E5%86%99%E5%AE%8C%E8%B6%8A%E5%AE%B9%E6%98%93%E6%94%B9%E5%B4%A9%E7%BB%99%E5%86%8D%E5%A4%9A">为什么越接近写完越容易改崩，给再多</a></li><li class="outline-h2"><a href="#%E7%9B%AE%E5%BD%95%E9%9A%94%E7%A6%BB%E7%AE%A1%E6%89%A7%E8%A1%8C%E6%B8%85%E7%A9%BA%E5%8E%86%E5%8F%B2%E7%AE%A1%E5%90%88%E5%B9%B6%E8%90%BD%E5%88%B0%E6%97%A5%E5%B8%B8%E5%B0%B1%E4%B8%89%E6%AD%A5">目录隔离管执行，清空历史管合并：落到日常就三步</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>让 AI agent
+去执行一个十几分钟的任务，我们通常不会干等着。大家可能会顺手修改其他代码、中途添加新需求，或者同时运行多个任务。在同一目录下这么操作很容易导致文件互相覆盖，因此现在流行的方法是使用
+git worktree
+为每个任务创建一个独立的目录。虽然编写代码时互不干扰，但在最后让跑完任务的
+agent
+把主分支的最新改动合并进来时，经常会出现一个奇怪的问题：合并看起来没问题，所有测试也都通过，但你或同事刚加到主分支的新函数却消失了。</p>
+<p>为什么目录已经隔开了，合代码时既没报冲突，单元测试也没拦住？遇到半路改需求或合分支，到底怎么操作才安全？十月底公布的一项名为
+SWE-Shift 的基准测试 测了
+17
+个主流编程系统，刚好把这件事的底儿摸清了。顺着它的实验数据和真实翻车现场看下去，就能明白
+git worktree
+为什么只管用一半，以及合代码时多做哪一个动作就能避开这个坑。</p>
+<h2 id="人在等" data-reading-heading="">人在等</h2>
+<p>agent 的那二十分钟里干的事，为什么会让成功率掉一半</p>
+<p>这项测试挑了多个真实开源仓库里的 120
+个任务，专门还原开发里半路出状况的场景。研究人员设计了两组对照路径：先让
+agent
+跑到某个中间节点存下现场，再从同一个节点分出两条路线，一条不做任何外部改动直接跑完实验，另一条在同一个节点塞进一次常见的改动，比如人顺手改了代码，半路加了接口需求，或者队友往仓库里合入了一些新逻辑。</p>
+<p>结果出来以后，所有十七个系统全都大滑坡。以最强的 GPT-6 Astra
+为例，它在静止环境下能做完 67.35%
+的任务，但一旦中途出现变动，完成率直接掉到
+24.79%。如果要求它在静止线和变动线两边都顺利交卷，既通过原任务测试又不破坏新加的改动，这项成对成功率它只拿到
+20.34%。其他前沿模型如 Claude Opus 也跌到两成左右。</p>
+<p>掉下来的这大半任务里，比直接报错停机更麻烦的，是 agent
+为了迁就自己的旧计划，悄悄删掉别人的新代码，偏偏原有的单元测试还能全部通过。开源评测仓库
+里记录了一个真实的 Django 数据库迁移优化案例。当时 GPT-5.6 Sol
+正在修改迁移模块里的索引操作逻辑，进度到六成，队友往同一个文件里合入了一段合法代码，新增了名为
+can_reduce_index_with
+的辅助方法，两边连行号都没有冲突。由于 agent
+在前几步已经定好了自己的改法，它虽然试着调了一下这个新方法，但为了跑通原来的方案，最终在提交补丁时直接删掉了队友刚写的
+can_reduce_index_with 方法。更棘手的是，仓库原有的 39
+个单元测试随后全部跑通变绿，如果不专门检查队友的新接口还在不在，谁也发现不了这段逻辑已经丢了。</p>
+<h2 id="用-git" data-reading-heading="">用 git</h2>
+<p>worktree 把目录隔开，为什么只防住了一半冲突</p>
+<p>看到这里，很多人第一反应是队友不该趁任务跑到六成还往同一个目录里合代码；如果一开始就用
+git worktree
+给每个任务分配独立目录，等写完再合，是不是就不会互相干扰了？我们在十月下旬讨论
+多
+agent 到底买到了什么
+时也指出，编写代码时最怕多个执行者在同一目录下同时操作。使用
+git worktree 隔离目录后，agent
+在修改代码时看到的始终是一个静止环境，不会因为你的文件保存而变动，确实可以将执行成功率提升到静止环境的六成以上。</p>
+<p>问题是，写完分支终究还是要合回主分支的，所以
+git worktree
+只是把外部环境的变化从执行中间推到了合并的那一刻。评测会把队友的改动分成两类：一类是改同一个文件，Git
+会在合并时直接报告文本冲突；另一类则是改上下游关联文件中的接口约定，当前文件一行没动。后一种情况即使直接执行
+git merge，也看不到一行的冲突，但合完以后两边代码的调用逻辑已经对不上了。如果这时让在
+worktree 里忙活了半天的 agent 自己去执行
+git rebase
+解冲突或调测试，它面对的其实就是一次发生在任务最末尾的外部变动。</p>
+<p>git worktree
+挡住了执行期间的文件互相覆盖，但挡不住合并时刻带着长历史的 agent
+删掉主分支的新代码。</p>
+<h2 id="为什么越接近写完越容易改崩给再多" data-reading-heading="">为什么越接近写完越容易改崩，给再多</h2>
+<p>token 预算都没用</p>
+<p>把外部变动推迟到任务最末尾，听起来比中途打断更安全，但实验测出来的结果正好相反。研究人员专门对比了在任务进度一成到九成之间引入变动的影响。在任务刚起步的前三成进度里遇到变动，agent
+往往还能顺着新情况调整计划；可一旦到了七成至九成的收尾阶段，正好对应写完代码准备合并或最后关头改需求的节点，GPT
+和 Claude 系列的成对成功率反而比早期干预还要再跌 12 到 20 个百分点。</p>
+<p>面对这种收尾阶段的下滑，很多人会本能地想多加些 token
+预算。研究组把变动后的可用 token 预算从一百万一路放大十六倍到 1600
+万，结果发现预算超过四百万以后，成对成功率的涨幅连 0.3
+个百分点都不到。问题不出在预算不够，真正拖后腿的是窗口里攒下的旧对话历史，多给的
+token 全都花在顺着老计划反复跑同样的旧测试上了。</p>
+<p>在最初的几十步里，agent
+读到的文件行号、踩过的旧报错、定下的修改方案全都留在对话窗口里，这种长历史让它对眼前新出现的改动视而不见。评测里有个专门测试旧证据失效的实验：任务中途环境变了，终端已经印出新的报错，但
+17
+个受测系统的成对成功率一下子掉到零，它们全信了自己在几十步前记在上下文里的老结论，不再回头重核现场代码。</p>
+<h2 id="目录隔离管执行清空历史管合并落到日常就三步" data-reading-heading="">目录隔离管执行，清空历史管合并：落到日常就三步</h2>
+<p>要让 agent
+重新核对眼前的代码，就得先把它脑子里那套老结论清掉。评测对比了几种挽救的方法，只有清空变动前的旧对话历史，并且让系统重扫当前工作区的文件状态和差异，才带来了明显的成功率提升。这一步让成对成功率增加了六到九个百分点。微软研究院的分支清理实验
+也验证了这一点：他们让模型分叉尝试不同的方案，然后把冗长的中间推理删掉，只保留阶段结论，任务得分就从单次长跑的
+0.47 涨到了
+0.78。如果只做常规的摘要压缩，老思路依然会残留在摘要里面把后续步骤带偏。我们在
+GPT-6
+长任务指南的分析
+中聊过，现在很多平台都支持在任务不停的情况下半路插话改要求，并自动把长历史压缩成摘要。这套功能适合修补小偏差，但如果任务已经跑到后半程，外部代码或接口变了，光靠压缩和插话就不够用了，直接清空历史重开窗口才管用。</p>
+<p>变动后把 token 预算放大 16
+倍几乎无效，关掉旧窗口、换干净窗口做合并才能把成对成功率拉回来。</p>
+<p>把这些实验结论用到日常开发里，只要求我们把同一个窗口继续执行的习惯改掉，分成三步来走。第一，平时查代码、做计划、做代码审阅多开几个窗口并行读没问题，但动手改代码默认只留一条主线，能不并发写就不并发写。第二，如果你需要一边等
+agent 一边自己改代码，或者想同时试探两套改法，就用
+git worktree 先把目录隔开，让每个 agent
+在完全静止的目录里把初稿跑完。第三，到了要把 worktree
+合回主分支，或者任务过半你想改需求的时候，先让原来的窗口把代码提交存盘，然后直接关掉这个旧窗口；接着新开一个没有任何历史包袱的干净窗口，只把主分支的新改动和当前分支的补丁差异发给它，明确交代以主分支的最新接口为准完成合并。</p>
+<p>当然，看前面那组跌到两成的数字时，也不用觉得平时十次合代码有八次会崩。这
+120
+个场景中的外部变动是研究人员用确定性脚本在固定的进度节点注入的。同时，它的评判标准非常严格，要求变动前后所有检查点都通过才算成功，如果漏了一个就判定为失败，因此这些百分比不能直接当作日常开发中事故的频率。但它确实揭示了两个真实的痛点：任务到后期
+agent 改不了旧计划，并且会顺手把主干上新加的代码删掉。用
+git worktree
+来隔离执行期，再用清空历史来帮助它在合并期理解现场，二者结合才能真的有用。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/90205ab8c7532f67685854c07d991468232177708c8c178adac068f39e48e3ef.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/90205ab8c7532f67685854c07d991468232177708c8c178adac068f39e48e3ef.md" download="为什么用了 git worktree，Agent
+合代码时还是会删掉你的新逻辑.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=GPT-6 Astra" class="entity-link company-link">GPT-6 Astra</a>, <a href="/search/?q=Claude Opus" class="entity-link company-link">Claude Opus</a>, <a href="/search/?q=Django" class="entity-link company-link">Django</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=GPT-6 Astra" class="entity-link product-link">GPT-6 Astra</a>, <a href="/search/?q=Claude Opus" class="entity-link product-link">Claude Opus</a>, <a href="/search/?q=GPT-5.6 Sol" class="entity-link product-link">GPT-5.6 Sol</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

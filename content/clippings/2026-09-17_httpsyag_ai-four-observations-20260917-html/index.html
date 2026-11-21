@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 四则观察：AWS
+的芯片伙伴、自主武器、数学方法与模型相似度</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">AI 四则观察：AWS
+的芯片伙伴、自主武器、数学方法与模型相似度</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-17</span>
+    
+
+    <header class="article-header">
+      
+      <h1>AI 四则观察：AWS
+的芯片伙伴、自主武器、数学方法与模型相似度</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/ai-chip/">ai-chip</a>
+      
+        <a class="tag-link" href="/tags/autonomous-weapons/">autonomous-weapons</a>
+      
+        <span class="tag-pill tag-pill--no-page">math-research</span>
+      
+        <span class="tag-pill tag-pill--no-page">model-similarity</span>
+      
+        <a class="tag-link" href="/tags/ai-ethics/">ai-ethics</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">本文记录四项AI进展：AWS与高通深化芯片合作以拓宽算力供应；Anthropic披露Claude被用于开发自主武器软件；数学家呼吁避免数学研究沦为单纯跑分竞技；Arena分析显示跨厂商模型回答相似度可能高于同门模型。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/ai-four-observations-20260917.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-09-17T00:00:00.000Z">2026-09-17</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%B8%80aws">一、AWS</a></li><li class="outline-h2"><a href="#%E4%BA%8Cclaude-%E4%B8%8E%E8%87%AA%E4%B8%BB%E6%AD%A6%E5%99%A8%E8%BD%AF%E4%BB%B6%E7%A0%94%E5%8F%91">二、Claude 与自主武器软件研发</a></li><li class="outline-h2"><a href="#%E4%B8%89%E6%95%B0%E5%AD%A6%E7%A0%94%E7%A9%B6%E7%9A%84%E7%9B%AE%E7%9A%84%E7%95%99%E4%B8%8B%E6%96%B9%E6%B3%95%E8%BF%98%E6%98%AF%E5%8F%AA%E8%BF%BD%E7%AD%94%E6%A1%88">三、数学研究的目的：留下方法，还是只追答案</a></li><li class="outline-h2"><a href="#%E5%9B%9B%E6%A8%A1%E5%9E%8B%E5%9B%9E%E7%AD%94%E7%9A%84%E7%9B%B8%E4%BC%BC%E5%BA%A6%E6%9C%AA%E5%BF%85%E6%8C%89%E7%85%A7%E5%8E%82%E5%95%86%E5%88%92%E7%95%8C">四、模型回答的相似度：未必按照厂商划界</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>最近读到四件互不相同的事情。高通在 9 月 8
+日宣布扩大与亚马逊的数据中心定制芯片合作，Anthropic 披露有开发者调用
+Claude
+编写自主攻击无人机软件，二十五位菲尔兹奖得主联署呼吁不要把数学研究变成单纯跑分的竞技，Arena
+则对主流大模型回答相似度做了一次量化测量。这几个进展落在不同的技术方向，彼此独立，下面一件一件单独记录。</p>
+<h2 id="一aws" data-reading-heading="">一、AWS</h2>
+<p>扩充芯片伙伴：自研之外走宽多条路</p>
+<p>AWS
+一直在做自研芯片，看到这笔高通合作，我注意的倒是它还在扩大朋友圈。在许多技术讨论中，大家容易把云服务商自研硬件与引入外部伙伴看作非此即彼的路线。从实际的算力建设来看，自研硬件与引入外部定制伙伴完全可以并行推进。面对线上快速累积的计算请求，多铺设几条供应通道，可以让基础设施团队拥有更宽阔的调度余地。</p>
+<p>根据高通在 9 月 8 日发布的官方新闻稿，双方计划开展多代产品合作，联合为亚马逊云科技开发数据中心定制芯片，重点放在已经完成训练的
+AI 推理负载上。AWS 副总裁 Prasad Kalyanaraman
+在新闻稿中表示，双方在定制芯片和先进互连上的合作，将为客户提供性能更高、效率更高、更具成本效益的基础设施。AWS
+自身拥有包括 Trainium 和 Inferentia
+在内的自研芯片产品线，这些硬件覆盖了模型训练与推理任务。与高通达成多代合作，表明平台在推进自研硬件的同时，继续拓宽外部定制的合作广度。</p>
+<p>这次合作除了计算芯片本身，还延伸到了数据中心网络的高速互联方案。双方规划开发最高每秒
+1.6
+万亿比特的光互连方案，同时涉及数据传输与光学数字信号处理等底层模块。新闻稿称，这些方案旨在支持
+AI 基础设施不断增长的规模与带宽需求。</p>
+<p>我觉得这里很有意思的一点，是双方在软件与工具层面的互动。高通提到，团队计划扩大使用
+AWS 的 AI 基础设施，包括 Amazon
+Bedrock，用于电子设计自动化。高通希望借此缩短芯片设计周期，但新闻稿目前只给出了使用规划，没有列出具体缩短时间的量化数据。两家公司也借此形成了业务往来，高通计划扩大云端芯片设计工作，AWS
+则与高通合作开发数据中心定制芯片。</p>
+<p>回顾两家公司的交往历程，高通此前就已进入过 AWS 体系。在此之前，AWS
+就已经正式上线了搭载高通 Cloud AI 100 芯片的 Amazon
+EC2 DL2q
+实例，为开发者提供低功耗的推理运行环境。这次达成的多代合作是在既有业务合作基础上的进一步深化，表明双方对于长期联合定制具有明确的共识。</p>
+<p>目前高通新闻稿公布的内容主要确立了长期的协作框架。稿中没有公布具体的芯片型号名称，也没有给出首批芯片交付上线的时间表或者第三方基准测试成绩。芯片最终何时完成流片并在数据中心落地，以及它未来如何在实际业务中与
+Trainium
+系列芯片分工配合，还需要等待后续具体产品亮相后才能得到验证。</p>
+<p>从这件事能看出来的，其实是 AWS 没有把选择押在一条路上。它已经拥有
+Trainium 和 Inferentia
+自研芯片产品线，面对已经合作过的芯片伙伴，也愿意继续坐下来一起开发多代产品。两条路同时走，平台调配算力硬件也能多留出回旋空间。</p>
+<p>AWS
+同时推进自研与外部定制合作，图中连接表示合作路线，并非新芯片已交付。</p>
+<h2 id="二claude-与自主武器软件研发" data-reading-heading="">二、Claude 与自主武器软件研发</h2>
+<p>Anthropic 在 9 月 10 日发布的安全威胁报告中，记录了一起具体的工程研发案例。有技术团队为了开发自主攻击无人机软件，直接调用通用编程助手
+Claude Code 编写与维护工程代码。</p>
+<p>按照报告第
+117 至 119 页的披露，涉事团队代号为 GTG-27005，在俄罗斯以 DronDoc 或
+Serafim 项目名义运作。Anthropic
+评估这是一个兼做民用与军事工作的自由职业技术小组，并不属于俄罗斯官方国家实体。该团队自称获得了军方等机构的资金支持，不过
+Anthropic 在报告中注明无法独立核实其资金背景。在具体使用中，该小组利用
+Claude Code
+编写并测试代码，并将生成的代码直接保存到自己的工程文件中。</p>
+<p>这个案例引起关注的地方在于软件设定的目标。Anthropic
+在报告中指出，该系统旨在实现自主致命交战。团队设计让机载模型识别包含人员在内的各类目标，并且无需人类操作员逐次确认，就能自主发出攻击指令。把目标筛选与开火判定交给程序执行，软件逻辑直接进入了交战的核心环节。</p>
+<p>报告记录的一处技术细节是，该团队把真实的硬件开发板接入了测试流程，尝试让软件代码与底层硬件进行联合调试。硬件在回路的测试表明代码已经开始脱离单纯的理论文本，走向物理实物的验证阶段。在列出的六行系统或子系统中，Anthropic
+将五行的技术就绪度评为 3 级至 4
+级，另一行为作战理论与仿真。这项成熟度评估属于厂商自身的技术判断，报告没有提供外部独立机构的认证。</p>
+<p>不过也要看到，这目前只是一份研发记录，还不是实战部署的证据，而且信息来源只有
+Anthropic
+自己的安全报告。报告展示了有人调用通用编程工具辅助编写武器代码，但没有给出该系统已经制造完成或者送上战场的实战证据。看清这一点，就不会把实验阶段的软件调试直接当作已经成型的作战装备。</p>
+<p>报告中还提到了另一起涉及中东地区的也门案例。一个具备硬件工程基础的小组在制导火箭试射疑似受挫之后，间隔数小时就返回
+Claude 平台分析遥测数据，排查技术故障。Anthropic
+说明没有证据表明该小组拥有可用于实战的部署装备。这个例子反映出模型在复杂工程排错中的辅助作用，但这段记录未说明项目是否涉及自主攻击决策，不能用来佐证自主武器的自主属性，也不能与前面的无人机项目混为一谈。</p>
+<p>这件事带来的直接提醒非常现实。有人在用日常写代码的工具做这样的研发，风险不用等模型自发恶意。只要有人输入需求并组织代码，现有的通用工具就已经可能卷入危险的物理项目。</p>
+<h2 id="三数学研究的目的留下方法还是只追答案" data-reading-heading="">三、数学研究的目的：留下方法，还是只追答案</h2>
+<p>大模型在数学竞赛和自动定理证明中接连刷新成绩，常常在技术社群中引发热烈讨论。9
+月 11 日，数学家陶哲轩在个人博客转贴了发布于
+mathandai.org
+的联合声明，题为《数学中人工智能的严重错位》。这份声明由包括陶哲轩在内的二十五位菲尔兹奖得主作为初始联署人共同签名支持。</p>
+<p>联署的数学学者并没有否定技术本身的价值，他们在声明中肯定了大模型在数学解题方面的进展，也认可工具在促进数学理解方面的潜力。学者们提出异议的地方，在于商业机构将攻克孤立命题包装成模型跑分榜单的竞技化做法。声明指出，解决题目只是获得概念理解与学术洞察的工具与代理指标。如果过度偏向大规模批量产出真或假的结论，可能会损害孕育新思想的学术环境。</p>
+<p>在严谨的数学探索中，推导过程当然需要保证逻辑正确，但这不意味着结论本身就是终点。很多时候，即便证明或推翻了某个著名猜想，相关的探索也不会画上句号。研究人员在推导中创造出的新数学表述，提炼出的分析工具与理论框架，往往能迁移到其他数学分支甚至其他科学领域。如果整个领域的评价都围绕最后的对错标签运转，那些能够开拓新领域的基础探索就可能受到忽视。</p>
+<p>我们可以考虑这样一种假设情境：某个自动化系统找到了一组构造繁复的反例，恰好推翻了某个知名猜想，评测榜单立刻把题目记为已解决。如果大家仅仅因为反例成立就认为工作结束，原本可能围绕反例展开的机理分析、性质分类和新工具构建，就可能失去持续投入的动力。好的反例往往能启发全新的理论方向，关键在于面对反例，大家是止步于记录推翻结论的分数，还是继续追问反例背后的数学机制。</p>
+<p>把注意力全部放在最终答案上，类似于工程调优过度拟合单一指标，容易拿到了数字，却把背后需要长期积累的概念建构放在一旁。这并不表示商业实验室完全不产出严谨学术内容，例如
+OpenAI 发布流体方程研究，就同步提供了学术手稿与形式化验证代码。数学家们担忧的倾向，是单纯的打榜竞技主导了研究评价，让追求答案标签的热度盖过了对基础理论体系的沉淀。</p>
+<p>数学研究除了得到正确结论，还要留下能用于其他问题的方法。</p>
+<p>这种理念上的分歧在加州理工学院的一场活动中表现了出来。加州理工的部分现任与前任数学学者在
+Proofs
+&amp; Prompts 上发表公开信，批评原定由 OpenAI 和 Anthropic
+提供算力赞助的加州理工数学马拉松。该赛事初轮设计了 40
+小时的极限解题冲刺，据主办方回应，只有经评委筛选晋级的团队才能进入第二轮，获得六个月的验证与消化研究期。公开信批评，这种黑客松模式把学者当成免费检验团队，让大家无偿承担核验大量模型输出的沉重负担。</p>
+<p>面对学界的意见，OpenAI 很快调整了赞助安排。9 月 10 日，研究人员 Dan
+Roberts 在社交媒体上公开宣布，考虑到数学界的顾虑，公司决定撤回对加州理工数学马拉松的赞助，并希望未来开展更多交流讨论，Business
+Insider随后报道了这一调整。Dan Roberts
+宣布退出赞助的时间早于次日陶哲轩发布的联合声明。主办方接受 Gizmodo
+采访表示，他们正在寻找替代赞助，这项比赛并未取消。</p>
+<p>对我来说，解题之后能留下什么样的方法，往往比单纯拿下一个数字更重要。看见一种方法能帮忙理解别的问题，或者为后续推演提供趁手的工具，数学研究往往是在这种积累里往前走的。工具再怎么演进，如果只是为了榜单产出一堆对错标记，反倒容易漏掉数学里那些真正能启发人的东西。</p>
+<h2 id="四模型回答的相似度未必按照厂商划界" data-reading-heading="">四、模型回答的相似度：未必按照厂商划界</h2>
+<p>直觉上大家容易认为，同一个团队研发出来的模型，输出风格与回答内容往往更为接近，而不同厂商之间则会有明显的风格差异。9
+月 11 日，Dawid Galarowicz 与 Peter Gostev 在 Arena
+官方长文中公布了一份关于模型概念相似度的分析，测量结果呈现出不同的事实走向。需要说明的是，这篇长文是
+Arena 官方账号发布的研究洞察分享，并非经过同行评审的正式学术论文。</p>
+<p>这项分析基于 5 月 1 日至 9 月 2 日期间收集的 30,086
+对针对英文提示词的 Text Arena
+回答。这里统计的样本量对应的是两个模型回答同一个用户提问的配对总数，并不能直接等同于独立问题的总数量。为了衡量两个模型回答同一问题的内容重合程度，研究人员引入了模型裁判。裁判会从每个模型的回答中分别提炼出最多五个有文本支持的核心观点，随后结合两份原始回答比对这两组观点，区分出双方共同包含的观点以及各自独有的观点。</p>
+<p>相似度的计算方法比较直观：用双方共有的观点数量，除以合并去重后的全部观点总量。为了减少呈现顺序带来的位置偏差，算法会交换两份回答的输入顺序再判定一次，最后取两次判定的平均值。举例来说，面对同一个提问，模型
+A 与模型 B 都给出了三条相同的核心见解，此外模型 A
+多提了一条独有看法，模型 B
+也多给了一条独有思路，两个回答汇总后共有五个互不相同的观点。在这五个观点中，三个是双方共有的，那么它们的观点重叠度就是五分之三，即
+60%。</p>
+<p>在研究公开的统计配图中，研究团队列出了多组代表性模型的重叠度数据。其中
+Fable 5 与其他几款模型的对比结果呈现出了很有意思的分布情况：</p>
+<p>模型配对</p>
+<p>观点重叠度</p>
+<p>Fable 5 × DeepSeek V4 Pro</p>
+<p>59.2%</p>
+<p>Fable 5 × GLM 5.3</p>
+<p>55.9%</p>
+<p>Fable 5 × Claude Opus 5</p>
+<p>41.2%</p>
+<p>Fable 5 × Claude Sonnet 4.6</p>
+<p>37.9%</p>
+<p>这四组配对中，Fable 5 与 DeepSeek 和 GLM
+的观点重叠高于它与 Opus 和 Sonnet 的重叠。</p>
+<p>从这组公开的数据可以看到，Fable 5 与外部厂商的 DeepSeek V4 Pro
+观点重叠度达到了 59.2%，与 GLM 5.3 的重叠度达到了
+55.9%。相比之下，它与同属于 Claude 家族的 Claude Opus 5 重叠度为
+41.2%，与 Claude Sonnet 4.6 更是降到了
+37.9%。在这组配对中，跨厂商模型之间的观点重合度明显超过了同门内部的重合水平。虽然原图展示的并非包含全部前沿模型的完整全量方阵，但这几组对照说明模型的输出相似度与品牌归属并没有必然的对应关系。</p>
+<p>这种跨厂商高度相似的现象在其他测试配对中也有出现。据作者报告，观察到的最高重叠配对是
+Kimi K3 与 Muse Spark 1.2，重叠度达到了
+63.5%。作为对照参考，同属一个家族且版本相邻的模型之间，Grok 4.5 与 Grok
+4.6 之间的重叠度为 59.7%，GPT 5.5 与 GPT 5.6 之间为
+59.2%。来自两家完全不同开发团队的模型，在针对相同问题的观点重合度上，甚至高于同门相邻代际的重叠水平。</p>
+<p>从整体样本来看，所有测试配对的平均观点重叠度为
+43.1%。这项数值代表全部测试配对的综合均值，并不意味着多数模型的观点高度趋同，更不代表有超过四成的回答完全相同。在不同任务分类下，观点的重叠度表现出差异，其中医学与健康类任务平均重叠度达到
+51.1%，而创意写作类任务则降至
+34.9%。作者的解释是，在专业事实约束较强的场景下，不同模型容易提炼出一致的核心见解，而在开放表达的创作场景下，各个模型的视角选择和论述展开则更为分散。</p>
+<p>这项测量本身也有清晰的局限。官方长文属于阶段性的观察，并未披露裁判模型的具体选型、各个配对的样本量及置信区间，也没有评估观点质量或错误的相关性。输出观点的相似度反映的是回答内容的交集，不能拿来推断模型内部的架构设计或训练数据来源，更不能草率当作模型蒸馏或代码抄袭的证据。跳出单纯的厂商标签来看，像
+Fable 5
+这样跨厂商模型在回答内容上比同门更近的现象，确实提供了一个很有意思的观察视角。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/cb15243bd83fec62c28b4df3a1668da0a98d8b06c0651bd789839e1103c7abd4.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/cb15243bd83fec62c28b4df3a1668da0a98d8b06c0651bd789839e1103c7abd4.md" download="AI 四则观察：AWS
+的芯片伙伴、自主武器、数学方法与模型相似度.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=陶哲轩" class="entity-link person-link">陶哲轩</a>, <a href="/search/?q=Prasad Kalyanaraman" class="entity-link person-link">Prasad Kalyanaraman</a>, <a href="/search/?q=Dan Roberts" class="entity-link person-link">Dan Roberts</a>, <a href="/search/?q=Dawid Galarowicz" class="entity-link person-link">Dawid Galarowicz</a>, <a href="/search/?q=Peter Gostev" class="entity-link person-link">Peter Gostev</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=AWS" class="entity-link company-link">AWS</a>, <a href="/search/?q=高通" class="entity-link company-link">高通</a>, <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, <a href="/search/?q=Arena" class="entity-link company-link">Arena</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, <a href="/search/?q=Trainium" class="entity-link product-link">Trainium</a>, <a href="/search/?q=Inferentia" class="entity-link product-link">Inferentia</a>, <a href="/search/?q=Fable 5" class="entity-link product-link">Fable 5</a>, <a href="/search/?q=DeepSeek V4 Pro" class="entity-link product-link">DeepSeek V4 Pro</a>, <a href="/search/?q=GLM 5.3" class="entity-link product-link">GLM 5.3</a>, <a href="/search/?q=Claude Opus 5" class="entity-link product-link">Claude Opus 5</a>, <a href="/search/?q=Claude Sonnet 4.6" class="entity-link product-link">Claude Sonnet 4.6</a>, <a href="/search/?q=Kimi K3" class="entity-link product-link">Kimi K3</a>, <a href="/search/?q=Muse Spark 1.2" class="entity-link product-link">Muse Spark 1.2</a>, <a href="/search/?q=Grok 4.5" class="entity-link product-link">Grok 4.5</a>, <a href="/search/?q=Grok 4.6" class="entity-link product-link">Grok 4.6</a>, <a href="/search/?q=GPT 5.5" class="entity-link product-link">GPT 5.5</a>, <a href="/search/?q=GPT 5.6" class="entity-link product-link">GPT 5.6</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

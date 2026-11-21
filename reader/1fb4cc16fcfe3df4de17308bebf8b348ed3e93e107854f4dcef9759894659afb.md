@@ -1,0 +1,462 @@
+---
+author: AI Engineer
+date: '2026-10-27'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=aGIUg8zKI8A
+speaker: AI Engineer
+tags:
+  - market-making
+  - ai-platform
+  - agent-architecture
+  - model-evaluation
+  - token-optimization
+title: Optiver 如何在盈亏一线间规模化应用 AI 并实现前沿模型当日上线
+summary: Optiver AI 工程主管 Nayan 介绍了做市商环境下规模化应用 AI 的实践。由于交易盈亏反馈周期以小时计，团队构建了支持多模型路由、本地化部署的 AI 平台与评测框架，实现前沿模型公开当天即可上线生产。针对 Token 开销激增，团队通过 MCP 工具搜索、CLI 封装、上下文缓存与预算控制优化 ROI，并依托 Agent 网关推进多智能体协作与评测。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people:
+  - Nayan
+companies_orgs:
+  - Optiver
+products_models: []
+media_books: []
+status: evergreen
+---
+### Optiver 的业务背景与高频交易决策
+
+[music]
+
+>> 我叫 Nayan，是 Optiver 的 AI 工程主管。今天我想和大家聊聊，在直接关系到盈亏（P&L）的情况下，我们是如何规模化应用 AI 的。不过，这到底意味着什么呢？首先为了提供一些背景，请允许我简要介绍一下我们在 Optiver 所做的事情。我们是一家做市商（market maker）。
+<details>
+<summary>Original English</summary>
+[music]
+
+>> My name is Nayan. I'm the head of AI engineering at Optiver, and today I'm going to talk to you a little bit about how we scale AI with P&L on the line. Like, what does that mean though, right? So, first I think to contextualize, uh let me tell you a little bit about what we do at Optiver. So, we're a market maker.
+</details>
+
+这代表着我们促进交易。我们是一家交易公司，用自己的资金进行交易，而且我们没有客户。
+<details>
+<summary>Original English</summary>
+Uh what that means is that we facilitate trading. Uh we're a trading firm. We trade with our own money. Um and we don't have clients.
+</details>
+
+基本上，从技术层面来说，我们获取大量数据，构建模型，然后利用它们做出决策。这些决策需要以非常高性能的方式运行。我们每天执行超过 1000 万笔交易，对超过 100 万种金融工具进行定价，每天处理数 PB 的数据。同时，我们是一家相当全球化的公司，在世界各地拥有 10 多个办公地点。这也带来了一些具体影响，我们稍后会讨论。
+<details>
+<summary>Original English</summary>
+Uh basically, you know, we in in a tech sense, we take a lot of data, you know, we build models, and then we make decisions with them. And these decisions need to work in a very high-performance manner, you know, we make 10 million plus trades a day, pricing million plus instruments, and petabytes of data processed daily. And also, we're a pretty global firm. We have 10 plus locations across the world. Um and that comes with, you know, certain implications that we'll get into for a second.
+</details>
+
+>> [清嗓子]
+<details>
+<summary>Original English</summary>
+>> [clears throat]
+</details>
+
+### 做市商与传统科技公司的反馈闭环差异
+
+>> 通常情况下，如果你看一家传统的科技公司，你可以想想他们是如何衡量自己赚了多少钱的。大概是这样的流程：你实施某项改动，向用户发布，然后用户使用数天、数周等等，你收集一些参与度指标。然后经过数月、数季度，也许数年，你再看收入、生命周期价值（LTV）等指标。我以前在苹果公司工作过，所以我了解这是怎么运作的。
+<details>
+<summary>Original English</summary>
+>> So, typically, if you look at a traditional tech company, you can think about how they think about, you know, how they measure how much money they make. Uh it's something along the lines of you implement some change, you roll it out to users, and then users use it for days and weeks, etc., and you collect some engagement metrics. Uh and then over, you know, months and quarters, maybe years, you look at like revenue, long-time value, etc. I used to be at Apple, um so I know how this works.
+</details>
+
+但在 Optiver，我们实施了一项改动，将其推给我们的交易员和量化人员，实际上在几小时之内，你就能看到对盈亏的影响。事实上，每天一开始，我们基本上把资产负债表归零，到了当天结束时，再看我们赚了多少钱。因此，这对我们如何决定规模化扩展 AI 以及如何构建系统产生了一定影响。
+<details>
+<summary>Original English</summary>
+Um but um at Optiver, we implement something. Uh we roll out that change to our traders and our our quants, and literally within hours you can see the P&L impact. In fact, you know, at the top of every day, we basically zero out the balance sheet, and then look by the end of the day how much money we've made. So, this has certain implications around how, you know, we make decisions around how we want to scale AI and how do we want to build things.
+</details>
+
+>> [清嗓子]
+<details>
+<summary>Original English</summary>
+>> [clears throat]
+</details>
+
+首先，反馈回路要紧凑得多。当你做出一个决策，到当天结束时你就会开始看到该决策带来的影响。当然，就长期而言，我们交易的某些工具期限更长，长期来看还有更多价值有待挖掘，但你马上就能开始看到某项改动的影响。
+<details>
+<summary>Original English</summary>
+>> First of all, the feedback loop is much more immediate, right? Like, when you make a decision, by the end of the day you'll start seeing the impact of that decision. Of course, like, over long term, there are instruments that we trade that are, you know, longer horizon and there's more value to discover over long-term, but immediately you'll start seeing the impact of something.
+</details>
+
+但硬币的另一面是，如果你错失了一个机会，那意味着机会损失可能是相当昂贵的。特别是如果市场上发生了一些特殊情况——[清嗓子] 假设有 SpaceX AI IPO 之类的事情，而你错过了，那代价可能相当高昂。
+<details>
+<summary>Original English</summary>
+But, the other side of that coin is that if you miss an opportunity, then that means that opportunity loss is potentially pretty costly. Especially if, you know, there's like a special [clears throat] thing going on in the market, let's say that there's a SpaceX AI IPO or something like that and you miss out on that, then that's probably, you know, pretty costly.
+</details>
+
+这意味着我们需要非常迅速地做出决策。我们需要能够非常有效、非常高效地衡量它们。我们必须具备行动倾向。这意味着你所能做出的决策，其价值和重要性的上限非常高。在面向用户的服务型业务中，比如 Spotify 等等，从根本上说，他们是在争夺客户有限的注意力。而在交易中，你交易得越多，赚的钱就越多。所以，经济模型会有些不同。
+<details>
+<summary>Original English</summary>
+Which means that we need to make decisions pretty quickly. Uh we need to be able to measure them really effectively and really efficiently. And we got to have a bias for action. Um that means like the ceiling of the value and importance of a decision decision you can make is really, really high. Um so, in the in the case of like a service, like a user-facing service business, like Spotify or whatever, like fundamentally, they're competing for a finite amount of attention of the customers. Versus with your trading, the more you trade, the more money you make, right? So, you know, the economics are a little bit more different.
+</details>
+
+### AI 平台的核心构建原则
+
+为了实现这一点并能够以这种方式扩展和运作，我们基本上需要围绕几个核心原则来构建我们自己的 AI 平台。
+<details>
+<summary>Original English</summary>
+So, to accomplish this and to be able to scale and operate at this way, we basically needed to build our own AI platform around a few core principles.
+</details>
+
+快速行动。我的意思是，这一点我们刚才已经讨论过了。当然，快速行动的一部分在于具备模块化能力。因为在 AI 领域，每天都有新模型、新产品、新范式出现。我们之前在做循环（loops），现在我们在做蜂群（swarms），现在又在做图（graphs）等等。我们需要能够应对这些变化。如果某种范式很有价值，那就对其进行评估；如果有价值，就引入它。因为一旦你引入它，你就会开始获得更多价值。
+<details>
+<summary>Original English</summary>
+Move fast. I mean, we talked about that already. But, of course, part of moving fast is that being able to be modular. Because, you know, in the AI world, every day there's a new model, there's a new product, there's a new paradigm. We're doing loops, now we're doing swarms, now we're doing graphs, etc. And we need to be able to account for that. And if that paradigm is valuable, like measure it. And if it is, bring it in. Because the moment you bring it in, you're going to start, you know, getting more value.
+</details>
+
+当然，为了能够理解这一点，我们需要具备在每一层进行度量的能力。做交易自然意味着要做大量的回测等工作。但同时，当一个新模型推出时，虽然外部有关于该模型表现的基准测试，但我们也需要了解它在我们内部基准中的表现。因为我们拥有的基准数据分布与外部公开的数据分布是不同的。
+<details>
+<summary>Original English</summary>
+And of course, to be able to understand that, we need to build to measure at every layer. You know, of course, like trading means lots of backtesting, etc. But also, you know, we need to when a new model comes out, yes, there's of course external benchmarks as to how this model is performing, but we also need to be able to understand how in our internal benchmarks these things perform. Because the data distribution of the benchmarks that we have is different from what they have available externally.
+</details>
+
+此外，交易员是非常聪明、主观能动性极高的人。因此我们希望平台具备高度的自服务性。但是，任何时候只要你提供纯粹的自服务，局面都可能变得非常混乱。所以我们也需要能够提供良好的默认配置。
+<details>
+<summary>Original English</summary>
+Now, the thing is, traders are pretty smart people. They're pretty high agency people. So, we want our platform to be very self-service. But, of course, anytime you provide something purely self-service, it can be really chaotic. So, we also need to be able to provide good defaults.
+</details>
+
+我们与他们协同的一种方式是向前派驻（forward deploy）。我们有一支规模相当不错的 AI 工程团队，我们让工程师去和交易员坐在一起，与他们协作，理解他们是如何交易的，向他们展示 AI 如何能带来更多价值，从中学习并将经验带回平台。
+<details>
+<summary>Original English</summary>
+Uh and one way we kind of have this um way of working with them is also being able to forward deploy. So, we have a fairly decently sized AI engineering team and we take our people, we have them sit down with the traders, work with them, understand how they trade, teach them how AI can add more value to them, learn and bring it back to the platform.
+</details>
+
+大家肯定都听过关于 OpenAI、Hugging Face 等等的故事。随着我们在 AI 领域做得越来越多，我们自然也需要确保是以安全的方式进行。可以想象，如果智能体失控并在我们的技术栈中乱搞，可能会带来相当负面的影响。
+<details>
+<summary>Original English</summary>
+Now, of course, you've all heard the stories of like opening eye hugging face, etc. So, of course, as we're doing more and more with AI, we also need to make sure that we're doing in a safe manner. As you can imagine, there's potentially pretty negative impacts if the agents kind of go haywire and do stuff with our stack.
+</details>
+
+不过，我想强调的是，公司里的每个人都在使用 AI。每个人的用法可能略有不同，但从根本上说，我们是非常非常 AI 原生（AI native）的，我想这是我们现在通用的说法。
+<details>
+<summary>Original English</summary>
+Um but, I do want to underscore that everybody in the company is using AI. Like, everybody's using it a little bit differently, but fundamentally we're very very um AI native, I guess is the term that we're using now. Um
+</details>
+
+同时，由于我们处于高度受监管的行业，且极其重视我们的知识产权，我们所做的一切都是在本地（on-prem）完成的。我们有自己的本地 GPU、本地基础设施等等。我们唯一会向外部服务发起请求的情况，实际上就是调用第三方的模型推理。当然在这些情况下，我们与这些公司签署了零数据保留（zero data retention）等协议。
+<details>
+<summary>Original English</summary>
+And, of course, because we're a highly regulated industry and we value our IP deeply, everything that we do is on prem. So, we have our own on prem GPUs, our own prem infrastructure, etc. The only thing that we phone home outside of our service really is for like third-party model inference. And, of course, in those cases, we have like things like zero data retention, etc. agreements with the companies.
+</details>
+
+### AI 平台全栈架构：从推理网关到智能体工作台
+
+这幅幻灯片有点像那种信息量极大、让人眼花缭乱的架构总览。我不指望大家能全部消化吸收，但如果大家想拍照并在会后和我交流，非常欢迎。我在最后还会再展示一次这张幻灯片。
+<details>
+<summary>Original English</summary>
+So, here's kind of like a very, you know, shock and awe, like a lot of information on the slide type of view of our AI platform. I don't expect you to, you know, digest all of this, but, you know, if you want to take a photo and talk about me afterwards, be my guest. I'll flash this slide again at the end.
+</details>
+
+但总体而言，我想强调的是，我们必须对技术栈的每一层负责。在底层，我们有来自第三方供应商的模型，同时也自托管我们自己的模型以及开源模型。
+<details>
+<summary>Original English</summary>
+But, broadly, the things that I want to highlight is that um we all have to be accountable for every layer of the stack. At the bottom, you know, we have models from third-party providers. We also self-host our own models and the open-source models.
+</details>
+
+我们有一个推理网关（inference gateway），提供诸如在这些不同模型之间进行路由等功能。我们可以衡量在每个模型上的花费，可以分配预算等等，我稍后会详细介绍。这当然也为我们提供了弹性。例如如果某一个供应商服务中断，我们随时可以切换到另一个供应商。因为一旦我们停机，就意味着我们无法赚钱。
+<details>
+<summary>Original English</summary>
+We have an inference gateway that provides things like routing between these different models. Um we can uh, measure how much we're spending on each of these models. We can assign budgets, etc. I'll go to that in in a second. And of course this gives us resilience. Like if one provider goes down, we can always swap out to a different provider, etc. Because again, any time that we're down, you know, that's basically we're not making money.
+</details>
+
+然后我们有自己的智能体平台，智能体在其中拥有已注册的能力，例如技能（skills）、插件（plugins）和工具（tools）。每个智能体以及使用智能体的各个团队都可以接入自己的知识与记忆系统。
+<details>
+<summary>Original English</summary>
+Um, and then we have our own agent platform where uh, agents have uh, registered uh, capabilities like skills, plugins, tools. Each agent in each team with the using an agent can bring in their knowledge and memory systems.
+</details>
+
+我们有一个智能体网关（agent gateway），它基本上就像是全公司所有智能体的统一账本，能够让它们汇聚在一起、进行通信，并以类似的身份管理方式编排人类与智能体等等。这便涉及到了大家可能也听说过的智能体蜂群（agent swarm）等概念。最后，对我而言非常重要的一点是——我也是个做产品的人——我们拥有合适的界面供用户与智能体交互。因为你可能构建了一个出色的平台，但如果没有人想用、喜欢用或知道如何使用它，那其实就毫无意义。
+<details>
+<summary>Original English</summary>
+We have an agent gateway which is basically like a single ledger of all of the agents in the company being able to come in together, communicate, orchestrate humans and agents with similar identity management, uh, etc. So this kind of goes into things like the agent swarm, etc. concepts that you also may have heard about. And finally, what's really important to me, I'm a product guy as well, is that um, we have the right surfaces for our users to engage with the agents because you can build a great platform, but if nobody wants to, likes to, or knows how to use it, then it doesn't really matter.
+</details>
+
+所以我们构建了自己的 Web 界面，供大家访问他们的会话等等。我们还有这个被称为智能体工作台（agent workbench）的工具，基本上用于画像管理（persona management）。各个团队可以构建自己使用智能体的配置文件并进行共享。我们还有一个全公司所有人都可以访问的个人助手。
+<details>
+<summary>Original English</summary>
+So we've built our own kind of um, web interface for people to access like their sessions, etc. Uh, we have this thing called our agent workbench which is basically persona management. Teams can kind of build their own profile of how they use the agents and share. Uh, we have a personal assistant that everybody in the company uh, has access to. Um,
+</details>
+
+是的，我稍后还会回到这里。如果大家有问题，我们可以在会后讨论。
+<details>
+<summary>Original English</summary>
+yeah. So again, I'll get back to this later, uh, but if you have questions we can talk about it afterwards.
+</details>
+
+### 前沿模型当日上线与评测机制
+
+那么，我们如何践行这些原则呢？我们的一项原则是：如果一个全新的前沿模型公开发布，我们希望当天就能将其应用到生产流程中。因为如果它确有价值，其中蕴含的价值是巨大的。但它到底有没有价值呢？我们需要能够在黄金数据集（golden sets）上对其进行基准测试。
+<details>
+<summary>Original English</summary>
+Right. So how do we move on these principles? Uh, one principle that we have is that, you know, if a new frontier model is made available publicly, uh, we want to be able to leverage it in production flows the same day because there's immense value in that if it is valuable. But is it valuable, right? We want to be able to benchmark it on golden sets.
+</details>
+
+这意味着我们需要有一套成熟的评测框架。我们与核心的客户交易团队合作，收集他们的基准测试集。我们将这些数据集接入进来，每当有新模型发布，我们就在这些新基准上运行该模型，立即获得指标，并能与公司内部的同事分享，看看：“嘿，这对于我们的使用场景真的有价值吗？”
+<details>
+<summary>Original English</summary>
+So that means that we need to have a mature evaluation framework. Um, and then we partner with key customer trading teams where we collect their benchmarks. We onboard onto them and whenever we get a new model, we run the model on these new benchmarks, immediately know the metrics, and can share with the folks in the company to see, "Hey, is this really valuable for our use cases?"
+</details>
+
+此外，每当出现不同的模型，通常意味着我们需要在网关中提供该模型，准备好合适的 API 和接口，正确配置成本管理等等。很多时候，新模型意味着测试套件（harnesses）需要更新等，我们也会负责相关的更新和交付管理。
+<details>
+<summary>Original English</summary>
+But additionally, you know, anytime there's a different model, usually that means that we have to make the model available in our gateway, we have the right APIs, interfaces, we have the cost management, etc. set up correctly. And often times new models mean like the harnesses need to be updated, etc. and we also manage the update and delivery of that as well.
+</details>
+
+上线之后，随之而来的还有运营预期。我们是一家全球化公司，因此需要提供全天候支持。我们的团队在不同地区安排了支持轮值，以确保高可用性。我想今天在场的观众中有些人就在负责当天的技术支持，不过这先按下不表。
+<details>
+<summary>Original English</summary>
+And then of course, yes, we launch it, but then that also comes with the expectations. We're a global company, so we need to have round-the-clock support. So our team, you know, has in different regions support rotations to make sure that the uptime is high. I think some people here in the audience actually are in support today, but anyway.
+</details>
+
+在运行这些基准测试之后，我们还需要让公司内部的人明白：“好的，我们研究了这个模型并进行了基准测试，它的表现如何，你应该如何使用它，我们的建议是什么”，并保持这条沟通渠道畅通。
+<details>
+<summary>Original English</summary>
+Um and then of course, like we run these benchmarks, we also need to be able to have um the people in the company understand like, okay, we looked into this model, we benchmarked it, here's how well it works, here's how you use it, here's our recommendation, and kind of keep that communication line open.
+</details>
+
+另一件事是，由于我们在不同模型之间拥有选择权，只要有任何模型能增加价值，我们都希望将其集成进来。我们需要能够防范不同地区或不同云服务商等场景下的模型可用性风险。
+<details>
+<summary>Original English</summary>
+Um another thing is that because we have optionality between different models, uh if any model's adding value, we want to integrate it. Uh and we need to be able to insulate against model availability in like different regions, uh or different, you know, cloud providers, etc.
+</details>
+
+此外，我们有一项要求：部分工作负载必须在完全处于 DMZ 的本地网络区域内运行。出于成本原因以及隔离原因，我们希望做到对模型和 harness 保持中立。这意味着我们接入第三方供应商，也拥有本地模型，所有流量都会经过我们的推理网关。
+<details>
+<summary>Original English</summary>
+Uh and also we have a requirement that some of our workloads run in a completely DMZ on-prem zone. Uh so we also there's cost reasons for that, there is um reasons of isolation for that. So for those reasons, we want to be able to be agnostic to the model and harness, so which means that we have the third-party providers, uh we have on-prem models, and all of it kind of goes through our inference gateway.
+</details>
+
+我们记录一切。与模型的每一次交互都会被记录下来，并且我们会自动将它们同步到我们的评测系统中。我们支持许多不同的 harness，在此之上，我们构建了一个 meta-harness 层，各团队可以在其上配置自己的使用体验，并在这些不同的 harness 之间实现一定的可移植性。
+<details>
+<summary>Original English</summary>
+We log everything, uh every interaction going with the models is logged, and we also automatically move them to our evaluation system. Uh we have a bunch of different harnesses that we support, and on top of that we have a meta harness layer that basically lets teams configure their experience on top of that and have some portability between these different harnesses. Um
+</details>
+
+>> [清嗓子]
+<details>
+<summary>Original English</summary>
+>> [clears throat]
+</details>
+
+各团队可以在这个 meta-harness 层中定义他们自己的配置，并接入团队的知识库。知识会随着时间自动沉淀；我们通过查看调用链路追踪（traces），推导出获取额外知识的途径。通过这个 meta-harness，你既可以在我们的平台上部署和管理智能体，也可以通过我前面介绍的 Web 门户 IDE 界面来访问它们。看到有人在拍照，我稍等大家一下。好的。
+<details>
+<summary>Original English</summary>
+>> so teams can define their own harness configs in this meta harness layer, and that plugs into the team's knowledge base. Automatically knowledge is harvested over time, we look at the traces and then derive ways to uh get additional knowledge as well. Uh and then through this meta harness, you can either deploy manage the agents on our platform or you get access to them through the web portal IDE UI that I described earlier. I see some people taking photos, so I'll give it a second. All right.
+</details>
+
+### Token 成本控制与架构优化实践
+
+>> [清嗓子]
+<details>
+<summary>Original English</summary>
+>> [clears throat]
+</details>
+
+>> 这种图表大家很多人可能都很熟悉。这里大致描绘了我们在 AI 上的支出情况，上面没有标具体数字。但我们的使用量确实越来越大。可以看到，12 月份出现了类似 Claude Code 的时刻，支出直线上升。顺便提一句，这里的拐点正是我加入公司的时间，所以我不知道这是否和我有点关系。
+<details>
+<summary>Original English</summary>
+>> So, um this type of a chart may be familiar to a bunch of you. Uh this is kind of a roughly illustrated version of how much we're spending on AI, no numbers on it. Um but we are doing more with it. And this is, you know, in December you see like the Claude code moment and things go up. By the way, this inflection point here is like when I joined the company, so I don't know if I have anything to do with that. Um
+</details>
+
+然后到了夏天，迎来了一批重大前沿模型的发布。大家可以看到，支出急剧飙升。但随后我们把它重新控制住了，因为我们在流程中构建了一些优化机制，帮助我们真正控制住了成本。
+<details>
+<summary>Original English</summary>
+and then um then we have here, you know, like the big frontier model releases of the summer. As you can see, like spend really shot up there, but then we kind of got it back under control because we built some optimizations into the process that helped us really get this thing uh in check.
+</details>
+
+实际情况是，我们投入越多，能获得的价值就越大。我们非常有信心能够持续获得回报。但我们希望确保资金花得明智。我们发现的一个现象是：我们有一大堆 MCP、知识库和各种信息。在一个全新的会话中，我们发现用户默认情况下往往至少带上了 200k token 的上下文，有时甚至更多。这太离谱了，因为每个人都在往里面硬塞大量内容。这就是把所有事情做成完全自服务会遇到的问题。我们需要大家共同承担责任（skin in the game）。
+<details>
+<summary>Original English</summary>
+So, um the thing is the more we spend, the more value we can get. We are pretty confident that we can, you know, keep getting returns. We want to make sure that we're spending wisely, right? So, one thing that we discovered was that um we have a bunch of MCPs, we have a bunch of knowledge bases and information, etc. Um and on a fresh session, we were seeing that, you know, sometimes people have like 200k tokens worth of context like by default minimum, sometimes even more. That's That's ridiculous, right? Because everybody was kind of dumping a bunch of stuff in there. This is the kind of problem with like doing things completely self-service, right? We need to have skin in the game.
+</details>
+
+因此，我们实施了一系列改进措施：
+- 引入了 MCP 工具搜索（tool search）；
+- 为智能体提供了选项：与其直接调用 MCP，不如使用封装了大量 MCP 的自有 CLI，这种方式效率要高得多；
+- 分析了缓存特性，例如缓存何时失效、参数需要设置多长时间、是否需要区别设置或动态设置；
+- 与各个团队合作，进一步优化他们的 harness 配置，例如将部分内容移入知识库，而不是塞进庞大的系统提示词中。
+<details>
+<summary>Original English</summary>
+So, we implemented a bunch of different changes. Uh we brought in MCP tool search. Uh we gave the agents the option to um rather than calling MCPs, have their own CLI that's wrapping around a bunch of the MCPs, which is like much more efficient. Um we looked at the caching characteristics of like when caches are getting invalidated, how long do we need to set these parameters? Do we need to set them differently? Do we set them dynamically? Um and then we work with the individual teams to kind of come up with further optimizations to their harnesses. You know, we do we put some things into knowledge base rather than this like massive system prompt etc.
+</details>
+
+这些改进的好处在于，它们都会随着 Token 成本的增加而成比例放大效果。基本上，Token 单价越贵，你节省的成本就越多。这里的核心在于：是的，你可以直接把模型摆在那里供大家使用；而我甚至还没谈到我们在模型路由或子智能体优化等方面所做的工作。单纯在单次会话层面，几乎总有被忽视的优化空间，而我们正在对此进行不遗余力的优化。
+<details>
+<summary>Original English</summary>
+And the good thing about these improvements is that um these things all scale with token cost, right? So basically if the tokens are more expensive, you're saving more on this. But the point here is that um yes, you can dump models out there, make them available to people. And I'm not even going into the work that we're doing on things like, you know, model routing or sub-agent optimizations etc. Sheer single session stuff, there's almost always value left on the table. And we're, you know, ruthlessly optimizing towards that.
+</details>
+
+我们在这个时间节点上线了优化措施，但当然总需要经历推广上线的流程。当涉及到跨不同全球区域进行推广时，我们的技术栈显得稍微有点复杂。
+<details>
+<summary>Original English</summary>
+Yeah, there we go. And we shipped optimizations at this point in time, but of course there's always like roll out etc. Our tech stack is a little bit interesting when it comes to rolling out across the different global regions.
+</details>
+
+另一件切实帮助我们削减开支的事情是：事实证明，如果你告诉大家他们花了多少钱，提供更直观的可视化、更完善的告警，并给予他们自主管理的权力，大家实际上能做得很好。我们构建了一套系统，让各个团队自行设置告警和限额。我们看到许多团队都为自己设定了合理的额度。
+<details>
+<summary>Original English</summary>
+But then also other things that really helped us spend less was that um turns out that if you tell people like how much they're spending and like give them a little bit more visibility, a little bit more alerting, and give them the agency to self-manage, they actually do a pretty good job, you know. We built a system to basically have teams kind of set their own alerting and limits. And we've seen like many teams, you know, basically set reasonable limits for themselves.
+</details>
+
+另一个选择是探索开源模型。市面上有不少开源模型在 Token 成本上与前沿模型相比极具竞争力。虽然不一定适用于所有场景，但我们发现它们在某些地方是性价比极佳的替代品。我们一直在内部提供这些模型，并且看到越来越多的人开始使用它们。
+<details>
+<summary>Original English</summary>
+Another option is, you know, exploring open-source models. Uh you know, there are a bunch of open-source models that are on token cost pretty competitive with the frontier models out there. It's not necessarily right for every use case, but we found opportunities where they're a good value replacement. And we've been basically making that available internally. Uh and we've seen more and more people leverage those.
+</details>
+
+当然还有模型路由等等。我们一直在探索不同的方法，动态地将 Prompt 发送到较便宜的模型；或者采用由前沿模型生成计划、再由较小模型进行拆解实现的模式。
+<details>
+<summary>Original English</summary>
+Then of course, like there's things like model routing etc. There's we've been exploring different approaches to dynamically send the prompt to like a cheaper model etc. Or sometimes have a way where we have the like plan generated by like a more frontier model and the implementation be broken down by smaller models, etc.
+</details>
+
+最后，我认为知识库是被低估了的。知识库非常重要，但只要构建得当，它也有助于控制开支。因为如果你只检索适量的上下文，从根本上说你检索的上下文总体更少。简而言之，我们依然在大量使用 Token，但这关乎如何从同样的 Token 中获取更高的投资回报率（ROI）。
+<details>
+<summary>Original English</summary>
+Um and finally, you know, I think knowledge bases are underrated, uh which yeah, I mean they're very important, but they also help get spend in control if you do your knowledge base effectively because then you're retrieving less context fundamentally if you just retrieve the right amount of context. Um so, long story short is that we're still investing I mean using a lot of tokens, but this is just about getting more ROI out of the same tokens.
+</details>
+
+### 面向用户的产品化与多智能体协作
+
+最后，我想谈谈如何满足用户的现有使用习惯。几个月前，我们处于这样一种状态：很多人使用不同的 harness，搞了各种奇怪的定制配置连到各自的开发机上，有些人还在做简陋的 Web UI 等等。于是我们说：“既然大家都在做这类事情，为什么我们不直接做个好用的版本，向全公司开放呢？”
+<details>
+<summary>Original English</summary>
+And finally, I kind of want to talk about uh meeting the users where they're at. Um so, a few months ago we were in this place where like a bunch of people are using different harnesses. They have all these weird bespoke setups to kind of team up into their dev boxes and some people were building, you know, hacky web UIs, etc. etc. Whatever. So, basically what we said was like, "Hey, you know, there's a bunch of people doing these types of things. Why don't we just build a nice version of this and then make it available to everyone in the company?"
+</details>
+
+我们正是这么做的。在我们的 Web 门户中，我们构建了这样一个系统：你可以管理自己的会话，拥有聊天窗口，还可以在里面查看产物（artifacts）。市面上有些 harness 厂商也提供类似的产品，但我们觉得我们构建的方案与我们的基础设施契合得很好，并且我们可以按照自己期望的速度进行迭代。
+<details>
+<summary>Original English</summary>
+So, that's exactly what we did. In our web portal, we built this basically system where you can manage your sessions. You can have chat windows. You can have like artifacts in there. Um there are similar products out there offered by, you know, you know, some of the different uh harness companies, but we feel that this worked very well with our infrastructure um and we can kind of iterate it at the rate that we would like to. Um
+</details>
+
+实际上这也达到了一个阶段，即公司里不同的交易员现在开始贡献代码了。他们发现对自己的工作流有价值的功能，直接提交一个 PR，我们合并更新。现在我们已经支持了协同文档编辑等功能。
+<details>
+<summary>Original English</summary>
+so, basically this was actually uh also at a at a place where different traders in the company are now kind of contributing code. They find something that's valuable to their workflow and then they did they just send up a PR and we just update it and then now we have things like, you know, collaborative document editing and things like that.
+</details>
+
+事实上，我们正在推进一个“智能体多人协作（agent multiplayer）”的功能：我在里面有我的会话，我们可以创建房间，汇集我的智能体、你的智能体以及其他已部署的智能体，将所有这些整合在同一个地方。这极大地提升了大家的生产力。我们现在还推出了 Slack 客户端等，用户在移动办公时也能使用。总体来说，我们的用户主观能动性极高，如果我们不为他们构建，他们就会自己去写一个。所以我们直接做了一个更好的版本。
+<details>
+<summary>Original English</summary>
+And in fact, we're kind of getting this to a place where uh we're doing this, you know, agent multiplayer thing where now I have my sessions in there. We can create rooms with like my agents, your agents, like other deployed agents and we can kind of have all of that in one place and this really helps uh people be more productive and uh you know, we have now a Slack client, etc. So, you can also do it on the go and whatnot. So, basically, um our users are very high agency. Uh they will go and build something if we don't build it for them. So, we just built a better version of it.
+</details>
+
+这就是我们做这件事的总体理念。我们拥有一个高度模块化的平台，并且我们在持续对其进行迭代。到目前为止，我们的进展非常顺利。
+<details>
+<summary>Original English</summary>
+Yeah. So, uh basically, this is um the overall overarching philosophy of how we did this. Uh we have a platform, very modular, uh and um we continue to iterate on it. But, so far, we're having a pretty good time.
+</details>
+
+演讲到此结束。如果大家对这方面或任何其他领域有疑问，我们可以交流。另外，今晚我们有一场社交活动，欢迎大家前往我们的展台登记。活动会很有趣，我们准备了精美奖品。
+<details>
+<summary>Original English</summary>
+Um that's the end of the talk. Uh but, if you have questions about anything on this or any other area, we can talk. And by the way, we have a networking event uh this evening. Uh please come to our booth and register. It's going to be fun. We have cool prizes.
+</details>
+
+>> [掌声]
+<details>
+<summary>Original English</summary>
+>> [applause]
+
+[applause]
+</details>
+
+### 现场问答：知识库、自研平台与状态评测
+
+>> 有什么问题吗？
+<details>
+<summary>Original English</summary>
+>> Questions?
+</details>
+
+好的。我们确实一直在探索许多不同的方案。就我个人而言，我对市面上的现有方案都不太满意。这存在权衡取舍。如果你去问一些前沿实验室他们用什么做知识库，他们会说就是巨大的 Markdown 文件、层级化的 Markdown 等等。这在某些场景下管用。
+<details>
+<summary>Original English</summary>
+Yeah. So, we've um definitely been exploring a bunch of different options. Um personally, I'm not happy with any of the options out there. There's tradeoffs, but I mean, if you ask like some of the Frontier Labs what you do for knowledge base, they're like just huge markdown files, hierarchical markdown, etc. Um there's places where that works, but um there is um
+</details>
+
+向量搜索有其自身的好处和劣势。我们采用了一种混合方案，使我们能够探索这些不同的选项。我个人希望我们能在图数据库等方向投入更多精力，那些可能会更有价值。每天在 Twitter 上我都能看到处理记忆和知识的新方法。这是我们希望投入更多时间解决的问题，我对我们目前的解决方案还不满意。请讲。
+<details>
+<summary>Original English</summary>
+vector search has its own benefits and disadvantages. We have a hybrid approach that kind of uh allows us to explore these different options. Personally, I want us to spend more time around like doing things like perhaps some graph databases, etc. that are going to be uh more valuable. I mean, every day on Twitter, I see something like new way of like handling memory and knowledge. Um that's a problem that we want to spend more time on. I'm not happy with our solution. Go ahead.
+</details>
+
+>> 是自研的还是……
+<details>
+<summary>Original English</summary>
+>> There's hand built or
+</details>
+
+>> 好的，好问题。使用自研解决方案相比 Codex 获得的价值。这里有几个方面。一个比较平淡的原因是：因为所有的东西都在我们自己的基础设施内，很多现成工具无法按你期望的方式工作。直到最近，Codex 才真正支持在自有基础设施上运行托管智能体等功能。现在他们开始提供这种支持了，我们实际上也一直在与他们合作。但这确实是我们最初选择这条路线的一个原因。
+<details>
+<summary>Original English</summary>
+>> Yeah, good question. Um, value gained from using hand built solutions versus Codex. So, there's a few things. Um, I mean, one kind of boring answer is that because everything is kind of in our own infrastructure, a lot of these tools don't work in the way that you would want them to. Um, un- until recently, Codex didn't really have the option to kind of run managed agents, etc. or some of these things on your own infrastructure. Now, they've started offering them and we've been working with them on it, actually. But, um that was one reason why we started this way.
+</details>
+
+其次，我认为提供此类解决方案的许多厂商往往试图将你绑定到他们的模型或其解决方案的其他组件上。一旦我们走上那条路，如果我们过度依赖某一家特定供应商的基础设施，我们的迭代速度就会受制于对方允许的节奏。我们之前使用的一家推理网关供应商就出现过这种情况：新产品发布了，我们需要接入，对方却说：“好的，先和我们的 GTM 团队谈谈，我们把你排进路线图。”到了那个地步，我们的反应是：“不行，我们实际上需要走得更快。”这也是原因之一。
+<details>
+<summary>Original English</summary>
+Secondly, I think the um most Many of the places that offer these types of solutions also try to kind of lock you into either their model or some rest of their solution. But, the moment we kind of go down that path, then we end up in a place where if our infrastructure is overly invested in one particular provider, we move at the speed that they let us move. Uh, we've actually encountered with um that was one of the uh inference gateway providers that we used to use. Um, and basically, we would encounter scenarios where something comes out, we need it, and they're like, "Okay, uh let's talk to our GTM team. Let's put you on the road map." Well, it's like and then by that point, it's like, "Okay, no, we need to actually move faster." Um, so that's also one of the reasons.
+</details>
+
+最后，我认为在其中一些领域，我们始终处于领先地位。例如在与一些前沿实验室交流时，针对我们实现托管智能体能力的方式，他们甚至会向我们请教具体是怎么做的。并不是要过度夸耀，但我们在工程能力和自身路线图上感到相当自信。所以目前进展顺利。我不认为这种自研方法适合所有人，但我们具备独特的环境与条件支撑我们这么做。请讲。
+<details>
+<summary>Original English</summary>
+Uh, and finally, I think the in some of these areas, we've been um consistently ahead of the curve. Like, uh talking to some of the frontier labs, um the the way that we've been doing managed agent capabilities, etc. like, they're asking us to tell them how we did it. Not to be bragging too much, but I think the um we feel pretty confident in our engineering and kind of our road map. So, that's also uh been well. I don't think this approach works well for everybody, but I think we have a unique um coalition of circumstances that allow for us to do that. Good.
+</details>
+
+>> 能谈谈你们的……
+<details>
+<summary>Original English</summary>
+>> Can you talk a bit about your
+</details>
+
+>> 好的。为了确保我准确理解了你的问题：我们如何将其他部分整合进评测和记忆的最佳实践是什么，对吗？
+<details>
+<summary>Original English</summary>
+Um yeah. So, just to make sure I understand your question correctly. What are some of the best practices of how we integrate the rest of this into eval and memory? Right.
+</details>
+
+正如我所说，我们一开始是对所有内容进行完整记录——每次工具调用、输入、输出等等，全都进行详细日志记录。这些数据都会进入我们的评测系统。我们发现的挑战——我认为这可以说是一个开放性难题——在于当你尝试评估工具调用时遇到的问题。比如我们在 Slack 中运行了一个技术支持机器人智能体。我们想要评测这个智能体，假设我们在另一个模型上运行它会怎样？可是这个支持机器人调用的很多工具依赖于外部世界状态，而这些状态在当时你运行它时与现在是不同的。这是一个非常典型的问题。
+<details>
+<summary>Original English</summary>
+Um so, I think the we started at a place where, you know, we log everything, like I said, every tool call, input, output, etc. Just hotel logging. And that goes into our evaluation system. Um the challenge that we found with that, and we it's kind of an open problem, I would say, is that um when you're kind of trying to evaluate like a tool call, I mean, we have like, for example, a support bot agent that we run in Slack. And we want to evaluate that agent. Let's say, what if we ran this agent on a different model? Well, the support bot is leveraging a bunch of tools that depend on the state of the world that were different at the time when you ran it. And that's the pretty like typical problem.
+</details>
+
+我们一直在探索的方案是：我们能否利用这些工具对世界状态进行快照（snapshot）？根据工具接入的具体系统，这个问题的答案各不相同。如果面对的是交易回测数据库，那就很简单，因为你总能指定具体的时间点，我们也就是这么做的。但如果是其他系统，比如 Slack，当最初进行评测时 Slack 的状态是怎样的？也许有一些方法可以回放特定时间点的 Slack 状态，但对于其他系统而言就很难做到。
+<details>
+<summary>Original English</summary>
+Um we've been working on basically things like, can we snapshot world states with these tools? And depending on the system that it ingresses with, it's, you know, there's different answers to that question. If you're looking at some like trading back test database, easy. Like that you can always point in time. That's what we do. But if you're looking at some other system, like if you're looking at Slack, for example, what was the state of Slack when this was originally evaluated? Maybe there's some ways to kind of replay Slack from a particular point in time, but other systems, not really.
+</details>
+
+因此，我们尝试评估该特定工具调用能够在多大程度上还原到特定时间点，并为其赋予置信度。我们在记录时依然保持原样记录。当重新运行评测时，我们在调用工具时会指明想要使用的快照版本。我们在 MCP 周围加了一层代理。但这种方式并不完美。除了把所有东西都记录下来，我不知道是否还有更完美的方案。我想我可能还有时间回答最后一个问题？请讲。好的。
+<details>
+<summary>Original English</summary>
+So, we kind of try to assign the confidence value as to how well we can point in time this particular tool invocation. And we still log it as such. And when we're rerunning the eval, we will run the tool with kind of saying, okay, I want to kind of the snapshot. We have like a proxy around the MCPs. But, you know, it's imperfect. And I don't know if there's a perfect solution other than just record, you know, everything. Yeah, I maybe I talk time for one more? Good. Yeah.
+</details>
+
+这是我们遇到过好几次的一个非常经典的问题。我们有一个团队做了一个智能体，协助他们进行代码编写和分析。原本它的范围仅限于该团队的代码仓库。后来大家觉得，要是也能和另一个团队协作，让对方的内容也接入进来该多好？复杂度随即爆炸式上升。现在它需要拉取多个代码库，涉及不同的鉴权等等，这是个典型的问题。
+<details>
+<summary>Original English</summary>
+That's a very classic problem that we've actually run into several times. You know, we had this one team that built an agent that did like coding and like analysis with them. It was kind of scoped to their repo and it was like, well, what if we also had worked with this team and have their thing also come to us and immediately kind of explodes in complexity. Now it's checking out multiple repos that have different off, etc. like typical problem.
+</details>
+
+最初我们的解决思路是：如果我们就照这个方向做呢？如果我们直接创建一个合并了两边所有功能的新智能体呢？但往往结果是产生大量技术债，运行效果非常差。我认为我们目前针对这种范式的答案是：显然每个智能体都要做版本管理等。对于小幅度的增量调整，你可以向智能体发布新版本并赋予新能力；但面向未来，我们更鼓励大家利用我们的智能体网关——不要让单个智能体承担 10 项不同的工作，而是将智能体的范围限定在它们擅长的具体任务上。
+<details>
+<summary>Original English</summary>
+So, initially our solution was explore, okay, what if we like literally just did that? What if we just made the new agent that just had a union of the functionality, but often times that ends up, you know, a lot of tech debt, works very poorly, etc. I think our current answer to that type of paradigm is obviously every agent is version, etc. So, you can if it's small increments, you can push a new version to the agent, make make new capabilities, but going forward we would more encourage people to basically leverage our agent gateway where rather than one agent having like a 10 different things that it does, scope your agents to like a task that they're good at.
+</details>
+
+这样你就可以轻松对其进行度量，轻松管理其生命周期；然后由另一个智能体与之交互，就像在操作自己一样。因为我们构建了这样一种机制：智能体能够通过统一的账本互相唤起。这有助于我们更有效地扩展这类功能，而不是一味地将单个智能体膨胀到无所不包。这逐渐变成了一个多智能体编排（multi-agent orchestration）的问题。但保持可度量性至关重要，因为如果智能体过于臃肿，就会出现某些功能变好、某些功能变差，而你却很难轻易对其进行微调定位的情况。
+<details>
+<summary>Original English</summary>
+You can easily measure them at, you can easily manage the life cycle of it and then there'll be another agent that it can talk to easily as if it was, you know, kind of operating on itself because we kind of have this construct of agents being able to go through one ledger, spin up each other, etc. And that will help us scale these types of functionality more effectively rather than just bloating one agent to do everything. It becomes kind of like a multi-agent orchestration problem, but you know, that's I think keeping things more measurable is really important because if you really bloat the agent then you can end up in scenarios where like, you know, some of the functionality gets better, some gets worse, and you can't really, you know, tweak it easily.
+</details>

@@ -1,0 +1,1251 @@
+---
+author: a16z
+date: '2026-10-05'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=aCvrzhwUxg0
+speaker: a16z
+tags:
+  - consumer-ai
+  - personal-agent
+  - power-law
+  - monetization-model
+  - software-layer
+title: a16z 对话：消费级 AI 的真实格局、超级用户法则与软件层价值回归
+summary: 本期 a16z 播客深度探讨第七期《全球 Top 100 消费级 AI 应用榜单》。数据显示消费级 AI 呈现极端的幂律分布：全美仅约 4.5% 用户付费，其中前 1% 超级用户月均消费高达 903 美元。嘉宾探讨了个人智能体的爆发、订阅向广告与交易模式的演进、基础大模型竞争格局，以及初创企业如何在软件交互层与空白市场建立不可替代的护城河。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - Andreessen Horowitz
+  - OpenAI
+  - Anthropic
+  - Google
+  - Meta
+products_models:
+  - ChatGPT
+  - Claude
+  - Gemini
+  - Midjourney
+  - Suno
+media_books: []
+status: evergreen
+---
+### 消费级 AI 前沿亮点与核心数据速览
+
+**乔希·埃尔曼**: 当前最引人注目的全新演进趋势，毫无疑问是**个人智能体**（Personal Agents）的兴起。我们如今身处的世界，已经深深为 **ChatGPT** 所开创的“万物皆可对话”的交互范式所震撼；而现在，我们更能够把这些具备自主行动能力的智能体直接无缝嵌入日常使用的即时通讯应用中，让整个交互体验变得更加具有对话感与原生感。这是一个极其不可思议的全新范式跃迁。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: The newest, most interesting trend is definitely personal agents. We're living in a world that got super excited by what ChatGPT did by turning everything into a conversation, and now we can add these agents directly into our messaging apps to make them even more conversational. It's an incredible paradigm shift.
+
+*(Transcript Source: La nueva tendencia más interesante es la de los agentes personales. Estamos en un mundo entusiasmado por lo que ChatGPT logró al convertir todo en conversación, y ahora podemos sumar estos agentes a nuestras apps de mensajería para hacerlas aún más conversacionales. Existe un paradigma increíble.)*
+
+</details>
+
+**奥利维亚·摩尔**: 从宏观渗透率来看，大约有一半的美国成年人表示自己使用过人工智能工具。但在商业变现层面，目前仅有大约 **4.5%** 的美国消费者会真正自掏腰包为某款 AI 消费级产品按月支付订阅费用。更为惊人的是，在付费群体内部存在着极其悬殊的分化：处于金字塔最顶端 **1% 的超级高净值用户**，每月仅通过个人信用卡在各类 AI 工具上的直接支出就高达 **903 美元**。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: Roughly half of Americans say they use AI today. Around 4.5% of US consumers actually pay a subscription for an AI product. And the top 1% of highest-spending users are spending $903 a month on AI directly on their personal credit cards.
+
+*(Transcript Source: Aproximadamente la mitad de los estadounidenses afirman utilizar IA. Alrededor del 4,5% de los consumidores estadounidenses pagan una suscripción a un producto de IA. El 1% de los usuarios más ricos gasta 903 $ al mes en IA con sus tarjetas de crédito personales.)*
+
+</details>
+
+**乔希·埃尔曼**: 现实情况是，今天的普通人和开发者真正开始利用这些技术来构建完整的端到端软件了。大家正在打造出功能极其完备的独立商业产品。或许他们会指挥底层的智能体来辅助编写其中的一部分业务代码，但当他们最终把这整套端到端的无缝产品体验交付给终端消费者时，这背后蕴含的价值已经远远超越了一个简单的大模型微调或提示词补丁。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: The reality is that people are now building real software. They are building truly complete, end-to-end products. They might be using their agents to write part of that code, but when they deliver that whole complete experience to an end user, it is so much more than just a wrapper or a simple tweak on top of a model.
+
+*(Transcript Source: La realidad es que ahora la gente está creando software. Están creando productos realmente completos. Puede que utilicen a sus agentes para escribir parte de ese código, pero cuando ofrecen toda esta experiencia a un usuario, es mucho más que una simple corrección del modelo.)*
+
+</details>
+
+**奥利维亚·摩尔**: 看看 **OpenAI** 仅仅通过商业广告渠道所跑出的年化营收运行率（Run-rate），这究竟在向整个创投市场释放出怎样的信号？在以往的消费互联网时代，哪怕一家公司正式推出了商业化广告系统，通常也需要耗费数年甚至数十年漫长的积累才有可能触及这样的营收体量。而在广告产品的整体进化脉络上，最令我感到着迷的是其背后所展现出的全新商业潜力与惊人变现效率。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: What does the revenue run-rate that OpenAI has achieved through advertising tell us? In the past, it would take a company years and years and years to reach that milestone, even after launching an ad product. What fascinates me most in terms of the evolution of the ad product is where this whole ecosystem is heading.
+
+*(Transcript Source: ¿Qué nos dice la tasa de ejecución que ha alcanzado Open AI a través de la publicidad? Antes, a una empresa le llevaría años y años y años llegar a ella, incluso después de lanzar un producto publicitario. Lo que me fascina ver en términos de la evolución del producto publicitario es...)*
+
+</details>
+
+---
+
+### 第七期 Top 100 榜单与消费级 AI 现状
+
+**阿莱娜·伯格**: 欢迎收听 **a16z** 官方播客。我是主持人 **阿莱娜·伯格**（Alena Berger）。今天与我一同参与录制的是 **奥利维亚·摩尔**（Olivia Moore）——她是 a16z 极具行业影响力的《全球 Top 100 消费级生成式 AI 应用报告》的核心主笔人；以及来自我们 a16z 消费级投资团队的合伙人 **乔希·埃尔曼**（Josh Elman）。今天我们将全面拆解该系列报告的第七期最新研究成果：到底是谁在真正为 AI 买单？为什么头部主流个人助手正在分道扬镳、驶向截然不同的商业终局？以及个人智能体能否把人们日常琐碎的生活差事转化为下一代万亿美元级的消费商业帝国？两位好，非常感谢你们今天能来参加讨论！
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: Welcome to the a16z Podcast. I'm Alena Berger, and I'm joined by Olivia Moore, author of our report on the Top 100 Consumer AI Applications, and Josh Elman from our consumer investing team. Today we're diving into the seventh edition of this report: who's actually paying for AI, why the biggest assistants are heading in completely different directions, and whether personal agents can turn everyday errands into the next massive consumer business. Team, thank you so much for joining us.
+
+*(Transcript Source: Bienvenidos al podcast a16z. Soy Alena Berger y me acompaña Olivia Moore, autora de nuestro informe sobre las 100 principales aplicaciones de IA para consumidores, y Josh Elman, de nuestro equipo de consumidores. Hoy nos adentramos en la séptima edición de este informe. Quién paga por la IA, por qué los asistentes más importantes se dirigen en direcciones diferentes y si los agentes personales pueden convertir las tareas cotidianas en el próximo gran negocio de consumo. Equipo, muchas gracias por acompañarnos.)*
+
+</details>
+
+**乔希·埃尔曼**: 非常感谢邀请我们，非常高兴能来交流。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Thank you so much for having us.
+
+*(Transcript Source: Muchas gracias por invitarnos.)*
+
+</details>
+
+**阿莱娜·伯格**: Olivia，让我们直奔主题吧。我非常期待能第一时间听到你从这期最新出炉的重磅报告中提炼出的几项最核心的结论与洞察。
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: Olivia, let's cut right to the chase. I would love to hear your top takeaways from this latest report.
+
+*(Transcript Source: Olivia, vamos directo al grano. Me encantaría conocer tus principales conclusiones de este informe.)*
+
+</details>
+
+**奥利维亚·摩尔**: 好的。这是我们第七次发布这份 Top 100 行业榜单了。回想我们最初发布第一期榜单时，我们的排榜逻辑非常纯粹：仅仅根据全球范围内所有原生 AI 网站的公开网络访问流量（如页面独立访问量）进行排队。在那个时期，这种单纯看流量的方式之所以行之有效，是因为当时几乎全人类使用 AI 的唯一途径，就是在网页浏览器里对着一个简单的文本输入对话框进行打字交互。
+
+但是在过去的几年里，随着生成式 AI 的技术边界与应用场景发生剧烈扩张，我们也不得不大幅革新评估方法论。因此，这一期发布的榜单是我们迄今为止覆盖维度最全面、颗粒度最细致的一版。在本次评估中，我们**首次引入了实际营收数据**这一核心维度。具体而言，我们与数据供应商合作，专门获取了消费者在个人银行卡/信用卡维度的真实交易流水，将任何企业端采购（B2B Enterprise）以及中小企业级采购（SMB）彻底剥离出去。我们纯粹依据终端消费者在现实中真金白银掏钱购买的产品来进行综合排名。
+
+我认为，从本次报告的流量维度来看，最显著的一项结论就是：许多早期的头部产品似乎正在进入格局固化的稳定期。在本次将网页端与移动端合并统计的整体大榜单中，新上榜的产品**仅仅只有 11 款**。这是该系列报告历次更新换代以来，新面孔数量最少的一次，说明早期凭借新奇感驱动的流量红利正在显著消退。
+
+然而，一旦我们将实际的信用卡消费支付数据纳入考量，整个竞争版图立刻涌现出了大量全新的变数。因为在完全按照消费者真实消费支出排名的前 50 款产品中，竟然有整整 **29 款产品**此前从未在任何单纯依据流量排名的榜单中露过脸！这一极其鲜明的反差也直接印证了本次报告的另一项核心重大发现：**当下的消费级 AI 市场在很大程度上是一场由极客与超级核心用户（Power Users）主导的深度游戏**。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: Yes. This is the seventh time we've put together this list. When we first ranked all the global AI-native websites, we ranked them solely by web traffic, like direct website visits. And that worked back then because the way nearly everyone used AI was essentially as a chatbox product inside a browser window. We've had to evolve our methodology significantly over the last couple of years as AI has expanded into so many different form factors. So this edition is the most comprehensive to date. 
+
+For the first time, we added actual revenue data. We worked with data providers to look specifically at consumer card transaction spend, stripping out enterprise and SMB accounts entirely. We ranked products based on what consumers are truly paying out of pocket. 
+
+I think, for me, the single biggest takeaway based purely on traffic is that many of these products seem to be settling into their positions. We only had 11 new products appear across the combined web and mobile lists, which is the lowest number of newcomers we've ever seen across any edition of this series. But the spending data introduced an enormous number of new variables. Because out of the top 50 products ranked strictly by consumer spending, 29 of them were not on either of the traffic lists at all! And I think that ties directly into the other massive takeaway of this report: just how much consumer AI right now is overwhelmingly a power-user game.
+
+*(Transcript Source: Sí. Esta es la séptima vez que hacemos esta lista. La primera vez que clasificamos todos los sitios web globales que eran nativos de IA solo por el tráfico, como las visitas al sitio web. Y eso funcionó porque la forma en que casi todo el mundo usaba la IA era como un producto de cuadro de diálogo en un navegador. Hemos tenido que evolucionar mucho eso en los últimos años a medida que la IA se expande. Así que esta lista es la más amplia hasta la fecha. Agregamos datos de ingresos por primera vez. Trabajamos con los datos para obtener específicamente el gasto en tarjetas. Sin tener en cuenta a las empresas ni a las pymes. Clasificamos los productos según lo que pagan realmente los consumidores. Creo que, para mí, la conclusión más importante de este informe se basa en el tráfico. Parece que muchos de estos productos se están asentando. Solo teníamos 11 productos nuevos en la lista web y móvil combinadas. Que es la menor cantidad que hemos tenido en cualquiera de las ediciones anteriores de la serie. Pero los datos de gasto realmente introdujeron muchas variables nuevas. Porque de esos 50 que se clasificaron por gasto, 29 no estaban en ninguna de las listas de tráfico. Y creo que eso también contribuye o se relaciona con la otra gran conclusión del informe, que es lo mucho que la IA de consumo es un juego de usuarios avanzados en este momento.)*
+
+</details>
+
+---
+
+### 幂律法则下的个人智能体与开源先驱
+
+**乔希·埃尔曼**: 确实如此，这非常有意思。我们近期也同步发布了 a16z 的年度《市场状态报告》（State of the Markets），我们团队的合伙人 **莎拉·王**（Sarah Wang）在当时就一针见血地指出：“大家请注意，当前整个 AI 市场正在上演极其残酷的**幂律分布**（Power Law）。这种幂律法则不仅毫无保留地发生在企业级（Enterprise）市场，也同样在消费级（Consumer）领域全面上演。”
+
+在本次榜单中，最显而易见的一个事实或许就是新晋上榜者的数量创下了历史新低，猛一看似乎整个行业正在走向僵化或停滞。但如果大家退后一步，仔细观察过去这几个月的底层生态动态就会发现，整个市场的底层活力其实已经变得更加活跃与亢奋，而我认为眼下最令人兴奋、最具备颠覆性的新趋势，绝对是**个人智能体**（Personal Agents）的全面崛起。那么，Olivia，你们在数据层面到底看到了哪些微观异动？幕后正在酝酿着怎样的大级别结构性转变？
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Yeah, absolutely. That's really funny. We also recently published our State of the Markets report, and something our partner Sarah Wang noted directly was: "Look, there is an extreme power-law game playing out right now, happening simultaneously at both the enterprise level and the consumer level." 
+
+One thing that definitely stands out is that we have the smallest number of newcomers on this list, which makes it look on the surface like the space might be ossifying. But I think over the past few months things have actually picked up quite a bit of steam, and I believe the single most exciting new trend is personal agents. So, what are you seeing in the numbers? What are the big shifts taking place beneath the surface?
+
+*(Transcript Source: Sí. Sí. Eso es algo gracioso. También publicamos recientemente nuestro estado de los mercados y algo que Sarah Wang comentó directamente es que dijo: "Oigan, ahora mismo se está produciendo un juego de ley de potencias. Está ocurriendo a nivel empresarial y a nivel de consumidor". Una cosa que probablemente sea destacable es que tenemos la menor cantidad de recién llegados en esta lista y parece que el espacio se está anquilosando. Pero creo que en los últimos meses las cosas han mejorado un poco más y creo que la nueva tendencia más interesante es la de los agentes personales. Entonces, ¿qué están viendo? ¿Cuáles son los grandes cambios que se están produciendo?)*
+
+</details>
+
+**奥利维亚·摩尔**: 是的，这整个演变过程非常奇妙。在我们上一期制作报告时，统计周期的截止日期刚好卡在类似 **OpenClaw** 这类开源自主智能体引发全球流量狂潮的前夕。因此在上一期报告正式刊发之前，我们团队在内部做了一次复盘推演，结果发现如果把当时的数据算进去，这类工具本该直接冲到榜单非常靠前的位置。
+
+然而到了这一期，OpenClaw 在榜单中却完全消失得无影无踪了，因为其初期的网页公网访问流量已经彻底呈现断崖式下跌。这里面的原因有很多，据我了解，其核心初始团队后来被 OpenAI 收购招募了，因此他们现在大概率正在 OpenAI 内部专注于打造官方的原生智能体助手产品体系。但与此同等重要的是，它在市场上迅速被其他更成熟的面向产消者（Prosumer）的智能体所超越，比如 **Grok-bot**、生态里涌现出的优秀自主智能体 **Town**，以及 OpenAI 全新推出的一系列内置智能体功能。
+
+但更关键的突破其实发生在纯消费端：在经过了漫长的等待后，我们终于开始在市面上看到了这样一类新型消费级产品——在安全性和易用性上，我终于可以放心地把它推荐给我没有任何技术背景的家人，并有底气告诉他们可以非常安全、毫无门槛地去日常使用。正如你所言，这类面向大众消费者的智能体助理浪潮，实际上就是在过去短短三四周到一个月的时间里才集中引爆的，因此它们当中的绝大多数甚至还没来得及完整沉淀进我们本期基于历史周期的正式排名中。不过，我们专门调取了这批先锋产品的最新即时跟踪数据，其增长斜率极为陡峭惊人，尽管客观来说，它们距离真正渗透进全社会最广泛的主流大众日常生活中，依然还有一段不小的鸿沟需要跨越。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: Yeah, it's fascinating. The last report we did cut off right before the traffic inflection of things like OpenClaw. We did an internal retrospective right before publishing that report and realized it would have ranked very high up on the charts. 
+
+And this time around, OpenClaw isn't anywhere on the rankings because that web traffic has completely dropped off. Part of that is because the team was reportedly acqui-hired by OpenAI, so they're likely heads-down building native agent assistant products over there. But also, it was swiftly bypassed by other prosumer agent efforts, like Grok-bot, Town, and now OpenAI's new agent capabilities. 
+
+On the everyday consumer side, we are finally starting to see products emerge that I would feel totally comfortable handing to a family member and telling them they can use safely. Because, as you mentioned, this whole wave of consumer assistants has exploded literally in the last three weeks to a month, many of them hadn't yet shown up in our finalized historical rankings. But we pulled the latest real-time data to inspect what's happening with them, and it has been extraordinarily fast growth—though I would say it hasn't quite permeated everyday mainstream users just yet.
+
+*(Transcript Source: Sí. Es curioso. El último informe que hicimos terminó justo antes de la fecha límite de entrada de tráfico de Open Claw. Así que hicimos una especie de retrospectiva antes de publicar el informe y descubrimos que habría estado muy arriba en la clasificación. Y esta vez Open Claw no está en ninguna parte de la clasificación porque el tráfico ha disminuido por completo. Como soy, creo que el equipo fue adquirido por Open AI, así que probablemente estén trabajando en productos de asistentes de agentes allí. Pero también, creo que ha sido superado por otros intentos de agentes prosumidores, como Crock-Bot. Town tiene algunos agentes fantásticos; ahora dots de Open AI, que es nuevo. Pero también en el lado del consumidor, finalmente estamos viendo cosas que me sentiría cómodo dándole a un familiar y diciéndole que puede usar de forma segura. La mayoría de ellas también, porque como dices, esta tendencia de asistentes de consumo ha estado literalmente en las últimas 3 semanas o un mes, muchas de ellas aún no aparecían en las clasificaciones. Pero extrajimos los datos para ver qué está pasando con ellos, y ha sido un crecimiento muy, muy rápido, y aún no ha llegado del todo a los usuarios convencionales, lo que diría.)*
+
+</details>
+
+**乔希·埃尔曼**: 我认为我们目前正处在一个极其迷人的转折点上。这个转折点在去年底到今年初随着类似 OpenClaw 这样的开源探索而发生关键质变：**人工智能的角色，从过去被我们当作单纯提高个人工作效率的生产力加速工具、用来更快速地检索网络信息，真正演进成为能够主动替我们接管任务、把事情从头到尾办妥（Get things done）的行动实体**。
+
+我认为早期的开源先驱在开拓这一赛道上立下了不可思议的头功。我知道他们依然在通过开源基金会和社区不遗余力地推动其技术演化，但它最重大的贡献在于真正敲醒了行业内所有人的脑袋，让大家猛然惊醒：“等等，这类型的 AI 产品在现实中究竟能做成什么样？”我们亲眼目睹了无数极客争相去抢购苹果的 **Mac mini** 专门当作本地服务器，看到人们开始把个人所有核心数据全量接入本地私有运行的 Agent 中，掀起了一股现象级的自托管热潮。这种前所未有的全新可能性与极客能量，具有巨大的行业启蒙与催化意义。
+
+正如历史上绝大多数技术浪潮的发展规律一样：当最初的技术火花被点燃之后，行业必然需要经历一个周期的沉淀，才能把粗糙的底层技术打磨成第一批真正可用的消费级商业产品；这需要一定的时间来积蓄势能、打磨产品体验，然后正式推向大众市场接受真实消费者的检验。在某种程度上，这份报告生动地印证了我们平日在硅谷内部、在播客中反复研讨的前沿命题，它极其精准地映射出了整个外部真实商业世界正在发生的深刻嬗变。事实显而易见：**AI 正在真正无孔不入地渗透进所有垂直赛道；哪怕榜单中全新的单点上榜者变少了，但几乎所有留在赛场上的现有玩家，其业务体量与用户规模都在变得越来越庞大**。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: I think we're in a very interesting transition that shifted late last year and early this year: AI moved from being a tool we used purely to enhance personal productivity or search for information faster, to something that could actually help us do things and get real tasks done. I think early pioneers like OpenClaw were incredible trailblazers in that regard, and I know they're still doing great work through their open-source foundation to keep pushing it forward. But it really made so many heads spin, asking: "Wait, what could these products actually become?" 
+
+We saw people buying up Mac minis just to run them, people piping all their personal data into their own local setups, and there was this huge grassroots rush. It was profoundly inspiring to feel that fresh energy around what was suddenly possible. As with most major tech waves, when that initial spark hits, it takes time to build the first refined products, time to build momentum, and time to launch them into the market for real users to experience. 
+
+In many ways, this report captures what we talk about so much here in Silicon Valley, but it reflects so well what is playing out across the broader world. The truth is that AI is truly appearing everywhere; even if there aren't tons of net-new entrants on the leaderboard, the existing participants are getting massively bigger.
+
+*(Transcript Source: Creo que estamos en un área muy interesante que cambió a finales del año pasado y principios de este con Open Claw: la IA pasó de ser algo que usábamos como herramienta para mejorar nuestra productividad a buscarnos más rápido, algo que realmente nos ayudaría a hacer las cosas. Creo que Open Claw fue un pionero increíble en esto y sé que todavía están trabajando mucho a través de su fundación de código abierto para seguir avanzando en ello. Pero realmente hizo que muchas cabezas se preguntaran: "Espera, ¿qué pueden ser realmente estos productos?". Vimos a gente comprando Mac minis, vimos a gente que gestionaba todos sus datos con su propio Open Claw local, y hubo una gran afluencia de público. Pero fue realmente inspirador sentir esta nueva energía de lo que es posible. Como ocurre con la mayoría de las tendencias, cuando surge la chispa, lleva un tiempo crear los primeros productos, lleva un tiempo que empiece a cobrar impulso y que se lancen al mercado para que los usuarios los vean. Y bueno, ya saben, de alguna manera, este informe muestra que es de lo que hablamos mucho, ya saben, en nuestro podcast en Silicon Valley, pero esto realmente representa muy bien lo que está sucediendo en el mundo en general. Y creo que la verdad es que la IA realmente está apareciendo en todas partes; incluso si no hay muchos participantes nuevos, todos los participantes son cada vez más grandes.)*
+
+</details>
+
+**阿莱娜·伯格**: 确实是这样。
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: Yes, absolutely.
+
+*(Transcript Source: Sí. Sí.)*
+
+</details>
+
+---
+
+### 消费级助手双雄：Muse 与 Instinct
+
+**奥利维亚·摩尔**: 针对纯粹面向个人消费者的智能助手赛道，我认为近期最引人注目的两项标杆性进展莫过于 **Muse** 与 **Instinct**。当然，正如我们在报告中详细罗列的那样，市面上还有许多其他表现极为亮眼的创新产品在这个领域深耕，例如 **Poke** 就是极早期的开创者之一。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: When we look at pure consumer assistants, probably the two biggest, most prominent developments have been Muse and Instinct, I would say. Though there are many other fantastic products we highlight in the report that paved the way—you know, Poke was one of the very early pioneers here.
+
+*(Transcript Source: Creo que probablemente las cosas más importantes cuando hablamos de asistentes de consumo puros, los mayores desarrollos han sido Muse e Instinct, diría yo. Aunque hay muchos otros productos fantásticos que enumeramos en el informe que también lo han hecho, ya saben, Poke fue uno de los primeros pioneros en esto.)*
+
+</details>
+
+**乔希·埃尔曼**: 完全没错。像 **Tomo** 也聚集了极其庞大的忠实用户群体，业务数据表现非常抢眼。而 Instinct 此前对外公布的运营数据显示，其注册用户数已迅速突破 10 万关口，并且正在以日环比 **10%** 的惊人速度持续狂飙。更震撼的是，他们公布有 **40% 的用户在注册前三周内便主动绑定了个人信用卡**，并且这部分付费用户在首月的平均支出直接**突破了 1000 美元**大关。
+
+至于 Muse，它的表现同样极富启发性。在许多维度上，它的产品上线都算得上是现象级的成功，尤其是在整个科技极客与创投圈层内部引发了巨大轰动。如果我没记错的话，官方公布的数据是在上线最初的大约 12 天内，便斩获了 **50 万次下载量**以及 **25 万名日活跃用户**。但如果客观地将它与 Meta 此前推出的 **Threads** 这类同属大众消费级、引发全网轰动的现象级产品横向对比就会发现，从触达那些完全不从事科技行业的普通大众圈层的角度来看，Muse 目前的体量与渗透深度依然微不足道。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Exactly. Tomo has built a very large audience and is doing incredibly well. Instinct announced reaching around 100,000 users, growing at 10% day-over-day. Remarkably, they shared that 40% of their users connected a credit card within their first three weeks, spending on average over $1,000 in their very first month. 
+
+Muse is equally interesting because, in many respects, it was a wildly successful consumer launch, especially within the tech community. I believe the reported numbers were around 500,000 downloads and 250,000 active users in roughly the first 12 days. But when you compare that to a massive mainstream launch like Threads, which was another recent splashy consumer rollout, it remains tiny in comparison when looking at true mainstream appeal to the average non-tech person.
+
+*(Transcript Source: Exactamente. Tomo tiene una audiencia muy grande y lo está haciendo increíblemente bien. Instinct había anunciado como 100 000 usuarios, creciendo un 10% día tras día. Anunciaron que el 40% de los usuarios se conectaron a la tarjeta de crédito en las primeras 3 semanas y gastaron más de 1000 $ de media en su primer mes. Muse es interesante porque en muchos sentidos fue un lanzamiento muy exitoso, especialmente dentro de la comunidad tecnológica. Creo que la cifra fue de 500 000 descargas y 250 000 usuarios activos en los primeros 12 días más o menos. Pero si lo comparas con Threads, que fue otro gran lanzamiento reciente y llamativo, sigue siendo insignificante en comparación en términos de atractivo para la persona media que no trabaja en tecnología.)*
+
+</details>
+
+**奥利维亚·摩尔**: 确实，如果我们严格从应用商店的下载量指标来拉平对比：由于 Muse 目前仍然仅仅对美国和加拿大地区开放下载，因此我们专门提取了 Threads 上线初期在美国和加拿大两国的纯本地下载数据来进行公允对比。在上线前 22 天左右的统计区间里，Threads 在美加两地就狂揽了大约 **1600 万次**下载；而处于同一时间跨度的 Muse，其美加下载总量目前仍然徘徊在 **500 万次**上下。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: Yes, if you look strictly at downloads: Muse is still only available in the US and Canada, so we isolated Threads' downloads specifically to the US and Canada for an apples-to-apples comparison. In its first 22 days or so, Threads did around 16 million downloads in the US and Canada alone, whereas Muse is sitting at roughly 5 million over that exact same timeframe.
+
+*(Transcript Source: Sí, si nos fijamos en las descargas, Muse sigue estando disponible solo en EE. UU. y Canadá, así que solo hemos cogido las descargas de Threads en EE. UU. y Canadá. En los primeros 22 días más o menos, Threads tuvo unos 16 millones de descargas y Muse sigue estando en torno a los 5 millones en ese mismo periodo de tiempo.)*
+
+</details>
+
+**阿莱娜·伯格**: 这种增长差异是否主要源于它们背后的底层分发机制？据我回忆，Threads 在冷启动时直接深度绑定了用户已有的 **Instagram** 账号体系，拥有某种极其天然、无缝导入的超级社交分发通道。Muse 目前是在尝试复制某种类似的裂变增长机制，还是说它完全在践行一套截然不同的产品分发逻辑？
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: Does that distribution mechanism come down to how Threads was built? As I recall, Threads was plugged directly into your existing Instagram account, which provided a massive, completely natural distribution channel. Is Muse trying a similar playbook, or is this an entirely different distribution approach altogether?
+
+*(Transcript Source: ¿El mecanismo de distribución es como recuerdo de Threads? Ya estaba vinculado a tu cuenta de Instagram y había una especie de distribución muy natural. ¿Están intentando una estrategia similar con Muse o es simplemente una estrategia de distribución diferente?)*
+
+</details>
+
+**奥利维亚·摩尔**: 我也很想听听 Josh 的专业判断，但在我看来，Muse 的增长策略在激进程度上显然无法与 Threads 相提并论。这背后很大一部分原因在于底层经济学规律的限制：**服务这些重度调用大模型底座的智能体用户，背后伴随着极其昂贵的基础设施与推理调用成本（Inference Costs）**；因此在商业考量上，他们根本不敢冒着算力成本击穿资产负债表的风险，去让用户规模在极短时间内失控般地超速膨胀。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: I'd be curious to hear Josh's take, but from my vantage point, it certainly isn't nearly as aggressive. A significant part of that constraint is that there is a substantially higher cost to serve each of these agentic users, so they strategically cannot afford to let it grow unsustainably fast.
+
+*(Transcript Source: Quiero decir, tendría curiosidad por saber qué piensa Josh, pero desde mi punto de vista no es tan agresivo, sin duda. Y parte de eso también se debe a que hay un coste mucho mayor para dar servicio a estos usuarios, por lo que no quieren que crezca demasiado rápido.)*
+
+</details>
+
+**乔希·埃尔曼**: 没错。此外我认为另一个核心差异在于：Threads 这类社交产品具有极强的“临界规模效应”（Critical Mass）。如果他们不能在产品上线的第一瞬间让海量用户涌入平台并快速产生双向互动，用户根本无法体会到新社交网络成型的独特价值。
+
+反观 Muse，它在现阶段的本质依然是一个**高度私密、深度的个人化生产力工具**。即便他们正在大力推进产品的普及，看到这批早期尝鲜者沉浸其中也令人极其振奋。正如我刚才所说，如果你在今年一月份用过开源的自主智能体，或者在春夏季节体验过刚刚发布的 Grok-bot，你一定已经亲身体验到了那种令人汗毛倒竖的颠覆感。而现在，正如 Olivia 所言，我们的母亲、身边的家庭成员，以及那些日常完全不靠科技吃饭的普通大众，开始纷纷向我们发问：“在接下来的 AI 浪潮中，我们普通人究竟能用它来做什么？”
+
+我认为这正是当前消费级 AI 赛道最令投资人热血沸腾的地方。我毫不怀疑，当我们下一次更新发布这套报告时，大家必将亲眼见证这种面向大众的规模化普及。但是在现阶段，这类工具确实不需要像社交网络那样拼了命地去强行启动早期的网络效应。然而从长期主义的视角来看，真正能让这些智能体助手穿越周期、建立起长期商业壁垒的核心支柱，依然离不开双边网络效应、繁荣的应用市场，以及智能体能够代表用户与之深度交互的商业网络生态。这将是真正具备颠覆意义的第二增长曲线。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Exactly. And I also think Threads relied on a massive critical mass effect: if they didn't get millions of people actively communicating instantly, you never unlocked the network density needed for a new social graph to form. 
+
+Whereas Muse is still such an intimate, personal tool. Seeing this early wave of adoption take off is thrilling. Again, if you played with early local agent workflows in January, or used the Grok bot when it first dropped earlier this summer, you were already getting these magical glimpses. And now, just as Olivia mentioned, our parents, our families—the people who don't live and breathe tech—are asking: "What's the next chapter of AI for me?" 
+
+That is what makes this consumer inflection point so exhilarating. My bet is that by the time we do this report next time, we will be looking at massive mainstream adoption. For now, it hasn't required that brute-force push to trigger an immediate network effect. But over the long horizon, what will truly make these products endure will be platform network effects, two-sided marketplaces, and the vast universe of commercial businesses that your personal agents can interact with on your behalf. That will be utterly transformative.
+
+*(Transcript Source: Bueno, y también creo que Threads tuvo un gran efecto de masa crítica, que es que si no conseguían que mucha gente se comunicara rápidamente, en realidad no llegabas a aprovechar esa ventaja de que empezara a formarse una nueva red. Mientras que Muse sigue siendo una herramienta tan personal que, ya sabes, la están impulsando y es muy emocionante ver incluso esta adopción temprana, y que la gente tenga estas experiencias que, de nuevo, si usas Open Clone January, estás teniendo experiencias increíbles; Al usar el bot Grok cuando se lanzó por primera vez a principios de este verano o primavera, estabas teniendo estas experiencias. Y ahora estamos viendo, ya sabes, creo que Olivia dijo, ya sabes, nuestras madres, nuestras familias, ya sabes, las personas que no solo viven de la tecnología, ¿qué sigue en el ciclo de la IA? Y creo que eso es lo que realmente entusiasma de este consumidor. Supongo que cuando volvamos a hacer esto la próxima vez, veremos una adopción masiva. Pero creo que no ha sido necesario esforzarse tanto para tener ese efecto de red temprano. Pero también pienso en lo que hará que estas cosas se mantengan durante mucho tiempo, y serán cosas como los efectos de red y los mercados y todos los negocios con los que puedes interactuar con esos agentes. Eso también será realmente transformador.)*
+
+</details>
+
+---
+
+### 平台博弈、隐私边界与使用成本之谜
+
+**阿莱娜·伯格**: 是的。这也是我们在探讨消费级智能体与个人助手时反复深入剖析的核心议题之一：它们似乎正在逐步享受构建起一个全新平台所带来的复合复利效应；至少在其他第三方应用生态的丰富度上是如此——这些生态让智能体能够更加顺畅自如地调用各种外部服务。
+
+但我们也清醒地看到，这种博弈往往是双向且充满张力的：例如电商巨头 **亚马逊**（Amazon）公开明确表态，坚决不允许 Muse 这类外部智能体在其网站上进行自动化抓取、比价或代客下单；但在另一个阵营，Muse 已经迅速与 **Shopify** 达成了成百上千家独立商户的深度合作，从而赋予了智能体在 Shopify 庞大商业网络中直接代客购物结算的能力。
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: Yes. This is one of the themes we talk about constantly regarding consumer agents and assistants: they appear to be capturing the compounding platform effects of an emerging ecosystem, making it easier for agents to integrate with other apps. 
+
+We've seen that dynamic cut both ways, though. On one hand, you have a giant like Amazon explicitly stating they won't let Muse crawl their catalog or buy products on their site; but on the other hand, Muse already has hundreds of brand partnerships powered by Shopify, letting users seamlessly transact across Shopify merchants.
+
+*(Transcript Source: Sí. Esta es una de las cosas de las que hablamos mucho cuando se trata de agentes y asistentes de consumo. Lo cual, creo, es que están obteniendo los efectos acumulativos de construir una plataforma o al menos eso parece, en términos del ecosistema de otras aplicaciones que están disponibles y que el agente puede usar más fácilmente. Hemos visto que eso funciona en ambos sentidos. Por ejemplo, Amazon dice que no va a permitir que Muse explore y compre productos en nuestro sitio, pero además, Muse ya tiene cientos de otras asociaciones con Shopify para poder comprar cosas en Shopify.)*
+
+</details>
+
+**奥利维亚·摩尔**: 没错。但就我个人观察而言，我认为市面上现有的所有智能助手类产品，目前**尚未有任何一家真正成功解锁人与人之间（Peer-to-Peer）的双向网络效应**。
+
+在我看来，造成这一现象的根本底层原因在于：**这套大模型软件对我们私人生活的了解程度，已经超越了人类软件史上出现过的任何单款产品**。它不仅能够全面读取你的历史私人电子邮件、日程表与即时通讯记录，更关键的是，我发现自己甚至会主动向我的 AI 倾诉大量极其隐私、未曾对任何人吐露过的心声。因此，这里面存在着一种极具张力的天然悖论：一款 AI 助手对你作为个人消费者而言越好用、越体贴，它掌握的关于你的绝密个人隐私就越庞大、越深刻。那么试问，你真的愿意把这样一个洞悉你一切软肋与隐私的智能体，推向包含同事、朋友甚至陌生人的公开社交网络场景中去吗？正如现实中许多人会极其谨慎地把工作专用的 ChatGPT 账号和个人生活账号严格物理隔离一样，迄今为止，整个科技行业尚未有人能够完美破解这种隐私与社交化之间的底层矛盾。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: Exactly. And candidly, I don't feel like any assistant product has truly unlocked person-to-person viral network effects just yet. 
+
+Part of the underlying reason for me is that this software knows us far more intimately than any digital product in history. It has access to our personal email archives, and beyond that, I find myself regularly confiding deeply private things to my AI. Consequently, there is an inherent structural tension: the more intensely useful the product is to you as an individual, the more deeply intimate data it holds about your life. Do you really want to project that into social contexts with other human beings? It's the exact reason many people maintain completely segregated ChatGPT accounts for work versus personal life. Nobody has cracked that social puzzle yet.
+
+*(Transcript Source: Exactamente. Sí. Bueno, todavía no siento que ninguno de los productos de asistencia haya desbloqueado los efectos de red de persona a persona. Y parte de esto para mí es que este software nos conoce más íntimamente que cualquier otro producto en el pasado. Basado en el correo, pero además me encuentro contándole cosas extremadamente personales a mi IA. Por lo tanto, existe una especie de tensión natural entre cuanto más útil es el producto para ti como consumidor, más sabe sobre ti. Y entonces, ¿realmente quieres introducir eso en otros contextos con otras personas? Es lo mismo que mucha gente tiene una cuenta de chat GPT de trabajo y una cuenta personal independientes. Y nadie ha logrado descifrar eso todavía.)*
+
+</details>
+
+**乔希·埃尔曼**: 确实没有。我认为随着我们把讨论聚焦在普通消费者与 AI 的结合点上，关于**隐私、数据安全与心理防御机制**的权重正在成倍放大。显而易见，全社会对通用人工智能的宏观信任度，以及人们是否发自内心地坚信“AI 将让世界变得更美好”，无疑会在宏观层面上直接左右大众对这类产品的采纳热情。
+
+但如果我们落脚到微观的个人体验层面：如果你无法百分之百信任一个被你赋予了最高权限、能够深入读取你所有的私人信件、家庭生活乃至信用卡支付接口的软件；如果它可能在背后做出完全不可预测的诡异行为，或者擅自把你未曾授权的私密信息泄露给外部第三方，这必将成为阻止这类产品蜕变为数亿大众通用消费级应用的最大阻碍。
+
+我们正身处一个所有人都在摸索全新人机交互规范的激荡时代。对于人类而言，我们在漫长的进化史中早已形成了极其精密成熟的社交规范直觉：我们天然就清楚哪些秘密是可以向闺蜜吐露的，哪些话语是别人托付给我们必须守口如瓶的，哪些公共信息是可以随意转告的，哪些原则是必须誓死捍卫的。然而今天，我们却突然开始期待一行行软件代码也能在一夜之间精准理解并恪守这些人性极其微妙的社交伦理，这本身就是一系列既充满挑战又令人极度着迷的崭新课题。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Not at all. And I think as we talk about mainstream consumers and AI, privacy, safety, and psychological security become paramount. There are, of course, macro societal trends regarding trust in AI and whether people believe artificial intelligence is a net-good for humanity, which undeniably influences consumer enthusiasm. 
+
+But at a raw personal level: if you don't completely trust the tool that you have granted full access to your inbox, your personal life, or your credit card, and you worry it might act erratically or leak private details to others, that will be the single fatal bottleneck preventing these things from scaling to hundreds of millions of users. 
+
+We are living through this fascinating era where we are all learning the social contracts of AI in real time. As humans, we possess highly evolved social intuition: we intuitively understand what sensitive information we feel comfortable sharing, what was shared with us in strict confidence that we must safeguard, and what is public knowledge. Now, all of a sudden, we expect software to navigate those exact same nuanced human boundaries. It is an extraordinary set of new behavioral dynamics we are actively navigating.
+
+*(Transcript Source: No, y creo que, ya sabes, a medida que hablamos de consumidores e IA, la privacidad, la seguridad y la protección son cada vez más importantes. Quiero decir, obviamente, existen tendencias generales de confianza en la IA y este tipo de creencia de que la IA es buena para el mundo que, de alguna manera, afecta a la adopción y al entusiasmo en torno a estos productos. Pero a un nivel muy personal, si no confías en aquello a lo que le estás dando acceso más íntimo a tu correo electrónico, a tu vida o a tu tarjeta de crédito, y puede que haga cosas poco fiables que no esperarías o que comparta cosas con otras personas que no esperarías, ese será el mayor obstáculo para que estas cosas crezcan como aplicaciones de consumo masivo. Así que estamos en una época fascinante en la que todos estamos aprendiendo estas nuevas normas. Y estas son normas que, como personas, se nos dan muy bien. Somos muy buenos para saber qué información nos sentimos cómodos compartiendo, qué información si alguien nos la da, qué información se nos confía para poder transmitirla a alguien o qué deberíamos proteger y conservar nosotros mismos. Y de repente esperamos que el software también haga esto. Es un conjunto de cosas nuevas e interesantes que estamos aprendiendo.)*
+
+</details>
+
+**阿莱娜·伯格**: 两位刚才精准剖析了该议题的一体两面：一面是外在的生态推力，即各大主流商业平台究竟以何种开放姿态允许外部智能体与其进行底层接口调用与数据交互；另一面则是内在的心理拉力，即消费者究竟在多大程度上能够建立起足够的安全感去托付生活。对于这两大核心挑战，你们认为哪一个会率先被科技行业所攻克？解决这背后重重阻碍的核心责任究竟在谁身上？
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: You both just touched on two fascinating facets: on one side, you have the external platform force—how open platforms choose to be in letting agents interact with their systems. On the other side, you have the internal human force—how emotionally comfortable and safe an individual user feels trusting an agent. Which of those two bottlenecks do you think gets solved first, and whose responsibility is it to solve them?
+
+*(Transcript Source: Sí. Bueno, ambos acaban de mencionar dos facetas interesantes de esto. Una es que existe esta fuerza endógena, que son todas las plataformas y cómo permiten que los agentes interactúen con ellas. Y luego está esta fuerza exógena, como ¿qué tan cómodo me siento al usar esto? Y cómo tal vez confundí endógeno y exógeno. Uno está en el exterior y otro en el interior. Sabíamos a qué te referías. Una es lo que hacen las plataformas y la otra es cómo te sientes al respecto o cómo te sientes con respecto al agente. Y tengo curiosidad por saber cuál crees que se resolverá antes y de quién es la responsabilidad. ¿De quién es la responsabilidad de resolver ese tipo de preguntas?)*
+
+</details>
+
+**奥利维亚·摩尔**: 从以往 AI 技术的发展轨迹来看，我认为各大平台底层基础设施与 API 交互能力的升级速度，永远会远远跑在普通消费者心理防线的真正接纳速度之前。
+
+许多行业观察家在看到这批智能体初创企业的创始人公开披露的惊人运营成本时感到极度困惑——很多团队公开表示，他们**每个月为了服务单个活跃用户所消耗的算力与 API 账单动辄高达数百甚至数千美元**。大家都在问：这怎么可能？一开始我也对此百思不得其解。但最近我一直在与主导 **Assistant Benchmark** 项目的 **大卫·普兰**（David Pulan）进行深度的数据合作，他搭建了一个非常出色的评测系统，我们前不久也刚和他录制过一期播客。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: I think platform capabilities are capable of advancing much faster than genuine consumer willingness to adopt them, which mirrors everything we've witnessed in AI thus far. It's fascinating because so many observers look at the staggering infrastructure numbers published by founders in the assistant space—claiming it costs hundreds or even thousands of dollars per month just to serve a single heavy user—and wonder how on earth that's possible. 
+
+I was equally baffled at first. But I've been collaborating closely with David Pulan, who runs Assistant Benchmark, which is phenomenal—he was just on the podcast recently.
+
+*(Transcript Source: Creo que las plataformas son capaces de mejorar más rápido que la verdadera disposición del consumidor a usarlas, algo que hemos visto hasta ahora en la IA. Es interesante porque mucha gente ve estas cifras que publican los fundadores de estos productos de asistencia, que dicen que cuesta cientos o miles de dólares al mes atender a un usuario, y se preguntan cómo es posible. Yo también me quedé perplejo, pero he estado trabajando con David Pulan, que dirige Assistant Benchmark, que es fantástico. Hace poco hizo un podcast con él.)*
+
+</details>
+
+**阿莱娜·伯格**: 是的，大卫所做的工作极具开创性。
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: Yes, he's doing brilliant work.
+
+*(Transcript Source: Sí, es genial.)*
+
+</details>
+
+**奥利维亚·摩尔**: 没错。简单来说，大卫搭建了一个高频追踪自动化基准评测体系，对市面上超过 170 多个（昨晚看是这个数字，今天上午可能已经飙升到 200 多个了）各类自主智能体进行长期端到端监控。他组织了真实的极客用户去使用这些智能体，并严格依据任务交付的成功率进行量化跑分。但除此以外，他做了一件更有价值的事：他亲自组建并运营了一个汇聚了超过 **1500 多名深度先锋用户**的高质量私密社群。
+
+大卫向我们共享了一组极为震撼的微观行为数据：这些早期用户究竟在拿这些高成本的智能体做什么？绝大多数受访者反馈的**头号核心用例，竟然全部集中在复杂代码编写与极度硬核的技术自动化流程**上——即便是面对像 Muse 或 Instinct 这种包装成纯消费级助手的应用也是如此！
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: Basically, he built a tracking benchmark monitoring—I think it was over 170 agents when I checked last night, and probably well over 200 by this morning. He has actual users run them through real-world tasks and rigorously grades them on execution success. But the other really compelling thing he does is maintain private group chats and power-user communities comprising over 1,500 of the earliest adopters of these agents. 
+
+He shared some fascinating qualitative and quantitative telemetry with us: what are people actually using these agents for all day long? And by an overwhelming landslide, the number one use case was heavy-duty coding and complex technical automation—even within ostensibly consumer-facing assistants like Muse and Instinct!
+
+*(Transcript Source: Sí, es genial. Básicamente, lo que ha hecho es crear un sitio web en el que rastrean, creo que a más de 170 agentes. Lo revisé anoche, probablemente sean unos 200 y pico esta mañana. Y hace que los usuarios los utilicen y luego los califican según su éxito en diferentes tareas. Pero la otra cosa realmente interesante que hace es que organiza una especie de chats grupales y comunidades de los primeros usuarios de estos agentes. Bueno, tiene un grupo de más de 1500 usuarios, creo. Y nos ha proporcionado algunos datos interesantes, como: ¿qué hacen con los agentes? ¿Qué dicen que hacen con los agentes? Y la gran mayoría, el caso de uso número uno, era la codificación y la automatización técnica, incluso para estos productos de asistencia al consumidor como Music Instinct.)*
+
+</details>
+
+**乔希·埃尔曼**: 没毛病，完全合乎逻辑。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Exactly. That makes total sense.
+
+*(Transcript Source: Correcto.)*
+
+</details>
+
+**奥利维亚·摩尔**: 如此一来，逻辑瞬间全部闭环了：“天哪，难怪服务一个活跃用户的月成本能烧到几千美元！”因为用户是在拿消费级助手的底座来高并发地跑庞大的代码编译与自动化 Agent 循环。而反观当我们去与那些真正把产品定位在全网主流非技术大众的智能体团队交流时，他们反馈的单用户服务成本其实仅仅徘徊在**数十美元级别**，根本不可能达到几千美元的高位。
+
+这一鲜明的成本撕裂现象，从根本上折射出一个客观现实：要让真正的主流大众像呼吸一样自然且安心地接纳这套产品，行业前方的商业化普及长征依然任重而道远。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: Through that lens, you immediately realize: "Oh, of course it costs that much!" They are burning through tokens running continuous coding loops and tool-use scripts. When we talk to agent and assistant startups that are genuinely targeted at everyday mainstream consumers, their serving costs are on the order of tens of dollars per month, not thousands. So that disparity illustrates just how long of a runway we still have before typical consumers feel genuinely at ease weaving these agents into everyday life.
+
+*(Transcript Source: Y entonces, bajo ese marco, es como: "Oh, por supuesto que cuesta tanto". Esto es como cuando hablamos con algunos productos de agentes o asistentes que están dirigidos al consumidor más convencional, están viendo costes de decenas de dólares, no de miles de dólares al mes. Así que, bueno, creo que eso es quizás una representación del hecho de que tenemos un largo camino por recorrer en términos de que los consumidores se sientan cómodos con estos productos.)*
+
+</details>
+
+**乔希·埃尔曼**: 我完全赞同。对于那些本身就精通软件工程、过去数年一直深度浸润在 AI 代码生成环境里的开发者来说，生成式 AI 是人类工业史上最不可思议的超级杠杆。这一结论在本次榜单的各项硬核指标中得到了淋漓尽致的体现，甚至可以说是主导了 Top 100 榜单的半壁江山。我们这群具备编程能力的人，在体会到了这种百倍杠杆后，很自然地会脑洞大开，试图把这种超能力平移并套用到现实生活的方方面面。
+
+但是，当你把这样一个空空如也的单行输入框直接扔给一个对技术一无所知的普通人时，对方感受到的绝不是自由，而是一种令人手足无措的巨大空白。他们会陷入迷茫：“我到底应该拿这玩意儿来干嘛？”哪怕界面上贴心地预置了诸如“帮你预订餐厅座位”或“帮你全网比价订机票”等范例指令，但如果这名用户眼下根本没有出行旅游或外出聚餐的即时刚需，他根本不知道该如何把这套高大上的技术定制成符合自己生活轨迹的有用工具。
+
+反观人类文明的知识传播机制：人类在本质上是通过彼此模仿、相互激发来习得新技能的。回顾过去二十年整个移动互联网与社交网络的爆发逻辑就会发现：其核心在于先行者在社交网络上公开晒出自己的新奇玩法，数以亿计的围观者看到后心领神会，纷纷依葫芦画瓢进行二次模仿；而这种模仿又会引发微小的个性化二次创新，最终汇聚成滚雪球般的现象级网络浪潮。
+
+然而在当下的 AI 领域，由于绝大多数的人机对话都是在高度私密的单对单封闭窗口里完成的，除了在专业编程和严肃工作生产力领域——比如大家公开分享“我用 AI 生成了这支震撼的视频，你想知道提示词与工具链吗”——我们至今**尚未在主流生活领域看到任何类似社交裂变式的模仿浪潮**。市面上虽然涌现出了海量优秀的垂直生成工具，但摆在我们面前最关键的时代命题在于：我们究竟该如何把这种超能力，从当前已经深谙其道并愿意大把付费的几百万极客人群，真正跨越鸿沟，普惠并推广至数千万乃至数以亿计的普通家庭？
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Totally. For the folks who know how to code and have been building with AI, it has been an absolute superpower, and that shows up vividly all over this data. But when you hand a blank prompt box to an everyday person, it feels like an intimidating blank canvas. They sit there thinking: "What am I supposed to ask this thing?" 
+
+You might show canned examples like booking a dinner reservation or buying a flight, but if you aren't actively planning a trip or dining out right at that moment, it's really hard to bridge that gap. So much of human learning is observational—we watch what other people do, get inspired, and try it ourselves. 
+
+The entire mechanics of social media succeeded because someone posted something creative, millions saw it, tried their own slight variation, and those micro-iterations snowballed into massive cultural adoption. Because AI interactions are currently so isolated and personal, we haven't seen that communal virality happen outside of technical circles and niche creative workflows. Figuring out how to mainstream this—not for the few million power users already gladly paying for everything, but for the next hundreds of millions of consumers—is the ultimate trillion-dollar opportunity.
+
+*(Transcript Source: Y creo que, ya sabes, creo que las personas que han estado codificando y han estado trabajando con IA, quiero decir, ha sido un potenciador increíble y eso se refleja en muchos de los datos, estás entre los 100 primeros aquí, es increíble. Y luego, las personas que hemos podido hacer eso, hemos tenido estas grandes ideas para todas las demás cosas en nuestra vida. Pero cuando simplemente le das esto a alguien nuevo, se siente como una caja en blanco. Y sientes, ¿qué debería hacer con esto? Y tal vez haya ejemplos de cómo obtener una reserva o reservar un vuelo, pero si no estás buscando activamente una reserva o reservando un vuelo, es difícil descubrir cómo personalizarlo. Y gran parte de lo que hacemos como personas es aprender de otros y obtener estas grandes ideas y probar otras cosas que las personas nos dicen. Gran parte de cómo han funcionado las redes sociales es que las personas publican cosas en las redes sociales y otras personas lo ven e intentan lo mismo y luego genera estos efectos en los que intento hacer una pequeña modificación y luego esas modificaciones se convierten, ya sabes, en bolas de nieve en cascada y así es como florecen las grandes ideas. Y con la IA, como gran parte de ella es tan personal, todavía no hemos visto nada de eso floreciendo, ya sabes, fuera de áreas como la codificación y la productividad, ya sabes, todo el trabajo creativo, ya sabes, creé este video increíble y ¿cómo lo hiciste? Utilizo IA. Bueno, hay muchas herramientas que hacen eso, que están creciendo y ya están aquí. Pero resulta muy interesante que ahora debamos averiguar cómo generalizar esto, no para los millones y millones de personas que ya las están usando y pagando por todo, sino para las decenas, los cientos y para los cientos y cientos de millones de personas adicionales.)*
+
+</details>
+
+---
+
+### 消费数据深度剖析：超级用户法则
+
+**奥利维亚·摩尔**: 如果我们仔细审视全美当前真实的宏观用户画像就会发现：虽然有接近一半的美国人自称使用过某种形式的 AI，并且大约有 **25%** 的美国人认为自己几乎每天都会与某种 AI 系统发生交互；但只要一把标尺拉到真金白银的个人财务支出维度，数据立刻呈现出**令人咋舌的高度极化分布**。
+
+根据不同的消费追踪数据源交叉比对：我们基于 Yipit 交易大盘面板的精准核算表明，在全美消费者整体大盘中，真正自掏腰包为消费级 AI 软件订阅付费的比例**甚至不足 5%，大约仅徘徊在 4.5% 左右**；而其他第三方机构统计的数字甚至更加冷峻，仅有 2% 到 2.5% 上下。
+
+虽然横向来看，这一付费比例相较于一年前已经实现了翻倍增长；但这些消费金额在付费人群内部的集中度依然极度夸张：即便将样本严格限定在付费的这 4.5% 的极少数群体内部，**其中支出最高的前 10% 的核心用户，直接贡献了整个消费级 AI 市场超过 50% 的总营收！而位于金字塔尖的前 1% 超级用户，单独贡献了整个市场 20% 的总流水；相比之下，处于后 50% 的普通付费用户，全部加在一起所贡献的营收份额也不过区区 16%**。可以说，整个消费级 AI 商业大盘完全是由这最顶层 10% 的超级重度用户一手撑起的。
+
+而本次引入真实交易流水数据最具价值的地方在于，我们得以把颗粒度细化到具体的单一自然人维度，去清晰刻画究竟是怎样一群人在不惜代价地向 AI 砸钱。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: If you examine the actual top-of-funnel usage data today, nearly half of all Americans claim to have used AI in some capacity, and roughly 25% believe they interact with AI almost daily. But the actual spending data is unimaginably concentrated. 
+
+Depending on the tracking panel—our Yipit card data indicates that probably fewer than 5%, roughly 4.5% of US consumers, pay for an AI product out of pocket. Other tracking datasets suggest it's hovering closer to just 2% or 2.5%. While that penetration has roughly doubled year-over-year, the dollars remain hyper-concentrated. 
+
+Even within that tiny 4.5% paying slice: the top 10% of spenders account for more than half of all total consumer AI revenue. The top 1% alone drives 20% of all industry revenue, whereas the entire bottom 50% of paying users combined accounts for just 16%. So the top 10% of users are essentially carrying this entire commercial market on their shoulders. 
+
+What made this dataset so invaluable was our ability to inspect consumer profiles on an individual cardholder basis to see precisely who these high-spending individuals are.
+
+*(Transcript Source: Si observamos los datos de uso actuales, cerca de la mitad de los estadounidenses declaran usar IA. Y alrededor del 25% de los estadounidenses creen que interactúan con la IA probablemente casi a diario. Pero los datos de gasto están mucho más concentrados. Por lo tanto, depende de la fuente. Nuestro panel de Yipit muestra que, probablemente, menos del 5%, cerca del 4,5% de los consumidores en EE. UU. , pagan por IA. Otras fuentes señalan que es apenas un dos o dos y medio, o quizás un poco más elevado. Está creciendo, así que es como el doble que hace un año. Pero ese gasto sigue estando extremadamente concentrado. Entonces, incluso dentro de ese 4,5% superior de personas que gastan, el 10% superior de ellos supone más de la mitad de los ingresos. Y el 1% superior supone el 20% de los ingresos, mientras que el 50% inferior supone el 16%, ¿verdad? Así que el 10% superior de usuarios está impulsando este mercado. Otro aspecto interesante de los datos de ingresos es que pudimos analizarlos casi persona por persona, observando cómo se ve y quiénes son exactamente estas personas que están invirtiendo en IA.)*
+
+</details>
+
+**乔希·埃尔曼**: 没错，正是如此。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Mhm, absolutely.
+
+*(Transcript Source: Mhm.)*
+
+</details>
+
+**奥利维亚·摩尔**: 具体数字甚至更加颠覆认知：位于消费金字塔顶端 **1% 的超级核心用户，平均每月自掏腰包使用个人信用卡在各类 AI 服务上的支出高达 903 美元！**
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: The top 1% of users are personally spending $903 per month on their consumer credit cards strictly on AI tools.
+
+*(Transcript Source: El 1% superior de usuarios gasta 903 $ al mes personalmente en sus tarjetas de crédito personales en IA.)*
+
+</details>
+
+**阿莱娜·伯格**: 哇，这简直太惊人了。
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: Wow. That is wild.
+
+*(Transcript Source: Vaya.)*
+
+</details>
+
+**奥利维亚·摩尔**: 与此同时，全美付费用户月消费金额的中位数仅仅只有 **25 美元**。请大家千万记住，这组对比的前提是我们已经把样本严格局限在了那仅占人口 4.5% 的付费人群内部。
+
+但这套微观交易数据赋予我们的最大穿透力在于，我们得以清晰看清这批每月豪掷近千美元的超级用户到底把钱花在了哪些具体产品上。不出所料，他们消费清单中高度过载的产品几乎全军清一色是：**专业开发者工具、硬核生产力工具以及专业创意生成工具**——也就是那些被他们直接用来构建新业务、编写商业软件、制作高净值内容并向市场变现的杠杆工具。诸如 **N8N**、**Granola**、**Higgsfield**、**Manifold** 等等。这些硬核产品在超高净值用户群体的账单中所占的权重之高，呈现出压倒性的超额表征。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: And the median spend is just $25. Remember, this entire dynamic is already restricted solely to that top 4.5% paying cohort. 
+
+However, this gave us unprecedented visibility into the specific products these power users are funding out of their own pockets. Unsurprisingly, the heavy-spending bucket was overwhelmingly populated by developer tools, high-leverage productivity suites, and pro-creative platforms—tools used to design, construct, automate, and monetize. Platforms like N8N, Granola, Higgsfield, and Manifold were radically overrepresented among these top spenders.
+
+*(Transcript Source: Y la mediana de gasto es de 25 $. Y, de nuevo, todo esto se limita únicamente al 4,5% de los que realizan algún tipo de gasto. Sin embargo, también nos resultó útil porque pudimos ver en qué productos gastaban realmente a nivel personal. Y, como era de esperar, la mayoría eran herramientas para desarrolladores, herramientas de productividad, herramientas creativas, cosas que se utilizan para crear, fabricar y vender, cosas como N8N, Granola, Higgsfield, Manifold. Todas ellas estaban sobrerrepresentadas entre los que más gastaban.)*
+
+</details>
+
+**乔希·埃尔曼**: 从某种极其积极的角度来看，这本身就是一件令人无比振奋的时代奇迹。虽然当前这批高客单价数字尚未普惠到全社会每一个普通人的头上，但我们正在亲眼见证一个**前所未有的新型超级个体与个人创造者阶层的全面诞生**。
+
+这群人绝非仅仅是在公司办公室里奉命使用这些软件完成日常 KPI；他们是在下班后心甘情愿地掏出自己的私人信用卡，去自主编写那些他们过去根本无力企及的复杂程序，去创作震撼的视觉艺术、剪辑商业视频、搭建自动化工作流。他们被赋予了以往只有百人工程团队才具备的造物能力。在技术爆发的破晓时分，看到有如此庞大的人群仅仅为了将脑海中盘旋的灵感变为现实，就爆发出了如此汹涌的创造热情并甘愿每月自费上千美元，这本身就宣告了一场巨变的到来。
+
+如果一个人愿意每月掏出 900 多美元采购一套 AI 工具链，其底层逻辑绝非仅仅是投机取巧，而是为了将自己交付创意的速度成倍提升，让成百上千个前所未有的宏大设想在现实中落地生根。在技术编织创意与工程的交汇处，这种生产力的释放注定蕴藏着不可估量的巨大能量。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: In a massive way, this is incredibly empowering. Even though these metrics don't reflect mainstream society yet, we are witnessing the birth of an entire generation of supercharged creators. These are individuals who aren't just using tools because their enterprise boss mandated it; they are putting down their personal credit cards to code software they never could have built before, to produce high-end cinema, dynamic art, and original digital products. 
+
+It is exhilarating to see that much raw creative agency unlocked. If you are willingly spending $900 a month on an AI toolkit, you are using it to execute faster, think bigger, and bring far more ideas to life than ever before in human history. The intersection of developer leverage and creative software is proving to be exceptionally potent.
+
+*(Transcript Source: Quiero decir, en cierto modo, esto es realmente genial. Quiero decir, aunque estas cifras todavía no abarcan a todo el mundo, estamos dando cabida a toda una nueva generación de creadores: de personas que, ya sabes, no solo usan esto para trabajar, sino que utilizan sus tarjetas de crédito personales para programar cosas que nunca habían programado antes, para hacer arte, vídeos, contenido y, ya sabes, realmente tienen este poder de creación. Y, en cierto modo, aunque todavía sea muy pronto, es genial ver cómo se está creando tanto que la gente está tan entusiasmada que está dispuesta a gastar. Quiero decir, si gastas 900 dólares al mes en un conjunto de herramientas de IA, en realidad lo estás usando para, con suerte, hacer las cosas más rápido, mejor, y hacer que más ideas cobren vida en tu cabeza que nunca. Es algo parecido a cuando yo analizaba las categorías que existen entre la creatividad y la codificación, algo que, con suerte, resulta ser sumamente potente.)*
+
+</details>
+
+**阿莱娜·伯格**: 是的，这确实是一个至关重要的视角：软件工程师和职业开发者往往是全社会对“如何将技术转化为杠杆”这一命题最具有天然敏锐度的一群人。他们的大脑思维模型天然就是结构化的：“我该如何构建一套自动化工具来成倍撬动我的个人时间？”而当大模型赋予其无尽杠杆时，这种化学反应自然极其剧烈。
+
+但这种极端追求极致生产力杠杆的世界观，在全社会总人口中毕竟只属于极少数精英群体的特权心智。那么核心的问题就变成了：**科技行业究竟该如何将这种狭窄的极客世界观推广至广大普通大众？我们该如何帮助一个普通人真切感知到，AI 究竟能为他们的琐碎日常与漫长人生撬动出哪些全新的可能性与闲暇时间？**
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: That's a crucial distinction. Developers and technical builders are naturally wired to look for leverage: "How do I build something that radically multiplies my output per hour?" Generative AI effortlessly supercharges that mindset. But that hyper-efficient worldview is held by a relatively small slice of humanity. The million-dollar question is: how do you expand that mental model? How do you help the average person understand how AI can unlock leverage across their personal lives?
+
+*(Transcript Source: Bueno, creo que este es un punto muy importante, y es que creo que los desarrolladores y los codificadores son personas que están naturalmente en sintonía con la idea de cómo sacar partido de esto. ¿Cómo puedo crear un producto que me permita sacar partido de mi tiempo? Y la IA, obviamente, potencia eso. Pero creo que es un tipo de mentalidad específica y una visión del mundo específica. Creo que parte de mi comprensión de estas cifras es que sigue siendo una visión del mundo que se refleja solo entre un pequeño grupo de personas. La pregunta podría ser, ¿cómo se amplía esa visión del mundo? ¿Cómo se ayuda a la gente a entender que aquí están todas las formas en que pueden aprovechar su tiempo y su vida?)*
+
+</details>
+
+---
+
+### “省时间”与“消磨时间”：商业模式的终极拷问
+
+**奥利维亚·摩尔**: 我们在本次报告中专门开辟了一个独立章节，深度研讨那些迄今为止尚未涌现出原生 AI 领军企业的空白领域。在我们被投企业矩阵中，有一位极其出色的创始人——掌舵 **Wabi** 的 **尤金妮亚**（Eugenia）。她曾经发表过一段堪称经典的行业洞察（我可能会复述得不太精确）：**“人类社会中的绝大多数普通人，从来都不是为了节省时间而活着的；大家真正孜孜以求的，是寻找如何更有趣地把大把无聊的时间‘挥霍消耗’（Kill/Spend Time）出去的方式。”**
+
+正因如此，放眼全球消费互联网史，拥有最高用户粘性、占据用户每天数小时心智的最庞大商业帝国，永远是社交网络与流媒体娱乐平台——**Netflix**、**TikTok**、**YouTube** 等等。反观我们在生成式 AI 领域迄今所目睹的绝大多数产品，正如你刚才所总结的，它们所有的产品宣传语无一例外都在高呼：“我能帮你把这件事情做得更快一点、更省心一点、更聪明一点。”然而，对于全球几十亿并不打算去创办一家初创企业的普通老百姓来说，“每天帮你省下十分钟工时”根本无法构成一个具备不可替代吸引力的核心价值主张。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: We dedicated a section in the report to exploring the massive categories where AI-native startups haven't meaningfully materialized yet. Eugenia, who leads an incredible company in our portfolio called Wabi, has a brilliant quote on this (I'm paraphrasing slightly): "Most everyday humans aren't desperately looking to save time; they are looking for compelling ways to spend their time." 
+
+That simple truth explains why social media, streaming entertainment, TikTok, Netflix, and YouTube are the most dominant, sticky consumer franchises in history. Nearly everything we've built in consumer AI to date pitches: "How do I get this task done slightly faster, slightly cheaper, or with slightly less friction?" That is simply not an emotionally gripping daily consumer value proposition for the vast majority of human beings.
+
+*(Transcript Source: Hablamos un poco de esto en este informe en términos de áreas en las que aún no hemos visto surgir empresas emergentes nativas de IA o categorías en las que no las hemos visto. Eugenia, una de las directoras de nuestra cartera, dirige una empresa llamada Wabi que es fantástica. Tiene una cita genial. Probablemente la estropee, pero es algo así como que la mayoría de las personas no buscan ahorrar tiempo, buscan formas de invertirlo. Por eso las redes sociales, el entretenimiento, Netflix, TikTok, todos estos YouTube son los productos de consumo más utilizados que tenemos. Creo que mucho de lo que hemos visto en IA hasta ahora, como decías, es como ¿cómo hago esto un poco más rápido, un poco más fácil, un poco más impresionante? Y esa no es una propuesta de valor activa diaria u horaria increíblemente convincente para la mayoría de las personas.)*
+
+</details>
+
+**乔希·埃尔曼**: 我举双手赞成。“节省时间”对于那些追求超高生产力、每天必须交付大量工作成果的极客和专业创作者而言，无疑是第一刚需。但在现实中，我也正在看到一股全新的消费浪潮开始萌芽：许多原本对晦涩编程一窍不通的普通人，或者那些脑海中充满故事剧本但从未掌握过专业音频软件 **ProTools**、专业剪辑软件 **Adobe Premiere** 复杂时间轴的大众群体，突然发现自己只需要注册一个生成式 AI 账号，就能直接把自己沉睡多年的想象力瞬间转译为精美的视听作品。
+
+因此，我认为大众化的转折点正在悄然显现。回顾这些数据指标时，我们必须时刻提醒自己：整个行业目前依然处于黎明破晓的绝对早期。虽然当前全网只有极少比例的超级极客在每月豪掷近千美元，但这绝对是未来大趋势的先行预兆——随着创作门槛被彻底抹平，当越来越多的大众第一次体会到无拘无束造物的纯粹快乐时，驱动他们的将不再是功利的“帮我省时间”，而是发自内心想要把美好事物创造出来的纯粹愉悦。
+
+大家一定还记得前阵子在极客圈子里流传的那些段子：当早期极客第一次在本地部署运行自己的自主智能体时，他们整天抱着笔记本电脑寸步不离，生怕屏幕合上断电；他们逢人便兴奋地喊道：“我一整晚没合眼！我的智能体在替我通宵疯狂跑代码、造软件，我这一周写出的代码比我过去一年还要多！”这种震撼人心的纯粹能量，虽然眼下仅仅呈现在最尖端的极客消费账单上，但我坚信它必将在不久的将来全面蔓延至大众日常生活的每一个角落。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Exactly. Saving time is the obsession of hyper-productive professionals focused on optimizing output. But I'm also seeing this fresh wave of creative agency emerge among folks who previously found technology alienating. Think of the aspiring storyteller who never mastered the labyrinthine interfaces of ProTools or Adobe Premiere, but can suddenly open an AI canvas and effortlessly translate the raw ideas in their head into polished reality. 
+
+We are just beginning to see that surface. Whenever I look at these extreme numbers, I view them as the early leading indicators of a massive democratization wave. It ceases to be about cold transactional time savings; it becomes about unlocking the pure joy of bringing something new into the world. 
+
+Remember the jokes from when early adopters first got their hands on autonomous coding agents? People were literally walking around clutching open laptops, refusing to let them sleep, exclaiming: "I haven't slept in two days! My agents are writing software for me around the clock, and I'm shipping more than I have in a decade!" That euphoric creative drive is currently concentrated at the top of the dataset, but it is bound to spill over everywhere.
+
+*(Transcript Source: No, creo que esto, ya sabes, ahorrar tiempo sigue siendo muy, ya sabes, hiperproductividad, personas que se centran en, ya sabes, trabajar, ser creativas. Pero también lo estoy viendo en esta nueva ola de personas que tal vez estaban acostumbradas a programar, ya no lo son. Quizás personas que, ya sabes, quieren hacer videos pero nunca dominaron, ya sabes, ProTools y Adobe Premiere u otra cosa. Donde de repente pueden registrarse para estas cosas y tomar las ideas en su cabeza y hacerlas realidad. Así que creo que estamos empezando a ver que esto aumenta. Y de nuevo, como ya sabes, miro todas estas cifras porque todavía es muy pronto. Y el hecho de que estemos aquí y hablemos de lo grandes que son algunas de estas empresas y de que el 100% de las personas gastan 900 dólares al mes. Yo veo esto como presagios de lo que está por venir a medida que más personas se sientan empoderadas. A medida que más personas sientan que pueden crear. Donde no se trata necesariamente de ahorrar tiempo. Se trata de dedicar la alegría de querer hacer que esto sea una realidad. Ya sabes, había todos esos chistes de, ya sabes, cuando la gente estaba en esa fase pico en la que todo el mundo usaba su OpenClaw por primera vez. Sus agentes iban por ahí con sus ordenadores y portátiles. Tenían que mantenerlos abiertos. Y decían: "No estoy durmiendo. Estoy programando. Y estoy haciendo cosas, ya sabes, más de lo que nunca lo he hecho". Y creo que eso está empezando a aparecer, ya sabes, de nuevo, en la parte superior de los datos, pero creo que está empezando a aparecer en todas partes.)*
+
+</details>
+
+**奥利维亚·摩尔**: 确实如此。但如果直视本次榜单所折射出的商业模式真相，我在这里甚至想抛出一个可能略带争议的行业观点：**我个人在未来其实并不希望看到“为消费级 AI 软件直接支付纯订阅费”的用户比例（目前为 4.5%）出现毫无节制的大规模扩张**。
+
+这句话从一个消费级 AI 领域的专职风险投资人口中说出来可能非常离经叛道，因为我本该是消费级 AI 最坚定的多头与最大化主义者（Maximalist）。但我之所以这么说，是因为放眼当下的整个消费级 AI 赛道，几乎全部商业营收都建立在**单一的纯用户直接软件订阅模式**上。
+
+根据我们本次榜单的详尽统计：入围我们网页端 Top 100 榜单的产品中，**整整有 85% 的企业完全依靠按月收取固定软件订阅费来实现商业变现；另外还有 62% 的企业引入了超出额度后购买 Token 积分包或按用量弹性计费的机制。而在这整份庞大的榜单中，仅仅只有区区 13% 的应用在尝试广告模式**，或者采用那种“用户享受免费优质服务，第三方商业广告主来为算力买单”的经典互联网模式。
+
+如果你倒退二十年去翻阅整个消费互联网的发展史就会发现，当下这种全行业集体向消费者收取高额软件订阅费的生态格局，是极其违背商业常理与反直觉的变异畸形状态。放眼全人类当今最庞大、市值最高的消费级科技巨头，其绝大多数商业帝国的底盘完完全全建立在**广告展示变现**或**交易抽成（Take Rates）**之上，而非每月向普通网民硬性扣除订阅软件费。因为最质朴的商业真相在于：这世界上绝大多数的普通人，根本不打算去学习写代码来开创一门副业，也没有意愿自费打造一个商业产品去变现；绝大多数普通消费者不仅没有闲置的可支配资金，更是打心眼里排斥每月为纯软件工具掏腰包。
+
+如果我们放眼全人类范围内排名前 20 大的纯个人消费级订阅产品榜单，ChatGPT 在经历了短短三年半的指数级增长后，确实奇迹般地杀入了这前 20 强席位之中，这无疑是一项前无古人的伟大壮举。但如果你仔细审视同在这份全球前 20 强榜单上的其他巨头就会发现，它们几乎全军是诸如流媒体影视媒体巨头，或者是像亚马逊（Prime 会员包邮与流媒体）、Uber（出行与外卖免配送费）这种具有极高消费频次与实体交易履约属性的超级平台。
+
+因此，我极其坚信的一点是：消费级 AI 行业必须迅速跨越当前这种“要求所有大众必须每月购买 AI 软件订阅”的幼稚期，**我们必须迫切推动广告变现与交易抽成等经过数十年验证的经典互联网商业模式的全面回归**。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: Exactly. And looking at the monetization breakdowns in this list, I'll actually offer what might be a slightly controversial take: I don't necessarily want or expect to see that 4.5% of direct paying subscribers to consumer AI just expand linearly. 
+
+That might sound backwards coming from an early-stage consumer tech investor who is an unabashed consumer AI maximalist. But the reason I say that is because virtually all consumer AI revenue to date has flowed through straightforward direct-to-consumer software subscriptions. 
+
+In our ranking, roughly 85% of the web list monetizes via subscriptions, and another 62% monetizes via credit or token-based usage packs. Only 13% featured advertising or alternative business models where the consumer is served free while sponsors foot the bill. If you look back across the entire history of the consumer internet, this represents a totally unnatural inversion. Nearly every generation-defining consumer tech titan generates the vast lion's share of its revenue from advertising or marketplace transaction fees—not software subscriptions. 
+
+The honest reality is that everyday folks aren't looking to pay monthly tool fees to build software or launch commercial storefronts. The majority of ordinary people don't have the spare budget, nor the appetite, to spend on software subscriptions. If you look at the top 20 consumer subscription franchises globally, ChatGPT has miraculously cracked that list in just three and a half years of growth—which is completely unprecedented. But nearly every other player on that leaderboard is either a pure entertainment media company or an omnichannel marketplace like Amazon Prime or Uber One where you are unlocking high-frequency real-world transactions. We must transition past the assumption that every consumer will hold an AI software subscription, and usher in the return of these alternative, battle-tested business models.
+
+*(Transcript Source: en esta lista. En realidad, no quiero ver necesariamente que el 4,5% de las personas que pagan por productos de IA se expandan directamente. Lo cual puede ser controvertido porque estoy invertido en productos de IA de consumo y soy un maximalista de la IA de consumo. Pero la razón por la que digo eso es porque prácticamente todos los ingresos de la IA de consumo hasta ahora han venido de suscripciones directas. Y en esta lista que observamos, era como, ya sabes, el 85% o algo así de nuestra lista web monetiza a través de suscripciones y otro 62% monetiza a través de créditos o pagos de tokens por uso adicional. Solo el 13% tenía anuncios u otras opciones en las que tú eres el producto en lugar de pagar por el producto. Y eso es como...Si echas la vista atrás en la historia del Internet de consumo, es como una inversión bastante antinatural. Casi todas las grandes empresas de tecnología de consumo que tenemos ahora obtienen la gran mayoría de sus ingresos de los anuncios o de las tarifas de transacción, no de las suscripciones. Porque creo que la verdad es que no todo el mundo busca una herramienta de codificación que le ayude a iniciar un negocio o a crear y vender un producto. La mayoría de la gente no tiene los fondos o no quiere gastarlos en software. Si nos fijamos en los 20 principales productos de suscripción para consumidores a nivel mundial, Chat GPT ya está ahí, lo cual es una locura en unos tres años y medio de crecimiento. Casi todos los demás son empresas de medios o grandes plataformas como Amazon o incluso Uber, cosas así en las que tienes un comportamiento de compra muy frecuente. Así que, de hecho, creo firmemente que tenemos que avanzar. Hemos superado la necesidad de que todo el mundo compre una suscripción a la IA, y necesitamos ver cómo vuelven estos otros modelos de negocio.)*
+
+</details>
+
+**乔希·埃尔曼**: 我完全同意这一判断。我认为行业目前之所以普遍采用纯订阅制，是因为**我们依然处于大模型推理成本（Inference Costs）下降曲线的极早期阶段**。初创团队与各大企业才刚刚开始探索如何借助更小参数、经过极致量化剪枝的低成本开源模型来构建优秀的产品体验。随着模型推理成本在摩尔定律驱动下实现断崖式下挫，那些在过去三十年互联网长河中被无数次验证过的经典商业范式——例如交易佣金、促成转化的效果广告分成——才真正具备在商业单体模型（Unit Economics）上成立的技术前提。
+
+我们必须耐心等待技术底座演进到这一临界点。但眼下的行业现状是，所有初创团队都被迫困在一种朴素的防御性逻辑中：“如果我每服务一个用户哪怕仅仅回答一句话，底层都要直接产生高昂的 GPU 算力成本，那我为了不破产，唯一的自保手段就只能在一开始向用户强行按月预收高昂的会员费。”这就直接导致纯订阅模式成为了整个行业早期心照不宣的默认妥协解。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Absolutely. We are still in the very earliest innings of inference cost reduction. Developers are just starting to master deploying highly optimized, ultra-low-cost small models to deliver exceptional product experiences. And as that cost curve continues to plunge, all those other historically dominant internet business models—like transaction take rates and contextual advertising—will finally unlock and pencil out economically. 
+
+We desperately need that shift to happen. But right now, the industry defaulted to subscriptions out of defensive necessity: "If it's going to cost me a fortune in GPU compute just to serve each prompt, I have no choice but to charge upfront just to keep the lights on." That became the early universal survival mechanism.
+
+*(Transcript Source: Sí, creo que todavía estamos en las primeras etapas de la reducción de los costes de inferencia. Aún estamos en los inicios de que la gente encuentre formas de ejecutar modelos de menor coste para crear grandes productos. Y a medida que lo hagan, muchos de los otros modelos de negocio que siempre han estado en Internet, como las tarifas de transacción y los anuncios, finalmente comenzarán a funcionar. Pero necesitamos que eso suceda, y creo que ahí es donde todavía estamos, hay mucho aprendizaje y tanto, tanto que, como, "Bueno, si me va a costar mucho prestar el servicio, al menos déjenme cobrar dinero para que la gente lo pague", se convirtió en una especie de opción predeterminada temprana.)*
+
+</details>
+
+**奥利维亚·摩尔**: 确实。Josh 经历过消费互联网的数次大周期演进，对于这一点肯定深有体会。在以往的典型消费互联网投资逻辑中，如果一家专注做 C 端应用的初创公司在创立的前五年内就过早地赚到了大钱，投资人的第一反应反而是：“天哪，这家公司的增长飞轮到底出了什么大问题？”
+
+在那个时代，铁一般的金科玉律永远是：先把一切精力聚焦在不计代价地获取海量用户、打造极致的用户网络密度上；既然当时服务器分发边际成本趋近于零，团队完全可以等到平台建立起不可撼动的流动性与网络密度壁垒后，再从容地通过广告变现或向交易流水抽取佣金来收割利润。但在今天，由于大模型背后极其高昂的**主营业务成本**（COGS，包括高昂的 GPU 算力和 Token 消耗），这种传统的烧钱补贴模式被彻底颠覆了。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: Exactly. You've lived through multiple consumer internet cycles, but historically, if a consumer tech startup was aggressively turning a profit in its first five years, early-stage investors would panic: "Wait, what's wrong with your growth flywheel?" 
+
+The historic playbook was: prioritize accumulating dense user liquidity above all else because the marginal cost of serving another byte was essentially zero, allowing you to delay monetization and turn on ads or transaction fees once you had monopolized distribution. That classic playbook broke down given how punishingly high the raw COGS are in the modern AI paradigm.
+
+*(Transcript Source: Sí. Quiero decir, probablemente puedan hablar de esto al ver muchas eras anteriores del Internet de consumo, pero solía ser, al menos para mí como inversor de consumo, si una empresa ganaba dinero en los primeros 5 años, era como, "Vaya. ¿Qué está pasando?". La regla era como, construyamos densidad de usuarios, y como el coste de prestar el servicio es casi cero, podemos esperar y ganar dinero a través de anuncios o comenzar a cobrar por transacciones una vez que tengamos liquidez y densidad, y ese no es el caso dado lo altos que son los engranajes.)*
+
+</details>
+
+**乔希·埃尔曼**: 没毛病。这种居高不下的算力成本结构，给所有创业者带来了极其棘手的新挑战：**许多 AI 公司今天甚至害怕自己的用户规模增长得太快**。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Exactly. This cost structure poses an entirely novel paradox where consumer startups are genuinely terrified of growing too fast.
+
+*(Transcript Source: No, creo que este tema de los costes es un reto muy interesante y las empresas tienen miedo de crecer demasiado rápido.)*
+
+</details>
+
+**奥利维亚·摩尔**: 这话一点都不夸张。如果一家初创公司的产品突然引发全网病毒式疯传，而在变现端却没有建立起严格按用量计费的门槛机制，其云服务与算力账单会在短短几天内彻底失控暴雷，瞬间把公司的现金储备焚烧殆尽。
+
+这就直接塑造了我们在本期 Top 100 榜单上所看到的这幅截然不同的商业图景。但我必须重申，这仅仅是技术漫长演化史的一个短暂中继站：我们依然处于极早期，前方的工程创新空间极其辽阔——我们一方面要持续压降算力推理成本、大幅拉升单位交互的真实商业价值，另一方面要积极引入广告系统与更多元的消费履约场景。当然，如果我们真心热爱的某款优秀产品确实为我们提供了源源不断的无可替代的价值，我们心甘情愿按月为它支付订阅费，这本身也是一件非常棒的商业闭环。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: Truly. If you scale overnight without metering your billing against your compute costs, you can run up millions in runaway infrastructure bills that can sink a startup within weeks. That dynamic has radically distorted the shape of the Top 100 ecosystem compared to historic software waves. 
+
+Again, this is a snapshot of the very early days. There is immense runway to lower compute costs, engineer higher-margin value, and introduce ads alongside transaction infrastructure. And obviously, when users derive continuous, life-changing utility from software they love and happily pay a subscription for it, that remains a magnificent business model too.
+
+*(Transcript Source: Sí. De hecho, si crecen demasiado rápido y no tienen medidores sobre cómo cobran por ello, pueden tener un gasto descontrolado que puede ser muy, muy difícil de gestionar. Por lo tanto, ha creado esta forma muy diferente de lo que vemos en las principales aplicaciones del top 100, ya sabes, el tráfico y todo ahora mismo. Pero, de nuevo, esta es mi función. Todavía es muy pronto. Hay mucho que construir y aprender, y reducir los costes y aumentar el valor, e introducir publicidad y otras formas de gastar dinero. Y, por cierto, si nos suscribimos a estos servicios que nos encantan y de eso obtenemos un valor continuo, eso también es increíble.)*
+
+</details>
+
+---
+
+### 广告新范式：OpenAI 10 亿美元变现与精准商业意图
+
+**阿莱娜·伯格**: 这恰好为我们切入探讨 AI 广告这一核心命题提供了绝佳的过渡切口。你们本次发布的消费级 Top 100 报告中包含了一个极度引人瞩目的重磅数据：**OpenAI 目前仅仅依靠商业广告所实现的年度运营收入运行率（Run-rate），已经正式突破了 10 亿美元大关**。对于整个科技创投市场而言，这绝对是一个里程碑式的信号。这究竟向我们揭示了什么？
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: That is the perfect segue to dive into advertising. Your Top 100 report surfaced a phenomenal datapoint: the revenue run-rate OpenAI has hit exclusively through advertising has officially reached a $1 billion annualized pace. What does that signal about the shifting winds of the market?
+
+*(Transcript Source: Creo que esta es una gran transición para hablar de anuncios. Sí. Su informe sobre los 100 principales consumidores incluía un dato muy interesante, que era la tasa de ejecución que Open AI ha alcanzado a través de la publicidad. Sí. Ahora tienen un gasto anual de mil millones de dólares en publicidad. ¿Y qué nos dice eso?)*
+
+</details>
+
+**奥利维亚·摩尔**: 我首先需要强调一个背景细节：这个 10 亿美元的数据采集自今年 8 月份；因此以今天这个时间点来看，仅仅过去了一个多月，其实际的真实年化广告流水大概率已经大幅攀升到了一个更加庞大的量级之上。
+
+但即便如此，大家必须意识到：OpenAI 在推进广告变现这件事上实际上一直表现得极其克制、谨慎而缓慢，他们仅仅是在非常有限的特定合作伙伴网络中进行了极小范围的灰度试水测试。然而即便是在这种小步慢跑的状态下，其年化广告流水就已经闪电般跨过了 10 亿美元门槛！十亿美元啊！在传统的消费互联网历史上，哪怕一家成熟的科技独角兽正式上线了全套商业化广告系统，通常也需要耗费数年甚至漫长的大规模地推与系统迭代才有可能企及这一天文数字。
+
+我认为这背后蕴含着两大关键内核驱动力：
+**第一，OpenAI 如今终于真正构建起了不可撼动的“超级用户密度”（User Density）**。根据他们几天前对外公布的最新官方数据，ChatGPT 目前的**周活跃用户数（WAU）已经正式跨过了 12 亿人**的恐怖大关。这已经不是普通的行业头部，而是全人类顶级的超级网络密度。
+
+**第二，也是从广告产品进化的底层逻辑上最令我感到着迷的一点：理论上，生成式 AI 对单次商业广告所能收取的溢价、所能实现的点击与购买转化率（Conversion Rates），理应远远碾压以往任何一代互联网广告产品**。因为这个智能体对你的了解程度，要远远比那些单纯在后台埋点监控你的传统平台深刻千万倍。不仅如此，ChatGPT 最近还在陆续上线诸如“以 ChatGPT 账号一键免密登录”（Log in with ChatGPT），未来甚至大概率会直接集成原生数字钱包与免密支付基础设施。大家完全可以想象，对于商业品牌和广告主而言，这到底构成了一个多么具备致命吸引力的全链路精准转化闭环！这将以极其惊人的加速度推动其商业广告飞轮的狂飙。不过，好戏才刚刚开场，一切才刚刚拉开序幕。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: To add context, that metric was from August, so it has likely scaled meaningfully higher since then. Remarkably, they've been rolling out advertising very gingerly through a tight, controlled partner network. And yet they've already printed a billion-dollar annualized run-rate. Historically, it took massive platforms years of aggressive ad engineering to hit that scale. 
+
+There are two primary engines here:
+First, they now command genuine, unassailable user density. They publicly reported hitting 1.2 billion weekly active users just recently—that is staggering global scale. 
+
+Second, from an ad auction dynamic, they should theoretically be able to command dramatically higher CPMs and achieve radically higher conversion rates because the model possesses contextual knowledge of your intent that dwarfs anything cookies or social graphs ever captured. As ChatGPT rolls out features like "Sign in with ChatGPT" and native wallet infrastructure, you have an end-to-end intent-to-checkout loop. For advertisers, that is the holy grail.
+
+*(Transcript Source: Insisto, la cifra es de agosto, así que es probable que sea bastante más alta incluso un mes después. Sí. Pero diría que han ido lanzando anuncios muy lentamente con una especie de red de socios. Y ya tienen un gasto anual de mil millones. Miles de millones. Antes, a una empresa le llevaría años y años llegar a esa cifra, incluso después de lanzar un producto publicitario. Creo que hay dos cosas interesantes. Una, ahora tienen una densidad real. Creo que la última cifra comunicada hace unos días fue de 1200 millones de usuarios activos semanales, lo que es una densidad real. Y la segunda cosa, y lo que me fascina ver en términos de la evolución del producto publicitario, es que, hipotéticamente, deberían poder cobrar más y tener tasas de conversión más altas porque saben mucho más sobre ti como usuario. Y ChatGPT ha lanzado cosas como el inicio de sesión con ChatGPT. Creo que pronto habrá una cartera, cosas así. Así que puedes imaginar que se convierte en una propuesta de valor mucho más atractiva para los anunciantes y que eso impulsa aún más el negocio de la publicidad. Pero ya veremos, todavía es muy pronto.)*
+
+</details>
+
+**乔希·埃尔曼**: 确实仍处于非常早期的探索阶段。在过去这一两年里，围绕“在 AI 助手里植入广告”这一话题，创投圈内部爆发过大量极具趣味性的激烈辩论。试想一下：如果你正在与一个高度私密的智能体深入倾诉极其隐私的个人健康隐忧，而此时 AI 却突然跳出来对你说：“说到你的健康困扰，我顺便给你隆重推荐这款能帮你光速甩肉的疯狂减肥神药！”这种生硬突兀的广告植入，会瞬间把用户与 AI 之间好不容易建立起来的心理信任纽带撕得粉碎。
+
+因此，摆在整个软件生态面前最严苛的考验在于：我们该如何在一个前所未有地深刻洞悉用户私密生活的对话界面里，极其优雅、克制且有分寸地去运营商业变现？这个助手所给出的每一个字句，都是基于你当下的所思所想、你所提出的精确疑问以及它对你背景的深度记忆所生成的量身定制的反馈。
+
+就我个人的真实体验而言，我认为 OpenAI 团队在将广告优雅融入对话流这件事上，展现出了极其高超且精湛的产品克制力。在我的日常使用中，每当我触发一条商业推广时，界面上的赞助商标注极其清晰直观，而且它呈现的方式非常自然，就像是你在与一位专业博学的朋友对话时，对方恰如其分地为你引荐了一个真正契合你当下需求的外部优质选项。
+
+另一个深刻的底层行为变迁在于：**全球用户正在逐步把越来越多的复杂生活决策与高阶综合查询，彻底从传统搜索引擎全面迁移到 ChatGPT 之上**。在过去，人们打开大模型往往只是把它当作一个高级百科词典——“帮我查一下这句古诗的出处”、“帮我讲讲这段历史背景”、“帮我检查一下作业有没有语法错误”；在那个阶段，用户并没有把它当成一个解决现实消费决策的终极入口。
+
+但在今天，无数用户开始在 ChatGPT 上寻求非常严肃的生活消费决策建议：“我该买哪款车”、“我假期想带全家去旅行，该怎么规划路线”、“我想挑选一款符合某种特殊诉求的小众商品”。当用户的状态从单纯的信息求知，全面切换到这种高度具备商业交易意图（Commercial Intent）的“主动发现模式”（Discovery Mode）时，商业广告往往就不再是惹人厌恶的打扰，而是刚好能帮用户解决心头大患的绝佳解决方案。这种高商业意图的高频涌现，正在催生前所未有的商业价值。但一切的前提，依然必须建立在极其克制精湛的交互设计之上，决不能变成那种把粗暴弹窗强塞进私密对话里的灾难体验。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Exactly. There's been fascinating debate around ads in conversational AI. If you're confiding in an AI about a vulnerable health scare and it suddenly blurts: "Speaking of your wellness, buy this miraculous new weight-loss powder!", you instantly shatter all user trust. 
+
+So the existential design challenge is: how does the software ecosystem manage monetizing an intimate conversational surface that knows you so completely? Every response is dynamically generated based on your exact identity and context. OpenAI has actually handled this with immense subtlety. Whenever I encounter a sponsored placement, it's explicitly labeled and feels organically woven into the dialogue. 
+
+The other macro behavior shift is that people are migrating high-intent commercial queries over to ChatGPT. Early on, users treated it like a novelty encyclopedia—asking for historical facts or essay homework proofreading. Today, consumers actively consult it for high-stakes decision-making, shopping research, and vacation planning. When a user enters that commercial discovery mode, an ad placement isn't an annoying interruption; it's often the exact personalized answer they were hunting for. But it demands exceptional product craftsmanship so it never feels like an invasive ad shoved into an intimate chat.
+
+*(Transcript Source: Todavía es pronto y creo que ha habido algunas conversaciones muy divertidas sobre los anuncios y la IA. Si hablas de algo tan personal y dices: "Déjame hablarte de salud y te presento este producto tan loco que puede ayudarte a perder peso rápido", eso no genera confianza con la IA. Eso no genera confianza con la IA, así que creo que otro aspecto interesante es cómo nosotros como ecosistema gestionamos estos productos, que son tan diferentes y mucho más personales que nunca. Te ofrecen respuestas personalizadas según lo que haces, lo que estás preguntando en ese momento y todo aquello que saben acerca de ti. De hecho, la introducción de los anuncios se ha hecho con mucha destreza. De hecho, me ha impresionado mucho la implementación de la IA abierta en los anuncios. Cuando veo un anuncio, está muy claramente etiquetado y parece un anuncio natural en la conversación que estoy teniendo. Creo que también estamos, ya sabes, otro de los cambios es que la gente está empezando a confiar mucho más en ChatGPT para muchas más consultas. Antes era algo así como buscar un dato o contarme la historia de esto o ayudarme con mi tarea, no necesariamente para resolver problemas ni cosas por el estilo, pero ahora la gente recurre a él para obtener consejos reales o para comprar o para intentar averiguar exactamente a dónde quiere ir o qué quiere hacer, y esas son grandes oportunidades cuando estás en un modo de descubrimiento en el que los anuncios suelen ser una gran respuesta para ayudarte a resolverlo. Y así, muchas más de estas consultas comerciales y esta intención comercial también lo crean. Pero, de nuevo, tiene que hacerse con mucha, mucha destreza, no con esta experiencia extraña, disruptiva y muy personal que estoy teniendo, en la que los anuncios se introducen en la conversación.)*
+
+</details>
+
+**阿莱娜·伯格**: 确实是这样。我非常好奇其底层的**单体经济模型**（Unit Economics）究竟是如何跑通的。照常理推断，单纯运行一次短文本的上下文检索与广告匹配，其背后所消耗的 GPU 算力成本，理应远远低于那些让大模型长链思考去编写几千行复杂工程代码、或者直接生成超高清视频的多模态重度任务。那么对于 OpenAI 而言，这种商业广告模式究竟能为他们带来怎样惊人的毛利率空间？这是一个极具想象力的财务命题。
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: I'd be fascinated to see the true unit economics of their ad business. Serving a lightweight text recommendation in a chat thread is exponentially cheaper than generating a high-res video or running multi-step reasoning coding loops. What kind of gross margins is OpenAI realizing on these sponsored queries? That's an extraordinary financial question.
+
+*(Transcript Source: Sí. Sí. Tendría mucha curiosidad por saber cómo funciona la economía unitaria en los anuncios. Es de suponer que es una cuestión de menor coste o menor en comparación con, ya sabes, la codificación o algo así o la generación de imágenes. Bueno, para Open AI, ¿qué tipo de márgenes ven en los anuncios? Es una cuestión muy interesante.)*
+
+</details>
+
+**奥利维亚·摩尔**: 确实如此。我也很想知道，Josh，你在日常使用中到底在哪些具体场景下看到了广告？因为我个人平时主要使用的是企业版账号（Enterprise），所以在我的日常界面里目前还完全没有看到过任何广告推送。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: Totally. And Josh, I'm curious: what exact kinds of ads are you seeing in the wild? Because I primarily use our enterprise instance, so I don't see any ads served in my interface.
+
+*(Transcript Source: Sí. También tengo curiosidad, Josh, ¿qué tipo de anuncios ves? Porque yo no recibo ningún anuncio. Supongo que uso la versión empresarial.)*
+
+</details>
+
+**乔希·埃尔曼**: 没毛病，企业版账号在设计上天然就是完全免广告且严格受到商业数据保密协议保护的。
+
+而在我个人的普通账号上，我可以分享一个真实的微观案例：前阵子我正在规划一趟去纽约的私人旅行行程，因为要在纽约停留几天，我便在 ChatGPT 里针对行程安排做了一些前期调研。就在那个对话流里，系统非常自然地向我展示了几个近期刚好在纽约本地举办的沉浸式文化活动与展览推荐。我当时的第一感觉是：天哪，这实在太有用了，完全契合我当下的出行诉求。
+
+另一个更典型的案例发生在我挑选实体商品的过程中：我当时正在寻找一款非常特殊的钥匙扣——它必须具备极其实用且稳固的快速机械快拆结构，好让我在把车交给泊车员时能一秒把车钥匙单独拆卸下来。我当时在传统的 **Google** 搜索框里翻找了半天，翻来覆去全都是千篇一律的廉价货，死活找不到真正符合我苛刻尺寸与机械设计诉求的商品。
+
+万般无奈之下我想着：“不如直接去问问 ChatGPT 吧。”于是我打开对话框，开始像跟一个专业五金设计师对话一样，把我在尺寸、手感、机械快拆逻辑上的诉求逐条描述给它听。大模型立刻开始跟我进行多轮深度来回推演，并迅速根据我的偏好调整建议，给出了一系列惊艳的候选方案。聊到最后我对它说：“太棒了！如果可以的话，我希望能买到一个完全由美国本土制造（Made in USA）的硬核品牌。”结果它顺理成章地为我找到了底特律当地一家原本专门做特种金属模具制造的宝藏小众工坊，对方刚好手工打造了这样一款满足我全部幻想的特种快拆钥匙扣！
+
+这就是最生动的例证：如果不是因为我有机会在 ChatGPT 里展开这样一场长达十几轮、极具上下文深度的交互推演，我这辈子可能都永远无法在浩瀚的信息海洋里发现那家底特律小厂的存在。虽然在那次具体的长对话里系统并没有向我强插赞助商广告，但我当时的心理状态是完全对高质量的相关商业推广敞开怀抱的——如果当时有某个同样极致的同类本土五金品牌花钱在此处做了精准推荐，我不仅不会反感，甚至会发自内心地感激它为我省去了海量的搜寻心力。最终我直接跳转到那个从未听说过的独立品牌官网完成了全额支付，整个消费履约体验令人极其愉悦。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Exactly, enterprise is pristine. But on my personal account, I'll give you a real example: I was doing some trip planning recently for an upcoming stay in New York. I started seeing contextual suggestions for a couple of curated events and activities happening around the city during those exact dates, and it felt genuinely helpful. 
+
+Another time, I was hunting for a very specific valet keychain—one with a quick-release mechanism so I could easily detach my car key when handing it to a valet. I spent twenty minutes wrestling with Google Search and kept getting junk results. Finally, I thought: "Let me just ask ChatGPT." 
+
+I went back and forth with it, detailing the exact mechanical release I wanted, and it began serving phenomenal options. Finally, I added: "Great, but I'd really love one crafted by a domestic manufacturer in the US." And it unearthed this incredible domestic fabricator in Detroit that specializes in precision metalwork and produces this brilliant custom valet key. Had I not had that dynamic back-and-forth dialogue, I never would have discovered them. Even if an ad had surfaced in that moment, I would have welcomed it with open arms because it directly accelerated my intent. It was an extraordinary discovery experience.
+
+*(Transcript Source: Es empresarial. Así que no...Sí. Sabes, estuve investigando un poco sobre viajes recientemente y, bueno, iba a estar en Nueva York durante unos días y empecé a ver algunos anuncios de un par de cosas que estaban pasando en Nueva York y que podría haber querido hacer. Y me pareció muy útil. Y empecé a usarlo más para compras comerciales. Estaba buscando un llavero especial que se pudiera separar fácilmente para una llave de aparcacoches. Y estaba teniendo problemas para encontrar esto en Google. Y finalmente pensé: "Déjame preguntarle a ChatGPT". Y estuve yendo y viniendo y describiendo lo que quería y empecé a darme algunos ejemplos realmente buenos. Y al final pensé: "Genial. Y también me encantaría uno que esté hecho en Estados Unidos". Y de hecho encontré esta increíble opción de una fábrica en Detroit que a menudo hace muchos otros trabajos en metal y otras cosas que tenían esta clave realmente genial para mí. Y fue una de esas cosas donde, de no haber tenido nunca la oportunidad de intercambiar ideas y de verdad tener esa conversación con ChatGPT, habría sido distinto. Y si hubiera habido otros anuncios que obtuve, no se presentaron anuncios en esa conversación, pero estaba completamente abierto a anuncios que me habrían ayudado a encontrar cosas. Y finalmente fui a este sitio web. Nunca había oído hablar de esa empresa antes y fue una gran experiencia.)*
+
+</details>
+
+**奥利维亚·摩尔**: 这个案例实在太有启发性了。我认为随着整个商业化团队在算法工程上的不断深耕，OpenAI 在底层人群画像与商业意图精准定向（Targeting）维度的能力，很快将实现对 **Meta** 的全面弯道超车——要知道 Meta 在过去十几年里一直是全球精准效果广告领域当之无愧的绝对王者，凭借的就是其对用户社交图谱与兴趣维度的深刻洞悉；然而在 ChatGPT 面前，用户是在以极其主动的姿态、实时通过长篇大论的对话把脑海中最私密、最真实的商业购买意图全盘托出。这种实时对话数据的纯度与确定性，是传统社交网络被动刷帖所根本无法比拟的。
+
+而这一全新变现模式的繁荣，不仅将成为 ChatGPT 持续扩大其飞轮效应的核心现金流引擎，更关键的是，它将成为整个消费级 AI 领域所有高度垂直化（Verticalized）产品的核心商业生路。举一个最具代表性的成功范例：在我们本次榜单中表现极其亮眼的 **Open Evidence**——这是一款专门面向执业医师与临床医疗专家的垂直 AI 决策工具。根据最新的全美统计数据，全美国竟然有整整 **50% 到 60% 的执业医生**都已经是该产品的常态化高频活跃用户！
+
+试想一下：当你在一款软件中不仅建立起了极其惊人的专业细分人群密度，而且这群用户全都是全社会收入最高、决策权重最重的执业医师群体时，这种极其纯粹的垂直人群资产对于全球大型药企、尖端医疗器械巨头而言，具备无与伦比的商业投放价值。你可以在完全不伤害医生专业工作流的前提下，实现极其精准高效的专业医疗学术推广与商业变现。我认为在未来的消费级与专商业界，我们理应、也必然会看到越来越多沿着这种垂直人群垄断路径突围的标杆企业。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: That's fascinating. Over time, OpenAI's precision ad-targeting capabilities could easily surpass Meta—which has historically been best-in-class simply because of how much ambient behavioral data they captured. But here, you are having a real-time, explicit, high-trust dialogue revealing exact intent. 
+
+That monetization tailwind won't just bolster horizontal giants like ChatGPT; it will anchor highly focused, verticalized consumer and prosumer AI products. Another phenomenal company seeing explosive ad monetization right now is Open Evidence, which is an AI platform built specifically for practicing medical doctors. The most recent data shows they have captured between 50% and 60% density of all practicing physicians in the United States on the platform! 
+
+When you establish that kind of jaw-dropping category density over an extraordinarily valuable, high-trust professional audience, the advertising economics become outrageously lucrative. You can monetize that captive vertical audience with phenomenal precision. We will see many more vertical powerhouses follow that exact monetization blueprint.
+
+*(Transcript Source: Muy interesante. Creo que, a medida que se adentren en ello, Open AI podrá hacer una segmentación increíblemente buena, incluso mejor que Meta, que antes era la mejor en su clase para esto, solo porque sabían mucho sobre ti. Pero es como si estuvieras teniendo esta conversación en vivo con ellos. Sí. Creo que ayudará a ChatGPT, pero también creo que también respaldará muchos de estos productos de IA de consumo más centrados, casi verticalizados, por usar el término empresarial. Entonces, otra empresa que ha tenido un éxito temprano en los anuncios es Open Evidence, que es un producto de IA para médicos. Y ya tiene un 50, creo que las cifras más recientes fueron de entre el 50 y el 60% de densidad de todos los médicos estadounidenses en el producto. Entonces, cuando tienes ese tipo de densidad, pero una audiencia realmente valiosa, y es como una audiencia segmentada porque sabes que son médicos, puedes, creo, hacer publicidad de manera muy efectiva, y habrá y debería haber más de esos, creo.)*
+
+</details>
+
+---
+
+### 三巨头之争：ChatGPT、Claude 与 Gemini 的用户画像分化
+
+**阿莱娜·伯格**: 这引出了一个非常值得我们深度停驻探讨的重量级话题：我们该如何审视当前站在大模型竞技场最顶端的“基础模型三巨头”——**OpenAI**、**Anthropic** 以及 **谷歌（Gemini）**？在某种意义上，这三家底层大模型实验室几乎从我们首期制作消费级榜单的第一天起，就始终稳稳盘踞在整个排名的最前列。那么在当下的最新周期里，我们是否观察到了终端用户为这三大模型买单的方式正在发生某种深层次的分化？基于这三者各自的付费与流量结构，我们能对这三家平台的真实终端用户画像做出哪些深度推论？我极其渴望听到 Olivia 揭晓数据背后的秘密。
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: It's worth pausing to examine the foundation lab triumvirate: OpenAI, Anthropic, and Google's Gemini. In many ways, these three frontier labs have anchored our list from the very inception of this report. Are we seeing a divergence in how consumers are paying for these respective products? What can you infer about the user profiles anchoring each of the three?
+
+*(Transcript Source: ¿Merece la pena que nos detengamos un poco y hablemos de OpenAI, Anthropic y Gemini? En cierto sentido, estas son las empresas, estos laboratorios que han estado en la lista prácticamente desde el principio de todo este proceso. ¿Estamos viendo algún tipo de evolución en la forma en que la gente paga por estos productos? ¿Qué puedes suponer sobre los diferentes tipos de usuarios de los tres? Tengo muchísima curiosidad por saber qué estás viendo.)*
+
+</details>
+
+**奥利维亚·摩尔**: 没问题，这绝对是本期报告最震撼人心的看点之一。自从我们开创性地推出第一期 Top 100 报告以来，整个消费级 AI 生态最恒定、最坚不可摧的一条主线结论就是：**ChatGPT 在全球终端消费级市场始终占据着绝对的统治霸主地位——无论是在总体使用流量、活跃用户数，还是在直接变现流水层面，皆是如此**。时至今日，这一王座格局依然牢不可破。
+
+但是，只要你把视线移向排在 ChatGPT 身后的追赶者梯队，整个竞技场却爆发出了前所未有的剧烈震荡与洗牌。单看传统的网页公网流量指标：ChatGPT 目前在网页端的用户访问流量依然相当于 **Claude** 的整整 **6 倍**之巨，同时也保持着大约两倍于 Google Gemini 网页端流量的显著领先优势。然而正如我们前面所反复强调的，鉴于当前整个消费级 AI 商业大盘极度向那些愿意持续自费的超级核心用户倾斜，单纯看免费网页流量所能反映的信息量已经极其有限，**真实的银行卡付费用户数与订阅收入流水，才是真正洞察竞争格局的终极试金石**。
+
+而这恰恰构成了本次报告带给我个人最大的震撼与颠覆：在我们针对全美真实个人银行卡交易的微观追踪面板中，**Anthropic 旗下的 Claude 在美国本土的直接付费订阅用户总量，竟然已经正式全面反超了谷歌旗下的 Gemini！**
+
+大家请务必细细品味这背后的震撼含金量：谷歌的 Gemini 坐拥整个安卓操作系统（Android）极其庞大的硬件设备预装底盘，享有数以亿计的谷歌生态既有用户基数，更拥有 Google.com 这个全人类最恐怖的天然流量分发总入口；而在完全没有这些先天地利优势的前提下，Claude 作为一个后发独立的创业公司产品，其纯付费会员盘子竟然能够以弱胜强、彻底击溃科技巨头 Gemini！这毫无疑问是 Anthropic 取得的里程碑式的史诗级商业胜利。
+
+深度复盘这一战局可以清晰看到，这主要得益于 Anthropic 在过去这几个月里所接连祭出的一系列极具统治力的产品连环拳——例如其全新推出的 **Claude Artifacts**（交互式构件生成界面），在全网开发者与设计师群体中引发了海啸般的疯传与极高粘性；同时，他们在资本运作与公共影响力上的密集出击也功不可没。
+
+但更耐人寻味的一大底层分化，体现在这三大模型**在商业化变现路径上的价值观决裂**：
+虽然 ChatGPT 在整体付费用户总盘子上依然具备一骑绝尘的统御力——其在美国本土拥有的实际付费订阅用户规模，大约是 Gemini 和 Claude 两者各自体量的整整 **3 倍**之多；但是，Anthropic 此前在战略层面公开明确表态：**坚决向任何形式的商业广告说“不”（Say No to Ads）**。
+
+因此，为了覆盖高昂的模型研发与算力成本，Anthropic 在挖掘订阅用户的客单价深度上表现得极其激进与凶悍：**在 Claude 的所有付费会员大盘中，竟然有高达 7.5% 的硬核用户直接订阅了其每月收费高达 100 美元以上的至尊版套餐（Max Plan）！**
+
+大家对比一下横向参照物就会明白这有多恐怖：在 ChatGPT 和 Google Gemini 各自的付费会员群体中，能够承受每月 100 美元以上高昂月费的超级用户比例，**仅仅只有微不足道的 1% 上下**！这就极其生动地向全行业证明：即便是在这三家大模型各自圈定的付费用户大本营内部，其底层的用户结构、用户对工具的使用深度，以及他们在软件里所解决的任务复杂度，已经彻底分道扬镳、驶向了完全不同的维度。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: Absolutely. Ever since our inaugural report, the undisputed headline has been that ChatGPT is the 800-pound gorilla, dominating both absolute scale and consumer spend globally. That remains true today. 
+
+Everything beneath ChatGPT, however, has undergone massive tectonic volatility. If you look strictly at web traffic, ChatGPT still outpaces Claude by roughly 6x and Gemini by about 2x on desktop. But because engagement is so concentrated among paying power users, revenue data tells a far more profound story. 
+
+And this was arguably the single biggest jaw-dropping surprise of the entire report: within our US consumer transaction panel, Claude has officially overtaken Google's Gemini in absolute paying consumer subscribers! 
+
+That is utterly wild when you consider the gargantuan structural advantages Gemini enjoys—pre-installed on billions of Android devices, directly integrated into the world's default search engine, and possessing a colossal installed base. It is a phenomenal validation of Anthropic's product execution. It rode a wave of spectacular product rollouts over recent months, most notably Claude Artifacts, coupled with surging mainstream mindshare. 
+
+The other massive divergence is in how these foundation giants monetize: ChatGPT remains the undisputed revenue king, maintaining roughly 3x more paying US subscribers than either Gemini or Claude. But Anthropic has famously drawn a line in the sand against ads. They are consequently far more aggressive in monetizing through high-tier software subscriptions: roughly 7.5% of Claude's paying subscriber base is on their premium tier paying over $100 per month! For both ChatGPT and Gemini, that ultra-premium cohort represents a sliver—only around 1%. That data proves the paying cohorts inside these three platforms look totally different, behave differently, and utilize the models for wildly different economic purposes.
+
+*(Transcript Source: Sí, por supuesto. Desde la primera vez que hicimos este informe, la conclusión principal fue que ChatGPT es el usuario global dominante tanto por uso como por ingresos en el lado del consumidor. Eso sigue siendo cierto. Todo lo que está por debajo de ChatGPT ha experimentado, creo, más movimientos y más cambios. ChatGPT supera ahora a Claude por unas 6 veces en la web, y a Gemini por unas 2 veces en la misma plataforma. Probablemente en el futuro, dado que gran parte del uso se concentra en estos usuarios avanzados que pagan, las cifras de ingresos podrían ser incluso más útiles aquí. Bueno, y probablemente esa sea una de las mayores sorpresas para mí en este informe, es que tenemos un panel de consumidores estadounidenses, y Claude ha superado a Gemini en cuanto a número de suscriptores de pago, lo cual es una locura dado que Gemini tiene una base instalada y una base de usuarios mucho mayor en general, y también tiene el mecanismo de distribución natural de algo como Google. Creo que es un gran logro para Anthropic. Creo que ha llegado tras la ola de un montón de productos muy exitosos que han lanzado en los últimos meses, como el diseño de Claude. También ha surgido de mucha más prensa que han tenido, empezando por el Departamento de Guerra, creo que fue en febrero. La otra gran diferencia la diría en cómo se monetizan estos productos, y de nuevo ChatGPT sigue muy por delante en cuanto a monetización. Tienen unas tres veces más suscriptores de pago en EE. UU. que Gemini y Claude. Pero Anthropic ha dicho, como es sabido, no a los anuncios. Así que son mucho más agresivos con las suscripciones. Tienen alrededor de un 7,5% de suscriptores en el plan máximo de más de 100 $ al mes. Y eso es como un 1% tanto para ChatGPT como para Gemini, por lo que esos usuarios tienen un aspecto diferente y hacen cosas diferentes en el producto, incluso en esa base de usuarios de pago.)*
+
+</details>
+
+---
+
+### 创意工具版图：垂直化护城河与多模态战局
+
+**阿莱娜·伯格**: 这极其自然地把我们引向了下一个至关重要的核心战场——**专业创意生成工具**（Creative Tools）。我认为当前一个极具启发性的现象在于：各大顶级前沿实验室在多模态创意能力上正在变得越来越无懈可击。而 Anthropic 在战略上曾长期主动选择克制、未曾下场去自研底层的原生图像扩散模型或视频生成模型；但极其戏剧性的是，由于其代码生成与前端渲染能力极其强悍，大众用户如今竟然可以通过编写代码脚本，在 Claude 的原生界面里自如地调取并渲染出极其惊艳的可视化图形与交互式图表。
+
+然而，如果我们把目光从大模型实验室抽离出来，去审视那些在纯粹创意工具赛道上选择极致垂直化（Verticalized）深耕的专业初创企业，我们在市场格局上究竟看到了哪些全新的态势？
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: That brings us naturally to creative tools. It's fascinating how capable the frontier foundation models have become across creative modalities. Anthropic famously held back from releasing a native image diffusion or video model, yet people use Claude Code and Artifacts to programmatically generate astonishing interactive graphics and visuals anyway. But for the dedicated startups that chose to verticalize deeply into pure creative software suites, what dynamics are unfolding?
+
+*(Transcript Source: ¿Deberíamos hablar de herramientas creativas? Creo que algo interesante es que todos los grandes laboratorios se han vuelto realmente buenos en herramientas creativas y una cosa de la que Anthropic se abstuvo, pero que de alguna manera logra de todos modos, fue crear un modelo de imagen o de vídeo. Pero ahora la gente está creando imágenes y vídeos porque la codificación es muy buena para crear imágenes y vídeos. Es interesante que, como sabes, no hayan creado un modelo de difusión, pero que sigan siendo capaces de generar imágenes, pero en cuanto a las herramientas creativas puras, las empresas que se han verticalizado en esa categoría, ¿qué estamos viendo?)*
+
+</details>
+
+**奥利维亚·摩尔**: 专业创意工具在整个消费级市场的分布与分化版图极富戏剧色彩，这完全取决于具体的细分模态以及初创公司在何处构筑壁垒。
+
+显而易见，有某些特定的人工智能创意模态——或者用更学术的词汇来说，特定感知模态（Modalities）——底层的各大前沿模型实验室出于极其复杂的商业与法律考量，迄今为止都未曾倾注核心精力与算力去直接涉足。其中最典型的代表领域便是**纯音频与高阶音乐生成赛道**（Audio & Music Generation），包括极高保真度的实时文本转语音（TTS）以及全编曲音乐合成。
+
+也正因如此，诸如 **ElevenLabs** 以及 **Suno** 这样的垂直独角兽，如今不仅在我们全网流量榜单上毫无争议地稳居前列，在真实的消费者个人银行卡支出榜单上也同样高居第一梯队。大家设身处地地站在各大底层大模型实验室的立场想一想：他们每天的大脑里塞满了千头万绪的战略重心——他们要全力冲刺研发能够自主编写复杂架构代码的工程智能体，他们要把全部身家性命押注在冲击通用人工智能（AGI）的历史征程上。在当前的节点，让他们分心去冒着巨大的版权侵权诉讼风险、去硬刚 Suno 过去一年在应对全美唱片业协会版权纠纷上所经历的重重法律梦魇，只为了去抢先自研推出一款具备直接竞争力的音乐生成模型，这在商业战略上真的具备紧迫的合理性吗？答案显然是否定的。而就在各大巨头犹豫徘徊的战略空窗期内，Suno 已经凭借极致专注的产品打磨，在音乐生成这一垂直王国里构筑起了极其稳固且坚不可摧的先发护城河。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: The landscape of creative tools is deeply nuanced, and it comes down to who is winning which modality and why. There are specific modalities where the foundation labs simply haven't focused their firepower, for very obvious strategic and legal reasons. 
+
+Audio—specifically text-to-speech and music generation—is the quintessential example. Platforms like ElevenLabs and Suno sit right near the very top of both our traffic rankings and our actual card-spend leaderboards. The foundation labs have fish to fry: they are racing to train trillion-parameter architectures, building enterprise coding agents, and pursuing AGI. Does it make any strategic sense for them to wade into the massive copyright and intellectual property minefields that Suno has had to navigate, just to ship a standalone music model? Probably not right now. And in the meantime, Suno has built a powerhouse consumer brand and an enormous competitive moat.
+
+*(Transcript Source: La distribución de herramientas creativas es muy interesante según quién triunfa y dónde. Bueno, hay algunas categorías de herramientas creativas o quizá modalidades sería un término más acertado en las que los laboratorios no han centrado su energía ni su atención por muchas razones que podríamos analizar. Muchas tratan sobre audio, como el texto a voz o la música. Eleven Labs y Suno ahora se encuentran muy cerca de la cima de nuestras listas de tráfico y también ocupan un lugar muy alto en nuestra lista de gastos. Los laboratorios tienen muchas cosas que hacer. Están creando agentes de codificación, están creando AGI. ¿Tiene sentido en este momento que lidien con todos los quebraderos de cabeza de la propiedad intelectual por los que ha tenido que pasar Suno y lancen un modelo musical competitivo? No lo sé. Y mientras tanto, Suno ha podido salir airoso con una ventaja realmente sólida.)*
+
+</details>
+
+**乔希·埃尔曼**: 我完全笃信这一点。底层基础大模型实验室无疑将沿着它们宏大的技术基准测试路线图持续狂飙演进，并继续成为整个科技行业无可替代的算力灯塔。
+
+但在真实且广袤的商业市场中，大家永远会看到这样一批**极其专注、对细分人群需求理解得深入骨髓的垂直化软件产品**。他们对自己的目标用户画像了如指掌，完全清楚这些专业创作者每天的工作流痛点究竟在哪里，并能够围绕这些极其隐晦的微观交互，打造出完全量身定制的极致产品体验。
+
+如果你今天仅仅是出于纯粹的娱乐消遣，或者为了给自己的视频配一段专属背景乐而想要创作一首完整的音乐，Suno 从你敲下第一行提示词到最终旋律生成的整套交互反馈，都像是在直接与你内心深处的音乐灵感对话。同样，如果你需要在自己正在研发的商业软件产品或游戏引擎里深度植入具备饱满情绪张力的人类原声配音，ElevenLabs 所提供的整套工程化 API、声音克隆与微调控制台，其工作流逻辑与使用质感是任何通用大模型完全不可同日而语的。
+
+再看看专业设计领域的那些经典范例，比如 **Figma**：它从底层架构的第一天起，就是为了服务于专业设计师高强度的复杂表达与协同设计而生的；它的界面语言是在与专业设计师直接对话，而不是在试图讨好那些只想一键跳过所有设计步骤的外行。我坚信，在未来的商业版图里，**这种深度贴合垂直工作流的专属交互软件层（Software Layer），其所沉淀的真实商业价值与资产溢价，将远远超越底层大模型本身**。软件在界面侧对状态的保存、对复杂逻辑的编排、对多模态资产的无缝管理，才是真正能够长期锁住用户价值的核心资产。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Absolutely. The foundation labs will follow their own trajectory and continue scaling, serving as the core compute engine for everything. But in vertical markets, you consistently see specialized platforms dominate because they understand their specific audience inside and out. 
+
+If you want to produce music—whether just for personal joy or for a commercial production—Suno offers an intuitive, deeply tailored canvas that speaks to a musician or creator from the first beat. If you need hyper-realistic human voice synthesis inside an application, ElevenLabs gives you a developer ecosystem and fine-grained acoustic control that feels totally distinct from prompting a raw foundation model. 
+
+Look at iconic design platforms like Figma: they are constructed from the ground up for deep, expressive craft. They speak fluently to professional designers, rather than forcing them into generic compromises. We are going to see massive enterprise and consumer value accrue to these specialized interface layers. The software layer—how you interact, how you store project context, how you manipulate creative assets—is where the defensible value truly resides, not just within the foundation weights.
+
+*(Transcript Source: Sí, y estoy firmemente convencido de que los laboratorios seguirán su propio camino y continuarán creciendo, pues ellos son, evidentemente, unos excelentes puntos de referencia para todo. Pero en muchos de estos mercados, se ven productos realmente especializados que están muy centrados, que saben quién es su público y qué están haciendo, y que son capaces de crear cosas realmente personalizadas. Si quieres hacer música solo por diversión o para algo que realmente estás produciendo, Suno es una herramienta increíble que te habla desde el momento en que empiezas a usarla hasta el final. Eleven Labs, si necesitas voz y audio dentro del producto que estás creando, tiene una forma de trabajar e interactuar con ella que resulta completamente diferente. Cuando observas un montón de herramientas de vídeo, ya sabes, cuando observas herramientas de diseño, incluso como Figma, están diseñadas para usarse profundamente para aquello con lo que intentas expresarte, y les habla a los diseñadores, no a las personas que, ya sabes, quieren saltarse ese paso. Creo que vamos a ver mucho más valor de estas interfaces realmente personalizadas, donde la capa de software de todas las cosas que puedes hacer, las cosas que guardas y la forma en que interactúas con ellas se convierte en donde realmente reside el valor, no solo los modelos.)*
+
+</details>
+
+**奥利维亚·摩尔**: 是的。这精准地引出了专业创意软件的第二大主力战场：**图像与动态视频生成**（Images & Video）。这一领域的竞争态势与刚才提到的音频赛道呈现出了截然不同的分化格局。
+
+在静态图像生成领域，正如 Josh 所指出的，OpenAI 近期在原生图像生成与二次局部编辑能力上展现出了极其强悍的攻势，其最新迭代的原生视觉功能在出图质量、文本嵌入渲染以及局部重绘上表现得极为出色。与此相伴随的，还有谷歌依托其庞大的底层视觉研发力量，接连推出的多模态图像体系。而这些科技巨头在图像能力上的全面发力，客观上直接对那些功能单一的早期独立生图工具造成了毁灭性的降维打击，无情地抽干了原本涌向独立生图网站的海量大众泛娱乐流量。
+
+以最著名的 **Midjourney** 为例：在我们前几期的纯流量排行榜上，Midjourney 曾经长期以统治级的姿态稳稳盘踞在全网排名的最前列；而在本期纯流量维度下，它甚至已经彻底从全球流量前列滑落出局。但正如我们前面反复强调的“超级用户法则”一样，只要你把视线切换到真实的个人银行卡付费收入榜单上，**Midjourney 瞬间王者归来、强势杀回全美吸金榜最顶层席位！** 这雄辩地证明：全网最核心的专业设计师与视觉极客，依然发自内心地坚信 Midjourney 拥有任何科技巨头都无法复制的独特审美情趣、艺术质感以及极其细致入微的参数调优掌控力。
+
+而这就直接把我们带到了当前整个生成式 AI 领域技术最复杂、竞争最惨烈的狂野西部大前线——**视频生成**（Video Generation）。在这一赛道上，包括快手可灵（Kling）、MiniMax 等中国企业，凭借在底层海量多模态数据训练、极速算法迭代以及惊人工程化优化上的深厚积累，展现出了令人敬畏的巨大全球竞争优势。
+
+生成一段具备物理世界连贯性的逼真视频是一项难度登天的超级系统工程：画面每一帧的视觉光影必须高度一致，运镜镜头语言必须符合电影工业规范，环境音效与动态画面的物理碰撞必须做到毫秒级的精准声画对齐。在这一领域，谁在底层拥有更庞大、更高质量的多模态训练数据储备，谁就能在真实画质的物理拟真度上占据碾压性的领先优势。而中国团队在这场全球角逐中，迄今为止取得了令人刮目相看的亮眼突破。
+
+从宏观维度来看，我非常好奇在座两位近期是否有过类似的亲身体验：我最近在工作中频繁让具备高阶推理能力的尖端多模态模型来直接替我跨模态生成、编辑并自动化排版各类高难度的视觉创意物料，其执行水准极其惊艳，生成的物料可以直接无缝分发到全网各类数字渠道中。因此我认为，**任何在底层能够对外部自动化智能体提供极致友好接口、能够被 Agent 顺畅调用与操控的专业创意工具，在未来必将迎来极其磅礴的产业复合增长红利**。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: That sets up the second creative battleground: images and video. And that picture looks markedly different from audio. 
+
+In pure images, OpenAI leaned in aggressively with their newer multimodal image generation suites, which are phenomenal for both generation and in-painting edits. Google followed suit with their own visual engines. And frankly, those integrated native suites sucked away massive top-of-funnel consumer traffic that historically flowed to standalone image generation wrappers. 
+
+Take Midjourney: in our earliest reports, Midjourney dominated our traffic rankings. In this edition, its direct web traffic dropped significantly. But going right back to the power-user phenomenon: if you look at the consumer revenue leaderboard, Midjourney roared right back near the very top! The elite power users and aesthetic purists still insist on using the model they feel possesses unmatched taste, creative style, and granular parameter steerability. 
+
+And that leads directly to video, which feels like the untamed Wild West right now. Chinese AI labs possess a formidable structural edge here because they've trained on colossal, unconstrained datasets with remarkable engineering velocity. Video generation is a fiendishly hard engineering challenge—visual coherence, fluid motion, spatial continuity, synchronized native audio—and the more high-fidelity training data you can pipe into the architecture, the better your output behaves physically. Chinese players have carved out an immense competitive lead on the global stage. 
+
+Broadly across creative tools: I've recently been prompting frontier reasoning models to programmatically compose, manipulate, and export complex visual assets directly for me, and they do it with astonishing finesse. Creative software architectures that make themselves fully accessible, frictionless, and programmable for autonomous agents will ride massive operational tailwinds.
+
+*(Transcript Source: Sí. Bueno, creo que esta es la segunda categoría de herramientas creativas, que son las imágenes y el vídeo. Eso se ve diferente del audio. En cuanto a las imágenes, creo que, como decías, OpenAI se ha apoyado realmente en las imágenes con bastante éxito. Como Images 2.0, es muy, muy bueno tanto para la creación como para la edición de imágenes. Y luego, por supuesto, Google con las distintas versiones de Nano, Banana y Bio. Creo que han eliminado francamente gran parte del tráfico de consumidores de alto nivel que antes iba a estos generadores de imágenes independientes. Por ejemplo, Midjourney estaba bastante alto en nuestras primeras clasificaciones. Ha caído completamente de las clasificaciones de tráfico. Pero sobre tu punto de los usuarios avanzados, si miras el ranking de ingresos, Midjourney ha vuelto. Por lo tanto, los usuarios avanzados siguen queriendo el modelo que consideran que tiene gusto, sentido estético y que pueden ajustar de una manera muy específica. Y eso nos lleva al vídeo, que para mí es como una especie de frontera salvaje en este momento porque las empresas chinas que pueden entrenar con cualquier dato tienen una ventaja real. El vídeo es tan complejo de generar con elementos visuales, sonoros, sincronizados visual y sonoramente, y que se ve de una manera específica que creo que cuantos más datos tengas para entrenar, mejor. Hasta ahora han tenido éxito en ese aspecto. Creo que, en términos más generales, en las herramientas creativas, me gustaría saber si alguno de vosotros ha experimentado esto, pero recientemente he estado pidiendo a Astra y a otros modelos realmente potentes que generen o creen, generen o editen material creativo para mí, y lo hacen muy, muy bien y se utilizarán en otros lugares de Internet. Por lo tanto, creo que las herramientas creativas que son fáciles de usar y accesibles para los agentes verán cada vez más vientos de cola realmente atractivos.)*
+
+</details>
+
+**乔希·埃尔曼**: 是的，这绝对太疯狂了。当你真正把系统级权限毫无保留地托付给一个自主智能体，并对它下达指令：“去吧，在我的本地系统里随意安装并调用你所需要的任何底层依赖与开源库！”那种爆发力是难以想象的。
+
+我前几天刚好做过一个实验：我让最顶尖的几款前沿大模型在后台进行面对面的同台竞技，要求它们纯粹通过编写底层的代码脚本，来直接为我全自动渲染并生成一系列极其复杂的动态交互动画。整个执行过程流畅得如同有神助，模型完全清楚每一行渲染代码该如何精准落位。
+
+而这背后最让我发自内心感到震撼的一点在于：全网最顶尖的极客与前沿探索者，正在以极高的敏锐度不断刺探并解锁大模型的全新边界。而在接下来的这整整一年时间里，整个创业投资生态必将见证海量惊艳的全新商业产品正式破土而出、并强势杀入我们未来的 Top 100 榜单之中——**因为这些优秀的创业者，正在把底层这些极度晦涩、复杂的代码控制力与 Agent 调用链，用极度优雅、直观、开箱即用的方式，重构包装成普通大众一秒就能上手的极致产品体验**。
+
+每当我深度思考“通用底层大模型（General AI）”与“大众消费级应用（Consumer AI）”之间那道巨大的商业鸿沟时，我始终坚信：**唯有通过这种极其精湛的产品化包装能力、唯有打造出超越预期的端到端完整软件体验，才能真正把冰冷的技术奇迹沉淀为穿越历史周期的伟大消费级科技帝国**。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: It's wild what unfolds when you grant an autonomous agent permission to execute arbitrary local tools, essentially telling it: "Install whatever dependencies you need to get the job done." I recently ran a benchmark pitting frontier models head-to-head to dynamically script and render custom animations, and they knew precisely what libraries to pull down and how to structure the frames cleanly. 
+
+What I cherish about this moment is that the tinkerers and vanguard hackers are unearthing these raw capabilities first. Over the next twelve months, an army of founders is going to package that raw technical complexity into intuitive, frictionless consumer products that will populate this exact Top 100 list. When I contemplate the gulf between raw foundation model intelligence and true consumer-grade software, bridging that divide through exceptional product craft is precisely what builds generational companies that endure.
+
+*(Transcript Source: Sí, sí. Es una locura lo que puedes hacer si simplemente le das poder a un agente y le dices "sí, instala lo que quieras instalar". Yo tenía Astra y 5.5 compitiendo cara a cara para animar algunas cosas para mí y era como si supiera exactamente qué hacer. Es como sí. Y lo que me encanta de esto es que los manitas, las personas que están en la vanguardia, están descubriendo estas capacidades. Y vamos a crear productos durante el próximo año que aparecerán en estas listas, porque van a tomar toda esta complejidad de lo que puedes hacer y empaquetarla de una manera que sea realmente fácil de usar. Y así es como...Cuando pienso en esta brecha entre la IA general y la IA de consumo, es exactamente este movimiento de empaquetar todo esto y crear excelentes experiencias de producto lo que realmente lo convierte en estas cosas que perduran.)*
+
+</details>
+
+---
+
+### 软件层的价值归宿：从工具套壳到深度工作流
+
+**阿莱娜·伯格**: 历史的演进逻辑向来如此：一切永远始于极客在终端黑框里做出的粗糙原型，然后他们激动地在社交平台 **X**（原 Twitter）上公开发布演示视频；大约六个月后，整个创投生态便会催生出一款真正具备成熟形态的商业产品和初创企业；再过一阵子，市场上就会演变为数十家初创公司围绕同一赛道展开殊死搏杀。
+
+而在传统的独立网页浏览器窗口之外，我们近期目睹了一批产品成熟度极高的新物种的大规模爆发：例如深度重构会议生产力的 **Granola**、彻底颠覆语音输入的 **WhisperFlow**，以及将个人通信重构到极致的 **Superhuman**。Olivia，你在这一生态位上看到了哪些微观趋势？同时，在那些直接寄生在即时聊天与社交软件内部的智能体——比如 Instinct——在具体的产品分发机制、产品形态以及所锚定的终极用户画像上，你又观察到了哪些鲜明的特征？
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: That's the playbook: it begins with tinkerers shipping experiments on X, and six months later we see a category-defining startup launch—or a dozen rivals competing fiercely. Outside of the standalone web browser window, we've seen a massive surge of mature software products: Granola, WhisperFlow, Superhuman. What are you tracking there? And regarding messaging-native assistants like Instinct: what are you observing around their distribution levers and target user personas?
+
+*(Transcript Source: Sí. Sí. Supongo que tiene que empezar con los que hacen experimentos y luego publican en X y, ya sabes, 6 meses después obtenemos un producto real y una startup a partir de él o, ya sabes, 12 startups diferentes compitiendo entre sí. Fuera de la ventana web, ha habido una gran proliferación de productos maduros. Así que está Granola, está WhisperFlow, está Superhuman. ¿Qué ves ahí? Y luego, obviamente, los que existen en el chat y la mensajería. Así que Instinct. ¿Qué ves en lo que respecta a la distribución y qué ves en lo que respecta a los tipos de productos y usuarios a los que se dirigen?)*
+
+</details>
+
+**奥利维亚·摩尔**: 这个问题抓得非常深刻，我认为这里面有两条极其清晰的商业脉络值得我们抽丝剥茧地展开剖析：
+
+第一条脉络，源于我大约大半年前撰写的一篇名为《大扩张时代》（The Great Expansion）的深度行业分析报告。那篇文章的核心立论就在于阐明：**为什么在生成式 AI 时代，大量的纯个人消费级应用（Consumer Apps），能够以前所未有的恐怖速度光速演进并全面蜕变为严肃的企业级软件公司（Enterprise Companies）**。
+
+回顾历史：像 **Canva** 这样伟大的经典消费级先驱，在创立初期整整耗费了超过六年漫长的时间，才终于在严肃的企业级市场打通了真实的规模化营收。然而在今天，无论是代码领域的 **Replit**、语音领域的 ElevenLabs、演示文稿领域的 **Gamma**，还是我们刚才提到的 WhisperFlow 和 Granola，都在以极高的执行效率狂飙突进。
+
+其底层的商业逻辑在于：这些产品无一例外通过极其丝滑的**产品驱动增长**（PLG，Product-Led Growth）范式在 C 端个人消费者中建立了极高的口碑与病毒式渗透；随后，由于这些工具天然与每一个职场白领的日常工作生产力紧密交织在一起，这批狂热的 C 端用户很自然地把它们带入了各自的企业办公流中。到了这个阶段，公司的创始人往往会恍然大悟：“天哪，我们必须光速在系统底层补齐企业级单点登录（SSO）、严苛的数据隐私合规、审计日志与团队付费套餐体系！”这直接构成了一种获客成本极低、转化留存极高的高维分发闭环——它对于那些既能完美服务于个人日常生活、同时又与严肃职场生产力高度接壤的边缘工具而言，具备碾压性的商业威力。
+
+第二条同样至关重要的底层脉络在于：WhisperFlow、Granola 和 Superhuman 等产品的强势崛起，极其生动地印证了我们在历次技术大革命中反复目睹的一条铁律——**传统的在位统治级科技巨头（Incumbents），往往出于组织惯性或既得利益的巨大包袱，根本不愿意、也根本没有魄力去亲手颠覆并自我蚕食（Canibalize）他们现有的成熟产品交互界面**。
+
+最经典的教科书级反面案例莫过于科技巨头谷歌：放眼当下的 AI 大航海时代，我们可曾见过谷歌真正大刀阔斧地把 **Google Docs**、**Gmail** 或 **Google Calendar** 按照大模型原生交互逻辑进行过彻底推倒重来式的重构吗？完全没有。令人啼笑皆非的是，这种“自我蚕食的恐惧”甚至同样发生在 OpenAI 和 Anthropic 这两家新贵巨头身上——只要脱离了它们各自现有的旗舰核心对话框界面（ChatGPT、Claude 对话窗口或 Claude Code），两家大模型实验室在推出其他独立创新形态的产品探索上，其成功率和敏捷度都肉眼可见地大幅跌落。尽管我深知这些基础实验室在内部曾多次尝试孵化过无数颠覆性的前沿实验，但由于他们必须把 99% 的组织精力聚焦在底层大模型研发与超大规模集群工程上，他们客观上根本没有多余的心力在应用软件交互层进行持续精细的打磨与颠覆式创新。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: There are two vital strategic threads to unpack here. 
+
+The first connects to an essay I published titled "The Great Expansion," which explored why modern consumer AI platforms morph into enterprise software powerhouses with unprecedented speed. Legacy consumer software like Canva required over six years before generating meaningful enterprise ARR. Today, platforms like Replit, ElevenLabs, Gamma, WhisperFlow, and Granola achieve rapid B2B scale because of frictionless product-led growth (PLG). 
+
+Professionals initially adopt them out-of-pocket for personal productivity, and because the utility is inextricably linked to their daily output, they inevitably bring the software into the enterprise. Founders suddenly realize: "We need enterprise-grade security, administrative controls, and an enterprise sales tier immediately." It represents an extraordinarily cost-effective bottom-up distribution vector. 
+
+The second thread—which Granola, WhisperFlow, and Superhuman illustrate so powerfully—is that massive tech incumbents are fundamentally structurally paralyzed: they cannot and will not cannibalize their legacy user interfaces. Google is the archetype: we haven't seen them fundamentally reinvent Docs, Gmail, or Calendar for an AI-native paradigm. 
+
+Fascinatingly, we're seeing that exact same innovator's dilemma begin to plague OpenAI and Anthropic. Beyond their flagship conversational windows—ChatGPT, Codex, or Claude—their ancillary experimental products haven't demonstrated anywhere near the same velocity. When your organization is consumed with the Herculean task of scaling frontier compute clusters, executing agile, world-class UI/UX innovation at the software layer becomes near impossible.
+
+*(Transcript Source: Sí. Creo que hay dos hilos conductores interesantes que tratar aquí. Uno, escribí un artículo llamado La gran expansión hace unos 6 o 9 meses, que trata básicamente de por qué las empresas de consumo se están convirtiendo en empresas tan rápidamente. Como cosas como Creasia, ya sabes, Replit, 11 Labs, Gamma. Estos productos, como Canva, tardaron más de seis años en generar ingresos reales para el equipo y la empresa. Y lo que está pasando es que tienen mucho éxito en crecer a través de PLG. WhisperFlow y Granola son otros grandes ejemplos. Y luego, como están relacionados con la productividad laboral, se incorporan a las empresas y los fundadores piensan: "Tenemos que añadir privacidad, seguridad y un plan", pero es una distribución muy eficaz y de muy bajo coste. Y, de nuevo, funciona muy bien para estas herramientas que se pueden utilizar de forma personal, pero que son como adyacentes al trabajo. Creo que cosas como WhisperFlow, Grainola y Superhuman son otro buen ejemplo de esta tendencia que hemos visto en general, en la que los operadores tradicionales no quieren o no pueden canibalizar sus interfaces existentes. El ejemplo clásico de esto es Google. No los hemos visto reinventar Docs, Gmail o Calendar para la era de la IA. Creo que incluso está ocurriendo con Open AI y Anthropic, que han tenido mucho menos éxito en todo lo que no sea un lanzamiento dentro de sus interfaces existentes ChatGPT, Codex, Claude o Claude Code. Bueno, y sé que muchos de ellos han intentado incubar proyectos revolucionarios para muchas de estas startups, pero creo que es difícil para ellos innovar más allá de eso desde una perspectiva de producto, especialmente cuando tienen tantas otras cosas en sus manos.)*
+
+</details>
+
+**乔希·埃尔曼**: 我对你的判断不能同意更多。虽然整个市场正在逐步适应并习惯某些既有的交互范式，但我们仍然身处一个激动人心的产品交互大重构时代。过去这一年半时间里整个行业之所以能够迎来如此波澜壮阔的大爆发，最底层的原动力就在于**底层基础大模型的能力实现了多维度的跨越式跃迁**。
+
+正因如此，那些在技术爆发初期便早早耐住寂寞、把全副身心投入到打磨极致软件交互界面上的创业者——那些把产品打磨得极度丝滑直观、极度符合人性自然直觉、支持极速协作分享并能轻松无缝拉动整个团队协同的优秀团队；比如像 WhisperFlow 和 Granola 这样在冷启动第一秒就让用户感到毫无负担的先锋产品——随着底层大模型智商与逻辑推理能力的每一次指数级升级，他们产品的端到端实用价值与综合体验立刻随之迎来成倍的爆发式增长！
+
+在创业初期，你可能耗尽心血打造出了一款令人惊艳的软件交互雏形，但受制于当时底层大模型的智商瓶颈，它在现实中常常掉链子、无法完全满足你的严苛诉求；然而突然之间，新一代基础大模型横空出世，模型的智商全面破局，你原本卡壳的产品瞬间在市场上引发了海啸般的需求与口碑爆发！**这就形成了一种“水涨船高，潮水托起所有大船”的产业共振效应**。
+
+那些固执地认为“全天下只有一两家垄断性大模型实验室能够垄断所有应用层体验”的悲观论调，在本次 Top 100 报告的硬核数据面前被彻底击碎了。不可否认，底层的巨头确实极其庞大，并且牢牢统治着最宽泛的通用场景；但在其周围能够茁壮成长出成百上千家高速狂飙的创新企业，核心原因就在于全人类有无数个垂直细分场景的交互界面亟待被彻底重构。底层模型能力的狂飙像潮水一样托起了所有优秀的应用之船。
+
+诚然，底层的算力基础设施价值或许会持续流向少数模型提供商或专业的云端推理芯片巨头，但这完全属于另一维度的宏观产业叙事；**对于千千万万真实的终端消费者而言，大家最终张开双臂狂热拥抱的，永远是那些真正能够完美解决自身痛点、上手毫不费力、能够如呼吸般自然融入真实生活的卓越产品**。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Everything you just laid out is absolute truth. We are living through an era of UI/UX reinvention. A primary reason we witnessed explosive momentum over the last eighteen months is that the underlying models improved so radically. 
+
+Founders who dedicated themselves to crafting brilliant, intuitive software layers—interfaces that felt natural, collaborative, and frictionless to adopt, like WhisperFlow and Granola—suddenly saw their products get massively more capable overnight simply because the intelligence of the frontier models leaped forward. You might construct an interface that misses the mark initially solely because the model's cognitive capabilities weren't quite there yet; then the lab drops a new model weight, and your product explodes in demand because the utility finally clicks. A rising tide truly lifts all ships. 
+
+The cynical notion that only one or two frontier labs will capture the entirety of software value is thoroughly dismantled by this report. The labs will dominate broad, horizontal entry points, but the reason this vibrant ecosystem is thriving is that hundreds of workflows are being reimagined at the interface layer. Infrastructure dollars will continue to flow to compute providers, but what consumers fall in love with are the refined software tools that seamlessly solve problems in their real lives.
+
+*(Transcript Source: Quiero decir, creo que todo eso es cierto y creo que ahora que nos acostumbramos a algunas interfaces, seguimos en un período de reinvención increíble. Gran parte de la razón por la que hemos visto tanto crecimiento en el último año o año y medio es que los modelos han mejorado mucho. Y los modelos han mejorado mucho. Entonces, las personas que habían dedicado su tiempo a crear estas interfaces increíbles que eran fáciles de usar, que resultaban naturales, fáciles de compartir e ideales para involucrar a tu equipo, y considerando que WhisperFlow y Grainola eran tan sencillas para comenzar, uno llegaba a decir: "Dios mío, ahora han mejorado tanto a medida que los modelos han progresado, que la utilidad del producto también ha mejorado de una manera significativa". Y entonces pensamos: "Increíble, creas algo genial, pero puede que no haga todo lo que quieres porque las capacidades del modelo no estaban ahí". Entonces, los modelos mejoran y tu producto explota en demanda y utilidad. Y esta especie de marea creciente lo eleva todo. Y pensar que, ya sabes, solo tenemos una o dos empresas que pueden crear esa capa de experiencia, creo que es lo que este tipo de informe desacredita. Ahora bien, esas son sin duda algunas de las principales empresas y estos son casos de uso muy generales, pero la razón por la que tantas otras cosas están creciendo es que hay muchas interfaces que se reinventan y la marea creciente lo eleva todo. Y luego, ya sabes, el valor de la infraestructura puede seguir yendo a los proveedores de modelos o puede ir a otras cosas que sirven para la inferencia y hay una conversación completamente diferente allí, pero lo que los consumidores están adoptando son cosas que les funcionan y son fáciles de usar y de incorporar a sus vidas.)*
+
+</details>
+
+**奥利维亚·摩尔**: 确实如此。顺着这个逻辑，我们完全可以进一步为初创企业在当前的生态大博弈中建立更强大的论证底气。
+
+虽然 OpenAI 和 Anthropic 在很多维度上依然保留着初创企业的敏捷基因，但不可否认的是，它们如今已经双双蜕变为拥有数千名员工、组织架构极其错综复杂的庞大商业组织。正所谓“船大难掉头”：当一个组织的体量变得越来越庞大时，任何微小的产品决策与战略调整，都需要跨越海量内部部门的反复权衡与掣肘。
+
+在本次真实个人银行卡收入榜单中，涌现出了一家极具启发性的黑马企业——**Plaud**。这是一款将硬件与 AI 深度融合的智能录音便签设备，它最早发端于亚洲本土市场，随后势如破竹般席卷了整个美国消费市场。消费者不仅需要掏钱购买其高单价的实体物理硬件，更需要每月为其云端 AI 纪要功能按期续费订阅。理论上，拥有顶尖技术与雄厚资本的 OpenAI 完全也有能力去打造一款专属的硬件硬件设备；但现实中我们都清楚看到，一旦一家公司成长为超级航母，硬件从立项、供应链打磨到软硬件系统集成的每一步，都会伴随着成倍延长的审核周期与复杂的组织制衡。
+
+因此，各大前沿实验室固然会在它们的主干航道上继续取得辉煌的商业成功，但摆在广大初创团队面前的，依然是一片充满结构性历史机遇的辽阔战略窗口期。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: To double down on the startup case: OpenAI and Anthropic are phenomenal, but they are increasingly managing complex organizations staffed by thousands of people. It is a fundamental law of physics: larger ships are vastly harder to maneuver and turn. 
+
+One of the fascinating entrants on our consumer revenue list this edition is Plaud—an AI-powered physical note-taking device that originated internationally and rapidly captured the US market. Users buy the physical hardware upfront and then pay an ongoing software subscription on top. OpenAI could theoretically manufacture an AI hardware device, but inside a multi-thousand-person corporate structure, everything takes longer and requires endless consensus checks. The foundation labs will flourish, but agile startups will continually exploit these massive tactical execution windows.
+
+*(Transcript Source: Sí. Quizás también para seguir defendiendo el caso de las startups en este caso. OpenAI y Anthropic son startups en muchos sentidos, pero han tenido tanto éxito que se han convertido en grandes empresas con miles de personas. Y hay muchas más consideraciones, como que un barco más grande es más difícil de dirigir y de dar la vuelta. Bueno, creo que una de las empresas que aparecen en nuestra lista de ingresos esta vez es Plaud, que es un dispositivo de toma de notas con IA que empezó en China y Oriente y que ahora ha llegado a EE. UU. Puedes comprar el dispositivo y también puedes comprar una suscripción. OpenAI puede fabricar un dispositivo de hardware, pero como hemos visto con ellos, todo lleva más tiempo cuando eres una gran empresa. Tienes que integrarlo con otros productos existentes, lo que supone más controles y equilibrios. Por tanto, creo que los grandes laboratorios seguirán teniendo mucho éxito y que tienen mucho más que hacer, y creo que las startups seguirán encontrando estas grandes ventanas de oportunidad.)*
+
+</details>
+
+**阿莱娜·伯格**: 归结起来，摆在所有初创公司面前的终极生死命题就变成了：**创业团队究竟该如何打造出一款能够伴随着底层大模型的智商升级而水涨船高，但绝不会在下一次基础模型换代时被直接无情蚕食吞并的产品？** 这显然是每一个创始人梦寐以求、但又极难把握的黄金平衡点。
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: That frames the golden question for any startup: how do you build a product that compounds in value as the underlying frontier models improve, without getting instantly rendered obsolete or cannibalized by the next lab model drop? That feels like the ultimate sweet spot.
+
+*(Transcript Source: Sí. Y bueno, también parece que la pregunta para las startups es cómo crear un producto que, como has dicho Josh, mejore a medida que mejoran los modelos, pero que no se canibalice a medida que mejoran los modelos. Sí. Bueno, lo cual es, ya sabes, lo que parece un punto óptimo interesante en el que existir.)*
+
+</details>
+
+**乔希·埃尔曼**: 这正是我在大约两个月前选择全职合伙加入 a16z 消费级投资团队的核心初心所在：**我发自内心地坚信，科技世界的最高价值重心，目前正在全面、实质性地重新回归到应用软件层（Software Layer）！**
+
+在过去的漫长探索期里，整个创投市场的注意力被底层大模型的大兵团军备竞赛完全吸附走了；而现在，既然全人类已经能够随时随地通过标准化 API 接入如此不可思议的超级智能底座，聪明的开发者终于能够把全部精力解放出来，专注于打造功能极其完备、深度贯通真实业务逻辑的端到端商业产品。不仅如此，生态里还涌现出了包括 TypeSafe 的 Jeff 等大量全新工程抽象框架，让开发者得以用前所未有的敏捷姿态，去调用结构化输出、精准执行复杂工具链。
+
+我们今天甚至连这些超级模型所能催生的全新商业形态的冰山一角都还未曾见识过。现在，创新的主轴重新全面交还给了**产品交互体验的重塑、高密度网络效应的构建，以及如何借助大模型的能力将千千万万的人类用户与协同网络紧密缝合在一起**。在此过程中，专属的业务上下文（Context）以及高粘性的人性社群，才是一家企业真正不可剥夺的永久核心资产。
+
+我甚至坚信，全人类现有商业版图中的几乎每一个成熟品类，今天都迎来了被大模型彻底推倒重构的历史性契机。诚然，某些原有的传统巨头确实有能力完成惊险一跃、顺利晋级为 AI 时代的霸主；但历史经验告诉我们，绝大多数传统在位者最终都会在变革中掉队。这恰恰是属于新一代初创企业弯道超车、缔造崭新商业物种的黄金时代。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: A foundational reason I was thrilled to join Andreessen Horowitz recently is this profound conviction: defensible value is violently shifting back to the software application layer. Now that we have reliable programmatic access to these extraordinary frontier intelligence engines, founders can architect complete, end-to-end software experiences. Modern developer abstractions enable teams to build with structured outputs and robust multi-step agents in ways that were science fiction just a year ago. 
+
+We haven't even glimpsed the full surface area of what's possible when developers can orchestrate fast, reliable, highly structured cognitive intelligence natively inside applications. The battleground for enterprise and consumer defensibility has returned to workflow craft, network density, proprietary context, and collaborative community. 
+
+Virtually every established software category on earth has the opportunity to be reinvented right now. A few legacy tech behemoths will manage to cross the chasm and retain dominance, but many will falter. That innovator's dilemma is the exact vacuum that brilliant startups will exploit.
+
+*(Transcript Source: Quiero decir, parte de la razón por la que estaba tan emocionado de unirme a Andreessen Horowitz hace un par de meses fue esta creencia de que el valor ahora realmente está volviendo a la capa de software. Que ahora que tenemos estos modelos increíbles en nuestras capacidades a las que podemos acceder, puedes crear productos realmente completos que aprovechen los modelos para hacerlo. Y hay nuevas innovaciones como Jeff de TypeSafe que permite incluso a los desarrolladores crear cosas de formas aún más nuevas. Y ni siquiera hemos visto todas las nuevas e increíbles ideas que se pueden hacer cuando tienes acceso a un modelo como ese que es rápido, fácil de integrar, que te da código o respuestas muy estructuradas. Y por eso, ahora la creatividad vuelve a la experiencia, la red que puedes construir, las formas en que puedes servir a muchas personas y unirlas usando los modelos para que sean algo poderoso, pero el contexto y la comunidad realmente se convierten en el activo. Y hay tanta invención que creo que casi todas las categorías tienen la oportunidad de reinventarse. Y, ya sabes, algunas grandes empresas podrán dar el salto y convertirse en la empresa relevante para su sector en la era de la IA, pero no todas lo harán. Y ahí es donde entran las startups para adelantarse a ellas y ser realmente una nueva experiencia posible.)*
+
+</details>
+
+**奥利维亚·摩尔**: 是的，顺着 Josh 的精彩论述，我脑海中一直在高频思考两个维度的核心壁垒：**其一是个人专属上下文价值的长期沉淀（Personal Value Accrual），其二则是多人协同网络价值的深度沉淀（Multiplayer Value Accrual）**——这两者正是初创应用能否在底层大模型的狂暴迭代中建立起牢固用户粘性（Retention）的核心护城河。
+
+这里有一个极具代表性的绝佳案例——**Town**。这是一款定位于产消者（Prosumer）与高端知识工作者专属智能体助手的先锋产品。它的杀手锏在于：它能够安全、无缝地深度接驳进你日常工作所有的底层私有信息系统——全量接入你的 **Slack** 团队聊天流、你的企业电子邮箱、你的 **Google Drive** 私有云端知识库；它能以极高的颗粒度透彻理解你本人的语言风格、你所在组织的全部历史决策脉络，并在此基础上替你代为执行极其复杂的端到端任务。我本人每天就在深度使用 Town 来替我起草海量的日常商务往来邮件，甚至在打磨撰写这期 Top 100 行业报告的漫长过程中，Town 也为我提供了至关重要的协同支持。
+
+我深知科技圈总有一批喜欢冷嘲热讽的批评家，他们一看到这类产品就会极其轻蔑地撇撇嘴：“切，这不就是一个简单的提示词夹具（Harness）或者简单的软件套壳（Wrapper）嘛！”虽然“夹具”这个词听上去好像比“套壳”显得稍微客气了那么一点点。但这些批评家根本没有意识到：**Town 在系统底层为你极其精密地编织出了一套关于‘你是谁’、‘你在特定语境下听起来该拥有怎样的口吻与原则’的个性化专属行动策略手册（Playbook）**！
+
+这套极其精细的上下文手册，是全天下任何其他通用大模型产品在出厂时完全不具备的；更关键的是，这套经过我数月深度训练打磨的个人策略手册，绝非我明天随随便便换一个新的竞品工具就能瞬间无缝迁移走的。在真实的高端商务通信中，一封起草出来的邮件究竟是有 **99.9%** 的神态完全像我本人，还是只有 **85%** 的模糊相似，这中间的微小差距，直接决定了我到底只需要花 10 秒钟扫一眼就能一键点击发送，还是不得不被迫坐在电脑前痛苦地耗费 10 多分钟去逐句修改调优！正因如此，我坚定地相信：未来必将涌现出越来越多像 Town 这样在“高精度捕获私有上下文、并依托上下文执行复杂动作沉淀专属策略手册”维度做到极致的先锋产品，并在商业市场上大获成功。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: Exactly. That highlights the twin flywheels of defensibility: compounding personal context accrual on one side, and compounding multiplayer network accrual on the other. That is the bedrock moat against model commoditization. 
+
+A prime illustration of this is Town, which targets the prosumer executive assistant tier. Town bridges into all your mission-critical operating pipes—Slack channels, email threads, Google Drive repos—synthesizing deep institutional context around your organization and your unique executive voice to proactively execute high-context workflows. I rely on it to draft communications, and it assisted materially in researching this very report. 
+
+Cynics love to dismiss software like this as "just an orchestration harness" or "a thin wrapper." But Town has meticulously constructed an evolving, algorithmic playbook of who I am, how I reason, and how I communicate—a proprietary state that cannot simply be copy-pasted into whatever new foundational model ships tomorrow. The difference between an automated draft that matches my voice at 99.9% fidelity versus 85% fidelity is the profound difference between a 10-second glance-and-send versus spending 10 agonizing minutes manually rewriting the draft yourself. Products that excel at mining context, executing against it, and compounding user-specific playbooks will continue to win massive enterprise and consumer lock-in.
+
+*(Transcript Source: Sí. Sí, creo que en ese punto, pienso mucho en la acumulación de valor personal y, con suerte, en la acumulación de valor multijugador que se convierte en algo así como un vínculo con algunos de estos productos de startups. Un ejemplo que daría es Town, que está más en el extremo del prosumidor del asistente de agente. Puede conectarse a todos tus sistemas, Slack, correo electrónico, Google Drive, entender el contexto tuyo y de tu organización, y luego hacer cosas por ti. Lo uso para escribir muchos de mis correos y me ayudó con gran parte de este informe. Sé que es fácil para la gente desestimar cosas como esta y decir: "Oh, es solo un arnés", que ahora es un término un poco menos despectivo para referirse a un contenedor, supongo. Pero Town ha creado estos manuales de quién soy, cómo sueno, que ningún otro producto tiene, y que no puedo tomar y migrar fácilmente a algo que aparezca mañana. Porque la diferencia entre un correo electrónico que suena como yo en un 99,9% e incluso un correo electrónico que suena como yo en un 85% es la diferencia entre dedicar 10 segundos a arreglarlo y más de 10 minutos. Por eso creo que veremos más productos como Town que hacen un muy buen trabajo recopilando contexto y actuando en función de ese contexto para crear manuales de estrategias en torno a ti y que seguirán teniendo éxito.)*
+
+</details>
+
+**乔希·埃尔曼**: 说得太精辟了，完全击中了问题的核心本质。在日常对话中，我个人向来竭力避免去使用像“夹具（Harness）”或者“套壳（Wrapper）”这种带有傲慢与偏见的贬义词汇。
+
+因为在冰冷的商业现实面前，全球的优秀团队今天真正正在全力以赴构建的，是严谨、扎实且完整的现代软件工程体系！大家正在打造出功能极其完备、体验极其丝滑的端到端商业产品。诚然，工程师们在编写这些产品底层业务逻辑时，确实会大量使唤智能体来辅助撰写部分代码模块；但是，当他们最终把这整套端到端的产品体验完整交付到终端用户手中时，这背后所凝聚的工程心血与商业价值，已经远远超越了一个简单向大模型发送上下文的提示词垫片。
+
+这已经是一个拥有独立生命力、拥有独立交互灵魂与业务闭环的完整产品与成熟体验；在这样的体系里，底层的大模型仅仅是这套庞大复杂商业引擎中负责提供认知动力的一颗零部件而已。而我认为，这恰恰是整个创投生态在审视未来消费级榜单演进脉络时，最应当感到热血沸腾的底层趋势。在下一波即将来临的产业海啸中，所有真正能够穿越周期的伟大企业，其绝大部分商业护城河与企业价值都将稳稳扎根在软件交互层之上，而底层的基础模型，将真正退居为底层那块必不可少、但绝非全部的基础积木。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: That is dead-on. I deliberately avoid condescending jargon like "wrapper" or "thin harness." The reality is that world-class founders are architecting complete, deeply engineered software systems. 
+
+Sure, they might use coding agents internally to scaffold components of the backend codebase, but the holistic customer experience they deliver to the market is a vastly complex, integrated platform. The foundation model is simply one cognitive microservice powering an intricate customer-facing engine. That is the real momentum that will define future editions of our Top 100 list. The next generation of enduring tech powerhouses will build massive, defensible enterprise value where the model is simply an ingredient—not the entire recipe.
+
+*(Transcript Source: No, creo que es totalmente correcto. Intento evitar usar palabras como arnés y contenedor. Sí. Porque creo que la realidad es que ahora la gente está creando software y están creando estos productos realmente completos. Y, bueno, es decir, puede que utilicen a sus agentes para escribir parte de ese código, pero en realidad, cuando ofrecen toda esta experiencia a un usuario, es mucho más que una simple inserción en el modelo o un arnés que aporta contexto al modelo. En realidad, es un producto y una experiencia realmente completos que ahora utilizan un modelo como parte de lo que les permite ofrecerlo, y creo que esa es realmente la emoción de hacia dónde va a llevarnos, ya sabes, lo que vamos a ver en esta lista. Sabes que muchas de ellas ya lo están haciendo y creemos que realmente la próxima ola. Todas van a ser empresas que han creado mucho más valor y el modelo es algo que es, ya sabes, solo una pieza.)*
+
+</details>
+
+---
+
+### Web2 镜像对照与万亿级空白蓝海
+
+**阿莱娜·伯格**: Olivia，你此前在报告中绘制过一张极具视觉震撼力的行业对照图谱，我们能否在播客中重点展开探讨一下这张图所揭示的内涵？即如果我们把整个传统 **Web2** 时代以及前 AI 时代所有被验证过的成熟消费级产品形态拉平对比，在当下的生成式 AI 商业版图里，究竟还盘踞着多么广阔的空白地带（White Space）？能否请你重点为我们拆解其中几个最具潜力的巨大空白赛道，并指明未来的万亿美元级历史机遇究竟潜藏在何方？
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: Olivia, you put together a phenomenal visual map in the report illustrating the colossal white space that remains when you juxtapose successful Web2 consumer categories against what exists in consumer AI today. Could you walk us through those massive blank canvases and pinpoint where the biggest untapped opportunities lie?
+
+*(Transcript Source: Olivia, creo que has hecho referencia a este gráfico que has hecho, pero ¿podríamos mencionarlo? ¿Todo el espacio en blanco que todavía existe para, ya sabes, todas las categorías de productos que existen en la Web 2 y en la era anterior a la IA? Y quizá puedas hablar de algunas de estas categorías y, eh, ¿dónde están las grandes oportunidades?)*
+
+</details>
+
+**奥利维亚·摩尔**: 没问题，这张图谱背后的反差极其强烈。放眼当下的现实世界，绝大多数未曾深度涉足科技圈的纯终端消费者，今天使用 AI 的方式，本质上依然仅仅是把大模型当成了传统搜索引擎（比如 Google）的一个更聪明的替代品而已。
+
+在广泛的大众生活中，最典型的刚需用例依然是教育场景——比如全球数以亿计的青少年学生正在大规模使用 AI 帮他们起草课后论文、解答疑难作业；或者是普通的职场打工人用来润色并撰写日常的工作邮件。
+
+但是，只要大家将目光投向我们所绘制的那张全景行业对照图谱就会惊悚地发现：**迄今为止所有在消费级 AI 领域斩获规模化商业成功的初创企业，其业务场景几乎完完全全高度拥挤在‘狭义任务交付’（Getting Things Done）这一极度逼仄的单一维度之内！** 所有的成功者无一例外都在扎堆做：纯办公生产力工具、图形图像与音视频剪辑设计工具，以及信息搜索与智能问答工具。
+
+然而，在这一狭窄的生产力孤岛之外，整张商业版图上横亘着无边无际的巨大空白荒原！而在这些未被开垦的辽阔赛道中，绝大多数都属于那种必须依赖多人协同网络效应才能跑通的**多人网络型产品**（Multiplayer Network Products）：
+
+举一个最典型的空白赛道：**在线约会与婚恋社交**（Dating）。在当下的全球消费级 AI Top 100 榜单上，专门深耕于婚恋社交领域的 AI 原生企业，数量是绝对的零！虽然市面上已经开始涌现出一批非常勇敢的早期探索型初创公司，我也坚信它们当中的佼佼者必将在未来的榜单迭代中强势杀入排名，但眼下这里依然是一片绝对的荒原。
+
+另一个与婚恋在底层网络双边匹配逻辑上极其相似的赛道，便是**招聘与人力资源匹配**（Recruiting & Hiring）。在这类双边甚至多边撮合的网络型赛道上，AI 原生产品同样处于严重的缺位状态。
+
+再看看**原生 AI 社交网络**（Social AI）：时至今日，全行业尚未目睹任何一款真正具备独立网络形态的 AI 原生社交平台真正成势并跑通网络飞轮。目前全网所谓的 AI 社交，其绝大多数表象依然仅仅是个人用户利用 AI 工具生成了某些新奇的内容后，再被动地搬运并分发到 **Instagram**、**X** 或 **TikTok** 等传统的旧时代社交网络上去博取眼球而已。
+
+除此以外，还有海量具备极其深厚交易属性的**交易市场型平台**（Marketplaces）——比如垂直电商购物、家庭房产交易买卖、大众零售服务等等。对于这些庞大且高频的交易品类，行业未来最大的看点在于：它们究竟会被以 Instinct 或 Muse 为代表的通用个人智能体通过底层 API 直接吞噬整合为内置功能？还是会催生出完全独立运作的 AI 原生垂直交易市场平台？抑或是二者走向深度融合——即你的私人智能体在后台全自动帮你调用并对接一个 AI 原生专业交易网络？我对这一方向的未来充满无限期待。
+
+最后，像**互动游戏与大众娱乐**（Gaming & Entertainment）赛道，过去制约其爆发的核心瓶颈在于：底层多模态大模型的推理能力与生成质量，在此前尚不足以持续、稳定地输出能够让挑剔的主流大众消费者沉浸其中的高质量视听与剧情交互内容。不过，近期整个行业在 **AI 微短剧**（AI Micro-dramas）领域的爆发出海已经拉开了一道震撼的序幕，我相信真正的原生娱乐大爆发也已近在咫尺。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: The contrast is staggering. The vast majority of mainstream consumers still interact with AI essentially as an alternative to Google Search. You see heavy concentration in education—students relying on LLMs for homework help and essay drafting—or workplace professionals using it to dash off emails. 
+
+If you look at our visual map, virtually every consumer AI startup that has achieved breakout scale to date clusters inside that narrow theme of functional task execution: productivity suites, photo/video editing, and conversational search. 
+
+Outside of that functional cluster, the map is dominated by wide-open white space. And those wide-open territories are predominantly multiplayer, network-effect categories: 
+Take online dating. There is not a single dating platform on our Top 100 list today. There are ambitious startups building there that I believe will break onto future editions, but today it is wide open. 
+Recruiting and hiring is another massive two-sided matching network with zero native dominance. 
+In social AI, we haven't seen an autonomous social network ignite. Current "social AI" is merely creators posting AI-generated media onto legacy Web2 networks. 
+
+Then consider high-stakes marketplaces: personalized shopping, real estate acquisition, consumer retail. Will those commerce behaviors live natively inside personal agents like Muse and Instinct, or will they spawn standalone, AI-native vertical marketplaces? Or a hybrid where your personal agent negotiates with specialized merchant agents? 
+Finally, in gaming and interactive entertainment, models historically lacked the real-time fidelity to keep everyday consumers engaged—with the exciting exception of the explosive rise of AI-generated micro-dramas. That entertainment dam is about to break wide open.
+
+*(Transcript Source: Sí. La gran mayoría de los consumidores puros siguen utilizando la IA básicamente como un reemplazo de los productos de búsqueda. Cosas como Google. Quizás, sobre todo en casos de uso educativos, los niños la utilizan ya para redactar sus ensayos. Un caso de uso un poco más amplio. Ayuda con las tareas, exactamente. Sí. O las personas en el lugar de trabajo para escribir correos electrónicos, pero si nos fijamos en este gráfico, en el que mostraremos casi todas las áreas en las que hemos visto que las startups han tenido éxito hasta ahora han sido en torno a ese tema de hacer las cosas. Como productividad, diseño y edición de fotos y vídeos, búsqueda y respuestas. Hay muchas categorías abiertas. Y muchas de esas categorías son, yo diría, categorías de red en las que necesitas un producto multijugador. Ya sabes, las citas son una. No hemos visto...Ciertamente hay startups allí que espero y creo que aparecerán en futuras ediciones de la lista, pero no hay ninguna en la lista que se dedique a las citas ahora. La contratación es otra. Creo que las citas y el reclutamiento son redes similares en cuanto a intentar hacer match. En cuanto a la IA social, no hemos visto que despegue nada. La mayor parte de la IA social es gente publicando contenido creado por IA en redes sociales existentes. Y luego creo que hay todas estas otras categorías que se parecen más a mercados, como compras, compra de vivienda, ya sabes, venta minorista. Tendremos que ver si acaban viviendo en agentes como Instinct o Muse o viviendo como productos independientes o los siguientes, que serán muchos. O viviendo como productos independientes o quizás una mezcla de ambos, quizás tu agente lo llame mercado nativo de IA. Así que estoy muy ilusionado con esas cosas. Creo que también categorías como los juegos y el entretenimiento, los modelos simplemente no han sido lo suficientemente buenos como para producir contenido que le guste ver a la persona media, con la excepción de los microdramas de IA que están explotando. Pero creo que eso también llegará pronto.)*
+
+</details>
+
+**乔希·埃尔曼**: Olivia 的研判完全命中了历史的节拍。我们目前所处的整个产业周期，仍然深深沉浸在被 ChatGPT 所点燃的“将一切操作简化为对话”的狂热兴奋感之中；而我们眼下所做的大多数尝试，也仅仅是顺水推舟地把这些智能体塞进我们手机里的短信和即时通讯 App 中，试图让一切交互都以打字对话的形式来展开。
+
+这是一个无可置疑的伟大交互范式跃迁；但是，只要你把这种纯文本交互带入到现实生活中复杂的大众消费场景时就会发现，它的局限性同样一览无余：
+例如当你作为消费者真正去逛街购物（Shopping）时，没有人愿意对着一个单调的文字窗口不断打字！消费者发自内心渴望的是**极其直观、具有强大视觉冲击力的商品陈列与穿搭选项**；大家渴望在视觉画布上随意浏览、沉浸式比对，并根据个人的极度个性化的审美进行动态微调——“这件风衣的整体剪裁我非常喜欢，但我希望能把衣领改成某种特定风格的复古包边，或者根据我的特殊体型重新定制收腰逻辑。”而未来的生成式 AI 恰恰能够在这个视觉交互节点上大显身手：它不仅能在毫秒之间直接为你实时渲染出这件经过天马行空改造后的成衣视觉效果，更能通过底层柔性供应链直接代客下单、为你真正量身定制并履约交付！在这一维度上，整个电商购物赛道蕴藏着无与伦比的颠覆潜能。
+
+再把视线投向更加宏大的**文化娱乐与叙事表达**（Entertainment & Storytelling）领域：我认为人类社会在今天甚至仅仅只是刚刚触及了新时代交互式叙事能力的绝对皮毛！大模型技术最伟大的使命，在于它如何能够真正赋能生活中的每一个普通人，让每一个人都毫无门槛地蜕变为极其优秀的故事讲述者与视听造物者；而这种大众造物能力的全面解放，必将进一步催生出由无数热爱消费新奇内容的用户所紧密编织出的超级新型文化消费网络。
+
+回顾当年 **TikTok** 席卷全球的爆发历史：它之所以能开创一个时代，核心就在于它打造出了一个不可思议的飞轮平台，让全世界每一个普通人都能以极低的门槛随手创作并发布趣味横生的短视频，让全球数十亿受众在指尖滑动中沉浸式领略全人类多样化的生活切片。然而在现实中，受制于传统视频剪辑与创意表达门槛的严苛限制，依然有海量原本极其惊艳、极具天才脑洞的伟大故事，被死死困在绝大多数普通人的大脑深处，因为他们缺乏把脑海中的意象转化为专业画面的工具手段而无法面世。而多模态生成式 AI 的历史使命，恰恰就在于彻底砸碎这道最后的专业壁垒，帮助全人类每一个人把灵魂深处最绚烂的设想尽情表达出来！这将毫无悬念地孕育出一整套我们今天甚至无法想象的超级新型社交娱乐网络。
+
+我们当前正处在所有这些万亿级空白赛道全面爆发的历史奇点前夜。在过去这两年里，我们需要耐心地等待底层大模型在逻辑推理与多模态生成质量上实现真正的工程破局，只有这样，前沿的创业者们才有可能在这些极其高难度的场景下展开实质性的产品发明。而随着未来几年大模型底层能力的持续指数级暴涨，我自始至终坚信一条不可动摇的商业真理：**整个科技产业最澎湃、最庞大、最持久的长期商业价值，最终必将完完全全沉淀在直接服务于终端消费者的卓越应用软件产品层之上！**
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: That hits the nail squarely on the head. We are living in a moment that is captivated by ChatGPT's conversational chat interface, and we're naturally bolting those capabilities into SMS and messaging to make communications more dynamic. 
+
+That is a magnificent paradigm, but when you go shopping, nobody wants an endless wall of text! You want rich visual palettes, spatial exploration, dynamic aesthetic curation: "I love this jacket silhouette, but render it with a houndstooth collar or custom tailored to my frame." Generative AI can dynamically render that bespoke asset on the fly and route it directly into a flexible manufacturing supply chain for custom production. Commerce has boundless territory to conquer. 
+
+And in entertainment: we have barely scratched the surface of how AI unlocks interactive storytelling. The highest calling of this technology is empowering every single human being to become a master storyteller, which in turn breeds magnetic consumer networks hungry to consume those narratives. TikTok became a historic titan because it provided an effortless canvas for ordinary people to film and distribute their creativity. Yet there remains infinite creative brilliance locked inside people's heads simply because they lack the technical illustration, animation, or rendering skills to externalize it. Generative AI unlocks that imagination, and that will forge a breathtaking new social and entertainment graph. 
+
+We are on the absolute precipice of all these blank categories bursting to life. We needed the models to cross core thresholds of intelligence so ambitious founders could invent on top of them. And as that transpires over the coming years, I remain totally convinced that the ultimate durable value will settle squarely within the product software layer.
+
+*(Transcript Source: No, creo que es exactamente así. Creo que estamos en un mundo en el que estamos entusiasmados con lo que ChatGPT ha hecho para convertir las cosas en conversaciones y ahora podemos incorporar a estos agentes en nuestras aplicaciones de mensajería para convertirlas en más conversaciones. Es un paradigma increíble, pero cuando estás de compras quieres ver opciones visuales, explorar y personalizar las cosas para ti y poder decir: "Me gusta mucho, pero me gustaría que tuviera algún ribete en el cuello o algo". Y la IA te ha ayudado a darte cuenta de eso y quizás incluso a que te lo hagan a tu medida. Y las compras pueden tener mucho que ofrecer. En el mundo del entretenimiento, creo que apenas hemos empezado a arañar la superficie de la capacidad de contar mejores historias, de la forma de empoderar a las personas para que sean mejores narradores, lo que crea estas redes increíbles de personas que consumen historias. TikTok era un lugar increíble donde las personas se reunían y creaban pequeños vídeos. Ves a personas de todo el mundo que ahora estás viendo, pero todavía hay mucho capturado en la cabeza de las personas que ojalá pudieran expresar sus ideas incluso mejor. La IA nos ayudará en ese sentido y tendremos una nueva red increíble. Por lo tanto, creo que estamos en la cúspide de todas estas categorías y necesitábamos que los modelos mejoraran para que pudieras empezar a incursionar en algunas de estas ideas e inventarlas. Pero a medida que eso suceda en los próximos años y con las nuevas capacidades del modelo, sigo pensando que el valor acabará en esta capa de software del producto.)*
+
+</details>
+
+**奥利维亚·摩尔**: 是的，这段论述极其精辟地让我们全景闭环、重新呼应了我们今天对话开篇所重点剖析的核心论题：即**帮助用户“节省时间”的产品，与陪伴用户“消磨/度过时间”的产品之间的巨大鸿沟**。
+
+迄今为止，我们在整个消费级生成式 AI 领域所目睹的几乎全部成功产品，其核心宣传点无一例外都停留在“帮你节省时间”的生产力范畴之内。然而放眼人类商业文明史，那些真正跻身全球市值巅峰、成就万亿美元商业帝国的企业，几乎清一色出自于那些让数以亿计的大众心甘情愿把大把大把闲暇时光沉浸式“消耗沉醉”在其中的赛道。
+
+为了让消费级 AI 真正迈向全人类普及的星辰大海，我们迫切需要看到这类致力于让人们更美好地度过时光的伟大消费级产品的全面降临，而我深信，全球最敏锐的一批优秀开发者，眼下正在各个角落日夜兼程地为之全力奋斗。
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: That brings our whole discussion full circle to the profound dichotomy between products engineered to save you time versus platforms built to absorb and spend your time. 
+
+Virtually everything that has broken out in consumer AI to date has been squarely about saving time. Yet historically, the most valuable consumer tech franchises on earth monetize the time spent and savored. We desperately need those immersive consumer experiences to emerge in AI, and I have zero doubt the most visionary builders are heads-down building them right this second.
+
+*(Transcript Source: Sí. Para mí, esto nos lleva de nuevo a lo que estábamos hablando de productos que ayudan a las personas a ahorrar tiempo en lugar de perderlo. Casi todo lo que hemos visto en la IA de consumo ahorra tiempo. Y ese tiempo perdido suele acabar estando entre las empresas más grandes, si no entre las más grandes. Así que necesitamos que eso también exista, y estoy seguro de que muchos desarrolladores están trabajando en ello ahora mismo.)*
+
+</details>
+
+**乔希·埃尔曼**: 毋庸置疑，事实绝对就是这样。
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Without question. Absolutely.
+
+*(Transcript Source: Por supuesto.)*
+
+</details>
+
+**阿莱娜·伯格**: 我认为用这番深刻的总结来作为本期播客的收尾，简直再完美不过了。非常感谢 Olivia 和 Josh 今天为我们带来的极具含金量的深度思想交锋！各位听众也千万不要忘记亲自查阅 a16z 官方发布的《全球 Top 100 消费级生成式 AI 应用报告》第七期完整版报告。
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: That is the absolute perfect note to wrap on. Thank you both so much for joining us, and everyone be sure to dive into the full Top 100 Consumer AI Applications report, edition seven.
+
+*(Transcript Source: Por supuesto. Creo que es una gran nota para terminar. Muchas gracias a ambos por acompañarnos y no olvidéis consultar las 100 mejores aplicaciones de IA de consumo, séptima edición.)*
+
+</details>
+
+**奥利维亚·摩尔**: 谢谢 Alena，非常感谢邀请我们！大家第八期榜单再见！
+
+<details>
+<summary>Original English</summary>
+
+**[Olivia Moore]**: Thank you. Thanks for having us. See you all for edition eight!
+
+*(Transcript Source: Gracias. Gracias por invitarnos. Nos vemos en la octava edición.)*
+
+</details>
+
+**乔希·埃尔曼**: 谢谢大家，下次再会！
+
+<details>
+<summary>Original English</summary>
+
+**[Josh Elman]**: Yeah, thank you all.
+
+*(Transcript Source: Sí.)*
+
+</details>
+
+**阿莱娜·伯格**: 谢谢大家收听！
+
+<details>
+<summary>Original English</summary>
+
+**[Alena Berger]**: Thank you.
+
+*(Transcript Source: Sí.)*
+
+</details>

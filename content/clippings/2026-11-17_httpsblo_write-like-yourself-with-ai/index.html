@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>让 AI 写得像自己：Every 评测负责人试了六年，最后靠一个&#34;盲审裁判&#34;做到了 · 乔木博客</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">让 AI 写得像自己：Every 评测负责人试了六年，最后靠一个&#34;盲审裁判&#34;做到了 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>向阳乔木</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-17</span>
+    
+
+    <header class="article-header">
+      
+      <h1>让 AI 写得像自己：Every 评测负责人试了六年，最后靠一个&#34;盲审裁判&#34;做到了 · 乔木博客</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/ai-tooling/">ai-tooling</a>
+      
+        <a class="tag-link" href="/tags/ai-workflow/">ai-workflow</a>
+      
+        <a class="tag-link" href="/tags/prompt-engineering/">prompt-engineering</a>
+      
+        <span class="tag-pill tag-pill--no-page">skill-optimization</span>
+      
+        <a class="tag-link" href="/tags/testing/">testing</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章总结了评测负责人 Mike Taylor 在六年试错后，如何通过一套系统流程让 AI 写作工具（如 Claude）写出更像自己风格的文章。核心方法是建立一个“盲审裁判”机制，通过收集真实文章作为测试集，将每篇文章拆解为“只有内容、没有风格”的简报，并利用优化器（如 GEPA）迭代改进写作 skill。文章强调，有效的优化依赖于一个可靠的裁判来评估 AI 生成的文本与原文的相似度，而不是简单的风格指南。最终结论是，比起写作者的勤奋，做过值得写的事和形成新的观点更重要，AI 更多是作为将想法用自己会用的方式表达的代笔。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://blog.qiaomu.ai/write-like-yourself-with-ai" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-17T00:00:00.000Z">2026-11-17</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>11 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E9%AA%97%E8%BF%87%E4%BA%86%E6%89%80%E6%9C%89%E6%9C%8B%E5%8F%8B%E9%AA%97%E4%B8%8D%E8%BF%87%E4%BB%96%E8%87%AA%E5%B7%B1">骗过了所有朋友，骗不过他自己</a></li><li class="outline-h2"><a href="#%E5%A4%A7%E5%A4%9A%E6%95%B0%E4%BA%BA%E7%9A%84%E5%86%99%E4%BD%9C-skill%E5%8F%AA%E6%98%AF%E4%B8%80%E5%A0%86%E7%8C%9C%E6%B5%8B">大多数人的写作 skill，只是一堆猜测</a></li><li class="outline-h2"><a href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%E6%94%B6%E9%9B%86%E5%B7%B2%E5%8F%91%E8%A1%A8%E7%9A%84%E6%96%87%E7%AB%A0%E5%B9%B6%E7%95%99%E4%B8%80%E9%83%A8%E5%88%86%E5%BD%93%E6%9C%9F%E6%9C%AB%E8%80%83">第一步：收集已发表的文章，并留一部分当期末考</a></li><li class="outline-h2"><a href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%E6%8A%8A%E6%AF%8F%E7%AF%87%E6%96%87%E7%AB%A0%E6%8B%86%E6%88%90%E5%8F%AA%E6%9C%89%E5%86%85%E5%AE%B9%E6%B2%A1%E6%9C%89%E9%A3%8E%E6%A0%BC%E7%9A%84%E7%AE%80%E6%8A%A5">第二步：把每篇文章拆成&quot;只有内容、没有风格&quot;的简报</a></li><li class="outline-h2"><a href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%E9%80%A0%E4%B8%80%E4%B8%AA%E9%9D%A0%E5%BE%97%E4%BD%8F%E7%9A%84%E8%A3%81%E5%88%A4">第三步：造一个靠得住的裁判</a></li><li class="outline-h2"><a href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5skill-%E9%9D%A0%E4%BC%98%E5%8C%96%E5%BE%97%E6%9D%A5%E4%B8%8D%E9%9D%A0%E6%89%8B%E5%86%99">第四步：skill 靠优化得来，不靠手写</a><ol><li class="outline-h3"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%89%8B%E5%86%99%E7%9A%84%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97%E4%BC%9A%E5%A4%B1%E8%B4%A5">为什么手写的风格指南会失败</a></li><li class="outline-h3"><a href="#%E6%88%90%E6%9C%AC%E5%92%8C%E9%80%89%E6%8B%A9">成本和选择</a></li></ol></li><li class="outline-h2"><a href="#%E7%AC%AC%E4%BA%94%E6%AD%A5skill-%E8%A6%81%E9%92%88%E5%AF%B9%E4%BD%A0%E5%AE%9E%E9%99%85%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B%E6%9D%A5%E4%BC%98%E5%8C%96">第五步：skill 要针对你实际用的模型来优化</a></li><li class="outline-h2"><a href="#%E7%AC%AC%E5%85%AD%E6%AD%A5%E4%BB%8E%E7%AE%80%E6%8A%A5%E5%BC%80%E5%A7%8B%E5%86%99%E5%86%8D%E6%8A%8A%E4%BF%AE%E6%94%B9%E5%96%82%E5%9B%9E%E5%8E%BB">第六步：从简报开始写，再把修改喂回去</a></li><li class="outline-h2"><a href="#%E5%85%88%E6%83%B3%E6%B8%85%E6%A5%9A%E6%80%8E%E4%B9%88%E8%AF%84%E5%86%8D%E5%8A%A8%E6%89%8B%E4%BC%98%E5%8C%96">先想清楚怎么评，再动手优化</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>让 AI 写得像自己：Every 评测负责人试了六年，最后靠一个"盲审裁判"做到了 · 乔木博客</p>
+<p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1 id="让-ai-写得像自己every-评测负责人试了六年最后靠一个盲审裁判做到了">让 AI 写得像自己：Every 评测负责人试了六年，最后靠一个"盲审裁判"做到了</h1>
+<p>AI教程</p>
+<p>·</p>
+<p>2026年11月17日</p>
+<p>·</p>
+<p>19 次阅读</p>
+<p>·</p>
+<p>约 14 分钟</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+<p>让 Claude 读完自己的文章，写一份风格指南，再拿这份指南去写稿。很多人都这么做过。</p>
+<p>Mike Taylor 的实验结果很扎心：这种 Claude 写的风格指南，对上三种优化方法时，在 80% 到 95% 的测试文章上都输了。 换成 Opus 5.5 时更离谱，不加这份指南反而写得更像他本人。</p>
+<p>Mike Taylor 是 Every 的评测负责人，也是 O'Reilly《Prompt Engineering for Generative AI》的合著者。他从 2020 年就开始折腾这件事，这篇文章是他六年试错后总结的完整流程。</p>
+<h2 id="骗过了所有朋友骗不过他自己" data-reading-heading="">骗过了所有朋友，骗不过他自己</h2>
+<p>2020 年，AI 写作工具 Copy.ai 给所有没进 Y Combinator 的人发免费的 GPT-3 账号。Mike 就是从那时候开始，尝试让 AI 模仿自己写作。</p>
+<p>每出一个新模型，他就再试一次，效果一次比一次好。到 2023 年，他的 AI 写作流程已经能通过图灵测试：朋友和同事都看不出那些文章不是他亲手写的。</p>
+<p>但他自己看得出来。</p>
+<p>更难受的是，同事拿"他写的"文章来问问题，他认不出那些观点是自己的。</p>
+<p>后来他慢慢形成了一套用 AI 写作的原则，比如专写训练数据里还没有、不写出来就没人会说的话题。流程也在进化：先用语音模式口述想法，再把多个草稿像拼乐高一样拼在一起，直到满意为止。</p>
+<p>这样出稿快了，也没丢掉真实感。可读起来还是有一股 AI 味。让 Claude 根据他过去的文章生成一个写作 skill，也没改善多少。</p>
+<p>于是他做了一系列实验。现在他有了一个叫 /write-like-mike 的写作 skill，这篇文章本身就是用它写的。他还有一套评测指标，能证明它确实有效。</p>
+<p>效果很实在：每次他仍需要手动改几处（这篇文章的开头就是他自己重写的），但从有一个观点到成文，现在大约一小时，以前要花一整天。他给编辑的投稿频率从每月一篇变成了每周一篇，编辑那边的压力，成了他下一个要解决的问题。</p>
+<h2 id="大多数人的写作-skill只是一堆猜测" data-reading-heading="">大多数人的写作 skill，只是一堆猜测</h2>
+<p>多数人的写作 skill 是一份描述，自己写的，或者让 Claude 读几篇文章后总结的。</p>
+<p>当起点没问题。问题在于停在这里，skill 里每条规则都只是"我大概是这么写的"的有根据猜测。</p>
+<p>Mike 的方法，是把这些猜测变成一场可以检验的考试：这个 skill 写出来的东西，到底像不像你。</p>
+<p>下面是六个步骤。</p>
+<h2 id="第一步收集已发表的文章并留一部分当期末考" data-reading-heading="">第一步：收集已发表的文章，并留一部分当期末考</h2>
+<p>Mike 一开始收集了 185 篇自己的文章，共 33.5 万字，分布在 13 个平台上，最早可追溯到 2013 年。</p>
+<p>其中 54 篇他刻意不让模型碰，留作最终考试。只有这批"没见过的题"，才能判断 skill 学会的是风格，而不是背下了几篇文章。 道理和机器学习里的测试集一样，用训练过的题考试，分数再高也说明不了什么。</p>
+<p>数量多也不一定好。他发现自己的文风这些年变了，只用最近 30 篇 Every 文章重新优化时，效果反而更好。</p>
+<p>他的建议：挑一个平台或一种体裁，收集 12 到 25 篇已发表的作品。</p>
+<p>没有写作样本怎么办？用最近 30 次会议的文字记录代替。Mike 认为，像说话一样写作，更能打动人。让一段有真实感的文字变正式，交给 AI 很容易；反过来让一段文字更像人话，难得多。</p>
+<p>有一类素材不要用：推文和邮件。他试过，效果很糟。社交媒体和邮件的写法太依赖那个媒介，搬到长文里根本不成立。</p>
+<h2 id="第二步把每篇文章拆成只有内容没有风格的简报" data-reading-heading="">第二步：把每篇文章拆成"只有内容、没有风格"的简报</h2>
+<p>他让模型从每篇文章里只提取核心内容：论点、大纲、每个事实、来源、轶事，以及理解故事所需的原话引用。</p>
+<p>风格、措辞、开头钩子、笑话，统统去掉。</p>
+<p>这样做的目的是控制变量。模型拿到了写这篇文章需要的全部信息，唯独缺风格。如果根据简报写出的草稿像 Mike，功劳就可以算在 skill 头上，也能拿来测试新 skill 是否更强。</p>
+<p>这也意味着一个绕不开的前提：你得有真正的观点。 没什么有意思的话要说，再好的写作 skill 也救不了你。</p>
+<p>Mike 提过一个概念，叫"蒸馏比"：把你输入给 AI 的内容量，除以最终稿的长度。他认为只有输入 token 多于输出 token 时，AI 写作才站得住脚。想法必须是你的，AI 只负责用对的风格把它写出来。</p>
+<h2 id="第三步造一个靠得住的裁判" data-reading-heading="">第三步：造一个靠得住的裁判</h2>
+<p>Mike 以前的尝试，都栽在"怎么评分"这一步。</p>
+<p>要优化 skill，或者证明它有用，就得成百上千次地判断"这段 AI 文字像不像你"。人工做不过来，必须交给 AI 裁判，而裁判本身得可靠。</p>
+<p>最后奏效的方法，他称为成对黄金三元组评测：AI 裁判同时看三样东西，Mike 的原文，以及根据同一份简报生成的两份草稿，然后选出更接近原文的那一份。</p>
+<p>有个坑要避开：AI 裁判偏爱先读到的那份草稿。所以每次比较都跑两遍，交换顺序。</p>
+<p>裁判还要写一段点评，说明每份草稿和原文差在哪。比如有一条点评嫌某份草稿"有些出彩的插话"，比原文"低调的语气"显得"稍微有点表演性"。这些点评就是后面优化器学习的材料。</p>
+<p>裁判要选最稳定的。交换草稿顺序后，Opus 5.5 有 86% 的时候给出相同答案，Sonnet 5.5 只有 70%。Jev 有一半的时候会改主意，等于抛硬币，判断这种需要更高智力的创作类任务，它不合格。</p>
+<h2 id="第四步skill-靠优化得来不靠手写" data-reading-heading="">第四步：skill 靠优化得来，不靠手写</h2>
+<p>Mike 对比了四种构建 skill 的方法。</p>
+<p>第一种是常规做法：让 Claude（Fable 5.1）读他的文章，写一份风格指南。玩过 AI 写作的人多半这么干过。结果是一份看起来很像样的指令，但没有任何证据表明它能让模型写得更好。</p>
+<p>另外三种是优化器。它们的工作方式是：写草稿，交给裁判评分，只有分数提高了，才保留对 skill 的修改。 三个优化器分别是：</p>
+<p>Andrej Karpathy 的 autoresearch</p>
+<p>DSPy 的 GEPA</p>
+<p>Every 的 Compound Engineering 插件里的 ce-optimize</p>
+<p>结果就是开头那组数据：Claude 写的 skill，在 80% 到 95% 的测试文章上输给了三个优化器。对 Opus 5.5 来说，去掉这个 skill 反而表现更好，不带 skill 的 Claude 有 61% 的时候赢过带 skill 的 Claude。Mike 的解读是，Opus 5.5 本身写得就挺像他，加上这个 skill 弊大于利。</p>
+<h3 id="为什么手写的风格指南会失败" data-reading-heading="">为什么手写的风格指南会失败</h3>
+<p>把几个 skill 放在一起对比，原因就清楚了。</p>
+<p>Claude 写的 skill 读起来像 Mike 的"金曲合集"：自嘲式幽默、一句话成段、"Here's the thing"这类引导语。模型被要求时时刻刻用上这些特征，写出来的就成了漫画式的 Mike，而不是真实的 Mike。</p>
+<p>在一篇测试文章里，它让 Mike"在咖啡机旁徘徊，盼着有个有趣的人路过"。这种句子他从没写过。</p>
+<p>这就像模仿一个人，只抓住他的几个口头禅，然后每句话都塞一个。熟人一听就知道是假的。</p>
+<p>优化出来的 skill 则完全是另一副样子，里面全是从裁判点评里提炼出的纠错。比如智能体注意到，早期失败的版本总在写"整齐的编辑式总结"和"有冲击力的博客节奏"，于是警告不要编造笑话，不要用"Here's the thing"。</p>
+<p>Mike 用这些反馈重写 skill，再拿每篇文章重新测试，看是否纠正了之前的错误。针对具体案例说清哪里错了，远比模糊描述"我喜欢什么"管用。 他说这条对带人类写手同样适用。</p>
+<p>优化器找到的，是真正能复现他风格的东西，而不是过度放大他的小怪癖。</p>
+<h3 id="成本和选择" data-reading-heading="">成本和选择</h3>
+<p>优化更贵：按 API 价格算，每个 skill 要 27 到 53 美元，一次性生成的版本只要 5 美元。</p>
+<p>好在三个优化器的大部分提升都发生在前三轮，及早停止能省不少钱。第二轮实验，Mike 改用自己有补贴的 Claude Code 和 Codex 订阅来跑，没付全额 API 费用。</p>
+<p>他会选 GEPA。在他的 Every 文章上，GEPA 对 autoresearch 的战绩是 77 比 31，对 ce-optimize 是 85 比 15。而且它内置在 DSPy 里，他本来就在用 DSPy 优化提示词。</p>
+<h2 id="第五步skill-要针对你实际用的模型来优化" data-reading-heading="">第五步：skill 要针对你实际用的模型来优化</h2>
+<p>写作 skill 既属于写作者，也属于模型。</p>
+<p>Mike 为六个写作模型分别优化了 skill，把所有组合放在同一个尺度上排名，差距大得惊人：</p>
+<p>模型</p>
+<p>无 skill</p>
+<p>GEPA 优化 skill</p>
+<p>Opus 5.5</p>
+<p>16%</p>
+<p>93%（所有测试中最高）</p>
+<p>GPT-6 Astra</p>
+<p>1%</p>
+<p>66%</p>
+<p>数据说明，skill 的作用比模型本身更大。 带优化 skill 的 Sonnet 5.5，对上带 Claude 手写 skill 的 Opus 5.5，60 次判断里赢了 46 次。便宜一档的模型配上好 skill，能打赢贵一档的模型配烂 skill。</p>
+<p>结论很直接：选定你要用来起草的模型，针对它优化；换模型了，就重新优化。</p>
+<p>Mike 自己就经历过这一步。实验第一阶段，他调出的 Sonnet 5.5 比 Opus 5.5 写得更好。但真实写作中上下文不是固定的，他想用更聪明的模型，Opus 有可能带来比他原本更好的想法。于是他又跑了一轮优化，最终找到了把 Opus 推到第一的 skill。</p>
+<h2 id="第六步从简报开始写再把修改喂回去" data-reading-heading="">第六步：从简报开始写，再把修改喂回去</h2>
+<p>用 skill 的方式，要和测试它的方式一致：给它一份装满你真实内容的简报。</p>
+<p>只给一句话的提示，它会用看似合理的内容填补空白，再套上逼真的你的口吻。内容是编的，声音却像你，这是最糟的组合。</p>
+<p>Mike 写关于"克隆同事"的那篇文章时，给了 skill 一句引语、10 条事情经过的要点、他测试过的邮件，以及一份口述文字稿。</p>
+<p>最后他对草稿做了 44 处修改。之前的实验里，AI 草稿动辄要改几百处。</p>
+<p>这些修改大多是让语气更随意，比如加上"我写邮件就像写推文"和"有点烂"这样的话。有一处修改和 skill 直接冲突：skill 会把人名加粗，而 Mike 从不这样做。</p>
+<p>这些修改，就是下一轮的训练数据。</p>
+<p>有一点要提防：裁判只奖励"像你过去发表的东西"，所以用旧文章优化出的 skill，听起来像过去的你。如果你的风格正在变化，就把最近的文章留作期末考。</p>
+<p>想在自己的文章上试试，可以去 GitHub 获取这个 skill，里面有设置说明。它很快会并入 Every 的 Compound Writing 插件。</p>
+<h2 id="先想清楚怎么评再动手优化" data-reading-heading="">先想清楚怎么评，再动手优化</h2>
+<p>距离第一次用 Copy.ai 过去了六年。Mike 的结论是：把风格描述写得更好，没用；换更强的模型，也不会自动更像他。</p>
+<p>真正起作用的，是一场实打实的考试：用真实文章，配上装满真实内容的简报，再由裁判拿两份生成稿去对照原文。</p>
+<p>这条经验能迁移到写作之外：用 AI 做某件事卡住了，先想清楚怎么评估它，再去优化它。 没有评估，所有优化都只是自我感觉良好。</p>
+<p>Mike 的下一步是把这套流程做成系统：每发表一篇文章，就自动加入语料库，系统重新测试，看看有没有变化。</p>
+<p>他的设想是，自己专注于过有意思的生活、形成新的想法和观点，事后交给 AI 写成文章。在他看来，写作者是否勤奋、是否有条理，正在变得没那么重要；有没有做过值得写的事，变得更重要。</p>
+<p>skill 依然决定不了什么值得说，也不该指望 AI 替人思考。它只能把输入的东西，用他会用的方式说出来。可以把它当成一个代笔，帮你写下每一个好想法。经历和观察还得自己去积累，只是现在把它们分享出去，容易多了。</p>
+<p>如果想照着做，最小可行版本是这样的：</p>
+<p>挑一个平台，找 12 到 25 篇自己的文章，或者 30 次会议的文字稿，留几篇最新的不用于训练</p>
+<p>把每篇拆成只有内容的简报</p>
+<p>用 Opus 级别的模型当裁判，对比两份草稿和原文，交换顺序跑两遍，并要求写点评</p>
+<p>用 GEPA 跑两三轮优化，针对你真正要用的写作模型</p>
+<p>写作时喂详细的简报，把自己的每处修改存下来，作为下一轮的训练数据</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/6eac7feba0bcc41ef64ccc94c2cb6b4d920b4dee92cd5bf54d749ff38b36e12c.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/6eac7feba0bcc41ef64ccc94c2cb6b4d920b4dee92cd5bf54d749ff38b36e12c.md" download="让 AI 写得像自己：Every 评测负责人试了六年，最后靠一个&#34;盲审裁判&#34;做到了 · 乔木博客.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Mike Taylor" class="entity-link person-link">Mike Taylor</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Every" class="entity-link company-link">Every</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Claude" class="entity-link product-link">Claude</a>, <a href="/search/?q=Opus 5.5" class="entity-link product-link">Opus 5.5</a>, <a href="/search/?q=Sonnet 5.5" class="entity-link product-link">Sonnet 5.5</a>, <a href="/search/?q=GPT-6 Astra" class="entity-link product-link">GPT-6 Astra</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

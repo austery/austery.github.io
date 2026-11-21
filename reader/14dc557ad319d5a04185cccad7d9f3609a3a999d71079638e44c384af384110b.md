@@ -1,0 +1,726 @@
+---
+author: New York Times Podcasts
+date: '2026-11-17'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=ufHhmDzeplg
+speaker: New York Times Podcasts
+tags:
+  - cost-of-living
+  - inflation
+  - congress
+  - healthcare-policy
+  - minimum-wage
+title: 民主党承诺降低物价：掌控国会后究竟能做些什么？
+summary: 在以降低生活成本为竞选承诺赢得中期选举后，民主党即将在国会面临拥有否决权的特朗普总统。时报记者分析了民主党在汽油价格、医保补贴、住房供给、关税、最低工资以及人工智能数据中心等关键领域的实际政策选项与现实约束。
+insight: ''
+draft: true
+series: ''
+category: politics-society
+area: society-thinking
+project: []
+people:
+  - Rachel Abrams
+  - Rebecca Elliot
+  - Margot Sanger-Katz
+  - Ben Casselman
+  - Donald Trump
+  - Hakeem Jeffries
+  - Bernie Sanders
+  - Jensen Huang
+companies_orgs:
+  - The New York Times
+  - Nvidia
+products_models: []
+media_books:
+  - The Daily
+status: evergreen
+---
+### 中期选举后的物价承诺与国会现实
+
+这里是《纽约时报》，我是蕾切尔·亚伯拉罕斯（Rachel Abrams），这是《每日新闻》（The Daily）。[音乐]
+<details><summary>Original English</summary>
+From the New York Times, I'm Rachel Abrams, and this is the daily. [music]
+</details>
+
+>> 密歇根州的人们买不起食品杂货。他们加不起油。他们看不起医生。
+<details><summary>Original English</summary>
+>> People in Michigan can't afford their groceries. They can't afford their gas. They can't afford to see a doctor.
+</details>
+
+>> 在全州各地，包括得克萨斯州东南部的这里，人们都在苦苦挣扎。他们交不起水电燃气费。[音乐] 他们买不起食品杂货。
+<details><summary>Original English</summary>
+>> Across the state, including here in Southeast Texas, folks are drowning. They can't afford utilities. [music] They can't afford groceries.
+</details>
+
+>> 我们将携手让生活变得更可负担。
+<details><summary>Original English</summary>
+>> Together, we are going to make life more affordable.
+</details>
+
+>> 我们可以降低物品的成本，我们需要能做到这一点的领导人。
+<details><summary>Original English</summary>
+>> We can make stuff cost less, and we need leaders who will do that.
+</details>
+
+>> 民主党通过向美国民众作出降低高昂生活成本的重大承诺，在中期选举中大获全胜。[音乐]
+<details><summary>Original English</summary>
+>> The Democratic Party swept the midterm elections [music] by making big promises to Americans by bringing down the high cost of living.
+</details>
+
+>> 我要去参议院为可负担住房而奋斗。
+<details><summary>Original English</summary>
+>> I'm going to the Senate to fight for affordable housing.
+</details>
+
+>> 通过暂停征收联邦汽油和柴油税，以及找到退出这场对伊朗战争的途径，来降低汽油和柴油价格。[音乐]
+<details><summary>Original English</summary>
+>> To lower gas and diesel prices by suspending [music] the federal gas and diesel tax and finding our way out of this war with Iran.
+</details>
+
+>> 我要去为全民联邦医疗保险（Medicare for all）而奋斗。
+<details><summary>Original English</summary>
+>> I am going to fight for Medicare for all.
+</details>
+
+>> 我们将为降低你们的生活成本、开辟通往中产阶级的道路而奋斗。
+<details><summary>Original English</summary>
+>> We will fight to lower your costs and open up paths to the middle class.
+</details>
+
+>> 但当民主党人在 1 月真正接管国会时，[音乐] 他们将面对一位能够否决他们提出的任何方案的总统，而且这位总统对于与他们合作的意愿也释放了复杂且矛盾的信号。[音乐]
+<details><summary>Original English</summary>
+>> But when Democrats actually take control of Congress in January, [music] they will face a president who can veto anything they put forward and who has also sent mixed [music] signals about his willingness to work with them.
+</details>
+
+>> 我大概能和民主党人处得来，除非他们想搞破坏；但我拥有否决权，所以如果我们不喜欢他们在做的事情的话。[音乐]
+<details><summary>Original English</summary>
+>> I'll get along probably with the Democrats unless they want to be destructive, but I have [music] the power of the veto, so if we don't like what they're doing.
+</details>
+
+>> 因此今天，我们逐一连线本报的常驻专家丽贝卡·埃利奥特（Rebecca Elliot）、[音乐] 玛戈·桑格-卡茨（Margot Sanger-Katz）和本·卡塞尔曼（Ben Casselman），去询问民主党人究竟能做些什么——如果真能做些什么的话——来解决那些促使他们当选的关键问题。[音乐]
+
+今天是 11 月 17 日，星期二。[音乐]
+<details><summary>Original English</summary>
+>> And so today, we are calling up our resident experts, Rebecca Elliot, [music] Margot Singer Katz, and Ben Casselman, one by one, to ask what, if anything, Democrats can actually [music] do to fix the key issues that propelled them into office. [music]
+
+It's Tuesday, November 17th. [music]
+</details>
+
+### 油价与能源市场：国会的有限杠杆与战争阴影
+
+好的，丽贝卡，你在时报报道石油与天然气领域，我们显然知道高油价一直是选民的主要关切。所以我想从这里谈起。民主党人有什么选择来尝试压低油价？
+<details><summary>Original English</summary>
+Okay, so Rebecca, you cover oil and gas for the Times, and we obviously know that high gas prices have been a major concern for voters. So I want to start there. What options do Democrats have to try to bring down the price of gas?
+</details>
+
+>> 蕾切尔，我得告诉你一些坏消息，那就是在尝试降低汽油价格方面，国会总体上几乎没有什么好的选择。
+<details><summary>Original English</summary>
+>> So I have some bad news for you, Rachel, which is that Congress in general has very few good options when it comes to trying to bring down gas prices.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Right.
+</details>
+
+>> 人们不难想到，如果有简单可行的好办法摆在桌面上，特朗普总统或者共和党控制的众议院和参议院在选举前就已经采用这些方案了。
+
+话虽如此，我们来谈谈这场战争。
+<details><summary>Original English</summary>
+>> One would imagine that if there were easy good options on the table that President Trump or the Republican controlled House and Senate would have availed themselves of said options before the election.
+
+That said, let's talk about the war.
+</details>
+
+>> 好的。
+<details><summary>Original English</summary>
+>> Okay.
+</details>
+
+>> 那是过去几个月里美国人所经历的高汽油和高柴油价格最直接的原因。因此，问题当然在于民主党人在宣誓就职后，理论上能做些什么来尝试结束战争。
+<details><summary>Original English</summary>
+>> That is the most direct cause of the higher gas and diesel prices that Americans have been seeing for the past many months. And so the question of course is what can Democrats do theoretically to try to end the war once they're sworn in.
+</details>
+
+>> 明白。
+<details><summary>Original English</summary>
+>> Right.
+</details>
+
+>> 选择之一是通​​过一项《战争权力决议》（War Powers Resolution），试图迫使总统停止敌对行动，但这是否真正具有约束力尚不明确。
+
+第二种选择是威胁扣留冲突所需的资金。
+<details><summary>Original English</summary>
+>> So option one would be to pass a War Powers Resolution seeking to compel the president to put an end to the hostilities, but it's not actually clear that that would have teeth.
+
+Option two is to threaten to withhold funding for the conflict.
+</details>
+
+>> 钱袋子的权力。
+<details><summary>Original English</summary>
+>> Power of the purse.
+</details>
+
+>> 是的，但必须记住，民主党人并没有达到能够推翻总统否决的绝对多数。
+<details><summary>Original English</summary>
+>> Yes, but it's important to remember that Democrats don't have a veto proof majority.
+</details>
+
+>> 在众议院和参议院都是如此，对吧？因为即便他们在期中选举中大胜，但没有达到三分之二多数，你刚才列出的这两种选择，[音乐] 都会直接撞上一堵墙，也就是总统基本上可以说坚决不行，并直接否决任何送到他办公桌上的法案。
+<details><summary>Original English</summary>
+>> In the House and the Senate, right? Because even with their [music] sweeping victories in the midterms, without a two-thirds majority, both of these options that you just outlined, they both run [music] up against the president basically just saying absolutely not and vetoing whatever comes across his desk.
+</details>
+
+>> 没错。[音乐] 但即便战争以某种方式在纸面上结束了，[音乐] 这也并不必然会直接传导至加油站的价格上。
+<details><summary>Original English</summary>
+>> That's [music] right. But even if the war does end one way or another on paper, [music] that doesn't necessarily flow directly through to prices at the pump.
+</details>
+
+>> 请解释一下你这话的意思，以及为什么会是这种情况。
+<details><summary>Original English</summary>
+>> And just explain what you mean by that and why that would be the case.
+</details>
+
+>> 关键问题在于，通过霍尔木兹海峡把石油运出中东到底有多危险。如果战争在纸面上结束了，但依然有无人机，油轮仍有受损风险，运输成本——
+<details><summary>Original English</summary>
+>> The big question is how dangerous is it to move oil out of the Middle East through the Strait of Hormuz. If the war is over on paper, but there are still drones and a risk of damage to tankers and shipping costs
+</details>
+
+>> 还有水雷。
+<details><summary>Original English</summary>
+>> mines.
+</details>
+
+>> 保持在极高水平。没错，还有尚未被清除的水雷。这很可能会使石油价格、进而使汽油和柴油价格持续居高不下。
+
+眼下的另一个巨大因素是所有那些因为中东战争而受损或关闭的炼油厂。所以你还必须给企业足够的时间和安全保障，去维修像受损炼油厂这样的基础设施。可以说这非常复杂，[清嗓子] 并不是说民主党人在 1 月的第一天就能像按开关一样说，好了，现在一切都解决了。
+<details><summary>Original English</summary>
+>> stay really high. Right, mines that haven't been cleared yet. That is likely to keep oil prices and therefore gasoline and diesel prices elevated.
+
+Another huge factor right now is all of the refineries that have been damaged or shut down because of the war in the Middle East. And so you also have to be able to give companies the kind of time and security to make repairs to infrastructure like refineries that have been damaged. And suffice it to say this is very complicated [clears throat] and it's not as if Democrats day one in January can flick a switch and say, okay, it's all better now.
+</details>
+
+>> 那我们假设战争最终陷入某种僵局或停滞状态。我想知道，如果真有什么办法的话，民主党人到底还能做些什么来影响汽油价格。比如总统谈到过至少暂时停征联邦燃油税。你能谈谈民主党人拥有的其他选择，或者民主党人用来向总统施压的手段吗？其中哪些方案落地的可能性有多大？
+<details><summary>Original English</summary>
+>> So let's just say that the war ends up being in kind of a a stalemate holding pattern. I wonder what else Democrats could actually do that would affect gas prices if anything. The president for example has talked about temporarily at least halting the federal gas tax. Can you just talk about some of the other options that either Democrats have or Democrats have to pressure the president into and how likely any of those are?
+</details>
+
+>> 你说得对。确实有一些选项能够在边际上拉低汽油和柴油价格。你提到了联邦燃油税。那是对汽油每加仑征收 18 美分的税，对柴油更高。它从未被暂停过，但国会确实有权这么做。现在来看，它能提供一些缓解吗？当然可以。但它不会带来根本性的改变。
+
+你手头还有一些工具，比如暂停燃油出口，这实质上意味着要求企业不能将在本土生产的汽油或柴油销往海外。这是特朗普总统在期中选举前探讨过的事情，当时他承受着巨大的压力，尤其是来自柴油价格的压力。这样做很可能在短期内拉低价格。问题在于，从长远来看，这存在着极其巨大的导致价格反弹上升的风险。这是因为如果市场变小了，企业通常会怎么做？它们会削减产量。
+<details><summary>Original English</summary>
+>> You're right. There are options that could on the margins lower gasoline and diesel prices. You mentioned the federal gas tax. That's an 18 cent tax per gallon on gasoline, higher for diesel. It has never been suspended, but Congress does have the power to do that. Now, could it provide some relief? Sure. But it's not going to game-changing.
+
+You also have tools such as suspending fuel exports, which would essentially mean saying companies cannot sell the gasoline or perhaps diesel that they are producing here overseas. This is something that President Trump explored before the midterms when he was under a great deal of pressure, particularly on diesel prices. And doing that could very well bring prices down in the near term. The problem is there's a really big risk that you end up causing prices to rise longer term. And that's because if there's a smaller market, what do companies typically do? They cut back on production.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 因此这将进入一个非常棘手的领域。这里的逻辑在于，如果你强制国内产业只能卖给美国本土，这基本上就是供求关系问题：他们会缩减供应量，而美国的国内需求推测依然保持不变，因此价格反而会上涨。
+<details><summary>Original English</summary>
+>> And so this would be really tricky territory. The idea here being that if you make the domestic industry only sell to the United States, it's basically supply and demand. They're going to shrink the amount of supply. The demand in the United States presumably is the same. Therefore, prices go up.
+</details>
+
+>> 确实如此。但我还想就我们在国内拥有的基础设施和能源产业多停留讨论一分钟，因为从非常基础的层面上看，我不确定人们能否理解：既然我们投入了如此多的时间和资金来发展自己的能源基础设施，以获得某种能源独立，而这恰恰是为了让我们能够免受战争成本波及的原因，那为什么在我们拥有如此强劲的国内石油产量的情况下，美国人仍然在支付如此高昂的汽油价格？
+<details><summary>Original English</summary>
+>> Exactly. But I just want to linger on sort of the domestic infrastructure and energy sector that we have here for a minute because I think on a very basic level, I'm not sure that people understand why if we have invested so much time and money in developing our own energy infrastructure to gain some kind of energy independence, but the exact reason that we could maybe insulate ourselves from the costs of a war, why are Americans still paying such high gas prices if we have so much robust domestic oil production?
+</details>
+
+>> 是的。我的意思是，在这次战争期间，美国本土产量如此之高确实带来了好处，体现在它没有像世界各地的许多其他国家那样遭遇供应短缺，尤其是在冲突发生的最初几周和几个月里。话虽如此，在美国并不存在任何一个人或一家公司能够单独定价的情况。[清嗓子] 这是一个全球市场。因此，波斯湾或欧洲发生的事情，都会影响到美国的燃油价格。
+<details><summary>Original English</summary>
+>> Right. I mean the the United States has indeed benefited during this war from producing so much at home in that it hasn't faced shortages the way many other countries around the world have, particularly in the early weeks and months of the conflict.
+
+That said, it is not as if prices are set by any one person or company [clears throat] in the United States. It's a global market. And so what happens in the Persian Gulf or in Europe affects the price of fuel in the US.
+</details>
+
+>> 好的。所以讲到这里，丽贝卡，你告诉我们民主党人的选择非常有限，而且他们仅有的选择其实也并不怎么样。所以你这番话差不多让我觉得，至少在可预见的未来，我们就是生活在一个高油价的世界里了。
+<details><summary>Original English</summary>
+>> Okay. So at this point, Rebecca, you have told us the Democrats have very limited options and the options that they do have are not that great. So you're kind of making me think that we're just living in a world of higher gas prices, at least for the foreseeable future.
+</details>
+
+>> 是的，没错。我们可能会生活在一个加油站价格在一段时间内持续居高的世界里。但还有另一种情况我认为值得考虑，尽管在经历了这么多月承受极高能源价格之后，这种设想听起来可能会让人感觉很奇怪。
+<details><summary>Original English</summary>
+>> Yes, that's right. We could be living in a world where prices at the pump stay elevated for some time. But there's another scenario that I think is worth considering, as strange as it might feel after all of these months of paying very high energy prices.
+</details>
+
+>> 好，请继续说。
+<details><summary>Original English</summary>
+>> Okay, go on.
+</details>
+
+>> 那就是在幕后，各家企业一直在美国和南美洲等地投资，加大石油开采和生产。[音乐] 因此存在着这样一种替代情景：如果战争结束了，[音乐] 如果穿越霍尔木兹海峡的航运变得更加安全，全球可能会面临石油供应过剩。你可能会看到价格非常迅速地大幅下降。
+<details><summary>Original English</summary>
+>> And that is in the background, companies have been investing in places like the United States and South America in ramping up oil production. [music] And so there is this alternate scenario where if the war were to end, [music] if shipping through the Strait of Hormuz becomes much safer, the world could be facing a glut of oil. And you could see prices come down considerably very quickly.
+</details>
+
+>> [音乐]
+<details><summary>Original English</summary>
+>> [music]
+</details>
+
+>> 好的，鉴于我们刚经历的这段时期，这确实有点难以想象。但如果这真的发生了，它跟民主党人会有任何关系吗？
+<details><summary>Original English</summary>
+>> Okay, that is in fact kind of hard to imagine given this period of time we've just been through, but if it did happen, would it have anything to do with Democrats?
+</details>
+
+>> 不会。
+<details><summary>Original English</summary>
+>> No.
+</details>
+
+>> 丽贝卡·埃利奥特，非常感谢你。
+<details><summary>Original English</summary>
+>> Rebecca Elliot, thank you so much.
+</details>
+
+>> 谢谢你的邀请。
+<details><summary>Original English</summary>
+>> Thanks for having me.
+</details>
+
+### 医疗开支与医保方案：奥巴马医保补贴、医疗补助削减与药价博弈
+
+>> 嗨，玛戈。
+<details><summary>Original English</summary>
+>> Hi Margo.
+</details>
+
+>> 嗨。
+<details><summary>Original English</summary>
+>> Hi.
+</details>
+
+>> 玛戈，我们找你来是想谈谈民主党人能做些什么来缓解医疗保健成本。不过在我们讨论他们可能在考虑的潜在解决方案之前，我想请你先帮我们理清他们试图解决的问题究竟有哪些。
+<details><summary>Original English</summary>
+>> So Margo, we have come to you to talk about what Democrats can to help with healthcare costs. But before we even talk about the potential solutions that they might be looking at, I want you to help us understand what the problems are that they're even trying to solve.
+</details>
+
+>> 医疗体系里存在着很多问题，我不知道他们是否能解决所有问题，但有一些他们正聚焦的具体问题。其一是对于通过“奥巴马医保”（Obamacare）购买保险的人来说，健康保险变得非常昂贵，这是因为相关补贴在去年到期了。
+<details><summary>Original English</summary>
+>> Well, I think there are a lot of problems in the healthcare system and I don't know if they can solve all of them, but there are some really specific problems that they're focused on. One is that health insurance has gotten really expensive for people who buy coverage through Obamacare and that's because of subsidies that expired last year.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 另一个问题是，由于共和党人去年通过的大规模税收和国内政策法案中对联邦医疗补助（Medicaid）计划所做的改动，许多人定于明年失去 Medicaid 保障。
+
+此外，我认为普遍存在一种感受，即美国的医疗保健体系对每个人来说都太贵了，我们的药品价格高昂，人们买不起保险，在需要的时候保险又无法报销。我认为民主党人可能会首先把精力集中在那些他们认为可以推翻特朗普政府以及共和党掌控国会时所作改动的具体政策上。然后我认为在未来，面对这套影响到其他所有人的更广泛的问题，他们将不得不进行更长远的思考。
+<details><summary>Original English</summary>
+>> Another is that a lot of people are set to lose Medicaid coverage next year because of changes that Republicans made to the Medicaid program as part of their big tax and domestic policy bill that they passed last year.
+
+And then I think there's just a general sense that the US healthcare system is too expensive for everyone, that our drug prices are high, that people can't afford their insurance, that it doesn't cover things when they need it. I think Democrats are probably going to focus first on those discrete policy things where they think they can reverse changes that were made by the Trump administration and Republicans when they controlled Congress. And then I think in the future they're going to have to think bigger about what they're going to do about this broader set of problems that is affecting everyone else.
+</details>
+
+>> 好的，那我们先来谈谈民主党人可以尝试推行的那些具体的政策调整。请解释一下民主党人究竟拥有什么工具，至少可以尝试去恢复奥巴马医保的补贴或逆转对 Medicaid 的削减。
+<details><summary>Original English</summary>
+>> Okay, so first let's talk about those, those discrete policy changes the Democrats could try to make. Explain what tools Democrats actually have to at least try to restore the Obamacare subsidies or the Medicaid cuts.
+</details>
+
+>> 即将出任众议院议长的哈基姆·杰弗里斯（Hakeem Jeffries）已经表示，众议院民主党人有一个“百小时计划”。他们一掌权，就会就两项重大的医疗保健法案进行表决。我们知道这两项法案是什么。一项是恢复这些失去的奥巴马医保补贴，降低自费购买医疗保险人群的开支，这大概涉及 2000 万美国人。第二项则是推翻去年税收法案中对 Medicaid 的大量削减。这些削减大部分尚未生效，但即将来临，预计将导致大约 500 万美国人失去医疗保险，并且还会对医院和州财政预算造成巨大的财务打击。
+<details><summary>Original English</summary>
+>> So Hakeem Jeffries, the new speaker to be of the House of Representatives, he has already said that the Democrats in the House have a 100 hour plan. As soon as they take power they are going to take votes on two major healthcare bills. We know what those are. One that would restore these lost Obamacare subsidies, lowering the cost for people who buy their own health insurance, affects maybe like 20 million Americans. And then the second thing would reverse a lot of these Medicaid cuts that were made in last year's tax bill. Those mostly have not taken effect yet, but they are coming and they are expected to result in something like 5 million Americans losing health insurance and also uh big financial hit to hospitals and to state budgets.
+</details>
+
+>> 玛格丽特，我只想向我们的听众提醒一下，在众议院，民主党人拥有非常清晰的多数席位，但在参议院，这一优势更为微弱。民主党人目前拥有 55 个席位。如果他们赢得阿拉斯加州，可能会拿到 56 席。那么对于你刚才提到的这些拟议立法，民主党人在参议院究竟需要满足什么条件才能通过任何法案并最终使其成为法律？
+<details><summary>Original English</summary>
+>> And Margaret, just want to remind our audience here that in the house the Democrats have a very clear majority, but in the Senate it is narrower. Democrats currently have 55 seats. If they take Alaska, they could have 56. So this proposed legislation that you have mentioned, what would Democrats actually need in order to pass anything in the Senate and actually get it into law?
+</details>
+
+>> 现在我们要谈到参议院领导层希望采取多么激进的行动了，这涉及到一点立法程序细节。一般而言，参议院需要 60 票才能克服冗长议事阻碍（filibuster）并通过立法，将其呈送给总统签署。不过有一条绕开这一要求的途径，那就是预算调节法案（reconciliation bill）。国会去年就是通过这种方式通过了那项大型税收法案的。如果参众两院联合起来，表示要通过预算调节法案来实现这一点，那么他们仅凭参议院的简单多数票就能通过它。然后这就完全取决于特朗普了：他是会否决该法案，还是会签署它？
+<details><summary>Original English</summary>
+>> So now we're getting into how aggressive does the Senate leadership want to be and a little bit of nerdery. In general, the Senate needs 60 votes to overcome a filibuster and pass legislation, bring it to the president's desk. There is a way around that. That's a reconciliation bill. That's how Congress passed the big tax bill last year. If the Senate and the house got together and said we want to do this through a reconciliation bill, then they could pass it with just their majority vote in the Senate. And then it will really be up to Trump. Is he going to veto that bill or is he going to sign it?
+</details>
+
+>> 我确实想就特朗普的否决权讨论片刻。因为自期中选举以来，对于与民主党人合作的意愿，我们从总统那里收到了许多各不相同的矛盾信号。所以作为一个报道医疗保健领域的人，我想知道你认为在具体涉及医疗保健问题时，他可能会倾向何方？
+<details><summary>Original English</summary>
+>> I do want to talk about the Trump veto for a second because since the midterms we've gotten a lot of different mixed signals from the president about how willing he's going to be to work with Democrats. So I just wonder as a person who covers this healthcare space, where do you think he might lean when it comes to healthcare specifically?
+</details>
+
+>> 我推测他很可能会否决这套议程中的大部分内容。特别是，在我看来，他极不可能支持推翻他本届总统任期内标志性立法成果的一部分。他们去年通过的那项税收法案是他在任期间发生的主要立法事件，是他的一项重大优先事项。我很难想象他会直接签署一项废除其中很大一部分内容的法案。但我确实认为，在许多此类医疗保健问题上，总统的意识形态色彩比国会中的普通共和党人要淡。
+
+我认为他展现出对民主党可能支持的想法最持开放态度的领域，是在药品价格方面。我认为总统和很多民主党人一样，觉得相比世界其他地方，美国支付如此高昂的处方药价格是不公平的。他在今年早些时候推出了他的 TrumpRx 网站，并且一直在与制药公司高管达成协议。因此我或许能看到在那里存在达成妥协的潜力。
+<details><summary>Original English</summary>
+>> Well, I would guess that he is probably likely to veto a lot of this agenda. In particular, it seems very unlikely to me that he is going to support a reversal of a portion of his signature legislative achievement in this presidency. That tax bill they passed last year, that is the main legislative thing that has happened on his watch. It was a huge priority of his. Very hard for me to imagine that he would just sign a bill that is reversing a big part of it. But I do think that the president is less ideological about a lot of these healthcare issues than the average Republican in Congress.
+
+I think one area where he's shown the most openness to ideas that Democrats could get behind is in the area of drug prices. I think the president like a lot of Democrats feels like it's unfair that the United States pays such high prices for prescription drugs compared to the rest of the world. And he launched his TrumpRx website earlier this year, and he's been making these deals with pharmaceutical executives. So I could maybe see some potential for a compromise there.
+</details>
+
+>> 好的。
+<details><summary>Original English</summary>
+>> Okay.
+</details>
+
+>> 已经有一项跨党派法案讨论了一段时间，试图将人们每月为胰岛素支付的费用上限限制在 35 美元。这看起来像是那种总统以及国会两党议员可能都愿意支持并借此争取一项政绩的倡议。
+<details><summary>Original English</summary>
+>> There has been bipartisan legislation that's been under debate for a while to try to cap the amount that people have to pay for insulin every month to $35. That seems like the kind of initiative that maybe the president and both Democrats and Republicans in Congress might want to go for and take a win.
+</details>
+
+>> 我能再提一件我们在选举周期中经常听到的事情吗，那就是“全民联邦医疗保险”（Medicare for all）。在特朗普仍然在任的情况下，这方面究竟有什么可行性？
+<details><summary>Original English</summary>
+>> Can I just raise one other thing that we heard a lot about during the election cycle, which was Medicare for all? What is actually feasible on that front while Trump is still in office?
+</details>
+
+>> 面对这位总统，去想象像“全民医疗保险”这样雄心勃勃、耗资巨大、推进困难且具有颠覆性的方案能够走得很远，似乎极其困难。我想说，其实即便总统不对任何法案行使否决权，也很难想象它能迅速推进，因为我认为民主党人在这个问题上内部步调并不一致。但我确实认为这是他们正在考虑的事情，并且他们会希望在本届国会中开始讨论。
+
+你知道，从历史上看，我认为民主党人一直倾向于在边缘做修补工作：让我们把这部分运行得更好一点，让那部分变得更便宜一点。但 [音乐] 我认为现在有一种越来越强烈的愿望，想要考虑更根本性的变革：我们能否改变整个体系，从头开始建立一个让它运转得更好的体系？伯尼·桑德斯（Bernie Sanders）整个政治生涯的核心议题之一就是这个。他将成为参议院卫生委员会的主席，这是一个对医疗保健拥有管辖权的委员会。他在多届国会中都提出过一份法案，现在该法案拥有的共同提案人比以往任何时候都多。还有一些新当选的国会议员，包括密歇根州的埃尔-萨耶德（El-Sayed），这是他竞选的核心议题之一，因此我认为他会想要讨论这个。所以 [音乐] 我认为民主党人会涉足这个领域展开工作。但我认为“全民医疗保险”更像是在未来的政府任期内——当白宫由民主党人入主、当他们有更多时间围绕更大的方案建立共识时——才会发生的事情。[音乐]
+<details><summary>Original English</summary>
+>> It seems extremely difficult to imagine something as ambitious, as expensive, as difficult, as transformative as Medicare for all really getting very far with this president. I would say it's actually also pretty hard to imagine it going forward very quickly, even if the president didn't veto anything, because I think Democrats are not all on the same page about this issue. But I do think that it is something that they are thinking about and that they are going to want to start talking about in this Congress.
+
+You know, historically, I think Democrats have wanted to kind of tinker on the edges. Let's just make this part work a little better. Let's make this part a little bit cheaper. But [music] I think there's a growing desire to think about more wholesale change. Could we change the whole system and just kind of make it work better, build it from scratch? And Bernie Sanders, this has been one of the core issues of his whole political career. He will become the chairman of the Senate Health Committee. That's a committee with jurisdiction over healthcare. He has a bill that he's introduced in numerous Congresses. It has more cosponsors now than it's ever had before. There's some of these new members of Congress, including El-Sayed in Michigan. This is one of his core issues that he ran on, and so I think he's going to want to talk about it. And so [music] I think Democrats are kind of going to be working in this space. But I would think about Medicare for all as something that's more [music] like future administrations, when there's a Democrat in the White House, when there's more time for them to build consensus on something bigger.
+</details>
+
+>> 玛戈，非常感谢。
+<details><summary>Original English</summary>
+>> Margot, thank you so much.
+</details>
+
+>> 感谢邀请。
+<details><summary>Original English</summary>
+>> Thanks for having me.
+</details>
+
+>> [音乐] 我们马上回来。
+<details><summary>Original English</summary>
+>> [music] We'll be right back.
+</details>
+
+### 宏观民生压力：住房困境、关税争端与最低工资立法
+
+本，我们刚才与同事玛戈·桑格-卡茨和丽贝卡·埃利奥特讨论了美国人花费巨资、并真正感到钱包吃紧的两个主要领域：医疗保健支出和汽油价格。但显然，正如你在报道经济时所了解的那样，人们的钱包还承受着成千上万种其他压力。因此，本，我们来找你，是因为我们想了解在美国人当前深感拮据的其他支出类别中，民主党人还能做些什么来尝试降低物价和削减成本？
+<details><summary>Original English</summary>
+So, Ben, we just talked to our colleagues Margot Sanger-Katz and Rebecca Elliott about two major areas where Americans spend a lot of money and where they've really felt the pinch in their pocketbooks, healthcare spending and gas prices. But obviously, as you know from covering the economy, there are a million other drags on people's wallets. So, we're coming to you, Ben, because we want to understand of the other categories that Americans are really feeling the pinch right now, what are other things the Democrats could do to try to lower prices and to lower costs?
+</details>
+
+>> 听着，可负担性涵盖了很广的范围，但我认为我们在这里必须谈论的第一件事——甚至可以说是第一件、第二件和第三件事——就是住房。
+<details><summary>Original English</summary>
+>> So look, affordability covers a lot of ground, but I think the number one thing that we have to talk about here, almost the first, second, and third thing, is housing.
+</details>
+
+>> 好，那我们就来谈谈住房。告诉我们问题出在哪里，以及我们应该讨论的、目前在民主党人考虑之中的解决方案是什么？
+<details><summary>Original English</summary>
+>> Okay, so let's talk about housing then. Tell us what the problem is and what are the solutions that we should be talking about that are on Democrats' minds?
+</details>
+
+>> 好的，我的意思是，我认为住房在某种程度上是可负担性问题的源头，对吧？这一问题甚至可以追溯到通胀激增和疫情爆发之前。
+<details><summary>Original English</summary>
+>> Yeah, so I mean, I think housing is in some ways the original affordability concern, right? I mean, this dates back even to before the inflation surge, before the pandemic.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 这是一个非常棘手、难以解决的问题。这不是靠单一法案或单项政策就能解决的事情。比如我们今年看到，国会实际上通过了一项相当重大的住房法案，是几十年来最实质性的法案，旨在鼓励建筑开发并做了一些其他工作。
+<details><summary>Original English</summary>
+>> And it's a really challenging, intractable problem. This is not the kind of thing that one piece of legislation or one policy is going to address. Like we saw this year, actually, Congress passed a fairly substantial piece of housing legislation, the most substantial piece in in decades, encouraging some building, doing some other things.
+</details>
+
+>> 确实。
+<details><summary>Original English</summary>
+>> Right.
+</details>
+
+>> 有一些经济学家和专家持乐观态度，认为这会在边际上带来一些改变，但没有人认为这一项立法就能突然让各地的住房都变得容易负担。住房面临的长期挑战在于我们的房屋供应不足，具体而言，是在那些就业机会最多、经济增长最快、人们想去居住的地区——主要是沿海城市——房源不足。
+<details><summary>Original English</summary>
+>> And there are economists and experts who are optimistic that it will kind of make some differences at the margins, but nobody thinks that that piece of legislation is going to suddenly make housing affordable everywhere. The sort of long-term challenge facing housing is that we don't have enough of it, and we specifically don't have enough of it in the places, the mostly coastal cities where there are the most job opportunities, the most economic growth, where people want to live.
+</details>
+
+>> 但我想问一下，本，我觉得听众听到这里可能会想：如果问题在于住房不够，国会难道就不能通过某种法案来进一步鼓励建筑施工吗？难道不能提供某种税收激励吗？你能帮我们理清，鼓励建设的前景究竟难在哪里吗？
+<details><summary>Original English</summary>
+>> But can I just ask, Ben, I feel like people listening to this might think like, well, if the problem is that there isn't enough housing, couldn't Congress pass, I don't know, some kind of legislation that would even more so encourage building? Couldn't there be some sort of tax incentives? Like, can you just help us understand what is so difficult about the prospect of encouraging building exactly?
+</details>
+
+>> [轻哼]
+<details><summary>Original English</summary>
+>> [snorts]
+</details>
+
+>> 这是一个极其复杂的领域，但我可以强调几点。其一就是，建筑施工面临的大量阻碍需要州和地方层面的改变，而坦率地说，这些改变遭遇了现有房主的强烈反对，他们不希望看到大量新建设，因为那可能会抑制他们的房屋价值，对吧？那是他们最重要的资产。此外，我认为我们可能会看到民主党人在边缘做一些尝试，比如购房首付补贴、租房补贴以及房贷获取渠道等，但这些都是相对次要的措施，只能惠及相对有限的美国人群体。
+<details><summary>Original English</summary>
+>> So look, I mean, this is an incredibly complex area, but I'll I'll highlight a couple of things. I mean, one is just that a lot of the obstacles to building would require changes at the state and local level that frankly face a lot of opposition from existing homeowners who don't want to see a ton more construction that maybe would limit their home values, right? That's their most important asset. And there are some other things that I think we could see Democrats kind of try to do around the edges, around down payment assistance and rental assistance and access to mortgages, but these are all relatively minor things that could help a relatively modest group of Americans.
+</details>
+
+>> 所以这依然谈不上民主党人赢得中期选举时主打的那种大刀阔斧的变革。但显然美国人还在其他方面花钱。还有其他领域是民主党人可以尝试去应对、并可能在其中取得更大成功的吗？
+<details><summary>Original English</summary>
+>> So still not talking about the sort of the sweeping change the Democrats basically took the midterms with. But obviously there are other things that Americans are spending their money on. Are there other things that Democrats could try to do to tackle and potentially have more success in those other areas?
+</details>
+
+>> [轻哼]
+<details><summary>Original English</summary>
+>> [snorts]
+</details>
+
+>> 我首先想强调的是关税。
+<details><summary>Original English</summary>
+>> The first thing that I would highlight is tariffs.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mm.
+</details>
+
+>> 关税是对进口商品征收的税。关于特朗普总统的关税具体在多大程度上推高了哪些具体产品的价格，经济学家之间存在很多争论，但大家普遍认同关税确实推高了价格，特别是某些特定类别的商品，每户家庭每年为此要花费数百美元，甚至可能是一两千美元。而最终拥有征收关税权力的正是国会。他们把这项权力中的很大一部分交给了总统，关于他究竟拥有多大的权力、以及他是否合法行使了所有这些权力，存在很多争论，但国会完全可以收回这些权力。
+<details><summary>Original English</summary>
+>> Tariffs are a tax on imported goods. There's a lot of debate among economists about exactly how much President Trump's tariffs increased prices of exactly which products, but there's broad-based agreement that the tariffs did drive up prices, particularly of certain categories of goods, and that that costs a few hundred dollars, maybe a couple of thousand dollars a year per household. And it is Congress ultimately that has the power to impose tariffs. They've given a lot of that power to the president, and there's a lot of debate over exactly how much of that power he has and whether he's used all of that power legally, but Congress could take it back.
+</details>
+
+>> 那么本，我想请问，第一，你认为国会实际废除这些关税的几率有多大？第二，你认为这究竟会产生什么影响？
+<details><summary>Original English</summary>
+>> Well, can I just ask you, Ben, number one, what you think the chances are that Congress will in fact repeal these tariffs? And number two, what impact do you think that that will actually have?
+</details>
+
+>> 我认为民主党人（可能在某些共和党人的支持下）通过立法推翻专门针对加拿大的关税，可能性是非常大的。
+<details><summary>Original English</summary>
+>> I think it's very likely that the Democrats, possibly with some Republican support, will pass legislation to roll back the tariffs on Canada specifically.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 这些关税一直极具争议，甚至招致了许多共和党人的反对，对吧？他们说，我们为什么要和我们的邻居、盟友及朋友加拿大打贸易战？当然，加拿大也实施了报复性关税，对许多美国产业造成了打击，给边境沿线的社区带来了实质性损害。
+<details><summary>Original English</summary>
+>> These are tariffs that have been really controversial, drawn a lot of opposition even from Republicans, right, who sort of say, why are we, you know, in a trade war with our neighbor and ally and friend Canada? Canada, of course, has imposed retaliatory tariffs that have hit a lot of American industries. It's done real damage to communities along the border.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 因此民主党人似乎很有可能尝试推动某些法案通过。
+<details><summary>Original English</summary>
+>> So it seems very likely that Democrats are going to try to get something through.
+</details>
+
+>> 但那会产生怎样的效果呢？或者在你目前看来他们可能尝试撤销、并可能取得成功的任何方案中，效果会如何？
+<details><summary>Original English</summary>
+>> But what would the effect of that be? Or what would the effect of anything be that you are currently looking at as like a likely option that they would try to roll back and may maybe successful at?
+</details>
+
+>> 是的，我的意思是，当我们把它放在宏观的可负担性背景下来看时，我认为答案是作用非常有限，对吧？关税确实在推高消费物价方面起到了一定作用，特别是去年，但它们并不是通胀的主要推动力。而且，如果说我们在过去几年里学到了一件事，那就是企业涨价很快，但降价往往非常缓慢。
+<details><summary>Original English</summary>
+>> Yeah, I mean, so look, when we're thinking about this in the context of affordability broadly, I think the answer is not very much, right? I mean, tariffs played a role in raising consumer prices, particularly last year, but they weren't a huge driver of inflation. And, you know, if there's one thing that we've learned over the past few years, right, it's that companies are quick to raise prices. They tend to be pretty slow to bring them down.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Right.
+</details>
+
+>> 我认为我们不应该假设，即便你能够打个响指取消所有关税，所有这些价格就会突然跌回加征关税之前的水平。
+<details><summary>Original English</summary>
+>> I don't think that we should assume that even if you could sort of snap your fingers and eliminate all of the tariffs, that suddenly all of these prices are going to come back down to where they were before those tariffs were imposed.
+</details>
+
+>> 确实。好的，所以取消关税不会在很大程度上显著改善可负担性。本，我们的清单上还有什么？
+<details><summary>Original English</summary>
+>> Sure. Okay. So eliminating tariffs not going to make affordability better in a big, meaningful way, what else is on our list, Ben?
+</details>
+
+>> 当我们讨论可负担性时，我们往往关注天平的价格端，但收入端在这里同样重要，对吧？什么是可负担性？就是你用现有的收入购买物品的能力。我认为我们很有可能看到民主党人推动的一点，就是最低工资。
+<details><summary>Original English</summary>
+>> Well, so you know, when we talk about affordability, we we tend to focus on the price side of the equation, but the income side of the equation matters here too, right? What is affordability? It's it's your ability to buy things with the income that you have. And you know, one place I do think we're very likely to see Democrats push is on the minimum wage.
+</details>
+
+>> 等等，真的吗？我觉得至少在期中选举期间，这并没有作为竞选议题出现过。
+<details><summary>Original English</summary>
+>> Wait, really? I feel like that has not come up as a campaign issue during the midterms at least.
+</details>
+
+>> 过去几年里，最低工资受到的关注可能确实没有那么多，但如果你看看大量参选并于 11 月获胜的民主党人的施政日程，它出现在很多人的竞选纲领中。退一步来看，值得记住的是联邦最低工资是每小时 7.25 美元，自 2009 年以来一直未变。我们经历了长达 15 年的“争取 15 美元”（Fight for 15）运动，推动在州和地方层面提高最低工资。我们看到大量以蓝州为主的州提高了最低工资，而联邦最低工资在此期间纹丝未动，以至于当我与经济学家交谈时，他们说在实际功能上已经不存在联邦最低工资了。
+<details><summary>Original English</summary>
+>> So you know, the the minimum wage hasn't gotten quite as much attention maybe in the last few years, but if you look at the agendas of a large number of the Democrats who were running and and who won in November, it's in a lot of their platforms. And it's worth sort of just stepping back here and remembering that the federal minimum wage is $7.25 an hour. That's unchanged since 2009. And you know, we've gone through this 15-year now fight for 15 movement, pushes to raise minimum wages at the state level, at the local level. We've seen a ton of mostly blue states raise their minimum wages. And the federal minimum wage has not budged in that entire time to the point that when I talk to economists, they say there functionally is no federal minimum wage.
+</details>
+
+>> 但本，这里的设想是什么？如果国会通过一项新的联邦最低工资，大幅高于大多数州目前的水平，它就会推高全美 50 个州的工资水平吗？
+<details><summary>Original English</summary>
+>> But the idea being Ben what? That if Congress passes a new federal minimum wage that is significantly higher than what most states are paying, that it'll push wages up in all 50 states?
+</details>
+
+>> 是的，来这里之前我计算了一些数据。将联邦最低工资提高到每小时 15 美元，将立即为大约 900 万美国工人带来加薪。
+<details><summary>Original English</summary>
+>> Yeah, I mean look, I ran some numbers before I came on here. Raising the federal minimum wage to $15 an hour would give an immediate raise to something like 9 million American workers.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 有超过 3000 万工人的收入介于当前最低工资和每小时 20 美元之间。因此，我们讨论的是数以千万计的工人；理论上，如果他们提高联邦最低工资，这些工人基本上能在一夜之间实现加薪。
+<details><summary>Original English</summary>
+>> There are more than 30 million workers who earn between the current minimum wage and $20 an hour. So we're talking about millions and millions of workers who in theory, right, if they raise the federal minimum wage, would get basically an overnight pay increase.
+</details>
+
+>> 但我想指出的是，关于民主党人争取到足够多的共和党人支持来提高联邦最低工资这一设想，它像你所说的那样多年未变是有原因的，对吧？保守派一直在争辩说，提高最低工资会对企业产生各种不利影响，并影响经济增长，过快提高最低工资实际上会导致许多企业倒闭，因为他们根本无法承受激增的劳动力成本。因此我只是想知道，像大幅提高联邦最低工资这样的方案获得通过的几率有多大，以及民主党人如何看待可能遭致的反弹。
+<details><summary>Original English</summary>
+>> I do want to just point out though that the idea of Democrats getting enough Republicans on board to raise the federal minimum wage, there's a reason why it hasn't budged in as many years as you mentioned, right? Like conservatives argue all the time that raising minimum wage has all kinds of detrimental effects to businesses and affect growth that affect the economy and that raising the minimum wage too quickly can actually put many businesses out of work. They simply cannot afford labor costs that shoot up. So I just sort of wonder what the chances are that something like a significantly higher minimum wage federally passes and how Democrats might be thinking about the blowback to anything like that.
+</details>
+
+>> 你说得很对。最低工资长期以来是一项充满争议的政策。多年来关于这一问题的研究确实发生了很大演变，通过所有这些大幅提高最低工资的州和城市，我们现在有了一个直接的试验场。尽管这方面的研究结论略有差异，但我认为总体而言，并没有证据表明出现了批评者所预言的灾难性后果。
+<details><summary>Original English</summary>
+>> You're exactly right. The minimum wage has long been a controversial policy, right? The research on this has really evolved over the years and you know, we now have a direct experiment with all of these states and cities that have raised minimum wages really substantially. And while the studies on this vary a little bit, I think we can say generally there hasn't been any evidence of the apocalyptic fallout that critics promised.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 而且我们知道，最低工资是一项极其受欢迎的政策，包括在传统的红州也是如此。我认为真正的关键在于民主党人会争取什么？他们会主张每小时 15 美元还是 17 美元？他们会主张 20 美元吗？还是像某些人正在讨论的那样主张 25 美元？在多长时间范围内推行？是否允许对小企业豁免，或者让小企业更缓慢地分阶段执行？你可以设想民主党人会采取很多办法来稍微减轻这种冲击。
+
+至于这能否通过特朗普总统的否决笔，我认为那是另一个问题。
+<details><summary>Original English</summary>
+>> And we know that the minimum wage is an incredibly popular policy, including in traditionally red states. I think the real question here becomes what do Democrats push for? Do they push for $15 or $17 an hour? Do they push for 20? Do they push for 25 as some are talking about? Over what time period do you allow carve outs for small businesses, for example, or phase it in more slowly for smaller businesses? There are a lot of things you could imagine Democrats doing to sort of soften the blow a little bit.
+
+Whether that gets past President Trump's veto pen, I think is another question.
+</details>
+
+### 人工智能热潮、通胀压力与中选承诺的政治账
+
+本，我能否向你请教一个在中期选举中频繁出现的问题，它表面上似乎与可负担性没有直接关联，但却引发了如此多的愤怒和抵制，那就是人工智能（AI）。我们显然看到了所有这些数据中心暂停建设禁令（moratoriums）的通过。当我们谈论 AI、数据中心以及对当前经济产生的所有相关影响时，从可负担性的角度来看，是否存在实质性的讨论空间？
+<details><summary>Original English</summary>
+>> Ben, can I ask you about something that came up a lot during the midterms that did not feel connected on its face to affordability and yet was also generating just so much anger and so much backlash and that is AI. We obviously saw all these data center moratoriums pass and I just if there is something actually to talk about in terms of affordability when we're talking about AI and data centers and all of sort of the related effects on the economy right now.
+</details>
+
+>> 我绝对认为 AI 是一个涉及可负担性的问题。它不仅仅关乎可负担性，但我确实认为这是其中的一部分。
+
+直接来看，数据中心消耗巨大的电力，我们看到了人们对于这给全国许多地区的电价带来何种影响的切实担忧。但还有一种观点认为，这种 AI 数据中心的繁荣从更广泛的层面加剧了我们的通胀问题。它推高了建筑材料的成本，推高了建筑工人的劳动力成本。如果你如今想建造一座工厂、仓库、公寓楼或住宅，由于大规模的数据中心建设，成本都会变得更加高昂。
+
+对通胀的这些担忧，也是美联储重新开始加息的部分原因。正如我们之前讨论过的，这会体现在你的信用卡、汽车贷款、乃至你的住房抵押贷款上。我认为我们将观察国会或州一级会在多大程度上真正推动遏制其中的某些问题。除了在选票公投中实际通过的禁令外，我们还看到多位州长是在承诺实施禁令或控制数据中心建设的纲领下当选的，这可能会在这些州产生潜在影响。我的意思是，国会现在其实有一项跨党派法案，旨在降低建设电力基础设施的难度，并要求数据中心为其给电网带来的负担分摊更多成本；如果该法案获得通过，可能会起到缓解数据中心建设对电价冲击的作用。
+<details><summary>Original English</summary>
+>> I absolutely think that AI is an affordability issue. It's not only an affordability issue, but I do think that that is a piece of this.
+
+So I mean one is just directly. Data centers use a tremendous amount of power and we've seen, you know, real concerns about what that means for electricity prices in many parts of the country. But you know, there's an argument that this sort of whole AI data center boom has contributed to our inflation problem more generally. I mean it's driven up the cost of building materials. It's driven up the cost of construction labor, right? If you're trying to build a factory or a warehouse or an apartment building or a home these days, right? That's going to be more expensive because of this massive data center build out.
+
+And those concerns over inflation are part of why the Federal Reserve has taken to raising interest rates again. And so that shows up as we've talked about before in your credit card, in your auto loan, potentially in your mortgage. And I think that we will see to what extent there are sort of real pushes at the congressional level or at the state level to sort of rain some of this in. But in addition to the moratoriums that actually passed in ballot measures, we're seeing a number of governors were elected on promises to impose moratoriums or to rain in data center construction, which could potentially have an impact in those states. And I mean there's actually a bill in Congress now, a bipartisan effort to make it easier to build electrical infrastructure and also to require data centers to foot more of the bill of the strain that they put onto the grid, which could have the effect if it passes of softening some of the impact of the data center build out on electrical prices.
+</details>
+
+>> 不过我确实在想，本，考虑到 AI 支撑我们经济的方方面面——不仅仅是股市，单是数据中心建设显然就创造了大量的就业机会——如果民主党人采取任何措施减缓 AI 的增长，无论他们以何种方式去做，都有切实令人担忧的风险可能会严重伤害经济。因此我只是想知道，这不仅是民主党人“能”做什么的问题，更在于他们“应该”做什么。
+<details><summary>Original English</summary>
+>> I do wonder though, Ben, just given all the ways that AI has been propping up our economy and not just the stock market. I mean, the data center build out alone has obviously created a huge number of jobs. If Democrats did anything to slow down the growth of AI, however they might do it, there's a real concern that that could seriously hurt the economy. And so I just wonder if it is not just a question of what Democrats could do, but what they should do.
+</details>
+
+>> 是的，我认为这是一个非常有趣的问题，对吧？也就是如果民主党人过度压制 AI 的繁荣，他们是否面临着抽掉当前支撑经济运转的支柱的风险？
+<details><summary>Original English</summary>
+>> Yeah, no, I think this is a a really interesting question, right? Which is sort of if Democrats try to rein in the AI boom too much, do they risk sort of kicking the legs out from under this stool that is holding up the economy right now?
+</details>
+
+>> 没错。
+<details><summary>Original English</summary>
+>> Right.
+</details>
+
+>> 实际上在选举刚结束时，我就开始与经济学家和专家交流，试图确切理解这个问题。坦率地说，我在那些对话中所听到的内容让我感到惊讶，他们表现出了相当多的乐观情绪，认为在某些方面，放缓这种繁荣在让经济变得更加可持续方面实际上可能带来相当积极的效果。这种繁荣过于狂热，以至于推高了物价、推高了利率，并威胁要制造这种泡沫；稍微让气球放一点气，可以让这种发展以一种更加可持续的方式继续下去，并在不扼杀经济的前提下解决其中的部分成本担忧。
+<details><summary>Original English</summary>
+>> And actually right in the wake of the election, I set out talking to economists and experts sort of trying to understand exactly this question. And I was surprised frankly by what I heard in those conversations, which was a lot of optimism that in some ways actually slowing down the boom could be pretty positive in terms of sort of making the economy a little bit more sustainable here. That the boom has been so intense that it is pushing up prices, it is pushing up interest rates, it is threatening to create this bubble, and that maybe just sort of letting a little bit of air out of that balloon could allow this to go on in a little bit more of a sustainable fashion and address some of these cost concerns without killing off the economy in doing so.
+</details>
+
+>> 你知道，在与你、丽贝卡以及玛戈的整个对话中，本，我一直在思考：像民主党人在中期选举中那样以“可负担性”为主打纲领参选究竟意味着什么。他们可能明知这些问题极其复杂，且极少有容易落地的短期解决方案。坦率地说，听起来似乎没有任何一个方案拥有真正简单、短期且普遍实质有效的解决办法。我不想显得太天真，归根结底我们在谈论的是政治，政客们为了赢得选举一直在作出他们实际上无法兑现的承诺。
+
+所以我只是想知道，作为一个报道政治与经济交汇点时间像你一样长的人，这些承诺——我们在中期选举中从民主党人那里看到的这种民粹主义经济言论——在你看来是格外空洞，还是没那么空洞，或者只是司空见惯的空洞？
+<details><summary>Original English</summary>
+>> You know, I've been thinking in this whole conversation with both you and Rebecca and Margo, Ben, about just sort of what it means to run on affordability, the way that Democrats did in the midterms, probably knowing that these issues were very complicated and very few had easy short-term solutions. I mean, frankly, it sounds like none of them have really easy short-term and broadly substantively effective solutions. I don't want to be naive here. We are talking at the end of the day about politics and politicians make promises all the time to win elections that they can't actually keep. And so I guess I just sort of wonder as someone who's covered the intersection of politics and the economy for as long as you have been, whether these promises, this sort of populist economic messaging that we saw from Democrats in the midterms, did that strike you as particularly empty or maybe less empty or just I don't know, status quo empty?
+</details>
+
+>> [轻哼] 我们刚刚经历了连续两次选举：2024 年总统大选和 2026 年中期选举，在某种基本层面上都围绕着可负担性展开，对吧？选民在 2024 年惩罚了民主党人，因为他们未能改善生活负担问题；在 2026 年又惩罚了共和党人，因为他们未能兑现解决可负担性问题的承诺。
+
+基于我们在此讨论的一切，我认为很可能到 2028 年，可负担性仍将是一个主要议题。我认为没有人会觉得民主党人在未来两年内能挥舞某种魔杖彻底解决这个问题。
+
+但当我与许多拜登政府的老将交流时，他们表示从那段经历中吸取的教训之一，就是他们必须采取能在相对较短的时间范围内产生切实可见影响的举措。拜登团队的人辩解称，我们通过了这项基础设施法案，通过了《芯片法案》（Chips Act），通过了《通胀削减法案》（Inflation Reduction Act），这些举措将对人们的生活产生极其重要的影响，只是需要时间来显现。我们可以争论这些法案到底在多大程度上帮助了人们。但我认为我们从中懂得的一点是，选民不愿意干坐着说“我们等上 10 年再来看看这是否起效”，对吧？他们想要比这更快的见效速度。
+
+因此，我认为我们将看到民主党人 [音乐] 真正致力于通过能够以某种方式产生立竿见影影响的立法。[音乐] 比如恢复其中的部分医疗保健补贴，[音乐] 提高最低工资，采取切实具体的步骤。是的，也许特朗普总统会否决这些法案，但至少届时他们能在 2028 年走向选民时 [音乐] 说：听着，我们通过了本可以在你们生活中产生立竿见影、切实改变的方案，而共和党人阻挠了它们。对吧？这与跟选民说“我们试图通过某项极其复杂的住房改革、而它将在数年 [音乐] 或数十年后见效”有着天壤之别。
+
+这并不是说他们不想做那些长远的事，而是他们认识到必须通过一些能够产生更具即时现实影响的法案。
+<details><summary>Original English</summary>
+>> So [snorts] so look, we we've just had two straight elections. The 2024 presidential election and the 2026 midterm election that were on some basic level about affordability, right? And voters punished Democrats for failing to improve affordability in 2024. They punished Republicans for failing to make good on their promises to address affordability in 2026.
+
+And I think it's pretty likely based on everything we've been talking about here that affordability is still going to be a major issue in 2028. I don't think anybody thinks that, you know, Democrats are going to be able to wave some magic wand and solve this problem in the next two years.
+
+But you know, when I talk to a lot of veterans of the Biden administration, one of the lessons that they say they learned from that experience is that they have to do things that will have a real discernable impact on a relatively short time frame. The Biden folks argue passed this infrastructure bill and we passed this, you know, Chips Act and we passed the Inflation Reduction Act and these things are going to have really important impacts on people's lives. They just are going to take a while to play out. And, you know, we can debate to what extent it's true that those bills will help people. But I think one thing that we learned from this is voters aren't willing to just sit back and say we'll give it 10 years and then we'll check in and we'll see whether we think this worked out, right? They want something that is faster than that.
+
+And so I think that what we're going to see from the Democrats is [music] a real effort to pass legislation that have [music] an immediate impact of one sort or another. You know, restore some of these healthcare [music] subsidies, raise the minimum wage, you know, take sort of concrete steps. And yes, maybe President Trump vetoes those, but at least then they're able to go to voters in 2028 [music] and say, listen, we passed these things that would have made an immediate concrete difference in your lives and Republicans blocked them. Right? That's a very different [music] thing from saying we tried to pass some incredibly complicated housing reform that is going to pay off in years [music] or decades.
+
+Not that they don't want to do those things as well, but there's a recognition that they have to pass some things that could have a more immediate real-world impact.
+</details>
+
+>> 好的，本·卡塞尔曼，[音乐] 如果他们真的通过了其中的任何方案而我们需要有人来解读，我们一定会再次邀请你。非常感谢。
+<details><summary>Original English</summary>
+>> Well, Ben Casselman, [music] if they do pass any of these things and we need them explained to us, we'll be sure to bring you back. Thank you so much.
+</details>
+
+>> 非常期待。
+<details><summary>Original English</summary>
+>> Looking forward to it.
+</details>
+
+>> [音乐] 我们马上回来。
+<details><summary>Original English</summary>
+>> [music] We'll be right back.
+</details>
+
+### 今日其他要闻与演职员表
+
+以下是你今天还需要了解的其他新闻：[音乐]
+
+特朗普政府表示，正在推进一项新规定，以收紧中国获取先进 AI 芯片的能力。
+
+该规定旨在堵住一个漏洞，该漏洞允许中国企业通过向东南亚及其他地区的数据中心租赁芯片，来绕过购买英伟达（Nvidia）等公司生产的最先进 AI 芯片的禁令。[音乐]
+
+堵住该漏洞一直是特朗普政府内部争议激烈的问题。堵住它理论上将使中国企业更难远程访问这些芯片。[音乐]
+
+此外，特朗普总统周一表示，对于让黄仁勋（Jensen Huang）复任 [音乐] 英伟达负责人持开放态度，这是他对这位科技高管的最新公开支持表态。该高管在承认与一名被美国官员 [音乐] 认定为中国情报人员的女性有染后辞职。
+<details><summary>Original English</summary>
+Here's what else you need to know today. [music]
+
+The Trump administration said that it was moving forward with a new rule that would clamp down on China's ability to access advanced AI chips.
+
+The rule aims to close a loophole that allows Chinese companies to side step a ban to buy the most advanced AI chips made by companies like Nvidia by renting the chips from data centers in Southeast Asia and elsewhere. [music]
+
+Closing the loophole has been a contentious issue within the Trump administration. Closing it would theoretically make it harder for Chinese firms to remotely access the chips. [music]
+
+And
+
+President Trump said on Monday that he was open to seeing Jensen Huang reinstated [music] as the head of Nvidia, his latest public expression of support for the tech executive who resigned after admitting to an affair with a woman whom US officials [music] had identified as a Chinese intelligence asset.
+</details>
+
+>> 我不反对这样做，但我得说关于黄仁勋复职的事，我认为他吸取了一个大教训。也许一个教训比另一个教训更重要。
+<details><summary>Original English</summary>
+>> I would not mind that, but I would say that the Jensen's reinstatement I think he learned a big lesson. I maybe one lesson is more important than another.
+</details>
+
+>> 总统的这番言论是他数天来的首次表态，此前这一丑闻席卷了这家处于人工智能热潮核心的芯片制造巨头，并引发了对该高管处理潜在国家安全威胁方式的质疑。[音乐]
+
+今天的这期节目由阿德里安·赫斯特（Adrian Hurst）、莱克西·迪奥（Lexi Dio）和凯特琳·奥基夫（Caitlyn O'Keefe）制作；由丽莎·周（Lisa Chow）和马克·乔治（Mark George）在利兹·奥贝伦（Liz O'Bailen）的协助下编辑；包含艾丽西亚·拜图（Alicia Baitu）、帕特·麦卡斯克（Pat McCusker）、玛丽安·洛萨诺（Marian Lozano）和丹·鲍威尔（Dan Powell）创作的音乐，[音乐] 并由艾丽莎·莫克斯利（Alyssa Moxley）负责工程混音。
+
+我们的主题音乐 [音乐] 由 Wonderly 制作。
+
+特别鸣谢安娜·斯旺森（Anna Swanson）、凯蒂·埃德蒙森（Katie Edmonson）和康纳·多尔蒂（Connor Doherty）。[音乐]
+
+以上就是本期《每日新闻》。我是蕾切尔·亚伯拉罕斯。
+
+明天见。
+<details><summary>Original English</summary>
+>> The president's remarks were his first in days [music] after a scandal that has engulfed the chipmaking giant at the heart of the artificial intelligence boom and raised questions about the executive's handling of a potential national security threat.
+
+Today's [music] episode was produced by Adrian Hurst, Lexi Dio, and Caitlyn O'Keefe. It was edited by Lisa Chow and Mark George with help from Liz O'Bailen. Contains music [music] by Alicia Baitu, Pat McCusker, Marian Lozano, and Dan Powell and was engineered by Alyssa Moxley.
+
+Our theme music [music] is by Wonderly.
+
+Special thanks to Anna Swanson, Katie Edmonson, and Connor Doherty. [music] [music]
+
+That's it for the Daily. I'm Rachel Abrams.
+
+See you tomorrow.
+</details>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+
+  
+  
+  
+  <div class="container" data-pagefind-ignore><div class="home-layout">
+    <h1>标签：model-efficiency</h1>
+    
+    
+<ul>
+
+  <li>
+    <a href="/content/clippings/2026-11-12_httpsyag_anthropic-message-threads-conversation-state-20261112-html/">从 800 KB 到 1.8
+KB，账单却一分不减：为什么英伟达劝你砍掉长上下文，Anthropic 却帮 100 万
+Token 修高速路</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-11-12T00:00:00.000Z">2026-11-12</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章讨论了在利用 Claude Code 等工具进行长对话时，如何通过 Message Threads 增量传输协议来优化上下文处理，以解决长对话首字等待时间过长的问题。该协议将长对话单次上传的请求包中位数从约 800 KB 降至 1.8 KB，但模型每轮仍读取完整历史。同时，文章对比了英伟达关于长上下文扩展带来的硬件成本增加的实验结果，并分析了 Anthropic 采用的轻量级内存暂存协议的工程限制，以及与 OpenAI 长连接模式在处理上下文和合规性方面的差异。文章总结了在构建智能体时，应根据算力成本和合规边界选择不同的技术路线，如使用锯齿波模式结合增量传输和上下文压缩，或优先考虑不落盘设置的 WebSocket 长连接模式。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-09-11_httpsyag_deepseek-v41-flash-kv-cache-memory-20260911-html/">DeepSeek V4.1
+Flash：算力优化触顶之后，长上下文的战争转向内存</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-09-11T00:00:00.000Z">2026-09-11</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章讨论了 DeepSeek V4.1 Flash 的发布及其技术报告，核心在于将长上下文的优化重心从算力转向内存体系。通过对 KV 缓存压缩、预填充算力削减以及持久化存储的工程取舍，报告展示了如何通过优化这些物理资源来降低长文本推理的成本，使模型在处理长上下文任务时的账单重心从计算转向存储与搬运。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-07-27_httpsyag_harness-genes-multi-agent-20260727-html/">都是 Multi-Agent，各家 AI 编程 Harness
+的基因与信仰到底有何不同？</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-07-27T00:00:00.000Z">2026-07-27</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章对比了 Claude Code、Codex CLI、Cursor 和 Antigravity 这四种主流 AI 编程 Harness 在多 Agent 协作方面的底层设计哲学和工程信仰。它分析了每种工具在通信拓扑（Claude）、算力效率（OpenAI）、无感融合体验（Cursor）以及显式工作流治理（Antigravity）上的差异，帮助开发者根据具体业务场景进行 AI 编程工具的选型。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/notes/2wIxPWK6nCs/">科学研究中的规模效应与数据瓶颈：从模拟到现实的挑战</a>
+    <span class="badge"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+</span>
+    <a href="/speakers/latent-space/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ Latent Space</a> 
+    <time datetime="2026-07-16T00:00:00.000Z">2026-07-16</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章探讨了在人工智能和科学领域，如何克服“规模的苦涩教训”，即现有数据集的局限性。核心议题包括如何为模型提供新的扩展轴（如数据），以及将实验室概念转化为类似数据中心的未来模式。同时，文章分析了科研范式转变，例如利用计算资源进行快速验证和商业合作，以及解决“模拟到现实”的差距等关键技术瓶颈。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/notes/fpC4sbawSzQ/">OpenAI业绩未达预期，AI算力瓶颈凸显，巨头资本支出激增，新型减肥药引关注</a>
+    <span class="badge"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+</span>
+    <a href="/speakers/all-in-podcast/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ All-In Podcast</a> 
+    <time datetime="2026-05-01T00:00:00.000Z">2026-05-01</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 本期节目深入探讨了OpenAI用户和营收未达预期的问题，分析了AI算力（特别是电力）成为行业发展瓶颈的现状。嘉宾们讨论了OpenAI与Anthropic在产品和市场份额上的竞争，以及AI在网络安全领域的应用潜力。此外，节目还关注了大型科技公司在AI基础设施上的巨额资本支出及其对自由现金流的影响，并介绍了Eli Lilly新型减肥药Retatrutide的惊人临床试验数据。最后，节目还简要提及了Elon Musk对OpenAI的诉讼以及最高法院的听证会。</small>
+    
+    
+  </li>
+
+</ul>
+
+    
+  </div></div>
+
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

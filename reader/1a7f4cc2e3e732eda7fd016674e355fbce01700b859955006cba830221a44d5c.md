@@ -1,0 +1,423 @@
+---
+author: a16z
+date: '2026-10-26'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=9v42ZOdiBJY
+speaker: a16z
+tags:
+  - computer-use
+  - ai-agent
+  - automation
+  - human-ai-interaction
+title: OpenAI 谈 Computer Use 代理：从加速日常到超越人类操作水平
+summary: OpenAI 的 Ari Weinstein 和 James Sun 在 a16z 播客中探讨了 Computer Use 技术的演进。随着新模型能力提升与对齐加强，代理操作速度已超过人类平均水平并趋向超越专家。两人分析了企业端安全控制与遗留软件自动化、消费端主动式代理（如 DOTS）与个性化软件构建的前景，以及人机协作界面的未来走向。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people:
+  - Ari Weinstein
+  - James Sun
+  - Sema Amble
+companies_orgs:
+  - OpenAI
+  - a16z
+products_models:
+  - Astra
+  - DOTS
+media_books: []
+status: evergreen
+---
+### 开场与 Computer Use 的进展
+
+>> 我们现在已经让计算机使用（computer use）达到了比普通人类更快的水平。我认为我们正非常接近超越人类操作水平的阶段。
+<details><summary>Original English</summary>
+>> We've gotten computer use now to a place where it's faster than the average human. And I think we're getting really close where it is superhuman.
+</details>
+
+>> 你认为哪些类型的任务已经准备好移交给代理，而哪些任务仍然需要一些检查和纠正？
+<details><summary>Original English</summary>
+>> What sorts [music] of tasks do you think are ready to hand over to the agent versus the ones like okay it still requires some checking [music] and correcting
+</details>
+
+>> 自从有了 Astra，计算机使用代理现在能够做任何人能做的事情。我们大量思考随着一个更快更好的模型，我们能实现哪些新的消费者体验。而在企业端，这也自然让安全性变得更加有趣。我们如何赋予控制人类在环程度的能力，以及可审计性？它不同于我们构建的任何其他东西，在那些东西里开发者必须做一些适配工作，比如有人必须构建一个连接器或 MCP 服务器。你看，计算机使用能与任何东西协同工作。现在我们拥有了有能力的模型，它们的运行成本也变得足够便宜以实现规模化运行。企业应该考虑将什么自动化？
+<details><summary>Original English</summary>
+>> computer using agents now since Astra is now capable of doing anything that a person would do. We think a lot about what new consumer experiences can we enable with a faster better model. And then on the enterprise side that's kind of naturally why the safety becomes more interesting. How do we give the ability to control the amount of human the loop there is and then the auditability? It's unlike any other thing that we've built where the developer has to do some work to adopt it. Someone has to build a connector MCP server. You know, computer use works with everything. Now we have like capable models. They're getting cheap enough to run at scale. What should companies think of automating?
+</details>
+
+>> 我把它看作两个大类。第一类就像是……
+<details><summary>Original English</summary>
+>> I think of it as in two big categories. The first category is like
+</details>
+
+>> 欢迎收听 A16Z 播客。我是 Sema Amble，与我一起的是我的同事 Fbritzio Saraphiniti。8月份，我们撰文探讨了使用计算机的代理，以及它们如何开始在企业内部承担实质性工作。今天，OpenAI 的 Ari Weinstein 和 James Sun 加入我们，他们将从他们的视角帮助剖析使用计算机的代理的现状，并分享一些对未来的看法。Ari、James，感谢你们的加入。
+<details><summary>Original English</summary>
+>> Welcome to the A16Z podcast. I'm Sema Amble. I'm joined by my colleague Fbritzio Saraphiniti. In August, we wrote about uh computer using agents and how they're starting to do the real work inside companies. Uh today I'm joined by Ari Weinstein and James Sun from OpenAI um who are going to help unpack what is going on with computer using agents from their perspective and uh share some thoughts on the future. Ari James, thanks for joining us. Of
+</details>
+
+>> 当然，很高兴来到这里。是的，感谢邀请我们。
+<details><summary>Original English</summary>
+>> course, happy to be here. Yeah, thanks for having us.
+</details>
+
+### Astra 带来的能力升级
+
+>> Ari，请为我们开个头，谈谈 Astra 中有哪些特性推动了计算机使用代理的发展，以及真正解锁了什么。
+<details><summary>Original English</summary>
+>> Ari, kick it off and tell us a little bit about um what in Astra has made computer using agents move forward and what what's really unlocked.
+</details>
+
+>> 好的。Astra 是一个令人惊叹的模型，它擅长许多事情。在 Astra 之前，我们的计算机使用模型就已经非常优秀了，比如 Soul 本身在计算机使用方面就非常出色。所以根据我个人的体验，Astra 确实在一些细微之处提供了帮助。第一，它平均而言更快一些，因为完成同样的任务它使用更少的思考 token。它更擅长某些类型的创造性工作，例如在我们的发布视频中有这样一个演示：你与它交谈，它就在微软画图（Microsoft Paint）上画东西。它在这类事情上要好得多，我认为这可能也可以迁移到其他类型的创造性任务中。最后一点我发现的是，它在细节处更加可靠。就像你知道的那样，我觉得我能多信任它一些。这就像是 99% 可靠与 97% 可靠之间那种难以察觉但非常重要的微小差距。我觉得它的表现就是略高一些，而且这种提升让人感觉相当实在。
+<details><summary>Original English</summary>
+>> Yeah. Um so Astra's an amazing model. It's good at so many things. Our computer use models were already so good before Astra, you know, like Soul itself is amazing at computer use. So um Astra really helps with a few things around the edges in my sort of anecdotal experience. One is it is a little bit faster on average because it uses fewer thinking tokens to do the same task. It's better at certain kinds of creative work like for example we had this demo where um in our launch video where you were talking to it and it's drawing things on Microsoft Paint. Um it's way better at that sort of thing which I think probably transfers to other kinds of creative tasks also. And then the last thing I find is it's just more reliable around the edges. Like you know it's kind of I feel like I trust it a little more. like it's sort of the kind of thing where there's a little difference that is hard to perceive but really important between something being 99% reliable and 97% reliable. And I feel like it's sort of just a little a little higher in a way that feels uh pretty pretty concrete.
+</details>
+
+>> 是的。补充几点，Astra 也是我们最对齐的模型。对吧。所以说到信任。是的。
+<details><summary>Original English</summary>
+>> Yeah. And I think adding on to some of those things, Astra is also our most aligned model. Yeah. Right. And so, you know, talking about trust a little bit. Yeah.
+</details>
+
+>> 如果你查看它的系统卡（system card），它在抵御提示注入（prompt injection）方面的能力要好得多。它在避免采取任何意外行动方面表现好得多。因此，当你考虑将其用于企业工作时，尤其是公司将其用于敏感事务，无论是采购、与供应商交流还是与客户沟通，使用它时你会感觉安全得多，这真的非常令人兴奋。此外在创造性方面也有一些有趣的事情。在内部我们让 Astra 和 5.6 对战玩电子游戏，它每次都能赢。网上有人发了一些很酷的推文，Astra 能够在大约 30 小时内通关《辐射》（Fallout）之类的游戏。它在玩电子游戏方面确实非常惊人。我不知道这是否能转化为其他方面的价值，但[笑声]是的，这非常令人兴奋。
+<details><summary>Original English</summary>
+>> Um you know, if you look at the system card for it, it is much better at being resistant to prompt injection. um it's much better at not taking any kind of um unintended actions. And so when you think about it for like enterprise work, especially for companies using it for sensitive things, whether it's like procurement or you know talking to vendors or talking to customers, it's going to be just a you're going to feel a lot safer kind of using it and that's really really exciting. And then so some some fun things on the creative side. I think internally we had um you know Astra play video games against uh you know 5.6 and it wins every time. And so there are some cool tweets that people have made where, you know, Astro is able to beat Fallout in like 30 hours or something like that. And so it's also just really amazing at playing video games. So I don't know that probably translates to something, but [laughter] yeah, it's very exciting.
+</details>
+
+### 消费端与企业端用例的差异
+
+>> 也许可以进一步探讨一下这一点，消费端与企业端在计量代理方面的用例，在计算机使用代理周边的各种脚手架上有着非常不同的含义。如果让你们选，你们认为消费端和企业端哪一边的前景更令人兴奋？
+<details><summary>Original English</summary>
+>> Maybe just to double click on that point, um consumer versus enterprise use cases of metering agents, very uh very different implications around kind of like all the scaffolding around I would say the um computer using agents. How do you guys think about where things are more exciting between consumer and enterprise if if you were to pick?
+</details>
+
+>> 我们在 OpenAI 的目标确实是构建对每个人都有用的产品。这很有趣，因为 Ari 在这里显然更偏向消费端，而我则在企业端花更多的时间。我认为消费端始终是我们努力推进可能性前沿的领域。正如 Ari 提到的，Astra 相比之前的模型速度快得多，因此我们大量思考：借助一个更快更好的模型，我们能解锁哪些新的消费者体验？而在企业端，安全性自然变得更加重要。每当我们与大公司交流时，计算机使用的用例其实相当显而易见。在企业内部有大量没有任何 MCP 工具的遗留软件，这些软件已经被使用了 15 到 20 年，而且通常对普通人来说相当难用。界面很多都是过去十年遗留下来的，你甚至不知道如何操作某些关键功能。因此我们看到企业构建了各类技能（skills）来教会模型更好地使用这些软件。所以思考它的方式也许是：企业端是能力可能已经存在了较长时间，公司正在跟进并试图理解如何应对它；而消费端则是我们试图探索今天用现有软件可能无法实现的新型用例。也许你可以分享更多。
+<details><summary>Original English</summary>
+>> I think you know our goal at OpenAI is really about building products that's useful for everyone. And so um you know actually it's interesting because Ari is definitely more of a consumer guy here and I spend a little bit more time on the enterprise side. Um I think the consumer is always the place where we try to push the frontier on what's possible. uh you know uh with Astra like Ari mentioned there is it's a much faster compared to the previous models and so we think a lot about like what new consumer experiences can we enable with a faster better model and then on the enterprise side that's kind of naturally why the safety becomes more interesting because I think the enterprise whenever we talk to large companies I think the use cases for comput is actually fairly obvious right inside enterprises there's lots of legacy software that doesn't have any MCP tools they are software that's been used for like 15 20 years and so there's and and and a lot of times it's actually kind of hard to use for a normal person. right? Lots of like UI that is like from the last, you know, decade. And so you don't even know how to operate some of the key key key things. And so we've seen companies build skills that kind of teach the model to be able to use them better. And so I think maybe the way the way to think about it is enterprise is where, you know, the capabilities have been there maybe for a little bit longer and the companies are catching up trying to understand how to deal with it and consumers where we're trying to figure out the next types of use cases that's not maybe possible today with software. Maybe you can share more.
+</details>
+
+>> 是的，消费端的用例对我来说非常有趣，因为这就像是：你如何让你的代理去替你处理日常生活中那些烦人的事情，为你节省大量时间，让你能有更多时间专注于你真正感兴趣的事情。看到 DOTS 真的非常有趣，每个 DOT 都会获得属于它自己的计算机，你可以让它在云端为你做事。它拥有一个完整的网络浏览器，可以帮你买东西、预约理发，以及做任何你想做的事情。这非常有趣，而且我认为未来还有很多更令人兴奋的东西。
+<details><summary>Original English</summary>
+>> Yeah, I mean the consumer use cases are so fun for me because it's kind of like how can you put your agent to work doing the things in your daily life that are so annoying and save you tons of time and just have more time to focus on the things that um that you're excited about. Um I think it's been really fun to see dot uh where you know each dot gets its own computer and you can ask it to do things for you in the cloud. Um it gets a full web browser. It can buy things for you. can um you know book haircut appointments and uh you know anything else you wanted to do. So um so that that's been really fun and I think there's a lot more on the horizon. That's going to be really fun.
+</details>
+
+### DOTS 的实际工作流与主动性
+
+>> 是的，那原本是我想就 DOTS 提出的问题。James 你可能用 DOT 来梳理产品反馈，如果你能多分享一些这方面的内容那就太棒了，或者我非常好奇想知道在你们那边，你们是如何使用 DOTS 的，以及计算机使用是如何融入到你们能用它们做的事情当中的。
+<details><summary>Original English</summary>
+>> Yeah. Know that was going to be my question on on on dots. I think James you probably use a dot to walk through product feedback. It would be cool if you could share share more about it or I'm just so curious to know on on your end guys like how are you using dots and like how does computer use play into kind of what you can do with them.
+</details>
+
+>> 我觉得 DOTS 很酷有几个原因。其一是它非常主动。无论在我的个人生活还是工作中，很多时候 DOTS 直接指出了某些我完全遗漏的事情，这让我感到非常惊讶。就在前几天，在公司内部的电子邮件系统上，每当我们收到外部邮件邀请时，它实际上并不会显示在我们的日历上，因此我常常错过一堆外部会议。现在 DOTS 就会帮我捕捉这些事情。它会说：“你的收件箱里有这个邀请，但它不在你的日历上。你希望我在你的 Gmail 中接受它以便显示出来吗？”这真是帮了大忙。这是一件小事，但非常重要。
+
+同时我也让它主动去关注一些我认为非常适合主动寻找的任务，即那些每次任务形式并不是特别具体的场景。例如我也设置了这样一个任务：我们在内部使用 Slack，随时随地都有大量消息。我过去曾用自动化和 Codec 设置了一个 Slack 定时任务，每小时或每 30 分钟去拉取内容，但我最终关闭了大量通知，因为有些时候有用，有些时候没用。而使用 DOTS，我可以设定一个高层目标，比如：“如果我的汇报链条上有任何人说了什么，请向我标出；如果有任何人给出了关于某些产品的关键反馈，请运用你的判断力去处理。”
+
+而且因为它有一台云端计算机，我有一个非常酷的工作流：当有人报告问题时，他们通常会附带一个 Sentry 日志。我可以让它使用云端计算机，甚至驱动我本地的浏览器——DOTS 可以同时控制你的本地计算机和云端计算机——登录 Sentry，拉取日志，进行分析，然后给我反馈。这就省去了整个循环：弄清楚哪些反馈重要、查看反馈、去 Sentry 下载日志、输入到 Codec 中寻求分析，所有这些现在基本都可以自动化了。所以 DOTS 非常适合处理这些主动式且长周期的任务，尤其是那些每次形态都不完全相同的任务。
+<details><summary>Original English</summary>
+>> Yeah, I mean I think dots is really cool for a few reasons, right? One is like really proactive and so um I've been very surprised a lot of times when in both my personal life and work when dots will just flag something that um I just completely slip through the cracks, right? Just the other day. So internally like on our our email system whenever we get an external email for an invite it doesn't actually show up on our calendars and so I end up missing a bunch of like external meetings and so dots now is like catching these things for me. It's like oh there's this invite that's in your inbox. It's not on your calendar. Do you want me to like accept it in your Gmail so it shows up? So that's been a lifesaver. It's a small thing but it matters a lot. Um, but I also have it proactively kind of looking at I think it's really good at proactively looking for tasks where it's the shape of it is not super uh, let's say concrete every single time. So, an example that I also haven't set up to do is um we use Slack internally and there's there's a ton of messages that's going on at all times and uh I used to have this Slack job uh using automations and codecs that's like every hour or every 30 minutes go and try to pull things and I've just ended up tuning out a lot of the notifications because it's just like sometimes useful sometimes not. With DOTS, I can give kind of a high level goal. It's like hey if anybody in my reporting chain says anything flag it to me, right? if anybody who's giving some critical feedback, use your judgment uh about certain products, go for it. And then because it has a cloud computer, um you know, I've had this pretty cool workflow where when someone reports, they usually have like a sentry log. I could have it go use the cloud computer, um you know, actually drive my local local browser while the DOS's going to control both your local computer as well as the cloud computer. Log into Sentry, pull the logs, analyze it, give me feedback. And so it's saving that entire loop of figuring out which feedback is important, looking at it, then going to Sentry, downloading the logs, feeding into codecs, asking for thoughts, and all that can now just kind of be automated. And so, um, yeah, DOS is great for for at least these proactive and kind of longunning tasks where they're not the same shape every single time.
+</details>
+
+### 速度、超人能力与企业控制
+
+>> 我们谈到了一些关于可靠性、速度、token 消耗和效率的话题。随着你们不断改进发布的产品，你们如何考虑平衡所有这些因素？
+<details><summary>Original English</summary>
+>> We talked a little bit about reliability, speed, token usage, and efficiency. How do you guys think about balancing all these things uh as you uh as you keep making improvements on what what you're releasing?
+</details>
+
+>> 我们在 OpenAI 对计算机使用感到非常兴奋，在这方面投入了大量资源，并且已经达到了我们认为拥有最快、最便宜且最可靠的计算机使用产品的阶段。我认为我们还可以将它推进得更远。我们在速度上花了很多时间进行考量。速度非常有趣，一方面计算机使用的威力在于它可以在后台执行任务，所以某些情况下它花费多长时间并不重要，因为在它为你完成任务时你可以去做其他事情；但有时你又希望看着它以确保它执行无误，或者你需要等待它，因为必须在它完成后才能进行下一步。所以速度非常重要，因为你不想产生那种“我本来可以自己做而且会容易得多”的感觉。
+
+我们现在已经让计算机使用的速度达到了比普通人使用计算机更快的程度。我认为我们正非常接近超越人类操作水平的阶段，也就是它比一位熟练的计算机专家（可能就像我们桌上的某位）还要快。当这种情况发生时，我认为将真正带来翻天覆地的变化。它将改变我们所有人与计算机互动的方式，因为突然之间，任何你能手动做的事情，它都能做得更快。所以除非出于某种原因你真的想自己动手——我认为人们确实可能有很多理由想要自己做——但在默认情况下，你大概率会希望代理替你完成。我认为这将使我们能够构建各种非常酷的用户体验。因此速度是我们深入思考的一个维度。此外，我们显然采取了提供不同模型、覆盖不同质量和价格点的策略。针对不同的用例，你可能会想要使用不同的模型。与此同时，我们那些成本较低的模型在计算机使用方面的能力也在随着时间大幅提升。因此我认为随着时间推移，人们针对不同任务选择不同模型的多样性会更大。
+<details><summary>Original English</summary>
+>> I think we're really excited about computer use at OpenAI and we've invested in it a lot and we've gotten to a place where I think we have the fastest, cheapest and most reliable computer use product. Um, and I think there's actually so much further we can take that. Um, we spent a lot of time looking at speed. You know, speed is really interesting because on one hand the power of computer use is it can do tasks in the background. So in some cases it doesn't matter how long it takes because you can be going going and doing other things while it's accomplishing the task for you. But also sometimes you want to watch it to make sure it does it correctly. You need to wait for it because it needs to complete this before something else can happen. And so the speed is so important because um you know you don't want to get this feeling like oh I could have just done that myself and it would have been so much easier. So um you know we've gotten computer use now to a place where it's faster than the average human at using a computer. And I think we're getting really close to a place where it is superhuman, meaning it is faster than an expert computer user like probably one of us at this table. Um, and I think that's going to actually be a sea change when that happens. I think it's going to change the way we all interact with computers because all of a sudden anything that you you know that that you could do manually, it could do faster. So unless you really want to do it yourself for some reason, which I think actually there may be many reasons people would want to do that, but in a default case, you probably just want the agent to do it for you. And I think that's going to let us build all kinds of cool user experiences. So speed is something we think about a lot. And then obviously we have a strategy of offering multiple different models at multiple different you know qualities and price points. And so for different use cases you may want to use a different model. Um at the same time our um our less expensive models are getting much better at computer use over time. And so I think there will actually be more variation over time in which models people want to use for which tasks.
+</details>
+
+>> 补充一点，我认为另一个思考是：我们如何让客户在安全性、可靠性、自主性与速度之间拥有控制权？当模型较慢时，你某种程度上可以看着它操作，但这样你就受限于你能执行的任务，因为你不可能一直坐在这里盯着它做，这实际上效率更低，因为它比你还慢。但一旦达到你无法再观察和审计它所做的一切的程度，我们如何赋予企业和商家控制人类在环程度以及可审计性的能力？几个月前，作为 Astra 的一部分，我们推出了一套企业控制功能，让企业能够选择其一：他们希望保留多少程度的人类在环，比如他们是否希望代理自动批准所有操作？我们有一个非常出色的系统叫做 Guardian（或者应用内的自动批准功能），它是一个非常聪明的模型，会检查计算机使用代理采取的每一个操作，以判断其是否安全、是否对齐以确保不存在恶意意图。普通消费者可能会觉得“我只想让它把所有事都做了，不要向我请求批准”，而企业则能够决定哪些类型的操作可以实际执行。因此我认为，随着我们的计算机代理也达到超人水平并执行各项任务，控制这一部分会变得越来越重要。
+<details><summary>Original English</summary>
+>> adding on saying like I think another thought is like how do we give customers you know control over the safety reliability autonomy versus speed right like if you have like you know when when the model is slow you can kind of watch it do stuff but then you're limited to that to the task that you can do because you can't just sit here watching the thing doing it like it's actually less effective right because it's slower than than you um but once you can get to a point where you can no longer observe and audit everything it's doing um how do we give especially enterprises and businesses the ability to control um the amount of human the loop there is and then the auditability right like I think a few months ago it's part of access a few months ago it's part of Astra you know we we kind of launched a set of enterprise controls that let um businesses choose one like how much human in the loop is there like do they want the agent to automatically approve everything we have this really awesome system called guardian right or auto I think auto approve in the app that uh is a really smart model looking at every single action that the computer use agent is taking to decide if it's safe it's if it's aligned so there's no intent um a consumer might be like I just want it to do everything and I don't want it be asked for approval whereas an enterprise is able to kind of decide which type of actions actually go through and so I think the the the control part becomes more and more important as our computing agents become also superhuman and doing things
+</details>
+
+>> 完全同意。我认为随着向更多企业用例推广，雇主们对效率感到兴奋，但他们同时也在警惕到底释放出了什么。
+<details><summary>Original English</summary>
+>> totally I think as you try to you know roll out more enterprise use cases I think employers They're excited about the efficiency, but they're also, you know, wary of like what is what are what's sort of being unleashed.
+</details>
+
+### 应用软件生态与 WebMCP
+
+>> 也许从另一方面来看，你们是否看到了应用软件方面的反应，关于“现在有计算机使用代理正在访问我的传统工作流软件”？你们对此有思考吗？还是说你们更专注于供消费者或企业用户使用的代理本身？
+<details><summary>Original English</summary>
+>> Maybe even on the other side, have you guys seen the response from application software around okay, now there's computer using agents accessing my legacy workflow software and how do you do you guys think at all about that? Are you more focused on just the the agent that's being used by the you know consumer enterprise user?
+</details>
+
+>> 实际上在开放网络（open web）上，这个问题变得非常有趣。当它发生在公司批准和使用的软件内部时，其实更加直接，因为大家会觉得“百分之百支持，我们希望员工在这里实现自动化并完成工作，而不需要亲自处理乏味的事务”。但当涉及互联网时，人们通常会分成几个不同的阵营。其一，有些人的商业模式与让代理使用其产品不一致，比如广告商和出版商，他们的商业模式完全建立在广告之上。如果代理替用户访问网站，那么广告收入从何而来？而且在大多数地方，代理的广告展示次数并不算作实际收入。这是一个有趣的问题，我们一直在与合作伙伴团队共同研究推进。
+
+另一个问题是，对于那些确实非常希望接纳计算机使用代理访问其网站的公司，他们中的许多人正在采用某种标准，允许人类（用户）和代理能够共同使用网站。例如 WebMCP 就是我们非常看好的一项标准，我们在应用内浏览器中加入了对它的支持。你可以想象这样的场景：代理提升了使用网站的体验，但并没有完全取代它。在我看来浏览互联网仍然非常有趣，我仍然喜欢购物，喜欢查看所有的酒店、航班和地点。因此你可以想象在某些场景中，代理完成了所有乏味繁琐的工作，但它为你保留了一种浏览的用户体验，比如“好的，现在我想完成这笔交易，然后输入我的信用卡并处理这些事情，之后你可以再交还给代理”。WebMCP 就是一种有趣的方式，你与网站的接口仍然是网站本身而不是 API，但人类和代理可以在一起共同使用它。这些是我的一些思考。
+<details><summary>Original English</summary>
+>> M yeah I think there's like I think this problem becomes really interesting on the open web actually. I think when it's like within software that is like approved and used by the company it's actually more straightforward because it's like oh yeah 100% we want to have uh people automate and do work in here that they don't have to do tediously themselves. But when it comes to the internet, I think you kind of have a few different camps of folks, right? One is we run a our business model is not in line with having agents use our product, right? You think about advertisers, publishers whose business model is entirely on advertisement. If the agents using the website for them, then where's the ad revenue coming from? And I think most places a agent's ad impression does not actually count towards real uh revenue. Um and so that's like an interesting question that we're always working through and working with our partnerships team on. Um there's another question kind of around um for the companies who do really want to embrace having computer use agents using their sites. A lot of them are adopting kind of standards that let humans or people and agents to be able to use it together. So like WebMCP is a standard that we're really excited about. We we added support for in the app browser. And so you can kind of imagine these scenarios where the agent is elevating the experience of using the site, but it's not entirely replacing it. So like I think browsing the internet is still very fun in my opinion, right? I still like doing shopping. I still like looking at all the hotels and flights and places. And so, you know, you can you can imagine places where um the the agent does all the tedious work, but it kind of carves out an user experience where you're doing the browsing be like, "Okay, now I want to finish the the transaction and then put in my credit card and do all this stuff, then you can hand it back to the agent." And so, Web MCP is kind of an interesting way where your interface with the website is still the site itself versus an API, but then the person is kind of using it together. And so, those those are some thoughts.
+</details>
+
+### 通用性与人机协作的边界
+
+>> 换个话题，我们想深入了解一下所谓完成一项工作或完成端到端工作意味着什么。我们很想听听你们的看法，什么运作良好？你们如何界定合适的、狭窄且可重复的任务？在用户端，你认为哪些类型的任务已经可以移交给代理，而哪些任务仍然需要一些检查和纠正？
+<details><summary>Original English</summary>
+>> Yeah. Shifting gears, we want to double click a little bit on what it means to do the job or for get the end to end job done. Um, we'd love to hear a little bit from you guys around, you know, what works well. How do you guys define the right the right narrow repeatable task uh ver you know and what sorts of tasks do you think um are ready to hand over to the agent versus the ones like okay it still requires some checking and correcting as the on the user side.
+</details>
+
+>> 总的来说，我发现模型现在已经相当有能力做你在计算机上能做的任何事情。我尝试强迫自己做的一个练习是：每当我有一个任务时，我首先想到的就是能否直接让代理来做。现在显然存在一些敏感性，比如如果我给别人发消息，我希望让人感觉那是我本人发的。但总的来说，我的看法是，自从 Astra 推出后，现在的计算机使用代理已经能够做任何人能做的事情。之前可能存在一些疑问，比如针对某些具体规范和要求的模糊性，我通常发现模型在遇到模糊指令时变得越来越善于处理。在 Astra 中我们推出了类似“灵活输入”（flexible input）的功能，它实际上会向你询问细节，如果你没有及时回答，它会继续推进并提取必要的上下文。如果你有可重复的工作流，能尽早定义需求是很好的，类似于撰写产品规范。但总的来说，我现在的感觉是，除非是非常敏感、你必须保持在环的事情，否则对于我现在的各项工作，我都会直接使用计算机模型。我很好奇你是否也是这样。
+<details><summary>Original English</summary>
+>> M I mean generally I found the model to be pretty capable to do anything that you can do on a computer now like um and and you know one exercise that I try to force myself to do um is that whenever I have a task the first thing I think about it is just can I just have the agent do it now there are obviously some sensitivities around you know if I'm sending a message to someone I want to feel like it's coming from me um but in general I think the way I think about it is the computer using agents now since Astra um is now capable of doing anything that a person can do and uh there are questions around I think before of like oh there are some like squishiness around like specificity and requirements I' I've generally found that the model is getting pretty good at whenever you're asking it to do something and there's some vagueness it will actually you know with Astra I think we launched this like uh flexible input right and so it will actually ask you about hey like I want some details and if you don't answer in time it'll just keep going and then pull the context that's necessary I think there are some things around you know if you have repeatable workflows it's nice to be able to kind of define, you know, the the requirements early, similar to like writing a product spec. Um, but in general, I I generally feel like unless there is something incredibly sensitive that you want to be in the loop for, I I just reach for the computer model for everything I I do now. I'm curious if the same for you.
+</details>
+
+>> 是的，我也是。我正在努力养成这种直接调用它的本能习惯，因为它是如此好用，但有时人很容易被禁锢在旧的做事方式中。我认为作为一项技术，计算机使用真正酷的地方在于其通用性。它适用于每一个应用程序。这不同于我们构建的任何其他技术——在那些技术中，开发者必须进行适配，必须有人构建连接器或 MCP 服务器。计算机使用能够适用于一切，而且它的运作方式与人类使用应用程序的方式一模一样。如果你没有花太多时间了解这项技术，这一点非常值得理解。计算机使用操作计算机的方式和人类操作完全一致。它赋予代理和你一样的全部能力，我认为这太强大了。
+<details><summary>Original English</summary>
+>> I Yeah, it is. I'm I'm trying to uh uh, you know, build that impulse to to reach for it because, you know, it's so good and sometimes it's so easy to get locked into the old way of doing things. Um I um I think the really cool thing about computer use as a technology is the universality of it. You know it works with every application. It's unlike any other thing that we've built where you know the developer has to do some work to adopt it. Someone has to build a connector MCP server. You know computer use works with everything. And it works by using the application the same way a human uses it. Um, which I think is something worth understanding if you haven't spent much time with this technology. It like it computer use uses computers the same way a human does. It makes the agent have all the capabilities you do. Um, which I think is so powerful.
+</details>
+
+>> 补充 Ari 所说的，随着时间推移，我已经不再去区分我是在让它做计算机使用任务还是非计算机使用任务。它们经常是连接在一起的。我们对计算机使用的理解是：它并不是你拿起来说“我想用它做点什么”的具体工具，它实际上是模型用来采取一切必要行动的通用 API。因此如果你有一个宏大的任务并希望代理去完成，随着任务变得越复杂，在整个过程中的某个节点触及计算机使用的可能性就越大。也许我唯一不使用计算机使用的情况，就是当任务非常简单，以至于我自己去点两下按钮搞定反而更容易的时候。但随着计算机使用变得越来越快，问题就变成了也许我连那两下都不需要点，我只需要通过语音驱动，它就和我一起操作计算机。这些也是一些很有意思的想法。
+<details><summary>Original English</summary>
+>> Yeah. And I guess like adding on to Ari saying like part of it is like I think over time I've stopped thinking about it as like am I using them on like a computer use task or a non-computers task. Frequently they're like connected, right? Like the way we think about computer use um is that like computer use is not like a thing you pick up and just say I want to do something with it. It's really like the universal kind of API that the model has to do whatever it takes. And so if you have an ambitious task and you want the agent to do it likely the more complex it becomes the more likely it will probably touch computer use at some point in that journey. Um, and so like maybe the only time that I I don't reach for computer use for some cases is if the task is so simple that then it's like easier for me to just go and like click two buttons and do it. But you know as computer use gets faster even faster then the question becomes maybe I don't need to do that I just you know drive voice and it just uses the computer with me. Um so those are some interesting thoughts there too.
+</details>
+
+### 企业安全与用户信任设计
+
+>> 你觉得有什么可以分享给企业用户以让他们对此感到放心的吗？显然你们已经完全沉浸在计算机使用当中了，但企业用户有时显然存在迟疑，比如“是的，人类去点击操作可能会做得更差，但人类操作有一种问责机制，那个人是受过培训的”等等各种经典反驳。我很想知道如何说服大家。
+<details><summary>Original English</summary>
+>> Yeah. Do you think there's anything you have to share with like an enterprise user to get them comfortable with that? Obviously, you guys are totally pilled on computer use, but you know, I think there's obviously like hesitance sometimes on enterprise user of like, okay, well, yes, the human would click through it and probably do it worse, but uh there is that feeling of like there's accountability and and you know, that person's trained and all you know, all the classic kind of rebuttals. I'm curious have to convince people around.
+</details>
+
+>> 当然。最近一段时间我们与企业进行了大量交流，我们将其视为两个层面。第一层是我们如何创建确定性的控制。这确实给企业带来了巨大的安全感：即使我们的模型是有史以来最对齐的，而且我认为它在防范提示注入等方面比大多数人都要强，但当企业管理员能够明确规定某些任务或某些数据源过于敏感而不能使用时，他们就会产生一种安全感。因此我们推出的企业控制包含两点：第一是能够以确定性方式在代理周围建立沙箱的能力，也就是能够指定它可以访问某些应用而不能访问其他应用、可以访问某些网站而不能访问其他网站；第二是人类在环的机制，即哪些类型的操作需要人类介入干预？例如我们可以设定：每当发生下载或上传时必须经过人工批准，每当它访问新网站时必须经过人工批准。这些都是企业可以自行调节的控制旋钮。这是一方面。另一方面就是直接向企业管理员展示我们在内部针对这些模型的对齐程度进行的所有评估，包括内部评估和第三方评估。
+
+我认为我们全面做的一些基础工作也能帮助人们对这类产品建立信任。我们知道这是非常新的事物，对人们来说是一种充满魔力、有时甚至不可思议的体验。因此我们在产品设计中投入了大量精力。例如，如果你想观察它执行任务，你始终能看到光标，并且光标以一种有趣的方式移动，看着不会觉得无聊。
+
+而且就像 James 刚才说的，这不仅对企业是高度可定制的，对普通用户也是如此。在不同的模式下，我们在使用新应用或新网站之前会征求你的许可。这有助于人们不会觉得它会在计算机上失控乱来。你希望拥有这样一个建立信任的时刻，去感受它的体验是怎样的、你希望它为你做什么，随着时间推移你就会感觉更适应。
+<details><summary>Original English</summary>
+>> For sure. lots lots of conversation with enterprises kind of over the last little bit and I think the the main thing is we think about it as two layers right the first layer is like how do we create deterministic controls I think that's really what gives um you know enterprises a lot of feeling of safety is when they can even though our model is the most aligned ever and it's I think better you know better than most people at you know protecting against prompt injections and things because it's like just you know the intelligence is so smart but um I think there is just a feeling of safety when the enterprise admins can basically say for certain task or for certain data sources just too sensitive to be used. Um and so we see kind of enterprise so we launched was two things right one is the ability to be able to deterministically create a sandbox around your agent. So being able to say it can use certain apps it can't use other apps it can use certain websites and not other websites. And then two is you know this kind of part of a human in the loop like what type of actions does it require a human to um be interveneened? And so we might say, okay, for anytime there's like a download and upload, a person has to kind of approve it. Anytime it goes to a new website, a person has to approve it. Now, again, these are all like dials an enterprise can kind of go through. And so it's really like that's one. And then two is really just showing the enterprise admins just how you know all the evals that we've run internally around how aligned these models are even compared to like you know both internal and kind of third party um evals. I think there's also some baseline stuff that we do across the board to just try to help people build trust with these kinds of products. You know, we know it's so new. It's such a magical and sometimes alien experience for people. And so, um, you know, we put a lot of work into the design of the product. So, you can always see the cursor if you want to watch it perform a task and it sort of animates in a fun way so it's not boring to watch. Um, and then like Jame was was saying, this is very, um, customizable for enterprises, but also for a regular user. You know, we ask you for permission before using a new application or website. Um, uh, depending on which sort of modes you're in. And, um, I think that helps people sort of not feel like it's going to go do some runaway stuff on their computer. You kind of want to have this trust building mode moment where you figure out what it feels like and what you um, want it to do for you and then um, and then you sort of feel more comfortable over time.
+</details>
+
+>> Codec 的光标太可爱了。我非常喜欢……
+<details><summary>Original English</summary>
+>> The Codex cursor is so cute. I love
+</details>
+
+>> 这确实是一个小细节，但看着它操作计算机会给你带来信心，让体验变好。所以这是一个非常值得投入的用户体验点。
+<details><summary>Original English</summary>
+>> it's like such a I know it's a small detail, but like watching it use the computer gives you like confidence and it makes the experience nice. So I think there's a kind of like a user experience point. Uh that's that's worth uh uh that's definitely worth investing on.
+</details>
+
+### 最有前景的自动化场景：从繁琐流程到创意领域
+
+>> 我想在更广泛的层面上了解：现在我们有了强大的模型，它们的成本也变得足够便宜以实现规模化运行。在你们看来，企业应该考虑将什么自动化？你们认为企业内部最有前景的用例是什么？有哪些工作流？也许是围绕 ERP，也许是关于人类和代理如何协同完成任务。如果要挑选，你们最兴奋看到自己的模型在现实世界中用于什么？
+<details><summary>Original English</summary>
+>> And I guess I'm curious like in in a broader sense like okay now we have like capable models they're getting like cheap enough to run at scale. In your view, what should kind of companies think of automating? Like what would you what where do you see the most promising kind of use cases within enterprises? Are there some workflows? Maybe something around the ERP, maybe something around kind of u how like again humans and agents can work together to get tasks done. But like if you had to like pick where where are you most excited to see your models perform uh in the world like
+</details>
+
+>> 从我的角度来看，我把它归纳为两个大类。第一类是自动化繁琐的工作流。这是比较枯燥的一类，我可以举一些枯燥的例子。
+<details><summary>Original English</summary>
+>> Yeah, I guess like from my perspective, I'd love to hear ours. It's like two two I think of it as in two big categories. The first category is like automating you know tedious workflows. That's like the more boring one and I'll give us some boring examples like
+</details>
+
+>> 枯燥即机会。
+<details><summary>Original English</summary>
+>> boring boring as opportunity.
+</details>
+
+>> 机会。[笑声] 对，正是如此。ERP 就是一个非常大的领域，以及你能想到的所有首字母缩写系统：ERP、CRM……
+<details><summary>Original English</summary>
+>> Opportunity. [laughter] Yeah, exactly. Um like ERPs is a really big one. Um and so all the all the acronyms you can think of ERPs, CRM,
+</details>
+
+>> 所有记录系统（systems of record）。
+<details><summary>Original English</summary>
+>> all the systems of record.
+</details>
+
+>> 每一个记录系统。比如采购软件：企业每年都要向供应商订购大量实验室设备，通常的做法是各个团队填写一个包含数千行的大型电子表格，然后运营团队拿着这个电子表格输入到内部采购软件中，生成一系列条目，采购团队再根据这些软件输出去联系供应商。计算机使用可以把这些全部自动化。采购是我们看到的一个大领域。
+
+财务是另一个非常有趣的类别。公司内部有大量不同的账本，比如费用账本等，因此在月末有大量的对账工作，而很多此类财务软件根本没有能够快速提取数据的 API。让财务团队能够使用计算机使用去查阅所有这些账本、进行核对、提取任何值得注意的事项并向专人标出或展开调查，这也是一个非常枯燥但极为有用的工作流。
+
+对于销售团队，很多销售团队使用各种不同的软件来处理会议记录、获取数据等。利用计算机使用去进行潜在客户挖掘（prospecting），然后录入 CRM 或外联软件中。所有这些记录系统都是枯燥但实用的部分。
+
+市场研究也是我们经常看到的另一个领域。在闲暇时间我一直在为羽毛球构建一个视频标注软件。我经常打羽毛球，喜欢拍摄自己打球的视频，然后让代理去查看分析。我在想如何让这个工具真正有用，市面上有一些针对匹克球、壁球、网球的软件，于是我就直接让计算机使用去登录并在这些软件上创建账户、试用、截屏并给我反馈，然后尝试将这些功能做回到我自己的应用中。这些都是可以完成的繁琐工作流。
+
+而更具雄心和创造性的工作方面，我们之前谈到模型现在在视觉设计上非常出色。因此电路设计、架构工作、硬件工程、游戏设计，这些也是我们对 Astra 能达到的能力感到非常兴奋的领域。目前企业考虑这些相对较少，因为他们首先着眼于那些枯燥的机会。但我认为随着大家对模型能力理解的加深，未来会看到更多这方面的应用。
+<details><summary>Original English</summary>
+>> Yeah. Every single system of record, right? And so we know we've seen folks you know procurement software like you know you're going to vendors and every year you're ordering a bunch of lab equipment uh instead of having this giant spreadsheet with like a thousand rows that then the ops team so it's like you know work companies like normally what they have done is you they have this giant spreadsheet that gets filled out by the teams themselves. Then an ops team takes that giant spreadsheet puts it into an internal you know procurement software and then that gets like you know finalized as a bunch of lines and then a sales team then goes procurement team then takes that giant software output and then goes out and reaches out to vendors. um computers can automate all of that, right? And so like procurement is a big one we see. Um finance is another really interesting category we've seen and so uh you know there's a lot of different ledgers within a company right and so you have like ledgers for expenses ledgers for all these things and so at the end of the month there's a lot of reconciliation and a lot of these recon financial software don't have APIs to be able to quickly pull things. Um, and so the finance team being able to have computer use, look through all these ledgers, reconcile, pull out anything that's like interesting, um, to flag either to a person or then do some investigation. Also a very boring but useful workflow. Um, for our sales team, a lot of sales teams uses a lot of different software for like transcripts, for getting data, all these kind of things. And so having computer use go and do prospecting and then going and uh putting that into a CRM or some kind of like you know outreach software and then all that. So all the system records is the boring part. Um and then like market research is another one that we see a lot. Um and so you know in my free time I've been building this like uh video annotation software for for Bmon. I pull out of Bmon and like I like to film myself playing the game and then uh having the agent kind of go and and look at stuff and I was like okay how do I make this thing really useful there's some software out there for like pickle ball for squash for tennis and so I just had computer use go log in create an account on these soft on these softwares try it take screenshots give me feedback and then try to build it back into the app and so these are all kind of like tedious workflows that could be done and then I think the some of the more like interesting creative work of like enabling more ambitious work is like, you know, we talked about um the model now being really good with like visual visual design. And so um circuit design, you know, being able like architecture work, hardware engineering, game design, these are also areas that I I think we're really excited about where Astro can take. Um less, you know, less common for enterprises to think about those right now because they're thinking about the boring opportunities. But I think as folks understand the capabilities of model more, that's where, um I think we'll we'll kind of see more usage next. But curious if any thoughts. Sorry.
+</details>
+
+>> 是的，在消费端也有类似的情况，有很多事情属于自动化枯燥苦工或处理你不想做的事情，比如帮你填写机动车辆管理局（DMV）的表格，帮你退订收件箱里的一堆邮件。
+
+同时还有另一类事情：我听到很多人的故事，他们在做那些他们过去没有时间或根本不会想去尝试的事情。例如对我个人而言，我用它来维护关于我财务状况和膳食计划的电子表格；我有一个做私人教练的朋友，正在利用它为客户定制方案。在个人生活中，有些事情过去在时间成本上是令人望而却步的，但这让事情变得如此简单。我使用的是 Apple Numbers 这种小众的表格软件，但模型依然能搞定。
+<details><summary>Original English</summary>
+>> Yeah, I think kind of similarly on the consumer side, there's a lot of things where it's sort of automating drudgery or just doing things you don't want to do. It's filling out DMV forms for you. It's helping you uh unsubscribe from a bunch of emails in your inbox. Um and then I think there's also things that are more like um I'm I'm hearing from a lot of people stories of people doing things that they just wouldn't have time they wouldn't have had time or wouldn't have thought to do otherwise. like I don't know for me personally I'm um uh maintaining spreadsheets about my finance and spreadsheets about meal planning and uh I have a friend who's a personal trainer who's making customized things for his clients and um you know some of these things um would just be so so time prohibitive to do in your in in in your personal life. Um but this makes it so easy. Um I use Apple Numbers which is like a obscure spreadsheet program but the model still knocks it out.
+</details>
+
+>> 我想我从没听说过有人使用 Apple Numbers。
+<details><summary>Original English</summary>
+>> I don't think I've ever heard someone use Apple Numbers.
+</details>
+
+>> 它是一款出人意料地棒的电子表格软件。然后我认为还有第三类事物，也是我最兴奋、刚刚展露头角的领域：拥有一种全新的方式来使用整台计算机或与软件进行交互。在我们的 Astra 广告中可以看到很酷的范例，人们直接用语音与计算机交谈。这是一种非常自然的电脑使用方式。我认为随着时间推移，我们将看到软件本身的形态因这项技术而改变，我对此感到非常兴奋。
+<details><summary>Original English</summary>
+>> It's a surprisingly great spreadsheet software. Um and then I think there's a third category of thing which I'm kind of the most excited about which is just starting and I think you know on the horizon you know um which is really just having a different way to use your entire computer or interface with software. I think you saw in our Astra ad uh really cool examples of people just talk to their computer with their voice. It's such a natural way to use your computer and I think over time we're going to see the form factor of software itself change due to this technology and I'm I'm really excited about that
+</details>
+
+### 软件形态的演进：遗留软件封装 vs. 原生定制
+
+>> 关于软件形态改变这一点：想象一下如果你是一个企业用户，或者习惯于使用 30 年前的笨重 ERP。一种可能是你释放出一组代理来操作该软件，你根本不在乎底层；另一种可能是全新的 AI 原生玩家采用计算机使用代理。你认为世界会更多地走向“保留传统软件并在其上架设这一层”，还是你认为计算机使用代理完全会成为新软件参与者的一部分？这是我经常思考的问题，想听听你们的想法。
+<details><summary>Original English</summary>
+>> on that point. Okay, form factor of software changing. Um if imagine if you're an enterprise user or you've used you're used to using whatever clunky ERP from you know 30 years ago. Um there's a world in which you now, you know, unleash uh a set of agents that just operate that software and you don't really care. Um there's another world in which um folks are a new like AI native player is using computer using agent and I'm curious if do you think the world is going to go more in the direction of like keep the legacy folks um and just have this layer on top or do you think you know computer using agents can absolutely be part of uh new software players and this is something I think a lot about so I'm curious to get get your guys' thoughts.
+</details>
+
+>> 这是一个非常有趣的节点，创建新软件的成本和复杂性大大降低，以至于你能想象软件会发生如此大的改变；但同时世界上又存在着如此多的遗留软件，而计算机使用非常适合与它们进行交互。所以我预计这两种情况都会持续很长一段时间。如果你看看今天在生产环境中运行的软件，很多都是在 10 年、20 年、30 年甚至 40 年前编写的，我不认为这些东西会一夜之间消失。我确实认为，计算机使用的存在可能会给企业带来更大压力，迫使其软件更好地与代理配合工作，因为所有软件默认都将与代理协同运行，WebMCP 就是一个极佳的例证，我们未来会看到更多类似的东西。
+
+所以我预计两者都会极其重要。但我确实认为这会随着时间发生转移。James，你怎么看？
+<details><summary>Original English</summary>
+>> It is such an interesting moment where simultaneously the cost and complexity of creating new software is so much lower. So you can't imagine software changing so much but also there exists so much legacy software in the world. The computer use is so well suited to interact with. So I expect both of those things to continue for a long time. You know if you look at the software that's in production today a lot of it was written 10 20 30 40 years ago and I I I don't think that that stuff's going to go away overnight. I do think that in some way the existence of computer use um uh puts may put more pressure on companies to make software work better with agents because all the software is going to work with agents by default and I think webc is a great example of this and I think we'll see more stuff like that. Um so yeah, I I sort of expect both to be to be super important. Um but I I do think it'll like kind of shift over time. Um what do you think, James?
+</details>
+
+>> 我同意你的看法。我认为这里涉及很多工艺与匠心。Ari 和他的团队打造了美观的产品，光标设计全面倾注了心血，所以你能理解这一点。我认为打造人们拿在手里感觉良好的优秀产品包含大量的工艺。如果互联网变成一个没有面孔的面目模糊之物，只是代理彼此交谈而人类不再使用任何软件，我会非常难过。而且我不认为会变成那样，因为手工艺般的定制软件拥有某种特质，使用起来感觉非常棒，因为设计它的人真正理解客户想要的体验。
+
+比如我妻子最近迷上了一款棋盘游戏（我忘了名字，好像是连成五个子获胜的游戏，名字大概叫 Omach）。她试图提高水平，因为她在网上和朋友对战被打得落花流水。于是我说：“好吧，我来为你构建一个战术训练器，带你过各种开局定式，这样你就能提升水平。”举个例子，我做出了第一版，因为我了解她喜欢以某种特定的方式学习，更喜欢某些学习途径。所以我能够精心定制这款软件，让它对她来说使用感受非常好。这种个性化软件在今天可能仍然感觉像是只有技术人员才会做的事情，但如果往未来看几年，如果任何人都能在极短时间内为极其细分的场景构建这种高度贴合用户的匠心软件，我认为那将是一个美好的世界。在训练结束时，她学到的经验和犯过的错误可以由代理总结并以文本形式提供给她，但当她真正与 AI 对弈、努力提升时，那是必须由人来完成的事情。所以我坚信 UI 不会消失。稍微偏离一下你最初的问题：我认为廉价软件的压力会促使软件必须变得更好，但我不认为这会变成“所有东西都将拥有 MCP 和 API，而计算机使用将不再有用”。
+<details><summary>Original English</summary>
+>> Yeah, I I I agree with you. I think it's like um the there the the way there's like a lot of arts and craft and you understand this because Ari built beautiful product with his team. the cursor was all in. Um, and so the uh um I think there's like a lot of art and craft into building like great products that people can hold in their hand. And um I don't know like for me if we go if the internet becomes just this like faceless, you know, thing that is just agents talking to each other and and people are not using anything anymore. I would be very sad. Um, and and I I don't think it will be like that because like there's like something about craftsmanship and art artisan software that's like just feels nice to use because the person who designed it really really understands um like the experience that the customer wants to have. So like my wife loves is recently got into playing this like uh you know board game. I I forgot the name of it. It's where you connect like five pebbles to like win. I think it's like Omach is the name of it. And so anyway, uh so she's trying to get good at it because she's playing online with friends and it's getting her ass kicked and so I was like, "All right, I'm going to build you like a tactical trainer for um you know, going through different gambits so you can like get better at it." Like that's for example something that like I you know created a first version. I was like, "Oh, I know like she likes to do it in a certain way. She likes these type of uh ways to learn more than others." And so I was able to like, you know, craft the software to be something that feels really good for her. And like these kind of personalized software, I I know it's like a thing maybe today still feels like only really tech people will do. But I think if you like think about this a few years out, it's like if anybody can build anything and they can build these really craft software in a very short amount of time for like niche use cases that are like so well tailored for people, I think that's a beautiful world. Um, and again, you know, at the end of her training, the lessons and mistakes she made, that could be an agent that summarizes it and gives her in text format, but when she's actually playing with the with the AI and and and and trying to get better, that's something that the person has to do. So I do think it's it's um I I'm more I'm bullish that I I don't think UI is going away and and uh and I think kind of a little tangent to your original question, but I I do think that um the pressure of cheap software will make it so that software has to be better. Um but I don't think it will just be like yeah everything will have an MCP and an API and you know comput will never be useful.
+</details>
+
+>> 我太喜欢这个观点了。人类天生就适合直接操纵，你真的希望能亲手去移动和处理事情。过去软件通常是一刀切的，很多我们每天接触的软件都是设计给数百万、数千万甚至数十亿人使用的。而我们将进入一个任何软件都可以专门为一百人甚至一个人定制的时代，那种软件将变得多么个性化和独特。
+<details><summary>Original English</summary>
+>> I love this point so much. I think that like humans are so hardwired for direct manipulation. you really want to be able to, you know, move and and and do things with your own hands. Um, and I I think that it's really exciting to think about how software in the past was so oneizefits-all and had to be, you know, often uh a lot of the software we interact with every day is designed for millions, tens of millions, hundreds of millions, billions of people to use. And I think we will enter an era where any piece of software could be designed for a hundred people or one person and um just how much more uh personal and and and unique that kind of software will be.
+</details>
+
+>> 我的心智模型大概分为两个桶。在消费端，你要么从中获得乐趣，要么从中学习。这不在于工具性，而在于交互或学习的乐趣，你愿意为此投入时间。在 B2B 方面，你可能希望代理完成大量繁琐工作，但同时存在审计日志的概念。你可以根据自己的交互喜好进行个性化，但产品核心在于我作为人类用户设定目标，然后能够理解其中的逻辑，而不必亲自执行导致该结果的整条指令链。任何 B2B 用户仍需弄清楚“为什么发出了那笔款项”，然后回溯查看摘要，确认“在30天时支付给此人，应用了多少折扣”等等。他们希望代理负责执行，但仍需要保持某种程度的控制，而我认为这确实需要某种 UI。如果我们要走向相信 AI 会承担更多工作的方向，那部分交互界面也必须让人乐于使用。我们为什么要容忍糟糕的软件呢？
+<details><summary>Original English</summary>
+>> Yeah. I my mental model is I think there's probably two buckets. One is on the consumer side you've got um either something [clears throat] you just get you you get joy out of you enjoy using or you learn from. There is this it's not the utility of it. It's the joy of interacting or learning or whatever it is and you want to spend time on the on the B2B side. You you may want your agent to complete a bunch of the tedious work, but you also there's this concept of like the audit log like and you that could be personalized in how you want to interact, but the product really is me as the human user setting the goal and then being able to like understand the logic but not necessarily need to run through like the entire chain of command of how it happened. And so like any B2B user still needs to figure out okay like why did that payment get made and go back in and get a summary of what happened and be able to say okay pay this person at this time um yeah at 30 days this this much um discount should be applied etc. They want the agent to take care of like the execution of it but they want to be able to at some level like some level of control still needs to be put put in there and I think that's like something that does require a UI of some sort. Um and it has to be I think if our it if we're moving more towards believing that um AI will do more of this that part has to be enjoyable to use too, right? Like why not? Like why should we settle for shitty software?
+</details>
+
+>> 我确实认为，观察我们是否会看到新型软件将是非常有趣的，我也对此感到乐观：这类软件拥有传统用户界面，但在底层使用代理。有时这些代理本身使用计算机使用技术来自动化遗留软件，从而为你提供更好、更专用化的体验。我对这类产品感到非常兴奋。
+<details><summary>Original English</summary>
+>> You know, it's I do think it'll be really interesting to see if we and I I'm optimistic that we will see new kinds of software where it has traditional user interfaces but is also using agents under the hood. And then maybe sometimes those agents are themselves using computer use to automate legacy software by giving you some much nicer more purpose-built experience. I'm like really excited for for that class.
+</details>
+
+>> 这有点像我们在内部喜欢使用的“共享智能层”概念：让你的代理在其他地方使用遗留软件并处理事务；当你使用某个应用时，该应用希望获取该上下文以提供更好的体验。如果每个网站都有自己的代理且互不沟通，那将是一个非常割裂的世界。探索如何协同运作、让代理接入并使用你的其他软件，将是未来几个月非常值得关注的发展。
+<details><summary>Original English</summary>
+>> Yeah, it's kind of like the one where we like to use internally like the shared intelligence layer, right? Like you have your agent using legacy software somewhere else and doing things other places. You like if you're using an application, the application wants to get access to that context so it's able to deliver a better experience. It's like I think if we had every website has its own agent that doesn't talk to your agent, it's it's a very fragmented world. And so figuring out like how that plays together where the agent can plug in and and use your other software, I think it's going to be like a really um interesting thing to play out over the next few months.
+</details>
+
+### 初创公司的机会与落地建议
+
+>> 我很喜欢你们谈论这一点，因为人机交互的重要性被严重低估了，特别是如果你想让一个产品成功的话。人类习惯于协作，因此你希望任何代理都能融入团队。如果将此应用到一家新创公司——假设你明天要创办一家公司，希望利用计算机使用解决企业内的工作流，你会如何思考？哪些事情会浮现在脑海中？比如希望清楚了解它在何时优雅地失败、希望它能与人沟通，还是说希望它成为一个黑盒子？如果你现在要对创业者提出建议，当他们尝试利用你们的模型和能力为企业解决问题时，你会给他们什么建议？
+<details><summary>Original English</summary>
+>> I love that you guys Yeah. talk about this because I I think it's so underappreciated the importance of like human AI interaction, especially if you want like a product to be successful. So like being thoughtful of like how can I kind of like humans are used to collaborate. So you want any agent to be able to like kind of fit into the team. I'm just curious like if you apply that to a new startup let's say you're like I don't know starting a company tomorrow and you want to use computer use to like um solve a workflow within the enterprise. How would you think about it? And uh would you be kind of what would be the things that jump to mind in terms of like oh I want to know when it fails well. I want it to be able to communicate with people or I want it to be like a I don't know a black box just like maybe if you had to talk to founders right now what advice would you give them as they try to use your models and capabilities to just solve problems for enterprises.
+</details>
+
+>> 在我看来，这在很大程度上取决于模式：你是一个小团队，希望团队中的个体能够以更高效的方式使用团队正在使用的某些软件？还是你正在构建某种本身需要与现有软件交互的东西？在后一种情况下，你可能在云端有某台机器在后台运行计算机使用。我认为这将真正影响你所希望的人机协作模式。在前一种情况下，我们很多产品正在服务于这种用例，比如你坐在 ChatGPT 面前进行良好的协作；而在后一种情况下，也许你正在基于 API 构建，实现自己的计算机使用方案。这时弄清楚何时需要人类在环就变得非常有趣：代理是在出问题时通知你？还是在成功时通知你？是否有机制对此进行总结，以免你被“发生了这个、发生了那个”的海量通知轰炸并最终选择忽略？James，你怎么看？
+<details><summary>Original English</summary>
+>> In my mind, it depends on it depends so much on the modality of you know are you trying to are you a small team and you want sort of individual on the team to be able to use some piece of software that that you're um that that your team is using but in a more efficient way. Um or are you maybe building something that itself wants to interact with existing software in which case maybe you have some you know machine in the cloud somewhere that's uh doing computer use in the background I think that will really affect the modality of how you want the human agent collaboration to be right um and um yeah you know in the former case I think a lot of our products are serving this use case um you know where you sit down at chatbt and uh you know there's a lot of great uh you collaboration you can have there. Um and in the other case, you know, maybe you're building something with with the API. Um you're you're um uh doing doing your own computer use implementation. And then uh yeah, then it really is interesting to figure out when when do you want the human to be in the loop? Is the agent telling you when something's wrong? Is it telling you when something went right? Uh you know, is something summarizing that so that you don't get bombarded with notifications saying, "Hey, this happened. This happened. This happened." Which actually you're going to ignore. Um um I don't know. What do you think, James?
+</details>
+
+>> 在加入 OpenAI 之前，我和 Ari 都是创业者，所以我依然非常看好初创公司。核心问题归结为：是否存在护城河？在大模型实验室不断推进技术的同时，初创公司是否依然有可以攻克的空间？我认为有两点：第一，有太多东西需要去构建。即使我们现在规模相当大、有几千人，但在内部仍然感觉人力非常紧张，面对所有的问题团队规模并不大。因此，如果你面对一个你深刻理解的问题，你拥有行业专业知识，理解监管运作方式、市场推广策略以及如何服务这些客户，那里依然是一片巨大的蓝海。通过我们的 API（包括 Ari 提到的计算机使用），这些工具能让你加速。归根结底，我认为如今存在的护城河就是速度与执行节奏。
+
+第二点在于，依然存在大量垂直行业，其中 AI 的渗透扩散要慢得多。前几天我和一家公司交流，他们利用计算机使用帮助餐饮集团：拍摄后厨仓库的照片，利用视觉模型预测次日客流下可能短缺的物资，然后利用计算机使用访问 Shopee 或采购软件订购次日所需的食材；接着它会进入 ERP 系统，调整第二天员工的排班表，因为去年的同一天可能因为节假日等原因客流量大得多，需要更多人手。这些餐饮集团并不是科技公司，并不完全熟悉现有的所有工具。生活在旧金山，我们经常看到一种想法，觉得实验室能做所有事情，为什么大家不直接安装 Codec 让它解决一切？但对于普通美国人、普通中小企业主和普通企业来说，理解工具的能力是一步，以合理的方式连接工具是第二步，部署是第三步，维护服务是第四步。因此很多复杂的、需要依赖大量分散软件的工作流，计算机使用是将它们串联并完成整个端到端流程的极佳方式。为这些客户构建出握在手里感觉良好的格式与 UI，依然是一个非常巨大的机会，我认为这扇大门依然敞开。
+<details><summary>Original English</summary>
+>> Yeah, I mean I I you know, both Ari and I were startup founders before we joined OpenAI and so you know I'm I'm still very bullish on startups. You know I think the question right kind of comes down to like what is there still a mo right? Is there something that startups can still tackle while labs are are doing things? I mean in general I just think there's like like two two things like one is like I think there's so many things to build right and like even though we're quite big now thousands of people we are still feeling very stretched thin internally and like you know it's like the teams are not very big for all the problems and so if you have a problem that you really deeply understand you have industry expertise you understand how regulatory works the go to market motion how to service the those customers um it it is still I think a very green field out there and um the the tools that that you have through our APIs like Ari mentioned with computer use. Um I think I think we'll still let you accelerate and speed really I think at the end of the day speed and pay is kind of the mode that that exists today. Um I think the other thing I think about a lot is like there are in my opinion still a lot of like vertical industries where um the diffusion of AI is like much slower. And so um you know uh I was talking to a company the other day who uh uses computer use to help restaurant groups to you know take pictures of like their back storage you know and then using that the the vision looks at kind of like what is going to be missing based on a projection of tomorrow's traffic and then it takes that to then use computer use to go to like a shopppee or some kind of like procurement software to then order your groceries for the next day. Um and then based on that it will go into your ERP to adjust like the timetable for your like employees who are um who we might need more people to help because in the last year at this time of the day um there was a lot more traffic coming in from like like a holiday or something like that. And so like you know those restaurant groups are probably not like tech companies that are um super you know familiar with all the tools are available. And so I think like you know living in San Francisco we see a lot of thinking wow like you know labs can do everything the codecs and like you know why doesn't everybody just install codecs and just have it do stuff but like for the average American and the average small mid medium business owner the average enterprise um even understanding what the tools are capable is one connecting tools in a way that makes sense is two deploying it is three servicing is four and so there's still a lot in my opinion where if there there are complex workflows that require a lot of disparate software computer use is a great way to join them complete the entire intend flow and then building it in a format and UI that is feels good to hold um for those customers feels still like a really really big opportunity that um you know we I think is still open right
+</details>
+
+### 前沿展望：统一体验与主动性
+
+>> 谈谈接下来的规划。关于前沿领域，有哪些与使用计算机的代理相关的进展是你们感到兴奋并可以分享的？
+<details><summary>Original English</summary>
+>> tell us about what's next what's what are you excited about um that's on the frontier that you can share around uh around computer using agents
+</details>
+
+>> 我之前已经提到过，我们对速度感到非常兴奋，对让计算机使用达到超人水平感到非常兴奋；我们对融合不同类型界面、整合多模态输入与输出的事物感到非常兴奋，这样你就能与计算机获得更加流畅的体验。目前我们的大部分计算机使用产品都非常侧重后台运行，主要是“让我交给代理一个任务，让它去执行，而我去做别的事情”，这确实是该产品的巨大优势。但我认为在未来，我们也会看到更多你与代理之间的这种实时协作。我对这个领域非常兴奋。除此之外，就是更好、更便宜、更普及、更易用……
+<details><summary>Original English</summary>
+>> well I' I've sort of gestured towards it already but we're really excited about speed we're really excited about making computer use superhuman and Um, we're really excited about things that blend together different kinds of interfaces that bring together sort of multimodal inputs and outputs. Um, so you can have more kind of fluid experiences with your computer. I think right now a lot of our computer use product is very background focused. It's very much like um, let me give the agent a task. So it can do that while I do something else, which is actually a tremendous strength, right, of the product. But I think that in the future we'll also see more of this like real time collaboration between you and the agent. Um, so I'm I'm really excited about this area. Um, and um um and other otherwise just uh sort of better, cheaper, more more available, easier to use,
+</details>
+
+>> 是的，确实如此，能够实际访问所有内容。
+<details><summary>Original English</summary>
+>> more Yeah, exactly. Being able to actually access everything. Yeah.
+</details>
+
+>> 通过 DOTS，我们为人们提供了云端计算机。在其他工作中也有云端浏览器。对我而言，感到兴奋的一件事是让体验感觉更加连贯一致。例如今天你可以安装 Chrome 扩展程序，它会使用你的密码管理器以及 Chrome 中的一切；然后我们在桌面应用中有一个应用内浏览器，它拥有一套不同的 cookie 和密码；而你的云端计算机也拥有不同的设置。对于普通消费者来说这是令人困惑的：“为什么我有四个互不相通的不同浏览器？如果我在一个里面打开标签页，它会显示在另一个里面吗？”因此我非常期待的是：我们如何让计算机使用从这种供企业和最前沿极客用户使用的产品，转变为普通人真正能够理解的东西。这有点像一个矛盾修辞法，因为我认为计算机使用其实是最容易理解的 AI 产品，因为它是 AI 在使用你的计算机；但由于状态管理和使用环境的多样复杂性，底层的实现细节有时会渗透出来，变得难以理解。因此能够将其做到消费级、更易于理解、更加连贯，是我下个季度非常兴奋的事情。
+<details><summary>Original English</summary>
+>> I think I think there is, you know, we with DOTS, right, we're we're giving folks these like computer in the cloud. Tragic work also has a browser in the cloud. I think honestly like for for me like one thing I'm excited about is just making the experience feel a little bit more more coherent. Like you know today you can install the Chrome extension and it that uses your like password manager and everything in Chrome and then we have an inapp browser in the desktop app which has a different set of cookies and different passwords. Your computer in the cloud also has different things and for the average consumer it's confusing. It's like why do I have these four different browsers that all don't talk to each other? If I open up a tab in one does it like show up in the other? And so like I think a lot of um what I'm excited about is how do we make computer use go from this product that is used by like enterprises and like really hardcore tip of the spear kind of users to something that's actually understandable for for people. It's kind of like an oxymoron because I think computer use is actually the most easy to understand AI product because right it's an AI using your computer but then because of the like uh complexities of like the different like states you have to manage and the different places you're using it the implementation details sometimes seep through and then it becomes kind of hard to gro and so um being able to kind of make that consumer grade and easier to understand more more coherent um is something I'm really excited about next quarter
+</details>
+
+>> 这又回到了刚才的核心：仍然是由人在启动代理，UI 和控制做得越好、使用起来越轻松愉快，人们从中获得的价值就越多。
+<details><summary>Original English</summary>
+>> yeah and I think it it comes back to the point that there is still a human that's setting off the agent right and they have to the the the better the UI and controls and the easier and more enjoyable it is to use, the more they're going to get out of it. And that's
+</details>
+
+>> 完全正确。
+<details><summary>Original English</summary>
+>> absolutely
+</details>
+
+>> 基于这一点，我还想指出另一件事：我认为当前产品的另一个挑战在于，你必须花心思去考虑如何使用它，你必须记得去用它，而且你必须说服自己采取与以往不同的做事方式。正如 James 刚才所说，DOTS 具有这种强大的主动性，它们能够主动找你、识别情况并帮助你解决问题。我认为未来会看到更多的主动性。我非常期待一个代理能够适应你，而不是你去适应代理的世界。我认为我们将看到很多这样的进展，它将使人们更容易理解、接受并融入这项技术，同时人类仍然是设定和把控目标的主体。
+<details><summary>Original English</summary>
+>> principle. On that point, one other thing I want to gesture towards is um I think another challenge of the product today is you you have to put some thought into how you're going to use it and you have to remember to use it and you have to um convince yourself to do things that are different from how you're used to doing them. Um, and I do think, um, dots, like James was talking about earlier, um, have this really powerful proactivity where they can sort of come to you and identify situations and and and and, um, and and help you solve problems. I think we'll also see a lot more proactivity. I'm really excited about a world where the agent can sort of adapt to you instead of you adapting to it. Um, and I think that we're going to see a lot of that and I think it will um make it a lot easier for people to actually like relate to and u and and understand and incorporate this technology while also um still being the ones sort of setting and searing the the the goals if that makes sense.
+</details>
+
+### 发展动量与移动端愿景
+
+>> 我们尚未讨论的一个方面是计算机使用背后的动量，以及已经发生了多少变化。Fitzi 和我在文章中对此进行了简要探讨，很想听你们谈谈目前的发展轨迹以及未来的走向。
+<details><summary>Original English</summary>
+>> One of the things we haven't talked about yet is the momentum behind computer use and how much has changed and Fitzi and I chatted a little bit about this in in our piece. would love for you to just kind of talk about where it's, you know, how it's the trajectories so far and where things are headed.
+</details>
+
+>> James 和我在 OpenAI 从事计算机使用研究已经有一段时间了。过去六到九个月极其令人兴奋。当我们刚开始研发这些计算机使用产品时，几乎没有什么人在用。得益于研究团队的出色工作，今年早些时候模型在这类任务上的表现突然突飞猛进。随后我们与内部多个团队紧密合作，探索如何围绕它打造真正出色的产品体验。就在过去的几个月里，产品突然迎来了爆发式增长，人们真正看到了其中的价值。但这仍然处于非常早期的阶段，目前仍只有一部分用户在使用计算机使用功能，我认为我们将见证它的巨大增长。
+<details><summary>Original English</summary>
+>> Yeah, I mean James and I have been working on computer use for some time now um at OpenAI and it's been an incredibly exciting past like six to nine months, right? Because we started working on these computer use products and um very few people were using them. um the models um all of a sudden it felt to me became great at these kinds of tasks um earlier this year because of amazing work the research team did and then we've been working super hard with a bunch of teams internally on how to create actually good product experiences around this and then just in the past couple of months all of a sudden you know the product's growing like crazy and and people are really seeing the value in it um but I think it's still so early you know it's still the case that only um some you know portion of our user face is using computer use and um I think we're going to see it uh grow quite a bit.
+</details>
+
+>> 完全赞同。我是在一月份加入 OpenAI 的，当时负责 Atlas 产品。我很喜欢 Atlas，但我们意识到的一点是：在 Atlas 产品中，由于一些原因，代理体验并没有成为一个主要的卖点。使用它的人并不多，部分原因我认为是大多数人把它当作普通浏览器来对待。在过去的几个月里，随着模型能力的提升，我们现在将浏览器和浏览器使用整合到了所有现有的产品中（那些本身已有代理使用场景的地方），我们看到了每周环比达到 YC 级别的迅猛增长，其速度总是令人惊喜。
+
+我认为下一个重大的拐点是云端。桌面端目前仍然非常偏向高阶专业用户（power users）。我们可能经常使用桌面电脑，但大多数消费者使用的是手机。因此，如何给每一个聊天用户、给每一个在日常生活中只使用手机的人一台强大的计算机，让他们甚至不需要理解如何操作，计算机就能自动帮他们解决问题？对于如何将这项技术带给十亿用户，我感到非常兴奋。
+<details><summary>Original English</summary>
+>> Yeah, totally. I mean, you know, I joined OpenAI in January and I was I joined working on the Atlas product and love love Atlas, RIP Atlas, but the the I think you know, one of the things that we realized was um in the Atlas product, the agentic experience, I think for a few reasons, wasn't actually like a big selling point. Not many people used it, partly because I think most people treated it like a normal browser. Um, and over kind of the last few months because the model capabilities have gotten better. We've now incorporated browser and browser use into kind of all of our existing products where there was already a gentic usage, we've we've just seen, you know, it's like YC level of growth week over week and then always surprised by how fast it can go. And I think this next like big inflection point is like cloud, right? Like how do we like desktop is still very much a power user thing. I know we probably use our desktop all the time, but like most most consumers are on their phones, right? And so um how do you give every single chat user, how do you give everybody who's just using their phone for their day-to-day life um a powerful computer that they don't even need to understand how to use that it just kind of makes things work for them. And so really excited about how that kind of brings it to, you know, billion users.
+</details>
+
+>> 感觉使用计算机的代理已经拥有了巨大的发展势头，现在正处于“如何将它交到更多人手中、让他们信任并真正使用它”的关键时刻。你之前提到的关于连贯一致体验的观点非常关键，一旦这一点得到大幅改善，消费者在使用时会感到更自如、更自然。
+<details><summary>Original English</summary>
+>> It feels like computer using agents have had a ton of momentum behind them and now it's the moment of like, okay, how do we get it into more people's hands? they trust it, they feel like they can really use it. And your experience your point earlier about coherent experiences like that's that's a real I think once as that gets a lot better, I think consumers will feel more comfortable using it and and it'll feel more natural.
+</details>
+
+>> 我认为确实如此。我认为我们正处于计算机使用在消费端和企业端同时实现规模化扩张的时刻。是的，我也非常兴奋想看看它将走向何方，以及人们会用它构建出什么。
+<details><summary>Original English</summary>
+>> I think that's right. I think I think we're at the scaling moment of computer use both for consumer and enterprise. Yeah. At the same time. Um and I'm Yeah. really excited to see where it goes and what people build with it.
+</details>
+
+>> 太棒了，我们也是。
+<details><summary>Original English</summary>
+>> Nice. Us too.
+</details>
+
+>> 好的。
+<details><summary>Original English</summary>
+>> All right.
+</details>
+
+>> 非常感谢你们的加入。这次对话太精彩了。我们很喜欢探讨这个话题，直接从你们那里听到这些见解非常有趣。
+<details><summary>Original English</summary>
+>> Well, thank you so much for joining us. This was awesome. Um, we love talking about this topic and it was really fun to hear it from you guys directly.
+</details>
+
+>> 谢谢，也非常愉快。
+<details><summary>Original English</summary>
+>> Thank you. A lot of fun as well.
+</details>
+
+>> 很有趣，是的，谢谢。[笑声]
+<details><summary>Original English</summary>
+>> Fun. Yeah. Thanks. [laughter]
+</details>
+
+>> 谢谢大家。
+<details><summary>Original English</summary>
+>> Thank you.
+</details>
+
+>> 谢谢你们。
+<details><summary>Original English</summary>
+>> Thank you guys.
+</details>

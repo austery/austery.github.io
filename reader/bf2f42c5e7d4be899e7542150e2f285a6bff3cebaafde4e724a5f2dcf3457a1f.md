@@ -1,0 +1,312 @@
+---
+author: New York Times Podcasts
+date: '2026-11-20'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=lf7fjni9E04
+speaker: New York Times Podcasts
+tags:
+  - black-friday
+  - online-shopping
+  - inflation
+  - consumer-guide
+  - scam-prevention
+title: 黑色星期五与网购周：在价格普涨下识别真实折扣与网购防坑指南
+summary: Wirecutter 交易编辑 Nathan Burrow 指出，过去数年物价持续上涨，导致许多“黑五”折扣价接近甚至高于去年的标价。针对折扣力度减弱的现状，他分享了使用价格追踪工具核查历史走势、叠加信用卡与会员优惠、选购带官方质保的翻新商品等省钱策略，并提醒警惕 AI 生成的虚假钓鱼电商网站。
+insight: ''
+draft: true
+series: ''
+category: home-logistics
+area: life-family
+project: []
+people:
+  - Christine Cyrill
+  - Rosie Guerin
+  - Nathan Burrow
+companies_orgs:
+  - Wirecutter
+  - Apple
+  - Mejuri
+  - Keepa
+  - CamelCamelCamel
+  - Target
+  - Amazon
+  - American Express
+  - KitchenAid
+  - Dyson
+  - eBay
+  - Walmart
+products_models:
+  - MacBook
+  - iPad
+  - PlayStation 5
+media_books:
+  - The Wirecutter Show
+status: evergreen
+---
+### 节日促销季与物价上涨背景
+
+我是 Christine Cyrill。[音乐] 我是 Rosie Guerin。您正在收听的是《The Wirecutter Show》。[音乐]
+<details><summary>Original English</summary>
+I'm Christine Sirette. [music] I'm Rosie Garin. And you're listening to the Wire Cutter Show. [music]
+</details>
+
+>> Rosie，我们又回到了每年的这个时候，对我来说，有时感觉就像陷入了土拨鼠之日。
+<details><summary>Original English</summary>
+>> Rosie, we have returned to a time of year that to me sometimes feels like I'm in Groundhog Day.
+</details>
+
+>> 你真是太像 Andie MacDowell 了。
+<details><summary>Original English</summary>
+>> And you are such an Andy McDow.
+</details>
+
+>> 啊，谢谢你。我一直都是这么说的。[笑声]
+<details><summary>Original English</summary>
+>> A thank you. I have and I've always said that. [laughter]
+</details>
+
+>> 我接受这个夸奖。我喜欢这个。
+<details><summary>Original English</summary>
+>> I'll take that. I love that.
+</details>
+
+>> 我们显然是在谈论黑色星期五、网络星期一，也就是 Wirecutter 的“超级碗”赛季。
+<details><summary>Original English</summary>
+>> We're obviously talking Black Friday, Cyber Monday, Wire Cutters, Super Bowl season.
+</details>
+
+>> 是的，每年都在这个时候发生。而且似乎每年都开始得更早，持续得越来越长。现在的促销季几乎要持续一个月、两个月了。不过，我觉得以前这可能比现在更令人兴奋，或者看起来更兴奋，因为商品价格一直在攀升，而且在过去几年里似乎一直如此。所以我很好奇这对今年的黑色星期五和网络星期一促销季意味着什么。是的，今天我们将与 Wirecutter 的交易编辑 Nathan Burrow 一起讨论这个话题。他的[音乐]团队全都在追踪我们在 Wirecutter 上推荐的产品的价格，并在[音乐]我们的交易页面上与读者分享这些折扣。今年，你可能会看到[音乐]海量的优惠信息。你可能会觉得自己被它们淹没了。但 Nathan 的团队发现，你现在看到的很多促销活动[音乐]与几年前的促销相比都相形见绌。那么，你该如何找到真正的优惠呢？Nathan 将[音乐]为我们提供一些在物价持续攀升的情况下如何省钱的技巧，因为现在的折扣[音乐]已经不像以前那样名副其实了。折扣已经不再真正便宜了。
+<details><summary>Original English</summary>
+>> Yeah, it happens every year at the same time. And it seems to be getting earlier every year and lasting longer and longer. Like the deal season is just a month, two months at this point. Well, I feel like that used to be maybe more exciting than it is now or than it seems because prices for things are climbing and it seems that they've been doing so for the last couple of years. So, I'm curious what that means for this Black Friday, Cyber Monday deal season. Yeah, today we are going to talk about that with Wire Cutter deals editor Nathan Burrow. His [music] team spends all year tracking the prices of the products that we recommend on Wire Cutter and shares [music] those deals with our readers on our deals page. This year, you might see [music] what look like tons of deals. You might feel like you're bombarded by them. But Nathan's team has found that a lot of the sales that you see [music] right now pale in comparison to sales from a few years ago. So, how do you find real deals? Nathan's going to [music] give us some tips for how to save money even when the prices keep climbing because the deals, they are [music] just not dealing like they used to be. The deals ain't dealing.
+</details>
+
+>> 没错。我们当然会在节目说明中附上我们交易页面的链接，以便大家轻松找到 Nathan 的团队已经发现并在整个网购周（Cyber Week）期间继续寻找的所有[音乐]特惠。
+<details><summary>Original English</summary>
+>> That's right. And we will of course share a link to our deals page in the show notes so you can easily find all the [music] sales that Nathan's team has already found and will continue to look for throughout Cyber Week.
+</details>
+
+>> Nathan，非常高兴能再次邀请你来到节目中。欢迎回来。
+<details><summary>Original English</summary>
+>> Nathan, it's so great to have you back on the show. Welcome back.
+</details>
+
+>> 谢谢。很高兴能回来。Nathan，你之前曾来过节目，讨论过如何在黑色星期五和网购周期间获得最佳优惠的策略。我们以前邀请过你，你给我们提供了很好的指导。我认为今年我们想要重点关注的是这样一个现象：在过去的几年里，各类消费品的价格一直在不断攀升。那么，这对今年的节日购物意味着什么呢？是的。你可以想象，对于一个职位是“交易编辑”的人来说，看到价格一直在上涨，而你努力去寻找最优惠的价格，但折扣却不像以前那么好了，这真的很令人沮丧。
+<details><summary>Original English</summary>
+>> Thanks. It's great to be back. Nathan, you've been on the show to talk about strategies for how to get the best deals during Black Friday and Cyber Week. We've had you on before. You've given us great guidance. I think something we want to home in on this year is this idea that over the past few years, prices have just continued to climb and climb for all sorts of consumer goods. So, what does that mean for holiday shopping this year? Yeah. So, you can imagine it's really disheartening for somebody with the job title of deals editor to see that the prices are just going up and up and up and you're working to try to find the best prices you can, but the deals just aren't as good as they used to be.
+</details>
+
+>> 我们正走向打着引号的“优惠”。
+<details><summary>Original English</summary>
+>> We're moving toward deals in air quotes.
+</details>
+
+### 通胀下的价格数学与涨价推手
+
+>> 相对于全价来说，它仍然算是一种优惠，但让我来解释一下这是怎么运作的。假设某样东西在 2025 年的价格是 80 美元。打七五折（25% off）后，价格会降到 60 美元。
+<details><summary>Original English</summary>
+>> There's still a deal relative to full price, but let me speak to how that works a little bit. Let's imagine that something was $80 in 2025. A 25% off deal of 80 is going to drop the price to 60.
+</details>
+
+>> 那确实挺划算的。
+<details><summary>Original English</summary>
+>> That's a deal.
+</details>
+
+>> 是的，没错。但现在让我们设想一下，在 2025 年到 2026 年之间，这件商品的价格上涨到了 100 美元，
+<details><summary>Original English</summary>
+>> Yeah, absolutely. But then let's imagine that the price went up to $100 between 2025 and 2026,
+</details>
+
+>> 这在今天并不罕见。
+<details><summary>Original English</summary>
+>> which is not all that uncommon today.
+</details>
+
+>> 不幸的是，确实如此。根据所起作用的各种环境因素，商品同比上涨 10% 到 20% 是相对常见的。所以同一件商品，现在 2026 年的价格是 100 美元。打七五折后是 75 美元。这意味着消费者为完全相同的商品同比多支付了 15 美元。
+<details><summary>Original English</summary>
+>> Unfortunately, that's true. It is it is relatively common for things to go up by 10 20% year-over-year depending on the environmental factors that are at play. So that same item now it's $100 in 2026. 25% off $75. That's 15 bucks more year-over-year that shoppers are paying for the same item.
+</details>
+
+>> 所以从本质上讲，这个季节的促销价——我这里用引号表示——实际上可能就是去年的标价。是的，完全如此。从历史背景来看，大致出现过两波这样的涨价潮。一波发生在大约 2020 年，当时存在大量的全球物流压力和源于疫情相关事件的制造业问题；但我认为在过去的 18 到 24 个月里，又出现了第二波涨价潮。
+<details><summary>Original English</summary>
+>> So essentially the sale I'm using air quotes the sale price this season might actually just have been the list price last year. Yeah, absolutely. So, there have been two waves of these sort of price hikes to sort of give some historical context. One happened in around 2020. One, there were a lot of global logistical pressures and manufacturing issues that stemmed from from CO stuff, but I would say that there's been a second wave over the course of the last 18 to 24 months.
+</details>
+
+>> 我希望你能举出更多例子，因为我觉得听众可能会觉得，了解你所看到的具体例子类型会很有帮助。
+<details><summary>Original English</summary>
+>> I want you to give me more examples because I think people listening might it might help them kind of understand the the types of examples that you've seen.
+</details>
+
+>> 是的。这里有几个例子，遗憾的是，它们是我从过去 24 个月的历史记录中非常容易就找到的。我们推荐的一款由 Mejuri 公司制作的耳环，是 Huggie Hoops 款式。它们在 2025 年 8 月是 298 美元，到 2025 年 11 月就暴涨到 398 美元。我今年最后一次核对时，它们已经要 448 美元了。所以对于钻石耳环来说，这是个令人难以置信的涨幅。但不仅仅是奢侈品，人们日常购买的普通用品也是如此。比如我们挑选推荐的一款碳钢煎锅，那是我们的平价优选之一。在 2025 年 4 月之前，它的常规全价通常是 30 美元。之后我们看到的常规全价大概在 45 到 47 美元左右，最近几个月终于跳到了大约 50 美元。而在 2026 年最新、最引人瞩目的例子则与苹果公司的产品有关。他们甚至公开发布公告，表示不得不提高 MacBook 的价格，不得不提高 iPad 的价格。这些压力来自 AI 以及内存和存储成本，它们不仅会推高 MacBook 的价格，而且确实会推高很多消费电子产品的价格，手机和笔记本电脑肯定在其中。Nathan，为什么在过去的 18 到 24 个月里价格涨得这么厉害？
+<details><summary>Original English</summary>
+>> Yes. Here are some examples that I grabbed with relative ease, unfortunately, from our history during those 24 months. Earrings we recommend made by a company called Majuri. They're Huggy Hoops. They were $298 in August 2025, jumped to $3.98 by November of 2025. The last time I checked, they were $448 this year. So, that's that's an incredible jump for diamond earrings. But it's not just luxuries. It's everyday stuff that people are shopping for. And so we have a carbon steel frying pan pick. It's one of our budget picks. And the typical full price was $30 until April of 2025. And we've seen a typical full price around like 45 to 47 and then finally it jumped to around 50 in recent months. And the most recent high visibility example in 2026 is related to Apple products. They went so far as to make a public announcement saying that they had to increase prices on MacBooks. They had to increase prices on iPads. Those pressures are arising from AI and the cost of memory and storage that are just going to drive prices of not just MacBooks, but really a lot of consumer electronics, certainly phones and laptops up. Nathan, why have prices left so much in the last 18 to 24 months?
+</details>
+
+>> 嗯，正如你可以想象的，价格上涨有很多原因。关税；呃，伊朗的战争；每当化石燃料受到影响时，就会推高产品运送给你的成本。AI 是另一个正在推高科技产品成本的因素，无论是内存还是存储。10 月份的通胀，呃，消费者价格指数（CPI）同比上涨了 4%。这里面有很多不同的因素。作为一名追踪这些价格并在这些价格上寻找折扣的人，我可以告诉你，这让我感到无比沮丧，因为我一直在努力为 Wirecutter 的读者寻找最划算的特惠。但从购买任何东西的角度来看，这都令人沮丧——不仅仅是购买节日礼物，甚至包括购买日常生活必需品。我希望我能给大家带来好消息，但我认为现实情况是，这种情况短期内不太可能改变。我几乎从没见过价格上涨之后，在施加于其上的压力减轻时还能回落到原来的水平。通常，这类价格上涨都是近乎永久性的。因此，我真正鼓励大家去做的是想办法去适应这一点，想办法让自己的预算与此保持一致，并将当前的价格视为在近期内可能看到的最好的价格。在这些压力有所缓解之前，我们将继续看到价格上涨。
+<details><summary>Original English</summary>
+>> Well, as you can imagine, there are a lot of reasons why prices could go up. Tariffs, uh, the war in Iran, whenever fossil fuels are impacted by something, that's going to drive up the cost of, uh, product shipping to you. AI is another factor that is increasing the cost of tech, whether that's memory or storage. inflation in October. Uh the consumer price index went up 4% year-over-year. There are a lot of different factors here. And I can tell you as somebody who tracks these prices and looks for sales on these prices, like it's immensely frustrating to me because I'm trying to find the best sales possible for Wire Cutters readers. But this is just frustrating from a standpoint of shopping for anything. Not just shopping for gifts for the holidays, but shopping for everyday essentials. I wish that I had good news for folks, but I think that the reality is it's also just not likely to change anytime soon. I've never really seen prices go up and then go back down when the pressure that was exerted on them diminishes. Usually, these sort of price hikes are something approaching permanent. And so, what I would really encourage folks to do is to find a way to make peace with that. find a way to get their budgets in line with that and think about today's pricing as the best they're likely to see in the immediate future. Until these pressures sort of ease off, we're going to see prices continue to rise.
+</details>
+
+>> 有时候当我在网购时，我会把某件商品放在购物车里，反反复复纠结。我可能会把它放在购物车里 6 周或者更久。知道价格可能在这么短的时间内发生显著变化，真是令人沮丧。是的，实际上这曾是我建议人们做的事情之一，就是把东西留在购物车里，看看是否可能会降价，或者在购物时借此评估自己究竟有多想要和多需要这件商品。
+<details><summary>Original English</summary>
+>> Sometimes when I'm shopping online, I'll have something in my cart and I'll go back and forth and back and forth and back and forth. I'll keep it in a cart for 6 weeks or something. To know that a price could change significantly in such a short period of time is really disheartening. Yeah, it's actually that's one of the things that I used to recommend people do was leave things in their carts just to see if there was potentially a price drop or also just to gauge how much they actually wanted and needed an item when when they were shopping.
+</details>
+
+>> 但现在，如果你真的发现自己想要它，价格同比上涨 10% 甚至 20%，甚至可能是 25%，都并不是特别罕见。但考虑到今年促销季的优惠是如此严苛和不尽如人意，如果人们想要省钱，你会建议他们怎么做？有没有什么策略可以用来找到你认为真正划算的交易？
+<details><summary>Original English</summary>
+>> But now, if you do really find that you want that, it's it's not terribly uncommon for prices to jump, you know, 10% or even 20%, perhaps even 25 yearoveryear. But given how unforgiving and ungrate the deals are this season, what would you recommend people do if they're they are looking to save money, are there any strategies that you can use to find something that you would consider to be a good deal?
+</details>
+
+### 省钱策略：即时决策、被动优惠与价格追踪
+
+>> 是的，当然有。我认为，尽管我刚才说的听起来很暗淡，但你仍然可以通过一些方式找到省钱的途径。我最近几个月给出的一些不同建议是：如果你现在发现有符合你预算的促销价商品，我几乎建议直接购买。我们并没有真正看到价格会像往年那样从比如劳动节大促一路降到黑色星期五。因此，如果有一个符合你预算的价格，在很多情况下我都建议直接下手购买。我想说的第二点是，你可以找到一些被动省钱的机会，比如结合信用卡促销或会员优惠，这可以为你节省额外的百分比。此外，还可以使用价格追踪工具等来获得省钱机会，或者至少评估价格以及你可以期待的水平。我说的价格追踪器是指这类追踪工具，其中比较知名的有 Keepa 和 CamelCamelCamel，你可以在这些价格追踪工具中输入亚马逊的网址，它就会告诉你近期的价格历史。它还会显示整体的价格历史。这样你就可以看到，嘿，这件商品在去年的黑色星期五是否有降价，降幅是否超过了前几个月？这样你就能对可能发生的情况有所了解。你可以根据在追踪器中看到的情况进行一些预测。你还可以查看最近价格是否被上调过。虽然这些追踪器只是在大致方向上准确，但它们可以帮助你确保自己拿到了不错的优惠。关于价格变动这点，你见过——我是说，我想这也是你推荐价格追踪器的部分原因——你见过有些公司在黑五网购周之前抬高价格，以便在打折时制造出优惠比实际幅度更大的假象吗？
+<details><summary>Original English</summary>
+>> Yeah, absolutely. I I think that while what I've just said feels bleak, there are ways that you can still find to save money. Some of the changing advice that I've given in recent months is if you find something available at a sale price right now that fits your budget, I'd almost recommend buying it. We're not really seeing prices come down from, let's say, Labor Day sales to Black Friday in the same way that we have in previous years. And so, if you have a price that fits your budget, I would recommend going ahead and and buying in a lot of cases. The second thing that I would say is you can find sort of passive opportunities to save where you roll in things like credit card promos or membership deals that can save you additional percentages. Additionally, there are opportunities to save or at least assess pricing and what you can expect using things like a price tracker. So when I say a price tracker, there are these trackers. Some of the big names are Keepa and Camel Camel Camel where you can drop in an Amazon URL into this price tracker and it tells you what the recent price history is. It also tells you an overall price history. So you can see, hey, did this fall during Black Friday of last year or more than it had in the previous months? And you can get a sense of what might happen. You can kind of do some some prediction on the basis of what you see in a tracker. You can also see if the price has recently been hiked. Those those trackers are kind of directionally accurate, but they can help you ensure that you are getting a good deal. And to the point about movement of prices, do you ever see I mean I I imagine this is in part why you recommend a price tracker. Do you see companies hiking prices before Black Friday Cyber Week to give the illusion that when they then discount them, it seems more significant than it is?
+</details>
+
+>> 是的，他们是否故意制造“比实际情况更好”的假象，这一点是不得而知的。但我可以说的是，在 8 月、9 月出现涨价并不是特别罕见。根据常识，紧接着这几个月的就会是假日购物月，在那些月份里，商家会大肆宣传那些折扣。他们会大声宣扬：“哦，这是打六五折（35% off），打六折（40% off）。”然而，我的意思是，这件商品在 4 个月前的价格本身就便宜了 20% 到 25%。你提到了要精明利用信用卡促销和信用卡优惠。你在这方面有什么建议？大家该如何优化自己已有的信用卡，或者如果他们正在考虑办一张新卡该怎么做？
+<details><summary>Original English</summary>
+>> Yes, it's kind of unknowable whether they're intentionally trying to give the illusion that it's better than it is. But what I will say is that it's not terribly uncommon for price increases to happen in August, September. Pretty common sense. The months that are going to follow that immediately are going to be those holiday months where things are going to see those sales that they're shouting to the rooftop. They're going to say it's, "Oh, it's 35% off. It's 40% off." Well, I mean, the price was 20 25% less 4 months ago. You mentioned being smart about credit card promos and credit card offers. What is your advice here? How can someone kind of optimize either the credit card they already have or if they're thinking about getting a new one?
+</details>
+
+>> 你知道，首先我想说的是，我们不建议为了获得某种优惠而特意去办某张特定的信用卡。但我个人喜欢做几件事。我会寻找能够叠加被动储蓄的方法，特别是针对那些不经常打折的商品。比如，我是 Target Circle 卡的持卡人，在 Target 进行的任何消费，我都能被动获得 5% 的优惠。
+<details><summary>Original English</summary>
+>> You know, first I would say we don't recommend getting any particular credit card just to get an offer. But like there are a couple things that I like to do personally. I look for ways that I can kind of layer in passive savings where I know that especially on things that don't go on sale very often. So, like I am a Target Circle card holder and I get that 5% passively as part of just any purchase that I make there.
+</details>
+
+>> 你能拿到什么？比如 5% 返现吗？我没有 Target 卡，你说的 5% 返回是指什么？
+<details><summary>Original English</summary>
+>> What do you get like 5% cash back? I don't have a Target card, but what do you mean by 5% back?
+</details>
+
+>> 对于 Circle 卡持卡人来说，在购买时直接立减 5%。假设有某件商品从来不打折，比如 PlayStation 5。如今它很少会有折扣，在黑色星期五期间可能会有一些非常微小的优惠。能省下 5% 也不是小数目了。所以即使某件商品一直维持全价而不打折，你至少还能省下一点点。这是一种把一部分钱刮回来的方法。亚马逊的信用卡也是如此，不过那是采取返现的形式。比如，在亚马逊购物时，在某些情况下你可以选择慢速送货，以此来节省我想大概 5% 到 6% 的费用。同样，使用这类信用卡购买某些类型的商品时，你可以获得返现。最后，我想说比起这些被动省钱的机会（它们本身也是可行的），我甚至更喜欢某些信用卡自带的特定优惠。最著名的例子可能就是 American Express（美国运通）。他们有自己的 Offers 门户。通常它的运作方式是需要你使用该卡进行消费。它通常要求你消费超过一定的金额门槛，然后你就能获得返现。举个例子，目前运通对 Stanley 有一项优惠，Stanley 生产的产品是 Wirecutter 长期推荐的保温杯。如果你在那里消费满 75 美元，你的账单上就能获得 15 美元的返点。这种优惠并不是在购买时立减的。我喜欢尝试将这些运通优惠与现有的促销活动进行叠加。因此，如果我能找到一个在特定时间窗口内有效的优惠，同时在同一窗口期内找到促销活动，那么除了节省 15% 之外，我还能拿回我的 15 美元。你知道，这让我最终在付款时感觉好多了，因为实际上我获得的折扣比例比单纯的促销要好得多。
+<details><summary>Original English</summary>
+>> It's 5% off at the time of purchase for Circle card holders. So, let's say that something just never goes on sale like PlayStation 5. Rarely does it ever see sales these days. It might see some very small ones during Black Friday. Saving 5% on that isn't nothing. And so you can still save a little bit at least even if something is going to just stick at its full price and not go on sale. It's a way to scrape a little bit of that money back. The same is true of Amazon card, which that is in the form of cash back. So like you can opt for slow shipping in some cases on Amazon purchases to save I want to say 5 6%. Similarly, you're getting cash back with purchases on certain types of items with a card like that. Finally, I mean, one of the things that I like even more, I would say, than those sort of passive opportunities to save, which are viable in themselves. I like offers that come with certain credit cards. So, probably the most notable example is American Express. They have their own offers portal. Usually, the way that it works is it involves you using your card to make a purchase. It usually involves you spending above a certain dollar threshold and then you hit cash back. So, an example would be there's a current MX offer for Stanley, which makes Wire Cutters a longtime thermos pick. If you spend $75 there, you get a $15 credit to your cart. The savings aren't immediate at the time of purchase. I like to try to stack those offers with existing sales. So, if I can find, you know, an offer that is live during a certain window and I can find a sale during the same window, then I'm getting my I'm getting my $15 back in addition to saving 15%. You know, it makes me feel better about ultimately making the purchase cuz in effect, I'm getting a much better percentage than the sale.
+</details>
+
+>> 我觉得这里反复传达的意思是，你不会看到那种诱人的巨额省钱优惠。大家其实是在一分一厘地抠搜，艰难地争取一点节省，不要指望会有大幅降价。
+<details><summary>Original English</summary>
+>> I think the refrain here is that you're not seeing big sexy savings. We're really kind of nickel and dimming your way and clawing your way to savings and then not expecting these big swings.
+</details>
+
+>> 是的。我的意思是，滑稽的地方在于，从表面上看，很多地方仍然像是提供了巨大的折扣。我认为这对我来说算是一种职业危害，就是看到打六折（40% off），而心里很清楚它实际上只优惠了 15%，这种认知失调——这两种现实同时存在于我的脑海中。因此，Nathan，我听到你说的关键在于，[音乐]今年想要拿到好交易，核心就是要合理预期。预期整体价格会更贵，折扣给人的感觉可能不如往年那么令人兴奋。Keepa 和 CamelCamelCamel 等比价工具可以帮助你[音乐]判断你看到的优惠到底有多实在，而且你可以通过查看信用卡奖励和会员价格来设法扣回一些节省。我们将稍作[音乐]休息，回来后我们将讨论通过寻找翻新商品来省钱，以及在网购时避免受骗的技巧。请[音乐]稍候。
+<details><summary>Original English</summary>
+>> Yeah. I mean, and the funny part about it is it's still going to look on the surface like those big savings are being offered from a lot of places. It's an occupational hazard, I think, for me is just the cognitive dissonance of seeing 40% off and knowing that it's 15% off, like having those two realities exist in my head at the same time. So, Nathan, what I'm hearing here is [music] that this year getting a great deal is all about being reasonable. Expect the prices will be more expensive across the board and that the deals will feel probably less exciting than they have in previous years. Price comparison tools like Keepa and Camel Camel Camel can help you [music] determine how good of a deal you're actually seeing, and you can find ways to scrape back savings by checking your credit card rewards and membership pricing. We're going to take [music] a quick break and when we come back we'll talk about saving money by looking for refurbs and tips for avoiding scams while shopping online. Stick [music] around.
+</details>
+
+### 选购翻新商品与二手送礼考量
+
+欢迎回来。我们正在与 Wirecutter 交易专家 Nathan Burrow 一起讨论在这个节日季如何更聪明地购物。[哧鼻声] Nathan，我们能聊聊翻新（refurbished）设备吗？这实际上是我最喜欢的品类之一，因为我总是忘记还有这个选项，而每次想起来时，我都超级兴奋。你能谈谈这方面都有哪些选择吗？我们需要了解什么？
+<details><summary>Original English</summary>
+[music] Welcome back. We're talking about how to shop smarter this holiday season with wire cutter deals expert Nathan Burrow. [snorts] Nathan, can we talk about refurbished gear? This is actually one of my favorite categories because I perpetually forget that it's an option and then when I'm reminded, I'm so excited. Can you talk about what the options are there? What do we need to know?
+</details>
+
+>> 大型零售商通常拥有相当完善的翻新政策，他们能够为你提供品质保障并包含保修服务，而且退货政策也很好。这些正是我们在选购翻新商品时所看重的东西。在某些情况下，选择翻新商品可以为你节省相当可观的金额。而且你知道，这还有环保可持续性的额外好处。你可以省下 20%、25%，甚至在此基础上还会有促销折扣。eBay 会针对官方认证翻新商品（certified refurbs）推出一系列促销，你可以叠加优惠券代码，在购买翻新商品原本已享受的折扣之上获得额外的优惠。对于想要省钱的人来说，这是一个非常好的机会，尤其是那些看重可持续性或者单纯就是想省钱的人。Wirecutter 长期推荐的一些商品经常会有翻新促销。一个极好的例子是 KitchenAid 厨师机（台式搅拌机）。这些产品不仅可以通过 eBay 认证翻新购买（KitchenAid 在 eBay 上有官方店面），而且也可以直接从 KitchenAid 官方购买。如果你访问 KitchenAid 的官方网站，可以在那里找到一个翻新专区。在过去的五六年里，这些厨师机的价格上涨了不少。如果买一台全新的，你可能需要花费大约 350 到 400 美元；而买一台翻新机，花费就会少得多。Dyson（戴森）的无绳吸尘器和吹风机也是如此。这些产品可以在戴森的 eBay 官方店购买翻新版。它们也可以通过像沃尔玛这样的大型零售商购买，并附带戴森的保修。因此，你可以放心地知道自己既省了钱，同时也有保障，知道如果出了问题，随时可以换货。
+<details><summary>Original English</summary>
+>> Major retailers have pretty robust refurbished policies where they're able to give you a guarantee and offer a warranty and the return policy is good. And those are the kind of things that we look for with refurbished items. And you can save a pretty substantial amount in some cases by opting to go refurbished. And you know, there's the added bonus of uh sustainability. You can save 20%, you can save 25% and then there are even sales on top of that. eBay does a series of sales on certified refurbs where you stack a coupon code to get you an additional savings on top of the savings that you were already getting with a refurbished item. It's a really good opportunity for people to save, especially people that prioritize sustainability or otherwise just want to save. There are some things that wire cutter has recommended for a long time that we see reurb sales on. One great example is KitchenAid stand mixers. Those are available not only via like eBay certified reurb which KitchenAid has an eBay storefront but also from KitchenAid directly. And so if you go to KitchenAid site you can find a refer portal there. And the cost of those stand mixers has increased a bunch over the last five six years. So, you'd be looking at spending like $350, $400 for one new. You're spending much less for one refurbished. Same is true of Dyson stick vacuums and hair dryers. Those are available refurbished from the Dyson eBay storefront. They're also available via major retailers like a Walmart that are accompanied by a Dyson warranty. So, you can feel good knowing that you're going to save and you're also going to have some insurance knowing that if something goes wrong, you can always get it replaced.
+</details>
+
+>> 好吧。但我很想知道，我们对把二手或翻新物品作为礼物送人怎么看？比如，如果收到一台二手的 KitchenAid 或二手的——
+<details><summary>Original English</summary>
+>> All right. I got to know though, what's our take on giving something that's used as a gift? Like, would you be excited to receive a used KitchenAid or a used
+</details>
+
+>> 在当前的经济环境下？
+<details><summary>Original English</summary>
+>> in this economy?
+</details>
+
+>> 是的，在当前的经济环境下，收到肯定挺高兴的。好吧，你觉得呢，Nathan？
+<details><summary>Original English</summary>
+>> Yeah, in this economy, you'd be happy. Okay. What about you, Nathan?
+</details>
+
+>> 这取决于收件人。就像很多送礼的事情一样。如果你生活中认识的人很看重环保可持续性，那绝对没问题；或者说，关键在于充分了解你要送礼的对象，并据此行动。
+<details><summary>Original English</summary>
+>> It depends on the recipient. Like so many things that are gifttoriented. If you know somebody in your life who like prioritizes sustainability, then absolutely or it's all about getting a good sense of who you're giving that gift to and operating accordingly.
+</details>
+
+>> 我问这个问题有点试探性，因为我完全赞成这样送礼。但我可以看到我的孩子们可能想要一个戴森吹风机，而我绝对、绝对、绝对不会买新的，因为它们太贵了。但如果我能以好价钱买到一个二手或翻新的，我想他们会非常兴奋的。
+<details><summary>Original English</summary>
+>> And I asked that a little coily because I would totally be okay with this. But I could see my kids wanting a Dyson hair dryer and I'm never ever ever going to buy a new one because they're so expensive. But if I could find a good deal on a used one, I think they'd be pretty pumped.
+</details>
+
+>> 我充分利用了我家孩子还不识字这个事实。[笑声]
+听起来，对于其中一些较贵的商品，今天的核心词就是“保修”（warranty）。它能让你额外感到安心。
+<details><summary>Original English</summary>
+>> I take advantage of the fact that my kids can't read. [laughter] And it sounds like the word of the day is warranty for some of these bigger ticket items. It'll give you a little extra piece of mind.
+</details>
+
+>> 是的，绝对如此。当我们为读者寻找物美价廉的商品时，这一点对我们来说极其重要。我认为，在很多情况下，这也是 Wirecutter 指南在挑选推荐产品过程中的一部分：无论商品是全新还是翻新的，他们都会考察那些保修计划。
+<details><summary>Original English</summary>
+>> Yeah, absolutely. That's super important to us when we're looking for bargains for our readers. I think that it's also just part of the pickmaking process in a lot of cases for wire cutter guides is they're looking at those warranty programs whether something is new or refurbished.
+</details>
+
+### 防范虚假钓鱼电商与安全结账
+
+Nathan，大家今年在寻找优惠时，有没有什么需要特别警惕的危险信号（red flags）？
+<details><summary>Original English</summary>
+Nathan, are there any red flags folks should specifically watch out for this year when deal hunting?
+</details>
+
+>> 有的，不仅是在寻找折扣时，在通常的购物中也是如此：现在冒出来的假冒网站多得多了。举个例子，我们昨天刚在聊天中讨论过这件事。我们的一位作者在买鞋时偶然发现了一个鞋类品牌 Camper 的网站，表面上乍一看很正规，但仔细查看后发现根本不是真正的 Camper 官网。这是我在过去一年里经常见到的现象。我之前在寻找我们推荐的一款 Dustbuster 手持吸尘器，看它是否有打折，结果发现了一个假冒的百得（Black & Decker）网站。这种情况也发生在 Blundstone 上，以及生产 Wirecutter 推荐加热马克杯的 Ember 上。这种现象正变得相当普遍。我认为这与不良分子在当前 AI 时代能够进行“氛围编码”（vibe code）有关。
+<details><summary>Original English</summary>
+>> Yes, and not just when deal hunting, but just when shopping in general, there are fake websites that are popping up a lot more. To give you an example, we were just discussing this yesterday in a chat. One of our writers was looking for shoes and stumbled across a a website for a shoe brand camper that on its face initially looked legit, but upon closer examination was not the actual camper website. This is something that I've seen a bunch in the course of the last year. I was looking for one of our Dustbuster pics to see if it was on sale and there was a fake Black & Decker site. This has happened with Blundstone with Ember who makes wire cutters heated mug pics. It's becoming pretty pervasive. I think it has to do with bad actors being able to vibe code now that we're in this era of AI.
+</details>
+
+>> 你说的“氛围编码”（vibe code）是什么意思？
+<details><summary>Original English</summary>
+>> What do you mean by vibe code?
+</details>
+
+>> 所谓的氛围编码就是让像 Claude Code 这样的 AI 工具为你创建网站。你只需要给它发提示词，它最终就能搭建出整个站点。不良分子正在做的是，他们通过这种方式生成这类仿冒网站，以获取你的支付信息。在我看来，这就解释了为什么近年来我们看到的此类网站数量大幅激增。所以我会把原因归结于此。
+<details><summary>Original English</summary>
+>> So vibe coding is having AI like cloud code for example create a website for you. You can just prompt it and it ultimately creates the site. What bad actors are doing is they're vibe coding sites like this in order to get your payment information. That to me explains the uptick in the number of these sites that we've seen in recent years. So that's what I would attribute it to.
+</details>
+
+>> 我去年差点就上当了。
+<details><summary>Original English</summary>
+>> I almost fell for this last year.
+</details>
+
+>> 是怎么回事？对。
+<details><summary>Original English</summary>
+>> How do you Yeah.
+</details>
+
+>> 太糟糕了。我十几岁的孩子当时在选购 Lululemon 的短裤或类似的东西，她找到了这个网站，上面只要大约 15 美元，她高兴坏了。当时我觉得那看起来不太对劲。但随后我在同一个网站上看到了一些 Hoka 跑步鞋。我完全差点上当了，我们把所有东西都加到了购物车里。然后当我开始结账时，我发现网址看起来怪怪的。它看起来不对劲。我想它应该是想模仿 Nordstrom Rack。一旦我仔细看了网址，很明显它不是 Nordstrom 的网址，就像是，我不知道，里面有一些错误的字母和数字，那时我才意识到它是假的。但我也听说过不少人误入这些网站。该如何避免呢？
+<details><summary>Original English</summary>
+>> It was awful. My tween was shopping for some Lululemon shorts or something like that and she found this site where she was finding them for like $15 and she was just over the moon and I was like that doesn't look right. But then I saw some Hokas on the same site, Hoka running shoes. I totally almost fell for it and we added everything to cart and then once I was starting to check out I could see the URL looked wonky. It did not look right. I think it was supposed to be mimicking Nordstrom Rack. Once I looked at the URL, it was just clearly not Nordstrom's URL, it was like, I don't know, there were some wrong letters and numbers in there, and that's when I figured out that it was fake. But I've also been hearing about people kind of landing on these sites. How do you avoid it?
+</details>
+
+>> 是的。关于这一点，最阴险的事情之一是，我看到它们出现在了 Google Shopping 的搜索结果中。我看到它们出现在了社交媒体上。它们出现在了正规合法网站也会出现的地方，这使得分辨它们变得更加困难。但有一些方法可以让你退一步，意识到某样东西可能不是合法的。我想说的第一点就是采取常识性的方法：如果某件事听起来好得难以置信（too good to be true）。如果一个价格好得令人不敢相信，那它很可能就是假的。前面提到的那个 Ember 的例子就是这样，它的折扣实际上有五折或四折（50% 或 60% off）。经过一番仔细核对，我们发现该网站的网址看起来不对头。[哧鼻声] 这也就是我关于这方面的第二点建议：查看该网站的网址（URL）。尝试找到制造商或零售商的官方网站，并将两者进行对比。在很多情况下，你会发现假网址就是有破绽，有时并不是以 .com 结尾。在两个不同的案例中，我们看到它们使用的是以 .it 结尾的网址。
+<details><summary>Original English</summary>
+>> Yeah. I mean, one of the most insidious things about this is that I've seen these pop up on Google Shopping results. I've seen them pop up on social media. They're happening in places where other legit websites are showing up, and so it makes it even harder to sort of tell between them. But there are ways to take a step back and know that something is probably not legitimate. The first one I would say is just taking a common sense approach. If something feels too good to be true. So if a price looks just unbelievably good, it probably is. That was the case with the Ember example that popped up where it was literally I think 50 or 60% off. Upon some examination, we saw that the website URL didn't look right. [snorts] And that would be my second bit of advice around this is look at the URL of the site in question. Try to find the manufacturer retailer site and compare the two. In many cases, you'll find that the URL is just off sometimes instead of a.com thing. We've been seeing them pop up in two different cases withit URLs.
+</details>
+
+>> 这完全是一个全新的世界。
+<details><summary>Original English</summary>
+>> It's a whole new world.
+</details>
+
+>> 是的。但基本上，Nathan，我想你的意思是，如果你的“蜘蛛感应”（直觉）对你所在的网站发出警报，你可能就应该听从它。
+<details><summary>Original English</summary>
+>> Yeah. But basically, I think what you're saying, Nathan, is if your Spidey sense goes up about a site you're on, you should probably listen to that
+</details>
+
+>> 百分之百。我认为只要保持警惕，当你进入网站的某一步（比如支付页面）感觉不太对劲时，遵从那种直觉。[音乐]
+<details><summary>Original English</summary>
+>> 100%. I think just being cautious and when you get to a level of a website like the payment portal that just doesn't feel quite right, follow that instinct. [music]
+</details>
+
+>> Nathan，非常感谢你的加入。我们真的很感激。我们总是[音乐]很喜欢有你在节目中指导我们度过这个促销季。谢谢你，Nathan。
+<details><summary>Original English</summary>
+>> Nathan, thank you so much for joining us. We really appreciate. We always [music] love having you here guiding us through uh the deal season. Thanks, Nathan.
+</details>
+
+>> 谢谢。很高兴能来这里。
+这里的核心要点在于，尽管你看到的优惠数量可能和以往一样多，[音乐]但它们并不都那么划算。因此，希望运用这些小技巧能帮助你避免在这个节日季花冤枉钱。[音乐] 试试那些价格追踪工具来评估优惠幅度；寻找带有制造商保修的翻新产品；并[音乐]警惕诈骗网站。如果一个折扣好得令人难以置信，那它很可能就是假的。务必仔细核对网址。[音乐] 当然，你可以在 Wirecutter 交易页面上轻松找到 Nathan 及其团队为 Wirecutter 推荐商品找到的所有优惠链接。[音乐] 我们会在节目说明中放置链接。《The Wirecutter Show》执行制片人是 Rosie Guerin，[音乐]制片人是 Abigail Keel。工程支持由 Maddie Maziello 和 Nick Pitman 提供。本期节目由 Katherine Anderson 混音。[音乐] 原创音乐由 Dan Powell、Marian Lozano、[音乐] Rowan Nemoto、Katherine Anderson 和 Diane Wong 创作。Cliff Levy 是 Wirecutter 的副出版人兼总经理。Ben Frumin 是 Wirecutter 的总编辑。我是[音乐] Christine Cyrill。我是 Rosie Guerin。感谢收听。
+<details><summary>Original English</summary>
+>> Thanks. It was great to be here. The big takeaway here is that while you may see just as many deals as ever, [music] they aren't all that great. So, using these tips will hopefully help you avoid paying more than you need this holiday season. [music] Try out those price trackers to evaluate deals. Look for refurbished products with warranties from the manufacturer and [music] watch out for scam sites. If a deal seems too good to be true, it probably is. Always double check the URL. [music] And of course, you can find handy links to all the deals that Nathan and his team find for wire cutter recommendations [music] on the Wire Cutter deals page. We'll drop a link in our show notes. The Wire Cutter Show is executive produced by Rosie Garren and [music] produced by Abigail Keel. Engineering support from Mattie Maziello and Nick Pitman. Today's episode was mixed [music] by Katherine Anderson. Original music by Dan Powell, Marian Lozano, [music] Rowan Nemoto, Katherine Anderson, and Diane Wong. Cliff Levy is Wire Cutter's deputy publisher and general manager. Ben Fman is Wire Cutters editor-inchief. I'm [music] Christine Sirette. And I'm Rosie Garren. Thanks for listening.
+</details>

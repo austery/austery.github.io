@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>美研芒格君 · 2026-09-13 · 帖子</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="x-reading" data-pagefind-body>
+  <header class="x-heading">
+    <p class="x-eyebrow">𝕏 原文阅读 · 帖子</p>
+    <h1 data-pagefind-meta="title">美研芒格君 · 2026-09-13 · 帖子</h1>
+    <span hidden data-pagefind-meta="author">美研芒格君</span>
+    <span hidden data-pagefind-filter="x_author" data-pagefind-ignore>2058239737522204672</span>
+    <span hidden data-pagefind-meta="date">2026-09-13T02:54:16.000Z</span>
+    <p>保留来源原文。时间显示为 Toronto 当地时间；未保存的配图与引用请前往 X 查看。</p>
+    <a href="/x/">返回 X 阅读</a>
+  </header>
+  <p class="x-status">保存说明：除条目另有标注外，正文尚未人工核对 · 图片未保存 · 引用或对话上下文可能不完整。</p>
+
+  
+<article class="x-entry" data-author="2058239737522204672" data-long="true" id="x-post-2098968475792499163">
+  <span id="x-post-heading-2098968475792499163" class="x-post-anchor" aria-hidden="true"></span>
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div id="x-post-time-2098968475792499163" class="x-post-heading"><time datetime="2026-09-13T02:54:16.000Z">2026-09-12 22:54</time></div>
+    <a class="x-outbound" href="https://x.com/kay2289123/status/2098968475792499163" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text">最近有很多关于 RSI（Recursive Self-Improvement，递归自我改进）的讨论，也让大家开始担心，AI 会不会不断升级自己，最后超出人的控制
+
+我周末集中看了一批 RSI 2026 年的论文和公开项目，想把几个问题讲清楚：现在到底发展到了哪一步，业界 popular 的讨论是什么，以及我们普通人能怎么用。最后我会给大家一个可以用来直接给 AI 实现初步 RSI 的 Prompt
+
+这次按方向来聊，论文和项目放在对应段落，大家可以收藏下来慢慢看
+
+1/ 先分清楚，大家说的“自我改进”，有三件不同的事
+第一件，AI 根据反馈，把当前任务再做一遍。
+
+第二件，它把有效经验、工具或工作流程留下来，下一次任务也能用上。
+
+第三件，它进一步改进“下一轮怎么学习、怎么做实验、怎么选方案”这套方法。
+
+越往后，接手的研发决策越多。9 月 10 日发表的的《The Last AI Built by Humans》把这些自主范围拆成了执行、策略、经验获取、环境适应和元改进几层，适合当阅读地图 https://t.co/aOWmBcFure
+
+2/ 今年一条很密集方向研究线，是让 AI 改自己的 Harness
+
+Harness 可以理解为模型周围那套实际干活的系统：读哪些文件、给模型看什么上下文、怎么调用工具、失败后怎么恢复、什么时候算完成。
+
+今年 3 月的 Meta-Harness，6 月首发、8 月更新的 Self-Harness，以及 7 月底的 DarwinX （Salesforce），都在研究怎样把这套系统交给自动实验来优化
+
+3/ 另一条已经出现企业内部应用的路线，是把人的纠错变成持久经验
+
+今年 1 月的 MemRL，把经验和“这条经验实际有多管用”一起保存。下次先找相关经验，再根据使用效果挑选，而不只是找文字最相似的记录
+https://t.co/kJ8zPuFy4G
+
+到了 9 月 2 日，Meta 公开了一个更贴近日常工作的内部案例：专家纠正 Agent 后，系统会判断错误来自知识缺口还是处理流程，把纠错转成文件修改，重放原来的问题、跑回归测试，再交专家审核。
+
+通过后，这次失败还会进入以后的测试集。这是 Meta 在特定专业领域的内部实践
+https://t.co/YRgKSDa7So
+
+对我们普通用户来说，这一条就很有用了, 人的一次纠错，开始有机会变成后续任务都能使用的改进
+
+回到关键问题，我觉得今年这些工作的共同价值，是让我们开始认真维护一个会积累经验的系统。所以我们现在可以怎么用？
+
+篇幅有限，我把一个我们都能用上的效仿 RSI 的基础 prompt 放在评论区里，
+
+我最近也在观察，每次任务留下什么，每次纠错改到哪里，下一次能否因此做得更好，这些都已经可以在自己的工作里动手验证了。
+
+为了防杠，我得说明一下：这三个方向只是工程向的，硅谷大佬们担心的更多是研究向的内容。
+
+这些内容比较硬核，研究向 RSI我会在后面帖子里单独去聊</div>
+    <footer>
+      
+      <div class="x-related"><a href="/content/clippings/x/posts/2098958020915188124/#x-post-2098958020915188124">引用原帖（已保存）</a></div>
+      <details><summary>来源与保存记录</summary><p>Post ID: 2098968475792499163<br>保存时间：2026-09-13T14:16:20.254Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Linked or quoted context may not be saved</p><p>QUOTES: x:post:2098958020915188124 · /content/clippings/x/posts/2098958020915188124/</p></details>
+    </footer>
+  </div>
+</article>
+
+  <nav class="x-pagination" aria-label="同来源合集" data-pagefind-ignore> </nav>
+</div>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

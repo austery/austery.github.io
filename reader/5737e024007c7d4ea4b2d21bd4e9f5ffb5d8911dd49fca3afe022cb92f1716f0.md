@@ -1,0 +1,1363 @@
+---
+author: TVO Today
+date: '2026-11-20'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=xAy64YRdFJI
+speaker: TVO Today
+tags:
+  - dairy-industry
+  - supply-management
+  - food-policy
+  - farmland-preservation
+title: 加拿大高蛋白热潮与乳制品供应：从茅屋奶酪短缺、贸易关税到安大略省农田保护
+summary: 节目探讨了加拿大因消费者追求高蛋白饮食引发的乳制品需求激增（如茅屋奶酪），分析了乳制品供应管理制度在调控产量和价格方面的运作机制；随后核实了美加贸易争端中有关乳制品高额关税的指控与关税配额实际情况；最后就安大略省《第109号法案》讨论了限制外资所有权是否能真正解决开发导致的农田流失问题。
+insight: ''
+draft: true
+series: ''
+category: politics-society
+area: society-thinking
+project: []
+people:
+  - Jeyan Jeganathan
+  - Michael von Massow
+  - Adam Petherick
+  - Charlie Buckley
+  - Donald Trump
+  - Martin Straathof
+companies_orgs:
+  - Gay Lea Foods
+  - Dairy Farmers of Ontario
+  - Ontario Farmland Trust
+products_models: []
+media_books:
+  - The Rundown
+status: evergreen
+---
+### 加拿大高蛋白热潮与乳制品产业应对
+
+>> 朋友们，我跟你们说，下班后晚饭前最棒的加餐妙招就是茅屋奶酪（cottage cheese）。
+<details><summary>Original English</summary>
+>> Guys, I'm telling you, the
+best hack after work to eat
+before dinner is cottage cheese.
+</details>
+
+>> 没错，茅屋奶酪迎来了高光时刻。那条 YouTube Short 短视频的播放量已经超过一百万次，而且这只是网上众多夸赞这种富含蛋白质的乳制品视频之一。需求是如此之高——听听这个：Gay Lea Foods 正在投资2亿加元扩建其位于多伦多的生产设施。你问为什么？为了帮助解决他们所称的全国性茅屋奶酪短缺。是的，茅屋奶酪短缺。我敢肯定你之前绝没想到会有这种情况。现在，这全都属于一场正在改变加拿大人消费选择以及该行业运作方式的高蛋白热潮的一部分。那么，安大略省的生产商跟得上步伐吗？这一转变对农民和消费者又意味着什么？现在，这一切都是在贸易战期间发生的。而且随着该行业逐步适应即将出台、将对安大略省农民产生影响的立法——即所谓的第109号法案《保护安大略省粮食独立法案》（Protecting Ontario's Food Independence Act），其旨在达成目标的方式之一是限制外国收购。但这真的是个问题吗？眼下对安大略省农田的最大威胁究竟是什么？我是 Jeyan Jeganathan，这里是《The Rundown》。因为我知道你们想了解更多关于茅屋奶酪的数据，请听这组数据：如果将2023年前六个月与2026年同期相比，加拿大的茅屋奶酪产量增长了75%。Adam Petherick、Michael von Massow，非常高兴能请到两位做客《The Rundown》并来到我们的演播室。Mike，我想先请问你，作为一名食品经济学家，你看到像希腊酸奶、乳清蛋白、蛋白牛奶以及茅屋奶酪等乳制品眼下正迎来高光时刻。你能跟我们说说我们是如何走到这一步的吗？
+<details><summary>Original English</summary>
+>> That's right, cottage cheese
+is having a moment.
+That YouTube short has been
+viewed more than a million
+times, and it's just one of many
+videos out there praising the
+protein packed dairy product.
+Demand is so high.
+Get this Gay Lea foods is
+investing $200 million to expand
+a manufacturing facility in
+Toronto.
+Why you ask?
+To help address what it's
+calling a national cottage
+cheese shortage.
+Yes, a cottage cheese shortage.
+I'm sure you didn't see that one
+coming.
+Now it's all part of a protein
+craze that's changing what
+Canadians buy and how the
+industry works.
+So are Ontario's producers
+keeping up, and what does this
+shift mean for farmers and
+consumers?
+Now, all of this is happening
+during a trade war.
+And as the industry adjusts to
+upcoming legislation that will
+impact Ontario farmers, it's
+called Bill 109, Protecting
+Ontario's Food Independence Act,
+one of the ways it's aiming to
+do that, restricting foreign
+acquisitions.
+But is that actually an issue?
+And what are the biggest threats
+to Ontario farmland right now?
+I'm Jeyan Jeganathan, and this
+is The Rundown.
+Because I know you want more
+stats on cottage cheese.
+Just listen to this.
+If you compare the first six
+months of 2023 to the same
+period in 2026, you're looking
+at a 75% increase in cottage
+cheese production in Canada.
+Adam Petherick Michael von
+Massow, great to have you both
+on The Rundown and in our
+studios.
+Mike, I'm going to start with
+you as a food economist, you're
+seeing dairy products like Greek
+yoghurt, whey protein, protein,
+milk, and cottage cheese.
+Having a moment right now.
+Can you tell us how we got here?
+</details>
+
+>> 好的，这其实关乎蛋白质，对吧？消费者热爱蛋白质。我的意思是，这有点讽刺。作为北美居民，我们并不缺蛋白质，但人们在追求高蛋白密度的食物。一部分原因是 GLP-1 药物。另一部分就是随着年龄增长，人们开始考虑维持肌肉等这类事情。所以蛋白质现在很流行，我们正在重新发现一些老产品，比如茅屋奶酪，而像希腊酸奶这样的较新产品也是在饮食中摄入蛋白质的好途径。而且它们的蛋白质密度高，是健康的蛋白质。所以我认为就是这样。我过去常说这只是一时的热潮，但我现在不太确定了。我不确定它是否会消退，所以它更像是一个会长久留存的趋势。
+<details><summary>Original English</summary>
+>> Well, it's about protein,
+right?
+You know, consumers are loving
+protein.
+I mean, it's a bit ironic.
+We are not short protein as as
+North Americans, but people are
+looking for protein dense.
+Part of it is GLP-1.
+Part of it is just, you know,
+people are thinking about as we
+get older about about muscle
+preservation and those sorts of
+things.
+So protein are cool and we're
+rediscovering some of these old
+products like cottage cheese and
+newer products like Greek
+yoghurt are a good way of
+getting protein into our diet.
+And protein dense.
+And they're healthy proteins.
+So, so I think it's it.
+I like to say it's a fad, but
+I'm not sure.
+I'm not sure that it's one
+that's going to go away.
+So it's more of a trend that's
+here to stay.
+</details>
+
+>> 好的。那我们就顺着这一点继续聊。我想从农场主的角度来了解一下，Adam，你是第七代奶农。正如 Mike 所说，茅屋奶酪突然又流行起来了，不再只是你祖父母或父母辈吃的东西，也不是某种节食风潮之类的。奶农们事先预料到这一点了吗？
+<details><summary>Original English</summary>
+>> Okay.
+Well we'll pick up on that note.
+I want to get from a farmer's
+perspective, Adam, you are a
+seventh generation dairy farmer.
+Cottage cheese, as Mike is
+saying, is suddenly cool again,
+not something just for your
+grandparents or parents, not a
+diet fad or anything like that.
+Did farmers see this coming at
+all?
+</details>
+
+>> 我想，这确实相当难以预料。我认为，正如 Mike 所提到的，这是一种饮食趋势吗？你知道，我们一直在推广乳制品，而且我认为很多人意识到这是营养密集的。它是一种干净、简单、纯粹的产品。而且，你知道，这也起到了一定作用。但我认为，对于如今市场上出现的这些巨大波动，无论是什么产品，都很难提前预测。
+<details><summary>Original English</summary>
+>> I think it was.
+It was pretty hard to see it
+coming.
+I think, as Mike alluded to, is
+this a dietary trend?
+You know, we've always promoted
+dairy, and I think a lot of
+people realise this
+nutritionally dense.
+It's a clean, simple, pure
+product.
+And, you know, some of that
+plays into this as well.
+But I think I think it would be
+pretty hard to predict some of
+these big swings that we see in
+the in the markets these days,
+no matter what it is.
+</details>
+
+>> 奶农们是如何应对这种需求的？
+<details><summary>Original English</summary>
+>> How are farmers responding to
+the demand?
+</details>
+
+>> 嗯，我想说在农场端，我们致力于以任何所需的形式来满足需求。所以我认为这需要一点时间和规划，去与加工商以及整个行业合作，确保我们在深思熟虑地做好准备，保证消费者能买到他们想要的东西。如果他们渴望更多的茅屋奶酪或希腊酸奶，我们绝对会为他们提供，并会全力以赴。
+<details><summary>Original English</summary>
+>> Well, I'd say on farm, you
+know, we are committed to
+filling demand in whatever form
+it takes.
+So I think that takes a little
+bit of time and planning to work
+with the processors, with the
+industry to make sure that we're
+we're thoughtfully preparing to
+make sure that consumers can
+have what they want.
+And if they crave more cottage
+cheese or Greek yoghurt, we're
+absolutely going to provide that
+to them and we'll do what it
+takes.
+</details>
+
+>> Mike，请帮我们从趋势的角度来理解一下，像茅屋奶酪或希腊酸奶这类产品的价格是怎样的？与十年前或五年前相比，现在的价格发生了什么变化？我们是价格翻倍了吗？目前处于什么水平？
+<details><summary>Original English</summary>
+>> Mike, help us understand from
+a sort of a trends sort of
+perspective, the price of
+something like cottage cheese or
+Greek yoghurt.
+What is it?
+What does it change from where
+we are now to maybe ten years,
+five years ago?
+Have we like, are we doubling in
+price?
+Where are we at?
+</details>
+
+>> 噢不，并没有。如果你看一下乳制品总体以及具体单品的通胀率，它实际上一直低于整体食品价格的通胀水平。原因之一就是我们的体制提供了强得多的价格稳定性。我们有时面临的挑战是其中一些产品的相对价格，因为像 Adam 这样的人在生产牛奶，他们可以通过饲养管理和遗传育种实践稍微调整牛奶中的成分。但真正的挑战在于，如果我们对这些成分的需求发生了变化——与乳脂相比，蛋白质变得更受欢迎。而在20年前，我们面临的恰好是相反的问题。当时黄油重新流行起来，我们必须想方设法提高我们的乳脂含量。所以挑战有时在于，如果我们手头有这一升牛奶，而我们需要其中含有更多蛋白质、更少脂肪，那么它们所制成的产品的相对价格有时就会发生变化。但我们并没有看到价格飞涨。
+<details><summary>Original English</summary>
+>> Oh no we've not.
+If you look at at at sort of the
+the inflation rate for dairy
+products generally and
+individual ones, it's actually
+stayed below the level of food
+price inflation.
+One of the reasons is our system
+provides much more price
+stability.
+The challenge we come sometimes
+is the relative price of some of
+these things, because people
+like Adam are producing milk and
+they can adjust the components a
+little bit.
+But through feeding practices
+and genetic practices.
+But the real challenge becomes
+if we have different demand for
+those components, protein
+becomes more more popular versus
+versus butterfat.
+And, you know, 20 years ago, we
+had the exact opposite problem.
+Butter was cool again.
+And we had to find ways to, to
+increase our butter, our fat
+content.
+So the challenge becomes
+sometimes if we have this leader
+of milk and we need more of the
+protein in it and less of the
+fat in it, then sometimes the
+products that they go into will
+change in a relative price.
+But we've not seen skyrocketing
+prices.
+</details>
+
+>> 谈到价格，我们确实看到了一些相当引人注目的投资。例如，加拿大乳业合作社 Gay Lea 投资2亿加元扩建其位于多伦多的工厂。正如你所提到的，你认为这是一种会长久留存的食品趋势。考虑到目前的预测以及我们在这里看到的长期前景，你认为这些投资合理吗？
+<details><summary>Original English</summary>
+>> Well, speaking of prices, we
+have seen some pretty remarkable
+investments.
+For example, Canadian Dairy
+Co-op Gay Lea $200 million in
+expanding their Toronto facility
+here.
+As you mentioned, a food trend
+that you believe is here to
+stay.
+Do you think these investments
+are fair for what the
+projections are, the long term
+of what we're seeing here?
+</details>
+
+>> 我们听到联邦政府说我们希望在这个国家有更多的食品加工业。对我来说，这绝对是个好消息。它表明我们的乳品行业很健康，表明我们对这些乳制品有着旺盛的需求，而且由农民拥有的 Gay Lea 这样的公司看到了真正的机遇。我们看到在加拿大西部有投资，在安大略省这里也有其他投资。我认为这是一件好事。这表明我们的乳品业很健全，我们正在国内进行加工，我们在创造就业机会。因此，投资在我看来是对该体制具有信心的标志。
+<details><summary>Original English</summary>
+>> Well, we're hearing the
+federal government say we want
+more food processing in this
+country.
+And to me, this is profoundly
+good news.
+It tells us we have a healthy
+dairy industry.
+It tells us we have a good
+demand for these dairy products,
+and that companies Gay Lea is
+owned by.
+Farmers see a real opportunity.
+We're seeing investments in
+Western Canada.
+We're seeing other investments
+here in Ontario.
+I think it's a good thing.
+It says we have a healthy dairy
+industry.
+We're processing it here
+domestically.
+We're creating jobs.
+So investment, to me is a sign
+of confidence in the system.
+</details>
+
+>> 好的。Adam，请从农场主的角度帮我们理解一下，为了从更高的需求中获利，你们能直接多产牛奶吗？还是像 Mike 提到的配额制度，在某种程度上限制了你们的能力和反应？
+<details><summary>Original English</summary>
+>> All right.
+Adam, help us understand from a
+farmer's perspective, can you
+simply produce more milk to
+capitalise on higher demand?
+Or as Mike mentioned, you know,
+that quota system, does that
+sort of limit your ability and
+your response?
+</details>
+
+>> 不会。提得很好。配额制度的前提不是过度供应，不是用过剩的牛奶淹没并冲垮整个系统。它的初衷是保持持续稳定的供应，让消费者能够买到他们想要的产品。所以正如 Mike 所说，如果乳制品的某种成分增长强劲——因为脂肪仍在增长，但蛋白质相对于脂肪增长得更快。我会与农场上的营养师、兽医和顾问合作，试图看看是否能增加牲畜产出的蛋白质含量，同时在此过程中保证粮食安全、食品安全和动物健康。
+<details><summary>Original English</summary>
+>> No.
+Great question.
+The premise of the quota system
+is to not oversupply, flood and
+crash the system with the excess
+milk.
+What it does is meant to do is
+have a consistent supply where
+consumers are able to have the
+products that they want.
+So as Mike said, if we if
+there's an element of the dairy
+products that is experiencing
+stronger growth than others
+because fat is still growing,
+but protein is growing quicker
+in relation to fat.
+You know, I'm going to work with
+my nutritionists, my
+veterinarians, my advisors on
+farm to try and see if I can
+increase the amount of protein
+coming out of from my animals
+while maintaining the food
+security, the food safety and
+the animal health while doing
+it.
+</details>
+
+>> 我觉得，我觉得。
+<details><summary>Original English</summary>
+>> I think, I think.
+</details>
+
+>> 另一件需要记住的事情是，虽然我们认为配额是僵化的，但随着需求的变化，奶农会被分配到更多配额。因此这个系统是在增长的。它并没有僵化到那种程度，说“哎呀天哪，我们突然要运出一大批新的希腊酸奶了却没办法”。随着年复一年的人口增长，对产品的需求在增加，像 Adam 这样的农场主会被分配到更多的生产能力来满足这种需求。所以，这个体制是有一定灵活性的。
+<details><summary>Original English</summary>
+>> The other thing to keep in
+mind is while we think of quota
+as rigid as demand changes,
+dairy farmers are allocated
+more.
+So there is there is growth in
+the system.
+So it is not so rigid that, oh
+my God, we've got, you know, a
+whole bunch of new Greek yoghurt
+going out the door.
+There's a whole bunch that year
+over year population growth,
+demand for for for products
+increases.
+Farmers like Adam get allocated
+more production capacity to, to
+meet that demand.
+So, so the system has some
+flexibility in it.
+</details>
+
+>> 当我们谈到这种灵活性时，他们的反应速度究竟有多快？比如从传闻来看，我们常听人们说“货架上再也找不到茅屋奶酪了，希腊酸奶也没货了”，但农场主能多快作出反应，去满足杂货店里的那些需求呢？
+<details><summary>Original English</summary>
+>> When we talk about that
+flexibility, how quickly though,
+can they respond?
+Like anecdotally, we hear people
+talk about, I can't find the
+cottage cheese on the shelf
+anymore.
+The Greek yoghurt is not there,
+but how quickly can farmers
+respond to meet those demands
+at.
+</details>
+
+>> 杂货店里的需求？
+<details><summary>Original English</summary>
+>> The grocery store?
+</details>
+
+>> 我认为农场主做出反应相对更容易，对吧？我的意思是，这是一个生物学过程，所以你不能加开第二班倒，但你可以多养一头奶牛，多养几头奶牛。只要你有这个承载能力，这就不是问题。我们有时遇到的情况是——现在茅屋奶酪又重回货架了，现在你随处可见——但之前我们经历过某种对茅屋奶酪的疯抢。它变得流行起来，而我们必须在加工环节和供应链内部进行调整。同样，你必须调整设备，调整牛奶的分配。所以你不可能立刻办到，但它确实在发生。而如今在农场层面的挑战可能比在加工部门要小，在加工厂里，“我究竟是把这些牛奶用于制作茅屋奶酪，还是用于制作切达奶酪”，需要重新分配。有时这甚至无法在工厂内部完成。你知道，有时事情会让我们措手不及，我认为茅屋奶酪突然走红确实让某些人感到非常意外。
+<details><summary>Original English</summary>
+>> I think it's easier for
+farmers to respond, right?
+I mean, this is a biological
+process.
+So you don't you don't add a
+second shift, but you can add
+another cow.
+You can add another couple of
+cows.
+And so as long as you have the
+capacity to do it, that's not a
+problem where we sometimes run
+into, we couldn't cottage
+cheeses back on the shelves.
+Now you can see it everywhere,
+but we had this sort of run,
+run, if you will, on cottage
+cheese.
+It became popular and we had to
+adjust in the processing and
+within the supply chain.
+You know, again, you have to
+adjust equipment, you have to
+adjust allocation of milk.
+And so we, you don't you don't
+do it at the drop of a hat, but
+you it happens.
+And it's probably less of a
+challenge at the farm level
+today than it is within the
+processing sector where I'm
+putting this milk into cottage
+cheese, or I'm putting this milk
+into cheddar cheese and I need
+to reallocate it.
+And sometimes that doesn't even
+happen within the plant.
+And, and, you know, sometimes
+things catch us by surprise.
+And I think the cottage cheese,
+cottage cheese becoming cool
+really caught some people by
+surprise.
+</details>
+
+>> 我想顺着 Mike 提到的“第二班倒”继续问。如果需求持续走高，在不对加拿大和安大略省的奶牛增加额外压力的情况下，农场的增产会是什么样子的？有许多机构担心，这种需求的上升意味着，可能不一定是轮班倒，但会对其中一些奶牛造成更大的压力。
+<details><summary>Original English</summary>
+>> I want to pick up on the
+second shift that Mike alluded
+to.
+If demand continues to point
+upwards, what does increased
+production look like on the farm
+without putting added pressure
+on Canadian cows and Ontario
+cows?
+There's a number of
+organisations that are concerned
+that an uptick in.
+This means that perhaps not
+necessarily a second shift, but
+more pressure on some of these
+cows.
+</details>
+
+>> 是的。我在农场做的每一个决定都是从两个维度出发的：食品安全以及动物健康与福利。除非这两个标准都得到满足，否则我什么都不会做。农场端正在发生什么呢？很像我们听到的对工厂基础设施的投资一样，农场主们也在投资扩充他们的产能。就我自己而言，我们新建的设施已经投运三年了，如果有更多配额分配给我，我完全有能力挤更多奶牛的奶，这样我就可以用正确的方式做事，而不会给动物施加不当压力。我可以多养一两头奶牛，以确保按所需的质量和时效提供产品。
+<details><summary>Original English</summary>
+>> Yeah.
+So every decision I make on farm
+happens through two lenses food
+safety and animal health and
+care.
+I won't do anything unless both
+of those criteria are met.
+What is happening on farm?
+Much like we heard through the
+investment in plant
+infrastructure, is that farmers
+are investing their capacity as
+well.
+Myself, we are three years into
+a brand new facility where I do
+have the capacity to milk more
+animals.
+If I'm allocated more quota so
+that, you know, I can do things
+in the right way, I'm not
+putting undue pressure on
+animals.
+I can add another animal or two
+to make sure that I'm providing
+the the product in the quality
+and the timeliness that is
+needed.
+</details>
+
+>> 我们联系了农业部，询问第109号法案及其对乳制品监管拟议的修改对安大略省的生产商和加工商意味着什么。我们确实收到了他们的一份声明，部分内容如下：“通过第109号法案，我们政府正在采取行动，通过现代化安大略省的乳制品监管框架、增强我们供应管理系统的稳健性，并确保全行业监管的一致性，从而为子孙后代保护这一优势。这些变化将有助于为生产商和加工商维持公平的竞争环境，同时支持建立一个具有主权、安全且自给自足的粮食供应。”Michael，在实际操作中，这些改变会对该行业产生什么不同？
+<details><summary>Original English</summary>
+>> We reached out to the
+ministry about Bill 109 and what
+its proposed changes to dairy
+regulation could mean for
+Ontario's producers and
+processors.
+We did receive a statement from
+them, which reads in part
+through Bill 109.
+Our government is taking action
+to protect that strength for
+future generations by
+modernising Ontario's dairy
+regulatory regulatory framework,
+strengthening the integrity of
+our supply management system,
+and ensuring consistent
+oversight across the sector.
+These changes will help maintain
+a level playing field for
+producers and processors, while
+supporting sovereign, secure and
+self-reliant food supply.
+Michael, what difference could
+these changes make for the
+industry in practice here?
+</details>
+
+>> 这个嘛。
+<details><summary>Original English</summary>
+>> Well.
+</details>
+
+>> 魔鬼总是藏在细节中。所以，总是很难确切地说具体会如何落地执行。我认为我们目前的系统运行得相当不错。我的预期是他们会关注——Adam 可能对具体细节更清楚一些——但他们会着眼于通过某些监管来增加信任度和透明度。我认为这一直是政府所追求的。但同样，我认为乳制品行业有着非常出色的表现。因此，如果有人对系统中有更多监管或更高清晰度感到担忧，我会感到惊讶。所以，我不确定这是否会对我们看到的乳制品价格、Adam 在农场的日常工作、甚至是加工设施内部的运作产生重大影响。我们可能只是把事情运转得稍微顺畅了一点。
+<details><summary>Original English</summary>
+>> The devil is always in the
+details.
+And so so it's it's always it's
+always difficult to say exactly
+how implementation comes.
+I think we have a system that's
+working pretty well.
+I think, you know, there there
+will be my, my expectation is
+they'll look at.
+And Adam might have a better
+idea of what the specifics are,
+but they'll, they'll look at
+some oversight to increase trust
+and transparency.
+I think that that's something
+that governments are always
+looking for.
+But again, I think the dairy
+industry has a profoundly good
+story to tell.
+So I would be surprised if
+anyone was worried about about
+more oversight or more clarity
+in, in the system.
+So, so I'm not sure this will
+have a significant impact on, on
+what we see from dairy prices,
+on what Adam does on a day to
+day basis on his farm, or even
+what what happens in processing
+facilities.
+We might just move things a
+little bit easier.
+</details>
+
+>> 好的，Adam，我肯定想听听你的看法，因为你是安大略省奶农协会（Dairy Farmers of Ontario）的董事会成员。监管也会更多地落到他们头上。同时也有一些反对意见，小农户表示他们觉得自己会被排挤出去，这些变化可能偏向大农场。所以我希望你能顺着 Mike 所说的谈谈，但也分享一下你的想法。
+<details><summary>Original English</summary>
+>> Well, Adam, I want to get
+your take for sure as you are a
+you sit on the board of Dairy
+Farmers of Ontario.
+More oversight over to them as
+well.
+And also some some pushback.
+Small farmers are saying that
+they're going to feel like
+they're going to be squeezed
+out, that this perhaps these
+changes favour big farms.
+So I'm hoping you can sort of
+pick up on what Mike had to say,
+but also some thoughts there.
+</details>
+
+>> 是的，我认为作为一个行业，整部第109号法案对整个农业而言，确实名副其实：它将为可持续的未来奠定道路。就乳业本身而言，政府与安大略省奶农协会在食品安全以及该法案概述的所有要素上完全保持一致。我们没有任何担忧，我们支持这一倡议，该法案旨在保障未来整个农业的长期发展轨迹。
+<details><summary>Original English</summary>
+>> Yeah, I think as an industry,
+the overall Bill 109 for all of
+agriculture, I think it really
+does do what it's labelled as
+is.
+It will set the path for a
+sustainable future in terms of
+dairy itself, the government and
+dairy farmers of Ontario are
+completely aligned on food
+safety and all of the elements
+that are outlined in that bill.
+We don't have any concerns that
+we support the initiative, that
+this bill aims for the long term
+trajectory of agriculture in
+general going forward.
+</details>
+
+>> 好的，我们来谈谈未来和长期情况。如果消费者像我们讨论的那样持续需要浓缩蛋白，这是否最终会影响到整体乳制品的价格？
+<details><summary>Original English</summary>
+>> All right, let's talk future
+and sort of that long term.
+If consumers keep demanding
+concentrated protein like we
+talked about, could that affect
+eventually affect the price of
+dairy generally?
+</details>
+
+>> 嗯，如果有任何影响的话。
+<details><summary>Original English</summary>
+>> Well, well, if if if.
+</details>
+
+>> 话说回来，这里存在相对需求的问题。如果蛋白质成为唯一的焦点，它实际上可能会降低液态奶、奶酪以及蛋白质含量较低的产品的价格，因为我们生产牛奶是为了满足那种蛋白质需求。然后我们手头就有了这些其他产品，它们是牛奶的成分或不同脂肪与蛋白质组合的牛奶副产品。你看过去一年，黄油价格在过去一年实际上有所下降。这部分又是相对需求在起作用。我们现有的体制是根据生产成本来定价的。因此，在这种情况下，我们不会看到剧烈的价格变化，因为我们可以扩大行业规模。蛋白质价格会上涨吗？我们已经看到蛋白质价格在上涨了，这不仅仅是对乳蛋白的需求，还有对牛肉蛋白、植物蛋白等所有蛋白的需求。因此在我看来，这种需求不会像牛肉牛群缩减导致牛肉价格上涨那样产生那么大影响。我认为你可能会看到乳蛋白价格微涨，因为调整蛋白质比调整脂肪更难。但这实际上可能意味着其他一些低蛋白产品会变得更便宜，因为我们必须把整升牛奶都消化掉。
+<details><summary>Original English</summary>
+>> Anything, again, you've got
+relative demand.
+If if protein becomes the
+singular focus, it might
+actually decrease the price of
+fluid milk and cheese and things
+that are lower in protein
+because we're producing milk to
+meet that protein demand.
+And then we have these other
+products which which are
+components of milk or products
+of milk with different
+combinations of fat and protein,
+you know, if you look at the
+past year, butter prices
+actually came down in the last
+year.
+And again, it's it's partly that
+relative demand.
+So the system we have sets price
+on cost of production.
+And so, so in that circumstance,
+we're not going to see a
+dramatic change because we can
+grow the industry.
+And and might protein prices go
+up?
+Well, we've seen protein prices
+go up.
+And that's not just demand for
+dairy protein.
+That's demand for beef protein.
+And, and, and plant proteins and
+all of it.
+And so in my view, this demand
+isn't going to have as much
+effect as, as, say, we ran our
+beef herd got smaller and, and
+beef prices went up.
+I think you might see dairy
+protein go up a little bit
+because it's harder to adjust
+protein than it is to adjust
+fat.
+But that might actually mean
+some of the other lower protein
+products become cheaper because
+we have we have to get rid of
+that whole litre of milk.
+</details>
+
+>> 简短问一句。正如你提到的，茅屋奶酪的走红没人真正料到。有没有哪款产品或副产品是你正在关注、并认为在未来几年会迎来高光时刻的？
+<details><summary>Original English</summary>
+>> Very quickly.
+As you mentioned, you know,
+cottage cheese.
+No one really saw that coming.
+Is there a product or a
+by-product that you've got your
+eye on that you're thinking is
+going to have a moment in the
+next couple of years?
+</details>
+
+>> 噢，这是个有趣的问题。我认为在当前时期，我们看到了消费者购买行为的真正转变，即我们可能看到一些高端产品的下滑，人们在说“我们要坚守核心基本品”。我们看到对有机等产品的需求放缓甚至缩减，因为它们有溢价；而随着工资追赶上通胀，我认为其中一些产品会回暖。我感兴趣的是，我认为未来真正会聚焦在健康产品上。这就是为什么蛋白质备受追捧。我认为我们最终会看到人们根据气候或其他因素来改变需求。而且现在已经有了可以降低奶牛温室气体排放的育种技术。我认为我们已经做到——加拿大的牛奶碳排放强度在世界上已经属于最低之列。但我认为我们可以开始通过繁育和饲喂动物来进一步减少排放，这是我们可能很快就会看到的动向。
+<details><summary>Original English</summary>
+>> Oh there there's a there's
+an interesting question.
+I think in the current period,
+we've seen a real shift shift in
+what consumers are buying that
+we're seeing probably a decline
+in some of the premium products
+that people are, are saying
+we're going to go with our core.
+We've seen sort of a, a, a
+slowing or even a shrinking of
+demand for things like organic
+because, because it's a premium
+where I think some of those
+things will come back as wages
+catch up to, to inflation.
+I'm interested.
+I think there'll be really a
+focus on healthy products.
+That's why that's why protein is
+out there.
+I think that we're eventually
+going to see people make demand
+changes based on based on
+climate or, or other things.
+And, and, you know, there are
+now genetics that can lower the
+emissions from, from cows.
+I think we're already, you know,
+Canada's already amongst the
+lowest emissions density for
+milk in the world.
+But I think we can start
+breeding and feeding animals for
+lower emissions.
+And that's something that we
+might see coming soon.
+</details>
+
+>> 非常有意思。Adam，最后的发言权留给你。你认为乳业部门准备好长期满足这种需求了吗？
+<details><summary>Original English</summary>
+>> Very interesting.
+Adam, give me the last word
+here.
+Do you think the dairy sector is
+ready to meet this demand long
+term?
+</details>
+
+>> 当然。我充满信心，并期待能够继续为加拿大人提供营养密集且安全的加拿大牛奶。
+<details><summary>Original English</summary>
+>> Absolutely.
+I have every confidence and I
+look forward to the ability to
+provide Canadians with a
+nutrient, nutrient dense and
+safe Canadian milk.
+</details>
+
+>> 好的，二位，我们先聊到这里。Mike、Adam，非常感谢你们的时间和真知灼见，非常感谢。
+<details><summary>Original English</summary>
+>> All right, gentlemen, we are
+going to leave it there.
+Mike.
+Adam, I really appreciate your
+time and your insights.
+Thank you so much.
+</details>
+
+>> 谢谢你。谢谢。
+<details><summary>Original English</summary>
+>> Thank you.
+Thank you.
+</details>
+
+### 美加乳制品贸易争端与关税配额真相
+
+>> 加拿大的乳制品行业还笼罩着另一个问题：与美国的贸易战。如果你一直在关注的话，你可能听过唐纳德·特朗普抱怨加拿大对美国乳制品征收的关税。但加拿大真的对美国销售牛奶和奶酪收取那么高的费用吗？《The Rundown》栏目主持人 Charlie Buckley 为大家带来深入解析。
+<details><summary>Original English</summary>
+>> So there's another issue
+hanging over Canada's dairy
+industry.
+The trade war with the United
+States.
+And if you've been following it,
+you've probably heard Donald
+Trump complain about the
+tariffs.
+Canada charges on American dairy
+products.
+But is Canada really charging
+the U.S.
+that much to sell US milk and
+cheese?
+Rundown segment hosts Charlie
+Buckley breaks it down.
+</details>
+
+>> 这场贸易战怎么样了？距离特朗普的第一轮关税已经快两年了，我们还在为同样的几项大宗资源争论不休：汽车、钢铁、木材、能源和牛奶。我说得对吧？
+<details><summary>Original English</summary>
+>> How about that trade war?
+We're coming up on two years
+since the first round of Trump
+tariffs, and we're still arguing
+about the same big resources
+cars, steel, lumber, energy and
+milk.
+Do I have that right?
+</details>
+
+>> 我们想把牛奶卖到加拿大，而他们给牛奶加了270%的价格。
+<details><summary>Original English</summary>
+>> We want to sell milk into
+Canada.
+And they throw a 270% price
+increase on the milk.
+</details>
+
+>> 这意味着我们没有多少市场，意味着……
+<details><summary>Original English</summary>
+>> Which means we don't have
+much of a market, which means.
+</details>
+
+>> 我们在加拿大卖不了牛奶。
+<details><summary>Original English</summary>
+>> We don't sell milk in Canada.
+</details>
+
+>> 听起来真是高得离谱的关税，但他说的那些全都是真的吗？让我们来一探究竟。不，总统说的不是事实。这是你的事实核查。现在你已经……噢，好吧，情况要比这复杂一点。让我们一件一件来说。第一个问题：加拿大对乳制品真的征收超高关税吗？是的。如果你翻开我们厚厚的关税税则表，确实在某些情况下你需要支付超过300%的关税。但接下来是第二个问题：真的有人支付过那些高额关税吗？没有。基本上从来没有。这被称为“供应管理”（supply management）。它的运作方式是这样的：每年加拿大只希望市场上出现特定数量的牛奶、黄油、奶酪、鸡蛋和家禽。为什么？首先，我们希望保持这些商品的价格稳定。简单的经济学101常识：如果供给远大于需求，物价通常就会下跌。虽然短期内五分钱一个的鸡蛋听起来很诱人，但这最终可能会让农民破产，这对于未来——嗯，对于吃饱饭来说，可不是什么好兆头。另一个原因是，对于如何确保我们的农场符合人道、环保和食品安全标准，我们有着非常严格的法规。既然不是所有人都采用与我们相同的标准，我们就试图限制从国外进口的数量。这就是高额关税出场的地方。它们被称为关税配额（tariff rate quotas），简称 TRQ。每年我们都会设定一个我们愿意进口的上限。在达到该上限之前，关税其实相当低，通常不到10%。事实上，只要在配额之内，很多美国进口商品实际上是免关税的。一旦我们那一年的额度用完了，更高的关税就会生效，达到百分之两百、三百——高到再进口任何商品可能都变得无利可图。但这正是其设计初衷。加拿大不想要更多了，因此让继续输入变得在经济上难以承受，进口商通常也就不会这么做了。行业监测机构表示，超配额进口的情况极为罕见。对于某些产品，全年的进口总量仅略低于配额；但对于其他产品，到年底仍留有充足的配额空间。现在，有些人争辩说供应管理仍然对贸易不利，因为配额人为限制了商品的自由流通。这个辩论还是留给比我懂商业得多的人去讨论吧。但如果声称人们真正在为乳制品支付超高关税，那完全是不真实的。顺便说一句，那种认为美国人无法在这里销售牛奶的想法也是不成立的——根据他们自己的数据，加拿大是美国乳制品的第二大国际市场，仅去年一年的出口额就超过10亿美元。有人说过，战争的第一个受害者就是真相，贸易战也是如此。敲定协议可能并不容易，但有一点我们很确定：把事实搞清楚是有价值的。这就是你的事实核查，现在你心里有数了。
+<details><summary>Original English</summary>
+>> That sounds like a heck of a
+tariff, but is all that stuff he
+said true?
+Let's find out.
+No, the president was not
+telling the truth.
+That's your reality check.
+Now you're in.
+Oh.
+All right.
+Fine.
+It's a little more complicated
+than that.
+Let's take this one thing at a
+time.
+First question.
+Does Canada really have super
+high tariffs on dairy?
+Yes.
+If you crack open our big book
+of tariffs, there are indeed
+circumstances where you could be
+paying duties of more than 300%.
+But here's question two.
+Does anyone actually pay those
+big tariffs?
+No.
+Basically never.
+It's called supply management.
+Here's how it works.
+Each year Canada only wants a
+certain amount of milk, butter,
+cheese, eggs and poultry on the
+market.
+Why?
+Well first we want to keep
+prices for those things stable.
+A quick bit of econ 101.
+If there's a lot more supply
+than there is demand, then
+prices usually drop.
+And while five cent eggs might
+sound nice in the short term, it
+could end up bankrupting
+farmers, which doesn't bode well
+for the future of, well, eating
+food.
+Another reason is we have pretty
+strict regulations on how to
+keep our farms humane, eco
+friendly and food safe.
+And since not everyone uses the
+same standards that we do, we
+try to limit what we get from
+abroad.
+That's where the big tariffs
+come in.
+They're called tariff rate
+quotas or TRQs.
+Each year we set a cap for how
+much we're willing to import.
+And until we hit that cap, the
+duties are actually pretty low.
+Usually less than 10%.
+And in fact, a lot of U.S.
+imports are actually tariff free
+so long as we're within the
+quota.
+Once we've had enough for the
+year, the higher duties kick in
+two 300% so high that it's
+probably not worth it to import
+any more goods.
+But that's by design.
+Canada doesn't want any more,
+and so it makes it unaffordable
+to bring more in.
+And the importers typically
+don't.
+Industry monitors say that over
+quota imports are extremely rare
+for some products, annual import
+totals are just under the quota,
+but for others, there's still
+plenty of room left over at the
+end of the year.
+Now, some people argue that
+supply management is still bad
+for trade because quotas
+artificially restrict the free
+flow of goods.
+That's a debate for someone far
+more business than me.
+But if the claim is that people
+are actually paying super high
+tariffs on dairy, that is just
+not true.
+And neither is the idea that
+Americans can't sell their milk
+here, by the way, according to
+their own numbers, Canada is the
+second largest international
+market for U.S.
+dairy, with more than 1 billion
+USD in exports.
+Last year alone, it's been said
+that the first casualty of war
+is truth, and trade wars are no
+different.
+Deal making might not be easy,
+but there's one thing we know
+for sure it pays to have your
+facts straight.
+That's your reality check.
+Now you're in the know.
+</details>
+
+### 安大略省109号法案与农田保护之辩
+
+>> 我们已经讨论了高蛋白热潮和贸易战。但安大略省农业部门面临的另一个重大问题是：保护土地本身。这就是第109号法案发挥作用的地方。其目标是促进国内粮食生产并保护农民和粮食体系。作为其中的一部分，它正在限制政府所称的“有害外国利益”的准入。但外国投资者究竟购买了多少农田呢？Martin Straathof，非常高兴你能做客《The Rundown》。你今天好吗？
+<details><summary>Original English</summary>
+>> So we've talked about the
+protein craze and the trade war.
+But there's another big issue
+facing Ontario's agricultural
+sector protecting the land
+itself.
+And that's where Bill 109 comes
+in.
+Its goal is to boost domestic
+food production and protect
+farmers and the food system.
+As part of that, it's limiting
+access for what the government
+calls harmful foreign interests.
+But how much farmland is being
+bought by foreign investors?
+Martin Straathof, great to have
+you on The Rundown.
+How are you doing today?
+</details>
+
+>> 很好。谢谢你。你怎么样？
+<details><summary>Original English</summary>
+>> Good.
+Thank you.
+How are you?
+</details>
+
+>> 我很好。你是安大略省农田信托（Ontario Farmland Trust）的执行董事，你曾称第109号法案围绕外国所有权的限制“有点转移焦点”。请帮我们理解一下你的意思。
+<details><summary>Original English</summary>
+>> I'm doing well.
+You are the executive director
+for Ontario Farmland Trust, and
+you have called Bill 109
+limitations around foreign
+ownership.
+A bit of a distraction.
+Help us understand what you mean
+by that.
+</details>
+
+>> 是的，当然。纵观第109号法案及其保护安大略省农田的意图，实际上我们并没有看到多少数据表明外国所有权对安大略省农田构成了任何重大威胁。然而，我们看到的日益严重的威胁是由于开发建设导致的农田流失。因此，我认为农田所有权方面确实存在一些问题，但相比于外国所有权，国内土地投机商和开发商拥有农田往往是一个更大的担忧。因此，该法案是否真正解决了农田归属的问题，我不知道它是否真正触及了问题的核心根源。
+<details><summary>Original English</summary>
+>> Yeah, certainly.
+So looking at the Bill 109 and
+its intent to be able to protect
+Ontario's farmland, you know, we
+don't really actually see a lot
+of numbers that's indicating
+that foreign ownership is any
+sort of significant threat to
+Ontario's farmland.
+And yet we see a an increasing
+threat in farmland loss due to
+development.
+And so I think there's some
+issues around ownership of
+farmland, certainly, but whether
+that's foreign ownership or
+domestic land speculators and
+developers owning farmland tends
+to be a little bit more of a
+bigger concern.
+And so whether or not this bill
+is actually addressing the issue
+of who's owning farmland, I
+don't know if it's really
+getting to the core root of the
+problem.
+</details>
+
+>> 我们是否掌握到底有多少土地是由外国实体所有的概念？
+<details><summary>Original English</summary>
+>> Do we have a sense of how
+much land is actually owned by
+by foreign entities?
+</details>
+
+>> 是的。其实并没有真正深入探究这一问题的出色研究。我认为最近一次深入研究大约是在十年前，当时的数据显示安大略省仅有大约1%的农田实际由外国实体所有。所以从全局来看比例相当小。虽然有关于非农地——抱歉，是非农户拥有农田（比如开发商和投机者）的数据，但这些数据不易公开获取，所以我们手头也没有那个具体数字。但我们知道市政物业评估公司（MPAC）确实掌握这些数据。
+<details><summary>Original English</summary>
+>> Yeah.
+So there hasn't really been
+really great research to
+actually dive into that.
+I think the latest deep dive was
+about ten years ago, and it was
+looking at only about about 1%
+of Ontario's farmland that was
+actually owned by foreign
+entity.
+So quite small in the grand
+scheme of things.
+There is data out there about
+who is non-farm land or sorry,
+non-farmers who own farmland,
+such as developers and
+speculators, but that data isn't
+readily available.
+So we don't actually have that
+number either.
+But we know that impact does
+have that available.
+</details>
+
+>> Martin，你们机构表示安大略省每天正在流失319英亩的农田，但安大略省的一些农民对这一数字提出了质疑，称加拿大统计局（Statistics Canada）报告方式的变化使得土地看起来像是消失了，而实际上可能只是不再被算作农田。每天319英亩仍然是描述该省现状的准确说法吗？
+<details><summary>Original English</summary>
+>> Martin, your Organization
+says Ontario is losing 319 acres
+of farmland per day, but some
+farmers across Ontario dispute
+that number, saying changes in
+Statistics Canada reporting make
+it look like land has
+disappeared, when it may simply
+no longer be counted as
+farmland.
+Is 319 acres a day still an
+accurate way to describe what's
+happening in this province?
+</details>
+
+>> 这无疑是我们用来描述其背后准确情况的最佳数据之一。在加拿大统计局和农业普查如何计算农田方面，有许多不同的因素参与其中；而且统计口径发生了一项变化，即排除了较小的业余爱好农场（hobby farms），这类农场的规模和体量往往要小得多。因此在这方面确实存在一点影响该数字的因素。但对于一些深入研究过该数据的人士来说，归根结底，要说这是否对319英亩这一数字产生了显著影响，其实是微不足道的。这是我们能够拿来参考的最佳数据，它确实表明我们正在以不可持续的速度流失农田。
+<details><summary>Original English</summary>
+>> It's certainly one of the
+best numbers that we have to
+describe the accuracy behind it.
+You know, there's a lot of
+different factors that go into
+the calculation around how
+Statistics Canada and the
+Agricultural Census is
+calculating farmland, and there
+was a change in terms of saying
+that there was the exclusion of
+smaller hobby farms, which tends
+to be a lot smaller in size and
+scale.
+So there is a little bit of an
+influencing number in that.
+But for some of the folks who
+have dived into that number,
+it's really negligible at the
+end of the day to say that it
+had a significant impact on
+that.
+319 but it's the best number
+that we have to work with, and
+it is really indicating that we
+are losing farmland at an
+unsustainable rate.
+</details>
+
+>> 我们当然知道安大略省正面临着住房供应短缺和可负担性危机的挑战。那么，如果不应该为了建造这些房屋而牺牲农田，这些住宅到底应该建在哪里呢？
+<details><summary>Original English</summary>
+>> We know, of course, that
+Ontario is facing challenges
+with housing supply and an
+affordability crisis.
+So if it's not farmland that
+needs to go in order for these
+houses to go, where exactly do
+these homes need to go?
+</details>
+
+>> 是的，问得好。实际上有人针对目前可用于住宅开发的土地进行了调查。即使仅在大大多伦多地区（GTA），调查过此问题的一些规划师就发现，现有的土地足以建造超过200万套住房，这完全可以满足安大略省住房工作组（Ontario Housing Task Force）报告中所说的需要建成的150万套住房。所以归根结底，那里的信息是，根本不需要将更多土地移出农业生产来为住房开发腾出空间。因此，非常重要的是思考我们如何在城市边界内采取更好的土地利用规划做法——即“向上建设而非向外蔓延”的环境和策略，以此来帮助保护安大略省的农田。
+<details><summary>Original English</summary>
+>> Yeah, and that's a great
+question.
+So there was actually some
+investigation in to the land
+that's already available for
+housing development.
+And even in the GTA alone, some
+of the planners that
+investigated this recognized
+that there's enough land to
+build over 2 million homes,
+which would address the 1.5
+million homes that have the
+Ontario Housing Task Force
+report said was going to be
+needed.
+And so really, the end of the
+day, the message there is that
+no more land was really needed
+to be taken out of agricultural
+production to make room for
+housing development.
+And so that's something that is
+really important to think about
+how we can adopt better land use
+planning practices within urban
+boundaries that are in settings
+built up, not out strategies
+like that to help preserve and
+protect Ontario's farmland.
+</details>
+
+>> 我们联系了安大略省农业、食品与农业综合企业部（Ontario Ministry of Agriculture, Food and Agribusiness），询问关于第109号法案以及其对外国所有权拟议的修改对安大略省农田意味着什么。我们收到了他们的一份声明，部分内容如下：“我们政府正在采取行动限制安大略省农田的外国所有权，以支持我们世界一流的农业家庭，确保这一宝贵资源继续专注于为我们的社区生产粮食，而不是沦为外国公司资产负债表上的一个会计分录。”声明接着写道：“与此同时，我们正在通过负责任地开发黏土带（clay belt）的农田，创造扩大农业生产的机会。我们将始终致力于保护安大略省的农田，同时确保我们的社区拥有发展与繁荣所需的空间，助力建设一个更具主权、安全且自给自足的省份。”Martin，政府表示它既可以保护现有农田、容纳这里不断发展的社区，又能在黏土带开辟新农田。这种方法有什么问题吗？
+<details><summary>Original English</summary>
+>> We reached out to the Ontario
+Ministry of Agriculture, Food
+and Agribusiness about Bill 109
+and what its proposed changes to
+foreign ownership mean for
+Ontario farmland.
+We received a statement from
+them, which reads, in part, our
+government is taking action to
+restrict foreign ownership of
+Ontario's farmland to support
+our world class farming families
+by ensuring this valuable
+resource remains focussed on
+producing food for our
+communities, rather than serving
+as a line item on a foreign
+corporations balance sheet.
+It goes on to read.
+At the same time, we are
+creating opportunities to expand
+agricultural production through
+the responsible development of
+farmland in the clay belt.
+We will always work to protect
+Ontario's farmland while
+ensuring our communities have
+the space they need to grow and
+prosper, helping build a more
+sovereign, secure and
+self-reliant province.
+Martin the government says it
+can protect existing farmland,
+accommodate growing communities
+here and create new farmland in
+the clay belt.
+Is there something wrong with
+that approach?
+</details>
+
+>> 那个嘛，我们能去投资安大略省北部的农业，实际上非常棒。北部已经有了非常优秀的农业产业。然而挑战之一在于，并非所有土地都是平等的。安大略省以及加拿大最优质的一些农业用地位于安大略省西南部，那里的气候也更为温和，拥有丰富的淡水资源。我们那里的基础设施也已经很完善，并且紧邻社区，我们的农业生产商或食品生产商能够很容易地将产品推向市场。当你把农业向北迁移时，难度会大得多。北部的许多服务更加分散，而且仍需要对土地本身进行大量投资，才能使那些农田达到像我们在安大略省西南部这里一样的高产和高可行性。
+<details><summary>Original English</summary>
+>> You?
+It's actually fantastic that
+we're going to be investing in
+northern Ontario agriculture.
+There's already a really great
+agricultural industry taking
+place up north.
+One of the challenges, though,
+is that all land is not created
+equally.
+Some of Ontario's and Canada's
+best agricultural land is
+located in southwestern Ontario,
+and it's also the area that we
+have a more temperate climate.
+We have abundance of fresh
+water.
+We also have the infrastructure
+already developed, and it's in
+close proximity to the
+communities in which, you know,
+our agricultural producers or
+food producers are able to get
+their products to market.
+It becomes a lot more
+challenging when you end up
+moving agriculture up north.
+And a lot of those services are
+more dispersed, and there still
+needs to be a lot of investment
+into the land itself in order to
+make that agricultural land as
+productive and as viable as what
+we have here in south western
+Ontario.
+</details>
+
+>> 所以据我理解，在安大略省北部开辟农田，那里的进展以及开发利用那些空间，并不一定能补偿我们在安大略省南部失去的土地。是这样吗？
+<details><summary>Original English</summary>
+>> So from what I gather,
+creating farmland in northern
+Ontario, the progress that's
+being there, tapping into some
+of those spaces necessarily
+wouldn't compensate for land
+that we're losing in southern
+Ontario.
+Is that correct?
+</details>
+
+>> 没错，是这样的。我们必须考虑到，安大略省西南部的农民投入到土地中的时间和投资成本，无论是暗管排水（tile drainage）、还是仅仅清理岩石以及其他会使农业耕作更加困难的事务。我们一直在安大略省西南部的这类土地上进行投资。这里的地形也很平坦，非常适合进行开发建设，这就是为什么它对开发极具吸引力。
+<details><summary>Original English</summary>
+>> That.
+Yes, that's correct.
+And we have to think about the,
+you know, the the amount of time
+and investment that farmers here
+in southwestern Ontario has also
+put into their land as well,
+whether that's tile drainage,
+you know, even just clearing
+rocks and other sort of things
+that end up making the
+agricultural operation a little
+bit more difficult.
+We have been putting that
+investment into this kind of
+land down here in southwestern
+Ontario.
+It's also flat.
+It's very ideal for being able
+to develop on, which is why it's
+very attractive for development.
+</details>
+
+>> Martin，去年有一项议员个人提案建议建立一个省级粮食带（food belt），并对农业用地转用实施更严格的限制。安大略省目前的政策中缺失了哪些保护措施？
+<details><summary>Original English</summary>
+>> Martin, last year, a private
+member's bill proposed a
+provincial food belt and tighter
+restrictions on converting
+agricultural land.
+What protections are currently
+missing from Ontario's policy?
+</details>
+
+>> 是的，我们的省级政策声明确实承认了保护我们优质农业景观的重要性。但它的不足之处在于，现在土地脱离农业生产或重新调整规划用途变得非常容易。在保护这些农业用地方面基本上存在一些漏洞。比如，开发商或土地投机者可以随时申请扩大城市边界。而以往，这必须作为市政综合审查（municipal comprehensive review）的一部分，以便确认：“好吧，社区处于需要扩张的阶段，但让我们进行一次综合审查，以确保无论我们在哪里扩张，都能避免、最小化或减轻对我们优质农业用地的影响。”现在这种审查不再是强制性的了。因此，这确实为在没有进行全面审查的情况下在这类优质土地上进行开发打开了闸门。此外，还有其他一些政策，基本上是骨料开采（aggregates）凌驾于一切之上。骨料也是我们在该省拥有的一种有限资源，它对于开发我们的基础设施和社区非常重要，但我们也需要在骨料的使用上更加负责。因为这不仅是一种有限的资源，而且它还会让农业用地退出生产。
+<details><summary>Original English</summary>
+>> Yeah, so our provincial
+policy statement does recognize
+the importance of protecting our
+prime agricultural landscape.
+But where it misses the mark is
+that it's very easy now for land
+to be converted out of
+agricultural production or
+redesignated.
+There's some loopholes,
+essentially, that are being able
+to protect that agricultural
+land.
+So, for instance, developers or
+land speculators are able to
+apply for urban boundary
+expansion at any point in time.
+Whereas before it had to be a
+part of a municipal
+comprehensive review to be able
+to say, you know, okay, the
+community's in a stage where it
+needs to expand, but let's do a
+comprehensive review to make
+sure that wherever we're
+expanding is going to avoid,
+minimise or mitigate the impact
+on our prime agricultural land.
+That doesn't have to happen
+anymore.
+And so that really opens the
+floodgate to be able to develop
+on, on this prime land without a
+comprehensive review being done.
+There's also, you know, some
+other policies that we're
+essentially aggregate trumps
+everything, aggregates also a
+finite, limited resource that we
+have here in the province.
+And it's so important for
+developing our infrastructure
+and communities, but we need to
+be more responsible with our use
+of aggregate as well.
+And because not only is that a
+finite, limited resource, but
+it's also it takes agricultural
+land out of production.
+</details>
+
+>> Martin，我们今天就聊到这里。非常感谢你的宝贵时间和独到见解。
+<details><summary>Original English</summary>
+>> Martin, we're going to leave
+it there.
+I want to thank you so much for
+your time and your insights on
+this one.
+</details>
+
+>> 非常感谢你的邀请。
+<details><summary>Original English</summary>
+>> Thank you so much for having
+me.
+</details>
+
+>> 你是否在食用更多的高蛋白食品？你多久在安大略省购买一次牛奶、奶酪和更多农产品？请告诉我们。欢迎发送电子邮件至 TheRundown@TVO.org，或者一如既往地在我们的 YouTube 页面上留言评论。下周再见。
+<details><summary>Original English</summary>
+>> Are you eating more high
+protein foods, and how often do
+you buy milk, cheese and more
+produce in Ontario?
+Let us know.
+Send us an email to
+TheRundown@TVO.org.
+Or as always, drop us a comment
+on our YouTube page.
+Until then, I will see you next
+week.
+</details>

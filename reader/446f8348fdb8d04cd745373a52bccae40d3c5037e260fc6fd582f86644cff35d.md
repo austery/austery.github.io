@@ -1,0 +1,633 @@
+---
+author: TVO Today
+date: '2026-10-20'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=gvs1pAQRpho
+speaker: TVO Today
+tags:
+  - election-integrity
+  - misinformation
+  - generative-ai
+  - digital-campaigning
+  - voter-confusion
+title: AI时代的选票与算法：安大略省地方选举能否经受住虚假信息与生成式AI的冲击？
+summary: 随着安大略省地方选举临近，社交媒体虚假信息与生成式AI对选举公正性带来了前所未有的挑战。本期《The Rundown》深入探讨了选民面临的投票信息混淆、地方选举法（Municipal Elections Act）11年未更新的监管滞后、以及竞选团队使用AI自动生成评论工具（如Victory App）操控舆论等严峻现实，呼吁全社会与省级政府协同筑牢民主防线。
+insight: ''
+draft: true
+series: ''
+category: politics-society
+area: society-thinking
+project: []
+people: []
+companies_orgs:
+  - Association of Municipalities of Ontario
+products_models:
+  - ChatGPT
+media_books: []
+status: evergreen
+---
+### AI时代安省地方选举的真实与虚假
+
+**Jeyan Jeganathan**: 安大略省的选举日马上就要到了。现在，我们当中有些人已经投出了自己的选票，许多人也为10月26日做好了投票计划。我在这里说的是最基本的信息：去哪里投票、如何投票，以及投给谁。但是，如果你所依赖的信息并不准确，会发生什么呢？也许是一条社交媒体帖子搞错了你需要携带哪种身份证明，或者是一个由**人工智能**驱动的搜索结果把你引导到了错误的投票站，再或者是在AI时代，一段候选人的视频背后并不像表面看起来那么简单。你该如何在AI时代分辨事实与虚构？我们的选举法律是否跟上了技术的步伐？我们将深入探讨错误信息和虚假信息是如何重塑选举的，以及你能做些什么来穿透这些杂音。我是**Jeyan Jeganathan**，这里是**《The Rundown》**。
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: It's almost election Day in Ontario. Now, some of us have cast their ballots already, and a lot of us have made plans for October 26th. I'm talking about the basics here where to vote, how to vote, and who to vote for. But what happens when the information you're relying on isn't accurate? Maybe it's a social media post, getting the facts wrong about what kind of ID you need, or an AI powered search result that sends you to the wrong polling station, or a video of a candidate that isn't quite what it seems in the age of AI. How do you separate fact from fiction and our election laws? Keeping up with technology. We dig into how mis and disinformation are shaping elections, and what you can do to cut through the noise. I'm Jeyan Jeganathan, and this is The Rundown.
+
+</details>
+
+**Jeyan Jeganathan**: 安大略省的**《市政选举法》**（**Municipal Elections Act**）包含了对候选人和第三方选举广告等事项的规定。这部法律早在1996年就通过了，自那以后也进行过更新。但是，它能否应对社交媒体和人工智能带来的挑战呢？**Andrea Coyne**、**Riley Brockington**，非常高兴两位来到《The Rundown》。Andrea，我想先从你开始。你针对错误信息和虚假信息这个问题已经研究了很长一段时间。当我们谈论本次市政选举以及我们所看到的情况时，我们究竟在谈论什么？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Ontario's Municipal Elections Act includes rules for things like election ads from candidates and third parties. Now, it was passed back in 1996, and it has been updated since then. But can it deal with the challenges of social media and AI? Andrea Coyne, Riley Brockington, great to have you on the rundown. Andrea, I'm going to start with you. You have worked on this issue of misinformation, disinformation for quite a while. What are we talking about when we talk about this municipal election and what we are seeing, sort of with that.
+
+</details>
+
+**Andrea Coyne**: 从市政选举行政管理的角度来看，**错误信息**（misinformation）其实可以简单到只是那些单纯造成选民困惑的虚假或误导性信息。它可能围绕着选民资格、投票方式、投票流程等展开。这完全取决于管理部门如何去弄清楚应对之道，以及如何确保选民掌握准确的信息，从而做出他们需要做出的明智选择。
+
+<details>
+<summary>Original English</summary>
+
+**Andrea Coyne**: From a from a municipal election administration perspective, misinformation can really be as simple as false or misleading information that just simply causes confusion with voters. And it could be around voter eligibility, voting methods, voting processes. And it really is up to the administration to figure out how to combat that and how to ensure that voters have that accurate information to make the informed choices that they need to make.
+
+</details>
+
+### 捍卫公众信任与选举公正性
+
+**Jeyan Jeganathan**: Riley，我希望你能给我们提供一个全局视角。作为**安大略省市政协会**（**Association of Municipalities of Ontario**，简称 **AMO**）的主席，你代表着各个区域和地方市政当局。所以请帮我们理解一下，这是AMO所关切的问题吗？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Riley, I'm hoping you give us the big picture. As president of the Association of Municipalities of Ontario, also known as Amo. You represent regional, local municipalities. So help us understand, is this a concern for Amo?
+
+</details>
+
+**Riley Brockington**: 是的，确实如此，因为全安大略省市政选举的**公正性与完整性**（integrity）至关重要。我们需要维护并捍卫公众对自由公正选举的信任与信心。任何旨在误导选民、旨在为某一候选人获取不当优势，坦率地说，旨在**作弊**（cheat）的不当行为，都是不可接受的。因此，我们对此非常严肃地对待。我们希望维护整个系统的高标准公正性。这是AMO一直密切关注并且非常担忧的事情。
+
+<details>
+<summary>Original English</summary>
+
+**Riley Brockington**: Yes, it is, because the integrity of the municipal elections across Ontario is critical. We need to maintain and defend the public trust and confidence in fair and free elections and any type of inappropriate behaviour that is meant to mislead the voters is meant to get an advantage from one candidate or another, and frankly, to cheat is unacceptable. So we take this very seriously. We want to maintain a very high integrity of the system. And this is something that Amo follows and is concerned about.
+
+</details>
+
+**Jeyan Jeganathan**: Andrea，我想顺着Riley用到的“作弊”这个词继续聊。你身处一线，是**奥克维尔镇**（**Town of Oakville**）的副书记官（Deputy Clerk）。你目前正在一线负责奥克维尔的选举工作。在这次选举周期中，你都遇到了什么？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Andrea, I want to pick up on the word Riley uses cheat and you're on the ground. You are the deputy clerk for the town of Oakville. You are on the ground right now working on the Oakville election. What are you encountering this election cycle?
+
+</details>
+
+**Andrea Coyne**: 这是个很有意思的问题，因为我们实际上看到了更多的困惑。正如我之前提到的，关于投票流程的困惑：人们去投票站时需要携带什么身份证明？采用了哪些投票方式？选票是如何清点的？所以，从选举行政管理的角度来看，我们其实离候选人竞选团队那边发生的事情稍远一些，更多的是接触选民这一端，关注他们在前往投票地点并确保能够投出选票的过程中所经历的事情。
+
+<details>
+<summary>Original English</summary>
+
+**Andrea Coyne**: So it's an interesting question because we're actually seeing more confusion. Again, as I mentioned earlier around the voting process, what identification do people need when they when they come to the voting location? What voting methods are being used? How are the ballots being counted? So. So from the election administration perspective, we're less removed from what's happening on the candidate campaign campaign side and more with what's happening on the voter end and what they're seeing in terms of getting out to that location and ensuring that they can cast their ballot.
+
+</details>
+
+### 澄清选民身份证明要求与地方规则差异
+
+**Jeyan Jeganathan**: 那么Andrea，鉴于存在那些错误信息和虚假信息，我们不妨来澄清一下：当你去投票站时，究竟需要带什么？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: So, Andrew, let's maybe clarify with, you know, with some of that misinformation and disinformation, what do we actually need when you go to the polls?
+
+</details>
+
+**Andrea Coyne**: 在奥克维尔，《市政选举法》确实概述了所有的**身份证明要求**，但大家对“我需要出生证明吗？”、“我需要带照片的身份证件吗？”存在很多疑惑。虽然有些市镇确实提出了超出《市政选举法》规定的要求，但通常情况下就是身份证明文件。该法规列出了大约25种有效证件，上面必须包含你的合法资格地址。但是，**带照片的身份证明并不是必需的**。像奥克维尔这样的许多市镇鼓励选民携带选民卡（voter cards）或选民通知（如果已发放的话），但通常它们也不是强制要求的。这实际上也是导致选民困惑的一个症结所在：在市政层面上，虽然我们遵循的都是同一部法律，但各个市镇的书记官确实有权制定超出《市政选举法》大纲规定的额外程序。
+
+<details>
+<summary>Original English</summary>
+
+**Andrea Coyne**: So in Oakville, the Municipal Elections Act does outline all of the identification requirement, but there is a lot of confusion around do I need a do I need a birth certificate? Do I need a do I need photo identification? So while some municipalities do require above and beyond what the Elections Act stipulates, typically it is its identification. There's about 25 pieces that the legislation lays out, and it has to have your qualifying address. But photo identification is not required. Many municipalities like Oakville encourage them, the voters, to bring voter cards, voter notices if they have distributed them. But typically they're not required. This is actually some of one of the issues that does contribute to that voter confusion is at the municipal level. Again, we are all following the same legislation, but municipal clerks do have the ability to establish procedures above and beyond what the Municipal Elections Act outlines.
+
+</details>
+
+**Jeyan Jeganathan**: 我完全能想象到，Andrea，在这次竞选周期里，工作日子一定非常漫长。请帮我了解一下，你花了多少时间来应对这些问题？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: I have to imagine, Andrea, that the days have been long during this campaign cycle. Help me understand how much of your time is being spent on dealing with this.
+
+</details>
+
+**Andrea Coyne**: 我必须首先说明，我有一支不可思议的优秀团队。我们拥有一支出色的选举工作人员团队、宣传支持团队和网站技术团队。因此，每个人在这段时间都在超时高强度工作。我们竭尽全力走在前面，试图对向选民和候选人发布的沟通信息采取非常前置、主动的策略。我常说，从候选人切入是最好的办法，因为从他们提交登记的那一刻起，你就有机会向他们提供准确的信息，然后他们可以在每天挨家挨户敲门拜访时，将这些准确信息转达给潜在选民，因为他们才是每天走入社区与大众面对面的人。
+
+<details>
+<summary>Original English</summary>
+
+**Andrea Coyne**: I have to start by saying I have an amazing team. We have an amazing team of election staff, communication support staff, the web team. So everybody really works very long hours during this time. And we we try and get ahead of it. So we really are trying to be proactive with the communication that we're putting out there to both voters and candidates. I like to say that candidates is the best way to start with it, because from the moment they file their registration, you have the ability to provide them with the accurate information that they can then turn and relate to the their potential voters, because they're the ones going out and knocking on those doors every single day.
+
+</details>
+
+### 获取官方选民资讯与多元化投票渠道
+
+**Jeyan Jeganathan**: Riley，话虽如此，你在你自己的职位上是不战而胜（acclaimed，无竞争对手当选）的。但这并没有阻止你去挨家挨户敲门。从选民的角度来看，如果他们除了日期和行政事务之外，还想了解候选人的更多信息，选民应该去哪里寻找这些内容呢？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Riley, with that being said, you are acclaimed in your in your position. So but that doesn't stop you from door knocking from from voters perspective, if they want to get more information on candidates outside of sort of the dates and the administrative stuff, where where should voters be going for that?
+
+</details>
+
+**Riley Brockington**: 嗯，我可以根据我在**渥太华市**（**City of Ottawa**）的经验来说。渥太华市有一个“渥太华选举”（**Elections Ottawa**）官方网站。它列出了所有登记竞选市长的候选人、所有市议员选战的候选人，以及安大略省现有的四个教育局的学校董事受托人候选人。那是一个绝佳的信息来源。他们也可以通过市政热线 **311** 进行咨询，工作人员会指引他们前往该页面。当然，在我的办公室里，我们也收到了许多关于其他选战或候选人的咨询，这非常重要。
+
+但是，你知道，正如我在我自己的选区里所强调的，自我了解候选人是谁、他们的立场是什么、他们主张什么，是至关重要的。对候选人来说，走出家门、向选民分享自己的政纲和信息显然同样重要。但更非常关键的是，人们必须知道去哪里投票，必须知道投票的具体日期。如果你在10月26日不能前往投票或不在城里，其实有多种投票方式可选；不同市镇拥有不同的投票途径，并不只有现场亲身投票一种。你可以通过邮寄选票投票，正如我所说，你也可以在所在市镇设置的各个提前投票点（advance polling stations）进行投票。
+
+<details>
+<summary>Original English</summary>
+
+**Riley Brockington**: Well, I can speak to my perspective here in the city of Ottawa. The city of Ottawa has an Elections Ottawa website. It lists all the candidates registered for mayor, all the city councillor races and the school board trustee candidates in the four school boards that we have in Ontario. That's a great source. They also reach out to 311 through the city, who can direct them to that page. Certainly within my office, we've received a number of inquiries about the races or candidates in the other races, which is very important. But, you know, as I speak in my own ward, I talk about the importance of educating yourself about who the candidates are, the positions that they're taking, what they stand on. It's equally important for candidates, obviously, to get out there and share their platform and message with voters, but it's very important that people know where to vote. It's important to know when the voting dates are. If you can't vote, if you're not going to be in town on October 26th, there are multiple ways to vote, and municipalities have different ways of voting, not just in person. You can mail, vote by mail, and like I said, you can vote through various pre voting locations in your municipality.
+
+</details>
+
+### 社交媒体应对工具箱与公私责任边界
+
+**Jeyan Jeganathan**: Andrea，你谈到了你在奥克维尔背后的强大团队。我想多了解一下你们在应对错误信息及其传播时所拥有的具体工具。你们的工具箱里都有些什么？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Andrea, you talked about the team that you have behind you in Oakville. I want to understand a little bit more about the tools that you guys have when it comes to responding to misinformation and how it spreads. What do you have in the toolkit?
+
+</details>
+
+**Andrea Coyne**: 我们确实有一支社交媒体监测团队，负责关注网络上的动态，监测该镇官方 Facebook 页面上的舆情和留言评论。在什么时候应该回复评论、什么时候不该回复之间找到平衡，确实非常棘手。因为在某些情况下，如果你针对某些言论进行回应或互动，可能会反而进一步助长和放大正在扩散的虚假信息。因此，我们真正努力做到的是尽可能主动，并反复向所有选民和社区居民重申准确的事实信息，指引他们可以在网上的何处找到这些官方核实内容。
+
+<details>
+<summary>Original English</summary>
+
+**Andrea Coyne**: So we do have a social team that does monitor what they're seeing online and what they're seeing on the town's Facebook page, some comments that are made. It's it really can be tricky to to balance when a comment should be responded to and when it should be not responded to to because in some cases, if you do respond or engage in some comments, then that might just further enhance the misinformation that's getting out there. So we really are we try and be as proactive as possible and just reiterate to all the voters and the residents in the community the accurate and accurate information and where you can find that online.
+
+</details>
+
+**Jeyan Jeganathan**: Riley，在选举周期的错误信息和虚假信息问题上，社交媒体公司应该扮演怎样的角色？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Riley, what role do social media companies play here when it comes to misinformation and disinformation on election cycle?
+
+</details>
+
+**Riley Brockington**: 嗯，这是一个极其重大且深刻的问题。当然，我们不希望看到任何类型的传播媒介被滥用于选举宣传或公众接触的目的。我们不希望看到任何工具被用来赋予某人不正当的竞争优势，无论他们是违反了《市政选举法》，还是单纯地不当使用这些工具。这是一个大得多的问题，因为显然各大社交媒体公司也因其他事务受到过问责交涉，而它们在介入或限制其平台使用方面显得相当迟疑。
+
+但我认为公众在此也有一份责任，应当站出来公开指责不良行为、不当操守、社交媒体的滥用以及**AI的滥用**。我们现在已经开始看到这种迹象了。人工智能作为选举工具或许目前尚未极度普及或被完全接纳，但它毫无疑问正在呼啸而来。候选人使用各种工具，参与市政竞选的人士也加入其中。我们刚才听 Coyne 女士提到，就连她所在市镇的官方社交媒体主页有时也会被用于此类目的。但归根结底，我认为责任落脚在地方基层：如果公众看到了不当行为发生，我们就必须予以揭露和制止。而候选人本身更是绝不能参与到这种不当行为当中。
+
+<details>
+<summary>Original English</summary>
+
+**Riley Brockington**: Well, that is a significant question. Certainly, we don't want to see any type of communication medium abused for the purposes of election communications or outreach to the public. We don't want any tools to be used to give someone an unfair advantage if they breach the Municipal Elections Act, are simply just using them inappropriately. That's a much bigger question because obviously social media companies have been approached for other matters, and they seem quite hesitant to engage or restrict the use of their platforms. But I think the public has a role here to play, to call out bad behaviour and inappropriate conduct, inappropriate conducts, misuse of social media, misuse of AI. We're starting to see that now. AI maybe isn't further advanced or accepted as a tool for elections yet, but certainly it will be coming. But candidates use various tools, people who want to engage in the municipal campaigns get involved as well. We heard from Miss Coyne that her own city's social media sites are sometimes used for that type of purpose, but really, I think the buck stops locally, where if the public sees inappropriate behaviour happening, we have to call that out. And candidates just cannot engage in that appropriate inappropriate behaviour either.
+
+</details>
+
+### 《市政选举法》滞后11年与立法全面改革呼声
+
+**Jeyan Jeganathan**: Riley，我们讨论了社交媒体，讨论了候选人，也讨论了选民。省政府在这里是否有采取行动的责任或空间？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Riley, we have talked social media, we've talked candidates, we've talked voters. Is there a role here for provincial government to do something?
+
+</details>
+
+**Riley Brockington**: 我认为是有的。据我了解，作为统管选举的规范准则、也是我们所有候选人和希望参与这一进程的人必须遵守的规则集合——**《市政选举法》**，已经有**整整11年没有进行过实质性修订或改版了**。显而易见，我们的时代已经发生了演变。社交媒体在其中扮演了重要得多的角色。AI现在也可以说是“加入了战局”。我认为在2026年选举尘埃落定之后，是时候进行反思了：AMO 或其他人，或许全安省的市政书记官协会，可以梳理我们听到的趋势，对候选人及其竞选团队就其经历开展某种形式的调查或民调，并要求他们指出通过各种传播工具出现的任何不当使用情况。因此，《市政选举法》或许是时候进行周期性审查了。就像我说的，该法案实际上根本没有触及社交媒体，也许是时候开启一场认真的对话了。
+
+<details>
+<summary>Original English</summary>
+
+**Riley Brockington**: I think so. My understanding is the Municipal Elections Act, which governs elections, is the set of rules that we all must follow as as candidates and people who want to engage in this process must follow, has not been revised or modified in 11 years. Obviously, we've evolved. Social media is much more at play. AI is now joined joined the party per se, and I think it's time coming out of the 2026 elections to reflect whether Amo or others, perhaps city clerks, their association across Ontario can look at trends that we've heard can do some sort of surveying or polling of candidates and their teams about their experience, and ask them to identify, you know, any inappropriate use in that regard through various communications tools. So the Municipal Elections Act, perhaps it's time for a cyclical review. And like I said, social media really isn't touched upon in that in that act. And perhaps it's time we have a conversation.
+
+</details>
+
+**Jeyan Jeganathan**: Riley，你在提到这一点时，我看到 Andrea 在一边微笑着点头。所以，Andrea，我不得不问，你希望看到《市政选举法》发生哪些改变，从而有助于解决其中的部分问题？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Riley, I see Andrew is smiling a little bit with a head nod there as you're mentioning that. So, Andrew, I do have to ask, what changes would you like to see with the Municipal Elections Act that would perhaps help fix some of these problems?
+
+</details>
+
+**Andrea Coyne**: 我想说，在过去的10到15年里，一直存在着大量的倡议呼吁；我自己参与选举工作也大约有20年了。虽然《市政选举法》确实发生过一些加强执法力和管理权限的积极改变，相关部门也在努力跟上时代的步伐，但在我看来，**绝对需要对该法案进行一次彻底的全面改革**（huge overhaul），以切实强化支撑立法背后的行政权力与执法机制。而且我认为，正如 Riley 在社交媒体方面所提及的那样，我们真的需要清醒地认识到，现在已经是**2026年**了。AI平台、**生成式AI**（Gen AI），有些人每天都在使用它们，甚至自己都未曾察觉。因此，我们真的只是希望确保我们必须遵守的法律能够跟上我们当前社会的脚步。
+
+<details>
+<summary>Original English</summary>
+
+**Andrea Coyne**: There's been a lot of advocacy over, I'd say over the last ten, 15 years I've been involved in elections for about 20 years now. And while there have been changes and great changes to the Municipal Elections Act to strengthen that enforcement, that the authority they are trying to keep up with the times, but there definitely has to be, in my opinion, a huge overhaul of the of the legislation to really enhance the authority and the enforcement mechanisms that are the mechanisms, mechanisms that are behind the legislation. And I think this is Riley touched upon it as well with respect to social media. And we really need to recognize that we're it's 2026 AI platforms, Gen AI. It's used on a daily by some people who don't even realise it. So we really just want to ensure that that the legislation that we have to adhere to is, is up to date with, with our current society.
+
+</details>
+
+### “投票前先核实”与搜索引擎AI幻觉的隐患
+
+**Jeyan Jeganathan**: Andrea，你谈到了生成式AI。给我举个例子吧，当你提到人们甚至不知道自己正在使用它时，你指的究竟是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Andrew, you talk about generative AI. Give me an example. When you when you talk about people who don't even know they're using. What do you what are you actually talking about?
+
+</details>
+
+**Andrea Coyne**: 嗯，我觉得这很简单。这其实是某种有时会让我在夜里辗转难眠的事情。比如你打开浏览器，不管你习惯用哪一款，你可能随手输入：“嘿，我明天要投票，我该去哪里？”然后AI就会抓取它所能找到的信息。但它抓取的内容很可能存在偏差，你甚至可能根本意识不到它抓取的并不是最权威准确的信源。这正是我们努力告知选民的地方——**“投票前先核实”**（**know before you vote**），这是我们的口号。所以我们真的在努力引导选民并提醒候选人：你一定要在投票前做到心中有数，一定要去寻找准确的信息源，而在绝大多数情况下，那正是所在市镇的官方选举网站。
+
+<details>
+<summary>Original English</summary>
+
+**Andrea Coyne**: Well, I think it's simple. I think this is something that keeps me up at night. Sometimes. But you, you jump onto your, your Internet Explorer, whichever, whichever one you choose to use. And you might even just say, hey, I have to vote tomorrow. Where do I go? And so it pulls the information that it can, but it might not even, you might not even realise that it's not actually pulling from the most accurate source. And that's where we are trying to inform voters know before you vote. That's our tagline. So we're really just trying to drive voters and reminding candidates that you really want to know before you vote. You want to go to that accurate information, which in most cases is the municipality's election website.
+
+</details>
+
+**Jeyan Jeganathan**: Riley，这里的利害关系究竟有多大？请帮我们深入理解一下。
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Riley, what is at stake here? Help us understand a little bit.
+
+</details>
+
+**Riley Brockington**: 我想，每一个负责组织、参与竞选以及投身于选举的人，正如我之前所言，都希望捍卫整个选举进程的公正性。自古以来，选举中就一直存在着不当行为，这并非新鲜事。在选举过程中，总会有人——无论是候选人、候选人的志愿者，还是心怀怨恨的人、不支持选举制度的人——做出违规失德的举动。正因如此，我们才需要立法；正因如此，我们才需要治理这一进程的规章制度。但我们必须对不良行径大声谴责。如果我们看到不良行为呈现出蔓延趋势，我们无论是通过 AMO、书记官协会还是候选人网络，都有责任将其呈报给省政府并指出：“我们认为《市政选举法》中有一些领域尚未涵盖这些问题；我们认为某些行为随着时间的推移正在呈上升趋势，我们希望提请你们注意，这需要进一步展开讨论。”
+
+但归根结底，参与投票的人民需要得到确切保证：这个过程是公平的、中立的，并且有合理的规则来规范选举的举办和管理。这是全省每一位选民的殷切期望，也是 AMO 将永远坚决捍卫的原则。
+
+<details>
+<summary>Original English</summary>
+
+**Riley Brockington**: Well, I think like everyone who administers runs in elections is engaged in elections. As I said earlier, wants to defend the integrity of the entire process. We've had inappropriate behaviours in elections since the dawn of time. This is not new. There are there are people who engage in the electoral process, either as candidates, volunteers for a candidate, people who have an axe to grind, people who don't support elections, who have misbehaved. And that's why we have legislation. That's why we have rules that govern this process. But we have to call out bad behaviour. And if we see trends in bad behaviour, we have a role, whether it's through Aimo clerks, association candidates, to bring this to the province's attention and say, we believe there are areas here that are not addressed through the Municipal Elections Act. We believe that our behaviours that are trending upward over time, that we want to bring to your attention that we need further discussion on. But at the end of the day, people who vote need to be assured that the process is fair. It's neutral and that there are reasonable rules in place that govern how those elections are held and administered. That's the expectations of every voter across this province. And that's what Amo will always defend.
+
+</details>
+
+### 全社会协同应对与选民冷漠症的警钟
+
+**Jeyan Jeganathan**: 那么请帮我理清，当虚假信息在选举期间扩散时，究竟应该由谁来负责应对？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: So help me understand who should be responsible for responding when misinformation spreads during an election.
+
+</details>
+
+**Andrea Coyne**: 我想说，这绝对需要采取一种**全社会协同的方法**（**whole of society approach**）。我认为，正如你所提到的，每个人都需要参与进来，确保选举的公正性得以维系，确保选民掌握充分知情的信息并对选举过程充满信心。但我也确实认为，在省级层面上，应当对市镇层级的选举给予某种宏观统筹与监督。
+
+<details>
+<summary>Original English</summary>
+
+**Andrea Coyne**: I'd like to say it definitely is a whole of society approach. I think, as you mentioned, everybody needs to be involved in ensuring that election integrity is maintained and that voters are informed and they feel confident in the process. But I do feel like there should be some overall oversight at the provincial level with respect to the municipal elections.
+
+</details>
+
+**Jeyan Jeganathan**: 你觉得在推动选举制度变革方面，目前有足够的政治意愿吗？因为归根结底，这是一场角逐赢家的竞选，自然也会有输家；如果现行体系对某些在任者行之有效，我想人们难免会想：既然运转正常，何必去改动它呢？Andrea。
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Do you find there's enough will to make some changes when it comes to elections? Because ultimately, at the end of the day, this is a race to elect winners. There are losers, of course, and if it's working for some people, I imagine why change it if it works? Andrea.
+
+</details>
+
+**Andrea Coyne**: 我倾向于认为是有这种意愿的。对于我们在未来几年可能看到的变革，我持乐观态度。**安大略省选举局**（**Elections Ontario**）最近接管了市政层级选民名册的主管权，这是几年前生效的。因此在我看来，在对全省444个市镇每四年开展一次的选举工作实施省级监督方面，这是迈向正确方向的一步。
+
+<details>
+<summary>Original English</summary>
+
+**Andrea Coyne**: I'd like to think that there is. I, I'm positive about the changes that we might see in future years. Elections Ontario recently took over the authority of the voters list at the municipal level. That was a couple years ago that that came into effect. So that is, in my opinion, one step in the right direction in having that provincial oversight over over the work that that all 444 municipalities do every four years.
+
+</details>
+
+**Jeyan Jeganathan**: Andrea，我想接着探讨 Riley 刚才谈到的这对民主带来的深远影响。如果不做出任何改变，如果我们看不到政府像你提到的那样去审视这10到15年未变的问题——正如 Riley 所说，这并不新鲜——但如果我们没有给予它应有的高度重视，我们的民主将会承受怎样的后果？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Andrea, I want to pick up on some of what Riley had to say about the impact this has on democracy here. If there are no changes, if we don't see governments take a you know, a look at this, as you mentioned, ten, 15 years. This is nothing new. As Riley has mentioned. But if we if we don't take this as seriously as we should, what's the impact on our democracy?
+
+</details>
+
+**Andrea Coyne**: 嗯，我们其实已经开始看到了。我想说在过去的八、九、十年里，投票率和公众参与度正在缓慢下滑。我想在2022年，全安省的各个市镇普遍见证了**有史以来的最低选民投票率**。因此我认为，如果我们不在市政层级牢牢捍卫选举的公正性，我们将开始看到越来越多的**选民冷漠**（**voter apathy**）：人们对整个流程丧失信任，觉得付出自己的时间去参与选举政治根本毫无价值。
+
+<details>
+<summary>Original English</summary>
+
+**Andrea Coyne**: Well, we are already starting to see, I'd say in the last eight, nine, ten years, the the turnout and the engagement level is slowly decreasing. I think in 2022 across Ontario, municipalities saw the lower the lowest voter turnout ever across the board. And so I feel like if we if we don't maintain electoral integrity at the municipal level, we are going to start to see more and more voter apathy. People not feeling confident in the process and not feeling like their time is worth it to engage in the electoral process.
+
+</details>
+
+### 面向2030：地方官员对省政府的建言
+
+**Jeyan Jeganathan**: Riley，对于那些正在审视这一局面的群体——不仅包括选民和候选人，还有省政府中的决策者——你想传达什么信息？有一个明确的声音在呼吁认真审视《市政选举法》，严肃对待错误信息与虚假信息，无论是在本次选举中还是下一轮周期中。你对他们的核心信息是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Riley, what is the message for those who are having who are looking at this, not just voters and candidates, but those in provincial government? There is a message to kind of look at the Municipal Elections Act, to look at misinformation and disinformation seriously, whether it's this election or the next round. What is your message to them?
+
+</details>
+
+**Riley Brockington**: 像 AMO 这样的协会组织，以及安大略省各地的市政书记官们，都希望与省政府以及**市政事务和住房部**（**Ministry of Municipal Affairs and Housing**）携手紧密合作。正如我强调的，我们所有人都认为选举体系的公正性高于一切。我们可以做好自己的分内工作：AMO 可以在2026年选举结束后对部分候选人进行抽样调研，以收集他们在各类问题上的反馈，我们可以将这些汇总数据共享给市政事务部；书记官们也可以分享他们的第一线经验，梳理他们从候选人和市民那里听到的关切并找出问题根源。
+
+我们希望这套系统能够做到尽善尽美。我们希望该系统能够继续维系安大略省人民的信任与信心，而我们必将为此竭尽所能：共享前沿信息，分享来自基层的真实声音，从而让**2030年的市政选举流程**变得更加完善。但我确实认为，《市政选举法》在某些领域处于完全失声的空白状态，包括社交媒体。我认为这理应成为急需深入探索的优先事项之首。
+
+<details>
+<summary>Original English</summary>
+
+**Riley Brockington**: Well, associations like Amo, like clerks, city clerks across Ontario want to work hand in hand with the provincial government, with the Minister of Municipal Affairs and Housing. We all believe, as I said, the integrity of the system is paramount. We can do our work. We can survey, Amo can survey a sample of of candidates coming out of the 2026 election to get their feedback on various issues. We can share that in aggregate form with the ministry. The clerks can share their experiences, what they've heard from candidates, what they've heard from residents, and identify issues. We want the system to be as the best it can be. We want the system to maintain the trust and confidence of the people of Ontario, and we will do that. What we need to to do, to share information, to share what we've heard on the ground, to make the 2030 municipal election process even better. But I do think the Municipal Elections Act is silent in some areas, including social media. I think that's sort of a top of the list of areas that need to be explored.
+
+</details>
+
+**Jeyan Jeganathan**: Andrea，最后一段发言留给你。你谈到了你的团队。我们深知虚假信息扩散的速度有多惊人，我们也清楚在大多数情况下，当涉及到新兴技术时，我们在预防和搞清楚应对之策方面往往总是处于滞后状态。在情况得到解决之前，局面是否会变得更加糟糕？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Andrea, I'm going to give you the last word here. You talk about the team that you have. We know how quickly misinformation can spread. We know in most cases when it comes to technology, we're usually behind when it comes to prevention and trying to figure out, could this get worse before it gets fixed?
+
+</details>
+
+**Andrea Coyne**: 我依然愿意保持乐观。但我认为，再次回到那个“全社会协同应对”的理念，只要建立起正确的伙伴关系，我们完全有能力战胜AI以及我们如今身处的全新技术格局所带来的种种挑战，并真正化挑战为机遇。正如 Riley 所提到的 AMO 正在开展的工作；我自己也是**安大略省市政管理者、书记官与司库协会**（**AMCTO**）的一员，他们正在开展极具价值的政策倡导工作。我知道 AMCTO 与 AMO 之间存在紧密的合作关系，共同探索如何将《市政选举法》所需的立法改革推向深入。因此，在这种背景下我依然想保持积极态度并强调：只要我们大家同心协力，我们一定能够维系并捍卫选举的公正与尊严。
+
+<details>
+<summary>Original English</summary>
+
+**Andrea Coyne**: I'd like to remain optimistic, but I think, again, referring to that whole of society approach, I think with the right partnerships, we can absolutely combat the challenges that AI and the technological landscape that we're living in now can bring and really leverage the opportunities, as Riley mentioned, the work that Amo is doing, the work, the I'm part of am CTO, which is the Association of Municipal Managers, clerks, Treasurers of Ontario. They are doing phenomenal advocacy work, and I know that there's partnerships with them. AMC and Amo as well, in terms of how we can bring forward the legislative changes that we need to the Municipal Elections Act. So I'd like to remain positive in that case and say, providing we all work together, we can maintain and uphold electoral integrity.
+
+</details>
+
+**Jeyan Jeganathan**: 好的，访谈的这个环节就到这里，因为我知道你们两位目前都非常忙碌。非常感谢你们抽出宝贵时间与我们交流。Andrea Coyne、Riley Brockington，非常感谢两位。
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: And with that, I am going to leave you to it, because I know both of you are quite busy. So we really appreciate you taking the time to chat with us. Andrea Coyne, Riley Brockington, thank you so much.
+
+</details>
+
+**Andrea Coyne**: 谢谢你。
+
+<details>
+<summary>Original English</summary>
+
+**Andrea Coyne**: Thank you.
+
+</details>
+
+**Riley Brockington**: 谢谢。
+
+<details>
+<summary>Original English</summary>
+
+**Riley Brockington**: Thank you.
+
+</details>
+
+### 多伦多市长选战：Victory App与AI自动水军争议
+
+**Jeyan Jeganathan**: 我们此前曾联系安省市政事务和住房部长办公室，询问是否有任何修订《市政选举法》的计划，但在本期节目录制之前尚未收到答复。
+
+刚才我们探讨了各个市镇目前所面临的一些挑战，但这里还有另一个疑问：人工智能是否可能改变候选人的竞选方式？在多伦多市长竞选中，候选人**Brad Bradford**的竞选团队就因为使用了一款能够自动生成评论供支持者在网上发布的应用程序而登上了新闻头条。随着AI驱动的工具变得愈发精密复杂，它们可能被用于哪些场景？这对未来的选举活动又意味着什么？**Rory White**，非常欢迎来到《The Rundown》。你最近怎么样？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Now, we did reach out to the office of the Minister of Municipal Affairs and Housing for comment about whether there are any plans to update the Municipal Elections Act, but did not get a response before this episode. Taped. So we've talked about some of the challenges municipalities are facing, but there's another question could AI change the way candidates campaign in Toronto's mayoral race, candidate Brad Bradford's campaign made headlines for using an app that could generate comments for supporters to post online. Now, as AI powered tools get more sophisticated, what kinds of things could they be used for and what could that mean for future election campaigns? Rory White, great to have you on The Rundown. How are you doing?
+
+</details>
+
+**Rory White**: 挺好的，谢谢。非常感谢邀请我来参加节目。
+
+<details>
+<summary>Original English</summary>
+
+**Rory White**: Good, thanks. Thanks for having me on.
+
+</details>
+
+**Jeyan Jeganathan**: 不客气。你在《Canada's National Observer》专门报道科技与民主议题。我想深入聊聊你对 **Victory 应用程序**（**Victory app**）以及 Brad Bradford 竞选团队所做的调查报道。请给我们详细介绍一下背景。
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Of course. Now you report on technology and democracy at Canada's National Observer. I want to talk a little bit about your reporting that you did on the Victory app. And Brad Bradford's campaign. Tell us a little bit about it.
+
+</details>
+
+**Rory White**: 好的。这是一种首次在加拿大投入使用的新型竞选科技。它在本次市政选举中被 Brad Bradford 的竞选团队所采用。它的基本运作机制就是**自动生成AI评论**，供用户复制并发布到社交媒体网络上。
+
+因此我们对其运作机制展开了深入调查。我们通过 Bradford 竞选渠道注册了该应用程序。一旦进入应用内部，我们的手机就会收到推送通知，指令我们复制并粘贴一条由AI生成的评论发布到社交媒体上，并承诺在应用内奖励25个积分作为报酬。这是一种极具实验性质的全新竞选科技。其核心逻辑在于：赋予候选人控制社交媒体舆论叙事的能力；当其他社交媒体用户对该候选人提出批评指责时，能够迅速调动舆论进行反击和应对。
+
+<details>
+<summary>Original English</summary>
+
+**Rory White**: Yeah. So this is a new campaign technology that is being used in Canada for the first time. It was used by Brad Bradford's campaign in the municipal elections. And it basically generates AI comments for users to post online onto social media. And so what we did was we investigated the way that it works. We signed up for the application through the Bradford campaign. And once we were inside, we got notifications on our phone and it basically instructed us to copy and paste an AI generated comment onto social media and offered 25 points in the app for for doing so. So it's this kind of new campaign technology that is quite experimental. And the idea is that it gives the candidate the ability to control the narrative on social media and to respond. If there's criticism of the candidate from other social media users.
+
+</details>
+
+**Jeyan Jeganathan**: 我必须说明，我们确实联系了 Bradford 的竞选团队，但在本次录像前未能及时收到回复。不过，你在采访中从他的竞选团队那里得到了怎样的回应？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Now, I should mention that we did reach out to the Bradford campaign. We didn't hear back in time for this taping, but what did you hear back from his campaign?
+
+</details>
+
+**Rory White**: Bradford 的竞选团队告诉我们，这是一种前沿尖端科技，他们正在为加拿大的政治竞选引入创新。他们还表示，他们内部有一个专门的审核团队，在所有评论被推送给普通用户之前对其进行人工审核与部分润色编辑。他们还强调，在网上发布这些评论并没有实质性物质奖励，用户在应用内赚取的代币积分完全不具备现实世界中的经济价值。因此，尽管确实存在某种激励机制，但它并不能兑换成现实世界的实物奖品。
+
+<details>
+<summary>Original English</summary>
+
+**Rory White**: So Bradford's campaign told us that this is a cutting edge technology and that they're bringing innovation to Canadian campaigns. They also told us that they have a team that is reviewing all of the comments and editing some of them before they go and are sent to users as well. They told us that there is no rewards for the posting these comments online, and that the coins that users receive in the app are just entirely not of real world value. So there is an incentive, but it doesn't translate into real world prizes. For instance.
+
+</details>
+
+### 监管真空下的伪装：缺乏声明标识的虚假民意
+
+**Jeyan Jeganathan**: 我不知道这是不是唯一正在使用它的竞选团队，但这在法律上真的合规合法吗？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: I don't know if this is the only campaign that's using it, but is this actually legal?
+
+</details>
+
+**Rory White**: **这完全是合法的**。因为在安大略省的市政选举法规中，这块领域完全处于**无监管的空白状态**。你可以随意利用AI生成评论让支持者去散发张贴。
+
+这里最耐人寻味的关键点在于：**这些评论没有任何免责声明或标识**。这些评论并不会注明“本条评论系竞选团队利用AI生成制作”；恰恰相反，这些评论完全伪装成是由真实的普通网民个体撰写的。因此它们的语气往往非常带有个人情绪，比如写道：“我感到非常沮丧，我觉得只有你这位候选人才能化解我的担忧与恐惧。”在这些评论究竟源自何处的问题上，缺乏任何实质透明度。这正是研究人员最为担忧的核心痛点。而面对这类技术，真正值得拷问的问题是：如果要求强制公开透明、要求披露其真实来源，这类工具在社交媒体上还能产生同样的传播效果吗？
+
+<details>
+<summary>Original English</summary>
+
+**Rory White**: It's entirely legal. So this is this is totally unregulated. In Ontario's municipal elections, you can use AI to generate comments for people to post. The interesting part is that there's no disclaimers when it comes to the comments. So the comments don't say this comment was AI generated by a campaign, and that was essentially created instead. The comments present as written by individual users. So they're often quite emotional. They say like, I feel frustrated. I'm feeling like you're the only candidate that can answer my fears. And so there's no actual transparency around where the comments came from. And that's the part that the researchers are most concerned about. And the real question with these sorts of technologies is, would they work if you were transparent and disclosed where it came from, would they have the same impact on on social media?
+
+</details>
+
+**Jeyan Jeganathan**: 我知道有人对此提出了反驳，他们说：使用这种应用程序，与以往给上门拜访的志愿者分发传单或谈话要点（talking points）在口径统一上有什么本质区别呢？对此你怎么看？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Now, I understand that some people have pushed back and said, well, what's the difference between using something like this app versus, you know, giving a brochure, talking points to volunteers, going door to door when the messaging is similar. What do you say to that?
+
+</details>
+
+**Rory White**: 我认为他们提出的观点确实有其合理性。从本质上讲，这确实是长期存在于加拿大政治竞选中的常规手法的一种延伸。以往向支持者分发统一的谈话要点并不是什么新鲜事物。
+
+然而，**人工智能赋予这些竞选团队的能力，在本质上是截然不同的**。试想一下，在过去，如果一个竞选团队想要向所有支持者提供针对性的评论文本，他们必须通过人工逐字撰写；必须雇佣专门的竞选工作人员为支持者撰写单条评论，这在财务成本上对于竞选团队来说是根本不切实际的。而有了人工智能，你可以自动化批量生成海量独一无二的文本，为每一位评论者分配一条极具个性化的独家评论去网上发布。因此，它极大地**拉低了实施此类操弄的准入门槛**。
+
+最核心的关键差异还在于：传统的谈话要点会明确声明身份，比如志愿敲门时会说“我是Bradford竞选团队的志愿者，欢迎加入我们”；而这些AI评论完全隐瞒并模糊了发帖者与竞选团队之间存在任何关联的事实。
+
+<details>
+<summary>Original English</summary>
+
+**Rory White**: I think they make a fair point. You know, this is really an extension of what's been used in campaigning for a long time in Canadian politics. There have been talking points handed out to supporters. It's not entirely new. But what AI enables these campaigns to do is something quite different. So if you imagine in the past, if a campaign wanted to give AI generated comments to all their supporters, they would have to be writing out these comments manually. They'd have campaign staffers that were writing individual comments for supporters. It wouldn't make sense financially for campaigns to do this with AI, you can generate these automatically and give every commenter an individual comment to post online. So it's reduced the barrier to entry to do this sort of stuff. And the key thing is that unlike talking points where it's they say, for instance, come volunteer with Bradford's campaign. I'm a volunteer. These do not disclose that these individuals are in any way affiliated with the campaign.
+
+</details>
+
+### 安省首个“AI地方选举”与应用伦理两极
+
+**Jeyan Jeganathan**: Rory，你将这次选举称为安大略省**首个“AI市政选举”**。你还观察到了哪些其他现象？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Rory, you have called this the first AI municipal election in Ontario. What else have you seen?
+
+</details>
+
+**Rory White**: 是的。上一次安省市政选举是在2022年举行的，那刚好是在 **ChatGPT** 问世前五周。因此，这确实是安大略省第一次普遍使用AI工具的市政选举。在这次市政选举中，你可以看到众多候选人都在广泛应用它们，Bradford 竞选团队绝非孤例。
+
+我认为这种现象在社交媒体广告投放中尤为明显。我们对各个竞选团队在 Instagram 和 Facebook 上发布的竞选广告文本进行了AI使用情况分析，发现有充分证据表明，许多团队都在使用人工智能来撰写广告文案，但在公开披露方面却几乎是一片空白。
+
+但这里真正引人入胜的维度，不仅在于竞选团队是否使用了人工智能，更在于**他们是如何使用它的**。因为你可以想象AI有许多完全不同的使用方式：例如，你可以利用AI将广告精准翻译成少数族裔的语言，从而触达那些平时难以覆盖的选民群体，这种用例相比于具有欺骗性质的操作而言，基本上是没有争议且极具积极意义的。
+
+<details>
+<summary>Original English</summary>
+
+**Rory White**: Yeah. So the last municipal election was held in 2022, five weeks before the launch of ChatGPT. So this is really the first municipal election in Ontario where we have widespread use of AI tools. And you can see them used by many candidates throughout the municipal elections. The Bradford campaign is no exception. I think we see them particularly using advertising on social media. We've conducted an analysis of the use of AI by campaigns in writing their ads that are posted on Instagram and Facebook, and we found evidence that many of them are using artificial intelligence to do so. But there's very little disclosure that this is going on. But one of the really interesting parts is not just whether campaigns are using artificial intelligence or not, but how they're using it, because as many different ways you can imagine using AI for, for one example, you could translate an ad into a language that is reaching harder to reach voters, for instance. And this would be fairly uncontroversial compared to other use cases that are more deceptive.
+
+</details>
+
+**Jeyan Jeganathan**: 我们现在已经进入了最后的冲刺阶段。距离那些没有参加提前投票的人最终投出选票大约还有一周时间。当选民在网上查看选举信息或关于候选人的内容时，他们需要注意什么？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: We are in the home stretch here. We've got about a week before people who haven't done advanced voting will start putting their votes in. What do they need to know when they're looking online at election information or content about about candidates?
+
+</details>
+
+**Rory White**: 最核心的一点是：在查询诸如投票日期等具体行政事项时，一定要认准官方权威信源。但在面对网络上看到的各类内容时，你也应该保持**适度的合理怀疑态度**（healthy degree of scepticism）。网络评论可能是误导性的，发言者的真实身份可能并不如其标榜的那样。
+
+但与此同时，我们绝不能走向极端愤世嫉俗的虚无主义。因为如果我们凡事都推定“任何持反对意见的人都是被收买来支持某位政客的水军机器人”，那么这对地方民主生态同样会造成巨大破坏。关键在于我们要继续与身边的真实人群展开**线下面对面的交流**，并清醒认识到社交媒体在某些层面上是失真的；但绝对不要彻底丧失展开建设性对话的希望。
+
+<details>
+<summary>Original English</summary>
+
+**Rory White**: The key thing is that you should look for official sources when it comes to the dates of the vote. For instance. But you should also have a healthy degree of scepticism when it comes to the materials you see. Online. Comments can be misleading. It may be that they're not who they say they are, but at the same time, we shouldn't really end up being too cynical because if we all just assume that anyone that has an opposing view is a bot that has been sort of contracted to support a political candidate, well, that's, that's not really great for local democracy either. The key thing is to keep having conversations in person with people around us and realise that social media can be in some ways distorted, but not to lose hope entirely, that we can't have constructive conversations.
+
+</details>
+
+### 重塑现实民主：面对面交流与规则确立的关键时刻
+
+**Jeyan Jeganathan**: 这在某种程度上是否也激励着人们在有人敲门拜访时主动去开门？去面对面与竞选人员沟通，或者在户外的市民集会上与候选人本人见面？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: They're in some ways, is this an incentive for people to answer their doors? If people are knocking and campaigning or perhaps meeting their candidates at at meetings outside?
+
+</details>
+
+**Rory White**: 完全是这样。我认为这确实提供了一种强大的激励。而竞选团队使用这种新型AI技术的借口之一，正是人们现在不再愿意给敲门的志愿者开门了，人们不再愿意进行面对面的现实接触；这使得数字工具更具诱惑力，因为你可以通过不依赖人际会面的方式触达选民。但在民主制度中，拥有**面对面的线下对话**具有某种极其健康的特质——这种交流脱离了那些充满人为煽动情绪、以博取眼球和点击率为导向的算法环境。因此，当有人带着竞选探讨的诚意走来敲门时，敞开大门去交流是非常有价值的。
+
+<details>
+<summary>Original English</summary>
+
+**Rory White**: Absolutely. Yeah, I think it really is. And that's one of the justifications for the use of this technology is that people are no longer answering their doors. They're no longer engaging in person. And it makes these tools more attractive because you can reach voters in ways that don't rely on in-person meetings. But there is something healthy in a democracy about having in-person conversations that aren't in these artificial environments, that are framed around outrage and getting as many clicks as possible. So there is something to be said for for just opening your door up when someone is coming with, you know, campaign conversations.
+
+</details>
+
+**Jeyan Jeganathan**: Rory，你提到这是我们在本次选举的竞选活动中第一次真正看到AI的大规模登场。虽然我有点害怕听到答案，但我们在未来的竞选活动中是否注定会看到更多这类现象？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Now, Rory, you had mentioned this is really the first time we're seeing AI on display on the on the campaign trails for this for this election. I'm scared to ask, but can we expect to see more of this in future campaigns?
+
+</details>
+
+**Rory White**: 毫无疑问。正如我们所谈到的，这仅仅是开端，随着时间推移，AI工具的使用只会变得更加普遍。在当前节点，针对这些工具的监管完全为零，这是一个真正的**全面技术实验期**。
+
+而这也是我们在地方民主进程中，关于**如何规范AI定位的行业伦理与社会规范正在形成的决定性时刻**。我们到底希望这些工具如何在地方选举中发挥作用？目前，基本上完全取决于各个候选人自己的主观裁量权，来决定如何将AI引入竞选。而眼下正是我们在安大略省确立“什么是可接受的AI应用底线”的关键时刻。
+
+<details>
+<summary>Original English</summary>
+
+**Rory White**: Absolutely. This is the first time as as we mentioned, but it's it's only going to become more common over time to use AI tools. At the moment, there's zero regulation around the use of these tools. This is a time of real experimentation. And it's also the time when the norms are being set about how we want AI to feature in our local democracies. How do we want these tools to be used in our local elections? Right now, it's pretty much up to the discretion of individual candidates to decide how they roll out AI into their campaigns. And this is the moment where we're really setting the norms of what we view as acceptable use of AI in Ontario.
+
+</details>
+
+### “数字民兵巡逻”：商业峰会揭开政治操盘内幕
+
+**Jeyan Jeganathan**: 是什么引发了你对这个话题的浓厚兴趣？我很好奇。作为一名民主议题记者，你自然在密切追踪各方竞选动态，但究竟是什么契机促使你去深度调查AI在竞选活动中的角色？
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: What's got you interested in this? I'm quite curious. You know, I'm sure as you're, you know, democracy reporter, you're following campaigns left, right and centre. But what was it that triggered you to, to kind of look into AI and its role on these campaign trails?
+
+</details>
+
+**Rory White**: 是的，我在今年一月份听过一场项目推介。当时我参加了在多伦多市中心举办的名为**“下一次竞选峰会”**（**The Next Campaign Summit**）的竞选技术会议，现场展示了大量技术供应商。他们正是专门开发这些用于政治竞选工具的技术公司。我坐在台下亲耳聆听了其中几家供应商的商业推介，其中就包括我们一直在调查的 Victory 应用程序背后的供应商。
+
+对我来说最震撼、最耐人寻味的部分，在于他们向政治策略顾问推介这些工具的方式：针对 Victory 应用程序，他们将其标榜为**“一支数字平民巡逻队”**（**digital civilian patrol**），声称其响应的效率和智能化程度远远超越任何传统的网络机器人（bot）。任何记者听到这样的推介词，其职业敏感度和好奇心都会瞬间被点燃。这成为了我切入调查的突破口，而亲眼见证它如何与现实生活中的真实竞选产生互动，对我而言极具吸引力。
+
+<details>
+<summary>Original English</summary>
+
+**Rory White**: Yeah, I mean, so I heard a pitch in January, I attended a campaign summit called The Next Campaign Summit in downtown Toronto, and it showed a lot of these vendors. They're the companies that are designing these tools to be used in political campaigns. And I sat there in person. I watched some of these talks from some of these vendors, and that included the vendor behind the victory app, the campaign tool we've been investigating. And the fascinating part for me was the way that they were pitching these tools to political strategists. So the victory app, they pitched it as a digital civilian patrol, responding with more efficiency and intelligence than any bot. And that, of course, piques any journalists interest. And so that was my entry point into this. And seeing how it interacted with real world campaigns was pretty fascinating for me.
+
+</details>
+
+**Jeyan Jeganathan**: 好的 Rory，我们今天就聊到这里。非常感谢你的深度调查报道，也非常感谢你带来的独到见解。非常感谢。
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: Well, Rory, we're going to leave it there. I want to thank you so much for your reporting, and thank you so much for your insights. Really appreciate it.
+
+</details>
+
+**Rory White**: 非常感谢邀请我参加节目。
+
+<details>
+<summary>Original English</summary>
+
+**Rory White**: Thank you very much for having me on.
+
+</details>
+
+**Jeyan Jeganathan**: 那么，你会去哪里寻找关于投票和候选人的真实信息呢？在这个选举季，你是否也曾遭遇过错误信息或虚假信息？欢迎告诉我们。请发送电子邮件至 TheRundown@TVO.org，或者在我们的 YouTube 页面下方留言评论。在那之前，我们明天见。
+
+<details>
+<summary>Original English</summary>
+
+**Jeyan Jeganathan**: So where do you go to find information about voting and candidates? Have you come across mis or disinformation this election season? Let us know. Send us an email to TheRundown@TVO.org or drop us a comment on our YouTube page. Until then, I will see you tomorrow.
+
+</details>

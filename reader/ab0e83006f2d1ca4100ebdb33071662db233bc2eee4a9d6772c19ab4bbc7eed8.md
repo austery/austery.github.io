@@ -1,0 +1,858 @@
+---
+author: New York Times Podcasts
+date: '2026-10-01'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=nQ1l7taJBxY
+speaker: New York Times Podcasts
+tags:
+  - college-athletics
+  - sports-law
+  - nil-rights
+  - labor-market
+  - government-regulation
+title: 华盛顿介入大学体育：NIL金钱狂潮与国会监管风暴
+summary: 本期节目探讨了美国大学体育在允许学生运动员通过姓名、形象和肖像权（NIL）获得商业报酬五年后的剧烈动荡。随着校友助学团体（Collectives）砸下数百万美元重金争夺高中招募生与转校球员，大学体育演变为缺乏监管的‘自由金钱游戏’。参议院近日以压倒性两党多数通过法案，试图为转校频率和学校开支设定上限，引发了关于劳工权益、反垄断与体制公平的激烈争议。
+insight: ''
+draft: true
+series: ''
+category: politics-society
+area: society-thinking
+project: []
+people: []
+companies_orgs:
+  - NCAA
+  - United States Senate
+products_models: []
+media_books: []
+status: evergreen
+---
+### 大学体育陷入前所未有的失控与动荡
+
+**娜塔莉·基特罗夫**: 《纽约时报》播客，我是**娜塔莉·基特罗夫**。这里是《每日新闻》（The Daily）。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: From the New York Times, I'm Natalie Kitroeff. This is the Daily.
+
+</details>
+
+**新闻原声集锦**: 一项运动在我们眼前崩溃内爆了。我这么说绝非夸大其词。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: A sport has imploded before our very eyes. And I don't say this hyperbolically.
+
+</details>
+
+**新闻原声集锦**: 在允许学生运动员通过比赛获得报酬以来的五年里，大学体育已经彻底陷入了癫狂失序的状态。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: In the 5 years since student athletes were allowed to get paid to play, college sports has gone completely haywire.
+
+</details>
+
+**新闻原声集锦**: 得了吧。这根本就不是我们从小看着长大的大学橄榄球了。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: Give it a break. This is not the college football we all grew up with.
+
+</details>
+
+**新闻原声集锦**: 一年比一年糟糕。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: Each year, it's gotten a little worse.
+
+</details>
+
+**新闻原声集锦**: 我们的体制已经彻底坏掉了。球员们为了追逐更高的薪酬，不断在各个球队之间跳槽辗转。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: We have a broken system. Players are moving from team to team chasing a payday.
+
+</details>
+
+**新闻原声集锦**: **马拉奇·托尼**（Malachi Toney）410万美元。**卡森·贝克**（Carson Beck）估值达到了四百多万。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: Malachi Tony 4.1 million. Carson Beck four points evaluation.
+
+</details>
+
+**新闻原声集锦**: 几百万美元。我觉得我挣得最多的一年也就是六位数。可他还只是个大学生啊。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: Million. I think my biggest year was six. He's a college kid.
+
+</details>
+
+**新闻原声集锦**: 各大学正在积聚庞大的黑金作战基金。那些以前从未有过出头之日的小球队，如今竟然摇身一变成为了全国冠军。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: Colleges are amassing dark money war chests. Programs that never stood a chance before are becoming champions.
+
+</details>
+
+**新闻原声集锦**: **印第安纳大学山地人队**（Indiana Hoosiers）现在成了大学橄榄球的新王者。然而，从球员、教练到体育总监，没有一个人能搞清楚这里的规则究竟是什么，更别提该如何遵守了。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: The Indiana Hoosiers are the kings of college football. And no one, not the players, not the coaches, not the athletic directors, can agree on what the rules around all this even are, much less how to follow them.
+
+</details>
+
+**新闻原声集锦**: 我们既没有规则，也没有治理机制。这真是一种极其可悲的现状。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: We have no rules and we have no governance. This is just a really sad state of affairs.
+
+</details>
+
+**新闻原声集锦**: 这样下去绝对不行，我们必须想办法做点什么。今天，《**The Athletic**》的**斯图尔特·曼德尔**（Stuart Mandel）将为我们解读，为什么华盛顿国会山在本周终于决定出手干预。今天是10月1日，星期四。斯图尔特·曼德尔，欢迎来到《每日新闻》。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: It's not right and we got to find a way to do something. Today, Stuart Mandel of The Athletic explains why this week Washington finally decided to step in. It's Thursday, October 1st. Stuart Mandel, welcome to the Daily.
+
+</details>
+
+### 国会罕见两党联手：两党以压倒性优势通过法案
+
+**斯图尔特·曼德尔**: 噢，我们现在就正式开始了吗？
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Oh, we're starting right now.
+
+</details>
+
+**娜塔莉·基特罗夫**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: Yes.
+
+</details>
+
+**斯图尔特·曼德尔**: 好的。刚才确实没收到什么预告，不过我现在准备好了。谢谢你，很高兴能来这里。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Okay. There was no real warning there, but I'm ready now. Thank you. Glad to be here.
+
+</details>
+
+**娜塔莉·基特罗夫**: 本周早些时候，发生了一件非常罕见的事情：参议院以压倒性的两党支持率通过了一项法案。更罕见的是，这项法案试图监管体育运动——而体育在以往通常是华盛顿政客们极少插手的美国社会领域。所以我们请你来解释这个关键节点，帮我们理清这背后究竟发生了什么。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: So, earlier this week, something very rare happened. a bill passed the Senate with overwhelming bipartisan support. And even rarer, that bill is attempting to regulate sports, which is a part of American life that Washington generally keeps its nose out of. So, we are turning to you to explain this moment. Help us understand what's going on here.
+
+</details>
+
+**斯图尔特·曼德尔**: 过去五年间，自从大学运动员终于被允许赚钱，特别是获得对其**姓名、形象和肖像权**（即我们现在所说的 **NIL**）的报酬以来，所有人都在讨论大学体育是如何陷入一片混乱的，人们最常用的一个形容词就是“狂野西部”（Wild West）。因此，整个体育行业，包括 **NCAA**（全美大学体育协会）、各大赛区以及各所高校，花费了大量时间和金钱向国会游说，哀求说：“我们真的需要你们的救助。”这项由共和党参议员**特德·克鲁兹**（Ted Cruz）和民主党参议员**玛丽亚·坎特韦尔**（Maria Cantwell）共同发起的《**保护大学体育法案**》（Protect College Sports Act），几乎涵盖了你能想到的大学体育的方方面面。但绝大多数人最关注的，还是它如何规范姓名、形象和肖像权报酬的支付，以及限制球员在不同学校之间转学的频率。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Well, for the past 5 years, ever since college athletes were finally allowed to make money and specifically paid for their name, image, and likeness rights, what we now call NIL, everybody's been talking about how college sports is in chaos, a term you often hear as the wild, wild west. And so the industry, the NCA, the conferences, the schools have spent a lot of time and a lot of money lobbying Congress saying, "We need your help." So this bill, the Protect College Sports Act, which was co-sponsored by Ted Cruz, a Republican, and Maria Canwell, a Democrat, it covers pretty much everything you can think of in college sports. But what most people focus on is how it regulates name, image, and likeness payments and then how often the players can transfer between schools.
+
+</details>
+
+**娜塔莉·基特罗夫**: 明白了。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: Got it.
+
+</details>
+
+**斯图尔特·曼德尔**: 周一晚上，它在参议院以压倒性优势通过，最终表决结果是77票赞成对22票反对。现在该法案已经移交众议院。没人能准确预料接下来在众议院会发生什么，但无论如何，对于提案的发起人来说，这是一场巨大的跨党派大胜；但对于站在对立面的人来说，情况恐怕就完全不是这样了。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: And on Monday night, it passed in the Senate and it passed in a landslide. Final vote was 77 to 22. Now it goes to the House. Nobody can really predict what's going to happen then, but in the meantime, a huge bipartisan slam dunk for the people who sponsored the bill. Maybe not so much for the people who are on the other side of it.
+
+</details>
+
+**娜塔莉·基特罗夫**: 这件事被普遍形容为具有历史意义。能谈谈为什么吗？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: And this is being described as historic. Talk about why
+
+</details>
+
+**斯图尔特·曼德尔**: 它是历史性的，因为在大家的记忆中，国会还从来没有试图对一整项体育运动设立全方位的监管法规。你知道，他们过去曾监管过某些特定板块，比如 **NFL**（国家橄榄球联盟）的电视转播权之类的事务。但现在国会基本上是在直接宣布：“听着，现在由我们来制定游戏规则。”他们想要全权接管整个大学体育的监管大权。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: it's historic because nobody can remember a time when Congress set out to regulate an entire sport. You know, they they've regulated certain parts like NFL television rights and whatnot. But here is Congress basically saying, "Hey, we're dictating the rules now. They want to take over regulation of all of college sports.
+
+</details>
+
+**娜塔莉·基特罗夫**: 好的，我们稍后会深入探讨法案的具体细节和实际内容。但在那之前，我想先聊聊大学体育目前的现实处境。在当下，我觉得每个人对大学体育都有一套自己的看法。这个领域充斥着大量的暗钱流动，而作为《纽约时报》旗下优秀体育媒体《The Athletic》的一员，你和你的团队做了很多至关重要的调查报道，帮助我们看清了这里的全貌。所以，让我们先回顾一下，这一切究竟是如何演变到今天这个地步，以至于让华盛顿不得不以这种方式介入的。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: Okay, we're going to get into the specifics of the bill, what it actually does. But before we do that, I want to talk about the state of college sports right now. At this point, I think everybody has an opinion about college sports. There's a lot of dark money flowing through this world, and you, as a part of the amazing team at The Athletic, which is a sports publication owned by the Times company, have done a lot of vital work to help give us a clearer picture of the landscape here. So, let's tell the story of how we actually got to this point where Washington is intervening in this way.
+
+</details>
+
+### 从百吉饼禁令到最高法院判决：业余神话的破灭
+
+**斯图尔特·曼德尔**: 我觉得完全可以说，大学体育在过去五年间所发生的变化，比之前五十年的总和还要多。这一切都源于一个非常关键的时间分水岭：在2021年7月1日之前，在我们所有人过去的认知中，大学运动员是绝对不能拿报酬的。除奖学金之外，他们不能获得任何形式的额外经济补偿。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Well, I think it's safe to say that college sports has changed more in the last 5 years than it had in the 50 years before that. And that all has to do with a pretty important demarcation, which is prior to July 1st, 2021, throughout all of our lifetimes, it was understood college athletes cannot make money. They cannot receive any compensation above and beyond their scholarship.
+
+</details>
+
+**娜塔莉·基特罗夫**: 对。曾经有段时间，NCAA的规则手册里甚至明确规定，你可以给运动员提供一个百吉饼，但绝对不能在百吉饼上抹奶油奶酪。这在当时可是一条不折不扣的真实规则。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: Right. In fact, at one point in the NCA rule book, it said you can give them a bagel, but not a bagel and cream cheese. That was a real rule.
+
+</details>
+
+**斯图尔特·曼德尔**: 哇。但在整个2010年代，公众舆论逐渐发生了转变，大家开始质问：既然这门生意产生了如此庞大的财富，凭什么运动员连一杯羹都分不到？人们在新闻里读到价值数十亿美元的巨额电视转播合同；看到教练们每年拿着五六百万美元的年薪——虽然这数字放到今天看显得有点微不足道了，但在当时确实是一笔天文数字——大家都觉得这对运动员太不公平了，他们理应得到属于自己的一份分成。
+
+这种思潮最终推动全美各州的政客纷纷提出各自的州法案并立法，规定运动员可以赚取 NIL 报酬，这与 NCAA 当时的规章产生了直接冲突。随后在2021年迎来了一个极其重大的转折点：**最高法院**受理了一起针对 NCAA 的反垄断诉讼案（**奥尔斯顿案**，*NCAA v. Alston*）。那起诉讼本身倒不是专门针对 NIL 的，当时的争议核心是学校向运动员提供的教育相关开支报酬上限。但这背后其实是完全相同的法理逻辑：对某种形式的报酬强加限制是否合法。最终，最高法院以9比0的悬殊比分一致裁定 NCAA 败诉。而且在**布雷特·卡瓦诺**（Brett Kavanaugh）大法官撰写的一份协同意见书中，他把这一裁决的适用范围扩展到了远远超出单一案件争议的层面。他写道：NCAA 现行的商业运作模式，如果在任何其他行业中存在，都将是彻头彻尾的违法行为。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Wow. But throughout the 2010s, public opinion is shifting to, well, why don't the athletes receive a cup of all this money? People are reading about television deals that are worth billions of dollars. They're reading about coaches making5 $6 million a year, which is quaint now, but it was a lot then, and saying this is not fair to the athletes. They deserve a cut. And that eventually leads to state politicians around the country making their own bills, making their own laws that say athletes can make NIL money in direct conflict to the NCA's rules. And then a really big moment came in 2021 when the Supreme Court took up an antitrust case in which the NCA was sued. Not specifically about NIL. The issue in that one was a cap on educational expenses that the schools offer the athletes, but same principle, right? There was a restriction in place on a form of compensation and the Supreme Court ruled 9 nothing against the NCA. And in a concurring opinion that Justice Brett Kavanaaugh wrote, he kind of expanded the scope of their decision to cover a lot more than just this one issue. He wrote that the NCA's business model in any other industry would be flatly illegal.
+
+</details>
+
+**娜塔莉·基特罗夫**: 这是卡瓦诺大法官的原话。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: That's a quote.
+
+</details>
+
+**斯图尔特·曼德尔**: 没错，这就是他的原话。于是，NCAA 彻底败下阵来，举手投降。2021年7月1日到来之际，运动员们终于被允许承接商业代言合同了。既然我能跟**佳得乐**（Gatorade）签约，你也可以。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Yeah, that's what he wrote. So that's when the NCA caved. And so July 1st comes and athletes can now do endorsement deals. If I can sign with Gatorade, you can, too.
+
+</details>
+
+**广告原声**: **贾里德·凯西**（Jared Casey），你刚刚完成了堪萨斯大学橄榄球历史上最伟大的制胜接球之一！你现在打算去哪儿？我打算去哪儿？我要去 **Applebee's** 餐厅大吃一顿！
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: Jared Casey, you just made one of the greatest game-winning catches in Kansas football history. Where are you going now? Where am I going? I'm going to Applebee's.
+
+</details>
+
+### 从普通代言到暗度陈仓：助学团体（Collectives）崛起
+
+**斯图尔特·曼德尔**: 很快，你就能看到大学运动员开始在电视广告中抛头露面，代言运动饮料、快餐连锁品牌，或者在他们作为大明星的大学城里为当地的街坊小店做宣传。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: So, pretty quickly, you started seeing college athletes appearing in TV ads, for sports drinks, for fast food chains, local mom and pop shops in some of these college towns where they're big celebrities.
+
+</details>
+
+**广告原声**: 嘿，我是来自路易斯安那大学的外接手**达科他·斯克罗勒**（Dakota Scrawler）。如果你们家的空调制冷不够劲，赶紧呼叫 **SOS 冷暖气工程**！
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: Hey, this is Dakota Scrawler, wide receiver from Louisiana. When your AC isn't the coldest, you call SOS, heating and cooling.
+
+</details>
+
+**广告原声**: 呼叫 SOS！
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: SOS.
+
+</details>
+
+**斯图尔特·曼德尔**: 当然还有铺天盖地的社交媒体广告。所有这些在大家看来都是完全合情合理、无伤大雅的正常商业行为。但当时没有任何人预见到，一旦潘多拉魔盒被打开，NIL 权益很快就会被挪作完全不同的用途——变成了校友资助者（**Boosters**）花巨款雇佣优秀运动员加盟自己支持的学校的幌子。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: And of course, social media ads. All of these things that we would consider to be fairly benign. What nobody foresaw was that once they open that Pandora's box that NIL rights would be used for a completely different purpose, which is boosters paying their athletes to come to their favorite school.
+
+</details>
+
+**娜塔莉·基特罗夫**: 请具体解释一下究竟什么是“Boosters”。所谓 Boosters，就是向大学体育部捐款的热心捐赠者。虽然 NCAA 的标准是只要你买了季票就算赞助者，但我们通常所指的，是那些拥有数百万甚至数千万美元资产、家境极其富裕的狂热支持者。他们热衷于动用自己庞大的财力，不惜一切代价帮助母校在体育赛场上赢取胜利。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: And just say what boosters are exactly. Boosters are donors to a university's athletic department. And the NCA considers you a booster if you buy season tickets, but what we think of are the really wealthy alumni with deep pockets who have hundreds of millions of dollars to throw around and want to win.
+
+</details>
+
+**斯图尔特·曼德尔**: 那么他们过去是怎么操作的呢？在 NIL 合法化之前，所有的一切全是在密室里搞见不得光的私下勾当。说实话，那种台下交易极难取证，但私底下到处都是传言。而到了如今这个时代，一切全都摆到了明面上，而且摇身一变成为了受法律保护的合法操作。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: And how are they doing that? Well, in history prior to NIL, it was all back room shady under the table stuff. Stuff, frankly, that was hard to prove, but you always heard rumors about it. And now it's all in the open and it's protected by law.
+
+</details>
+
+**新闻播报**: **尼科·伊亚马莱阿瓦**（Nico Iamaleava）已经决定加盟田纳西大学，签下了一份高达800万美元的 NIL 协议。
+
+<details>
+<summary>Original English</summary>
+
+**News Anchor**: Nicole Evva has committed to Tennessee. $8 million NIL deal.
+
+</details>
+
+**新闻播报**: 《The Athletic》报道称，加州一名甚至尚未正式承诺加盟任何大学的五星级高中四分卫，与田纳西大学相关联的一个助学团体签订了一份为期四年、总价值800万美元的赞助协议。
+
+<details>
+<summary>Original English</summary>
+
+**News Anchor**: The Athletic reports that a high school quarterback in California, a five-star recruit who hasn't committed to a college yet, has signed a 4-year, $8 million deal with a collective associated with the University of Tennessee.
+
+</details>
+
+**娜塔莉·基特罗夫**: 那么到底什么是所谓的“团体”（**Collective**）呢？它其实就是一群校友捐赠者把钱集中放到同一个资金池里，然后统一分配给他们看中的新球员。因为学校官方本身不能直接给球员发现金，否则就会惹上大麻烦，所以他们必须通过这种第三方的助学团体来暗中运作。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: So what's a collective? It's a bunch of donors pulling their money together in one pot that they can then use to distribute to recruits because the school itself can't do it. They would get in big trouble. So they create this third-party system.
+
+</details>
+
+**斯图尔特·曼德尔**: 没错，就是把巨额资金汇集到一起，在这个案例中就是整整800万美元。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: and pulling a whole bunch of money together, $8 million in this case.
+
+</details>
+
+**娜塔莉·基特罗夫**: 是的。这在整个大学体育界引发了剧烈震荡，因为此前根本没有人意识到，这项运动竟然会在如此之短的时间内迅速跨入千万美元级别的烧钱时代。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: Yeah. And that sent shock waves throughout college sports because nobody realized just how quickly we'd gone to multi-million dollar deals.
+
+</details>
+
+**斯图尔特·曼德尔**: 确实如此。而且我们很容易想象，如此巨额的资金注入，必然会从根本上彻底改变这些联盟与联赛的实际运转方式。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Right. And it's easy to imagine how these sums of money can begin to transform the way these leagues actually function.
+
+</details>
+
+### 转校门户大开：无休止的“自由球员交易市场”
+
+**娜塔莉·基特罗夫**: 一点没错。因为恰好就在2021年的同一时期，NCAA 还大幅放宽了关于运动员转学的限制规定。在过去漫长的岁月里，如果你想转学去另一所大学，你必须强制休赛整整一年。这就形成了一种威慑机制，使得大部分球员轻易不会选择转学。然而在2021年，NCAA 出台了一项新规则：每位运动员都拥有一次无需休赛坐板凳即可直接上场比赛的转学机会。后来经过几起法庭诉讼的判决，这个限制甚至被彻底击碎——现在的情况是，你想转多少次学都可以，随时转学随时上场。于是，两大因素在同一瞬间彻底碰撞爆发：一边是球员可以完全自由流动，另一边则是到处充斥着诱人的巨额金钱。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: Absolutely. Because right around that same time in 2021, the NCA also loosened its restrictions around transfers. So for a long time, if you wanted to transfer to another school, you had to sit out a year. So people didn't transfer that often. In 2021, they put in a rule where you could transfer once without sitting out. And then a series of court cases followed that, and basically blew that up so that now you can transfer as many times as you want. So at the very same time, you had total free agency and a ton of money entering the system.
+
+</details>
+
+**斯图尔特·曼德尔**: 哇。另一个翻天覆地的巨变是：在过去很长一段时间里，大学校方本身是被严禁直接参与其中的。所有这些 NIL 商业交易全部都是由外部第三方机构操作的。但是从2025年开始——这同样是因为 NCAA 遭遇了另一起重大反垄断集体诉讼（**豪斯案**，*House v. NCAA*）并被迫达成和解——大学终于被允许正式直接向运动员进行收入分成并支付报酬，每所学校每年大约可以拿出2000万到2200万美元。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Wow. The other big change is right up till that point, the schools themselves couldn't be involved. All these NIL deals were being done by third parties. But starting in 2025, again, because the NCA settled a major antitrust lawsuit, schools can now directly revenue share with athletes, to the tune of about 20 to $22 million a year.
+
+</details>
+
+**娜塔莉·基特罗夫**: 这可是一件非同小可的大事对吧？大学现在被允许名正言顺地直接给球员发钱了。请带我们梳理一下，推行这项政策最初的初衷到底是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: This is a huge deal, right? Schools now being able to directly pay players. Walk me through what the goal was here.
+
+</details>
+
+**斯图尔特·曼德尔**: 官方宣称的目标，实际上是为了稳定整个失控的体系。当时各方的想法是：只要让学校官方来统一掌控资金发放，那么球员的频繁跳槽流动就会减少，疯狂攀升的成本也能得到有效控制。我们甚至还打算成立一个全新的清算监管机构，任何超过600美元的第三方协议都必须提交审核，以此来遏制那些野蛮生长的第三方助学团体。但事与愿违，现实中的真实情况却完全走向了反面：那个旨在稳定局面的清算机构在法庭上面临重大法律挑战，根本无法有效运转；而那些资助团体不仅没有销声匿迹，反而变得比以往任何时候都更加有恃无恐、变本加厉。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: The goal was actually to stabilize the system. The thinking at the time was well if we the schools can control the payments then there's going to be less movement and the costs are going to go down. We're going to have this clearing house where every third-party deal over $600 has to be approved, and the collectives are going to go away. But what's happened is that clearing house is caught up in legal challenges, and the collectives are doing just the opposite.
+
+</details>
+
+**娜塔莉·基特罗夫**: 那现在台面下的真实景象到底是什么样子的？听起来简直极端混乱，请给我们描绘一幅完整的全景图。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: What does that exactly look like? It sounds extremely chaotic, but paint me the full picture here.
+
+</details>
+
+**斯图尔特·曼德尔**: 是的，现在的大学体育就像是没有设立任何规则、也没有任何能力去执行规则的 NFL。在球场上，你看到的是一群朝气蓬勃的年轻人；而在球场外，他们身后却站着职业经纪人。这些经纪人成天给各个学校的体育部门打电话试探底细，或者干脆直接跟对方学校的助学团体接触，说：“我手里有个球员，你们打算出多少钱抢他？”如果某个球员在自己现在的学校过得不顺心，比如打不上主力位置，或者纯粹就是觉得自己在其他地方能赚到更多钱，经纪人就会直接威胁现任主教练：“嘿，教练，我们收到了其他地方开出的丰厚报价。你必须给我们涨薪匹配这个价格，否则下周一转校门户一开，我们就直接走人。”
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Yeah, it looks like the NFL, if the NFL had no rules or ability to enforce their rules, you have on the field, these are young men. Off the field, they have agents. And the agents are calling around to athletic departments or directly to collectives and saying, "Hey, what are you going to pay for this guy?" And if a player is disgruntled with his situation, maybe he's not getting enough playing time, maybe he just wants more money, they'll say to their coach, "Hey coach, we got this offer. You need to match it or come Monday when the transfer portal opens, we're out of here."
+
+</details>
+
+**娜塔莉·基特罗夫**: 而且他们把这种操作一次又一次地反复上演。你是说，他们整天都在像推销商品一样把这些年轻球员四处兜售？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: And they're doing that over and over again. They're shopping these players around. You're saying
+
+</details>
+
+**斯图尔特·曼德尔**: 他们一天到晚都在到处兜售转卖这些球员。事实上，一个球员只要在九月份打出一场高光比赛，经纪人立刻就会把它当成坐地起价的黄金窗口期，开始满世界打电话询价测算市场兴趣。而所有这一切的终极目标，无非就是在转学窗口开启时为球员谋取一份最大化的天价合同。可是正如我们前面提到的，这些暗箱操作没有任何透明度可言。没有任何地方强制要求公开披露谁到底拿了多少钱，所以你听到的全是一堆真假难辨的传言。在过去，大家从来没有真正掌握过关于这个金钱市场实际行情的可靠全景数据。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: they're constantly shopping these players around. In fact, the guy could have one good game in September and suddenly that's the window to start calling around engaging interest. And ultimately the goal is to get the best deal when the transfer portal opens. But as we said, none of this is transparent. There's no requirement that people disclose who is making what, so it's all rumors and speculation. And we haven't had real hard data on what the marketplace actually looks like until now.
+
+</details>
+
+**娜塔莉·基特罗夫**: 想要获取那些内部核心数据极其困难，每个人对此都三缄其口、守口如瓶。正如我之前所言，他们没有任何法律义务对外公布这些财务隐私。但是今年夏天，你和《The Athletic》的几位资深记者成功突破了防线，挖掘出了迄今为止最全面、最详尽的独家内幕数据。我们稍后马上回来详细探讨。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: that information is very hard to obtain. Everybody's very hush- hush about it. Like I said earlier, they're under no obligation to publicize it. But this summer, myself and several of my colleagues from The Athletic came out with the most comprehensive data yet. We'll be right back.
+
+</details>
+
+### 独家调查：顶尖四分卫均价逼近400万，贫富悬殊撕裂联盟
+
+**娜塔莉·基特罗夫**: 好的，斯图尔特，你们究竟是如何拿到这些内部核心数据的？你们是如何摸清这个地下交易市场的真实面貌的？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: All right, Stuart, how did you get to these numbers? How did you figure out what this marketplace actually looks like?
+
+</details>
+
+**斯图尔特·曼德尔**: 你很快就会发现，各队的主教练和总经理们极度抗拒公开谈论具体的个案数字。但只要你愿意承诺匿名保护，他们私底下其实非常渴望向外界吐苦水，他们对于整个行业彻底失控的现状感到无比抓狂。我和我的同事**马克斯·奥尔森**（Max Olson）联手对整个大学橄榄球顶级层级（FBS）的几十位总教练、总经理、体育总监以及助学团体的负责人进行了深入的背景访谈，最终成功拼凑出了整个市场各个位置球员的真实身价行情。
+
+我们发现的数据令人瞠目结舌：在全美各大顶级豪门学校之间，一名具备首发实力的顶级四分卫，目前的平均市场行情已经达到了每年**350万到400万美元**。即使是一名普通的首发球员，年薪通常也在50万到100万美元之间。这就意味着，一支志在争夺季后赛和全国冠军的顶级球队，单单每年付给其橄榄球名册球员的实际开支，就已经飙升到了**1500万到2000万美元**之间。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Well, one thing you figure out pretty quickly is coaches and GMs are very reluctant to speak publicly about specific numbers. But on background, they are desperate to talk about it because they're losing their minds. And so my colleague Max Olson and I went around and interviewed dozens of coaches, GMs, athletic directors, collective operators across the FBS, and we were able to put together real data on what positions are making, what players are making. And what we found was that the average starting quarterback at a power conference school is making between 3.5 and $4 million a year. Even just regular starters are making 500,000 to a million. And what that means is for a team that wants to contend for a national title, they're spending anywhere from 15 to $20 million on their roster alone.
+
+</details>
+
+**娜塔莉·基特罗夫**: 如此看来，之前那种以为“一旦学校正式开启直接收入分成，第三方合同被置于严格审批之下，助学团体就会自然消亡、市场就能恢复平静稳定”的想法，显然彻底沦为了一纸空谈。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: So the idea that the market was going to stabilize once the schools establish direct revenue sharing and third party deals have to be approved, the collectives would go away. Clearly that was not the case.
+
+</details>
+
+**斯图尔特·曼德尔**: 是啊。我的意思是，如果单看这些数字本身，考虑到大学体育每年产生的数十亿美元天量转播收益，你或许可以辩称两千万美元占总收入的比例其实并不算过分夸张。但真正令人震撼的是时间维度的对比——仅仅在五年前，这个数字在全美所有大学里还是整整齐齐的“零元”。而如今，短短几年时间，它就从零一路狂飙到了每年两千万美元之巨。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Yeah. Yeah, I mean I think in a vacuum you could make the case that it's not actually that significant a number relative to how much revenue comes in. But it's jarring because 5 years ago that number was zero. And now all of a sudden you have these teams spending $20 million a year on players.
+
+</details>
+
+**娜塔莉·基特罗夫**: 没错！而且我认为，你们这项重磅调查揭示出的另一个极其触目惊心的事实，就是这套体系内部所展现出的那种惊人的极端不平等。说实话，如果你所在的大学一年只能勉强凑出800万美元给球员发薪，而你同赛区的死敌对手每年能砸下两三千万美元，那你们之间的竞技公平性就完全荡然无存了。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: right? And the other dramatic piece of this, I think, was just how inequitable this system was shown to be. And honestly, problematic if you're a school that is only paying $8 million to your players and your rival is paying 20, 25, $30 million.
+
+</details>
+
+**斯图尔特·曼德尔**: 毫无疑问。这是我们报道中一个非常令人警醒的残酷现实，它极度放大了富豪学校与贫困学校之间原本就存在的巨大鸿沟。诚然，在这项运动的历史上一直都存在着“有钱人”和“穷人”的差别。但现在的关键在于，以往决定胜负的是你盖的训练设施有多奢华、教练团队有多庞大、更衣室有多高档；而现在，金钱已经直接转化为你在场上每一个位置能买到何种水准的现成顶尖战力。拥有更多预算的学校，可以直接把其他弱小学校辛辛苦苦培养出来的高光明星球员连根挖走。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: No question. It's a really alarming takeaway from this that kind of accentuates just how wide the gap is growing between the halves and have nots. Now, there's always been halves and have nots in this sport, but the difference was always in facilities, coaching staff salaries, things like that. Now it's direct. If you have more money, you can literally buy better players off of other people's rosters.
+
+</details>
+
+**娜塔莉·基特罗夫**: 一个顶尖球员的加入能带来立竿见影的巨大质变。事实上，另一个大家普遍担忧的核心问题，就是如此庞大的资金规模究竟在多大程度上影响了球员的转学流动。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: He can he can make a huge difference. In fact, another big concern is how all that money affects transfers.
+
+</details>
+
+**斯图尔特·曼德尔**: 我个人其实一直认为，转校门槛的放宽总体上对这项运动的发展是一件大好事。以印第安纳大学山地人队为例，他们去年居然一路逆袭夺得了全国冠军，从历史上输球最多的鱼腩球队一跃成为全美霸主。如果放在以往的旧体制下，这种奇迹是绝对不可能发生的。他们之所以能创造奇迹，是因为他们的新主教练直接利用转学机制，一口气带来了多达三十名成熟优秀的转校老兵。然而，硬币的另一面在于：对于普通球迷来说，你今天买了一件当家球星的球衣，下个赛季这个人可能就穿上了死敌球队的战袍。一支球队每年有四五十名球员进进出出，阵容年年大换血，这让球迷们越来越难对自己支持的球队建立起真实、持久的情感联结。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: I happen to think that the rise of transfers has been good for the sport overall. Indiana wins the national championship last year, goes from losing his program to national champion. They could not have done that without transfers. Their coach brought in like 30 transfers. But on the other side of that, it means your favorite team's roster could be completely overturned every single year. You buy a jersey of a guy, and next year he's playing for your biggest rival. And fans are having a hard time feeling connected to their teams.
+
+</details>
+
+### 《保护大学体育法案》出台：限制开支与转校锁喉
+
+**娜塔莉·基特罗夫**: 是的。我的意思是，你刚才所描绘的图景，不仅仅是对球迷与大学体育之间情感纽带的彻底颠覆，更是从最底层的逻辑上彻底重塑了大学体育的基础运作法则。而这恰恰构成了国会参议员们决心采取立法行动的直接导火索。所以，请为我们详细拆解一下这项刚刚在参议院通过的法案，它究竟包含了哪些具体条款？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: Yes. I mean, what you've described is not just a complete reordering of fans relationship to college sports, but a complete reordering of how college sports actually work at the most fundamental level. And that brings us back to this bill that just passed the Senate. So break down this bill for us. What does it actually do?
+
+</details>
+
+**斯图尔特·曼德尔**: 说老实话，这项法案读起来简直就像是一份大学体育界各种利益诉求混杂在一起的“填字拼贴游戏”。这也是我人生中第一次深入追踪报道国会立法进程，我不得不有生以来第一次坐在那儿连续啃了整整三个小时的 C-SPAN 国会辩论直播。你知道，就在上个月底，**ESPN** 的旗舰节目《**大学比赛日**》（College GameDay）来到德克萨斯大学奥斯汀分校录制现场。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Well, the bill is kind of a college sports mad li to be honest, but this is my first time covering anything congressional. I had to watch C-SPAN for 3 hours for the first time in my life. And you know, a few weeks ago, College GameDay was in Austin, Texas.
+
+</details>
+
+**解说现场**: 让我们热烈欢迎来自德克萨斯州的联邦参议员——**特德·克鲁兹**！
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: to be joined by Senator from the state of Texas, Ted Cruz.
+
+</details>
+
+**斯图尔特·曼德尔**: 特德·克鲁兹作为该法案的主要起草发起人，亲自现身节目现场为法案大声站台宣传。顺便提一句，他在整个出场过程中被全场观众从头到尾狂嘘喝倒彩。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Ted Cruz appears on the show to basically shill for the bill. And he gets, by the way, booed the entire time.
+
+</details>
+
+**特德·克鲁兹**: 听着，正如大家深知的那样，大学体育是一项多么伟大的美国传统制度……
+
+<details>
+<summary>Original English</summary>
+
+**Ted Cruz**: Well, look, as you know, well, college sports is an amazing institution. It
+
+</details>
+
+**斯图尔特·曼德尔**: 全场嘘他倒不是因为讨厌这项法案本身，而是因为当地球迷圈子里普遍流传着一个迷信，觉得他是个“赛事丧门星”——只要他去现场看哪支德州球队的比赛，哪支球队就会输球。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: not because of the Bill, but because he's considered a curse wherever he goes to a Texas team's game.
+
+</details>
+
+**娜塔莉·基特罗夫**: 球迷们根本连看都不想看到他出现在球场看台上。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: They just don't even want him in the stands.
+
+</details>
+
+**斯图尔特·曼德尔**: 目前全美绝大多数大学体育项目每年都在遭受数千万美元的巨额财务亏损。对于克鲁兹参议员以及其他深度参与此事的两党参议员们来说，眼下真正压倒一切的当务之急其实只有两件事：一是转校问题，二是支出失控问题。
+
+在转校方面，该法案直接赋予了学校强制推行并执行**具有法律约束力的具有排他性合同**的法定权力。这就意味着，学校终于可以合法地要求运动员签署一份为期多年、具有约束力的合约。如果球员单方面毁约想转校跳槽，他就必须强制休赛整整一年，或者向学校支付巨额的违约金赔偿。这就把原本大开的转学大门重新狠狠关上了。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Most college athletic programs right now, they're losing tens of millions of dollars. And for Cruz and for the other senators who were deeply involved in this, there are really two issues that seem to be at the top of their priority list. One is transfers, the other is spending. On transfers, it would basically give the schools the authority to enforce binding contracts, which they haven't been able to do. So players would be locked into a contract, and if you transfer, you would have to sit out a year. It would basically stop the revolving door.
+
+</details>
+
+**娜塔莉·基特罗夫**: 确实。这样一来，球队年复一年就能保留住自己阵容中绝大部分的骨干球员，不再轻易散伙。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: Correct. You would have far more of your roster in place from one year to the next.
+
+</details>
+
+**娜塔莉·基特罗夫**: 好的。那么关于资金开支那一块呢？该法案又是如何着手解决花销失控问题的？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: Okay. And what about the spending piece? How does it address that?
+
+</details>
+
+**斯图尔特·曼德尔**: 这里需要特别澄清并强调的是：该法案并没有直接针对个别运动员个人能够赚取多少钱设立任何上限。它所限制的，是大学校方整体在所有运动员身上能够支出的总预算天花板。从法理技术层面上讲，它其实设定了一个开支上限，同时还赋予了大学体育界梦寐以求的“**有限反垄断豁免权**”。
+
+这正是大学官方过去多年梦寐以求的护身符：只要拥有了这项反垄断豁免权，各所大学和 NCAA 就可以联合起来集体制定限制支出和设立薪酬帽的规则，而再也不用害怕随后被运动员或者律师告上法庭指控违反联邦反垄断法了。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: It's important to note that the bill does not include any specific limit on what an individual athlete can make. It's a cap on how much the school can spend on those athletes. Technically, there's a cap on spending, and it gives the schools and the NCA a limited antitrust exemption, which is what they have been begging for forever. Because without that, anytime they try to put a cap on anything, they get sued and they lose. This would protect them from antitrust lawsuits.
+
+</details>
+
+**娜塔莉·基特罗夫**: 是的，这绝对是一套旨在严格控制运营成本的硬性干预措施。因为就目前的现状来看，各大球队的薪酬花销年年以40%、50%甚至60%以上的疯狂幅度爆炸式增长，学校管理层极度迫切地需要踩下一脚急刹车。然而，现实中也确实有一些顶尖名校——比如俄亥俄州立大学、德克萨斯大学等——他们手握雄厚的资金池，原本非常乐意继续大把花钱买人。但对于整个行业中剩下的95%的学校来说，他们已经彻底被拖入了难以为继的财务深渊。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: Yeah, it's definitely a cost control measure because right now, year to year to year, these rosters are going up 40, 50, 60%, maybe even more, and they need that to slow down. Now, there are schools right now that want to spend more. Ohio State, Texas, they have the money, they want to spend it. But for 95% of the schools, they simply can't keep up.
+
+</details>
+
+### 反噬与争议：两党合谋背后的虚伪与劳工权利困境
+
+**娜塔莉·基特罗夫**: 我不得不说，斯图尔特，这项法案中确实有太多引人入胜的看点。但我个人觉得最为吊诡和玩味的地方在于：一大批平时张口闭口“自由市场、反对政府干预”的保守派共和党人，如今竟然聚精会神、全力以赴地推动这项本质上属于联邦政府强力介入私营经济市场的严苛监管法案。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: I have to say, Stuart, there's a lot that's fascinating about this bill, but I think it's really interesting that a bunch of Republicans are supporting what's essentially the government intervening in a private labor market and capping compensation.
+
+</details>
+
+**斯图尔特·曼德尔**: 是啊。要促成如此庞大的两党压倒性支持，共和党人和民主党人双方都不得不违背各自阵营一贯坚持的传统政治教条。一方面，如你所言，原本将自由放任奉为圭臬的共和党人，现在却在积极要求联邦政府出面强推价格管制和劳工流动限制；而另一方面，很多原本坚定站在劳工权益和工会立场上的民主党人，现在却投票支持对这些年轻劳动者的议价权实施严格约束。
+
+不过，并非所有人都买账。**国会黑人核心小组**（Congressional Black Caucus）就公开站出来表达了极其强烈的反对立场。正如该小组一位核心成员所尖锐指出的：“如果我们执意要对年轻的运动员施加如此苛刻的规则限制，那么我们首先就应该把完全相同的规则套在那些腰缠万贯的主教练头上！”
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Yeah. Yeah. To get to that much bipartisan support, you had both Republicans and Democrats going against what some of their traditional stances would be. You have, like you said, Republicans who are traditional free market advocates voting for government regulation, and Democrats who are typically pro-labor voting for restrictions on labor. But there is real pushback. Within Congress, the Congressional Black Caucus has already said they're going to oppose this. If we're going to impose rules on athletes, we should apply the same rules to coaches.
+
+</details>
+
+**议员原声**: 因为这项法案的实质根本就不是为了保护运动员，也绝不是为了所谓的公平竞争，它纯粹是在用国家机器强行巩固一种彻头彻尾的体制性虚伪！
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: because it's not about the athletes, it's not about fairness, it's enforcing hypocrisy.
+
+</details>
+
+**斯图尔特·曼德尔**: 这项法案遭遇的核心炮火主要集中在几个方面。首先是那头谁也无法回避的“房间里的大象”：该法案严厉限制了学校可以发给球员的报酬，但对那些年薪上千万美元的主教练薪水却只字未提、完全不设任何上限！顺便提醒大家一句：在大学橄榄球和大学男篮的赛场上，绝大多数流汗拼搏的顶级学生运动员都是非洲裔黑人青年；而绝大多数坐享数千万巨额年薪和丰厚解约金的主教练与行政高管，却全是不折不扣的白人。这就让整个法案从种族和阶层视角审视时，显得尤为扎眼和站不住脚。
+
+更重要的是，法案还明确白纸黑字地彻底剥夺了学生运动员被认定为“雇员”的一切法律权利。这就从根本上切断了他们未来通过成立工会组织去集体谈判薪酬、争取医疗工伤保障的法定途径。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Couple of the main issues are, first of all, the elephant in the room. This bill restricts what schools can spend on their players, but not their coaches. And oh, by the way, the majority of college football and basketball players are Black, and the majority of coaches making 10, 12, $13 million a year are white. And on top of that, the bill explicitly states that athletes are not employees, which prevents them from ever unionizing and collective bargaining for their rights.
+
+</details>
+
+**娜塔莉·基特罗夫**: 没错。听起来这项法案的批评者们精准切中了其骨子里的根本不公：如果你自称是为了控制暴涨的运营成本，为什么你每一次挥刀动斧，永远只砍在处于权力最底层的年轻学生球员身上，而那些位高权重的高管、总监和名帅们的奢华待遇却分毫未损？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: Right. It sounds like the critics of this bill are pointing out what they see as something fundamentally unfair, which is that if you're trying to control costs, why are you doing it only on the backs of the labor, the athletes, and not on the coaches or the athletic directors or the administrators?
+
+</details>
+
+**斯图尔特·曼德尔**: 是的。回过头去重温2019和2020年各州最初萌生出提出 NIL 改革法案的那个历史节点，真是一件非常有意思的事情。当时加州是全美第一个率先立法的州。我当时经常跟身边的人开玩笑说，在当时那个高度极化撕裂的政治气候里，整个美国可能再也找不到比大学体育 NIL 更能跨越党派鸿沟、赢得朝野一致支持的完美议题了。因为左派进步人士把它视作一场为长期遭受无偿剥削的少数族裔年轻劳工争取基本经济正义的伟大平权运动；而右派自由主义者则把它看作是对个人财产权和神圣不可侵犯的自由市场原则的捍卫。
+
+然而，谁也没有料到，时隔短短五年之后，两党竟然再一次达成了惊人一致的跨党派共识——只不过这一次，他们的方向来了一个整整180度的倒车大反转，联手立法要把这个他们自己亲手放出来的自由市场怪兽重新锁进笼子里。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Yeah, it's pretty fascinating to go back to 2019 2020 when the states were first starting to propose these NIL bills. California was the first one. I used to say back then there's never been a more bipartisan issue in America, because Democrats supported it because it was a civil rights issue, a labor rights issue for largely Black athletes. And Republicans supported it because it was free market, individual rights. And now here we are 5 years later, and it's bipartisan again, but in the exact opposite direction, to put the genie back in the bottle.
+
+</details>
+
+### 前景难料：牢不可破的狂热信仰
+
+**娜塔莉·基特罗夫**: 好的。这项法案在真正成为具有效力的法律之前，显然还有极其漫长坎坷的一段路要走。它现在移交给了联邦众议院，众议院内部党派分歧严重，谁也不知道接下来究竟会发生什么。但我很想问你的是，斯图尔特：我们在前面聊了这么多关于混乱、焦虑、铜臭与体制失灵的沉重话题，但在你看来，这些乱象到底有没有真正伤害到大学橄榄球这项运动本身的核心魅力？
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: All right. So, this bill has a long way to go before it passes. It goes to the House now. We don't know what's going to happen there. But I want to ask Stuart, we've spent a lot of time here talking about the chaos, the anxiety, the system falling apart. But has all of this actually ruined the sport?
+
+</details>
+
+**斯图尔特·曼德尔**: 这恰恰是整件事情中最荒诞、最不可思议的地方：尽管经历了如此剧烈的舆论恐慌，尽管这桩纠纷一路惊动到了美国国会参议院的最高殿堂，但在每一个金秋十月的周六下午，大学橄榄球比赛的精彩程度和受关注度却处在历史的最高峰！当你坐在电视机前或者亲临现场，欣赏着俄亥俄州立大学与俄勒冈大学之间那种荡气回肠的巅峰史诗对决时，全场沸腾，收视率接连打破历史纪录。普通观众根本不会去在乎场上的四分卫到底拿了多少代言费，大家在乎的唯有竞技本身展现出的无与伦比的激情与魅力。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Yeah, that's what's crazy. For all the angst, for the fact that it went all the way to the Senate, Saturdays in the fall have never been more exciting. When you're watching a great game like Texas vs. Georgia, Ohio State vs. Oregon, the ratings are through the roof. Fans are loving the product on the field. Nobody is watching that game thinking about collective bargaining or antitrust law. They're just watching incredible football.
+
+</details>
+
+**娜塔莉·基特罗夫**: 事实证明，大学橄榄球这项运动的生命力和韧性是如此之顽强，它实在是一样极难被真正彻底毁掉的伟大事物。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: Turns out college football is just a really hard thing to break.
+
+</details>
+
+**斯图尔特·曼德尔**: 他们正在竭尽全力试图毁掉它，但至少到目前为止，他们还没有得逞。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: They're trying hard to break it, but they haven't yet.
+
+</details>
+
+**娜塔莉·基特罗夫**: 好的。斯图尔特，非常感谢你能来参加我们的节目，为我们带来如此精彩深刻的分享。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: All right. Well, Stuart, thank you so much for coming on the show.
+
+</details>
+
+**斯图尔特·曼德尔**: 非常感谢你们的盛情邀请。
+
+<details>
+<summary>Original English</summary>
+
+**Stuart Mandel**: Thank you so much for having me.
+
+</details>
+
+### 今日要闻速览：FlyDubai 航班高空惊魂事件与制作名单
+
+**娜塔莉·基特罗夫**: 我们稍后马上回来。以下是今天你还需要了解的另一条重要国际新闻。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: We'll be right back. Here's what else you need to know today.
+
+</details>
+
+**幸存乘客原声**: 突然之间，砰的一声巨响，飞机机翼上的减速板猛地升了起来。整架客机开始以极其骇人的角度头朝下疯狂俯冲，感觉飞机彻底失控了。我们在极短的时间内极速下坠了整整15,000英尺，相当于直线下落了五公里。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: Suddenly, boom, the brakes of the wings come up. We start dog diving. Like the plane loses control. We fell down 15,000 ft, like 5 km.
+
+</details>
+
+**幸存乘客原声**: 就在那一瞬间，极度的绝望笼罩了所有人。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: No. S now.
+
+</details>
+
+**幸存乘客原声**: 在我脑海深处，我反复对自己说：我还这么年轻，我绝不应该以这样惨烈的方式死去。
+
+周三，一架飞往以色列的**迪拜航空**（FlyDubai）客机在航程中实施了紧急迫降。起因是在飞行途中一名副驾驶员突然持刀疯狂刺伤了另一名飞行员，危急关头机上的勇敢乘客和机组乘务人员奋起搏斗，最终成功夺回了飞机的驾驶控制权。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio / Natalie Kitroeff**: In my head, I said, I don't deserve to die like this. I'm so young. On Wednesday, a Fly Dubai plane on its way to Israel made an emergency landing after one pilot stabbed another and passengers and crew won a fight to regain the flight control.
+
+</details>
+
+**幸存乘客原声**: 当时感觉就像遭遇了一场极其剧烈可怕的重度颠簸，一开始大家根本不知道究竟发生了什么。随后我们惊恐地看到有几个人疯狂地朝着驾驶舱方向冲过去，我们这才猛然意识到里面发生了严重的持刀行凶流血事件。在袭击发生的过程中，失去有效操控的飞机在空中骤降了数千英尺，直到一群英勇的乘客不顾个人安危猛扑上去将行凶的发狂飞行员彻底按倒制服，险情才得以化解。现场乘客拍摄的机舱视频显示，至少有一名男子身负重伤，现场多名乘客身上沾满了鲜血。在有关部门紧急派遣替补客机前往接应后，全体机组成员和受惊乘客已于周三深夜平安抵达以色列特拉维夫。当他们步出机舱时，惊魂未定的乘客们向《纽约时报》记者**亚当·拉斯坎**（Adam Rasgon）和**纳坦·奥登海默**（Natan Odenheimer）痛陈了机舱内发生的惊险一幕。
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio / Natalie Kitroeff**: Like a massive turbulence and we didn't know what happened. Then we saw that there is a people running to the cockpit and we understood that there was some stabbing over there. The plane suddenly plunged thousands of feet during the attack, which was only stopped when a group of passengers rushed to subdue the aggressive pilot. Videos from the plane showed at least one wounded man and several others covered in blood. All of the passengers and crew members arrived safely in Israel by Wednesday night after a replacement aircraft was sent to retrieve them. As they disembarked, they shared harrowing stories of what had happened on board with my colleagues Adam Rascan and Natan Odenheimimer.
+
+</details>
+
+**幸存乘客原声**: 对我而言，真正最令人窒息的恐惧时刻，其实是飞机最终迫降在沙特阿拉伯机场之后。在后面的几个小时里，每当我一想到还要重新登上一架飞机，脑海里就忍不住反复回放飞机在空中失速坠落的那一瞬间，总觉得同样的可怕灾难随时可能再次上演……
+
+<details>
+<summary>Original English</summary>
+
+**Archival Audio**: The most frightening moment was actually for me after we arrived in Saudi Arabia. And every time I just thought of going back to that plane, I just thought of the moment where the plane collapsed and maybe it could happen all over again. And then maybe
+
+</details>
+
+**娜塔莉·基特罗夫**: 以色列总理**本雅明·内塔尼亚胡**（Benjamin Netanyahu）随后发表公开声明指出，涉案的一名飞行员据初步调查“显然企图蓄意摧毁这架载满无辜乘客的客机”，而机上的绝大部分乘客均为以色列公民。以色列官方安全部门目前正在全力调查此案究竟是一起针对以色列公民的有预谋恐怖袭击，还是单纯出于个人心理崩溃的自杀倾向，亦或是存在其他可能的深层诱因。
+
+今天的这期节目由**卡洛斯·普列托**（Carlos Prieto）、**阿德里安·赫斯特**（Adrien Hurst）、**埃里克·克鲁普克**（Eric Krupke）和**阿斯塔·查图尔维迪**（Asta Chaturvedi）联合制作；由 **M.J. 戴维斯·林恩**（M.J. Davis Lin）和**迈克尔·伯努瓦**（Michael Benoist）共同审校编辑，并得到了**罗布·齐普科**（Rob Zipko）的协助支持。本期节目配乐由**马里安·洛萨诺**（Marian Lozano）、**帕特·麦卡斯克**（Pat McCusker）和**丹·鲍威尔**（Dan Powell）创作，音频工程由**艾丽莎·莫克斯利**（Alyssa Moxley）混音制作。节目主题曲由 **Wonderly** 倾力打造。《每日新闻》今天就播送到这里，我是**娜塔莉·基特罗夫**。我们明天见。
+
+<details>
+<summary>Original English</summary>
+
+**Natalie Kitroeff**: Israeli Prime Minister Benjamin Netanyahu said that one of the pilots had quote apparently attempted to crash the plane with its passengers on board, nearly all of whom were Israelis. The Israeli authorities are investigating whether the incident was an attempted attack on Israelis or a suicide among other possible explanations. Today's episode was produced by Carlos Prito, Adrien Hurst, Eric Krupkkey, and Asta Chathurvedy. It was edited by MJ Davis Lynn and Michael Benois with help from Rob Zipco. Contains music by Marian Lozano, Pat McCusker, and Dan Powell, and was engineered by Alyssa Moxley. Our theme music is by Wonderly. That's it for the daily. I'm Natalie Kitroof. See you tomorrow.
+
+</details>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>一次出图可用率不到两成：从字节 Seedream 5.5
+看生图模型的真实座次与选型</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">一次出图可用率不到两成：从字节 Seedream 5.5
+看生图模型的真实座次与选型</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-14</span>
+    
+
+    <header class="article-header">
+      
+      <h1>一次出图可用率不到两成：从字节 Seedream 5.5
+看生图模型的真实座次与选型</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/image-generation/">image-generation</a>
+      
+        <a class="tag-link" href="/tags/model-comparison/">model-comparison</a>
+      
+        <span class="tag-pill tag-pill--no-page">image-editing</span>
+      
+        <a class="tag-link" href="/tags/ai-tooling/">ai-tooling</a>
+      
+        <a class="tag-link" href="/tags/tech-trends/">tech-trends</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">字节跳动发布了标准版生图模型 Seedream 5.5，其一次出图可用率约为 18%，低于上一代模型。文章分析了当前生图模型的发展趋势，指出大厂的关注点正从单次生成转向局部修改和素材导出，以解决单次生成结果的半成品问题。同时，对比了不同模型（如 OpenAI GPT Image 2.6、谷歌 Nano Banana 2.1、Black Forest Labs FLUX 3 Image）在单次生成和局部改图方面的表现，并分析了不同模型的成本和适用场景，指出字节的 Seedream 5.5 在低成本素材生成和局部改图方面具有优势。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/seedream-55-image-landscape-20261114.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-14T00:00:00.000Z">2026-11-14</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%B8%80%E6%AC%A1%E5%87%BA%E5%9B%BE%E4%B8%8D%E5%88%B0%E4%B8%A4%E6%88%90%E8%83%BD%E7%94%A8%E9%87%8D%E5%BF%83%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BD%AC%E5%90%91%E4%BA%86%E6%94%B9%E5%9B%BE">一次出图不到两成能用，重心为什么转向了改图？</a></li><li class="outline-h2"><a href="#%E5%90%8C%E9%97%A8%E8%A7%86%E9%A2%91%E6%A8%A1%E5%9E%8B%E6%8B%BF%E4%BA%86%E7%AC%AC%E4%B8%80%E5%AD%97%E8%8A%82%E7%9A%84%E7%94%9F%E5%9B%BE%E6%A8%A1%E5%9E%8B%E6%8E%92%E8%80%81%E5%87%A0">同门视频模型拿了第一，字节的生图模型排老几？</a></li><li class="outline-h2"><a href="#%E5%B0%8F%E5%AD%97%E9%80%8F%E6%98%8E%E5%BA%95%E5%92%8C%E7%99%BE%E8%BD%AE%E6%94%B9%E5%9B%BE%E6%96%B0%E6%A8%A1%E5%9E%8B%E5%81%9A%E5%88%B0%E4%BA%86%E5%93%AA%E4%B8%80%E6%AD%A5">小字、透明底和百轮改图，新模型做到了哪一步？</a></li><li class="outline-h2"><a href="#%E4%B8%80%E8%BE%B9%E6%9A%97%E6%B6%A8%E4%B8%80%E8%BE%B9%E9%99%8D%E4%BB%B7%E7%8E%B0%E5%9C%A8%E5%81%9A%E5%9B%BE%E5%92%8C%E6%8E%A5%E6%8E%A5%E5%8F%A3%E8%AF%A5%E6%80%8E%E4%B9%88%E9%80%89">一边暗涨一边降价，现在做图和接接口该怎么选？</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>使用过生图模型的人，尤其是生成过海报或电商配图的人，大都有过这样的体验：你抽卡抽了很长时间终于抽到了一张满意的图，构图不错，光照不错，人物表情也不错，现在只想把左下角的标题改一下，或者让人物戴个眼镜。但常发现
+AI 在把标题改对的同时把人脸也改了，甚至把背景和窗框都改了。</p>
+<p>11 月 9 日，字节跳动发布了标准版生图模型 Seedream
+5.5，后续还会推出定位更高的 Pro 版本。在国内改一张 2K
+方图，价格已经降到了 0.28 元左右。这个模型主打连改 100
+轮不变形、直接出透明底素材，并且在小字和写实质感上有所改善；配套的平台工具还能把成品海报拆成最多
+100 个图层。回顾过去两个月，OpenAI 发布了旗舰 GPT Image 2.6，谷歌升级了
+Nano Banana 2.1，德国的 Black Forest Labs 也发布了 FLUX 3
+Image。这些公司都在发力局部改图和导出素材。为什么大厂突然都在卷改图呢？在真实的盲测榜单上，字节到底排第几，我们平时用又该如何选择呢？</p>
+<h2 id="一次出图不到两成能用重心为什么转向了改图" data-reading-heading="">一次出图不到两成能用，重心为什么转向了改图？</h2>
+<p>答案就在字节的官方博客里面。他们测试了包括电商、营销、影视在内的
+6
+种商业场景。官方表示新模型的可用率全面超越上一代，影视和办公场景甚至达到上一代两倍以上。但是综合所有场景来看，上一代一次出图的整体可用率只有
+11% 左右，最新的 Seedream 5.5 也只有 18% 左右。</p>
+<p>一次成图的可用率不到两成，剩下的八成多都是半成品。最头疼的是大方向是对的，只是错了一个字或少了一个配饰。重新抽卡太费钱费时；塞回模型局部修改，模型每次都会把没让改的区域顺手重算一遍，连改几轮就会出现偏色、人物走样和细节衰减。要想拯救半成品，模型要么在局部修改时锁死其余像素，要么直出透明底
+PNG 素材给设计软件去拼。</p>
+<p>单次抽卡很难一步到位。入秋以来，各家都在猛补局部改图和素材导出：OpenAI
+的新旗舰 GPT
+Image 2.6 支持在照片上圈画改图；接口还能导出矢量图，或直出动图。德国团队
+Black Forest Labs 的 FLUX 3 Image
+主打锁住其余画面的多步编辑；擅长商品摄影与曲面贴标的谷歌
+Nano Banana 2.1 支持多图参考对话改图。阿里还发了采用非商用研究许可的
+Qwen-Image-2.1，免费公开模型文件让你下载到自己电脑运行，同样集成了涂抹选区改图与透明底输出。字节主推多轮改图与透明底直出，走的正是同一条路。</p>
+<p>单次抽卡只有约 18%
+可用且返工会破坏原图，锁死非编辑区像素才能把大方向做对的半成品修成可用资产</p>
+<h2 id="同门视频模型拿了第一字节的生图模型排老几" data-reading-heading="">同门视频模型拿了第一，字节的生图模型排老几？</h2>
+<p>如果要论字节在生图领域的地位，需要区分视频和图片。字节 Seed
+团队同时负责视频模型 Seedance 和生图模型
+Seedream，支撑即梦、剪映、豆包等应用。视频线今年表现强势，年初登顶盲测榜，随后与好莱坞的美国电影协会签署版权保护协议，近期传闻海外收入占比一半，甚至德国同行发布新视频模型都以
+Seedance 2.5 为唯一对标。但静态生图方面，自去年春季 Seedream 3.0
+短暂登顶后，如今榜单前列已由美欧厂商占据。</p>
+<p>打开独立评测组织 Artificial Analysis 维护的文生图盲测榜，评测员在不知厂商名的情况下对两张图二选一投票，以
+1000 分为基准算出等级分。到 11 月 9
+日，全球单次生图分成三个清晰梯队。OpenAI 一家包揽前 5 名：刚发的 GPT
+Image 2.6 精修版和快速版霸占前 2 名，榜首拿到 1259 分，9 月发的 2.5
+精修版和快速版分列第 3、第 4 名，第 5 名是更早的 GPT Image 2。第二梯队第
+6 到 15 名为美欧厂商主力，包括谷歌 Nano Banana 2.1、微软、xAI、单张仅 1
+美分的 Meta Muse Image 和 FLUX 3 Image。</p>
+<p>中国厂商的文生图模型大多落在第三梯队。刚发布的 Seedream 5.5
+目前还未上榜，字节在榜主力仍是第 18 名的 5.0 Pro；紧挨着的第 19
+名是阿里闭源商业版
+Qwen-Image-3.0-Pro。但字节旧旗舰的默认标价是谷歌和阿里的两倍多，单次抽卡不划算。阿里的免费公开权重版
+Qwen-Image-2.1 排在第 23 名。</p>
+<p>如果去看同一机构的图像编辑盲测排行榜，字节的真正强项就露出来了。前
+5 名由 OpenAI 的 4 款模型和微软的改图预览版包揽，谷歌的 Nano Banana 2.1
+排第 7。字节的 5.0 Pro 在这里拿到了全球第 11 名，排在 Meta Muse Image 和
+FLUX 3 Image 前面。它比国内排后面的腾讯混元预览版和 Qwen-Image-3.0-Pro
+高出将近 40
+分，在这个千分基准榜上拉开明显差距，拿下了国内头名。字节单次生图居二线，但局部改图是强项。距
+5.0 Pro 发布 4 个月后，它没有急着更新贵价的 Pro 版，而是先发标准版 5.5
+做深改图和小字，顺便把价格打下来。</p>
+<p>2026 年 11
+月生图模型分成三个梯队，字节在单次生图居二线但在局部改图位居国产头名</p>
+<h2 id="小字透明底和百轮改图新模型做到了哪一步" data-reading-heading="">小字、透明底和百轮改图，新模型做到了哪一步？</h2>
+<p>新上线的标准版 5.5 到底成色怎样？OpenAI 的 2.6 刚发 5
+天，字节官方评测对比的是上一代 GPT Image 2.5
+精修版。中英文和密集小字测试里，两家严重错字率都压在 1%
+以内；但字节轻微错字率只有 1.7%，比对手的 7.4%
+低了一大截。换成多语种排版，字节海外云平台 BytePlus 公布的 15
+种语言小字评测显示，它的得分仍略低于 GPT Image
+2.5。画面真实感也要分两头看。从零生成写实新图，官方称它压住了常见的过曝和皮肤油光。但拿已有图片进去修改就不一样了。官方盲测对比数据显示，更多专家认为谷歌
+Nano Banana 2.1 画面更真实，字节落后了约 6.2 个百分点。</p>
+<p>至于透明底直出和海报拆图层，这两项分别对应生图模型本身和配套的平台工具。直接生成单张透明底
+PNG 图片，是生图模型本身这次新增的能力；OpenAI 接口和阿里 Qwen-Image-2.1
+此前就已支持。前面提到把海报拆成最多 100 个图层：1
+张自动补齐遮挡的底图加上最多 99
+张透明图层。这个工具还可以按需识别提取画面文字，是字节旗下即梦和海外平台
+BytePlus 的配套功能。直接调基础生图接口不会自动拿到分层文件。在国内媒体的首日实测中，测试者先用新模型画好了透明底的白羽雪鸮和透明艺术字。再把两张透明图丢回模型去拼横版海报时，它依然把鸟的飞行姿态重画走样了。拿到模型画好的干净透明素材以后，不要再扔回大模型去合图；直接塞进
+Figma、Photoshop 或代码里固定位置拼终稿，要省心很多。</p>
+<p>关于连续改 100
+轮不变形的宣传，目前还只是在官方演示视频里看到的效果。字节也没有公开技术报告和百轮改图的量化数据。从刚才的媒体首日实测看，单张出图大约
+5 到 10
+秒。连续改几轮人物服装和客厅家具，确实保住了人脸和房间透视。但遇到精细结构还是会露怯：人物换装后出现偏长的大拇指；换上黑色长裙后，裙摆与小腿衔接不自然，小腿看着像悬在半空；桌面静物测试里要求改成金色细框眼镜，更是画出了
+3 条眼镜腿。此外，定位更高的 Pro 版本目前没有时间表；发布当天，海外
+BytePlus 产品页的试用按钮也仍然指向上一代的旧模型。</p>
+<h2 id="一边暗涨一边降价现在做图和接接口该怎么选" data-reading-heading="">一边暗涨一边降价，现在做图和接接口该怎么选？</h2>
+<p>字节选这个时间点降价，还正好撞上了 OpenAI
+几天前的一轮变相涨价。OpenAI 接口是按计费单位 token
+来定价的，每生成一张图都会折算成相应的 token 数量收费。这次更新 GPT
+Image 2.6，价目表上的 token 单价没有变动，但独立团队实测
+80 张图的账单发现，2.6 快速版在中低画质下单张消耗的 token
+大幅增加。跑低画质方图，消耗量涨到 2.5 快速版的 4.2 倍，单张实付从约 0.6
+美分涨到 2.5 美分；中画质消耗也涨到 3.3
+倍，精修版出图还变慢了。反观字节刚上线的标准版
+5.5，海外平台单张起步价压到了 2 美分。国内云平台火山方舟改一张 2K
+方图，按输入原图加输出新图两笔费用合计，单次总成本大约只要 0.28
+元人民币，折合约 4 美分，还不到上一代 5.0 Pro 的一半。要知道上一代 5.0
+Pro 在国际榜单上的默认生图标价高达每张 9
+美分，字节这次先上标准版，相当于把日常改图开销砍掉了一半以上。</p>
+<p>把价格与优缺点放在一起看，很多公司日常选型就不必死磕一个冠军。如果需要多语种复杂小字或经常跑低画质缩略图，留在旧版
+GPT Image 2.5
+比升级划算很多；真要用到直出动图、导出矢量图、照片圈画改图或高画质提速时，再升上
+2.6 也不迟。如果重视商品摄影和杯身曲面贴标的质感，单张约 3.4 美分的谷歌
+Nano Banana 2.1 是可靠的默认选项。如果追求单张 1
+美分的超低成本铺量，就选 Meta Muse
+Image。如果是经常做中文密集小字的信息图或模特局部换装，改图约 0.28 元的
+Seedream 5.5
+适合放进候选池试水。先用便宜顺手的模型出好局部素材，最后再回设计软件里合成定稿，省钱又少返工。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/ff24b70384101649ac5b75cb506e3df1f1c4d2ac60acb1f2132b61695fec281b.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/ff24b70384101649ac5b75cb506e3df1f1c4d2ac60acb1f2132b61695fec281b.md" download="一次出图可用率不到两成：从字节 Seedream 5.5
+看生图模型的真实座次与选型.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=字节跳动" class="entity-link company-link">字节跳动</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, <a href="/search/?q=谷歌" class="entity-link company-link">谷歌</a>, <a href="/search/?q=Black Forest Labs" class="entity-link company-link">Black Forest Labs</a>, <a href="/search/?q=阿里" class="entity-link company-link">阿里</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Seedream 5.5" class="entity-link product-link">Seedream 5.5</a>, <a href="/search/?q=GPT Image 2.6" class="entity-link product-link">GPT Image 2.6</a>, <a href="/search/?q=Nano Banana 2.1" class="entity-link product-link">Nano Banana 2.1</a>, <a href="/search/?q=FLUX 3 Image" class="entity-link product-link">FLUX 3 Image</a>, <a href="/search/?q=Qwen-Image-2.1" class="entity-link product-link">Qwen-Image-2.1</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

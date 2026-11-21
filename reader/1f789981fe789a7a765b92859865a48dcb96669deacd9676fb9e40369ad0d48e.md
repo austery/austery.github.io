@@ -1,0 +1,939 @@
+---
+author: New York Times Podcasts
+date: '2026-11-20'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=P33u6JPZCBM
+speaker: New York Times Podcasts
+tags:
+  - book-award
+  - literary-criticism
+  - contemporary-literature
+  - publishing
+title: 《纽约时报书评》复盘2026年图书奖季：布克奖、诺贝尔文学奖与美国国家图书奖评析
+summary: 《纽约时报书评》编辑团队复盘2026年图书奖季，深入讨论布克奖得主M·约翰·哈里森、诺贝尔文学奖得主安妮·卡森以及美国国家图书奖各项得主与长名单争议，探讨评审标准、政治议题与文学创作价值。
+insight: ''
+draft: true
+series: ''
+category: culture-history
+area: society-thinking
+project: []
+people:
+  - MJ Franklin
+  - John Maher
+  - Dave Kim
+  - M. John Harrison
+  - Anne Carson
+  - Brenda Hillman
+  - David Levithan
+  - Vicente Luis Mora
+  - Hala Alyan
+companies_orgs:
+  - The New York Times
+  - National Book Foundation
+products_models: []
+media_books:
+  - The End of Everything
+  - Autobiography of Red
+  - Paradiso 17
+  - Centro Europa
+  - Huna
+  - 'The Fight of Our Lives: AIDS in America'
+  - Still House in the Desert
+status: evergreen
+---
+### 开场与奖季总体感受
+
+**MJ Franklin**: 朋友们，罗马人，同胞们，图书奖季到了。[音乐] 欢迎收听《纽约时报书评》播客。我是 MJ Franklin，是《纽约时报书评》的一名编辑。今天和我在一起的是 John Maher。
+
+<details><summary>Original English</summary>
+**MJ Franklin**: Friends, Romans, countrymen, book award season is upon us. [music] Welcome to the book review from the New York Times. I'm MJ Franklin. I'm an editor here at the New York Times Book Review. And today I'm with John Maher.
+</details>
+
+**John Maher**: 我是《纽约时报书评》的新闻编辑。
+
+<details><summary>Original English</summary>
+**John Maher**: I am the news editor at the New York Times Book Review.
+</details>
+
+>> **Dave Kim**: Dave Kim。我是预览编辑。[音乐]
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: Dave Kim. I'm a preview [music] editor.
+</details>
+
+>> **Jim Monica T**: Jim Monica T。我是书评编辑，偶尔来播客空降一下。[音乐] [笑声]
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: Jim Monica T. I'm an editor at the book review and occasional podcast [music] parachute in. [laughter]
+</details>
+
+>> **MJ Franklin**: 欢迎回来。谢谢各位。我对这次对话感到很兴奋，[音乐] 因为我们要在这里复盘图书奖季。在过去几周里，公布了好几个重量级图书奖项。[音乐] 我们现在知道了2026年布克奖、2026年诺贝尔奖以及2026年美国国家图书奖的得主。这真是一个热闹的奖季。[音乐] 出现了一些大冷门、一些意想不到的转折，还有一些重大的胜利。问题是，我们如何看待这些？这就是我们今天在这里要深入探讨的。我们要聊聊获奖的书籍和作者。今年到目前为止的图书奖季有什么格外突出的吗？我们有任何个人观点、心头好吗？我们如何看待这些奖项？所有这些话题。我想先从一个大问题开始。我们刚刚经历了一波图书奖季的浪潮。我们一直沉浸在短名单、长名单以及奖项猜测和——砰砰砰——讨论声浪中。我觉得房间里的灯光都暗下来了，就像……[笑声]
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Welcome back. Thank you for everyone. I am excited [music] for this conversation because we are here to debrief on book award [music] season. In the past few weeks, several huge book prizes have been announced. [music] We now know the winners of the 2026 Booker Prize, the 2026 Nobel Prize, and the 2026 National Book Awards. And what a season it [music] has been. There have been some big upsets, some unexpected twists, some big victories. The question is, what [music] do we make of it? And that is what we are here to dive into today. We're talking about the books and authors that won. Does anything [music] stand out about book award season so far this year? Do we have any personal opinions, [music] favorites? How do we regard these awards? All of that stuff. I want to start here with a big question. We have just finished a wave of book awards season. We've been swimming in short list and long list and prize speculation in bum bum bum discourse. I feel like the the light lower in the room and like [laughter]
+</details>
+
+>> **John Maher**: 我觉得我们在播客里每次说“discourse”（高谈阔论/话语）这个词，FTC（联邦贸易委员会）都该收我们的税。
+
+<details><summary>Original English</summary>
+>> **John Maher**: I feel like the FTC should tax us anytime we say discourse on a podcast.
+</details>
+
+>> **MJ Franklin**: 我懂。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: I know.
+</details>
+
+>> **MJ Franklin**: 到目前为止，大家对图书奖季感觉如何？我想澄清一下，这次对话特别聚焦在布克奖、国家图书奖和诺贝尔奖上。我知道全年中还会发生很多其他奖项。以后也还会有其他奖项揭晓。但我觉得这是一段集中出现三大重量级奖项的时期。大家感觉如何？给我一个总体概括。我们换这种方式：用一个词表达。我们绕桌子轮流来。用一个词来形容你对这个图书奖季的感受。我先来。我的词就是：huh（哼/哈）。一个音节。甚至不算一个词，就是一个音节。我是说，那就是……
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: How are we feeling about book award season so far? And I should clarify this conversation is focused specifically on the Booker, the National Book Award, the Nobel. I know there are a ton of other awards that happen throughout the year. There are awards that will happen down the line. But I feel like this has been a concentrated period of kind of the three huge ones. How do we feel? Give me a top line. Let's do it this way. What's one word? Let's go around the table. One word that would describe your feeling about the book award season. I'll start. And my word is just huh. Nice syllable. Not even a word, but a syllable. I mean, that's
+</details>
+
+>> **Dave Kim**: 那是一声感叹。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: it's an utterance.
+</details>
+
+>> **MJ Franklin**: 是的。[笑声]
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Yeah. [laughter]
+</details>
+
+>> **Jim Monica T**: 好吧。呃，我选 vipasa（毗婆舍那/内观）。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: Okay. Uh, I'll go with vipasa.
+</details>
+
+>> **MJ Franklin**: 那是什么意思？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: What does that mean?
+</details>
+
+>> **Jim Monica T**: 我最近重新接触佛教了。我是说，虽然我也从来没有真正离开过。嗯……
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: I'm getting back into Buddhism. I mean, not that I ever really left it. Um,
+</details>
+
+>> **MJ Franklin**: 那个词是什么意思？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: what does that word mean?
+</details>
+
+>> **Jim Monica T**: 据说直译是“纯粹的洞察”，但我真正想表达的是我对文学奖项那种禅宗式的超然超脱，尤其是今年。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: Apparently, the direct translation is bare insight, but really what I'm trying to get at is the zen-like detachment that I have to uh literary awards, particularly this year.
+</details>
+
+>> **MJ Franklin**: 明白了。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Got it.
+</details>
+
+>> **Jim Monica T**: 我不知道。我不知道是不是因为我该休假了，但感觉就像我已经见识得够多了，我都见过了。[笑声] 我不知道经历了这么久之后它们究竟意味着什么。我甚至不确定自己是否知道它意味着什么。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: I don't know. I don't know if it's like I'm ready for a sbatical, but it's just like I've seen enough of the I've seen it all. I [laughter] don't know what do they mean after all this time. I'm not even sure I know what it means.
+</details>
+
+>> **MJ Franklin**: 好吧。你能把那个词再说一遍吗？[笑声]
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Okay. Can you say the word one more time? [laughter]
+</details>
+
+>> **Jim Monica T**: Vipasa。我鼓励大家去体验一下。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: Vipasa. I would encourage everybody to uh take it up.
+</details>
+
+>> **MJ Franklin**: 显然这对我很管用。Dave，你的词是什么？我下一个孩子就起名叫 Vaposa。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Clearly, it's working very well for me. Dave, what's your word? Name my next kid Vaposa.
+</details>
+
+>> **Dave Kim**: [笑声] 嗯，我的词是——这有点敷衍——但我会说“复杂”（mixed）或“分歧”（divided），只是因为我想到布克奖和诺贝尔奖，其中一个让人感到意外。布克奖对我来说不是一个常规的选择。不。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: [laughter] Um, my word it would be it's a copout but I would say mixed or divided only because I'm thinking about the Booker Prize and the Nobel one of which was, you know, surprising. Uh, the Booker to me was not a kind of conventional choice. Nope.
+</details>
+
+>> **Dave Kim**: 但诺贝尔奖对我来说感觉并不意外，我会这么说。我说不上来，是的，我不会说这是个乏味的选择。我觉得实至名归，但它并不是我意料之中的，不过我觉得它对我来说并不是一个令人震惊的选择。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: But the Nobel to me felt unsurprising, I'd say. I would say no. Yeah, I would not say it's a boring choice. I think welldeserved, but it was I not expected either, but I think it was not it did not it was not a shocking choice to me.
+</details>
+
+>> **MJ Franklin**: 好的。你呢，John？你的词是什么？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Okay. What about you, John? What's your word?
+</details>
+
+>> **John Maher**: 我也想到了今年早些时候颁发的一些奖项。那就是贝利·吉福德奖（Baillie Gifford）和普利策奖，那是针对去年的书。所以，我又打破了 MJ 所有的规则，但我脑海中浮现的词是“神话般的”（mythic）。
+
+<details><summary>Original English</summary>
+>> **John Maher**: So, I'm thinking of a couple of of awards that happened earlier this year as well. And those are the Bailey Gford and the Pulitzer, which is for a book from last year. So, again, I'm just breaking all of MJ's rules, but but the word that is coming to mind is mythic.
+</details>
+
+>> **MJ Franklin**: “神话般的”。这个词太棒了。我觉得很有趣的是，今年获奖的许多书籍或作者都在某种寓言形式中探讨问题。无论那是触及古代神话，还是触及某种神话般的、奇特的、无法解释的现代性维度。在历史的这一刻，出于各种各样的原因，我发现这一点特别引人入胜。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Mythic. That's a great word. I have found it sort of fascinating that many of the books or authors who have seen prizes this year, who have received prizes this year, are dealing in some kind of fabulism. Whether that is tapping into uh the ancient myths or tapping into a kind of mythical, strange, unexplainable aspects of modernity. And I and I find that to be at this moment in history uh for a variety of reasons particularly fascinating.
+</details>
+
+### 奖项的定位与期望
+
+>> **MJ Franklin**: Dave，你对这个词、这个理论怎么看？我认为“神话般的”是一个很好的桥梁词，概括了今年获奖书籍的诸多特质。这是一个非常好的定性。Jim，Dave，你们俩选的词似乎都指向了某种矛盾摇摆的心态，不管那是因为佛教的超脱修行 [笑声] 还是别的什么。你们能跟我聊聊那种情绪、那种复杂分歧的感觉或者 vipasa 吗？我们到底是什么感受？为什么会采取这种态度？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Dave, how do you feel about this this word, this theory? I think mythic is a great bridge word that encapsulates so many of the qualities about the books that have won prizes this year. That's that's a really good characterization. Jim Dave, you both had words that seem to get at a certain type of ambivalence whether that was because of a Buddhist practice of detachment [laughter] or or not. Can you talk to me about that sentiment that feeling the mix divided the vaposa? What are we feeling there? What why that approach?
+</details>
+
+>> **Jim Monica T**: 我非常不愿意去做任何诸如“这说明了我们当下的什么时代特征”之类的归纳。所以很明显，如果我抱持着“让我们静观其变、等尘埃落定，十年后再来看看”的态度，我显然入错了行。嗯，但另外我也只是觉得这些事情来了又去，你知道的，比如我根本不记得五年前是谁获得了美国国家图书奖。我不记得五年前是谁得了布克奖。也许这是我的问题。也许只是我太心不在焉了。我能说什么呢？我只是觉得这是谈论书籍的绝佳机会，这就是我对获奖者的看法。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: I am very loathed to try to make any kind of like what does this say about our moment now sort of thing. So obviously I'm clearly in the wrong business if I'm like I let's wait and see how the dust settles. Let's check in in 10 years and see. Um, but but also I just these things they come and go, you know, like I don't even remember who won the National Book Award like 5 years ago. I don't remember who won the Booker 5 years ago. Maybe that's a me problem. May my my head is just too in the clouds. What can I say? I just I think it's a wonderful opportunity to talk about books and that's kind of how I feel about winners.
+</details>
+
+>> **MJ Franklin**: 这引出了我的问题：总体而言，尤其是今年，你们如何看待这些奖项？我觉得随着美国国家图书奖长名单的公布——整个名单都非常出人意料——引发了一场大讨论：这些奖项的目标到底是什么？我们在寻找什么？这些奖项应该对谁说话？作为读者，我们想从中获得什么？都是宏大的问题，极好的问题。我认为没有简单的答案。我只是很好奇这个房间里的人，你们是如何思考这些奖项的？你们怎么看待这些奖项？你们在寻找什么？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Well, that leads me to ask, how do you regard these prizes overall this year especially? I feel like with the National Book Award long list, which was very unexpected across the board, there was a big conversation of what are the goals of these prizes. What are we looking for? Who are these prizes supposed to speak to? What do we as readers want to get out of them? All big questions, great questions. I don't think any easy answers. I'm just curious for the people in this room, how do you think about these prizes? How do you regard these prizes? What are you looking for?
+</details>
+
+>> **John Maher**: 我可以说这一点，毕竟在评选我们自己的“十佳图书”内部讨论中，我简直是个绝对的“恐怖分子”……
+
+<details><summary>Original English</summary>
+>> **John Maher**: I can say this is somebody who was an absolute terrorist during our own discussion, internal discussions
+</details>
+
+>> **MJ Franklin**: 针对我们十佳图书的节目很快就要推出了。但我得说，Jumanna，看着你拉票是我这辈子见过最令人印象深刻的事情之一。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: for our 10 best an episode coming up soon. But I will say, Jamona, watching you whip votes is one of the most impressive things I've seen in my life.
+</details>
+
+>> **Jim Monica T**: 连我自己都对我自己的行为感到震惊。我是说，我对我们的榜单很满意，但我……[笑声] 我所做的事情既令人震惊又很值得。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: Even I am appalled at my conduct. I mean, I'm happy with our list, but I'm [laughter] what I what I did was appalling and worthwhile.
+</details>
+
+>> **Dave Kim**: 我的眼睛被打了一拳。[笑声]
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: I got punched in the eye. [laughter]
+</details>
+
+>> **MJ Franklin**: 本播客出现假新闻了。没有发生肢体暴力。也许有很大的心理伤害，[笑声] 但没有……
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Fake news on this podcast. There was no physical violence. Maybe high psychic damage, [laughter] but no
+</details>
+
+>> **Jim Monica T**: 巨大的心理伤害。正如我所说，大家都去试试内观禅修吧。那是件美好的事。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: high psychic damage. As I said, everybody go try the Posa meditation. It's a wonderful thing.
+</details>
+
+>> **Dave Kim**: 在你拉票的时候，[笑声] 我还是老老实实在桌子底下躲上几周吧。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: I'll stick to just hiding under my desk for a few weeks while [laughter] you while you whip.
+</details>
+
+>> **Jim Monica T**: 不过也许——我说这话时意识到——我认为这是因为我自己对一份榜单应该发挥什么作用的感受基本上已经僵化了，你知道的，我就是觉得它应该能够契合各种不同的品味。同时它也应该反映出编选者们的那种热情。我不喜欢出于应付义务的提议。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: But maybe I I'm saying this and I'm realizing I think it's because my own feelings about what a list should do have basically oified, you know, where I'm just like it should be it should be able to speak to a range of tastes. Like it should also reflect the like passion of the people that are putting it together. I don't like dutiful suggestions.
+</details>
+
+>> **John Maher**: 我要插一句完全不相关的话，谈谈我对这些奖项感到非常有趣的一点：那些理应颁给某一本书的奖项……
+
+<details><summary>Original English</summary>
+>> **John Maher**: I'm going to jump in there with something that touches in no way on that and say one thing that I find really interesting about these awards, the awards that are supposedly given for the book
+</details>
+
+>> **John Maher**: 有时我觉得它们更像是颁给整个职业生涯的，就像是一种“哎呀我们当年真的错过了那本”的事后补救。
+
+<details><summary>Original English</summary>
+>> **John Maher**: is that sometimes I feel like they're given for the career almost as a like oops we really missed that one kind of afterthought.
+</details>
+
+>> **John Maher**: 这让我觉得很有意思，因为明明是有终身成就奖的，对吧？有专门表彰职业生涯的奖项。诺贝尔奖就是其中之一。美国确实会颁发文学奖。还有其他几个奖项我一时想不起来了，因为坦白讲，该死的奖项实在太多了。[笑声] 但确实存在那些奖项。当我在文学奖中看到选出的某些书，甚至只是入围决选的作品，给我的感觉就像是在试图说：“你知道的，当年你写的那本绝对是当年最佳的书，我们真的给漏掉了。我不知道为什么，我们都不知道为什么，这只是评奖的古怪变数。所以这次我们要对你表示认可。”这总是让我有点沮丧，因为对我来说，如果一个奖项是颁给职业生涯的，那它就该针对职业生涯；如果一个奖项是颁给一本书的，那它就该针对这本书。我们应该让书本身说话。
+
+<details><summary>Original English</summary>
+>> **John Maher**: Uh which which I find fascinating because there are career awards, right? There are awards that are meant to recognize a career. The Nobel Prize is one of them. the the United States literally gives an award for literature. There are a few other ones that I am forgetting off the top of my head because to be honest with you, there are too many bloody awards. [laughter] Uh but but truly those those awards exist and when I see certain books chosen for literary prizes or even finalists for those prizes that feel to me like they are an attempt to say, you know, we really missed the book you wrote that absolutely was the best book of that year. I don't know why. We don't know why. It's just the quirks of the prizes. So, we're going to we're going to give you the nod on this one. That always kind of frustrates me because it it feels to me like if a if a prize is for a career, it should be for a career. If a prize is for a book, it should be for the book. We should let the books talk.
+</details>
+
+>> **MJ Franklin**: 是的，那也是我的准则。我对榜单和获奖者的期待也是如此。我不必喜欢每一本获奖的书。我也不必理解每一本获奖的书。但对我来说，我希望拿起一本书时，不需要去读颁奖词，不需要参与那些高谈阔论，就能在书页上看到：这本书以其自身追求的方式，显而易见是杰出的。当然，有时我们需要别人解释，讨论有助于抽丝剥茧。但对我来说，读完一本书后如果感觉只是“嗯，好吧，我猜还行”，那挺令人失望的。我希望有一种强烈的情感，某种触动。我希望经历一段旅程。我希望能觉得自己需要去交流、去研读或去学习。对我而言，一本书获得大奖就应该具有不言而喻的杰出特质。Dave，你在做表情。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Yeah, that's my kind of rule. What I look for in a list and a winner. I don't have to love every book that won a prize. I don't have to understand every book that won a prize. For me though, I want to be able to pick up a book and see without reading a citation, without being part of the discourse. I want to see on the page, this book is self-evidently great in whatever way it's trying to be. Of course, sometimes we need things explained to us. discussion helps tease out things, but I don't want like for me it's kind of disappointing when you read a book and you finish and you're like, hm, okay, I sure I want to have some type of strong emotion, some feeling. I want to have gone on some journey. I want to feel like I need to go talk or study or learn. Like there's something about I I feel like a book should be self-evidently great for me for a prize. Dave, you're giving a face.
+</details>
+
+>> **Dave Kim**: 呃，我们要记住，对你来说显而易见的杰出，对其他人来说可能完全不同。我们应该注意到，这些奖项并不是由某个全知全能的大人物评判的。评审也是有缺陷的凡人，拥有不同的背景和品味，而且每年都在换，对吧？除了诺贝尔奖和一些历史更悠久的奖项——除某些年份例外其评审团成员相对固定之外——像美国国家图书奖、布克奖，他们会挑选评委，对吧？他们试图组建一个在各种意义上都很多元的读者评审团。所以我想我们忘了，年复一年，你根本无法预测那种品味的混合体到底会产生什么结果。[音乐]
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: Well, let's remember that what's self-evidently great for you is very different from others. We should note that these these prizes are not judged by, you know, some almighty figure. I mean, these are judged by fallible human beings with different backgrounds and tastes who change every year, right? aside from the Nobel Prize and some of the more established prizes that that you know where the jury is always the same with certain exceptions from year to year but but like something like the National Book Award, the Booker Prize, they choose juries, right? And they try to assemble a diverse uh in all senses of the word, you know, panel of of readers. And so I think we forget that from year [music] to year you're there's no predicting what what that medley of tastes is going to
+</details>
+
+>> **MJ Franklin**: 评选出来。[音乐] 好的。我们已经讨论了我们对这些奖项的期待。休息过后，我们将进入实际获奖的书籍，首先从今年令人意外的布克奖得主开始。[音乐] 我们马上回来。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: produce. Okay. So we've talked [music] about what we want from these prizes. After the break, we'll get into the books that actually won, starting with this year's surprising [music] Booker Prize winner. We'll be right back.
+</details>
+
+>> **MJ Franklin**: [音乐]
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: [music]
+</details>
+
+### 布克奖：《万物的终结》与科幻文学的界限
+
+>> **MJ Franklin**: 让我们从布克奖开始，今年的布克奖颁给了 M·约翰·哈里森（M. John Harrison）的小说《万物的终结》（The End of Everything）。Dave，你为《时报》写了这部小说的书评。所以我把你安排在我们的专家席上，因为写过书评意味着你读过好几遍。你对这本书进行了深入研究。这是一本怎样的书？这部小说到底写了什么？什么是“万物的终结”？M·约翰·哈里森是谁？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Let's start with the Booker Prize, which this year went to M. John Harrison for his novel, The End of Everything. Dave, you reviewed the novel for the Times. So, I'm putting you in our expert seat because reviewing it means you've read it multiple times. You have dug in deep into this book. What is it? What is this novel? What is the end of everything? Who is M. John Harrison.
+</details>
+
+>> **Dave Kim**: 这部小说的背景设定在类似外星人入侵世界大约一代人之后。它是反乌托邦的。属于后末日类型的故事。但你刚刚联想到的那些类型和词汇的所有画面，都应该抛弃，因为它实际上根本不是那些东西。它不拘泥于那种作品。它确实挑战了该类型的常规，但也挑战了一般虚构作品、一般叙事虚构作品的常规。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: It is a novel that is set about a generation after something like aliens have invaded the world. It is dystopian. It is a post-apocalyptic type of story. But all of the images you associate with those genres and words that I've just talked about, you should throw away because it's not really any of those things. It it does not subscribe to that kind of work. It really challenges the conventions of the genre, but it also kind of challenges the conventions of fiction in general, narrative fiction in general.
+</details>
+
+>> **MJ Franklin**: 我们看到的是一个怎样的故事？你刚才稍微定了个调。反乌托邦，虽然你说话时的肢体语言像是在说“反乌托邦”，隐约带有“反乌托邦风格”、“后末日风格”的意思。我们看到的是什么？故事是怎样的？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: What's the story that we're getting? You kind of gave it a little bit of a tone. Dystopian though your body language as you were saying it, you were like dystopian and there was an implied likeish apocalypticish. What are we getting? What's the story?
+</details>
+
+>> **Dave Kim**: 好吧，是的。事情已经发生了。入侵已经发生，人们感到有些倦怠。他们心想：好吧，这就是终局了。不存在某种可以重建或重新评估的“灾后”，对吧？事情已经发生，并且一直在持续发生，已经持续了大约20年，而我们不知所措。我们不知道它们想要什么。我们不知道它们会呆多久。所以，我们只能继续生活。故事开篇是一位38岁的海滩拾荒者，他在水里发现了一样东西。书里称之为“神器”（artifact）。这是外星人或入侵者留在世界各地的生物小玩意。它们是会变形的实体，刚开始只有小孩大小，然后迅速长成类似成年人类的模样，能够像成年人一样说话和行动，但举止更像孩子。故事就是跟随他试图卖掉这个东西或摆脱它。从那里开始，事情迅速变得非常离奇。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: Well, yeah. I think okay, so that this has happened. This invasion has happened and people are sort of tired. They're they're they're like, well, this is an ending. There is no sort of after, right, where we can sort of rebuild or reassess. This has happened and it keeps happening and it's been happening for like 20 years and we don't know what to do. We don't know what they want. We don't know how long they're going to stay. So, we just have to kind of continue to live. And we open with a 38-year-old beach comr who finds something in the water. And this is called an artifact in the book. It is a biological gadget that the aliens or whoever has invaded have left all over the world. They are shapeshifting entities that starts as the size of a small child and then it quickly grows into what resembles a full adult human and is able to speak and act more or less as an adult would but in a much more childlike way. And the story just follows him as he tries to sell this thing or get rid of it. And things quickly get really strange from there.
+</details>
+
+>> **MJ Franklin**: 你提到这次获奖是个意外。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: You mentioned that the win was a surprise.
+</details>
+
+>> **Dave Kim**: 是的。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: Yeah.
+</details>
+
+>> **MJ Franklin**: 为什么？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Why?
+</details>
+
+>> **Dave Kim**: 意外是因为这绝不是你典型的享有声誉的严肃正剧。它不是冲奥片。它不是那种宏大的历史小说，能切合我们时代并且真正一针见血。它深入探讨了造就伟大虚构作品的所有要素：出色的角色、宏大的叙事弧光、强烈的空间感，它开始切入这些东西。它开始深挖，但又留给人们不完整的感觉，让读者觉得：我对这些元素好像都抓不住要领。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: It's a surprise because this is not your typical prestige drama. It is not Oscar bait. It is not, you know, a historical sweeping novel that is relevant for our time and and and really kind of hits the nail on the head. And it it delves into all the things that make great fiction great character, a great narrative arc, a great sense of place, and it starts to get into those things. It starts to dig into that, but kind of leaves them incomplete and leaves the leaves the reader feeling like I don't have a great grasp on any of those elements.
+</details>
+
+>> **MJ Franklin**: 你提到它不是典型的冲奥之作。它也不是典型的冲布克之作。布克奖首席执行官 Gabby Wood 在一份新闻稿中表示，引用原话，这是“第一部从真正意义上的科幻界走出来的布克奖得主”。所以我们确实知道的一点是，这是科幻小说的第一次获胜。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: You mentioned it's not the typical Oscar bait. It's not the typical Booker bait. Gabby Wood, the Booker Prize's chief executive, said in a news release that it is quote the first Booker winner to have emerged from the bonafide science fiction world. So it's like when one thing we do know is that it's the first science fiction win.
+</details>
+
+>> **John Maher**: 嗯，我认为我们应该对此加以界定，谈谈那意味着什么，对吧？因为……
+
+<details><summary>Original English</summary>
+>> **John Maher**: Well, I think we should qualify that and talk about what that means, right? Because
+</details>
+
+>> **MJ Franklin**: 让我们界定一下。谈谈那意味着什么。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: let's qualify. Let's talk about what it means.
+</details>
+
+>> **John Maher**: 稍微回顾一下，我认为人们感到如此意外的原因之一，是因为短名单上有些书——继续借用那个比喻——是非常显而易见的“冲奥之作”。比如 Marlon James 的《失踪者》（The Disappearers）……
+
+<details><summary>Original English</summary>
+>> **John Maher**: So to go back very briefly, one of the reasons why I think people found this so surprising is because there were books on that list that were very obvious to keep the the metaphor going. Oscar bait, you know, Maron James, The Disappears,
+</details>
+
+>> **MJ Franklin**: 被《时报》誉为近十年最佳书籍。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Heralded by the Times as the best book of the decade.
+</details>
+
+>> **John Maher**: 这一代人、这十年甚至可能这世纪最伟大的书。
+
+<details><summary>Original English</summary>
+>> **John Maher**: The greatest book of its generation of its decade as the decade or possibly century.
+</details>
+
+>> **MJ Franklin**: 天哪。天哪。是的，那是极高极高的评价。名单上的其他书还有 Luke Kennard 的《黑袋》（Black Bag）、Rebecca Perry 的《也许我们喂养国王》（Maybe We Feed the King）、Elizabeth Strout 的《我们从未说出的事》（The Things We Never Say）以及 Douglas Stuart 的《约翰之子》（John of John）。Douglas Stuart 和 Marlon James 以前都赢过布克奖。如果他们第二次获奖，并非没有先例。那虽然也会令人意外，但最初他们两位同时出现在短名单上本身就很让人意外，对吧？一旦他们入围，你很难不想他们其中一人会赢。所以这一点挺让人意外的。但就 Gabby Wood 提到的科幻小说这一点而言，Harrison 出身于科幻圈。他在写科幻小说的环境中成长。他曾为科幻杂志撰稿。他是那种你会认为他是乔治·R·R·马丁同辈的人。你不会看着他说他是 Julian Barnes 这种传统严肃文学布克奖得主的同辈。所以我认为这是人们对此感到意外的一个原因。Margaret Atwood 曾写过与科幻相近或受科幻影响的作品并赢得了布克奖。并不是说科幻小说从未触及过文学圣殿。而是传统的科幻圈子往往被排斥在我们所谓的纯文学虚构奖项之外。他们赢得雨果奖，他们赢得阿瑟·C·克拉克奖——事实上 Harrison 曾经得过。但我们并不指望他们赢得布克奖。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Oh my god. Oh my god. Yeah. Like, so that's huge, huge praise. The other books are Black Bag by Luke Canard, Maybe We Feed the King by Rebecca Perry, The Things We Never Say by Elizabeth Stout, and John of John by Douglas Stewart. So Douglas Stewart and and Marlon James have both won the Booker before. It would not have been unprecedented if they had won a second. It would have been surprising, but there was also sort of it was surprising that both of them were on the list in the first place, right? And once they were, you kind of it was hard not to think like uh you're you're they're going to one of them's going to win. So, that was sort of surprising. But to the the point of of the science fiction note that was given by Gabby Wood, Harrison came from the science fiction community. He grew up writing science fiction. He wrote for science fiction magazines. He was the kind of guy that you would have looked at and say like he was a peer of George RR Martin. You did not look at him and say he was a peer of pick a pick a literary booker winner in this Julian Barnes and and so I think that's one reason why people sort of felt surprised at that. Margaret Atwood had written sci-fi adjacent work or sci-fi informed work and won the Booker. It's not that science fiction has never touched the hallowed halls. It's that the science the traditional science fiction community has often been boxed out of what we consider literary fiction prizes. They win the Hugo. They win the the Arthur C. Clark award. In fact, Harrison once did. But we don't expect them to win the Booker.
+</details>
+
+>> **MJ Franklin**: 所以这对科幻作家、科幻读者来说是一个巨大的时刻。Jumanna，你觉得呢？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: So this was a big a huge moment for science fiction writers, for science fiction readers. Jamano, what did you think?
+</details>
+
+>> **Jim Monica T**: 我很高兴。我完全被这结果逗乐了。我喜欢这个选择。我喜欢它带来的惊喜。而且，Patricia Lockwood 今年是评审团成员，我想她在颁奖礼上说：“我已经写了关于这部小说的诗歌。我已经……”对我来说，这是一个多么了不起的衡量标准，就像，这不仅仅是一本能长久留在你心中的书，而且还能激发创造力。当然，我们并非人人都有 Patricia Lockwood 那样的头脑。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: I was delighted. I was I was totally delighted by this. I loved this pick. I loved that it was a surprise. And also, Patricia Lockwood was on the jury this year, and I think she said at the ceremony, "I've already written poems about this novel. I've already you know like and to me like what an amazing metric it's like like this is not this is a book that like
+</details>
+
+>> **MJ Franklin**: 你知道的，这不仅留在你脑海里，而且催生了……当然，我们并不都有像 Patricia Lockwood 那样的头脑。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: you know really not only stays with you but like yields create of of course we don't all have brains like Trisha Lockwood.
+</details>
+
+>> **Jim Monica T**: 我就是喜欢这一点。我感到非常开心。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: I just I loved that. I was just tickled.
+</details>
+
+>> **Dave Kim**: 我只想澄清一下，这本书其实并不是一本真正的科幻小说。我是说，不是按我们通常理解的科幻小说那样。是的，作者来自科幻圈。他在职业生涯早期写过一套极其有趣又优美的小说系列，叫《维里科尼姆》（Viriconium）。而那纯粹是高级严肃奇幻。非常符合那种模式。就像托尔金作品加上机器人。嗯，但它很美。文字极为华丽繁复。角色塑造得非常饱满，就是那种你想到奇幻文学就会联想到的样子。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: I will just clarify that this book is really not a science fiction novel. It's it's I mean not in the way that we think of science fiction. Yes, the author is from the science fiction community. He wrote one of the most interesting and and beautiful series of novels called Viriconium earlier in his career. And this is this is really high fantasy. It's very much in that mode. It's like Tolken with like robots. Um I mean it's but it's beautiful. I mean the pros is just baroque. The characters are are really well-developed and it's it's just very kind of when you think of fantasy, you think of this.
+</details>
+
+>> **John Maher**: 对于吉恩·沃尔夫（Gene Wolfe）或迈克尔·穆考克（Michael Moorcock）的粉丝，如果你还没读过 Harrison 早期的作品，赶紧去读吧。
+
+<details><summary>Original English</summary>
+>> **John Maher**: For anyone who's Jean Wolf or Michael Morco fans and you haven't read Harrison's earlier stuff, get to it.
+</details>
+
+>> **Dave Kim**: 是的，棒极了。这本书很不一样。散文风格不同，结构也不同。我认为 Harrison 的一些标志性特质很明显。但是，这本书完全摒弃了“世界观构建”（worldbuilding），而那曾是科幻小说的基石——比如在那些时刻，你会被短暂地带离叙事，去理解究竟发生了什么以及这个世界是怎样的。通常作者在叙事开始几页后会给你一份总结，说明你在哪里、我们是如何走到这一步的。Harrison 对这些毫无兴趣。他根本不在乎你懂不懂。或者也许他在乎，但他表现得非常含蓄，断断续续地抛给你，甚至在某些情况下与早先的描述相冲突或改变那些描述。其效果非常令人迷失，但如果你喜欢那一套，你就很难抗拒。我是说，我深深地沉浸在这部小说里……
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: Yeah, it's great. This book is very different. The pros is different. The the the structure is different. I think some of Harrison's signatures are evident. Um, but this book dispenses completely with worldb building which is was such a a cornerstone of science fiction. Those kinds of moments where you are taken out of the narrative briefly to to understand what's actually going on and what this world is like. And the author and you know generally will start a few pages into the narrative and give you kind of rundown of where are you and how did we get here. Harrison is not interested in any of that. He does not care whether you understand it or not. And or maybe he does care, but he's he's going to be very koi about it and give it to you in fits and starts and also and even conflict with earlier descriptions in some cases or change uh those descriptions. And it's the the effect is very disorienting, but it's also if you're into that kind of thing, it's really hard to give up. I mean, it's I was very much lost in this novel,
+</details>
+
+>> **MJ Franklin**: 这挺棒的，对吧？因为你能有几次机会说：今年地球上最重要的文学虚构类奖项之一的得主，我竟然不知道该拿它怎么办？它真的非同凡响。感觉它在挑战我对文学功能的预期。这难道不正是意义所在吗？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: which kind of rules, right? Because like how often do you get to say the award winner of one of the biggest fiction awards on the planet this year? I didn't know what to do with it. It was really different. It felt like it was challenging what I expected literature to do. Shouldn't that be the point?
+</details>
+
+>> **MJ Franklin**: 在我们转向诺贝尔奖之前，关于布克奖得主大家还有什么要说的吗？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Any last things you want to say about the Book or Winner before we go to the Nobel?
+</details>
+
+>> **Jim Monica T**: 不是关于获奖作品，但总体而言，我对长名单非常满意。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: Not about the winner, but in general, I was really pleased by the long list.
+</details>
+
+>> **MJ Franklin**: 是的。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Yes,
+</details>
+
+>> **Jim Monica T**: 我觉得很棒，而且看到 Kenan Orhan 的书《整修》（The Renovation）入选我很开心，我们曾做过一期播客讨论……
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: I thought it was great and I was like really delighted to see the renovation on there, the Kenan Orhan book that we had a podcast about
+</details>
+
+>> **MJ Franklin**: 读书会播客。如果你想了解更多，它就在《书评》的往期归档里。另外，我们还为《约翰之子》做了一期读书会。我们还讨论了长名单上的哪些书？《Switzy》（《斯维茨》）？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: book club. If you want to know more, it's in the book review archive. Also, we did a book club for John of John. What were the other books on the long list that we did? Switzy Switzy. Switzy.
+</details>
+
+>> **John Maher**: 我们都涵盖了。我们都为你准备好了。
+
+<details><summary>Original English</summary>
+>> **John Maher**: So, we got you covered. We got you covered.
+</details>
+
+### 诺贝尔文学奖：安妮·卡森的古典重塑与诗意实验
+
+>> **MJ Franklin**: 让我们来看诺贝尔奖。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Let's go to Nobel.
+</details>
+
+>> **John Maher**: 让我们聊聊诺贝尔奖。[清嗓子]
+
+<details><summary>Original English</summary>
+>> **John Maher**: Let's talk about the Nobel. Let's go a Nobel. [clears throat]
+</details>
+
+>> **John Maher**: 今年的2026年诺贝尔奖授予了加拿大诗人安妮·卡森（Anne Carson），理由是“她大胆而富有创造力的全部作品，在与古典传统的嬉戏对话中，为当代文学创造了新的形式”。这句话引自诺贝尔委员会。称她为“诗人”有点低估她了，安妮·卡森是一位文学实验家，对一位诗人来说这是非常棒的赞誉。那是什么意思？她在做什么？她在探索什么？首先，她是一位古典学者。这绝对是你一开始指出的“神话”脉络的一部分。她是一位评论家。她写过类似于诗体叙事小说的作品，而且她的语调非常特立独行。
+
+<details><summary>Original English</summary>
+>> **John Maher**: So this year the 2026 Nobel Prize was awarded to the Canadian poet Anne Carson for quote her bold and inventive u that in playful dialogue with classical tradition has created new forms for contemporary literature. That quote comes from the Nobel committee poet is underelling it and Carson is a literary experimentter which is a wonderful thing to say of a poet. What does that mean? What is she doing? What's she up to? She's a classicist for one thing. I mean, that's definitely part of the mythic strain that you identified early on. She's a critic. She's written like a a narrative in verse and and also her her tone is really idiosyncratic.
+</details>
+
+>> **MJ Franklin**: 我所寻求、想了解的是——我必须坦白，安妮·卡森是我一直知道名字的人。我知道那个名字。但我还没读过安妮·卡森的任何东西，这让我有点不好意思，但要读的实在太多了，时间太少了。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: What I'm asking for, what I'm looking for is I have to admit an Carson is someone that I have known of. I've known that that name. I have not read a single thing of Anne Carson in a way that I'm embarrassed by, but like there's so many so much to read, so little time.
+</details>
+
+>> **Dave Kim**: 经典的诺贝尔奖得主效应。[笑声]
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: Classic Nobel winner. [laughter]
+</details>
+
+>> **MJ Franklin**: 我想要一份关于安妮·卡森的入门指南。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: I want the primer on Anne Carson.
+</details>
+
+>> **Dave Kim**: 实际上，我们的诗歌专栏作家——我很喜欢《纽约时报》仍然保留着诗歌专栏作家，尤其是在这种时刻——Elisa Gabbert 说得非常精妙：新科诺贝尔奖得主安妮·卡森是“最容易亲近的晦涩诗人”。就像许多最出色的作品一样，她是平易近人的。我是说，比如她用的不是古英语写作。它依然极具智性驱动力。然而，它提供了一个切入点。而且，你在她的作品上花的时间越多，就越能剥离出更多层深意。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: So, actually our poetry columnist and I love that the New York Times still has a poetry columnist, especially for moments like these. Alisa Gabbert, she put it beautifully. Anne Carson, the new Nobel laurate, is the easiest difficult poet. Like so much of the best kind of work, she is accessible. I mean, she's not writing in old English, for example. It's still very intellectually driven. And yet, there's an entry point. And yet, the more time you tend to spend with her work, the more there is to peel back.
+</details>
+
+>> **MJ Franklin**: 你说她是个古典学者。所以，她吸取古典传统，具体拿它来做什么呢？她在重混它。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: She's a classicist, you said. So, she's taking classical tradition and she's doing what exactly with it? She's remixing it.
+</details>
+
+>> **Dave Kim**: 她透过当代的棱镜来看待它。她把流行文化、当代观念、事件和处境连接起来，把它们带回到那种古典的——通常是古希腊的——模式中。并不是她所有的作品都如此，但举个例子，她最近的一部作品名为《特洛伊的诺玛·简·贝克》（Norma Jeane Baker of Troy），[笑声] 那就是把欧里庇得斯的《海伦》拿来进行改编，并把玛丽莲·梦露置于核心。另一部作品可能会取材赫拉克勒斯的故事，并将其变成青少年戏剧。很有意思。所以这有点像把这两个世界结合在一起，但你不需要成为古典学者也能理解和阅读安妮·卡森。你只要拿起来读就是了。我认为她的诗歌风格非常偏向散文体。有时读起来几乎就像散文，然而它确实存在那种留白，那些诗人故意阻滞或重引语言流向的时刻。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: She's seeing it through a contemporary lens. She's she's sort of bridging pop culture, contemporary ideas and and events and and situations and sort of bringing them back into the kind of classical, you know, often Greek mode. It's not true of all of her works, but just to give you an example, one of her recent works was called Norma Jean Baker of Troy, which is, [laughter] you know, taking the Helen Europees Helen and and and sort of adapting it and putting Marilyn Monroe at the center of it. Another might take the story of Heracles and make it a teenage drama, you know. Interesting. So, it's it's kind of bringing those those marrying those two worlds, but you don't have to be a classicist to understand and to access Anne Carson. You can just pick it up and read it. I think her poetry, her style is very proentric. It it almost reads like pros sometimes and yet it does have those kinds of gaps, those moments when the poet sort of intentionally impairs or or or reroutes the flow of language.
+</details>
+
+>> **John Maher**: 她不仅仅是在传达古典，对吧？她当然确实在传达。对于那些没读过古典作品的人来说，古典作品的一个酷炫之处在于它们探讨的是我们期望所有文学都探讨的宏大主题。事实上，它们在某种程度上为这些主题树立了典范。但同时，她也是那种……瞧，我又把她称为诗人了。嗯，她通过新方向出版社（New Directions Publishing）出版过一本名为《诺克斯》（Nox）的书。我想大概是在15年前左右。那是一首挽歌，是写给她已故兄弟的挽歌。但那是一个折页小册子，对吧？它是一个奇怪的艺术品，据我了解，她长期的另一家出版商根本无法出版，作为一本书来说太具实验性了。这就是安妮会做的事情。她玩弄形式与观念。
+
+<details><summary>Original English</summary>
+>> **John Maher**: She's not just channeling the classics, right? Like she she certainly is. And one of the cool things about the classics, for those of you who haven't read them, is that they deal in the same gigantic themes that we expect all literature to to deal in. In fact, they kind of set them set the set the model for them in some way. But also, she she is the kind of poet who, you know, there's a there's a book that she published now see here I am calling her a poet again. Um there which she is she published a book with with New Directions Publishing called Knox. Uh I think I think maybe 15 years ago or so. And it is it's an elegy. It's an elegy for her brother. Uh but it is a a pamphlet, right? It is a this strange sort of art object that her other publisher her longtime other publisher can just I from what I understand just couldn't publish. It was like it was too experimental as a book. That is the kind of thing that Ann does. She plays with form and idea.
+</details>
+
+>> **MJ Franklin**: 她是个古怪奇特的人（weirdo）。这样说可以吗？她很怪。她在重新解构古典事物，以奇异的方式重混它们。她把玩标点符号，就像所有诗人都是怪人一样，对吧？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: She's a weirdo. Is that okay to say? She's weird. She's re taking classic things. She's roommixing them in weird ways. She plays punctuation in the in the way that all poets are weirdos, right?
+</details>
+
+>> **Dave Kim**: 不，我不觉得她是个怪人。我认为她是一个非常棒的选择，因为她既受到诗歌实验派的尊敬，同时任何人都可以随手拿出一首安妮·卡森的诗并有所收获。这绝不是晦涩难懂的诗歌。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: But no, I don't think she's a weirdo. I think she's like a really kind of she's a great choice in that, you know, she's respected both by like the experimental wing of poetry, but also anyone can go to and just pick up an An Carson poem and get something out of it. It's not this is not difficult poetry.
+</details>
+
+>> **MJ Franklin**: 为什么她是意料之中的选择？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Why is she the expected choice?
+</details>
+
+>> **Dave Kim**: 我不会说她是意料之中的。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: I wouldn't say she's expected.
+</details>
+
+>> **MJ Franklin**: 但你说过你并不意外。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: But you said you weren't surprised.
+</details>
+
+>> **Dave Kim**: 我确实不感到意外。我的意思是我一度以为今年会像 Jumanna 想的那样，是残雪（Can Xue）的一年——那位中国虚构作家——但你知道，安妮·卡森一直以来都是诺贝尔奖的热门……不叫热门，是候选人……
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: I was not surprised. I mean I kind of thought this was as Jumanna did Ku's year the the Chinese uh fiction writer but you know Anne Carson has been a Nobel hopeful for not hopeful Nobel candidate no
+</details>
+
+>> **John Maher**: 常年被作为备选讨论。
+
+<details><summary>Original English</summary>
+>> **John Maher**: perennially bandied about as as an option.
+</details>
+
+>> **Dave Kim**: 她总是出现在博彩赔率榜的某个位置。她获得过许许多多不同的奖项，麦克阿瑟奖、古根海姆奖，凡是你能获奖的她都拿过。所以在诗歌界她算是一个家喻户晓的名字，但这绝不是说她在任何层面上显得无聊或守旧。正如 John 指出的那样，她绝对在把玩形式。这是一个很棒的选择，因为坦白讲，任何人都可以读她并有所收获。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: She's always somewhere on the oddsmakers lists. She's won many many of different awards and MacArthur Guggenheim everything that you can win awards for. So she is a kind of household name in the poetry world, but this is not to say that she's in any case like in any way boring or conventional. She definitely plays with form as John pointed out. It's a great choice because honestly there anyone can can read her and be and get something out of it.
+</details>
+
+>> **MJ Franklin**: 我说她“怪异”的评价源于2013年《纽约时报杂志》对安妮·卡森的人物特写，作者 Sam Anderson 当时正在为她写人物专访，他在文章中解释说安妮曾表示不想接受面对面采访。她只接受通过电子邮件完成专访。我读一段引文，因为太好笑了。Sam 写道：“作为一名电子邮件通信者，卡森回复迅速且友善，但略显特立独行。她几乎全部使用小写字母写作。她的标点符号很不规则。有些问题她用几百字回答，有些问题只用一两个字，有些问题她则完全忽略。她的邮件主题行只包含标点符号：尖括号、逗号、括号。她总是称呼我为大写的 SA，并署名小写的 a c。就像她出版的文字一样，她的有些邮件非常离奇而有趣，读起来让我因兴奋、困惑和惊叹而摇头。”
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: My weirdo comment came from in 2013, the New York Times magazine um profiled Anne Carson and the writer Sam Anderson was profiling her and in his piece he explained Anne had said that she didn't want to do an interview. She would only do the profile over email and I'm just going to read a quote cuz it's so funny. Sam writes, "As an email correspondent, Carson was prompt and friendly but slightly unorthodox. She wrote almost entirely in lowercase letters. Her punctuation was irregular. Some questions she answered was several hundred words, others with only one or two. Others she ignored altogether. Her subject lines contained only punctuation marks, an angle bracket, a comma, a parenthesis. She always referred to me as capital SA and signed herself lowercase a C. As with her published writing, some of her emails were so strange and interesting that reading them made me shake my head and excitement and confusion and wonder.
+</details>
+
+>> **Dave Kim**: 这对我来说真的很奇怪，因为这根本不是我印象中的安妮·卡森。真的吗？是的。你把她说得像 E. E. 卡明斯一样。[笑声] 就像——不，我是认真的。去看看安妮·卡森的任何一首诗。那是常规的英语，[笑声] 你知道的。你可以读懂。那是一个句子，只不过被打散了。而且非常……我的意思是，这并不是说它没有挑战性。就像我说的，它存在那些知性留白，迫使你去做出跨越，但绝非什么疯癫之作。你知道……
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: That's really strange to me because that's not at all what I associate with Anne Carson. Really? Yeah. You made her sound like EE Cummings. Like [laughter] like No, I'm serious. Like look at any poem by Anne Carson. It's it it's like regular English, you [laughter] know. It's like you can read it. It's a sentence but you know broken up. Uh and it's it's very much I mean this is not to say that it's not challenging. You know, like I said, there are these intellectual gaps where you're where you're forced to make these leaps, but it's it's not anything crazy. You know
+</details>
+
+>> **MJ Franklin**: Dave，我察觉到一件事，如果我说对了请告诉我：我感受到你的一种热情，试图保护安妮·卡森免受误解，免于被错误归类。跟我聊聊这个。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Dave, one thing I'm sensing, let me know if I'm correct here, is I feel this passion where you are trying to shield an Carson from misinterpretation, from being classified incorrectly. Talk to me about that.
+</details>
+
+>> **Dave Kim**: 我只是觉得诗人……我不知道自己怎么就成了诗歌的辩护者，[笑声] 我觉得他们有点被中伤了。我是说，即使是诺贝尔奖诗人，我觉得也被中伤为那种无法阅读、自命不凡、只为极少数特定受众写作的人，人们对他们缺乏耐心，不如对 M·约翰·哈里森这样的人有耐心。我只是希望人们能觉得他们可以接触这些作品，他们是被接纳的。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: I I just I think that poets I don't know how I became [laughter] the the the defender of po um I I I think they're sort of malign I mean even even Nobel poets I think are are are maligned for being kind of like these you know uh impossible to read kind of highfulutin people who just write for a very select audience and it people don't have the same patience for them as they would even a person like John Harris M John Harrison you And I just I would like pe people to sort of feel that they can access this work like they can be invited in.
+</details>
+
+>> **MJ Franklin**: 让我们直接听听她的作品。有人手头有引言、段落，或者想读一段安妮·卡森的文字吗？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Let's just hear from her directly. Does anyone have a quote, a passage, something they want to read from Anne Carson?
+</details>
+
+>> **Jim Monica T**: 我手头正好有一段，同样要感谢我们的诗歌专栏作家。这出自《红的自传》（Autobiography of Red），这可能是她最广为人知的作品。我想这算是一部诗体小说。重要的是要知道，在视觉版面上，行长在很长与相当短之间交替。我现在可以读其中的四行。为了防止有人不熟悉，简单交代一下背景，基本上这是一本将希腊神话怪物重塑为成长中的同性恋青少年的书。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: I have something handy once again courtesy of our poetry columnist. Um, this is from Autobiography of Red, which is probably her best known work. And and it's a it's a novel in verse, I guess. And and what's important to know is that visually the the lines alternate between quite long and then rather short. And and so I can read four lines from that right now. And and just in case anybody is not familiar, right off the top of the dome, basically this is a book that reimagines a Greek monster uh growing up as a gay teenager.
+</details>
+
+>> **Jim Monica T**: “革律翁的母亲转过身，把烟灰弹在水槽里，然后再次面对革律翁。他坐在厨房餐桌旁，相机遮在眼前，正在对焦。他没有回答。他最近放弃了言语。”
+
+我是说，这些都是熟悉的词，但内涵却如此丰富，对吧？而且当你大声读出来时，它不可否认是一首诗。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: Gary's mother turned to knock her cigarette ash on the sink, then faced Gerion again. He was seated at the kitchen table with his camera in front of his face, adjusting the focus. He did not answer. He had recently relinquished speech. I mean, these are all recognizable words, but there's so much to it, right? I mean, and and it is undeniably a poem when you read it out loud.
+</details>
+
+>> **John Maher**: 诗体小说无论如何可能不如诗集或散文小说那么普遍，但它们是一种传统，是她正在发掘的传统。而这一传统一直可以追溯到希腊神话本身。那些本就是诗体叙事。她触及了这一点，其方式同时也——就像刚刚谈到你读的内容一样，Jim——为这些神话带来了一种惊人的现代感。这是许多译者在翻译《奥德赛》或《伊利亚特》时试图做到的事情，而她运用了对这些神话的了解以及在这个世界上的阅历……
+
+<details><summary>Original English</summary>
+>> **John Maher**: Novels in verse may not be as common as collections of poetry or pros novels by any stretch, but they are a a tradition, a tradition that she is is mining. and and that tradition goes all the way back in to to the Greek myths themselves. These were narratives in verse. Uh she speaks to that in a way that also brings from even just talking about what you just read, Jim, like a a a sort of striking modernity to these these myths. something that many of their translators try to do when they are translating the Odyssey or the Iliad and and and she
+</details>
+
+>> **MJ Franklin**: 让她两者兼具。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: she takes her knowledge of those things and her experience in this world.
+</details>
+
+>> **John Maher**: 是的。
+
+<details><summary>Original English</summary>
+>> **John Maher**: Yeah.
+</details>
+
+>> **MJ Franklin**: 让它们并存。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: And lets them both exist.
+</details>
+
+>> **John Maher**: 她还翻译过许多希腊语作品。
+
+<details><summary>Original English</summary>
+>> **John Maher**: She also she has also translated many Greek works.
+</details>
+
+>> **MJ Franklin**: 是的。这很有帮助。我想过去五年里有两位英语诗人获奖。我认为确实有两位。另一位是路易丝·格吕克（Louise Glück），在某些方面我觉得格吕克比卡森更容易接近，但在其他方面则完全不是。在情感层面上，我认为卡森触动读者的速度比格吕克更快，后者通常保持着一种冷峻的外表。即便抛开这些比较，抛开谁更具挑战性的对比，我还是想回到我们谈到 Harrison 时说的：期待这些奖项要求读者拓展一下自己的边界，难道不是一件美好的事吗？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Yeah. Well, that helps. I think like we've had a couple of poets in using the English language win in the past 5 years. Literally, I believe a couple. The other was Louise Glick, who who I think of as a much more accessible poet in some ways than Carson. But but in in other ways, not at all. On an emotional level, I think Carson hits readers faster than Glick does, who often maintains this sort of icy cool veneer. Even leaving that aside, even leaving aside the comparison of like who is challenging or who is not. Again, I I I go back to what we said about Harrison. Is it not beautiful to expect these prizes to ask readers to stretch a bit?
+</details>
+
+>> **Dave Kim**: 是的。是的。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: Yeah. Yeah.
+</details>
+
+>> **MJ Franklin**: 是的。我完全不认为具有挑战性是件坏事。我的意思是，有时诺贝尔奖得主让人觉得晦涩难懂，是因为他们通常不是美国人。在英语阅读大众中并不是超级流行。我最后想说的是，如果你是安妮·卡森作品的新读者，我们在《时报》上有许多内容供你阅读以充实自己。我们之前提到过 Elisa Gabbert 对安妮·卡森的评价。我们有2013年发表在杂志上关于安妮·卡森的文章。我们还有 Ash Woo 撰写的阅读指南，介绍了初读安妮·卡森必读的五本书。我喜欢图书奖的地方在于，它们是通向一位作者全部作品的跳板，是通向一本你从未听说过的伟大书籍的跳板。[音乐] 我们有资源帮助你迈出这一步。[笑声] 说到跳跃，我认为我们应该跳到美国国家图书奖。但[音乐]首先，让我们稍作休息。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Yeah. I don't think challenging is a bad thing at all. I mean, I I think what can sometimes make the Nobel laureates feel obstruuse is because they're not usually American. They're not super popular in anglophone reading public. The last thing I wanted to say though is um if you are new to Anne Carson's work, we have a lot of stuff on the times that you can read to refresh yourself. We have, you mentioned before, Alyssa Gabbard's appraisal of Anne Carson. We have that 2013 magazine article on Anne Carson. We have a reader by Ash Woo, which is a guide to five essential Anne Carson books to start with. What I love about book prizes in general, they're a springboard into a body of work into a [music] great book you've never heard of. We have resources to help you take that jump. [laughter] And speaking of jumps, I think we should jump to the National Book Awards. But [music] first, let's take a quick break.
+</details>
+
+### 美国国家图书奖：长名单争议与政治化质疑
+
+>> **MJ Franklin**: 我们回来了。让我们进入美国国家图书奖。我们是在颁奖典礼的次日录制这期节目的。颁奖礼举行还不到24小时，所以我们的观点依然很新鲜。我们正在进行实时梳理。我先来梳理一下获奖名单。2026年美国国家图书奖的得主包括：David Levithan 和 Gabriel Duckles 凭借《我们生命中的战斗：美国的艾滋病》（The Fight of Our Lives: AIDS in America）获得青年文学奖。翻译文学奖得主是 Vicente Luis Mora 的《中欧》（Centro Europa），由 Rahul Berry 从西班牙语翻译。诗歌奖授予了 Brenda Hillman 的《沙漠中的寂静之屋》（Still House in the Desert）。非虚构类获奖者是 Abdelrahman ElGendy 的回忆录《这里：革命、监狱与成长的回忆录》（Huna: A Memoir of Revolution, Prison, and Becoming）。Hala Alyan 的《天堂17》（Paradiso 17）获得了虚构类奖项。在我们深入讨论具体书目之前，我想了解大家对今年国家图书奖的宏观想法。今年是一个两极分化、颇具争议的年份。有很多争论声浪。我们之前提到过这个。很抱歉再次提起。有很多议论。大家感觉如何？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: And we're back. Let's jump into the National Book Awards. We're recording this the day after those awards. The ceremony was less than 24 hours ago, so our opinions are still fresh. We're doing some real time processing. I just want to take down the winners list. The winners of the 2026 National Book Awards were The Fight of Our Lives: AIDS in America by David Levathan and Gabriel Duckles, who won for young people's literature. The winner for translated literature was Centro Europa by Fzente Luis Mora, translated from the Spanish by Rahul Barry. The poetry prize went to Still House in the Desert by Brenda Hillman. The non-fiction winner was Huna, a memoir of revolution, prison, and becoming by Abdul Kraman Algendi and Paradiso 17 by Hana Lilith Assadi won the fiction prize. Before we dive into specific titles, I want to know what are your top level thoughts about the National Book Awards this year. It was kind of a polarizing, contentious year. A lot of discourse. We brought that up before. I'm sorry bring that back. There was a lot of discourse. How are we feeling?
+</details>
+
+>> **Jim Monica T**: 就像我今天早上对别人说的那样，在我看来几乎没有什么意外。发言中充满了真挚，而且很多演讲确实拖得稍微长了点。但你真的不能抱怨，因为这一切都是为了推动读写能力服务。所以，这只是美国国家图书奖的又一个平常之夜。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: I mean, as I said to somebody this morning, there were very few surprises in my mind. There was a lot of earnestness in the speeches and a lot of it just went on a little too long. But you really can't complain because it's all in service of literacy. So, uh, it was just another night at the National Book Awards.
+</details>
+
+>> **John Maher**: 我到了那个典礼现场，感到心情非常开放、真诚，我完全接受了现场的氛围。发言虽然冗长，但非常感人，无论是颁奖嘉宾还是获奖者，我都全情投入。那是颁奖礼现场。但从宏观上看整个国家图书奖季，据我理解是这样的：这个奖季之所以两极分化，是因为所有的长名单中都有显著的“遗珠”（snubs）。
+
+<details><summary>Original English</summary>
+>> **John Maher**: I get to that ceremony and I feel so open and earnest and I fully drink the Kool-Aid and the speeches were long but so moving both from the announcers and the winners and I was I was there for it. So, that's the ceremony. But just the National Book Award season writ large, my understanding is this. My understanding is that the season was polarizing because there were notable snubs in all of the long lists.
+</details>
+
+>> **Jim Monica T**: 从长名单中公布决选入围名单那一刻起，我就心想：“糟了，大家会对这个非常不高兴。”现在，正如我之前在这一播客、这一期节目中所说的，我对这事的总体感受就是 vipasa。我不会对任何文学奖项的任何结果抱有任何执念。一个都没有。我正尽力超脱于其上。但事实是，《失踪者》没有进入虚构类决选名单，《整修》没有进，《乘客》（Passengers）也没有进。抱歉，我得说出来：虚构类是我最关心的奖项之一。而入围决选的五部作品中有三部是由某家大出版集团的同一位编辑编出来的。我当时就觉得……
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: The minute that the finalists were announced from the long list, I was like, "Oh, people are going to be really unhappy about this." Now, as I have said before on this very podcast, on this very episode, my overarching feeling about this has been vipasa. I am not going to have any attachment to any outcome at of any literary award. Not one. and I am doing my best to sort of remain above it. But like the fact that the disappearers did not make it to the finalist list for fiction, the fact that the renovation, the fact that passengers didn't make it. I'm sorry. I'm going to say this. Fiction is one of the prizes that I care the most about. Three of the finalists were edited by the same person at a big house. And I was just like,
+</details>
+
+>> **MJ Franklin**: 一家出得起大笔资金支付美国国家图书奖每部参评作品135美元报名费的大出版社。我以前根本没意识到还要交报名费。我之前完全不知道。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: a big house that can afford to spend a whole lot of money on that $135 per title entry fee to the National Book Awards. I didn't realize there was an entry fee, period. I didn't realize that.
+</details>
+
+>> **John Maher**: 这让我感到沮丧，因为像 Milkweed、Graywolf 或 Copper Canyon 这样的非营利性或实质上非营利的出版社数量正在减少。所以你知道，那笔报名费对一家非营利性出版社的意义，比起对一家大型综合出版集团要重大得多。
+
+<details><summary>Original English</summary>
+>> **John Maher**: It's just frustrating to me because there are a dwindling number of nonprofit or essentially nonprofit presses like Milkweed or Greywolf or I mean, take your pick, Copper Canyon. And so, you know, that entry fee means a lot more to a nonprofit press than it does to a major conglomerate.
+</details>
+
+>> **MJ Franklin**: 如果我理解正确的话，你想说的并不是非得有小型出版社代表不可，那并不是奖项长名单的强制要求，但费用关乎获得参评考量的准入门槛。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: What you're saying, if I'm understanding correctly, is not like there needs to be small press representation. That is not a mandate for the award long list, but the fee is about accessibility for consideration period.
+</details>
+
+>> **John Maher**: 我确实有此疑问。我确实在思考这点。
+
+<details><summary>Original English</summary>
+>> **John Maher**: I do wonder about that. I do. I do.
+</details>
+
+>> **MJ Franklin**: 我觉得提出这个问题很合理。我是说，比赛如何运作至关重要。我得说，看到《中欧》……
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: And I think it's a fair question to ask. I mean, how a contest is run matters. I I I I will say that I was chuffed, delighted to see Centro Europa,
+</details>
+
+>> **Dave Kim**: 我也是。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: same
+</details>
+
+>> **MJ Franklin**: 赢得翻译文学奖。我已经读了大约一半，我觉得那真是一本非凡的书。一个有抱负的甜菜农夫，在他那满怀希望的甜菜农场里发现了几个世纪以来保存完好的尸体。甜菜农场自己也能抱有抱负吗？[笑声] 真是……
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: win the the translated literature prize. I I am about halfway through it and I just think it is a remarkable book. I an aspiring beet farmer who discovers dead bodies from centuries upon centuries perfectly preserved in his aspiring beet farm. Can a beet farm aspire to be [laughter] itself? It's just
+</details>
+
+>> **Dave Kim**: 而且里面甚至没有一丝德怀特·舒鲁特（Dwight Schrute）的影子，这简直不可思议。[笑声] 也许有一点点道格·范尼（Doug Funnie）的味道，但你必须赞赏那些敢于进行怪异大胆尝试的作品走到那个位置。而且我认为，当一部得到认可的书出乎我们意料时，我们应该予以欣赏。说实话，我对“落选遗珠”毫无意见。我是天秤座。我喜欢惊喜。我不喜欢做抉择，我不喜欢被迫选。我很喜欢 Marlon James 没有进入决选名单这一点。我完全不介意。Marlon 是一位了不起的作家，我们大家都深深赞赏他的作品。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: and there's not even a whisper of Dwight Shroo to it, which is miraculous. [laughter] you maybe a little bit of Doug Funny, but you you have to appreciate when something that takes a weirdo swing gets to that place. And I think we should appreciate when a book that is recognized is a surprise to us. I have no problem with snubs to be completely honest with you. I am a Libra. I love to be surprised. I don't like to make choices. I don't like to have to. And I love that Marlon James did not make the finalists. I have no problem with that. Marlin is an amazing writer and we all deeply appreciate his work.
+</details>
+
+>> **John Maher**: 但让一个奖项给你带来一点震撼，不也是一件好事吗？
+
+<details><summary>Original English</summary>
+>> **John Maher**: But isn't it nice to have a prize sort of shake you up a little too?
+</details>
+
+>> **MJ Franklin**: 这正是我感到极其复杂的地方，我试图穿过一条非常微妙的针眼，我确信我在这里可能会搞砸，但我对落选遗珠的看法是：没有任何作者、没有任何一本书理所当然地应得一个奖项、应得长名单或决选名单上的席位，像国家图书奖这样的评审团的职责是去奖励卓越。正如我们之前提到的，卓越对每个人意味着不同的东西。然而对我而言，那些落选之所以如此引人注目，是因为这些书此前被广泛讨论为杰作。这些是大家渴望阅读的书，是人们热烈讨论的书，而且这些书感觉非常符合典型的国家图书奖风格。所以，当你对其中的一些书充满期待，想看到泰坦巨人们如何交锋，而它们却根本不在名单上时，确实会让人感到有些泄气。重申一下，我并不是认为长名单上的任何一本书不该在那里，我也不认为任何所谓的落选书籍理所当然该有一个名额；但纯粹作为一名观众，作为一个希望能兴奋地见证结果的人，它们的缺席让讨论对我来说显得有些平淡。这是否能理解？Dave，你正在点头，你在思考什么……
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: This is where I feel so complicated and there's like a very nuanced needle that I'm trying to thread and I'm sure I'm going to fumble it here, but I feel like for my opinion for snubs, no author, no book is owed an award is owed a spot on a long list or a finalist list, it is the job of a panel like the National Book Awards to award greatness here. As we mentioned before, that means something different to everybody. Though for me though, the snubs felt so notable because these books were widely discussed as great. These are books that people were excited to read. These were books people were excited to discuss and these were books that felt like they were such typical national book award fair. And so when you have some of those books that you're excited about and you want to see how the Titans are going to clash and when they're just not there, it feels a little deflating a little bit. Again, I don't think that any of these books on the long list should not have been there. And I don't think any of the books that were quote unquote snubbed deserved a spot, but just as a spectator, as someone who wants to be excited to see what's going to happen, to not have them there made the conversation feel a little flat to me. Does that feel Dave you're you're naughty you're thinking what are
+</details>
+
+>> **Jim Monica T**: 抱歉我不是 Dave，但我个人是一个希望看到布朗队（Browns）打进季后赛的钢人队（Steelers）球迷。我不需要它是最好的球队。不，我们就顺着这个说吧。比如你不需要……
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: I personally I'm sorry I'm not Dave but I I am a Steelers fan who wants to see the Browns get into the playoffs. I don't need it to be the best team. No, let's go with that though. Like you don't
+</details>
+
+>> **Dave Kim**: 嗯，这有点像你刚才说的，对吧？泰坦之战。你想看到紧张感，看到戏剧性……
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: Well, that's sort of what you were saying, right? Clash of the Titans. You want to see some tension, some drama,
+</details>
+
+>> **MJ Franklin**: 但这很重要——如果重要的话，是布朗队吗？我不懂体育。我不该继续用这个比喻。重要的是他们能打进季后赛，因为他们曾与所有那些领跑的热门球队较量过，那些被看好的队伍，然后看最终谁突围了。所以你想让那些大人物留在讨论之中，对我来说那些遗珠之所以显眼，并不是针对谁最终获奖。谁获奖我都觉得无所谓，但对我来说问题在于长名单的构成，因为整场戏剧性的张力缺失了。我最后想说的是：炒作和卓越之间是有区别的。我认为一个好的奖项能看穿这一点，它知道两者的区别。但确实有一批既备受炒作又极具卓越品质的书籍显得格外显眼地缺席了，这让我觉得很奇怪。我觉得这很值得关注。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: but it matters if it matters if was it the Browns? I do not know sports. I should not continue this matter. it matters that they make it to the playoffs because they played against all of those other teams that are the front runners, the other teams that are the favorites and like look what made it. So, you want the big Titans in the conversation and the snubs for me felt notable. Not for whoever won. I I felt so neutral about who won, but for me the issue were the composition of the long list because that the the drama of it all wasn't there. And the last thing I'll say is there's a difference between hype and excellence. And I think a good award pierces through that. It knows the difference. But there were a bunch of hyped and excellent books that felt very conspicuously not present and that felt strange to me. It felt notable to me.
+</details>
+
+>> **John Maher**: 你认为这在多大程度上可以归因于那个显而易见却被刻意回避的大问题（the elephant in the room）？即今年整个国家图书奖的评选过程都被各种讨论所笼罩，有人指责这些奖项变得尤其受政治驱动，或者说是基金会在进行“美德标榜”（virtue signaling），觉醒文化（wokeness）在某种程度上占据了主导地位。大家同意还是反对？你们认为围绕评选本身的争论，有多少与这个问题有关？
+
+<details><summary>Original English</summary>
+>> **John Maher**: How much of that do you think we we can attribute to the elephant in the room here, which is that the whole National Book Awards process this year has been clouded by discussions of or accusations that the awards have become particularly politically driven or are examples of virtue signaling by the foundation that wokeness has sort of taken over this whole process. I mean, do you guys agree, disagree, and how much of the debate around the pics themselves? How much do you think it has to do with that issue?
+</details>
+
+>> **Dave Kim**: 我们在评论区总能看到一件事——虽然《纽约时报》的评论区绝非任何可靠的风向标，但我们确实热爱你们每一位读者——那就是每当我们报道长名单、决选短名单以及我们自己的十佳图书榜单时，评论者中总有一股强大而直言不讳的声音说：这些听起来没有一本好的。就好像在说：还记得以前读书是一种乐趣的时候吗？或者类似那种消极悲观的胡言乱语……倒也不算胡言乱语，[笑声] 我的意思是这是一种非常普遍的观点，人们常常觉得榜单在制定时可能考虑到了舆论形象。我不知道这种指责有多公平。我真的不知道。我没在现场——谢天谢地我没跟国家图书基金会的评委们坐在同一个房间里，那听起来太疯狂了——但这种指控感觉非常模糊软性，很难去具体衡量。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: One thing that we always see in our comment section, not that the New York Times comment section is any kind of reliable bellweather, and we do love you constituents, each and everyone, is that people inevitably when we write about long list, short list, our own lists of 10 best books, there is a strong and vocal fraction of those commenters who say none of these sound good. like remember when books used to be pleasurable or so like kind of Eeyore um nonsense not nonsense but not not nonsense [laughter] um and so I mean that's like that is a very very I think that is like a a well represented viewpoint that people often feel that lists are made with um perhaps optics in mind. I don't know how fair that is. I just don't know. I'm not in the I mean, thank God I'm not in the room with the panel of the National Book Foundation judges. I mean, that just sounds crazy, but it just seems like a really squishy, hard to gauge kind of charge.
+</details>
+
+>> **MJ Franklin**: 这感觉像是一个轻率的推脱。比如，“哦，我不喜欢这些书，或者这些书表达的内容太觉醒了。这本书不完全合我的胃口。”
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: It feels like an easy copout. Like, oh, I didn't like these books, or these books seem to say something too woke. This book isn't exactly for me. too like
+</details>
+
+>> **Dave Kim**: 这些我根本没读过的书，仅凭我刚刚看到的一段简介，似乎在表达某些我不想读的东西。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: but this is this book these books seem to be saying these books that I have not read seem to be saying based on a prey that I have just consumed they seem to be saying something I don't want to read
+</details>
+
+>> **MJ Franklin**: 另外我认为，我们经常认为那些表达观点的书与那些富有技巧和工艺的书是截然不同的类型。对我们所生活的世界发出声音、切入一场宏大的对话、揭开这些重大的社会议题、表达某种政治立场，是需要大量技巧的。要以一种能够触及读者的方式有力地表达出来，需要高超的功力。它们不是截然对立的，也不是相互排斥的。因此，当我听到诸如“哦，太觉醒了”之类的评论时，我真的很沮丧，因为这背后是有工艺的，是有技巧的。强有力的艺术往往具有政治倾向，这就是艺术的运作方式。政治就是人性，是构成我们人类的一部分。作家选择追求政治关怀作为人类关怀的一部分，是完全合情合理、值得褒奖的。昨晚我们看到了很多这样的例子。我们看到了一本关于艾滋病危机的书……
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: the other thing I think is that we frequently think like books that make statements and books that are skilled and like books that have craft are different types of books it takes a lot of skill to say something about the world we live in to cut through a big conversation to open up these big social topics to make a political statement. It takes a lot of skill to say that effectively in a way that reaches readers. They're not polar opposites. They're not mutually exclusive. And so when I hear these these comments like, "Oh, it's too woke." It really frustrates me cuz it's like there is a craft. There is a skill here. Powerful art has often a political band. That is the the way that art works. it. Politics is human nature. It is part of what makes us people. And authors choosing to pursue political interests as part of human interests is a completely reasonable thing to reward. And I think we saw a lot of that last night. We saw a book on the AIDS crisis when
+</details>
+
+>> **John Maher**: 为青年读者而写。
+
+<details><summary>Original English</summary>
+>> **John Maher**: for young readers
+</details>
+
+>> **MJ Franklin**: 为年轻读者而写的书获得了青年文学奖。这或许是一种政治表态，但它也是在审视多年来影响同性恋群体的健康议题。而且我们想想 David Levithan 是谁：David Levithan 是一位久经考验的巨匠级编辑和作家，写作数十年了，对吧？仅仅因为那是他书的主题，并不意味着他入围是因为要填补某种意识形态的名额。他是一位优秀的作家和优秀的编辑。那本书里包含着技艺和水准。另一件事是，在这间录音室里，我大概比任何人都更具弗雷德里克·詹姆森（Fredric Jameson）的视角。我确实相信，几乎每一部伟大的文学作品——如果不是全部的话——都蕴含着政治潜流。我认为那些反对政治的人，反对的只是那些他们可能看不惯的政治；而与他们自己的政治观念更相符的作品的政治性，对他们而言则是隐形的。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: for young readers win the award in young people's literature which is which yes is perhaps a political statement but it's also one of of looking at a a a a health issue that has affected the gay community for years and also let's think about who David Levathan is. David Levathan is a tried andrue titan editor and writer who's been writing for decades, right? Just because that is the topic of his book does not mean he is there because of some type of ideological like slot that needs to be filled. This he's a great writer and a great editor. There's skill and craft to that book. The other thing that I like I am probably more Frederick Jameson P than anybody else in this studio. But like first I actually do believe that almost every great work of literature if not every great work of literature has a political current. And I think that the people who object to politics they object to the politics that maybe they don't see. And the politics of work that more closely resembles their own politics is invisible. And and that's
+</details>
+
+>> **John Maher**: 是的。是的。是的。是的。如果我是《纽约时报》评论区或者其他地方的管理员，我可能会鼓励他们沿着这个思路去思考。
+
+<details><summary>Original English</summary>
+>> **John Maher**: Yes. Yes. Yes. Yes. And that is just something if I were Jennifer Melie to the New York Times commentariat or whoever I might encourage them to think along those lines.
+</details>
+
+### 国家图书奖各奖项评析：《天堂17》、《这里》与诗歌奖
+
+>> **MJ Franklin**: 我觉得我们应该谈谈一些具体的获奖者。让我们从虚构类开始。今年虚构类奖项颁给了 Hala Alyan 的《天堂17》。有人能跟我说说这是本什么书吗？讲了什么？作者是谁？
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: I think we should talk about some specific winners. Let's start with fiction. So this year the fiction prize again went to Hanai for Paradiso 17. Can someone tell me what is this book? What is it about? Who is this author?
+</details>
+
+>> **Dave Kim**: 好的。《天堂17》是一部讲述人生的长篇小说，主角名叫 Sufian，他出生在1948年战争前几年的巴勒斯坦托管地。这部小说本质上就是他的故事，跟随他的足迹从巴勒斯坦到科威特，到他去上大学的意大利，再到纽约市——他在那里开出租车并坠入爱河，顺便提一句，他爱上了一位犹太女性——最后来到亚利桑那州度过余生。这是一部关于流亡、流离失所的小说，讲述了离开家乡、试图在别处寻找归宿却又从未真正彻底找到归宿的感觉。评委会的颁奖词是：“以优雅的抒情笔触以及对时间和空间的大胆跨越，Assadi 带着同情心点亮了 Sufian 从出生到流亡、历经爱欲、为人父母、衰老以及超越回归梦想的悲欢与渴望，直到死亡之外可能存在的任何希望或归宿。这是一幅描绘破裂与坚韧的具有远见卓识、精雕细刻的肖像。”摆在桌面上，我们的反应是什么？关于这本书我们还需要了解什么？
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: Sure. Paradiso 17 is a whole life novel uh about a guy named Zufian and he is born in mandatory Palestine just a few years before the 1948 war. The novel is essentially his story and it's following him from Palestine to Kuwait to Italy where he goes to college and to New York City where he falls in love and drives a cab, falls in love with a Jewish woman I should add. and then finally to Arizona, uh, where he lives out the rest of his life. It's a it's a novel about exile, about displacement, about what it means to to leave your home and try to find a home somewhere else and yet never fully feel like you've done it. The judge's citation for the award was, "With elegant lyricism and an ambitious bending of time and space, Assad compassionately set to glow, Sufian's griefs and wants and joys from birth to exile through love and lust and parenthood and aging past dreams of return to whatever hope or homecoming might lie beyond death. A visionary finally wrought portrait of rupture and endurance to the table. What's our reaction? What else do we need to know about this book?
+</details>
+
+>> **Dave Kim**: 这不是一本带有明显政治色彩的书。显然，一部关于巴勒斯坦男子的作品不可能完全脱离冲突背景，但这纯粹是关于他个人、他的缺点、他的爱情和他的成长历程。我认为它在最好的层面上体现了传统小说的风范，它没有试图用任何文学花招来震撼你。它只是讲好故事，而且讲得很精彩。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: It's not an overtly political book. Obviously, you cannot have a work about a Palestinian man without dealing with some of that conflict. But it's really just about him and his flaws, his loves, his his evolution. And it's old-fashioned, I think, in the best way in that it it doesn't try to wow you with any sort of literary tricks. It just tells the story and it does it well.
+</details>
+
+>> **John Maher**: 是的。该书大致取材于她父亲的一生，她曾提到这本书始于她父亲的临终前，在很多方面还原了他生命中所经历的波折。听起来这就是那种让人能彻底沉浸其中的生命故事。我还没读过，但我很期待翻开它。现在我想再谈谈非虚构类。获奖的是《这里》（Huna）。这是一本怎样的书？我们需要了解什么？
+
+<details><summary>Original English</summary>
+>> **John Maher**: Yeah. It was inspired loosely by uh her father's life and she has mentioned that this book started it began at her father's deathbed and in many ways tracks the the kind of twists and turns that his life took. That sounds like just a story a life to get lost in. I haven't read it but I'm excited to check it out. Now I want to talk about non-fiction again. It was Huna that won. What is this book? What do we need to know?
+</details>
+
+>> **Jim Monica T**: 好的。Abdelrahman ElGendy 在17岁时在埃及因所谓的“非法集会”被判处15年监禁。我相信当时他和父亲正在街头记录一场抗议活动。他在监狱里服刑了六年多。我之前说过这个，但你知道，关于出狱后生活会是什么样子的梦想，以及把他所见的一切形诸笔端的渴望，真正支撑了他。这其实让我想起了一点《美丽人生》（La Vita è Bella），那种父母与孩子之间的纽带。好吧，每个人的感受可能不同。我以前过过非常快乐的圣诞节。[笑声] 这曾是他学习创意写作时的毕业论文。我想再次从读者的审视角度问一句：ElGendy 是否需要地理和时间上的真实距离来写这本书，这种距离对他获得作为一名青少年经历这一切的审视视角是否必要？他现在依然是个年轻人，我甚至不知道他满30岁没有。
+
+<details><summary>Original English</summary>
+>> **Jim Monica T**: Yeah. So, Abd Rahman al Gandhi was sentenced to 15 years in prison at age 17 for quote unlawful assembly in Egypt. Uh I believe that he and his father were recording a protest in the street. And he served six years over six years in prison. And I said this before, but you know, the the dream of like what his life was going to be like getting out of prison and committing everything that he'd seen to the page is really what sustained him. It actually kind of reminds me a little bit of a beautiful life. It's the parent child thing. And okay, your mileage may vary. I had very happy Christmases. Um, [laughter] so I mean this was his thesis when he studied creative writing. I guess again to put on my Jennifer Melie hat, I might ask if the fact that El Gandhi needed some real distance, geographic and time distance to write this book, if that was necessary for him to sort of get the perspective on what he went through as a as a teenager. He's still a young man. He might I mean, I don't even know if he's 30 yet.
+</details>
+
+>> **MJ Franklin**: 我相信他30岁了。哇。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: I believe he is 30. Wow.
+</details>
+
+>> **John Maher**: 这是一本相当引人注目的书。由于各种原因围绕它有许多争论。首先，他未获准签发入境该国出席颁奖典礼的签证。
+
+<details><summary>Original English</summary>
+>> **John Maher**: This was a kind of notable book. There's a lot of discourse around it for a variety of reasons. First, he was not allowed a visa to come into the country and attend the ceremony.
+</details>
+
+>> **MJ Franklin**: 他在《纽约客》上写了这件事。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: And he wrote about it for the New Yorker.
+</details>
+
+>> **John Maher**: 他在《纽约客》上写了相关文章。我在颁奖典礼前一晚参加了国家图书奖入围作者朗读会，所有决选入围者都会登台朗读他们作品的节选。非虚构类的几乎每个人——我想实际上是非虚构类别的每一个人，以及其他类别的好几个人——都站出来大声疾呼这是多么不公。他也不是唯一一个被拒签的人。我想翻译文学类别里也有一位被拒签了。但那种情绪笼罩在这本书周围。John，我们还发表了一篇报道，大概就在决选入围者进行……
+
+<details><summary>Original English</summary>
+>> **John Maher**: And he wrote about it for the New Yorker. I went to the finalist reading for the National Book Awards the night before the awards were conferred. That's where all of the finalists come to a stage and they get to read excerpts from their book. and almost every person in the non-fiction category. I think actually every person in the non-fiction category and several people in other categories spoke up about how unjust that is. He also wasn't the only person denied a visa. I think there was someone in the translated literature category as well, but like that that was in the air around this book. We also had a story John which actually published probably right around the time when the finalists were
+</details>
+
+>> **MJ Franklin**: 朗读的时候。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: reading
+</details>
+
+>> **John Maher**: 朗读的时候。是的。ElGendy 周五在《纽约客》发表了他的随笔，其中他提到的一件事是，出于对被捕的恐惧，他在2025年4月离开了这个国家。离开了美国。而国家图书奖针对虚构、非虚构等除翻译文学之外所有类别的参赛资格标准，要求他在2025年12月1日身处该国境内。我们在《纽约客》上读到了那篇文章，《时报书评》的记者 Rhonda Kase 和 Ash Woo 对此进行了调查。
+
+<details><summary>Original English</summary>
+>> **John Maher**: reading. Yeah. El Gendi published his essay in the New Yorker on Friday and one of the things he said in it was that he left the country in April of 2025 for fear of being arrested. Left the United States and the eligibility criteria for the National Book Awards for fiction, non-fiction, everything but translated literature required that he be in the country on December 1st of 2025. So, we read that piece in the New Yorker and Rhonda Kase and Ash Woo at the Times Book Review, our reporters looked into it.
+</details>
+
+>> **MJ Franklin**: 所以那是弥漫在空气中的另一场重大讨论。然后我们来到了颁奖礼现场，他赢了。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: So, that was a big other kind of conversation, a big other thing in the air. And then we get to the ceremony and he wins.
+</details>
+
+>> **Dave Kim**: 这类讨论还有另一个问题，这也是为什么我讨厌无休止的“舆论高谈阔论”——虽然身处这行我不得不面对——那就是我们正在脱离作品本身的价值。围绕这本书的所有喧嚣确实削弱了阅读体验。坦白讲，我认为国家图书基金会对这种情况负有责任。我认为任何作者都不应该陷入这种境地。我真心这么觉得。如果有任何疑问，就修改参赛资格规定。他们给普利策奖改过。
+
+<details><summary>Original English</summary>
+>> **Dave Kim**: Here's the other thing about these kinds of discussions and this is why I hate discourse just which I'm in a great line of work for that is that we are getting away from the merit. like all this bluster about the book really detracts from the reading experience. And to be fair, I blame the National Book Foundation for this. I don't think that any author should be in this situation. I really don't. I think they if if there's any doubt about it, change the eligibility requirements. And they did that for the Pulitzers.
+</details>
+
+>> **John Maher**: 他们确实为国家图书奖调整过。我只想说一件事，我不希望这些争议削弱它作为一部文学作品的事实。由国家图书基金会选出的评判今年非虚构作品的五位评审一致认定它是最佳非虚构作品。
+
+<details><summary>Original English</summary>
+>> **John Maher**: They did it for the National Book Awards. The one thing I will say, I just don't want this to detract from the fact that this is a work of literature. It and five people who were chosen by the National Book Foundation to judge non-fiction this year decided it was the best non-fiction work.
+</details>
+
+>> **MJ Franklin**: 听着，在我们结束之前，我最后想提的是诗歌奖。Brenda Hillman 获奖了。她的演讲太让人愉快了。她非常震惊，一直说：“我觉得我快心脏病发作了。”她也是一位职业诗人，诗人群体中的诗人。当时我坐在我们的诗歌编辑 Greg Cowles 旁边，他为她感到无比兴奋。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: Look, before we go, one last thing I want to say is the poetry prize. Brenda Hillman won her speech. Delightful. Delightful. She was so shocked and she kept saying, she's like, "I feel like I'm going to have a heart attack." She's also just like a career poet, a poet's poet. Um, I was sitting next to Greg Kohl's, our poetry editor, who was so excited for her.
+</details>
+
+>> **John Maher**: 是的。而且她非常迷人。我喜欢她演讲最后点缀的那一点葡萄牙语。去参加过她朗诵会的人都说她是表现最出色的。我无法亲自判断，因为我不在场。有时国家图书奖会颁发一些感觉像终身成就性质的奖项，在某种程度上我在这里也有这种感觉。当她获奖和讲话时，你可以感受到全场气氛都振奋了起来。我只是想确保把这也纳入这次对话中。我就是想向她致敬。遗憾的是，我们在录音室的时间就这么多了。Dave、Jumanna、John，非常感谢。这真的很有趣。[音乐]
+
+<details><summary>Original English</summary>
+>> **John Maher**: Yeah. And, you know, she was totally charming. I loved the little sprinkle of Portuguese at the end. Everybody who went to her reading said she was by far the best. I mean, I can't really gauge that cuz I wasn't there. And, you know, sometimes the National Book Award will award prizes that feel like capstone achievements. And that's sort of what I got in this sense. You could feel the room lift up when she won and when she was speaking. I just wanted to get make sure that was part of this conversation. Like I just I wanted to shout that out. That is unfortunately all the time that we have in this studio. Dave Jumanna John, thank you so much. This is really fun. [music]
+</details>
+
+>> **MJ Franklin**: 本期《书评》播客由 Sarah Diamond、Amy Pearl 和 Patricia Cronin 制作，由 Pedro Rosado 混音。[音乐] 原创音乐由 Dan Powell 和 Alicia Ba Eup 创作。[音乐] 特别鸣谢 Dalia Hadad。我们很想听听您对本节目的看法，请发送电子邮件至 bookreview@nytimes.com。我是 MJ Franklin，代表 Goa Cruz 感谢大家的收听。
+
+<details><summary>Original English</summary>
+>> **MJ Franklin**: The book review is produced by Sarah Diamond, Amy Pearl, and Patricia Suban and [music] mix by Pedro Rosado. Original music by Dan Powell and Alicia Ba Eup. [music] Special thanks to Dalia Hadad. We want to hear what you think about the show, so send us an email at the bookreview atny [music] times.com. I'm MJ Franklin and for Goa Cruz. Thanks for listening.
+</details>

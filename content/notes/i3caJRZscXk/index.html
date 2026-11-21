@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>全美连环宕机背后：AI发现深层漏洞引发修补潮与民航停飞调查</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">全美连环宕机背后：AI发现深层漏洞引发修补潮与民航停飞调查</span>
+      <span data-pagefind-meta="speaker" style="display:none;">New York Times Podcasts</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>New York Times Podcasts</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-19</span>
+    
+
+    <header class="article-header">
+      
+      <h1>全美连环宕机背后：AI发现深层漏洞引发修补潮与民航停飞调查</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/cybersecurity/">cybersecurity</a>
+      
+        <a class="tag-link" href="/tags/technical-debt/">technical-debt</a>
+      
+        <a class="tag-link" href="/tags/vulnerability/">vulnerability</a>
+      
+        <span class="tag-pill tag-pill--no-page">incident-response</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">近期微软、银行、FAA及NSA等连环技术故障引发全网恐慌。记者调查指出，多数中断并非网络攻击，而是AI指数级发现底层古老漏洞后各机构抢修补丁所致；FAA停飞则源于阿肯色州网络升级中路由配置异常。白宫与内阁初步回应显混乱，专家预计技术设施在未来12至18个月仍将经历阵痛期。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/new-york-times-podcasts/">New York Times Podcasts</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=i3caJRZscXk" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-19T00:00:00.000Z">2026-11-19</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>7 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E8%BF%9E%E7%8E%AF%E5%AE%95%E6%9C%BA%E5%85%A8%E7%BE%8E%E9%99%B7%E5%85%A5%E6%8A%80%E6%9C%AF%E6%95%85%E9%9A%9C%E6%81%90%E6%85%8C">连环宕机：全美陷入技术故障恐慌</a></li><li class="outline-h3"><a href="#%E4%BB%8E%E5%BE%AE%E8%BD%AF%E6%95%85%E9%9A%9C%E5%88%B0%E5%85%A8%E7%BE%8E%E5%81%9C%E9%A3%9E%E6%81%90%E6%85%8C%E5%A6%82%E4%BD%95%E8%94%93%E5%BB%B6">从微软故障到全美停飞：恐慌如何蔓延</a></li><li class="outline-h3"><a href="#ai%E6%8C%96%E6%8E%98%E5%BA%95%E5%B1%82%E6%8A%80%E6%9C%AF%E5%80%BA%E4%BF%AE%E8%A1%A5%E5%AF%BC%E8%87%B4%E7%9A%84%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83">AI挖掘底层技术债：修补导致的系统崩溃</a></li><li class="outline-h3"><a href="#%E8%A7%A3%E5%89%96-faa-%E5%85%A8%E5%9B%BD%E5%81%9C%E9%A3%9E%E5%85%89%E7%BA%A4%E5%8D%87%E7%BA%A7%E4%B8%8E%E8%B7%AF%E7%94%B1%E5%99%A8%E5%BC%82%E5%B8%B8">解剖 FAA 全国停飞：光纤升级与路由器异常</a></li><li class="outline-h3"><a href="#%E4%BF%A1%E6%81%AF%E7%9C%9F%E7%A9%BA%E4%B8%8E%E6%94%BF%E6%B2%BB%E5%8D%9A%E5%BC%88%E5%85%AC%E4%BC%97%E4%BF%A1%E4%BB%BB%E7%9A%84%E8%A3%82%E7%97%95">信息真空与政治博弈：公众信任的裂痕</a></li><li class="outline-h3"><a href="#%E6%9C%AA%E6%9D%A512%E8%87%B318%E4%B8%AA%E6%9C%88%E6%8A%80%E6%9C%AF%E9%98%B5%E7%97%9B%E6%9C%9F%E4%B8%8E%E4%B9%90%E8%A7%82%E6%84%BF%E6%99%AF">未来12至18个月：技术阵痛期与乐观愿景</a></li><li class="outline-h3"><a href="#%E4%BB%8A%E6%97%A5%E5%85%B6%E4%BB%96%E8%A6%81%E9%97%BB%E4%B8%8E%E5%88%B6%E4%BD%9C%E5%9B%A2%E9%98%9F">今日其他要闻与制作团队</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="连环宕机全美陷入技术故障恐慌" data-reading-heading="">连环宕机：全美陷入技术故障恐慌</h3>
+<p><strong>Rachel Abrams</strong>: 这里是《纽约时报》[音乐]，我是瑞秋·艾布拉姆斯（Rachel Abrams），欢迎收听《The Daily》。[音乐]</p>
+<p>最近几天，在 Anthropic 警告我们其商业模式面临的风险之一包括毁灭人类之后，一连串神秘的技术[音乐]故障接踵而至。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+From the New York Times, [music] I'm Rachel Abrams and this is the Daily. [music] In recent days, after Anthropic warned us that one of the risks to its business model included wiping out humanity, a cascade of mysterious technical [music] glitches.
+</details>
+<blockquote>
+<blockquote>
+<p>西南航空 2179，只是提个醒，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Southwest 2179, just a heads up,
+</details>
+<blockquote>
+<blockquote>
+<p>让飞机停飞了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; have grounded planes.
+</details>
+<blockquote>
+<blockquote>
+<p>我们进入了全国地面停飞状态。你是指区域性的全国，还是整个国家的全国停飞？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We went into a national ground stop. Are are you saying national like rean national or national for the whole country?
+</details>
+<blockquote>
+<blockquote>
+<p>关闭了银行账户。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Closed bank accounts.
+</details>
+<blockquote>
+<blockquote>
+<p>所以现在如果你用大通银行（Chase），你简直什么都无法访问[音乐]。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So right now if you have Chase you literally cannot access [music] anything.
+</details>
+<blockquote>
+<blockquote>
+<p>今天早上网络空间出现了更多麻烦，至少</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; There's more trouble in cyerspace this morning at least
+</details>
+<blockquote>
+<blockquote>
+<p>把我们所有人都关在电子邮件之外。微软 Outlook 遭遇了严重中断，与此同时</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; shut us all out of our email. Microsoft Outlook experiencing major disruptions as
+</details>
+<blockquote>
+<blockquote>
+<p>万豪（Marriott）、国家气象局[音乐]、嘉信理财（Charles Schwab），</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Marriott, the National Weather [music] Service, Charles Schwab
+</details>
+<blockquote>
+<blockquote>
+<p>还有苹果、谷歌和国家安全局（NSA）[音乐]，总体上让人觉得世界要么在分崩离析，要么被黑客入侵了，或者两者兼而有之。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; at Apple, Google and the National Security Agency [music] and generally created a sense that the world is either falling apart or getting hacked or maybe both.
+</details>
+<blockquote>
+<blockquote>
+<p>我的意思是，如果这完全是个巧合，那可真是世界历史上最大的巧合了。所以今天，我们请来[音乐]我们的同事卡伦·德扬（Karen Demerian）、达斯汀·沃尔兹（Dustin Voltz）和佐兰·坎诺-扬斯（Zolan Kanno-Youngs），来解释关于究竟[音乐]发生了什么我们所掌握的情况、未来我们可能会面临什么，也许他们还能给我们带来一点点安慰。</p>
+</blockquote>
+</blockquote>
+<p>今天是11月19日，星期四[音乐]。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I mean, if this is all a coincidence, it it's like the greatest coincidence in the history of the world. And so today we turn to [music] our colleagues Karen Degian, Dustin Boltz, and Zolan Kano Young's to explain what we know about what's actually [music] happened, what we might expect going forward, and maybe they can give us just a little bit of reassurance. It's Thursday, [music] November 19th.
+</details>
+<blockquote>
+<blockquote>
+<p>哇，他来了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Wow, there he is.
+</details>
+<blockquote>
+<blockquote>
+<p>他来了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; There he is.
+</details>
+<blockquote>
+<blockquote>
+<p>非常准时。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Right on time.
+</details>
+<blockquote>
+<blockquote>
+<p>传奇人物。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And the legend.
+</details>
+<blockquote>
+<blockquote>
+<p>非常抱歉。我，呃……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I'm so sorry. I uh
+</details>
+<blockquote>
+<blockquote>
+<p>达斯汀，你是跑完最后两个街区过来的吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Dustin, did you run the last two blocks here?
+</details>
+<blockquote>
+<blockquote>
+<p>确实是。是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I did. Yes.
+</details>
+<blockquote>
+<blockquote>
+<p>我的天啊。女士们先生们，这就是《纽约时报》记者对《The Daily》的敬业程度。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Oh my god. That is how committed New York Times journalists are to the daily, ladies and gentlemen.
+</details>
+<blockquote>
+<blockquote>
+<p>刚才路上很堵，而且你知道，互联网要爆炸了什么的。所以……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; There was there was a lot of traffic and you know the uh the internet is exploding or whatever. So
+</details>
+<blockquote>
+<blockquote>
+<p>如果有哪一天可以用这个借口，那就是今天了。嗯，佐兰·坎诺-扬斯，白宫记者。你好，欢迎回来。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; if there was ever a day to use that excuse, it is today. Um so Zolan Ko Young's White House correspondent. Hello. Welcome back.
+</details>
+<blockquote>
+<blockquote>
+<p>嗨，瑞秋。谢谢邀请我。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Hey there Rachel. Thanks for having me.
+</details>
+<p><strong>Rachel Abrams</strong>: 卡伦·德扬，你除了其他领域外还负责报道航空业。欢迎来到节目。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Karen Demerian, you cover aviation among other things. Welcome to the show.
+</details>
+<blockquote>
+<blockquote>
+<p>嗨，瑞秋。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Hi, Rachel.
+</details>
+<blockquote>
+<blockquote>
+<p>达斯汀·沃尔兹，欢迎。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Dustin Voltz, welcome.
+</details>
+<blockquote>
+<blockquote>
+<p>你好。你好。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Hello. Hello.
+</details>
+<h3 id="从微软故障到全美停飞恐慌如何蔓延" data-reading-heading="">从微软故障到全美停飞：恐慌如何蔓延</h3>
+<blockquote>
+<blockquote>
+<p>那么，达斯汀，我想先从你开始，因为就你在报道线上关注的内容而言，对于过去几天发生的所有事情，你可能掌握着最广泛的全局视角。你是何时第一次意识到自己手上碰上了一个大新闻的？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So, Dustin, I want to start with you because you probably have the broadest overview on your beat of just everything that's happened in the last few days. When did you first realize that you had a huge story on your hands?
+</details>
+<blockquote>
+<blockquote>
+<p>你知道，人们总是以为我作为记者会提前知道这些事情，但事实往往并非如此。嗯，我最早知道微软宕机——我认为这是引发最近几天我们所看到的技术故障潮的第一个大事件——我是从我妻子那里知道的。我不用微软，但我妻子用。她是一名律师。呃，我记得她很早就告诉我……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You know, people always assume I find out about these things in advance because I'm a reporter, but the truth is that's not often the case. Um, I I first found out about the Microsoft outage, which I think was the first big one that sort of kicked off this spree of technology failures that we've seen in recent days. I learned about it from my wife. I don't use Microsoft, but my wife does. She's a lawyer. And uh, I recall her telling me early on
+</details>
+<blockquote>
+<blockquote>
+<p>微软 Outlook。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Microsoft Outlook.
+</details>
+<blockquote>
+<blockquote>
+<p>微软 Outlook。是的。我记得她告诉我：“好吧，我猜我今天上不了班了。呃，看来微软宕机了。”那实际上是我第一次听说这件事。老实说，我当时根本没当回事。你知道，这种事情总会发生。再次说明，这算是过去几天里我们看到的第一个技术中断，而且微软过去也有过问题。其他主要平台过去也出现过问题。即使它持续了几天，这并不罕见。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Microsoft Outlook. Yeah. And I recall her telling me, "Well, I guess I'm not working today. Uh, seems like Microsoft's out." And that was actually the first time I had uh, heard about it. And I honestly didn't think anything of it. You know, these things happen. Again, this was like kind of the first one that we saw over the past few days that was like a technology outage and Microsoft's had issues in the past. Other major platforms have had issues in the past. It's not unusual even though it persisted for, you know, a couple of days.
+</details>
+<blockquote>
+<blockquote>
+<p>我想，真正提示我正在发生更重大的事情，或者表面上看起来更重大的事情，是第二天美国联邦航空局（FAA）下令全美所有航班停飞的时候。我立刻开始收到来自消息源、朋友，以及多年未联系的人发来的大量信息，都在说：“天哪，发生什么事了？这个出事了，微软也出事了。是有网络攻击吗？是伊朗干的吗？我们遭到攻击了吗？”</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think what clued me in that something more significant was happening or seemingly something more significant was happening was the next day when there was a nationwide ground stop ordered by the FAA of all flights in the United States. And I immediately started getting a lot of messages from sources and friends and uh people I haven't talked to in years saying, "Oh my gosh, what's going on? This happened. Microsoft happened. Is there a cyber attack? Is it Iran? Are we under attack?"
+</details>
+<blockquote>
+<blockquote>
+<p>我当时完全不知道。我和家人以及一些朋友在树林里的一间木屋里，正准备做智利炖肉晚餐。我有点立刻行动起来，开始问人：“这里到底怎么回事？你们知道什么？”我联系的政府部门的人，以及其他对情况有所了解的人，基本都在说：“嘿，我们不知道发生了什么，但我们没有任何迹象，没有任何情报指向外国威胁或网络攻击。这看起来不像是伊朗，不像是有人故意搞出来的行动。”</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And I had no idea at the time. I was at a cabin in the woods with my family and some friends trying to get ready for a Chile dinner. And I'm sort of springing to action and start asking people, "What's going on here? What do you know?" And so the folks I reach out to in the government uh and other people who are, you know, sort of familiar with what's going on are basically saying, "Hey, we have no idea what's going on, but we have no indications, no intelligence pointing to a foreign threat, a cyber attack. This doesn't look like it's Iran. It doesn't look like it's something that someone's pulled off."
+</details>
+<blockquote>
+<blockquote>
+<p>对，对，对。然后当然到了周一，我们开始看到所有这些银行中断。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Right. Right. Right. And then on Monday, of course, we start seeing all these banking outages.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。所以银行中断很有意思。然后，你知道，同一天周一，美联航（United）也出现了中断。这时我开始试图在内心权衡：好吧，美联航的中断很有意思，但这会不会是认知偏差？比如，大家是不是只是因为几天前 FAA 出了故障而过度恐慌，现在开始注意到平时根本不会注意到的事情？所以，我试图在两者之间平衡：好吧，也许就是这么回事；但另一方面，确实有很多人感到非常担忧，这看起来可能稍微不只是巧合了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Right. So the bank outage was interesting. And then, you know, the same day on Monday, there's a United outage. And this is when I start kind of trying to reckon with myself like, okay, this United outage is interesting, but is this perception bias? Like, are people just freaking out because there was the FAA outage a few days ago and now we're noticing things that we normally wouldn't notice. So, I'm trying to balance like, okay, maybe that's what's going on versus, you know, okay, there are a lot of people who are really concerned. This is seeming like maybe a little bit more than a coincidence.
+</details>
+<blockquote>
+<blockquote>
+<p>认知偏差，意思就是我们都看到了所有这些疯狂的事情，然后基本开始推定存在阴谋。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Perception bias, meaning like we're all seeing all these crazy things and starting to assume a conspiracy, basically.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。然后到了周二，对我来说事情变得非常有趣了。国家安全局——这是一个拥有数万人的机构，对国家的网络安全非常非常重要——他们自己的内部机密网络出现了故障，而他们平时大部分业务往来都使用这个网络来传递机密信息。网络瘫痪了，他们无法运作，工作人员被告知错峰前往马里兰州的总部，与此同时该机构正在努力弄清楚到底发生了什么。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. And then on Tuesday, that's when it got really interesting for me. The National Security Agency, which is a organization of tens of thousands of people who are very, very important to the nation's cyber security, had their own outage of their internal classified network that they use to communicate classified information, which is most of what they do business in. It was down and they could not operate and staff were being told to stagger their arrivals to the headquarters in Maryland as the agency worked to process what was going on.
+</details>
+<blockquote>
+<blockquote>
+<p>哇。需要说明的是，我们谈论的可是最神秘的秘密政府机构。所以如果他们都遇到了这种问题，那确实会让你立刻警惕起来。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Wow. And we're talking about just to be clear, we were talking about the secretiest of the secret government agencies. So if they are having this problem, it is really making you sit up straight.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。我的意思是，几十年来在华盛顿针对 NSA 的笑话是“没有这个机构”（No Such Agency）。呃，因为你知道，他们的存在过去是保密的，而且他们很少公开发言，确实是在2013年爱德华·斯诺登（Edward Snowden）披露事件之后，他们才在某种程度上被迫走向公众视野。但没错，他们就是那种会黑进你电脑的神秘角色，或者我猜他们会说自己不黑美国电脑，但他们黑外国间谍和恐怖分子的电脑，他们对美国政府肩负着非常非常重要的国家安全使命。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I mean NSA the joke in in Washington for decades is they're no such agency. um because you know their existence used to be secret and they don't talk uh publicly very often and really was only after the Edward Snowden revelations of 2013 they were sort of forced in the public but yes these are sort of you know the spooky types that hack your computers or I guess they would say they don't hack American computers but they hack the computers of you know foreign spies and terrorists and they have a very very important national security mission uh to the United States government
+</details>
+<blockquote>
+<blockquote>
+<p>你知道，我想很多人听到你至少在一定程度上也有过类似的疑问，会感到得到了极大的共鸣。因为你知道，至少在我的生活中，很多人的反应是这样的。我不知道你的生活中是不是这样，卡伦、佐兰，他们问我的问题都很类似。我至少收到了两个关于逃生避难包（bugout bags）的询问。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; you know it's I think it's going to sound quite validating to a lot of people to hear that you at least somewhat shared some of those questions because you know a lot of people's reactions at least in my life. I don't know about your lives Karen and uh Zolan were asking me similar things. I got at least two questions about bugout bags.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。[嗤笑] 特别是在本周早些时候，即使当时没有证据表明这一切都与同一个作恶者有关。公众确实注意到了这里的趋势，对吧？他们注意到广泛的数字化中断似乎正在私营部门的各个领域发生，甚至影响到了政府机构。大家都在问两个问题：到底发生了什么？以及联邦政府在哪里……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. [snorts] Particularly like earlier this week when even if there wasn't evidence that all of this was linked by the same perpetrator. Like the public does notice a trend here, right? They're noticing that there are widespread digital outages happening seemingly in various aspects of the private sector and even impacting government institutions. And it was both questions also of like what is going on but also where is the federal government here to
+</details>
+<blockquote>
+<blockquote>
+<p>对，以及我应该有多害怕？是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; right and how scared should I be? Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Right.
+</details>
+<h3 id="ai挖掘底层技术债修补导致的系统崩溃" data-reading-heading="">AI挖掘底层技术债：修补导致的系统崩溃</h3>
+<blockquote>
+<blockquote>
+<p>但同样需要明确的是，这不仅仅是理论上的恐惧，对吧？我们确实看到了许多不同程度的技术故障甚至黑客攻击。达斯汀，你能快速带我们梳理一下这些情况吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; But also just to be clear, it's not just sort of theoretical fears, right? We have seen a number of like technological malfunctions and even hacks of varying degrees. So can you just walk us through those quickly, Dustin?
+</details>
+<blockquote>
+<blockquote>
+<p>没错。我们看到美国发生过与伊朗有关的水务系统网络攻击。最近在法国和整个欧洲也看到了针对制冷系统的攻击。因此，重大网络攻击正在发生并破坏基本服务的概念，是我们最近刚刚亲眼目睹的事实。与此同时，我们看到这些顶尖的 AI 模型在整个互联网无处不在的软件中发现了未知的计算机漏洞。我们距离发现一种名为 PHP 的编程语言中的漏洞才过去几周，互联网上有 70% 的网站都在使用该语言。当时该漏洞被公开后，目前正在应对自身网络中断的 NSA 当时就表示，请立即修复此问题，如果无法修复，基本上应该把网站下线。我们正看到许多类似的情况发生，由于 AI 的存在，那些如果不加以解决就似乎会产生重大影响、或者可能产生重大影响的巨大漏洞，现在基本上每天都在涌现。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+That's right. We've seen cyber attacks happening in the US that have been linked to Iran on water system. We've seen recently refrigeration attacks in France and throughout Europe. So the idea that like major cyber attacks are happening and disrupting essential services is something that we've seen happen very recently. And we also at the same time are seeing these topshelf AI models discover unknown computer bugs in software that's ubiquitous throughout the internet. We're just a few weeks removed from the discovery of uh vulnerability in a programming language called PHP which is used by 70% of websites on the internet and that came out and the NSA which has been dealing with its own disruption now at the time said please immediately fix this uh and if you can't you should basically take your website offline and we're seeing a number of episodes like that where thanks to AI enormous bugs that seem to really have significant impact or could have significant impact if they're not addressed are coming out essentially every day now.
+</details>
+<blockquote>
+<blockquote>
+<p>所以，好吧。这引出了我的下一个问题，因为人们在发给你的短信中提出的一个大问题是：这些事件在某种程度上是相互关联的吗？所以我想知道，关于这个问题的答案，你的消息源是怎么告诉你的？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So, okay. So, this sort of leads me to my next question because one of the big questions that people have that they're texting you is are these events related in some way, right? And so, I wonder like what are your sources telling you about the answer to that question?
+</details>
+<blockquote>
+<blockquote>
+<p>他们基本上说这很复杂。简短的回答是，它们似乎都没有直接关联；但长一点的回答是，大多数事件都存在某种程度的间接关联。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; They're saying essentially it's complicated. The short answer is none of them seem to be directly related, but the longer answer is most of them are somewhat related.
+</details>
+<blockquote>
+<blockquote>
+<p>以什么方式？稍微解释一下。是的，很多事件——把 FAA 停飞先放在一边，因为那似乎是个不同的问题。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; In what way? Just explain that a little bit. Yeah, a lot of them putting the FAA outage aside because that seems to be a different issue.
+</details>
+<blockquote>
+<blockquote>
+<p>大多数其他问题似乎都与银行、航空公司美联航以及 NSA 在其系统中推送的软件更新有关。我想我们都遇到过这种情况：你必须关闭 Chrome 浏览器以确保安装更新，或者你必须重启 iPhone，基本上就是把它关掉再重新打开。正因为这些由 AI 发现的漏洞带来的问题，最近许多事件似乎都与 AI 发现漏洞有关。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Most of the other issues seem to be dealing with software updates that the banks, the airline, uh, United and the NSA were pushing through their system. And I think we've all been in a situation where, you know, you have to close your Chrome browser to make sure it installs the update or you have to restart your iPhone and essentially, you know, turn it off and turn it back on again. And so because of the issues that these AI discovered vulnerabilities are presenting, a lot of these recent episodes appear to be linked to AI discoveries of bugs.
+</details>
+<blockquote>
+<blockquote>
+<p>基本上是企业试图通过打补丁来抢先解决问题，结果反而导致了全盘崩溃，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Basically, companies trying to get ahead of problems by patching things and then crashing everything,
+</details>
+<blockquote>
+<blockquote>
+<p>对吧？再次说明，这些并不是网络攻击。这不是坏人在做坏事，而是好人试图赶在坏人有机会行动之前抢先一步。所以，在大多数其他案例中，表面上发生的似乎就是这样：基本上 AI 正在以指数级发现比以往更多的漏洞，远超人类所能发现的范围。这里的部分问题在于许多专家所称的“技术债”（technical debt），其本质概念就是互联网在最初构建时根本没有考虑到安全性。从一开始安全就只是事后诸葛亮，现在我们意识到很多旧代码——在某些情况下有几十年的历史，就像我刚写过的那段 Java 代码——包含人类肉眼从未发现过的问题，但 AI 现在正在识别它们，这让我想到了某种叠叠乐（Jenga）积木塔：你越往下走，抽出一块积木并替换它就越难，因为如果你这么做且不够小心，整个大厦就会轰然倒塌。我认为正在发生的情况就是：你在技术栈中下潜得越深，出现失误导致所有事情分崩离析的可能性就越大。当然，除此之外，发现的一些漏洞极其严重，可能允许黑客做出各种疯狂的事情，彻底摧毁系统。因此，一旦发现问题，就会出现一种抢着修复的冲动。同时，一次性应对这么多问题也会带来某种程度的疲惫。我认为你看到的是，过去一家企业可能会说：“好吧，周六我们把系统下线。没人在上班，大家不要登录所需的任何应用程序，因为我们要修复它。”但现在，我们看到这些事情发生在周一、周二、周三、周四，因为大家有一种感觉，一种紧迫感：我们必须立即、马上发布补丁，因为我们等不起。我们承担不起等待的代价，因为万一有人攻击我们的某个关键漏洞怎么办？所以基本上按照你的说法，为了避免这种情况，整个国家基本上一直在把它关掉再重新打开。是的，我们既在经历一场群体恐慌，又在经历一场全国性的“关机重启”。我认为差不多就是这么回事。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; right? And again, these are not cyber attacks. These are not the bad guys doing something bad. These are the good guys trying to get ahead of something before the bad guys have a chance to act. And so that appears to be what's going on in most of these other cases is that basically AI is finding exponentially more bugs than it's ever found before that humans could ever possibly uncover. Part of the problem here is something that a lot of experts refer to as technical debt and that is essentially the concept that the internet was not ever built with security in mind. It sort of was an afterthought from the beginning and you know sort of the bill is coming due now as we are realizing that a lot of old code you know in some cases decades old like this bit of Java code that I just wrote about contains problems that have never been spotted before by human eyes but AI is now identifying and it does remind me of sort of like a stack of Jenga blocks where the further down you go the harder it is to pull out a block and replace it because if you do that and you're not careful the whole thing will come tumbling down. And I think that's what's going down is the deeper down the technology stack you go, the more likely it is that you're going to have a slip up and everything's going to fall apart. Sure. And in addition to that, some of the bugs are finding are extraordinarily severe things that could allow hackers to do all sorts of crazy things that could take systems down entirely. And so there's sort of a rush to fix things as soon as they're discovered. And there's a level of exhaustion as well dealing with so many problems at once. And I think what you're seeing is historically a business might say, "Okay, on Saturday we're going to take systems offline. No one's at work. Don't log into, you know, whatever app that you need to because we're going to fix it." But instead, now we're seeing these happen on Monday, Tuesday, Wednesday, Thursday, because there's a feeling, a sense of we need to get this out right away, right now, because we can't wait. We can't afford to wait because what if somebody like attacks one of our critical vulnerabilities? So basically what you're saying in order to avoid that, the entire country has basically been turning it off and turning it back on again. Yes, we're going through both a mass psychosis episode and a national turn it off and turn it back on episode. I think that's sort of what's happening.
+</details>
+<blockquote>
+<blockquote>
+<p>哇。好的。这既让人深感安慰，又极其令人不安。佐兰，当所有这些关于宕机的新闻传出时，至少我认为值得注意的一点是，我们并没有怎么听到白宫的声音。在人们我想是有点恐慌的时候，感觉总统似乎有点缺席。我不是说他应该发表评论还是不应该发表评论，我只是作为一名白宫记者想问，你是否觉得他有点缺席，或者谈谈你的看法？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Wow. Okay. That is both like deeply sort of reassuring and also extremely disconcerting. Zolan, one thing that I thought was notable at least when all this news was coming out about the outages was that we didn't really hear a lot from the White House. It it felt like the president was a little bit absent when people were I guess panicking a little bit. I'm not saying he should have made a comment or should not have made a comment. I'm just sort of wondering as a White House correspondent, did you feel like he was a bit absent or just give us your take?
+</details>
+<blockquote>
+<blockquote>
+<p>是的，因为在某些方面他确实缺席了，对吧？他离开了美国，前往亚洲进行外交访问，我们知道这次访问对他非常重要，他预计将在那里会见中国国家主席习近平。但他在公众担忧与焦虑日益上升的时刻离开，确实引人注目。总统在亚洲着陆时确实就此事发表了评论，但他并没有确切向公众提供清晰的解释，或者澄清究竟发生了什么、没发生什么。他更多是采取轻描淡写的态度。我相信有一句原话是：“这就是生活。”</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, because in some ways he was absent, right? He left the country and and went on this diplomatic trip to Asia which we know is of great importance to him where he's expected to meet with President Xiinping. But the fact that he left at a time where you're seeing this rising concern from the public, rising anxiety from the public was notable. And the president did comment on this when he landed in Asia, but he didn't exactly provide a clear explanation or sort of fact check for the public what was happening and what wasn't happening. He more so was dismissive. And I believe one quote was, "That's life."
+</details>
+<blockquote>
+<blockquote>
+<p>嗯。“这就是生活。”是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Mhm. It's life. Yep.
+</details>
+<blockquote>
+<blockquote>
+<p>“当你身处一个强大的国家时，这种事就会发生。”这显然没有平息公众的焦虑。不过，自总统发表这番言论以来，我们看到了我称之为政府部门仓促应对的局面。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; This is going to happen when you're a powerful country. That certainly didn't quell the anxiety of members of the public. Since the president's comments, we have seen what I would describe as a scramble by the administration, though.
+</details>
+<h3 id="解剖-faa-全国停飞光纤升级与路由器异常" data-reading-heading="">解剖 FAA 全国停飞：光纤升级与路由器异常</h3>
+<blockquote>
+<blockquote>
+<p>卡伦，当听到很多技术故障的核心问题究竟是什么时，我想知道这种解释在你具体报道航空领域时是否听起来可信——即面对所有这些威胁，这是一种试图抢在长期存在的问题爆发前主动出击的做法。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So, Karen, I wonder as you're hearing what the issue has been at the heart of a lot of these tech outages. I wonder if that explanation rings true to you in your coverage of aviation specifically, this idea that it was some kind of proactive attempt to get ahead of a a problem that sort of lingered for a while in the face of all these threats.
+</details>
+<p><strong>Karen DeYoung</strong>: 嗯，你看，FAA 事件的部分原因也与试图进行修复有关，但周五发生的全美地面停飞确实给我们留下的疑问多于答案，因为它似乎与其余的模式并不相符。</p>
+<p>[音乐]</p>
+<p>我们马上回来。</p>
+<p>[音乐]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Well, look, there are parts of the FAA story that also have to do with trying to make fixes, but what happened on Friday with the national ground stop really left us with more questions than answers because it just didn't seem to fit the rest of the pattern. [music] We'll be right back. [music]
+</details>
+<p><strong>Rachel Abrams</strong>: 卡伦，过去一周里，我们一直听到电路故障、L3Harris、ping检测、路由器等词汇，我们请你来这里的部分原因，就是想让你用浅显通俗的话解释一下周末飞机到底发生了什么。你能为我们解释一下吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Karen, for the last week, we've been hearing words like circuit failure, L3 Harris, pinging, router, and part of the reason we summoned you here is for you to explain in plain English what actually happened with the planes over the weekend. So, could you do that for us?
+</details>
+<blockquote>
+<blockquote>
+<p>好的。在周五，阿肯色州埃尔多拉多（El Dorado）正在进行一次升级。基本上，FAA 一直在推进一个项目，将数十年来支撑空中交通管制网络的铜线更换为光纤电缆。他们完成了大约 70%，这意味着需要前往全美各地的这些不同设施进行升级。他们往往会在夜间、平静的时段对大型枢纽进行升级，但这次是在周五下午一个相当偏远的设施。他们以为不会出什么问题：我们需要从铜线切换到光纤，并且需要添加一台新路由器来支持新的网络功能。在那次升级完成后不久，他们开始发现它正在发出大量的 ping 数据包。他们还在德克萨斯州阿马里洛的一个雷达设施注意到了问题。这种过度活跃基本上开始像洪水一样冲击系统。因此官员们观察了这一情况，看到了这些异常现象发生，判定无法快速弄清如何将其关闭，于是决定直接发布全美地面停飞令，以确保他们正在追踪的技术故障不会演变成现实中的事故。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So, on Friday, there was a upgrade that was being done in El Dredo, Arkansas. And basically the FAA has been trying to pursue this program of switching over the copper wiring that has been holding up the air traffic control network for decades over to fiber optic cable. They're about 70% of the way through and that means going into these various facilities across the country and making these upgrades. They tend to do the big hubs overnight, quiet periods, but this was a Friday afternoon fairly remote facility. They figured nothing's really going to go wrong. we need to switch over from copper to fiber and we need to add a new router to support the new network capability. And then shortly after that upgrade was made, they started to see that it was sending out a lot of pings. There was also an issue that they noticed at a radar facility in Amarillo, Texas. And this overactivity started basically like flooding the system. And so the officials looked at this, they saw these errant things happening, decided that they couldn't figure out how to shut it down quickly and that they were going to just issue a nationwide ground stop to make sure that the technical glitches that they were tracking would not turn into actual accidents.
+</details>
+<blockquote>
+<blockquote>
+<p>对，对。但我能在这里暂停一下吗，卡伦？因为我想弄明白，我想我需要你把这个解释得更通俗一点。你提到系统接收到了大量的 ping。你能解释一下究竟什么是 ping 吗？我们谈论的究竟是哪类信息？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Right. Right. Can I just pause here though, Karen, because I want to understand I think I'm going to need you to dumb this down a little bit more even. You mentioned that the system was getting pinged a lot. Can you just explain what exactly a ping is? what kind of information we're talking about.
+</details>
+<blockquote>
+<blockquote>
+<p>要理解这一切是如何运作的，你大概需要一张空中交通管制网络布局的基本图景。它由许多不同的组件组成。有航路交通管制中心——一共有 22 个，负责处理高空交通。有管理进出机场流量的区域设施。然后是机场本身的塔台，以及位于弗吉尼亚州的指挥中心。它们都通过一个网络连接在一起，该网络需要能够实时传输有关飞机位置、交通状况的信息，以及有关天气和其他对管制员和飞行员确保飞行安全至关重要的其他输入数据。嗯。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So to understand how this all works, you kind of need a basic map of how the air traffic control network is laid out. There are a number of different components. There are airroot traffic control centers. Uh there's 22 of those. They handle the high altitude traffic. There are regional facilities that manage the flow towards airports and away from airports. And then there's the towers at the airports themselves and the command center in Virginia. They are all connected by a network that needs to be able to transfer in real time information about where planes are, what the traffic is, and other data about weather and other inputs that are important for both the controllers and the pilots to make sure they are flying safely. Mhm.
+</details>
+<blockquote>
+<blockquote>
+<p>但当你的路由器开始使系统过载时，当一个设施（或者本例中的两个设施）开始用过多的数据 ping、用过多尝试连接到平时通常不会连接的各种不同位置来淹没系统时，就会开始挤占带宽，系统就变得不可靠了。其最终效果基本上是：如果你是一名空中交通管制员，需要查看多种信息中的任何一项来防止飞机靠得太近，你将无法实际看到地图、看到天气、看到距离，或尝试传输的任何其他数据。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; But when you start to have a router overload the system, when one facility or two facilities in this case start to just flood the system with too many data pings, with too many efforts to connect to a variety of different places that normally they might not be doing, you start to basically crowd out the space and it becomes unreliable. And the net effect of that is basically if you're an air traffic controller who needs to see any one of many things in order to make the planes not come too close to each other, you're not going to be able to actually like see a map or see the weather or see the distance or any of that other data that's trying to get through.
+</details>
+<blockquote>
+<blockquote>
+<p>这并不是彻底瘫痪，我们先明确这一点。但问题在于它变得不可靠了，他们不确定下一次故障会在哪里出现，或者下一个需要获取的数据加载缓慢问题会出在哪里。因为你确实必须拥有实时的实时数据流，他们认为这不安全。“我们不知道接下来的另一只靴子会在哪里落地，我们必须把一切都停下来，以免演变成危及生命的现实事故。”</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; This was not a total blackout. Let's make that clear. But the issue was that it was becoming unreliable and they were not sure where they were going to have the next glitch or the next slow to load issue that they needed to be able to get it. And because you really do need to be able to have that real-time data flow, they figure this isn't safe. We don't know what's going to be the next shooter or drop here and we've got to just shut it all down before it becomes an actual situation of trying to avoid a real life accident where lives would be at stake.
+</details>
+<blockquote>
+<blockquote>
+<p>基本上，之所以出现全国范围的地面停飞，是因为 FAA 不知道自己正在接收什么信息，也不知道自己可能漏掉了什么信息。因此，最安全的做法就是告诉所有人不要起飞。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Basically, there was a nationwide ground stoppage because the FAA didn't know what information it was getting and what information it might not be getting. And so therefore, the safest thing to do was to tell everybody don't fly.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。而且你看，在此后的几天里，我的意思是，地面停飞持续了几个小时，但在此后的几天里，整个航空业都在艰难恢复，因为有机组人员滞留在某些地方，或者因为整夜未睡导致超时。这给试图出行的人造成了真正的积压。我父母就碰上了，他们的航班被取消了。我是说，这成了一个非常普遍的出行问题。这让人们格外紧张，因为它发生在一周之后感恩节出行高峰即将拉开帷幕的前夕。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. And look, for days after, I mean, it was several hours, a few hours that this ground stop was in place, but for days after that, you really had the whole airline industry struggling to recover because there were crews that got stranded in certain places or timed out because they hadn't slept overnight. And that created real backups for people who were trying to travel. My parents got stuck in that, their flight got cancelled. I mean, it was just a very widespread travel issue. And it made people extra nervous because it happened a week before the Thanksgiving travel season was going to kick in.
+</details>
+<blockquote>
+<blockquote>
+<p>卡伦，你之前说过，关于究竟是什么原因导致系统过载，我们的疑问远多于答案。我想知道，目前已经过去快一周了，关于上周末发生的事情，我们又了解到什么新情况？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; K, you had said earlier that we have a lot more questions than answers about what exactly caused the system to be overloaded. And I wonder, we're nearly a week out at this point. What have we learned about what happened last weekend?
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，我们知道了出问题的地点：阿肯色州埃尔多拉多和德克萨斯州阿马里洛，一个无线电设施和一个雷达设施。我们了解到，阿肯色州当时只有一名承包商在从事这项特定的升级工作，而且全程有一名 FAA 技术人员在现场监督。我们知道 FAA 预料不会出任何差错，而且我们知道他们已经查明确实出了差错的地方是：涉事路由器开始了组播（multicasting）。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Well, we've learned where things went wrong. Eloro, Arkansas and Amarillo, Texas, a radio facility and a radar facility. We've learned that there was a single contractor that was working on this particular upgrade in Arkansas and that they were being physically supervised by an FAA technician through it. We know that the FAA did not expect anything to go wrong and we know that they have figured out that what did go wrong is that the router in question started multiccasting.
+</details>
+<blockquote>
+<blockquote>
+<p>当你提到路由器时，我们说的是类似于我客厅里放的那种路由器吗，还是别的什么？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; When you say router, are we talking about a router that like what I have in my living room basically or?
+</details>
+<blockquote>
+<blockquote>
+<p>是的，我的意思是有点像，对吧？我是说，我们谈论的是一种不同类型的系统，但路由器的职责是接收传入的数据流，并可能将其提供给其他设备或网络中的其他部分。因此存在一种可预测的流量，当路由器做出不可预测的行为时，就会演变成淹没系统的情形。而这显然是基于一种 FAA 表示他们和承包商都没有更改或设置的配置发生的。我不想过多深入技术细节，但他们现在依然感到百思不得其解。他们不知道这是人为失误、设备故障，还是安装方式出了差错。即使距离事发实际上已过去一周，这些仍然全都是悬而未决的问题。达斯汀，我确实想了解人们对黑客攻击的所有这些疑问，因为卡伦描述的被 ping 和请求淹没的情况，我只是想知道这看起来是否像可疑活动？根据你的报道，当局在这次地面停飞的具体事件中排除这种可能性了吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, I mean sort of, right? I mean, it's we're talking about a different sort of a system, but a router's job is to take the flow of data that's coming in and make it available to other devices, other parts of a network potentially. And so, there's a predictable flow and when the router does something that is not predictable, it becomes a potential situation where it's flooding a system. And that apparently happened based on a configuration that the FAA says neither they nor the contractor changed or set. I don't want to get too much into the technical details, but they are at a loss right now still. and they don't know if that was human error or if that was faulty equipment or if there was something that went wrong with the way they did the installation. And those are still all open questions even though we're basically a week out from when it actually happened. Dustin, I do wonder though about all of these questions people have about the hacking because the way that Karen is describing getting sort of flooded with pings, right, and requests and stuff like that. I just sort of wonder if that looks like suspicious activity and from your reporting, have the authorities ruled that out in this [clears throat] particular case when we're talking about the ground stoppage.
+</details>
+<blockquote>
+<blockquote>
+<p>当局一直在坚称，他们认为 FAA 的中断或任何其他事件都不是由网络攻击引起的。当然，当你谈到异常的路由器 ping 时，这可能确实类似于某种网络活动，我认为这可能会引导人们相信某些事情。但在电视简报会上公开发表正式言论的众多高级政府官员，以及我在这些机构中交谈的没有公开发言、而是匿名或以背景方式发言的人士，都在传达同样的信息：他们认为没有任何证据表明这里发生了网络攻击。你知道，这并不意味着调查已经结束，事情是可能发生变化的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; The authorities have continued to say that they do not think a cyber attack is responsible for the FAA outage or any of the other episodes. Certainly, when you talk about anomalous router pinging, that can resemble perhaps a cyber activity and that is something that I think could lead people to believe certain things. But numerous senior administration officials on the record in public in televised briefings and folks that I'm talking to, you know, in these agencies who are not speaking on the record, but sort of speaking anonymously or on background are saying the same thing that they don't think there's any evidence that that is what's going on here. You know, that doesn't mean the investigation's over. Things can change.
+</details>
+<h3 id="信息真空与政治博弈公众信任的裂痕" data-reading-heading="">信息真空与政治博弈：公众信任的裂痕</h3>
+<blockquote>
+<blockquote>
+<p>对。就这一点而言，佐兰，至少从局外人的角度来看，我的印象是每个人——包括白宫——都在真正手忙脚乱地弄清到底发生了什么。请告诉我们，关于他们在这一切初期的反应，你了解到了什么？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Right. To that point though, Zolan, I got the impression, at least from a distance, that everyone, including the White House, was really scrambling to try to figure out what was going on. and tell us what you have learned about their response in sort of the early days of all of this.
+</details>
+<blockquote>
+<blockquote>
+<p>他们确实在手忙脚乱地弄清发生了什么，同时也在试图琢磨出对外沟通的口径，而正是后一点似乎花了不少时间。是的，确实有官员出来举行了新闻发布会——交通部长和国土安全部长——但最初的调子主要是指责拜登政府，并表示我们需要国会拨更多款项，对吧？但在最近几天，我认为白宫和特朗普政府已经听到，这些担忧并不仅仅来自民主党人。共和党参议员乔什·霍利（Josh Hawley）表示，他们需要特朗普政府提供更明确的简报。极少批评特朗普政府的前白宫新闻秘书卡罗琳·莱维特（Karoline Leavitt）也表示，目前需要更大的透明度。他们所呼吁的，实际上触及了其中一些联邦机构的立足点，以及联邦政府在此时此刻的真正作用。今天我大部分时间都在与国家安全官员、前国家安全官员交谈，他们描述说，在像现在这样存在信息真空的时刻，填补这一真空确实取决于联邦政府；因为如果你不去填补，公众就会用他们最坏的假设来填补，对吧？“这一定是黑客攻击，一定是网络攻击”，尤其是在此时政府缺乏进一步信息的情况下。因此，他们似乎开始注意到了这一点。你看到国务卿马尔科·卢比奥（Marco Rubio）站出来承认美国民众的焦虑，并至少尝试对正在发生的事情给出解释。呃，你看到即将出席关于美国面临威胁的国会听证会的政府官员名单在最后时刻追加了人员，杰伊·克莱顿（Jay Clayton）最终出席了，他算是特朗普总统新任命的“沙皇”（沙皇式总管）。是这样吧？在人工智能方面。是的，他确实很喜欢设这类主管职位。然后你还看到国土安全部长马克韦恩·穆林（Markwayne Mullin）回答不同议员的质询，但这在目前并没有平息焦虑。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So, they definitely were scrambling to figure out what was going on and at the same time trying to figure out a message on this and it's the latter point that seemed to take a while. Yes, there were officials that came out and held the press conference, the Secretary of Transportation and Homeland Security, but the message initially was mainly blaming the Biden administration and saying we need more money from Congress, right? But then in recent days, I think that the White House and the Trump administration has heard that these concerns are not just coming from Democrats. You've had Senator Josh Hawley, who's a Republican, say that they need a more clear briefing from the Trump administration. You had former White House press secretary Caroline Levit seldom to criticize the Trump administration who was saying that greater transparency was needed at this time and and what they're speaking to actually gets to sort of the point for some of these federal agencies and really the role of the federal government in a time like this. I've now spent really most of this day talking to national security officials, former national security officials, and they were describing how, you know, at a time like this when there's a void of information, it really is up to the federal government to fill that void because if you don't, then the public is going to fill it with their worst assumptions, right? It must be a hack. It must be a cyber attack, particularly in the void of any more information coming from the administration at this time. So, it seems like they've started to notice that. You saw Secretary of State Marco Rubio come out, acknowledge the anxiety of Americans, and provide at least an attempt at an explanation of what was going on. Uh, you saw that there was a late addition to the administration officials that were going to appear at a congressional hearing on threats to the United States. Jay Clayton ended up appearing who's sort of President Trump's new SAR. Is that right? Like when it comes to artificial intelligence. Yeah, he does love SARS. And then you also had the Homeland Security Secretary, Mark Wayne Mullen, answering from different lawmakers, but it has not calmed the anxiety at this time.
+</details>
+<blockquote>
+<blockquote>
+<p>佐兰，正如你所说，有一种压倒性的焦虑感。所有这一切的累积效应是一种深深的偏执与猜疑。我绝对不是唯一一个收到父母短信问“你还确定下周要坐飞机回家过感恩节吗？”的人。在整整一周缺乏信息的情况下，我唯一能说的安慰话似乎就是：“爸，别上网了。”</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And to your point, Zolan, there is an overwhelming sense of anxiety. The cumulative effect of all of this is a deep sense of paranoia. I am definitely not the only person whose parent texted them, are you still sure you want to fly home for Thanksgiving next week? And the only reassuring thing I have to say, it feels like in the absence of information for so much of this week is, "Dad, get off the internet."
+</details>
+<blockquote>
+<blockquote>
+<p>我记不得有哪一次，收到过来自各行各业如此广泛人群的这么多信息。人们就是担心，对吧？过着日常的生活却在问我：“到底怎么回事？我还能指望医院系统和电网等关键基础设施吗？对吧。呃，目前政府似乎在说是的，但这并没有平息眼下如此显而易见的焦虑。”</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I cannot recall a time where I have received so many messages from just a wide range of people from all walks of life. People that are just worried, right? Going about their every day that are asking me, "What is going on? Will I be able to rely on critical infrastructure like hospital systems and our electric grid? Right. Um, as of now, it seems the government is saying yes, but that has not calmed the anxiety that is so apparent right now.
+</details>
+<blockquote>
+<blockquote>
+<p>你知道，当我观看你谈到的马克韦恩·穆林和肖恩·达菲（Sean Duffy）之间的那场新闻发布会时，他们不仅似乎在指责其他人、其他机构，而且似乎彼此之间也起了一点内讧。你知道，我总体的感觉是马克韦恩·穆林在把责任归咎于达菲任内发生的事情。我认为所有这些动态的累积效应是：当你看到那种局面，意识到除了向公众传达信息之外似乎还有其他博弈在起作用时，这自然会让人们更加神经紧绷。我的意思是，你看，指责拜登政府是本届政府的老生常谈，但在向国会要钱的时候，真切地与国会开撕并指责他们小气吝啬，可不会让你在国会山赢得任何朋友和赞赏，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You know, when I was watching this press conference that you've talked about between Mark Wayne Mullen and Shawn Duffy, not only did they seem to be blaming other people, other agencies, but they also seem to have kind of turned on each other a little bit. You know, I got a general sense that Mark Wayne Mullen was blaming things that had happened under Duffy. And I think the cumulative effect of all of that is you look at that dynamic. And when you get the sense that there's sort of other dynamics at play beyond just getting information to the public, it makes sense that that might, I don't know, underscore people's nerves. I mean, look, blaming the Biden administration is a common refrain with this administration, but picking a real fight with Congress and accusing them, you know, of being stingy is not going to win you any friends and admirers in Capital Hill
+</details>
+<blockquote>
+<blockquote>
+<p>特别是在你想索要更多资金的时候。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; when you're trying to ask for more money.
+</details>
+<blockquote>
+<blockquote>
+<p>没错。而且他处理这件事的方式确实让共和党人和民主党人都感到反感。因此，这只是在制造更多的混乱。无论其中一些是无意的，还是完全属于糟糕的判断，都无关紧要，因为最终的效果是：它确实没有抚平观众紧张的情绪，也没有给他们留下一种政府已经掌控局面、并且真正有能力推进解决问题的感觉。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Correct. And the way he went about it has really turned off Republicans and Democrats. And so that is just sewing a little bit more chaos. Whether some of it was inadvertent or some of it was just real bad judgment, it doesn't really matter because the net effect was that it really did not calm the nerves of the viewers and did not leave them with a sense that the government's got this and that they're going to actually be able to forge ahead with a fix.
+</details>
+<h3 id="未来12至18个月技术阵痛期与乐观愿景" data-reading-heading="">未来12至18个月：技术阵痛期与乐观愿景</h3>
+<blockquote>
+<blockquote>
+<p>嗯。鉴于你们三位告诉我们的有关驱动这些问题背后的原因——由于 AI 的存在，人们以曲速尝试防止任何漏洞彻底公开暴露。而 AI 短期内不会消失，看起来不会，对吧。所以我只是想知道，我们现在是否可能正处于这样一个时期：过去一周所见到的景象其实成为了一种“新常态”。佐兰，除非你这里有什么重要的想法想补充，否则我就把最后总结交给达斯汀了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Mhm. Given everything that the three of you have told us about what has been driving these issues, this warp speed attempt to prevent any vulnerabilities from breaking out into the open because of AI. AI is not going away anytime soon. it does not appear right. And so I just sort of wonder if we might be in this period right now where what we've seen the last week is kind of the new normal. And Zolan, unless you have a a big thought you want to add here, I'm going to go to Dustin for a final word.
+</details>
+<blockquote>
+<blockquote>
+<p>找达斯汀吧。我都说得差不多了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Go to Dustin. I've given all good.
+</details>
+<blockquote>
+<blockquote>
+<p>我同意。跳过佐兰的高见。嗯，你知道，这整件事一直非常耐人寻味，因为一方面，解决我们都在谈论的这些问题的唯一方法，就是抓住公众的注意力。而通常情况下，只有在发生重大灾难之后才会引起注意。值得庆幸的是，过去几天并没有发生灾难，没有人丧生。所以，我有一种冲动想叫大家冷静下来。你知道，理性看待问题，比如，你仍然可以访问你的银行账户，飞机仍在起飞，也许有时会延误，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I I agree. Skip Zolan's big thoughts. Um, you know, this whole thing has been so fascinating because on the one hand, the only way you're going to fix these problems that we're all talking about is by sort of seizing public attention. And typically, it only happens after a major catastrophe. Thankfully, that hasn't happened in the past few days. No one has died. And so, I have this impulse to tell people to calm down. You know, that put things in perspective like, you know, you're able to still access your banking accounts. The flights are still leaving. Maybe sometimes they're delayed,
+</details>
+<blockquote>
+<blockquote>
+<p>但事实是，这些问题将会持续存在。随着先进 AI 的迅速发展，我们可能会继续看到更多类似的问题，即漏洞被发现并被修复，而在修复过程中系统被下线。这甚至还没涉及到黑客会利用他们发现的这些工具做些什么的问题。因此，我们未来的道路将是崎岖不平的。我认为与我交谈过的非常聪明的人都表示，未来 12 到 18 个月对科技行业来说可能会极其艰难。他们的意思是，AI 正在将现代计算机基础设施技术栈中那些古老代码里的所有问题暴露并识别出来，而这些问题由于我们多年来没有解决安全性而被忽视了数年甚至数十年。互联网在构建时就没有把安全放在首位。因此，AI 将能够发现这些问题，并有望修复它们。在这一切经历过后的某个时刻，希望迎来的是一个更加安全、问题更少的互联网。</p>
+</blockquote>
+</blockquote>
+<p>不过对此有一个警告：那些非常聪明的人至少在过去 8 [音乐] 到 10 个月里一直告诉我“关注接下来的 12 到 18 个月”，而这个时间跨度从未改变。</p>
+<p>但如果你是一个乐观主义者，这会给你一些可以坚持的信念：你知道，把它想象成一场大流行病。我们现在正在经历这场技术故障的大流行，因为我们正在发现所有这些新问题。希望在经历这一切之后，会迎来一个更加具备免疫力、技术上[音乐]更加安全的互联网。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; but the truth is that these problems are going to persist. And with the rapid acceleration of advanced AI, we're probably going to continue to see more issues like this where bugs are being found and fixed. And while they're being fixed, systems are taken offline. And that even gets before, you know, the question of, you know, what are the hackers going to do with these tools that they discover. So there is going to be a bumpy ride ahead of us. I think the folks I talked to who are really smart say you know the next 12 to 18 months for technology it could be extremely difficult. And what they mean by that is AI is surfacing and identifying all of these problems in ancient code in the technical stack of modern computer infrastructure that we've neglected for years or decades because we have not addressed security. The internet was not built with security in mind. And so AI is going to be able to find these problems and hopefully fix them. And at some point on the other side of that is going to be hopefully a much more secure internet with fewer problems. Now the one caveat to that is people who are really smart have been telling me look out for the next 12 to 18 months for at least the last 8 [music] to 10 months and the time horizon doesn't change. But if you're an optimist, that gives you something to hold on to is that, you know, think of it like a pandemic. You know, we're going through this pandemic of technology failures right now as we're discovering all of these new problems. And hopefully on the other end of that is a much more inoculated, technologically [music] safe internet.
+</details>
+<blockquote>
+<blockquote>
+<p>达斯汀，非常感谢你以乐观的基调结束本期节目。佐兰和卡伦，非常感谢你们两位的光临。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Dustin, thank you so much for ending this episode on an optimistic note. And Zolan and Karen, thank you both so much for being here.
+</details>
+<blockquote>
+<blockquote>
+<p>谢谢[音乐]你。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Thank [music] you.
+</details>
+<blockquote>
+<blockquote>
+<p>非常感谢。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Thank you so much.
+</details>
+<blockquote>
+<blockquote>
+<p>谢谢你，瑞秋。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Thank you, Rachel.
+</details>
+<h3 id="今日其他要闻与制作团队" data-reading-heading="">今日其他要闻与制作团队</h3>
+<blockquote>
+<blockquote>
+<p>[音乐]</p>
+</blockquote>
+</blockquote>
+<p>我们马上回来。</p>
+<p>以下是您今天还需要了解的其他新闻：</p>
+<p>周三在中国深圳，特朗普总统、[音乐]中国国家主席习近平和俄罗斯总统弗拉基米尔·普京在微笑着握手致意，数小时前特朗普总统在机场受到了习近平包含拥抱的亲自迎接。[音乐] 这三位世界领导人在三边峰会前夕展现出的友好姿态，与他们[音乐]在核军控、[音乐]中国获取先进 AI 芯片以及乌克兰战争未来等世界上一些最紧迫问题上的分歧立场形成了鲜明对比。</p>
+<p>绝大多数众议院民主党人投票提名纽约州众议员哈基姆·杰弗里斯（Hakeem Jeffries）[音乐]在该党于 1 月接管国会控制权时出任众议院议长。此举使他有望成为首位担任众议院最高领导职务的黑人议员[音乐]，该职务在总统继任顺序中排名第二。[音乐]</p>
+<p>杰弗里斯面临过一些对民主党建制派感到厌倦的进步派人士的抵制，但没有人[音乐]站出来挑战他。</p>
+<p>本期节目由杰克·达多罗（Jack D'Isidoro）、克里斯·本德列夫（Chris Benderev）和阿兰·克罗普夫（Aran Crapuchettes）制作，由 M.J. 戴维斯·林（M.J. Davis Lin）和迈克尔·贝努瓦（Michael Benoist）编辑，包含玛丽安·洛扎诺（Marian Lozano）和丹·鲍威尔（Dan Powell）创作的音乐，音频工程由艾莉莎·莫克斯利（Alyssa Moxley）负责。我们的主题音乐[音乐]由 Wonderly 制作。</p>
+<p>以上就是今天的《The Daily》。我是瑞秋·艾布拉姆斯。明天见。</p>
+<p>[音乐]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; [music] [music] &gt;&gt; We'll be right back. Here's what else you need to know today. President Trump, [music] Xi Jinping of China, and Russian President Vladimir Putin greeted each other with smiles and handshakes on Wednesday in Shenzen, China, hours after President Trump received a personal airport welcome from Xi that included a hug. [music] The shows of friendliness by the three world leaders on the eve of a trilateral summit contrasted sharply with their [music] divergent stances on some of the world's most pressing issues including nuclear arms control, [music] China's access to advanced AI chips, and the future of the war in Ukraine. And an overwhelming majority of House Democrats voted to nominate Hakee Jeff, [music] the New York representative, to be speaker when the party assumes control of Congress in January. The move puts him in line to become the first black lawmaker [music] to hold the House's top leadership role, which is second in line to the presidency. [music] Jeff has faced some resistance from progressives who have been fed up with the Democratic establishment, but no one [music] emerged to challenge him. Today's episode was produced by Jack [music] Dadoro, Chris Benderev, and Arab Cropki. It was edited by MJ Davis Lynn and Michael Benois. It contains music by Marian Lozano and Dan Powell and was engineered by Alyssa Moxley. Our theme music is [music] by Wonderly. That's it for the Daily. I'm Rachel Abrams. See you tomorrow. [music]
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/2448431d500d6c82db1666f8739b6ac0a9fb23a2bf3a282def0dc67e1e491d73.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/2448431d500d6c82db1666f8739b6ac0a9fb23a2bf3a282def0dc67e1e491d73.md" download="全美连环宕机背后：AI发现深层漏洞引发修补潮与民航停飞调查.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Rachel Abrams" class="entity-link person-link">Rachel Abrams</a>, <a href="/search/?q=Dustin Volz" class="entity-link person-link">Dustin Volz</a>, <a href="/search/?q=Karen DeYoung" class="entity-link person-link">Karen DeYoung</a>, <a href="/search/?q=Zolan Kanno-Youngs" class="entity-link person-link">Zolan Kanno-Youngs</a>, <a href="/search/?q=Donald Trump" class="entity-link person-link">Donald Trump</a>, <a href="/search/?q=Xi Jinping" class="entity-link person-link">Xi Jinping</a>, <a href="/search/?q=Vladimir Putin" class="entity-link person-link">Vladimir Putin</a>, <a href="/search/?q=Hakeem Jeffries" class="entity-link person-link">Hakeem Jeffries</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=Microsoft" class="entity-link company-link">Microsoft</a>, <a href="/search/?q=FAA" class="entity-link company-link">FAA</a>, <a href="/search/?q=NSA" class="entity-link company-link">NSA</a>, <a href="/search/?q=Chase" class="entity-link company-link">Chase</a>, <a href="/search/?q=United Airlines" class="entity-link company-link">United Airlines</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Microsoft Outlook" class="entity-link product-link">Microsoft Outlook</a>, <a href="/search/?q=PHP" class="entity-link product-link">PHP</a>, <a href="/search/?q=Java" class="entity-link product-link">Java</a>
+</p>
+      
+        <p><strong>媒体/书籍:</strong> <a href="/search/?q=The Daily" class="entity-link media-link">The Daily</a>
+</p>
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

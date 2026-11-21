@@ -1,0 +1,72 @@
+---
+author: AI Engineer
+date: '2026-07-18'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=yv6xovSsB1U
+speaker: AI Engineer
+tags:
+  - content-engineering
+  - shift-left
+  - technical-communication
+  - developer-experience
+title: 代码即媒介：AI时代的技术传播与内容工程新范式
+summary: Conductor开发者体验负责人Matt Palmer探讨了技术内容的“向左偏移”（Shift-Left）趋势。随着AI使代码编写变得廉价，TypeScript和React已成为创建高保真技术传播资产（如交互式产品导览、动态更新日志和Remotion视频）的最佳媒介。他指出，AI时代的关键竞争壁垒不再是单纯的代码编写技能，而是维护严密结构与设计标记的“尽责性”（Conscientiousness）与组织卓越性。
+insight: ''
+draft: true
+series: ''
+category: software-development
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - Conductor
+  - Replit
+  - Anthropic
+  - OpenAI
+products_models:
+  - Remotion
+  - React
+  - TypeScript
+  - Claude
+media_books: []
+status: evergreen
+---
+### 技术传播的媒介重构：当代码成为核心沟通桥梁
+
+在现代技术产品生态中，任何制作过内容的人都深知沟通媒介选择的痛点。无论是撰写博客文章、录制演示视频，还是在开发者大会上进行现场演讲，人们往往倾向于选择自己擅长或拥有丰富经验的传统媒介。然而，在技术传播领域，一个正在发生且不可逆转的趋势是：**代码正逐渐成为我们进行技术沟通的核心媒介**。虽然这一结论在2026年看起来理所当然，但如果退回到几年前，这依然是一个极其疯狂的想法。在过去，只有专业的软件工程师才会为了创作技术内容去编写代码，而他们通常将绝大部分精力投入到纯粹的工程架构开发中，无法在内容创作和用户体验上进行深度的探索。
+
+当我们讨论“技术内容”时，其定义已不再局限于传统意义上的文档或宣传软文，而是涵盖了整个**技术传播**（Technical Communication: 阐明产品核心解决痛点及具体实现路径的实践过程）体系。这包括极其详尽且准确的系统文档、及时的更新日志（Change Logs）、产品营销邮件、视频覆盖图层（Video Overlays），以及产品官网上的交互式导览。传统的静态截图正被动态的代码化演示所取代。以更新日志为例，要输出一份高质量且包含丰富视觉资产的更新日志，本质上要求创作者必须对产品的代码库变更（Diff）有极其精准的掌握，而非像过去那样仅仅依靠人力去逐个翻阅拉取请求（Pull Requests）。目前，这一趋势正朝着整个产品界面和展示视频完全由代码自动生成的方向演进。例如，在**Conductor**（开发者体验平台）的实践中，我们完全使用 **React** 和 **Remotion**（基于 React 的视频生成框架）重建了产品表面，在 Remotion 场景中完美复现了产品的用户流，实现了一个高保真的动态交互产品导览。尽管这类探索在现阶段可能仍存在轻微的程序错误（Bug）或交互流程不够顺畅，但这清晰地昭示了技术传播的未来方向。
+
+<details>
+<summary>Original English</summary>
+
+So, if you've ever created content, you know it could be hard. And what's often most hard is choosing a medium for how you'd like to communicate. Do you write a blog post? Do you create a video? Do you go out and speak at a conference? And even of these things, you're likely to select something that you're good at or you have experience doing. But the idea I want to present to you today is that increasingly code is becoming the way that we communicate. Now, this might seem obvious in 2026, but I want to point out that even a couple years ago, this was wild because the only people that were writing code to create content were professional software engineers. And often professional software engineers are spending their time doing mostly engineering and are not getting that deep on content. Now, what do I mean when I say content? Well, I'm talking mostly about technical communication. That could be documentation, it could be things like change logs, emails, product marketing, it could be video, which I create a lot of. Um, and it could be other things associated with a typical DevRel motion, but it's not restricted to DevRel, right? Content or technical communication is the act of communicating what a what problem a product really solves. And that can be done by anybody. That might mean really complete, accurate documentation that covers every part of the Deta X this framework. It could be change logs shipped timely um with robust assets that cover all areas of a product. This is something that's often overlooked. This is actually really hard because to have an accurate change log, you have to have an accurate diff of your product. Or you could just have someone that spends a lot of their time combing through PRs to try to figure out what was shipped. It could be things like timely product updates, emails, which kind of follow from a change log, right? If you understand what changed, you can then summarize that over time for your users. It could be something as simple as a home page product tour instead of a static screenshot. These are all ways that we're communicating products, we're communicating what this thing does or how it's changed via either written content free via code via distinct assets. It could also be something like video overlays, right? Something like adding a bit of engaging material to the content that you create, but increasingly where I think this is headed is entire product surfaces and entire videos generated via code. And in front of me, I have a product tour for Conductor that was built entirely with React and Remotion. So, basically, I recreated the product surface. I used a Remotion scene to recreate the product and do a full walk-through of a sample user flow. Now, it's not perfect. It's a little buggy and the flows aren't quite there yet, if I'm being honest, but I think we're moving towards a world where this is normal.
+
+</details>
+
+### 技术内容的向左偏移：从高门槛工程到廉价代码时代
+
+要理解这一转变的底层逻辑，我们需要追溯技术内容生产的三大历史演进阶段。在第一阶段，即**手工制作时代**（Handcrafted Era），一切资产的生产都是完全手动的。在这个阶段，创作者能动用的杠杆只有时间、金钱与个人技能。受限于一天只有24小时的物理瓶颈，团队不得不高度依赖外部专家、专业设计机构来制作如动态图形等关键资产。随后进入第二阶段，虽然代码技术已相对成熟，但**代码编写成本极其昂贵**（Expensive Code Era）。在这一时期，软件工程和云端资产已成为成熟要素，但工程资源是整个系统的最大瓶颈。由于企业需要为软件工程师支付高昂的薪资，且工程师更倾向于将精力放在核心业务系统的构建上，因此像文档优化、高保真官网建设或交互资产开发等内容需求往往被置于次要优先级。这也解释了为什么在那个时期，像 Remotion 这样的声明式视频生成框架没有得到爆发式的普及——因为根本没有团队有余力去培养所谓的“内容工程师”。
+
+而现在，随着人工智能的爆发，我们已然跨入第三阶段——**代码极度廉价的时代**（Cheap AI Code Era）。今天，代码的生成成本接近于零，技术团队不再需要为高昂的人力工时买单，而是直接向 **Anthropic** 或 **OpenAI** 订阅大模型服务。通过 **Claude** 等先进模型，非专业前端开发者也可以直接生成视频、编写文档、设计高水准网站并直接输出动态图形资产。在这种全新的背景下，**代码即沟通**（Code is Communication）的理念成为现实。如今，构建任何创意资产（无论是演示视频原型、网页、幻灯片，还是图片与视频）最快速的路径不再是使用复杂的图形编辑工具，而是直接通过编写代码或运行代码生成系统。这种媒介变革甚至重塑了技术人员的技能栈。以我个人为例，我之前的背景是数据工程，主力语言是 **Python**；但为了在这个AI时代快速获得高保真的视觉传播资产，我必须主动去学习 **React**、**TypeScript**、CSS 和 HTML。因为在AI的辅助下，TypeScript 与 React 已成为表达技术创意和生成高质量资产的最有效媒介。
+
+<details>
+<summary>Original English</summary>
+
+So, my name is Matt. I was previously a data engineer, then I led DevRel at Replit, and now I lead developer experience at Conductor. And today I want to talk about how content is shifting left to code as the source of truth. And so, I think there are three distinct eras we can think about here. Era one, the handcrafted era of content. Era two, an era where code existed, but it was quite expensive. And era three, where code exists, but it's very cheap. And that's where we are today with AI. So, in the handcrafted era, right? Everything is manual. The only levers we really have are time and money and skill. And so, if I want something, I either need to create it myself, but there are only 24 hours in a day, so likely I'm going to go out and seek an expert, someone that does know how to create this thing. Maybe that's an agency or someone who creates these assets professionally. If I'm thinking about like motion graphics, for example. Now, post era one, when we had expensive code, code and cloud are mature assets. These are things that have existed for a while, and most professional software engineers know how to use. Engineering is now the bottleneck. This is like Serp era, everybody's paying a lot for engineers, and to get anything done, you really need professional software engineers. So, you'd better pay someone, maybe not an agency, but an engineer. And that included things like, you know, um robust documentation, or even just a website, right? Back in the day, it's hard to imagine before AI, you wanted a website, a good website, you needed a front-end engineer, or like a low-code website service, but those weren't any good to begin with. So, you needed a professional engineer to have a really nice website. And what that meant was that content is really not the priority, right? Because if you're a professional engineer, you have better ways of spending your time. And I think this is reflected by um libraries like Remotion, frameworks like Remotion, um not proliferating the way that they are today. Because, really, who has the time and energy to put into these things? There aren't a ton of what I'd call content engineers. Now, in era three, most of these things, you're not paying a human, you're paying Anthropic, or OpenAI, or whoever, right? You can create videos with Claude. You can create documentation with Claude. You can design websites with Claude, and you can create motion graphics with Claude. Now, the problem is that not all of the all of these things are good, right? We'll talk about that later, but if you know what you're doing, if you have an engineering mindset, if you understand the systems, you can create high-quality assets with these systems. And I'm going to talk about how to do that in the rest of this presentation. So, today, code is cheap. And we talk about code as communication. So, code is communication. The fastest way to build an asset today is through code. And it's not just to build software, right? It's really to build anything. If I want a prototype a video, a website, slides, um I mean really any asset, any creative thing that I can think of, images, video, the fastest way to do that is going to be through code or code generation. And I was thinking about this presentation, I was thinking about how I was going to create all the assets for this presentation, and I realized that my favorite medium is actually TypeScript. Aside from recording myself talk or writing, every ancillary asset is React or TypeScript. And I just want to take a moment because that is the most insane statement to hear myself say if I was thinking about this two or three years ago, right? I don't even really know how to write that good of TypeScript, you know? My background's in data engineering, I come from Python land. Well, I better learn TypeScript, I better learn React because the best way for me to get these high-fidelity assets is React, TypeScript, CSS, um and HTML. And that's wild. That's wild to say.
+
+</details>
+
+### 架构秩序重于开发技巧：AI时代的“尽责性”与内容工程
+
+在AI极大降低代码编写门槛的今天，真正的核心壁垒并非“审美或品味”，而是**严密的架构与秩序**（Structure is Expensive）。在软件工程中，维护一个高度结构化的代码库、维持品牌指南的一致性、将设计标记（Design Tokens: 用于规范视觉属性的系统变量）引入项目、以及彻底实现前后端代码与设计标记的解耦，是一件极难且成本极高的事情。这需要研发团队展现出极强的工程纪律，例如维护干净的合并拉取请求（PRs）、对 PR 进行精准的标签化与描述分类（区分功能开发与缺陷修复）、以及建立可追溯的 PR 回滚机制。然而在现实中，几乎没有几家组织能将这些工作做到极致。缺乏严密结构化文档的支持，即便部署了再强大的 AI Agent，它们也无法准确理解并解决项目中的具体问题。因此，代码库的**结构秩序**，成为了划分“粗制滥造的 AI 紫色渐变垃圾（AI purple gradient slop）”与“专业且精致的工业级应用”的根本分水岭。
+
+从底层逻辑来看，这本质上是研发团队的**尽责性**（Conscientiousness: 严谨、细致，并受强烈职业与道德使命感驱使的品质）在起作用。在代码生成变得唾手得的当下，技术团队的核心竞争力已从单纯的“软件开发技巧”，转向了对交付结果是否符合预期的严苛把控与一丝不苟的求真态度。每一代大模型的迭代都证明，最终胜出的团队不再是技术水平最高或最聪明的那个人，而是最注重结构、纪律与组织卓越性的团队。AI 最终奖赏的是结构化与严谨的系统设计。那些缺乏严密结构与设计标记约束的 AI 生成资产，最终只能沦为低质量的数字垃圾。因此，我们正在目睹一场技术内容的**向左偏移**（Shift-Left），即内容资产的生产正在全面向代码库靠拢。唯有建立起纪律严明、基于 React 等现代前端栈的声明式内容管线（Content Pipelines），才能高效、自动化地生产交互式产品导览、产品更新日志与自动化文档。在这个趋势下，2026年是“创意技术专家（Creative Technologist）”在 DevRel 领域备受瞩目的一年，而 2027 年必将迎来“**内容工程师**（Content Engineer）”的黄金时代。
+
+<details>
+<summary>Original English</summary>
+
+So, if code is inexpensive, what is the expensive thing? Now, you might think I'm going to say taste here. I'm not going to say taste because everybody says taste. Structure is expensive. This is maybe a bit of a contrarian statement here because the hard thing is maintaining a very structured code base, maintaining brand guidelines and keeping those guidelines consistent, keeping design tokens in your project, separating even front-end code from back-end code from these design tokens. Merging really clean PRs, which like nobody does, right? Tagging PRs, PR descriptions, knowing what's a feature and what's a bug fix, knowing if you reverted a PR. How many organizations do this? I've worked at a number of organizations, none, right? And maintaining accurate internal documentation so that anybody can accomplish anything. Even if you have really good agents, they're not going to know how to solve these problems if they don't have documentation or skills, right? And so, structure often is the difference between AI purple gradient slop, right? And something that looks professional and polished. And I would even go a little bit further, and I would say that this is conscientiousness. And the dictionary definition for conscientiousness is the quality of being meticulous, careful, and guided by a strong sense of moral or professional duty. And so, it's less about like software engineering skill today. It's less about the skill of being able to create this these assets, and more about the meticulousness and care given to making sure that an outcome matches your expectations. And that, you know, increasingly with each model generation is not predicated on being the smartest person in the room, or being the person in the room with the most technical skill. So, what does AI reward? AI rewards conscientiousness. AI rewards organizational excellence. AI rewards structure. And ultimately, these are the things that go into good AI skills. There's a lot of like not very good AI skills out there. Um and most of them are just generated without any regard for what's in their contents or how they're structured. And so, all the assets that I showed you at the beginning of this video are a byproduct of design tokens, structured code, um structured assets. And they get exponentially harder to create when we lack those things. And so, code, again, is communication. And we're seeing a shift left movement for content, where content is moving to code. And if code, right, is the source of truth, if our code base is the source of truth, we have to have a structured source of truth in order to create content from code. In order to communicate, we need structure and conscientiousness around the way that we create code. And again, this only works with organizational excellence. And so, I think what we'll see in 2026 and the years beyond is that the highest performing the best communicating teams are the ones that are able to instill discipline and rigor into the process of creating software and then shift their content left towards the code through content engineering. And so, 2026, I think was the year of the creative technologist, at least in the DevRel space. This is the term that got thrown around a lot. I think 2027 is the year of the content engineer. And I'll close on that because I think what we're going to see next year are declarative and robust content pipelines capable of producing content walkthroughs, capable of producing documentation, screenshots, product updates, all of the things that were really manual can now be created through code, through React, and ultimately because of AI. Again, I'm Matt with Conductor. Thanks for sticking around for my talk. I'll catch you next time. Peace.
+
+</details>

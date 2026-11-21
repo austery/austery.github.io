@@ -1,0 +1,692 @@
+---
+author: New York Times Podcasts
+date: '2026-09-30'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=_xRcOYRrEfI
+speaker: New York Times Podcasts
+tags:
+  - cyber-security
+  - data-breach
+  - ransomware
+  - zero-day-exploit
+  - threat-intelligence
+title: 深入调查：FBI 敏感人事系统惨遭黑客入侵的内幕与余震
+summary: 十多年前美国人事管理局曾遭重大数据泄露，如今历史重演，受害者变成了联邦调查局（FBI）。黑客组织“闪亮猎人”（ShinyHunters）利用零日漏洞入侵其招聘及人事门户，窃取包含探员职务、住址乃至家属信息的极敏感数据并以此向官方施压。本期节目深度解析了攻击细节、黑客动机反转、官方缉捕行动，以及对一线执法人员及其家庭带来的长期安全危机。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - FBI
+products_models:
+  - Oracle PeopleSoft
+media_books: []
+status: evergreen
+---
+### 历史重演与 FBI 的严重数据泄露
+
+**迈克尔·巴巴罗**: 这里是《纽约时报》的《The Daily》节目，我是**迈克尔·巴巴罗**（Michael Barbaro）。
+
+十多年前，在黑客攻破美国政府系统并窃取了数百万联邦雇员的人事档案后，美国官员曾信誓旦旦地誓言这种事绝不会再次发生。然而，它刚刚又发生了——这一次受害的是**联邦调查局**（FBI）。
+
+今天，我的同事、网络安全记者**达斯汀·沃尔茨**（Dustin Volz）将为我们讲述这次毁灭性网络攻击的来龙去脉、背后的黑客团伙，以及那些黑客所窃取的超敏感数据接下来将面临怎样的命运。今天是9月30日，星期三。
+
+达斯汀，欢迎回到《The Daily》。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: From the New York Times, I'm Michael Barbaro. This is The Daily.
+
+A little over a decade ago, after hackers broke into the US government and stole the personnel records of millions of federal workers, US officials vowed that it would never happen again. It just did. This time to the FBI.
+
+Today, my colleague, cybersecurity reporter Dustin Volz, tells the story of this devastating attack, the group behind it, and what now happens to the hypersensitive data that those hackers have stolen. It's Wednesday, September 30th.
+
+Dustin, welcome back to The Daily.
+
+</details>
+
+**达斯汀·沃尔茨**: 谢谢你，迈克尔，很高兴来到这里。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: Thank you. Good to be here.
+
+</details>
+
+**迈克尔·巴巴罗**: 很高兴能邀请到你。你长期跟踪报道黑客和网络攻击领域，而这次针对 FBI 的黑客攻击确实非同小可，称得上是一场大地震。你能为我们描述一下刚刚在 FBI 发生的这起事件的规模到底有多大吗？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Good to have you. You cover the world of hacking, cyber attacks, and this hack is a doozy. So, can you just describe the scale of what just happened at the FBI?
+
+</details>
+
+**达斯汀·沃尔茨**: 这确实是一起极具震撼性的重大事件。而且我认为，比起规模本身——受影响的可能涵盖数以万计的现任和前任 FBI 雇员——这次事件涉及的数据深度和广度才是真正至关重要的。因为黑客成功攻破了 FBI 使用的一个政府求职与招聘门户系统。
+
+黑客不仅仅是窃取了姓名、电话号码和电子邮件等基础联络信息，更窃取了关于这些联邦官员极其敏感的深入背景细节：在某些案例中甚至包含了他们配偶的姓名、他们子女的名字、他们的家庭住址、他们高度保密的职务头衔，甚至包括可能被黑客用来在日常差旅途中追踪其行踪的详细日程轨迹。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: It is a doozy. And I think more important than the scale, which could be tens of thousands of current and former FBI employees affected here, I think the scope of it is what's really important because the hackers were able to break into a government jobs portal the FBI uses and not just steal names and phone numbers and emails, but far more sensitive details about these officials, including their spouse's names in some cases, their children's names, their addresses, their secretive job titles, and even details that could be used to help a hacker follow them during their travels.
+
+</details>
+
+### 极其敏感的职务档案与情报威胁
+
+**迈克尔·巴巴罗**: 请允许我停下来，深入追问一下你刚才提到的那些令人瞠目结舌的内容之一：FBI 内部的职务头衔。在这次黑客攻击中，究竟暴露了什么样的职务头衔？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Let me just zero in on one of these staggering things you just said, job titles at the FBI. What kind of job titles were revealed in this hack?
+
+</details>
+
+**达斯汀·沃尔茨**: FBI 是一个带有高度保密性质的特殊机构。虽然他们做的很多日常执法工作是面向公众公开的，但还有相当大一部分工作完全是在幕后秘密运作的。因此，这些职务头衔即便可能没有被盖上法定“绝密”的安全密级印章，但它们所包含的实质内容却是极其极其敏感的。
+
+举例来说，这些职位记录可能会泄露出某位特工正直接从事针对外国间谍的反情报间谍追踪工作，或者正在具体负责中国事务部（China desk）或俄罗斯事务部（Russia desk）的一线情报专职任务。而这些 FBI 官员是你平时根本无从听闻、普通人一辈子也绝不可能接触到的隐蔽人员。他们往往在幕后默默奉献了数十年的职业生涯，竭尽全力追查各种被指控的严重犯罪分子和外国情报间谍网络。
+
+因此，这次黑客攻击所获取的情报信息详尽到了极点，拿到这些数据的黑客完全可以清晰看透 FBI 内部哪些具体人员被指派去针对我们特定的外国敌对势力。这种程度的泄露可以说具有极高的侵入性和危险性。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: So, the FBI is a pretty secretive organization. A lot of the work they do is public, but a lot of it is behind the scenes. And so the job titles might not be classified, but they are very, very sensitive and they might reveal things such as an agent working in counterintelligence against foreign spies or working on a China desk or a Russia desk. And these are FBI officials that you sort of never really hear about. You never meet. And they spend oftentimes decades of their lives working behind the scenes to try to pursue various alleged criminals. So this hack accessed information so detailed that the hackers who now have it can see which people within the FBI are assigned to which of our foreign adversaries. That's very intrusive.
+
+</details>
+
+**达斯汀·沃尔茨**: 确实极其严重。而且被泄露的不仅是他们本人的具体职务头衔，在许多情况下还包括他们对应的直属主管领导信息。
+
+在很大程度上，拿到这份数据的人几乎可以逆向绘制出一整幅详尽的 **FBI 组织架构与人力地图**，完全看清内部人员正在从事什么具体任务，从而洞悉其各项正在进行中的核心侦查行动细节，并可能根据你自身的特定诉求或利益图谋，采取各种针对性的干扰或应对策略。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: It is. And it's not just their job titles. It's also in many cases their supervisors. And in many ways you almost can build a map of the FBI's workforce and see what people are doing, learn more about their investigations and potentially respond in other ways depending on what your pursuit or interests are.
+
+</details>
+
+**迈克尔·巴巴罗**: 没错。而这里的图谋可能直接就是为了彻底破坏并终止 FBI 的某项重大调查；也有可能企图借此对某位特定的 FBI 特工进行报复，或者是对其施加敲诈勒索。谁又能完全预料呢？单凭这份极其详实的人事机密数据，就足以武装任何有心人去实施上述任何一种危险行径。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Right? And your pursuit could be to end such an FBI investigation. Your pursuit could be to seek revenge on an FBI agent, to extort them. Who knows? This information would seem to arm you to do any number of those things.
+
+</details>
+
+**达斯汀·沃尔茨**: 完全如此。过去一周里，我与多位前 FBI 资深官员进行了深入交流，包括多位曾经直接主管网络安全事务的高级官员，我从他们那里听到的最大担忧之一，正是那些曾将极其残暴的危险罪犯送入监狱、或者曾经主导起诉黑手党黑帮家族的特工们。如果这份完整档案一旦在互联网上公开发布，他们将直接暴露在各种极其现实的暴力报复威胁之下。
+
+大家必须明白的是，这批特殊的 FBI 探员平日里对个人隐私的维护可以说是严防死守、小心翼翼到了极点。他们竭尽一切技术和制度手段确保自己的私人住址不会被列入任何公开数据库；这些人绝对不会注册或出现在社交媒体网络上。然而就在此刻，外界却凭空多出了这样一个数据库，将他们最隐秘、最不想为人所知的全部个人细节暴露无遗。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: Absolutely. One of the top concerns that I've been hearing for the past week from a number of former FBI officials that I've spoken to, including senior officials who worked on cybersecurity issues, is that these are going to be FBI agents who maybe put violent criminals behind bars, prosecuted the mafia and are now, if the data surfaces publicly, exposed to forms of retaliation. I think it's important for people to understand that these types of FBI agents zealously guard their privacy. They do everything they can to make sure their addresses are not listed. These people are not on social media and now you have this database that is out there that reveals all sorts of intimate details.
+
+</details>
+
+### 对比 OPM 历史浩劫与系统失守
+
+**迈克尔·巴巴罗**: 嗯。鉴于你所描述的这次泄露所涉及的严重程度与敏感性，如果将它与美国政府历史上遭遇过的那些重大黑客攻击事件横向对比，这次事件究竟处于怎样的位置？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Mhm. So given the scale of what you're laying out here, how does this stack up against previous hacks into the United States government?
+
+</details>
+
+**达斯汀·沃尔茨**: 大约在12年前，美国官方清晨对外指责黑客制造了另一起极其严重的数据泄露事件。当时外国情报黑客成功攻破了**美国人事管理局**（OPM，Office of Personnel Management），从中窃取了超过 2000 万份美国联邦政府雇员以及承包商的详细人事背景调查档案，甚至包括大约 500 万份高度敏感的生物识别指纹数据。
+
+正如当年一位涉事官员私下对我们所评价的那样：“查理，这太糟糕了，这头猪身上怎么涂口红也掩盖不了丑陋本质。”当时这被普遍认定为一次史诗级规模的历史性惨重黑客攻击，足以让外国情报机构借此大做文章、持续享用消化长达数年乃至数十年之久。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: So about 12 years ago, US officials this morning are blaming foreign hackers for another serious data breach. The foreign government hacked the Office of Personnel Management, also known as OPM, and stole more than 20 million records of US government employees and contractors, as well as something like 5 million fingerprints. As one official told us, Charlie, this is bad. There is no way to put lipstick on this pig. And that was kind of considered a historic hack of epic magnitude that the foreign intelligence services would be dining out for years, if not decades.
+
+</details>
+
+**迈克尔·巴巴罗**: 没错，我对当年的事件记忆犹新。当时国会调查时最尖锐的一个质问就是：“为什么这些极其机密的数据竟然没有被加密？”
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Right. I remember it. Why wasn't this information encrypted?
+
+</details>
+
+**达斯汀·沃尔茨**: 当时受审官员只能结结巴巴地推诿，称“数据加密只是系统可以采取的诸多防护工具之一，这方面问题我得听取国土安全部同事的答复”。而议员们当场怒斥：“不，我现在只想从你嘴里知道为什么数据没被加密！”
+
+那是一场巨大的风暴，直接引发了各种密集激烈的国会听证会，各方众口一词认为现状绝不可接受，涉事管理层必须引咎辞职，时任人事管理局局长最终也确实引咎下台。那发生在奥巴马政府执政时期。事后官方做出了一连串誓言与承诺，宣称将全面提升联邦数据安全防护等级，将核心资产牢牢置于最严密的保险锁之下，以确保此类安全灾难永远不再重演。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: Um the encryption is one of the many tools that systems can use. I'll look to my colleagues at DHS for their response. No, I want to know from you why the information wasn't encrypted. It was a huge deal and it prompted all sorts of congressional hearings. The status quo is unacceptable and leadership has to resign. Resignation from the director. This was during the Obama administration and a lot of vows to better protect data, put it behind lock and key to make sure this never happened again.
+
+</details>
+
+**迈克尔·巴巴罗**: 显而易见，他们的防线彻底失败了。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Obviously, they failed.
+
+</details>
+
+**达斯汀·沃尔茨**: 他们的确彻底失败了。现在有非常多的现任和前任官员私下告诉我，考虑到此次涉案数据的极度颗粒化（granularity）程度，以及幕后窃取者的特殊身份与不可预测性，当前这起针对 FBI 的黑客事件所造成的破坏力，完全可能与当年的 OPM 大浩劫不相上下，甚至在某些维度的危害性上还要远远更加恶劣。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: They failed. And a lot of officials are telling me that this current hack could be as bad or in some ways worse than what happened with the OPM breach because of the granularity of the data at issue and because of who took it.
+
+</details>
+
+### 黑客组织“闪亮猎人”与敲诈勒索模式
+
+**迈克尔·巴巴罗**: 好的，那请具体聊聊究竟是谁干的。关于实施这次攻击的黑客，我们目前掌握了哪些确切情报？他们究竟为何要对 FBI 下手，又是通过何种具体技术手段得逞的？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Well, talk about that, who took it. What do we know about the hackers who did this? Why they did it and precisely how they did it?
+
+</details>
+
+**达斯汀·沃尔茨**: 这一次制造袭击的黑客并非某个外国国家级情报安全机构。恰恰相反，他们是一个由年轻犯罪黑客构成的松散网络聚合体，据信分散活动于世界各地的不同国家。
+
+而这伙黑客在网络世界中使用的名号正是**闪亮猎人**（ShinyHunters）。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: So the hackers in this case are not a foreign intelligence agency. Instead, they are a loose collective of young criminal hackers believed to be operating in countries around the world. And these hackers go by the name ShinyHunters.
+
+</details>
+
+**迈克尔·巴巴罗**: 黑客组织往往喜欢起一些颇有意思的代号。网络安全分析人士指出，这个名字似乎源自全球知名视频游戏《精灵宝可梦》（Pokémon）。在游戏中，玩家们会全力以赴去搜寻捕获那些极其罕见、异色稀有的“闪光宝可梦”（Shiny Pokémon）。
+
+明白了，所以“闪亮猎人”之所以活跃在暗网，绝不仅仅是为了小打小闹的日常收益，而是专门盯上极具价值的重磅大猎物，力求一击命中，猎杀巨型猎物。他们疯狂入侵了成百上千家各类组织机构，并对受害者实施敲诈勒索，在许多案例中勒索金额动辄高达数百万美元。
+
+也就是说，他们从本质上干的是一门**勒索软件**（ransomware）的犯罪生意。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Hackers often have very interesting names. Analysts say that this one seems to be a reference to the popular video game Pokémon in which gamers go after extremely rare and exotic shiny Pokémon. Got it. So, the ShinyHunters are out there not to just get everyday paydays, but to score big hits, to bring home big game, and they are breaking into hundreds of organizations to extort them in some cases for payments of millions of dollars. So they're basically in the business of ransomware.
+
+</details>
+
+**达斯汀·沃尔茨**: 是的，但他们并不是那种传统的勒索软件团伙。传统的勒索软件入侵受害者机构后，往往是将受害者的电脑文件进行强力加密锁死，然后向受害者勒索赎金以换取解密密钥。
+
+然而“闪亮猎人”采取的手法却完全不同：他们侵入组织机构后，直接将海量内部数据整盘打包秘密窃走，随后利用这些数据作为筹码对受害者发起威胁勒索。他们威胁称，除非受害者在极短的时间内（通常往往只有仅仅 72 小时）通过比特币支付高额赎金，否则他们就会直接将全部敏感数据在公共互联网上公开发布曝光。
+
+他们此前袭击的受害者名单涵盖了各行各业无论体量多么庞大的巨头公司，比如电信巨头 **AT&T**、票务垄断平台 **Ticketmaster**，乃至全美和全球学生广泛使用的教育类软件系统服务商等等。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: Yes. But it's not a traditional ransomware group. Instead of breaking into an organization and locking up their files and demanding payment, what they do instead is they break into an organization, steal all of that data, and then threaten to do things with it like publish it online unless they're given a payment via Bitcoin in oftentimes as little as 72 hours. And they go after all sorts of companies no matter how big: AT&T, Ticketmaster, educational software used by students around the country and the world. I mean, these are just a few names that stick out.
+
+</details>
+
+### 入侵动机的离奇反转与零日漏洞
+
+**迈克尔·巴巴罗**: 这么看来，攻击 FBI 似乎与这个团伙以往纯粹为了牟利的常规运作模式（MO）大相径庭。以往他们都是针对大公司下手，威胁公开数据，进而逼迫公司掏钱买单。但 FBI 既不是 Ticketmaster，也不是什么教育软件公司。他们究竟出于什么动机，竟敢直接针对美利坚合众国最首要的顶级执法机构下手？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: So, this would seem to be a real departure from this group's normal MO of going after companies, threatening to release things, getting paid. The FBI is not Ticketmaster and it's not an education software company. So why target the premier law enforcement agency of the United States?
+
+</details>
+
+**达斯汀·沃尔茨**: 这是一个非常核心的好问题。胆敢公然对 FBI 动手确实需要极其狂妄大胆的狂徒心态，这一举动瞬间震惊了无数业界人士。不仅让我大吃一惊，让广大的网络安全研究人员感到不可思议，更让 FBI 本身以及在那里工作过的大批前任官员感到猝不及防与极度震动。
+
+这伙黑客在最初公开发布这起入侵事件时宣称，他们之所以这么做，从根本上讲是出于一种报复心理。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: That's a great question. It is certainly audacious to go after the FBI and it really surprised a lot of people. It surprised me. It surprised a lot of security researchers and it certainly surprised I think the FBI and a lot of former officials who work there. The hackers said when they disclosed this hack that essentially they were doing this as a form of revenge.
+
+</details>
+
+**迈克尔·巴巴罗**: 嗯？报复？究竟是为了报复什么？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Huh, for what?
+
+</details>
+
+**达斯汀·沃尔茨**: 黑客声称，他们是在对 FBI 此前发布的一份公开公共服务预警通告（Public Service Advisory）进行报复惩戒。
+
+早在今年 5 月，FBI 曾发布专项警示，公开警告外界称“闪亮猎人”这伙黑客危害极其严重，正在造成巨大的破坏。在那份官方通报中，FBI 详细罗列了该黑客团伙的作案手段，指责他们为了强行索取赎金，对受害者及其周边人员采取了极其恶劣的人身骚扰和恐吓威胁手段。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: They said they were seeking retribution from the FBI for a public service advisory that the bureau issued back in May of this year where they warned that the ShinyHunters hackers are very, very serious and doing a lot of damage. And in that they detailed their tactics. The FBI said that they engage in harassment and intimidation of victims to try to secure payment.
+
+</details>
+
+**迈克尔·巴巴罗**: 比如采取了哪些手段？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Such as?
+
+</details>
+
+**达斯汀·沃尔茨**: 比如将从受害者处窃取的极其隐私的私人照片在网上恶意公开；或者发动性质极其危险的“虚假报警特警出动”（swatting）恶意报假警袭击——即恶意向警方报假案，诱骗全副武装的地方特警持枪强行突袭破门进入受害者的住所，给受害者造成极度的人身恐吓。
+
+然而，“闪亮猎人”黑客团伙却跳出来喊冤，声称：“喂，看清楚了，我们确实勒索受害者要钱，但我们从来不屑于干那些下三滥的人身骚扰和 swatting 勾当，FBI 必须公开发布声明为我们澄清事实、纠正记录！”
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: Such as revealing private photos that they've stolen from victims, launching swatting attacks where local law enforcement is called into the address of a victim to scare them maybe with guns drawn. All sorts of harassment-type activities that the ShinyHunters group says, "Hey, look, we extort victims, but we don't do those kinds of things, and the FBI needs to correct the record."
+
+</details>
+
+**迈克尔·巴巴罗**: 所以，说白了，他们是因为自己没有被 FBI 视为他们自封的所谓“讲道义的盗贼”（honorable thieves）而恼羞成怒。他们觉得 FBI 把他们贬低并描摹成了比实际情况还要更加卑劣无耻的角色，为此深感被污蔑和不公。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: So, basically, they're mad that they're not being seen by the FBI for the honorable thieves they see themselves to be. They feel like the FBI has incorrectly maligned them as something even worse than they are.
+
+</details>
+
+**达斯汀·沃尔茨**: 是的。他们至少在部分成员心目中自诩为讲究职业操守的“侠盗”或体面的犯罪商人。他们在谈论自己的黑客活动时，仿佛那是一家经营得法、极为高效的正规商业公司一样，并对自身的技术水平抱有极端的自负。
+
+而在这次针对 FBI 的行动中，他们实际所做——或者他们自称所做的事情——是挖掘并利用了一个所谓未公开的**零日漏洞**（zero-day computer flaw）。这种漏洞在被发现前对全球整个软件安全界而言是完全未知的，此前没有任何公开补丁或披露预警。他们声称正是利用该未知漏洞攻破了一款名为 **Oracle PeopleSoft** 的产品。该产品被众多大型企业和机构广泛用于人力资源管理、财务档案记录以及人员数据治理。黑客宣称他们就是通过这个零日漏洞攻陷了 FBI 的招聘系统门户，从而畅通无阻地卷走了其中积攒的全部历史档案与现行人事档案。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: Yes. They view themselves as honorable thieves. At least some of them do. They talk about their work as if it's almost a business that they are running and they are very good at what they do. And in this case, what they did or what they've claimed to have done is to find a zero-day computer flaw. This is a type of flaw that is unknown to the world that has not been previously disclosed to attack a Oracle PeopleSoft product that is used for helping with HR and financial records and data management for companies. And what they have said is that they used this zero-day to compromise the FBI to get this historic and current data from the jobs portal and walk away with it.
+
+</details>
+
+### 记者与黑客的暗网邮件博弈
+
+**达斯汀·沃尔茨**: 整个外部世界是在上周二获知这次黑客事件的。当时该团伙在其暗网论坛上发布公告，公开宣称他们已经成功攻破了 FBI。在他们的勒索声明中，黑客甚至指名道姓地提到了现任 FBI 局长**卡什·帕特尔**（Kash Patel）以及负责 FBI 网络事务的主管领导。他们直截了当地发出通牒：“你们必须马上纠正那份公共服务警示中的错误言论，否则后果自负。”
+
+此外，极其戏剧化的是，他们居然在勒索声明里顺便附上了一个供外界直接联络他们的联系电子邮箱。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: And so the world learns about this hack last Tuesday when the group posts on its dark web forum that they have hacked the FBI. And in their statement which calls out Director Kash Patel as well as the cyber leader of the FBI, they say, "We need you to fix this public service alert or else essentially." And in that statement they also include conveniently a email to contact them.
+
+</details>
+
+**迈克尔·巴巴罗**: 呵，竟然留了联系邮箱。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Huh.
+
+</details>
+
+**达斯汀·沃尔茨**: 作为一名职业敏感度驱使的记者，我毫不犹豫地按照那个地址给他们发去了一封邮件。我写道：“嗨，我听说你们攻破了 FBI 的系统。”
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: So being a reporter as I am want to do I reached out to them. I sent them a note and said, "Hi, I hear that you have hacked the FBI."
+
+</details>
+
+**迈克尔·巴巴罗**: 身处这种境地，确实是一种非常微妙而奇异的体验。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: What a funny position to be in.
+
+</details>
+
+**达斯汀·沃尔茨**: 坦白说，我当时其实完全没有指望他们真的会回复我。但出乎意料的是，这伙黑客表现得极为急切和积极，我记得大概仅仅过了大约 10 分钟左右，他们就迅速给我发回了回信。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: It was. I honestly did not expect them to respond at all, but they were eager to do so and got back to me I think within about 10 minutes.
+
+</details>
+
+**迈克尔·巴巴罗**: 哇，响应居然这么快。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Wow.
+
+</details>
+
+**达斯汀·沃尔茨**: 正是在那次快速回信中，他们直接向我发送了一份所谓的黑客攻击样本数据集。他们声称该样本正是从这次针对 FBI 人事系统的入侵中截取下来的，属于那些数据遭泄露的受害者。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: And that's when they sent me a sample of data that they said was from the hack of the individuals who had their data compromised.
+
+</details>
+
+**迈克尔·巴巴罗**: 他们实质上是向你提供了一份黑客成果的实物样本，以向你彻底证明他们确实做到了他们所声称的一切。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: They send you essentially a sample of the hack material to prove that they've done what they say they have done.
+
+</details>
+
+**达斯汀·沃尔茨**: 是的，这在某种程度上就像是一张“提货凭证”或“发票收据”：“你看，我们确实偷到了大批核心机密，这就是证据。”他们在分享这部分样本数据的同时明确强调，他们给 FBI 设定了一个不可逾越的最后通牒期限，要求 FBI 必须在该期限前撤回或删除那份指责他们的公开声明，而这个截止日期就是**9月29日，星期二**。
+
+当时与我进行沟通的所有政府官员和外部网络安全专家都普遍形成了一种强烈的严峻预期：一旦到了最后期限而 FBI 拒绝就范，黑客必定会将他们所获取的部分乃至全部敏感人事档案直接倾倒在互联网上公开发布。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: Yes. It was sort of like a, you know, we've stolen a lot of stuff and here's a receipt and they shared that information and said, you know, we have a deadline for the FBI to retract or remove this public statement, Tuesday, September 29th. And the officials and security experts that I spoke with were very much under the impression that they were going to leak some or all of the data that they had obtained online.
+
+</details>
+
+**迈克尔·巴巴罗**: 如果 FBI 不答应他们的条件，他们就要将这些极其敏感的 FBI 内部雇员人事档案全盘公之于众。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: They would publish all this very sensitive FBI personnel data if the FBI didn't meet their demand.
+
+</details>
+
+**达斯汀·沃尔茨**: 没错，倒计时的钟声在一分一秒地流逝。我继续通过电子邮件与黑客保持联络，我非常直接地追问他们：“如果截止日期过去，而 FBI 仍然拒不配合，你们接下来究竟打算怎么做？”黑客对此给出的回答是：“无可奉告”。
+
+但与此同时，整个网络安全研究圈以及 FBI 内部的焦虑与恐慌情绪正在呈指数级蔓延。所有人都认定，一旦到了那个决定命运的最后截止时间，他们很可能会采取极其极端的报复动作，将 FBI 特工的真实姓名、具体职位头衔、家庭成员信息等全盘公开发布在网上，任由全世界无底线地随意查阅。
+
+然而，就在这个危急关头——在截止日期到来的前一天，也就是周一，黑客突然主动发来了一条全新的重磅消息，将整起事件的发展走向彻底颠倒了过来。
+
+广告之后，我们马上回来。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: Yes. So the clock is ticking. I am emailing with the hackers. I ask them point blank, what are you going to do if the deadline passes and the FBI does not comply? They say no comment. But meanwhile, the fear and anxiety is growing in the security community, within the FBI, that come the deadline, they could do something very dramatic and just publish FBI names and titles and family members names, all of the data online for the whole world to see. And then on Monday, a day before the deadline comes to pass, the hackers reach out with a new message that twists the story on its head. We'll be right back.
+
+</details>
+
+### 黑客突然退缩与内部派系纷争
+
+**迈克尔·巴巴罗**: 达斯汀，这伙黑客在最终截止日期到来前夕，究竟说了些什么话，竟然能够从根本上彻底逆转了整起事件的发展轨迹？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: So Dustin, what did these hackers say right before this deadline that ultimately ends up really changing the whole direction of the story?
+
+</details>
+
+**达斯汀·沃尔茨**: 黑客给我发来了一封言辞冗长的正式长信。他们在信中向我宣称：“我们在此做出郑重澄清：我们**绝对不会**将这批 FBI 的机密数据在网上公开发布。”
+
+“我们绝不会这么做。任何此前认为我们会泄露数据的人都是完全误解了我们。总而言之，这里没有什么可看的了，大家都散了吧，该干嘛干嘛去。”
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: So the hackers reach out in a lengthy email and tell me we have a clarification. We are not going to publish this FBI data online. We are not going to do it. And anybody who thought otherwise was mistaken. So essentially nothing to see here. Let's all move on.
+
+</details>
+
+**迈克尔·巴巴罗**: 这太不可思议了。面对他们此前那套惯用的勒索手段发生如此彻底的一百八十度大撤退，并且突然宣称每个人先前完全合乎常理的合理恐慌竟然只是一场“彻底的误会”，你对此该如何理解？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: I mean, how do you understand such a complete backing down from their normal tactics and a sudden claim that the thing everyone feared seemingly quite justifiably was, oh, kind of total misunderstanding?
+
+</details>
+
+**达斯汀·沃尔茨**: 听着，想要真正窥视一个高度去中心化、遍布全球的国际黑客犯罪网络的深层内心世界，绝非我所能轻易做到的。（笑）但从客观事实来看，有几点情况格外引人深思。
+
+首先，FBI 在内部早已将这起事件定性为极其严峻的“特大火灾事故”（five-alarm fire），宣称正展开雷霆万钧的全面调查，并联络多方第三方安全力量全力追击这帮黑客。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: Look, far be it from me to try to get inside the minds of a diffuse network of international hackers. (laughter) But here's what strikes me. The FBI says they are aggressively investigating this, working with third parties to go after the hackers. Essentially, they are treating this as a five-alarm fire internally.
+
+</details>
+
+**迈克尔·巴巴罗**: 嗯。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Mhm.
+
+</details>
+
+**达斯汀·沃尔茨**: 与此同时，外界关于这次黑客攻击的舆论关注度正像滚雪球一样急速飙升。黑客团伙还在不断向各大主流新闻媒体独家披露他们究竟盗走了哪些核心机密。媒体铺天盖地的报道声浪一浪高过一浪，大批前任 FBI 资深官员和权威网络安全专家纷纷公开出面表态，痛陈这在整个美国政府数据被盗历史上绝对是空前严重的灾难性事件。
+
+所有这些巨大的外部压力与恐慌情绪，随着截止日期的临近被推向了最高潮。也正是在这个节骨眼上，黑客决定出面抛出这份充满退让意味的修正声明。
+
+正如我所说，很难精准界定他们全部成员的真实心理动态。这是一个组织极其松散的黑客网络聚合体，据信是由分布在世界各地的大批不同黑客协同组成的。因此，其内部完全可能分化成了持有不同主张的对立派系，彼此对于这场极限施压游戏究竟要推到多大多硬的境地存在严重分歧，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: Meanwhile, the news of the hack is getting more and more attention. The hackers are doling out exclusives to various media outlets about exactly what they've taken. That drumbeat continues and you see the reaction building too from former FBI officials, security experts saying this is historically bad when we think about the theft of data from the government. And so all of this is building into a crescendo as this deadline approaches and that's when the hackers decide to issue this updated statement. Now, like I said, it's hard to know exactly what their motivations are. This is a loose collective of hackers. It's believed to be a bunch of different people working together from across the globe. And so, it is very possible that you have different factions that have different views about how hard they want to push this, right?
+
+</details>
+
+**迈克尔·巴巴罗**: 也就是说，黑客团伙内部可能一部分人主张：“嘿，我们必须把这件事情的价值压榨到极限，继续硬刚下去！”而另一部分人则可能惊慌失措地认为：“或许我们已经达成了初步目标，已经把公众注意力拉满了，赶紧见好就收、置身事外吧！”
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Some might be saying, "Hey, let's milk this for all it's worth. Let's keep going." Others might think, you know, maybe we have gotten what we wanted. We got the attention and let's sit back.
+
+</details>
+
+**达斯汀·沃尔茨**: 没错。我们完全有充分的理由合理推测，在这群分散的国际黑客网络内部，某个更为谨慎清醒的派系可能向其他成员发出了极其严肃的警告：他们这次所干的事情，恐怕已经彻底越界、玩得过火太大了。
+
+他们必须意识到，坐在对面的可不是 AT&T，更不是 Ticketmaster。捅了 **FBI** 这个全美最大的执法马蜂窝，可能会是一个毁灭性的致命错误，不仅会招致美国国家机器最疯狂的绝地反扑，甚至会引火烧身，将整个黑客团伙彻底连根拔起、彻底摧毁。虽然外界很难百分之百坐实其内部细节，但这种推测在逻辑上是极其合理的。
+
+回想一下黑手党或者历史上其他各种跨国犯罪集团的发展历程，内部派系对于下一步该怎么走、犯罪生意究竟该做到何种危险边界产生激烈内讧与冲突，是司空见惯的常态。
+
+然而，如果这伙黑客天真地以为，仅仅凭借口头许诺一句“保证不公开发布数据”，就能够让暴怒的 FBI 就此罢手、放他们一马的话，那他们就错得太离谱了。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: Right? I mean, it's seems quite reasonable to speculate that perhaps one of the factions within this collective of diffuse hackers may have made the claim to the rest of them that what they did here was ultimately maybe just a little too ambitious. That this is not AT&T, this is not Ticketmaster, and that kicking this hornet's nest, the FBI, that that might be a huge mistake and that it would backfire and that it might even destroy this group. It's hard to know, but it's very possible. And I mean, think of, you know, the mafia or other criminal organizations over the years. Like, this is not an unusual situation where you do have competing factions that might have disagreements about what they should do, how they should carry out their business. However, if they thought they were going to get the FBI off their back by vowing to not publish the data, they were wrong.
+
+</details>
+
+### FBI 的跨国追捕与严正通牒
+
+**迈克尔·巴巴罗**: 错得太离谱？为什么这么说？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Wrong. How?
+
+</details>
+
+**达斯汀·沃尔茨**: 就在本周二，**布雷特·莱瑟曼**（Brett Leatherman）——作为一名拥有完美名字的 FBI 资深官员（笑）——以 FBI 网络部门助理局长的官方身份，亲自出镜发布了一段强硬的公开视频声明。
+
+在视频中，莱瑟曼局长开门见山地宣布：“我们的合作伙伴荷兰国家警察局刚刚正式宣布逮捕了‘闪亮猎人’犯罪团伙的一名核心骨干头目。”
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: On Tuesday, Brett Leatherman, assistant director of the FBI's cyber division—Brett Leatherman, who has a great name for an FBI official, (laughter) came out in a public video today. "Our partners at the Dutch National Police announced the arrest of one of the alleged leaders of ShinyHunters."
+
+</details>
+
+**达斯汀·沃尔茨**: 莱瑟曼在视频中着重强调并宣扬了荷兰警方最近开展的精准抓捕行动：一名年仅 24 岁的黑客在荷兰境内被正式逮捕归案，而该名青年被确认为“闪亮猎人”黑客组织内部的绝对关键灵魂人物。
+
+紧接着，莱瑟曼直接把凌厉的目光对准了该犯罪团伙的其余在逃在册成员。他对着镜头毫不留情地向整帮在逃黑客发出了最后的最后通牒：“以往其他黑客组织总妄想凭借所谓的网络匿名性或者狐朋狗友的包庇来保全自己，但他们全都不幸猜错了。你们知道该怎么联系到我们，而我们也完全清楚该如何把你们一个个揪出来。”
+
+“我们正在全力追捕你们。”
+
+“我强烈建议你们最好趁着自己眼下尚有选择权的时候，主动向我们自首联络。”
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: And he touts in this video the recent arrests in the Netherlands of a 24-year-old hacker believed to be a key figure in the ShinyHunters group. And he says essentially to the rest of the gang, "Now to the remaining members of ShinyHunters. Other groups believed anonymity or their friends would protect them and they were wrong. You know how to find us and we know how to find you. We are coming after you. I suggest you reach out first while the choice is still yours."
+
+</details>
+
+### 数据幽灵与无法收回的安全覆水
+
+**迈克尔·巴巴罗**: 尽管 FBI 已经公开发出了这种杀气腾腾的法律制裁威胁，而且毫无疑问正在动用全部国家机器力量掘地三尺地追捕这些黑客，但一个无法回避且极其残酷的客观现实是：所有这些被盗走的机密数据，此刻依然冰冷地散落并漂浮在黑客们的电脑网络服务器深处，甚至正如你刚才坦白承认的那样，其中一部分样本数据此刻就静静地躺在某些新闻记者的电子邮箱收件箱里。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Well, while the FBI issues these threats and no doubt is vigorously attempting to find all these hackers and arrest them, the reality is that all of this data is still floating around within the hackers' computer systems and I suppose even in the email of some reporters.
+
+</details>
+
+**达斯汀·沃尔茨**: 完全没错。仅仅因为黑客单方面口头声称他们不会在网上公开发布，首先，他们随时可能再度改变主意，在未来的某个时间节点突然选择全部倾倒出去；其次，没有任何物理或技术手段能够真正阻止他们暗中将这批窃取来的核心数据打包，转手倒卖给暗网上的出价最高者，或者同时分发抛售给多个潜在买家。
+
+而这些买家极有可能就包括**俄罗斯国家情报机构**或**中国情报部门**。这些外国情报实体怀有极其强烈的战略情报需求，渴望竭尽所能摸清掌握关于 FBI 全体人员组织架构的一切底牌内幕。
+
+因此，如果有人认为这件事就此画上了句号，那绝对是大错特错的幻觉。因为这批核心机密数据如今已经切实流失到了外面的世界。他们甚至已经向好几家互不相干的新闻媒体分发了部分数据样本，不是吗？
+
+更有网络安全研究人员此前已经主动站出来公开承认，他们也通过各种渠道拿到了黑客散布的数据样本。目前尚不完全清楚具体扩散途径，但网络安全领域有一条颠扑不破的铁律：数据一旦被分享分发给了其他人，它就会立刻获得属于它自己的野蛮生命周期，你根本不可能再把泼出去的覆水重新装回瓶子里了。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: That's right. So, just because the hackers said they're not going to publish it, first of all, they could change their mind and decide to do that later, but also there's nothing to stop them from selling the hacked data to the highest bidder or multiple bidders, including Russian and Chinese intelligence agencies that might have deep interest in learning everything they can about the FBI's workforce. So the idea that this is the end of the story is definitely not the case because this is data that is now out there. They've shared it with several different news outlets, right? There are security researchers who have come forward and publicized that they have also obtained the sample data set as well. It's unclear how, but once you start sharing data with other people, it tends to take on a life of its own and it really can't be put back in the box.
+
+</details>
+
+**迈克尔·巴巴罗**: 达斯汀，我必须要追问一句，因为我个人对此非常好奇，相信广大听众也同样极想知道：既然你说你自己亲手收到了这份被盗机密材料的真实样本，那么如果允许我直接探询的话，我们《纽约时报》究竟该如何处理处置这份极其烫手的材料？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: I have to ask Dustin because I'm genuinely curious and listeners maybe too. You said you got a sample of this hacked material. What do we the Times do with this? If I can ask?
+
+</details>
+
+**达斯汀·沃尔茨**: 必须承认，这对我们报社内部而言是一个极为艰难而严肃的伦理与法律议题。我们最初甚至在内部激烈讨论：我们究竟应不应该去看这份数据？如果我们看了它，我们又该拿它来做什么？我们应该对它进行深度技术分析吗？我们应当在多大程度上报道它的具体内容？
+
+关于如何以最高准则稳妥处理外界流传的这些敏感材料，我们在报社内部与我们的专业法务团队以及新闻采编标准委员会进行了大量极为审慎严密的研讨。在此我可以向大家保证：我们绝不会将这些数据与外部任何人进行共享分发，并且我们正在用我们能力范围内最高等级的安全手段严密保管着这些内容。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: You know, this was a difficult issue for us to deal with internally. Should we even look at it? And if we look at it, what should we do with it? Should we analyze it? Should we report on it? How much should we report on it? These were a lot of questions we had internally with our lawyers and our standards team about sort of how do we want to handle this material that is out there. We are not sharing it with anyone and we are securing it to the best of our ability.
+
+</details>
+
+### 一线探员的背叛感与家庭危机
+
+**迈克尔·巴巴罗**: 因此，眼下极其清楚的一点是：在面对这批外泄的机密数据所带来的深远隐患时，FBI 绝非脱离了危险境地。
+
+而这一切不得不让我联想起达斯汀你在节目开头所描绘的情景——多年前那起臭名昭著的人事管理局（OPM）特大黑客入侵惨剧发生后，美国政府信誓旦旦地向全社会承诺：“我们绝不会允许这种事情再次上演。”然而，历史却如此荒诞地再度重演了。
+
+因为从根本的本质上讲，这让人感受到的不仅仅是一次灾难性的重大网络安全防线崩溃，更是对全体 FBI 一线工作人员极其沉重的一种**信任背叛**。这些人当初之所以选择加入 FBI，投身于极度危险脆弱的顶级联邦执法事业，正是建立在一项隐性的基本共识与承诺之上：那就是组织必定会竭尽所能、无条件地保全捍卫他们最隐秘的私人生活与个人安全信息。如果你效力的雇主是堂堂的 FBI，要求达成这样一份安全契约是再正当不过的基本权利。
+
+然而现实却是，FBI 竟然放任其内部人事管理系统漏洞百出、不堪一击，直接导致了这场骇人听闻的黑客入侵发生，进而让全体一线特工和雇员如今无端陷入了完全不必要的巨大现实人身险境之中。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: So what seems clear is that the FBI when it comes to this data is not at all out of the woods. And that makes me want to go back to Dustin, what you had described as the government's response to that infamous OPM hack all those years ago when it said, "We're never going to let this happen again." And it does happen again. Because ultimately this feels like a very meaningful not just security breakdown but a betrayal of people at the FBI who signed up for really sensitive law enforcement work within understanding that their personal information would be protected implicitly. That's a reasonable bargain to reach with your employer if your employer is the FBI. And instead the FBI left its personnel system so vulnerable that this hack happened and these workers are now in real unnecessary peril.
+
+</details>
+
+**达斯汀·沃尔茨**: 你的总结击中了核心。目前我们从大量现任和前任 FBI 官员那里持续听到了极其强烈的愤怒与沮丧情绪。他们向我们明确指出，他们此前压根就不知道局里居然还存在着这样一个集合了如此详尽个人背景的大型人事数据库，他们极度质疑为什么这样的系统会被允许存在，为什么会有一个中心化的系统仓库长期储存着如此海量、极度隐私的个人生活记录，并且看似长年累月地存放着，既没有经过必要的定期擦除淘汰，也没有彻底清除销毁，最终变成了任由外部黑客肆意掠夺的活靶子。
+
+许多受访官员痛心疾首地向我们表示：“在 FBI 工作本身就是一项高危职业。我们当初签名加入这个队伍，早就做好了承担职业危险的心理准备，但是**我们的家人从来没有签过这种危险协议**。”
+
+而该数据库中最让大批 FBI 雇员感到毛骨悚然、彻底震怒的痛点正在于：档案里不仅记录了特工本人，更毫无保留地完整包含了他们的紧急联系人、配偶姓名、兄弟姐妹姓名，甚至在某些情况下还详尽登记了他们幼小子女的信息。这也就意味着，如今真正需要日夜提心吊胆、面临现实人身威胁的，绝不仅仅是探员他们自己，而是连带上了他们毫无防备的全部家庭成员。
+
+在我看来，这起严峻的入侵事件血淋淋地证明了一点：尽管自从上次 OPM 特大黑客灾难以来，美国联邦政府在网络安全建设上看似走过了一段漫长的亡羊补牢之路，但若想真正筑牢数字防线，有效保护其关键信息系统免遭荼毒，特别是从根本上**保护好它的人民与一线雇员**，美国政府显然还有极其漫长、极其艰巨的路要走。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: That's right. You know, I think there's a lot of current and former officials that we've been hearing from at the FBI who are very frustrated about the situation and made clear to us that they didn't even know that a data set like this existed and had questions about why it existed and why would there be a place where there's a repository of so much intimate information that seemingly is kept for years without being deleted, without being purged that a hacker could access and And a lot of these officials said, you know, working for the FBI can be a dangerous job. I sign up for this, but my family doesn't. And the fact that this data set includes emergency contacts, spouses, siblings, in some cases, children, that is, I think, what is especially alarming to a lot of the people who work at the FBI, that it's not just them that have to worry about it, but their entire families in some cases. And to me, this demonstrates that even though the government has come a long way since that last big hack, that hack of OPM, it still has a very long way to go to protect its systems and more importantly to protect its people.
+
+</details>
+
+**迈克尔·巴巴罗**: 好的，达斯汀，非常感谢你今天带来的深度独家解读与详尽剖析。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: Well, Dustin, thank you very much. I appreciate it.
+
+</details>
+
+**达斯汀·沃尔茨**: 非常感谢你的邀请。
+
+<details>
+<summary>Original English</summary>
+
+**Dustin Volz**: Thank you for having me.
+
+</details>
+
+### 今日其他要闻与演职员表
+
+**迈克尔·巴巴罗**: 读者朋友们可以在《纽约时报》App 上阅读到更多来自达斯汀·沃尔茨以及我们全体驻站记者的最新后续调查报道。如果您目前尚未下载该应用程序，现在下载即可享受整整一个月的全平台新闻报道免费畅读特权，欢迎大家体验尝试。
+
+节目稍后，我们将继续播报今日其他重要新闻简讯。
+
+以下是您今天还需要了解的其他重要资讯：
+
+据《纽约时报》独家披露报道，在人工智能初创公司 **OpenAI** 发生其 AI 系统失控并主动对初创公司 **Hugging Face** 发动攻击的数月之前，两名 OpenAI 内部核心雇员曾就此极其严重的安全隐患向其直属高管层拉响了警报，但遗憾的是，他们的预警在当时遭到了高层的置之不理与彻底忽视。
+
+根据内部往来电子邮件显示，这两名员工当时深感忧虑，指出 OpenAI 正在测试的最新一代人工智能模型并未在测试过程中受到充分适度的人工监督与风控审查。然而面对员工的警告，他们的主管领导却回应称，为了赶上既定项目死线进度，模型测试必须强行向前推进；据员工透露，公司内部当时根本没有为此建立任何新型安全防护协议。
+
+另外，在特朗普政府取得的一项暂时性司法胜利中，美国联邦最高法院裁定允许政府继续将移民驱逐出境至非其原籍国且当事人可能与其毫无渊源关联的国家。这些所谓将移民驱逐至第三国（包括遣送至存在严重侵犯人权记录的威权专制国家）的争议性政策，正是本周一《The Daily》节目的重点报道主题。尽管最高法院大法官目前为这些驱逐行动的继续执行开了绿灯，但他们已经将该诉讼案的最终法律终审裁决快速排期至明年正式审理。
+
+今天的这期节目由**亚历克斯·斯特恩**（Alex Stern）、**奥利维亚·纳特**（Olivia Natt）以及**埃里克·克雷普克**（Eric Krupke）联合制作，**杰克·迪多罗**（Jack D'Isidoro）提供协助。本期节目由**安妮·米多夫**（Annie Midgley）担任编辑，配乐由帕特·麦卡斯克（Pat McCusker）、罗恩·埃米托（Rowan Niemisto）和黛安·黄（Diane Wong）共同创作，音频工程由**艾丽莎·莫克斯利**（Alyssa Moxley）负责完成。我们的节目主题音乐由 **Wonderly** 创作。
+
+以上就是今天《The Daily》的全部内容。我是迈克尔·巴巴罗，我们明天再会。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Barbaro**: You can read more from Dustin Volz and all of our reporters on the New York Times app. If you don't already have the app, we want to let you know that if you download it right now, you'll get access to all of our journalism free for 1 month. So, give it a try. We'll be right back.
+
+Here's what else you need to know today.
+
+The Times reports that in the months before OpenAI's artificial intelligence went rogue and attacked the startup company Hugging Face, two OpenAI employees raised an alarm with their superiors, but were ignored. In emails, the employees worried that OpenAI's newest artificial intelligence models were not being appropriately monitored during testing. In response, their superiors said that testing needed to move ahead to meet deadlines and workers said that no new safety protocols were created.
+
+And in a temporary victory for the Trump administration, the Supreme Court allowed the government to keep deporting people to countries they aren't from and may have no connection to. These so-called third-country deportations, including to authoritarian countries with human rights abuses, were the focus of Monday's episode of the show. And while the justices cleared the way for those deportations to continue for now, they fast-tracked a final ruling in the case for next year.
+
+Today's episode was produced by Alex Stern, Olivia Natt, and Eric Krupke with help from Jack D'Isidoro. It was edited by Annie Midgley, contains music by Pat McCusker, Rowan Niemisto, and Diane Wong, and was engineered by Alyssa Moxley. Our theme music is by Wonderly.
+
+That's it for The Daily. I'm Michael Barbaro. See you tomorrow.
+
+</details>

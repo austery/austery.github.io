@@ -1,0 +1,504 @@
+---
+author: Big Think
+date: '2026-11-20'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=xXROVLqhchg
+speaker: Big Think
+tags:
+  - gravitational-lensing
+  - black-hole
+  - interferometry
+  - gravitational-wave
+  - astronomy
+title: 天文学家解释为什么每台望远镜都如同时光机
+summary: 天文学家米歇尔·塞勒探讨了望远镜作为时间机器的观测原理、引力透镜效应、事件视界望远镜对黑洞首张图像的干涉测量成像，以及LIGO对引力波的首次探测与观测意义。
+insight: ''
+draft: true
+series: ''
+category: science
+area: knowledge-meta
+project: []
+people:
+  - Michelle Thaller
+  - Albert Einstein
+companies_orgs:
+  - NASA
+  - Big Think
+  - Event Horizon Telescope Consortium
+  - LIGO
+products_models:
+  - Hubble Space Telescope
+  - James Webb Space Telescope
+media_books: []
+status: evergreen
+---
+### 序言与引言
+
+我是米歇尔·塞勒（Michelle Thaller）。我是一名天文学家和科学传播者。我曾在 NASA 工作了 28 年，现在已经退休了。大多数人是从我参与制作的关于科学的电视节目和播客中认识我的。
+
+<details>
+<summary>Original English</summary>
+I'm Michelle Thard. I'm an astronomer and science communicator. I worked at NASA for 28 years. I'm retired now. And most people recognize me from [music] TV shows and podcasts I've done about science.
+</details>
+
+今天在 Big Think，我们将探讨引力透镜、黑洞的首张图像以及引力波。
+
+<details>
+<summary>Original English</summary>
+Today on Big Think, we're [music] going to talk about gravitational lensing, the first image of a black hole and gravitational waves.
+</details>
+
+感谢收看 Big Think。如果您想支持我们的工作，我们鼓励您加入我们的会员社区。作为会员，您将收到我们的季度印刷杂志，这是一份精美设计的合集，汇集了最重要的思想和访谈。Big Think 适合那些渴望深入探索宏大思想的好奇之人。要支持您希望在世界上看到的媒体，请访问 bigthink.com/membership。现在回到访谈。
+
+<details>
+<summary>Original English</summary>
+Thank you for watching Big Think. If you'd like to support our work, we encourage you to join our members community. As a member, you'll receive our quarterly print magazine, a beautifully designed collection of the ideas and interviews that matter most. Bigthink [music] is for curious people who want to take deep dives into big ideas. To support the media you want to see in the world, go to bigthink.com/membership. And now back to the interview.
+</details>
+
+### 第一章：借助引力透镜穿越回过去
+
+第一章：借助引力透镜穿越回过去。
+
+<details>
+<summary>Original English</summary>
+Chapter 1, time traveling to the past with gravitational lenses.
+</details>
+
+大多数人都熟悉宇宙非常辽阔这一概念。我们谈论的是数十亿、数万亿英里之外的事物。甚至去想想“光年”这个词，对吧？光年就是光在一年内传播的距离。光以每秒 186,000 英里的速度行进。如果以这个速度走一年，覆盖的距离大约是 6 万亿英里。作为一个拥有人类大脑的人类，我对这意味着什么完全没有概念。我认为关于科学家的一大误解是，人们以为我们不知怎么就能理解这些普通人无法理解的事物。当然，我们其实就是普通人。但我们需要这些巨大的标尺来真正谈论宇宙。宇宙太大了，没有它们你就无法谈论。
+
+<details>
+<summary>Original English</summary>
+Most people are familiar with the idea that the universe is a very big place. That we're talking about things that are billions and trillions of miles away. I mean, even to think about the term a lightyear, right? I mean, a light a light year is the distance that light travels in one year. Light going at 186,000 miles per second. If you go that speed for one year, you cover approximately 6 trillion miles. And I'm a human being with a human brain. I I have no conception of what that means. It's one of the big I think misperceptions about scientists is that somehow we're able to comprehend these things that the the average human being can't. And of course we we are the average human being. Um but we need these big measurement sticks to actually talk about the universe. The universe is so large you can't do it without that.
+</details>
+
+但光年还有另一个层面，我认为人们同样没有真正领会，那就是它至少与时间产生了联系——当空间中的某个物体非常遥远时，光需要很长时间才能传到我们这里。它必须传播到我们这里，所以即使是距离我们较近的物体，比如太阳，我们知道太阳是离我们最近的恒星，距离我们大约 9300 万英里，以光速计算需要大约 8 分钟。所以当你在天空中看到太阳时，你看到的是它 8 分钟前的样子。你绝不可能看到它现在的样子，因为光必须从太阳传播到我们这里。然后，哪怕是最近的恒星，离我们最近的恒星比邻星（半人马座阿尔法星系统）位于南半球，距离大约 4 光年。所以你在天空中看到的它是 4 年前的样子。
+
+<details>
+<summary>Original English</summary>
+But there's another aspect to a lightyear which again I think people don't really appreciate and that is it it does become something that is at least involved with time that when something is very far away in space light takes a long time to get to us. It has to travel to us and so even the things that are closer to us like the sun you know the sun the nearest star to us is about 93 million miles away and at light speed that takes about 8 minutes. So when you see the sun in the sky, you're seeing it as it was eight minutes ago. There's no way you can see it right now because light has to travel to us from the sun. And then even the nearest stars, the nearest star to us, Alpha Centauri, is in the southern hemisphere and it's about four light years away. So you see it in the sky as it was four years ago.
+</details>
+
+顺着这个继续延伸，不断增加距离：我们的星系，即我们生活其中的恒星家族，银河系的盘面直径大约是 10 万光年。因此，即使你看向我们空间邻域的另一侧、我们自己的星系对侧，你也是在回望一个甚至比大部分有记录的人类文明还要早的时代。然后，我们能看到的最近的另一个星系仙女座星系，距离我们有 250 万光年。令人惊叹的是，你实际上可以用肉眼看到仙女座星系。你实际在看着某个东西，你的眼睛正在接收 200 万年前发出的光。因此，我们绝不可能看到仙女座星系今天的样子。光必须经过传播。
+
+<details>
+<summary>Original English</summary>
+And so now you keep going on, you keep adding distance to this. So our galaxy, the family of stars that we live in, the disk of the galaxy is about a 100,000 lighty years across. So by the time you look even to the other side of our own neighborhood in space, our own galaxy, you're looking back to a time before there was really much recorded human civilization at all. And then the nearest other galaxy we can see, Andromeda, is 2 and a half million light years away. And amazingly, you can actually see Andromeda with the unaded human eye. You're actually looking at something. Your eyes are picking up light that left 2 million years ago. So there's no way that we can actually see the Andromeda galaxy as it is today. Light has to travel.
+</details>
+
+因此作为一名天文学家，这不仅仅是观察遥远的事物。这不仅是一个广袤的空间宇宙，还是一个时间中的宇宙。你无法避免成为一名时间旅行者，你逃脱不了这一点。这带来了非常深远的优势，因为我们能做的是借助望远镜，你可以坐下来，宛如拥有一张前排座席，切身观看整个宇宙的变化，看它是如何形成的，看过去的事物是什么样子。有些天体，当你向深空远望时，我们在附近已经看不到了；它们是宇宙中已不复存在的事物。
+
+<details>
+<summary>Original English</summary>
+And so being an astronomer, it's not just about looking at things that are far away. It's not just a a vast universe. It's a universe in time. And there's no way that you can't be a time traveler. You can't escape this. And and this has some really profound advantages because what we can do is with a telescope, you can sit back and and and you kind of have this ringside seat to actually watch the whole universe change, see how it formed, see what things were were like in the past. They're objects that when you look very far out in space, we don't see them anymore. They're things that no longer exist in our universe.
+</details>
+
+所以，我们确凿知道宇宙发生过改变。这不是理论，这不是猜测。当你向空间深处看得越来越远时，你必然会看到宇宙越来越久远过去的面貌。
+
+<details>
+<summary>Original English</summary>
+So, we know for a fact that the universe has changed. That's not a theory. That's not a guess. When you look farther and farther out into space, you have to see the universe as it was, farther and farther back in time.
+</details>
+
+如今凭借我们最强大的望远镜，我们实际上能够看到大约 120 亿或 130 亿年前的宇宙面貌。你正在接近宇宙的起点。我们认为大爆炸发生在大约 138 亿年前。所以你现在谈论的是回望大爆炸后仅几亿年的时代。当你回望那么远时，景象确实截然不同。
+
+<details>
+<summary>Original English</summary>
+And now with the most powerful telescopes we have, we're actually able to see the universe as it was, say, on the order of of 12 13 billion years ago. You're getting close to the beginning. We we believe the Big Bang happened about 13.8 billion years ago. So you're now talking about looking back to a time only some hundreds of millions of years after the Big Bang. And when you look back that far, things look very different indeed.
+</details>
+
+我们拥有的能看得最远的仪器——在这种情况下它不是普通的望远镜，而是卫星图像——实际上能回望到大爆炸后大约 40 万年的时期。那是我们用望远镜所能看到的极限，因为 40 万年其实对应一个具体的事件：那是宇宙首次对光变得透明。宇宙曾经是如此炽热和致密，以至于整个空间、万事万物都像太阳表面一样发光。你在天空中朝任何方向看，任选天空中的一个随机方向，如果你看得足够远、回望到那个时代，那里的温度和密度会高到让你无法看得更远。所以从某种意义上说，我们周围就像有一个气泡，一个我们所能看到的极限。那并不是整个宇宙，那是时间效应。这是从我们身处的太阳系朝各个方向向外看所产生的一种效应。所以如果你身处数百万光年外的一个遥远星系，他们周围也有他们自己的气泡，他们有自己的视角。我们绝不认为那就是整个宇宙，那是围绕我们为中心的时间效应。
+
+<details>
+<summary>Original English</summary>
+The very farthest looking instruments we have, and in this case it's not a telescope, they're satellite images that can actually look back to a time about 400,000 years after the Big Bang. That's the limit that we can ever look with a telescope because 400,000 years is actually a specific event. It's the first time the universe ever became transparent to light. The universe was once so hot and so dense that the entirety of space, everything was glowing like the surface of the sun. And in every direction you look on the sky, pick any direction, random direction on the sky, if you look that far away that you're looking back to that time, things become so hot and so dense that you can see no further. So in some ways there's kind of a bubble around us, a limit of how far we can see. That's not the whole universe. That's an effect of time. That's an effect from looking out from where we are in our solar system and looking out in every direction. So if you're in a very far away galaxy, millions of light years away from us, they have their own bubble around them. They have their own perspective. There's no way that we think that's the entire universe. That's a time effect centered on us.
+</details>
+
+这是宇宙的一张婴儿照。这就是大爆炸后仅仅几十万年时的宇宙。这就是我们所称的微波背景辐射。当初以高能光形式出发的辐射，现在以这些非常非常低能量的微波形式到达我们这里。在所有可用的不同光波段的光谱中，微波和无线电波是我们拥有的能量最低的光。那么在所有这些时间里发生了什么？我是说，我们现在谈论的是超过 137 亿年的时间。宇宙自身膨胀了，空间正在膨胀。因此，这些波失去了能量，波峰之间的距离变大了。现在的能量非常低，我们将其视为微波。这些微波的温度接近绝对零度以上 3 度。它们现在非常冷，能量非常低，但你仍然可以探测到它们。通过卫星，我们实际上能够绘制出这些微波的分布图。我们实际上可以观察整个天空，绘制这些微波的温度图。它们在天空中几乎每个方向上都相同，一致性优于十万分之一。它的温度几乎完全一致。但在过去几十年里，微小的差异刚刚被分离辨析出来。
+
+<details>
+<summary>Original English</summary>
+This is a baby picture of the universe. This is what the universe was just, you know, some hundreds of thousands of years after the big bang. This is what we call microwave background radiation. What left as high energy light now comes to us as these very very low energy microwaves. Microwaves and radio waves are the lowest energy light that we have on our spectrum of all the different colors of light that are available. And so what's happened in in all of that time? I mean, we're now talking, you know, more than 13.7 billion years. The universe itself expanded. Space is expanding. And so now these waves have lost energy that the peaks of the waves have gotten farther apart. And the energy now is so low, we see them as microwaves. The temperature of these microwaves is close to 3° above absolute zero. They're very cool now. They're very low energy, but you can still detect them. And with satellites, we actually can map these microwaves. We can actually see all around the sky and map the temperatures of these microwaves. And they're almost the same in every direction on the sky. Better to one part in a 100,000. It's almost all the same temperature. But there are tiny little variations that have just been teased out in the last decades.
+</details>
+
+我们已经开始看到结构的最早雏形。有些区域稍热一些，有些区域稍冷一些。较冷的区域最终会让气体相互聚集收缩；较热的区域则使气体膨胀散开。你开始看到形成第一批星系、第一批星系团的结构。甚至在没有任何恒星或任何星系之前，它就已经存在了——那是气体聚集、结团的结构。
+
+<details>
+<summary>Original English</summary>
+And already we start to see the very beginning of structure. There are some areas that are a little hotter, some areas a little colder. The colder areas will eventually allow the gas to contract together. The hot areas expand the gas apart. And you're beginning to see the structure that formed the first galaxies, the first clusters of galaxies. It was already there even before there were any stars or any galaxies. The structure of gas coming together, clumping together.
+</details>
+
+我们认为这很可能是受到神秘暗物质的影响，那是宇宙中具有引力、但我们无法将其与任何常规物质关联起来的东西。它似乎改变了密度，创造了最终允许星系形成、恒星形成、行星形成的结构。因此，我们再次回望我们自己的过去，极其深刻的事情在于，我们确实能够回望到那个时代。那是一个真实的测量。我们能够回望到任何大型结构存在之前的时代，恰好就是它开始的那一刻。
+
+<details>
+<summary>Original English</summary>
+We think this was probably influenced by the mysterious dark matter, the the stuff in the universe that has gravity, but we can't associate it with any matter at all. That seems to have changed the density, created the structure that eventually allowed galaxies to form, stars to form, planets to form. So once again, we we look back at our own past and the the incredibly profound thing is that we really can see back to that time. That's a real measurement. We can see back to a time before any large structure existed, just the moment it began.
+</details>
+
+能够看到更远的地方，因而能够看到更久远的过去，这两者是紧密关联在一起的。这就是为什么天文学家想要更强大的望远镜、更大的望远镜，想要观测射电、微波、可见光、红外线、热辐射，一直延伸到能量最高的光（如 X 射线和伽马射线）的望远镜。对于每种类型的光，就好像你获得了宇宙的一个不同切片，甚至是不同时期所发生事件的不同切片。你把它们拼合在一起，就能得到一个完整的视图。在某种程度上，这非常简单。望远镜越大，镜面越大，收集的光就越多，你就能看到更遥远、更微弱的物体。此外，望远镜越宽，镜面越大，你获得的天空图像就越清晰。所以我们总是希望建造更大、更不同的望远镜。
+
+<details>
+<summary>Original English</summary>
+Now, being able to see farther away and therefore farther back in time, the two are linked together. That's why astronomers want more powerful telescopes, bigger telescopes, telescopes that look at radio light, microwave light, visible light, infrared light, heat, you know, all the way out to the most energetic types of light like X-rays and gamma rays. For each type of light, it's almost like you get a different slice of the universe, even a different slice of what was going on at different times. You put them all together and you get a complete view. And to some extent, it's very simple. You know, the larger telescope you have, the bigger a mirror you have, the more light you collect and you can see fainter things from farther away. Um, also, the the wider your telescope is, the bigger your mirror is, the clearer your image gets of the sky. And so we always want to be building bigger telescopes, different telescopes.
+</details>
+
+令人惊奇的是，宇宙本身还给予了我们一个美妙的小技巧、一点小小的帮助。这是阿尔伯特·爱因斯坦所预言的。他是第一个真正阐述引力本质的人。在此之前，人们可以描述引力是如何起作用的、力有多强、行星绕太阳运行等等。他们可以描述它。但爱因斯坦更进一步，教会了我们引力到底是什么。答案令人震惊。同样，作为一个三维层面的人类，我对这并没有任何直观的理解，但这已经成为我觉得无比美丽的事物。那就是，引力的本质其实是时空本身的弯曲。物体只是在空间中穿行，它们移动时往往只是试图沿着直线路径行进。但是你试图在一个正在弯曲的时间和空间本身中沿着直线路径行进，所以你的路径就弯曲了。这就是形成轨道的原因。
+
+<details>
+<summary>Original English</summary>
+And the amazing thing is that there's also a wonderful little trick, a little bit of a of a help that the universe itself is giving us. And this is something that was predicted by Albert Einstein. And he was the first person that really described what gravity is. Before that, people could describe how gravity works, how strong the forces, planets are orbiting the sun, that kind of thing. they could describe it. But Einstein went a step further and and taught us what gravity really is. And the answer was astounding. And again, this is something that as a three-dimensional human, it's not that I have any intuitive understanding of this, but it's become something that I find incredibly beautiful. And that is that what gravity really is is a bend in space and time itself. Objects are just flying through space. They're they're often just trying to follow a straight path as they move. But you're trying to follow a straight path through time and space itself that are bending. So your path bends. That's what creates orbits.
+</details>
+
+令人惊奇的是，任何有质量的物体——哪怕在极微小的程度上包括我自己在内，尽管对于像人类这么小的物体来说极难测量——我们所有人都会让周围的时空发生一点点弯曲。太阳的质量极其巨大，它是一个庞大的天体。太阳大到可以容纳 100 万个地球，实际上比这还要多一点。我们发现在日食期间，当月球挡住来自太阳的光时，你实际上可以拍到紧靠太阳边缘、按理不应该被看到的恒星照片；有些恒星在物理位置上是处于太阳背后的，太阳和月亮本该挡住它们。但是来自恒星的光实际上绕着太阳弯曲了，因为太阳正在弯曲时空。那种程度的引力实际上在时空中产生了可测量的弯曲。
+
+<details>
+<summary>Original English</summary>
+And the amazing thing is that anything with mass, I mean, even even me to some tiny degree, it's very hard to measure for something as small as a human. We all bend space and time around us a little bit. The sun is incredibly massive. It's a gigantic object. You know, the the sun is so big you could fit a million earths inside it. Actually, a little more than that. And we actually found out that during solar eclipses, when the moon is blocking out the light from the sun, you can actually take pictures of stars that you shouldn't be able to see right up along the edge of the sun, there are stars that are physically behind the sun. The sun and the moon should be blocking them out. But the light from the stars actually curves around the sun because the sun is curving space and time. That amount of gravity actually creates a measurable curve in space and time.
+</details>
+
+时空本身——周围的空间看起来并不像任何坚固的东西，这里看起来似乎空无一物，但其实不然。空间和时间是可以改变的、可以弯曲的、可以扭曲的、可以拉伸的。所以当空间中存在大量质量的天体时——在这种情况下，我们谈论的是比单个星系还要巨大的质量；银河系拥有数千亿颗恒星，但宇宙中还存在包含数百、数千，甚至在某些情况下数百万个星系的星系团。
+
+<details>
+<summary>Original English</summary>
+Space and time itself. I mean that space does not seem like anything solid around us. I mean there's nothing really here but there is. Space and time are something that can be changed, can be bent, can be curved, can be stretched. So when you get objects in space that have lots of mass, and in this case we're talking, you know, even more massive than a single galaxy, the Milky Way galaxy has hundreds of billions of stars, but there are also clusters of hundreds or thousands, in some cases millions of galaxies.
+</details>
+
+那是在同一个地方汇集了大量的质量。当你有一个靠得非常近的星系团时，所有这些结合在一起的质量会在时空本身中造成相当巨大的弯曲，它实际上形成了一个天然的透镜。而你可以把透镜当作望远镜来使用。现在，这是一台由时空构成的望远镜。实际上是空间本身的曲率在汇聚光线。所以如果你设想有一个距离你较近的星系团（可能在数百万光年之外），但在更远的地方还有其他天体（距离数十亿光年的天体），而且在三维空间中它们位于那个星系团的后方。来自更遥远天体的光线必须绕过星系引力所创造的这个透镜。这实际上能够聚焦并放大光线。通过使用这个由时空构建的天然奇妙望远镜，你所能看到的距离甚至能超过我们最强大的望远镜原本应当展示给我们的极限。
+
+<details>
+<summary>Original English</summary>
+And that's a lot of mass in one place. When you have a cluster of galaxies all very close together, all of that combined mass creates quite a huge bend in space and time itself, it actually creates a natural lens. And you can use a lens as a telescope. Now, this is a telescope made out of space and time. It's actually the curvature of space itself that is focusing light. And so what you can do if you think about having a cluster of galaxies somewhat closer to you, maybe millions of light years away, but there are other things even farther away, things that are billions of light years away, and they're behind that cluster of galaxies in three dimensions. The light from the farther away objects has to curve around this lens that the gravity of the galaxies has created. And that can actually focus and amplify the light. You can actually see farther away than even our most powerful telescopes should be able to show us by using this natural wonderful telescope that's been built by space and time.
+</details>
+
+我们将这些天然望远镜称为**引力透镜**，因为光线确实是由引力本身进行透镜化并聚焦的。我们可以用它们来观察极其遥远的星系，现在在某些情况下甚至是单颗恒星。我们回望的是大爆炸后仅两三亿年的时代。而且透镜不仅会放大光线，有时还会将图像拆分成彼此对称的镜像。有时你会看到一个实际上被涂抹拉伸的星系。有时它们在太空中几乎构成奇特的幽灵般的面孔，因为你看到的星系镜像就像两只注视着你的发光眼睛。
+
+<details>
+<summary>Original English</summary>
+We call these natural telescopes gravitational lenses because indeed the the the light is actually lensed and focused by gravity itself. And we can use them to see galaxies or now in some cases even individual stars that are so far away. We're looking back to times that are only a couple hundred million years after the Big Bang. And the lenses don't simply magnify the light. They actually kind of break the images up sometimes into mirror images of each other. Sometime you'll see a galaxy that's actually smudged out. Sometimes they make almost kind of ghostly weird faces in space because you have mirror images of galaxies that look like two glowing eyes looking at you.
+</details>
+
+再次利用爱因斯坦的方程，你能做的非常酷的一件事是：你可以反推重构出该透镜原本必须是什么形态才能产生那些扭曲。你看到了来自更遥远星系的所有这些绕着该星系团弯曲的扭曲光线，这使你能够逆向追踪光线原本是如何绕星系团传播的，从而为你提供有关星系团自身实际质量以及这个引力透镜形状的线索。因此，这些透镜绝非简单，它们在太空中创造了我所见过的最富戏剧性、最神秘怪异的图像。一旦我们意识到太空中存在这些天然望远镜，你实际上就可以利用这些引力透镜看得比原本所能达到的更远。当然，现在每次我们看到星系团，都会观察其边缘，试图寻找是否有任何被透镜化的天体，看看我们能发现什么。
+
+<details>
+<summary>Original English</summary>
+And one of the really cool things you can do again using the equations of Einstein is you can kind of reconstruct what the lens had to look like to make those distortions. You're seeing all this distorted light from the more distant farway galaxies bending around this galaxy cluster. So that allows you to kind of retrace how the light had to move around the cluster that gives you clues about the actual mass of the cluster itself and the shape of this gravitational lens. So these lenses are by no means simple and they create some of the most dramatic eerie images in space that I've ever seen. Once we realized there were these natural telescopes in space, you could actually use these gravitational lenses to see even farther than you should. Of course, every time we see a galaxy cluster, now we're looking at the edges trying to find if anything's lensed, what can we see?
+</details>
+
+起初，我们看到的是被透镜化的星系，即包含数千亿颗恒星的整个家族。但随后我们开始意识到我们可以看到更小的东西。我们可以看到星团，甚至可能看到单颗恒星本身。哈勃空间望远镜沿着其中一个引力透镜边缘观测时，看到的是一系列模糊的小点。你可以看到所有这些小点排列成环状，就像项链上的珠子。非常精细的观测证明，所有这些小点实际上都是同一个天体；图像被引力透镜拆分了。我们意识到这个天体比一个星系要小得多。它可能是一个星团，甚至可能是一颗巨大的大质量恒星。我们回望的是大约 129 亿年前的时代，这个天体就是那么遥远，光花了那么长时间才到达我们这里。
+
+<details>
+<summary>Original English</summary>
+And to begin with, we were seeing lensed galaxies, you whole families of hundreds of billions of stars. But then we started to actually realize we could see smaller things. We could see just clusters of stars or or maybe even individual stars themselves. What the Hubble Space Telescope saw when it looked along the edge of one of these gravitational lenses was a series of little smudged out dots. You could see all these little dots kind of on on a ring like beads on a necklace. And very careful observations proved that all these little dots were actually the same object. The image was being broken up by the gravitational lens. We realized that this object was a lot smaller than a galaxy. It may be a cluster of stars. It may even be one huge massive star. But we're looking back to a time about 12.9 billion years ago. That's how far away this object is. The light took that long to get to us.
+</details>
+
+所以这颗正在发光的恒星处于宇宙诞生后、大爆炸后不到 10 亿年的时期。而我们通过引力透镜看到的这个奇特、扭曲的小图像，是我们所能见到的最古老的恒星。它被命名为埃兰迪尔（Earendel）。对于《指环王》的爱好者来说，这来自精灵语；对他们而言，埃兰迪尔是第一颗晨星。因此，我们目前还不知道它究竟是一颗单星还是一个星团，但我们正在回望第一代恒星点亮时的那个时代。我们认为——而且这项观测似乎也表明——那时的恒星极其庞大。它们的质量远比我们的太阳大得多，可能是太阳质量的 50 倍、70 倍，最高可达 100 倍。这些恒星寿命不长。我们看到的那颗恒星最多只存在了大约 100 万年，然后它就爆炸自我毁灭了。它现在已经不在那里了，但我们看到的是它 129 亿年前的样子。在某种意义上，天空中充满了美丽的幽灵。
+
+<details>
+<summary>Original English</summary>
+So this star that's shining is less than a billion years after the beginning of the universe after the Big Bang. And the strange little distorted image that we're seeing through the gravitational lens is the oldest star that we've ever been able to see. And it was named Arendel. For those of you that are fans of Lord of the Rings, this is from the Elvish language. Arendelle to them was the very first star. So, we don't know if it's actually a single star or a cluster of stars yet, but we're looking back to that time when that first generation of stars turned on. And stars back then, we believe and and this observation seems to to show, were gigantic. They were much more massive than our sun. Maybe 50, 70, up to 100 times as massive as the sun. And these stars didn't live long. That that star that we're seeing only lived about a million years at most. And then it blew itself up. It's not there anymore. But we're looking as it was 12.9 billion years ago. And in some ways, the sky is full of beautiful ghosts.
+</details>
+
+现在，在宇宙早期还有一个巨大的谜团。那就是，似乎存在着质量极大的黑洞——黑洞的质量是太阳的数十亿倍，有时甚至数百亿倍。而这些黑洞形成于大爆炸后不到 10 亿年的时代。所以大问题是：你是如何在这么短的时间内形成如此巨大的黑洞的？据我们目前的理解，要形成一个黑洞，你需要让一颗恒星经历其生命周期。恒星需要形成，在核心进行聚变反应。当聚变耗尽、聚变反应熄灭时，恒星自身的引力压迫会不断向内坍缩，没有任何力量能够阻止它。如果有足够的质量，坍缩就会一直进行下去，在引力本身中形成一个无底深渊，那就是我们所说的黑洞。那么，当恒星本身的存在时间并不长时，你又是如何得到相当于数十亿倍恒星质量的黑洞的呢？根本没有足够的时间让数十亿颗单独的恒星全部死亡、形成黑洞；也许在一个星系的致密核心，那些黑洞开始合并成一个大黑洞——好吧，但当时似乎根本没有足够的时间来完成这个过程。
+
+<details>
+<summary>Original English</summary>
+Now, there's another thing that's a big mystery at the beginning of the universe. And that is that there seem to be extremely massive black holes around black holes that are billions of times, sometimes even tens of billions of times the mass of the sun. And these formed back at a time, you know, say, you know, less than a billion years after the big bang. So the big question was, how do you form such a giant black hole so quickly? To form a black hole, as far as we understand it now, you need to have a star live its life. A star needs to form to diffuse things in its core. And then when that's done, when when the fusion reactions die out, the crush of gravity of the star keeps crushing in and there's nothing to stop it. And if you have enough mass there, it just keeps on going. It forms a bottomless pit in gravity itself. And then that's what we call a black hole. So how do you get black holes that are billions of times the masses of stars when stars themselves haven't lived very long? There hasn't been time for billions of individual stars to all die, form black holes. Maybe in the dense heart of a galaxy, those black holes begin to combine into one big black hole. Okay. But there just didn't seem to be enough time to do that.
+</details>
+
+詹姆斯·韦布空间望远镜开始观测到这些非常神秘、微暗且紧凑的天体。它们发生了极大的红移，这通常意味着它们极其遥远。光线必须穿过极其广袤的膨胀空间才能到达我们这里，光的波长被拉伸，从而变红，这被称为红移。对于这些天体，起初我们好奇它们是否是非常遥远的星系，但对于那么早的时代来说，它们显得非常有序且致密。这令人十分惊讶。而现在我们对这些小红点的发现确实令人震惊。我们可能真的找到了缺失的一环。这些天体可能被称为**伪恒星**（pseudo stars）或**黑洞恒星**（black hole stars）。
+
+<details>
+<summary>Original English</summary>
+The James Web Space Telescope started to see these very mysterious dim small objects. They're highly reened and and usually what that means is that they're very far away. The light had to pass through so much expanding space to get to us that the wavelength of light was stretched out and they they turned red. It's called the red shift. And these objects, at first we wondered if they were very distant galaxies, but they seemed very organized, very compact for that far back in time. That was a surprise. And now what we're finding out about these little red dots is really astounding. We actually may have found this missing link. It could be that these are something called pseudo stars or black hole stars.
+</details>
+
+其机制在于，当这第一代恒星开始形成时，确实存在着这些巨大的氢气云一同坍缩，它们直接坍缩成了黑洞。黑洞本身并不释放辐射，它们实际上无法让任何东西发光。但发生的情况是，极热的气体正围绕着这些黑洞旋转。黑洞的引力捕获了周围的气体，气体向黑洞坠落，可能形成了一个盘状结构；随着气体向黑洞加速下落，这个盘变得越来越热。
+
+<details>
+<summary>Original English</summary>
+The idea is when this first generation of stars began and yes, you had these giant clouds of hydrogen all collapsing together, they just went straight to black hole. Now, black holes themselves don't give off any radiation. They're they're not actually very useful to make anything shine. But what happens is that very hot gas is swirling around these black holes. The black hole's gravity traps gas around it that falls in toward the black hole and probably forms a disc that gets hotter and hotter and hotter as the gas is accelerated towards the black hole itself.
+</details>
+
+这一切开始吸引某种外壳，类似周围氢气云构成的茧状物。因此存在着这样一种延展的、球状的高温气体云，其发光几乎类似于恒星表面，但其内部提供能量的并不是聚变反应的光芒。它并不靠聚变发光。相反，黑洞周围的核心区域有高温气体在旋转，正是它照亮了周围的气体。现在我们有很多理由认为事实确实如此。现在我们实际在气体本身中、在光线中看到了线索，表明其内部有某些物质在以非常非常快的速度运动，甚至可能达到了光速的相当大一部分。存在一个围绕黑洞旋转的高温气体吸积盘。在某些情况下，我们实际上观测到了 X 射线。当气体温度达到数百万度时，就会自然产生 X 射线。因此，这再次证明了其内部存在非常非常炽热的气体。
+
+<details>
+<summary>Original English</summary>
+Now, all of this begins to attract kind of an an envelope, kind of a cocoon of hydrogen in the clouds around it. So there is this sort of extended kind of spherical hot cloud that's glowing almost like the surface of a star, but what's powering it inside is not the glow of of a fusion reaction. It's not shining. Instead, there's hot gas around a black hole swirling around at the core, and that is lighting up the gas around it. And now we have many reasons to think this is the case. Now we actually see clues in the gas itself, in the light that something is moving very very fast inside it, maybe even a substantial fraction of the speed of light. There is a disc of hot hot gas going around the black hole. And in some cases, we're actually seeing X-rays. X-rays are generated naturally when gases become millions of degrees hot. And so once again, that that's another proof that there's some very, very hot gas inside there.
+</details>
+
+这就是形成伪恒星的原因。它就像是一种“僵尸恒星”。并没有活跃的核反应在点亮这颗恒星；相反，里面有一个黑洞，有一个恒星的遗骸在其中，黑洞周围的环境条件点亮了这颗奇特的黑洞恒星。对这些黑洞恒星质量的初步估计是在太阳质量的 100 万倍左右。而这就是我们一直在寻找的缺失环节。恒星本身太小了，无法通过正常的坍缩、经历生命并汇聚来形成一个超大质量黑洞。但如果现在有许多紧密聚集的这种伪恒星呢？你便拥有了数百万倍太阳质量的构件，可以在极早期的星系核心开始拼装成这些巨型黑洞之一。关于这些大质量黑洞为何能如此迅速形成，我们现在或许已经知道了原因，或者至少有了非常充分的线索。
+
+<details>
+<summary>Original English</summary>
+And this is what's creating the pseudo star. It's sort of a a zombie star. I mean, there's no active nuclear reaction lighting up the star. Instead, there's a black hole that there's a stellar corpse in there, and just the conditions around the black hole are lighting up this strange black hole star. The initial estimate for the masses of these black hole stars is on the order of a million times the mass of the sun. And that's the missing link we were looking for. Stars themselves are too small to just collapse, live their lives, and get together somehow to form a big black hole. But what if now you have a lot of these pseudo stars all closely packed together? Now you have building blocks that are millions of times the mass of the sun to start putting together one of these giant black holes in the very early core of a galaxy. We may now know or at least have a very good clue about how these massive black holes formed so quickly.
+</details>
+
+所以实际情况确实如此富有戏剧性。这不是隐喻。我们真的希望能借助这种不可思议的回望效应，看到最初点亮的第一批恒星——有史以来存在过的最初恒星。向宇宙深处看得越远，光到达你这里的时间就越长，因此你回望的时间就越久远。我真希望在我的有生之年，我们能确认第一代恒星中的一员。它很可能是一颗巨星。我们将知道它是第一代恒星，因为除了大爆炸中创造的最简单的元素——氢、少量的氦，没有其他任何元素——之外什么都没有。那些恒星将教给我们很多关于我们是如何来到这里的知识：恒星形成的整个过程，最初的星系是如何组织成型的？这些巨型黑洞是否参与其中？它是否在星系周围聚集了形成星系的物质？我们希望亲眼见证这一过程的发生。我们希望能看到那些第一批星系的形成，然后从那里一步一步走来，不是去猜测宇宙是如何形成的，而是拥有真正的观测、真实的数据、真实的图像。
+
+<details>
+<summary>Original English</summary>
+So it it it really is as dramatic as this. This is not a metaphor. We actually hope to see the very first stars turn on. The very first stars that ever existed with that incredible look back effect. You know, the farther out in the universe you look, the longer light took to get to you. So the farther back in time you look. I really hope in my lifetime we identify one of the first generations of stars. It'll probably be a giant star. uh we'll know it's the first generation because there is nothing other than the simplest elements created in the big bang. Hydrogen, little bit of helium, nothing else. Those stars are going to teach us a lot about how we got here. The whole process of star formation. How did the very first galaxies organize themselves? Did these giant black holes have something to do with it? Did that actually sort of gather the material of a galaxy around it? We want to see that process happen. We want to see those first galaxies form and then from there step by step, not guess about how the universe formed, but have have real observations, real data, real images.
+</details>
+
+对我而言，向空间深处看得那么远、向时间久远回望那么深，带给我一种非常深刻的联结感。关于天体物理学，我一次又一次地强调：天体物理学不是研究遥远之物的学问，不是研究空间或时间中遥不可及的东西。所有这一切都是一个连续体，引向了此时此刻的这一瞬间，引向了我、我的身体、我的心智和我的经历。
+
+<details>
+<summary>Original English</summary>
+To me, looking that far out in space and looking that far back in time gives me a a really deep feeling of connection. Astrophysics, I keep saying this over and over again. Astrophysics is not the study of the very distant, you know, the very distant in in space, the very distant in time. All of this is a continuum that leads to this moment right here that leads to me, my body, my mind, my experiences.
+</details>
+
+所有这些汇聚在一起，让我短暂地拥有了意识。我有机会回顾自己所走过的道路。我这完全是从字面意义上讲的。令人惊奇的是，宇宙中唯一能够制造各种原子——我是指氧、碳、钙、铁、磷，我身体里的一切元素——唯一能制造这些的，就是恒星内部的天然聚变反应。宇宙刚开始时只有最简单的化学元素：氢、氦，一个质子、两个质子，仅此而已。因此我现在身边这间屋子里的一切，这里存在的所有东西，大部分都是在宇宙初期的那场盛宴中诞生的；回溯到大爆炸后几亿年的时代，当第一代恒星爆发式地喷射出令人惊叹的新物质、新化学元素和新原料，随后这些物质又去形成了其他新的恒星、行星等等，然后我便存在于此。因此，我现在体内的物质直接来自那个时代。所以，我只是在看着我自己的婴儿照。我知道这非常久远，但这就是此地的一切，这就是它的来源。
+
+<details>
+<summary>Original English</summary>
+I am all of that kind of brought together and made conscious for a brief time. I get a chance to look back at the path that I've taken. And I I mean that that I very literally. The incredible thing is that the only thing in the universe that makes atoms atoms I mean I mean oxygen, carbon, calcium, iron, phosphorus, everything that's in my body. The only thing that makes those are the natural fusion reactions inside stars. The universe began with only the the simplest chemicals. Hydrogen, helium, one proton, two protons. That's it. And so everything around me that's in this room right now, everything that's here, most of this was made at that party at the beginning of the universe, looking back a couple hundred million years after the Big Bang when the first generation of stars put out this amazing explosion of new matter, new chemicals, new material that then went on to form other new stars and planets and so on and and and here I am. So what's in me right now is from that time directly. And so I'm just looking back at like my own baby pictures. I know it's it's a long way back, but but that's what's here and that's where it came from.
+</details>
+
+### 第二章：我们如何捕捉到黑洞的首张图像
+
+>> 第二章：我们如何捕捉到黑洞的首张图像。
+
+<details>
+<summary>Original English</summary>
+>> Chapter 2. How we captured [music] the first image of a black hole.
+</details>
+
+作为一名科学家，我的挫败感之一在于，当前正在发生一些极其惊人、令人瞠目结舌的事情，而很多人根本没有意识到。现在正在发生的一些事情，我曾以为我们永远也做不到。我会把一个名为**事件视界望远镜**（Event Horizon Telescope）的合作联盟排在显要位置。事件视界望远镜的目标是为黑洞的暗黑核心成像——那是没有任何光线能传到我们这里的地方。这些天体的质量极其庞大。星系中央的黑洞质量是太阳的数百万或数十亿倍。然而奇怪的是，黑洞非常非常致密。因此，这些天体的物理体积实际上并不非常大。即使你有一个质量是太阳几十亿倍的黑洞，其事件视界的物理尺寸也并不比我们自己的太阳系大多少。比方说，行星轨道延伸至海王星那么远，这大约就是这种超大质量黑洞的尺寸。以人类尺度来看，海王星轨道对我们来说似乎很大；但当你在星系尺度上谈论时，对吧？我们的银河系直径有 10 万光年，像我们太阳系大小的物体是极其微小的。在整个星系的尺度上，它基本上是微小到无法测量的。
+
+<details>
+<summary>Original English</summary>
+One of my frustrations of being a scientist is that there are absolutely gobsmackingly amazing things going on right now that a lot of people just aren't aware of. There are things that are going on now that I never thought we'd be able to do. And one thing that I would put right up there is a consortium called the Event Horizon Telescope. The goal of the event horizon telescope was to image the dark heart of a black hole. The place where no light was coming to us. Now these things are massive. Black holes in the middle of galaxies are are millions or billions of times the mass of the sun. The strange thing though is that black holes are very very dense. So these objects are actually not very large. So even if you have a black hole that's a couple billion times the mass of the sun, the physical size of the event horizon is not much bigger than our own solar system. You know, say the orbit of the planets out to like Neptune. That's about the size of one of these super massive black holes. Now the orbit of Neptune seems like a large thing to us at human scales, but when you're talking about scales of galaxies, right? Right? I mean, our own galaxy is 100,000 light years across. Something the size of our solar system is tiny. You It's basically unmeasurable on the scale of a whole galaxy.
+</details>
+
+所以真正的难题在于：你如何为一个太阳系尺度的物体成像，同时我们还要在我们自己星系的核心、甚至是深空中其他星系的核心去观察它？为了做到这一点，他们需要建造尽可能最大的望远镜。这里有一个极佳的简单关系，这也是天文学家总是想造越来越大的望远镜的原因：望远镜的集光面积越宽，我是说镜面越宽——试想一台大型望远镜——镜面越宽，你生成的天空图像就越清晰。字面意义上，望远镜越宽，图像上的像素就越小。所以如果你想看到极其微小且非常遥远的东西，你就需要拍出一张极其清晰的照片。极其微小的像素才能分辨出这些巨型黑洞的位置。那么你能建造的最大望远镜是多大？今天我们正在建造拥有分块镜面的望远镜，也就是蜂窝状拼接镜面。即将投入使用的最大望远镜，镜面直径大约在 100 英尺左右。那确实是一台非常非常大的望远镜，100 英尺宽的镜面；但即便如此庞大，也绝对没有希望看清数百万光年外像太阳系这么小的物体。
+
+<details>
+<summary>Original English</summary>
+So, the the real problem was how can you you image something that is solar system scale, but now we're going to be looking at it either in the heart of our own galaxy or maybe even in other galaxies out in space. And to do that, they needed to construct the largest telescope possible. There's there's actually this wonderfully simple relationship. It's the reason astronomers always want to build bigger and bigger telescopes. Uh the the wider your telescope collection area is, I mean, the wider your mirror is, if you think about a big telescope, the wider it is, the clearer an image of the sky you make. I mean, literally, the smaller the pixels get on your image, the wider your telescope becomes. And so if you want to see something that's very small and very far away, you need to take an extremely clear picture. Tiny tiny little pixels will actually be able to tease out where these giant black holes are. So what's the biggest telescope you could possibly build? We are building today telescopes where there is a segmented mirror, sort of a honeycomb of mirrors. The biggest ones that'll be coming online soon, the mirrors are on the order of 100 ft across. Now that's a really really big telescope 100 ft across mirror but as big as that is that has absolutely no hope of being able to see something as as small as the solar system millions of light years away.
+</details>
+
+所以你需要更聪明一点，而这正是人类能够做到的。如果你能把并非物理连接在一起的望远镜连接起来呢？它们实际上分布在世界的不同地方。如果你能不知怎么把它们连接在一起，组成一台巨大的虚拟望远镜呢？这是一种被称为**干涉测量术**（interferometry）的技术。干涉测量术允许你利用相距极远的望远镜进行非常非常精确的测量。我们对观测时间进行极其精确的计时，以便在相同波长的光波穿过探测器时将它们捕捉下来。
+
+<details>
+<summary>Original English</summary>
+So you need to get a little more clever and and that is in fact what humans can do. What if you could link telescopes that are not physically together? They're actually different parts of the world. What if you could somehow link them together into one big virtual telescope? This is a technique called interferometry. Interferometry allows you to take very very accurate measurements from telescopes that are spread very far apart. We time the observations so accurately that we can actually catch those sort of same wavelengths of light as they go through the detectors.
+</details>
+
+这在我看来不可思议，因为当你考虑合并光线、合并来自所有这些不同望远镜的信号时，这些望远镜在很多情况下相隔数千英里，而地球本身是圆的、地球是弯曲的。因此在整夜观测天空的过程中，望远镜的位置一直在不断变化，地球在运动。我们通常不会去操心一颗恒星有多远。但在这个实验中，我们试图捕捉射来的光线的各个独立波前。因此你必须考虑到：在夜晚的某一时刻，恒星的光可能会先击中一台望远镜，然后再击中另一台；随着夜间自转和地球运动，这种情况还会发生改变。我曾想，他们怎么可能做得到呢？
+
+<details>
+<summary>Original English</summary>
+And this seemed incredible to me because when you think about combining light, combining a signal from all these different telescopes, the telescopes are in many cases thousands of miles apart and the earth itself is round. The earth is curved. So in the course of a night when you're observing the sky, the position of the telescopes are constantly changing. The earth is moving. We don't really think about worrying about how far away a star is. But in this case, we're trying to catch the individual wavefronts of light coming. So, you need to worry that at one time of night, the stars light may hit one telescope before another and then that will change as things rotate and the Earth moves during the night. I thought, how can they possibly do that?
+</details>
+
+但在 2018 年和 2019 年，事件视界望远镜项目尝试将全球八台不同望远镜的观测数据联系起来。有的望远镜在北美，有的在智利，有的在欧洲附近，实际上甚至有一台位于南极点。其核心思想是将所有这些望远镜连接起来，从而在虚拟层面构建起你的集光面积——如果你把它想象成望远镜的镜面，其有效集光面积就相当于地球那么大。望远镜遍布整个地球表面。如果它们在同一时间观测黑洞，并进行极其精确的测量以捕捉到穿过的同一列光波。如果后续将所有这些数据合并——当你把它们汇总在一起时，基本上就像把所有磁带同步播放一样——你就应该能有效地创造出如同拥有一台与我们行星等大的望远镜所测得的数据，这是你在地球表面所能制造的最大望远镜。
+
+<details>
+<summary>Original English</summary>
+But in 2018 and 2019, the event horizon telescope program tried to link up observations from eight different telescopes all around the world. There were telescopes that were in North America. There were some that were in Chile. There were some that were over by Europe. There was actually even one that was in the South Pole. And the idea was to link all of these telescopes so that virtually you're creating your collection area. If you think about the mirror of a telescope, the collection area is effectively as big as the Earth. You have telescopes dotted all the way around the planet. And if they all look at the black hole at the same time and measure things so accurately that they can catch the same waves of light coming through. If you combine all of that data later on, if you basically play all the tapes together when you bring it all together, you should effectively create a measurement as if you had a telescope the size of our planet, the biggest telescope you could possibly make on the surface of the Earth.
+</details>
+
+于是，所有这些望远镜开始观测一个距离我们大约略超 5000 万光年的黑洞，它位于一个名为 M87 的星系中。M87 是一个特别好的观测目标，因为我们知道那里有一个巨型黑洞。该星系中心有某种东西在喷射出超高能辐射；从能量核心喷射出的喷流向我们表明，其中心存在着围绕巨大黑洞旋转的高温气体盘。因此，它似乎是用该技术进行试验的绝佳候选对象。于是所有望远镜在同一时间对准该黑洞，非常仔细地记录光线进入探测器的方式。
+
+<details>
+<summary>Original English</summary>
+And so all of these telescopes began to look at a black hole that is about a little more than 50 million lighty years away. It's in a galaxy called M87. And M87 was a particularly good candidate because we knew there was a giant black hole in there. There was something in the heart of the galaxy that was spewing out super high energy radiation. There were these jets coming out of the core of the energy that to us suggested there was a swirling hot dis of gas around a huge black hole in the center. And so it seemed the perfect candidate to actually try this technique out on. And so all of the telescopes started to look at the black hole at the same time very carefully recording how the light was entering the detectors.
+</details>
+
+接下来就是将所有数据汇总在一起的壮举，实际上就是把来自世界各地的所有观测数据结合起来，就像是一台巨大的望远镜在注视着黑洞一样。我认为这其中特别动人的一点——这是一个富有人性色彩的故事——在于有一台望远镜位于南极点。南极点的望远镜当然可以使用电子邮件。你在那里至少能连接上某种信号，但没有足够的带宽来传回那么庞大的数据：精确的时间戳、所有不同的观测记录。信息量太大，以至于他们必须用飞机物理运回装有这些信息的计算机硬盘。如果要靠电子邮件传回，需要花费很多很多年。因此他们必须等待观测周期结束，因为当时南极点正值冬季，那段时间没有飞机可以降落。所以天文学家们整个冬天都滞留在那里。他们在那里运行望远镜，需要等待夏季到来才能将那些设备运回，从而真正获得来自那台望远镜的信息。因此他们最终运回了整整一吨的计算机硬盘——这同样不是比喻，字面意思上就是整整一吨的硬盘——然后由计算机科学家团队合作处理合并其中的数据。
+
+<details>
+<summary>Original English</summary>
+And then came the wonderful project of bringing all of that data together, actually taking all of the observations from around the world and combining them as if it were one big telescope looking at the black hole. One of the things that I thought was particularly charming about this, this is kind of of a human story is that um one of the telescopes was at the South Pole. Now, now the South Pole telescopes certainly have access to email. You know, you're able to have at least some signal linked down there, but there wasn't the bandwidth to send back that much data. the timing, all of the different observations. There was so much information that they had to physically fly back all of the computer hard drives with that information on it. It would have taken many, many years for them to try to email that back. And so they actually needed to wait until the observing cycle was done because it was it was it was winter in the South Pole. There are no planes that land during that time. So the astronomers were stuck down there for the winter. They do operate telescopes down there and they needed to wait for the summer to fly those things back and actually have the information from that telescope. So eventually they got literally a ton of hard drives and this is again not a metaphor. It was a ton a ton of hard drives from computers that they all had a computer scientist team work on combining the data from.
+</details>
+
+正如我所说，如果以前有人让我下注他们能否做成这件事，我肯定会说绝不可能。计时必须分秒不差，数据必须极其精准。但当他们开始逐一将望远镜的数据纳入，测量不同望远镜记录下的所有内容时，展现出来的是有史以来拍摄的最具震撼力的图像之一。当我第一次看到那张图像时，我几乎觉得我要失去平衡了。我感觉不到脚下的地面，因为在那张图像带有亮环的中心黑暗区域，你所注视的是一个我们没有现存物理学能够描述的地方。你所注视的是一个空间和时间在我们所理解的方式下已不复存在的地方。
+
+<details>
+<summary>Original English</summary>
+And as I said I mean this is one of these things that you know if you would have asked me to bet money on whether they could do this I would have said there's no way. I mean, the timing has to be perfect. The data has to be so accurate. But as they began to put one telescope in at a time, measure all of the things the different telescopes were taking, what emerged was one of the most dramatic images ever taken. And when I first saw that image, it almost felt like I was going to lose my balance. I I I couldn't really feel my feet underneath me because the dark part of the center of that image with the light ring around it, you're looking at a place there that we don't have the physics to describe. You're looking at a place where space and time do not exist in the way we understand them.
+</details>
+
+当你观察它时，黑洞周围由炽热气体构成的亮环，就是围绕事件视界阴影产生那种模糊亮环的原因。那些气体旋转得非常非常快。在最内侧部分，其速度甚至达到了光速的很大一部分。那个暗黑核心让我无法移开视线。我只是不停地看着它。它字面上就像黑洞一样把我直接吸了进去。你实际上在看着一个没有任何光线向作为观测者的你传出的黑暗区域。光线实际上折回落入了黑洞之中。我最初的疑问之一是：如果你观测星系核心的黑洞，事件视界本身难道不会被围绕它运行的气体盘挡住吗？气体盘很热也很亮。那么，想要看到它，唯一的可能是不是必须要求该气体盘的朝向刚好完美，使你能够正对着黑洞内部直视，而吸积盘没有遮挡它？
+
+<details>
+<summary>Original English</summary>
+Now, when you look at it, the hot ring of gas around the black hole is what creates that kind of smudgy ring of light around that shadow of the event horizon. And that gas is actually rotating very very quickly. At the very inner part, it's even going a significant fraction of the speed of light. The dark heart is something I just can't really take my eyes away from. I I I just keep looking at it. It It just I mean, it literally sucks me right in as a black hole might. You're actually looking at a dark area where no light is coming out to you, the observer. The light is actually going back into the black hole. And one of my first questions was, okay, if you observe a black hole in the heart of a galaxy, wouldn't the event horizon itself be blocked out by a disc of gas orbiting around it? The disc would be hot, it would be bright. So is the only way you could see it, if the disc were perfectly oriented, you could look stare right down the black hole and the disc wasn't blocking it.
+</details>
+
+事实证明并非如此。这个黑暗区域实际上比事件视界稍微大一些，它被称为**事件视界的阴影**。事件视界位于其中，而阴影的直径大约是事件视界的两倍半。它稍微大一些的原因是黑洞确实使其周围的时空发生了弯曲。因此，尽管事件视界是其内部的一个球形区域，但在稍远的地方，时空弯曲得如此剧烈，以至于原本应该到达你这里的光线实际上被黑洞捕获了。思考这个问题的一种方式是：假设光线朝向黑洞射来。当然，如果光线正对着进入事件视界、直接进入洞口，它就会被吸入黑洞深处。但如果光线射来只是掠过黑洞上方，它就会弯曲并击中黑洞的背面。因此在该区域内没有任何东西看起来是平整的。围绕黑洞确实有一个旋转的气体吸积盘，但时空本身的扭曲意味着你既能看到黑洞的后方，也能看到黑洞的前方。所以那张图像展现的是弯曲的时空。在某种程度上，黑洞的朝向甚至无关紧要；所有那些光线都绕着黑洞弯曲，你依然可以看到中间的那条路径。当你看着它们时，你既看到了它们的背面，同时也看到了它们的正面。我从未想过我们真的能目睹这一景象。但它就展现在那里，就在你眼前看着真实成像——那是一个我们大脑无法理解的地方，一个空间和时间本身都不复存在的地方。这一直让我感到震撼战栗。
+
+<details>
+<summary>Original English</summary>
+And that turns out to not be the case. This dark area is actually a little larger than the event horizon. It's called the shadow of the event horizon. The event horizon is in there, but then the diameter is just about two and a half times the shadow. And the reason it's a little bit bigger is that black holes really do bend space and time around them. So although the event horizon is sort of a spherical area inside there a little farther out, space and time is so bent that light that should be getting to you is actually captured by the black hole. One way of thinking of this is if you think about light coming in towards the black hole. Sure, if light comes right into the event horizon, right into the mouth, it gets sucked down into the black hole. But if light comes and just sort of skims the top of the black hole, it curves around and hits the back of the black hole. So nothing in that area really looks flat. I mean, there really is a disc of gas spinning around the black hole, but the distortion of space and time itself means you can see behind the black hole as well as in front of it. So that image is of bent space and time. In some ways, it didn't even really matter what orientation the black hole was. All of that light was curving around the black hole, and you could still see in to that path in the middle. And when you look at them, you see behind them at the same time you see in front of them. And I never thought we'd really be able to see that. But there it was. looking at something right in front of you, looking at an actual image that I mean, it's a place where our minds don't work. It's a place where space and time itself don't exist anymore. And and that continues to give me chills.
+</details>
+
+当你思考事件视界望远镜这类采用干涉测量术的技术时，它的功能如此强大，以至于你能够分辨并拍摄出 5000 万光年外黑洞的图像。我认为一个显而易见的问题是：那我们为什么不一直用这种方法呢？这看起来是一个极好的技术。原因在于它极难实现。它本质上是一个利用光量子力学特性的超大尺度**双缝实验**。你几乎可以把光想象成水池中的涟漪。当你往池塘里扔一颗石子，涟漪就会向外扩散。然后想象有一道开着两条狭缝的障碍物，涟漪涌向那面混凝土墙，穿过混凝土上的缝隙，各自形成小涟漪。这最终产生的是一种波的图样。当单个光子穿过这两条狭缝时，它实际上会形成一系列由于波自身相互干涉而产生的明暗条纹。暗部是光波基本相互抵消的区域——波峰和波谷相遇并相互抵消；而亮部则是一个波与另一个波相叠加、形成更大波动的区域。这就是所谓的干涉特性。
+
+<details>
+<summary>Original English</summary>
+Now, when you think about something like the event horizon telescope that uses this technique called interpherometry, and it's so powerful that you can actually resolve and make an image of a black hole that's 50 million lighty years away. Uh I think an obvious question is well then why don't we just always do that? That seems like a really good technique to use and the reason is it's extremely difficult to do. It is a large scale double slit experiment that actually uses the quantum mechanical nature of light. You can almost think of light as being like a ripple on a pond. You when you drop a pebble into a pond and ripples go out from it. And then think about having a barrier that has two slits in it. And that ripple is coming towards that concrete wall. The ripples then go through the gaps in the concrete and form their own little ripple. And what that creates eventually is a wave pattern. As one photon goes through these two slits, it actually creates a series of dark and bright lines where the wave has interfered with itself. The dark parts are areas where the light basically canceled itself out. There were waves going up and going down and they met and they canceled and then the bright areas are areas where one wave added with another and you get a bigger wave. And so this is the property called interference.
+</details>
+
+我们习惯于把双缝实验看作是在实验室里完成的事情，其中两条狭缝紧挨在一起，距离并不远，你可以想象一列光波穿过它们并发生干涉，这可能挺合情理。但现在通过干涉仪所做的是：你把这个跨度拉大到数百或数千英里的范围。没错，这是同一回事。它基于同一个双缝实验：当一列光波传来并击中南美的探测器，而同一列光波最终也击中了南极点的探测器；只要你记录得足够精确，你就能重建该干涉现象，使波与波之间相互干涉。令人惊奇的是，这在某种程度上相当于说单个光粒子——单个光子——实际上同时穿过了两条狭缝（在这种情况下是同时穿过了两台望远镜）。单个光子存在于相隔数千英里的地方。但只要你能精确记录下来，就能在两台望远镜中捕捉到同一个光子。
+
+<details>
+<summary>Original English</summary>
+You know, we're used to thinking of the double slit experiment being something done in a laboratory where the two slits are right next to each other. They're not very far away and you can sort of think about a light wave going through them and and interfering. And that may make some sense. But now what you're doing with an interferometer is you're doing that over the course of hundreds or thousands of miles. And yes, it is the same thing. It's based on that same double slit experiment when you have a wave of light coming and actually hitting a detector say in South America and that same wave of light then eventually coming and hitting a detector at the South Pole and you record it that accur that accurately you can actually reconstruct that phenomena that interference you can actually get the waves to interfere with each other. Amazingly, that that's kind of the equivalent of saying one particle of light, one photon actually passes through both slits, in this case both telescopes at the same time. One photon has existed thousands of miles apart. But if you can record it that accurately, you can catch that same photon in both of those telescopes.
+</details>
+
+实际上有些人好奇这项实验的深层影响有多深。我们尚未真正弄懂在多大程度上该从字面意义上去理解量子力学。它在数学上运行得极好，能够生成图像，完全按照方程预测的方式工作。但有些人好奇：当你表明同一个光粒子基本上同时存在于相距数千英里的望远镜中时，这意味着什么？这在某种程度上是否可能是存在多重现实的证明？如果事件视界望远镜包含八台不同的望远镜，是否就像是在某些现实中该波分别存在于每台望远镜中，但不知怎的又同时存在，而你将其合并成对光的一次测量，实际上形成了一台地球大小的望远镜？我丈夫是世界顶尖的干涉测量专家之一。他实际上是几十年前就开始在这个领域工作的人之一，他不喜欢多重现实这种说法。他只是说，我们必须接受关于我们自身现实的一点：作为人类和人类的心智、以及在我们所生活的尺度上，这一点并不直观，但存在一个更深层次的现实——实际上物体可以同时位于许多不同的位置。他不认为这必然意味着多重宇宙，但在我们的宇宙中（无论你如何定义它），一个粒子、一个光子可以同时存在于许多不同的地方。
+
+<details>
+<summary>Original English</summary>
+There are actually some people that that wonder how deep the ramifications of this experiment are. Um I mean we we don't yet really understand how literally to take quantum mechanics. It it works so well mathematically. It's able to take images. It works just the way the equations predict. But but some people wonder that when you say okay well the same particle of light is basically existing in telescopes that are thousands of miles apart. What does that mean? You know, in is it in some ways a possible proof that there are multiple realities? If there are eight different telescopes that are part of the event horizon telescope, is it kind of that there are realities where the wave was present in each of those telescopes separately but somehow also together and you combine that into one measurement of light into effectively one telescope that's the size of the earth. My husband was one of the world's leading interpherometrists. He was actually one of the people that started working in this field decades ago and he didn't like the idea that it was multiple realities. He just said, you know, one of the things we need to accept about our own reality that as human beings and human minds and and and that the scale that we live in, it's not very obvious, but there's a deeper reality that in fact in fact things can be in many different locations at once. He didn't think it was necessarily multiple universes, but in our universe, however you define that. Um, one particle, one photon can be in many different places at once.
+</details>
+
+对我们来说，有些相当怪异的事情正在发生，这是不可否认的事实，我很喜欢这一点。同样，我生活在一个三维的人类思维中，我很难完全理解周围的一切并不坚固、我们都具有波长、我们在某种程度上都是相互交叉的波、能量波这一观念。但是当你在干涉仪中把设备设置得像它那样精确时，你就能将这些特性辨析出来。因此干涉仪的要诀在于：你必须将仪器的精度校准到光波波长的尺度。那是极其微小的，在某些情况下完全是原子尺度的微观量级。因此，为了利用光的量子力学特性创造这种干涉来生成这幅图像，所有设备都必须调整到这种精度。在我们现有运行的一些干涉仪中，我们实际上可以把仪器校准得精确到一个或几个原子级别，实际上有移动的小车可以达到这种精度。在事件视界望远镜的案例中，关键在于在时间上记录得如此精确：能够精确记录每个微小的光波函数击中探测器的时间，最后将所有这些数据同步回放，利用光的量子力学特性（即光确实可以同时存在于多处），由此拼凑出一张图像。
+
+<details>
+<summary>Original English</summary>
+It's actually kind of hard to get around the fact that there is something pretty uh deeply weird to us going on. And I I love that. You know, again, I live in a three-dimensional human mind. I I really can't comprehend the idea that that everything around us is not solid, that we all have wavelengths, that we're all intersecting waves, waves of energy in some ways. But when you set things as accurately as you do in an interferometer, you tease that out. So the trick of an interferometer is you have to actually have the instrumentation set to the scale accurately to the scale of the wavelength of light. And that's tiny. That's something absolutely microscopic on the scale of of atoms in some cases. So in order to create this interference using this quantum mechanical nature of light to make this image, everything has to be set to that accuracy. And some of the interferometers we have working now. We can actually set the instrumentation so accurate that it to an atom or a couple of atoms actually have little carts that are moving that can set things to that degree of accuracy. In the case of the Event Horizon Telescope, it was about recording things that accurately in time, being able to time that accurately when each little wave function of light was hitting the detectors, and then playing all of that data together at the end, and using the quantum mechanical nature of light, that light really can be in many places at once, and piecing together an image from that.
+</details>
+
+### 第三章：引力波如何解答未解之谜
+
+第三章：引力波如何解答未解之谜。
+
+<details>
+<summary>Original English</summary>
+Chapter 3. how gravitational waves could solve unanswered questions.
+</details>
+
+>> 作为天体物理学家最困难的事情之一，就是被要求抛弃你那源自人类尺度甚至常识的直觉。我们周围存在着非常真实的事物，它们在实验上是真实的，但它们确实挑战着你去思考一个不同的宇宙——一个在任何时刻我们都身处其中遨游的更复杂的宇宙。存在着某种真实的东西。我们习惯于把空间和时间看作是抓不住摸不着的东西，那里真的空无一物，但事实并非如此。这并不是某种奇怪的理论构想，这是事实。我们知道时间会因引力而改变。我们现在的时钟非常灵敏，如果你站在房间里，你可以在你的脚边放一个钟，在你的头部放一个钟，你可以测量出脚边的钟比头部的钟走得慢，因为你的脚离地球的引力中心稍近一点，而引力会使时间变慢。这是真实的。你可以测量出空间本身实际上会收缩或压缩。
+
+<details>
+<summary>Original English</summary>
+>> One of the most difficult things about being an astrophysicist is being asked to leave behind your sort of human sense of scale and even your human sense of of common sense. Um there are things around us that are very real. They're experimentally real, but they really challenge you to think about a different universe, the more complex universe that we're all kind of swimming in at any given moment. There's something real. I mean, we're so used to thinking of space and time as being nothing you can grab hold of. I mean, there's there's really, you know, nothing there, but that's not real. And and this is not some sort of strange theoretical construction. This is fact. You know, we know that time changes because of gravity. We now have clocks that are so sensitive that if you're if you're standing in a room, you can put a clock at your feet and a clock where your head is. And you can measure that the clock where your feet is is going slower than where your head is because your feet are a little closer to the gravitational center of the Earth and gravity slows down time. That's real. You can measure that space itself can actually contract or compress.
+</details>
+
+对于两个物体之间的距离，我们习惯于认为拿根量尺就能弄清楚两件不同物体之间有多远。但空间本身是会改变的。同样，这不仅仅是一个想法，不仅是抽象概念，这是你切实能够测量的。随着我们在测量方面变得如此极其精确，人类在过去几十年中所做出的最不可思议的事情之一，就是测量到了被称为**引力波**的现象。
+
+<details>
+<summary>Original English</summary>
+So, you know, the distance between two objects. I mean, we're so used to thinking of, well, that that's dig a measuring stick, figure out how far two different objects are. But space itself can change. And again, this is not something that's just an idea, just something that's abstract. This is something you can really measure. And now that we're getting so good at measuring things so accurately, one of the most incredible things that humans have done in the last few decades is measure something called gravitational waves.
+</details>
+
+引力波的概念可以追溯到阿尔伯特·爱因斯坦。当然，阿尔伯特·爱因斯坦是真正揭示引力本质的人。引力在某种意义上是一种弯曲，是时空本身的某种几何结构，而他是从字面意义上这样定义的。具有引力的物体——哪怕我自己，在非常微小的程度上——实际上都在让周围的时空产生轻微的弯曲。
+
+<details>
+<summary>Original English</summary>
+The idea of gravitational waves goes back to Albert Einstein. And of course, Albert Einstein is the person that really figured out what gravity really is. Gravity is somehow a bending. It's somehow a geometry of space and time itself. And he meant that literally. Objects that have gravity, even myself, to a very small degree, I'm actually bending space and time around me just a little bit.
+</details>
+
+因此他预言的其中一点是：如果有质量的物体在运动，在时空中四处穿行，它们实际上也会在引力中制造波动。我们谈论的不是一直静止不动的东西。宇宙中有恒星相互绕转，万物都在宇宙中运动。伴随着这些运动，时空本身可能会产生涟漪。质量在运动时，就会产生引力波。
+
+<details>
+<summary>Original English</summary>
+So, one of the things he predicted is that if objects with mass are moving, moving around through space and time, they actually may create waves in gravity, too. We're not talking about things that are just standing still all the time. There are stars orbiting each other. Everything is moving around in the universe. And as that motion happens, there can be ripples in space and time itself. As masses move, they create gravitational waves.
+</details>
+
+对我们来说幸运的是，这些波极其微小。需要巨大的质量和极大的能量，才能在时空本身中激起显著且可测量的涟漪。因此总的来说，这些波时刻穿过我们的身体，但它们微小到根本无法让我们察觉。所以难题在于如何真正证实它们的存在、如何测量它们。甚至进一步说：如果我们能找到引力波，我们是否能通过接收来自极其遥远天体的这种波，从而对我们周围更广阔的宇宙有所了解？
+
+<details>
+<summary>Original English</summary>
+Now, luckily for us, these waves are quite small. It takes a lot of mass and a lot of energy to actually make a noticeable ripple, a measurable ripple in space and time itself. So, by and large, these waves are going through us all the time, but they're much too small for us to really notice. So, the problem is how to actually prove they're there, how to measure them. And then maybe even go a step further. If we can find gravitational waves, can we actually learn something about the larger universe around us by picking up these waves from very very distant objects?
+</details>
+
+阿尔伯特·爱因斯坦预言了引力波遍布我们周围。但他个人认为它们太微弱了，以至于我们永远无法探测到它们。他认为人类绝不可能拥有能够直接测量引力波的技术。为什么会这样呢？幸运的是，引力波对时空的收缩幅度非常微小。穿过我们的引力波并没有将我们的物质撕裂。引力波压缩时空的因子——即压缩的幅度——是 $1/10^{20}$。这意味着：想象一个分子为 1 的分数，分母是 1 后面加上 20 个零。$1/10^{20}$ 就是引力波对物体的压缩比例。如果你试图在比如我身体大小的尺度上去测量这个因子，我现在站在这里，去测量 $1/10^{20}$ 的收缩，它是如此微小以至于几乎是不可测量的。所以当时的想法是：如果我们在更大的距离上去观测呢？它依然会收缩同样的比例 $1/10^{20}$，但现在你有更大的距离来尝试测量收缩的总量。
+
+<details>
+<summary>Original English</summary>
+So, Albert Einstein predicted that gravitational waves are all around us. But he personally thought they were so small that we would never be able to detect them. He didn't think that humans would ever have the technology to actually measure directly a gravitational wave. Well, so why not? Well, luckily for us, the amount that a gravitational wave contracts space and time is very small. You know, our matter is not being ripped apart by gravity waves going through us. And the factor of compression, how much a gravity wave compresses space and time is 1 / 10 to the 20th. So, what that means is think about a fraction, one on top. Now, take a 1 and put 20 zeros behind it. 1 over 10 the 20th is how much a gravity wave contracts things. So if you're trying to measure that factor over something say the size of my body right okay so so here I am now now measure a contraction of 1 over 10 the 20th that's so small it's it's probably unmeasurable so the idea was what if we look over a larger distance it's still going to contract by the same thing 1 over 10^ the 20th but now you've got a bigger distance to try to measure that amount of contraction
+</details>
+
+于是诞生了一个极具雄心的构想——LIGO。LIGO 代表激光干涉引力波天文台（Laser Interferometer Gravitational-Wave Observatory）。一个设在路易斯安那州，另一个设在太平洋西北地区的华盛顿州。在两处设施中，各有两个臂长均为 2.5 英里的激光干涉臂，构成一个直角。其设计原理是两边的长度应该完全相同。利用干涉测量术，你可以证明两束光束的传播距离完全一致。随后发生的情况是：引力波穿过，引力波实际上会改变空间本身，它压缩了空间。引力波以光速传播。因此一个探测器中会出现轻微晃动，而在光传播到另一个探测器所需的精确时间内，另一个探测器也会出现完全相同的晃动。这意味着这束激光相比于另一束发生了一点点收缩。它们不再具有完全相同的距离。由此你便知道有某种情况发生了变化。通过激光在两端反射镜之间的来回反射，你实际上可以测量出当引力波穿过时，其中一条臂的距离长度确实发生了收缩。建造这样一个设施是不可思议的成就。
+
+<details>
+<summary>Original English</summary>
+and so there was this incredibly ambitious idea called LIGO. And LIIGO stands for the Laser Interferometric Gravitational Wave Observatory. There's one in Louisiana and one in Washington State in the Pacific Northwest. And in both of these places, you have these two lasers 2 and a half miles long on each arm. And they form this corner. And the idea was the two sides should be exactly the same length. And using interferometry, you can show that the light beams are exactly the same length. So now what happens is that a gravity wave comes through and a gravity wave actually changes space itself. It actually compresses space. Gravitational waves travel at the speed of light. So there would be some little wobble in one detector and then exactly the time it takes light to get to the other one, there'd be the same wobble as well. That means that this laser beam contracts a bit compared to this one. They're no longer the same exact distance. And now you know that something has changed. You can actually measure with the lasers bouncing off mirrors on each end that in fact the distance the length of one of them has contracted as a gravity wave comes through. That's an amazing thing to build.
+</details>
+
+我希望大家花一秒钟体会一下这一点，因为这些激光束必须处于真空管道中。你必须确保没有空气流动来干扰你的信号。它们需要被安置在地质极其稳定的地方。正如我之前所说，收缩比例是 $1/10^{20}$。因此在 LIGO 激光臂的尺度上（LIGO 的激光臂长达 2.5 英里），该收缩尺度大约比单个质子还要小一千倍。质子是构成原子核的粒子，而收缩量比它还要小一千倍。这就是当引力波穿过时，一条 2.5 英里长的激光光路所收缩的幅度。想象质子有多微小就已经是我大脑难以形象化的事情了，我的思维完全无法处理。我听过的最佳比喻之一是：这种收缩相当于测量到最近恒星的距离（离我们最近的恒星距离略超 4 光年），而这段距离收缩的幅度相当于一根人类头发丝的粗细。这就是我们追求的精度。这就是 LIGO 试图测量的目标：其空间收缩量相当于在测量从这里到最近恒星的距离时，精确到一根头发丝宽度的水平。这太令人惊叹了。
+
+<details>
+<summary>Original English</summary>
+I want you to think about that for a second because these laser beams have to be in vacuum chambers. You have to make sure there's no air flowing through that's actually going to disrupt your signal. They need to be placed in a place that's very geologically stable. And as I said before, the contraction is 1 over 10 to the 20th. So at the scale of the LIGO lasers, LIGO lasers again 2 and a half miles long, that scale would be about a thousand times smaller than a single proton. A proton, the particle that that makes up the nucleus of an atom, a thousand times smaller than that. That's how much a 2 and a half mile laser will contract when a gravity wave goes through. Now, even thinking about how tiny a proton is is something that I I don't really conceptualize. It's nothing that my mind can really do. One of the best analogies I've ever heard is that this contraction is equivalent to measure the distance to the nearest star. The nearest star to us is a little over four light years away. And that distance is going to contract by the thickness of a human hair. That's the accuracy we're looking for. That's what LIGO is trying to measure. the equivalent contraction in space as if you were measuring from here to the nearest star to the accuracy of the width of a human hair. That's amazing.
+</details>
+
+而在探测器内部，原子本身在运动。原子具有热运动，具有一定的温度。即使探测器是由金属、硅、导线等构成，让我惊讶的是原子自身的运动幅度都会远大于这一收缩量。你到底该如何从中发现信号呢？这就引出了科学家的定义：科学家常谈到“噪声”这个术语。我们通常把噪声当成声音，是烦人的、不想要的东西，你想把它隔绝开来，想要降噪耳机。而当科学家谈论探测器中的噪声时，他们指的是探测器本身及其周围环境实际上产生了你所不需要的信号。原子在运动，考虑到那种测量精度，任何地面微小的震动，任何温度的变化，与你正在寻找的极其微小的波相比，都会产生巨大的变化。那么，当你寻找的目标甚至远小于探测器本身及其周围环境的常规运动时，你究竟该如何分辨出引力波的存在呢？
+
+<details>
+<summary>Original English</summary>
+Now, inside the detector, the atoms themselves are are moving around. Atoms have some motion. They have some temperature. You even if the detector is made of metal and silicon and wires and all of this, the thing that amazed me is that the atoms themselves would be moving around more than that. How would you even find the signal? And and this actually leads us to the definition. Scientists talk about the term noise. And um we think of noise as a sound. It's something that is is annoying. It's something that you don't want. You want to block out. You want your noise cancelling headsets. When when scientists talk about noise in a detector, they mean that the detector itself and the environment around it is actually creating sort of signal that you don't want. The atoms are moving around. I mean, when you think about that scale of accuracy, you probably anytime there's a little shift in the land and you anytime the temperature changes, there's going to be a huge change compared to these tiny little waves you're looking for. So, how do you even tease out the existence of gravitational waves when what you're looking for is so much smaller even than the regular motion of your detector and all the environment around it?
+</details>
+
+这就是为什么需要两个探测器。因为如果你有两个探测器，它们内部可能都存在这种噪声——都有某种运动，原子都在做各自的运动。但如果在这些噪声之下，你不知何故能看到存在一个比噪声还要小的模式，而且两台探测器在同一时间出现了完全相同的模式，那么我们就能断定：这是一次真实的探测。
+
+<details>
+<summary>Original English</summary>
+And that's why you have two of them. Because if you have two detectors, they probably all have this noise. There's some motion. The atoms are doing their thing. But then underneath that, if you could somehow see that there's a pattern even smaller than the noise, that's the same pattern in each of them at the same time, then we'll be able to say, okay, that was a real detection.
+</details>
+
+于是这些不可思议的设施——LIGO 天文台建立了起来。它们全部经过了检验测试。他们花了数年时间来评估这种噪声的规模，弄清楚如何将其降至最低。随后它们关闭了几年以升级所有设备，让系统更稳定，让激光功率更强。2015 年，设备启动并开始测试。它已经运行了几个月；事实上 LIGO 当时仍处于工程调试阶段，当时甚至并未开始采集实际数据。
+
+<details>
+<summary>Original English</summary>
+So these incredible facilities, the LIGO observatories were built. They were all checked out. They had spent some years characterizing how big this noise was, figuring out how to minimize it. And then they went down for a couple years to upgrade everything, make everything more stable, make the lasers more powerful. And in 2015, it was turned on and it began testing. It had been running for a couple of months, and in fact, LIGO was still in its engineering checkout. It actually wasn't taking real data at the time.
+</details>
+
+然后在 2015 年 9 月 14 日，极其惊人的事情发生了。当然，探测器中有大量的噪声，但其中一台探测器出现了一个奇怪的微小振动。我们称之为“啾啾声”（chirp）。而在光线从一台探测器传播到另一台探测器所需的精确时间内，另一台探测器中也观测到了完全相同的模式、完全相同的“啾啾声”。这真的是引力波吗？这件事如此意义深远，甚至在我讲给你听的此刻，我都能感到寒毛直竖。是的，事实证明确实如此。他们真正发现了一个真实的引力波，是人类有史以来探测到的第一个引力波。而他们所发现的内容绝对令人震惊。
+
+<details>
+<summary>Original English</summary>
+And then on September 14th of 2015, something absolutely astounding happened. Sure, there was plenty of noise in the detectors, but there was a weird little shake in one. We actually called it a chirp. And that exactly the time it took light to travel from one detector to the other, the same the exact same pattern, the exact same chirp was seen in the other one. Was this really a gravitational wave? This is something so profound that even as I'm telling you this, I can feel my my hair standing on end. Yes, it turns out it was. They had actually found a true gravitational wave. the first one ever detected by humans. And what they found was something absolutely astounding.
+</details>
+
+我现在必须彻底转换尺度了。我们刚才讨论的是极其微小的物理量，引力波比单个质子还要小一千倍。而现在我们需要转向宇宙所拥有的最大尺度：因为在 14 亿年前发生了某种事件，它剧烈地激荡了空间，以至于时空的剧烈震动被探测器捕捉到了。那是什么？结果表明，那是两个巨大的黑洞——相当于太阳质量 30 倍的两个黑洞。它们位于大约 15 亿光年之外的一个星系中。很久以前，两个黑洞彼此相互绕转，速度越来越快、越来越快。在 0.2 秒之内，它们相互坍缩合并，最终形成了一个单一的巨大黑洞。
+
+<details>
+<summary>Original English</summary>
+I now have to completely switch scales. We've been talking about things that are so small, gravitational waves being a thousand times smaller even than a single proton. Now, we need to go to some of the largest scales the universe has because something happened 1.4 4 billion years ago that rippled space so much it actually shook space and time so much that it was picked up by the detectors. And what was that? It turns out that it was two giant black holes. Two black holes that were on equivalent of 30 times the mass of the sun. And they were in a galaxy that was approximately 1 and a half billion lightyear away. A long time ago, two black holes were orbiting each other and they began to go faster and faster and faster. In 02 seconds, they collapsed into each other and eventually formed one single large black hole.
+</details>
+
+因此在 0.2 秒的时间里，我们捕捉到了这两个黑洞在合并成单一黑洞之前绕转的最后几圈。我们捕捉到了被称为**黑洞合并**的事件。其规模之大、过程之剧烈让我感到震撼，是我完全无法在脑海中充分处理的。这两个黑洞的质量都约为太阳的 30 倍；在 0.2 秒内，我们捕捉到了它们的加速过程。当我们发现它们时，它们的速度已经极快，大约达到光速的 30%。而在 0.2 秒内，它们从光速的 30% 加速到了光速的 60%。两个天体，各自都具有 30 倍太阳质量。我认为这值得深思片刻。释放出来的并不是以光形式表现的能量，而是通过这些引力波释放的能量。15 亿年前，这些黑洞发生碰撞并在时空中造成了巨大的涟漪扭曲，穿过了如此漫长的时间与空间来到我们这里，引起了这些探测器的轻微晃动，而我们真正找到了它。
+
+<details>
+<summary>Original English</summary>
+So in 02 seconds, we caught the very very last passages around these black holes before they collapsed into one single black hole. We caught something called a black hole merger. And the scale of this and the violence of this is something that astounds me. Is something that I actually don't have any ability to process. Both of these black holes being about 30 times the mass of the sun in 2 seconds we caught them accelerating. They were going very fast when we found them. They were going about 30% the speed of light. And in 2 seconds they accelerated from 30% the speed of light to 60% the speed of light. two objects that were both 30 times the mass of the sun. I think that bears just thinking about that for a second. It wasn't energy that came out in light. It was energy that came out in these gravitational waves. One and a half billion years ago, these black holes collided and distorted space and time so much in a giant ripple that it came across that much time and space to us and wobbled these detectors. And we were able to actually find that.
+</details>
+
+获得这第一次单次探测耗费了数十年的时间，而现在它几乎成了司空见惯的事。LIGO 很快陆续发现了许多起这类黑洞合并事件。甚至还有更小的天体——被称为中子星的死亡恒星，现在你可以看到它们旋进聚集在一起。因此天体物理学迎来了一个全新的前沿领域：**引力波天文学**。我们实际上能够测量这些超高能剧烈事件在时空中激起的涟漪。
+
+<details>
+<summary>Original English</summary>
+It took decades to actually get that first single detection and and now it's almost commonplace. So LIGO went on very quickly to find many of these black hole mergers. Uh there were even smaller objects, dead stars called neutron stars. You can now see these spiraling together. And so now there's this whole new frontier in astrophysics, gravitational wave astronomy. We can actually see we can actually measure the ripples in space and time from these ultra high energy violent events.
+</details>
+
+引力波天文学的“圣杯”之一，就像人们问：“你的梦想是什么？它最终可能探测到什么？”答案是：我们也许能够探测到大爆炸、即宇宙起源时遗留下来的引力波。当然，我们面临的最大疑问之一是：为什么会发生大爆炸？是什么引发了它？它是如何展开的？天文学家当然不认为宇宙是从虚无中凭空出现的；我们认为大爆炸绝对源于某种先在状态。问题在于如何去描述当时的宇宙状态，因为万物处于如此极端的温度和密度之下，我们认为我们所经历的时空在当时其实并不存在。时空是在宇宙膨胀之后才形成的。物理学极难去描述时空诞生之前存在的事物。但是现在可能有穿越我们身体的引力波，它们正是那个时代、那个事件的遗迹。
+
+<details>
+<summary>Original English</summary>
+and and one of the the sort of holy grails, one of the things it's like they say like, "What are your dreams? What could this possibly ever see?" Well, it may be that we'll be able to detect gravitational waves that were even left over from the Big Bang, from the beginning of the universe. And and of course, you know, one of the big questions we have is is why did the Big Bang happen? What caused it? How did it unfold? Astronomers certainly don't think that the universe emerged from nothing. We think there absolutely was something that the big bang came from. The question is even trying to describe the state of the universe because everything was at such high temperatures and densities that we actually believe that what we experience as space and time didn't really exist. That came later after the universe expanded. It's awfully hard to have physics to describe something that came before space and time emerged. But there may be gravity waves going through us right now that are actually relics from that time, relics from that event.
+</details>
+
+我认识很多参与 LIGO 项目的人。作为个人，我此前真的认为他们做不到这种测量。我当时想：你怎么可能捕捉到整条长度仅收缩 $1/10^{20}$ 倍的变化呢？但他们做到了。现在下一步是：如果我们能在 2.5 英里长的激光上测量到它，如果我们能把激光做得更长呢？事实上，如果我们把激光放到太空中去呢？如果你能把这种干涉仪的组件放置在远过月球的地方，或者最终放置在土星之外的太阳系深处呢？通过这种方式，我们或许能够合并这些信号，建立起一个太阳系尺度的引力波干涉仪。那样我们将能够看到更多的东西，包括质量小得多的天体。它的灵敏度更高，我们可以更深入地探究周围时空如何振动的细节。这可能成为探索那些完全黑暗、没有任何光线发出的区域的一种途径。
+
+<details>
+<summary>Original English</summary>
+So I knew many people that were involved in the LIGO project. I it was one of the things that as a person I I I actually thought they wouldn't be able to make the measurement. I was like how are you going to catch something where the entire length is going to contract by a factor of 1 over 10 the 20th? They did. And now the next step is well if if we could find that over a 2 and a half mile long laser what if we can make the lasers even longer and in fact what if we could take the lasers into space. What if you could put one of the components of this interferometer you know all the way out past the moon or maybe eventually even past Saturn you know in the the distant parts of our solar system. It may be a way that we could combine those signals and actually build one of these gravitational wave interrometers. That's the scale of our solar system. Then we may be be able to see many more things, you know, things that are much less massive. It's more sensitive. We can actually delve deeper into the details of how space and time are vibrating all around us. It may be a way to explore places that are completely dark, places that no light is coming from.
+</details>
+
+因此在我的天文学家生涯中，我认为最重大事件之一，就是当那些探测器以极其极其微小的方式发生振动的时刻。那是来自 15 亿年前事件的涟漪——当时存在着在能量释放上彻底使宇宙其余部分相形见绌的黑洞。那是真实的。那就是此时此刻环绕在你周围的时空，它正如同钟声一般在振鸣回荡。而我们未来还将发现什么呢？
+
+<details>
+<summary>Original English</summary>
+So in my career as an astronomer, I would have to say one of the most significant things that happened was when those detectors shook in that tiny tiny little way. Ripples from an event, you know, one and a half billion years ago that there were these black holes that just completely outshone the rest of the universe in terms of energy. That's real. That's actually the space and time around you right now. And it's ringing like a bell. And what else are we going to find?
+</details>
+
+每年四次，我们印制一份值得您放下手机阅读的杂志。Big Think 的高品质印刷杂志由精美原创艺术设计与来自全球顶尖思想家的专业见解共同打造。没有 AI 废料，没有博人眼球的诱饵，只有为好奇之人提供的宏大思想。支持您希望在世界上看到的媒体，请访问 bigthink.com/membership 加入我们。
+
+<details>
+<summary>Original English</summary>
+Four times a year, we print a magazine worth putting your phone down for. Big Think's premium print magazine is built with custom artwork and expert insight from the world's biggest thinkers. No AI slop, no ragebait, just big ideas for curious people. Support the media you want to see in the world. Go to bigthink.com/membership to join.
+</details>

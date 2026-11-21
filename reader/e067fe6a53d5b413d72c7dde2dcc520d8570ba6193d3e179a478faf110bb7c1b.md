@@ -1,0 +1,477 @@
+---
+author: AI Engineer
+date: '2026-10-07'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=exiwa9QbQXI
+speaker: AI Engineer
+tags:
+  - software-factory
+  - ai-agent
+  - autonomous-system
+  - software-engineering
+title: 软件工厂：从输入信号到生产代码的自主工程系统
+summary: Factory 团队的 Davis Palmie 阐述了“软件工厂”概念，探讨 AI 工程如何从 Token 补全、文件生成跨越到自主系统。他提出了模型与工具无关性、全生命周期集成及 Agent 就绪度评估模型，并主张以实际业务产出而非 Token 消耗量来衡量效能。
+insight: ''
+draft: true
+series: ''
+category: software-development
+area: tech-engineering
+project: []
+people:
+  - Davis Palmie
+companies_orgs:
+  - Factory
+products_models: []
+media_books: []
+status: evergreen
+---
+### AI 工程的三大演进时代与软件工厂
+
+大家好，我是 Davis Palmie，Factory 的技术团队成员。在此之前，我联合创立了 Lone Metric，一个面向投资团队的 Agent 平台，该项目入选了 Y Combinator 并最终被 Factory 收购。更早之前，我是 Slalom 创新实验室的工程负责人。因此，我亲历了大型企业以及更多 AI 原生组织中的 AI 部署。基于这些背景，今天我将与大家探讨“软件工厂”（Software Factory），以及如何迈向一个能够将输入信号直接转化为生产代码的自主系统。
+
+<details>
+<summary>Original English</summary>
+[Speaker 1]:  hey，
+[Speaker 1]:  folks，
+[Speaker 1]:  i'm davis。
+[Speaker 1]:  pall me a member of technical staff here in factory before this，
+[Speaker 1]:  i cofounounlonew metric，
+[Speaker 1]:  which was an agent platform for investment teams that we took three white combator and was acquired by factory。
+[Speaker 1]:  and prior of that，
+[Speaker 1]:  i was a engineering lead for slolums innovation lathem。
+[Speaker 1]:  so i've en en ai deloloyments，
+[Speaker 1]:  both across large terpriprand，
+[Speaker 1]:  more ai native ororms。
+[Speaker 1]:  with that mind today，
+[Speaker 1]:  i'm going to be talking to you about the software factory and how you can move towards an autonomous system that translates input signals interproduction code。
+</details>
+
+首先，我们经历了 AI 工程的三个不同时代。
+
+最初，我们拥有 Tab 键自动补全与下一 Token 预测，工程师仍然牢牢掌握着控制权；接着，AI 能够生成整个文件，软件工程师随之变成了一名有鉴别力的“复制粘贴者”，但对 AI 的输出仍保持着严密的控制；随后出现的 Agent 则与代码更加紧密结合，它们能够自行搜集上下文、调用工具并调试自身输出。
+
+曾经让人觉得神奇的自动补全，如今充其量只是个老古董。回顾过去，你会看到 AI 工程正以极快的速度攀登抽象阶梯：从 Token 到文件，到上下文，如今已跨越到整个系统。每一次转变都是一种调整，但沿抽象阶梯的每一步跃升，都让工程师变得更有价值，而不是更无足轻重。
+
+<details>
+<summary>Original English</summary>
+[Speaker 0]:  so first，
+[Speaker 1]:  we moved through three distinct erras of AI engineering。
+[Speaker 1]:  first，
+[Speaker 1]:  we had tab auto complete next tokan prediction，
+[Speaker 1]:  and the engineer was still firmly in the driver seat，
+[Speaker 1]:  then AI could generate entire files，
+[Speaker 1]:  and the software engineer became a bit of a discerning copy pastter，
+[Speaker 1]:  but they still heheavhad control over the output of the ai。
+[Speaker 1]:  and then you had agents that were more tightly，
+[Speaker 1]:  coupled with the code they could gather their own context，
+[Speaker 1]:  calall tools and debug their own output。
+[Speaker 1]:  now autto complete，
+[Speaker 1]:  use the field magical。
+[Speaker 1]:  and now adbest sit's。
+[Speaker 1]:  it's a quint thing。
+[Speaker 1]:  we remember you want to look the speed at which ai engineering is climbing the abstraction letter from tokens to file the context。
+[Speaker 1]:  now to entire systems，
+[Speaker 1]:  every shift you have here is in adjustment，
+[Speaker 1]:  but each move up the abstraction letter。
+[Speaker 1]:  he's made engineers more valuable，
+[Speaker 1]:  not less。
+</details>
+
+如今我们正处于一个变革点。工程师正从敲写代码转向治理 Agent，并最终将这些 Agent 组织成一个系统——这就是软件工厂。
+
+在此模式下，工程师的角色转变为：筑牢安全护栏、捕捉代码偏离，并设定高层级的优先级与方向。与此相应，系统则负责摄取错误报告或用户反馈等输入信号，并输出生产级代码。
+
+<details>
+<summary>Original English</summary>
+[Speaker 1]:  and so now we're a transformational point。
+[Speaker 1]:  engineers are going from typing code to governing agents evenventually 'll organize those enents a system that's yourself for a factory。
+[Speaker 1]:  so with this，
+[Speaker 1]:  the engineers role shifts to keeping gardreel's tight catching coo drift and setting the high level priorities interaction。
+[Speaker 1]:  but meanwhile，
+[Speaker 1]:  the system is interesting input signals like but reports are user feedback and outputting production code。
+</details>
+
+### AI 规模化生产中的四大核心拷问
+
+如果 AI 系统产出的代码量超过了人类，所有人自然都会提出几个重大的疑问：
+
+第一，**我该如何防止严重的成本超支？**
+我们都见过相关头条：Uber CTO 到四月份就花光了全年的 AI 预算，或者微软收回云代码许可证以试图削减开支。在 Factory，你不会被绑定在单一模型供应商上，这意味着你解锁了整个性价比光谱。对于大语言模型，你需要的是针对每项任务实现最大成本效益与满足要求的最低有效性。正如我们 CEO 常说的：如果你的孩子需要代数家教，你完全能找到比亚尔伯特·爱因斯坦便宜得多的人选。
+
+第二，**我如何确保能够获得当前最强模型的最佳访问权限？**
+我们认为必须押注某一匹黑马本身就是个伪命题，尤其随着开源模型的效果不断提升。我们坚决主张为合适的工作选择合适的工具，甚至现在就可以实现动态路由。
+
+<details>
+<summary>Original English</summary>
+[Speaker 1]:  so if you have AI systems that are producing more code than humans，
+[Speaker 1]:  there are some big questions that everyone is rightly asking first。
+[Speaker 1]:  how can i prevent massive cost overruns？
+[Speaker 1]:  we've all seen the headlines about uber cto blowing through the years aii budget by april or microofoft liwing back cloud code licenses to try and cut down on spent and factory。
+[Speaker 1]:  you're not locked into a single model provider，
+[Speaker 1]:  and this means you unlocked the entire spectrum of cost of performance with l lims，
+[Speaker 1]:  you want the maximum cost efficiency and the minimum effectiveness necessary for each task。
+[Speaker 1]:  as our CEO likes to say，
+[Speaker 1]:  if your kid needs a algbra tutor，
+[Speaker 1]:  you can definitely find someone cheaper than albert einstein。
+[Speaker 1]:  second point，
+[Speaker 1]:  how can i ensure the best access to whatever model is top right now？
+[Speaker 1]:  well，
+[Speaker 1]:  we think that having the back the right horses，
+[Speaker 1]:  a false choice，
+[Speaker 1]:  um especially with the increasing effectiveness of open source models，
+[Speaker 1]:  were strong opponents of being able to choose the right tool for the right job，
+[Speaker 1]:  or even now have it dynamically rounded。
+</details>
+
+第三，**软件工程师的未来会怎样？软件工程的未来是什么面貌？**
+显然，这个角色正在演变，产品与工程之间的界限正变得模糊。工程师今后将构建并维护负责产出生产代码的系统，并为软件工厂设定大方向。
+
+最后，**这将如何重塑组织形态？**
+团队之间的边界也开始模糊，上下文需要在这些边界之间无缝流动。信息不能被隔绝在孤岛中——这对人类来说如此，对 AI Agent 而言尤为迫切。跨所有团队的每个人，都将对软件工厂的各个支柱承担共同责任。
+
+<details>
+<summary>Original English</summary>
+[Speaker 1]:  number three，
+[Speaker 1]:  what happens the software engineers？
+[Speaker 1]:  what is the future of software engineering look like？
+[Speaker 1]:  well，
+[Speaker 1]:  the role is obviously evolving，
+[Speaker 1]:  and the line between product and engineering is bluring。
+[Speaker 1]:  engineers will now build and maintain the system that's responsible for building your production code，
+[Speaker 1]:  and we'll set the high level direction for the software factory。
+[Speaker 1]:  and lastly，
+[Speaker 1]:  how does this going to change the organization？
+[Speaker 1]:  well，
+[Speaker 1]:  team boundaries are also starting to blair and context needs to flow seamlessly across these boundaries。
+[Speaker 1]:  information can't be silored that was true for humans，
+[Speaker 1]:  but it's especially true for ai agents。
+[Speaker 1]:  everyone across all，
+[Speaker 1]:  your teams will have a shared responsibility for the pilars of the software factory。
+</details>
+
+### 打破服务孤岛：从编写代码到全生命周期贯通
+
+编写代码其实是容易的部分，它从来都不是真正的瓶颈。你的上下文都是用自然语言呈现的。我敢打赌，如果你审视一下真实的工程指标：
+- 审查一个 PR 的平均时间是多少？
+- 重现用户 Bug 报告或排查调试代码需要花费多长时间？
+- 谁能在每个 PR 提交时都保持文档最新？又有谁能在每次战略会议后保持其与时俱进？
+- 谁在维护测试套件？很多时候，测试团队、工程团队和产品团队各自犹如身处不同的大陆。
+
+如果提取你们的 DORA 指标——从代码写完到上线生产的时间，我敢打赌它会远远超过实际进行工程修改的时间。
+
+今天你们真正的痛点是跨所有这些服务的内聚性。目前，文档常常过时失效，废弃代码长期残留，各团队之间存在重重沟通壁垒。这对于人类工程师来说本就十分棘手，对 Agent 而言则更为严峻。构建软件工厂所必须开展的工作，正是确保 Agent 能够打通所有这些服务，并理解组织内部的细微差异。
+
+<details>
+<summary>Original English</summary>
+[Speaker 1]:  now coding was the easy part。
+[Speaker 1]:  this actually was never the bottom neck。
+[Speaker 1]:  your context is laid out a natural language。
+[Speaker 1]:  i bet if you look at your real engineering metrics，
+[Speaker 1]:  what's the medium time to review APR，
+[Speaker 1]:  how long that take you to reproduce user bug reports，
+[Speaker 1]:  or go through your debug code，
+[Speaker 1]:  who keeps your dogs current with every pr？
+[Speaker 1]:  and who keeps the current with every strategy meeting who maintain your test sweets often times the testing teams and engineering teams and the product teams are each on their own continent。
+[Speaker 1]:  if you pull your door metric，
+[Speaker 1]:  the time from code written to time and production，
+[Speaker 1]:  i would bediworse the time actually making those engineering changes。
+[Speaker 1]:  the real need you have today is cohesision across all of these services。
+[Speaker 1]:  right now。
+[Speaker 1]:  dogs will go stale dead code lingers，
+[Speaker 1]:  and there are so many layers of communications between your different teams。
+[Speaker 1]:  again，
+[Speaker 1]:  this is hard for human engineers，
+[Speaker 1]:  but it is especially more pronounced for agents。
+[Speaker 1]:  the necessary undertaking to build your factory is to make sure the agents can bridge all of these services and understand the new ones within your organization。
+</details>
+
+这就引出了“软件工厂”——一个将你从输入信号引领至生产部署的 Agent 系统。
+
+你的 Agent 不再只是写代码，它开始接管客户支持、产品工程、部署运维以及跨越这些支柱的诸多其他职责。你的 Agent 应该分流故障事件、制定计划、创建和更新文档、实际执行代码、进行审查、执行测试、实施发布，并在发布后进行监控。
+
+显然这是一项极其繁重的工作，你绝不能指望一步登天。一方面，这个工程体量过于庞大；另一方面，你的团队也还没有时间对系统建立信任。
+
+你需要从范围狭窄且易于验证的环节切入，例如**事件分流（incident triage）**。让 Agent 读取 Sentry 告警，拉取调用链追踪（traces）及其他上下文，然后发送到 Slack 中，但要保留人工审查机制，由工程师进行复核并决定应对方案。随着更准确的诊断不断产出并经由 Agent 提供，你的团队便能逐步建立信任，并加深对这一支柱环节的理解。
+
+因此，在考虑让流水线全自动闭环之前，软件工厂的每一步都需要审慎的归属划分与严格监控。但一旦你能将该系统的输出重新挂钩回输入信号，你就能解锁组织的自我进化能力。
+
+<details>
+<summary>Original English</summary>
+[Speaker 1]:  so this brings us to the software factory，
+[Speaker 1]:  which is the system of agents that will take you from input signal to production deployment。
+[Speaker 1]:  your agents，
+[Speaker 1]:  not just coding anymore。
+[Speaker 1]:  it's taking on customer support product engineering，
+[Speaker 1]:  deployment opts and many other rules across these pillars。
+[Speaker 1]:  your agent should be triogan incidents，
+[Speaker 1]:  making plans，
+[Speaker 1]:  creating and updating dogs actually executing the code reviewing it，
+[Speaker 1]:  testing it，
+[Speaker 1]:  rolling it out and then monitoring that release。
+[Speaker 1]:  now that's obviously a ton of work。
+[Speaker 1]:  and you don't want to jump into that all it once。
+[Speaker 1]:  for one，
+[Speaker 1]:  it's too heavy and undertaking，
+[Speaker 1]:  but for two，
+[Speaker 1]:  your teams will not have time to build trust in the system。
+[Speaker 1]:  you want to start with something narrow and verifiable，
+[Speaker 1]:  like incident triosh。
+[Speaker 1]:  let your agent read a century alert，
+[Speaker 1]:  pull the traces and other context and then post in slack，
+[Speaker 1]:  but keep it。
+[Speaker 1]:  so your engineers can review this。
+[Speaker 1]:  and decide what to do and is more correct diagnosis，
+[Speaker 1]:  role land。
+[Speaker 1]:  and in from the agent，
+[Speaker 1]:  your team can start to build trust and in understanding of this pillar。
+[Speaker 1]:  so each step in the software factory needs careful ownership and monitoring before you even think about letting the pipeline loop。
+[Speaker 1]:  but once you can tie the output of this system back to the input signal，
+[Speaker 1]:  that's when you unlock organiztional self improven。
+</details>
+
+### 软件工厂的三大核心原则
+
+我们坚信，软件工厂应当遵循几个关键原则：
+
+1. **模型无关性（Model Agnostic）**：显然，不同的模型擅长不同的任务，且成本效益差异极大。例如我们发现，使用最新的开源模型在代码审查上能达到与 GPT 相当的表现，但价格仅有一半；若进一步探寻开源替代方案，甚至能将成本降低 10 到 30 倍。在 Factory 中，你可以充分权衡任务速度、效能与成本之间的相互关系，解锁整个大模型的帕累托前沿。
+2. **部署模式主权（Sovereign Deployment Model）**：你不应当为了强行迎合 AI 部署模式而牺牲自身的安全架构或策略。在 Factory，你可以自由选择工作空间和部署模式。我们提供从完全托管、自带机器（BYOM）到完全物理隔离（air-gapped）的全方位支持。
+3. **全软件生命周期（SDLC）深度集成**：这些不再是彼此割裂、毫无关联的环节。文档变更应当反哺代码，反之亦然；规划目标应当明确测试的方向，而非取决于战略、产品工程与测试团队之间隔了多少层沟通壁垒。每一个支柱都在支撑着软件工厂，单点薄弱即意味着整个系统的薄弱。
+
+<details>
+<summary>Original English</summary>
+[Speaker 1]:  now we feel pretty strongly that ysoftware factory，
+[Speaker 1]:  you should have a few key principles。
+[Speaker 1]:  first，
+[Speaker 1]:  it should be model ignostic，
+[Speaker 1]:  obviously，
+[Speaker 1]:  different models，
+[Speaker 1]:  excel，
+[Speaker 1]:  different tasks and with very different cost efficiencies we found。
+[Speaker 1]:  for instance，
+[Speaker 1]:  you can achieve the same performance on code review with GPT five point，
+[Speaker 1]:  and we with the latest opens models，
+[Speaker 1]:  but at half the price。
+[Speaker 1]:  and now if you look at the open source alternatives that can sash your cost down to ten to thirty x cheaper。
+[Speaker 1]:  so in factory，
+[Speaker 1]:  again，
+[Speaker 1]:  you have the entire interplay of speed to task effeicacy cocost。
+[Speaker 1]:  you unlocked the ensingle lab means you unlocked the entire priador frontier of alymps。
+[Speaker 1]:  no number two，
+[Speaker 1]:  your deployment model should be solving。
+[Speaker 1]:  you shouldn't have to compromise on your security architecture or your policies to try and fit your ai deployment model in now at factory。
+[Speaker 1]:  you can choose your workspace and your deployment model。
+[Speaker 1]:  we support everything from fully manage to bring your own machine to entirely airgapt。
+[Speaker 1]:  and number three，
+[Speaker 1]:  your software facfactory needs to be integrated across the slc。
+[Speaker 1]:  these are no longer separate uncouple concerns，
+[Speaker 1]:  dogs changing shouldn't form your code and vice versa。
+[Speaker 1]:  planning goals should inform what you test for。
+[Speaker 1]:  not。
+[Speaker 1]:  however，
+[Speaker 1]:  many communication layers there are between strategy，
+[Speaker 1]:  product engineering and your testing teams。
+[Speaker 1]:  each one of these pilars supports the software factory and week this in one means a week this in the entire system，
+</details>
+
+### AI 原生组织的落地战术与企业价值
+
+在 AI 原生组织中，具体战术是如何体现的？
+
+我们通常将其视为统一软件工厂伞状架构下，多个子团队的融合与渐进式自动化。我们见到的常见模式包括：
+- 分流 Sentry 告警等传入信号，让 Agent 在人类响应传呼之前就完成初步诊断；
+- 主动测试，扫描安全隐患以排查密钥泄露或漏洞；
+- 创建并维护测试用例，监控变得脆弱或冗余的测试；
+- 保持文档与代码同步，保持文档与不同会议渠道同步；
+- 以及经典的代码审查、PR 评论、上线发布与发布监控。
+
+随着 Agent 承担起这一切，人类工程师的角色转变为：响应事件、行使工程判断，并以一种能让 AI 从错误中学习的方式去纠正它。如今，一切在各子团队之间都是可传递的，一个小组的改善即意味着整个系统的提升。
+
+<details>
+<summary>Original English</summary>
+[Speaker 1]:  so tactically in an ai native org。
+[Speaker 1]:  what does this look like？
+[Speaker 1]:  well，
+[Speaker 1]:  we typically see it as the fusion and the incremental automation of many subteens under the umbrella of one software factory，
+[Speaker 1]:  some really common patterns。
+[Speaker 1]:  we see our tree ogan incoming signals like century alerts，
+[Speaker 1]:  having the agents make diagnosis before the human can even answer the page。
+[Speaker 1]:  proactively testing security scanning for secrets or vulnererabilities，
+[Speaker 1]:  creating maintaining your tests monitoring the ones that are becoming brittle or unneeded，
+[Speaker 1]:  again，
+[Speaker 1]:  keeping dogs and sink with code kekeepdodogs and sink with your different meeting channels and in the classic reviewing code，
+[Speaker 1]:  commenting on prs rollouts monitoring releases。
+[Speaker 1]:  and with the agent doing all of this，
+[Speaker 1]:  the human engineers role shifts to responding to exercising judgment and correcting the ai and such a way that it can learn from these mistakes。
+[Speaker 1]:  now everything is transitive across some teams and improven to one group means an improvement to the entire system。
+</details>
+
+那么，大型企业为何要在意软件工厂？
+
+组织规模越大、越碎片化，就越能感受到管理多支团队带来的线性增长痛苦。用技术术语来说，你的软件工厂应当将这种复杂度从 $O(n)$ 降为 $O(1)$。往保守了说，你可以只定义一次指南、Agent、文档、测试策略及发布治理规则，然后在全组织范围内实现标准化。这种标准应确保每个人都被拉升至最高水准，而不是向最低共性妥协。
+
+此外，如果 Agent 能在这些服务之间穿梭，它们就能跨团队维持这一质量标准，而无需你线性增加管理时间。并且，当 Agent 贯穿所有服务时，你就拥有了一个统一上下文的集中平台，管理层也能全面洞察整个 SDLC 的运行效能。
+
+<details>
+<summary>Original English</summary>
+[Speaker 1]:  so why should your enterprise care about a software factory？
+[Speaker 1]:  well，
+[Speaker 1]:  the larger and the more fragantage you are，
+[Speaker 1]:  the more you feel the linear pain of managing teams in tech terms，
+[Speaker 1]:  your software factory should should take this in in oovto。
+[Speaker 1]:  all of one conservatively，
+[Speaker 1]:  you can define your guy，
+[Speaker 1]:  illes your agents，
+[Speaker 1]:  your dogs testing policies really governance，
+[Speaker 1]:  just one time。
+[Speaker 1]:  and then standardize it across the organization，
+[Speaker 1]:  and the standard should make sure that everyone is pulled to the highest bar，
+[Speaker 1]:  not the lowest common dominator。
+[Speaker 1]:  now also，
+[Speaker 1]:  if agents can move across these services，
+[Speaker 1]:  then they can hold that quality bar across teams without you having to veninearly scale your time to manage each one。
+[Speaker 1]:  and if agents are moving across all these services，
+[Speaker 1]:  then you have one place where context can be unified，
+[Speaker 1]:  and you can have executive visibility into how the entire slc is performing now，
+</details>
+
+正如同模型无关性能消除厂商锁定，你的 Agent 也应该做到**交互介质无关（Surface Agnostic）**。无论团队使用何种工具，Agent 都必须保持高可用性。团队不应为了迁就 AI 供应商而牺牲原有流程或工具链。在 Factory，从远程机器、CLI 到 Slack，Agent 在你团队使用的任何工具中均可接入。即使人类与 Agent 使用的服务各不相同，底层也应共享相同的底座和上下文。
+
+建设工厂的过程会暴露出隐性知识、手动流程和过时信息。消除这些阻塞不仅有利于 Agent，对你的工程团队同样大有裨益。
+
+<details>
+<summary>Original English</summary>
+[Speaker 1]:  just like model，
+[Speaker 1]:  like agnostiticism removes locking，
+[Speaker 1]:  your agents should also be surface iagnostic。
+[Speaker 1]:  they need to be highly available to your teams，
+[Speaker 1]:  regardless of what tools they use。
+[Speaker 1]:  your teams should not have to compromise on their processes，
+[Speaker 1]:  or they're tooling to try and fit your ai provider in in factory，
+[Speaker 1]:  have have agenavable able where where romo machines to the cii to slack，
+[Speaker 1]:  any tool，
+[Speaker 1]:  your teams use。
+[Speaker 1]:  and even though humans and agents may use different services，
+[Speaker 1]:  everything should share the same underlying hardness and context。
+[Speaker 1]:  so the undertaking of building the factory will expose tribal knowledge，
+[Speaker 1]:  manual processes and outdated info unblocking。
+[Speaker 1]:  these is not only going to help your agents，
+[Speaker 1]:  but it's also going to help your engineering teams in factory。
+</details>
+
+### Agent 就绪度的八大支柱与工程治理
+
+在 Factory，我们提出了“Agent 就绪度”（Agent Readiness）的概念，并基于八个支柱进行评估：
+1. **验证机制（Validation）**：是否具备 Linter 和格式化工具等安全护栏？
+2. **构建系统（Build System）**：CI 中的构建命令是否具备完善文档？
+3. **反馈闭环（Feedback Loops）**：单测与集成测试是否严密？
+4. **文档规范（Documentation）**：是否有 README 或针对 Agent 的指令文件（如 `AGENTS.md`）？
+5. **开发环境（Dev Environments）**：开发环境是否能干净复现，以便 Agent 直接使用？
+6. **代码模块化（Modularity）**：代码是否具备清晰边界与防止失控蔓延的规则？
+7. **可观测性（Observability）**：在出现故障时，需要多久能查明根因？
+8. **安全扫描（Security Scanning）**：是否进行了主动安全扫描，从而无需担忧凭证泄露或漏洞？
+
+核心要义在于：如果你的 Agent 和人类工程师要走同一条路，把路铺平会带来双重收益。
+
+<details>
+<summary>Original English</summary>
+[Speaker 1]:  we have the concept of agent raininess，
+[Speaker 1]:  and we evaluate this based on eight pilars。
+[Speaker 1]:  the first is validation。
+[Speaker 1]:  do you have guarriils like mentters？
+[Speaker 1]:  and form matters in place，
+[Speaker 1]:  then your build system are your build commands in cii。
+[Speaker 1]:  well，
+[Speaker 1]:  documented feedback loops，
+[Speaker 1]:  you have unit and integration tests tight，
+[Speaker 1]:  and you have dogs like read mees agent。
+[Speaker 1]:  stoart md files are your def environments cleanly reproduceble。
+[Speaker 1]:  such an agent can use them is your code moduler with clear boundaries and rules against sprawn？
+[Speaker 1]:  do you have observability？
+[Speaker 1]:  how long does it take you to find out why something went wrong？
+[Speaker 1]:  and are you proactively security scanning so that you don't have to worry about leked secrets or vulnerabilities？
+[Speaker 1]:  basically，
+[Speaker 1]:  the key take away here is that if your agents in your human engineers are going to walk the same roads，
+[Speaker 1]:  paving them well is double useful。
+</details>
+
+你无法治理看不见的东西，这对 Agent 和人类工程师皆是如此。你可以从 Agent 就绪度评估起步，但无论如何，工程师必须持续监控 Agent 的表现并控制其行为。在 Factory 中，每一项操作都是可审计的，并且严格遵循基于角色的访问控制（RBAC）与最小特权原则。
+
+构建软件工厂的团队首先需要建立这种信任与理解，这就是为什么应当循序渐进地推广。在将系统转变为完全自动闭环之前，必须先将各个单独的支柱自动化。
+
+此外，**精准的执行并不等同于优秀的设计**，从来都不是。在架构、战略和方向设定上，我们仍然严重需要人类参与。工程师不会被取代，但工程判断力与优先级权衡能力将胜过单纯的机械化实现能力，后者 Agent 完全可以规模化处理。代码可能会偏离，系统仍需严密的护栏，人类必须在这座工厂中充当校验把关人。
+
+但正如我们今天不再需要向机器塞穿孔卡片一样，代码也不再必须由人纯手工敲写。你的团队应当负责制定战略与风险边界，然后交由 Agent 执行。
+
+<details>
+<summary>Original English</summary>
+[Speaker 1]:  now you can't gon what you can't see，
+[Speaker 1]:  and that's true for agents and human engineers。
+[Speaker 1]:  you can start with this agent ready as assessment，
+[Speaker 1]:  but no matter what your engineers must monitor agent performance in control behavior in factory。
+[Speaker 1]:  every action is ottawable。
+[Speaker 1]:  it operates under standards with role based access control and least privilege。
+[Speaker 1]:  for example，
+[Speaker 1]:  your teams that are building the software factory need to first building this trust and understtding。
+[Speaker 1]:  that's why you should roll this out incremently。
+[Speaker 1]:  you want to automate the individual pillars first。
+[Speaker 1]:  before you turn this system into a loop 有没有异议？
+[Speaker 1]:  and again，
+[Speaker 1]:  precise execution does not prevent poor design。
+[Speaker 1]:  it never has，
+[Speaker 1]:  you still heavily need humans in the loop for architecture for strategy and for setting direction，
+[Speaker 1]:  engineers will not be replaced，
+[Speaker 1]:  but judgment and priortization。
+[Speaker 1]:  now beat mechanical implementation scale agents will be able to handle everything。
+[Speaker 1]:  there will be ggarriil's tititan code that drifts humans need to stand as validation gates in this factory，
+[Speaker 1]:  but just like we don't have to feed punch guards in of the machine anymore。
+[Speaker 1]:  code does not have to be written by hand。
+[Speaker 1]:  your team should be able to set the strategy and the risk creameters，
+[Speaker 1]:  and then let agents execute。
+</details>
+
+### 以业务产出为准绳，而非 Token 消耗
+
+了解 Agent 执行好坏的关键在于衡量正确的指标。
+
+根本上说，**你需要衡量的是产出，而不是 Token**。代码行数和生成的 Token 数都是容易被操弄的指标，它们与实际产出并不直接相关。大企业内部的 Token 排行榜只会助长挥霍性支出，这完全是古德哈特定律（Goodhart's Law）的实时上演：一旦你决定以 Token 消耗量为考核指标，工程师就会针对 Token 消耗进行优化，它也就不再是一个有效的衡量标准。
+
+重点不在于谁在 Token 上花钱最多，而在于谁能通过这些开销获取最高杠杆率的业务成果。在 Factory，我们推崇的衡量指标包括：
+- **从信号到上线的时间（Signal to production time）**
+- **人工干预次数（Human intervention count）**
+- **平均修复时间（MTTR）**
+- **代码留存周期（Shelf life of code）**
+- **单 PR 成本（Cost per PR）**
+
+这些才是真实、切实的业务成效。
+
+因此，无论系统最终是由 Agent 还是人类来承接，Agent 就绪度都是实现高效工程的前置条件。你的 Agent 需要与工程师一样接受严密治理——包括工具链、权限级别及审查系统。不要直接在代码库中漫无目的地放任运行，也不要去盲目追求 Token 最大化，请关注真正重要的指标。
+
+你的最终用户并不在乎你在 AI 上砸了多少钱，他们真正在乎的是切实感受到软件工厂所带来的巨大改进。谢谢大家。
+
+<details>
+<summary>Original English</summary>
+[Speaker 1]:  and knowing if your agents are executing well，
+[Speaker 1]:  comes down to measuring the right things。
+[Speaker 1]:  basically，
+[Speaker 1]:  you want to measure outcomes，
+[Speaker 1]:  not tokens lines of code and tokens generated are gaamable metrics。
+[Speaker 1]:  these are not actually associated with outcomes。
+[Speaker 1]:  token leader boards and big companies just encourage profleate spending。
+[Speaker 1]:  it's good heart's law in real time。
+[Speaker 1]:  if you decide to measure token usage，
+[Speaker 1]:  engineers are going to optimize for token usage，
+[Speaker 1]:  and then it's no longer a good metric。
+[Speaker 1]:  it's not about who spent the most on tokens。
+[Speaker 1]:  it's about who can get the highest leverage outcomes from that spent so metrics that we like in factory or signal to production time，
+[Speaker 1]:  human intervention account medium time to repair shelf life of code and cost her pr。
+[Speaker 1]:  these are real tangible outcomes。
+[Speaker 1]:  so agent readiness is really a precursor to afffective engineering，
+[Speaker 1]:  whether it's an agent or human that ends up in that system。
+[Speaker 1]:  your agents need the exact same careful governance as your engineers tooling access levels systems will review。
+[Speaker 1]:  don't just turn on loose in your code base and don't talken max measure。
+[Speaker 1]:  what actually matters。
+[Speaker 1]:  your end users don't care about how much you're spending on ar。
+[Speaker 1]:  they care about feeling the dramatic improvements that will come from yourself a factory。
+[Speaker 1]:  thank you。
+</details>

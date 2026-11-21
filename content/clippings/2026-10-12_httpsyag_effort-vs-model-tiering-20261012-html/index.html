@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anthropic 官方指南：控制成本该调 effort
+还是换模型</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Anthropic 官方指南：控制成本该调 effort
+还是换模型</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-12</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Anthropic 官方指南：控制成本该调 effort
+还是换模型</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/cost-optimization/">cost-optimization</a>
+      
+        <a class="tag-link" href="/tags/prompt-caching/">prompt-caching</a>
+      
+        <span class="tag-pill tag-pill--no-page">effort-tuning</span>
+      
+        <a class="tag-link" href="/tags/agent-architecture/">agent-architecture</a>
+      
+        <span class="tag-pill tag-pill--no-page">model-selection</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章解析 Anthropic 官方指南，指出 Agent 成本取决于任务解决率而非 Token 单价。由于提示词缓存机制，切换模型会导致缓存失效从而增加成本，而调节 effort 参数更经济。建议优先通过调整 effort 优化单模型性能，仅在特定场景下采用多模型分层架构。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/effort-vs-model-tiering-20261012.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-12T00:00:00.000Z">2026-10-12</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%BD%A0%E4%BB%98%E7%9A%84%E6%98%AF%E4%BB%BB%E5%8A%A1%E4%B8%8D%E6%98%AF-token">你付的是任务，不是 token</a></li><li class="outline-h2"><a href="#%E8%B4%B5%E5%8D%95%E4%BB%B7%E4%B9%98%E5%9C%A8%E4%B8%80%E4%B8%AA%E6%89%93%E6%8A%98%E7%9A%84%E6%95%B0%E4%B8%8A">贵单价乘在一个打折的数上</a></li><li class="outline-h2"><a href="#effort-%E6%9B%B2%E7%BA%BF%E4%B8%8D%E6%98%AF%E4%B8%80%E6%A0%B9%E7%BA%BF%E6%98%AF%E4%B8%A4%E6%A0%B9">effort 曲线不是一根线，是两根</a></li><li class="outline-h2"><a href="#%E9%82%A3%E5%A4%9A%E6%A8%A1%E5%9E%8B%E5%88%86%E5%B1%82%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%BF%98%E6%9C%89%E4%BC%98%E5%8A%BF">那多模型分层什么时候还有优势</a></li><li class="outline-h2"><a href="#%E8%BF%99%E5%A5%97%E6%96%B9%E6%B3%95%E7%9A%84%E8%BE%B9%E7%95%8C%E5%92%8C%E5%AE%83%E6%B2%A1%E8%AF%B4%E9%80%8F%E7%9A%84%E9%82%A3%E4%B8%80%E5%8D%8A">这套方法的边界，和它没说透的那一半</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>Anthropic 在官方成本指南里面提供了一个选择模型的策略：不要用每token的价格来比较模型，而应该看每个任务被解出来的成本是多少。从这个角度出发，你会发现价格表上贵的模型其实往往更便宜。例如在软件工程的评测集SWE-bench
+Pro上，把Fable 5.1每次出力大小的 effort 设为
+low，可以解出88.6%的题目，每个题目花费了0.54美元。相比之下，如果用默认设置的Sonnet
+5，只能解出来77.4%的题目，但每解出一个题目需要0.84美元。虽然单价差了大约5倍，但总得来说贵的模型更便宜。</p>
+<p>很多团队一旦看到账单高了，第一反应是把某些步骤换成单价更低的模型。这个直觉默认了成本来自单价。但真实
+agent
+负载里这个假设站不住。更强大的模型往往用更少的轮次、更少的工具调用、更少的重试就做了同样的事，省下来的工作量直接把单价的差价抹平了。</p>
+<h2 id="你付的是任务不是-token" data-reading-heading="">你付的是任务，不是 token</h2>
+<p>关于推理的成本，大家通常很直观地会去看价格表上单价是多少。但当你让
+agent 去修一个
+bug、出一份报表的时候，你购买的是确定的结果，而不是按字收费的字符。agent
+的工作量和普通的文本补全接口完全是两码事，账单应该按结果算，不应该按单价算。</p>
+<p>Anthropic
+关于成本和智能的优化文档里有一组数据说明了这一点。按每解出一个任务来看的话，又是一副图景。默认配置下，Opus
+5.5 可以解出 92.8% 的任务，每解出一个任务只需要 0.22 美元。Fable 5.1
+也可以解出 92.3% 的任务，但每解出一个任务需要 1.19 美元。注意 Fable 5.1
+每 token 的价格明显更高（$10 / $50 对比 Opus 5.5 的 $4 /
+$20）。但这里在准确率这个噪声范围内，更贵的模型并没有带来更好的结果，反而每任务成本高了约五倍。</p>
+<p>模型的迭代也遵循同样的规律。根据文档中的测试，从 Sonnet 4.6 切换到
+Sonnet 5，解题率提升了 5 个百分点，每解出任务的平均成本还降低了 15%；从
+Fable 5 升级到 Fable 5.1，解题表现相当，每解出任务的花费降了 43%。</p>
+<p>但换更强模型不等于账单自动下降。在文档的另一个基准 DeepResearch Bench
+II 上，Fable 5.1 把 effort 调到 high，准确率虽比前代高 2~3
+个百分点，每解出任务成本却涨了
+41%。单任务成本能否降低，不取决于模型有多强，而取决于这类任务中模型做的工作量能否被收住。</p>
+<p>价格表上的 token
+费率只作用在被打折的输入上，最终账单由模型的活动量决定</p>
+<h2 id="贵单价乘在一个打折的数上" data-reading-heading="">贵单价乘在一个打折的数上</h2>
+<p>贵模型能在每任务成本上赢便宜模型，是因为 agent
+的运行方式把费率的作用架空了。agent
+每跑一轮就攒一层状态，下一轮又要把整段对话历史、工具定义、系统提示词重新发给模型。一个跑
+40 轮的任务，等于把第一轮的内容发了 40 遍。不做优化的话，输入 token
+会随轮数平方增长。</p>
+<p>在生产环境里，提示词缓存承担了绝大多数重复内容。Anthropic
+公布过一组来自其第一方 API 的数据：对连续 14 天里 10
+万个以上的组织进行观察，在 agent 循环里，从提示词缓存里读的 token
+占所有输入 token 的中位数是 84.2%，上四分位是
+91.7%。在写代码的组织里中位数是 88.5%，当单任务工具调用超过 25 次时升到
+90.9%，头部十分之一的组织更超过 95.9%。任务一旦跑到深处，好的 agent
+循环里只有不到 1% 的输入 token 需要付全价。</p>
+<p>但缓存读便宜很多。普通模型的缓存读一般只要输入价格的十分之一，Opus
+5.5 和 Sonnet 5.5 是二十分之一，Fable 5.1
+甚至只有四十分之一。因为缓存默认只存 5 分钟，而 agent
+的轮次往往只是几秒，所以每轮基本都能吃到这个折扣。因此，价格表上那个吓人的输入单价，在实际中大多数时候乘的是一个打折到一折甚至零点二五折的小数。真正决定账单的是模型跑了多少轮、调了多少次工具，而不是标价。</p>
+<p>所以在会话中间换模型来省钱，往往适得其反。因为提示词缓存要求前缀逐字节完全相同，你在中间换了一个更便宜的模型，或者改变了系统设定，整条缓存就会直接作废。</p>
+<p>Anthropic 做过实验：10 万 token
+的前缀断一次，就要按写入价重算全量。在 Fable 5.1 上这一刀要花 1.25
+美元，原本读一次只要 0.03 美元，差了 50 倍；Opus 5.5 和 Sonnet 5.5
+上也差了 25
+倍。为了省某一步那点费率去切模型，换来的是几十倍重写代价的缓存断裂。</p>
+<p>相比之下，调模型的工作量是顺手得多的杠杆。Anthropic 的 effort
+文档给了五档：low、medium、high、xhigh、max，控制模型在思考、写文本、调工具上花多少力。更关键的是，开一个请求头就能在会话中途改
+effort，而且完全不会破坏缓存。</p>
+<p>二者结合，直觉就很明显了：想省钱，把同一个模型的 effort
+调低，比换一个更便宜的模型划算很多，因为换模型会引发缓存断裂，而调
+effort 不会。</p>
+<h2 id="effort-曲线不是一根线是两根" data-reading-heading="">effort 曲线不是一根线，是两根</h2>
+<p>那如果在一个模型上调节 effort 又省事又不破坏缓存，是不是都应该把
+effort 设到最小呢？不是的。实测里 effort
+的效果在不同的任务上有两种完全不同的表现。</p>
+<p>第一类是研究和知识抽取的活。Anthropic 在
+WideSearch、DeepWideSearch、BrowseComp、GDPval 几个检索分析基准上测试了
+Fable 5，这些基准官方默认档是 high，往下调 effort
+准确率几乎不动，成本却能一路降下来。</p>
+<p>对于这种研究和知识抽取的任务，把 effort 从 high 调到
+low，准确率只掉了 1 到 3
+个百分点，但每解出一个任务的成本可以省掉三分之一到一半。中档（medium）的准确率和默认几乎一样，成本只有默认的
+70% 到 87%。在四个基准里，默认的 high 相比 medium
+都没有可测的精度收益。降 effort 还更快，DeepWideSearch 上每题从默认的
+7.9 分钟缩到 4.5 分钟。在这些活上硬撑高 effort，纯属浪费算力。</p>
+<p>第二类是长程工程和复杂编码，曲线很陡。在 Opus 5.5 解 SWE-bench Pro
+代码缺陷的测试中，这个模型默认档是
+medium，准确率高度依赖给它多少思考和计算量。medium 比 high 低约 2.5
+个百分点，成本是 high 的 70%；降到 low，解题率掉约 8 个百分点，从 high
+的 95.3% 掉到 87.4%，成本降到约三分之一，也就是 0.11 对 0.29 美元；升到
+xhigh，准确率加约 1.4 个百分点达到 96.7%，但成本涨到 0.74 美元，是 high
+的 2.5 倍。</p>
+<p>研究类任务的 effort
+曲线近乎平缓，而长程编码任务的 effort 曲线表现陡峭</p>
+<p>把一档 effort
+死磕在一个模型上，研究任务上浪费预算，长程编码上压太低又大面积失败。</p>
+<p>对于这种陡峭型任务，如果有明确的验证信号（单测过不过/编不编得过），一个聪明的办法是：全部先用low跑，失败了的再用high重跑一遍。SWE-bench
+Pro上，全量high是95.3% /
+0.29美元/题；先low再重跑失败题，准确率反而到了97.0%，每题只要0.17美元。代价是失败题要跑两遍，好处是用便宜算力过掉大部分常规题，把高effort只留给真正难的分支，总成本省了近一半，准确率还略高。</p>
+<h2 id="那多模型分层什么时候还有优势" data-reading-heading="">那多模型分层什么时候还有优势</h2>
+<p>那既然用一个模型内部调整 effort
+就能实现类似缓存和算力调节的效果，那为什么还要用多模型分层架构呢？Anthropic
+在文档里有一个硬性标准：一个多模型分层架构要想成立，得先证明它比用同一个模型降低
+effort
+更划算。有很多看起来精巧的多模型分层方案，做简单的数学比较后发现，其实比用同一个模型降低
+effort 还贵。</p>
+<p>举个例子，比如顾问模式。用一个轻量级的执行者跑主循环，卡了再请更聪明的高阶模型当顾问指点。要见效，需要二者能力差距够大，且执行者真会去问。</p>
+<p>但问题在于，执行者到底会不会问？这个恰恰是最薄弱的一环。在GPQA
+Diamond的198题里，官方用单跑85%的Haiku 5.5和单跑91%的Sonnet
+5.5当执行者，Opus
+5.5当顾问。两轮一共396次机会，执行者一次没问（0/396）。只是挂了顾问工具的定义，每次请求就多约1000个输入token，把Haiku每题成本涨12%，Sonnet涨25%，得分却和执行者单跑一样。</p>
+<p>更麻烦的是，一旦把执行者调到低 effort
+档位试图省成本，它连自己卡住了都常察觉不到，问得更少，表现甚至不如单跑。在另一项
+370 题的内部代码基准上，官方测了 Opus 5.5 当执行者、更前沿档位的 Fable
+5.1 当顾问：比 Opus 5.5 单跑 high effort 多 1.7
+个百分点，每次尝试成本却是 2.1 倍（2.92 美元）。这点提升跟直接把 Opus
+5.5 开到 xhigh 差不多，多出来的架构没换来更好的性价比。</p>
+<p>另一个思路叫协调者模式：用最强的模型来做规划和分块，然后把大量细活丢给便宜的
+worker。但在常规任务上这样去拆同样不划算。在 DeepWideSearch 上，让 Fable
+5 在 low effort 下自己跑，精度和它指挥 Sonnet 5
+干的复合架构完全一样，但便宜 29%。原文结论是：单纯把 effort
+调低就吊打了整套架构重构。</p>
+<p>根据官方测试，协调者模式只有在两种情况下能够真正节省成本：</p>
+<p>一是在日常成本的长尾上买保险。很多开放性的搜索或排查任务，强模型会偶尔在某道常规题上打转或过度发挥，极少数这种轮次就把整个周期里的大头账单给吃了。让协调者把常规活甩给便宜模型，就能把最贵的那段长尾给掐掉。在BrowseComp的测试切片里，用Fable
+5 + 1个Sonnet
+5，平均成本砍了大约一半，90%分位从33美元降到12美元，还把”某个单模型跑了84美元却答错”的极端情况给消掉了。</p>
+<p>二是活太大、一个上下文窗口装不下。面对 14 个公开代码包、2160 万 token
+的大型缺陷排查，单靠 Fable 5.1 要 15 到 20 小时、468 到 552 美元；换成 1
+个 Fable 5.1 带 25 个 Sonnet 5 并行，2.3 小时跑完，总成本降约
+50%，代价是得分低 10 到 12 分。</p>
+<p>如果你的工作是一条依赖链、能装进一个上下文窗口，或者单模型降 effort
+之后已经足够，就别去搭多模型。选型的第一步永远是先给当前模型扫一遍
+effort；只有在确实发现能力缺口之后，才给更强的模型在 low effort
+下单跑定价，把这个数字当作接下来所有分层方案的门槛。</p>
+<h2 id="这套方法的边界和它没说透的那一半" data-reading-heading="">这套方法的边界，和它没说透的那一半</h2>
+<p>这套推导可以用，但要记住它的成立条件：数据来自 Anthropic
+官方的技术指南，用的是他们做的 benchmark、当时的 list price 和 5
+分钟缓存。文档也明确写着这些测量只有方向性，别拿你自己的业务直接套用，要在自己真实流量上重测。</p>
+<p>另一个层面是，这篇文章虽然给出技术建议，但它也是厂商自己的立场。Anthropic
+在自己的官方选型指南里提到
+tuning effort 往往比换模型更划算（“Tuning effort is often a better lever
+than switching models”）。这句话背后有两层。</p>
+<p>从工程角度讲，这个费率和活动量、缓存读写、跨模型缓存断裂的分析是有道理的，它确实抓到了agent账单的主要来源，也解释了为什么长轮次上下文里降级模型常常得不偿失。</p>
+<p>但从平台方的生意来看，effort
+只是厂商在自己产品里定义的一个算力旋钮。不管你在 low 还是 high
+上调节，你的计算和流量都在 Anthropic
+这里。它推荐你用自家的模型，这样你花钱省、系统跑得好、还不会被带走。真正让厂商亏的事，不是你调一个模型的
+effort 从 high 到 low，而是你把整个调度跑到别的模型、甚至开源上面。</p>
+<p>那具体怎么落地呢？不是照单全收”不分层、调effort”这个结论。接受账单由工作量决定这个事实，然后在搭建多模型调度、切流量给便宜模型之前，先在你自己的业务里给主力模型画一条effort曲线。把它在low
+effort下的每任务开销当一条底线；任何分层方案，都得先在真实账本上证明能打赢这条不用付缓存断裂代价的单模型基线。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/2b082095cbb18d0cf389ec480bbef604e5f04f07076af514b9e566858b135c67.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/2b082095cbb18d0cf389ec480bbef604e5f04f07076af514b9e566858b135c67.md" download="Anthropic 官方指南：控制成本该调 effort
+还是换模型.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Fable 5.1" class="entity-link product-link">Fable 5.1</a>, <a href="/search/?q=Opus 5.5" class="entity-link product-link">Opus 5.5</a>, <a href="/search/?q=Sonnet 5" class="entity-link product-link">Sonnet 5</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

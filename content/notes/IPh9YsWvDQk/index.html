@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAI 开发者体验团队：Codex 的全新工作模式与功能演进</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">OpenAI 开发者体验团队：Codex 的全新工作模式与功能演进</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-17</span>
+    
+
+    <header class="article-header">
+      
+      <h1>OpenAI 开发者体验团队：Codex 的全新工作模式与功能演进</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/coding-agent/">coding-agent</a>
+      
+        <a class="tag-link" href="/tags/context-engineering/">context-engineering</a>
+      
+        <span class="tag-pill tag-pill--no-page">cloud-development</span>
+      
+        <a class="tag-link" href="/tags/multi-agent-system/">multi-agent-system</a>
+      
+        <a class="tag-link" href="/tags/developer-tool/">developer-tool</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">OpenAI 开发者体验团队的 Charlie 与 Dom 介绍了 Codex 在过去数月中的功能演进。内容涵盖插件生态、App Shots 与计算机使用等上下文获取能力，UltraFast 与标注等快速迭代机制，Codex Cloud V2 环境，ChatGPT Sites 与代码审查等交付工具，以及语音控制、Dots 和 Agents API 等多智能体协同实践。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=IPh9YsWvDQk" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-17T00:00:00.000Z">2026-11-17</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>11 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#codex-%E7%9A%84%E6%BC%94%E8%BF%9B%E4%B8%8E%E5%8F%91%E5%B1%95%E7%8E%B0%E7%8A%B6">Codex 的演进与发展现状</a></li><li class="outline-h3"><a href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B%E4%B8%8E%E6%A8%A1%E7%B3%8A%E6%8F%90%E7%A4%BA%E6%9E%84%E5%BB%BA%E6%97%A0%E7%BC%9D%E8%AE%A4%E7%9F%A5">上下文工程与模糊提示：构建无缝认知</a></li><li class="outline-h3"><a href="#%E6%8F%92%E4%BB%B6%E4%BD%93%E7%B3%BB%E4%B8%8E%E8%B7%A8%E7%95%8C%E9%9D%A2%E4%B8%8A%E4%B8%8B%E6%96%87%E5%85%B1%E4%BA%AB">插件体系与跨界面上下文共享</a></li><li class="outline-h3"><a href="#%E6%8F%92%E4%BB%B6%E6%89%A9%E5%B1%95%E4%B8%8E%E6%A1%8C%E9%9D%A2%E7%AB%AF%E7%94%9F%E6%80%81%E5%AE%9A%E5%88%B6">插件扩展与桌面端生态定制</a></li><li class="outline-h3"><a href="#app-shots%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%BF%E7%94%A8%E4%B8%8E%E8%B7%A8%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E6%84%9F%E7%9F%A5">App Shots、计算机使用与跨系统环境感知</a></li><li class="outline-h3"><a href="#chatgpt-space%E8%A7%A3%E5%86%B3%E5%88%86%E6%95%A3%E8%B5%84%E4%BA%A7%E7%9A%84%E5%8D%8F%E4%BD%9C%E5%8D%8F%E5%90%8C">ChatGPT Space：解决分散资产的协作协同</a></li><li class="outline-h3"><a href="#%E9%AB%98%E9%A2%91%E8%BF%AD%E4%BB%A3ultrafast-%E6%A8%A1%E5%BC%8F%E4%B8%8E%E9%A1%B5%E9%9D%A2%E5%AE%9E%E6%97%B6%E6%A0%87%E6%B3%A8">高频迭代：UltraFast 模式与页面实时标注</a></li><li class="outline-h3"><a href="#codex-cloud-v2%E7%AE%97%E5%8A%9B%E6%89%A9%E5%B1%95%E4%B8%8E%E5%A4%9A%E4%BB%93%E5%BA%93%E9%9A%94%E7%A6%BB%E7%8E%AF%E5%A2%83">Codex Cloud V2：算力扩展与多仓库隔离环境</a></li><li class="outline-h3"><a href="#%E4%BA%A7%E5%93%81%E5%8C%96%E4%BA%A4%E4%BB%98chatgpt-sites-%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5">产品化交付：ChatGPT Sites 与代码审查</a></li><li class="outline-h3"><a href="#%E5%A7%94%E6%B4%BE%E6%96%B0%E8%8C%83%E5%BC%8F%E8%AF%AD%E9%9F%B3%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%E4%B8%8E-dots-%E5%8D%8F%E4%BD%9C">委派新范式：语音控制面板与 Dots 协作</a></li><li class="outline-h3"><a href="#%E9%AB%98%E6%95%88%E5%AE%9E%E8%B7%B5%E6%8A%80%E5%B7%A7%E4%B8%8E%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E5%8D%8F%E5%90%8C%E6%9C%BA%E5%88%B6">高效实践技巧与多智能体协同机制</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="codex-的演进与发展现状" data-reading-heading="">Codex 的演进与发展现状</h3>
+<p>好的，非常感谢大家今天能来。我是 Charlie。我们俩都来自 OpenAI 的开发者体验团队。今天我们想和大家聊聊与 Codex 协同工作的一些新方式，对吧？距离我们上一次参加 AIE 已经有一段时间了。过去我们曾探讨过一些内容，但今天想帮大家同步一下我们在过去大约四五个月里所发布的各项新成果，对吧？不过在切入正题之前，有一个问题很值得探讨：Codex 已经消亡了吗？如果你经常深度活跃在互联网上，可能已经看到过围绕这个话题的一些激烈讨论。而我认为，答案不仅是 Codex 没有消亡，而且现在它正以比以往更多样的方式、在更多的地方、携带更丰富的功能供大家使用，对吧？我想说的是，它不仅是在增长，更是在持续演进。我认为今年的一大核心变化就是 Codex 与 ChatGPT 的工作流进行了某种程度的合并。通过这种整合，数以千万计的更多用户得以借助 Codex 这一运行载体（harness），开始与长期运行的智能体（long-running agents）协同工作，并在日常工作中真正切实地感受到 AGI 的存在。大家在这里也可以看到我们将 Codex 与 ChatGPT 正式结合的具体时间节点，以及这一举措给使用人数带来的巨大变化。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+All right. Thanks everybody so much for coming.  I am Charlie. And we're both on the developer
+experience team at OpenAI. And today we wanted to  talk to you guys about some new ways of working
+with Codex, right? I think it's been a little  while since we've had an AIE. We've talked about
+some things in the past, but wanted to catch you  up on all the new things we've shipped kind of
+over the last four or five months, I think,  right? But before we get there, you know,
+it is worth asking the question, is Codex dead?  I think you if you are terminally online, you may
+have seen some hot takes around this question. And  I think the answer is not only is Codex not dead,
+I think Codex is now available, you know, in  more ways than ever, in more places than ever,
+with more features than ever, right? And  I would say that it's it's, you know,
+not not just that it's growing, but that it  is evolving. I think one of the big, you know,
+changes of this year is that Codex kind of  merged with ChatGPT work, right? And in doing so,
+you know, we tens of millions of more people have  been able to leverage the harness that is Codex,
+kind of start working with long-running agents,  right? And really kind of feel the AGI in the
+work that they do every day. You can see here too  the the date where we actually, you know, combined
+Codex and ChatGPT and just like what that did to  to the number of folks using it.
+</details>
+<p>它也正在向云端演进。我想可能很多人并不知道，最初版本的 Codex 本质上就是一个云原生的智能体，运行在独立的环境中。它会检出你的代码仓库，并在远端完成所有工作。我认为我们正在逐步回归到那种模式。这不仅体现在为开发者打造更好的工具以在本地机器上远程控制 Codex，也体现在按需启动性能更强劲的云端环境来承接这类工作。此外，它也接入了更多服务之中。我们今天会深入讨论其中的一部分，但 Codex 作为一个底层框架，目前驱动着 ChatGPT 工作流、ChatGPT 的 CLI 工具、Slack 上的 ChatGPT、Dots、我们全新的 Agents API，以及许多大家熟悉并喜爱的产品，它如今出现在了更多的场景中。正如我提到的，早在今年 7 月的 IIE 世博会上，我就在这里分享过关于 Codex 能做些什么的议题。在那场工作坊中，我们梳理了 1 月到 7 月之间上线的所有功能。既然我再次回到这里，我想更新一下这张幻灯片：这里列出的是我们在 7 月到 11 月之间交付的所有成果。为了能把它们塞进屏幕，我不得不删减掉相当一部分清单，因为需要展示的内容实在太多了。团队这段时间的发布节奏令人难以置信。我们会涵盖其中的很多特性，但从宏观层面上看，我想先向大家梳理一下今天将要涉及的几大核心主题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+It's evolving
+into the cloud. I think, you know, not a lot of  people know this, but the very first version of
+Codex was a cloud native, you know, agent that  ran in its own environment. It checked out your
+repo. It did all of its work remotely. And we've  been, I think, slowly getting back to that place,
+right? it comes to making better tools for you  to to remotely control Codex on your machines,
+right? As well as increasingly spin up more  powerful cloud environments to keep doing that
+kind of work. And it's available across, you know,  more services. And we're going to talk about,
+you know, some of these in more depth today, but  Codex as a harness is now what powers, you know,
+ChatGPT work, the CLI at ChatGPT and Slack, Dots,  our new agents API, a lot of these things that you
+kind of know and love, it's available in a lot  more places now. Like I said, back in July, you
+know, we had the IIE World's Fair and I was here  talking about things that, you know, you could do
+with Codex. In that in that workshop, we talked  about here's kind of everything we've shipped
+between January and July, right? Since I'm back,  I wanted to update this slide. Here's everything
+we've shipped between July and November, right?  And I had to cull this list in order to make
+it fit on the screen because there were too many  things to put in here. I think the team has been
+shipping at an unbelievable rate. And, you know,  we're going to cover like a lot of these features,
+right?
+</details>
+<p>显然，我们希望探讨<strong>上下文（context）</strong>，以及将精准上下文引入智能体的全新和改良途径。我们想探讨<strong>迭代（iteration）</strong>，即如何与长期运行的智能体持续协作并获得理想成果，毕竟并非每件事都能像 Twitter 上发布的炫酷单次生成（one-shot）演示那样轻松搞定。我们想探讨如何在各个环境中运用 Codex——无论是在本地、云端还是远程；探讨<strong>交付（ship）</strong>，即如何将一个想法推进至生产环境，以及我们为此构建的一系列新工具；探讨我们在<strong>任务委派（delegation）<strong>领域观察到的新趋势，包括与子智能体（sub-agents）协同、与 Dots 配合以及跨多种形态的工作方式；最后是一轮</strong>快速技巧问答</strong>，帮助大家在日常工作中充分发挥 Codex 的潜力。那么接下来，我把麦克风交给 Dom。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But I think at a high level, I want to talk  to you about kind of some of the themes that we're
+going to touch on, right? Obviously, we want to  to talk about context and new and improved ways
+to bring the right context into your agent. We  want to talk about iteration, how to keep working
+with long-running agents and and get to the right  outcome because not everything is a cool one-shot
+demo that you post on Twitter, right? We want  to talk about working with Codex everywhere,
+both locally and in the cloud and remotely, how  to ship, how to get from an idea to production
+and some of the new tools we have to make that  happen, the the new things that we're seeing
+with delegation, working with sub-agents, working  with Dots and across these different form factors,
+and then a quick speed round of tips, right?  To help get the most out of Codex for everyday
+work. So with that, I'll turn it over to Dom.
+</details>
+<h3 id="上下文工程与模糊提示构建无缝认知" data-reading-heading="">上下文工程与模糊提示：构建无缝认知</h3>
+<p>太棒了。我们要聊的第一件事就是上下文，因为显然，要想让编程智能体发挥实际作用，最关键的前提是赋予它恰当的上下文，这不仅是为了让它理解自己正在做什么，更是为了让它理解我们最终期望达成的目标。在过去的两年里，每个人都在大谈特谈上下文工程，试图将需要纳入上下文的所有要素进行完美组合。但我认为，我们正日益进入一个我称之为**模糊提示（vague prompting）**的时代——也就是说，你真正期望的是像对待一位早已掌握全局上下文的同事或朋友那样与编程智能体交流，而不必事无巨细地持续下达指令。毕竟在现实中，没有人愿意和一个必须事无巨细明确交代、琐碎到不如自己动手去做的同事共事。令人欣慰的是，Codex 在收集上下文方面表现非常出色。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Cool. Awesome. So the first thing we wanted to  talk about is context, because obviously, um, the
+biggest thing for you to be able to get anything  out of a coding agent is to have it have the right
+context in order to, um, understand not just what  is it trying to do, but what is the goal that
+we're trying to fulfill. And so, um, you know,  the last two years we talked everything everyone
+talked about context engineering and like trying  to perfectly combine all of the different things
+that have to go into a context. But I think we're  increasingly getting into this world of what I
+call like vague prompting, uh, which is like you  really want to be able to like converse with your
+coding agent the same way that you would do with  a colleague or a friend who understands and has
+all of the context already. Um, so you don't have  to continuously dictate everything because like
+reality is nobody wants to work with a colleague  like that who you have to like explicitly dictate
+every little thing at the point to which you can  just do it yourself. Um, and the great thing is
+Codex is great at that context gathering.
+</details>
+<p>当我们最初构建 Codex 时，面临的难题在于 OpenAI 自身的代码构建依托于一个极其庞大的单体仓库（mono repo）。这意味着，若想在该单体仓库中顺畅开展工作，Codex 本身以及背后的模型就必须非常擅长检索这些巨型代码库，并在其中精准地大海捞针。而且，这种收集上下文的能力并不仅局限于代码本身。一方面，你需要确保适用于代码库的所有规范都沉淀在仓库中——我想大家现在都在这么做，不论是通过 <code>agents.md</code> 文件，还是借助代码检查工具（linters）及其他辅助工具。从现实逻辑来看，如果你将一名经验丰富的高水平工程师放入你的代码库，他们应当能够在不犯错误的情况下提交贡献。对智能体而言同样如此。因此，如果是编码标准这类内容，你应该始终将其置于实际的代码仓库中。然而，大量的关键上下文实际上留存在代码仓库之外。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um,  when we originally built Codex, um, we had the
+problem that OpenAI builds on a giant mono repo,  um, which means that like if you want to have,
+uh, be successful with working in that mono repo,  Codex needs to be really good and our models
+need to be really good at like navigating  these giant repositories and finding like the
+proverbial like needle in the haystack. Um,  and this context gathering capability spans beyond
+just, uh, you know, code. So on the one hand,  you want to be able to make sure that all of the
+standards that, um, apply to your repository or in  your repository I think we all do this at this
+point, whether it's through agents.md files or  linters and other tools, like realistically, if
+you have a really skilled engineer and you drop  them in your codebase, they should be able to
+contribute without making a mistake. The same  goes for agents. So if it's just things like,
+uh, coding standards, you should always put  them in the actual repository. However, a lot of
+context lives outside of that repository.
+</details>
+<h3 id="插件体系与跨界面上下文共享" data-reading-heading="">插件体系与跨界面上下文共享</h3>
+<p>这正是插件（plugins）发挥作用的地方。插件本质上是将 MCP 服务器、技能（skills）以及针对特定用例可能相关的任何额外资源捆绑在一起的载体。我们在推出的插件市场中提供了丰富多样的插件，并且仍在持续扩充。你自己构建的任何插件都可以进行提交，而且其中绝大多数都借助远程 MCP 运行，因此它们不会被局限在你的单台本地机器上。正如 Charlie 所说，由于开源的 Codex 框架目前驱动着所有这些不同的产品界面，你可以在这些所有界面中复用相同的插件连接。举个例子，只要你在 Web 端的 ChatGPT 上连接一次 Slack 插件，那么你开发机上的 Codex 就能以同样的方式访问那些 Slack 消息；而在其他采用 Codex 框架的界面中（比如 <code>@ChatGPT</code> 的 Slack 机器人标签），同样能够直接调用这些资源。这意味着我们可以在所有这些产品界面间共享统一的上下文。你也可以仅在公司内部构建并共享这些插件，或者将开源市场发布到 GitHub 供其他人连接使用。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And this  is where plugins come in. Um so plugins are uh
+bundles between uh MCP servers, um skills, and any  additional resources that might be relevant um for
+that particular use case. And so on the one hand,  we have a plugin marketplace that we launched that
+has a wide series of plugins and we keep adding to  them. You can submit yourself any plugins that
+you build, um, and they use remote MCPs for the  majority of them to not just have a connection
+to, like, your one machine. But because, as  Charlie said, the open source Codex harness powers
+all of these different surfaces at this point,  you can use that same plugin connection across
+all of these surfaces. So if you connect once,  say on ChatGPT on the web, your like Slack plugin
+Codex on your dev box has access to those Slack  messages the same way that like any other,
+um, uh, device that is, or like any other, um,  interface that uses the Codex harness, like the
+@ChatGPT, uh, Slack tag for example, has access  to those same resources. And so that means we can
+share that context across all of these surfaces.  Um you can also build these plugins and just
+share them within your company or um connect  them or or publish an open source marketplace to
+GitHub so that other people can connect to it.
+</details>
+<p>借助这一点，你就能实现自然得多的交互沟通。这是我前段时间发给我自己的 Codex 的一条消息。乍看之下，你或许能大致猜出我要求它做什么，但实际上这句话留下了很大的发散空间，对吧？比如，我并没有说明自己在 Slack 的哪处被提及（tagged），也没有指明自己提到的是哪一个 Katya。但我的 Codex 掌握着所有的完整上下文，因为它连接了我进行交流沟通的各个渠道。它拥有我的 Google Drive 访问权限，因此能够打开那条 Slack 消息中共享的电子表格；它显然拥有 Slack 的访问权限，能够拉取相关会话；此外它还拥有构建新功能或类似任务所需的其他资源权限。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And with that, you get to a much more natural  conversation. This was like a message I sent to my
+Codex a while ago um where if you look at it, you  might get a bit of context out of what I'm asking
+it to do, um but the reality is there's a lot of  openness, right? Like I didn't say like where in
+Slack I got tagged. I I'm like didn't say which  Katya I was referring to, but my Codex has all
+of that context because it's connected to all of  the different ways that I'm uh talking, right? So
+it has access to my Google Google Drive so it can  access the spreadsheet that was um shared in that
+Slack message. It has access to Slack, obviously,  to be able to pull that conversation, but it also
+has it also has access to other things that we  need to build new features or similar things.
+</details>
+<p>这带来的另一个优势在于能够把你的工作推进得更远。事情发生在 6 月，但这依然是我最喜欢的案例之一：当时我们需要在周日午夜更新我们的文档站点。不知道各位怎么想，但我个人绝不想半夜守在电脑前盯上线。于是我告诉我的 Codex 去处理，并和它一起准备好了 PR。一切就绪后，我让它在预定时间前持续跟进争取审核批准，同时留意 Slack 频道，以防这次发布出现任何临时变更；若一切正常，就在原定上线时间前 20 分钟启动发布流程——在当时，整套部署流程大约需要耗时 20 分钟——随后确保其成功上线。到了当天午夜过后的 4 分钟，它发来通知说：“嘿，已经顺利上线了，一切正常。”整个过程我根本不需要介入。更戏剧性的是前一天的周六，我直到事后才察觉到：当时有人在 Slack 上艾特我询问变更进展以及预览环境的 URL 在哪里，我的 Codex 直接替我进行了回复，而我的同事也回应说“看起来没问题”。整个过程中我无需操心任何琐碎事项，它掌握着全部上下文，能够持续追踪并解决问题，因为我授权它去推动那次发布的推进。它并未脱轨去闲聊别的事，而是切实推动了这项工作的落地。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The other thing that allows you to do  is like take your work way further,
+right? So we had a this was in June, but I  still it's still one of my favorite examples
+where we had to update our documentation site on  Sunday at midnight. I don't know about you all,
+but like I don't want to have to like watch that.  So I told my Codex to go and I prepped with it
+the PR. I was good. I asked it to continue to try  to get like an approval on time and then keep an
+eye out on the Slack channel in case there's  any last minute changes to this launch and
+otherwise launch it on time 20 minutes ahead  of time. That's how long the deployment took
+at that time and then make sure it's live.  And so 4 minutes after midnight on that day,
+it was like, hey, it 's live. We're all good.  And I didn't really have to get involved there.
+The funnier thing though was on Saturday, the  day before, I didn't notice this until afterwards
+where my I got tagged about like the changes that  had that were being done and where the preview URL
+was. And my Codex replied for me. And my colleague  was like, looks good. So I didn't have to deal
+with anything there. It just had all the contact.  They could keep up with it and solve this because
+I empowered it to like be able to like shepherd  that launch ahead, right? It didn't go and like
+have a conversation about something else, but  it was able to like push this forward.
+</details>
+<h3 id="插件扩展与桌面端生态定制" data-reading-heading="">插件扩展与桌面端生态定制</h3>
+<p>在插件领域，另一项值得关注的能力是我们近期推出的<strong>插件扩展（plugin extensions）</strong>，它为处理上下文提供了另一种思路。到目前为止，我们谈论插件时，主要将其视为向智能体输入上下文的渠道。但是在整个 ChatGPT 生态中，你往往还希望有各种不同的方式来更好地与这些上下文进行交互。通过插件扩展，你几乎可以扩展桌面客户端以及 ChatGPT Web 端和移动端的各个组成部分。你可以新增侧边栏条目，添加侧边抽屉面板，创建完整的全页面视图，甚至能够深度定制文件查看器（file viewer）和编辑器（composer）。因此，如果在你所在的公司内部，存在某些高度契合自身工作流和工作习惯的特殊场景，你完全可以构建一个专属插件，让你和智能体都能更便捷地访问这些资源。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+One of
+the interesting things though with plugins is that  we recently launched plugin extensions and plugin
+extensions gives you another way of dealing with  context. So so far we talked about having plugins
+as a way to give your agent context. But there's  also a lot of different ways that you want to
+better interface with said context in the overall  ChatGPT ecosystem. And so with plugin extensions,
+you can extend pretty much every part of the  desktop app as well as ChatGPT online and on
+mobile. So you can add sidebar entries. You can  add a side panel. You can create a full-on full
+page view, but you can also change things like the  file viewer and composer. So if you have things
+inside of your company that are very specific  to your workflow and your ways of working,
+you can go and build a plugin that makes that  more accessible for both you and your agent.
+</details>
+<p>让我为大家快速演示一个例子。这是桌面应用程序。大家可以看到我们这里有很多不同的功能页面，其中很大一部分其实是我们自己构建并直接随 Codex 一起发行的插件，我们基于相同的底层原语进行开发。比如你可以看到这里的站点插件（sites plugin）、稍后 Charlie 会介绍的代码审查插件（code review）、安全云插件（security cloud）等，很多本身都是以插件形式构建的。而我自己构建了一个名为设计系统（design system）的小插件。现在它直接内嵌在桌面应用中，成为了我在应用内浏览公司设计系统的窗口。我可以随时查看可用的组件并直接使用。这非常实用，因为我不知道大家如何，我有时会特地开着一个设计系统的标签页，纯粹是为了获取一些灵感，看看该如何给模型写提示词，或者希望界面元素呈现出什么样的形态。现在我可以将它直接嵌入到这里。随后我可以进入其中并进行配置，比如我的项目可能需要这种下拉菜单。我只用了一条提示词让 Codex 来构建这一切：我给它提供了我们的设计系统，让它帮我构建一个实现此功能的插件。我在这里放置了一个“添加到编辑器”按钮。点击后，对应的上下文便直接注入了进来。大家可以看到这里切换到了操作下拉菜单，它已经具备了完整的上下文信息，我无需手动键入，Codex 也无需再去额外检索，全部以极其原生的方式注入其中。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And so let me give you a quick example of this.  So this is the desktop app. And one of the things
+that I built, so you can see we have all these  different pages here. A lot of them are actually
+plugins that we built ourselves and are just like  shipping as part of Codex. So we build on the same
+primitives. So you can see the sites plugin here,  code review which Charlie is going to talk about,
+security cloud. A lot of these things are plugins  themselves. But I built a little plugin called
+design system. And so this is like now directly  in the desktop app as a way for me to explore our
+company's design system. I can look at what kind  of components are available and then work with
+them. And this is incredibly helpful because like  I don't know about you, but like I I sometimes
+end up like having like a tap open without design  system just to like get some inspiration of like
+what I'm trying to prompt the model to do, what  I want these things to look like. And so I can
+have this embedded directly in here. And then  I can go in and I can change, you know, like
+maybe I want this sort of like drop down in my  project. And I asked Codex, all of this was built
+with one prompt from Codex. I was like, here's  our design system, build me a plugin that does
+this. And I have an add to composer button here.  And now I injected this context here that has,
+you can see here we switch to actions drop down.  It has all of the context now that I don't have to
+type out. It Codex doesn't have to go and find it  anymore. It's injected in there um all in a very
+like native way.
+</details>
+<p>此外，我还可以借此对编辑器进行扩展改造。比如我可以在这里输入 <code>@</code> 提及设计系统，输入框会提示“点击进行搜索”。点击进入后，就能重新看到我所有的设计系统组件。这里的应用场景是完全开放的，比如如果安装了 Figma 插件，你可以在输入时自动补全已有的 Figma 文件；或者以此类推，将其扩展到任何你内部正在使用的工具。这就是通过插件扩展上下文的一个典型实例。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The other thing that I can do  with this though is I can modify the composer. Um
+so I can add uh mention the design system here and  then it says tap to search. So if I tap into it,
+now I see all of my um design system components  again. And this can be anything, right? So if you
+if you install the Figma plugin for example,  you can get autocomplete on um like the Figma
+files that you have or uh similarly you can like  extend it to whatever internally you're using. Um
+so that's an example of extending context through  plugins.
+</details>
+<h3 id="app-shots计算机使用与跨系统环境感知" data-reading-heading="">App Shots、计算机使用与跨系统环境感知</h3>
+<p>另一项我极其推崇的功能是 <strong>App Shots</strong>。在座有多少人以前用过 App Shot？好的，只有几位。这是一项被严重低估的功能。如果你正在使用 Mac，并且习惯于不断截屏发送给 Codex，建议你尽快切换到 App Shots。如果你已经安装了桌面客户端，现在就可以尝试一下：同时按下左右两侧的双 Command 键（如果在 Windows 上，则是同时按下左右两侧的 Alt 键），它就会截取屏幕。初次使用时可能会提示你需要授予某些权限。但它不仅能抓取屏幕截图，还能抓取当前视口范围之外的额外上下文。举个例子，当你正在开发或浏览一个网站时，往往有大量信息处于截屏区域之外；在 Slack 中亦是如此，若截取一段对话，首屏下方通常还有更多内容。而 App Shot 会同时提取该页面上的**无障碍辅助功能树（accessibility tree）**信息并一并发送。你可以查看 App Shot 的效果，我来快速向大家展示一下。我之前截取过一次：表面上看它就是一张截图，但点击“查看文本”后，你可以看到其中包含了大量的附加信息，比如变量、数值以及任何属于无障碍树范畴的结构化数据。这为你的 Codex 提供了丰富得多的信息，而无需你费力去涵盖。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um the other thing that I'm a big fan of
+is app shots. How many of you have used an app  shot before? Okay, just a few. Highly underrated
+feature. Um if you're using Mac  and you keep  taking screenshots and sending them to your Codex,
+you should switch to app shots. So if you  have the desktop app already installed,
+you can try this right now. Press command  command um so both command keys left and right
+or if you're on Windows, it's alt on both sides  and it will take a screenshot, but it will also
+take it might ask you the first time for like some  permissions that you have to grant. But it's going
+to take both a screenshot, but it's also going  to take um additional context that is outside of
+that viewable port because if you're for example  working on a website, right? Or you're looking at
+a website, there's a lot of things that are often  outside of that screenshot or same on Slack or if
+you want to like screenshot a conversation,  there's like more beyond the fold. And so an
+app shot is going to take the accessibility tree  information that is on that page and send that as
+well. So you can go in an app shot. Let me quickly  show this to you. I did this earlier. Um um
+here. Um so this is it looks like a screenshot,  but we can click here on view text. And you can
+see there's a lot of additional information,  right? Like variables, numbers, anything that
+is like part of that accessibility tree. And so  it's going to give you way richer information to
+your Codex that you don't have to cover.
+</details>
+<p>另一个维度是<strong>计算机使用（computer use）</strong>。如果某个场景缺乏对应插件，但你仍然需要 Codex 能够获取信息，就可以借助计算机使用能力。在 macOS 上，这项功能完全可以在后台静默运行。它不会强行接管你的整台电脑而让你不得不离开座位等待其操作；它拥有自己独立的虚拟光标来进行屏幕交互。这在拉取数据以及测试应用程序时非常方便，比如在当前的演示场景中，它正在直接与 iOS 模拟器进行交互。此外，你也可以安装 Chrome 浏览器扩展。如果你不希望给它开放接管整个桌面的权限，但又需要它掌握网页维度的上下文，就可以通过 Chrome 扩展将相关上下文引入进来。该扩展在 Windows、Linux 和 macOS 上均支持纯后台静默运行。这样一来，即使你在浏览器中继续打开多个标签页正常工作，Codex 也可以在不抢占焦点的同时共享相同的登录态上下文。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The  other part is computer use. So if there's no
+plugin you and you still need Codex to be able to  access information, you can use computer use for
+this. On macOS, this can work entirely in the  background. So you don't it doesn't take over
+your your computer and you have to like sit away  and like it's going to handle it. It actually has
+its own cursor so it can interact with it. This  is great for just pulling information, but also
+testing applications. For example, in this case  it's like interacting with the iOS simulator.
+The other part of this is you can install the  Chrome extension. So if you don't want to have
+computer use for your entire desktop, but you  wanted to have contacts over your websites,
+you can then use the Chrome extension to pull  in that context through that. And that works
+on Windows, Linux, and macOS all in the  background. So this is great when like
+you want to continue to work on multiple tabs  in your browser without Codex taking it over,
+but Codex having that same logged in context.
+</details>
+<p>还有一项功能目前比较遗憾仅支持 macOS，那就是<strong>计算机历史（computer history）</strong>。这是属于那种只要开启后静静放置、随后便会展现神奇效果的功能。它不是开启瞬间就能让你立刻看到立竿见影效果的工具，但它本质上会持续记录你的日常操作轨迹，并据此学习你使用特定工具的习惯偏好，因为这也是极其重要的上下文。举个例子，通过计算机使用记录，我的 Codex 逐渐掌握了一个习惯：每当我着手撰写博客文章时，最初都会先在 Google Doc 中起草以便接受审阅。如果我改变了这一习惯，开始转而在 ChatGPT Space（稍后我们会详细介绍）中起草，它也能立刻捕获这一上下文，因为它明确知晓我正在与哪些应用程序交互。随后，它可以将这些信息作为 Codex 内部的长期记忆，用来引导其后续行为并作为上下文调用。它还能帮到很多其他事情，比如帮你回忆“我刚才看的那份文档到底是什么”，并主动为你检索呈现。开启方式非常简单，只需进入设置中的计算机历史模块并打开开关，随后它就会开始建立历史记录，供你查看其记录的各项活动。在底层实现上，它大量依赖 Mac 本身的原生事件流（event streams）而非持续截屏，这不仅大幅提升了 Token 的利用效率，而且运行速度也显著加快。你可以看到它正在逐步构建出你所使用的不同应用程序的脉络。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The other thing and this is unfortunately macOS  only at the moment is computer history. This is
+one of those things that like you have to  turn on and just wait and it just magically
+works. It's not the thing that like you turn on  and you instantly see a benefit. But computer
+history basically keeps track of what things  you are doing and learns based on that how you
+use certain tools, for example, because that  is again important context. So for example,
+like through computer use my Codex learned  that whenever I work on a blog post,
+I draft those in a Google Doc first so that I  can get them reviewed. If I changed that habit,
+I started actually drafting them now in like  chat GPT space, which we'll talk about in a
+second. It learns about that context because  it knows what apps I'm interacting with. Um
+and then it can use that as memories inside  uh Codex to be able to steer its behavior,
+use that as context. It can also do things like  help you with what was that document that I was
+looking at earlier and it can actually go and  pull that up for you. Um the way you turn it
+on is you just go into the computer history part  in the settings, you turn it on but and then it
+starts creating you this history where you can  see the things that it's been doing. It uses  uh
+for that a lot of the like event streams of your  of your Mac rather than screenshots, which makes
+us way more token efficient, but also faster.  Um and you can see it sort of like building
+that history of like what are the different  apps that you are using.
+</details>
+<p>我知道大家此刻都在思考安全与隐私问题。我们在隐私控制维度提供了多种自主把控手段。一方面，你可以随时暂停计算机历史的记录；另一方面，你也可以事后追溯并清除最近的历史记录。比如你刚刚打开了一份本应规避记录的敏感文档，便可立即前往设置清除过去一分钟内的记录。此外，你还可以将特定的网站或应用程序彻底排除。例如，浏览器的无痕隐私模式本身已被默认排除在外，若有任何不希望被纳入记录的特定网站，你都可以单独配置排除。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I know now though
+you're thinking what about safety. Um you have a  lot of different controls for you to control the
+privacy aspect of this. So on the one hand, you  can pause computer history whenever you want to.
+Um you can also go retroactively and clear the  most recent um history if you're like, oh shoot,
+I just started like looking at this document. I'm  supposed to turn off computer history for this.
+Like let me go and clear the last like minute.  Um and then you can exclude specific websites or
+apps entirely. So like private mode um website  stuff is already  excluded, but if there's
+like specific websites that you don't want to be  have as part of your computer history, you can.
+</details>
+<h3 id="chatgpt-space解决分散资产的协作协同" data-reading-heading="">ChatGPT Space：解决分散资产的协作协同</h3>
+<p>关于上下文，我想分享的最后一项核心观察是：上下文从来不是一股脑塞进代码仓库里的单一实体。你的真实上下文通常高度分散在多个不同界面中——它可能是产品经理在 Google Doc 或 Notion 里撰写的产品需求文档（PRD），也可能是你逐步迁移到 GitHub 仓库里的架构图，亦或是销售团队通过 Google Sheets 转发给你的一大堆客户反馈。当你试图在这些碎片信息之间来回权衡兼顾时，不仅 Codex 很难持续将它们拼凑串联起来，你与团队成员以及 Codex 围绕这些挑战展开协作也会变得异常痛苦。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The last thing I want to talk about for context is  um I think we all deal with this, but like context
+is not this one thing that you throw into your  repo, right? Like your context is normally spread
+across multiple different surfaces, whether  it's the PRD that your product manager wrote
+in a Google Doc or Notion, um it's like your  architecture diagrams that you've been like
+slowly moving into your GitHub repository, you  know, sales sends you a sends you a Google Sheet
+with like a bunch of customer feedback, and you're  trying to juggle all of these different things.
+Uh, it makes incredibly hard both for Codex to  continuously stitch these things together. Um,
+but it also makes it hard for you to collaborate  with others and Codex on these challenges.
+</details>
+<p>一个典型的例子就是针对某项大型功能的规划方案。你可能会让 Codex 先起草一份规划，很多人接下来习惯的做法就是将其提交保存进代码库，以便在 Pull Request 里查看并展开审阅。但想要对这个文档进行反复推敲并收集反馈，整个过程非常繁琐。于是不少人又把方案复制粘贴到 Google Doc 里发给团队，随后再把修改内容拷回仓库，或者在代码库里附上外部链接。正是为了解决这种智能体与人类之间的协作断层，我们推出了 <strong>ChatGPT Space</strong>。在此模式下，我只需让 Codex 直接把规划方案转化为一个页面，它就会在 ChatGPT Space 中生成一个支持富文本格式且完全可在线编辑的独立页面。我可以在这里直接 <code>@</code> 提及我的 ChatGPT，询问诸如“我们当前是否已有某种数据库结构应该复用到这里，之前遗漏了？”等问题，ChatGPT 会协助厘清。我也可以直接提及 Charlie 并向他提问；如果他愿意，他同样可以提及 ChatGPT，或者提及他的专属 Dot。我们所有人都能在同一个界面内协同编辑。看到 ChatGPT 带有独立的光标实时浮现并开始修改内容，这种体验非常奇妙。你甚至可以嵌入通过内置 HTML 对象构建的可视化图表等高级功能，或者借此攻克技术领域最头疼的问题之一：更新过时的历史文档。毕竟多少次我们写完值班应急手册（runbook）后，却往往抱怨“糟糕，刚才忘了同步最近修改的运维命令”。你完全可以让智能体来替你维护，只需在助手指令中设定规则，规范智能体何时可以修改 Space 页面；或者开启<strong>自动更新（auto update）</strong>，让它按固定周期对文档进行巡检与更新。你可以将其理解为专门作用于独立页面的 <code>agents.md</code>，极其好用。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um,
+a good example of this is, you know, an a plan for  a larger feature. You might ask Codex to write one
+for you, and then  one of the things I think  a lot of us have done is like go and like check
+it into the repo so that I can see it in a pull  request um and review it there. This is a giant
+pain to like iterate on and get feedback on. So  a lot of people start like copying and pasting
+the plan into a Google Doc or something so you  can send it to their team, and then you like
+copy paste it back or you have to like link your  Google Doc. Um, but for that reason, for this like
+collaboration between agents and people, we added  uh we launched ChatGPT Space. And so from here,
+I can just like ask Codex to go and turn the plan  into a page, and it's going to go and create a
+page in ChatGPT Space  that is fully editable in  this rich text format. Um, and I can go from here
+and tag my ChatGPT. So if I have like questions  like, you know, do we have already some database
+structure that we should fit in here that was  like missing? Uh, ChatGPT can work through that.
+But I can also go and tag Charlie, for example,  and  ask him for a question. If he wants to,
+he can tag in ChatGPT, he can tag in his dot.  Um, and we can all kind of collaborate on this,
+and it's incredibly fascinating to see, you  know, like ChatGPT having like a cursor pop
+up and start editing things, and you can even add  rich functionality like visualizations built in
+HTML objects or deal with one of the most painful  things I think in this world, which is updating
+uh legacy information because how many times have  you like written a document on like this is like
+your your runbook, for example, for on call?  Like how many times do you write that and like,
+ah damn it, I forgot like update that we  recently changed the command here. Um,
+you can actually ask  your agent to do that for  you by giving assistant instructions that are both
+dealing with when an agent is going to modify a  page in space or you if you turn on auto update
+uh for it to like have instructions on how to  go and update these on a regular cadence. Um,
+so you can think of this as like agents.md for  your individual pages. It's incredibly helpful.
+</details>
+<h3 id="高频迭代ultrafast-模式与页面实时标注" data-reading-heading="">高频迭代：UltraFast 模式与页面实时标注</h3>
+<p>接下来我想探讨的是<strong>迭代（iteration）</strong>。前面我们讨论了上下文以及指导智能体开展工作所需设定的指令，但现实中很多时候我们手中并没有完备的上下文。最典型的场景就是当你着手构建一个全新的功能或 Web 应用时，手头根本没有设计师提供的视觉设计稿，你只能自行摸索方向、感受交互并持续迭代。在这类场景下极具实用价值的一项能力是 <strong>UltraFast 极速模式</strong>。我们在 10 月份的 DevDay 上针对 <strong>GPT-6.1 Soul</strong> 和 <strong>GPT-6 Astra</strong> 同步推出了 UltraFast 模式，其推理速度提升了 8 倍，而成本仅为原有的 6 倍。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The next thing I want to talk about is iteration.  Um, so far we talked about context and sort of
+what instructions you have to give your agent  to be able to work on a goal. Um, but there's a
+lot of times where we don't actually have all the  context, right? The most classic example of this
+is you're trying to build a new feature or web  app and like you don't have a design from your
+designer or something. You're trying to kind of  just like figure out which direction do I want to
+go, what fields write and iterate on that. One of  the things that is incredibly helpful for that is
+Ultra Fast. Um, so we launched Ultra Fast for both  uh GPT-6 Soul and GPT-6  GPT-6.1 Soul and GPT-6
+Astra um in October at Dev Day and it's eight  times faster um at just six times the cost.
+</details>
+<p>不过这里我想强调一个非常重要的原则：你并不总是需要 UltraFast，也不应该盲目滥用 UltraFast。我知道直接把速度拉满是极具诱惑力的，毕竟在当下的数字节奏中大家凡事都追求更快。但问题在于，如果你的开发任务本身包含大量的验证和编译耗时，使用 UltraFast 往往无法带来体感上的加速。比如你在构建一款 iOS 应用或者视频游戏，如果一半以上甚至更长的时间都在等待编译器运行、或者等待端到端测试与集成验证完成，你可能根本感受不到明显的提速。我个人最推崇的使用场景，是借它找回全神贯注沉浸在心流中的工作状态。回顾从前自己纯手工写代码、到现在将大量工作托付给智能体的转变过程，我逐渐开始怀念一种体验：过去那种启动一个任务后就只能起身走开的状态，缺少了一种探索创意、实时协作并快速试错验证构想的创作乐趣。而这正是 UltraFast 能够大放异彩的舞台。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But I
+think I want to I want to say one important thing.  You don't always need Ultra Fast nor should you
+always use Ultra Fast. Um, I know it's incredibly  tempting to just be like I want everything fast.
+Just give like we're living in an economy where  like everything should be fast. Give it to me
+fast. The problem with this is that um a lot of  times even if you use Ultra Fast, you're not going
+to materially see changes fast if for example your  task requires a lot of validation and build time.
+If you're building an iOS app or like you know a  video game or something and like half your time or
+even longer is like spend on like running compile  uh compilers or you know like running end-to-end
+tests and validations, it might not actually like  you might not actually notice that much the speed
+up. What I love using it for though is to really  be back in the locked in and in the zone. Like,
+one of the things that I started to miss over time  from like going from like, you know, writing code
+myself to having agents do a lot of the work is  sort of like I kick off the task and I walk away
+and there isn't this sort of like creative process  like where I'm collaborating and like trying out
+different ideas and quickly iterate on an idea.  And so this is where UltraFast is really good.
+</details>
+<p>在进入实操演示前，我想介绍的另一项功能是<strong>标注（annotations）</strong>。如果你从未使用过桌面客户端中的标注功能，可以留意其内置的应用内浏览器：点击左上角的按钮，即可直接在网页的不同区域圈定标注，这意味着你可以向模型反馈极其具体且具备针对性的修改意见；同时，你也可以点击那个小设置按钮，实时微调页面上的各项参数，从而更直观地把握界面呈现效果。接下来我把这两项特性结合起来向大家快速演示一下。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um
+the other thing before I jump into a demo that I  want to show you is annotations. So annotations,
+if you've never used them in the desktop app,  you have the in app browser and you can click
+the button at the top left to go and annotate  different parts of the site, which means that
+you can give very specific targeted feedback.  But you can also use that little settings button
+to go and tweak things in the page live to get  a better feeling for something. So let me show
+you both of these quickly in action.
+</details>
+<p>这里有一个我们为演示搭建的小网站，我本地正跑着一个开发服务器。在使用 UltraFast 时，有一条核心前提：如果你没有配置具备热重载（hot reloading）能力的本地开发服务器，那么在这些交互场景下你大概率无法享受到 UltraFast 带来的收益。因此务必保持本地开发服务器处于运行状态。另外，如果启用了 UltraFast，记得把推理深度调低，通常选择轻度推理（light reasoning）即可；高于该档位虽然能跑通，但往往会破坏 UltraFast 独有的行云流水般的质感。当然，当我确知某些任务高度复杂或存在微妙细节时，我会切换到高深度推理，但绝大多数时间我都维持在轻度档位。现在我可以直接操作并提出要求：“删除带有按钮的‘all good music great company’标题区”。有时写下这些提示词的时间甚至比它跑完代码还要长。由于首次执行需要读取一些文件来建立索引定位，初次响应可能会花上一小会儿，这往往也是文件系统本身的 I/O 限制所致。接着输入：“让另一个页头全屏显示”。在快速迭代 UI 时，我常常会向它密集抛出细小明确的任务指令并实时滚动查看。比如这次改成：“只在水平方向全屏，其他方向保持常规”。我有时就只是靠在椅子上直接使用语音输入：“好的，改这个，再改那个”。比如：“添加一些背景动画，让黑胶唱片看起来更接近真实的唱片质感并保持旋转”。大家可以看到这些变更执行得极快：恢复只花了 5 秒，这项调整花了 10 秒。通过这种方式，你可以极速推进页面迭代，逼近脑海中预想的视觉形态，尤其适合在缺乏明确设计终局时的摸索过程。比如：“如果能让光标划过时模拟黑胶搓碟效果应该挺有意思”。我目前依赖的虽然都是相对简短的指令，但你依然有办法进一步加快这些操作流程。比如：“把这些文字全都调得更具可读性”。我可以给到非常精准的即时反馈。大家有时会看到我以极快的节奏连续把多条消息排入队列，甚至快到我自己都跟不上模型的生成节奏，因为 Astra 或当前演示中的 Sol 处理输出的速度实在太惊人了。大家可以看到，现在页面已经支持搓碟交互了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um so here I  have a little um site that we were building for a
+demo and I'm running a dev server. I think this is  one of the first things that like if you're using
+UltraFast, if you don't have a hot reloading dev  server, you're probably not actually benefiting
+from using UltraFast for these use cases. So  have a have a dev server running um and then
+if you're using UltraFast, just turn it down.  Just go reasoning on like light anything above
+it um can work, but you're going to see like  not sort of that magic moment that you get
+from UltraFast. So sometimes I turn turn it like  if I know that something is like fairly complex
+or there's like nuance, I turn it to high, but  most of the time I'm on light. And so from here
+I can go in and I say like remove the all good  music great company um header with the button.
+Takes me longer to write these things than um  it takes to run for some of these things. Um
+the first task sometimes takes a second because  it starts reading a couple of the files like
+orientate itself and again this is sort of where  you're running into like the limitations of um you
+know like your file system faster than anything  else. Um make the other header full screen. And
+so what I often do when I'm doing these sort of  things where I'm like iterating on UIs I often
+even just like started giving it very small tasks  um and uh scroll through it. So like in this case
+actually let's just do horizontally full and  uh rest normal. Um so like I can iterate on
+these things. I sometimes literally just like sit  back on my chair and I'm just like using voice
+dictation. I'm just like okay do this do this.  Um add some background animation, make the LP um
+look more like real vinyl and spin. And you can  see here all these changes like this like you
+know restoring took like five seconds. This took  10 seconds. And so like you can really quickly
+iterate on these things and get to a world that  you're actually sort of like envisioning with um
+your stuff especially if you're unsure what you  actually want to get to. Like I think it would be
+fun if we can make it scratchable with the cursor.  You know um it's an LP. Um but like right now I'm
+relying on like fairly simple instructions um  but you there's a way for you to like speed up
+some of these things even more. Like here for  example make all of these um more readable.
+Like I can give like very targeted  feedback  and like sometimes you see me like trying to
+queue up a bunch of these messages very quickly.  Um and it's hard for me to keep up because Astra
+is like kicking them out or in this case Sol is  kicking them out so quickly. We can see here it's
+scratchable now.
+</details>
+<p>举一个实际案例：在筹备本次 DevDay 的前夕，也就是发布前一晚，我正在审查 ChatGPT Space 的一些文档。当时我想让介绍各项功能的页面变得更加引人入胜。大家看到的这些微型特性展示全都是纯 HTML 构建，而不是视频。当晚我基本上就是以类似的方式将一系列调整排入队列，在逐步摸索中探寻自己想要的最终方案，因为起初我并不确定具体要做成什么样；而每一次交互循环，都让我对想要达成的效果有了更清晰的把握。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um to give you a very concrete  example, um where I recently used this was leading
+up to DevDay, um the night before the launch, um I  was looking at some of our docs for ChatGPT space.
+And I wanted to make this page that talks about  the features a bit more engaging. Um and so all
+of these little features here, they're all HTML,  they're not videos. Um and you can see here um I
+basically just started queuing up things and I  was like touching my way to the solution that I
+wanted cuz I wasn't quite sure what I wanted.  Um and so like every time I would do a turn,
+I'll get more clarity on like what  I'm actually trying to get towards.
+</details>
+<p>关于标注我想补充的最后一点：回到当前页面，目前大家可以看到，每当我把光标悬停在元素上方时，它都是基于底层的 DOM 节点进行选取的，而 DOM 正是构建所有 HTML 页面并赋予其结构的基石。然而在某些情况下，原生 DOM 的选取层级并不契合我们的意图，为此我们增加了<strong>标注 API（Annotations API）</strong>。你可以直接让 Codex 接入它，它完全明白对应的实现机制。该 API 允许你精细控制页面上哪些元素是真正可供选取的。比如，在开发设计系统时，你可能希望每个独立的组件都可以被圈定，但并不希望外部包裹的 Storybook 框架本身被选中；或者针对不同的应用场景设置不同的圈选边界。例如在昨天发布的 Game Boy 色彩复刻版（chromatic Game Boy）中，针对 Mod Retro 插件，我们就利用标注 API 实现了允许用户圈定标注模拟器内运行的游戏画面，同时避免误选模拟器外围控件的效果。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Uh the last thing on annotations is um if we go  back here. Right now you can see every time I'm
+like hovering something, it tries to do this  based on the DOM, um which is the thing that
+is powering every HTML site and gives it the  structure. Um but there's moments where that's
+not actually what we want, right? Um and this is  where we add in an annotations API. You can just
+ask Codex to do it. It will know what what I'm  talking about, but it allows you to select what
+is actually selectable on these pages. So for  example, if you're working on a design system,
+maybe you want all of the individual components  to be selectable, but you don't want it to have
+like the frame of your story book a  story book selectable or you want to
+have different settings. For example, for the um  chromatic Game Boy launch that we had yesterday,
+we um for the mod retro plugin, we ended up  um using the annotations API so that you can
+like mark up things inside the emulated game, but  you can't like mark out the like actual emulator.
+</details>
+<h3 id="codex-cloud-v2算力扩展与多仓库隔离环境" data-reading-heading="">Codex Cloud V2：算力扩展与多仓库隔离环境</h3>
+<p>好了，我们刚才讨论了上下文和快速迭代，但另一项令人惊叹的能力在于<strong>长期运行任务（long-running tasks）</strong>。去年我们还在为任务能连续执行 7 个小时而感到兴奋；看来动画似乎无法播放了。我们从去年为 7 小时的任务运行而欢欣鼓舞，跨越到了如今任务能够连续执行数小时乃至数天的新阶段。其结果就是，很多人（我知道台下的大家肯定也干过）开始购置 Mac Mini，或者翻出淘汰的旧笔记本塞在办公桌底下当作备用开发机，仅仅是为了能在合上日常笔记本电脑的同时保持任务不中断；或者开始在网上租用各种虚拟私有服务器（VPS），试图搭建自己的算力集群。如果你只是在进行体验式编程（vibe coding），这或许挺有意思；但如果是在企业经营的常态化业务中，这种模式很难持续维系，因为你不仅需要处理这一堆硬件设备的配置部署与更新维护，还得在算力负载饱和、并发任务受限或磁盘存储耗尽等瓶颈出现时不断进行扩容扩容。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+All right. So we talked about  context, we talked about iteration,
+but really one of the other magical parts,  right, is long-running tasks. We've went
+from last year being excited about, you know,  seven hours of tasks running. Um, looks like
+I guess there's no more animation. Uh, we went  from like seven  hours of tasks running to
+like now being able to have tasks that run for  hours or days. Um, and as a result, a lot of us,
+I know you've done it too, started buying like  Mac Minis or like dusting off that old laptop and
+shoving it under your desk as like an additional  dev box just so that you can like keep your laptop
+closed um or you start renting random virtual  private servers online just so you build your
+fleet of compute. This might be  fun if you're  like doing vibe coding, but like it's not really
+like sustainable if you're doing this on a regular  basis for like a business, for example, because
+you have to deal with like setting up all these  devices, deal with the updates, but you also have
+to like continuously scale them as you're running  into like issues around, you know, saturating
+the amount of compute and tasks that you can run  there or running into disk space issues, etc.
+</details>
+<p>我们由衷希望大家能够在任何场景下使用 Codex：Codex 应当无缝赋能你开展工作的每一个阵地。正因如此，我们投入了巨大的精力，旨在让你能够放心地合上笔记本电脑，同时依然确保后台的任务能够平稳顺畅地运行。其中的关键支柱之一，就是我们对 <strong>Codex Cloud</strong> 进行的重构升级。正如 Charlie 所言，我们在去年 5 月份左右就推出了 Codex Cloud 作为早期的重要服务之一，至今已经过去很久了。但底层的模型能力与支撑框架经历了一段较长的演进磨合期，才最终达到能够支撑极致交互体验的高度。于是在今年的 DevDay 上，我们对 Codex Cloud 进行了全面重构，推出了全新的 V2 版本。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um,
+ uh and we really want you to be able to use Codex  everywhere, right? Like Codex should just power
+wherever you want to work. And so that's why we  put a lot of effort into like allowing you to go
+and close that laptop and still be happy with uh  the tasks that are running. And one big part of
+that is revamping Codex Cloud. So as Charlie said,  we actually launched Codex Cloud last year as one
+of the first big offers around like May last year.  So it's been a while. Um, but it took a while for
+models and harnesses to kind of like equalize into  something where we can build a really engaging
+experience. And so at Dev Days here, we went  and revamped Codex  Cloud to be a new V2.
+</details>
+<p>我来向大家演示几项如何具体使用它的功能。到目前为止，刚才的所有任务都还跑在我的这台物理机上。大家以前可能进入过设置中的“连接”选项，以远程方式连接过自己的其他设备：如果从未尝试过，你只需在这里直接配置，它就能通过你的 ChatGPT 订阅通道将你的手机与这台 Mac 连接起来；你也可以远程操控其他安装了该软件的机器并将它们组网联动。如果你习惯使用 API 密钥进行身份鉴权，或者所有机器都在同一局域网内，也可以直接通过 SSH 连接各类设备。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um,
+I'm going to show you a couple of the things  um on  how to how you can use it. So  um right now, so far
+we've been running all these tasks on my computer.  Um, some of you might have gone into settings
+and  um gone into connections and you connected  remotely your other devices, right? So if you've
+never done this, you can connect  um your phone,  for example, to this Mac by like just connecting
+here and it connects through your ChatGPT  subscription. You can control other devices that
+have this installed and so you can like network  them all together or if you either are using API
+keys for your authentication or  um you anyways  have all of the devices on the same network, you
+could also use SSH to connect to things.
+</details>
+<p>而依托 Codex Cloud，我们现在可以直接在编辑器内瞬间拉起全新的云端环境。大家可以看到我这里已经准备好了一些环境，稍后我们会剖析一个环境在底层究竟包含什么。这些环境可以在企业团队内部实现共享，也可以仅创建供个人使用。启动的第一步，是选取你希望该环境能够访问的 GitHub 代码仓库。这是我们做出的首要改变之一：<strong>你现在可以一次性勾选多个代码仓库</strong>。确定之后，Codex 就会开始为你搭建这套环境。一方面，你可以将这套环境视为一台虚拟机，它负责克隆你的仓库（或多个仓库）；但与此同时，Codex 还会自主深入探索在该仓库中顺利开展工作所需的各项要素，比如该工程可能依赖哪些 API 密钥、需要安装哪些外部依赖包、启动开发服务器或执行测试套件具体需要运行什么命令。在过去，这些全都需要人工手动配置；而现在 Codex 会自动为你打理这一切。你依然保留对所有配置的手动修改权限，但默认情况下，Codex 会直接拉起任务并自动推导环境中的所有细微配置，并在发现问题时主动汇报。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, but  with Codeux Cloud, we can now go and  um spin up
+new environments that  uh inside directly from the  uh composer. So here you can see I already have a
+couple of environments and we'll take a look in  a second of what an environment actually is. And
+these can be shared within a company if you're if  you're working in a company or you can just create
+your own  um and you start off by picking the  GitHub repositories that you want to have access
+to. This is one of the first changes that we did  is you can now select multiple repositories at the
+same time. And from here, Codeux goes and sets up  this environment for you. So an environment on the
+one hand, you can think about it, it's a it's  a VM that  clones your repository or in this
+case multiple repositories, but then Codeux also  goes in and figures out what are the things that
+are necessary to actually successfully work on  this repository, right? Like what are the  um you
+know API keys that I might need for this? What are  the  um  dependencies that need to be installed?
+What what are the commands that I actually need to  run to spin up a web  a dev server or verify the
+tests running, etc. And so previously you had to  do all of this manually and now Codeux is handling
+this for you. You can still modify all these  things, but by default Codeux is just going to
+kick off a task, and it's going to start figuring  out all of these nuances  um for your environment,
+and  um call out different things.
+</details>
+<p>趁着后台运行的间隙，我向大家展示一个实际例子。在此前的配置中，我启动了同样的流程并挑选了两个仓库：一个叫 Blossom Music，另一个叫 Blossom Music mobile。做过移动端开发或者尝试打包过移动应用的朋友都知道，在 Linux 机器上实际上是无法编译 iOS 应用的。目前我们托管的全部是 Linux 虚拟机，我们正在推进“自带环境”（BYO environments）能力，允许用户接入自己的自有硬件并享受 Codex Cloud 的便利；届时如果你有云端 Mac，就可以接入使用。但在当前场景下，大家可以看到它精准识别出了所克隆的代码仓库中包含一个 iOS 工程，并明确提示无法直接编译启动该 App；但它依然选择将该项目完整保留下来以便后续参考。这恰恰符合我的预期，这样我们就能根据移动端新实现的功能，让智能体参考着在 Web 播放器端同步进行复刻。随后你便能在此基础上持续提供反馈并推进迭代。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I'm going  to while this is running,  um I'm just going
+to show you an example here.  Um so in this case,  I kicked off the same thing, and you saw me pick
+two repositories. One was called Blossom Music,  one was called Blossom Music  uh mobile. And  um if
+you've done any mobile development or if you've  tried to build an app, you know that you cannot
+actually build an iOS app on a Linux machine. And  right now, all of these Linux VMs that we host,
+we're working on letting you be able to bring  your own environments so that like you can
+have your own hardware that still benefits from  codex cloud, but like you can use your own your
+own machines. So if you have some cloud max, you  could use that. But in this case, you can see that
+it actually noticed that there was an iOS app as  part of these repositories that you're cloning,
+and it called out that like it can't actually  do anything like  um you know spin up the app,
+but it's still going to keep it around so that  it can reference it. And which that's actually
+what I wanted it to be able to do so that we can  still get an idea of like, oh, there was this new
+feature that we implemented on the mobile app,  go and implement it on the web player as well.
+Um and then you can continuously give feedback or  iterate on it.
+</details>
+<p>切回另一个窗口，它已经开始着手编写安装脚本了。这就是我刚才提到的自适应推导：分析运行当前任务需要哪些依赖项，以及如何启动相关服务。这些机制至关重要，因为我们在环境搭建机制上引入了快照管理与持续更新能力，以保障极致的响应速度。一方面，这意味着环境的恢复与唤醒极快：即使你派发了一个新任务，距离上次触碰已经过去了数小时，系统的响应依然能做到近乎即时；另一方面，系统可以在后台定期自动拉取诸如 <code>main</code> 分支的最新变更，并确保依赖包版本时刻处于最新状态。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+If we go back to the other one,  um
+it's beginning to work here on a install script.  So this is what I was talking about on like if
+figuring out what are the dependencies that are  necessary to go and run  um this task.  Um how do
+we actually spin up things? And all these things  are important because the way we change this is
+that  um these environments as they're being set  up, you snapshotting and continuous updating to
+make them really fast.  Um so on the one hand, that  means that  uh we can quickly like speed them back
+up. If you're sending a new task and it's been  like a couple of hours you haven't touched it,
+it should still feel very instant.  Um on the  other hand, it means that we can in the background
+on a regular cadence, like make sure all the  dependencies are up to date, make sure that like
+the latest changes are being pulled  um from let's  say main.  Um, and once you have your environment,
+we go back here.
+</details>
+<p>环境创建完毕后，你可以随意对其进行调整。点击“编辑该环境”，你可以管控诸如是否允许访问公网、是否需要注入敏感凭据（secrets）等设置。这些凭据既可以与团队成员共享，也可以设为个人专属——可以绑定在当前环境上，也可以强制要求每位使用者输入自己的独立密钥。此外，在企业实际场景中，常常会遇到某些内部资源无法在公网上直接访问、但又必须对云端环境开放权限的情况，这往往是传统云端沙箱环境最容易受阻卡壳的瓶颈。针对这一痛点，我们同时支持了 OIDC 认证（如果你的云服务商支持），以及 <strong>Tailscale</strong>。你可以配置 Tailscale 获得 API 密钥并建立连接，随后你的 Codex Cloud 环境便能直接访问内部的 HTTP 服务，而无需将这些内网服务暴露在公网之中，仅需保持其在 Tailscale 网络内部可达即可。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, once you have your  environment, you can go and modify this.
+Where's the button? Let's go to a different one.  Um, here we go. You can edit that environment.  Um,
+and you can control things like do you want to  have web access? Are there any like secrets that
+you want to store? You can share these with your  team or you can have personal ones. So like they
+can be attached to your environment or you can  say, hey, this is actually something where people
+have to put in their own key.  Um, the other thing  that I wanted to show here though is sometimes
+you have the situation where you have resources  that are not accessible to the public internet,
+but you need cloud you need your environment to  have access to them. This is normally where cloud
+environments break for people.  Um, in this case,  we added support for both OIDC, if your cloud
+provider supports that, or Tailscale. So you  can  um set up Tailscale, you get an API key,
+you configure it, and from there  um you can  expose like you can expose HTTP services that
+your code your Codex cloud environment can still  access through that Tailscale connection. So you
+don't have to make them publicly accessible,  um  just accessible within your Tailscale network.
+</details>
+<p>让我们切回幻灯片。最后我想澄清一个常见的认知误区：前面我展示了如何配置 Codex Remote 来连接自有设备，如果你想在手机等移动终端上访问该设备，常规思路往往是必须在主机上安装桌面客户端。但实际上，你完全可以使用 <strong>Codex CLI</strong> 达成同样的目的。如果你的云端开发机上安装了 Codex CLI，只需运行 <code>codex remote control start</code>，它就会在后台拉起底层驱动这一切的核心应用服务（app server），随后你便可以在手机端直接连接控制，完全不需要在远端宿主机上安装桌面图形客户端。接下来，我把内容交还给 Charlie。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, let's jump back to the slides. The  last thing I want to call out because
+this is a common misconception, so I showed  you how you can set up Codex remote as well,
+meaning on one of your own devices, if you want to  be able to go and access it  um access that device,
+for example, on your on your phone, you normally  have to install the desktop app. You can actually
+use the Codex CLI to do the same thing. So if  you have the Codex CLI installed, for example,
+on a dev box,  um then you're running on some  cloud host, you can go and run Codex remote
+control start, and it spins up the app server,  which is the Codex harness that is powering all
+these things so that you can then connect to  it  um and run it on your phone without having
+to install like the desktop app. And with  that, I'm going to hand it off to Charlie.
+</details>
+<h3 id="产品化交付chatgpt-sites-与代码审查" data-reading-heading="">产品化交付：ChatGPT Sites 与代码审查</h3>
+<p>太棒了。无论是在本地还是云端，能借助 Codex 实现的事情极其丰富。接下来我想探讨一些我们新增的能力，旨在帮助大家把构想真正推向现实并完成最终交付。首先要聊的是 <strong>ChatGPT Sites</strong>。在座各位有谁曾经使用或搭建过 ChatGPT Site 吗？很好。我认为这是 ChatGPT 与 Codex 体系中最强大但大家了解相对有限的核心特性之一。它在快速内容迭代与对外分发共享方面具备惊人的威力。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Cool.  Um so an incredible amount of stuff you can  do with Codex, right? Whether locally or in the
+cloud, I want to talk about some new things that  we've added to help you just get things out into
+the world and actually, you know, ship them.  Um to  start with, I want to talk about sites.  Uh who is
+like used or made a ChatGPT site? Cool.  Um so I  think this is one of actually the most powerful
+features of ChatGPT and Codex that folks don't  know that much about necessarily.  Um incredibly
+powerful  uh both to like quickly iterate on  content and to like share it with the world,
+right?
+</details>
+<p>举个例子，这是一张来自我几乎每天都在使用的一个内部站点的屏幕截图。Dom 和我所在的开发者体验团队承担着产品发布的支撑工作，这不仅包括撰写文档、发表演讲，还包括制作发布视频。每次拍摄完成后，我们都会使用这个内部搭建的名为 <strong>Cut Room</strong> 的站点。工作流程大致是：摄像师或我们将拍摄的原始素材上传至该平台，站点提供了专门的 UI 供我们浏览视频、添加批注、上传屏幕录屏或空镜（B-roll）素材。当我们点击提交并通知网站素材已就绪可供审阅时，它会将这一切自动移交给远端运行的 Codex 智能体；该智能体拥有 DaVinci Resolve 的调用能力以及一系列视频剪辑专业技能，能够全自主地完成全新剪辑版本的制作，随后将成片回传系统并通知我们：“嘿，下一个剪辑版本已就绪，可以进行复审了。”在很多发布物料的制作流程中，我们几乎已经完成了对视频剪辑环节的自动化改造。我记得在 <strong>GPT-6 Astra</strong> 的一系列发布视频中，虽然主宣传片不是，但有很多周边辅助视频完全是由 Astra 通过这套工作流自主剪辑完成的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um as one example,  uh this is a screenshot  from an internal site that I use pretty much every
+day.  Uh Dom and I are on the developer experience  team, and part of that is  um making, you know,
+supporting launches, maybe that's writing  documentation, giving talks, but also making
+launch videos. And after we do the filming,  um  we we use this site that we've built internally
+called Cut Room.  Uh and what we do is essentially  upload that footage or, you know, the videographer
+uploads that footage,  um and then we have this UI  where we can like look through the footage, leave
+comments, upload, you know, screen recordings or  B-roll.  Um, and then when we submit these and we,
+we tell, you know, the website that this is ready  for review, it hands all of this off to, like,
+a Codex agent running remotely that; that agent  has access to Da Vinci Resolve,  uh, to a bunch of,
+like, video editing skills,  um, and it just like,  autonomously go, autonomously goes and creates a
+new cut and then uploads it back and notifies us  that, "Hey, we're ready to review the next version
+of this," right? And we are like most of the  way through I think like just  uh automating out
+the video editing portion of a lot of our launch  materials.  Um I believe we had a number of like
+GPT-6 Astra,  uh not the main video, but like a  number of the sort of secondary videos that were
+just fully edited by Astra in this workflow.
+</details>
+<p>大家之所以容易低估 Sites，很大程度上是因为误以为它只是一种用来发布或托管静态内容的简易途径。但实际上，它底层隐藏着非常扎实的工程基础设施：你通过 D1 获得了完整的数据库服务能力；通过 R2 获得了完整的文件与对象存储能力；通过 <strong>Sign in with ChatGPT</strong> 获得了一整套现成的身份鉴权与用户管理层；由于它是基于 Codex 底层运行框架驱动的，你还可以直接打通插件和数据通道，自然也支持导出分析数据、安全存储机密信息等。换句话说，它是构建全功能完整 Web 应用的生产级平台，绝非仅仅用来托管静态页面。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um,  think part of the reason that people underestimate
+sites a little bit is because they assume that  it's, you know, basically a way to just public
+static content or host static content.  Um, and  there's actually a lot more kind of under the hood
+that's that's happening, right?  Um, you get like  a full database service through D1, right? You get
+a full file and object storage service through  R2.  Um, you get through sign in with ChatGPT,
+uh which I'll go into a little bit,  um this like  full authentication and user management layer.  Um,
+and then, you know, because it's running with  a lot of Codex harness tools, you get access
+to plugins and data.  Um, obviously, you know, you  can get analytics back out, you can store secrets,
+right? So it's a way to build like actually fully  fleshed out web applications, not just hosting
+static content.
+</details>
+<p>其中我个人极其欣赏的一个亮点是“使用 ChatGPT 登录”（Sign in with ChatGPT）功能。如果你作为开发者自己搭建过微型站点，大概经历过成百上千次试图自己硬写鉴权系统、或者引入 Ruby on Rails 或 Django 插件来配置用户认证的痛苦；随后便会迅速陷入关于需要暴露哪些字段、如何规划权限体系与团队边界等一系列泥潭之中。而在 Sites 中，开箱即用的 ChatGPT 登录能力让你能快速将特定功能向特定用户开放，或者在需要时将整个应用完全隐藏。我们内部经常为不同受众群体构建不同版本的内部站点，借此精准管控不同角色的数据与功能访问权限。最近，我们更是支持了通过插件体系将各项插件能力引入 ChatGPT Sites。这意味着你可以构建深度围绕个人 Google Calendar 日程展开的应用——我们目前正在对 Cut Room 进行新一轮迭代，计划通过与 Google Calendar 联动，实现让大家直接在共享日历上预约拍摄场地的时间；你也可以集成 Linear 来追踪未完成任务、创建新工单并指派给团队成员。将 Sites 与插件融合后，能够探索的重组模式极其丰富。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, one of the I think the the  best parts that I really appreciate about this
+is the sign in with ChatGPT feature.  Um, if you're  a developer that's made your own like microsites,
+you have probably, you know, like a hundred  times tried to just roll your own auth or use
+like a Ruby on Rails or a Django plugin to just  try to like, you know, install user auth. But
+then very quickly you get into some like murkiness  around, you know, what fields should be available,
+how do I think about permissions, teams, all  this stuff.  Um, with sites you just get sign
+in with ChatGPT out of the box, and this just  gives you a way to like immediately, you know,
+gate features to certain users  um or just like  hide the app entirely.  Uh often we'll build,
+you know, different versions of sites for  different audiences, and we can kind of
+direct who has access to what information  and what features.  Um, and more recently,
+you know, we added the ability to use plugins  to bring all of that goodness that comes with
+plugins into ChatGPT sites, right? So  um you  know, you can build applications that revolve
+around connecting people's Google Calendar.  Um, we're actually working on an iteration of
+Cut Room where we can like book our filming  space just by automatically like hooking up
+Google Calendar and letting people book times on a  shared calendar.  Um, you can use Linear to track,
+you know, what  uh tasks are open or like create  tasks right and assign them to to the team.  Um,
+there's a lot that you can start to remix when  you have you know, sites and plugins together.
+</details>
+<p>说到内容重组（remixing），你可以开启该功能允许他人直接克隆你的站点副本，并按他们自身的业务场景进行调整。将这些能力组合在一起，会衍生出大量意想不到的使用方式。对我而言，最核心的一个场景是处理内部数据并找到更生动的方式进行可视化呈现。在整个公司内部，我们已经见证了大量极富创意的案例：比如公关传播团队制作的发布回顾站点，通篇采用了 8 位复古像素风游戏的形式来呈现，极大地增强了互动性；工程团队曾以学术典籍装帧的风格来梳理核心系统架构合并的技术复盘；社交媒体运营团队在复盘已发布的社媒内容时，直接构建了一个高度仿真的 iPhone 界面视窗，用户可以模拟滑动浏览并在交互过程中实时查看各项内容指标数据。对我个人来说，这种动态呈现方式比起单次阅读后便束之高阁的死板 Google Doc 或 PPT 要引人入胜得多。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Oh,
+and actually speaking of remixing,  um, you can use  remixing to like let other people  uh, you know,
+create copies of your site and like tweak it as  as necessary for their use case. And I think when
+you put all these things together,  um, you  know, there's a lot of different ways that
+you can use sites, some that aren't immediately  obvious, right? I think a big use case for me has
+been working with internal data and finding more  interesting ways to present it, right?  Um, I think
+across the company we have seen a lot of different  use cases like this. For example, you know,
+I think the Comms team did a launch recap where  the entire theme was like eight-bit video game,
+right? And like they presented it in this way to  make it more engaging. The engineering teams have
+done like recaps of our architecture merging  like told through the lens of like scholastic,
+you know, book volumes, right?  Um, the social team  has done things where they've reviewed like social
+content that went out, but they built it as like  this iPhone viewer, right? And like you were able
+to scroll through and actually see analytics of  the content as you were going.  Um, and me for me
+personally, this is like way more interesting  to to consume and look at than like a Google
+Doc or a PowerPoint  um, that just kind of like you  know, sits once and and is like static, right?
+</details>
+<p>顺便提一个最后由于突发奇想而诞生的有趣实验：我当时想测试一下 Astra 的计算机使用能力。如果大家听说过“维基百科竞速”（Wiki Racing）这个概念的话——那是我高中时代非常流行的游戏，两名玩家各自随机选定两个风马牛不相及的词条，比拼谁能仅靠点击页面内部链接最快从起点词条跳转导航到终点词条。于是我用 ChatGPT Sites 快速搭建了一个页面，后台通过 API 密钥调用 Agents API 和计算机使用能力，让 Astra 和我展开一场竞速对决：从起点“弗里达·卡罗”（Frida Kahlo）词条一路跳转至终点“魔方”（Rubik's Cube）词条。屏幕右侧橙色框里的是我，大家可以看到我当时正在抓耳挠腮寻找通往魔方的跳转路径。遗憾的是，比赛进行到这个阶段我才突然反应过来：魔方的发明者好像来自匈牙利，而 Astra 显然早已知晓这个背景事实；我当时并不知道，还试图先跳转到“圣诞节”再转进“玩具”子分类去碰运气。当然，这种尝试未必能直接创造商业股东价值，但对我来说，这是测试模型边界能力并打造好玩东西与团队共享的绝佳尝试。我不知道我们还剩多少时间，但提前剧透一下：Astra 在这局里战胜了我。在实际测试中，我战胜模型的概率大约在 50% 上下徘徊，老实说这已经让人隐隐感到一丝危机感了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um,
+kind of on that last note, you know, like things  that interesting things you can do with sites,  um,
+just kind of on a whim,  uh, I wanted to test  out Astra's computer use capabilities. So,
+if you've heard of this concept of wiki  racing,  um, this is an idea you know,
+for me this was back in high school you would pick  two dramatically different Wikipedia pages,  uh,
+and two people would try to race to see, like,  how quickly they could navigate from one to
+the other.  Um, and so I built a ChatGPT site,  um,  with an API key in the background that was using,
+you know, the agency API and computer use,  uh, to  try to, like, get Astra to race me in this case,
+from the Frida Kahlo Wikipedia page all the way  to the Rubik's Cube Wikipedia page, right?  Um,
+and so I'm on the right here in the orange box  and you can see  um, I am like desperately trying
+to find a way to get to Rubik's Cube. I don't  know. Unfortunately, I realized at this point
+in the race that like it was probably made  um,  by somebody from Hungary. And because Astra has
+picked up on that already, I didn't know that. So  I was trying to navigate to Christmas and then go
+into like a toys subcategory and figure out if  I could get there, right? And again, like this,
+you know, not necessarily like driving shareholder  value with this, but like this was just a really
+cool experiment for me to test the capabilities  of the model and to just like make something
+that I wanted to share with with the rest of the  team. I don't know how much time we have, but like
+spoiler alert, Astra is going to beat me in this  one. And I think it like in play testing, it is
+like pretty close to 50/50 on whether I'm able to  beat the model, which is a little bit concerning.
+</details>
+<p>交付环节的另一个核心痛点，显然不仅在于将自己的代码推向生产，还在于<strong>审查别人的代码</strong>——尤其是当其他人通过体验式编程写了一堆代码然后直接甩给你做代码审查的时候。为了缓解这种压力，我们在 Codex 中新增了专门的<strong>代码审查标签页</strong>。大家可以在左侧侧边栏或者菜单区域找到它。当你关联 GitHub 账号后，它会自动拉取所有由你发起、或指派给你的 Pull Request。这让你无需切出当前应用即可快速完成代码复审。以当前页面为例，提交者附带了桌面与移动端的屏幕截图以自证功能的可用性；如果你想深入审查实际代码，可以在这里直观查看所有的 Diff 变更，界面中同样提供了跳转回 GitHub 原仓库或具体 URL 的快捷链接。但我最钟爱的特性是这个一键式的“使用 Codex 审查”（Review with Codex）按钮：点击后系统会在后台启动一个独立线程，自动对 PR 展开全面审查。该功能内置了审查提示词模板，我们也可以自行定制微调，比如注入特定的自定义指令来侧重审查某些核心维度。随后它会直接指派子智能体执行代码走查，并将审查分析结果直接呈现在对话流中。我们稍后再回过头来看它的审查产出。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Cool. Another part of shipping, right,  is obviously not just shipping your own
+code to production, but like reviewing  code that other people have perhaps vibe
+coded and then thrown on your plate for  a review, right? And to help with this,
+we we have a new code review tab in Codex  that let me see if I can find it. It's over
+here on the left, right, or you can find it  kind of in here. And it pulls up, you know,
+automatically will pull up when you connect GitHub  pull requests that  that you've been either created
+or you've been assigned to. And this is a way to  just like review the code quickly without having
+to leave the application. You know, you can see in  this case like the person who authored this or I
+guess this account authored this took screenshots  so that they could actually verify that, you know,
+everything worked. Took mobile screenshots. If you  want to dive into, you know, the the actual code,
+you can see all the diffs here. You know,  obviously there's links back to GitHub or
+to the URL. But one of my favorite features is  just this like single button click, you know,
+review with Codex, right? And this is going to  create a separate thread. We can get back to it,
+you know, in our main view, but it's just going  to automatically kick off a review of the pull
+request. It has like a pre-made prompt which  we can go in and customize. We can give it,
+you know, custom instructions,  uh if we wanted  to focus on certain things.  Um but that's going
+to go ahead and, you know, just start using  like a sub-agent to to review  um and then
+give us the results back in this chat.  Um we  will check back in on that in a little bit.
+</details>
+<h3 id="委派新范式语音控制面板与-dots-协作" data-reading-heading="">委派新范式：语音控制面板与 Dots 协作</h3>
+<p>我想深入介绍的最后一个重要板块是<strong>任务委派（delegation）</strong>。今年伊始我们还只是浅尝辄止地探索子智能体；但如今，在 Codex 内部以及跨 Codex 体系进行任务委派的方式正在变得越来越丰富。首先值得一提的是 <strong>Codex 语音模式</strong>，这是我们在几个月前推出的一项功能。外界对此存在不少误解，很多人在编程场景中使用语音时，仅仅将其视作叠加在常规操作之上的一种纯输入替代媒介——开一个新对话，不再用键盘打字，而是完全依靠口述指令来回拉扯。Codex 中的语音模式固然能够满足这种需求，但它的威力远不止于此。我更倾向于将它视作<strong>掌控 Codex 应用内所有活动的统一控制面板（control plane）</strong>。普通人类用户在 Codex 客户端内能够完成的几乎所有操作，语音模式都能直接代表你执行。因此，我不会把语音局限在手头单线程的具体任务上，而是用它来跨线程调度：检查任务进度、借助计算机使用能力从本机的其他软件拉取数据、或者仅靠口头下达指令就在应用中拉起新的会话线程。接下来我们尝试做个现场演示。我来连线呼叫一下 Codex。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Cool. And I think the last big section here  um that I want to cover is about delegation,
+right? Because  um you know, when we started  the year, we were just kind of poking at
+sub-agents.  Um but increasingly there are like  more ways to think about delegating within Codex,
+across Codex.  Um I think starting with Codex  Voice, right?  Uh and this is a feature that
+we we shipped a few months ago.  Um and I think  there's a lot of misconceptions around it where
+most people I see that use voice  uh with coding  essentially treat it as like just a different
+medium on top of their normal work, right? So like  you might start a new thread and just sort of say,
+instead of typing, I'm just going to like dictate  um out, you know, what I want and just going to go
+back and forth that way. And voice mode in Codex  um can do that if that's what you want to do.  Um
+but it's actually more powerful than that, right?  And I like to use it as kind of this control plane
+across everything that is happening for me in  the Codex app.  Um nearly anything that you can
+do as a human user in the Codex app voice mode  can just do on your behalf, right? And so  um I
+don't think about it as saying like here's the  one lane of work that I'm doing right now with
+voice. I think about it as saying how do I manage  my threads? You know, how do I check in on stuff?
+How do I pull data from other apps on my computer  with computer use? How do I create new threads in
+the application just using my voice, right?  Um and  hopefully  uh we will see a demo that works here.
+I'm going to give  uh Codex a quick call.
+</details>
+<p>Charlie：“嘿，能听到我说话吗？”
+Codex：“可以，声音非常清晰。”
+现场：“我们听不到声音。测试中？应该是会场音频链路的问题。能把笔记本自带的声音打开吗？已经开了。我们切换回笔记本内置音频。耳机接口连着吗？切回 Mac 内置音频。你能说句话吗？”
+Codex：“在的，嗨。我在这里。现在能听到我了吗？”
+Charlie：“太棒了。我想快速处理几项工作。能帮我一个忙吗？帮我查看一下刚才启动的 PR 代码审查任务状态；另外帮我同步一下 Matt 在 Slack 上的最新留言；还有，如果可以的话，我们现在正在 AIE 进行现场演讲，帮我在一个新线程里打开对应的幻灯片，我们来做一轮设计评审。完事之后，把幻灯片评审的线程置顶，我们稍后查看你的建议。”
+Codex：“没问题。我来帮你把这些整理好，保持精简。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Hey, can you hear me? Yes, loud and clear.
+We can't hear you. Testing? Oh, I think it's  on the venue. Are you able to turn the sound
+on for the laptop? It is on. All right,  we're going to  uh laptop audio real quick.
+Headphone port? That thing? your Mac  back and Yeah, we'll do built-in.
+Can you say something? Yeah, hi.  I'm here. Can you hear me now?
+Cool. Yeah. I just want to do some some work real  quick. Can you  uh do me a favor? Can you check
+on the poll review request that we kicked off?  Um and then would love to know the latest from
+Matt in Slack.  Um oh and then if it's possible  we're giving a presentation to AIE. Can you in
+a new thread pull up those slides and let's  do a design critique?  Um and then when you're
+done go ahead and pin that slide review thread  uh and we'll we'll take a look at your notes.
+All right. I'll pull those  together and keep it tight.
+</details>
+<p>我先把麦克风静音。在后台，Codex 正在跨越这些不同的会话开展工作，全面调动了我们今天谈到的所有特性，包括操控计算机使用的能力。
+Codex：“指的是 Slack 对话里的哪一位 Matt？是 Matt Sullivan、Matt Weaver、Matthew Poschiasc，还是 Matthew Cordier？”
+Charlie：“谢谢，Codex。”它会去核实。鉴于时间有限，我们没法一直等到它全部执行完毕。但重点在于，你完全不需要让语音一直回话。我最习惯的做法往往是让语音模式保持开启，让它充当我操作各项软件的幕后执行者，并不一定要它时时给出冗长的口头汇报。正如 Dom 所言，尤其在开启 UltraFast 的状态下，你可以直接通过口述指令，让变更在后台源源不断地完成委派与合并。你甚至可以用它在电脑上完成各类可视化调度：“嘿，调出这个窗口，把那个拖过去”。那种感觉会让你联想到钢铁侠与贾维斯（Jarvis）协同工作的状态，让它全面接管电脑里的各项操控。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I'm going to mute myself, but  um you know  in the in the background here Codex is  uh
+you know working across those chats.  It's using all of the features we've
+been talking about today, right?  The ability to drive computer use.
+Which Matt is Slack chat? Is it Matt  Sullivan, Matt Weaver, Matthew Poschiasc,
+or Matthew Cordier? Also Thanks, Codex.  Um  so that's going to go and take a quick look,
+right?  Um we we're running out of time so I  don't know that we can wait for that all to
+finish.  Um but again like you know you you don't  need to and you don't need to necessarily have
+the voice talk back either, right? I think  one of the things that that I like to do is
+basically just like have voice mode on and  then just have it control things as I go,
+not necessarily to to like give me notes back, but  um to just act as a driver across applications,
+right? Especially  um like Dom was saying if you've  got Ultra Fast on  uh you can just sort of dictate
+to it and just like have you know changes come  in and get delegated in the background. You can
+also use it to start to visualize things on your  computer for you and just say hey pull this up,
+you know, move this around. You start to kind  of feel a little bit like Iron Man, like working
+with Jarvis, right? Just like having it control  everything on your computer.
+</details>
+<p>紧接着是 <strong>Dots</strong>。Dots 是一项相对较新的事物，也代表了一种向 AI 或智能体委派工作的新型范式。坦率地说，对于习惯了高阶操控的 Codex 资深用户而言，初次接触 Dots 可能会略感别扭。这是因为它遵循着全新的范式，其专长与 Codex 主体有着显著的分野。我认为 Dots 有三种非常契合的使用场景，这往往是传统 Codex 处理起来较为棘手的：</p>
+<p>第一，<strong>将 Dots 作为你的安全兜底网（safety net）</strong>。这些都是 Dom 和我各自的 Dot 在现实中为我们捕捉到的真实案例：它精准捕获到了我们即将发布的一个 PR 中隐藏的 Bug；它向 Dom 预警出现了一处代码合并冲突；在另一个案例中，它提醒 Dom：“Charlie 发起了一个新 PR，而你在一个他不在的频道里，你应该去提醒他他正在改动的那部分已经过时了”；今天它还主动提醒我当前的演讲预留时间与一场 1v1 会议发生了时间冲突，我需要去取消会议；更有一次，它甚至侦测到了奥克兰或伯克利山区的火灾，提醒我们：“我知道你住在东湾，今晚下班通勤可能会受此影响”。这些完全超出了常规 Codex 的职责范围。</p>
+<p>第二，<strong>将 Dots 作为任务委派的接收池（delegation sink）</strong>。我在 Slack 中极其高频地使用 Dots。因为已经配置了连接，我会在 Slack 里持续向它转发消息：“去深入调查一下这个”、“针对这个创建一个待办事项”。在全天的工作流中不断向它指派任务，就像对待一位真正的虚拟同事或下属一样。</p>
+<p>第三，<strong>全方位的触达覆盖</strong>。我们的目标是让 Dots 真正渗透到你开展工作的每一个角落：不仅覆盖 ChatGPT 各端、Slack 和 Teams，还延伸至移动手机端——你可以直接给你的 Dot 打电话，或者通过 iMessage、RCS 发短信与它互动。我们希望它无处不在。</p>
+<p>在任务委派维度的最后一种形态，是<strong>将其嵌入到你自己的产品之中</strong>。目前正处于测试阶段的 <strong>Agents API</strong> 能够将 Codex 底层框架的所有核心能力（驱动桌面端应用、驱动 Dots 的同款底座）直接开放引入到你的自有应用中。如果你希望拥有并发拉起数百、数千个瞬态隔离沙箱会话的能力，并赋予它们相同的插件及系统访问权限，现在完全可以通过 Agents API 轻松实现。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um next up is Dots,
+right? And like Dots is a relatively new thing and  I think a relatively new way of delegating to AI,
+right? Or to an agent.  Um and I think if I'm  honest, right? Like as a Codex power user, Dots
+feel a little bit awkward to work with, right? And  I think because they're a new paradigm and because
+they're different, they're good at different  things than the main Codex is. So I think there's
+three kind of ways that I think about using Dots  that's a little bit different from Codex that that
+Codex is maybe is a little bit trickier to do.  The first is using Dots as a safety net, right?
+These are some real examples of like things that  Dom's Dot and my Dot have like flagged for us,
+right? It grabbed that like there was a bug in a  in a PR that we were going to ship. It told Dom
+Dom that like there was a merge conflict. And in  one case, it told you like, hey, Charlie has this
+other PR and you were in this channel that he's  not in and you should go tell him that like this
+thing he 's working on is out of date. It let me  know today that like my my speaker hold overlapped
+with a one-on-one that I had to go cancel. And I  think it told you one point there was like a fire
+in the Oakland or Berkeley Hills, right? And it  said, hey, like, you know, I know you live in the
+East Bay, this might affect you on your commute  home, right? And like these are things that just
+your normal Codex are not going to do for you.  Another way to use Dots is like as a delegation
+sink, right? So like, I use Dots a ton in Slack,  and because we have it connected there and I,
+m just constantly forwarding messages to it in  Slack and just telling it, "Go look into this,
+go create a to-do item for this," like treating it  like a true, you know, virtual coworker or direct
+report as I send it stuff throughout the course  of the day. And I think the third way that Dots
+are a little bit different is, you know, we're  we're aiming to make them truly everywhere that
+you work, right? Obviously in the ChatGPT apps and  in Slack and Teams, but also like on the phone,
+right? The ability to call your Dot, the ability  to text your Dot like iMessage or or RCS, right?
+We wanted to be in as many places as possible.  And the last way to think about delegation here,
+right, is, you know, inside of your own products.  We have the agents API, which is currently in
+beta, and it's a way to take all of these goodies  in the Codex harness, right, that power you know,
+the desktop app that power dots and build  them into your own application. So if you
+want the ability to create, you know, hundreds,  thousands of ephemeral sessions with the same
+access to sandboxes and plugins and everything  else, we can do that now through the agents API.
+</details>
+<h3 id="高效实践技巧与多智能体协同机制" data-reading-heading="">高效实践技巧与多智能体协同机制</h3>
+<p>我们还剩下几分钟，我把麦克风交还给 Dom 带来一轮快速实用技巧。</p>
+<p>太棒了。这里汇总了几条我们很想分享、但此前未能归入上述专题的零散经验：</p>
+<p>第一点：<strong>适当降低推理档位</strong>。大家不必——虽然我也知道把滑块一路拖到最右侧非常有诱惑力，尤其是伴随那些炫酷动效时。但面对绝大多数日常任务，其实高档推理（high reasoning）往往就已经是非常扎实的起步点了。此外，随着新一代模型的持续发布，如果你过去一直依赖极高档位（extra high），当新模型推出后，不妨先下调到常规的高档位，看看效果是否依然达标。模型的能力正在飞速提升，但强行推到最高配置并不能保证带来成倍的回报，反而可能遭遇边际效应递减，甚至陷入模型过度思考（overthinking）的陷阱。</p>
+<p>如果你实在纠结于该选哪款模型、该设多高的推理深度，不妨直接让智能体来辅助决策。比如在常规任务中选用中档推理的 Sol；同时指示它在遇到自己无法解决的疑难难题时，自动拉起高档推理的 Astra 子智能体来协助攻关；或者拉起一批高推理深度的 Luna 子智能体，把那些繁琐枯燥的琐碎事务委派分流出去。稍后我会分享一条完整的提示词，你可以直接配置成一个小技能（skill），让 Sol 在中档模式下自主完成这类任务调配。友情提醒：这并不意味着任何时候都能做到效果更优或成本更低，模型在精准研判任务契合度上仍有局限，但它至少能在很大程度上减轻你自己纠结参数组合的决策负担。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Cool. We got a few minutes left, so I'm going  to turn it back over to Dom for some quick speed
+round tips. Cool. So a couple of different things  that we were like we felt like we wanted to share
+with you all, but didn't fit into a sort of these  things. The first thing like turn it down. Like
+you don't have to like I know it's very enticing  to just slide the slider all the way to the right,
+especially if there's like pretty effects. But  the reality is for most of the things that you're
+doing, you know, high reasoning is often a good  starting point. Also as new model generations
+come out, it's a good idea that like if you were  like stuck on like extra high before and a new
+model comes out, like dial it down slightly to a  high and see if that fares as well for you. Like
+these these models become increasingly better, but  you're not necessarily getting more out of it if
+you just crank it to the highest tier, especially  as there can be diminishing returns or things
+like where it's overthinking problems. And if you  are really sort of like struggling with like what
+model do I pick, what reasoning effort do I pick,  one of the things you can try is like asking your
+agent for help. So, for example, you can have use  Sol on medium for the majority of the things that
+you're doing and then tell it to, like, spin up  Astra sub agents on high if it needs help with,
+like, something that it can't figure out, or spin  up a bunch of Luna sub agents on high for, like,
+more tedious work um uh, that it can, it can  delegate more easily. Um there is going to be
+I'm going to share with you in a second like  the full prompt for this um but you can just
+set up a little skill for this to like tell it to  do these things on Soul Medium. Uh fair warning
+this doesn't always mean it's always better  or always cheaper. Models still have a hard
+time to perfectly figure out what is the right  use case for for which things but it takes at
+least a little bit that pressure away from you  of like having to figure out what is the right
+combination.
+</details>
+<p>子智能体协同的另一种有趣模式是<strong>成对结对（pair of sub-agents）</strong>。有些复杂任务虽然可以并行推进，但彼此之间又存在某种微妙的相互依赖。相比于由你事先做前置任务拆解，或者由单一智能体制定出一套极其繁复庞大的完备方案再做并行编码，你可以直接拉起一对对协同智能体。典型的场景如构建全新应用时同时包含 Web 端与移动端：你可以指派一个智能体主导 Web 端（涵盖前后端逻辑），另一名智能体专职负责移动端。在这种格局下，两者的紧密协作必不可少——后端的接口改动直接牵涉移动端的接入，而移动端的某些交互决策又倒逼后端接口调整。此时你可以拉起一组平级对等的子智能体，由它们彼此自主保持进度同步与沟通。这种模式在技术落地上会更具挑战，需要 Codex 明确识别两者之间的交互边界；但模型本身已经学会了如何互通有无并维持信息同步。大家可以对幻灯片拍个照，让你的智能体结合这套架构去寻找适合的应用场景，它大概率能发掘出不少契合的切入点。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um another interesting way of sub  agents working together is sort of through this
+like pair um uh of sub agents. So like, there's  tasks where you might um be able to work on
+different things in parallel, but there are still  somewhat, somewhat interdependent on it. And like,
+rather than you having to like go and  first split things up ahead of time um,
+and then like do or like have one, one agent  create like a giant plan and everything perfect,
+and then paralyze implementation. You can spin  up these pairs of agents. So a good use case is
+let's say you you're working on a new app and  there is a web app and a mobile app for it.
+You might have one agent work on the web app  which  uh involves both the front end and back
+end logic and then the mobile app work  uh another  is assigned to another agent. In those cases you
+want to have them still collaborate because maybe  some back end changes are relevant for the mobile
+app or the mobile app made some decisions that  require back end changes. And so you can have it
+spin up a new  um  uh new  uh set of peer sub agents  essentially that coordinate with each other. This
+is a bit more  um tricky in the sense that like you  need to have Codex figure out like where are the
+communication barriers between these but then the  models learn learned how to communicate with each
+other so they can like  uh keep each other up to  date. So if you take a screenshot of that and you
+ask your agent to like find some find some good  use cases for this setup, it will probably find
+some.
+</details>
+<p>Charlie 刚才简要提及过这一点，但探讨的人还不够多：<strong>你可以让你的 Codex 动态派生出完全独立的全新会话</strong>。这些会话并不像子智能体那样强绑定在主会话上，它们彼此彻底独立。你可以自由穿梭主导它们，甚至构建出一个“会话中的会话”层级树，集中调度你所有的异构智能体；或者让你的专属 Dot 直接代你拉起新会话。</p>
+<p>如果你是 CLI 工具的重度拥趸，我们在近期的更新中为 CLI 引入了<strong>智能体多视图（agents view）</strong>。现在只需轻按左方向键，就能在多个活跃会话间无缝穿梭。当你通过 SSH 连入远端开发机、需要快速切换查看不同任务的执行进展时，这个功能尤为趁手。同样，我们也把语音模式移植到了 CLI 之中，刚才 Charlie 演示的所有炫酷特性在命令行环境下同样可以完整体验。</p>
+<p>知道这个技巧的人不多：你几乎可以为客户端内的所有功能绑定快捷键，大幅精简操作链路；更进一步，你完全可以配置全局听写与全局语音热键，这样即使无需切换至 Codex 应用窗口，也无需安装任何第三方工具，就能在任意软件中直接唤起全局语音或听写输入。</p>
+<p>最后，欢迎大家申请加入 <strong>Daybreak</strong> 计划。Daybreak 是我们的网络安全防护项目。只要申请 Daybreak Blue 即可——任何个人均可参与，不强制要求企业身份。只需自备一把类似 YubiKey 的实体硬件安全密钥（我们提供专属优惠码），成功申请后即可用它来加固自身应用的安全性。请务必去尝试一下。</p>
+<p>最后的最后：<strong>不要对现有的工作习惯产生过度执念</strong>。技术环境瞬息万变，新的模型和新特性层出不穷。每当新一代模型面世时，不妨主动尝试清空以往积累的工作流惯性，先试着抛开既有设定去探索其原生表现；只有当遇到瓶颈阻碍时，再逐步把必要的规则与技巧引回工作流中。</p>
+<p>现场如果想参与抽取 Codex Micro 专属键盘（一款能大幅加速 Codex 交互的高效硬件），欢迎扫描屏幕上的二维码。该链接同时也收录了今天涵盖的所有内容细节与延展资料。鉴于时间已经用尽，我们稍后会在会场门外停留，非常乐意解答大家的任何疑问。再次感谢大家的聆听！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um Charlie briefly covered this, but I think  not enough people talk about it. You can have your
+Codex spin up other chats as well. So, rather  than sub agents which are tied to a main session,
+these can be completely independent. You can  go steer them and you can have sort of a thread
+of threads where like you spin up all of your  different agents or you can have your dot for
+example spin up threads for you. Um if you are a  big fan of the CLI, we recently updated that. So,
+you have now an agents view in there as well. So,  you can just press the left arrow key and you can
+switch between those  uh sessions. It's also  helpful if you just like have to SSH into your
+dev box and you quickly want to switch between  the tasks that are running there.  Um similarly,
+we added voice mode to the CLI as well. So, you  if you love the voice mode and all the things that
+Charlie was showing you, you can do the same  thing there.  Um not enough people know this,
+um but you can just set up more you can set up  shortcuts for pretty much anything in the app
+which makes it much easier for you to like really  tweak your  um use cases. But you can also set up
+global dictation and  uh a global voice hotkey so  that like you don't have to switch into the app
+if you want to either start voice mode or if you  want to use dictation in other apps without having
+to install a third party app. The last thing  um is  go and apply for daybreak access. So, daybreak is
+our like cyber security  um program. If you apply  for daybreak blue which any individual can do,
+you don't have to be part of a company. You just  need a hardware  uh key like a YubiKey and we have
+a discount for that.  Um you can apply for that  and then you can use it for  um securing your own
+applications. So, definitely do that.  Um the last  thing, don't get too attached to how you're using
+things.  Um things are constantly changing, new  models come out, new capabilities. And every time
+a new model comes out, consider like abandoning  the things that you've been doing so far. Try out
+if it works better without it, and then bring back  the things where you're still running into issues.
+With that, scan that QR code if you want  to have a chance to like win a Codex Micro,
+which is a cool keyboard that helps you really  speed up your Codex workflows.  Um but also that
+link has all of the details that we covered as  well as additional resources. And because we're
+out of time,  um we're going to be right outside  this room.  Um if you want to ask us any questions,
+we're happy to chat with you. And  uh with  that, thank you so much for joining us.
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/8eabf3c55e6a365994edc412277d26d7763b4878b9af4b51ac3e46a5f8cf2507.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/8eabf3c55e6a365994edc412277d26d7763b4878b9af4b51ac3e46a5f8cf2507.md" download="OpenAI 开发者体验团队：Codex 的全新工作模式与功能演进.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Codex" class="entity-link product-link">Codex</a>, <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>, <a href="/search/?q=ChatGPT Space" class="entity-link product-link">ChatGPT Space</a>, <a href="/search/?q=GPT-6 Soul" class="entity-link product-link">GPT-6 Soul</a>, <a href="/search/?q=GPT-6 Astra" class="entity-link product-link">GPT-6 Astra</a>, <a href="/search/?q=Dots" class="entity-link product-link">Dots</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

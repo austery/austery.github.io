@@ -1,0 +1,930 @@
+---
+author: New York Times Podcasts
+date: '2026-10-09'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=wu2_1wkOgq4
+speaker: New York Times Podcasts
+tags:
+  - education-system
+  - social-mobility
+  - immigrant-experience
+  - community-resilience
+  - diaspora-literature
+title: 专访《柏青哥》作者李敏金：新书《美式补习班》、教育神话与移民韧性
+summary: 《纽约时报》书评专访畅销书《柏青哥》作者李敏金，深度剖析其历时近十年创作的“韩裔离散四部曲”第三部《美式补习班》（American Hagwan）。对话探讨了韩国社会对教育与文凭的狂热信仰、亚洲金融危机与次贷危机对普通家庭的经济冲击，以及支撑移民群体渡过阶级跌落危机的社区、家庭与信仰力量。
+insight: ''
+draft: true
+series: ''
+category: culture-history
+area: society-thinking
+project: []
+people: []
+companies_orgs: []
+products_models: []
+media_books:
+  - American Hagwan
+  - Pachinko
+  - Free Food for Millionaires
+status: evergreen
+---
+### 教育神话与经济冲击
+
+**李敏金**: 我想展现的是，培养一个家庭并依然坚信“只要接受了西方教育就能高枕无忧”究竟是怎样一种状态。然而在现实中，经济冲击每天都在降临到循规蹈矩的普通人身上。厄运同样会降临到好人头上。我想揭示的是，如果你仅仅将信任寄托于正规教育，这意味着什么。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: I wanted to illustrate what it's like to educate a family and still believe that if you have a western education, then you're going to be safe. When actually there are economic shocks which happen to perfectly decent people every day. Terrible things happen to good people. And I wanted to show what that means if you only trust in a formal education.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 我是**吉尔伯特·克鲁兹**，这里是《**纽约时报**》书评播客。本周我非常高兴能与**李敏金**（Min Jin Lee）对话。李敏金上一次做客本节目是在 2024 年夏天。她的代表作《**柏青哥**》（Pachinko）刚刚被数百位参与评选的作家票选为 21 世纪最佳图书之一。令人欣喜的是，她再次回到了节目中，这次是因为她带来了自 2017 年《柏青哥》以来的首部全新长篇小说——《**美式补习班**》（American Hagwan）。这是她倾注近十年心血的结晶，也是她计划创作的探讨韩国本土及**韩裔离散群体**的四部曲中的第三部。《美式补习班》讲述了高氏一家五口在 90 年代末**亚洲金融危机**爆发后的经历，他们最终全部移民到了美国。当然，这本书所承载的远不止于此，也远不止这一个家庭。这是一个关于为人父母与为人子女的故事，一个关于**阶层跃升**与阶层跌落的故事，更是一个关于教育及其承诺与代价的故事——正如书名中的核心词汇所揭示的那样，“Hagwan”指的是韩国的私立补习班。敏金接下来会展开详谈。首先，敏金，欢迎重返书评播客！
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: I'm Gilbert Cruz and this is the book review from the New York Times. This week I'm very happy to be talking with Min Lee. Min was last on this podcast in summer 2024. Her book Pachinko had just been voted one of the best books of the 21st century by the hundreds of authors who participated in that project. Wonderfully, she is back here on the show and she's here because she has a new novel, her first since 2017's Pachinko. It's titled American Hagwan, and it's the result of almost a decade's worth of work. It is the third book in what Min says will eventually be a four-part thematic series exploring Korea and the Korean diaspora. American Hagwan tells the story of the Koh family, a middle-class family of five following the Asian financial crisis of the late '90s. They find themselves all eventually migrating to America. The book, of course, is about much more than that. It's about much more than that one family. It's a story about being a parent and about being a child. It's a story about upward mobility and downward mobility. And it's a story about education and its promises and tradeoffs, which is best exemplified by that word in the title, which refers to private tutoring centers. Min's going to get into this a little bit more, but first, Min, welcome back to the book review.
+
+</details>
+
+**李敏金**: 嗨，吉尔伯特。近来可好，老兄？
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Hi, Gilbert. How's it going, man?
+
+</details>
+
+**吉尔伯特·克鲁兹**: 一切都好。你怎么样？对你来说这可是非同寻常的一周。天哪，真是忙碌的一周。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: It's going great. How are you? What a week for you. What a week. Oh my goodness.
+
+</details>
+
+**李敏金**: 这才刚到第三天，我已经有点犯困了。[笑]
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: It's only day three and I'm kind of sleepy. [laughter]
+
+</details>
+
+**吉尔伯特·克鲁兹**: 你还好吗？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Are you you?
+
+</details>
+
+**李敏金**: 说实话，我现在心里其实有点慌。我真的挺忐忑的。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Well, I'm actually a little freaked out. I'm a little freaked out.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 展开说说看。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Yeah. Say more about that.
+
+</details>
+
+**李敏金**: 这次安排了规模庞大的巡回签售，我以前从没做过这么大规模的巡回，所以心里直打鼓。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Well, there's a big tour and I've never done anything like this big before, so I'm a little scared.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 你说的“大规模”是指十几个城市吗？具体行程是怎样的？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: When you say big, is it like 10 cities? What are you doing?
+
+</details>
+
+**李敏金**: 我都数不过来了。[笑] 我真的数不清了，因为还涉及好几个国家。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: I lost count. Like [laughter] I lost count because there countries involved.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 哎呀，好的。那么在深入讨论这本书之前，你究竟在担心什么呢？这对你来说意味着巨大的挑战吗？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Oh boy. Okay. Um, what so what what are you nervous about before we get into this book? What this this is a big deal for you then?
+
+</details>
+
+**李敏金**: 你看，这就是为什么我需要接受媒介培训，因为我总是有什么就说什么。嗯……
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: See, this is a reason why see like I need to be media trained because I always just like say what's on my mind. Um,
+
+</details>
+
+**吉尔伯特·克鲁兹**: 相信我，我们要的就是真实表达。[笑]
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: but believe me, that's what I want. [laughter]
+
+</details>
+
+**李敏金**: 我想我之所以害怕，是因为——天哪，该怎么形容呢？我不想让任何人失望。出版前两本书的时候，我根本没指望会有多少受众，也没预料到会有读者群。而这一次我有了读者，我经常收到读者来信，而且这本书讨论的是一个极具争议性的话题。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Um, I think I'm scared because gosh, how should I say it? I don't want to let anybody down. You know, when I published my first two books, I didn't expect an audience. I didn't expect readers and this time I have readers because I I get correspondents from readers and this is a really controversial topic.
+
+</details>
+
+### 什么是 Hagwan 与社会小说
+
+**吉尔伯特·克鲁兹**: 聊聊这个主题吧，切入得恰到好处。为什么说它充满争议？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Well, tell me about the topic. Great segue. And why it's controversial.
+
+</details>
+
+**李敏金**: 我写的是教育，以及正如你精辟概括的那样，教育对阶层跃升与阶层跌落究竟意味着什么。[叹气] 如今无论接受教育还是购买教育，都是一个非常微妙的关口，尤其是在像美国这样的国家。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Well, I wrote about education and what it means for upward mobility and downward mobility as you put so aptly. And [sighs and gasps] it's a weird time to get education and also to buy education, especially in a country like America.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 书名《美式补习班》（American Hagwan）中，我刚才用了一句简短的话解释了什么是 **Hagwan**（学院/补习班）。我很想请你为听众深入拆解一下这个词的内涵，以及为什么你认为它是构建这部关于教育的故事的绝佳核心？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: So, the title of your book, American Hagwan, I used a very short phrase to describe what a hagwan is, but um I'd love for you to unpack for our listeners what that is and why you thought that was a good nucleus around which to build this this story about education.
+
+</details>
+
+**李敏金**: **Hagwan** 是韩语里的课外学习中心（补习班）。很多人如果听说过补习班，往往以为那是专属于孩子的，无论四岁幼儿还是十七岁少年，都是学科应试类的补习班。但在韩国，成年人也去补习班，他们去学踢踏舞、学歌剧、学钢琴，或者学习公众演讲。补习班的形式千罗万象。我之所以选择“补习班”作为全书的核心隐喻，是因为我想展现韩国人对**教育与自我提升**那种深入骨髓的信念，而他们在走向海外离散时，也把这种执念带到了世界各地。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: So, a hagwan is the Korean word for learning center. And I think a lot of people think, if they think at all about hagwans, they think of it as something for kids. whether you're a fouryear-old or a 17y old, the educational kind of hagwans. But in Korea, adults go to hogwans to learn how to tap dance, to become an opera singer, for piano lessons, in order to learn how to speak better. There are all sorts of hogwans. And the reason why I chose hagwan as an organizing metaphor is because I wanted to kind of illustrate the real deep faith and education and self-improvement that Koreans have. And then they carry this idea in the diaspora.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 上次交流时，你谈到了**社会小说**（social novel）的概念。我们对此做过剖析，你非常明确地表示自己扎根于这一传统，并希望成为延续这一传统的创作者。我不会要求你重复说过的话，听众可以去听那一期节目。但你如何看待这本新书延续了你试图勾勒的这一脉络？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: When last we spoke, you talked about the idea of the social novel. We unpacked this a little bit and you, you know, very clearly stated that you were someone who worked in this tradition and wanted to be someone who worked in this tradition. I I was not to ask you to repeat yourself. Please everyone go listen to that that episode. But how do you see this new book continuing sort of that line that you're trying to to trace here?
+
+</details>
+
+**李敏金**: 在主题上，我在所有虚构作品中都在探讨离散。然而，我所选择的虚构创作模式是**社会小说**——作家审视自己身处的当下社会，找出那些困扰她的痛点，然后试图在叙事中作出回应。我当下目睹的社会弊病，正是教育机制的深刻崩塌。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: So thematically I'm writing about diaspora in all of my fiction. However, the mode of fiction that I want to write are social novels in which the writer looks at the society that she lives in today and figures out what are the things that trouble her and then tries to make a response in a narrative. So, the social ills that I witness right now is just a profound destruction of education. Mhm.
+
+</details>
+
+### 屏幕化学习与现代教育危机
+
+**吉尔伯特·克鲁兹**: 我想面对**人工智能**的冲击，现在的每位家长都能真切体会到，我们孩子的学习过程已经发生了彻底的改变。我有一个上七年级的孩子，这个乖巧的孩子每天带着笔记本电脑回家，在电脑上完成作业。我总忍不住想：“这究竟是什么？甚至都先不谈 AI，学校究竟从什么时候开始把这种方式当作孩子学习的唯一途径了？坐在书桌前，拿着铅笔、工作纸和纸质作业本来理清思考脉络的传统去哪了？听起来可能像个老古董，但正如你所说，如果再往前走一步，AI 对自主思考、独立解决问题的能力又会带来怎样的摧毁性影响？顺便问一下，你的孩子多大了？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: I think every parent right now in the face of AI is certainly aware that the learning process of our children has been deeply altered. You know, I have one child uh who's in the seventh grade and my wonderful child comes home with a a laptop and he's doing homework on the laptop and I'm like, "What what is this? When did even this, not even getting into AI or anything like that, when did this become the way that children were being made to learn in school? What happened to, not to sound like a fuddy duddy, you know, what happened to the sitting down at a table with a pen and a worksheet and a piece of paper and sort of working out your thought process in that way. It's hard to imagine taking that a step further as you say what the heck AI is going to do to the idea of like coming up with your own thoughts, figuring how to solve problems on your own. I mean, how old are your kids? You're I don't know your
+
+</details>
+
+**李敏金**: 我儿子 28 岁了。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: My son is 28.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 嗯哼。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Uhhuh.
+
+</details>
+
+**李敏金**: 尽管我儿子已经 28 岁了，就他的正规教育历程而言那属于前 AI 时代，但我现在就可以明确告诉你：你绝不是老古董。所有的神经学家和脑科学家都会赞同你的看法。人类的大脑根本无法承受无限量的信息灌输，而互联网是无穷无尽的。当你把一台笔记本电脑交给孩子时，你并不是在告诉他“我想让你读完 20 页文本，哪怕 5 页，甚至哪怕背一张拼写单词表”。你传达的潜台词实际上是“我希望你拥有获取这些海量信息的权限”。这种做法纯粹是出于教育管理者的效率考量，而不是为了孩子着想。绝对不是。这让我感到极其愤怒，因为我认为这是在把一场未经检验的实验强加给家庭和孩子；而在当下这个时代，比历史上任何时期都更需要孩子们具备**批判性思维能力**、记忆调取能力以及自我掌控感。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: And even though my son is 28 and we're talking preai in terms of his educational formal educational process, I'm going to tell you right now that you're not a fddy duddy. All the neurologists and neuroscientists would agree with you. that the brain cannot handle infinite amounts of content. The internet is infinite. So when you give a laptop to a child, you're not saying, "I want you to learn 20 pages of text or even five pages of text or even one sheet of spelling words." You're saying, "I want you to have access to this." And it's an efficiency for the administrator, not for the child. It isn't. And it makes me really upset because I think that it has really taken an experiment and put it on families and on children in a time when more than any other time I can think of in history, children really actually do need critical thinking skills and recall and a sense of control.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 所以你儿子现在 28 岁了，你动笔写这本书时，大概正是他高中快毕业的时候。当年作为家长的你对教育的思考方式，与如今相比是否经历了一段心路历程？当你决定写一本关于教育危机的书时，这种心路历程是如何体现的？是因为当时孩子在上学，随后这种现状在某种程度上激怒了你吗？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: So your child is 28 now. You started this book maybe right when he was about to graduate high school. Did [snorts] the way that you were thinking about education then as a parent, you started in one mindset and now you're in a different one. H how did that sort of personal journey trace its way through when you said you wanted to write a book about the crisis in education or whatever specific word you want to use? Was that something you started because you had a child in school and then it just continued to sort of enrage you in some way?
+
+</details>
+
+**李敏金**: 不，促使我写这部小说的其实并不是危机本身。而是我真切地观察到，在我接触过的所有韩国人中，教育是被视作最重要且最共通的核心价值。然而我所看到的教育困境在于，真正的“学习”陷入了危机。所以这其实是两件事的交织：核心主题是教育，它关乎我在观察韩国人群体时所看到的对教育的极度狂热与极度痛恨；但与此同时，我们在美国乃至全球范围内所经历的**学习危机**，却是一场早已持续多时的漫长风暴。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: No, it wasn't actually the crisis which caused me to write the novel. It was that I really noticed that education was a value that was the most important and common in all the Koreans that I had ever met. But then the problem that I see about education is that there's a crisis in learning. So it's actually two of those things. So the subject is education and it's about the love of education, the hatred of education that I saw in all the Koreans that I examined. But then the crisis and learning that we're experiencing in America and also globally is something that's been going on for a long time.
+
+</details>
+
+### 两场金融危机与结构性重创
+
+**吉尔伯特·克鲁兹**: 你的新书结构由两场宏大的历史事件首尾呼应：一场是 1997 年的**亚洲金融危机**，另一场则是 2007 至 2008 年在美国及全球爆发的次贷金融海啸。你为什么选择这两个节点作为小说构建的时空坐标？为什么你觉得这是讲述这个故事尤为丰饶的切入点？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Your new book, it's sort of bookended by two events, two financial crises, the 1997 Asian financial crisis and then everything that happened here in America and around the world around 2007208. Why did you choose those, let's say, as like the poles that you were going to work within? And why did you think that was a particularly fruitful period to tell this story?
+
+</details>
+
+**李敏金**: 对绝大多数当代韩国人心理影响最为深远的历史事件，既不是朝鲜战争，也不是日本殖民统治。它实际上是 **IMF 危机**——西方称之为 1997 年亚洲金融危机，但在韩国本土被普遍称为 IMF 危机。当时韩元与美元挂钩，汇率发生剧烈暴跌，导致整个国家经济实质上陷入了主权债务违约。随之而来的后果是无数人被裁员下岗，许多家庭因无力负担而不得不中断子女教育，大量民众失去住房，甚至引发了自杀潮。西方人对这段历史往往一无所知，但如果你去问一个跟你年龄相仿的普通韩国人，究竟什么事件彻底重塑了他们的人生轨迹，他们都会说：“IMF 危机太可怕了”，尤其是那些并非出身于大富大贵之家的人。如果你缺乏**代际财富**（generational wealth）的庇护，你就无法抵御父亲失业、母亲失业、房产被强制拍卖、全家流离失所的狂风暴雨。所以我认为我必须正视这段历史，因为它深刻雕刻了当代韩国人的精神结构，制造了一种对教育的歇斯底里般的狂热焦虑，让韩国人产生了一种紧迫感：“我们必须比以往更加具有全球竞争力。”
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: The historical event that most modern Koreans are deeply affected by today is not the Korean War, and it's not colonization. It's actually the IMF crisis, which is the 1997 Asian financial crisis, but it's called the IMF crisis in Korea. And that was when the Korean currency was so devalued because it was pegged against the dollar that the national economy was basically in default. And as a consequence, people lost their jobs. Education was interrupted because they couldn't afford it anymore. Many people lost their homes. Many people committed suicide. Now people don't in the west don't know about this but if you ask the average person who's about actually your age what really affected you in Korea they will say oh the IMF was really horrible especially if they didn't come from money. So if you lack generational wealth you couldn't ride out the storm of your dad losing his job your mom losing her job you losing your house you having to move out as whole. So I thought, you know, I really need to address this because it affects the modern psyche because it caused a kind of hysterical anxiety about education because it made Korean people feel like, oh, we need to be even more global than we thought we had to be.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Mhm.
+
+</details>
+
+**李敏金**: 紧接着，西方的新自由主义模式、紧缩政策以及终身雇佣制的废除，被全面引入并扎根于韩国社会。整个社会的竞争烈度由此进一步剧增。作为年轻人，你不仅必须具备全球竞争力，而且你突然惊恐地发现，原先以为固若金汤的社会安全网已经荡然无存。我认为这些必须被记录下来。而到了 2008 年，则是全球金融危机的爆发。因此，当我书中所聚焦的高氏一家辗转来到加利福尼亚并在此定居时，我想展现的是：一个家庭倾尽所有投入教育，依然固执地相信只要拿到一张西方名校文凭就能筑起安全防线，但事实究竟是怎样的？现实中，宏观经济的剧烈震荡每天都会毫不留情地砸向品行端正的普通人。厄运接二连三降临在好人身上。我想要呈现的是，如果一个人把一生的赌注全部押在正规学历文凭上，究竟意味着什么。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: And then also the neoliberal practices of the West, austerity and the elimination of lifetime employment, all those practices became accepted into South Korea. So then it became even more competitive. So not only did you as a young person have to become globally competitive, you had to realize that you didn't have any of these safety nets that you thought you had. And I thought I had to cover that. And then of course 2008 is a global financial crisis. So when my family, the family that I focus on, goes to California or eventually ends up in California, I wanted to illustrate what it's like to educate a family and still believe that if you have a western education, then you're going to be safe. [snorts] When actually there are economic shocks which happen to perfectly decent people every day. Terrible things happen to good people. And I wanted to show what that means if you'd only trust in education, in a formal education.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 这确实让人不寒而栗。[笑] 我作为一个家族里极少数读过大学的人，对此深有体会。尽管我当年算不上喜欢上学，但在我们的成长认知里，教育永远是唯一的出路，是向上流动的天梯。当这是唯一的出路时，你别无选择只能全身心信任它，因为你根本不知道还有其他路可走。可是一旦你发现，即便你按部就班做对了所有事情，拼尽全力苦读，考入了心仪的大学，转头却赫然发现庞大的经济系统根本没有为你预留容身之所，或者你所准备的一切在新的经济体系面前完全对不上号。这太可怕了。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Uh, it's scary. [laughter] I say this to someone who is one of the only people in their family that went to college and that was always going to be, even though I never liked school much, that was always going to be the path, the way up. And when that is the path, you have to trust in the path because you don't know any other way. And the idea that you can do the right things, you could study your butt off, you can, you know, get into the right schools and [snorts] yet you still find yourself confronted with an economic system that maybe doesn't have room for you or that you are not prepared for. Maybe you were preparing for a different economic system. It's terrifying.
+
+</details>
+
+**李敏金**: 确实令人惊恐。然而在我的深度调研中，恐惧感反而渐渐消退了，因为我摸清了那些没有代际财富依托的人群在逆境中生存的最佳策略。那些真正渡过浩劫的人，是主动选择去维系深厚家庭纽带、建立真挚友谊的人；是那些清楚明白一旦自己重病或失业时谁会真正爱自己、谁是自己可以托付依靠的人。这些活得最好的人，往往是致力于**构建社区纽带**的人。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: It's terrifying. And yet, I think for me, in all of my research, I felt less terrified because I figured out some of the survival strategies of people who did the best when they didn't have generational wealth. And the ones who really fared were the ones who decided that I would have strong family bonds. I would have strong friendships. And then also, I will know who really loves me if I get sick or I lose my job and who I can count on. And then it was often the people who built communities.
+
+</details>
+
+### 从注意力经济转向依恋经济
+
+**吉尔伯特·克鲁兹**: 在你的前两部小说中，每一部似乎都有一个核心关键词。第一部小说《**百万富翁的免费食物**》（Free Food for Millionaires）的核心词是“选择”（choice）；第二部小说《柏青哥》的核心词是“家园”（home）。而正如你刚才所言，“社区”（community）显然构成了这部新书的绝对中轴。无论这些身处海外离散的移民遭遇何种变故，无论这种纽带是建立在教会、补习班还是其他社群中，社区始终是支撑他们渡过难关的依仗。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: So with your two previous books, I believe you focused on sort of one word for each of them. Your first novel, Free Food for Millionaires, the key word was uh choice. In Pachenko, your second novel, it was home. And as you just said, community seems to be the thing that sits at the center of this book or, you know, one of the centers of this book at least. No matter what happens in this diaspora for these people, its community, whether it's found at church, whether it's found at Hagwan or other places, that is the thing that's going to get them through.
+
+</details>
+
+**李敏金**: 这正是一无所有者的生存法则。当你身无分文但身边有朋友时，你就能撑过去；当你丢了工作、没有一个人愿意接你电话，但你依然拥有社区的支持时，你就能挺过来。我之所以不断强调这一点，是因为我们正生活在一个空前孤独、日趋疏离与隔绝的时代。我们如今已经从“注意力经济”全面跨入了“**依恋经济**”（attachment economy）。无论你依恋的是聊天机器人还是智能手机，你都没有在现实世界中真正依附于活生生的人类。因此在今天，主动选择去拥抱社区其实是一种极其激进的反叛姿态，但它却是一条历经漫长岁月检验的生存智慧。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Well, that was what the survival strategy is for people who have very little. When you don't have any money, but you have friends, you're going to be okay. when you don't have a job and no one wants to take your calls and you still have community, you're going to be okay. And the reason why I keep talking about this is because we are living in a time of tremendous loneliness and greater and greater isolation. And we have shifted now from the attention economy to the attachment economy. Whether you're attached to a bot or whether you're attached to your phone, you're not attaching yourself to necessarily other people. Not in real life. So to choose community is actually a radical gesture, but it's actually a time-tested one.
+
+</details>
+
+### 高氏一家的人物画像
+
+**吉尔伯特·克鲁兹**: 你刚才提到了田野采访，稍后我很想向你请教你创作每一部小说时深入真实世界、与真实人物访谈的方法论。不过在那之前，我想请你详细聊聊书中的核心家庭。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: You referenced interviews, and I want to ask you in a little bit about the process that you go through to write each of your novels that involves sort of going out into the real world and talking to people, but before we do that, I'd love if you could just talk a little bit more about this central family.
+
+</details>
+
+**李敏金**: 这个家庭有五位主要人物：父亲约翰（John）和母亲海伦（Helen），以及他们的三个子女。老大叫宝（Bo），老二是东赫（DH），最小的是小女儿美度（Meato）。老大宝是个天资聪颖的大学霸，老二东赫是个运动健将，而最小的小女儿美度是个极具深度的思考者，但她几乎不怎么开口说话，全家人为此操碎了心。在亚洲文化语境里，家里人往往不会那么焦虑，因为女孩子文静少言并不算什么大事；但当他们先后在澳大利亚、加利福尼亚和新泽西生活时，这就成了一个巨大的问题。父亲约翰第一次失业是因为遭遇了身为顶头上司的至交好友的背叛；第二次丢掉饭碗则直接源于 IMF 经济危机的冲击。我这并不算剧透，因为这本就是故事的基石设定。沿着这条人生轨迹，我们见证着他们一家从首尔辗转迁徙到悉尼，最终落脚在加利福尼亚的橙县（Orange County）。全书的大部分篇幅都发生在那里。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: So we have five characters. We have Helen and John. John's the dad, Helen's the mom, and they have three kids. The oldest is Bo. The middle child is DH and the youngest is Meato. Bo is the big scholar and DH is the athlete and the youngest is the little girl Meato. And she is a real thinker, but she's not much of a talker and the family really worries about her. And in [snorts] Asia, they don't they worry about her less because there for girls to talk less, it's not such a big deal. But when they live in Australia and in California and in New Jersey, it's more of a big deal. The father loses his job at first due to a betrayal of his best friend who's his boss. And the second time he loses his job because of the IMF crisis. I'm not giving that much away because that's the premise of the book. But in that trajectory, we find them moving from Seoul to Sydney and then to Orange County, California. And most of the book is set there.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 顺便说一句，父亲约翰的遭遇简直是对“千万别跟老板当朋友”的最有力警示。[笑] 在不剧透的前提下，请具体聊聊这几位人物，以及“社区”这一概念是如何在他们每个人身上流淌展现的？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Yeah, John's situation is a real argument for not being friends with your boss. By the way, [laughter] tell me just so we can dig into some of the the characters specifically without, you know, giving anything away. Talk to me about some of the people in this book and how that idea of community sort of flows through them. As I as I said, you have this family at the core, five people, mother, father, three kids, um, who find themselves moving throughout the world almost before they end up in America in Southern California. Tell me about this family.
+
+</details>
+
+**李敏金**: 比如小女儿美度，她面临着严重的语言表达障碍，年少时在首尔生活，才 13 岁就跟另一个小女孩结下了极其深厚的友谊。后来那个叫妍的小女孩先一步随家人搬到了加州。若不是美度在 13 岁时结识的这段宝贵友谊，后来全家前往加州时根本就找不到任何落脚点。我在采访中发现这类故事层出不穷：当你去探寻一个人究竟是如何从 A 点迁徙到 B 点或 C 点时，得到的回答往往是“是我朋友帮我找到的工作”、“是我姐姐为我担保了移民”、“是我舅舅借给我一笔启动资金”。在所有访谈中，这样的故事一次又一次出现。我当时就意识到：“啊，这就是平民百姓的生存方式，因为他们没有家族信托基金，没有世代积累的财富，也没有通天的权力渠道。”我很想弄清楚 21 世纪普通人的生存策略究竟是什么，因为它们与过去截然不同。此外，全球经济危机对我而言极具吸引力的一点在于：当这类灾难发生时，往往找不出一个明确的罪魁祸首。你无法指着某个人说“看，全都是因为他一个人造成的”。它就像一双看不见的面孔——比如货币急剧贬值，你该如何应对？但你必须面对，因为你承担着立竿见影的残酷后果：你没有学费去上学了，你的工作瞬间消失了。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: So, for example, the youngest child, Meato, has tremendous problems speaking and she ends up in Seoul as a young person. and she's only 13 years old and she makes a really good friend with another little girl. The other little girl, Yan, moves to California first. And but for that friendship that she makes in age 13, her family wouldn't have actually had a landing spot in California. And I found those kinds of stories to be so interesting because very often when you think about migrating from let's say point A to point B or point C, whatever it is, you think, well, how did you get here? And very often it's my friend got me a job. My sister sponsored my immigration. My uncle gave me a loan. And it was those stories that kept on coming up over and over again in all of my interviews. And I thought, "Oh, this is what people do because they don't have trust funds. They don't have generational wealth. They don't have access to power." And I liked learning about what the 21st century strategies were going to be because they were different. And also what's really interesting to me about economic crisis is that when you have global economic crises, very often they're not really identifiable villains. Like you can't point to somebody and say, "Oh, you know what? It's because of this person." You're like, it's it's kind of like this faceless thing. Like the devaluation of currency, like how do you handle that? But you have to handle it because you have real consequences of, oh, there's no more money for me to go to school. There is no more job.
+
+</details>
+
+### 金钱的精确度与社会小说的职责
+
+**吉尔伯特·克鲁兹**: 在阅读这本书时，最令我震撼的特质之一，就是你对**金钱**的描写是如此之多、如此精确。我看过大量小说，在严肃文学虚构作品中，金钱不仅极少被正面讨论，更绝对不会以如此精确入微的颗粒度呈现。很少能看到一部小说里的大批人物会说“我们正在拼命苦干，每个月必须存下具体多少钱才能达到某个目标”。你笔下对财务细节的描摹极其罕见。我想请教你，这种刻意为之的精准描写是出于怎样的考虑？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: One of the things that really stood out to me most prominently when reading this is how much and how precisely you write about money in this book, which I think and I I I read a lot. Other people read more than me, but in my reading of fiction and literary fiction, it's just not not only is money not really ever addressed, but money is certainly not addressed with [clears throat] this kind of specificity. And furthermore, it's not addressed. You don't see a ton of characters who really are like, "We're working hard and we're working hard because we need to save this much every month in order to get to this point." And the detail through which you do that just seemed very rare to me. And I wanted to ask you about the deliberateness with which you did that.
+
+</details>
+
+**李敏金**: 你知道吗，大部分在 19 世纪写给普通大众阅读（或者在工人们劳作时读给他们听）的小说，无时无刻不在谈论金钱，因为现实中的平民百姓确实是在为钱奔波！[笑] 幻想人们工作全凭兴趣或崇高意义固然美好，但绝大多数普通人工作的唯一目的就是为了赚钱。我认为作为一名社会小说家，我必须直面这一事实。因此，即便经济学绝非一门轻松的学科，我也苦心自学了大量关于**基准利率**的机制。[笑] 我去钻研银行运作的底层原理，去研究次贷危机爆发的机理。我之所以这么做，是因为我意识到，只有当我彻底融会贯通后，我才能把这些看似枯燥、却深刻左右着普通人命运的经济法则，清晰直观地呈现在对金融毫无兴趣的读者面前。如果不理解遗产继承法，你其实根本读不懂 19 世纪的大多数文学经典。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: You know, most 19th century novels which are read by regular people or read to to regular people because workers were often read to when they're working, they address money all the time because people actually work for money. [laughter] It's nice to think that people work for fun or for meaning, but most people work for money. And I think that as a social novelist, I have to deal with it. So even though economics is not the easiest subject, I have taught myself a lot about interest rates. [laughter] And then once I and also how banks work or why we had a subprime mortgage crisis and the reason why I did that is because I thought well after I understand it really well, how do I make it really obvious for people who have no interest in this and yet our lives are being affected? If we don't understand inheritance law, you actually can't understand a lot of 19th century novels.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 我认为这必须成为你的责任。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: And I thought I better learn it.
+
+</details>
+
+**李敏金**: 是的，我想我最好把它钻研透彻。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: And I thought I better learn it.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 钻研这些对你来说有乐趣吗？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Um, was that fun for you?
+
+</details>
+
+**李敏金**: 这太迷人了！比如我研究了“无本金贷款”（liar loans，欺诈性按揭贷款）和次贷危机中的违约潮，研究了人们在房贷上是如何被诱导断供违约的。当你知道你可以获得 125% 的房屋估值贷款时——
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: It was fascinating. Like to understand like liar loans and defaults, to understand how you could walk away from a loan. When you realize that you could get 125% of the loan of the value of the house,
+
+</details>
+
+**吉尔伯特·克鲁兹**: 零首付。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: zero money down.
+
+</details>
+
+**李敏金**: 零首付。他们直接把这笔钱塞给你，你就这样买下了房子。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Zero money down. And then they give you that money and then you buy the house.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 房产不断升值，于是你可以做再融资套现。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Values are going up and then you refinance.
+
+</details>
+
+**李敏金**: 这种机制实际上驱使大众疯狂买卖房产，并背负起惊人的巨额债务，进而催生了巨大的破产潮。而当这些发生在一个家庭内部时，你能看到夫妻之间是如何爆发歇斯底里的争吵。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Well, that kind of thing actually led to people buying and selling houses and also accumulating an enormous amount of debt, which actually caused enormous amount of bankruptcy. And when that happens in a family, you see how couples fight.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 还有贪婪。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: And greed.
+
+</details>
+
+**李敏金**: 我还想强调，那不仅仅是贪婪，更是最质朴的**阶层上升野心**。我深切同情书中的一些角色。他们并非恶人，他们只是渴望为孩子提供更好的生活条件。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: I I want to also just say it's not just greed, it's also just ambition, just the ambition. And I was really moved by some of the characters. They're not bad people, they just wanted better things for their kids.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 很多时候，甚至连房产经纪人和按揭贷款专员都坚信这就是常态。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Oftentimes the people the realtors, the people offering the loans also believed.
+
+</details>
+
+**李敏金**: 是啊，零首付买下一处居所，你对它倾注了全部情感；贷款机构把钱借给你，你以为他们是可信赖的专业人士；你以为既然系统允许这么操作，那就必然是合规安全的。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: No down payment, and you would buy a place, and then you get really attached to it, and then someone made that loan to you, so you thought they were an expert, so they thought you trusted them, and you trusted the system because if it's legally possible, then it must be okay.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 制度本身就是这么设计的。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: It's institutional.
+
+</details>
+
+**李敏金**: 人们往往很难分清制度规范与欺诈陷阱。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: It's hard to trust people.
+
+</details>
+
+### 田野调查与口述史创作法
+
+**吉尔伯特·克鲁兹**: 我们刚才聊到了访谈。你在小说写作过程中有着非常严谨的**深度采访**与田野调查机制。我记得你提过，创作《柏青哥》期间你在日本生活了四年，采访了无数在日朝鲜人（Zainichi Koreans）。而在写这本《美式补习班》时，你显然不可能回到 1997 年的首尔。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: It's hard to tell between institutional and scams. Talk to me a little bit about these interviews. You have an intense process of interviewing people for your novels. When you wrote Pachinko, you lived in Japan for four years and you spoke with many Zainichi Koreans, as they're known. With this book, obviously you can't go to 1997 Seoul.
+
+</details>
+
+**李敏金**: 确实无法穿越时空。但我接触了大量生活在美国的韩裔离散人群，以及生活在韩国本土的民众。你可以问他们：“当年你经历那场危机时是怎样的状态？”
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: I cannot. But there's also you talking to people who live in America and are part of the Korean diaspora, people who live in Korea, you can say, "Well, what was that like for you?"
+
+</details>
+
+**吉尔伯特·克鲁兹**: 请详细谈谈你的采访历程。整个过程持续了多久？涉及了多少受访者？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Tell me a little bit about that process. How long does it last? How many people did you speak to?
+
+</details>
+
+**李敏金**: 我采访过的人数难以计数，至少有数百人。但更重要的是：你怎样向受访者提问，才能让他们放下防备，向你吐露那些他们甚至从未对配偶或亲生骨肉袒露过的隐秘心事？这需要建立极度深厚的信任。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: I have no idea how many people I've interviewed, but it's in the hundreds. But the question is: How do you interview someone so that they will tell you things they wouldn't even tell their own spouse or their children? That takes a great deal of trust.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 明白了。那么这种信任究竟是如何建立起来的？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Got it. Got it.
+
+</details>
+
+**李敏金**: 比如如果我采访你，吉尔伯特，问你：“你当初为什么决定从事新闻业？”如果只聊表面事实，你可能只会给出标准答案。但我如果观察你眼神的变化、你迟疑的停顿、你何时会轻声叹气，去探寻那些没有被直接说出口的情绪底层——那才是小说家真正需要捕捉的生命质感。受访者当下的所作所为往往是具象的事件，而他们作为一个“人”的内在性格与精神底色，才是小说的灵魂。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Um, so for example, like if I interviewed you, Gilbert, and said, "How is it that you decided to go into journalism?" If it's just the facts, then you'd give the facts. But if I watch how your face changes, how you hesitate, when you sigh, to find out the unsaid things—that is what a novelist needs to capture. So like the personality of Gilbert is different than let's say what you did today.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Mhm.
+
+</details>
+
+**李敏金**: 许多作者习惯用几个标签或者大纲来推演人物行动，但我发现现实中的人物从来不会完全遵照作者的预设行事。真实的人性充满了矛盾、自欺与难以言说的尊严。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Right. So what I did today is very different than what you you could predict. Let's say what would men say is very different than how I act.
+
+</details>
+
+### “降落伞孩子”与跨国离散的代价
+
+**吉尔伯特·克鲁兹**: 这让我想起书中写到的**降落伞孩子**（parachute kids，低龄留学生）。我必须坦承自己的无知，在读你的书之前，我对这个概念并不十分熟悉。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: I must admit to my own ignorance. I I wasn't overly familiar with the concept. I hadn't really heard of parachute kids.
+
+</details>
+
+**李敏金**: 你的孩子在学校里很可能就有这样的同学，但他们通常不会到处宣扬。他们往往只有八九岁或者十几岁，父母依然留在韩国拼命工作挣钱，把他们独自送到美国，寄养在寄宿家庭或者亲戚家里，希望他们能接受纯正的西方教育。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Your child actually might be going to school with these kids, but they wouldn't advertise it. Mhm. They could be as young as nine or eight and somebody else raises them in the hopes that they can go to the public school system in America and learn English, and then get into a good university. Korea is in a middle space because even though it is a globally important economy, it is not a superpower like China or the United States. And because of that, there's a vulnerability. And their idea of having global citizenship. To me, it makes sense why they go to these lengths.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 这完全有可能。当我第一次在书里读到这个情节时，内心受到的冲击极其强烈。我的第一反应是：“这算怎么回事？一个小孩子怎么能孤身一人生活在大洋彼岸，与父母彻底分离？”这乍看之下简直是一场家庭伦理的悲剧。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: It's very possible. It's very possible. When I first came across it in your book, my initial reaction was like, "What's going on here? This kid just like lives across the world from their parents?" At first it struck me as a terrible situation. It's like this child is completely alone.
+
+</details>
+
+**李敏金**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: yeah,
+
+</details>
+
+**吉尔伯特·克鲁兹**: 但随后你会意识到，这背后凝结着整个家庭近乎残酷的自我牺牲。父母承受着与骨肉分离的巨大痛楚，孩子也承受着被抛入陌生异域的孤寂与重压，而这一切仅仅是为了博取一个跨越阶层的未来。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: But then of course you think of the it's this is all for a sacrifice. This is all about the parents going through the pain of not seeing their child and the child vice versa going through the pain of not seeing their parents all in the name of giving this kid a leg up.
+
+</details>
+
+**李敏金**: 想想纽约市那些从事幼儿看护的移民女性吧，她们把自己的孩子留在家乡，替别人照顾小孩；想想纽约各大医院里的护士们，她们的子女同样留在大洋彼岸。这与一个家庭中某一位成员独自迁徙是一体两面的境遇。因此，我想要为人们为什么会做出这种撕裂般的决定提供深层的社会与历史语境。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: And think of all the women who work as child care givers in New York City who don't see their children. All the nurses who work in the hospitals in New York City whose children live abroad. It's the reverse situation of a family member moving abroad. Um, so then I want to just give a context for why people make these decisions.
+
+</details>
+
+### 应试公平、文凭狂热与应试阶梯
+
+**吉尔伯特·克鲁兹**: 无论是在韩国本土、巴西的韩裔聚居区，还是在美国加州，韩裔群体内部似乎都对“唯有教育才能实现阶层跨越”抱有不可动摇的坚信。你在《美式补习班》中是试图去回答“在美韩裔意味着什么”，还是试图探寻“为何人们对教育价值抱有神圣崇拜”？抑或是剖析这两者的交汇点？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Korean diaspora has been very united in this idea that education is a pathway like that they never seem to shake. Were you trying with American Hagwan to answer a question about what it means to be Korean in America? Were you trying to answer a question about what it means to believe in the value of education? Or was it about sort of the way those things intersected? And do you think you you achieved an answer of some sort?
+
+</details>
+
+**李敏金**: 我动笔时的初衷确实是想弄明白：为什么教育对韩国人具有如此至高无上的意义？
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: I think I started out by thinking about why does education mean so much to Koreans?
+
+</details>
+
+**吉尔伯特·克鲁兹**: 确实，无处不在。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Yeah. Everywhere.
+
+</details>
+
+**李敏金**: 为什么这种执念如此深入骨髓？为什么大家坚信“教育等于社会流动”？因为他们笃信**应试唯才制**（meritocracy）。他们坚信只要参加全国统一考试并且成绩名列前茅，任何人都能拥有公平的机会。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Like why is this so important? What is this attachment to this idea that education equals greater social mobility? They really believe in merit. They really believe that if you take the test and you do well, then you have a chance. And they think of it as being really fair because then everybody has a shot.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 是的，书中让我极为抓狂的一点——不是针对书本身，而是书中所描绘的考试制度：书中的一个儿子参加了三次韩国大学修学能力试验（修能考试），最后彻底崩溃放弃，扬长而去。我读到那里时的批注直接就是：“这到底是怎么回事？”这简直是我见识过的最严苛、最性命攸关的考试。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Yeah, that was one of the things that really drove me crazy. Not about the book, but just about the testing system, the test you described that one of the sons of the family takes three times before he says, "Forget it. I'm out of here." I think my note at one point is like, "What the hell is going on here?" like this seems like [laughter] the the most serious test I've ever come across. Why is this so important?
+
+</details>
+
+**李敏金**: 韩国高考每年仅举行一次，之所以一年只举行一次，正是打着“绝对公平”与防止作弊的旗号。这一制度最初的设计初衷充满正义感，但在具体实践中却异化成了一场人间炼狱。反观美国，虽然表面上没有这种全凭一考定终身的绝对体制，但如果你是一名赛艇健将或者特长生，你进入顶尖大学的几率就会大幅飙升。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: What I think is so interesting is that in America even though I don't think a person's life is defined by one test, in Korea the college entrance exam is only given once a year and it's only given once a year out of fairness. It's to reduce cheating. So you have all these rightminded ideas but then in practice it turns into madness. And in America, if you are a great rower then you might have a greater chance of getting into an elite school.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 当然。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Sure.
+
+</details>
+
+**李敏金**: 我绝非在贬低专项体育运动或批评应试测评。但问题在于，在所有的指标堆砌与考试竞赛中，最关键的核心却丢失了——那就是**真正的教育**。我们丢掉了如何面对未知、如何做人、如何与周遭世界建立深刻联系的软技能与大智慧。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Sure. I'm not going to put down any specialized sports or excessive testing. What's missing in all of this is education. What's missing in all of this is the soft skills and the big themes that allow us to handle tremendous disruptions in the world.
+
+</details>
+
+### 教会共同体与精神锚点
+
+**吉尔伯特·克鲁兹**: 你在书中大篇幅展现了**教会**在移民社区中的存在。在当代严肃虚构文学中，教会作为一个核心社区场景极少被正面探讨，甚至往往被刻意回避。你将教会置于叙事舞台的中心，能借此挖掘出怎样的戏剧张力？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: You talked a little bit about community. Another place that we see that community is the church. In contemporary fiction, you certainly don't see the church as a community really addressed or really presented all that often either. What can you do with that as a setting? What sort of dynamics can you start to to dig into that makes the church particularly fruitful for fiction? It's just not a place I see very often, which is weird to be honest.
+
+</details>
+
+**李敏金**: 几乎每一部 19 世纪的英国小说里都有牧师、主教或教区执事的身影。在 19 世纪的文学传统中，宗教敬拜场所是无处不在的，因为信仰是普通人生活无可分割的现实。在真实的移民社区里，宗教场所不仅是寻求神圣慰藉的殿堂，更是最为坚固的**互助与生存安全网**。无论他人如何评价，在这个世界上，绝大多数普通人心中都保留着某种信仰。作为一个社会小说家，如果不去描摹这一维度，那就是对现实生活的蓄意失真。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Well, every 19th century novel pretty much had a parson or a crazy bishop or a vicar. There was always a place of worship in almost all the 19th century novels because it was part of life. And I have to say this because I think it's true. In immigrant communities, places of worship are safe havens and essential safety nets. Most people in the world believe in something and I think that as a social novelist, if I ignore that, I'm ignoring a huge part of reality.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 这或许也得益于你自己本就是一位有信仰的人，因此你并非只是将宗教作为增加小说层次感的技巧性拼贴。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Um it also helps that you yourself are someone who is a person of faith. It's not just an element you're adding to deepen the layers of your fiction.
+
+</details>
+
+**李敏金**: 正因为我自己拥有信仰，我既能毫不掩饰地揭露宗教共同体中那些伪善、丑陋与可怕的阴暗面，也能真诚地呈现它给予迷茫个体的救赎、庇护以及人际间真正的温情。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: I think that as a person of faith, I think I can represent the terrible parts about religious hypocrisy and religious communities, and also the parts about the church that make sense to me and to the people who find refuge there.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 的确如此。现实中有许多自称信徒的人在作恶，但同样有许多人在其中找寻到了支撑一生的道德基石。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Yeah. Yeah, there are many Christians out there doing terrible things and there are also people who find real solace and community.
+
+</details>
+
+### 从《柏青哥》到新书的创作长跑
+
+**吉尔伯特·克鲁兹**: 你是在《柏青哥》出版前后开始构思《美式补习班》的。在经历了《柏青哥》享誉全球的巨大成功后，立即投入下一部历时近十年的创作长跑，是怎样一种心理体验？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: So, you started working on American Hagwan around the time that Pachinko came out and in our last conversation a couple of years ago, Pachinko had become this huge bestseller and well-loved. What it was like to just say, "All right, I'm jumping into the next one here. I don't know what's going to happen, but what was that like? And what is it like to look back on the success of that book now?"
+
+</details>
+
+**李敏金**: 很多人以为《柏青哥》一问世就大获成功，但其实在出版的第一年里它平淡无奇。后来随着《纽约时报》的报道、入围**美国国家图书奖**决选，它才逐渐被越来越多读者看到。但对一个严肃写作者而言，昨天的荣光无法替你写出下一页文字。你依然必须独自坐在书桌前，面对空白的稿纸。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Oh, of Pachinko. Um, [sighs] you know, I think the first year of Pachinko, it was not a success really. It became a success over time, and much in part thanks to the New York Times and becoming a National Book Award finalist. But as a writer, that doesn't write your next book for you. You still have to sit down every day and do the work.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 那是一段艰苦卓绝的历程。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: That's rough.
+
+</details>
+
+**李敏金**: 当你写完一部宏大的历史史诗之后，进入一个关于现代教育、充满争议与焦虑的新题材，你必须重置自己的心智，重新建立对笔下世界的确信。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Yes. And I think that's the thing that I really hear about all the time from writers. It's a completely different project.
+
+</details>
+
+### 工具主义功利人际与真挚羁绊
+
+**吉尔伯特·克鲁兹**: 现在的社会充斥着**工具理性**与功利主义。甚至很多高中生参加课外活动，唯一的动机就是“这在申请大学简历上看起来漂亮”。你在小说中深刻剖析了这种功利交换。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: right now even with high school students about why you should do certain things because it'll look good on a resume. I think back to my own experience. I went to a very good school and I was around kids from wealthy families and had been to boarding schools and prep schools. And I remember at the time I was interested in politics and I realized all of these kids that I'm in college with are doing these unpaid internships and I couldn't afford to do that unpaid internship and therefore I wasn't going to be able to sort of walk the path that they are into in early years in government and stuff like that. Really it freaked me out for a while and actually that's why I made the swerve into journalism.
+
+</details>
+
+**李敏金**: 如果你在大学或者社会里的每一个人际交往，出发点都是纯粹的商业赞助或利益交换——“你能为我做什么，我能为你提供什么利用价值”，一旦你生病了、落魄了、或者不再具备任何可变现的资源，这种关系就会瞬间灰飞烟灭。那根本不是真正的人际纽带。当经济崩塌降临、文凭神话破灭时，究竟有谁还会坚定地站在你身边？唯有超越利益交换的**真挚羁绊**，才能在狂风暴雨中幸存下来。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: If everybody's there for the same purpose, then the transaction is all that matters. But then that's not actually a relationship that's a true lasting bond and it's certainly not what a family or community is. And what happens if you get sick? What happens if you get unattractive to them? In an educational catastrophe or financial shock, who's really there for you? Those bonds survive disruption.
+
+</details>
+
+### 写作背后的经济现实与《马歇尔计划》
+
+**吉尔伯特·克鲁兹**: 我想问一个非常直接、甚至可能有点敏感的问题：很多普通读者会想，既然你已经写出了《柏青哥》这样的超级畅销书，版权收益丰厚，你应该早就实现了财务自由，完全可以高枕无忧了吧？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: I would like to ask you a very direct, possibly sensitive question, but I think people would want to know. People think, "Oh, she wrote Pachinko, it was a massive hit, she's totally set." Is that true?
+
+</details>
+
+**李敏金**: 我四处做演讲、教学、写影视剧本，做过无数工作。我至今依然有着强烈的经济不安全感。现实并不像大众想象的那样，靠上一本书的版税就能一辈子躺平。比如《柏青哥》在英国或其他海外国家卖出一本平装本，扣除各种分成后我拿到手的版税少得可怜，在某些国家甚至买不起一包巧克力豆。[笑]
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Well, I I speak, I teach, I've written screenplays, I've done so many things. At no point have I felt like, "Oh, I'm completely set." No. I mean, for example, when I sell a book in England for Pachinko, the royalty is tiny. And actually, it's less for certain countries. That's not even enough for a bag of Smarties. [laughter]
+
+</details>
+
+**吉尔伯特·克鲁兹**: 接下来呢？你此前公开提过你的四部曲最终篇，那是一部怎样的小说？
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: What about your next book? You were working on another book that I think you've publicly said is the fourth in this series.
+
+</details>
+
+**李敏金**: 我已经动笔了。书名暂定为《**马歇尔计划**》（Marshall Plan）。它讲述的是冷战时期远赴西德做矿工和护士的韩国劳工的故事。他们将辛勤赚取的西德马克汇款寄回韩国，在废墟上支撑起了祖国的战后经济重建。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: I started it. It's called Marshall Plan. And it's about the Koreans who went to Germany to work as nurses and miners, and they sent remittances of Deutsch marks back to Korea to help rebuild the country. It's based on this idea of remittances and rebuilding.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 在巅峰时刻完美收尾。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: Just go out on top.
+
+</details>
+
+**李敏金**: 我希望如此。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: I hope so.
+
+</details>
+
+**吉尔伯特·克鲁兹**: 这绝对是最好的方式。今天这场对话非常精彩，令人深受启发。李敏金，新小说《美式补习班》的作者，一如既往的棒！感谢你再次做客我们的节目。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: I think is the way to do it. This conversation we just had was wonderful and delightful. Minjin Lee, author of the new novel American Hagwan. This was great as always. Thank you for coming on.
+
+</details>
+
+**李敏金**: 非常感谢你，吉尔伯特。
+
+<details>
+<summary>Original English</summary>
+
+**Min Jin Lee**: Thanks so much, Guilford. [music]
+
+</details>
+
+**吉尔伯特·克鲁兹**: 《纽约时报》书评播客由莎拉·戴蒙德（Sarah Diamond）、艾米·珀尔（Amy Pearl）和帕特里夏·苏巴兰（Patricia Subaran）联合制作，佩德罗·罗萨多（Pedro Rosado）混音，原创音乐由丹·鲍威尔（Dan Powell）和艾丽西亚·埃图普（Alicia Etup）创作。特别感谢达莉亚·哈达德（Dalia Hadad）。我们非常期待听到您对本期节目的看法，请发送邮件至 bookreview@nytimes.com。我是吉尔伯特·克鲁兹，感谢您的收听。
+
+<details>
+<summary>Original English</summary>
+
+**Gilbert Cruz**: The book review is produced by Sarah Diamond, Amy Pearl, and Patricia Subaran. It's mixed by Pedro Rosado. Original music by Dan Powell and Alicia Etup. Special thanks to Dalia Hadad. We want to hear what you think about the show, so send us an email at the bookreview@nytimes.com. I'm Gilbert Cruz. Thanks for listening.
+
+</details>

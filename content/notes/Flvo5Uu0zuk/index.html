@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meta Faiss 團隊重寫 K-Means 更新機制：訓練輪數減至十分之一與百億向量驗證</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Meta Faiss 團隊重寫 K-Means 更新機制：訓練輪數減至十分之一與百億向量驗證</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Best Partners TV</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>Best Partners TV</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-17</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Meta Faiss 團隊重寫 K-Means 更新機制：訓練輪數減至十分之一與百億向量驗證</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">clustering-algorithm</span>
+      
+        <a class="tag-link" href="/tags/vector-search/">vector-search</a>
+      
+        <span class="tag-pill tag-pill--no-page">exponential-moving-average</span>
+      
+        <span class="tag-pill tag-pill--no-page">unsupervised-learning</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Meta Faiss 團隊改寫 K-Means 聚類中心更新機制，引入指數移動平均（EMA）與免調參經驗規則。在百億向量實驗中將達到相同品質所需的訓練輪次縮減至約十分之一，顯著降低了大規模向量檢索中索引重建的計算成本。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/best-partners-tv/">Best Partners TV</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=Flvo5Uu0zuk" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-17T00:00:00.000Z">2026-11-17</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>7 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#k-means-%E6%BC%94%E7%AE%97%E6%B3%95%E7%9A%84%E7%93%B6%E9%A0%B8%E8%88%87-meta-%E7%9A%84%E6%94%B9%E9%80%B2">K-Means 演算法的瓶頸與 Meta 的改進</a></li><li class="outline-h3"><a href="#%E7%B6%93%E5%85%B8-lloyd-%E6%BC%94%E7%AE%97%E6%B3%95%E8%88%87%E5%B0%8F%E6%89%B9%E9%87%8F%E6%9B%B4%E6%96%B0%E7%9A%84%E6%8C%91%E6%88%B0">經典 Lloyd 演算法與小批量更新的挑戰</a></li><li class="outline-h3"><a href="#%E6%8C%87%E6%95%B8%E7%A7%BB%E5%8B%95%E5%B9%B3%E5%9D%87ema%E6%9B%B4%E6%96%B0%E8%88%87%E5%B9%BE%E4%BD%95%E7%9B%B4%E8%A6%BA">指數移動平均（EMA）更新與幾何直覺</a></li><li class="outline-h3"><a href="#%E4%B8%AD%E5%BF%83%E5%BE%A9%E7%94%A6%E6%A9%9F%E5%88%B6%E8%88%87%E6%94%B6%E6%96%82%E7%A9%A9%E5%AE%9A%E6%80%A7">中心復甦機制與收斂穩定性</a></li><li class="outline-h3"><a href="#%E8%87%AA%E5%8B%95%E5%8C%96%E8%B6%85%E5%8F%83%E6%95%B8%E7%B6%93%E9%A9%97%E8%A6%8F%E5%89%87">自動化超參數經驗規則</a></li><li class="outline-h3"><a href="#%E5%AF%A6%E9%A9%97%E5%B0%8D%E6%AF%94%E8%88%87%E7%99%BE%E5%84%84%E5%90%91%E9%87%8F%E9%A9%97%E8%AD%89">實驗對比與百億向量驗證</a></li><li class="outline-h3"><a href="#%E7%B8%BD%E7%B5%90">總結</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>大家好，這裡是最佳夥伴，我是大飛。</p>
+<h3 id="k-means-演算法的瓶頸與-meta-的改進" data-reading-heading="">K-Means 演算法的瓶頸與 Meta 的改進</h3>
+<p>K 均值演算法可能是機器學習中最不起眼的演算法。這項提議是在 20 世紀 50 年代提出的，比許多人的程式生涯還要長。如今，當你打開一個向量資料庫進行相似性搜索，或者讓系統壓縮一批圖像特徵時，它通常仍然在後台運行。它年代久遠，以至於許多人認為它已經沒有什麼可以改變的了。</p>
+<p>出乎意料的是，Meta 的 Faiss 團隊最近對它進行了一些更改。他們沒有改變目標函數的任何特徵，只是重寫了聚類中心的更新方式，將達到相同聚類質量所需的訓練輪數減少到原來的十分之一左右。在 10 億個向量的實驗中，實際耗時比預期快了 45.5 倍。</p>
+<p>這項成就的實際價值是什麼？我們可以從特定角度來看這個問題。在大規模向量搜尋中，聚類通常是建立索引的先決步驟。索引重建的頻率直接取決於聚類運作所需的時間。更進一步來說，大型模型推理會壓縮注意力緩存並量化注意力，它也使用 K-means 等方法，因此它實際上並沒有我們想像的那麼遙遠。</p>
+<p>K 均值演算法的原理很簡單：它將一堆資料分成 K 個簇，使每個樣本到其指定中心的平方距離總和最小化。幾十年來，這個目標從未改變；所有的發展演變都體現在如何解決這個問題上。</p>
+<h3 id="經典-lloyd-演算法與小批量更新的挑戰" data-reading-heading="">經典 Lloyd 演算法與小批量更新的挑戰</h3>
+<p>最經典的方法是勞埃德演算法，它分兩步驟進行：首先將所有樣本分配到最近的中心，然後使用每個聚類樣本的平均值計算一個新的中心。重複這兩個步驟，直到中心基本上停止移動為止。過程有一個約束條件：每次更新完成後，必須掃描整個資料集一次。因此，資料量越大，每次掃描的成本就越高。</p>
+<p>這裡所說的「一輪」指的是一個週期，也就是遍歷整個資料集一次。因此，回合數和計算負荷基本上呈現線性關係；減少十分之九的掃描次數，就能節省十分之九的資料掃描量。</p>
+<p>開源的 Faiss 預設運行 25 輪，這個數字已經逐漸成為行業基準。許多人將勞埃德演算法在 25 輪後的錯誤率作為參考線。但是，如果規模達到 100 億件，25 輪計算意味著極其昂貴的重複計算。以實際場景為例，運行 10 億個向量 25 輪需要超過 6000 個 GPU 小時。</p>
+<p>小批量更新呢？事實上，這種方法並不是什麼新鮮事。麥奎因在 1967 年提出的順序更新方案遵循了這個邏輯。2010 年，Sculley 的 MiniBatchKMeans 將其推向了網路規模，在處理一部分樣本後即可更新中心，而無需等待整個過程完成。它速度很快，而且邏輯聽起來也更連貫。後來，其他人對其進行了修改，提出了解決流資料、概念漂移和雜訊混合問題的方法。</p>
+<p>然而，還有一個問題尚未解決：如何設定參數。當用戶獲得新數據時，他們仍然需要自己進行猜測。</p>
+<p>批次處理與非批次處理的關鍵問題在於統計資料的累積方式。經典小批量會持續添加歷史統計數據，因此當早期中心位置不準確時，這些分配記錄會長時間影響結果。此類方法通常收斂速度更快，但誤差比完全訓練的 K-Means 演算法要高。您仍然需要自行測試批次大小和學習率，而對新資料重複此操作使得速度、品質和易用性難以平衡。</p>
+<h3 id="指數移動平均ema更新與幾何直覺" data-reading-heading="">指數移動平均（EMA）更新與幾何直覺</h3>
+<p>這種優化的 K-Means 演算法採用了一種不同的方法：它停止累積，並使用指數移動平均線（EMA）來維持中心，這並不複雜。</p>
+<p>首先，為每個中心保留兩個值：分配給它的樣本數，以及這些向量的總和。中心值本身並非直接存儲，而是透過計算這兩個值的比率得出的。每次有小批量資料到達時，這兩個值都會根據衰減率進行移動平均。新的任務可以及時地將中心拉向他們。較早的統計數據逐漸失去了分量。</p>
+<p>一種解釋是，它將 K-Means 更新視為硬分配 EM，但統計量會衰減。這種觀點並不新鮮，但以前沒有人系統性地將衰減率視為可調、可最佳化的變數。當然，這些規則並不陌生，因為 VQ-VAE 中的代碼簿更新就是這樣運作的。後來，神經音頻編解碼器甚至對其進行了修補，使「死寂」的中心重新煥發生機。</p>
+<p>差異在於，這些案例面臨著不斷變化的分佈，其中 EMA 衰減率基本上被視為一個常數，沒有人對其進行調整。但是，由於資料固定，目標是最大限度地減少誤差，因此必須重新設計公式。</p>
+<p>研究團隊也將其與隨機梯度下降法進行了比較。當使用大批量和大更新步長進行訓練時，梯度下降法可能會變得不穩定。作者認為，EMA 更新使中心保持在已分配樣本的凸包內，從而有效地限制了由大步長引起的抖動。雖然這種解釋並非嚴格的證明——更像是一種幾何直覺——但方向是正確的。</p>
+<p>更值得注意的是，它如何改變陷入局部最優解的機率。Lloyd 演算法每輪都會減少訓練誤差，這聽起來不錯，但這也意味著一旦穩定下來，它就會安然待在那裡，無法自行擺脫困境。小批量隨機波動實際上給了 EMA 重新調整的機會，甚至可以推動那些已經穩定的中心。</p>
+<p>團隊進行了一項實驗，很好地說明了這一點：將由兩個大小截然不同的集群組成的數據分成八組。勞埃德演算法有時會為較小的集群分配兩個中心，導致較大的集群缺乏中心。EMA 從相同的初始狀態開始，有機會進行自我修正。在 200 次隨機初始化中，勞合社有 26% 的時間陷入了這些次優分組，而 EMA 只有 3.5% 的時間陷入了這些次優分組。五個聚類排成一列，這些比率分別為 46% 和 0%。請注意，這些實驗使用了隨機初始化；他們甚至都沒用 K 均值++ 演算法。</p>
+<h3 id="中心復甦機制與收斂穩定性" data-reading-heading="">中心復甦機制與收斂穩定性</h3>
+<p>另一個容易被忽略的細節是，在勞埃德演算法中，一些中心在訓練期間逐漸停止接收樣本，實際上浪費了那部分聚類能力。相比之下，EMA 每五批進行一次檢查。如果一個中心的樣本計數低於平均值的某個比例，它會從一個更大的活躍群集中分成兩半重新分配，而不是簡單地隨機抽取一個樣本。</p>
+<p>然而，這種拆分邏輯遵循了 Faiss 的現有做法，並非一項新發明。在消融實驗中，以 YFCC 100 萬個樣本資料集為例，禁用復甦機制導致 26.3% 的中心樣本數少於 10 個。啟用後，這一比例下降到 0.3%。此外，在消融實驗中，使用從目前批次中隨機抽取樣本代替復甦機制（一種更便宜的方法）卻顯示出明顯較差的結果。其他修改（包括單獨移除這些修改）的影響大多在百分之幾個百分點左右。</p>
+<p>使用 K-means++ 初始化確實可以稍微改善情況，但成本太高；當訓練週期預算緊張時，最好多訓練幾輪。</p>
+<p>其餘的調整主要集中在穩定性和收斂性方面。初始化過程包括從資料中隨機選擇中心，但會給初始統計資料最小的權重。第一次更新後，幾乎沒有留下任何痕跡。學習率採用衰減方案，從峰值逐漸下降到谷值，因此訓練在後期不會出現波動。</p>
+<p>最後一輪結束後，你可以使用該輪分配的樣本的平均值再次計算中心；成本幾乎為零，訓練誤差肯定會降低。如果這些中心是用於處理新資料而不是服務訓練集本身，則可以附加一個較慢的移動平均值來專門改善測試誤差。</p>
+<p>此外，這兩種表面處理方法並不衝突。一次訓練可以產生兩組中心；具體使用哪種方法取決於您是想在訓練集上獲得最優解，還是想在新樣本上獲得最優解。</p>
+<h3 id="自動化超參數經驗規則" data-reading-heading="">自動化超參數經驗規則</h3>
+<p>接下來是最有趣的部分：超參數調優也被取消了。</p>
+<p>在小批量訓練中，批次大小和更新步長決定了速度和品質之間的權衡。如果批次太小，GPU 就無法充分利用；體積過大，更新頻率會受到影響。如果步長太小，訓練就不足；太大的話，就會變得不穩定。如果將批次大小設定為完整資料集，步長設定為 1，則移動平均值會退化為 Lloyd 的全批次重新計算。聽起來好像把參數調到極限會回到起點，但實際上，這種經典配置在誤差熱圖上處於性能較差的角落。</p>
+<p>作者進行了 75,000 次最佳化實驗，將樣本大小、訓練輪次和最優參數之間的關係提煉成兩條經驗規則。一個用於確定步長，另一個用於確定批次大小。</p>
+<p>批次大小的定義很微妙；他們使用「拐點」，即驗證誤差保持在曲線最小值 0.2 以內的最大批次大小（四捨五入到 2 的冪）。如果規模進一步擴大，則需要將此批次大小規則除以 8，因為小批次此時不再影響吞吐量。</p>
+<p>有趣的是，這兩個規則雖然是基於 Deep1B 資料擬合的，但它們也能很好地遷移到 Sift、SpaceV 和文字向量中。在保留的資料上，透過這些公式選擇預設的「相對最優」參數，只會導致中位數誤差增加約 0.19%。</p>
+<p>作者也承認，這些規則是為高維度資料設計的。對於維度很低或樣本很少的小型資料集，它們可能不一定是最佳解決方案。真正的困難在於資料的局部固有維度通常是事先未知的，因此這條規則更像是一個好的起點，而不是一個可以立即使用的通用公式。</p>
+<p>對於一般用戶而言，這相當於效能提升。過去，在切換資料集時，要麼依靠經驗猜測，要麼進行一輪超參數搜尋；現在，你只需要提供三個數字——資料集大小和訓練輪數——參數就會自動顯示。它甚至提供了兩種類型的工作流程：一種側重於吞吐量，另一種側重於質量，您可以根據自己的情況進行選擇。</p>
+<h3 id="實驗對比與百億向量驗證" data-reading-heading="">實驗對比與百億向量驗證</h3>
+<p>在實驗方面，該團隊使用 H100 和 64 核英特爾至強處理器，對 100 萬到 100 億個數據進行了處理，數據規模涵蓋了圖像數據和文字數據；所有實驗均未針對特定數據集進行調整。對照組包括 FAISS、FlashKMeans、scikit-learn 中的小批量版本以及其他後續改進，而 CPU 端還添加了 SuperKMeans 等距離剪枝實作。評估指標是均方誤差（MSE），它是樣本到其最近中心的平均平方距離。</p>
+<p>以 FlashKMeans 經過 25 輪測試後的誤差為目標，Instans 在主要對比中僅用了 1.4 到 2.6 輪就達到了該誤差，相當於實時速度提高了 9.5 到 45.5 倍，在 110 億 DINO 向量實驗中達到了最高峰值。在 CPU 上，速度提升了 9 到 15 倍。</p>
+<p>但是，我們必須澄清這個乘數的標準：它比較的是誰先達到對方第 25 輪的目標誤差，而不是誰在運行相同輪數時速度更快。由於每輪的計算量大致相同，演算法的節省主要體現在減少資料掃描次數。</p>
+<p>而且，它不僅速度更快；收斂後，其訓練和測試誤差均低於標準方法，包括使用 KMeans++ 初始化的方法；經過 25 輪測試，所有八種 Instans 配置的性能都優於 FlashKMeans。如果對手也使用 KMeans++ 初始化，差距會縮小，但五輪過後，Instans 仍然較低；另一個細節是，如果你將 40 個隨機種子的最終誤差繪製成直方圖，Instants 分佈總體上更偏向左側。所以它獲勝不是靠運氣，而是因為它的整體分佈更穩健。</p>
+<p>那麼，為什麼它沒有起到多大作用呢？作者的解釋非常實用：這種初始化方法是串列的，沒有並行實現，因此很難達到生產級效率。即使不考慮計算成本，在這個資料集上也無法恢復該錯誤。這就是為什麼 InMi 初步配置的預設配置只需要極少的工作量。</p>
+<p>除了真實向量之外，作者還使用了七個合成資料集進行比較，包括均勻立方體、各向同性高斯、拉伸高斯和高斯混合，所有這些資料集都得出了與真實資料一致的結論。</p>
+<p>減少回合數能否真正轉化為節省時間，還取決於工程實施情況；GPU 核心以資料區塊的形式處理數據，只保留最近的候選距離，而不是寫入完整的距離矩陣。賦值步驟使用低精度格式，如 BF16、FP8 或 int，並與最近的中心選擇合併。減少回合數是演算法問題，而減少記憶體讀取次數是系統問題；綜合以上資料得出最終的效能指標。</p>
+<p>為了實現 100 億規模的部署，該團隊從 YFCC100M 中選取了 6,000 萬張影像，並使用 DINOv3 將特徵提取為影像區塊。每張圖像有 196 個 1024 維的向量，總共 117 億個向量，去重後剩下 100 億個向量。量化後的資料量約為 10TB，可透過 CC 4.0 協定公開大量下載，該資料包含 167 萬個叢集。</p>
+<p>Faiss 演算法在 25 輪運算中耗時 6,784 個 GPU 小時，使用了 64 台機器。InMi 僅需 779 個 GPU 小時即可完成 2.5 輪運算，使用 32 台機器，誤差甚至更低。在這個規模下，僅僅將每個叢集的計數和向量和儲存在 float32 中就需要 64GB 的 VRAM。因此，在實際實作中，這些累加器必須分佈在顯存中；如果聚類數量達到一百萬，距離計算就會成為瓶頸。此時，可以建立中心的倒排文件，因此 IVF 為每個向量使用幾個候選聚類，而不是與所有聚類進行比較。透過使用這種近似方法，InMi 在 3 輪內達到目標誤差，將計算量減少到 23.2 GPU 小時。一台配備 8 個 GPU 的 H100 機器只需要運行大約三個小時。</p>
+<p>最後，就檢索而言，聚類通常只是一個中間步驟；中心的品質決定了索引的效能，因此該團隊在 1% 召回率下，以 11 個資料集測試了新的中心。該資料集包括經典的圖像描述符（如 SIFT）、文字向量（如 SpaceV）和其他公開的索引基準；在相同的訓練時間內，它的召回率通常更高。要達到與訓練有素的傳統方法相同的召回水平，所需時間要少得多。在許多資料集上，它的最終召回率相當或更好，其優勢在 SverA 和 LandmarkDNO 等資料集上最為明顯。</p>
+<p>資料集本身也已發布；作為一個具有完整真實值的近似最近鄰基準，研究人員可以直接使用它進行比較。實作程式碼現在位於 Faiss 儲存庫中，模組名為「ivf_nm」，其中包含實驗性配置，但由於它尚未正式發布，因此您需要從原始程式碼編譯它。在作者列表中，你可以看到像 Jeff Johnson 和 Matthijs Douze 這樣的 Faiss 核心貢獻者，這可能解釋了為什麼這項工作的工程實現如此細緻。</p>
+<h3 id="總結" data-reading-heading="">總結</h3>
+<p>總的來說，我最在意的其實不是 45 倍這個數字，而是它出現在哪裡。對於一個被認為早已解決的演算法，每個人都花了數十年時間來優化工程實現，例如距離計算、核計數或並行策略；很少有人回過頭來修改更新規則本身。然而，這次改變的恰恰是這一部分。</p>
+<p>指數移動平均、學習率衰減和融合核都是深度學習的基本原理，現在它們已被應用於經典的最佳化問題。事實上，這些結果甚至比它們原本的場景更加顯著。對於使用 Faiss 處理大規模向量的團隊來說，最直接的變化是索引重建的成本。以前，聚類步驟成本很高，因此更新頻率很低；現在價格便宜了一個數量級，可以重新計算更新頻率。</p>
+<p>感謝收看，我們將會</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/5e87f337112b1e5a856530088c223276147e5acc2e3df77ae3080fc7d940b1ab.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/5e87f337112b1e5a856530088c223276147e5acc2e3df77ae3080fc7d940b1ab.md" download="Meta Faiss 團隊重寫 K-Means 更新機制：訓練輪數減至十分之一與百億向量驗證.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Jeff Johnson" class="entity-link person-link">Jeff Johnson</a>, <a href="/search/?q=Matthijs Douze" class="entity-link person-link">Matthijs Douze</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Meta" class="entity-link company-link">Meta</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Faiss" class="entity-link product-link">Faiss</a>, <a href="/search/?q=FlashKMeans" class="entity-link product-link">FlashKMeans</a>, <a href="/search/?q=SuperKMeans" class="entity-link product-link">SuperKMeans</a>, <a href="/search/?q=DINOv3" class="entity-link product-link">DINOv3</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

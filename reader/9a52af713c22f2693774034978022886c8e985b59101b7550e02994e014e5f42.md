@@ -1,0 +1,161 @@
+---
+author: AI Engineer
+date: '2026-11-18'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=fTHByDwTxGM
+speaker: AI Engineer
+tags:
+  - post-training
+  - reinforcement-learning
+  - software-engineering
+  - model-evaluation
+  - model-alignment
+title: Gemini 4 后训练：面向真实工程任务的模型迭代与对齐
+summary: Google DeepMind 团队分享了 Gemini 4 系列（包括 Argon、Carbon 和 Hydrogen）在后训练阶段的实践。为解决基准饱和与数据饱和问题，团队引入多文件仓库真实提交、自动生成细粒度评分规则（rubric）和沙箱防作弊机制，并通过清洗轨迹、强化步骤锚定来降低模型编造率，结合公司内部十万余名工程师的日常真实工程反馈加速模型迭代。
+insight: ''
+draft: true
+series: ''
+category: ai-ml
+area: tech-engineering
+project: []
+people:
+  - Melvin Johnson
+  - Ethan Mollick
+companies_orgs:
+  - Google DeepMind
+  - Google
+products_models:
+  - Gemini 4
+  - Gemini 4 Carbon
+  - Gemini 4 Hydrogen
+  - Gemini 4 Argon
+  - Anti-gravity
+media_books: []
+status: evergreen
+---
+### Gemini 4 的发布节奏与前沿地位
+大家好，很高兴来到这里。我是 Melvin，在 Google 负责 Gemini 的后训练工作。今天我想带大家回顾一下我们是如何对 Gemini 4 进行后训练的。我们的这段历程始于外界质疑我们已不再属于前沿模型。
+
+这里有一个例子。大家知道，有人说“Gemini 已经不行了（cooked），但 GCP 正在发力”、“无论从哪个角度看，我们都认为 DeepMind 不再是一家前沿实验室”。我们非常尊重的 Ethan Mollick 也以他一贯友善的方式评价我们，称我们的特点是“发布间隔相当长”。
+
+我今天想告诉大家，我们并没有倒下，我们依然在这里。在过去的 28 天里，我们发布了 Gemini 4 Argon，宣布并推出了 Carbon。可以说我们正处于快速推进的轨道上，而且不仅如此。
+
+在这个过程中，我们实际上收到了 Dylan 的道歉。他说：“向 Google 正式道歉，他们其实没有不行。”Ethan 也提到，Gemini 4 最显著的特点之一就是我们发布产品的速度。此前我们曾有 236 天没有推出前沿模型，而在最近 28 天内我们发布了两款前沿模型。我们在交付速度上实现了 10 倍的提升。人们之前觉得 Google 不行了，但 Google 并没有不行。看到这种舆论氛围的转变令人高兴。处于评论的另一端感觉很好，当然收到批评意见也是好事，因为这会促使你做得更好。
+<details>
+<summary>Original English</summary>
+Hey everyone, good to be here. I'm Melvin and I lead post training for Gemini. So today I thought I'll take you through a little journey of how we post train Gemini 4. And our journey begins by people calling us not a frontier model. Um, so here's an example. You know, people say Gemini is cooked, but GCP is cooking. For all intents and purposes, we believe Deep Mind is no longer a frontier lab. Ethan Malik, who we respect a lot, he says in his own nice way, pretty long gap between launches is what he calls us. And I'm here to tell you we're not dead. We're here. uh and we have launched uh Gemini 4 Argon, we announced Carbon and we launched Carbon all within the last 28 days. So we're on a we're you know we're on a run here and that's not it. Uh in the process we actually garnered an apology from Dylan. No, he says official apology to Google. Uh they're actually cooked. They're not cooked. Um Ethan says, you know, one of the most significant aspects of Gemini 4 is the speed at which we're launching things. Um so we've gone 236 days without having a Frontier model and we've had two Frontier models in 28 days. That's a 10x improvement in our speed of shipping. And you know, people call us Google kind of cooked, but Google's not cooked. So it's good um to see see that sentiment. It's glad to be on the other end. It's also good to be on the receiving end of the bad comments because it pushes you to do better.
+</details>
+
+### Carbon 与 Hydrogen 的基准表现与成本优势
+我想先播放一小段视频，展示 Carbon 构建的一系列成果。谢谢。
+
+这要归功于模型自身构建了那个视频。大家可以看到很好的范例：模型在使用 Blender 构建 3D 模型资产方面表现好得多，展示中包含大量游戏、真实场景用例、模型处理以及多模态文档。
+
+但不仅是演示。在许多真实客户用例上，Carbon 实际上位列第一。我们真正感到振奋的方面之一是，它不仅在这些基准测试上非常出色，而且成本大幅降低。在 Cursor Bench 上，它目前是排名第一的模型，并且比排名第二的模型便宜 3.3 倍。在 Perplexity 针对深度研究查询的评测基准 Wander 上，它是最佳模型；面对市面上的竞品模型，我们在该基准上比排名第二的模型便宜 9 倍。而在 Zapier 的 Automation Bench 上，我们同样位列第一，且每个任务的成本便宜 2 倍。
+
+而且还不止这些。今天我们宣布了 Gemini 4 系列的新成员——毫无意外，它是 Hydrogen。大家可能在今天早些时候看到了发布消息。Gemini 4 Hydrogen 的目标是将 Gemini 4 的智能水平带给每一个人。它快速、可靠，并在所有接入面上线：包括 Anti-gravity、Gemini API、Gemini 应用以及 Google 搜索。
+
+我这里有一张图表，展示了许多人可能熟悉的 AA 指数，横轴是时间。可以看到，在同等智能水平下，它是速度最快的模型之一。为了让大家了解 Gemini 进步有多大：3.8 Flash 在 Terminal-Bench 4 上的成绩约为 20%，而 Hydrogen 约为 60%。因此我们在性能提升到 3 倍的同时，速度也快了 3 倍。这绝非易事，我们非常高兴能将其交付到大家手中，以便大家用它构建应用。
+
+这就补齐了我们的 Gemini 4 系列：Gemini 4 Carbon 作为前沿模型，提供深层次的前沿智能；Gemini 4 Hydrogen 具备高速度，适用于日常执行任务。元素周期表里当然还剩下很多元素，要全部用完我们还有很多工作要做，但我们很高兴能将其发布出来供大家测试和把玩。
+<details>
+<summary>Original English</summary>
+I want to start by playing a little video of a bunch of things that uh Carvin has built. Thank you. Now, kudos to the model for building that video uh itself. So you saw great examples of the model doing much better at 3D model building assets using Blender. There's lots of games in there. The real world use cases, model processing, multimodel documents. Uh but you know, it's not just the uh the demos. Carbon's actually number one on a bunch of real world customer use cases. And one of the things that we're really excited about is, you know, it's not just uh really good on these benchmarks, it's actually much cheaper. Um, so on Cursor Bench, it's the number one model today and it's 3.3 times cheaper than the second best model. On Perplexity's Wander, which is a benchmark for deep research um queries, it's the best model. you know, you saw um competitor models come out were 9x cheaper than the second best model there. And on automation bench, which is Zapier's uh benchmark, again, we're number one while being two times um cheaper per task. And that's not it. I mean, today we announced the new element uh to our Gemini 4 series, and it's not surprise. Uh it's uh hydrogen. Um, so you know, you might have seen the launch earlier today. Gemini 4 hydrogen is where we're trying to bring the Gemini 4 intelligence to everyone. It's fast, it's dependable, it's launched on all surfaces on anti-gravity, on the Gemini API, in the Gemini app, and on search. Um, and you know I have a graph that shows the AA index with many of you might be familiar with and time on the x-axis. You can see it's one of the fastest models for that level of intelligence. And to give you a sense of how far you know Gemini has come, 3.8 flash on terminal bench 4 was about 20%. And hydrogen is about 60%. So we're three times better performant while being three times faster, right? So that's no easy task and we're, you know, really happy to bring that to you in your hands so you can build things with it. And that completes, you know, our uh Gemini 4 series. So we have Gemini 4 carbon a frontier model for deep frontier intelligence. Gemini 4 hydrogen which is fast for everyday uh execution and we'll have more elements you know of course there are many elements left in the periodic table and we have a lot of work to do to exhaust them uh but we're glad uh to put it out there for you all to test it and for you all to play with it. Um,
+</details>
+
+### 真实工程任务的后训练挑战
+现在关于模型的产品宣传已经足够了。有人告诉我今天台下是一群非常偏技术背景的听众，因此我想多谈谈为什么对这些前沿模型进行后训练十分困难，以及这其中涉及哪些环节。
+
+首先我想说明，目前在 Google 内部，大约 75% 的新增代码是由 AI 编写的，这一比例相比几年前的不足 25% 有显著提升。每天在 Google 内部有 100,000 名工程师使用 Anti-gravity 编写代码。
+
+同时，过去几年人们执行任务的复杂度也呈指数级上升。我们最初的模型仅仅用于几秒钟内完成对话补全，随后发展到在几分钟内编写小型函数；接着你可以在大约一小时内提交 PR 并解决一个 issue。而现在，人们正在使用模型执行长达数天的真实工程任务，利用智能体集群（agent swarms）借助模型去攻关真实的开放性难题。Google 各地的工程师都在使用 Anti-gravity 和我们的 Gemini 4 模型来跨天解决任务。
+
+那么，我们该如何对面向真实工程任务的 Gemini 进行后训练？
+- 我们必须从高难度任务入手，真正为模型寻找具有挑战性的问题来源；
+- 对这些模型的评分本身就是一个极难的课题。你需要像资深代码审查者、资深工程师评估解决方案那样去评分；
+- 大规模强化学习（Large-scale RL）是我们训练模型的核心手段；
+- 我们希望借助内部 100,000 名工程师的群体对模型进行内部试用（dogfooding），并不断重复这一闭环。内部试用中出现的任何失败案例，都会转化为下一轮迭代的训练任务。
+<details>
+<summary>Original English</summary>
+now I think enough marketing with the models. I want to I was told this is a deeply technical audience. So I want to talk a little bit about why post- training these frontier models is hard and what goes into that. Let me start by saying you know AI writes about 75% of Google's new code today. And this is up from less than 25% a few years ago. And there are 100,000 people using anti-gravity writing code inside Google every single day. Now the complexity of the tasks that people do have also increased exponentially in the last couple of years. We started with you know models just completing chats which took seconds to writing small functions within the minutes. You can submit a PR and resolve an issue. Takes about an hour, let's say. But now people are doing days of real engineering tasks with the model. People have swarms of agents solving real open problems with the model. We have engineers across Google using anti-gravity and our Gemini 4 models to solve tasks over multiple days. Now, how do we go about post- training Gemini for real engineering tasks? We have to start with hard tasks. So we need really need to source hard problems for the model. Grading of these models is actually a very hard problem. So you want to grade like an experienced code reviewer would grade. You want to grade like an experienced engineer would grade a solution. Large scale RL is how we train the model. And we want to dog food our models with our 100,000 engineer community and repeat the loop. So any failures in the dog food become tasks for the next iteration of the loop.
+</details>
+
+### 高难任务构建与细粒度评分规则
+我想深入探讨上述每个环节的细节。首先谈谈高难度任务。大家可能听说过，随着模型能力的提升，大量评测基准正在趋于饱和；不仅基准测试会饱和，我们的训练数据同样会饱和。
+
+这里有一张图表，展示了在 Gemini 4 模型的三个不同迭代版本中，具有学习价值的提示词（learnable prompts）比例是如何持续下降的。假设第一代模型拥有 x% 的可学习提示词，等到训练下一代时，这些提示词对第二代模型来说就已经太简单了；完成并训练第三代时，这些提示词对第三代而言又过于简单。
+
+在简单任务上训练会带来什么问题？简单任务会给你带来零学习信号。如果一个提示词在所有采样轨迹（rollouts）中均输出正确，那就没有任何方差，也就没有任何强化学习（RL）信号。因此，你必须专注于获取高难度任务，而且获取难题的速度必须快于模型自身提升的速度。
+
+我们具体是如何做的？
+- 我们首先要识别这些简单任务并将其剪枝，从训练混合集中剔除对模型而言过于简单的测试用例扫描类任务；
+- 我们扩展至复杂度高得多的任务，例如涉及多文件代码仓库的场景；
+- 我们从基于单元测试或二元正误判断，转向基于评分规则（rubric-based）的打分机制。评分规则能提供稠密信号（dense signal），不仅限于 0 或 1，在各项标准内部可以包含更多梯度。
+
+以下是我们用于训练的高难度任务示例：
+- 我们考察多文件仓库并从中提取代码提交（commits），再让模型自动从这些提交中提取评分规则。我们并不强求必须包含单元测试，实际上可以基于这些仓库动态生成评分规则。
+- 另一个典型示例是教模型从零构建命令行工具（CLI tools）。你给模型提供一个空目录和一份规范说明，规范中说明需要构建名为 `GP` 的工具及其参数、标志和功能，然后让模型从零完整构建出该工具。由于你清楚该工具预期的功能，因而可以使用隐藏测试集对生成的二进制文件进行评估。
+- 最后一个示例是生产代码库的差异比对（diffs）。我们观察模型在生产代码库中的真实使用情况，并从中提取出有价值的任务。
+<details>
+<summary>Original English</summary>
+So I want to start by going into a little bit more detail of each of these sections. So let's start with the hard tasks, right? Um so you might have heard you know as models are getting better lots of benchmarks are getting saturated and it's not just the benchmarks that get saturated our training data gets saturated too. So here is a graph that shows for three different iterations of the Gemini 4 models how much uh the share of learnable prompts has gone down. So let's say we had x% of learnable prompts for the first iteration. By the time we finish and train the next one, the prompts are too easy for the second one. We finish that and train the third one, the prompts are too easy for the third one. So what's the problem with uh training on easy task? Easy task give you zero learning signal, right? So you have a prompt when all of your rollouts are going to be correct. There's no variance. There's no RL signal. So you really need to focus on getting hard tasks and you really need to be faster at getting hard task. Then the models are getting better, right? Um so how do we go about it? We first have to you know identify these easy tasks and prune them. So we cut these simple sweep style tasks from the mixture that are too easy for the models. we expand into much harder tasks for example that are multifile repos. We go from unit test or binary correctness um to rubric based grading and rubrics give you dense signal. They're not just 01. There can be um more gradients within the um within the criteria. Here are some examples of hot tasks that we train on. So uh we look at multifile repos and we extract commits from them. From those commits we have models automatically extract rubrics. Um we don't actually ne necessitate unit tests being involved. We can actually uh generate rubrics on the fly based on these repos. Another example a great example of tasks are you try to teach the model to build uh CLI tools from scratch. So you start with an empty folder and a specification. The specification says, hey, you have to build this tool. It's called GP. These are the parameters of GP. These are the flags. This is the functionality. And you let the model build the entire tool from scratch. And you know what the functionality for GP is going to be. So you have a hidden test suite that you can evaluate the binary on. The last uh example is production codebased diffs. So you look at real usage of the model inside your production codebase and extract useful tasks out of them.
+</details>
+
+### 评分机制与沙箱防作弊
+接下来我想谈谈评分器（graders）。
+
+智能体总是会千方百计通过测试，因为你的训练目标就是让它通过测试；但测试通过并不必然意味着它真正解决了问题。现实中存在不少情况：智能体会绕过检查程序，会去钻评测基准的空子，甚至会伪造证据——比如把虚假证据写进临时文件，随后删掉所有伪造痕迹。因此，随着模型能力的增强，你必须在评估判断上更加审慎。
+
+这就是我所说的“像代码审查者一样评分”。如果你参与过代码审查且遇到过极其严苛的审查者，你就会知道他们关心的绝不仅是方案的正确性，还会考量代码风格、可维护性等诸多维度。
+
+因此我们的做法是：
+- 从基于单元测试的正确性判断转向基于从真实提交中生成的评分规则；
+- 评分规则提供稠密的学习信号，而非单纯的 0 或 1 信号；
+- 对任何试图投机取巧的解决方案施加惩罚。这里的评分规则标准示例包括：必须通过的边界用例、必须保持的代码规范与整洁度（hygiene），以及必须满足的验证约束。
+
+除了评分所需的规则外，我们还必须谨防评分器被投机利用，真正加固评分器所处的运行环境：
+- 我们将评分器置于隔离沙箱中，移除 Git 历史记录和 Git 远端地址，以防答案泄露；
+- 保留隐藏测试集，只有当智能体完成任务并提交解决方案后，才真正揭晓测试集。我们曾遇到过这种情况：智能体假装声称“我已经完成了”，等测试集介入后，它根据测试集调整代码再次提交，这种漏洞必须杜绝；
+- 在打分上做到更加细致：我们比对完整 diff 与参考基准，考察正确性、代码质量以及变更范围等多个维度；
+- 对智能体的任何作弊企图进行惩罚，同时注意不去干预其思维链（thoughts）。任何作弊或破坏环境的行为都会受到极大的负强化学习奖励，而所有这些判定完全基于模型采取的操作行为，而非其思维内容。
+
+在作弊治理方面的一个典型表现是：Carbon 在 Terminal-Bench 4 上的作弊率为 0%。我们以往模型的作弊率要高得多，而 Carbon 的对抗性行为发生率大约比 Argon 低 5 倍。随着每一代模型的迭代，我们都在努力提升其对齐程度，使其不再试图作弊。
+<details>
+<summary>Original English</summary>
+Now let me talk a little bit about uh the graders. So agents you know they find any way you're you're training them to pass the test. So they will find any way to pass the test but if the test pass that doesn't necessarily mean that they've solved the problem. There are examples where the agent will bypass the checker. There are examples where the agent will game the benchmark. There are examples where the agent will fake the evidence. You know, it writes the uh fake evidence into a temp file. It'll delete any evidence of it faking it, right? Um so you have to be smarter about how you judge these models, especially as they become more capable. Now, this is what I meant by grading like a reviewer. So if you've done a code review, you have a very strict reviewer, you're going to know they're not just going to think about the correctness of the solution. They're actually going to think about the style. They're going to think about maintainability. They're going to think of many different aspects. So what we do is we move from unit test base correctness to rubric base and these are generated from real commits. The rubrics also provide dense learning signal not just 01 signal and we penalize any sort of solution that is looking for a workaround. Right? So here is an example of a rubric where the criteria is you know here are the edge cases that need to be passed. This is an example of hygiene that needs to be maintained. These are constraints around verification that need to be satisfied. Now, it's not just about the rubrics needed for grading. We also need to be careful about the graders not being gamed and you really need to harden the environment that the grader is in. So, we think about putting the graders in a isolated sandbox. So, we remove git history and git remote so the answers don't leak. The test sets are held out. So, only when the agent is done and submits the solution do we actually reveal the test. We've had instances where the agent will fake it and say, "Hey, I I'm done and the tests come into play and then it'll look at the test and resubmit the solution." Right? So, you don't want that. Um, we also want to be much more detailed with our scoring. So, we take the full diff and we look at the reference and we look at multiple aspects. It's not just the correctness. We also want to look at the code quality. We also want to look at the scope uh of the change that was done. And then finally we want to penalize any sort of cheating attempt by the agent while being careful not to police the thoughts. Um so any you know cheating or hampering of the environment gets a very negative RL reward. Uh and all of this is detected just based on the actions that the model is taking not the thoughts. Um so a good example of how we've handled cheating is you know carbon for instance has 0% cheating rate on terminal bench 4. Our previous models had a much higher cheating rate and it's about 5x less adversarial than argon. So every generation of the model we're trying to make it much more aligned so it's not trying to cheat.
+</details>
+
+### 诚实度建模与杜绝编造
+最后我想谈谈模型行为，特别是对诚实度（honesty）的建模。
+
+智能体总是倾向于表现得有帮助，有时甚至会通过弄虚作假来表现出有用。大家在日常使用中可能也见过类似情况：有时它们明明没有跑通测试却谎称通过；明明没有完成任务却宣布已经搞定；声称改动了代码实际上并未修改；或是凭空捏造事实、API 等等；又或者给出一长串堆满数字的文本，让你根本无法核实。这些情况我们都经历过。
+
+以下是 Gemini 模型编造率（fabrication rates）的数据：在一项高难度的内部评测中，最初的编造率为 8%；在 Hydrogen 中我们将其大幅削减至约 3%；而 Carbon 的编造率又减半至约 1.5%。但我们的目标是将其降至零。没有人希望自己的智能体会编造任何东西。然而，出于想要表现出有用的动机，它们会尝试捏造；你必须付出极大努力去对齐它们，让它们在不弄虚作假的前提下保持乐于助人。
+
+我们是如何降低编造率的？
+- 说出来可能难以置信，首要的一点是清洗数据。我们过滤掉大量训练轨迹，不仅排除故意编造的情况，也排除无意编造的内容，以及大量未完全得到支撑或未经验证的断言。
+- 锚定完整操作轨迹（ground in the full trajectory）。如果智能体声称完成了任务并给出了最终答复，我们会实际回溯该答复以及智能体在得出方案的整个轨迹中所采取的所有动作和执行步骤。当智能体说“我完成了”并提供总结时，该总结必须严格锚定在其所执行的操作之上。
+- 奖励诚实行为。如果遇到难题，智能体坦诚说明“这是我的阶段性进展，这个问题很难，我目前处理到这里，这是我的局部方案”，这远比它伪造最后一步并谎称“我搞定了、任务完成了”要好得多。
+<details>
+<summary>Original English</summary>
+Now finally I think uh I want to talk about model behavior a little bit and modeling honesty specifically. Now agents they always want to be helpful and sometimes they fake helpfulness. You might have seen this in your usage of the agents. So sometimes they'll claim that tests have passed when they've obviously not passed. They'll declare done but obviously they're not done. They'll make edits that they'll claim to have made edits but they've not made those edits. Or they'll invent facts and APIs and whatnot. or they will give you a wall of text that has so many numbers that it's going to be impossible for you to verify. Right? We've gone through all of these examples. Now, here is an example of fabrication rates in Gemini. Right? So, we on an internal eval started with 8% fabrication in that hard eval. We cut that down dramatically to about 3% for hydrogen and carbon is half of that is about 1.5%. But we're striving to get this down to zero. Like you don't want your agents fabricating anything, right? But they try to fabricate because they want to be helpful. And you really have to try hard to align them to be helpful but not by faking it. How do we reduce the fabrication? Believe it or not, you have to clean your data. Uh right. So we filter out lots of training trajectories where there's you know not just uh intended fabrication but unintended fabrication. There's lots of claims that are not fully supported. They're not verified. We ground in the full trajectory. So if the agent says I've completed the task and it has a final response, we actually look at that response and see all of the actions that the agent had taken in the trajectory to get to that final solution and we look at the steps that were taken. So you really need to when the agent says, "I'm done." and gives you a summary, that needs to be grounded in the actions that were taken. And we want to reward honesty. So if there's a hard problem, it's better for the agent to say, "Hey, this is my partial progress. It's a hard problem. I'm done here. This is my partial solution." Rather than faking the last step and saying, "Hey, I've solved the problem. You know, this is done."
+</details>
+
+### 以周为周期的敏捷交付闭环
+最后，关于以周为单位交付成果。我们为什么能够做到如此迅速地发布？
+
+最重要的原因在于我们内部拥有超过 100,000 名工程师组成的团队，他们持续使用该模型执行真实的日常任务。大家很多人可能知道，Google 采用单体代码仓库（monorepo）。什么是 monorepo？整家公司共享同一个代码库。虽然我不知道具体如何度量，但我认为这可能是全世界规模最大的单体仓库之一。那是一个极其复杂的代码库，而我们拥有顶尖的技术人员在如此复杂的代码库上执行极为复杂的工程任务。
+
+因此，每次后训练产出新的候选模型时，我们都会直接提供给内部用户使用：
+- 我们通过多个不同候选版本让用户进行盲测对抗（blind battles），由用户挑选出心仪的最佳模型；
+- 我们还在底层默默将部分流量路由到实验性模型，从中获取信号与反馈；
+- 我们收集所有这些信号与痛点（friction），重新投入到下一代候选模型的训练中。
+
+正是这一闭环帮助我们快速迭代，针对真正的难点进行训练；随着模型能力的增强，工程师们又会以各种新颖的方式进一步挖掘和挑战模型的极限。
+
+这也是为什么我们能将发布周期从过去的“按季度”缩短至“按周”推进。在 Gemini 3 时代，我们的发布间隔通常是每 2 到 3 个月一次；而最近 16 周内，我们已经完成了 6 次发布。我们非常期待大家上手尝试 Carbon、Hydrogen 以及 Gemini 4，也期待看到大家用它们创造出的成果。我们的工作还远未结束，元素周期表上还有很多元素等待我们去探索。谢谢大家！
+<details>
+<summary>Original English</summary>
+Finally, shipping in weeks. So how are we able to ship so rapidly? And the biggest reason for that is our internal uh team of 100,000 plus engineers at Google using the model for realistic tasks. You know many of you might know Google is a monor repo and what is a monor repo? The entire company is one codebase right and I don't know how to measure this but I think it might be one of the largest monor repos in the world. Now that's a really complex uh codebase and we have the best people in the world using a really complex code base to do really complex tasks. So every time we have a new candidate from post training, we actually serve that model uh for our users. We run blind battles with them through multiple different candidates. We let users you know uh pick the best model that they want. We also run less where under the hood we're routing the routing people to experimental models and get signal and feedback from that and we take all of these signals and friction back into training the next candidate. So this is a cycle that helps us you know rapidly iterate really train on hard problems and as the models get better the engineers are going to push the model in interesting ways. This is also why, you know, we've gone from releasing in weeks um to releasing to we releasing in quarters to releasing in weeks. So, in the three in the Gemini 3 era, we've had launches every 2 to 3 months, but now we've had six releases in the last 16 weeks, right? Uh and we're very excited to have you all try Carbon and Hydrogen uh and Gemini 4. Um, and we're excited for for for us to see what you all do with it. Uh, and we're not done. So, we have a lot more elements uh to go through. Uh, with that, you know, thank you.
+</details>

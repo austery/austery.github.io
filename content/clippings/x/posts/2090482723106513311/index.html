@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>美研芒格君 · 2026-08-20 · 帖子</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="x-reading" data-pagefind-body>
+  <header class="x-heading">
+    <p class="x-eyebrow">𝕏 原文阅读 · 帖子</p>
+    <h1 data-pagefind-meta="title">美研芒格君 · 2026-08-20 · 帖子</h1>
+    <span hidden data-pagefind-meta="author">美研芒格君</span>
+    <span hidden data-pagefind-filter="x_author" data-pagefind-ignore>2058239737522204672</span>
+    <span hidden data-pagefind-meta="date">2026-08-20T16:54:55.000Z</span>
+    <p>保留来源原文。时间显示为 Toronto 当地时间；未保存的配图与引用请前往 X 查看。</p>
+    <a href="/x/">返回 X 阅读</a>
+  </header>
+  <p class="x-status">保存说明：除条目另有标注外，正文尚未人工核对 · 图片未保存 · 引用或对话上下文可能不完整。</p>
+
+  
+<article class="x-entry" data-author="2058239737522204672" data-long="true" id="x-post-2090482723106513311">
+  <span id="x-post-heading-2090482723106513311" class="x-post-anchor" aria-hidden="true"></span>
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div id="x-post-time-2090482723106513311" class="x-post-heading"><time datetime="2026-08-20T16:54:55.000Z">2026-08-20 12:54</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2090482723106513311" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text">AI半导体投资第一性原理，其实就是在投 AI 变强的这条路上的瓶颈。这篇可以帮助你认知提升
+
+我自身就在硅谷带AI 训练、推理团队。这个帖子我从一线第一性技术原理角度，解读一下过去算力、存储、互联的股票上涨原理，我的展望和布局。
+
+希望你看完也有迹可循、能把好的标的拿住，看看是不是所有上涨时间线都符合我这三条路线的发展状态
+
+三条路分别是
+① 预训练：把模型养大  ② 强化学习 RL：教模型推理 ③ 推理时算力：答题时多想一会儿
+
+1/ 预训练（图 1）
+当模型参数、数据、算力一起放大，模型的&#34;底子&#34;稳定变好。这就是过去3年 AI 的主叙事
+
+算力越大，loss 越低，效果越好。一个 fun fact：
+训练数据 token 数是参数量的 20 倍左右时候，效果最优。70B 参数的模型就该配约 1.4T token。这就是著名的 Chinchilla 定律
+
+ 但问题来了，撞上了两堵墙
+1. 数据墙： 人类数据快被读完了。
+2. 经济墙：以前 10 倍算力换质变，现在 10 倍算力（几十亿美金一次训练）只换 loss 降 0.0x
+
+预训练从投资角度来看，不会停止，但最赚钱的时候已经过了。 
+
+$SNDK $MU $NVDA 等等都是这个逻辑
+
+2/ 强化学习 RL
+这是最近业界的重要主线
+
+原理：让 pre-train 好的模型自己刷题，做对了给奖励。这样现实生活中，agent 好干活
+
+这就是为什么 $META 要录屏员工电脑，把员工蒸馏。因为员工的操作是宝贵数据
+
+简单认为，RL 越多，数据越好，模型干活实际表现越好。集群内部的通信量爆炸。海量 rollout 意味着模型权重、KV Cache 在机器之间反复搬运——东西向流量成为瓶颈
+
+目前投入 RL 的算力，比预训练还小一到两个数量级——意味着这条坡还很长，各家实验室的增量算力正在往这里搬
+
+RL 训练的主要工作量是 rollout——让模型海量&#34;试做题&#34;。而试做题，本质上就是推理负载，也就是推理时算力
+
+3/ 推理时算力
+token 消耗量指数增长，推理成本成为每家 AI 公司的 COGS（销货成本）
+
+谁能把每 token 成本打下来，谁就有毛利。整个行业从&#34;融资竞赛&#34;进入&#34;成本曲线竞赛&#34;
+
+图三展现的曲线是，简单理解：相同模型，例如都是 Opus5或者 GPT 5.6，对于用户每次单次回答，投入算力越多，模型越聪明，投入少就更笨
+
+有的时候你发现 Claude/GPT 变笨了，只是因为公司算力不够了偷偷降智。
+
+这就是为什么你能看到 $NVDA $AMD $MRVL $ALAB 等等出现持续新的增量， $NBIS $MSFT $GOOG 等自有算力，host 模型公司出现新增量
+
+通信需要光模块 $LITE $COHR 而 内存的价值居高不下，因为持续的消耗
+
+4/ 我的观点和操作哲学
+资本开支的结构在变，从一次性超大训练集群，转向 RL rollout &#43; 用户推理的持续性负载
+
+预训练决定原材料 → RL 锻造解题能力 → 推理时算力临场兑现。
+
+任何一层的墙都会向下传导。目前的状态是：第一条轴的投资曲线在往 2/3移动
+
+而 RL 和推理时负载，我认为总量会超过第一阶段，目前还在需求的早期
+
+提到的标的我都持续持有，没有任何长线卖出打算</div>
+    <footer>
+      
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2090482723106513311<br>保存时间：2026-10-04T20:13:53.110Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：See source observations for media and context status.</p></details>
+    </footer>
+  </div>
+</article>
+
+  <nav class="x-pagination" aria-label="同来源合集" data-pagefind-ignore> </nav>
+</div>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

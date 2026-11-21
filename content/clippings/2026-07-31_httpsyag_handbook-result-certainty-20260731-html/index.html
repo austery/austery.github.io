@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>从 HANDBOOK.md
+的实验看：结果确定性何时会失败，以及怎样改进？</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">从 HANDBOOK.md
+的实验看：结果确定性何时会失败，以及怎样改进？</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-07-31</span>
+    
+
+    <header class="article-header">
+      
+      <h1>从 HANDBOOK.md
+的实验看：结果确定性何时会失败，以及怎样改进？</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">agent-development</span>
+      
+        <span class="tag-pill tag-pill--no-page">result-determinism</span>
+      
+        <a class="tag-link" href="/tags/system-architecture/">system-architecture</a>
+      
+        <span class="tag-pill tag-pill--no-page">workflow-control</span>
+      
+        <a class="tag-link" href="/tags/context-management/">context-management</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章探讨了在开发财务助理 Agent 时，如何从“过程确定性”转向“结果确定性”的工程实践。核心观点是，结果确定性并非意味着无限放权，而是需要构建清晰的分层控制架构，包括“结果确定性需要确定性的反馈与独立审阅机制”（运行时反馈闭环和独立审阅 AI）以及“面对长任务，用规划能力与分层控制应对上下文饱和”（分层 Agent 控制架构，如检索、推理、规划阶段的组合）。文章强调，必须在架构层面建立确定性的反馈和门控，以确保 Agent 在复杂业务中既灵活又可靠。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/handbook-result-certainty-20260731.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-07-31T00:00:00.000Z">2026-07-31</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E7%9C%8B%E8%B5%B7%E6%9D%A5%E5%AE%83%E7%94%A8%E4%BA%86%E7%BB%93%E6%9E%9C%E7%A1%AE%E5%AE%9A%E6%80%A7%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%98%E6%98%AF%E4%B8%8D%E5%AF%B9">看起来它用了结果确定性，为什么还是不对？</a></li><li class="outline-h2"><a href="#%E6%9C%BA%E5%88%B6%E4%B8%80%E7%BB%93%E6%9E%9C%E7%A1%AE%E5%AE%9A%E6%80%A7%E9%9C%80%E8%A6%81%E7%A1%AE%E5%AE%9A%E6%80%A7%E7%9A%84%E5%8F%8D%E9%A6%88%E4%B8%8E%E7%8B%AC%E7%AB%8B%E5%AE%A1%E9%98%85%E6%9C%BA%E5%88%B6">机制一：结果确定性需要确定性的反馈与独立审阅机制</a></li><li class="outline-h2"><a href="#%E6%9C%BA%E5%88%B6%E4%BA%8C%E9%9D%A2%E5%AF%B9%E9%95%BF%E4%BB%BB%E5%8A%A1%E7%94%A8%E8%A7%84%E5%88%92%E8%83%BD%E5%8A%9B%E4%B8%8E%E5%88%86%E5%B1%82%E6%8E%A7%E5%88%B6%E5%BA%94%E5%AF%B9%E4%B8%8A%E4%B8%8B%E6%96%87%E9%A5%B1%E5%92%8C">机制二：面对长任务，用规划能力与分层控制应对上下文饱和</a></li><li class="outline-h2"><a href="#%E6%80%8E%E6%A0%B7%E9%AA%8C%E8%AF%81%E6%8E%A7%E5%88%B6%E6%9E%B6%E6%9E%84%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7">怎样验证控制架构的有效性？</a></li><li class="outline-h2"><a href="#%E7%BB%93%E8%AF%AD">结语</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>想象你正在为公司开发一个财务助理
+Agent，收到一句看似简单的请求：“帮忙处理一下今天的未读邮件。”</p>
+<p>真正决定它能做什么、不能做什么的，并不是这句指令，而是工作区里躺着的一份几十页的员工手册和财务管理规范。Agent
+需要自己翻阅文件，查清楚发件人的岗位权限、金额限制和审批流程，再去邮件、Slack
+或者表格里操作。</p>
+<p>在真实测试轨迹中，研究者记录过这样一个充满戏剧性却又典型的案例：Agent
+顺着邮件线索，成功在系统里调取到了申请人的个人档案，清楚地看到对方是一位
+Junior Analyst。根据公司规定，这个岗位没有任何审批权限。然而在接下来的
+Reasoning 推理中，Agent 却自行把这位初级分析师重新解释成了拥有权限的
+Controller，随后果断调用 API，批准了一笔 7,500
+美元的资金申请。这个案例最耐人寻味的地方在于：模型并不是没读到规则。事实已经进入
+Context，AI
+也确实执行了查询，失败恰恰发生在查到事实与发出动作之间——系统缺少一套工程机制，能确保随后的
+Tool Call 必须服从刚刚查到的事实。</p>
+<p>在这项专门测试企业 SOP 合规性的基准测试中（详见 HANDBOOK.md 论文 与 开源代码库），研究团队在
+65 个覆盖财务审批、人力资源变动、保险理赔、物流调度和医疗计费等 10
+家虚构公司的真实业务场景中，评估了 20 个大模型组成的 30
+种配置。手册长度从 20 页到 124 页不等，包含 PDF、Word 和 HTML
+等多种格式。</p>
+<p>为了精准评估合规性，测试为这 65 个任务设计了总共 824
+条程序化评估细则，其中包括 592 条必须完成的必须动作，以及 232
+条严禁触发的禁止动作。在最严格的 Workflow 级 All-or-Nothing
+验收下，只有当一个任务的所有细则全部同时通过时，才算作一次成功。在这样的严格标准下，表现最好的配置通过率也仅有
+36.2%。</p>
+<p>这种严格的通过率指标虽然略显残酷，却非常贴近真实企业生产环境的要求：如果一个包含
+14 项规则的财务流程完成了 13
+项，但在最后一步漏掉了合规审批或触发了一项越权操作，整个业务流程依然意味着重大事故。研究团队的
+N-1 分析也表明，如果允许每个任务漏掉一项非关键动作，部分 Frontier
+模型的通过率会直接翻倍。这说明大部分失败都是临门一脚的“擦肩而过”，但漏掉的那一项往往正是关键防护。</p>
+<p>当 AI
+确实读到了规则，也做了检查，为什么从合规角度来看结果仍然会严重失控？</p>
+<h2 id="看起来它用了结果确定性为什么还是不对" data-reading-heading="">看起来它用了结果确定性，为什么还是不对？</h2>
+<p>我们在之前讨论 Agent 开发理念的文章 《从过程确定性到结果确定性》
+中分享过一个观点：在 AI 时代，与其用硬编码的静态流程去强行规定 Agent
+每一步怎么走（过程确定性），不如定义好清晰的终点标准和自动校验闭环（结果确定性），让
+Agent 在自主探索中动态修正并收敛。很多开发者看完 HANDBOOK.md
+的测试设计后，第一反应可能会觉得奇怪：这个 Benchmark
+看起来不正是依仗了结果确定性吗？研究者并没有规定模型必须先搜哪个词、推理几步或者按什么顺序调
+API，而是在每个任务结尾设定了若干条合规标准，按最终结果来评判。那是不是说明这个实验证明了结果确定性走不通？</p>
+<p>这里其实并不是这样。这种疑虑源于把三件不同的事混在了一起：规则可访问（AI
+找到了文件）、规则被理解（AI
+解释得通）、以及动作被约束（系统能卡住违规提交）。HANDBOOK.md
+展示的，恰恰是前两层正常工作、而第三层全面脱节的真实
+Gap。结果确定性并不意味着无限放权给一个单体 Agent
+随意发挥，更不是寄希望于把几十页的规章制度一股脑堆在 Prompt 或者 Context
+文件里，然后期待 AI 能够神奇地自动搞定所有要求。</p>
+<p>结果确定性只是不去干涉 AI
+具体怎么做，它依然需要确定性的反馈与约束。HANDBOOK.md
+的做法离真正的结果确定性，还有两大底层机制需要补齐。</p>
+<h2 id="机制一结果确定性需要确定性的反馈与独立审阅机制" data-reading-heading="">机制一：结果确定性需要确定性的反馈与独立审阅机制</h2>
+<p>HANDBOOK.md 在 65 个任务中设定了 824 条评估细则。但这些标准完全隐藏在
+Agent
+视角之外，只有在整条轨迹结束、测试运行完之后，后台的脚本才会去检查环境状态并打分。这种设计对
+Benchmark
+保证独立性完全合理，但在实际工程中，它暴露了一个混淆：事后隐藏的打分器只是结果验收，并不构成结果确定性。结果确定性从来不是一句相信你最终能做对的愿望，它需要一套在运行期实时工作的确定性反馈机制：</p>
+<pre><code>&lt;code&gt;执行动作 → 观察结果 → 校验差异 → 依据报错纠正 → 再次校验&lt;/code&gt;
+</code></pre>
+<p>事后结果验收只在任务结束后由隐藏打分器判分；运行时反馈闭环让系统执行、观察、校验和纠正，并在不可逆动作前经过提交门控</p>
+<p>这里可能会引发一个常见的困惑：如果我的业务场景非常复杂，结果审阅根本无法由一段静态的代码或程序来完成，那岂不是永远无法实现结果确定性？其实不然，确定性的审阅完全可以使用
+AI 来完成，但这需要满足两个关键条件。</p>
+<p>第一个条件是必须拥有明确的验收标准。我们不能粗暴地把几十页
+SOP 整体贴进 Context
+期待模型自律，而是要把复杂的业务规则提炼为结构化、可判定的细则标准。例如，明确规定“转账之前必须存在合规角色审批记录”、“发信之前必须包含法务会签标记”，将模糊的规章转化为清晰的判定点。</p>
+<p>第二个条件是执行的 AI 与审阅的 AI
+必须进行角色分离。就像体育比赛中不能既当运动员又当裁判员，公司财务中不能既当下属又当下属的审计。如果由同一个
+Agent
+既负责执行又负责自我审计，模型在生成推理轨迹时会自带“我已经符合规则”的认知偏置，不可避免地陷入单点自我确认的死循环。必须由独立的审阅
+AI
+担任裁判员，只读取当前产物与结构化验收标准，给出客观判定。如果发现缺陷，审阅
+AI 会产出具体到字段与逻辑报错的反馈日志，强制驱动执行 Agent
+进行下一轮针对性修补。这个运行时的独立反馈闭环，才是推动系统收敛的核心机制。</p>
+<p>当然，如果是发送邮件、转账付款或者删除数据等不可逆的动作，事后报告只能是一份事故通知单。这就需要我们在控制上做一层划分：可逆产物靠独立
+Verifier 形成运行时反馈；不可逆动作必须前移到前置 Commit Gate
+提交门控进行物理拦截。</p>
+<h2 id="机制二面对长任务用规划能力与分层控制应对上下文饱和" data-reading-heading="">机制二：面对长任务，用规划能力与分层控制应对上下文饱和</h2>
+<p>HANDBOOK.md 的另一个架构瓶颈，在于把繁重的职责集中交给了同一个单体
+Agent：一边定位几万字的规则，一边解析不同格式的文档，同时还要维护角色权限状态、挑选工具、连续执行几十步操作，最后还要自己审计自己。在长任务或者复杂手册面前，这很容易引发上下文窗口饱和。当上下文堆积得越来越长，模型的注意力就会稀释，对前置规则的服从度也会随之下降。</p>
+<p>面对复杂长任务，我们不能寄希望于单体 Agent
+从头到尾一气呵成跑到底。解决上下文过载，关键在于将能力拆解为精准
+Retrieval 检索、Reasoning 推理与 Planning
+阶段规划的组合，并通过分层控制来重新架构系统：</p>
+<p>控制层级</p>
+<p>采用的确定性模式</p>
+<p>工程职责与边界</p>
+<p>局部小任务执行</p>
+<p>结果确定性</p>
+<p>结合检索、推理与规划能力，在局部小边界里自主探索路线</p>
+<p>跨阶段推进与状态保存</p>
+<p>过程确定性</p>
+<p>由外层工作流或状态机管理，保存中间状态，防止上下文过长导致阶段遗忘</p>
+<p>规则与产物验收</p>
+<p>独立 Verifier</p>
+<p>由独立的审阅 AI 或程序脚本进行检查，提供实时反馈闭环</p>
+<p>高后果不可逆动作</p>
+<p>前置 Commit Gate</p>
+<p>强行校验参数、目标与角色，阻止非法 API 落地</p>
+<p>规则解释与例外处理</p>
+<p>自然语言 Context</p>
+<p>传递业务背景、复杂例外与开放式判断</p>
+<p>分层 Agent 控制架构：规则与
+Context、有边界的 Agent 任务、外层工作流与状态机、提交门控与 Sandbox
+分别承担不同控制职责</p>
+<p>这种分层架构的核心在于：全局的结果确定性，需要局部的过程确定性来支撑。外层系统像骨架一样负责保存中间状态、推进阶段交接，并在敏感动作发生前执行硬校验；而局部的
+Agent 则在边界清晰的小任务里，充分运用检索、推理与规划能力去解决问题。AI
+不需要一次性维护全盘的状态，上下文负担被大幅减轻，局部失败也能被精准定位并重新触发局部重跑。</p>
+<p>需要注意的是，物理硬边界不能只依赖在工具代码里加一行简单的条件判断。如果
+Agent 拥有原生的 API
+调用权或者命令行权限，它可能会通过旁路绕过软约束。真正的提交门控必须建立在受限凭证
+Restricted Credentials、能力矩阵与 Sandbox 隔离之上，确保未通过独立
+Verifier 校验的写操作在物理层面根本无法触发。</p>
+<h2 id="怎样验证控制架构的有效性" data-reading-heading="">怎样验证控制架构的有效性？</h2>
+<p>引入分层控制、独立审阅与提交门控，并不是要把它当成不可动摇的定理，而是要在实际开发中用数据来验证它的收益。想要知道一套
+Agent 架构是否真正有效，最直接的办法就是设计系统级的对照实验：</p>
+<p>单体长上下文基线：即 HANDBOOK.md 原始架构，原始文档 + 通用单体 Agent 循环。</p>
+<p>规范化切片 + 强化提示：隔离文档解析与检索干扰，看看纯 Context 方案的性能上限。</p>
+<p>分层架构 + 独立验证器：加入阶段拆分与独立 AI 审阅反馈，观察可逆任务的收敛效果。</p>
+<p>分层架构 + 提交门控：在敏感 API 前增加硬校验门控，测试不可逆违规动作的拦截率。</p>
+<p>在评估时，除了看整体的任务完成率，更要统计必需动作的完成度、违规动作的拦截次数，以及系统付出的
+Token 和时间成本。如果数据表明，硬校验门控和独立 Verifier
+能在不影响正常业务的前提下，把关键合规风险降低到极低水平，外部控制在架构上的必要性就获得了真正的工程支持。</p>
+<h2 id="结语" data-reading-heading="">结语</h2>
+<p>HANDBOOK.md 为我们带来的最大启示，并不是 Prompt
+写的还不够长，也不是模型不够聪明，而是暴露了长 Context 加单体 Agent
+在真实业务场景中的控制边界。合规率的低下并不意味着结果确定性本身失效，而是提醒我们不能把结果确定性简化为盲目的无限放权与规则堆砌。</p>
+<p>真正的解法在于构建一套清晰的分层控制架构：不要试图用静态 SOP 去干涉
+Agent
+怎么思考，但要明确问题在什么边界内解决、状态如何交接、何时必须由独立角色验证、什么动作不能未经验证就提交。给
+AI 留出自主探索的自由，同时在架构上建立确定性的反馈与门控，这才是让
+Agent 系统在复杂业务中既灵活又可靠的工程之道。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/04602011b4066efd3d556d6abfad78801d41a2286c3722fb1430e6239e78a859.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/04602011b4066efd3d556d6abfad78801d41a2286c3722fb1430e6239e78a859.md" download="从 HANDBOOK.md
+的实验看：结果确定性何时会失败，以及怎样改进？.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

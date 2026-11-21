@@ -1,0 +1,260 @@
+---
+author: AI Engineer
+date: '2026-10-07'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=f3o0-9Dlw3E
+speaker: AI Engineer
+tags:
+  - offensive-security
+  - penetration-testing
+  - ai-agent
+  - application-security
+  - vulnerability-assessment
+title: 持续性进攻性安全：以多智能体渗透测试应对 AI 时代的漏洞挑战
+summary: Snyk 的 Eli 讨论了 AI 自动生成代码带来的安全挑战。随着代码量增长且大量代码包含漏洞，攻击者也开始利用大模型进行快速漏洞利用。传统静态扫描和低频人工渗透测试已无法应对，需转向基于多智能体协同的持续性进攻性安全测试。
+insight: ''
+draft: true
+series: ''
+category: software-development
+area: tech-engineering
+project: []
+people: []
+companies_orgs: []
+products_models: []
+media_books: []
+status: evergreen
+---
+### 演讲开场与自我介绍
+
+[Speaker 1]: 对吧？大家好。我们今天将探讨持续性进攻性安全（continuous offensive security）。好的，我马上开始讲。这意味着什么呢？
+<details>
+<summary>Original English</summary>
+[Speaker 1]: right？ hi everyone。 we gonna talk today about continuous offensive security。 ok， i'm gonna speak quite soon。 what does it mean？
+</details>
+
+[Speaker 1]: 在这之前，先简单介绍一下我自己，今天能来到这里非常兴奋。我是 Ali（Eli）。之前曾担任 Helio 的联合创始人兼 COO，这是一家运行时安全公司，后来被 Snyk 收购。在过去两年半左右的时间里，我有幸在 Snyk 工作，主要负责 AI 产品的产品管理；而最近担任 Field CPO，这意味着我与开发者以及安全人员合作，更好地了解他们并帮助他们制定围绕 AI 安全的战略。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: uh before before ath a little bit about me， very excited being here today， i am ali。 uh used to be coffound in COO， helio surrountime security company gathdetic quied by snake。 and in the last two enough years， i had the privilege and walking in snake， primarily on product management for AII product， but more recently founding filld CPO meaningm working with develop ed， because and with security folks to better understand than to help them shape their strategy around AI security。
+</details>
+
+[Speaker 1]: 那么，你该如何部署你的 AI 智能体并确保它们是安全的？你在生产环境中又是如何更好地与智能体协作的？能帮我设个计时吗，拜托？计时器。这样我就不会超时了，太好了。好的，现在我们有了计时。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: so how do you take your AI agents and making sure they are um secured？ how do you walk with your agents in production begdar？ can you set up the time for me， please？ the timer。 so i'm not the time great。 okay。
+</details>
+
+[Speaker 1]: 为了更好地了解大家，请举一下手：在座的各位偏向开发背景、是开发者的有哪些？好的，太棒了。来自安全领域的有哪些？是的，我已经看到你们了，太好了。还有其他背景的朋友，比如销售、市场，或者既不属于开发也不属于安全但正在生产环境中运行智能体的人？太好了。好的，既然大家各行各业的都有，那我今天会针对所有人来调整内容。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: now we have the time also also um so just i'll get to new o will be better。 please face your hand who is heal more from the development side of the table developers。 okay， great from the security side of the table。 yeah， i already know you great。 and other people like sales marketing are do people running agences in production that are not from development on security grade。 okay。 so we have everyone here， so i'm going to taylow low usession， ent words， everyone。
+</details>
+
+### AI 生成代码带来的安全危机
+
+[Speaker 1]: 显而易见，这是一个 AI 工程大会，对吧？对吧？所以大家都已经知道，如今生成的代码量相比以往大幅激增。根据我们的数据，每位开发者产出的代码行数比过去增加了 218%。超过 85% 的开发者实际上都在使用代码生成工具。在今天在场的各位中，这一比例可能超过了 100%，对吧？因为我猜你们每个人可能同时开着 5 个不同的 Claude Code 会话，否则你们今天也不会坐在这里了。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: so obviously， this is an ai engineerine conference， right？ right？ so already know that the amount of code generated today is incredibly bigget than it used to be before。 okay， according to our data， it's two hundred and eighteen percent more lines of code pailed。 the developer than it ues to be before， okay。 and more than eighty five percent over the developers are actually using code engages。 and i probably running here today。 it's more than one hundred percent， right？ because i yes， that each one of you probably offs five different session of cloud cord running simultaneously hotherwise you would in beer today。
+</details>
+
+[Speaker 1]: 而关于这些在生产环境中运行并为我们生成代码的智能体，一个令人无奈的事实是：代码的安全性远低于以往的常规水平。LLM 生成的代码中有 62% 是不安全的或存在缺陷的。试想把这些数据结合在一起：这意味着我们产出了比以往任何时候都多的代码，而这些不安全的代码正不断流入生产环境。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: and the funny thing about those agents running in production and generating quote for us is that it's far less secured than we are useally。 okay。 so sixty two percent of the output generated， but alyams is not secure or it's broken。 okay。 so just imagine this data combined together， it's meaning that we are generating more code than we ever did， and this insecure code is getting into production。
+</details>
+
+[Speaker 1]: 这对我们整个社区而言都是巨大的挑战。它的实际影响是，我们的安全问题积压清单（backlog）变得越来越长、越来越庞大，修复起来也困难得多。我们制造新问题的速度，已经快到了根本无法及时修复或缓解的地步。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: so that's your challenge for us as a community。 and what it's actually means is that our backlog of security issues is becoming longer and bigger and much more challenging to remediathis。 okay。 so we are actually creating many more issues at the pace that we simply couldn't remediate or mitigate。
+</details>
+
+### 攻击者的 AI 武装与攻击速度
+
+[Speaker 1]: 不仅如此，AI 也在协助攻击者。他们能够将多个低危漏洞串联在一起，从而把这些低危漏洞转化为严重的危急漏洞。实际发生的情况是，攻击者正在利用这些大模型，并在极具难度的应用上下文中对我们发起攻击。这正是大模型自身最容易挣扎的地方，因为它们往往会在这些环节引入大量漏洞。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: and not only that AI is helping our attackers also。 so they are 're able to chain low vulnerababilities together。 and form m cricriticvulnererabilities from those um low low security vulnererabilities。 and what's actually is going on is that attackers are leveraging those allams， and they are tacking us， especially where it's very difficult using um application context。 this is actually where our elelims are struggled， the most cause they're creating many vvulnerabilities around those areas。
+</details>
+
+[Speaker 1]: 显然，我们在利用生成式 AI，但攻击者同样也在利用前沿模型。这方面的数据令人震惊。我们了解到一种运行中的模型，它能够识别 600 多个漏洞，并在超过 55 个国家攻破了 600 个防火墙。这简直令人难以置信。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: so obviously， we are leveraging GI， but our attackers are overall， also leveraging frontier models。 okay， and the numbers are simply incredible。 okay， we are familiar with an operating model that actually was able to identify more than six hundred vulnerable abilities to bredge six hundred firewalls in more than five， fifty five countries。 okay， this is simply undeliverable。
+</details>
+
+[Speaker 1]: 此外，AI 攻击生效的时间正在变得越来越短。一次 AI 攻击成功的平均时间是 24 分钟，而最快仅需 4 分钟。这意味着从我开始演讲到现在，世界上可能已经有一次 AI 攻击成功攻破了某套生产系统。而在所有 MCP 服务器中，实际上有 43% 存在漏洞。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: and the time for an ai attack to be effective is constantly getting faster and faster。 okay。 so the average time for an ai attack to be successful is twenty four， twenty four minutes。 okay？ well， the fastest time is four minutes。 okay， it means that sense the moment i began talking there is probably an air ethic out there that was able to successfully bridge a production system and forty three percent of all the mcpiece evers actually as vulnerabilities。
+</details>
+
+[Speaker 1]: 综合所有这些数据，我们意识到：我们产出的代码比以往任何时候都要多，每个人都同时挂着几个 Claude Code 或相关代码工具的会话，而这些代码存在安全隐患并正在进入生产环境；与此同时，我们面对的攻击者也在使用同样的工具，以更快的速度尝试利用这些漏洞。我们的待处理问题不断堆积，难以应对。这就是我今天想谈的主题：我们应该采取什么措施来改善安全态势。这与我们如何不仅让攻击者、也让我们自身作为防御者去利用进攻性安全紧密相关。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: okay。 so combining all of this data together， what we realize is that we are producing much more code than ever。 each one of us as a few session simultaneously of cloucororder of cordetics。 those this code is insecuure。 it's getting into production。 and the people we are facing their attackers are actually leveraging the sang tools， and they are acting faster than ever in trying to actually leverage those vulnererabilities。 and our backlog is simply getting piled up， and we are not able to get it。 this is exactly what i want to talk about today what we should be doing to to to help improve our security posure。 and this is that is heavily to how we can leverage offensive security， not just for the attackers， but for us as defenders。
+</details>
+
+### 传统安全测试方案的局限性
+
+[Speaker 1]: 为什么传统安全手段跟不上节奏？由于今天现场既有开发人员也有安全人员，我想先介绍几个基础概念，以确保大家都在同一个认知层面上。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: so white traditional security can really keep up。 so there is a mix audience today， both people from the development side also people from the security side。 so i want to cover for us a few basic concepts， okay， to make sure everyone is familiar with。
+</details>
+
+[Speaker 1]: 过去运行起来非常简单的是静态代码扫描（SAST）。试想你向生产环境推送新代码，静态扫描器会进行分析，查找 SQL 注入或跨站脚本攻击等问题。在过去的每次代码变更中运行这种扫描，成本相对较低且容易操作。这固然很好，但它检测不出什么呢？它无法捕获运行时才会发生的问题。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: so what used to be really easy about operating was staartic code scanning。 okay， sus。 so imagine that you are pushing new culture production。 there is a static scanal that is scanning that and is looking for rescual injection coall sidescript in。 so it used to be relatively cheap and relatively easy to run this across every cold change。 and this is great know what it doesn't catch。 it doesn't take catch things that are going into runtime。
+</details>
+
+[Speaker 1]: 如果存在权限授权问题或配置问题，你需要动态应用程序安全测试（DAST），即动态测试应用程序的工具。例如 BOLA（失效的对象级授权），简单来说就是用户 A 可以访问用户 B 的数据。这类漏洞通过静态分析是永远无法发现的，你必须在运行时对应用程序进行探测。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: okay。 so if you have any authorization issues， if you have any configlaation issues for that， you will need dynamic application security testing。 okay， you need something the test application dynamically。 one example is eboluh working object level authorization， which basically， it means that user a can access the data of user。 be okay， those kind of vulnerabilities you can never find with static analysis for that。 you need to prob application in runtime。
+</details>
+
+[Speaker 1]: 那么 DAST 扫描具体是怎么做的呢？它拿出一套预设的大量 Payload，直接发送给应用的不同 API 端点，以此发现漏洞。这也能够找出新问题。但面对当前大模型产出代码所带来的最大挑战——业务逻辑缺陷时，它依然力不从心。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: so what actually a darsccannis is doing？ it takes kes a define set of tons of payloads， and it just sending to the application to the different api and points。 and by that， it managed to find vulnerabilities。 so this was also something that could find new things。 but it wasn't good with the biggest challenge we have with the code， the teroleyama are producing。 and this is the business logic。
+</details>
+
+[Speaker 1]: 因此，行业一直以来依赖的是渗透测试。渗透测试的核心逻辑是什么？是由人工渗透测试员深入理解应用的业务逻辑与架构，尝试攻破它以找出所有漏洞。这虽然是应用安全测试领域的黄金标准，但存在诸多挑战。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: so for that， what we''ve been using as industry， it's the pantesting。 okay。 so what's the idea about pantesting？ it's a human pentester that really understands the concept and the business logic of the application。 and he's trying to break it。 and to find all devonabilities。 now it is the goldon starard in application security testing， but it has some challenges， right。
+</details>
+
+[Speaker 1]: 首先，它的成本非常高，因为你必须聘请安全研究人员——是真人实操进行测试并尝试攻破应用，而不是简单的“人在回路”，这需要花费大量资金。第二，正因为成本高昂且流程缓慢，企业通常一年只能做一次、两次，最多三次。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: first of all， it's costs a lot of right， right， because you actually needed to have a security research， a human， not a human in the loop， a human that is actually doing the testing and trying to break the application。 and that's cost a lot of money。 now the second problem is because it costs a lot of money。 and because the process was so slow， companies can only do it once a year， two times a year， maybe three times a year。
+</details>
+
+[Speaker 1]: 考虑到如今 AI 攻击者无休止地发起攻击，一年做两次渗透测试根本不够用。在一年中其余的 350 天里，没有任何人对你的应用进行安全测试。不仅如此，测试结束拿到的结果往往是一份长达百页的复杂 PDF 报告，你得把它分发给开发人员，再去梳理哪些问题真实存在、哪些不是，然后开始修复，接着还得重新测试。这听起来就像九十年代的场景，在当下已经不合时宜了。但它曾是业界的黄金标准，也是测试应用业务逻辑最有效的方法。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: okay。 so combining the fact that nowadays， our ai attackers are trying to continuous the attack us like doing their spantesting two times a year is simply not good enough。 okay。 so what are you going to do with the rest of the three hundred fifty days？ you have a yell that no one tested your application。 not now， not only that the results you got the result， you got this crazy and glogified poouked in pdf that you had to send you your developers。 you had to take it back to understand what's really。 and what's not and then to start fixing that。 and then you had to retest okit sounds like a movie from the nineties， right？ it doesn't make sense to do it this anymore。 but this was the gonderstandthis。 this is what we were doing now。 i think， is this is the best method out there to actually test your application for its business logic。
+</details>
+
+### 持续进攻性安全与 AI 渗透测试架构
+
+[Speaker 1]: 那么现在发生了什么改变？今天我们拥有了新技术。这正是我想谈的：如何利用这一波 AI 工具、LLM 和前沿模型，以持续、可调度的模式执行渗透测试。这也是为什么我们推出了 EVIL——持续性进攻性安全。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: okay。 so what changes today today？ we have a new technology。 and this is exactly when i want to talk how we can leverage this new area of AI tools and LLM and volunteer models to actually do pana strink on a continuous manu in a scheduabled manner。 and this is why we're introducing evil， continuous offensive security。
+</details>
+
+[Speaker 1]: 这自然与我们在 Snyk 内部所做的工作紧密相关，但我今天所讲的内容具有普适性，你可以将这些原则套用到行业中任何厂商的方案上去验证。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: okay。 so this is obviously very tied up to what we're doing within snake。 but what i'm going to tell you you today is general， okay， you can take the principles of what i'm telling you， and you can actually verify that with any window out there in the export。
+</details>
+
+[Speaker 1]: 我希望大家思考以下几点：当前你需要让生产系统做好应对“未知的未知”（unknown unknowns）的准备，为此需要一套新的范式。首先，你显然需要 AI 渗透测试能力（稍后我会深入展开）；但同时你也需要引入智能体红队测试（Agentic Red Teaming）的概念。其核心是执行多步攻击，模拟提示词注入、数据外泄或目标劫持（goal hijacking），并将其与擅长发现授权问题的动态测试相结合。我们将这些能力整合在 EVIL 套件中，旨在帮助大家应对攻击者利用相同工具、7x24 小时以更快速度寻找漏洞而导致防御方积压无法招架的现状。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: okay。 so i want i want you to think about the following things。 okay。 so what you need to do today， you need to prepare your production system from the unknown unknowns。 okay。 and for that， you need a new parwer diam。 okay。 so first of all， obviously， you need the AI pantesting capabilities， which i will doubicly on soon again， but you also need to start taking the concept of red timing。 okay， so agent to red timing。 the idea is to take multhe steps attacks。 okay。 so to try to simulate prompty jjection or data exploration and goal eye inkin， and obviously， to combine it with dynamic testing that is good at identifying authorization issues。 so we are taking all of those capabilities together。 we are building one sweet out of that for offensive security as part of our evil offering。 and their idea is to help you actually mitigate or help you a handle the fact that there are tackkles are leveraging the same tools that we are using。 and they are doing that in a continuous manual， twenty four seven finding vulnerababilities faster than than before， and your backlog simply can can can stand up with that。
+</details>
+
+[Speaker 1]: 那么在 AI 渗透测试中，我们有哪些不同的做法？前面提到过，渗透测试最大的优势在于人类能够深入理解业务上下文；现在我们将其交给大模型来做，而大模型非常擅长去理解业务上下文。我们在幕后利用大模型，以持续的方式运行测试。你不再需要一年只做两三次渗透测试，而是在每次代码提交、每个 PR、每次增量变更时，都会自动运行渗透测试，并直接告知开发者需要修复什么以及如何修改。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: so what we are doing differently within AI pantesting。 okay。 so i told you before the great promise of fantesting was always the fact that the human and the end really understand the business context。 okay。 so now we are taking this to the l lamb。 and if there's something that alellama are very good at is really trying to understand the business context。 so behind the ying， we are leveraging the all lams， and we are doing that in a continuous manner。 rights are no longer yougonna do things like do pantesting twice a year or three times a year。 we gonna do it on every coal change。 okay， every PR that you send every delttown。 we're gone around this spentist for you， and we're gonna tell your developers。 what do you they need to fix and how do they need to do it differently？
+</details>
+
+[Speaker 1]: 显然，我们利用了对应用上下文的理解，同时也大幅减少了误报。误报是整个行业面临的严重痛点。我们不会直接将发现的问题简单标记为缺陷，而是向你实际证明漏洞确实是可被利用的（exploitable）；我们从多种设备与环境中提取上下文信息整合在一起，用于指导大模型。正是这种方式构成了该方案的独特性，使其非常适应当下每位开发者都在生产环境中运行代码生成智能体并产生海量代码的现实。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: obviously， we leveelage our understanding of the application context， but we also helplly use the false positive for us as a industry。 we have a severe problem of false positive。 so we are actually proving you that the vulignabiliunities that we are finding are actually exploitable， and we jump just flag them as bugs。 we actually prehat you prove that they are exploitabthem， and we take context for many different machines and for many different environments， and we combine them together to help to guide our l limbs。 okay。 so this is what we're doing differently。 and i think this is really what makes this solution so unique and so well positioned to the fact that each one of us have a few code engagets running in production and pushing more code than ever。
+</details>
+
+### 多智能体协作机制与选型原则
+
+[Speaker 1]: 那么我们具体是如何实现的？其底层机制是怎样的？需要明确的是，我们并不是将传统的静态扫描或 DAST 扫描简单地拼接上大模型，而是完全基于大模型从底层重新构建的。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: now how do we do it？ how does it work behind the things？ okay。 so what i want you to understand is we are not taking the static scanners or the dust scners and just combine him with LLM。 okay， we build it from the ground up up ugalalyym。
+</details>
+
+[Speaker 1]: 我们设计了一系列相互协作的智能体。首先是 **LLM 编排智能体（Orchestrator）**，可以将其视为大脑，它根据动态规划进行运作，负责调度其他所有子智能体。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: so we have a series of a few agents working together。 the first one is the LM orchestrate。 okay， imagine it as the brain。 this agent is walking according to a dynamic plan that it follows， and he knows how to operate all the different sub agents。
+</details>
+
+[Speaker 1]: 紧接着是**侦察智能体（Recon Agent）**，相当于精锐情报部队。其职责是尽可能收集不同网络端点、API 和系统指纹等数据，整合成架构模型并传递给下一个智能体。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: the first agent， or actually， the second agent is the recon。 okay， you can imagine it as your elite intelligence unit。 the idea is to collect all the data it can about the different network can points the different api。 the different phinkle prints collect all of this data together， formalize an architecture out of that and hand it to the next agent。
+</details>
+
+[Speaker 1]: 下一个是**漏洞测试智能体（Vulnerability Testing Agent）**，它由多个细分专业智能体组成。有的针对已知的漏洞类型，有的则专门探测野外未知漏洞，尝试理解业务上下文并找出攻击者可乘之机，从而攻破系统。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: and the next agent is the vulnererability testing。 it's actually again a series of a few specialized agents。 some of them are targeting the well known classes of vulnererabilities。 some of them are actually hunting for vulnererabilities in the wild， and they are trying to break your application to understand the business context and to understand where can attackle can get from。
+</details>
+
+[Speaker 1]: 随后，它们将结果递交给**裁判智能体**——即我所称的**漏洞利用验证（Exploit Validation）智能体**。前序智能体发现的每个漏洞都会交给该裁判，其任务是判定这是不是一个真实存在的漏洞、是否真正可被利用，以此减轻认知负担，并削减系统中产生的误报。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: and then they handed into the judge， as i like to call it the exploit validation。 so actually， every vulnererability that the previous agents find are now being ended over to this judge。 and the goal of the judge is to tell us whether this is a real vulnerability or or not to tell us whether this can be exploititabil or not exactly because we want to reuse the cognitive load exactly because we want to reduce the amount of false positive we have in the system coming up。
+</details>
+
+[Speaker 1]: 接下来是**修复智能体（Remediation Agent）**，确保所有输出都具备可操作性，避免向开发者报了一个漏洞却无人知道该如何处理。最后是**报告智能体（Reporting Agent）**，对所有结果进行系统归档与报告。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: next is the remediation agent because everything we do， we want to make actionable。 okay， we don't want to report about a vulnerability that eventually the developers， they don't know what they can do with that。 and coming after that is the report in agent， because everything in is to be reported。
+</details>
+
+[Speaker 1]: 我们的差异化核心在哪？无论你是评估第三方方案还是打算在内部自建 AI 渗透测试，我都建议关注以下要点。尤其是现场的开发者都明白：上下文就是一切，大模型的效果取决于输入上下文的质量。我们并非将 AI 渗透测试作为孤立方案，而是将静态扫描、动态扫描等多种引擎的数据融合起来喂给 AI 渗透测试，明确引导大模型去哪里查找。当模型有了清晰的目标指引时，其检测效果会有质的飞跃。这是我们非常独特的优势。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: so what makes us different？ and those of the point， i alge you to check with every vendow out there， trying to provide you with the solution or whether you want to implement a solution in house for air pantesting。 this is the huhuge industry right now。 so i think the most important thing you need to remember is， and you already know that especially the developers in the room context is everything your LLM are as good as the context that you feed them weak。 so what we're trying to do。 we are not just taking our AAI pantesting solution as it stand alone。 we actually feed it， we data from all the previous scanner。 okay。 so the the statics code scanner， the dynamical scanner， all lot of different engine engines are being combined together， and they are being fed into a our AI pantesting solution。 because that way， we know how to tailor， and we know how to get there lamb well to look for。 and as you know， also for methods of frabel， when those models ls know where look look results ts significantly better。 so that's one thing we are doing that is very uniquque and very differentiated。
+</details>
+
+[Speaker 1]: 此外请记住，单一手段是远远不够的。结合实验室与实际客户数据来看，将多项技术融合成一体至关重要。对于某些特定漏洞类别（例如跨站脚本 XSS），DAST 凭借详尽预设的 Payload 测试仍然是最佳扫描工具；但如果你需要验证业务逻辑缺陷，则必须结合渗透测试。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: um and also what i want you to remember is that one solution is not enough。 okay， the great thing about it is when you combine those things together and based on the data that we see both from the labs and from real data from customers， combining the data together is really what's important。 and you can really， you can really use just one of them。 okay， there are certain classes of vulnnababilities。 this dust is the best canal for that。 okay， because you have a set of really exhaustive pread， a set of really exhausted um payloads that you can send your application。 so it's very good。 for example， with coursts， i scaping。 okay。 so does， for course， i think costs that scaping is the best solution。 but if you want again， like business logic， then you should combine it with pantesting because it will be the best solution。
+</details>
+
+### 总结与评估维度的四个问题
+
+[Speaker 1]: 我希望大家从今天的内容中带走的核心认知是：世界已经变了。过去我们每隔几个月才测试一次应用，因为发布节奏较慢，并且完全依靠人工来理解应用逻辑与变更；但那个时代已经不复存在了。如今我们全天候不间断地向生产环境推送代码，同时大模型正在持续分析应用上下文并尝试发起攻击，有些攻击仅需 4 分钟就能攻破系统，这还不到刚才讲座时长的一半。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: so i think what i really want him to take from this。 if there is one thing i wanted to take for me is to realize that the world is changing。 you already know that， that's what made you come in。 but you know， we used to test our application once every few months， because the change and the velocity of the change was so slow， and we we had people at end that were reasoning about the application and about the change， but that world d does not longer exist。 right？ right now， we are pushing call to production twenty four， seven， and we have l limbs that are time to listen about the application context， and that are trying to break continuuously。 some of them can do it in like as fast as four minutes。 okay， that's almost five time of the lecture of the session that they just did。
+</details>
+
+[Speaker 1]: 因此在寻找该问题的解决方案时，你需要问自己四个问题：
+1. **方案是否以持续模式运行？** 还是仅仅偶尔运行一次的单点工具？这是本质区别。
+2. **它是否真正对应用上下文进行推理？** 基于当前大模型生成的代码特性，应用上下文正是大量新漏洞滋生的地方。
+3. **它能吸收消化多少上下文？** 数据越丰富，大模型的运行效果越好，成本也会更低。
+4. **它是否能切实证明漏洞是可被利用的？** 是实际验证攻击可行性，还是仅仅草率地打上 Bug 标签？
+<details>
+<summary>Original English</summary>
+[Speaker 1]: so when you're coming to look for new solutions for this problem， you have to ask yourself full questions。 okay。 first of all， do we run this solution in a continuous way？ okay。 it just a point solution that we learn every once in a while。 okay， that's a major difference。 second， do they really reason about the application context？ okay。 because given the nature of dogzell， l mm， application context is really where the new foreign abilities are coming from。 and third， what more context can they digest？ okay， how can they enrich the data？ because the rich， the data is the better， and by the way， cheaper， the airelem operation is gonna be。 and the fourth path is， do they really help me wolve that there is a bug and to make sure that this is exploitable able data a just fgg it as a bug。
+</details>
+
+[Speaker 1]: 我们的目标不仅是帮大家更快发现漏洞，更是以更优质、更经济的方式推进安全，让现场的开发者和安全从业人员能够聚焦在最重要的事情上。非常感谢大家。我每次演讲都会做这件事——原本我想成为一名摇滚明星，但最后成了一名网络安全伴随者；所以我现在要拍张照片，请大家举起手来。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: okay。 so our goal is not only to help you find a bug's faster， but to actually do it better and cheaper and to help you as a developer or as the security people here focus on what matters most。 so thank you very much。 and i used to do it in every election。 you know， my my doing was to be a oxstyle， but i to be a cyblling cpanoon。 so instead of that， i'm going to take take picture so ends up everyone。
+</details>
+
+[Speaker 0]: 好的。
+<details>
+<summary>Original English</summary>
+[Speaker 0]: okay。
+</details>
+
+[Speaker 1]: 太棒了，非常感谢大家。接下来我在这里接受大家的提问。如果想去展台看看，Snyk 的展台就在附近，大家可以在那里体验 EVIL 这一全新的 AI 安全产品。非常感谢大家。
+<details>
+<summary>Original English</summary>
+[Speaker 1]: are 're great。 thank you so much。 and i'm here for questions。 if you want go for the boot， it's very closeer snicked that i'll meet evil。 i will new AI security offering。 thank you so much。
+</details>

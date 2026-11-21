@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>harness
+设计的关键决策：同一个开关，一个模型赚了，一个崩了</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">harness
+设计的关键决策：同一个开关，一个模型赚了，一个崩了</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-23</span>
+    
+
+    <header class="article-header">
+      
+      <h1>harness
+设计的关键决策：同一个开关，一个模型赚了，一个崩了</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/agent-harness/">agent-harness</a>
+      
+        <span class="tag-pill tag-pill--no-page">tool-interface</span>
+      
+        <a class="tag-link" href="/tags/context-management/">context-management</a>
+      
+        <span class="tag-pill tag-pill--no-page">task-planning</span>
+      
+        <a class="tag-link" href="/tags/llm-evaluation/">llm-evaluation</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">研究拆解编程智能体外层控制软件（harness）的规划、上下文与接口设计，发现同一精简策略对不同模型效果迥异。核心在于根据模型能力、任务场景及成本预算进行工程取舍，而非盲目做减法。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/harness-design-decisions-20260923.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-09-23T00:00:00.000Z">2026-09-23</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E6%8A%8A%E5%A4%96%E5%B1%82%E8%BD%AF%E4%BB%B6%E6%8B%86%E6%88%90%E4%B8%89%E4%B8%AA%E5%BC%80%E5%85%B3">把外层软件拆成三个开关</a></li><li class="outline-h2"><a href="#%E5%90%8C%E4%B8%80%E4%B8%AA%E5%BC%80%E5%85%B3%E4%B8%A4%E4%B8%AA%E6%A8%A1%E5%9E%8B%E5%8F%8D%E7%9D%80%E8%B5%B0">同一个开关，两个模型反着走</a></li><li class="outline-h2"><a href="#%E4%B8%89%E4%B8%AA%E6%97%8B%E9%92%AE%E5%90%84%E8%87%AA%E7%9A%84%E8%BE%B9%E7%95%8C">三个旋钮各自的边界</a></li><li class="outline-h2"><a href="#%E4%BD%A0%E8%AF%A5%E5%B8%A6%E8%B5%B0%E4%BB%80%E4%B9%88">你该带走什么</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>最近有篇测试编程智能体的论文，做了一件特别有意思的实验。作者把大模型外层的控制软件（也就是大家常说的
+harness，平时专门负责给模型递工具、攒历史记录的那层程序）拆成了几个独立开关，挨个测试每一处设计到底能起多大作用。当研究团队把预设的文件读写工具全撤掉、换成纯命令行环境之后，一个大模型在代码修复任务上的成功率直接涨了将近四个百分点，估算调用开销还省下了一半以上；换到另一个同处于前沿水平的大模型身上，成功率却跌掉了
+23.2 个百分点。这项研究没下简单粗暴的定论。在作者看来，harness
+设计本质上是几项具体的工程抉择：选对配置能把估算成本压掉一半，可一旦看错条件，照搬同样的精简操作，任务执行就会直接跑崩。</p>
+<p>平时大家自己动手搭编程智能体，凭着直觉往往更偏爱做减法。大家脑子里的预设往往是这样：外层包装越薄越利落，摆在模型面前的工具越少，交互过程越不容易节外生枝；像任务规划或者上下文摘要这种东西，就算平时用处不大，顶多白费一点计算资源，总归不至于反过来把解题思路带偏。很多团队做系统优化的时候，顺理成章地把砍工具当成默认方向，总觉得给模型减负肯定错不了。</p>
+<p>但真实测试恰好打破了这种惯常想法。外层软件里的每一个零件，都不能当成理所当然就该默认开启的基础设施。做减法大家都会，真正考验人的，是搞清楚到底在什么条件下做减法。要是脱离了底层模型的习惯和眼前的任务形态去盲目削减，原本想省下来的那几步调用，回头就会在执行现场演变成一场灾难。</p>
+<h2 id="把外层软件拆成三个开关" data-reading-heading="">把外层软件拆成三个开关</h2>
+<p>我们在终端里使唤大模型写代码，其实所有的动作都跑在外层这套宿主环境里。大模型自己只负责接收上下文、吐出文本补全，它既没办法直接翻看磁盘上的源码文件，也没法自己在操作系统里发起真正的调用。全靠外层软件把工具接口摆在它面前，把它吐出来的命令递给系统执行，再把终端的标准输出与报错捡回来。交互轮数一多，外层还要负责把这些来回拼接进对话历史，打理有限的上下文窗口。平时做工程，大家往往习惯性地给大模型配齐任务规划提示、外部检索机制以及专用的文件编辑工具，总觉得功能给得越全系统越稳妥，很少有团队真停下来单独测测某一个模块到底值不值。</p>
+<p>来自马萨诸塞大学阿默斯特分校、埃默里大学和北卡罗来纳大学夏洛特分校的研究团队，在
+2026 年 9 月放出了这项实测研究（预印本见 arXiv:2609.20804，全文见 arXiv HTML
+页面）。他们固定好思考、行动与观察这套标准循环，把外层软件切分成三个能单独开闭的核心模块，一项一项测量每个模块在真实任务里的实际表现。</p>
+<p>第一个开关管任务规划。开关推上去的时候，系统提示词会明确叮嘱模型，接手复杂任务必须先写出一份执行计划；往后每推进一步，外层程序都会把最新计划重新贴进提示词，还额外配了一个叫
+update_plan
+的专用工具让模型随时更新进度。要是把这个开关拉掉，提示词里催着做计划的语句和
+update_plan 工具就统统撤除，模型拿到任务目标直接动手干活。</p>
+<p>第二个开关负责怎么打理上下文。随着执行过程越拖越长，研究团队前后试了五种收拾历史记录的办法。最粗放的方案就是不管不顾，任由历史记录堆积，超出上下文窗口就终止。稍微讲究一点的是硬规则删减，历史长度超过硬阈值就把较旧的工具输出替换成占位短桩，保留基本结构。第三种路子更精细，把切掉的长文本存进外部空间，配上专属工具允许模型按需把历史细节读回。第四种是让同一个被测模型出面打扫战场，历史长度超过硬阈值时，通过一次不带工具的独立调用把前面的要点提炼成浓缩摘要。最后一种则是分阶段组合策略：上下文长度刚踩过软阈值就先走规则裁剪，要是裁剪后仍超过硬阈值，再喊同一个被测模型出面生成摘要。</p>
+<p>第三个开关管的是动作执行接口，也就是模型手里到底拿什么家伙干活。在大家习惯的全工具配置下，外层软件给模型备齐了八个趁手的专用工具，涵盖文件读取、文件写入、补丁替换、目录遍历、文本正则检索以及终端命令执行。可要是切换到纯命令行模式，外层会把所有预设的文件与搜索工具统统撤除，模型手里只剩最原始的终端指令，在工作区里找代码、改源码全得靠自己敲命令。</p>
+<p>为了看清不同梯队的大模型对这些开关作何反应，研究人员找来了两套基准测试。一套是大家熟悉的
+Python 代码修复基准 SWE-Bench Verified，包含 500 个真实 GitHub
+问题，重点考验模型在大型代码库里跨文件定位、分析逻辑和精准修改的能力；另一套是包含
+89 个终端原生任务的端到端命令行基准 Terminal-Bench 2.1，直接测试模型在
+shell 环境中配置服务、排查系统状态的操作水平。参测模型覆盖英伟达
+Nemotron-3 家族的三种尺寸（30B、120B、550B），加上开源前沿梯队的
+Mistral-Medium-3.5-128B。五种上下文方案与四个窗口长度（32k、64k、96k、128k）相互交叉，再加上仅在分阶段管理、128k
+窗口下进行的规划与接口两项消融实验，研究团队累计运行了 176
+种实验配置。单任务开销参考 OpenRouter 2026 年 8 月 token
+报价进行估算，评估采用配对成败检验并校正误报率，每项配置对每道题运行一次。</p>
+<p>理解这项实验给出的结论，得先留意论文里两个挺关键的工程实现细节，免得想岔了方向。第一点，切换到命令行模式其实是一次成组替换。作者在撤下专用文件工具的同时，同步调整了系统提示词，移除了写入前必须先读过文件的检查、修改前后的状态追踪，以及受支持的编辑后的自动诊断提示。这不仅改变了模型能调用的工具数量，还连带撤除了外层辅助护栏。第二点，纯命令行模式并不意味着整个环境里真的只剩下一个终端指令。在规划功能开启且采用分阶段上下文管理的组合下，命令行模式依然保留了计划更新工具与历史读回工具，外层的任务追踪机制并没有全部撤除。</p>
+<h2 id="同一个开关两个模型反着走" data-reading-heading="">同一个开关，两个模型反着走</h2>
+<p>外层软件拆开之后，反差最大的地方落在了动作接口的切换上。在 128k
+窗口并且开启规划的标准测试下，研究人员把专用文件工具撤掉，换成了纯命令行模式。面对拥有
+5500 亿参数的 Nemotron-3 550B，在 SWE-Bench Verified
+代码修复基准上，任务成功率从 65.80% 一路涨到了 69.40%，提高了 3.6
+个百分点；单任务平均调用估价从 2.33 美元降到 1.11
+美元，降幅超过了一半（见论文 Table 3
+结果表）。然而，把同一套精简操作放到同属前沿梯队的
+Mistral-Medium-3.5-128B 身上时，成功率直接从 68.60% 跌落到了
+45.40%，折损了 23.2 个百分点。单任务估算开销虽然也从 3.14 美元降到了
+1.72
+美元，解题能力却大幅滑坡。统计检验显示，两项差异均达到了显著水平。</p>
+<p>同一个工具接口开关，在 550B 和 Mistral
+上方向相反</p>
+<p>为了搞清楚为什么两个模型走向了相反的方向，研究人员借助大模型当裁判，对执行轨迹逐一排查。人工抽检覆盖
+200
+条轨迹里的一万五千多个标注单元，包括动作标签和失败阶段诊断，显示裁判与人工判断的一致率约为
+94.2%，Cohen’s κ 的加权均值达到
+0.929，相当可靠。顺着具体的轨迹记录看进去，两个模型在命令行下的真实差异立刻就看明白了。</p>
+<p>Nemotron-3 550B
+的轨迹展现出非常老练的复合命令编排功底。手里没了独立文件工具，550B
+一点不慌，直接把文件查找、正则匹配与代码替换逻辑整合进紧凑的 shell
+脚本与单行命令。测试数据显示，在代码修复基准上，550B
+在命令行模式下单次最大编辑量的中位数从 18 行升至 54
+行，对已编辑文件的反复修补从平均每任务 4.6 次锐减到了 1.5
+次，工具调用减少了
+32%。它靠着高密度的单次执行取代了反复试错，大幅压低交互轮次，解决问题干脆得多。</p>
+<p>Mistral-Medium-3.5-128B
+的轨迹则是另一番景象，到处都是定位失败。专用的文件工具一抽走，Mistral
+在深层目录里很难自主找对目标文件。在命令行模式下，Mistral
+从头到尾没提交任何代码修改就干脆退出的比例高达 32.80%（全工具配置下仅为
+1.20%）；在那些未能解决的任务里，始终摸不到正确文件的比例从 16.00%
+飙升到了
+41.40%。没有了外层工具提供的写入前已读检查与修改诊断，这个模型在搜寻和拼装脚本阶段就早早偏离了修复路径。</p>
+<p>但换到另一种任务场景，剧情立刻迎来转折。在包含 89 个终端原生任务的
+Terminal-Bench 2.1 中，切换到纯命令行模式后，Mistral 的成功率反而从
+37.08% 升到了 43.82%，涨了 6.74 个百分点；550B 也顺势从 44.94% 升到了
+50.56%（见论文 Table
+4 结果表）。虽说终端基准样本只有 89
+题，两项提升在统计检验中都没过显著性门槛，但两边的势头方向一致。翻开动作记录看原因：在终端原生任务中，Mistral
+哪怕在全工具配置下，也会主动把 71.90%
+的工作区动作交给命令行；而在代码修复任务中，这个比例其实只有
+40.40%。</p>
+<p>这组对比把外层设计的本质特征摆了出来：脱离具体场景谈不上普适的优劣，所有的表现都会随着使用条件发生转移。外层组件到底能赚多少收益，全看模型自身的命令行习惯与任务的原生属性到底契不契合。照搬同样的精简操作，在一个模型手里释放了自主执行的高效率，在另一个模型手里却抽走了维持运转的必要护栏。</p>
+<h2 id="三个旋钮各自的边界" data-reading-heading="">三个旋钮各自的边界</h2>
+<p>逐项拆开论文测试的这三个模块，能看清它们各自生效的真实边界。先说第一个旋钮任务规划，实验表明，规划机制对弱模型来说就是关键的生存线。拿
+300 亿参数的 Nemotron-3 30B 来看，开启规划之后，代码修复成功率从 13.60%
+一跃升到 25.20%，足足增加了 11.6 个百分点，单任务估价也只是从 0.02
+美元微涨到 0.09 美元。可一旦把规划关掉，30B 的中位执行轮次直接从 40
+轮暴跌到 5 轮，68.60% 的任务从头到尾没有产生任何编辑，更有 58.40%
+的题直接卡在代码定位阶段。外部注入的这套规划结构，牢牢维持着执行链条，这才让弱模型能够撑到发起第一次修改。</p>
+<p>换到能力成熟的大模型身上，规划机制的角色立刻变了，不再负责提分，主要是用来省钱控费。面对
+550B 与 Mistral 这两个聪明模型，开启规划并没能改善准确率：550B 成功率从
+67.80% 变成了 65.80%（下降 2.0 个百分点），Mistral 也从 69.00% 微降到
+68.60%（微降 0.4 个百分点）。但规划省下的估算成本相当可观：550B
+单任务估算成本下降了约 30%（从 3.31 美元降到 2.33 美元），Mistral
+更是下降了约 32%（从 4.65 美元砍到 3.14
+美元）。轨迹记录说明了一切：强模型自己不需要外层指令教它怎么找代码，规划的核心价值在于管住那些冗余验证。要是没开规划，550B
+做完改动后会没完没了地复核，让中位交互从 74 轮一路膨胀到 108 轮，Mistral
+也会从 53 轮膨胀到 68
+轮。这时候，规划机制就从能力助推器变成了控费阀门。业界的实际工程也走向了相同的取向，Anthropic
+官方仓库里的 issue
+#80487 显示，Claude Code 在 Opus 4.8、Sonnet 5、Fable 5
+等新型模型上默认停用了任务创建与清单工具，只保留环境变量供手动开启。这说明随着底座自身能力提升，结构化规划正逐步退成按需调用的优化配置。</p>
+<p>第二个旋钮落到了上下文管理上。实验数据显示，打理上下文最核心的收益在于防止窗口溢出，至于提升单步推理质量，帮助其实相当有限。随着物理窗口从
+32k 一路放宽到
+128k，管不管上下文带来的模型平均成功率差距迅速收窄：代码任务中两者的差距从
+32k 时的 35.7 个百分点收窄到了 128k 时的 2.7 个百分点；终端任务中也从
+9.5 个百分点降到了 2.8 个百分点。在 32k
+这样局促的窗口下，要是放任不做管理，模型平均有 78.70%
+的代码任务因为窗口溢出中途终止，开启管理后溢出率全部归零。而在全部测试的
+8 组模型与基准组合里，分阶段策略在 7
+组中都拿到了管理策略中最低的跨窗口平均估算开销，证明优先走死规则裁剪、超标再调用模型做摘要的做法，兼具稳定性与经济性。</p>
+<p>围绕上下文专门设计的读回机制，给出的反馈相当冷淡。这套设计原本打算在删减时把长文本存入外部空间，允许模型按需调阅读回。但在全部
+32 组配对比较当中，读回机制只取得了 15 胜 14 负 3
+平，平均准确率变化居然是负 0.36 个百分点。在开启读回功能的 64
+个配置里，整整 36 个配置自始至终连一次都没调用过读回；在 128k
+窗口下，平均每任务才仅调用 0.007
+次。多搭这么一套复杂的外部存取链路很难换来有效产出，真到了执行当中，模型极少主动回溯那些先前按照规则裁剪掉的陈旧输出。</p>
+<p>第三个旋钮管的是动作接口。Nemotron-3 30B
+在终端基准上的表现提供了一个经典的反面例子：切换为纯命令行后，30B
+的成功率从 13.48% 跌落到了 3.37%（见论文 Table 4
+结果表）。日志分析表明，它有足足 66.00%
+的轨迹是因为发射接口外工具调用而失败。这模型还在持续输出训练阶段背下来的专用函数语法，意识不到当前环境只剩
+shell，平均交互轮次因此直接从 71 轮锐减到了 15
+轮。强模型确实能从精简接口里吃到甜头，但怎样提前界定这个前提却是个难题。正如评论者
+agentdev001
+所指出的那样，论文通篇都在强调模型必须具备命令行能力，却始终没给出前置可测的操作化定义，这个关键前提大家往往只能在测试跑翻车之后再来反推。</p>
+<p>不过，看这套结论的时候也得留意它特定的实验环境。论文作者坦率地说明过，他们只测试了一种规划提示词和一套阈值调度策略，所有的接口消融实验也全都建立在
+128k 窗口与分阶段管理之上，代码任务限于 Python
+并且全是单次运行。社区讨论里大家同样各执一词。评论者 vblanco
+就提出质疑，认为开源模型很难代表那些针对特定脚手架重度对齐、同时拥有更大原生窗口的前沿商业闭源模型；评论者
+Systemerror7A69
+则反驳说，在缺乏同等份量的实证之前，不能随意把现有的实测证据搁在一旁。这场争议也正好提醒我们，论文里的相关结论不能脱离具体的模型家族生硬外推。</p>
+<h2 id="你该带走什么" data-reading-heading="">你该带走什么</h2>
+<p>面对这一整套实测数据，用不着走向全盘否定外层架构的极端。真正的要点，在于甩掉那种觉得外层机制默认都该全开的惯性想法，把
+harness
+设计老老实实当成具体工程场景下的取舍考量。自己动手搭建编程智能体时，需要做出三个具体的关键抉择。</p>
+<p>三个条件旋钮决定接口选择与成本</p>
+<p>先看底座模型，搞清楚它自己写脚本、找文件的本事到底够不够。如果选用的模型平时缺乏充分的终端数据训练，一进命令行就容易吐出语法错误或者在路径里迷路，这时候就得老老实实给它配齐专用文件工具，用工具层保住最基本的成功率。反过来，要是手头的模型已经养成了成熟的脚本编写习惯，直接精简掉专用工具，反而能给模型更广阔的自由发挥空间，同时还能大幅压低交互轮次与调用开销。</p>
+<p>第二个决策得看任务环境，仔细掂量工作本身有多大比例依赖
+shell。要是活计集中在运维、环境配置这种以 shell
+为中心的场景，动作接口直接走纯命令行最为干净利索，额外搭一套专用工具层往往只是徒增冗余。但如果任务是要在复杂的大型工程里重构源码，专用工具所提供的写入前已读检查、清晰的编辑边界以及及时的诊断提示，就是防范模型在仓库里盲目改动的坚固护栏。</p>
+<p>第三个决策要落到账本上，算一算自己的窗口预算和调用成本允许把上下文管理做到多深。当前分配的上下文空间要是特别充裕、花销预算也宽绰，上下文管理只要守好防溢出的底线就可以，没必要搞复杂花样。可在预算受限或者长程执行的场景下，优先规则清理、超标之后再喊大模型总结摘要的分阶段方案，就是最理想的控费首选，至于复杂的外部读回机制，大可不必费心去维护。</p>
+<p>站在关键决策的视角看工具选型，还能顺手纠正社区里的一场大误解。论文刚放出来的时候，评论者
+jimbokun 觉得既然命令行这么强，像 MCP
+这类专用工具协议以后就没啥意义了。评论者 CharlieDigital
+随后站出来指出：专用工具协议与本地命令行解决的压根不在同一个层面上。结构化协议的核心价值在于企业凭证管理、细粒度的权限隔离以及远程环境交互。真实世界里的生产系统，不会向一切外部调用开放原始宿主机的
+bash
+终端，结构化接口提供的权限边界与审计能力，是普通命令行替代不了的。</p>
+<p>学术界这几年的研究脉络同样表明，harness
+的搭建始终离不开具体的工程决策。Liu 在 2026 年关于提示词组件的评测（见
+arXiv:2605.05716）中就发现，组件全开的配置在多数场景下往往拿不到最优解，而且部分负面影响还会随着模型规模扩大转为正面。Mehtiyev
+与 Assunção 对 8 种框架中的 19 个智能体展开的实证研究（见 arXiv:2604.02547）显示，不同框架之间的性能差距正随着模型代际更迭持续收窄。Yang
+等人在 2026 年 7 月针对代码执行接口的研究（见 arXiv:2607.10569）报告称，哪种工具界面最划算，终归由任务特征与系统架构共同决定。</p>
+<p>最后留一个社区假说作开放式问题。评论者 svachalek
+提到，海量真实会话轨迹正在融入新一代模型的训练过程，模型会把这些外层行为模式慢慢内化成本能。假如果真如此，今天摆在工程师面前的这套
+harness 决策清单，明天还会有多少需要反复权衡？</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/3c7530cbf3f7a489df944711f51f58be94246e96d0b277ff1ab11b879c6f605d.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/3c7530cbf3f7a489df944711f51f58be94246e96d0b277ff1ab11b879c6f605d.md" download="harness
+设计的关键决策：同一个开关，一个模型赚了，一个崩了.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=nvidia" class="entity-link company-link">nvidia</a>, <a href="/search/?q=mistral-ai" class="entity-link company-link">mistral-ai</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=nemotron-3" class="entity-link product-link">nemotron-3</a>, <a href="/search/?q=mistral-medium-3.5" class="entity-link product-link">mistral-medium-3.5</a>, <a href="/search/?q=swe-bench" class="entity-link product-link">swe-bench</a>, <a href="/search/?q=terminal-bench" class="entity-link product-link">terminal-bench</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

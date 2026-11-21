@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google DeepMind 托管智能体与 Interactions API 技术解析</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Google DeepMind 托管智能体与 Interactions API 技术解析</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-26</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Google DeepMind 托管智能体与 Interactions API 技术解析</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">managed-agent</span>
+      
+        <span class="tag-pill tag-pill--no-page">cloud-sandbox</span>
+      
+        <a class="tag-link" href="/tags/multi-agent-system/">multi-agent-system</a>
+      
+        <a class="tag-link" href="/tags/developer-tool/">developer-tool</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Google DeepMind 工程师 Jack Wotherspoon 介绍了 Gemini API 中的托管/云端智能体（Managed Agents）。该服务通过单次 API 调用提供云端沙箱环境与 Antigravity Harness，结合 Interactions API 实现多步骤交互与多智能体协作，支持技能挂载、代理安全凭证注入与定时触发，并展示了基于 Gemini 4 Argon 的金融分析演示。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=Y_p3y6zP5QE" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-26T00:00:00.000Z">2026-10-26</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>7 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E6%89%98%E7%AE%A1%E6%99%BA%E8%83%BD%E4%BD%93%E4%B8%8E%E4%BA%91%E7%AB%AF%E6%B2%99%E7%AE%B1%E7%9A%84%E4%BC%98%E5%8A%BF">托管智能体与云端沙箱的优势</a></li><li class="outline-h3"><a href="#%E4%BB%8E%E5%8D%95%E6%AC%A1-api-%E8%B0%83%E7%94%A8%E5%88%B0%E5%BA%95%E5%B1%82%E6%9E%B6%E6%9E%84">从单次 API 调用到底层架构</a></li><li class="outline-h3"><a href="#%E6%89%98%E7%AE%A1%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E4%BA%94%E5%A4%A7%E6%A0%B8%E5%BF%83%E6%94%AF%E6%9F%B1">托管智能体的五大核心支柱</a></li><li class="outline-h3"><a href="#%E6%A8%A1%E5%9E%8B%E6%94%AF%E6%8C%81%E4%B8%8E%E9%95%BF%E8%A7%A3%E7%A0%81%E8%83%BD%E5%8A%9B">模型支持与长解码能力</a></li><li class="outline-h3"><a href="#interactions-%E4%B8%8E-environments-%E5%8E%9F%E8%AF%AD">Interactions 与 Environments 原语</a></li><li class="outline-h3"><a href="#%E5%AE%89%E5%85%A8%E6%9E%B6%E6%9E%84%E4%B8%8E%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E7%BC%96%E6%8E%92">安全架构与多智能体编排</a></li><li class="outline-h3"><a href="#%E7%8E%B0%E5%9C%BA%E6%BC%94%E7%A4%BA%E7%BE%8E%E8%82%A1-sec-%E7%A0%94%E6%8A%A5%E4%B8%8E%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E6%B5%81%E6%B0%B4%E7%BA%BF">现场演示：美股 SEC 研报与多智能体流水线</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="托管智能体与云端沙箱的优势" data-reading-heading="">托管智能体与云端沙箱的优势</h3>
+<p>大家好，非常感谢大家今天的前来。我叫 Jack Witherspoon，是 Google DeepMind 的一名开发者体验（DevEx）工程师。今天我们将要讨论托管智能体或云端智能体（managed or cloud agents）。</p>
+<p>请大家举一下手，这里有谁听说过云端或托管智能体，或者使用过它们吗？</p>
+<p>好的，看来我开局不错。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+[music]
+<blockquote>
+<blockquote>
+<p>Hi everybody. Thank you so much for coming. My name is Jack Witherspoon and I am a DevEx engineer at Google DeepMind and today we're going to talk about managed or cloud agents.</p>
+</blockquote>
+</blockquote>
+<p>So raise your hands here, who all has heard of either cloud or managed agents or has used them?</p>
+<p>Okay. I'm starting off on the right foot.</p>
+</details>
+<p>对于那些没听说过的朋友，云端或托管智能体本质上是一种运行方式：你不再需要在自己的机器上运行测试框架（harness）和编程智能体，而是可以直接在云端沙箱（sandbox）中运行它们。那么，我们首先来聊聊，究竟为什么会想这么做？</p>
+<p>其实，沙箱之所以非常强大，有几个核心原因。</p>
+<p>第一，它们不是在你的本地机器上运行。因此，你可以启动一个云端智能体，它可以去编写代码、进行推理、开展调研、搜索网络，还可以编写测试、运行测试并进行验证，最后带着经过验证的结论返回。</p>
+<p>这一点非常重要。如果你曾经尝试在自己的笔记本电脑上运行自动化验证，有时它会抢夺浏览器的焦点，开始为你执行各种操作，你会遇到弹窗之类的问题。因此，把所有这些操作放在云端运行，就消除了这种痛苦。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So you might have heard of them if you for those who haven't, cloud or managed agents are essentially a way of instead of running a harness and running coding agent on your own machine, you can actually just run them in the cloud on a sandbox. So let's first start by why the heck would you want to do that?
+<p>Well, sandboxes are really powerful for a number of reasons.</p>
+<p>Number one, they're not running on your own machine. So you can, you know, spawn a cloud agent. It can go and write code. It can reason. It can do research, search the web. It can go ahead and write tests, run tests, verify and actually come back with verified kind of answers.</p>
+<p>And that's a really strong thing. If you've ever like tried to run verification either on your own laptop, you know, sometimes it steals the browser. It starts to run things for you. You start getting pop-ups and things like that. So running this all in the cloud takes away that pain.</p>
+</details>
+<p>另一个原因是，你的笔记本电脑无法横向扩展（scale）。</p>
+<p>你可能会在本地配置专门的环境，比如智能体技能（agent skills），或者在机器上定制了专属的个人编程智能体。但之后你该如何与同事共享？又如何将它集成到你的应用中呢？你肯定不希望面向客户部署的应用程序，是依靠你个人的订阅或类似环境来运行的，对吧？因此，我们希望能够将这种能力横向扩展起来。</p>
+<p>而托管智能体或云端智能体正是实现这一目标的绝佳方式。差一点，那个牌子差点立住了。别担心。</p>
+<blockquote>
+<blockquote>
+<p>[笑声]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And the other reason is that your laptop doesn't scale.
+<p>You might start to have specific setups like agent skills or you maybe have customized your personal coding agent on your machine. But then how do you go and share that with a colleague or how do you integrate that into your app, right? You don't want your app that you're deploying to customers to be running with your own kind of subscription or things like that, right? So, we want to be able to scale this up and doing so.</p>
+<p>And managed agents or cloud agents are a great great way to do that. So close, the sign almost stayed up. Don't worry about it.</p>
+<blockquote>
+<blockquote>
+<p>[laughter]</p>
+</blockquote>
+</blockquote>
+</details>
+<h3 id="从单次-api-调用到底层架构" data-reading-heading="">从单次 API 调用到底层架构</h3>
+<p>谈到托管或云端智能体，如果自己从头搭建，会是一个相当繁琐的过程。你需要亲自启动容器或虚拟机，把各种组件加载进去并进行管理。然后你还必须进行测试框架工程（harness engineering），在沙箱内部构建自己的 harness。更别提还要处理网络配置、设置防火墙规则以及所有的安全事宜了。</p>
+<p>这正是托管智能体的用武之地。无论是 Gemini 托管智能体还是其他云端托管智能体——我们今天重点讲解 <strong>Gemini 托管智能体</strong>，这是我们在 DeepMind 推出的 Gemini API 服务。</p>
+<p>现在，这一切基本上归结为了<strong>单次 API 调用</strong>。</p>
+<p>这正是托管智能体的魅力所在。只需单次 API 调用，你就能获得我们刚刚讨论过的全部能力：获得沙箱环境，获得沙箱中开箱即用的 anti-gravity harness，它可以直接执行大量强大的操作。你完全不必操心任何基础设施管理或扩缩容问题；随着你的应用需要更多智能体，只需发起更多 API 调用即可。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So, when it comes to kind of managed or cloud agents, you know, to do this yourself is quite a tedious process. You know, you have to actually spin up a container or a VM. You have to load things onto that, manage it. And then you actually have to do harness engineering, you know, figure out kind of build your own harness within the sandbox. And then let's not even start to talk about networking or setting up firewall rules or all the security stuff.
+<p>So, that's where kind of managed agents come in and whether it's Gemini managed agents, cloud managed agents, we'll be talking about Gemini managed agents today, which is our offering in the Gemini API at DeepMind.</p>
+<p>And really now it boils down to just being a single API call.</p>
+<p>So, that is really the beauty of managed agents. With a single API call, you're getting all the things we talked about. So, you're getting the sandbox, you're getting the anti-gravity harness built out of the box that is in the sandbox, and it can go ahead and do a lot of powerful things. You don't have to worry about managing any of the infrastructure or the scale as you need in your application more agents, you can just do more API calls.</p>
+</details>
+<p>我们稍后倒回去看一眼。大家可以看到，这就是我们的 <strong>Interactions API</strong>。</p>
+<p>这是我们 SDK 和客户端库中全新的“智能体优先”（agent-first）版本。在此之前，我们主要面向模型——输入提示词，获得输出——但这种模式在我们当下生活的世界里，无法很好地扩展到智能体场景。因此，我们推出了一种覆盖 interactions 的全新 SDK。Interactions 能够更好地映射智能体的实际行为：它可以是多步骤的，当你发起一次智能体调用时，它可以去写文件、调用这些文件、调用不同的 MCP 工具。所以，我们在今年早些时候正式发布（GA）的这个全新 Interactions API，现在正是托管智能体的大本营。</p>
+<p>你只需调用智能体即可；不再是调用模型，而是拥有一个智能体。我们提供了基础的 <code>anti-gravity</code> 智能体，然后你将环境设置为 <code>environment=remote</code>。这个关键参数就是在告诉系统：“我们希望在云端运行一个托管智能体。”随后，你像往常一样向它传递普通的输入内容。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Actually, we'll go back for a sec. So, you can see here, this is our interactions API. It's our kind of new agent first version of our SDKs and client libraries. So, previously we had kind of models, you would, you know, do an input, get an output, but that didn't really scale to agents in the new world we live in. So, we launched a new kind of SDK uh, covering interactions. So, interactions are much more kind of mirroring what agents are doing. So, it can be multiple steps, you know, when a when you do an agent call, it can go ahead and write files, call those files, call different MCP tools. Um, so really this new interactions API that we launched, uh, and went GA earlier this year, is now our kind of home for managed agents.
+<p>So, you just call the agent instead of having a model, you have an agent. So, we have our base anti-gravity agent. And then you set environment equals remote. So, that's that key thing that's now telling it, "Okay, we want a managed agent that runs in the cloud." And then you give it kind of regular input as you're used to.</p>
+</details>
+<p>这是底层基础设施的实际运作方式。当你调用托管智能体时，输入刚才提到的内容，它会去调用 Gemini API。Gemini API 拥有许多内置的服务器端工具，例如通过 Google Search 进行网络搜索，或者用于读写文件的文件系统工具。此外，你也可以添加自定义函数或 MCP 工具。</p>
+<p>紧接着是沙箱环境，它实际上运行在 Google Cloud 基础设施之上。当你调用 Gemini API 获取托管智能体时，它会自动为你配置并启动该沙箱。你可以直接向沙箱上传文件。因此，如果你有智能体技能（agent skills）或 <code>agents.md</code>，或者希望在启动时加载一个 GitHub 代码仓库，系统都支持这些操作。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, here's kind of how the infrastructure actually looks under the hood. So, when you call a managed agent, you kind of have that input that we saw. And then it calls the Gemini API, which has a bunch of, you know, built-in server-side tools like, um, searching the web through Google Search or file system tools to read and write files. Um, and you can also add your own custom functions or MCP tools as well.
+<p>And then we have the sandbox. So, that's actually running on kind of Google Cloud infrastructure. Um, so when you call the Gemini API to get a managed agent, it goes ahead and actually sets up and spins up that sandbox for you. And you can go ahead and actually upload files to the sandbox. So, if you have agent skills or agents.md, or you want to load a GitHub repository on startup, uh, we allow you to do all of that cool stuff.</p>
+</details>
+<h3 id="托管智能体的五大核心支柱" data-reading-heading="">托管智能体的五大核心支柱</h3>
+<p>这里展示的是构成托管智能体的基础构建块，也就是几个不同的核心支柱：</p>
+<ul>
+<li><strong>测试框架（Harness）</strong>：即 anti-gravity harness。它与 Google 内部 anti-gravity 系列产品中运行的完全是同一个 harness，负责解析和决策工具调用，并提供内置工具。</li>
+<li><strong>环境（Environment）</strong>：环境本身是一个独立的实体。它支持实现非常强大的多智能体工作流：你可以让不同的智能体指向同一个沙箱，某个智能体在其中写入文件，后续另一个智能体可以接手同一个环境并基于这些文件继续构建。</li>
+<li><strong>技能（Skills）</strong>：你可以把技能上传到沙箱中，就像你在公司或个人智能体中定义的行动手册（playbooks）或特定工作流程一样，这些都可以直接上传到托管智能体中。</li>
+<li><strong>凭据管理（Credentials）</strong>：这是托管智能体的一项新功能，它允许我们将令牌（tokens）或 MCP OAuth 凭据注入到托管智能体沙箱中，以便访问各类外部服务。</li>
+<li><strong>触发器（Triggers）</strong>：允许你设定定时任务来调度托管智能体。例如每天早上 8:30 开盘前，你希望进行某种金融分析，就可以设置触发器。托管智能体到时会自动唤醒，执行任务或处理输入，并输出结果。你可以配置 Webhook 发送 Slack 消息；也可以让它每天早上查询团队的 Jira 看板，汇总并发送大家的工作进展等。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, here are kind of the building blocks that make up a managed agent. These are kind of the different core pillars. Um, so you've got the harness itself, and that's the anti-gravity harness. It's the exact same harness that's running, uh, in our anti-gravity suite of products over at Google. So, that's what's kind of figuring out the tool calls. It has the built-in tools.
+<p>Um, and then we have the environment. We'll talk a bit more about how the environment is kind of its own entity, um, which allows you to do really cool kind of multi-agent workflows by having different agents pointed at the same sandbox so they can write files. A different agent can pick that same environment up later and actually build upon those files. And then we've got skills we talked about so you can upload your skills to the sandbox just as you would have potentially like playbooks or different ways of doing things at your company or on your personal agent, you can upload those to the managed agent as well.</p>
+<p>And then we have credentials. Credentials is a new piece of managed agent which essentially lets us inject either kind of tokens or your MCP OAuth into the managed agent sandbox so you can access your different services.</p>
+<p>And then we also have triggers which allow you to actually schedule a managed agent to run. So let's say at 8:30 8:30 a.m. every morning before the market opens you want to go and you know do some kind of financial analysis before the market opens up. You could set a trigger. The managed agent would essentially wake up, run its task or run its input, output a result. You can like do webhooks so that you could send a Slack message. Maybe it queries your team's Jira board every morning and sends you know here's what everyone's working on and things like that.</p>
+</details>
+<h3 id="模型支持与长解码能力" data-reading-heading="">模型支持与长解码能力</h3>
+<p>我们刚才简要提到了 harness。底层的 anti-gravity harness 支持切换不同的运行模型。昨天我们刚刚发布了全新的前沿模型 <strong>Gemini 4 Argon</strong>，非常推荐大家去体验一下，它表现出色。稍后我们会在演示中展示它。</p>
+<p>在托管智能体的 <code>agent config</code> 配置中，你可以通过一行参数来指定模型，从而根据具体工作流进行调优：如果任务追求速度与高效率，可以使用 Gemini Flash；如果需要进行深度推理或海量数据分析，则可以切换为像 Gemini 4 Argon 这样的模型。</p>
+<p>正如刚才提到的，Gemini 4 Argon 昨天正式发布，是一款非常优秀的模型。它在金融类任务上尤其出色，希望这对在座各位能有所帮助；同时它也极其擅长跨大跨度文档进行数据分析。当然，Gemini 模型一如既往地在多模态方面表现极其亮眼。</p>
+<p>Gemini 4 模型另一个非常强大且有趣的特性是<strong>长解码（long decode）</strong>。通常情况下，模型的输出 token 上限大约在 64K 左右；但在 Gemini 4 中，我们将这一限制放开，现在 100 万 token 的上下文窗口限制是由输入（input）、思考（thinking）和输出（output）共同共享的。因此，当你的输出需求需要扩展——比如进行极其复杂的数学推理或金融建模，输出可能长达数十页时——模型完全有能力直接生成。这已经被证明能够显著提升相关数学与金融评测基准的表现。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So we talked a little bit about the harness. It's the anti-gravity harness that runs under the hood and you can change the different models that it runs with. Yesterday we just launched Gemini 4 Argon which is our new frontier model. So I definitely recommend testing it out. It's a great model. But we'll show it later on in this in demo.
+<p>And you can set the different model in the config for the managed agent in the agent config as you see there. We have that kind of one-line parameter to set the model. So that's how you can kind of tune the managed agent based on the workflow. If you're wanting to do something that needs to be fast and efficient, you can use Gemini Flash. If you want to do do that's deep reasoning or potentially doing a lot of analysis, then you can use a different model like Gemini 4 Argon.</p>
+<p>Like we said, Gemini 4 Argon was released yesterday. Um it's a really great model. It's especially good at financial tasks, which is great for hopefully for the audience here. Um and really good also at doing data analysis across a wide range of documents. Um and as always, the Gemini models are also super super good at multimodal.</p>
+<p>Another really cool, interesting um feature that we have with the Gemini 4 model is long decode. So, normally models have an output token max of around 64K tokens. Um but with Gemini 4, we actually have up this so that now the 1 million kind of context window or token limit is now shared between input, thinking, and output. So, output, as you need to kind of scale up if you need to do extreme kind of math reasoning or financial modeling where the output might be pages and pages and pages long, the model can actually go and do that. And this is showing to actually advance some of the more mathematical and financial benchmarks out there.</p>
+</details>
+<h3 id="interactions-与-environments-原语" data-reading-heading="">Interactions 与 Environments 原语</h3>
+<p>刚才我们探讨了 Interactions API 与环境（environments），它们是托管智能体的两大核心原语，赋予了系统极高的灵活性与配置自由度。</p>
+<p>这两者是我们服务端后端维护的两种不同状态实体：</p>
+<ul>
+<li><strong>Interactions（交互）</strong>：用于管理对话状态。当你输入内容、获取输出，并与模型进行一轮轮对话时，这些轮次会被保存为所谓的 interactions。你可以提取上一个 interaction 的 ID 并传给下一个 interaction，以此构成第二轮对话。</li>
+<li><strong>Environments（环境）</strong>：代表云端沙箱文件系统中的实际内容。当智能体在云端沙箱中写入文件、生成图像或执行各种文件任务时，这些就构成了环境状态。你可以通过我们的 API 从该环境中下载或上传文件。</li>
+</ul>
+<p>将这两者解耦可以带来非常强大的能力。如图中的第一段代码所示，我们创建了一个智能体 interaction，它开始执行工作并保存了一个文件；随后，我们可以把该 <code>environment ID</code> 传递给下一个智能体。下一个智能体接手时，拥有全新的上下文窗口和对话空间，但却能直接复用同一个文件环境。例如，前一个智能体抓取年报与报备文件，将 Q3 财报保存到工作空间并完成部分分析、存为文件；随后新智能体介入，复用完全相同的物理环境，但拥有干净的上下文窗口。这构成了一种非常优雅的多智能体协作工作流。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, we talked a bit about the interactions API and environments, and this is kind of one of the key pillars. These are kind of two core primitives in managed agents that allow you to get a lot of flexibility and be able to customize kind of the agent configurations that you do.
+<p>So, these are kind of two different um stateful things on our back end in our server side. So, interactions is what manages your conversation. So, when you put an input and get an output and kind of a different turn with the model, um those are saved as kind of what we call interactions. So, you can take one interaction, pass that ID to the next interaction, and that kind of, you know, it's the second turn.</p>
+<p>Um and then we also have environments. So, environments are what's actually kind of in the file system on the sandbox. So, when the agent goes and writes files or creates images or does different file tasks on the actual sandbox in the cloud, that's kind of representative of the environment. And you can go ahead and use our APIs to download files from that environment or upload them.</p>
+<p>But having these two things kind of split out allows you to do some really cool things where you can actually see here that we are creating one agent interaction with our first code block. And it's going to go ahead and do some work and save a file. And then we can pass that environment ID to our next agent. So, it actually picks up. It has a very fresh kind of context window and conversation, but it's reusing the environment. So, it can go and, you know, say save the Q3 filings in our workspace. Maybe we're going to go, you know, fetch the fetch the annual reports, the filings. And then we're going to go and do some analysis, save that as a file. And then we can have a new agent come in, reuse that same exact environment, but this time have a fresh context window. Kind of a multi-agent workflow, which is really cool.</p>
+</details>
+<p>沙箱中已预置了大量内置工具，例如代码执行、文件读写以及 Google 搜索。同时我们也支持远程 SMTP 服务器等协议，你可以自带服务器，连接到常用的外部服务中。这让智能体更进一步，能够真正处理日常任务，或深度集成到你的应用中。</p>
+<p>此外，你还可以将文件挂载到文件系统中。上传不同的 <code>agents.md</code> 文件、技能配置，在云端环境中运行你在本地机器上验证过的行动手册。这样工作在云端完全可复现，且不必担心覆盖本地文件或搞乱本地机器配置。一切都在云端作为一个独立进程运行，直接返回输出结果。</p>
+<p>在这段代码示例中，我们向沙箱上传了一个 <code>agents.md</code> 文件，并连接了一个 GitHub 代码仓库。现在，智能体可以直接检视你的代码、排查 Bug。</p>
+<p>我们还提供了 <code>Agents API</code>，支持通过 <code>agents.create</code> 保存智能体。当你调优好工作流并确认了有效配置后，可以将其保存下来以便日后多次调用，持续迭代并在之后直接通过 <code>agent ID</code> 轻松唤起专属智能体。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, there are a bunch of built-in tools already in the sandbox, like code execution, reading and writing files, as well as Google Search. But we also support, you know, remote SMTP servers, so you can bring your own servers. You can hook up to your favorite services. And really that takes the agent a step further and be able to actually do kind of daily tasks or things that you can build into your apps.
+<p>And we talked a little bit about it, but you can also kind of mount files to the file system. So, you can upload your different agents.md files, your skills, and kind of run through the playbooks that you have your agents doing on your personal machine, but doing it in an environment where you can kind of reproduce and have that work done for you in the cloud. So, you don't have to worry about, you know, overriding any files or messing up things on your machine. Everything runs in the cloud, um and can just run as a process and get you back that output.</p>
+<p>So, here's a Here's a code sample where we're actually going to upload an agents.md example into our um sandbox, and then we're also connecting a GitHub repository. So, now you can actually have the agent look at your code, check for bugs and things like that.</p>
+<p>And then you can also save the agents. We also have an agents API, so you can do agents.create. So, once you've kind of refined your workflow and found an agent that works for you, you can save it so you can easily call it, you know, in multiple different times. You can iterate on it and then save it for later. And then you can just easily invoke your personal agent by calling it with its uh agent ID.</p>
+</details>
+<h3 id="安全架构与多智能体编排" data-reading-heading="">安全架构与多智能体编排</h3>
+<p>托管智能体在安全性方面的另一大关键设计是：<strong>机密信息（secrets）绝不会真正进入沙箱</strong>。</p>
+<p>我们的托管智能体系统在沙箱与 API 之间部署了一层代理（proxy）。该代理在沙箱中放置一个占位用的伪令牌（dummy token），这样智能体就绝不可能“失控反叛”并心想：“既然手头有个 GitHub 令牌，让我看看还能读取什么其他数据。”因为真实的 GitHub 令牌根本不在沙箱里，它无法执行未授权操作。当智能体发起对 GitHub API 的调用时，我们的代理层会进行拦截匹配，识别出目标是 GitHub API，再由代理注入真正的密钥。这样便能严格杜绝智能体越权操作。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, another big part of the security aspect of managed agents is that secrets never actually enter the sandbox. So, our managed agents have a proxy that sits uh it's a kind of a layer between the sandbox and our API. And it actually what it does is it puts a placeholder kind of dummy token into the sandbox so that the agent can never kind of go rogue and say, "Oh, I see that I have this GitHub token laying around. Let me just see what else is on there." Um so, it can actually never do that because it never actually has your GitHub token.
+<p>So, what it does is when it goes and calls the GitHub API, our proxy will then inject that token. It will match it to say, you know, it's API uh GitHub API. Um we're going to go ahead and inject this secret. Um so, that way the agent can never do anything that it shouldn't be able to.</p>
+</details>
+<p>前面我们简要提到了触发器。触发器非常实用，你可以设置每日晨间简报，让智能体扫描邮件、推荐待回复事项，或者在美股开盘前检查市场动态。这是按固定计划调度运行智能体的有效方式。</p>
+<p>而在多智能体协作方面，托管智能体的表现同样非常出色。因为其本质就是 API 调用，你可以配置一个托管智能体去调用其他托管智能体，实现任务的扇出（fan out）与分发。这样你就能构建职责极其专一的微型垂直智能体：比如有的专门负责起草笔记，有的专门负责深度调研。某个智能体将调研结果写入文件持久化，下一个智能体读取该文件继续处理。这种拆分让整个流程高度可控，确保每个特定任务都被高质量执行，而不是盲目扔给单一智能体一个极其宽泛的任务，导致其行为难以衡量和把控。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+We talked quickly about triggers, but triggers are also really powerful because you can have them set to kind of a daily briefing every morning like we said, scan your emails, maybe suggest ones to reply to, or if you want to check on the stock market before it opens, um you can do that. And this is a way to run one of your agents on a set schedule.
+<p>And we talked a little bit about multi-agent workflows, but managed agents can actually work really well um in multi-agent workflows. So, you can actually set it up so that one managed agent knows how to, because it's just an API call, actually call other managed agents um and do work and fan out work. And then you can have very kind of niche and specific targeted agents that have one core purpose. They do that purpose really well. Um you know, maybe it's drafting notes or doing research. Um writes it to a file, gets that information saved, and the next agent can then take over from that different input. And this kind of breaks it up so that you can have things really controllable and really make sure that you're doing specific tasks well instead of just giving a super super broad, you know, task to an agent and having it have no way of kind of measuring what it's actually doing.</p>
+</details>
+<h3 id="现场演示美股-sec-研报与多智能体流水线" data-reading-heading="">现场演示：美股 SEC 研报与多智能体流水线</h3>
+<p>现在我们迅速通过实测来验证这一点。我们现场运行这些智能体，观察实际运行效果。这里有一个 SEC 报备文件调研智能体，专门调研公司信息，我们将其目标设为英伟达（Nvidia）。</p>
+<p>我们发起 API 调用。再次强调，这只是一个简单的 API 调用，无论是构建到内部工作流中，还是作为服务发布给外部用户，都非常简便。</p>
+<p>大家可以看到界面的单步追踪（step traces）。智能体执行的每一步操作都会被保存为一个 step trace。你可以看到写文件的函数返回结果、代码执行状态，并能全程追踪智能体的行为轨迹，便于随手优化并保证工作流的清晰直观。</p>
+<p>接着，我们复用前文提到的同一个 <code>environment ID</code>。在这个场景中，后续智能体直接接续前面的环境：第一位 SEC 调研智能体完成了对英伟达的调研，并输出了大量指标数据；随后我们启动第二位量化智能体（quant agent），由于处于同一个文件系统中、复用了同一沙箱，它可以直接读取 <code>metrics.json</code>，运行多段 Python 代码，对英伟达进行深入评估。</p>
+<p>查看生成的 Markdown 文件可以看到，托管智能体根据提取到的指标完成了深度调研，并对股票价格给出了预测。接着我们唤起第三个智能体，将前面积累的调研与知识沉淀整合为一份完整报告。如果连接了不同的 MCP 服务器（例如 Google Docs），它还可以直接写入 Google 文档，或向 Slack 推送通知。这展示了基于托管智能体构建高度定制化工作流的能力。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, now we'll just quickly put this to the test. Um so, we can actually run the agents here and see what this actually looks like when you run one. So, we have an SEC kind of an SEC filing researcher that just researches companies. We have it set to Nvidia here. And we can go ahead and make call the API. So, like again, this is just an API call. It's really easy to build into your own either internal workflows or to actually publish in your services or apps to external folks.
+<p>So, we can go see here. There are step traces. So, each thing the agent does um is saved as a step trace. So, you can see we're having function result for the right to file, code execution, and you can kind of trace the what the agent is doing and optimize as you go to kind of make sure that the workflow is straightforward. And then were we using the same environment ID that we talked about? So, because we're using the same environment ID in this scenario, we're actually having our agents pick up. So, we can have We had this SEC filing researcher that went and did research on Nvidia, gave us a bunch of metrics as the output. And then, we can now kick off this kind of quant agent, which will go take a look at the metrics because it's in the file system. It's reusing the same environment, the same sandbox. And now, it can pick up its task and its job from that um metrics.json, take it, run a bunch of Python code files to see and actually look at it make evaluation for Nvidia.</p>
+<p>And if we go here and look at the MD file, we can see the managed agent went and actually did research based on the metrics it got, and it's now kind of doing a forecast for the share price in the stock. And then, we can kick off a third agent just to kind of take that research and knowledge dump and turn it into a report. And if we had connected different MCP servers, like we could connect Google Docs, have it actually output and write to a Google Doc, or send a message in Slack so that you can really kind of create these customized workflows from managed agents.</p>
+</details>
+<p>利用 SDK 将托管智能体集成到你自己的应用程序中也非常容易。这里展示的是另一个 Demo：托管智能体连接到我们的服务与 Google Drive，我们把公司全年的各类收据数据存放在里面，智能体读取数据并自动生成可视化图表。整个调研全由托管智能体完成；它挂载了一项技能，指引其如何制作交互式报告，随后智能体自主推理并为我们构建完成。</p>
+<p>它的可定制性极强。你在本地个人编程智能体上能做的事情，基本都可以轻松转化为托管智能体——无论是作为公司的日常批处理任务，还是内置到业务应用中。我们在 AI Studio 的 Gemini API 上还提供了许多其他案例，比如动态生成小游戏、文档研读等。</p>
+<p>目前最快上手的途径是前往 Google AI Studio，那里可以免费开始体验，同时我们也提供了托管智能体的官方文档。</p>
+<p>趁着最后还有几分钟，我再快速演示一个 AI Studio 案例库中的托管智能体示例。这个例子旨在展示如何将托管智能体集成到自己的实际应用中：这里创建了一个美观的前端，我们输入股票代码——输入 <code>VOO</code>。这个代码分析智能体由一组不同的托管智能体组成，它们分别领受具体任务并进行各项股票分析。</p>
+<p>作为可视化展示，界面呈现了智能体在 Interactions API 中的各个思考步骤流。随后，该托管智能体接收指令，汇总其在沙箱中所做的全部发现与推理并生成一份报告。点击查看生成的 PDF 报告，可以看到完整的调研成果、核心分析结论、可视化图表，以及引用的全部原始资源——智能体亲自访问了 Vanguard 官方网站，检索到对应的文档并进行了深入分析。</p>
+<p>以上就是关于托管智能体的全部介绍，非常感谢大家！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And then, you can also build managed agents super easily with the SDK into your own application. So, this is just a demo here where we have a managed agent that is actually um connected to our service. Um it's connected to our Google Drive where we dumped in a bunch of receipts of our annual kind of um company data, and it's going to go ahead and actually create this visualization um by from from the the data. And the managed agent is the one that's actually doing all the research. It has, you know, kind of a skill that will go out and tells it kind of how to do this interactive report. Um and then, it's just kind of reasoning through it and building this out for us.
+<p>So, it's really customizable. You can really kind of anything you can do on your own personal coding agent, you can kind of turn it easily into a managed agent that you can either run as a company daily or set up in your own apps so that we have other ones on our on our Gemini API on AI Studio where you can kind of create games on the fly. You can research documents and do all kinds of things.</p>
+<p>So, the easiest way to get started today is to go over to AI Studio and get started for free over there. And we also have our documentation for managed agents, but I'll quickly just do another demo here since we have a few minutes. This is one of our kind of managed agents examples that is on AI Studio in our gallery. And this one's kind of just trying to showcase how you can actually build these managed agents into your own applications.</p>
+<p>So, this is you know, create a nice front end and put in a stock. Oh, not slash. So, we can go ahead and do VOO. And this ticker agent is a bunch of our different managed agents that will go out and do specific tasks and look for different analysis on a stock. And again, this is kind of more of an illustration illustration that's like as you're building managed agents into your own apps, you might not want to have this kind of stream but just to kind of visualize what the actual agent is doing. It's reasoning through all the different steps in the interactions API.</p>
+<p>And then this managed agent is told to kind of generate a report based on all of the findings and reasoning it did in its sandbox. So, now if we go ahead and click on the report, we can see the managed agent outputted this kind of PDF file for us where we can see all of the research it did, see its analysis and key takeaways, as well as doing these charts so we can visualize. And it's also going to go and link out to kind of all of the resources um that it went ends actually using for this. So it actually went to the Vanguard Vanguard site, found the different documents, read them in, and then did analysis on it.</p>
+<p>And that is it on managed agents. Thank you very much.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/b5be651a8d1eb3c1fc6a611b2d3a3994ff87a20d5c989b7d6a4c45207e3b2bd2.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/b5be651a8d1eb3c1fc6a611b2d3a3994ff87a20d5c989b7d6a4c45207e3b2bd2.md" download="Google DeepMind 托管智能体与 Interactions API 技术解析.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Jack Witherspoon" class="entity-link person-link">Jack Witherspoon</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Google DeepMind" class="entity-link company-link">Google DeepMind</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Gemini API" class="entity-link product-link">Gemini API</a>, <a href="/search/?q=Gemini 4 Argon" class="entity-link product-link">Gemini 4 Argon</a>, <a href="/search/?q=Google AI Studio" class="entity-link product-link">Google AI Studio</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,4916 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google生成式模型团队访谈：NanoBanana 2 light与Gemini Omni Flash发布及FDE机制探讨</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Google生成式模型团队访谈：NanoBanana 2 light与Gemini Omni Flash发布及FDE机制探讨</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-08-30</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Google生成式模型团队访谈：NanoBanana 2 light与Gemini Omni Flash发布及FDE机制探讨</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/generative-ai/">generative-ai</a>
+      
+        <a class="tag-link" href="/tags/multimodal-ai/">multimodal-ai</a>
+      
+        <a class="tag-link" href="/tags/world-model/">world-model</a>
+      
+        <a class="tag-link" href="/tags/model-deployment/">model-deployment</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">访谈回顾了团队推出的NanoBanana 2 light与Gemini Omni Flash API，探讨了多模态感知、世界模型以及前向部署工程师（FDE）连接下游实际需求与模型改进的作用。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=KLDdXOw6jIc" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-08-30T00:00:00.000Z">2026-08-30</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>17 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BC%80%E5%9C%BA%E4%B8%8E%E5%98%89%E5%AE%BE%E4%BB%8B%E7%BB%8D">开场与嘉宾介绍</a></li><li class="outline-h3"><a href="#%E6%9C%AC%E5%91%A8%E6%96%B0%E5%93%81%E5%8F%91%E5%B8%83nanobanana-2-light-%E4%B8%8E-gemini-omni-flash">本周新品发布：NanoBanana 2 light 与 Gemini Omni Flash</a></li><li class="outline-h3"><a href="#%E4%B8%BB%E5%8A%9B%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E4%B8%8E%E6%9C%AA%E6%9D%A5%E5%B1%95%E6%9C%9B">主力应用场景与未来展望</a></li><li class="outline-h3"><a href="#%E8%A7%86%E9%A2%91%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%9B%A0%E6%9E%9C%E8%A1%A8%E5%BE%81">视频基础模型与因果表征</a></li><li class="outline-h3"><a href="#%E5%8D%95%E4%B8%80%E6%A8%A1%E5%9E%8B%E6%BC%94%E8%BF%9B%E4%B8%8E%E6%A8%A1%E6%80%81%E8%BF%81%E7%A7%BB">单一模型演进与模态迁移</a></li><li class="outline-h3"><a href="#%E4%B8%96%E7%95%8C%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%A4%9A%E6%A8%A1%E6%80%81%E8%A1%A8%E7%A4%BA">世界模型与多模态表示</a></li><li class="outline-h3"><a href="#%E4%BB%8E%E8%A7%86%E8%A7%89%E7%90%86%E8%A7%A3%E5%88%B0%E7%94%9F%E6%88%90%E7%9A%84%E7%A0%94%E7%A9%B6%E6%BC%94%E8%BF%9B">从视觉理解到生成的研究演进</a></li><li class="outline-h3"><a href="#%E8%A7%86%E9%A2%91%E6%A8%A1%E5%9E%8B%E4%B8%8E%E5%A4%9A%E6%A8%A1%E6%80%81%E7%BB%9F%E4%B8%80%E7%9A%84%E8%B7%AF%E5%BE%84">视频模型与多模态统一的路径</a></li><li class="outline-h3"><a href="#%E9%9F%B3%E8%A7%86%E9%A2%91%E8%81%94%E5%90%88%E7%94%9F%E6%88%90%E7%9A%84%E9%80%BB%E8%BE%91">音视频联合生成的逻辑</a></li><li class="outline-h3"><a href="#%E6%84%9F%E5%AE%98%E4%BD%93%E9%AA%8C%E4%B8%8E%E8%AF%AD%E8%A8%80%E8%A1%A8%E8%BE%BE%E7%9A%84%E5%B1%80%E9%99%90">感官体验与语言表达的局限</a></li><li class="outline-h3"><a href="#%E9%9D%A2%E9%83%A8%E5%BE%AE%E8%A1%A8%E6%83%85%E4%B8%8E%E7%9C%9F%E5%AE%9E%E6%84%9F">面部微表情与真实感</a></li><li class="outline-h3"><a href="#%E5%AE%A1%E7%BE%8E%E6%95%8F%E6%84%9F%E5%BA%A6%E4%B8%8E%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B">审美敏感度与提示词工程</a></li><li class="outline-h3"><a href="#%E8%A7%86%E9%A2%91%E8%AF%84%E4%BC%B0%E4%B8%8E%E4%BA%BA%E5%B7%A5%E8%AF%84%E6%B5%8B">视频评估与人工评测</a></li><li class="outline-h3"><a href="#%E6%97%A9%E6%9C%9F%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%A7%86%E9%A2%91%E7%90%86%E8%A7%A3%E4%B8%AD%E7%9A%84%E8%AF%AD%E4%B9%89%E4%B8%80%E8%87%B4%E6%80%A7">早期测试与视频理解中的语义一致性</a></li><li class="outline-h3"><a href="#%E6%95%B0%E6%8D%AE%E9%9C%80%E6%B1%82%E4%B8%8E%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E6%95%B0%E6%8D%AE">数据需求与具身智能数据</a></li><li class="outline-h3"><a href="#agent%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%8E%E9%9A%90%E6%80%A7%E7%9F%A5%E8%AF%86">Agent工作流与隐性知识</a></li><li class="outline-h3"><a href="#%E5%89%8D%E5%90%91%E9%83%A8%E7%BD%B2%E5%B7%A5%E7%A8%8B%E5%B8%88fde%E4%B8%8E%E4%B8%8B%E6%B8%B8%E7%9C%9F%E5%AE%9E%E7%94%A8%E4%BE%8B%E5%8F%8D%E9%A6%88">前向部署工程师（FDE）与下游真实用例反馈</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><!-- chunk 1/8 -->
+<h3 id="开场与嘉宾介绍" data-reading-heading="">开场与嘉宾介绍</h3>
+<p>[music]</p>
+<p>欢迎线上直播间以及现场的各位回来。在各个主舞台主题演讲的间隙，我们通常会安排这种较长的对谈，来探讨一些特别重要、但并没有重大发布时刻的内容。今天非常荣幸能邀请到负责 Omni、VO、Nano Banana 等全球顶尖生成模型的团队成员来到现场。Demetrio，我最早关注到你，是因为你在网上晒办公室。[笑声] 我觉得你大概算得上是 Google 的头号办公室网红了，至少在旧金山是这样。我想你也挺喜欢骑自行车的，还喜欢拍——</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+[music]
+<p>and welcome back for those on the stream</p>
+<p>and those those in person. um we take tend to basically take these longer sessions between uh all the sort of mainstage keynotes to reflect on things that um you know are particularly important but like don't have like a significant like sort of launch moments. Today we're very lucky to have people working on Omni and VO Nano Banana like the you know the world's best generative models here with us. Uh, Demetrio, I I I first saw you when you were posting about your office. [laughter] Um, I think you're you're probably number one uh Google Google's number one office influencer at least in in San Francisco. I think you like you like to bike as well. You like to take photos of</p>
+</details>
+<blockquote>
+<blockquote>
+<p>骑车过来。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; bike here.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。不过，你也参与了视频模型的工作。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Um, but you know, but also you work on video models.
+</details>
+<blockquote>
+<blockquote>
+<p>没错。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That's right.
+</details>
+<blockquote>
+<blockquote>
+<p>另外，Shane，我记得好像是在一次晚餐上认识你的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um, Shane, I I met you I think at like a dinner.
+</details>
+<blockquote>
+<blockquote>
+<p>没错。我记得你当时还想拉我投资其中一家公司，我都忘了是哪家了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Um and uh and uh and I I remember you were trying to get me invested in like one of the companies. I forget forget which one.
+</details>
+<blockquote>
+<blockquote>
+<p>那事就别提了。[笑声]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Forget about that. [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>不过现在，你正在负责 Omni Thinking，还有各种——</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; But now but now you're um now you're working on Omni Thinking. Um and and just you know a bunch of other
+</details>
+<blockquote>
+<blockquote>
+<p>Gemini RL。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Gemini RL.
+</details>
+<blockquote>
+<blockquote>
+<p>对，对。还有 Nicole，负责其余的生成式媒体模型、Nano Banana，以及你们刚刚发布的全部内容，实际上就是本周刚刚推出的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. Uh and Nicole also uh the rest of the gen media models uh nano banana and uh all and everything you just launched actually even this week. Uh,
+</details>
+<blockquote>
+<blockquote>
+<p>是的，我们上线了一些 API。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah. We launched some APIs.
+</details>
+<blockquote>
+<blockquote>
+<p>没错，没错。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>我倒是还没拉你投过什么项目，不过也许我该试试。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And I haven't tried to convince you to invest in anything, but maybe I should.
+</details>
+<blockquote>
+<blockquote>
+<p>我其实一直尽量不去做投资者，可大家总是不由分说地来劝我。我心想，好吧，我也没那么有钱，但面对其中一些项目，你又很难忍住不去尝试投资。对于我们这些不在前沿实验室工作的人来说，这已经是我们能接触到的最近距离了。所以，既然你离这些业务最近，而且我们刚刚完成了发布，不如来回顾一下，这周到底上线了什么？大家应该去体验哪些东西？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I mean, so I try not to be an investor. People just convince me anyway. I'm like just, okay, well, I'm not that rich, but know like you can't not try to invest in some of these things. And, you know, for those of us who are not working at a Frontier Lab, this is the best this closest we'll ever get. Um, so yeah, actually, let's kind of recap since you're closest to it and we just did it, like what was launched this week? What should people go try out?
+</details>
+<h3 id="本周新品发布nanobanana-2-light-与-gemini-omni-flash" data-reading-heading="">本周新品发布：NanoBanana 2 light 与 Gemini Omni Flash</h3>
+<blockquote>
+<blockquote>
+<p>好的。昨天我们有两个发布节点。其中一个是推出了 NanoBanana 2 light，这是 Nano Banana 模型家族中最快、成本最低的图像模型，而且效果比初代 NanoBanana 更好。所以对大多数人来说，无论是生成还是编辑，这款模型都可以替代大家熟悉并喜爱的初代 Nano Banana，并且它的效果非常接近主流更大型模型的前沿水准。这确实令人兴奋。我觉得看看那些演示或者大家做过的尝试就会发现，达到大约 3 秒左右的延迟，在构思和迭代上就能解锁非常多的可能性，用起来非常过瘾；而且模型的质量也达到了相当出色的水平，你不仅可以用它来快速迭代，还可以直接把其中的一些输出用作现成的成品。这真的很让人振奋。</p>
+</blockquote>
+</blockquote>
+<p>另一个发布则是，我们终于推出了在 I/O 大会上预告过的 Gemini Omni Flash API。非常感谢大家的耐心等待。这也是我们首次向开发者开放这些 API，主要提供非常令人期待的视频生成和编辑功能，在定价上与 Y31 fast 保持一致。因此，希望我们是在以非常棒的价格为大家提供极其出色的质量。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Um so yesterday we had two launch moments. Uh one of them we launched NanoBanana 2 light uh which is our fastest, cheapest um image model in the nano banana model family. Um and it's better than the original NanoBanana. Um so really for most people um that model replaces what you you know used and love the original Nano Banana for across like generation and editing and it gets really close to the frontier quality of of the kind of mainland bigger models. So that that's really exciting. I think if you look at some of the demos or like things that people have been trying like getting kind of that like 3 second latency just unlocks a whole bunch of things that you can do with like ideation and iteration and it's just really fun and the model's getting to a point where like the quality is really good um where um it you know you can use it for iteration but you can also use some of those outputs as just kind of like ready um production output. So that's really exciting. Um and then second launch we finally um launched the Gemini Omni Flash APIs um that we pre-announced at IO. So thank you for waiting. Um and that you know is the first time that we're making the APIs available for developers and it's basically really exciting kind of video generation and editing and we're pricing it the same as Y31 fast. So we're getting you kind of like really really good quality for a really awesome price hopefully. Um
+</details>
+<blockquote>
+<blockquote>
+<p>是的，太不可思议了。实际上，在你们第一次发布 Omni 时，还和今天未能到场的 Logan 一起录了一期播客，你们在视频里加了一只树懒、一碗拉面之类的东西。其实我一直很想把这些效果用到我们的视频里，之前只是因为没有 API，毕竟我得把整个流程自动化才行。所以非常感谢你们提供了 API。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah, I mean that that's incredible. I'm actually really So when you guys launched Omni for the first time, you also did a podcast uh with Logan who couldn't be here today uh and you added like a sloth uh and and Ramen and all these all these things. I actually really want to do that to our videos. I just didn't have an API for it because obviously I have to automate the whole thing. So thank you for the API.
+</details>
+<blockquote>
+<blockquote>
+<p>那是我最喜欢的用例，大家都应该试试。我加了一只猫，可能是所有动物里最普通的一种了。如果不清楚我们在聊什么，建议大家去搜搜看，非常搞笑。这是团队里的 Feurer 做的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh that is my favorite use case. Everybody should do that. Um I got a cat which is probably like the most boring of the animals. Um if you don't know what we're talking about, you should look it up. It's very funny. Feurer. um Furer who's um you know on on the team did that.
+</details>
+<blockquote>
+<blockquote>
+<p>要想了解这东西到底能干什么、获取灵感，Furer 绝对是首选关注对象。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Furer is the number one guy you should follow for you should follow ideas on okay what can this thing do?
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes.
+</details>
+<blockquote>
+<blockquote>
+<p>对吧。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Right.
+</details>
+<blockquote>
+<blockquote>
+<p>没错，他在这方面确实极具天赋。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. He he's he's amazing at that.
+</details>
+<blockquote>
+<blockquote>
+<p>过去两年我一直想请他来 AIE，但他一直没能成行。其实他本人来过现场，只是因为保持匿名而不愿上台演讲。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I've tried to get him for the last two years to come to AIE. He hasn't made it yet. He's actually come in person. He just didn't want to speak because he's anonymous.
+</details>
+<blockquote>
+<blockquote>
+<p>我知道。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I know.
+</details>
+<blockquote>
+<blockquote>
+<p>我很想说出他的真名，但我不能说。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I I want to say his real name but I can't say his real name.
+</details>
+<blockquote>
+<blockquote>
+<p>别，[笑声] 我们别这么对他。不过大家真的应该关注他，他太厉害了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; No [laughter] no we won't we won't do that to him. But you should really follow him. He's amazing.
+</details>
+<blockquote>
+<blockquote>
+<p>这些工作全是他做的。录播客的时候我其实在办公室碰到过他，当时我都没认出是他，因为他的胸卡上写的并不是 Popers。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; He did all that work. I actually met him uh in the office uh when we did the podcast I think and I didn't realize it was him. So his badge doesn't say Popers.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah,
+</details>
+<blockquote>
+<blockquote>
+<p>我懂。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I know.
+</details>
+<blockquote>
+<blockquote>
+<p>他以前在 Replicate，Replicate 内部有个梗，就是人人都叫 Deep Fates。Deep Fates 是 Replicate 里的一个神秘人物。Replicate 是一家非常酷的公司，他也曾是其中的一员。</p>
+</blockquote>
+</blockquote>
+<p>在深入讨论 Omni 之前，我想了解的一点是：添加猫咪、添加树懒，确实非常酷、非常可爱、也很好玩。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So he used to be part of uh Replicate and Replicate had this joke where like everyone was Deep Fates. Deep Fates is this like kind of mysterious character and replicate. Replicate is very cool company and both was part of it. Um, so, okay, one thing I want to get on there before I go into like sort of the the the the sort of omniper is we added cats, we added sloths, very cool, very cute, very fun.
+</details>
+<h3 id="主力应用场景与未来展望" data-reading-heading="">主力应用场景与未来展望</h3>
+<blockquote>
+<blockquote>
+<p>能否启发一下大家，除了演示之外，有哪些更偏向主力生产的实际用例？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh, what are the, you know, inspire people as to like what are the more sort of workhorse use cases that maybe are not just demos, you know?
+</details>
+<blockquote>
+<blockquote>
+<p>好的。显而易见，该模型的核心主打能力——或者说有两点：其一，是能够以任意内容作为输入，并在另一端输出视频。当然在未来，正如我们此前预告过的，我们也希望输出其他模态；但本质上这意味着，你可以用一组现有的图片作为故事板，可以用一段音频作为角色说话的参考声音，然后在另一端生成视频。这在短片制作，或者像我们在 YouTube 上推出的 Shorts 等场景中，解锁了大量功能，能帮助创作者更轻松地制作内容。</p>
+</blockquote>
+</blockquote>
+<p>另一个重点显然是视频编辑。这也是让我们非常兴奋的一点，我们正在让它变得更简单，因为现在你可以直接使用自然语言输入一段视频，添加或删除某些内容。树懒当然是个有趣的例子，但我们显然也考虑过一些面向消费者的场景，比如你海滩度假拍的视频太嘈杂，你想去除噪点，过去你可能不会去处理，因为没有工具或者不知道该找什么工具。所以这是一个可以使用的场景。</p>
+<p>我们还看到许多人将其用于营销广告活动的物料制作，随着 API 的开放，我很期待看到更多此类用例。因为在第一方产品中我们显然无法看到全貌，但我非常期待大家开始在 API 中去探索这些方向。以上就是涌现出的一些高层面的应用。</p>
+<p>人们也用它来制作教学材料。是的，那非常令人兴奋。我想我们大家都探讨过对未来教育的憧憬：一切都可以为你量身定制，根据你的知识水平和喜欢的风格进行个性化适配，而这正是迈向那个方向的一步。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. So, so obviously the hero capability of the model or maybe there's two like one is the ability to kind of take in anything as input and then get video on the other side. Obviously in the future and and we've kind of talked about this as a pre-announce like we want to get the other output modalities out as well but basically what that means is you know you can take a set of images that you have as maybe a storyboard. You can take like an audio track as a reference of you know like a voice that you want a character to speak and then you can get a video on the other side. So like that just unlocks a whole bunch of things that you can do in like you know short film production or you know shorts we've launched on YouTube as well um to help creators kind of like create um content more easily. Um and then the other one is obviously video editing. Like that's another thing that we're really excited about that we're just making easier because now you can use natural language to take a video, you know, add something, remove something. Sloth is obviously like fun example. Um, but there there's obviously kind of there's consumer use cases that we kind of had in mind where, you know, you could take your beach vacation video that was too noisy and you want to clean up that noise. Maybe in the past you wouldn't have because you didn't have the tools or you didn't know what the tools were that you needed to go to. So, that's one use case that you can, you know, go to. We've seen a lot of folks use it for kind of marketing ad campaign creation and I'm excited to see more of those use cases as we launch the APIs. um because obviously like we don't we don't see all of it in the first party products but I'm really excited for people to start to explore that um in the API. So those are just some of the kind of like high level um things that have come up. U people also use it to create like education materials. Yes. Um and like like that's really exciting. I think we're all we've all kind of talked about being excited about the future of education where like everything can be kind of customized to you and personalized to your knowledge level and the style that you prefer and and so this is kind of just like a step in that direction.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，我昨天其实刚用了一下，不过我父母正好来访，碰到了一个非常有趣的用例。他们从亚马逊上买了一款心仪的小工具，说明书却只有英文，里面还有大量的图表示意。我拍了张照片，对它说：“把这个翻译成罗马尼亚语，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I I I sort of actually used just none of yesterday, but my my parents are visiting and there was there was a very fun sort of use case. They I bought some gadget off from Amazon that they wanted and the instructions to use it was were only in English and there was plenty of diagrams or whatever and I took a picture of it and said, you know, translate this into Romanian. Yes.
+</details>
+<blockquote>
+<blockquote>
+<p>并且保持其他所有内容完全不变”，对吧？效果太惊艳了，看起来完全一模一样，而且翻译得非常到位。大体上是这样，不过底层使用的其实就是 Gemini——</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And keep everything else the same, right? So it was amazing, right? Like it was just like, yeah, it looks identical and it has, you know, it's perfectly translated. I mean, more or less, right? But it's it's you know using Gemini under the hood
+</details>
+<!-- chunk 2/8 -->
+<p>显然，去做那种翻译。所以你也能看到视频方面的这种用例，对吧，比如 Omni 里的文本渲染能力确实达到了非常高的水平。所以你可以想到很多用例，比如文本渲染、翻译、内部化/本地化，各种对很多人真正有用的事情，以及更广泛的应用途径，比如你可以给视频重新配音，或者无论你想做什么。能想到的事情有很多。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+obviously to kind of do the translation and so you can you can see this use case for video as well right like the the power of text rendering in in in Omni is is quite next level. So and you could you could you could think about plenty of use cases of like both text rendering translation internalization all sorts of things that would be actually genuinely useful to a lot of different people and sort of broader access to either you could like redub a video or whatever it is that you wanted to do. like there's plenty of different things that you could you could think about doing.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。在我播客中进行的最具启发性的对话之一，就是和处于这些领域前沿的人、研究人员交谈。我和 xAI 视频团队（Grok 视频团队）的 Ethan 聊过一次，他基本上在说，下一波趋势实际上不仅仅是单一模型，更像是视频智能体（video agents）。我不知道这个术语是否能引起共鸣，显然这对强化学习非常相关。但这基本上有点像放弃尝试实际上一遍过搞定所有事情。你也有同感吗，还是说趋势朝哪个方向发展仍然是一个悬而未决的研究问题？[喷笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Um one of the most enlightening conversations I have on my podcast is with uh just people researchers at the frontier of these things. Um I had one with um Ethan from the XAI video team, the Grock video team who was basically saying like you know the next trend is actually not just like single model, it's more like video agents. Um, and I don't know if that terminology resonates uh obviously for for very relevant for RL. Uh, but it was it was basically kind of like giving up on like trying to do everything in in effectively one pass. Um, do you feel that same way or is it still an open research question which way the trends are going? [snorts]
+</details>
+<h3 id="视频基础模型与因果表征" data-reading-heading="">视频基础模型与因果表征</h3>
+<blockquote>
+<blockquote>
+<p>是的。最让我感到兴奋的，实际上是符号类的基础模型和这种视频基础模型能够真正协同工作。在某种程度上，如果你看生成式图像生成、视频生成的开端，很多其实始于语言模型足够好、能够提供非常详尽的描述文本（captioning），比如 Stable Diffusion 时代或 DALL-E 2 时代。所以，语言是一种极其有用的表征。一是它具有某种普遍性，但另一个更偏技术的点——也就是我的假设——是机器学习中一件非常困难的事情是这种虚假相关（spurious correlation）。你不知道这种具有预测性的特征到底是不是因果因素。有两种途径：一种是我们拥有极其多样化的训练数据，来自因果图的每一次干预；另一种是对因果信息进行条件约束，而用语言进行条件约束，某种程度上就像是在对世界的因果信息进行条件约束。所以……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. So um what kind of excite me most is really when the symbolic kind of foundational models and this kind of like video foundational model can actually kind of really work together and u in a way the if you look at the beginning of the generative sort of like image generation video generation a lot of it kind of started when the language model got good enough to provide a very detailed captioning like from stable fusion days or kind of dowi 2 days. So um so basically like language is extremely u helpful representation uh one is that it's kind of universal but the other kind of more um technical thing like kind of my hypothesis is like um one very difficult thing about machine learning is um this sort of like spirious coordination. So you don't know you know if the if this kind of feature right that's kind of predictive is actually causal factor or not. There are two ways. One is we can have really diverse data training data like from every intervention of the causal graph. The other is you condition the causal information and conditioning the language is kind of like conditioning like a coal information of the of the kind of world. So um
+</details>
+<blockquote>
+<blockquote>
+<p>也就是 prompt 或者概念？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; which is a prompt or a concept what
+</details>
+<blockquote>
+<blockquote>
+<p>对，没错。所以如果你看我们如何去描述这段视频、这种图像，实际上非常贴近你会如何描述背后的这种因果关系，也就是它是如何生成的。因此，一方面这确实能带来极其丰富的泛化能力，并且能造就一个出色的模型。另一方面，八个月前我们发布了一篇评测论文，题为《视频模型作为零样本学习者与推理者》（Video Models: Zero-shot Learners and Reasoners）。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah exactly so if you look at like you know how we going to describe this video how this kind of image is actually very close to you know how would describe this kind of causality you know behind this like how this is kind of generated. So one is like that can really allow for very rich generalization and then uh very kind of just like a good model. Um the other is so eight months ago uh we put the evaluation paper called video models zero shot learners and reasoners.
+</details>
+<blockquote>
+<blockquote>
+<p>对。那篇论文已经确认发表了。后来 N-Banana 团队跟进了一篇 Vision Banana 论文，基本上就是用 N-Banana 来做的。但核心思想是，视频模型在处理时空信息方面是一种极其优秀的基础模型。所以许多经典的计算机视觉任务都可以实现零样本。当你输入一个视觉测试题时，它能够去解答——当然绝对还有很多需要改进的地方——并且在机器人学这类场景中，它展现出了非常好的物理直觉，就像世界模型一样。我认为关键确实在于将视觉推理和文本推理交织在一起。显然，究竟是做成统一模型，还是仅仅做成智能体协作，我认为这会是一个渐进的过程。我设想最终所有东西都会融合进单一模型里。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. So that was a kind of you know it's it's a confirmed paper and then later on actually the N banana team followed up with a vision banana paper that basically used n banana to do but essentially the idea is uh video model is extremely good sort of a foundation model for space and time kind of information. So um classic computer vision tasks a lot of could be kind of zero shorted and when you like say feed in some like a visual quiz uh it can you know there's definitely like a lot to improve it can kind of solve and it can um like robotics kind of like seeing it has really good kind of physical intuitions like word model uh and I think the the key is really the kind of mix of the visual kind of reasoning and then the text kind of reasoning kind of all tied together Um obviously you know like whether doing it you know as kind of unified model versus like just kind of agent coation I think that's more like uh it's going to be more kind of incremental you know how it's going to I imagine everything's going to go into like a single model eventually
+</details>
+<blockquote>
+<blockquote>
+<p>但眼下，如果你把非常出色的视频理解、图像理解以及 Gemini 以智能体的方式与 Omni 结合起来，其实能做的事情非常多。我们的团队也正在这方面进行大量的探索。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; but right now there's like a lot you can do if you uh basically take like really good video understanding image understanding Gemini agentically with anomy and that's actually gonna yeah our team is like exploring a lot
+</details>
+<h3 id="单一模型演进与模态迁移" data-reading-heading="">单一模型演进与模态迁移</h3>
+<blockquote>
+<blockquote>
+<p>好，这里面包含的信息量很大。我觉得我越来越感到好奇的一个问题是：对你们来说，一切最终都会走向单一产品吗？现在你们推出了多个模型，Omni 这个命名确实暗示了最终一切都会消失、合并进 Omni 系列中。这是目前的规划吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah okay that there's a there's a lot in there um I I think uh one question I I am increasingly starting to wonder is does it all trend towards one product for you guys right like now you have multiple models out the naming of omni does imply that eventually everything will go away and it just goes into omnis um is that the plan
+</details>
+<blockquote>
+<blockquote>
+<p>会这样吗？[笑] 我不知道，我想也许吧。我的意思是，我认为最终……我认为在工程、研究和产品上存在各种不同的权衡。出于同样的原因，比如……抱歉，它是叫 Nano Banana Light 吗？我不知道具体产品名称叫什么。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; is it [laughter] I don't know I I think I think uh maybe I mean I think eventually I I think there's sort of different trade-offs engineering research product trade-offs in like it's like for the same reason like the the sorry how is it called nano banana light I don't know what the product name
+</details>
+<blockquote>
+<blockquote>
+<p>Nano Banana Tight。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; nanob banana tite
+</details>
+<blockquote>
+<blockquote>
+<p>Nano Banana 2 Light，对。它服务于特定的细分场景，对吧？它未必适合立刻塞进与那个能做 4K 30 秒视频的模型完全相同的模型 checkpoint 里，对吧？它们可能无法以完全相同的方式进行训练，对吧？所以我不知道，这取决于你看多长远的未来。当然，从现在起五年后，它们会全部变成同一个模型吗？很可能。但六个月后，我们可能仍然会有多个不同的模型在做不同的事情，因为从务实角度来看，这些权衡决定了我们应该保留多种不同类型的模型。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; nano banana too light yeah right it's it's it's it serves a particular niche right and it probably doesn't necessarily fit immediately in the same model literally checkpoint as uh something that can do 4K you know uh 30 secondond videos right like they're probably not like trainable in the same quite way, right? Like, so I I don't know. It depends on how how far into the future you look like. Sure, in five years from now, will they all be the same model? Probably. Uh but like, you know, six months from now, we'll we'll probably still have, you know, multiple different models doing different things because kind of from pragmatically the trade-offs are such that we we should have multiple different kinds of models.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，我……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, I
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得没错。顺着这一点来说，我们确实把它命名为 Gemini Omni，因为我们希望暗示未来的方向，也就是 Gemini 会变成完全端到端的多模态输入和输出，对吧？所以这绝对是朝那个方向迈出的一步。我认为我们很可能会看到它朝着 Omni 也能生成图像、编辑图像以及处理所有这类事情的方向发展。但 Doo 说得对，我认为在走向那一步的过程中，其中一些更专用的模型有着一系列非常非常有用的应用。所以我们可能也会继续在这些模型上投入，因为这满足了现阶段的某种需求，而这种需求在一年后可能就不存在了。此外还有一个研究问题，就是不同模态之间究竟存在多少迁移（transfer），对吧？我想可能有人会相信写代码和视频生成之间存在某些迁移，而我觉得大多数人未必这么认为，但你可以尝试去设想那里可能存在某种联系；或者把它们放在一起、试图同时学习这两项任务可能是一种浪费。所以我认为这是一个有趣的问题：图像和视频之间显然存在某种迁移，它们差别没有那么大；同时学习输出视频和音频是有价值的，因为音画联合本来就是自然形态。此外还有其他一些不是那么显而易见的模态交叉，比如 3D 表征与编程，不知道，也许有诸如此类的东西。所以我认为探索其中的不同切入点是值得的，我们也在积极地做这件事，重点放在人们真正想用这些模型来做什么上。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think that's right. And and just on that note, I mean, we did call it Gemini Omni because we wanted to hint at the future where Gemini just becomes fully multimodal in and out, right? And so so it's definitely a move in that direction. I think we'll probably see a move in the direction where Omni also generates images and edits images and all those kinds of things. But Doo is right that I think on the way there, there's a bunch of really really useful applications of some of these more specialized models. And so we we will probably continue to work on those as well because like that serves a certain need at this point in time that may not exist you know a year from now. There's also like a research question about like just how much transfer there is between different kinds of modalities, right? I think you may believe that there's some transfer between coding and video generation and I think most people don't necessarily believe that but they you know you could try to think that there is some some there something there or it could be a waste right to put them together to try to learn these both tasks at the same time right so I think it's it's it's interesting sort of question to which extent like image and video obviously kind of there's some transfer like kind of not that different there's value in in learning to output video and audio at the same time because joint audio visual is you know that's how that's how it is. Um and then there's you know other kind of intersections of modalities that are not super obvious right like 3D representation coding I don't know maybe uh things like that right so like I think it's worth sort of exploring the different corners there and we are actively doing that um with a focus towards like what people actually want to do with these models
+</details>
+<blockquote>
+<blockquote>
+<p>对。有一件事让我感到有些意外，但同时也觉得尚未得到充分的解答，那就是：什么是正确的中间表征？比如描述文本（captioning），对吧？xAI 在做 captioning，Omni 也在做 captioning。我理解 captioning 在图像上是如何运作的，也理解你可以把它拓展到视频中并在时间维度上进行引导。只是这感觉非常低效，一定有……我觉得应该有更好的东西。也许是代码，也许我们生成……显然我认为很多视频是通过 FFmpeg、Matplotlib 以及——那个 3Blue1Brown 做的叫什么来着——Manim，很多视频是通过代码生成的，也许那就是最优的表征。关于它是否更好，或者单纯用英语就足够了（all you need），有什么假设吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah um what one thing I feel I feel like uh I'm surprised by but also I feel like it's insufficiently answered is what is the correct intermediate representation Um, so captioning, right? XI does captioning. Omni does captioning. Um, and I I I understand how captioning works for images. Um, and I understand that you can extend it into to video and and sort of guide it across time. It just feels very inefficient. It there's got to be I feel like there should be something better. Uh maybe it's code and maybe we generate you know and obviously I think a lot of um ffmpeg and mapplot um what's the three blue one brown one manm um a lot of like video is generated through code and maybe that's like the optimal representation uh any hypothesis as to like is is it better or is just English all you need
+</details>
+<blockquote>
+<blockquote>
+<p>这个嘛，鉴于……我处于</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; well as so I'm in the
+</details>
+<!-- chunk 3/8 -->
+<p>Gemini，他们知道我们做了很多强化学习智能体（RL agent），当然也有编程方面的工作，所以是的，我们确实在探索代码表示形式。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>Gemini and they know we do like a lot of RL agent and of course kind of coding so yeah We we're definitely exploring the coding representations.</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; Yeah.</details>
+<blockquote>
+<blockquote>
+<p>作为一种更好的表示方式。是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; As kind of better kind of way to represent. Yeah.</details>
+<blockquote>
+<blockquote>
+<p>但是，你知道，你的概率估计是多少，比如［笑声］如果我们只输出二进制代码，比如我们只是，你知道，输出纯粹的 0 和 1 呢？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; But you know like do you what's your probability estimate on like [laughter] if we just output binaries like we just you know like just it's just ones and zeros.</details>
+<blockquote>
+<blockquote>
+<p>嗯，我想类似的一个讨论基本上是，语言是否是正确的表示形式，对吧。比如，一个问题是，比如有的教授会问，为什么思维链（channel of thought）必须用自然语言？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; Um I I guess maybe a kind of similar discussion was like um basically is the language the right representation like right. So uh one kind of question for example uh professor you know like some ask is like you know why why does the channel of thought need to be in the natural language?</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; Yes.</details>
+<blockquote>
+<blockquote>
+<p>它能不能就只是某种连续的标记（continuous tokens），纯粹是某种量的额外计算？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; Can it just be the kind of any kind of like continuous tokens just any amount of you know additional computations.</details>
+<blockquote>
+<blockquote>
+<p>嗯，一方面显然测试阶段的自适应计算（test-adaptive compute）会带来更好的结果。确实是这样，但真正让思维链行之有效的原因是——你知道，四年前我写了《Large Language Models are Zero-Shot Reasoners》，然后是自我改进（self-improvement）。所以我很早就知道这一点，但它真正起效的原因是，目前行之有效的方法是大幅扩展预训练，而这基本上学到了大量的智能。现在有很多扩展强化学习（scaling RL）的研究，但那些要提取信息仍然是极其计算密集型的。你真正希望智能依赖于预训练，所以基本上通过将推理绑定在自然语言上，你就直接利用了预训练中的智能；而如果你去掉了这种约束，你就无法做到这点。最近我觉得不仅在文本领域有很多进展，在多模态领域的进展很大程度上也是由文本作为一种绝佳的表示形式所推动的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; Um so one is like obviously the test like adaptive compute is going to give like you know better results. So it's that but what really kind of made CH thought so you know like four years ago I wrote you know the larger model zero sort reasoner and then self-improvement. So I kind of know from the very early day but the reason like it works really well is um right now the recipe that works is the pre-training that scales a lot and then that basically like learns a lot of intelligence. there are a lot of you know scaling RL but those are still like extremely kind of comput incent intensive to extract the information and um you really want to rely the intelligence on that so basically by tying the sort of like a reasoning in the natural language you basically directly use the intelligence of the pre-training to it while if you remove that kind of constraints then you're not um and these days uh I feel the a lot of advancements in the texts but also doing this kind of multimodal space is very driven by this uh kind of text as a kind of great uh sort of representation.</details>
+<blockquote>
+<blockquote>
+<p>是的，它是一个很好的骨架。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; Yeah, it's a good backbone.</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; Yeah,</details>
+<blockquote>
+<blockquote>
+<p>我觉得对我来说甚至比那更简单。文本就是我们沟通的方式。所以从根本上讲，如果你正在构建人类要与之交互的产品，如果是文本界面，我们无论如何都会以某种方式使用文本，对吧？虽然不是所有事物都如此。所以我认为默认采用文本是很自然的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; I I think to me it's even simpler than that. It's text is is how we communicate. So I think fundamentally if you're building kind of products that humans will be interfacing with um like like that we will be using text somehow if it's a text interface, right? Not not for everything. So I think it's it's natural to default to that.</details>
+<h3 id="世界模型与多模态表示" data-reading-heading="">世界模型与多模态表示</h3>
+<blockquote>
+<blockquote>
+<p>是的。显然有一些讨论，你知道，一些强化学习极大主义者（RL maximalists）会说，哦，我们不在乎这类通道之类的东西，它就只是额外的计算。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; Yeah. Obviously there's like a conf discussion you know some arrow like arrow maximalists is like oh we don't care about you know kind of channel those kind of like stuff it's just just additional compute</details>
+<blockquote>
+<blockquote>
+<p>当然，但我个人……是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; sure but I personally yeah</details>
+<blockquote>
+<blockquote>
+<p>强化学习极大主义者，我想知道谁符合这个描述，David Silver？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; ro maximalists I wonder I wonder who who qualifies in that description David silver</details>
+<blockquote>
+<blockquote>
+<p>啊，好的，是的。他们刚刚离开去创办自己的项目了。很有意思。好的，我是说，我对更好的表示形式非常感兴趣，因为我觉得这是我们今天在世界博览会上策划的主题之一，也就是世界模型。你提到了“世界模型”这个词，但它并不是一个被非常唯一定义的概念。我觉得大家都在趋向于某种理想中的版本。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; ah okay yeah I mean they they've just left to to start their thing um interesting okay so uh I I mean I think I'm very interested in just like better representations because I think that's one of our themes that we're curating today uh at the world fair is world models. You mentioned the word world models but it's not something that's like super well defined. I think everyone's like sort of converging on some version of it that is like the ideal.</details>
+<blockquote>
+<blockquote>
+<p>当然。现在什么都被称为世界模型了。它有点像……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; Sure. Everything is a world model now. It's sort of a</details>
+<blockquote>
+<blockquote>
+<p>这就没那么有用了，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; it's not it's not that useful, right?</details>
+<blockquote>
+<blockquote>
+<p>我刚刚在 ICLR 世界模型研讨会上发表了主题演讲。是的。基本上，我非常建议大家去看看 Jitendra Malik 给出的定义。他是加州大学伯克利分校计算机视觉领域的元老级教授。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; So I just gave a keynote at the IER world model workshop. Yeah. And then uh yeah essentially uh I definitely encourage to check out the definition by Jandra Matic. He's like the you know OG computer vision professor UC Berkeley.</details>
+<blockquote>
+<blockquote>
+<p>关于世界模型，他确实有一些很有分量的话要说。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; Uh he has pretty you know bit of word to say about world model</details>
+<blockquote>
+<blockquote>
+<p>但也可以看看 Schmidhuber 在 1990 年左右是如何定义世界模型的，基本上就是基于模型的（model-based）。对我来说，世界模型基本上就是基于模型的强化学习中的模型，我觉得这足以用来描述它，但显然……Fei-Fei 写过一篇不错的博文，剖析了这个问题。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; but also kind of Schmidt Herburver's kind of how he defined the world model from 2019 like 1990 sort of uh uh you know like Wayne was just basically just that kind of model base. Uh for me the word model is basically just the model in the model based RL and I feel that has sufficient to describe but obviously you know there are like a lot of uh FE had a kind of nice blog post about what about yeah this kind of broken down</details>
+<blockquote>
+<blockquote>
+<p>嗯，但是是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; um but yeah</details>
+<blockquote>
+<blockquote>
+<p>是的，我是说，我先结束这部分的讨论，但我确实认为，把语言当作万物穿过的窄通道来依赖，仍然是一种有损压缩。不，不，不。但我们并没有这样看，对吧？我们基本上是在说视频模型和语言模型结合在一起。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; yeah I mean so you know I I'll end this part of the conversation but like I I do think that language to me relying on language as like the sort of like the narrow pipe through which everything goes through um still is like a lossy compression. No, no, no. But we're not seeing that, right? We're basically saying the video model and the language together.</details>
+<blockquote>
+<blockquote>
+<p>所以，我认为单靠语言是不够的。这就是为什么我们觉得视频是一种非常互补的模型。对吧？现在很多人把 Video Omni 看作只是用来生成漂亮的视频，但我认为我们的愿景远不止于此。它是一个缺失的基础模型，如果你想打造能够媲美人类而非仅仅是单一领域的通用人工智能（AGI），它是绝对必须的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; So, so I think the language alone is uh not sufficient. That's why we feel like the video is a very complement model. Right? Now the um you know kind of v omni many people feel as uh you know generating kind of pretty videos but I think our vision it's it's much more than that. It's a missing foundational model that's absolutely required if you want to make the AGI that match to humans not just a jacked one.</details>
+<h3 id="从视觉理解到生成的研究演进" data-reading-heading="">从视觉理解到生成的研究演进</h3>
+<blockquote>
+<blockquote>
+<p>是的。好的。另一件事，你在视觉方面也提到了，我很好奇就你们的研究生涯而言，这种发展在某种程度上是怎样平行的。比如，我认为基本上很多做视觉的人都跨界去做了更多的模型，很多做视觉的人也变成了做生成式视频和图像的人。这是否就像把“图像到文本”反过来变成现在的“文本到图像”那么简单，比如……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; Yeah. Um okay. So one one other thing you know you you mentioned on the vision side um and I'm kind of curious how sort of uh parallel you know in terms of your research careers um this development is like I think basically a lot of vision people have crossed over into more model people um a lot of vision people also become generative video and image people and is it just as simple as you know reversing uh image to text and then now it's text to image like</details>
+<blockquote>
+<blockquote>
+<p>［笑声］</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; [laughter]</details>
+<blockquote>
+<blockquote>
+<p>如果……我是说，这在实际上就是扩散过程（diffusion process）。我只是看到与我交流过的人的职业路径，看到了研究方向的这个总体趋势，我只是想让你们两位反思一下这一点。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; is is that if I mean that effectively was the diffusion process. Um I I just you know I I just see the career paths of the people that I talked to and and see and I I I see this overall trend of research directions and I just wanted you to guys to sort of reflect on on that.</details>
+<blockquote>
+<blockquote>
+<p>我的确是走的那条路，对吧。我很久以前开始做计算机视觉，做目标检测、识别之类的事情。我认为那只是更简单的问题，对吧。生成就是更难，它是不同类型的映射，对吧。逆向映射并不像把你用的网络反转过来那么简单，对吧？它更加模糊，比如从“猫”这个词生成一张猫的图像。而且在某些方面它也是一个闭环，因为你的视觉工作会创造合成标签，进而继续……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; I mean I certainly went that way right I I started long time ago uh doing computer vision sort of object detection recognition things like that. Uh I think just that's just simpler problem right just generation is just harder like it's a it's a different kind of mapping right you map from the the inverse mapping is not as simple as just inverting the the kind of network you use right it's it's a it's it's more ambiguous right to go from cat to image of a cat and in some ways it's also a loop because your vision work creates the synthetic labels that then continues</details>
+<blockquote>
+<blockquote>
+<p>当然［笑声］。我不知道，我试图去验证我关于领域如何发展、职业生涯如何在这个过程中演进的理论。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; I mean sure [laughter] I don't know I don't know I try to validate my my sort of theories about how fields develop how how careers has progressed through this</details>
+<blockquote>
+<blockquote>
+<p>理解端做得越好，我们看到生成端也会变得越好，对吧，所以……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; I mean for like the the the better the understanding side gets like we have seen that the generation side also gets better right so like like</details>
+<blockquote>
+<blockquote>
+<p>这完全是自举（bootstrapping），是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; it's completely bootstrapping yeah it's</details>
+<blockquote>
+<blockquote>
+<p>所以这个论点绝对是成立的。而且我想，是的，我认为很多人确实有这种转变。我确实与很多从图像理解转到图像生成的人共事过，然后其中一些人又转向了视频，因为视频就像是下一步，有更多的维度可以处理。所以我很好奇你的……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; and so like like like there's definitely they're there to that thesis and I think yeah I think a lot of people have kind of like I I definitely worked with a lot of um image understanding people who became image generation people you know and then some of them have moved on to video because it's kind of like the next thing where you have so many more dimensions to work with so yeah I'm curious about you spec as your</details>
+<blockquote>
+<blockquote>
+<p>所以我非常建议从理解和识别开始，因为那基本上就是判别器，随后会带来更好的生成，而其中的桥梁基本上就是强化学习。我的历程是，我最初从事生成对抗模型（GAN）的算法研究，做一些类似 MNIST 的生成，然后我从事强化学习和机器人技术。大约六年前，我领导了一个灵巧操作（dexterity）方面的登月项目，那时还很早，但我看到现在大家都在做。四年前，我基本上意识到这种符号化 AGI 的发展速度将远远快于物理世界的 AGI 对应物。所以我决定转向语言模型等方向。最近我和 Doomi 以及 Omni 团队合作，我非常享受那里的合作。我非常喜欢、也非常推荐研究人员去做的事情是，一定要去探索或者至少接触各个社区顶尖人物在关注什么、他们如何思考问题。所以当我看到视频模型时，它让我想起了很早期的语言模型，当时的早期语言模型就像是一种创意的演示，对吧，你试着写个故事，比如像 GPT-2 以及那个时期的 LSTM 之类的……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>&gt;&gt; so I definitely like recommend start with understanding recognition because that's basically discriminator and then that's going to lead to better generation and that's what the bridge is basically reinforcement learning so my um my kind of journey is I initially kind of worked on the algorithmic research in the gent model against some like you know amnest kind of generation and then I worked on like RL and robotics um and then like six years ago I was like leading like a moonshot on the dexterity it was pretty early but I see now everyone's kind of doing uh four years ago I basically kind of figured out that this like symbolic AGI is going to accelerate much faster than the kind of physical AGI kind of counterpart. So uh I decided to kind of like language models and then those things. Um and then recently kind of work with Doomi and then like omni team I quite enjoy kind of collaboration there. the what I quite enjoy uh what I recommend definitely to the researcher is to uh definitely kind of explore or at least like get exposure to what the top people in each of the community are like looking at how they kind of think about problems. So when I look at the video model to me it kind of reminds me like pretty early on sort of like language model where like very early language model was a kind of creative sort of demo right you kind of like try to write like a story like mobile and then like you know GBD2 and then those kind of days like LTM kind of</details>
+<!-- chunk 4/8 -->
+<h3 id="视频模型与多模态统一的路径" data-reading-heading="">视频模型与多模态统一的路径</h3>
+<p>……时期，对吧。然后，你知道，做指令微调（instruction tuning）确实能让它在某种程度上用作聊天机器人，但在聊天机器人那个阶段，它仍然有非常多的幻觉，指令遵循（instruction following）能力也不够好，所以没法用于推理。而当在预训练和用于推理的后训练中做得足够好之后，你知道，这种测试时扩展（test-time scaling）和强化学习（RL）确实爆发了，催生了许多表现最好的模型。现在我认为视频模型就像我们之前提到的，它是一个互补的基础模型，我可以想象它会沿着类似的路径演进：它的指令遵循能力会大幅提升，在减少幻觉方面也会大幅改善，以至于演变成一个非常可靠的世界模型，这样我们就可以把类似视频的时空模拟与文本模拟结合起来，去解决任意的 AGI 问题。而且我认为，文本模型与图像、视频模型之间的区别仍然在于，我们在多媒体领域似乎还没有真正把理解与生成统一起来。我的意思是，当然这取决于你从哪个层面去思考这个问题，但总体而言，据我所知，并没有那么多前沿模型能够真正同时擅长视频的理解和生成，对吧？这是一个有趣的挑战。我并不是说我们一定要这么做，但我认为这在逻辑上是站得住脚的，也就是理解和生成是同一枚硬币的两面，所以在某种程度上它们应该被整合在同一个模型里。但我们并不一定总是这么做。所以，是的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+ days
+<p>right</p>
+<p>and</p>
+<p>then</p>
+<p>you</p>
+<p>know</p>
+<p>uh</p>
+<p>instruction</p>
+<p>tuning</p>
+<p>you</p>
+<p>actually</p>
+<p>kind</p>
+<p>of</p>
+<p>make</p>
+<p>it</p>
+<p>usable</p>
+<p>as</p>
+<p>a</p>
+<p>chatbot</p>
+<p>but</p>
+<p>then</p>
+<p>at</p>
+<p>the</p>
+<p>chatbot</p>
+<p>stage</p>
+<p>it</p>
+<p>still</p>
+<p>had</p>
+<p>so</p>
+<p>much</p>
+<p>hallucinations</p>
+<p>and</p>
+<p>instruction</p>
+<p>for</p>
+<p>wasn't</p>
+<p>good</p>
+<p>enough</p>
+<p>so</p>
+<p>it</p>
+<p>couldn't</p>
+<p>use</p>
+<p>for</p>
+<p>reasoning</p>
+<p>and</p>
+<p>when</p>
+<p>I</p>
+<p>got</p>
+<p>good</p>
+<p>enough</p>
+<p>um</p>
+<p>in</p>
+<p>pre-training</p>
+<p>and</p>
+<p>post-</p>
+<p>trainining</p>
+<p>for</p>
+<p>reasoning</p>
+<p>then</p>
+<p>you</p>
+<p>know</p>
+<p>this</p>
+<p>kind</p>
+<p>of</p>
+<p>test</p>
+<p>time</p>
+<p>scaling</p>
+<p>the</p>
+<p>RL</p>
+<p>really</p>
+<p>took</p>
+<p>off</p>
+<p>to</p>
+<p>like</p>
+<p>many</p>
+<p>of</p>
+<p>the</p>
+<p>kind</p>
+<p>of</p>
+<p>best</p>
+<p>performing</p>
+<p>models</p>
+<p>and</p>
+<p>right</p>
+<p>now</p>
+<p>I</p>
+<p>think</p>
+<p>the</p>
+<p>video</p>
+<p>model</p>
+<p>is</p>
+<p>as</p>
+<p>we</p>
+<p>mentioned</p>
+<p>it's</p>
+<p>it</p>
+<p>is</p>
+<p>a</p>
+<p>complimentary</p>
+<p>foundational</p>
+<p>model</p>
+<p>and</p>
+<p>I</p>
+<p>can</p>
+<p>imagine</p>
+<p>it's</p>
+<p>going</p>
+<p>to</p>
+<p>follow</p>
+<p>a</p>
+<p>similar</p>
+<p>path</p>
+<p>it's</p>
+<p>going</p>
+<p>to</p>
+<p>be</p>
+<p>very</p>
+<p>uh</p>
+<p>it's</p>
+<p>going</p>
+<p>to</p>
+<p>improve</p>
+<p>a</p>
+<p>lot</p>
+<p>instruction</p>
+<p>following</p>
+<p>a</p>
+<p>lot</p>
+<p>of</p>
+<p>uh</p>
+<p>this</p>
+<p>it's</p>
+<p>going</p>
+<p>to</p>
+<p>improve</p>
+<p>a</p>
+<p>lot</p>
+<p>in</p>
+<p>reducing</p>
+<p>coordinations</p>
+<p>to</p>
+<p>extend</p>
+<p>that</p>
+<p>it</p>
+<p>become</p>
+<p>a</p>
+<p>very</p>
+<p>reliable</p>
+<p>world</p>
+<p>model</p>
+<p>so</p>
+<p>we</p>
+<p>can</p>
+<p>kind</p>
+<p>of</p>
+<p>like</p>
+<p>intermixed</p>
+<p>video</p>
+<p>like</p>
+<p>space-time</p>
+<p>simulation</p>
+<p>was</p>
+<p>a</p>
+<p>text</p>
+<p>simulation</p>
+<p>to</p>
+<p>solve</p>
+<p>like</p>
+<p>arbitrary</p>
+<p>AGI</p>
+<p>problems.</p>
+<p>Also</p>
+<p>like</p>
+<p>I</p>
+<p>think</p>
+<p>the</p>
+<p>difference</p>
+<p>still</p>
+<p>is</p>
+<p>between</p>
+<p>sort</p>
+<p>of</p>
+<p>text</p>
+<p>models</p>
+<p>and</p>
+<p>like</p>
+<p>image</p>
+<p>video</p>
+<p>models</p>
+<p>is</p>
+<p>that</p>
+<p>like</p>
+<p>we</p>
+<p>haven't</p>
+<p>quite</p>
+<p>unified</p>
+<p>understanding</p>
+<p>and</p>
+<p>generation</p>
+<p>in</p>
+<p>in</p>
+<p>multimedia</p>
+<p>I'd</p>
+<p>say</p>
+<p>yet</p>
+<p>like</p>
+<p>I</p>
+<p>mean</p>
+<p>I</p>
+<p>think</p>
+<p>I</p>
+<p>think</p>
+<p>without</p>
+<p>going</p>
+<p>to</p>
+<p>the</p>
+<p>details</p>
+<p>of</p>
+<p>course</p>
+<p>there's</p>
+<p>like</p>
+<p>it</p>
+<p>depends</p>
+<p>on</p>
+<p>on</p>
+<p>at</p>
+<p>which</p>
+<p>level</p>
+<p>you're</p>
+<p>thinking</p>
+<p>about</p>
+<p>this</p>
+<p>but</p>
+<p>generally</p>
+<p>like</p>
+<p>there's</p>
+<p>not</p>
+<p>that</p>
+<p>many</p>
+<p>as</p>
+<p>far</p>
+<p>as</p>
+<p>I</p>
+<p>know</p>
+<p>models</p>
+<p>sot</p>
+<p>kind</p>
+<p>of</p>
+<p>you</p>
+<p>know</p>
+<p>frontier</p>
+<p>models</p>
+<p>that</p>
+<p>are</p>
+<p>genuinely</p>
+<p>kind</p>
+<p>of</p>
+<p>good</p>
+<p>at</p>
+<p>both</p>
+<p>understanding</p>
+<p>and</p>
+<p>generation</p>
+<p>of</p>
+<p>of</p>
+<p>let's</p>
+<p>videos,</p>
+<p>right?</p>
+<p>Like</p>
+<p>it's</p>
+<p>a</p>
+<p>it's</p>
+<p>a</p>
+<p>it's</p>
+<p>an</p>
+<p>interesting</p>
+<p>challenge.</p>
+<p>I'm</p>
+<p>not</p>
+<p>saying</p>
+<p>that</p>
+<p>we</p>
+<p>should</p>
+<p>do</p>
+<p>this.</p>
+<p>Uh</p>
+<p>but</p>
+<p>but</p>
+<p>I</p>
+<p>think</p>
+<p>uh</p>
+<p>it</p>
+<p>kind</p>
+<p>of</p>
+<p>stands</p>
+<p>to</p>
+<p>reason</p>
+<p>that</p>
+<p>like</p>
+<p>you</p>
+<p>know</p>
+<p>understanding</p>
+<p>and</p>
+<p>generation</p>
+<p>are</p>
+<p>two</p>
+<p>sides</p>
+<p>of</p>
+<p>the</p>
+<p>same</p>
+<p>coin.</p>
+<p>So</p>
+<p>they</p>
+<p>they</p>
+<p>kind</p>
+<p>of</p>
+<p>should</p>
+<p>be</p>
+<p>in</p>
+<p>the</p>
+<p>same</p>
+<p>model</p>
+<p>in</p>
+<p>some</p>
+<p>ways.</p>
+<p>Uh</p>
+<p>but</p>
+<p>we</p>
+<p>don't</p>
+<p>necessarily</p>
+<p>always</p>
+<p>do</p>
+<p>that.</p>
+<p>So</p>
+<p>yeah.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>你也提到了音频，对吧？是的。它有视频那么难，还是在本质上有所不同？如果是的话，在哪些方面不同？三年前一个有趣的方向是大家开始用……我想是用扩散模型来做音频，也就是类似 Riffusion 的那种方法。我不知道你们有没有看过。我只是觉得这非常有趣：如果我们人类感知中的一种模态——音频——与视频不同，但对机器来说，实际上完全是一回事，就像它们看两者没有任何区别。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh
+<p>you</p>
+<p>mentioned</p>
+<p>audio</p>
+<p>as</p>
+<p>well,</p>
+<p>right?</p>
+<p>Yeah.</p>
+<p>Uh</p>
+<p>is</p>
+<p>that</p>
+<p>as</p>
+<p>hard</p>
+<p>as</p>
+<p>video</p>
+<p>or</p>
+<p>qualitatively</p>
+<p>different?</p>
+<p>If</p>
+<p>if</p>
+<p>so,</p>
+<p>in</p>
+<p>what</p>
+<p>way?</p>
+<p>Uh,</p>
+<p>one</p>
+<p>of</p>
+<p>the</p>
+<p>interesting</p>
+<p>directions</p>
+<p>three</p>
+<p>years</p>
+<p>ago</p>
+<p>was</p>
+<p>people</p>
+<p>using</p>
+<p>um,</p>
+<p>I</p>
+<p>guess</p>
+<p>diffusion</p>
+<p>to</p>
+<p>do</p>
+<p>audio</p>
+<p>uh,</p>
+<p>as</p>
+<p>in</p>
+<p>like</p>
+<p>the</p>
+<p>the</p>
+<p>sort</p>
+<p>of</p>
+<p>refusion</p>
+<p>approach.</p>
+<p>I</p>
+<p>don't</p>
+<p>know if</p>
+<p>you</p>
+<p>you</p>
+<p>guys</p>
+<p>saw</p>
+<p>that.</p>
+<p>Um,</p>
+<p>and</p>
+<p>I</p>
+<p>just</p>
+<p>think</p>
+<p>it's</p>
+<p>like</p>
+<p>very</p>
+<p>interesting</p>
+<p>if</p>
+<p>a</p>
+<p>modality</p>
+<p>that</p>
+<p>we</p>
+<p>perceive</p>
+<p>which</p>
+<p>is</p>
+<p>audio</p>
+<p>is</p>
+<p>different</p>
+<p>than</p>
+<p>video</p>
+<p>actually</p>
+<p>two</p>
+<p>machines</p>
+<p>is</p>
+<p>exactly</p>
+<p>the</p>
+<p>same</p>
+<p>like</p>
+<p>there's</p>
+<p>they</p>
+<p>see</p>
+<p>no</p>
+<p>difference.</p>
+</details>
+<h3 id="音视频联合生成的逻辑" data-reading-heading="">音视频联合生成的逻辑</h3>
+<p>我觉得在技术层面上确实有一些差异，但相对来说比较小。从我的角度来看，音频进入我的视线是在我们发布 V3 的时候，我认为那是第一个实现联合……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I
+<p>mean</p>
+<p>I</p>
+<p>think</p>
+<p>on</p>
+<p>a</p>
+<p>technical</p>
+<p>level</p>
+<p>there</p>
+<p>are</p>
+<p>some</p>
+<p>differences</p>
+<p>but</p>
+<p>I</p>
+<p>think</p>
+<p>they're</p>
+<p>like</p>
+<p>relatively</p>
+<p>minor.</p>
+<p>I</p>
+<p>think</p>
+<p>from</p>
+<p>my</p>
+<p>perspective</p>
+<p>audio</p>
+<p>came</p>
+<p>into</p>
+<p>into</p>
+<p>my</p>
+<p>life</p>
+<p>when</p>
+<p>we</p>
+<p>shipped</p>
+<p>V3</p>
+<p>which</p>
+<p>was</p>
+<p>I</p>
+<p>believe</p>
+<p>the</p>
+<p>first</p>
+<p>model</p>
+<p>that</p>
+<p>did</p>
+<p>like</p>
+<p>a</p>
+<p>joint</p>
+</details>
+<blockquote>
+<blockquote>
+<p>带着切金条之类的片段。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; with
+<p>the</p>
+<p>slicing</p>
+<p>of</p>
+<p>the</p>
+</details>
+<blockquote>
+<blockquote>
+<p>是的，是的，切金条之类的。它是第一个实现这种联合音视频生成的模型。是的。在……我的意思是，之前也有其他模型在底层做了一些类似智能体拼接的处理，但这个模型是真正做到了一次性生成所有内容。我们这么做的原因是因为我们觉得——而且我认为这是正确的选择——我们觉得只有把它们同时生成才合理，因为从机器学习的角度来看，存在一个潜在的、因果的生成过程，对吧？就像有什么东西在产生你在说话的动作，并不是先生成像素，然后音频再通过某种其他过程生成出来；嘴唇必须与音频同步运动，对吧？所以，我认为这解决了之前模型存在的很多问题，或者说解决了人们以前做视频生成的方式，以前的方式就像是：好，我们先生成像素，然后在上面硬凑一个东西，让嘴唇随着我们生成的音频动起来。那效果非常差。</p>
+</blockquote>
+</blockquote>
+<p>[笑声]</p>
+<p>所以，我认为那对我来说就是……我的意思是，在 V3 之后，人们就会觉得：“你模型里怎么会没有音频呢？这毫无道理，一旦有了音频，你就必须具备这项能力。”所以我认为那是正确的选择，把它们做进一个单一的生成模型里，我认为是正确的选择。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+<p>Yeah.</p>
+<p>the</p>
+<p>gold</p>
+<p>bars</p>
+<p>or</p>
+<p>whatever.</p>
+<p>Um</p>
+<p>it</p>
+<p>it</p>
+<p>was</p>
+<p>the</p>
+<p>first</p>
+<p>model</p>
+<p>that</p>
+<p>did</p>
+<p>this</p>
+<p>sort</p>
+<p>of</p>
+<p>joint</p>
+<p>audiovisisual</p>
+<p>generation.</p>
+<p>Yes.</p>
+<p>uh</p>
+<p>like</p>
+<p>in</p>
+<p>the</p>
+<p>in</p>
+<p>the</p>
+<p>I</p>
+<p>mean</p>
+<p>there</p>
+<p>are</p>
+<p>there</p>
+<p>were</p>
+<p>other</p>
+<p>models</p>
+<p>that</p>
+<p>did</p>
+<p>kind</p>
+<p>of</p>
+<p>you</p>
+<p>know</p>
+<p>kind</p>
+<p>of</p>
+<p>kind</p>
+<p>of</p>
+<p>agentic</p>
+<p>hacking</p>
+<p>under</p>
+<p>the</p>
+<p>hood</p>
+<p>but</p>
+<p>this</p>
+<p>one</p>
+<p>was</p>
+<p>truly</p>
+<p>sort</p>
+<p>of</p>
+<p>you</p>
+<p>know</p>
+<p>generating</p>
+<p>everything</p>
+<p>at</p>
+<p>once</p>
+<p>and</p>
+<p>we</p>
+<p>the</p>
+<p>reason</p>
+<p>we</p>
+<p>did</p>
+<p>that</p>
+<p>is</p>
+<p>because</p>
+<p>we</p>
+<p>felt</p>
+<p>and</p>
+<p>I</p>
+<p>think</p>
+<p>was</p>
+<p>the</p>
+<p>right</p>
+<p>choice</p>
+<p>we</p>
+<p>felt</p>
+<p>that</p>
+<p>like</p>
+<p>uh</p>
+<p>it</p>
+<p>only</p>
+<p>makes</p>
+<p>sense</p>
+<p>to</p>
+<p>generate</p>
+<p>them</p>
+<p>at</p>
+<p>the</p>
+<p>same</p>
+<p>time</p>
+<p>because</p>
+<p>there</p>
+<p>sort</p>
+<p>of</p>
+<p>kind</p>
+<p>of</p>
+<p>like</p>
+<p>from</p>
+<p>a</p>
+<p>machine</p>
+<p>learning</p>
+<p>perspective</p>
+<p>there's</p>
+<p>one</p>
+<p>latent</p>
+<p>kind</p>
+<p>of</p>
+<p>you</p>
+<p>know</p>
+<p>causal</p>
+<p>kind</p>
+<p>of</p>
+<p>you</p>
+<p>know</p>
+<p>generative</p>
+<p>process</p>
+<p>right</p>
+<p>like</p>
+<p>there's</p>
+<p>something</p>
+<p>that</p>
+<p>generates</p>
+<p>you</p>
+<p>speaking</p>
+<p>it's</p>
+<p>not</p>
+<p>the</p>
+<p>pixels</p>
+<p>and</p>
+<p>then</p>
+<p>the</p>
+<p>the</p>
+<p>audio</p>
+<p>or</p>
+<p>somehow</p>
+<p>somehow</p>
+<p>generated</p>
+<p>by</p>
+<p>some</p>
+<p>other</p>
+<p>process</p>
+<p>like</p>
+<p>the</p>
+<p>lips</p>
+<p>have</p>
+<p>to</p>
+<p>move</p>
+<p>in</p>
+<p>sync</p>
+<p>with</p>
+<p>with</p>
+<p>the</p>
+<p>with</p>
+<p>the</p>
+<p>audio,</p>
+<p>right?</p>
+<p>So,</p>
+<p>I</p>
+<p>think</p>
+<p>that</p>
+<p>that</p>
+<p>solved</p>
+<p>a</p>
+<p>lot</p>
+<p>of</p>
+<p>the</p>
+<p>issues</p>
+<p>that</p>
+<p>previous</p>
+<p>models</p>
+<p>had</p>
+<p>or</p>
+<p>the</p>
+<p>way</p>
+<p>that</p>
+<p>people</p>
+<p>did</p>
+<p>video</p>
+<p>generation</p>
+<p>before</p>
+<p>where</p>
+<p>it</p>
+<p>was</p>
+<p>like,</p>
+<p>okay,</p>
+<p>we</p>
+<p>generate</p>
+<p>the</p>
+<p>pixels</p>
+<p>and</p>
+<p>then</p>
+<p>we're</p>
+<p>going</p>
+<p>to</p>
+<p>hack</p>
+<p>something</p>
+<p>on</p>
+<p>top</p>
+<p>of</p>
+<p>it</p>
+<p>that</p>
+<p>like</p>
+<p>moves</p>
+<p>the</p>
+<p>lips</p>
+<p>with</p>
+<p>the</p>
+<p>audio</p>
+<p>that</p>
+<p>we</p>
+<p>generate.</p>
+<p>And</p>
+<p>that's</p>
+<p>was</p>
+<p>very</p>
+<p>bad.</p>
+<p>[laughter]</p>
+<p>And</p>
+<p>so,</p>
+<p>I</p>
+<p>think</p>
+<p>I</p>
+<p>think</p>
+<p>that</p>
+<p>was</p>
+<p>that's</p>
+<p>to</p>
+<p>me</p>
+<p>that's</p>
+<p>the</p>
+<p>the</p>
+<p>I</p>
+<p>mean</p>
+<p>after</p>
+<p>V3</p>
+<p>like</p>
+<p>you</p>
+<p>know</p>
+<p>people</p>
+<p>were</p>
+<p>like</p>
+<p>what</p>
+<p>do</p>
+<p>you</p>
+<p>mean</p>
+<p>like</p>
+<p>there's</p>
+<p>no</p>
+<p>audio</p>
+<p>in</p>
+<p>your</p>
+<p>model?</p>
+<p>like</p>
+<p>that</p>
+<p>makes</p>
+<p>no</p>
+<p>sense</p>
+<p>like</p>
+<p>once</p>
+<p>it's</p>
+<p>there</p>
+<p>like</p>
+<p>you</p>
+<p>you</p>
+<p>have</p>
+<p>to</p>
+<p>have</p>
+<p>it.</p>
+<p>So</p>
+<p>I</p>
+<p>think</p>
+<p>that</p>
+<p>was</p>
+<p>that</p>
+<p>was</p>
+<p>the</p>
+<p>right</p>
+<p>choice</p>
+<p>and</p>
+<p>doing</p>
+<p>it</p>
+<p>to</p>
+<p>one</p>
+<p>single</p>
+<p>generative</p>
+<p>model</p>
+<p>I</p>
+<p>think</p>
+<p>was</p>
+<p>was</p>
+<p>the</p>
+<p>right</p>
+<p>choice.</p>
+</details>
+<h3 id="感官体验与语言表达的局限" data-reading-heading="">感官体验与语言表达的局限</h3>
+<blockquote>
+<blockquote>
+<p>有一件事我也想问问你们的看法。我发现音频与图像、视频相比的一个不同之处在于，音频信息较少被语言化。我的意思是，文本转语音（TTS）之类的当然很简单，对吧，但是当你脱离这些，比如怎么去描述音乐？怎么去描述一个人说话的语气、音高？我觉得这方面的语言表达是匮乏的。有趣的是，你也会在其他两件事上看到这种情况，比如味觉，还有比如触觉……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; One
+<p>thing</p>
+<p>I</p>
+<p>kind</p>
+<p>of</p>
+<p>want</p>
+<p>to</p>
+<p>also</p>
+<p>can</p>
+<p>ask</p>
+<p>you</p>
+<p>guys</p>
+<p>an</p>
+<p>opinion</p>
+<p>as</p>
+<p>well</p>
+<p>once</p>
+<p>one</p>
+<p>difference</p>
+<p>I</p>
+<p>find</p>
+<p>the</p>
+<p>audio</p>
+<p>and</p>
+<p>then</p>
+<p>against</p>
+<p>the</p>
+<p>image</p>
+<p>and</p>
+<p>video</p>
+<p>is</p>
+<p>like</p>
+<p>the</p>
+<p>audio</p>
+<p>information</p>
+<p>is</p>
+<p>less</p>
+<p>verbalized.</p>
+<p>I</p>
+<p>mean</p>
+<p>of</p>
+<p>course</p>
+<p>the</p>
+<p>TTS</p>
+<p>and</p>
+<p>stuff</p>
+<p>is</p>
+<p>trivial</p>
+<p>right</p>
+<p>but</p>
+<p>the</p>
+<p>when</p>
+<p>you</p>
+<p>get</p>
+<p>her</p>
+<p>outside</p>
+<p>like</p>
+<p>how</p>
+<p>to</p>
+<p>describe</p>
+<p>music</p>
+<p>how</p>
+<p>do</p>
+<p>you</p>
+<p>describe</p>
+<p>this</p>
+<p>like</p>
+<p>this</p>
+<p>person's</p>
+<p>tone</p>
+<p>kind</p>
+<p>of</p>
+<p>pitch</p>
+<p>I</p>
+<p>feel</p>
+<p>the</p>
+<p>sort</p>
+<p>of</p>
+<p>the</p>
+<p>verbalization</p>
+<p>is</p>
+<p>insufficient</p>
+<p>and</p>
+<p>the</p>
+<p>interesting</p>
+<p>thing</p>
+<p>is</p>
+<p>that</p>
+<p>you</p>
+<p>kind</p>
+<p>of</p>
+<p>see</p>
+<p>that</p>
+<p>in</p>
+<p>two</p>
+<p>other</p>
+<p>things</p>
+<p>like</p>
+<p>taste</p>
+<p>taste</p>
+<p>sense</p>
+<p>and</p>
+<p>also</p>
+<p>uh</p>
+<p>say</p>
+<p>um</p>
+<p>touch</p>
+</details>
+<blockquote>
+<blockquote>
+<p>比如嗅觉，还有另一个有趣的现象是肤色。对于肤色，用来描述肤色的语言相当有限，原因是由于我们对微小的差异扰动极其敏感——是不是肤色——因为那基本上向我们传达了这个人会不会杀我，或者我能不能和这个人做朋友这类信息。我觉得嗅觉、味觉、肤色以及声音这类东西，与极其原始的生存机制紧密相连，以至于我们的感官系统极其敏锐，以至于难以……嗯，举个例子，我问过一位专业品酒师之类的人，他基本上说他会用类似相亲约会、描述伴侣的语言来描述口感，因为没有足够的词汇来描述。嗯，所以我有点好奇。是的，你们有这种感觉吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; like
+<p>smell</p>
+<p>and</p>
+<p>then</p>
+<p>the</p>
+<p>another</p>
+<p>interesting</p>
+<p>thing</p>
+<p>is</p>
+<p>the</p>
+<p>skin</p>
+<p>color</p>
+<p>so</p>
+<p>skin</p>
+<p>color</p>
+<p>the</p>
+<p>the</p>
+<p>language</p>
+<p>is</p>
+<p>pretty</p>
+<p>limited</p>
+<p>to</p>
+<p>describe</p>
+<p>the</p>
+<p>skin</p>
+<p>color</p>
+<p>and</p>
+<p>the</p>
+<p>reason</p>
+<p>is</p>
+<p>that</p>
+<p>we're</p>
+<p>extremely</p>
+<p>uh</p>
+<p>sensitive</p>
+<p>to</p>
+<p>the</p>
+<p>small</p>
+<p>difference</p>
+<p>perturvations</p>
+<p>or</p>
+<p>not</p>
+<p>skin</p>
+<p>color</p>
+<p>because</p>
+<p>that</p>
+<p>basically</p>
+<p>shows</p>
+<p>us</p>
+<p>is</p>
+<p>this</p>
+<p>person</p>
+<p>going</p>
+<p>to</p>
+<p>kill</p>
+<p>me</p>
+<p>or</p>
+<p>is</p>
+<p>can</p>
+<p>I</p>
+<p>befriend</p>
+<p>this</p>
+<p>person</p>
+<p>kind</p>
+<p>of</p>
+<p>those</p>
+<p>kind</p>
+<p>of</p>
+<p>information</p>
+<p>and</p>
+<p>then</p>
+<p>I</p>
+<p>feel</p>
+<p>the</p>
+<p>smell</p>
+<p>tastes</p>
+<p>um</p>
+<p>skin</p>
+<p>color</p>
+<p>and</p>
+<p>like</p>
+<p>sound</p>
+<p>kind</p>
+<p>of</p>
+<p>stuff</p>
+<p>is</p>
+<p>very</p>
+<p>very</p>
+<p>tied</p>
+<p>into</p>
+<p>primitive</p>
+<p>a</p>
+<p>like</p>
+<p>survival</p>
+<p>kind</p>
+<p>of</p>
+<p>stuff</p>
+<p>and</p>
+<p>so</p>
+<p>our</p>
+<p>sort</p>
+<p>of</p>
+<p>sensory</p>
+<p>system</p>
+<p>is</p>
+<p>so</p>
+<p>sensitive</p>
+<p>that</p>
+<p>it's</p>
+<p>intractable</p>
+<p>to</p>
+<p>Um,</p>
+<p>so</p>
+<p>for</p>
+<p>example,</p>
+<p>I</p>
+<p>asked</p>
+<p>like</p>
+<p>one</p>
+<p>the</p>
+<p>wine</p>
+<p>sort</p>
+<p>of</p>
+<p>taster</p>
+<p>and</p>
+<p>then</p>
+<p>like</p>
+<p>professional</p>
+<p>and</p>
+<p>then</p>
+<p>he</p>
+<p>basically</p>
+<p>said</p>
+<p>he</p>
+<p>kind</p>
+<p>of</p>
+<p>use</p>
+<p>like</p>
+<p>a</p>
+<p>language</p>
+<p>from</p>
+<p>like</p>
+<p>a</p>
+<p>dating,</p>
+<p>you</p>
+<p>know,</p>
+<p>describing</p>
+<p>like</p>
+<p>a,</p>
+<p>you</p>
+<p>know,</p>
+<p>partner</p>
+<p>as</p>
+<p>a</p>
+<p>way</p>
+<p>to</p>
+<p>describe</p>
+<p>the</p>
+<p>taste</p>
+<p>because</p>
+<p>there's</p>
+<p>no</p>
+<p>sufficient</p>
+<p>vocab</p>
+<p>to</p>
+<p>describe.</p>
+<p>Um,</p>
+<p>so</p>
+<p>I'm</p>
+<p>kind</p>
+<p>of</p>
+<p>curious.</p>
+<p>Yeah.</p>
+<p>Do</p>
+<p>you</p>
+<p>guys</p>
+<p>feel</p>
+<p>that?</p>
+</details>
+<blockquote>
+<blockquote>
+<p>我想，在某种程度上，视觉信息也是如此，对吧？当你想起某种风格或某种美学时，对吧？就像有些人就是拥有发展得更充分的品味，无论是味觉还是视觉品味与审美，对吧？我觉得当你想去描述任何我们在感官上体验到的东西时，语言往往都会成为一种限制因素。正如你刚才所指出的，我认为这就是为什么我们正在投资世界模型，为什么我们正在推动感知和生成这方面的发展，因为这在我们作为人类探索世界的过程中占据了很大一部分。在具身智能（embodied AI）探索世界的过程中也是很大一部分。而且我确实认为，语言虽然让我们走到了今天，而且大概还能带我们走得很远，但在很多这类领域里，它确实让人感到局限。是的，我也不太知道该怎么去描述感官和味觉。不过，是的，我也很好奇。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I
+<p>think</p>
+<p>well</p>
+<p>to</p>
+<p>some</p>
+<p>extent</p>
+<p>I</p>
+<p>think</p>
+<p>the</p>
+<p>same</p>
+<p>is</p>
+<p>true</p>
+<p>for</p>
+<p>visual</p>
+<p>information,</p>
+<p>right?</p>
+<p>when</p>
+<p>you</p>
+<p>think</p>
+<p>about</p>
+<p>like</p>
+<p>a</p>
+<p>certain</p>
+<p>style</p>
+<p>or</p>
+<p>a</p>
+<p>certain</p>
+<p>aesthetic,</p>
+<p>right?</p>
+<p>Like like</p>
+<p>there</p>
+<p>are</p>
+<p>some</p>
+<p>people</p>
+<p>who</p>
+<p>just</p>
+<p>have</p>
+<p>a</p>
+<p>much</p>
+<p>more</p>
+<p>kind</p>
+<p>of</p>
+<p>developed</p>
+<p>like</p>
+<p>whether</p>
+<p>it's</p>
+<p>palette</p>
+<p>or</p>
+<p>kind</p>
+<p>of</p>
+<p>visual</p>
+<p>taste</p>
+<p>and</p>
+<p>aesthetic,</p>
+<p>right?</p>
+<p>Like</p>
+<p>I</p>
+<p>I</p>
+<p>think</p>
+<p>language</p>
+<p>just</p>
+<p>tends</p>
+<p>to</p>
+<p>be</p>
+<p>a</p>
+<p>bit</p>
+<p>of</p>
+<p>a</p>
+<p>limiting</p>
+<p>factor</p>
+<p>when</p>
+<p>you</p>
+<p>are</p>
+<p>trying</p>
+<p>to</p>
+<p>describe</p>
+<p>any</p>
+<p>of</p>
+<p>these</p>
+<p>things</p>
+<p>that</p>
+<p>like</p>
+<p>we</p>
+<p>experience</p>
+<p>with</p>
+<p>sensory</p>
+<p>information.</p>
+<p>And</p>
+<p>to</p>
+<p>your</p>
+<p>point</p>
+<p>earlier,</p>
+<p>I</p>
+<p>think</p>
+<p>that</p>
+<p>is</p>
+<p>the</p>
+<p>kind</p>
+<p>of</p>
+<p>the</p>
+<p>reason</p>
+<p>why</p>
+<p>we</p>
+<p>are</p>
+<p>investing</p>
+<p>in</p>
+<p>world</p>
+<p>models</p>
+<p>and</p>
+<p>why</p>
+<p>we</p>
+<p>are</p>
+<p>pushing</p>
+<p>on</p>
+<p>kind</p>
+<p>of</p>
+<p>the</p>
+<p>like</p>
+<p>perception</p>
+<p>and</p>
+<p>like</p>
+<p>generation</p>
+<p>side</p>
+<p>of</p>
+<p>things</p>
+<p>because</p>
+<p>it</p>
+<p>it</p>
+<p>is</p>
+<p>such</p>
+<p>a</p>
+<p>large</p>
+<p>part</p>
+<p>of</p>
+<p>how</p>
+<p>we</p>
+<p>as</p>
+<p>humans</p>
+<p>navigate</p>
+<p>the</p>
+<p>world.</p>
+<p>It's</p>
+<p>a</p>
+<p>large</p>
+<p>part</p>
+<p>of</p>
+<p>how</p>
+<p>like</p>
+<p>embodied</p>
+<p>AI</p>
+<p>navigates</p>
+<p>the</p>
+<p>world.</p>
+<p>Um,</p>
+<p>and</p>
+<p>and</p>
+<p>I</p>
+<p>do</p>
+<p>I</p>
+<p>do</p>
+<p>think</p>
+<p>language</p>
+<p>like</p>
+<p>does</p>
+<p>have</p>
+<p>a</p>
+<p>lot</p>
+<p>of</p>
+<p>it's</p>
+<p>it's</p>
+<p>gotten</p>
+<p>us</p>
+<p>very</p>
+<p>far</p>
+<p>and</p>
+<p>it</p>
+<p>can</p>
+<p>probably</p>
+<p>get</p>
+<p>us</p>
+<p>really</p>
+<p>far,</p>
+<p>but</p>
+<p>it</p>
+<p>it</p>
+<p>feels</p>
+<p>limiting</p>
+<p>in</p>
+<p>a</p>
+<p>lot</p>
+<p>of</p>
+<p>these</p>
+<p>kind</p>
+<p>of</p>
+<p>areas.</p>
+<p>And</p>
+<p>yeah,</p>
+<p>I</p>
+<p>don't</p>
+<p>I</p>
+<p>don't</p>
+<p>really</p>
+<p>know</p>
+<p>how</p>
+<p>to</p>
+<p>describe,</p>
+<p>you</p>
+<p>know,</p>
+<p>like</p>
+<p>sense</p>
+<p>and</p>
+<p>taste.</p>
+<p>Um,</p>
+<p>but</p>
+<p>yeah,</p>
+<p>I'm</p>
+<p>curious</p>
+<p>to</p>
+<p>me.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，我……是的，我不知道自己是否对这个问题有过那么深入的思考。所以，呃，是的，我对音频给不出一个很好的答案。我的意思是我不知道边界在哪里，因为我在想 Omni 在音频方面有什么做不好的，但我发现那些似乎都是可解决的问题，比如通过更多数据或更好的数据之类的方式。所以我不知道我们是否已经把前沿推到了触及某种源于人类进化所施加的限制。我不知道。他感受到了图文描述（captioning）的局限，这正是我之前……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um,
+<p>I</p>
+<p>I</p>
+<p>yeah,</p>
+<p>I</p>
+<p>don't</p>
+<p>know</p>
+<p>that</p>
+<p>I</p>
+<p>have</p>
+<p>thought</p>
+<p>that</p>
+<p>deeply</p>
+<p>about</p>
+<p>this</p>
+<p>yet.</p>
+<p>So,</p>
+<p>uh,</p>
+<p>yeah,</p>
+<p>I</p>
+<p>mean</p>
+<p>yeah,</p>
+<p>I</p>
+<p>don't</p>
+<p>have</p>
+<p>a</p>
+<p>good</p>
+<p>answer</p>
+<p>about</p>
+<p>audio.</p>
+<p>I</p>
+<p>mean</p>
+<p>like</p>
+<p>I</p>
+<p>don't</p>
+<p>know</p>
+<p>the</p>
+<p>limit</p>
+<p>because</p>
+<p>I'm</p>
+<p>thinking</p>
+<p>about</p>
+<p>like</p>
+<p>well</p>
+<p>what</p>
+<p>is</p>
+<p>what</p>
+<p>is</p>
+<p>Omni</p>
+<p>bad</p>
+<p>at</p>
+<p>in</p>
+<p>terms</p>
+<p>of</p>
+<p>audio</p>
+<p>but</p>
+<p>they're</p>
+<p>all</p>
+<p>like</p>
+<p>solvable</p>
+<p>problems</p>
+<p>I</p>
+<p>find</p>
+<p>uh</p>
+<p>so</p>
+<p>like</p>
+<p>with</p>
+<p>more</p>
+<p>data</p>
+<p>or</p>
+<p>better</p>
+<p>data</p>
+<p>or</p>
+<p>whatever</p>
+<p>it</p>
+<p>is</p>
+<p>so</p>
+<p>I</p>
+<p>don't</p>
+<p>know</p>
+<p>like</p>
+<p>that</p>
+<p>we</p>
+<p>have</p>
+<p>pushed</p>
+<p>the</p>
+<p>frontier</p>
+<p>so</p>
+<p>much</p>
+<p>that</p>
+<p>like</p>
+<p>we</p>
+<p>are</p>
+<p>have</p>
+<p>hit</p>
+<p>some</p>
+<p>sort</p>
+<p>of</p>
+<p>limits</p>
+<p>that</p>
+<p>are</p>
+<p>rooted</p>
+<p>in</p>
+<p>evolutionary</p>
+<p>uh</p>
+<p>kind</p>
+<p>of</p>
+<p>you</p>
+<p>know</p>
+<p>limits</p>
+<p>imposed</p>
+<p>by</p>
+<p>humans.</p>
+<p>I</p>
+<p>don't know.</p>
+<p>He's</p>
+<p>feeling</p>
+<p>the</p>
+<p>limits</p>
+<p>of</p>
+<p>captioning</p>
+<p>which</p>
+<p>is</p>
+<p>the</p>
+<p>the</p>
+<p>thing</p>
+<p>I</p>
+<p>was</p>
+</details>
+<blockquote>
+<blockquote>
+<p>是的，没错。[笑声] 世界上存在很多信息，这也基本上联系到了你刚才提到的我们为什么做世界模型。你只需要 srefs，sref 476，然后那就是你的……那就是你的旅程所做的事，对吧？我猜也许我没法描述这种感觉，但是……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah,
+<p>exactly.</p>
+<p>[laughter]</p>
+<p>There</p>
+<p>there's</p>
+<p>a</p>
+<p>lot</p>
+<p>of</p>
+<p>information</p>
+<p>in</p>
+<p>the</p>
+<p>world</p>
+<p>and</p>
+<p>it</p>
+<p>connects</p>
+<p>to</p>
+<p>basically</p>
+<p>why</p>
+<p>we</p>
+<p>do</p>
+<p>work</p>
+<p>modeling</p>
+<p>you</p>
+<p>mentioned.</p>
+<p>You</p>
+<p>just</p>
+<p>need</p>
+<p>srefs</p>
+<p>sref476</p>
+<p>and</p>
+<p>then</p>
+<p>that's</p>
+<p>your</p>
+<p>that's</p>
+<p>what</p>
+<p>your</p>
+<p>journey</p>
+<p>does,</p>
+<p>right?</p>
+<p>I</p>
+<p>guess</p>
+<p>maybe</p>
+<p>I</p>
+<p>can't</p>
+<p>describe</p>
+<p>this</p>
+<p>vibe</p>
+<p>but</p>
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，我认为提供这些参考样本的意义就在这里，对吧？因为哪怕只是描述某人如何说话、他们的语气、韵律以及所有这些东西，我认为甚至有些术语连我以前都不知道是什么意思，对吧？现在……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; well
+<p>well</p>
+<p>I</p>
+<p>think</p>
+<p>that</p>
+<p>that's</p>
+<p>kind</p>
+<p>of</p>
+<p>the</p>
+<p>point</p>
+<p>of</p>
+<p>providing</p>
+<p>some</p>
+<p>of</p>
+<p>these</p>
+<p>references,</p>
+<p>right?</p>
+<p>Because</p>
+<p>because</p>
+<p>like</p>
+<p>even</p>
+<p>just</p>
+<p>describing</p>
+<p>how</p>
+<p>someone</p>
+<p>talks</p>
+<p>and</p>
+<p>like</p>
+<p>their</p>
+<p>tone</p>
+<p>and</p>
+<p>and</p>
+<p>like</p>
+<p>procity</p>
+<p>and</p>
+<p>all</p>
+<p>of</p>
+<p>these</p>
+<p>things</p>
+<p>like</p>
+<p>I</p>
+<p>think</p>
+<p>I</p>
+<p>think</p>
+<p>some</p>
+<p>of</p>
+<p>these</p>
+<p>terms</p>
+<p>even</p>
+<p>like</p>
+<p>I</p>
+<p>didn't</p>
+<p>used</p>
+<p>to</p>
+<p>know</p>
+<p>what</p>
+<p>they</p>
+<p>mean,</p>
+<p>right?</p>
+<p>Well,</p>
+<p>now</p>
+</details>
+<blockquote>
+<blockquote>
+<p>是的。言语不流利（disfluencies）……就像存在一整套词汇，如果你不是深入某个领域——实际上人类大多数领域都是如此——你甚至都不知道它意味着什么。嗯……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yes.
+<p>Dispuencuencies</p>
+<p>ex</p>
+<p>like</p>
+<p>like</p>
+<p>there</p>
+<p>there's</p>
+<p>kind</p>
+<p>of</p>
+<p>an</p>
+<p>entire</p>
+<p>vocabulary</p>
+<p>that</p>
+<p>even</p>
+<p>if</p>
+<p>you're</p>
+<p>not</p>
+<p>kind</p>
+<p>of</p>
+<p>steeped</p>
+<p>in</p>
+<p>a</p>
+<p>domain,</p>
+<p>which</p>
+<p>is</p>
+<p>true</p>
+<p>for</p>
+<p>actually</p>
+<p>like</p>
+<p>most</p>
+<p>human</p>
+<p>domains</p>
+<p>that</p>
+<p>like</p>
+<p>you</p>
+<p>don't</p>
+<p>even</p>
+<p>know</p>
+<p>what</p>
+<p>it</p>
+<p>means.</p>
+<p>Um</p>
+</details>
+<!-- chunk 5/8 -->
+<p>而且有时这也是一个问题，比如如果我们没有把重点放在那些事情上，你知道，在大语言模型上，它们在那些领域可能也存在欠缺，对吧？然后我们在生成端的另一侧就会感受到它们，因为我们从根本上依赖语言模型对世界的理解来去表征它。嗯，所以我，是的，这一切有点又回到了你之前关于将语言作为中介的问题。嗯，不过是的，我认为正如 De 所说，其中一些可能只是重点领域以及我们不一定尽全力去推进的事情，随着我们逐步推进，我们会发现真正的上限在哪里。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+ and
+<p>sometimes
+it's
+also
+a
+question
+of
+like</p>
+<p>if
+we
+haven't
+focused
+on
+those
+things,</p>
+<p>you
+know,
+with
+the
+large
+language
+models</p>
+<p>that
+they
+may
+also
+have
+gaps
+in
+those</p>
+<p>areas,
+right?
+And
+then
+we
+feel
+them
+on</p>
+<p>the
+other
+side
+with
+generation
+because</p>
+<p>we're
+like
+fundamentally
+relying
+on
+on</p>
+<p>the
+language
+models
+understanding
+of
+the</p>
+<p>world
+to
+then
+be
+able
+to
+like
+represent</p>
+<p>it.
+Um,
+so
+I
+yeah,
+it
+all
+kind
+of
+goes</p>
+<p>back
+to
+your
+question
+about
+like
+the
+the</p>
+<p>language
+as
+an
+intermediary.
+Um,
+but</p>
+<p>yeah,
+I
+think
+to
+De's
+point
+like
+some
+of</p>
+<p>these
+might
+just
+be
+like
+focus
+areas
+and</p>
+<p>things
+that
+we
+haven't
+necessarily</p>
+<p>pushed
+on
+as
+much
+as
+we
+can
+and
+like
+as</p>
+<p>we
+will
+we
+will
+discover
+what
+the
+actual</p>
+<p>ceiling
+is.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>是的，作为一名播客主持人，我经常思考声音的问题。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah,
+ as
+ a
+ podcaster
+ I
+ think
+ a
+ lot
+ about
+<p>sound.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，而且我想抛出几点来供大家讨论，万一能触发你们的某些想法呢。嗯，我有三个大致的音频领域，也就是音乐、人声、音效，你知道，这样粗略划分是不是能涵盖所有内容；然后即便在人声内部，咱们就只聚焦在人声上，先不管另外两个。嗯，房间声响，比如大房间、小房间、面对面、在车里、通过电话的回声感，所有这些都是可以打标签的，但我们的体验却大不相同。我常常觉得 AI 视频的特征之一就是它具有录音室品质，因为它是在录音室视频中录制的，因为那是你的训练数据。而且对我来说，那确实是一件……实际上最有趣的事情就是，嗯，当我向那些对世界模型需求持怀疑态度的人解释时，我就是用这个来说服他们的，因为你即便在音频上也需要它，比如“我离你更远，所以我听起来应该稍微轻柔一点或者更扩散一些”，而且视频模型需要捕捉到这一点，因为如果它们要制作沉浸式视频和音频，你就需要那个。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um,
+ and
+ and
+ I
+ I'll
+ just
+ offer
+ a
+ couple
+<p>things
+for
+discussion
+in
+case
+in
+case
+it</p>
+<p>triggers
+anything
+with
+you
+guys.
+Um
+I</p>
+<p>have
+three
+domains
+of
+rough
+audio
+which</p>
+<p>is
+like
+a
+music
+voice
+SFX
+you
+know
+is</p>
+<p>that
+rough
+okay
+covers
+everything
+and</p>
+<p>then
+also
+even
+within
+voice
+let's
+just</p>
+<p>let's
+just
+focus
+on
+voice
+forget
+the</p>
+<p>other
+two
+um
+room
+sound
+like
+the
+the</p>
+<p>echoiness
+of
+like
+big
+room
+small
+room
+in</p>
+<p>person
+in
+a
+car
+over
+a
+phone
+all
+these</p>
+<p>like
+are
+labelable
+but
+we
+experience</p>
+<p>them
+very
+differently
+and
+I
+I
+often</p>
+<p>think
+like
+one
+of the
+tells
+of
+a
+AI</p>
+<p>video
+is
+that
+it
+is
+studio
+quality</p>
+<p>because
+it
+was
+recorded
+in
+a
+studio</p>
+<p>video
+because
+that's
+your
+training
+data</p>
+<p>and
+like
+and
+and
+to
+me
+that's
+one
+thing</p>
+<p>actually
+like
+the
+most
+interesting
+thing</p>
+<p>is
+just
+uh
+when
+I
+tell
+this
+is
+how
+I</p>
+<p>convince
+people
+who
+are
+kind
+of</p>
+<p>skeptical
+about
+the
+need
+for
+world</p>
+<p>models
+because
+you
+need
+it
+even
+for</p>
+<p>audio
+about
+well
+I'm
+further
+away
+from</p>
+<p>you
+so
+I
+should
+sound
+a
+little
+bit</p>
+<p>softer
+or
+more
+diffused
+and
+like
+the
+the</p>
+<p>video
+models
+need
+to
+pick
+that
+up</p>
+<p>because
+if
+they're
+going
+to
+do
+immersive</p>
+<p>video
+and
+audio
+you
+need
+that</p>
+</details>
+<blockquote>
+<blockquote>
+<p>我很喜欢那个例子，基本上就是录音室品质与否的问题。在某种程度上，我们没有足够的语言来真正描述这种回声，或者正在发生的某种噪音，我们就是没有足够精准的词汇。而且，如果你……基本上我认为拥有相对信息丰富的描述文本非常重要的原因，就是我们有点依赖自然语言作为一种表征，但如果你基本上没有足够的表征，那就意味着以语言为条件，生成是非常多模态的。如果能从 BAE 那种非常早期的 GMBA 类的研究中学到什么的话，其核心思想就是我们真正希望把大部分的随机性捕捉在潜在表征中，然后给定 Z 的 X 应该类似于确定性的，所以，是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I
+ I
+ I
+ love
+ that
+ example
+ of
+ basically
+<p>like
+studio
+quality
+or
+not
+in
+a
+way
+like</p>
+<p>we
+don't
+have
+enough
+language
+to
+really</p>
+<p>describe
+like
+like
+this
+kind
+of
+echoing</p>
+<p>or
+like
+some
+kind
+of
+noise
+kind
+of</p>
+<p>happening
+we
+just
+like
+don't
+have</p>
+<p>precise
+enough
+and
+uh
+if
+you
+um
+you
+know</p>
+<p>basically
+the
+reason
+that
+I
+think
+it's</p>
+<p>quite
+important
+to
+have
+like
+relatively</p>
+<p>information
+rich
+like
+kind
+of
+captioning</p>
+<p>is
+that
+we
+kind
+of
+rely
+on
+the
+natural</p>
+<p>language
+as
+a
+representation
+but
+if
+you</p>
+<p>basically
+don't
+have
+enough
+uh</p>
+<p>representation
+that
+basically
+means
+the</p>
+<p>condition
+on
+the
+language
+the
+generation</p>
+<p>is
+very
+multimodal
+and
+if
+you
+anything</p>
+<p>can
+learn
+from
+the
+BAE
+kind
+of
+like
+you</p>
+<p>know
+very
+old
+you
+know
+GMBA
+kind
+of</p>
+<p>research
+the
+idea
+is
+we
+really
+want
+to</p>
+<p>capture
+most
+of
+the
+stoasticity
+in
+the</p>
+<p>later
+representation
+and
+then
+the
+the
+X</p>
+<p>given
+the
+Z
+should
+be
+kind
+of
+like</p>
+<p>deterministic
+so
+yeah</p>
+</details>
+<blockquote>
+<blockquote>
+<p>是的，是的。嗯，那我希望在那些方面有更多进展，而且我确信你们正在做……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah
+ yeah
+ um
+ well
+ I
+ hope
+ I
+ hope
+ there's
+<p>more
+uh
+progress
+there
+and
+I'm
+sure
+you</p>
+<p>guys
+are
+doing</p>
+</details>
+<h3 id="面部微表情与真实感" data-reading-heading="">面部微表情与真实感</h3>
+<blockquote>
+<blockquote>
+<p>我甚至觉得面部表情也是这样，对吧？也许这正好触及了你所说的我们非常敏感的事情，对吧？我认为你通过人们的面部表情也能辨别出很多 AI 内容……紧张。</p>
+</blockquote>
+</blockquote>
+<p>[笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I
+ even
+ actually
+ like
+ facial
+ expressions
+<p>right
+and
+maybe
+this
+gets
+to
+your
+point</p>
+<p>about
+like
+things
+that
+we're
+very</p>
+<p>sensitive
+to
+right
+I
+think
+you
+can
+tell</p>
+<p>a
+lot
+of
+AI
+content
+also
+just
+by
+from</p>
+<p>like
+people's
+facial
+expressions</p>
+<p>stressful.</p>
+<p>[laughter]</p>
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。我们尽量不去增加这种情况，但你知道，嗯，或者比如皮肤纹理，对吧？就像现实生活中让事物看起来真实的东西。比如，你知道，我可以从你点头的方式，或者从你微表情的变化方式看出你对我所说内容的反应。我们好像还没有完全跨越那道鸿沟。我认为我们比一年前进步了太多。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes.
+ And
+ we
+ try
+ not
+ to
+ contribute
+ to
+ it,
+<p>but
+you
+know,
+um
+and
+or
+or
+like
+skin</p>
+<p>textures,
+right?
+Like
+like
+the
+things</p>
+<p>that
+kind
+of
+make
+things
+look
+real
+in</p>
+<p>real
+life.
+Like
+I
+you
+know,
+I
+can
+tell</p>
+<p>from
+the
+way
+you're
+nodding
+or
+from
+the</p>
+<p>way
+like
+your
+micro
+expressions
+are
+kind</p>
+<p>of
+changing
+of
+like
+how
+you're
+reacting</p>
+<p>to
+what
+I'm
+saying.
+Like
+we
+haven't</p>
+<p>quite
+crossed
+that
+chasm.
+I
+think
+like</p>
+<p>we're
+we're
+so
+much
+better
+than
+we
+were</p>
+<p>a
+year
+ago.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>是的。嗯，但是在人类极其敏感的很多这类事情上，还有很大的提升空间。而且我认为图像可以说是已经达到了那个水平，因为我看到了很多确实看起来与现实难辨真伪的图像，我都分不清它们到底是不是生成的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+ Um,
+ but
+ there's
+ so
+ much
+ more
+<p>headroom
+kind
+of
+in
+a
+lot
+of
+those</p>
+<p>things
+that
+like
+we
+as
+humans
+are
+super</p>
+<p>sensitive
+to.
+And
+like
+I
+think
+image</p>
+<p>arguably
+probably
+is
+there
+because</p>
+<p>there's
+there's
+a
+lot
+of
+kind
+of
+images</p>
+<p>that
+I
+will
+see
+that
+like
+really
+do
+look</p>
+<p>indistinguishable
+from
+reality
+and
+I</p>
+<p>can't
+tell
+if
+they're
+generated
+or
+not.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>比现实更好。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Better
+ than
+ reality
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，或者说那是另一……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; um
+ or
+ well
+ that's
+ a
+ different
+</details>
+<blockquote>
+<blockquote>
+<p>不，我觉得那是其中一个悖……</p>
+</blockquote>
+</blockquote>
+<p>[笑声] 比我在度假时拍的照片还要好。是的。我们团队不久前做过的一个有趣的实验就是，我们能不能生成比真实视频更好的视频，对吧？所以你直接采用某个视频的相同提示词，然后……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; No,
+ I
+ I
+ think
+ that
+ one
+ of
+ the
+ parad
+<p>[laughter]
+better
+than
+what
+I
+would
+take</p>
+<p>on
+my
+vacation
+as
+a
+photo.
+Yes.
+One
+of</p>
+<p>the
+one
+of the
+fun
+experiments
+that
+we</p>
+<p>did
+a
+while
+ago
+in
+the
+team
+is
+is
+like</p>
+<p>can
+we
+generate
+videos
+that
+are
+better</p>
+<p>than
+than
+real
+videos,
+right?
+So
+you</p>
+<p>just
+take
+the
+same
+caption
+from
+like
+oh</p>
+<p>yeah
+some
+video
+and
+then</p>
+</details>
+<blockquote>
+<blockquote>
+<p>循环利用它。是的。就是试着去描述一段真实视频，然后用 omni 生成对应的版本，接着进行人工评估。结果怎么样？结果如何？然后人类在很大程度上更偏好 AI 生成的……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; recycle
+ it.
+ Yeah.
+ Just
+ just
+ try
+ to
+ like
+<p>describe
+a
+real
+video
+and
+then
+generate</p>
+<p>the
+equivalent
+version
+with
+omni
+and</p>
+<p>then
+do
+a
+human
+eval.
+How
+does
+how
+does</p>
+<p>it
+do?
+And
+then
+humans
+largely
+prefer
+AI</p>
+<p>generated</p>
+</details>
+<blockquote>
+<blockquote>
+<p>幅度。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; margin.
+</details>
+<blockquote>
+<blockquote>
+<p>但因为那是……因为那是强化学习过程……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; But
+ because
+ it's
+ because
+ it's
+ the
+ RL
+<p>process,</p>
+</details>
+<blockquote>
+<blockquote>
+<p>那就是强化学习过程在起作用。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; that's
+ the
+ RL
+ process
+ working.
+</details>
+<blockquote>
+<blockquote>
+<p>无论你怎么去合理解释它。这不一定是那个旧过程。就像我认为这只是……我并不是说这是一个好结果。我只是说我们的优化方式在某种程度上可能触发了人类大脑中的某些东西，让人觉得，噢，它看起来……很多视频看起来就是更好。比如我不是……是的，是的，是的。在细致审视、在更深层次的审视下，它们实际上不会更有用或怎么样，但如果你直接将随意的 YouTube 视频与……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's
+ however
+ you
+ want
+ to
+ rationalize
+ it.
+<p>It's
+not
+necessarily
+the
+old
+process.</p>
+<p>It's
+just
+like
+I
+think
+it's
+just
+I'm
+not</p>
+<p>saying
+this
+is
+a
+good
+result.
+I'm
+just</p>
+<p>saying
+is
+we
+have
+optimized
+in
+a
+way</p>
+<p>that
+like
+kind
+of
+potentially
+sort
+of,</p>
+<p>you
+know,
+triggers
+something
+in
+the</p>
+<p>human
+brain
+that
+like,
+oh,
+it
+looks
+it</p>
+<p>looks
+all
+a
+lot
+of
+the
+videos
+just
+look</p>
+<p>better.
+Like
+I'm
+not
+Yeah.
+Yeah.
+Yeah.</p>
+<p>on
+on
+inspection
+on
+on
+deeper
+inspection</p>
+<p>they
+they
+would
+not
+actually
+be
+more</p>
+<p>useful
+or
+whatever
+but
+like
+if
+you
+just</p>
+<p>say
+side
+by
+side
+random
+YouTube
+video</p>
+<p>versus</p>
+</details>
+<blockquote>
+<blockquote>
+<p>它的生成版本放在一起对比，它看起来就是会更好，因为画面更锐利、更有 HDR 感，呃，肤色也更好；再说一次，它并不是更逼真……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; generated
+ version
+ of
+ it
+ will
+ you
+ will
+<p>just
+have
+a
+it
+will
+just
+look
+better</p>
+<p>because
+it's
+more
+it's
+a
+sharper
+more</p>
+<p>HDR
+uh
+you
+know
+the
+skin
+tone
+is
+is
+is</p>
+<p>better
+it's
+not
+again
+it's
+not
+more</p>
+<p>realistic</p>
+</details>
+<blockquote>
+<blockquote>
+<p>呃，它不一定能解决你的问题，但它看起来更好。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; uh
+ it
+ doesn't
+ solve
+ your
+ problem
+<p>necessarily
+but
+it
+it
+looks
+better</p>
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得这也取决于人的敏感度。我出生并成长在日本，我觉得我所了解的一点是，他们在某些方面极其极其敏感，比如你知道的，这就是为什么在建筑、美食这类东西上，他们拥有……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I
+ I
+ since
+ also
+ depend
+ on
+ the
+ sensitivity
+<p>of
+the
+people.
+Uh
+I
+was
+born
+raised
+in</p>
+<p>Japan
+and
+I
+think
+one
+thing
+I
+kind
+of</p>
+<p>know
+is
+like
+they're
+extremely
+extremely</p>
+<p>like
+sensitive
+about
+like
+you
+know</p>
+<p>that's
+why
+you
+know
+like
+architecture</p>
+<p>like
+food
+and
+stuff
+like
+they
+have.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，所以我跟那里的一位漫画艺术家聊过，他对生成式 AI 感到有些反感，他提到的一个细节就是眼神注视……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um
+ so
+ I
+ talked
+ to
+ like
+ a
+ mangar
+ like
+<p>like
+artist
+there
+and
+he's
+like
+he's</p>
+<p>kind
+of
+disgusted
+by
+like
+the
+generation</p>
+<p>AI
+and
+one
+kind
+of
+thing
+he
+mentioned
+is</p>
+<p>like
+the
+eye
+gaze</p>
+</details>
+<blockquote>
+<blockquote>
+<p>眼神注视，那一点点细微的差异。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; eye
+ gaze
+ that
+ slight
+ difference
+</details>
+<blockquote>
+<blockquote>
+<p>让……让他觉得有点诡异，觉得不自然。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; makes
+ me
+ makes
+ him
+ kind
+ of
+ feel
+ creepy
+<p>about
+like
+unnatural</p>
+</details>
+<blockquote>
+<blockquote>
+<p>比如目光稍微偏了一点。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; like
+ if
+ you're
+ looking
+ a
+ little
+ bit
+ off.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。就是……是的。就是它看起来太假了。是的。说到了点子上。所以我觉得这确实取决于敏感度，并且……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+ It's
+ just
+ uh
+ Yeah.
+ just
+ like
+ uh
+ it
+<p>looks
+too
+fake.
+Yeah.
+To
+the
+point.
+So</p>
+<p>So
+I
+think
+it
+does
+depend
+on
+the</p>
+<p>sensitivity
+and</p>
+</details>
+<blockquote>
+<blockquote>
+<p>是的，是的。我只是想说，人类偏好并不是衡量你应该优化什么的特别可靠的晴雨表，如果你只是去问人们喜不喜欢这个，你得到的结果不一定是你想要的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+ Yeah.
+ All
+ I'm
+ saying
+ is
+ like
+ you
+<p>know
+human
+preferences
+are
+like
+a
+not</p>
+<p>particularly
+like
+uh
+reliable
+barometer</p>
+<p>of
+like
+what
+you
+should
+be
+optimizing</p>
+<p>for
+like
+if
+you
+just
+ask
+people
+do
+you</p>
+<p>like
+this
+or
+not
+you
+not
+necessarily
+get</p>
+<p>what
+you
+wanted.</p>
+</details>
+<h3 id="审美敏感度与提示词工程" data-reading-heading="">审美敏感度与提示词工程</h3>
+<blockquote>
+<blockquote>
+<p>是的。让我稍微补充一点，四年前有一场关于提示词工程是否会消失的争论，我……你知道，一些非常有权势的人说它会消失，但我基本上表示它不应该消失，因为提示词工程——具体去明确指明那些细节——就像是当你受到 AI 控制时，你能够对输出进行某种控制的唯一途径。而能让你进行提示词工程的，正是那种敏感度。所以确实，也许现在 AI 可以做很多自动提示，并且能够生成足够好的东西，但如果真是那样，永远不要满足，永远不要满足于 AI 生成的内容，永远微调你的敏感度，并始终去针对差异进行提示。</p>
+</blockquote>
+</blockquote>
+<p>我觉得这与普通人未经训练的眼睛也有很大区别——我自己就会把自己归入那类人，你知道，我有一些审美感知，而且我做这行的时间也足够长，所以我也有自己的偏好。嗯，但你看你举的漫画艺术家的例子，那是可能磨砺了几十年技艺的人。嗯，任何从事这项工作的人，无论是设计还是建筑，对吧？你就是拥有完全不同层次的专业知识，并且能看到普通人看不到的东西。但 Doom 说得对。就像如果我们去看……如果你在街上随便调查 10 个人，他们可能都会更喜欢那种过度平滑、非常饱和的感觉……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+ Let
+ let
+ me
+ just
+ kind
+ of
+ add
+ one
+<p>thing
+but
+like
+four
+years
+ago
+there
+was</p>
+<p>a
+like
+debate
+that
+if
+the
+prompt</p>
+<p>engineering
+is
+going
+to
+disappear
+and
+uh</p>
+<p>my
+my
+like
+you
+know
+some
+very
+powerful</p>
+<p>people
+say
+you
+know
+it's
+going
+to</p>
+<p>disappear
+but
+I
+basically
+said
+like
+it</p>
+<p>shouldn't
+because
+the
+prompt
+engineering</p>
+<p>like
+sort
+of
+you
+know
+specifying
+that
+is</p>
+<p>like
+the
+the
+only
+way
+you
+can
+sort
+of</p>
+<p>control
+the
+output
+sort
+of
+you
+know
+when</p>
+<p>you
+have
+like
+sort
+of
+control
+by
+the
+AI</p>
+<p>and
+what
+allows
+you
+to
+prompt
+engineer</p>
+<p>is
+really
+that
+sensitivity.
+So
+sure</p>
+<p>maybe
+like
+right
+now
+the
+AI
+can
+do
+a
+lot</p>
+<p>of
+autoprompting
+and
+that
+and
+it
+can</p>
+<p>generate
+something
+that's
+sufficient
+but</p>
+<p>uh
+if
+it's
+like
+that
+never
+be
+satisfied</p>
+<p>like
+never
+be
+satisfied
+with
+the
+AI's</p>
+<p>generated
+content
+always
+fine-tune
+your</p>
+<p>sensitivity
+and
+always
+kind
+of
+keep</p>
+<p>prompting
+the
+differences.
+I
+I
+think
+to</p>
+<p>the
+there's
+also
+a
+big
+difference</p>
+<p>between
+like
+the
+average
+human
+untrained</p>
+<p>eye
+which
+I
+I
+would
+put
+myself
+in
+that</p>
+<p>bucket
+you
+know
+like
+I
+have
+I
+have
+some</p>
+<p>aesthetic
+sensibilities
+and
+I've
+done</p>
+<p>this
+long
+enough
+that
+you
+know
+like
+I</p>
+<p>have
+I
+have
+a
+preference
+um
+but
+you
+know</p>
+<p>like
+your
+example
+of
+a
+manga
+artist
+like</p>
+<p>that's
+somebody
+who
+has
+honed
+a
+craft</p>
+<p>like
+over
+possibly
+many
+decades.
+Um,
+and</p>
+<p>anybody
+who
+does
+that,
+whether
+it's
+like</p>
+<p>design,
+architecture,
+right?
+Like
+you</p>
+<p>you
+you
+just
+have
+a
+very
+different
+level</p>
+<p>of
+like
+expertise
+and
+you
+see
+things</p>
+<p>that
+like
+the
+average
+human
+will
+not</p>
+<p>see.
+But
+Doom
+is
+right.
+Like
+when
+we</p>
+<p>look
+at
+if
+you
+were
+to
+just,
+you
+know,</p>
+<p>um,
+poll
+10
+people
+on
+the
+street,
+they</p>
+<p>would
+probably
+prefer
+the
+like
+overly</p>
+<p>smooth
+like
+very
+saturated
+kind
+of</p>
+</details>
+<blockquote>
+<blockquote>
+<p>这叫做 Instagram 滤镜。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's
+ called
+ the
+ Instagram
+ filter.
+</details>
+<blockquote>
+<blockquote>
+<p>就是这样。确实就是……是的。[笑声] 嗯，你知道，所以这里也有一点疑问：如果你不作指定，你的默认美学风格会是什么样？不过话说回 Shane 的观点，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It
+ is.
+ It
+ is
+ the
+ Yeah.
+ [laughter]
+ Um,
+<p>and
+you
+know,
+and
+and
+so
+there's
+also
+a</p>
+<p>little
+bit
+of
+a
+question
+of
+like
+what</p>
+<p>does
+your
+default
+aesthetic
+look
+like
+if</p>
+<p>you
+don't
+specify?
+But
+then
+to
+Shane's</p>
+<p>point,</p>
+</details>
+<!-- chunk 6/8 -->
+<p>我们一直在努力让这些模型在遵循指令方面表现得更好，这样当你希望引导它们得出不同的结果时，你就能做到——无论通过语言还是通过参考物，因为语言有时局限性太大了。嗯，所以这些模型在这方面不断进步，但它们在这上面还有大量工作要投入。你作为一名产品总监，是否会感到为全世界设定默认风格的压力？就像，我是说……[笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+one of the things we always try to get these models better at is instruction follow so that like when you want to get them to a different outcome like you should be able to whether that's through language or whether that's through references because language is sometimes too limiting. Um, and so like these models continue to get better at it but they so much at work. Do do you feel pressure as a as a product director to set the default for the world like I mean [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>算是吧。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; kind of
+</details>
+<blockquote>
+<blockquote>
+<p>也许我应该感到压力，我不知道，我还没想过这个问题。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; maybe I should I don't know I haven't thought about this
+</details>
+<blockquote>
+<blockquote>
+<p>你知道的，必须有人来定一个默认值，默认值总归是要存在的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; you know you know it's like someone has to have a default the default has to exist
+</details>
+<blockquote>
+<blockquote>
+<p>其实我想说，我们确实考虑过这个问题。嗯，而且我觉得其中有一点……例如，如果你看一下 nanobanana 的生成内容，当 nanobanana pro 发布时，nanobanana 信息图表简直出现了一次大爆发。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; actually I will say like we have thought about this um and I I think one of the so for example actually like if you look at nanobanana generations we had like an explosion of nanobanana infographics when nanobanana pro came out
+</details>
+<blockquote>
+<blockquote>
+<p>我试过，是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I tried it yeah
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; um yeah
+</details>
+<p>我觉得 NeurIPS 的论文好像全都是……你知道的，好多都生成了信息图表。你们能对其运行一下你们的水印检测，看看有多少篇吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I think Nurb's papers were like all you know so so many had like infographics generated. Can you run your uh watermarking on it and see how many
+</details>
+<blockquote>
+<blockquote>
+<p>呃，我们大概可以，我们还没那么做过。但我看到……我的 Twitter 上全都是，也许这也只是我算法的偏差，但它们真的无处不在。嗯，这其实挺让人痛苦的，因为我觉得我们的默认审美有点太……太杂乱了。我认为这个模型有点像个过分热心的学生，刚学到了东西，你知道的，就像“哦，我知道关于这个概念的所有这些信息，让我把它们全塞进同一张图片里”。日本的信息图表还要繁密 5 倍。[笑声]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; uh we pro we probably could we have we haven't done that but I saw so like my Twitter was maybe this is just also like the bias of my algorithm but they were everywhere um and it was actually very painful because um I think our default aesthetic was a little bit too it was too cluttered like I think that the the model is like a bit of an overeager student that just like learned you know it was like oh I know all these like I know all this information about this concept let me like shove into the same image. Japanese infographics 5x that [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>或者也许是，你知道的……但它就是……而且……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; or maybe it was you know um but it just and and
+</details>
+<blockquote>
+<blockquote>
+<p>等等，所以同样的提示词、同样的内容，如果是日语的话，它就会……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; wait so same prompt same content if it's in Japanese it's
+</details>
+<blockquote>
+<blockquote>
+<p>密集，密集。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; density density
+</details>
+<blockquote>
+<blockquote>
+<p>哦，哇。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; oh wow
+</details>
+<blockquote>
+<blockquote>
+<p>因为在日本就是那种风格。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; because that's the style in Japan
+</details>
+<blockquote>
+<blockquote>
+<p>对，某种非常……你知道的，官僚风，并且[笑声]对此还有一个专门的知名词汇，是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah some like very you know bureaucrat and [laughter] there's a famous word for it yeah
+</details>
+<blockquote>
+<blockquote>
+<p>不，但我们确实会经历这个过程。在 Omni 上，我们是一起经历的，对吧？就像在最后，我们做了一些微调，然后就像“好吧，我们更偏好哪种风格”，对吧？就像你所知道的……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; no but we do do go through this process with Omni we did it together right like where like we had like a bunch of like we like at the very end okay like this is we did some tuning and like okay what kind of style do we prefer right like you know
+</details>
+<blockquote>
+<blockquote>
+<p>是更柔和一些，还是更饱和一些？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; is it more muted more saturated
+</details>
+<blockquote>
+<blockquote>
+<p>我们的饱和度很高。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; we had a lot of saturation
+</details>
+<blockquote>
+<blockquote>
+<p>是的，有……我觉得 Nicole 只是有了 PTSD 所以把它忘了，但她当时非常深入地参与了这件事，比如“好吧，我们基本上更偏好哪种调色板”，对吧？这并不是那种……你必须在其中做出权衡取舍，比如……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah there was there were I think Nicole just has PTSD so has forgotten about it but she was very much involved in this of like okay which which kind of color palette do we basically prefer right and it's you know it's it's it's not something that like you have to make a a trade-off there like uh
+</details>
+<blockquote>
+<blockquote>
+<p>而且……而且这是因为最终做决定的成了我们，对吧？实际上确实是这样，最终是由模型团队来决定的。你完全可以合理地提出质疑：我们是做这件事最合适的人选吗？还是说我们其实应该与那些真正具有创意视角、更像是艺术总监的人合作，并且有……我们在这点上有点反复权衡。嗯……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and and and it's because it ends up being us right like actually it is true like it it ends up being the modeling teams and you could ask the question legitimately of like are we the best people to do that or should we actually work with someone who like has a really creative point of view and is more of like you know an art director and like has like and we kind of go back and forth on this um
+</details>
+<blockquote>
+<blockquote>
+<p>我们有可信测试人员，我就是其中之一。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; we have the trusted testers I'm on
+</details>
+<blockquote>
+<blockquote>
+<p>确实，我们有可信测试人员，他们给了我们很多反馈，我们对此非常认真对待。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; we do we have trusted testers who give us a lot of feedback and we take that serious
+</details>
+<blockquote>
+<blockquote>
+<p>顺便说一句，组织得非常好，比如每周开例会之类的，非常棒。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; very well organized by the way to have these like weekly calls and stuff like it's it's amazing
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，Logan 的团队承担了其中很大一部分工作，所以要把赞誉送给 Logan，他今天没能来到现场。嗯，我们在 Google 内部其实也有很多人，比如 Fulfur，给了我们极其大量的……不，不，不，是真的，在发布新检查点时给了我们海量的反馈。有时会是我们没注意到的东西，对吧？我们可能会觉得“哦，这个优化看起来还行”，然后他们就会回过头来说“你们干了什么？你们把我的草坪彻底毁了，因为现在的细节全糊了”。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; um Logan's team does a lot of that so kudo kuda kudos kudos to Logan um who couldn't be here today um and we have a lot of people actually internally at Google like Fulfur who give us like a ton of No, no, no. Truly like who give us a ton of feedback on like when we when we release new checkpoints and like sometimes it will be stuff that we like don't see right like we would be like oh yeah this optimization seems okay and then they would come back what have you done like you completely ruined my grass you know because now the detail is all blurry.
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得他刚才注意到了——虽然现阶段这也不是什么超级机密了——我们的模型往往会在手上加上戒指、结婚戒指。这确实是，是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think he just noticed not not a super secret at this point but like that our model tends to put rings wedding rings on on on hand. That's yeah
+</details>
+<blockquote>
+<blockquote>
+<p>非常奇怪。我以前从没注意到这一点，但他……他刚看到了，基本上就有一个人造毛皮频道。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; very strange. I had never noticed that but he's like he I just saw it and there's a faux fur channel basically.
+</details>
+<blockquote>
+<blockquote>
+<p>呃，他发帖说，我当时心想“为什么每只手上都有结婚戒指？”我觉得那太奇怪了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh he posted I was like why is there wedding ring in every hand? I'm like that's strange.
+</details>
+<blockquote>
+<blockquote>
+<p>这听起来是非常普遍的奖励作弊。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That sounds very common reward hacking.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，是的，是的。所以……但你知道，这是我们在开发过程中未必会注意到的东西，对吧？是一个口头伪影，还是……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. Yeah. So but you know something that we would not have we would not have noticed necessarily while while developing this right is an oral artifact or
+</details>
+<blockquote>
+<blockquote>
+<p>我……我不知道，你们确实有大量基于偏好的机制，然后你知道，人类可能会偏好那种虚假关联，奖励作弊可能会以很多奇怪的方式发生。是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I I don't know you do have like a lot of preference based and then you know you may can prefer that sperious correlation reward hacking it can happen like in many weird ways. Yeah
+</details>
+<blockquote>
+<blockquote>
+<p>确实会，确实是。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; it does. It is
+</details>
+<h3 id="视频评估与人工评测" data-reading-heading="">视频评估与人工评测</h3>
+<blockquote>
+<blockquote>
+<p>呃，这与另一个话题有关，我再次尝试把这些主舞台的内容作为引子或关联。呃，我们有评估专场，有 Character AI 和 YouTube 讨论他们如何评估视频。嗯，你们是如何评估视频的？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; uh this was related to another topic that again I I try to use these mainstage things as introductions or ties in. Uh we have the eval track we have character AI and YouTube talking about how they evaluate videos. Um how do you evaluate videos
+</details>
+<blockquote>
+<blockquote>
+<p>除了 Fulfur 之外？[笑声]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; apart from furer [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>并不是所有人都有一个 Fulfur，但同时，你知道，我认为需要有一些更量化的东西。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; not everyone has a fauxur but also you know I think there needs to be something more quantitative
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，我是说，你通过改进 Gemini 来改进视频的评估。嗯，那……不，不，那绝对是一种方法。呃，其实这非常困难。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; well I mean it's you improve Gemini to improve the evaluation for video. Um that's that's no no that's that's definitely one way uh it's actually very hard.
+</details>
+<blockquote>
+<blockquote>
+<p>非常困难。让评测员去评估视频中的内容非常困难，尤其是像美感这样的东西，对吧？有些东西会相对客观一些，比如尤其当我们讨论图像，看一下信息图表的文本渲染，那其实还好，对吧？因为你可以用 OCR 把文字提取出来，然后看看“好吧，这个字母乱了”，那么整个素材其实就没用了，因为在渲染文本中如果确实错了一个字母，你就根本无法使用该素材。对吧。所以那些东西会更容易自动化打分一些。嗯，根据我们的发现，我们确实非常依赖人工去审视内容，所以我们确实做了大量的人工评估。我们做了大量的人工评估。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's very hard. It's very hard um to get like you know audators to evaluate things in a video like including especially things like aesthetics right like that it's like there are some things that are a little bit more objective like especially when we talk like let's say we talk about images and we look at like infographics text rendering that's actually fine right because like you can kind of OCR things out and then you can look at like okay this letter is like messed up and then the whole thing is actually useless because if like literally if a letter is off in render text you just can't use that asset. Right. So th those things are like a little bit more auto ratable. Um from what we found we do rely a lot on humans looking at things and so we do do a lot of human evals. We do a lot of human evals.
+</details>
+<blockquote>
+<blockquote>
+<p>做大量的人工评估，而且每次 Jane 都像……嗯，而且每次我们有了新模型，我们都想做更多的事情，想塞进更多的能力，然后我们就必须运行更多的评测。嗯，到了某个阶段，你确实会遇到两个彼此非常接近的模型，然后我们真的就是根据并排对比输出来做决定。有时是在一个房间里，比如我待过的会议室里有我们大约 10 个人，我们就是并排看着视频，然后商量“你更喜欢这个还是更喜欢那个？”就像，哦，哇，这……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Do a lot of human ev and every time Jane is like um and every time we have a new model we like want to do more things and we want to like gem in more capabilities and then we have like more emails that we have to run. Um, and then at some point you do get two models that are like kind of close to each other and then like we literally make decisions based on like looking at outputs side by side. Sometimes like in a room like I've been in rooms where there's like 10 of us and we're just like looking at video side by side and we're like do you prefer this or do you prefer that? like oh wow it's
+</details>
+<blockquote>
+<blockquote>
+<p>我的意思是，但这确实极其复杂，你添加的能力越多……你知道，即使只是一项能力，但它就像几乎属于 AGI 完全型的能力，比如视频编辑，对吧？想想把视频编辑作为一个……以及带音频的编辑，还有……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I mean but it is it is genuinely very complicated the more capabilities you add like you know even just the one capability but it's like almost AGI complete capabilities like video editing right like think about video editing as a and like editing with audio and
+</details>
+<blockquote>
+<blockquote>
+<p>我的剪辑师听到这个会非常开心的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; my editor will be very happy to hear this
+</details>
+<blockquote>
+<blockquote>
+<p>编辑是生成式媒体中最难的问题。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; edit the hardest problem in g media
+</details>
+<blockquote>
+<blockquote>
+<p>我不知道它是不是最难的，但它绝对名列其中，对吧？就评估的复杂性而言，自由形式的视频编辑是你可以做任何操作的，比如……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I mean I don't know if it's the hardest but it's definitely there right like uh in terms of like complexity of of evaluation like free form video editing is you can do anything like
+</details>
+<blockquote>
+<blockquote>
+<p>是的，呃，而且我在这上面花了很多钱，很难评判……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yes uh and like I I spent a lot of money on that and it's very hard to tell me
+</details>
+<blockquote>
+<blockquote>
+<p>比如添加那些，我们又没有一个“添加树懒”评估，对吧？我们……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; like adding those we don't have like add a sloth eval right like uh that we
+</details>
+<blockquote>
+<blockquote>
+<p>那么，现在我们应该有了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; well now we should
+</details>
+<blockquote>
+<blockquote>
+<p>现在我们应该有了，对，对对。但类似这样的事情，要追踪它并不是那么容易。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; now we should yeah yeah yeah but like things like that like it's it's it's not that easy to track
+</details>
+<blockquote>
+<blockquote>
+<p>我想我只是对你们的样本量感到惊讶，对吧？要测试你们模型的整个表面覆盖范围，你们依然依赖于数百这种量级？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think I'm just surprised at the sample size that you have right like to to test the entire surface of your models you still rely on a magnitude of hundreds
+</details>
+<blockquote>
+<blockquote>
+<p>不，不不，我们做……是的，我们对数千项内容进行大量的人工评估。嗯，我认为还有诸如实时实验这样的因素，对吧？在更大的规模下，你也能从中获得关于某些更细微差异的信号。此外还有自动打分器，我认为在 LLM 领域这绝对是一个定义非常明确的范畴，而在多媒体模型中则处于更初期的阶段。有时候你仍然必须依赖人类的判断，我们确实依赖那些具有非常确立的审美风格的人的反馈，以及那些在日常工作流中使用这些模型的人的反馈，对吧？因为我们也可能……你可能拥有一个模型，它……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; no no no so we do like yeah well we do we do a ton of human evals on like on like you know thousands of things. Um I I think there's also like an element of you know we can talk about things like live experiments right like which which is also where you get signal on like like some of these more minute differences at like much larger scale then there's auto raers which is definitely kind of a more it's a very well defined space I think for LLMs much more nent for media models and then like sometimes you still do rely on human judgment and we do rely on things like feedback from people who just like have a very owned like aesthetic and and people who just like use these models in their workflows dayto-day, right? Because we could also like you could have a model that
+</details>
+<!-- chunk 7/8 -->
+<h3 id="早期测试与视频理解中的语义一致性" data-reading-heading="">早期测试与视频理解中的语义一致性</h3>
+<p>在人类评估的某些切片上确实表现很好，但随后它又确实会破坏某个人的工作流程。所以这就是为什么我们会做像早期访问计划这样的事情，并且我们尝试获取反馈，然后在更广泛地发布某些东西之前尝试将其整合进去。我觉得肖恩根据他的表情……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+does really well on some slice of human evals, but then it like really breaks a workflow for somebody. And so this is why we do like early access programs and we try to get feedback and then we like try to incorporate it before we release something more broadly. I feel like Shane had a hot take based on his
+</details>
+<blockquote>
+<blockquote>
+<p>每次我们谈到这个时总会有这种表情。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; expression always when we were talking about this
+</details>
+<blockquote>
+<blockquote>
+<p>各种各样的人类工作，你知道，都应该逐渐被摊销。然后有趣的是视频理解，尤其是像针对像AI生成……比如检测AI生成的内容是一个非常有趣的视觉任务。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; every kind of human sort of you know work should be gradually kind of amortized and then the interesting thing is the video understanding especially like against like AI gener like detecting air stuff is extremely interesting uh visual task
+</details>
+<blockquote>
+<blockquote>
+<p>然后像其中的一些比如美学或这种视觉质量，但对于某些情况，比如语义上讲不通。例如，你从电影中截取一个著名场景，并尝试去构建它，然后如果你生成它，它可以在那里生成一些东西，但在某些时候，有些语义信息讲不通，比如它实际上是不一致的。那么AI真的能检测出这一点吗？所以当我评估AI视频时，就像是“哦，我觉得我太聪明了”，你知道，就像AI仍然有点落后，但我们应该付出很多努力。我认为视频理解是一项极其重要的智能任务，超越了单纯的美学或偏好。嗯，是的，我们应该始终努力去摊销人类……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and then like some of it kind of aesthetics or this kind of visual quality but for some of the kind of cases like semantically doesn't make sense for example you're taking like some like a famous scene from a movie and try to sort of um construct that and then if you kind of generate it uh it can generate something there but at some point some of the semantic information doesn't make sense like it's actually inconsistent. So can the AI actually detect that? So when I evaluate the AI videos like oh I feel I'm so smart you know like like AI is still kind of behind but we should make like a lot of effort. I think the video understanding is extremely uh important intelligence task uh beyond just the pure aesthetics or the preference. Um and yeah we we should always try to amatize the human
+</details>
+<blockquote>
+<blockquote>
+<p>人工标注。是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; human label. Yeah.
+</details>
+<h3 id="数据需求与具身智能数据" data-reading-heading="">数据需求与具身智能数据</h3>
+<blockquote>
+<blockquote>
+<p>是的。嗯，你们需要什么数据？实际上很多和我聊过的人都想见到你们。呃，他们……我是说他们想友善地对待这件事。他们有大量的视频数据。他们有游戏数据。他们有现实世界的视频数据。他们有图像。他们有标注人员。你们想要什么？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Um, what data do you need? A lot of people I talked to wanted to get in front of you actually. Uh, they I mean they want to be nice about it. They have a lot of video data. They have gaming data. They have real world video data. They have images. They have labelers. What do you want?
+</details>
+<blockquote>
+<blockquote>
+<p>你这是在提供提议吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Are you like offering?
+</details>
+<blockquote>
+<blockquote>
+<p>我只是在……这就是你们征集……好吧。好吧。我们收到……我相信你们收到了很多推介，对吧？你们遇到很多人想跟你们谈。什么才是……实际上我认为信号就是这个问题，从噪声中筛选出信号是主要问题，所以创建一个不错的API，比如“好吧，如果你真的做了A、B和C，我们对此感兴趣”……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I'm just like this is your request for like Okay. Okay. We get I'm sure you get a lot of pitches, right? You get a lot of people want to talk to you. what's like I think actually it's the signal is this problem this sorting out signal from noise is the main problem so creating a nice API of like okay if you actually do a b and c we are interested in that
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，这里有个诱导性问题，所以我不知道是否有那种容易回答的……你知道，是不是做……我认为我们确实已经有了大量的数据。我认为这很难……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; um loaded question there so uh I don't know that there's like an easy like you know did you do I think we we do already have a lot of data I think it's it's
+</details>
+<blockquote>
+<blockquote>
+<p>很难谈论这个。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; hard to talk about this
+</details>
+<blockquote>
+<blockquote>
+<p>你知道，你想谈论公开的事情，我不想让你惹上麻烦。是的，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; you know you want to talk about the public I don't want to get you in trouble Yeah,
+</details>
+<blockquote>
+<blockquote>
+<p>但我觉得……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; but like I think
+</details>
+<blockquote>
+<blockquote>
+<p>不，不。我只是想说……很难在不……你知道，在不试图……在不……我必须考虑我透露了关于我们项目的什么内容，以及我们要走向何方。嗯，通常是高质量的数据。我想也许……也许我们就这么说吧，对吧，这不是秘密……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; No, no. What I just want to say is like hard to talk about this in a sort of you know without trying to without I have to think about the what I am revealing about our project and what where we're going. Um generally high quality data I think maybe maybe let's just put it this way right it's not not the secret
+</details>
+<blockquote>
+<blockquote>
+<p>具身，不好意思。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; embodied I'm sorry
+</details>
+<blockquote>
+<blockquote>
+<p>具身数据。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; embodied data
+</details>
+<blockquote>
+<blockquote>
+<p>我是说……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I mean
+</details>
+<blockquote>
+<blockquote>
+<p>是的，当然。我是说我们已经在某种程度上公开宣布过了，对吧，我们有某种机器人合作，对吧，就像……所以我认为这就像……或者……但是，因为我们在GDM有一个机器人团队，所以你知道，他们总是对这类事情感兴趣。嗯，我是说具体对于Omni，我认为我们只是对高质量数据很感兴趣，对吧，比如你知道，它不是某种……不一定是像，哦，随意的YouTube视频，而是你知道，一些专业拍摄的内容，诸如此类的东西，对吧。那些东西正是我们一直在寻找的，比如……呃，是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah sure I mean we have sort of announced I think publicly right that we we have some sort of robotics collaboration right like so I think it's like a like or or but you because we have a robotics team at GDM so you know they're always interested in things like that um I mean for Omni specifically I think we're just quite interested just high quality data right like you know it it's not some sort of not necessarily like oh random YouTube video but like you know some a some more professional shop things like that right the things that those are those are things that we're always on the lookout for like uh and yeah
+</details>
+<h3 id="agent工作流与隐性知识" data-reading-heading="">Agent工作流与隐性知识</h3>
+<blockquote>
+<blockquote>
+<p>而且我认为，你知道，也许在某种程度上这对于一些Agent工作也更容易回答，比如人们试图去做的实际任务到底是什么，对吧？如果你自己做，或者如果你和供应商一起做，这些事情实际上是很难制造出来的。比如实际的……比如如果你正在创建一场营销活动，那会是什么样子的，对吧？比如，你是否从“这是我的新产品的图片”开始，然后我想把它变成视频广告，并且我想把它变成一堆适配所有这些不同广告格式的资产，我需要把它们推送到各种平台上进行推广，然后你就像是从这个走向那个，你在沿途经历的那种任务轨迹到底是什么样子的？像那样的东西真的很有用，而且实际上有点难以获取，对吧？因为我们并不总是拥有合适的第一方界面让人们实际在上面做其中的一些事情，或者你可能与某个供应商合作，但他们也没有那个产品界面，对吧？大量这类信息存在于人们执行这些任务的场所，所以这有点难以获取。如果有人弄明白了这一点，你应该联系我们。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and I think for you know maybe this is easier to some extent to answer for like some of the agentic work as well like like like actual kind of like what are the tests that people are trying to do right these things are actually kind of difficult to manufacture if you're doing it yourself or if you're like doing it with a vendor, like what is the actual like if you're creating a marketing campaign, like what does that look like, right? Like do do you start from here's like a picture of my new product and then I want to turn that into a video ad and I want to turn that into a bunch of assets that like fit fit all these different ad formats that I need to push onto various platforms to promote and then like so you kind of go from this to that and like what is that kind of trajectory of tasks that you're that you're like you know experiencing along the way like that is really useful and that is actually kind of difficult to get right u because like we don't always have the right firstparty surface where people are actually doing some of these things or like you might work with someone who's a vendor but they don't also don't have that product surface right like like a lot of this kind of information lives in the places where people are doing these tasks and so that's kind of difficult to get like if anyone's figured that out you should reach out to us
+</details>
+<blockquote>
+<blockquote>
+<p>每一个思维通道，是的，每一个……［笑声］思维。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; every channel of thought yeah every [laughter] thought
+</details>
+<blockquote>
+<blockquote>
+<p>每一个想法，是的。也许还有中国实验室正在使用的数据。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; every thought yeah and maybe the data the Chinese lab is using
+</details>
+<blockquote>
+<blockquote>
+<p>是的，是的。呃，你知道，我自己作为一个媒体人，对吧？有那么多的播客创作者和市场部门的人，以及所有这些人，他们很乐意成为你们的数据，你知道，就像在我头上戴上一个脑机接口……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yes yeah uh you know as a media person myself, right? Like there's so many podcasters and people in in marketing departments and all these like they would happy to be your data like you know just like put a BCI on my head
+</details>
+<blockquote>
+<blockquote>
+<p>然后播客……［笑声］看我做的东西。呃，因为你知道，就是有做不完的工作，有这么多的工作，而这都需要在某种程度上成为大宗商品。显然你可以成为一个艺术……像工匠一样，在极高质量的内容上你可以成为好莱坞，但实际上很多工作是大宗商品，并且应该能够被模型化，我们希望你们去做……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and podcast [laughter] watch my things uh because like you know there's just endless amount of work to do like there's so much work and this is all like this needs to somewhat be commodity like obviously you can be an art like an artisan like you can be Hollywood for like the really high quality stuff but actually a lot of work is commodity and like should be modelable and we want you to do
+</details>
+<blockquote>
+<blockquote>
+<p>［笑声］</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>而且，但正如德米斯所指出的，我们确实需要高质量的内容，对吧，我们确实需要高质量的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And but we we want the high quality to Demi's point right like we do want we want the high quality.
+</details>
+<blockquote>
+<blockquote>
+<p>我们需要大宗商品。是的。是的，是的。你们两方面都想要。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We want commodity. Yeah. Yes. Yes. You want on both sides.
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，我……我只是……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um I I just
+</details>
+<blockquote>
+<blockquote>
+<p>感谢你的拉拢推销。［笑声］</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Thank you for the solicitation. [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>呃，你知道，我们也……我也增加了一个数据质量赛道。我认为人们想了解比如在AI领域如何提高门槛，对吧？很大程度上就是教育市场，教育研究人员、工程师和创始人，告诉他们“这是我们要走的方向”，很多就是“别再做那个了，做这个，改做这个”，而且我觉得人们会听的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh I you know we we we also I also added a data quality track. I I think that uh people want to understand like what uh at AI like how to raise the bar, right? like like the and a lot of it is just educating the market and educating researchers and engineers and founders on like this is where we're going a lot of this is stop doing that do this do this instead and I'm like people will listen
+</details>
+<blockquote>
+<blockquote>
+<p>是的，我不知道……呃，到那种程度，你知道。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah I don't know uh to that extent you know
+</details>
+<blockquote>
+<blockquote>
+<p>但我认为就这一点而言，这里面同样投入了大量的技巧，对吧？并且有很多过程。就像即使以营销活动为例，你并不是在五分钟内就创造出来的，对吧？你经历了一个过程，你在不断迭代，你选择某样东西而不是另一样东西是因为出于某种原因你喜欢它，比如也许视线方向是正确的，对吧？我们只是不知道这些事情，对吧，因为我们中没有人是市场总监，而且模型也不知道这些事情。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; but I think to that to that point like there's a lot of again just like craft that goes into this right and there's a lot of process like you even to the marketing campaign example you don't create that in like five minutes right you like go you go through a process and you iterate and you like pick something over something else because you liked it for whatever reason like maybe the eye gaze was correct right like we just we don't know these things right because none of us are marketing directors and like the models don't know these things
+</details>
+<blockquote>
+<blockquote>
+<p>我甚至对自然语言也是这么说的，我总是说99%的信息都在人的内心深处，你只能通过主动对话和与他们交朋友来提取它。所以互联网上的大部分东西有点像是那样的结果、产物，是的，但是你知道，所有的轨迹是什么？你知道，这个人是如何获得写这篇论文的灵感的？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I even kind of say this for the natural like a language as well like I I always kind of say 99% of information is inside people you can only extract it through active dialogue and befriending them so most of the stuff on the internet is like sort of the outcome the output of that yes but you know what are what are all the trajectories you know how did this person have this inspiration to write this paper
+</details>
+<blockquote>
+<blockquote>
+<p>起点是什么？灵感是什么？引发它的对话是什么？这类东西都在人的内心深处。所以甚至在语言领域也是那样，我认为创作领域也有些类似，有大量的暗知识。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; what is the starting point what is the inspiration what are the dialogue that sparked it those kind of stuff is kind of inside people so even you know those kind of like even the language space is kind of that I think the creative is kind of similar as well there's a lot of dark knowledge
+</details>
+<blockquote>
+<blockquote>
+<p>是的，就像你写小说一样，对吧？一本小说能打动你，是因为你通常会对故事、轨迹或角色产生某种个人共鸣，对吧？如果你读过当今大语言模型写的大多数东西，它开始陷入这些默认的模式，语言开始变得非常相似，所有的描述听起来都非常相似。你可以很快读出来并觉得“哦，这没什么意思，因为我无法产生共鸣”，对吧？嗯，再次说明，那有点像是一种人类的专业知识。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah it's like when you write a novel right like a novel speaks to you because like usually there's some sort of like a personal connection that you feel to like the story or the trajectory or the characters right like if you read most of the stuff that's written by LLM's today like it's, you know, it's it's it starts it falls into these like default par patterns and like the language starts to feel really similar and all the descriptions sound really similar. You can kind of like quickly read it as like, oh, this is not that interesting because like I can't connect to it, right? Um, and again, that's that's kind of like a human expertise.
+</details>
+<blockquote>
+<blockquote>
+<p>最近有一件好事是Google Cloud和Google DeepMind有点……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; One nice thing recently is the Google Cloud and the Google Deep Mind are kind
+</details>
+<!-- chunk 8/8 -->
+<h3 id="前向部署工程师fde与下游真实用例反馈" data-reading-heading="">前向部署工程师（FDE）与下游真实用例反馈</h3>
+<p>开始针对产品工程师投入更多的 FDE（前向部署工程师）。而且我也看到在创意、比如生成式媒体（GenMedia）领域也有一些招聘。所以我觉得这些确实是关键的投入方向，因为我们觉得光靠大量公开数据能做的事情是有局限的，但真正通过这样的合作，我们能够提供更好的模型和产品，而且也能获得反馈。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+of starting to invest a lot more in the FTEEs for the product engineers. And I also kind of saw some uh recruiting for the creative you know gem media kind of space as well. So I think those are kind of really the effort because we we kind of feel that you know what we can kind of do with a lot of public data there's limits but really you know partnering with that we can provide kind of better models and products and yeah we kind of feedback
+</details>
+<blockquote>
+<blockquote>
+<p>我们这里也首次设立了 FDE 序列，每个实验室都在宣布这个。这真的很疯狂。我非常想做的一件事——而且我在 Cognition 也是这么推动的——就是不仅把 FDE 当作销售和解决方案团队，还要让他们成为评估（evals）、也就是评估人员。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; uh we have an FD track here for the first time every lab is announcing it. It's it's crazy. Um, one thing I'm actually very keen on doing and I push I push for this at Cognition as well is to turn the FDES not just into sales and solutions but also to EVAL's uh eval workers.
+</details>
+<blockquote>
+<blockquote>
+<p>FDE 不是销售，FDE 的范畴远比那大得多。那你是怎么定义 FDE 的？因为［笑］我确实把它看作销售，比如你越是为客户定制解决方案……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; FD is not the sales FD is way way bigger than that. How do you frame FDs then? Because [laughter] I do think about it as sales like you're you know the more the more you customize the solution for
+</details>
+<blockquote>
+<blockquote>
+<p>我把后训练（post-training）定义为预训练到最终用户体验之间的任何环节，任何环节都是后训练。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; so I define post training as anything between the pre-training and the final user experience anything anything is a post training
+</details>
+<blockquote>
+<blockquote>
+<p>对我来说，当我最初了解很多关于……我的意思是，FDE 大概最初是源于像 Palantir 那样的模式，所以历史沿革可能有所不同。但我认为核心确实在于，不仅要和他们一起工作并确保他们知道如何使用，而且还要提炼出基本上能对双方都有帮助的洞察。他们可以在使用模型的方式上加入很多 harness（测试与运行框架），而我们则可以在极其上游的层面进行改进。所以如何把客户的反馈传导到模型构建中，我觉得这更像是我希望 FDE 承担的角色。是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and to me when I first sort of you know learned a lot about I mean FD kind of I guess originally you know came from like path here and then that so I guess the kind of history is different but yeah I think the key is really that um you know the key is like not only to kind of work uh with them and ensure that they kind of know how to but also to sort of code like derive kind of insights that can basically kind of help both parties. They can put the like a lot of harness how they use the model. We can improve like very upstream. So how to get the customer feedback to the modeling I feel is the kind of more the the role I I kind of want for the fds. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。是的。甚至就此而言，抱歉插一句，比如如果你想和我们或者至少和我交流——我不会随便替你答应时间——但对我们来说，能够真正去和正在使用我们模型的人交流，去了解他们在哪些地方遇到了困难，这真的非常有帮助。因为再次说明，这就是你实际尝试去使用它们解决的现实世界任务，对吧？比如我会去和那些用我们的一些图像模型做室内设计的人交流，他们会说：“嘿，我真的很想采用这个图案，但我想要把它缩放到大概 10 种不同尺寸的地毯上，有时我会有非常定制化的地毯尺寸，然后模型就无法以同样的方式复刻出这个图案”；或者，“我想给这些耳环做试戴，而耳环有特定的大小，我的头也有特定的大小，如果你真的要试戴东西，这就必须合乎常理”，而模型在诸如此类现实世界中实际会发生的许多事情上往往会表现不佳，对吧？所以这对我们很有用，因为其中有些事情我们并没有想到，因为我们不会把模型用在那些任务上。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. and and even for sorry just on that like if you want to talk to us or at least me um I I'm not going to offer up your time um but I it's really helpful for us to actually talk to people who are using our models and like understand where they're struggling uh because again that just like it's it's the real world task that you're actually trying to use them for right like I will talk to people who do kind of interior inter interior design with some of our image models um you know and they will say hey like I really want to take this pattern pattern, but then I want to scale it across like 10 different ruck sizes and sometimes I have like a very custom ruck size and then the model fails at like replicating the pattern the same way or you know I want to do a try on for these earrings and then the earrings have a certain size and then like my head has a certain size like it has to make sense if you're actually trying to try things on and like the models kind of fail at a bunch of these things that like actually happen in the real world, right? Um and so that that's like useful for us because for some of these things like we don't think about because we don't you know we don't use the models for those tasks
+</details>
+<blockquote>
+<blockquote>
+<p>或者比如，我认为就像你提到的广告活动之类的，人们会有品牌语言之类的概念，这……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; or like um you know I think to your point about ad campaigns or whatever like people have like notions of brand languages or whatever like which is
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yes
+</details>
+<blockquote>
+<blockquote>
+<p>就像一堆写着各种要求的图片或 PDF，这也是一个相当模棱两可的问题，比如什么是宜家的品牌语言？是蓝色和黄色吗？我是说，那并不是非常……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; like a a bunch of images or PDFs saying things you know it's a pretty kind of you know ambiguous question as well what is the IKEA brand language you know is it is it blue and yellow I mean that's that's not a very like
+</details>
+<blockquote>
+<blockquote>
+<p>但比如到底是什么色调的蓝，对吧。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; but like what shade of blue you know.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。是的。是的。所以这里面有……而且品牌是相当具体的，他们确实在意究竟是哪种色调的蓝。它不应该只是随随便便的一种蓝和随随便便的一种黄。那样就不是宜家了，对吧？我只是随手举个例子。但这正是属于……这并不一定是我们开发前沿模型的必然使命范围，但我们从根本上确实想要打造出能让人用来解决具体任务的产品，而不仅仅是研究产物，对吧？所以我觉得去了解人们到底在意什么，是很有用的。</p>
+</blockquote>
+</blockquote>
+<p>我相信很多人都非常感激你们的工作，而且还有很多事情可以做，单是过去哪怕短短几年里，你们就已经取得了如此大的进展，比如像 Nano、Banana、Veo 和 Omni，我不知道你们还在酝酿些什么，但我们非常兴奋。这就是那种……比如 Sora 关闭时我感到非常失望的事情之一，我认为对于生成式模型，需要有更广泛的探索，而不仅仅局限于写代码。［笑］我认为那是……</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. Yeah. So there there's like, you know, and the brands are pretty spec, you know, pretty, you know, like they they do care about the shade of blue. It's not shouldn't just be a random blue and a random yellow. That's not going to be IKEA, right? I'm just thinking about an example. But like this is the kind of stuff that, you know, it's not necessarily part of our like, you know, developing frontier models kind of, you know, necessarily mandate, but it's something that we do want to we do want to fundamentally like build products that people will use to solve concrete tasks, not just not just research artifacts, right? So I think it's useful to understand what people do care about. Uh well, I'm sure a lot of people are very grateful for your work and there's a lot more to do that you've made so much progress over the last like even just couple years of like Nano Banana and Theo and Omni and uh I don't know what else you got cooking but we're very excited like you this is one of those things where like I was very disappointed you know when Sora shut down and and I think like there needs to be more general exploration of uh you know generative models and not just you know coding. [laughter] I think I think that is
+</details>
+<blockquote>
+<blockquote>
+<p>我们显然喜欢写代码。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; we obviously like this.
+</details>
+<blockquote>
+<blockquote>
+<p>我们热爱写代码。热爱写代码，而且……是的。非常感谢你们抽出时间。这真是一次由衷的愉快交流，我迫不及待地想看看接下来会呈现出什么样的新成果。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We love coding. Love coding and and uh yes uh but thank you so much for your time. Uh it's been a real pleasure and I can't wait to see what this looks like next.
+</details>
+<blockquote>
+<blockquote>
+<p>感谢邀请我们。非常棒的问题。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Thank you for having us. Great question.
+</details>
+<blockquote>
+<blockquote>
+<p>谢谢大家。［掌声］</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Thank you everyone. [applause]
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/85f343da17d4dc2f07e98c139ca2a4038c64c8abf92ecee790a862f6d0000f46.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/85f343da17d4dc2f07e98c139ca2a4038c64c8abf92ecee790a862f6d0000f46.md" download="Google生成式模型团队访谈：NanoBanana 2 light与Gemini Omni Flash发布及FDE机制探讨.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Google" class="entity-link company-link">Google</a>, <a href="/search/?q=Google Cloud" class="entity-link company-link">Google Cloud</a>, <a href="/search/?q=Google DeepMind" class="entity-link company-link">Google DeepMind</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=NanoBanana 2 light" class="entity-link product-link">NanoBanana 2 light</a>, <a href="/search/?q=Gemini Omni Flash" class="entity-link product-link">Gemini Omni Flash</a>, <a href="/search/?q=Omni" class="entity-link product-link">Omni</a>, <a href="/search/?q=Veo" class="entity-link product-link">Veo</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>
