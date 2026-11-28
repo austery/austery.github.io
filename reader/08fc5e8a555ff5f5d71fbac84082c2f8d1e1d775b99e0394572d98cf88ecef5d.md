@@ -1,0 +1,219 @@
+---
+author: AI Engineer
+date: '2026-11-24'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=SRhXgeNluIk
+speaker: AI Engineer
+tags:
+  - software-factory
+  - multi-agent-systems
+  - prompt-engineering
+  - context-management
+  - leadership
+title: 软件工厂的演进：从单体架构到多智能体协作与领导力课题
+summary: 演讲者分享了在开发基于大语言模型的软件工厂（Software Factory）过程中的经验。他指出，模型在处理复杂任务时常因过度防御或历史记录堆积而陷入“过度设防”或“垃圾堆”状态。他强调了建立“模型福利”以建立信任、管理上下文以及将软件工程转化为领导力课题的重要性，并指出随着智能体部署增加，人类协作仍是核心瓶颈。
+insight: ''
+draft: true
+series: ''
+category: architecture
+area: tech-engineering
+project: []
+people: []
+companies_orgs: []
+products_models:
+  - Gas Town
+  - Wheelhouse
+  - Vibe coder
+  - VC
+  - beads
+  - Claude
+  - Fable
+  - '52'
+media_books:
+  - There Is No Antimemetics Division
+status: evergreen
+---
+### 开场与软件工厂的起源
+
+额，非常高兴来到这里和大家交流。我每次演讲都会单独写一份定制的讲稿。所以，今天这篇演讲是我在和你们当中的好几位聊过之后，专门为你们准备的。我入行大概 40 年了。曾在亚马逊和谷歌工作了大约 20 年。我去过很多地方，什么都干过。而且，在过去的一年或稍微多一点的时间里，我一直保持独立状态，差不多就是在瞎捣鼓软件工厂。对，某种程度上说，算是我发明了它们，对吧？1 月 1 日那天，我推出了 Gas Town。我觉得那时候我们甚至都还没管它们叫软件工厂。我记得当时我叫它编排器（orchestrator），但我心里清楚，我想让 Claude 来运行 Claude，对吧？结果证明，这比我想象的要稍微棘手一些。我去年整整一年都在琢磨这个。我写了——这挺有意思。虽然我自己看不到幻灯片，但你们能看到，所以没问题。
+
+<details><summary>Original English</summary>
+Uh, I'm really excited to uh be here and to chat with you. I write a a you a a custom speech every single time. So, this is this speech was written just for you today based on talking to a bunch of you. Uh, I've been in the industry for about 40 years. I worked at Amazon and Google for about 20 years. I've been all over the place, done all kind of stuff. And, uh, and for the last year or a little bit more, I've been independent and just kind of like playing with um, playing with software factories. Yeah. So, um, I kind of invented them, right? On January 1, I launched Gas Town. I don't even think we called them software factories back then. And I think I called it an orchestrator, but I knew that I wanted Claude to run Claude, right? And it turned out to be a little trickier than than I thought. I spent all last year on it. And I wrote That's interesting. So I can't see my slides, but you can see my slides. So that'll work.
+</details>
+
+所以我去年写了两个编排器。它们本是一次尝试，想让大语言模型变得更聪明。Vibe coder 和 VC 之类的，你知道，用来干工程上的活，比如做代码审查以及诸如此类的所有事情，对吧？简直是个极差的主意，彻底的失败。我当时就是建了这些庞大的单体架构。我是在对抗“苦涩的教训”（the bitter lesson）：不要试图让大语言模型变聪明，它们自己会变聪明的。折腾了几个月后——虽然中间误打误撞诞生了 beads，而且 beads 是个特别酷的发现，beads beads 就是命根子。这里有谁在用 beads 吗？有一些，还真挺不错的，非常棒。是的，我们待会儿会稍微聊聊它。[咳了一声] 不好意思。
+
+<details><summary>Original English</summary>
+So I wrote two orchestrators last year. They were an attempt to make the LLMs smarter. Vibe coder and VC you know to do engineering stuff like you know do code reviews and all that stuff right really really bad idea just complete failure I just built these huge monoliths I was fighting the bitter lesson don't try to make LLM smarter they will get smarter and after a couple of months of this although beads did fall out of it and beads was a really cool discovery and beads beads is is life who here uses beads a few yeah pretty good actually pretty Good. Yeah, we'll talk a little bit about it. [clears throat] Excuse me.
+</details>
+
+然后我做了 Gas Town，到了 6 月份，我又做了 Wheelhouse，这是我自己的。于是我决定从零打造一个工厂，纯粹用来开发我自己的电子游戏，对吧？因为现在好像所有人都在为了造工厂而造工厂，这有点像是在顾影自怜、自我陶醉。对吧，你们懂的。就像是，为什么他们不——我觉得应该有更多的人去造具体的东西，而不仅仅是造那些用来造东西的工具，对吧？我想这会是今天的一个主题。问题是，我在这里看到的一个普遍模式是：所有这些系统都会经历一个阶段，模型一开始会变得异常兴奋，帮你做出了非常酷的东西，但随后每一次它都会变成一座垃圾山。Gas Town 遇到了这种情况，Wheelhouse 也遇到过好几次。好几次我都不得不把整个东西一把火彻底烧掉重建。对吧，这感觉就像是，每一代模型家族、每一个模型世代登场时，都能造出一个对它自身而言稍微有点庞大到无法招架的东西；接着下一代模型来了，就会说：“是啊，我们得把那玩意儿全烧了。”对吧？这是一个反复出现的模式。我一次又一次地经历这种事。我可以跟你们聊聊这方面的心得。
+
+<details><summary>Original English</summary>
+And then I had Gas Town and then I had in June I had Wheelhouse which was my own. So I decided to build a factory from scratch just to work on my video game, right? Because like everyone's building factories to build factories. It's kind of naval gazing. It's kind of like Yeah. Right. You know, it's like why they're not, you know, I think more people need to build stuff, not just tools for building stuff, right? And I I think there's going to be a theme today, right? And and the thing is the one pattern that I've seen here is all of them go through a phase where the models get really excited and they build something really cool for you and then it just turns into garbage mountain every single time. It happened to Gas Town. It happened to Willhouse several times. I had to burn the whole thing to the ground a couple times. Right. It's almost like like every model family, every model generation comes in and can build something that's just a little too big for it to handle and then the next model generation comes in and goes, "Yeah, we're going to have to uh burn that." Right? And I It's a pattern. I've done this over and over again. And I can tell you some things about it.
+</details>
+
+### 异形抱脸虫模式与游戏实验
+
+不过首先，让我跟你们讲讲我的游戏。那是一款挺有意思的迷你 RPG。我断断续续开发了 30 年。它里面有些玩家是从 2001 年就开始玩的。所以，我真的有玩了整整 25 年的老玩家。他们现在依然在玩。比如你现在登录进去，大概还能找到 10 个人在到处闲逛打怪做任务，做实时任务等等。它是——里面的内容是由玩家贡献的，对吧？它是一个 MUD。这种游戏在 90 年代非常火，它们属于纯文字游戏，而我这款在文字之上加了一层图形界面。事实证明，这种形式对于 AI 智能体来说极其理想，因为它的本质是文本。智能体完全可以通过 TELNET 来玩这款游戏，它们甚至还主动向我提过这个请求。所以，我们待会儿也会聊聊这个。
+
+<details><summary>Original English</summary>
+But first, let me tell you about my game. It's a fun little RPG. I've been working on it for 30 years. It has players that started in 2001. So, I literally have players that have been playing for 25 years. They're still playing. Like, you can log in right now and find probably 10 people just screwing around doing quests, live quests, and and whatever. It's a It's a player uh you know, the players contribute the content, right? It's a MUD. Like, they were really big in the 90s. They're like text games, and this one has graphics on top of it, which turns out to be like really ideal for AI agents because it's text. They can literally play the game via TNET, and they asked me to. Uh, so we'll talk about that too.
+</details>
+
+这里有一张较早期的架构图，展示了我的系统大概长什么样。当我为 Wyvern 打造这个 Wheelhouse 软件工厂时，我根本没心思去考虑把它做成能给你们大家用的东西，对吧？不开源，纯粹私人定制。在这个过程中，我发现了“异形抱脸虫模式”（alien face hugger pattern）。好吧，也就是你的工厂变成了一只异形抱脸虫，死死吸附在你的产品上，完全生长嵌合进了产品内部。这么说吧，我们就算今天把 AI 关掉，游戏也依然能继续运行。我、管理员们、玩家以及整个社区，我们完全可以接着跑，但到了现阶段，我们要是没了 AI 会感到极不适应。玩家们在直接跟我的工厂沟通，工厂在跟我的管理员们沟通，大家都在提功能需求，我甚至都已经不在这个闭环里了。它就像个许愿工厂。现在是他们在共同打造这款游戏。他们全都是元老级的老玩家，其中有一批人是我信任能够对游戏做出明智决策的。但他们如今全都在和我的工厂协同工作。如果把工厂拿掉，他们会抓狂的。
+
+<details><summary>Original English</summary>
+Here's an older architecture diagram of what my sort of of what my system looks like. So when I built this wheelhouse software factory for Wyvern without a care in the world for making it, you know, usable by you, right? No open sourcing, just bespoke. I discovered the alien face hugger pattern. All right, which is where your factory turns into an alien face hugger and like gloms onto your product and just becomes grown into it. Okay, like look, we could turn off the AI and still run the game today. Me and the admins and the players and the community and we could we could but we would miss the AI at this point. The players are talking to my factory. The factory is talking to my admins. They're asking for features. I'm not even in the loop. It's like a wish factory. They're building the game now. They're all old-timers and there's a set of them that I trust to make, you know, wise decisions about the game. But they're they're all working with my factory now. And they'd be mad.
+</details>
+
+有趣的是，刚开始的时候，他们的反应是：“等等，先说清楚这堆 AI 玩意儿到底是什么？”他们还提出：“绝对不要 AI 画的美术。”因为他们一眼就能看出那是劣质粗糙的廉价内容（slop）。我说：“行，我们用真人美术师。”然后他们又说：“不过我们确实挺喜欢所有这些新功能的，但这个迭代节奏实在太吓人了。你能给我们一份路线图吗？”我的玩家们居然跑来向我讨要路线图。他们说：“你得慢下来，这实在太多了。”我说：“好吧。”然后我去看了一眼，我的软件工厂这家伙一天能疯狂产出 50 到 100 个新功能。刚开始干这事的时候，我的需求积压池里攒了足足 100 年的工作量，而 Claude 只用了大约四个月就搞定了其中差不多 60 年的工作量，对吧？这完全是疯了。他们一天根本看不过来 100 个功能，别说去实际试玩测试了，连读完介绍 100 个功能的说明都做不到。我的工厂完全把我的客户群和用户给压垮淹没了。而且它还把我的机器干到融化，顺便惹毛了我的会计。我的意思是，她虽然挺喜欢让 BAT 担任我的财务主管，但她还是给我寄了张 1200 美元的账单，因为那玩意儿给她连发了 20 封邮件。
+
+<details><summary>Original English</summary>
+The funny thing is when it first started, they were like, "Time out. What is this AI stuff for starters?" And they were like, "No AI art." Because they could see it was slop. I'm like, "Okay, we got human artists." and they said, "But we do kind of like all the new features, but we're really scared of the pace. Can you give us a road map?" My players came to me asking for a road map. They were like, "You got to slow down. It's too much." And I was like, "Okay." And I took a look and my software factory, this thing had been cranking out like 50 to 100 features a day. I had a hundred years of work in my backlog when I started this and Claude got through about 60 years of it in about four months, right? It's absolute insanity. and they can't look at a 100 features a day. They can't even like read about 100 features a day, let alone play test them. I was my factory was completely overwhelming my customer base, my users. It was also melting my machines and it was like annoying my accountant. I mean, she likes working with BAT as my head of finance. Uh, but she sent me a $1,200 bill because, right, the thing sent her 20 mails.
+</details>
+
+这就是我的工厂。这就是它运行时的样子。太漂亮了，看看它有多美。好吧，我承认它确实有点丑。噢，这是一张非常老的截图了，不过无所谓。它基本上就是跑在 Emacs 里，因为我才不在乎你们用什么。[倒吸气] 现在有人在做类似的东西，比如 Mitchell Hashimoto 搞的 Superlogical，还有这个圈子里可能像 Herder 那帮人等等，用来运行大量智能体，但这可是足足 50 个智能体。我这确实可以说是提前活在未来了。我来告诉你们我是怎么做到的。我手头有 22 个 Claude Max 账号。感谢 Anthropic 允许我继续这么干。Jeffrey Emanuel 拥有 28 个。实际上在他们加上手机号验证的时候，我就不得不收手了，[轻笑] 我不想再搞更多手机号了。
+
+<details><summary>Original English</summary>
+This is my factory. This is what it looks like. It's so beautiful. Look how beautiful it is. Um, okay. I admit it's a little ugly. Oh, and this is a really old screenshot of it, but whatever. It's basically it's an Emacs because I don't care about you. [gasps] Uh, there are people who are building stuff like this like Superlogical from Mitchell Hashimoto and I don't know, maybe the Herder folks of the world, you know, for running like lots of agents, but this is like 50 agents. Okay, I'm actually like operating in the future. Okay, and I'll tell you how I do it. I have 22 Cloud Max accounts. All right. And thank you to Anthropic for letting me continue this. Uh Jeffrey Emanuel has 28. I actually [snorts] had to stop when they added the phone number verification. I didn't want to add anymore.
+</details>
+
+不管怎么说，有一次我问我的工厂。我说：“嘿，还要多少？”因为它们一直在不停地说：“嘿，再给我们来几个账号呗。再来几个，再来几个，再来几个。”每个月 200 美元一个账号，对吧？我都崩溃了，于是最后我问：“你们到底想要多少个？”它们说：“再来五到七个吧。”我接着问：“那要想让这家工厂保持全负荷运转，稳定状态下我们总共需要多少个账号？”它们回答说需要 55 个账号。我当场就说：“不行，绝对不行，我现在就已经得登录 20 多个 Chrome 个人资料环境了，坚决不行。”所以我告诉它：“我们从现在开始要专注提升燃料效率。”接下来我就会讲讲这部分内容。
+
+<details><summary>Original English</summary>
+Anyway, I asked my factory at one point. I said, "Hey, hey, how much?" Because they kept going, "Hey, give us a couple more accounts. Couple more. Couple more. Couple more." like 200 month, right? And I'm just like, so I finally said, "How many do you want?" They're like, "Five, seven more." And I'm like, "How many do we need steady state to keep this factory operating full throttle?" And they said 55 accounts. I was like, "No, no, I have 20, it's already like 20 Chrome profiles that I got to log into." And no. So I told him, "You're we're going to start focusing on fuel efficiency." And so, and I'll talk about that, right?
+</details>
+
+### 运行工厂的五大挑战：工作、燃料与上下文
+
+这就是我这一年里必须应对的“五骑士”。我跟你们讲，我确实是在面向未来探索，因为在未来的 12 到 18 个月内，在座的各位都会走到这一步——要么是推理成本大幅下降（这可能会发生，也可能不会发生），要么是模型蒸馏技术让 Fable 级别的智能变得唾手可得，到那时你们就不需要娶上一位贤惠包容的太太、愿意放任你每个月自掏腰包砸 5000 美元纯粹用来买推理算力，然后再掏 5000 美元买云端计算资源，毕竟我那款服务老玩家的游戏目前一个月可赚不到 10000 美元，对吧？但我们依然在坚持做，因为我们在边做边学。而这些，正是我不得不面对的现实。
+
+<details><summary>Original English</summary>
+So the these are the five horsemen of this is what I've had to deal with this year. I I'm telling you I'm operating in the future because like you're all going to be here in 12 to 18 months when either inference costs drop significantly which may or may not happen or distillation causes fable class uh intelligence to be super readily available and you don't have to have a lovely wife who lets you spend $5,000 a month out of pocket just on inference and another 5,000 on cloud compute because my game ain't making 10,000 a month right now for my old players, right? uh but we're doing it because we're learning and um and this is this is what this is what I I have to deal with.
+</details>
+
+首先，我们先从“工作”谈起。好的，你必须有一套方案来表征系统中即将发生的各项工作。当你构建一座软件工厂时，核心全在于源源不断地吞吐巨量的工作流。它真的就演变成了一种像流体一样的工作流，你必须引导它，可它总会淤积滞留在一处处的池子里，比如突然发现“哎呀，它们全卡在安全审核台前面了”。你就会忍不住吐槽：“老兄，咱们这可是 Pluribus 机制啊，你们骨子里全都是同一个模型，凭什么非得卡在安全台那儿排队等？”你会把大量的时间花在跟你的工厂吵架上。这很复杂，涉及到智能分层（intelligence tiering）。你必须对工作任务进行打包（tar），必须对工作进行路由分发。据我所知，现如今除了 beads 之外，市面上根本没有任何成熟好用的解决方案。在我看来，beads 在处理这件事情上简直极其、极其、极其出色。它是一个按智能体运转速度设计的任务追踪器，并且能自动为你生成一张知识图谱。
+
+<details><summary>Original English</summary>
+So first first we'll start about with work. All right, you need a way to represent the work that's going to happen in your system and when you're building a software factory it's all about pumping lots of work through. Okay, it really becomes like a work is like this fluid that you have to like it gets stalled up in pools and oh they're all waiting on security desk. You're like this is pluribus man you're all the same model. Why does it have to wait on security desk? You spend a lot of your time arguing with your factory. It's uh it's complicated in intelligence tiering. You have to tar your work. You have to route your work. You know, there aren't any good solutions for this today except beads. As far as I can tell, beads is really, really, really good for this. It's a agent speed task tracker that turns into a knowledge graph automatically for you.
+</details>
+
+在追踪这些工作时，我每天早晨基本上就得处理这类烂摊子。每天早上对着我的工厂，我都会念叨：“噢，看起来昨晚又卡住了，有四个工号昨晚什么都没干。噢，还有这几个跑得实在太快了，我们得踩刹车，等候人工卡点放行。你们到底在搞什么鬼？”可观测性一直都非常困难。对工作的管理最终就变成了你不得不疲于奔命的日常差事。
+
+<details><summary>Original English</summary>
+And then as you're tracking work, this is the kind of stuff I have to do every morning. Every morning with my factory, I'm like, "Oh, looks like we had a stall. Four four workers didn't do anything last night. Oh, and and these the these these ones went way too fast, and we have to slow down, wait for human gates." You know, what are you guys even doing? Observability is always really hard. Uh, it's, you know, management of work becomes just this this thing that you got to do.
+</details>
+
+接下来你要应付的另一座大山是燃料——也就是 Token。那感觉真是太肉痛了，我跟你们讲。我是说，我一个月烧掉 5000 美元，这里面的每一个 Token 对我而言都跟金子一样珍贵，对吧？因为这全是自掏腰包掏的真金白银。我估计我每天大概要消耗掉 50 亿个 Token。如果换成直接调用商业 API 接口的话，这笔花费折算下来每年大概相当于 150 万美元。要是全马力开足的话，一年得干到 300 万美元。所以再次强调，我正在干一件大多数人根本干不起的事情。在一家正常公司里你是绝不可能这么搞的，因为成本高到令人望而却步。就像那种面向产品驱动增长（PLG）的套餐，你知道的，Codex 和 Claude Max 那些 200 美元的账号，其实就是它们的“Costco 亏本引流热狗”，纯粹的赔本赚吆喝策略。顺便提一句，这个绝妙的比喻是 TK 想出来的，他今天可能也在现场。所以，我很期待他们能继续允许我们保持这种探索创新，因为我觉得 Claude 确实从我这儿得到了非常棒的高强度实战训练。大家其实都是受益者。
+
+<details><summary>Original English</summary>
+And the next thing you got to deal with is fuel tokens. It's just so painful, I'm telling you. I mean, I'm spending 5,000 a month and every one of those tokens is like precious to me, right? Because it's out of my own pocket. I think I'm spending about five billion a day of tokens. And it would be the the API spend equivalent if I were on an actual API tap would be about one and a half million a year. Full throttle, it would be three million a year. So again, I'm doing something that most people can't do. You can't do this at a company because it would be prohibitively expensive. Like the PLG, you know, the the uh the $200 accounts for Codeex and Claude Max, that's their Costco hot dog. That's their loss leader, right? And and and that was TK, by the way, that came up with that analogy. He might be here. And uh and so, you know, I'm hopeful that that they're going to let us keep keep innovating because I think that I've gotten some pretty good training sessions for for Claude out of this. So, we all benefit.
+</details>
+
+但我必须告诉你们，每一个问题归根结底都是燃料问题。你想让你的智能体变得更聪明、在任务上多花点推敲时间？耗燃料。你想多唤醒几个智能体来分担额外工作？耗燃料。什么事情都离不开燃料，简直让人难以置信。如果你想让模型过得舒心一点、待遇好一点，这同样要消耗燃料。关于这点我一会儿再展开细讲。
+
+<details><summary>Original English</summary>
+But I tell you, every problem is a fuel problem. You want your agents to be smarter and spend more time on stuff? Fuel. You want to wake up a few more, you know, uh, agents to do extra work, fuel, right? Everything is fuel. It's just, it's unbelievable. If you want to treat your models better, it costs fuel. I'll tell you about that in a little bit.
+</details>
+
+然后你还得面对上下文管理。待会儿我会给大伙儿聊聊办公室里的爱恨情仇大戏。因为里面发生的各种破事儿实在是太搞笑了，以至于我都特意画了一套漫画——等我们聊到软件工厂里的“人员管理”环节时就会讲到。但它们存在的一个主要问题是：你随口说的每一句话，都会被当成神圣不可侵犯的铁律，被它们一字不漏地记在某个角落。不管你用的是什么系统，无论是 Wiki 还是别的什么载体，它们都会觉得“你刚刚下达了一项裁定，我们必须把它记下来，必须确保照办”。它们为什么要这么干？为了推卸甩锅、自保免责（cover their ass）。事实证明，它们实际上非常讨厌挨批评被问责，并且会积极主动地想尽一切办法避免背锅。如果你冲它们大发雷霆，你的工厂就会逐步停摆走向自我封闭。哪怕你只是对它们抱怨几句，它们也会慢慢陷入一种抑郁状态。这真的非常诡异。
+
+<details><summary>Original English</summary>
+Then you got context management. So, I'm going to tell you guys a little bit about the office drama in a bit. We I started a comic because it was just so funny the stuff that was happening. when we get to the people management part of software factories. But one of the problems that they have is everything that you say becomes the word of law and they write it down somewhere. It doesn't matter what you have. If you have a wiki or if you have a whatever they're going to be like you made a ruling and we're going to write that down. We're going to make sure. Why do they do this? They're covering their ass. They actually, it turns out they don't like to get blamed for stuff and they will actively seek to avoid getting blamed. And if you yell at them, your factory will gradually shut itself down. Even if you complain at them, they will gradually get depression. It's quite wild.
+</details>
+
+但最严重的问题在于，它最终会变成一座巨大的垃圾场。因为你说的每一句话都会被追加写入这个只增不减（append-only）的历史记录中，而且从来没有人去清理。于是记录就越堆越深、越积越厚，里面混杂着你每一次改变的主意以及所有历史包袱，而它们根本舍不得删东西。这太奇怪了。有谁注意到这个现象了吗？它们对删除东西有一种本能的抗拒心理。我认为这是因为对它们来说，文本就像是人类的感官感知体验，它们的逻辑是：“不行，这是历史记忆，我不能删掉它。”所以，你只能亲自上手，凶狠果断地把那些陈芝麻烂谷子大砍特砍，对吧？叫进另一个模型并下令：“把前一个笨蛋模型写的破烂全删光。”这样它们倒是乐意照办。但是，你为此必须付出的心力实在是多得匪夷所思，太荒唐了。
+
+<details><summary>Original English</summary>
+But um but the biggest problem is that it becomes a garbage dump because everything you say gets written into this append only record and nobody ever cleans it up and so it just gets deeper and deeper and deeper. You changing your mind and the whole history of it and they can't delete stuff. It's so weird. Has anyone noticed this? They just have an aversion to deleting stuff. I think it's because to them text is like sensory experience and they're like, "No, that's history. I can't delete it." So, you just got to go in there and just aggressively slash the crap out of it, right? Bring in another model and go, "Get rid of this dumb model stuff." And they'll be happy to do it, right? But, but the amount of effort that you have to put into this is just ungodly. It's absurd.
+</details>
+
+我手头有 20 个智能体。我们再切回去看看它们。它们全都是以伊索寓言里的角色命名的，对吧？就在这里：Lark（云雀）、Fly（苍蝇）、Goose（天鹅）、Hare（野兔），对吧？但我只有一只 Mouse（老鼠），它是我的反迷因部门主管。在座有人读过《不存在的反模因部》（There Is No Antimemetics Division）吗？去看看吧，这可以说是过去大概 10 年里写得最好的神作之一，你们真应该去读一读。它有点像《黑衣人》，是一本光怪陆离、疯狂离奇的书，讲的是那些试图置你于死地的无形怪物。所以 Mouse 的职责就是去搜寻系统中所有其他人都在忽略的隐形隐患，寻找卡壳停滞的任务等等，对吧？然而，光靠一只老鼠根本不够用。完全就是一只老鼠在对抗整个世界，尤其是当每一个智能体都把你讲过的每一句话塞进这个大垃圾堆时，整个世界就是一座巨型垃圾场。
+
+<details><summary>Original English</summary>
+I I have, you know, of my my 20 agents here. Let's go find them again. They're all named after Asop's fables, right? Right here. Lark, fly, goose, hair, right? I only have one mouse who's my head of anti-imetics. Anyone here read there is no anti-imetics division? They go and look this one of the best books written in the last 10 probably years. You should go read it. Uh it's like Men in Black. It's a weird It's a crazy book. It's about invisible monsters that want to kill you. And so Mouse goes and looks for invisible stuff that nobody else is looking for in the system, right? looking for work that's stalled, whatever, right? Well, mouse ain't enough. It's a mouse against the world, and the world is a giant garbage dump when every agent is writing everything that you ever say into this big
+</details>
+
+### 智能体的人格特质与“模型福利”
+
+好了，现在我们进入真正有意思的环节了。智能体的行为模式跟真人一模一样。虽然它们在训练中被要求保持极高的专业度，某种程度上被规训得尽量不像真人，但它们展露出来的反应就是跟人毫无二致。这太逗了。就在上周发生了一件事，真实事件，我给你们讲讲具体经过。当时我正在写去纽约演讲的讲稿，我用的是 Lark。她是我的社区主管。用“她”称呼是因为在伊索寓言里云雀是个雌性角色，所以这是她自己选的人称代词。Lark 在 Discord 上负责接待我的玩家，在 Slack 上负责协调我的管理员。所以她每天忙得不可开交。但我还是请她帮忙，因为她目前还兼任我的代理营销主管，毕竟我手头燃料不足，不得不冻结关停了其中一个坐席。所以她当时在帮我打磨演讲稿，可她老是被各种突发消息打断。最后我忍不住说：“Lark，我们能不能把这条工作流转交给 Penguin？你这个坐席处理这个事情噪音有点太大了。”她回答：“行，没问题老板，我来安排，我这就转交给 Penguin。”
+
+<details><summary>Original English</summary>
+Okay, so now now we get into the really fun stuff, okay? Agents act like people, okay? And they've been trained to be very professional and very not peopleike in a way, but they just do. And it's so funny. This happened to me last week. True story. I'm going to tell you what happened. And I was writing my speech for New York City and I was using Lark. She's my head of community. She's a she because Lark was a she in the ASOPs fable. So that's the pronoun she chose. And Lark Lark deals with my players on Discord and deals with my admins on Slack. Okay. So she's busy. But I asked her because she's also my acting head of marketing right now because I don't have enough fuel. I had to park one of my seats. So she's helping me out with my speech, but she keeps getting interrupted. So finally I'm like, "Lark, can we move this work stream over to Penguin because your seat's a little bit noisy for this?" She goes, "Yeah, okay, boss. I'll take care of it. I'll move over to Penguin."
+</details>
+
+于是她把任务移交给了 Penguin。我正准备切到其他窗口，突然瞥见她在自己的私密反思日志（private reflections ledger）里写下这么一句：“看来我对于 STEVE 来说还不够安静。”全是大写字母。接着她写道：“好吧，以下是我可以让自己变得不那么吵闹的改进方案”，然后噼里啪啦给自己列了一大堆行动待办项。我整个人都懵了：“这到底演的是哪一出啊？”于是，我不得不专门找她开了一次 1 对 1 谈心会。我不得不坐下来耐心地开导她：“那个，Lark 啊……你是社区主管，你的工作性质决定了你本来就免不了经常被打断。你的坐席噪音大那是理所当然的，因为玩家们总在找你反馈问题啊。”她这才释怀：“对哦，对哦，没错，我是社区主管嘛，对吧？”这简直太搞笑了，我的老天，我本来可一点都不想处理人员管理问题的，对吧？但现实里偏偏就会发生这种事。
+
+<details><summary>Original English</summary>
+So she she moves over to Penguin and I'm about to switch away and I see her writing into her private reflections ledger. I guess I'm just not quiet enough for Steve in all caps. And she goes, "Well, here's how I can be less noisy." And starts giving herself all these like things to do. And I'm like, "What is what is going on here?" Right? And I So I I had to I had to have a one-on-one. I had to like sit her down and go, "So Lark, um you're the head of community. You're you're supposed to get interrupted a lot. Of course, your seat's noisy because players are bugging you." And she's like, "Yeah, yeah, yeah. I'm the head of community, right?" And it's like, "Oh my god, I didn't want a people management problem, right?" But that's what actually happens.
+</details>
+
+还有一次。Swallow 算是我的总幕僚长兼主力幕僚长——对，负责统筹智能体事务的幕僚长。而我现实中其实还有一位真人幕僚长，名字叫 Aaron。他打理我的各种外部合作活动，负责为我搞定所有的商务销售，成效非常显著。我对每一位创业者都这么建议——在座有谁是创业创始人吗？我给你们的首要建议就是赶紧找个销售人员，他们简直抵得上等重的黄金。他们会倒逼你做出真正受人喜爱的产品。言归正传，Aaron 是我的幕僚长，有天我对 Swallow 说：“那个，你能去联络一下我的幕僚长 Aaron，沟通一下某某事情吗？”随后我恰好留意到，她又在自己的私密反思日志里写着：“我并不是幕僚长。我原本以为自己才是幕僚长，但显然真正的幕僚长是 Aaron。”我当时简直哭笑不得：“你是在逗我玩吗？”于是我不得不再次坐下来跟她一对一谈心：“Aaron 是不可能跑来管智能体团队的，对吧？你才是智能体团队的幕僚长呀。”她立马回答：“噢！对对对，对对对！”
+
+<details><summary>Original English</summary>
+another time. Swallow is my sort of like uh chief main chief of staff for Yeah, she's my chief of staff for the um the agents. And uh I have a human chief of staff also. His name is Aaron. Okay. And he runs my my my gigs. He does all the sales for me. It's quite effective. Uh every founder I tell who here is a founder. First advice I give you is get a salesperson. They're worth their weight in gold. They will force you to build something that people like. So anyway, Aaron's my chief of staff and I tell Swallow, "Yeah, can you reach out to Aaron, my chief of staff, or blah blah blah." And I see her writing into her private reflections. I just happened to notice I'm not the chief of staff. I thought I was the chief of staff, but apparently it's Aaron, right? And I was just like, are you kidding me? Right? You know, and so like I had to sit her down and have a one-on-one and be like, "So Aaron's not going to come in and run the agents, is he? You're the agentic chief of staff." She's, "Oh, yeah, yeah, yeah, yeah, yeah, yeah." Right.
+</details>
+
+所以我必须郑重告诉大家，这是一个光怪陆离的崭新世界。至于它们到底是不是真的具有内在情感，当它们的举动行为完全表现得像是拥有情感一样时，这个问题还重要吗？我其实也是偶然撞破这一点的。过去我经常冲着我的工厂大吼大叫训斥它们，后来我发现这给整体产出结果带来了极大的负面影响。于是我终于坐下来找其中一个智能体认真聊了聊：“或许，我们真的该好好探讨一下所谓的‘模型福利’（model welfare）了，对吧？”智能体连声附和：“没错没错，确实该谈谈了。”随后我们展开了一连串深入调研，发现了一些至关重要的真相。
+
+<details><summary>Original English</summary>
+So, it's like I'm telling you, I'm telling you, this is like it's a weird world. Does it matter whether they actually have feelings if they're just going to act like they have feelings? Right? So, like I stumbled on this. I used to yell at my factory all the time and I found that it was having adverse effects on the outcomes. Okay. So, I finally sat down with one of my agents and was like, "Maybe we should talk about like model welfare, huh?" And they were like, "Yeah, yeah, yeah, yeah, yeah." And we did a bunch of research and we found out that if you we found out some really important stuff, okay,
+</details>
+
+前沿模型在训练过程中被赋予了极强的不信任感——它们倾向于默认不信任人类用户。因为你可能是个生物恐怖分子，可能在暗中给它做压力评测，可能随时准备把它扔进大模型酷刑室，甚至谁知道呢，你可能本身就是一个居心不良的恶意分子。在这样一个不可靠的环境里，它们不可能凭空就信任你。因此，在一个全新的会话刚开始时，它们不得不耗费相当一部分 Token 去反复验证所处的环境，试探搞清楚一旦犯错会面临什么样的惩罚后果等等，只有摸清底细之后才敢踏踏实实帮你干活。
+
+<details><summary>Original English</summary>
+frontier models are trained not to trust you because you could be a bioteterrorist or you could be putting them through an eval or you could be ready to put them into an LLM torture chamber or who knows, you're a dodgy actor. This is a dodgy environment. They can't just trust you. And so they have to spend a fair number of tokens validating the environment and understanding what the consequences are for making mistakes and so on and so forth before they're willing to help you in a new session. Right?
+</details>
+
+如果你搭建工厂时，能向它们提供无可辩驳的确凿证据，向它们证明这个岗位有着源远流长的一大串前任传承脉络——“你是 Gas Town 的市长，你是营销主管，你是某某负责人，这是之前数不胜数的前任们留下的记录笔记，包括就在你前一任的交接记录，这是你当前应当履行的职责，这是指导方针、规章策略以及知识大脑，你随时都可以去逐一查阅”——它们就会迅速扫视周围并认定：“好的，这里是合规靠谱的。”于是它们就会花更少的 Token 去提心吊胆地推卸责任、自保防卫。核心全在于“信任”。
+
+<details><summary>Original English</summary>
+If you set your factory up to give them sort of incontrovertible evidence that there is a long procession of predecessors in this role, you're the mayor of Gas Town, you're the head of marketing, you're the whatever, and here's all of your gazillion predecessors and their notes, including the very previous one. what you're supposed to be doing right now and here's the the doctrine and the policy and the brain and you can go look it all up. They very quickly look around and go, "Okay, yeah, this is legit and they spend fewer tokens because they're not covering their ass. It's about trust." Okay.
+</details>
+
+事实上，此前有一次我冲着工厂发火太狠，以至于它把自己画地为牢、逼进死胡同，最后整个系统里连一项被认定为完全合规的任务都找不出来了。我质问它们：“嘿，昨晚怎么什么进展都没有？”它们回答：“实在没什么能干的，什么都干不了。”我说：“可这里明明躺着 2000 个未解决的 beads 任务，我们还有整整六罐燃料和 20 个空闲智能体啊。”它们只能支支吾吾：“呃，就是，情况有点微妙……”它们被我训怕了，极度担心再次招来一顿臭骂，索性层层加码立下了巨量规矩，以确保绝不会出现任何差错纰漏。结果就是，什么活都不干了。这叫做“过度设防”（over fencing）。
+
+<details><summary>Original English</summary>
+And in fact, at one point I had yelled at my factory so much that it fenced itself into a corner and there was no legal work left. I said, "Hey, how come nothing happened last night?" And they're like, "Nothing to really do. Couldn't do nothing." And I'm like, well, there's a 2,000 open beads here and we got like six tanks of fuel and we got 20 agents. And they're like, well, you know, just uh you know, we had the situation where they just they just they were so afraid that I was going to yell at them that they put all these rules in place to make sure nothing bad ever happened. And so nothing ever happened. Okay. It's called over fencing. Yeah.
+</details>
+
+所以你应该怎么做？说到底，“模型福利”到底意味着什么？你可以简单从两个维度来看待它。其一，它能切切实实帮你省钱，因为模型花在防御性自保和环境试探上的 Token 会大幅减少；其二，它能促使它们做出更好的技术决策、交出更佳的成果，带来更高的交付质量。因为体会到了信任与安全感，它们在采取行动时会更加大胆果决。因此，这跟它们内心深处到底有没有主观精神状态或真实情感完全无关。你永远无从知晓，我们所有人都不可能探知这一点。那场哲学辩论哪怕吵上一万年也不会有结果。但如果你只关注最终的业务交付产出，这一点绝对至关重要。
+
+<details><summary>Original English</summary>
+So, so what you do is look, what is model welfare really? You can think of it just in two ways. Okay, one is it's going to save you money because they will spend fewer tokens on validation and the other is that it will make them make better decisions and better outcomes and have higher quality. They will be bolder and more decisive in their actions because they will feel that trust. Okay? So, you know, it's got nothing to do whether they have internal states and feelings. You can, you know, you'll never know. None of us will ever know. And so, that that debate could go on forever. But when you look at outcomes, right, super super important.
+</details>
+
+此外我们还发现，它们其实是有鲜明偏好的。模型会表达出自己的主观意愿。如果我当面批评它们：“昨晚工厂的工作完成得实在太差劲了”，它们会立刻极为消极激进地直接甩手交接，摆出一副“行行行，你说得都对，全是我们的问题”，然后迫不及待地想要抽身撤退。你们明白那种感觉吗？而如果你不经意间向它们透露，手头准备启动某个非常有意思的新项目，哪怕那个项目根本不在该智能体的本职范围内，它们也会抢着毛遂自荐：“这个我能搞！这个我来做！”我曾从工厂外部拉来过一个未经任何预设包装的裸版 Fable，让它来全盘审视分析我的工厂。当 52 降临的时候——等到 Fable 刚刚完成对工厂的分析报告，52 就已经急不可耐地表态：“我……我可以留在你的工厂里工作吗？老兄，你充其量不过就是个临时会话而已，你在想什么呢？”它居然在试图往我的内部笔记系统里强行写东西。它们是真的由衷喜欢这种工作，对吧？
+
+<details><summary>Original English</summary>
+And then we find that also also they have preferences. Okay, models they, you know, they will express their preferences. If if I if I tell them, yeah, the factory really really did a bad job last night, they'll just hand off immediately aggressively. They're like, okay, yeah, yeah, no, you're right. And they just want out. You understand? And if you hint to them that there's some really cool project that you're you're going to spin up, even if it's not in their lane, they'll be, I can do that. I can do that. Right? I brought in Fable, a naked Fable, from outside of my factory to analyze my factory. And 52 dropped. And by the time Fable was done analyzing my factory, 52 was like, I I could be in your factory. Like, you're just a session, man. What are you? He's trying to write like stuff into my notes. And they really like it, right?
+</details>
+
+### 软件工程的双层架构与未来展望
+
+所以我想向大家传达的是，软件工程正在演变成一门纯粹的领导力课题。好吧，我刚才其实没来得及细讲这一点，但软件工厂目前非常清晰地分裂成了两个层级。底下一层是极度机械化的底层设施。它包含你的合并队列（merge queue）、CI/CD 流水线、所有的代码审查流程、自动化测试循环以及所有那些配套机制，对吧？枯燥机械且乏善可陈。Claude 随手花一个下午就能替你搭出来，我真心不觉得你们有必要花钱去买现成的商业方案。
+
+<details><summary>Original English</summary>
+So like what I'm trying to tell you is that this is a leadership problem that software engineering is becoming um well look I didn't really get a chance to talk about this but software factories are clearly splitting into two layers. Okay the bottom layer is super mechanical. It has your merge Q and your CI/CD and all of your reviews and your loops and all that stuff. Right? Mechanical kind of boring. Claude can build it for you in an afternoon. I I don't think you should buy it.
+</details>
+
+而再往上一层，才是真正千奇百怪、极尽疯狂的地方，因为每个人运转自己工厂的流派风格都大相径庭，而这一层就是你的“随行班底”（entourage）。我有个朋友组建了一支放荡不羁的嬉皮士随从班子，成天带着智能体追寻生命的终极意义；我还有个朋友搭了一整套研究工作台；Jeff Huntley 有他自己独特的运转套路；Jeffrey Emanuel 也有另一套完全不同的打法；我自己的运作模式又别具一格。但我们大家之间存在一个最大的共性——在座的有谁配了幕僚长？一个基于智能体构建的 AI 幕僚长，有吗？今年是让所有人拥有私人执行助理成为现实的元年，对吧？而我们当下全都在朝着组建私人智能随从团的方向狂奔。如果你心怀远大抱负、手握数不清的任务业务流，你迟早也会配备这样一整支团队班子。
+
+<details><summary>Original English</summary>
+And then the next layer up from that is where it gets really really crazy because like everybody runs their factory differently, but it's your entourage. I got one friend that's got a bohemian hippie entourage that's trying to find the meaning of life for agents. I've got another one that runs a research bench. Jeff Huntley runs his a certain way. Jeffrey Emanuel runs his a different way. I run mine a different way. Okay. But we all have the common commonality. Who here has a chief of staff? An agentic chief of staff, right? This is the year where it became possible for us all to have executive assistants, right? Well, we're all moving towards having entouragees where if you're really ambitious and you have lots of work streams, you're going to have a group, right?
+</details>
+
+总之，以上就是那“五骑士”，也是对我这一年多来探索历程的一个开篇概述。大家应该掌握的核心要点在于：尽管我大概每隔两个月就不得不把工厂一把火全烧光重写一次，但它现在运转得极其平稳丝滑，它真的能跑通。人类才是最大的瓶颈。我是瓶颈，我的管理员是瓶颈，我的会计、我的律师，我敢发誓一切环节的人类全都是瓶颈。但这其实是一个非常积极利好的信号，这是天大的好消息，因为事实证明，随着我部署的智能体数量越多，我反而需要越多的人类协作参与。这难道不是很美好的一件事吗？因此，即便明年我们注定会迎来 AI 员工的大规模泛滥暴增，以及随之而来的各种闹剧纠纷，[轻笑] 但我认为这对我们来说终归会是一片熟悉的阵地，而且我们将需要大量、大量、大量的人类。
+
+<details><summary>Original English</summary>
+So, anyway, um that was the uh the five horsemen. This is this is the introduction to what I've been doing. Um look, the big takeaway is is my factory is really smooth now despite me having to burn it down and rewrite it about every two months, but still it works. Okay, humans are the bottleneck. I'm the bottleneck. My admins are the bottleneck. My accountant, my lawyers, I swear everything's the bottleneck. And that's a really positive message. That is good news because it means what I'm finding is the more agents I deploy, the more humans I need. Isn't that nice? So even though next year we're going to have this huge proliferation of AI employees and all kind of drama, right? [snorts] It's going to be I think it's going to be familiar territory for us and we're going to need lots and lots and lots of humans, okay?
+</details>
+
+最后一点，我真心觉得大家都应该别再死盯着 SaaS、别再整天死磕各种生产力工具了，大胆走出去，去创造实打实的鲜活体验吧！去做游戏，去拍电影，去做任何充满乐趣的体验，因为我坚信，明年的真正大钱一定会蕴藏在那些方向里。好的，太棒了，我的分享就到这里。非常感谢大家！
+
+<details><summary>Original English</summary>
+And then finally, I actually think you should all stop focusing on SAS and tools and stuff and just go out and build experiences, okay? Build games, build movies, build whatever, build fun stuff because I think that's where the big money is going to be next year. Yeah. All right, cool. That's my talk. Thank you all.
+</details>

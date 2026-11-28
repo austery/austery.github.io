@@ -1,0 +1,532 @@
+---
+author: Norges Bank Investment Management
+date: '2026-11-27'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=k8XXlLFrpeg
+speaker: Norges Bank Investment Management
+tags:
+  - ai-bubble
+  - macro-economics
+  - investment-strategy
+  - market-analysis
+  - behavioral-finance
+title: Ruchir Sharma 探讨人工智能泡沫、宏观经济及投资中的性格特质
+summary: Ruchir Sharma 预测人工智能泡沫可能因融资成本上升而受压，并指出美国政府高赤字对资本市场的挤压。他分析了中国在技术与商业化上的脱节，并强调在投资中，具备承受波动和独立思考的“性情”比单纯的分析能力更重要。
+insight: ''
+draft: true
+series: ''
+category: investment-assets
+area: finance-wealth
+project: []
+people: []
+companies_orgs: []
+products_models: []
+media_books: []
+status: evergreen
+---
+### 开场与人工智能泡沫是否已破裂
+
+尽管中东发生了战争，尽管他们加征了关税，尽管特朗普总统及其政策、反移民立场遭到了种种批评，所有这些因素都摆在那里。然而，世界上人们似乎唯一愿意把钱投进去的国家，仍然是美国。
+<details><summary>Original English</summary>
+Despite having the war in the Middle East, despite the tariffs that they have done, despite all the criticism heaped on President Trump and his policies, the anti-immigration stance, all of this has been thrown in. And yet the only country in the world where people want to put money into seems to be America.
+</details>
+
+大家好，我是挪威主权财富基金首席执行官 Nicolai Tangen，今天我非常有幸请到了投资者、《金融时报》专栏作家兼 Rockefeller International 主席 Ruchir Sharma。一年前我们交谈时，Ruchir 预测人工智能泡沫将在 2026 年结束，我当时答应过我们会再回来检验一下。很少有人比他更擅长挑战大众共识，我非常期待这次对话。Ruchir，热烈欢迎。
+<details><summary>Original English</summary>
+Hi everyone, I'm Nicolai Tangen, the CEO of the Norwegian sovereign wealth fund, and today I'm in really good company with Ruchir Sharma, investor, Financial Times columnist and chairman of Rockefeller International. When we spoke a year ago, Ruchir predicted that the AI bubble would end in 2026 and I promised we'd come back and check. Few people are better at challenging the crowd and I'm really looking forward to this one. So Ruchir, a warm welcome.
+</details>
+
+谢谢你，Nicolai。很高兴能回来。
+<details><summary>Original English</summary>
+Thanks, Nicolai. So good to be back.
+</details>
+
+当然，那么 Ruchir，人工智能泡沫破裂了吗？
+<details><summary>Original English</summary>
+Absolutely, so Ruchir, has the AI bubble burst?
+</details>
+
+你知道，我们永远不会真正知道这一点，因为从来没有一个明确的时间点。如果你回顾过去所有的泡沫，它们通常会在两到三年的时间里逐步破裂。所以现在我们回看 2000 年 3 月作为转折点，甚至回看 2008 年，比方说 2008 年 3 月左右作为泡沫破裂的转折点，但其实系统里的裂缝早在很多个月前就开始形成了。
+<details><summary>Original English</summary>
+You know, we will never really know this because there's never a point in time. If you look at all bubbles in the past, they typically tend to burst over two or three years. So now we look back at March 2000 as the turning point, we look back even at 2008, let's say March 2008 or so as the turning point where the bubble burst, but the cracks began to form in the system for many months.
+</details>
+
+而 Nicolai，去年这个时候，整整一年前我们交谈时，我对你说的核心一点是，泡沫的最初迹象正在形成；如果你看我当时向你概述的框架，我看到的“四个过度”（four O's），你知道，就像我们常说的，过度估值（overvaluation）、过度集中持有（over ownership）、过度杠杆（over leverage），还有市场上正在发生的如此大量的过度交易（over trading）。总之，我当时和你谈到了这“四个过度”，并说如果你仔细看，我们正看到自己处于这成为泡沫的相当后期阶段。
+<details><summary>Original English</summary>
+And my single point to you, Nicolai, when we spoke last time, exactly a year ago, was that the first signs of a bubble were forming, that if you looked at the framework that I'd outlined to you back then, the four O's that I saw, you know, like we speak about, the overvaluation, the over ownership, the over leverage, and also the fact that you're having so much over trading, which was happening in the markets. Anyway, so I'd spoken about the four O's to you back then and said that if you look at it, we are seeing that we are at a pretty advanced stage of this now being a bubble.
+</details>
+
+那么你现在还看到了哪些其他的裂缝呢？
+<details><summary>Original English</summary>
+So what are some of the more cracks you're seeing now?
+</details>
+
+是的。但我当时也提出了一点，泡沫不会自己破灭。只有一个因素会让泡沫破灭，那就是当资金的价格上升时。这是唯一的因素，而我们看到它……我们待会儿再回到这个话题。
+<details><summary>Original English</summary>
+Yeah. But the point I'd also made back then was that bubbles don't deflate on their own. There's only one factor which deflates a bubble when the price of money goes up. That's the only factor, and we look at it… We'll come back to that.
+</details>
+
+好的，只是你现在还看到了哪些其他类型的裂缝？
+<details><summary>Original English</summary>
+Yeah, just what are the other type of cracks you're seeing now?
+</details>
+
+是的。所以我认为现在最大的问题是利率上升，融资正变得困难得多，对吧？因为人工智能有潜力带来巨大的生产力提升，而且，你知道，这整个会带来投资大幅跃升的想法，这一切都在上演。但问题在于，这要如何融资，而我觉得我们大家似乎都忘记了一个问题，那就是所有这些公司现在都需要外部融资来为人工智能热潮提供资金。所以利率已经开始小幅上升了。接下来会发生什么？
+<details><summary>Original English</summary>
+Yeah. So I think the big thing is rising rates, that financing is becoming much more difficult, right? Because the potential for AI to be a massive productivity boost, and, you know, the whole idea that this is going to lead to a big step up in investment, all that is playing out. But the issue is the fact that how is this going to be financed, with the question that we all, I think, seem to forget, that all these companies need external financing now to fund the AI boom. So rates have started to tick up. What is going to happen next?
+</details>
+
+我认为，我看不到利率会大幅下降，对吧？所以我认为利率已经上升了。唯一能通向与我预测不同结果的路径，就是我们在未来几个月内——毫不夸张地说——看到生产力出现巨大提升。那样才能让乐观情绪进一步高涨，让利率不是上升而是下降，因为人们会觉得生产力奇迹已经开始了。如果没有这种情况，我认为接下来的路径就是，在未来几个月里，融资会变得越来越困难，你们对资本支出（CapEx）规模的一些庞大预测将会开始下调。我认为这就是我的看法。
+<details><summary>Original English</summary>
+I think that it's, I don't see rates coming down much, right? So I think that rates have gone up. The only path which leads to a different outcome from the one that I'm predicting is the fact that we see a massive boost in productivity in the next few months, literally. And that then allows the optimism to get even higher and for rates to not go up, but for rates to come down because people sort of believe that a productivity miracle has already begun. Absent of that, I think that the path is the fact that in the next few months, the financing becomes more and more difficult and some of the big projections you have about how much CapEx is gonna be spent are gonna start coming down. I think that's the way I see it.
+</details>
+
+### 美国赤字、利率与市场波动
+
+现在，大型科技公司过去是用自己的钱来支付人工智能开支，而现在它们开始举债。为什么这让你感到担忧？
+<details><summary>Original English</summary>
+Now, Big Tech used to pay AI out of its own pocket, and now they raise debt. Why does it worry you?
+</details>
+
+正如我所说，现在你需要外部融资了。当你用自己的资产负债表来支付时，这没什么大不了的，因为你有自己的现金流，你有能力这么做。现在所有这些公司都在变成净负债状态。但这次热潮有一个很大的不同，我认为这是我们过去从未见过的，那就是如果你回顾过去的热潮，政府并没有和这些公司在人工智能领域争夺资本。即使你回看 2000 年或其他例子，事实上在 2000 年，政府当时还处于财政盈余状态。
+<details><summary>Original English</summary>
+As I said, now you need external financing. When you were paying it out of your own balance sheet, it was not such a big deal because you had your own cash flow, you were able to do that. Now all these companies are turning into becoming net debt. But there's one big difference in this boom, which I think is something which we have not seen in the past, which is that if you looked at the past booms, the government was not competing for capital AI today with these companies. That even if you look back at 2000 or the other instances, in fact, in 2000, the government was running a surplus.
+</details>
+
+但你会说它们真的在竞争吗？我的意思是，与美国国债市场相比，科技公司的规模仍然相对有限。
+<details><summary>Original English</summary>
+But would you say they're really competing? I mean, the tech companies are still relatively limited compared to the treasury market.
+</details>
+
+是的，但我想说这就是区别所在，你说得对，这些公司现在的借款规模——当然，即便如此，今年人工智能生态系统的借款总额也已经达到了 6000 亿美元。现在你可能会说，这不如美国政府正在运行的 2 万亿以上的赤字那么大。但所有这些因素加在一起，就会对利率产生上行压力。我认为这就是我一直在强调的观点，这是这一次最大的不同。
+<details><summary>Original English</summary>
+Yeah, but I'm saying that's the difference, which is that you're right, that the amount of borrowing that these companies are doing now, of course, even this year, though, the amount of borrowing that the AI ecosystem has done is already 600 billion. Now you may say that's not as big as the two trillion plus deficit that the US government is running. But all these things combined together put an upward pressure on interest rates. I think that is the point that I've been making, that that's the big difference this time.
+</details>
+
+而且，你知道，我们之前谈到的关于美国政府财政的另一点是，它确实在持续恶化，我们现在又回到了运行占 GDP 6.5% 的预算赤字，你知道，所以这不是我们在过去见过的东西。这是一个史无前例的周期。因此，我们可以回顾过去寻找一些可能发生什么的线索，但这一次最大的不同在于，政府正在运行占 GDP 6.5% 的赤字。这正从其他市场抽走大量资本。
+<details><summary>Original English</summary>
+And the, you know, the other point that we had spoken about with the US government's finances, which is that they really keep deteriorating, we are back to now running a budget deficit of six and a half percent of GDP, you know, so this is not something which we've seen in the past. This is an unprecedented cycle. So we can look at the past for some clues about what may happen, but the big difference this time is that the government's running a deficit of six and a half percent of GDP. That is taking away a lot of capital away from the other markets.
+</details>
+
+所以这些赤字，市场似乎并不太担心这个赤字。你认为市场什么时候会开始在意？
+<details><summary>Original English</summary>
+So these deficits, it doesn't seem like the market is worrying too much about this deficit. When do you think markets will start to care?
+</details>
+
+不，我认为如果你看——而且人们已经对此做过拆解分析——我们在大约五年前利率还不到 1%，而现在利率已经到了 5%，对吧？就是这种情况。其中相当大一部分可以由政府持续运行的庞大赤字来解释。所以不是全部，但至少有一部分是这样。因此，这已经开始在股市中得到定价了。
+<details><summary>Original English</summary>
+No, I think that if you look at the, and people have deconstructed this, that we have gone from interest rates of being sub 1% five years ago or so, to now interest rates of 5%, right? That's the sort of thing. A very healthy chunk of this can be explained by the persistently large deficits that the government is running. So not all of it, but at least a part of it. So it's already beginning to get priced to the stock market.
+</details>
+
+而对于整个利率市场来说，那种拥有极低利率、可以为一切提供资金的日子已经结束了。这就是我所定义的“范式转变”（regime shift），我们曾经拥有的极度宽松货币的时代已经结束了。所以为这次热潮、这次人工智能热潮融资将会变得困难得多。你说得对，现在并没有出现那种警报，觉得赤字变得太大、政府无法再融资。但长端利率也在上升。而它们上升的部分原因，正是因为出现了你在过去从未有过的、更加持久的赤字。
+<details><summary>Original English</summary>
+The days, and for the general interest rate market, the days when you had very low interest rates which could fund everything are over. This is what I define as a regime shift, the regime of very easy money that we have is over. So financing this boom, this AI boom is going to get much more difficult. And you're right that there's no sort of alarm going on that the deficits become too large and the government still being able to finance it. But interest rates are going up at the long end as well. And a part of the reason why they're going up is because of the fact that you have much more persistent deficits that you did not have in the past.
+</details>
+
+你对市场和纳斯达克波动率的上升有什么解读吗？
+<details><summary>Original English</summary>
+Do you read anything into the increased volatility of markets and Nasdaq?
+</details>
+
+是的，这通常是泡沫即将结束的信号。就像我刚才说的，根据我的“四个过度”框架，你通常会看到我指出的那些经济信号，此外你还有技术信号，这两者是分开的。而在你看到的技术信号中，就包括在周期末期，你通常会开始看到波动率出现更急剧的上升。我认为这正是我们正在看到的，市场波动率出现了大幅上升，而这通常标志着股市周期的后期阶段。
+<details><summary>Original English</summary>
+Yeah, that's usually a sign of bubbles coming to an end. That you typically, now, as I said, there are economic signs that I pointed out to you based on my four O's framework, and then you have technical signs as well, which is separate. And among the technical signs that you see is that you typically begin to see a much sharper increase in volatility towards the end of the cycle. I think that that's exactly what we're We're seeing a big step up in volatility that is happening in markets, and that usually characterizes a late stage cycle for a stock market.
+</details>
+
+### 全球资金流向美国与散户狂热
+
+现在，在你最近发表在《金融时报》的专栏文章中，你谈到了“世界对美国的迷恋”。沃伦·巴菲特曾说过，永远不要做空美国，而现在的口号似乎变成了只押注美国。那么这里到底发生了什么？
+<details><summary>Original English</summary>
+Now in your most recent column in the Financial Times, you talk about the world's love affair with America. Warren Buffett, he said, never bet against America, and now the mantra seems to be bet only on America. So what's going on here?
+</details>
+
+是的，正是如此。我认为正是这一点让美国得以在犯下那么多其他政策错误的同时还能安然无恙。因为我认为，如果你回顾过去几年，人们都感到震惊：尽管中东发生了战争，尽管他们加征了关税，尽管特朗普总统及其政策、反移民立场遭到了种种批评，所有这些因素都摆在那里。然而，世界上人们似乎唯一愿意把钱投进去的国家，仍然是美国。为什么？因为我认为历史上从未出现过其他大国在财政和金融上如此疲软的情况。
+<details><summary>Original English</summary>
+Yeah, exactly. I think that this is what allows America to get away with so many other policy mistakes as well. Because I think that if you look at the last couple of years, people have been staggered that despite having the war in the Middle East, despite the tariffs that they have done, despite all the criticism heaped on President Trump and his policies, the anti-immigration stance, all of this has been thrown in. And yet the only country in the world where people want to put money into seems to be America. Why? It's because I think that never before in history have we seen that the other powers have been so weak financially.
+</details>
+
+而这里最大的断层线就是中国，也就是说，按理说你通常会预期，中国现在已经成为世界第二大经济体，你通常会预期全球资本会有相当一部分流入中国。然而却没有人愿意投资中国，至少从外国投资者的角度来看是这样。如今中国的外资流入量极低。甚至连最基本的数据也是如此，如今在中国的外国人数量甚至不到 1% 的一小部分。所以这是史无前例的，如果你从未有过这样一段历史时期……
+<details><summary>Original English</summary>
+And the big sort of fault line here is China, which is that normally you would expect that China now has become the world's second largest economy. You wouldn't normally expect a fair share of global capital to be flowing into China. Yet nobody wants to invest in China, at least from a foreign investor standpoint. The amount of foreign investment in China is extremely low today. The number, and even basic stuff, the number of people today, the number of foreign people in China today is a fraction of even 1%. So this is unprecedented, which if you've never had a period of history…
+</details>
+
+你认为这种情况会改变吗？
+<details><summary>Original English</summary>
+Do you think it will change?
+</details>
+
+我看不到任何改变的迹象，因为他们没有采取任何措施来吸引更多资本或出台更友好的政策。事实上，如你所知，大家关注的 MSCI 中国指数今年是全球表现最差的主要股市。这是因为存在太多的监管不确定性，存在太多的过度投资和无序竞争。市场结构让人很难在其中赚钱。同时我也认为，外国人在那个国家感受不到欢迎。所以我认为这是中国面临的一个真正问题，但也正因如此，美国才有了更大的回旋余地。而且，你知道，回到我最初的观点，美国市场的泡沫之所以随着时间推移变得越来越大，正是因为人们觉得没有别的选择，他们不想把钱投到其他地方。
+<details><summary>Original English</summary>
+I see no signs of it because there's nothing that they're doing to invite more capital or to have friendlier policies. Because in fact, China, as you know, the MSCI China, which people look at, is the worst performing major stock market in the world this year. And that's because of the fact that there's so much regulatory uncertainty, there's so much overinvestment, random competition. The market structure is such where it's very hard to make money. And also because I think foreigners don't feel welcome into that country. So I think that this is a real problem that China has, but also allows America to have a longer rope. And you know, just go back to my first point that there's bubble in the American market has gotten bigger over time just because people feel there's no alternative, that they don't want to invest in.
+</details>
+
+当你看究竟是谁真正持有美国股市时，家庭参与度非常高，你对此有什么思考？
+<details><summary>Original English</summary>
+When you look at who actually owns the U .S. stock market, very high household participation, what are the reflections you have there?
+</details>
+
+嗯，其中一点就是如今美国市场上正在进行的散户交易量。而且这不仅仅是美国人，也包括外国人。事实上，如果你看美国市场的结构，发生的一个巨大变化就是美国市场的外国持有比例。现在大约近 25% 的美国市场由外国人持有。几十年前，这个数字还不到 10%。所以外国人确实大举涌入了美国股市，他们的份额显著上升。
+<details><summary>Original English</summary>
+Well, one is the amount of retail trading going on in America today. And this is not just Americans, it's foreign as well. In fact, the big change which has happened if you look at the structure of the American market is the foreign ownership, like of the American market. That about the nearly 25% of the American market now is owned by foreigners. This number used to be sub 10% a couple of decades ago. So foreigners have really piled into the American stock market and their share has gone up significantly.
+</details>
+
+而且这不仅仅是机构，这还涉及散户投资者。我周游世界，看到各地对美国市场的兴趣达到了前所未有的程度，这让我感到震惊。你在迪拜可以看到出租车司机，他们用加密货币交易所里的代币去买英伟达（Nvidia）的股票。你去新加坡，在咖啡馆里，你会看到家庭主妇们开立盈透证券（Interactive Brokers）账户，这样她们最终就能买美国科技股。所以全世界正在上演一场针对美国股票的散户狂热。
+<details><summary>Original English</summary>
+And this is not just institutions, this has to do with retail investors. So I travel the world and I'm just staggered to see what the interest in the American market is in a way that it's never been. So you have cab drivers, taxi drivers in Dubai, and they're using tokens on their crypto exchanges to buy Nvidia stock. You go to Singapore and in cafes there, you have housewives opening Interactive Brokers accounts so that they can end up buying American tech stocks. So you have a retail mania around the world which is going on for American stocks.
+</details>
+
+嗯，我们基金有 55% 的资金投资在美国。你有什么看法吗？
+<details><summary>Original English</summary>
+Well, our fund, 55% of the fund is invested in the US. Any reflections?
+</details>
+
+没有，我的意思是，事实是你们的比例仍然低于指数或全球平均水平，因为正如我所说，在过去一年里，80% 的资金流向——股票资金流向——都进入了一个国家，那就是美国。这在以前从未发生过。你知道，人们会反驳我说，是的，但因为美国是世界最大经济体，美国有这些伟大的科技公司，等等等等。我说，是的，但过去的平均水平是 40%。跃升到 80% 只是这十年的现象。在这十年之前，平均水平是 40%，而根据最新数据，美国在全球经济中的占比目前大约在 28% 左右。
+<details><summary>Original English</summary>
+No, I mean, the fact of the matter is that you are still less than the index or the average person globally, because they're, as I said, over the past year, 80% of the flows have gone into, equity flows have gone into one country, which is America. This has never happened before. You know, people come back to me and say, yeah, but because America is the world's largest economy, America's got these great tech companies, blah, blah, blah. I'm saying, yeah, but the average used to be 40%. This step up to 80% is just this decade's phenomenon. Before this decade, the average was 40%, which was America's size in the global economy is about 28% or so just now, the latest numbers.
+</details>
+
+所以你看到了这种令人难以置信的脱节：美国占全球经济的 28%，然而在过去一年里，就股市而言，80% 的资金都流向了这一个国家。当然，现在的反驳理由是，没有其他国家值得投资，因为中国和欧洲看起来都如此功能失调。然而，Nicolai，我认为这里正在发生一件非常有趣的事情，那就是尽管有如此惊人的资金流向美国，但有趣的是，美国股市已经不再跑赢世界其他地区了。
+<details><summary>Original English</summary>
+So you have this incredible disconnect that you have 28% of the global economy is America. And yet, when it comes to the equity market over the past year, 80% of flows are going into one country. And so, of course, now the comeback is that there is no other country worth investing in because China and Europe just seem so dysfunctional. And yet, I think that there's something very interesting happening here, Nicolai, which is that despite this incredible amount of flows going into America, the American stock market, interestingly, has stopped outperforming the rest of the world.
+</details>
+
+嗯，你去年说过，你预测美国以外的股市会继续击败美国。
+<details><summary>Original English</summary>
+Well, you said, well, last year you said that you predicted stock markets outside America to keep beating the U .S.
+</details>
+
+是的，而且我很惊讶，尽管有如此大规模的资金流入，美国股市的相对表现实际上在 2024 年 12 月就已经见顶，然后在 2025 年大幅跑输。即使在过去一年里，美国股市也只是勉强与国际市场打平。所以正在发生的这件有趣的事情就是，尽管有大量资金涌入，市场却不再那么大幅跑赢了。我认为这部分是因为，由于这里吸收的大量资本现在正被用于投资，这个市场的股票发行量已经显著增加。因此，所有这些流入的资金都被美国企业体系吸纳，用于为人工智能热潮提供资金。
+<details><summary>Original English</summary>
+Yeah, and I'm surprised that despite such massive flows, the American stock market, in fact, peaked in terms of its relative performance in December of 2024, and then like massively underperformed in 2025. And even in the past year, the American stock market is barely even with the international markets. So that's something interesting which is going on, which is the fact that despite the massive flows coming, the market has stopped outperforming that much. And I think that that's partly because just that because the amount of capital being guzzled here is now being used for investment, the equity issuance in this market has gone up significantly. So all these flows coming in are being guzzled by the American corporate system to fund the AI boom.
+</details>
+
+对，比如买 Anthropic、SpaceX 的股票，这类事情。
+<details><summary>Original English</summary>
+Right, so buying Anthropic shares, SpaceX, that kind of thing.
+</details>
+
+没错。
+<details><summary>Original English</summary>
+Exactly.
+</details>
+
+### 全球债务水平与债券市场
+
+现在，去年我们谈到了美国的债务水平，但去年我们也谈到了英国、法国和日本的债务水平。是的，这方面现在发展得怎么样了？
+<details><summary>Original English</summary>
+Now, last year, well, we talked about the debt levels in the US, but last year we also talked about debt levels in Britain, France, and Japan. Yeah, how has this developed?
+</details>
+
+嗯，正如你所看到的，对吧，各地的长端利率都上升了。对于赤字规模更大的国家，它们的利差上升得更多。总体而言，今年利率上升得更多。法国就是典型例子，我认为人们在法国这件事上忘记了一点，你可以有你想要的任何花钱的雄心，但这是有限度的，对吧？我的意思是，法国政府支出占 GDP 的比重毫不夸张地说是世界第二高，仅次于朝鲜。所以你看到的就是这种过度支出。因此我认为，我们现在看到的是，世界各地至少对此有了更大的意识，意识到这些赤字正在达到不可持续的水平。债券市场还没有完全暴动，但至少已经开始抗议了。
+<details><summary>Original English</summary>
+Well, as you can see that, right, that everywhere interest rates have gone up at the long end. The spreads have gone up for countries running larger deficits, their spreads have gone up even more. In general, this year interest rates have gone up even more. France has been, you know, exhibit A, and I think that people forget this about this thing, France, that you can have all the ambition you want to spend, but there's a limit to it, right? right? I mean, France's government spending of the share on GDP is literally the second highest in the world after North Korea. So you just have that kind of excess going on. So I think that what we're seeing is that around the world there is greater consciousness now, at least, of the fact that these deficits are reaching unsustainable levels. The bond market isn't quite revolting, but it is at least beginning to protest.
+</details>
+
+你认为这件事最终会如何收场？
+<details><summary>Original English</summary>
+And how do you think this will pan out?
+</details>
+
+我认为，政策制定者在面临危机之前根本没有任何动力去采取行动。所以我认为政府支出会继续上升，直到债券市场达到“暴动点”。比如即使在美国，2025 年我们的赤字占 GDP 比重曾出现小幅下降，回落到了 5% 左右的区间，现在又回到了 6% 左右的区间。而鉴于我们现在面临的僵局——民主党控制着国会，而总统是特朗普——他们最容易达成的妥协就是允许支出继续上升。所以我看到政府支出占 GDP 的比重正处于这种上升轨道上。债券市场迟早会达到暴动点，而不会太晚。但就目前而言，它只是在抗议。因此，我们看到整条收益率曲线上的利率都在越来越高。
+<details><summary>Original English</summary>
+I think that they just, that policymakers have zero incentive to do anything until they face a crisis. So I think that the government's spending is going to keep going up until the bond markets hit a riot point. So like even the US, we had a marginal decline in the deficit in 2025 as a share of GDP. It went back down into the fives. Now it's back into the sixes. And with the gridlock we have here now, with the Democrats controlling the Congress and you have the President Trump, the easiest compromises that they will have is allows spending to keep going up. So I see government spending the share of GDP on this upward trajectory. And sooner rather than later, the bond market will hit a riot point. But for now, it is just protesting. And so we're seeing higher and higher interest rates across the curve.
+</details>
+
+### 中国经济、过度投资与印度市场
+
+今年最让你感到意外的事情是什么？
+<details><summary>Original English</summary>
+What's been the biggest surprise for you this year?
+</details>
+
+我认为今年最让我感到意外的是，正如我所说，中国甚至让悲观主义者都不断感到失望。一段时间以来，我一直对中国的前景持悲观态度，非常担忧它的债务、人口结构以及国家干预主义，所有这些事情一直让我感到担忧，我也写过大量相关文章。但我绝不会想到，我们今年经历了人工智能热潮——至少在今年的头八九个月里——而即便在那个时期，中国的表现依然如此糟糕。所以中国在金融和财务上如此严重滞后、表现得如此落后，我认为甚至连我这样的悲观主义者都感到意外。
+<details><summary>Original English</summary>
+I think the biggest surprise for me this year has been how, you know, that as I say, that China keeps disappointing even the pessimists. I've been pessimistic about China's outlook for a while, very concerned about its debt and demographics and also its state interventionism, all those things have been concerning me and I've written extensively about it. But I would have never guessed that we have had an AI boom this year, at least for the first eight, nine months of the year. And even in that period, just how poorly China keeps doing. So the idea that China has been such a massive laggard, financially so retarded, I think has been a surprise to even a pessimist like me.
+</details>
+
+那你如何将这一点与中国企业和技术的那种竞争实力联系起来看呢？基本上是技术实力。
+<details><summary>Original English</summary>
+And how do you tally that with a kind of the competitive strength of the Chinese corporates and technologies? It's basically technology.
+</details>
+
+所以我认为这里存在一个很大的脱节，那就是他们在技术前沿显然做得非常好，但他们显然不知道如何妥善地将其商业化变现，因为这就是为什么这些中国人工智能公司一直没有实现盈利。而一些大的……
+<details><summary>Original English</summary>
+So I'm thinking there's a big disconnect, which is that they've obviously done very well on the technology front, but they don't know how to monetize that properly, clearly, because that's why these Chinese AI companies have not been profitable. And some of the big...
+</details>
+
+我的意思是，你们也还有其他技术，对吧？比如自动驾驶汽车、人形机器人、太阳能，还有所有这些其他领域，在制药领域也越来越多。
+<details><summary>Original English</summary>
+I mean, you also have other technologies, right? Thinking self-driving cars, humanoids, solar, all these other things, increasing also in pharma.
+</details>
+
+没错。但似乎到处都存在过度投资的情况，他们只是把廉价资金砸向一切，然后最终确实产生了一些成果，但同时也造成了极其庞大的过度投资。另一个问题是，中国现在开始对世界其他地区产生非常负面的影响。因为在 2000 年代，中国在几个方面对世界都是一个巨大的积极因素。当时中国增长非常迅速，进口了大量大宗商品和其他东西，最终为世界其他地区创造了积极的溢出效应。所以中国当时发展得很好，并带动了世界其他地区一起向上。
+<details><summary>Original English</summary>
+That's right. But everywhere it seems to be a case of over-investment, that they just throw cheap money at everything, and then you end up producing some results, but you have a massive amount of over-investment. And the other problem is the fact that China's now beginning to have a really negative effect on the rest of the world. Because in 2000s, the China was a big positive factor for the world in a couple of ways. That China then was growing very rapidly and was importing a lot of commodities and other things which ended up creating a positive spillover effect for the rest of the world. So China was doing well and pulling the rest of the world up with it.
+</details>
+
+现在中国国内经济表现不佳，并且正在拖累世界其他地区，因为中国在所有这些行业中都发生了如此多的过度投资。国内经济无法消化这些产能。于是他们不断出口这些过剩产能，而世界其他地区则面临着一波去工业化浪潮。因此，从德国到印度尼西亚等国家，它们的制造业部门都因为来自中国的惊人出口顺差而被掏空。
+<details><summary>Original English</summary>
+Now China's domestic economy is doing poorly and it's dragging the rest of the world down with it because what's is there's happening so much overinvestment in China and all these industries. The domestic economy cannot absorb it. So keep exporting they these surpluses, and the rest of the world faces a wave of deindustrialization. So from countries to Germany to Indonesia, their manufacturing sectors all getting hollowed out because of the incredible export surplus coming out of China.
+</details>
+
+你如何看待其他新兴市场？
+<details><summary>Original English</summary>
+How do you read the other emerging markets?
+</details>
+
+嗯，我认为在其他新兴市场，情况是……“新兴市场”这个词越来越变成一个名不副实的称呼了。我甚至不知道该如何对新兴市场进行分类，因为如果你看那个指数，比方说，其中一半是韩国和台湾。现在，无论你怎么发挥想象力，韩国和台湾都不是新兴市场。而且它们只有三到四家公司，完全是美国人工智能周期的追随者。所以如果你在投资新兴市场，有人把它放进指数里，其中一半资金流向了韩国和台湾。那不是新兴市场投资。那是美国人工智能交易的延伸。所以让我们把这一点弄清楚。
+<details><summary>Original English</summary>
+Well, I think that the, in other emerging markets, it's… Emerging markets has increasingly become a misnomer. don't know even how to classify emerging markets because if you look at the index, so to speak, half of it is Korea and Taiwan. Now, Korea and Taiwan are not emerging markets by any stretch of imagination. And they just have three to four companies which are complete lemmings of the US AI cycle. So if you're investing in emerging markets and someone has, you know, like is putting it in the index, half of it is going to Korea, Taiwan. That's not emerging market investing. That is an extension of the US AI trade. So let's get that clear.
+</details>
+
+现在，新兴市场的另一半，真正算得上大国的其实只有两个，那就是中国和印度。中国有所有这些问题。印度似乎成了唯一一个默认能够吸引大量资本的国家，而且它有着很好的企业文化。所以，印度默认成了唯一一个你可以投入大笔资金的真正新兴市场。而且它已经变成了人工智能的反面。它变成了“反人工智能交易”（anti-AI trade），因为它没有任何这类人工智能标的。因此在人工智能下跌的几周里，印度就会上涨。它已经变成了负相关。
+<details><summary>Original English</summary>
+Now, the other half the of emerging markets, you really have only two large countries that make it, which is China and India. China has all these problems. India seems to be the only one, by default, which can attract large amounts of capital, has a, you know, very good corporate culture. So, but India by default is, you know, the only true emerging market in which you can put large sums of money. And it's become the opposite of AI. It's become the anti-AI trade because it doesn't have any of these AI plays. So weeks where AI is going down, India is going up. It's become negatively correlated.
+</details>
+
+我的意思是，这真是一个相当奇怪的情况。为什么会这样？
+<details><summary>Original English</summary>
+I mean, that's quite a bizarre situation. Why is that?
+</details>
+
+为什么会这样？因为我认为，印度被视为站在人工智能交易的另一边，有两个原因。第一，在这个周期的现阶段，至少在今年头八九个月里，它没有任何人工智能硬件类的股票，因为印度在技术研发或处于非常先进阶段的半导体方面投入不多。所以这只是一个纯粹的上市标的层面的原因，印度没有太多这类公司，或者几乎没有。第二，印度曾被视为有点像输家，因为它的许多 IT 服务公司和其他公司被认为如果人工智能革命真正展开就会成为输家，因为它们提供的服务可能会被人工智能商品化。所以当过去几周人工智能的市场情绪高涨了至少几周时，然后你看到印度大幅反弹，因为这两个论点都被彻底颠覆了。因此我认为，这就是所发生的事情，印度已经变成了这种反人工智能交易，无论是坏的一面——就像头八九个月那样——还是好的一面——就像过去几个月那样。
+<details><summary>Original English</summary>
+Why is that? It's because I think that, you know, like India has seen to be on the other side of the AI trade for two reasons. One that at this stage of the cycle, at least in the first eight, nine months of this year, it did not have any of the AI hardware kind of stocks because India does not invest much in technology for research and development or its semiconductors, which are of a very advanced state. So that's the one reason that just from a pure listing standpoint, India did not have much of these companies or hardly any of these. Secondly, that India was seen to be a bit of a loser because of the fact that a lot of its IT services companies and others were seen to be losers in the, you know, that if the AI revolution really got going, you know, because of the fact that the services that they provide could be commoditized by AI. So when the sentiment soared for AI for at least a few weeks in the last few weeks, then you saw India bounce back very sharply because both these arguments got turned on their head. So therefore I think that that's what's happened, that India has become this anti-AI trade, both for the bad, like it was for the first eight to nine months, and for the good, like it has been for the last couple of months.
+</details>
+
+### 2027年展望与全球优质股票
+
+那么展望 2027 年，你的看法是什么，2027 年会如何发展？
+<details><summary>Original English</summary>
+So now looking into 27, what are your, how will 27 pan out?
+</details>
+
+嗯，我还在思考这个问题，但我目前的思路是，货币收紧的滞后效应将会继续显现，也就是说，我认为你会看到破产数量上升，你会看到公司在获取资本方面面临更加艰难的融资需求，所以我认为货币政策的滞后影响将会在未来 12 个月左右显现出来。这是我看到的其中一件事。我看到的第二件事，也是我所见情况的延伸，就是你该如何为这种环境做准备？我认为现在是最好的时机，买入一篮子在过去两三年里被普遍忽视、但现在正重新受到青睐的全球优质股票。所以我认为，如果你想在这种环境下持有任何股票风险……
+<details><summary>Original English</summary>
+Well I'm still thinking about it, but I think that the way that I'm thinking is that the lagged effect of tighter money is going to keep showing up, which is that you're going to see I think a rise in bankruptcies, you're going to see much harder financing needs of companies to get capital, so the lagged impact of monetary policy I think is going to show up in the next 12 months or so. So that's one thing which I'm, which think I'm seeing. I the second thing, which is an extension of what I see, is that, you know, how do you prepare for this environment? I think that this is the best time, this is like, to be buying a basket of global quality stocks which have been broadly neglected in the last two, three years, but are now coming back in vogue. So I think that if you want to own any equity risk in this environment…
+</details>
+
+真的吗？它们真的在重新受到青睐吗？
+<details><summary>Original English</summary>
+Really? Are they really coming back in vogue?
+</details>
+
+是的，我认为，嗯，它们不是在重新受到青睐，而是在悄然开始跑赢大盘。Nicolai，我不知道这些趋势是怎么开始的。
+<details><summary>Original English</summary>
+Yeah, I think that, well, they're not coming back in vogue, but they're quietly beginning to outperform. I don't know how these trends start, Nicolai.
+</details>
+
+这些公司比如有哪些？
+<details><summary>Original English</summary>
+These are companies such as?
+</details>
+
+这些可以是欧洲的公司，一些新兴市场的公司，甚至在巴西、拉丁美洲等受挫市场中的公司，涵盖各个领域。而且其中很少有直接面向人工智能的公司。所以这就是“与人工智能无关的交易”（AI agnostic trade）。因此我认为，你有印度这个反人工智能交易，还有这些全球优质公司，尤其是其中有一批公司。全世界大约有 24,000 家上市公司，公开发行上市的公司。而我筛选出了一份大约 250 家左右最优质公司的名单，它们的估值相对便宜。正如我所说，这些公司遍布各个行业。其中不到 5% 属于人工智能领域，属于直接的人工智能标的——我说的是人工智能支出、人工智能基础设施标的——但它们涵盖了从金融、工业到必需消费品的各个领域。我认为对我来说，如今持有那一篮子股票已经成为未来三到五年内最好的单项投资。
+<details><summary>Original English</summary>
+These can be companies in Europe, in some emerging markets, even in beaten down markets like Brazil, Latin America, and such, across the spectrum. And very few of these are AI-facing companies. So this is the AI agnostic trade. So I think that you have India, which is the anti-AI trade, and these global quality companies, particularly there's a cohort of them. There were about 24 ,000 companies in the world which are listed, publicly listed companies. And I've come down with a list of about 250 or so of the highest quality companies trading at a relatively cheap valuation. And these, as I said, are across sectors. And less than 5% of them are in AI, are direct AI plays. I'm talking about the AI spending, AI infrastructure plays, but they are sort of across the spectrum, from financials, industrials, consumer staples. I think that having that basket for me today has become the single best investment to make for the next three to five years.
+</details>
+
+### 专栏作家与投资者的双重身份
+
+现在你既是专栏作家又是投资者。你是如何分配这两个角色的，你是两者兼顾，还是？
+<details><summary>Original English</summary>
+Now you are both a columnist and an investor. How do you, do you split the roles, or you do both, or you're?
+</details>
+
+嗯，我会说，是的。
+<details><summary>Original English</summary>
+Well, I'd say, yeah.
+</details>
+
+两顶帽子。
+<details><summary>Original English</summary>
+Two hats.
+</details>
+
+是的，虽然有两顶帽子，但我一直同时戴着这两顶帽子。如你所知，我很年轻的时候就开始写作了。我是说，我开始写作的时候……
+<details><summary>Original English</summary>
+Yeah, well there's two hats, but I've always worn those two hats. As you know, I started writing at a young age. I mean, I started writing.
+</details>
+
+对，你当时 17 岁，是吧？
+<details><summary>Original English</summary>
+Yeah, you're 17 years old, yeah?
+</details>
+
+对，对，没错。我很年轻就开始写作了，所以我一直并行做着这两件事，我的人生信条一直都是“并行生活”。但这两件事实际上是紧密相连的，因为我写的往往是我对世界如何运转的思考。
+<details><summary>Original English</summary>
+Yeah, yeah, that's right. I started writing at a very young age, and so I've done the two in parallel and my mantra has always been live life in parallel. But the two are really connected because often what I write about is my thoughts on how the world is working.
+</details>
+
+一个 17 岁的少年对世界了解多少呢？
+<details><summary>Original English</summary>
+What does a 17-year-old know about the world?
+</details>
+
+嗯，在那个时候，我开始在印度写作，因为印度当时刚刚向全球经济开放，那是 1991 年。而我当时恰好……
+<details><summary>Original English</summary>
+Well, at that point in time, I started writing in India because they were just opening up to the global economy and this was 1991. And I just happened to be-
+</details>
+
+而当你回看你当时写的东西时，你怎么想？
+<details><summary>Original English</summary>
+And when you look at what you wrote then, what do you think?
+</details>
+
+嗯，我过去常常写全球外汇市场是如何运作的。当我回看早年写的一些文章时，我只是被自己的勇气所震撼。那种做出大胆论断并去写一些东西的能力，你知道，换作今天我可能会更加犹豫，在发表声明之前我会需要大量数据作为支撑。但在那时，我，你知道，你有那种……
+<details><summary>Original English</summary>
+Well, I used to write about how global foreign exchange markets used to function. And I used to, when I look back at some of my writings of the early years, I'm just struck by my own courage. The ability to make bold statements and to write about stuff, which I, you know, like, today would be a bit more hesitant and I would need the crutch of a lot of data before making statements. But back then, I, you know, like you had this sort of.
+</details>
+
+那么你做过的最糟糕的判断是什么？
+<details><summary>Original English</summary>
+what's So the worst call you ever made?
+</details>
+
+嗯，那可有一长串，但我想说我也曾被情绪冲昏过头脑。我记得在 2007 年、2008 年新兴市场热潮兴起时，当时出现了各种理由，说新兴市场可以以高于世界其他地区的溢价进行交易，因为它们有高增长率等等。当时我也被那种逻辑所动摇。所以我觉得，被这些浪潮冲昏头脑是我觉得非常值得玩味的事情。我对如何思考市场做了很多自我反思。我认为有一个非常重要的区别：我非常尊重市场，因为我认为“群体的智慧”确实有其道理，但我认为历史上有些时刻，这种智慧会变成“暴民”。如何区分“群体”和“暴民”，我认为是我一直面临的重大挑战之一。而我就是这样面对的。
+<details><summary>Original English</summary>
+Well, there's a litany of those, but I'd say that I've been carried away as well. I remember in 2007, 2008, when the emerging market boom was going, all these justifications were made that emerging markets can trade at a premium to the rest of the world because of their high growth rates and stuff. And I also was swayed by that kind of logic there. So I think being carried away by these waves is what I find to be fascinating. And I do a lot of self-reflection about how to think about markets. I think there's a very important distinction that I respect markets a lot because I think that the wisdom of the crowd, there's something to it, but I think there are instances in history when the wisdom turns into a mob. And how to distinguish that crowd from a mob, I think is one of the big sort of challenges I face all the time. And that's how I face.
+</details>
+
+我认为就人工智能这件事而言，这是一场了不起的技术革命，但你回顾历史，当世界上所有的资本都只流向一个行业、并从其他行业抽走资金时，你就知道这正在变成暴民行为。而且这也是以前从未发生过的情况：今天正在发生的是，如果你不在人工智能领域，那么其他行业——尤其是在投资方面——实际上正处于零增长甚至负增长。你知道，就像这样一种情况怎么可能持续下去呢：一个行业不断吸走所有的钱，而其他行业在赔钱，但归根结底，你需要那个行业去购买人工智能生态系统所生产的所有产品。所以我认为这种脱节是存在的。但回到刚才的问题，我在投资中犯过的最糟糕的错误，就是当我也被卷入暴民之中时。我认为 2007 年、2008 年新兴市场热潮的顶峰，对我来说绝对算得上是那样的时刻之一。
+<details><summary>Original English</summary>
+I think that on this AI stuff, fantastic technological revolution, but you look at history, you know that this is turning into mob behavior when all the capital the world in is flowing into just one industry and sucking out money from other industries. And this also not happened before, that today what's happening is that if you're not in AI, then the other sectors, especially on the investment side, are actually seeing a flat to negative growth. It's, you know, so that, like how can the situation continue where one sector keeps sucking in all the money and the other sectors lose money, but at the end of the day, you need that sector to be buying. like all the goods that the AI ecosystem is producing. So I think this disconnect is there. But coming back to the point, the worst mistakes in investing I have made is when I've gotten sucked into the mob as well. And I think 2007, 2008, the peak of the emerging market boom has to rank as one of those instances for me.
+</details>
+
+### 纽约、印度、跑步与投资建议
+
+抛开商业不谈，Ruchir，你最喜欢纽约的什么？
+<details><summary>Original English</summary>
+Away from business, Ruchir, what is it that you like most about New York?
+</details>
+
+正如我今年夏天写过的一篇专栏文章，今年对纽约来说是一个载入史册的夏天，也就是说，我觉得这座城市今年真的以非常盛大的方式回归了。我是说，这对纽约来说真是太棒的一年了。它从体育赛季开始，纽约在篮球等方面取得了一系列胜利，但除此之外还有世界杯热潮。不过，你知道，能待在这座城市真是太棒了。我认为它重新确立了为什么它是世界之都，某种程度上每个人来到这里都会拿出自己最好的状态。我觉得还有一件有趣的事是，华尔街的人和其他那样圈子里的人往往容易陷入自己那种充斥着各种过度的泡沫中，这在纽约也发生过。这里花钱的规模简直令人难以置信。
+<details><summary>Original English</summary>
+As I wrote a column this summer, which is that this has been a summer of the ages for New York, which is that this city has really come back in a very big way, I feel, this year. I mean, it's been a great sort of year for New York. It started with the sporting season where New York was involved in a series of victories with what's happening with the basketball front and stuff, but more than that also what happened on the World Cup fever. But, you know, it's just been a great time to be like in the city. I think it's reestablished itself as to why it's the capital of the world in a way that everyone comes here with their A game in a way. And I think that, you know, something like also interesting has happened that people in Wall Street and people other, you know, like such society tend to be caught in their own bubble of a lot of excesses, which happened in New York as well. The kind of money spent here is incredible.
+</details>
+
+但那场选举——我知道这听起来会很有争议——但甚至像 Mamdani 这样的人当选，我认为最终点燃了这座城市里许多年轻人的想象力。如你所知，如今美国的一个大问题是，许多年轻人对正在发生的事情感到不满，觉得所有这些财富和美好时光都集中在少数人手中。但我认为，年轻人觉得在纽约这样的城市里现在有自己的人掌权，这种想法也提振了情绪。所以我认为这是两方面结合在一起的结果。因此，这可以说是纽约很长一段时间以来最好的一年，它再次证明了为什么人们会带着自己最好的状态来到这座城市，这座城市的活力和你能在这里做的事情令人难以置信。它就像一片茂密的丛林。我是说，我从哥伦布圆环（Columbus Circle）附近的家步行到洛克菲勒中心（Rockefeller Center），几乎没有哪天不遇到熟人的。
+<details><summary>Original English</summary>
+But the election, and I know this will sound controversial, but even someone like Mamdani getting elected, I think that ended up firing the imagination of a lot of young people in the city. As you know, a big problem in America today is the fact that a lot of the young feel disaffected by what's happening, thinking that all this wealth and all this good times are being concentrated in the hands of a few. But I think that the idea that the young felt that they had their own person now in power in a city like New York, I think also helped sentiment. So I think it's been a combination of the two coming together. So this has arguably been the best year that New York's had in a very long time and it's once again reasserted why, that people bring their A game to the city and the vibrancy and what you can do in the city is incredible. It's like a dense jungle. I mean, I walk from my home near Columbus Circle to Rockefeller Center. I don't think there's hardly a day when I don't run into someone.
+</details>
+
+但你也会花时间待在印度，对吧？是的。你在印度的时候会有不同的性格吗？
+<details><summary>Original English</summary>
+But you also spend time in India, right? Yes. And do you have a different personality when you're in India?
+</details>
+
+我想是的，因为在印度我觉得更多的是与人建立联系，那是，你知道，有一位非常著名的人类学家谈到过“高语境”（high context）和“低语境”（low context）国家，我在我的第一本书《Breakout Nations》里也写过这个，我觉得那非常有趣，印度完全是一个高语境文化。
+<details><summary>Original English</summary>
+I guess so, because in India I feel that it's a lot more about connecting with people, that the, it's, you know, there's a very famous anthropologist who sort of spoke about countries which are high context and low context, and I've written about this also in my first book, Breakout Nations, and I think that, I find that very fascinating, that in India it's a total high context culture.
+</details>
+
+那么你在印度和在这里有什么不同？
+<details><summary>Original English</summary>
+So how are you different in India compared to here?
+</details>
+
+嗯，我觉得在印度，随意性要高得多。你知道，人们要鲜活得多。他们说话，你知道，比如更……
+<details><summary>Original English</summary>
+Well, I think in India, it's a much more level of informality. It's, you know, people are a lot more colorful. They speak, you know, like a lot more.
+</details>
+
+嗯，你在这里也很鲜活。我是说，看看你的外套，相当大胆。
+<details><summary>Original English</summary>
+Well, you're quite colorful. You're quite colorful here, too. I mean, look at your jacket. It's quite brave.
+</details>
+
+我想这是受那里启发吧。但我想说那里要……
+<details><summary>Original English</summary>
+I guess it's inspired by that. But I'd say that it's a much more-
+</details>
+
+比如，你在印度走路会慢一点吗？你会走得更慢吗？
+<details><summary>Original English</summary>
+Like, do you walk slower and do you walk more slowly in India?
+</details>
+
+不，我想说在印度，那种随意和温暖的程度要高得多。不过，也有不好的一面。你知道，人们会告诉你，当我回到德里，人们约你吃晚饭时，你通常是在晚上 8 点半、9 点见面，到晚上 10 点才吃饭。而在这里，工作日晚上 6 点半吃晚饭是标准时间。而今晚我们就是那个时间吃晚饭。
+<details><summary>Original English</summary>
+No, I'd say like in India, it's just the level of informality and warmth is a lot more. And yet, there's also a downside. There've been, you know, people tell you like, when I go back to Delhi and people tell you to meet for dinner, you are meeting typically at 8 .30, 9, and eating at 10 o 'clock at night. Whereas here, 6 .30 on a working day is standard for dinner. And that's when we're having dinner tonight.
+</details>
+
+没错，所以你必须切换。你几乎得切换你的性格。但我喜欢在印度时入乡随俗，当地人怎么做我就怎么做。而当我来到纽约时，就做一个纽约客。我认为这关乎适应能力。
+<details><summary>Original English</summary>
+Exactly, so you have to switch. You have to switch your personality virtually. But I like to do what I do in India and just do what the locals do. And when I come to New York, be a New Yorker. I think it's about adaptability.
+</details>
+
+那你在这里怎么放松抽离呢？
+<details><summary>Original English</summary>
+And how do you switch off here?
+</details>
+
+我认为对我来说，我的冥想方式就是跑步，我一直都是个跑步者。我以前是短跑运动员，我还曾代表印度参加过世界大师田径锦标赛（World Masters Championship）的 100 米和 200 米比赛。
+<details><summary>Original English</summary>
+I think that for me, my form of meditation is my running, which is that I've always been a runner. I've been a sprinter, and I've run for, I've represented India as well in the World Masters Championship for the 100 meters and 200 meters.
+</details>
+
+天哪，你 100 米最好成绩是多少？
+<details><summary>Original English</summary>
+Oh my, what's your best 100 meter?
+</details>
+
+11 秒 4 左右，不过那是好久以前的事了，但我现在仍然每天晚上训练。所以即使在这里，我认为对我来说不可妥协的是，每天晚上我都有我的教练，她自己几十年前曾在奥运会上为牙买加赢得过铜牌。所以她和我认识很久了，每天晚上我……
+<details><summary>Original English</summary>
+11 .4 or so, but that was like a while ago, but I still train every evening. So even here, I think that what's non-negotiable for me is that every evening I have my coach, she herself won the bronze medal for Jamaica, you know, like a couple of decades ago in the Olympics. So she and I go back a long way and every evening I...
+</details>
+
+你们在中央公园。
+<details><summary>Original English</summary>
+You're in Central Park.
+</details>
+
+没错，在中央公园我们找一块地方，每天晚上训练至少 60 分钟，有时更长。所以对我来说，那就是我的方式，那就是我的冥想，如果你可以称之为放松抽离的话。
+<details><summary>Original English</summary>
+Exactly, in Central Park we find a spot and we train for at least 60 minutes, sometimes more every evening. So for that's my me, way of, that's my form of meditation and if you can say switching off.
+</details>
+
+天哪，要我说的话，这冥想速度可真够快的。现在，很多年轻听众想成为投资者。他们应该做些什么？你有什么建议？
+<details><summary>Original English</summary>
+Gee, it's pretty fast meditation if you ask me. Now, many of the young listeners want to be investors. What should they be doing? What's your advice?
+</details>
+
+如果我可以这么说，回顾我自己的职业生涯，以及其中的主要优缺点，我认为有一件事我随着时间推移意识到了，那就是对于投资而言，分析能力被高估了，而性情（temperament）被低估了。如果我看那些长期真正成功的投资者，他们都有着极好的性情：承受波动的能力，屏蔽噪音、保持高度专注的能力。然而在华尔街，似乎过剩的东西正是分析。比如说，每个人都知道一只股票的估值。这做起来很容易。但正如我常说的，借用一句老话：傻瓜知道所有东西的估值，却不知道任何东西的真正价值。所以我认为很多时间都花在了分析事情上。很多人患有“分析瘫痪症”。但性情是我认为极少数人拥有的东西：承受亏损的胆量、驾驭周期的定力，以及与众不同、从人群中脱颖而出的能力。我想——
+<details><summary>Original English</summary>
+If I can just say, so reflecting on my own sort of career, but also key pluses and minuses, I think that the thing is the fact that, one thing which I've realized over time, that for investing, analysis is overrated, temperament is underrated. That if I look at the real successful investors over time, they have an incredibly good temperament. The ability to withstand volatility, the ability to sort of, you know, cut out noise and to have a lot of focus. Whereas on Wall Street, what seems to be in surplus is analysis. Everybody, for example, knows the valuation of a stock. It's, it's, it's like easy to do. But as I sort of say, that, borrowing from an old phrase, that a fool knows the valuation of everything but the true value of nothing. So I'd say that a lot of time is spent analyzing stuff. And a lot of people suffer from analysis paralysis. But temperament is something which I think is what very few people have. The ability, the stomach to take losses, the stomach to ride cycles, and the ability to be different and stand out from the crowd. I think-
+</details>
+
+你觉得如果你处于自闭症谱系上，这会更容易吗？
+<details><summary>Original English</summary>
+Do you think it's easier if you are on the spectrum?
+</details>
+
+我认为这是一个非常好的问题。我以前没有那样想过，但有可能。
+<details><summary>Original English</summary>
+I think that's a very good question. I haven't thought about it that way, but possibly.
+</details>
+
+是的，而且你知道有些非常著名的投资者——你也采访过他们——往往就在这个谱系上。
+<details><summary>Original English</summary>
+Yeah, and you know some of the very famous investors, and you've interviewed them, who tend to be on the spectrum.
+</details>
+
+绝对的。是的。
+<details><summary>Original English</summary>
+Absolutely. Yeah.
+</details>
+
+所以我认为这对我来说可能是一个非常值得思考的重要见解，不过是的，就是这种关于性情以及如何不同地思考和脱颖而出的想法。甚至在过去几个月里，我一直称之为我导师的人是 Barton Biggs。他在二三十年前是华尔街非常著名的人物。我记得他经常说很多话，其中一些一直留在我的脑海里。我记得他说过的一句话是，当这些真正的热潮正在发生、每个人都在参与其中时，他有这样一句话：诺亚建造方舟的时候，有过很多晴朗的日子。你会去思考这类说法，也就是，你如何做点不一样的事情？你如何不成为暴民的一部分？所以我认为，这就是我认为要成为一名成功的投资者、看穿周期所需要具备的那种性情。我认识很多投资者，他们能抓准一个周期。但他们很少能连续抓准两三个周期，或者即使抓错了某一个周期，如何从中存活下来。所以我认为，性情是我所知的人身上最重要、也是最被低估的特质。
+<details><summary>Original English</summary>
+So I think that that could be a very important insight for me to think about, but yeah, this idea of temperament and how to think differently and how to stand out. Even for the last few months, the person who I sort of called my mentor was Barton Biggs. He was a very famous personality on Wall Street 20, 30 years ago. And I remember there are so many lines that he would say, and some of them would stay with me. One of them I remember he would say was, when these real booms are happening and everyone's participating in this and stuff, and he had this line that there were many sunny days when Noah was building his ark. And you think about those kind of statements, which is that, how do you sort of do something a bit different? How do you sort of not be part of the mob? So I think that that's the kind of temperament you need to have, I think, to succeed as an investor and to see through cycles. And there are many investors I know who can catch one cycle right. But very rarely are they able to catch two or three cycles correctly, or even if they get one cycle wrong, how to survive that. So temperament, I think, is the most important attribute and underestimated attribute that I know of people.
+</details>
+
+是的，你显然不是暴民的一部分。你思考方式不同，而且你跑得肯定非常快。
+<details><summary>Original English</summary>
+But yeah, you are clearly not part of the mob. You think differently and you for sure run very fast.
+</details>
+
+谢谢。谢谢你，Nicolai。和你聊天很愉快。
+<details><summary>Original English</summary>
+Thank you. Thanks, Nicolai. Great to chat with you.
+</details>

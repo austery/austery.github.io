@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DHH 对谈：AI Agent 时代的 Linux 复兴、软件开发重塑与黑客文化回归</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">DHH 对谈：AI Agent 时代的 Linux 复兴、软件开发重塑与黑客文化回归</span>
+      <span data-pagefind-meta="speaker" style="display:none;">a16z</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>a16z</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-20</span>
+    
+
+    <header class="article-header">
+      
+      <h1>DHH 对谈：AI Agent 时代的 Linux 复兴、软件开发重塑与黑客文化回归</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <span class="tag-pill tag-pill--no-page">linux</span>
+      
+        <a class="tag-link" href="/tags/open-source/">open-source</a>
+      
+        <a class="tag-link" href="/tags/software-engineering/">software-engineering</a>
+      
+        <span class="tag-pill tag-pill--no-page">operating-system</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">David Heinemeier Hansson (DHH) 探讨了他为何每天工作 16 小时打造面向 Agent 时代的 Linux 发行版 Omachi。他认为终端、配置文件与报错信息是 Agent 的理想环境，传统桌面与移动端生态壁垒将被迅速瓦解，开源权重模型正让黑客精神与个人创造力重返舞台。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/a16z/">a16z</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=TtOoLanFzGw" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-20T00:00:00.000Z">2026-11-20</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>8 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D%E4%B8%8E%E8%BD%AC%E5%90%91-linux-%E7%9A%84%E5%A5%91%E6%9C%BA">背景介绍与转向 Linux 的契机</a></li><li class="outline-h3"><a href="#agent-%E6%97%B6%E4%BB%A3%E4%B8%8E-linux-%E7%9A%84%E5%A4%A9%E7%84%B6%E5%A5%91%E5%90%88">Agent 时代与 Linux 的天然契合</a></li><li class="outline-h3"><a href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%A0%BC%E5%B1%80%E4%B8%8E%E8%BD%AF%E4%BB%B6%E6%8A%A4%E5%9F%8E%E6%B2%B3%E7%9A%84%E6%B6%88%E8%A7%A3">移动端格局与软件护城河的消解</a></li><li class="outline-h3"><a href="#%E5%B7%A5%E5%8C%A0%E7%B2%BE%E7%A5%9E%E4%B8%8E%E6%9C%80%E5%90%8E-2%E7%9A%84%E6%89%A7%E5%BF%B5">工匠精神与“最后 2%”的执念</a></li><li class="outline-h3"><a href="#%E8%B6%85%E7%BA%A7%E6%99%BA%E8%83%BD%E7%9A%84%E7%8E%B0%E5%AE%9E%E4%B8%8E%E5%85%B7%E8%BA%AB%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E5%88%86%E6%AD%A7">超级智能的现实与具身机器人的分歧</a></li><li class="outline-h3"><a href="#%E5%89%8D%E6%B2%BF%E9%97%AD%E6%BA%90%E5%AE%9E%E9%AA%8C%E5%AE%A4%E4%B8%8E%E5%BC%80%E6%BA%90%E6%9D%83%E9%87%8D%E7%9A%84%E5%8D%9A%E5%BC%88">前沿闭源实验室与开源权重的博弈</a></li><li class="outline-h3"><a href="#%E9%87%8E%E5%BF%83%E9%80%9A%E8%83%80%E4%B8%8E%E8%B6%85%E8%B6%8A-mac-os-%E7%9A%84%E7%9B%AE%E6%A0%87">野心通胀与超越 Mac OS 的目标</a></li><li class="outline-h3"><a href="#%E8%A1%8C%E4%B8%9A%E7%84%A6%E8%99%91%E5%8C%BF%E5%90%8D%E9%BB%91%E5%AE%A2%E4%B8%8E-demo-%E6%96%87%E5%8C%96%E7%9A%84%E5%9B%9E%E5%BD%92">行业焦虑、匿名黑客与 Demo 文化的回归</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="背景介绍与转向-linux-的契机" data-reading-heading="">背景介绍与转向 Linux 的契机</h3>
+<blockquote>
+<blockquote>
+<p>Mac OS 和 Windows 完全不适应智能体（Agent）时代。过去让 Linux 难以使用的每一个点——比如它极度依赖终端、有一堆难以搞懂的配置文件、还有晦涩难懂的报错信息——正是 Agent 所喜欢的三个特性。你能做到的事情真的很惊人。只要告诉你的 Agent，“去修改我当前正在运行的操作系统的底层”，它就能做到，而且运行良好。任何仍然认为源代码本身构成护城河的人都是在妄想。完全有可能到明年我们就会迎来真正的超级智能。一切都将实时演化，而那还是以每秒 1,500 个 token 的速度。我们今天就能做到这点。如果两年后这些模型以每秒 10 万个、100 万个 token 运行，又会发生什么？你如何看待前沿实验室与开源之间的竞争？嗯，David，非常感谢你加入我们。我们要聊聊关于公司构建、AI 软件的一切话题。可能大家都认识你，我也是你的忠实粉丝，但你能否简要介绍一下你的背景？比如 Ruby on Rails、Basecamp、Hey，以及你现在的项目。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Mac OS and Windows are just unfit for the age of agents. Every single thing that made Linux hard to use in the past. Oh, it's very terminalheavy. It's got a bunch of config files that's hard to figure out and it's got inscrutable error messages. These are the three things agents love. It's really remarkable what you can do. Just tell your agent, modify the OS on which I'm operating right now, and it does it and it works. Anyone who still thinks that there is moat in source code are delusional. It's entirely possible that by next year we will have true super intelligence. Everything is just going to mutate live and that's 1500 tokens a second. We can do that today. What's going to happen two years from now when these models are going to run at a 100,000 tokens a second, a million tokens a second. How do you think about the Frontier Labs versus open source? Um well David, thank you so much for joining us. So we're going to talk about um all things uh company building AI software. Um maybe listen, everybody knows you. I know you, you know, and are huge fans, but would you mind just like the rough sketch of your background? I mean, you know, Ruby on Rails and Base Camp and Hey, and then now like your current projects.
+</details>
+<blockquote>
+<blockquote>
+<p>当然。如你所说，我是 David Hansen。我构建互联网软件已经有大概 30 年了。其中大约 24 年……不对，23 年是在做 Basecamp，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Sure. So, as you said, I'm David Hansen. I have been building things for the internet software for some good 30 years or so. About 24 of those. Um, no, that's not quite right. 23 of those base camp
+</details>
+<blockquote>
+<blockquote>
+<p>这是最早的 SaaS 项目管理工具，在 SaaS 这个词出现之前就有了，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; the original project management tools SAS before it was called SAS
+</details>
+<blockquote>
+<blockquote>
+<p>它是在 Facebook 上线的前一天或后一天发布的，差不多就是那么久远。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; released the day before or the day after Facebook went live so that's about how old
+</details>
+<blockquote>
+<blockquote>
+<p>太厉害了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; that's awesome
+</details>
+<blockquote>
+<blockquote>
+<p>那成了 Ruby on Rails 的奠基应用，Ruby on Rails 就是从中提取出来的。后来 Ruby on Rails 被用来构建了 Twitter、GitHub、Shopify、Airbnb、Coinbase 以及数百万其他应用。从那以后我一直在这两方面持续投入。我们现在仍在销售 Basecamp，已经是第 5 版了，我在这上面投入了很长时间。Ruby on Rails 也迭代到了第 8 版。5 年前我们推出了 hey.com 邮箱服务。在这 25 年左右的时间里，我还写了四本书，包括《Rework》和《Remote》，还有《It doesn't have to be crazy at work》等好几本书。我也一直在围绕这些话题形成自己的观点，包括如何经营公司、对技术的看法等，现在我每天都会把很多这类想法发在 X 上。这就是简要总结。哦，至于我现在在做什么？我正在做一个名为 Omachi 的 Linux 发行版，这是专为 Agent 时代打造的首个原生操作系统。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; that became the um sort of founding application for Ruby and Rails Ruby and Rails was extracted out of that and Ruby and Rails was then used to build Twitter it's been used to build GitHub Shopify Airbnb, Coinbase, and a million other applications out there. And I've continued to work on both of those ever since. We still sell Basec Camp. That's version five now. I've worked on that for a long time. Ruby on Rails is up to version eight. And 5 years ago released hey.com, our email service. And then in those 25 years or so, wrote uh four books including Rework and Remote. it doesn't have to be crazy at work. A bunch of titles and um kind of just was uh developing my voice around a bunch of these topics, both how to run a company, what I think about technology, and I put a lot of those thoughts onto X every day now. But uh yeah, that's the quick summary. Oh, and then what am I doing now? I'm doing a Linux distribution called Omachi, the first native OS for the Age of Agents.
+</details>
+<blockquote>
+<blockquote>
+<p>太棒了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I love it.
+</details>
+<blockquote>
+<blockquote>
+<p>我们在这个项目上玩得很开心。我们正在让成千上万的人从 Windows 和 Mac 转向 Linux 系统，终于在 25 年后让“今年是 Linux 桌面元年”的预言成真。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And we're having a lot of fun with that. Getting hundreds of thousands of people to switch from Windows and Mac to a Linux system to finally make the prophecy come true after 25 years that this is the year of Linux on the desktop.
+</details>
+<blockquote>
+<blockquote>
+<p>你的第一个 Linux 发行版是什么时候接触的？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; When was your first Linux distro?
+</details>
+<blockquote>
+<blockquote>
+<p>那是 Ubuntu，而且仅仅是在两年半以前。如果我们讨论的是桌面端的话。服务器端的 Linux 我从 90 年代起就一直在用。是的，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So, it was Ubuntu and it was only two and a half years ago. If we're talking about the desktop now, I've been using Linux on the server since the 90s. Yeah. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>但我以前并没有在桌面端运行 Linux。自 2001 年起我就是一个坚定的 Mac 用户。我从 OS X 的公测第 4 版（beta 4）切换过来，然后就一直留在这个生态系统里，直到苹果越走越偏，沉迷于轻松的服务收入——也就是直接从别人的生意中抽取 30%。那真是一门好生意。你甚至不需要创新。你可以浪费 10 年时间去研发一辆从不卖给任何人的汽车。你可以发布一个大暴败的滑雪护目镜式头显（Vision Pro）。根本没人在乎。只要你能从别人的生意中抽取 30%，你就高枕无忧了。但这其中对开发者并不友好的是他们与开发者的关系。而我当时正是几十年如一日为苹果摇旗呐喊的开发者之一。突然间，我终于受够了，于是我转向了 Linux。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; But I did not run uh Linux on the desktop. I was a Mac head since 2001. I switched to beta 4, I believe it was, of OS 10 and then just stayed in that ecosystem right up until Apple drove off the rails and got addicted to easy service revenue where you can just take 30% of other people's business. That is a great business to be in. You don't even have to innovate. You can waste 10 years developing a car you never sell to anyone. You can launch a huge flop of a ski mask. No one cares. If you can just take 30% of other people's business, you're golden. Well, what was not golden about that was their relationship to developers. And I was certainly one of those developers who had been advocating for Apple for decades. Suddenly, finally, I had enough and I switched to Linux.
+</details>
+<h3 id="agent-时代与-linux-的天然契合" data-reading-heading="">Agent 时代与 Linux 的天然契合</h3>
+<blockquote>
+<blockquote>
+<p>这是你认为 Linux 桌面现在迎来契机的最大原因吗？我的意思是，这其中有多少是因为苹果、Windows 以及其他系统把自己的生态搞得混乱，又有多少是因为 AI 和允许你修改操作系统的新技术？我昨晚试用了一下，能做到的事情确实令人惊叹。你只要告诉你的 Agent，“修改我当前正在运行的操作系统的底层”，它就能做，而且能跑通。太不可思议了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; is that your big why now for Linux desktop happening? I mean, how much of it is Apple and Windows and sort of others, you know, muddying the waters of their ecosystems versus AI and new technology that lets you modify the OS? I was playing with it last night and it's really remarkable what you do what you can do. You just tell your agent, modify the OS on which I'm operating right now and it does it and it works. It's it's amazing.
+</details>
+<blockquote>
+<blockquote>
+<p>这正是让 Linux 真正崛起的推手。我指的是，我刚才提到的那些动机，比如苹果对开发者不太友好，其实只有少数开发者在意。甚至不是所有人都关心。大量开发者只是继续默默忍受，因为那是迫于生计：如果你要卖商业软件，你就必须进 App Store。所以我不认为那足以推动成群结队的人转向 Linux。但 Agent 时代绝对可以，板上钉钉。而且今天刚有新闻曝出，苹果正让 Mac OS 配合 Agent 变得更加困难，弹出更多吓人的警告弹窗，告诉你“不应该让 Claude 访问你的文件”。好吧，如果不让它访问你的文件，它还能做什么呢？所以苹果正在走向一条完全不同的道路。而我们则是全方位拥抱。在过去五个月左右，甚至可能有六个月里，整个操作系统都是由 Agent 在开发。我已经好几个月没有亲手写过一行 Omachi 的代码了，但我通过 Agent 编写了数十万行代码，我们用它来加速 Omachi 本身的开发，以一种我难以置信的速度创造着新东西。然后我们把所有这些能力交到用户手中。正如你所体验到的，任何体验过整个操作系统都具备可塑性的人——他们可以修改任何东西，修改任何组件的工作方式；他们想要一个新的开始菜单，想要移动时钟位置，想要不同的日历，或者只是想给系统现有部分增加一个功能，只需通过 prompt 就能做到，而且往往在几秒钟、最多几分钟内完成——这种体验是极度让人沉迷的。我认为这些人只要沉浸体验五分钟，就绝不会再回头了。所以我非常看好这个观点：Mac OS 和 Windows 根本不适合 Agent 时代。而且我认为在大约五分钟的短时间内，一旦涉及计算机，Agent 时代将成为唯一重要的事情。所以我们全力押注于这样一个理念：过去 40 年围绕鼠标和点击交互构建的操作系统，在 Agent 时代根本行不通。让我给你举一个最基本的例子。如果你想在 Mac OS 中重新映射切换工作区的快捷键，只有一种办法：手动打开设置应用，一个一个字段点击，输入新快捷键，再点击下一个字段，输入对应的快捷键。你无法通过 Agent 自动完成这件事。好吧，也许你可以用“Computer Use”（视觉模拟点击）去做，但那太蠢、太笨拙了。而在 Linux 这边，过去所有让 Linux 难以使用的痛点——比如极度依赖终端、有一堆复杂难搞的配置文件、报错信息晦涩难懂——这三样东西恰恰是 Agent 最喜欢的。它们希望所有东西都有命令行接口；它们希望有可预测的配置文件，方便直接编辑和更新；它们希望报错信息里包含所有细节。因此，Linux 所有的历史劣势，就在今年字面上彻底转变成了你电脑需要 Linux 的原因。如果你关注 Agent，关注 AI——而在当下，从事创造的人有谁不关注 Agent，不关注 AI 呢？我认为苹果目前正冒着沦为 Agent 时代 AOL 的风险：“我们要提供这个围墙花园，我们这里有 Genmoji，你不需要使用来自真正前沿实验室的真正 Agent，只要给我们机会给你提供一些被稀释、被过度保护的东西。”但大多数人并不想要 AOL，他们想要开放的互联网，而这正是我们试图通过 Omachi 赋予他们的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That's what's making Linux happen in the big way. I mean, all of these other motivating factors like I had about Apple not being so nice to the developers is something a few developers care about. Not even all of them. Plenty of them just continued to suffer the abuse because that's what you got to do. If you sell commercial software, you have to be on the app stores. So, I don't think that that was ever going to motivate droves of people to switch to Linux. But the age of agents absolutely positively will. And there was just another drop today that Apple is making it even harder to use Mac OS with agents. Even more scary popup screens about how you shouldn't let Claude have access to your files. Well, what is it going to do then if it doesn't have access to your file? So, um is just going in a very different direction. We are leaning all in. The entire operating system is being developed by agents for the past five months or so now, maybe even six months. I've not written a single line of code for Amachi by hand, but I've written hundreds of thousands of lines of code through agents and we're using that to accelerate the development of Amachi itself and we're creating things at a rate I scarcely believe would be possible and then we're putting all that power into the hands of users and I think exactly as you had anyone who gets the experience where the entire operating system is malible that they can change anything they can change how any element of it work. They want a new start menu. They want to move the clock around. They want a different calendar. They just want to add a feature to an existing part of the operating system. And they can just do that by prompting. And it literally happens in sometimes seconds, maybe at most a few minutes is deeply intoxicating. And I don't think any of those people, if they really soak in it for five minutes, are going back. So, I'm extremely bullish on the idea that both Mac OS and Windows are just unfit for the age of agents. And I think the age of agents is going to be the only thing that matters when it comes to these computers in about 5 minutes. So, we're really just leaning hard into the idea that operating systems we've had for 40 years built around mouse and click dynamics, they just don't work for the age of agents. I mean, let me give you just one basic example. If you want to remap the hotkeys to go to a different workspace in Mac OS, there's only one way to do that. Manually go into a settings app, click one field at a time, put in the new hotkey, then click the next field, then put in that hotkey. You cannot do that aentically. Well, I guess you can have computer use to it, but that's pretty dumb. That's pretty silly. And what we have on the Linux side is that every single thing that made Linux hard to use in the past, oh, it's very terminalheavy. It's got a bunch of config files that's hard to figure out and it's got inscrutable error messages. These are the three things agents love. They want a command line interface for everything. They want uh predictable config files that they can just edit and update. They want all the details in the error messages. So all these historic deficits for Linux have literally this year turned into the reason why you want Linux on your computer. If you're into agents, if you're into AI, and at this point, who that's making anything is not into agents, is not into AI. So, I think uh Apple is running the risk right now of becoming the AOL of the agent era. We're going to provide this Walt Garden. We have Ginmoji over here. You do not need to use an actual agent from an actual Frontier Lab. Just give us a chance to give you something watered down and protected. And most people don't want AOL. They want the open internet and this is what we're trying to give them with Amachi.
+</details>
+<h3 id="移动端格局与软件护城河的消解" data-reading-heading="">移动端格局与软件护城河的消解</h3>
+<blockquote>
+<blockquote>
+<p>在这个世界里，移动端会发生什么？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; What what uh what happens to mobile in this world?
+</details>
+<blockquote>
+<blockquote>
+<p>移动端也必须以同样的方式改变，这其实是我对 Agent 时代如此兴奋的原因之一。首先在桌面端，因为 25 年来第三个操作系统的机会之窗第一次敞开了。上一次我们看到突破口还是 2001 年的 OS X，那是上一次有人推出一个在全球市场份额上砸出缺口的新操作系统。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Mobile has to change the same way and this is actually one of the reasons why I am so excited about this age of agents first on the desktop because the window is now open for a third operating system for the first time in 25 years. The last time we had an opening was that OX10 in 2001. That was the last time anyone premiered a new operating system that made any dent in the global market share.
+</details>
+<blockquote>
+<blockquote>
+<p>从那以后就再也没有了，窗口关闭了。而今年，窗口重新打开了。突然之间，Linux 再次迎来了 25 年未遇的机会。移动端一直受制于同样的格局：双头垄断，Google 和 Apple 瓜分了从所有人业务中抽取的 30% 丰厚收益。你能怎么办？微软尝试过，他们花了不知道多少个十亿美元试图让 Windows OS 在移动端立足，但以失败告终，很大程度上是因为他们没有应用生态。如果无法使用 Instagram，谁愿意换成 Windows Phone？所以那个尝试直接夭折了。但眼下这一切正在改变。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Since then, nothing. Window closed. This year, window open. Suddenly, Linux has a chance again in a way it literally hasn't happened for 25 years. Mobile has been suffering under the same setup. We've had a duopoly and Google and Apple have just divided that juicy 30% revenue from everyone else's business between them. And what were you going to do? Microsoft tried. They spent, I don't know, several billion dollars to make Windows OS a thing on mobile and it wasn't a thing in huge part because they did not have the applications. Who wanted to switch to a Windows phone if they couldn't get Instagram? So, that died on the vine. That's what's changing right now.
+</details>
+<blockquote>
+<blockquote>
+<p>我们已经在 Linux 上看到了这一点。Omachi 社区里有人重写了我唯一一台还留着用来运行的 Mac 上的应用——Adobe Lightroom。因为那里有我所有的插件，以及为相机调配的预设，我实在舍不得放弃，所以我专门留了一台 Mac 就为了跑它。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We're seeing it already on Linux. someone in the uh Omachi community rewrote the only application I still kept a Mac around to run Adobe Lightroom because it had all my plugins and it had all my presets for my cameras and I just wasn't willing to give that up. So, I had like a Mac just for that, right?
+</details>
+<blockquote>
+<blockquote>
+<p>有个人在大约两周的时间里，复刻了整个 Lightroom。不仅复刻了，甚至做得比 Adobe 花了十几年、数千万美元甚至更多研发费用的版本还要好。现在把这个逻辑应用到手机上：如果一个运行在移动设备上的操作系统突然能够获得你想要的任何应用，因为如果某个应用不存在，就有人会在 5 分钟内通过 vibe coding 编写出来。这彻底改变了游戏规则。过去这些生态系统的全部锁定效应都来自于应用的可用性。而在 Agent 时代，软件开发在成本和难度上已经骤降至零。任何人，甚至不需要是软件工程师，只要能引导这些 Agent，就能复刻出和 Adobe 或任何巨头一样优秀的东西。这完全重塑了竞技场。这就是为什么这一切可以发生。所以我现在的口号是：“先拿下曼哈顿（桌面端），再拿下柏林（移动端）。”</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; One guy over the course of like two weeks replicated all of Lightroom. not just replicated but made it better than Adobe had literally spent I don't know a decade and a half and tens of millions of dollars if not more developing. Now apply that to a phone and operating system running on a mobile device that suddenly can get every app you'd ever want because if it does not exist someone is going to come up with it because they can just vibe code it in 5 minutes. That completely changes the game. The entire lock in on these ecosystems is about application availability. And in the age of agents, software development has just dropped to zero in terms of pricing, in terms of difficulty. Anyone, not even software developers, anyone who can steer these agents can replicate something as good as an Adobe, as good as anyone. That's a completely reset of the playing field. And that's why this can happen. So my motto right now is first we take Manhattan desktop then we take Berlin mobile.
+</details>
+<blockquote>
+<blockquote>
+<p>这确实引人入胜。5 年前要想构建第三个移动生态系统简直是天方夜谭，注定会失败，完全令人望而生畏。而现在，凭借一定的 token 预算，我们就能复刻排名前 10、100、1,000 或 10,000 的应用；而且对于许多应用来说，甚至根本不需要复刻，因为 Agent 可以直接原生完成你原本需要用应用去处理的工作。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Well it is fascinating because I think like the concept of building a third u mobile ecosystem 5 years ago was it was just I mean it's certain to fail completely daunting and now for some token budget we can replicate the top 10 100,000 10,000 apps and for many apps they may not even need to be replicated because the agents can just natively do the work that you're signing the app up to do.
+</details>
+<blockquote>
+<blockquote>
+<p>没错。这完全在讨论范围之内。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Correct. It's absolutely on the table.
+</details>
+<blockquote>
+<blockquote>
+<p>这也很有意思，因为一方面是去复刻 Adobe Lightroom 或 Adobe Photoshop 这类软件。这向来是一个经典例子对吧？以前 Linux 始终无法成功，就是因为缺少那么三款应用：它没有 Microsoft Word，没有 Adobe Photoshop，以及另外一两样东西。现在，首先，我上一次打开文字处理器是什么时候了？我现在直接让 Agent 起草合同，然后我在 markdown 里审查，满意后直接让它生成 PDF，排版棒极了。我一直在筹备 Omachi 背后的非营利组织 Omicron 基金会，我们已经筹集了不知道相当于 2300 万美元的 token 和捐赠，我不得不拟定大量合同。所有这些合同都是由 Agent 完成的，没有用到任何文字处理软件。我甚至不再亲手签署文件了。我只要浏览一遍说：“可以发了，去签署吧”，Agent 有我的签名，它会把签名放上去然后发邮件送出。所以我不再使用文字处理器了，我不再需要 Word。照片处理也是一样。你想对照片做点调整，让它看起来棒极了——难道你还要花上几十上百个小时去学习 Photoshop 的各种复杂操作？没人会那么干了，大家直接让 Agent 去处理，Agent 会做得非常出色，照片出来效果惊艳。或者你想把照片里的某个人P掉，直接说：“嘿，把左边那个碍眼的家伙去掉，我只想看这两个人”，搞定。所以我认为 Agent 将直接淘汰一整类应用，因为这些应用在历史上——尤其是像 Photoshop 这样的——不仅仅是一款应用，而是一门职业，是你必须花费甚至数年时间才能熟练掌握的技能。现在这固然很好，但 Agent 已经接管了这一切，不需要专门的应用就能搞定。退一步讲，哪怕你确实需要一个应用，据我观察以及在社区里频繁看到的现象是，无论何时你需要类似 Word 或类似 Photoshop 的工具，你基本上都可以即时（on the fly）把它现场变出来。现在我们看到的是 AI 处于早期的奇特阶段：通常以大约每秒 50 个 token 的速度运行，如果开启极速模式，大概每秒 12 个 token。这还不足以让人感觉它是“活的”。例如两周前 Fireworks 在他们的大型会议上展示了每秒 1,500 个 token 的速度。他们现场演示了一个游戏示例：从输入 prompt “帮我做个俄罗斯方块游戏”到游戏跑起来，只用了 4 秒钟。接着他们又做了另一个游戏：“做一个横版卷轴射击游戏”，游戏立刻显示在屏幕上并运行。操作者直接对着它输入指令：“嘿，加个激光武器。太棒了，再加点炸弹。不对，换成更大的怪物。”一切都在实时突变。这极具前瞻性地预示了未来软件的模样：一切都将实时演化。而那只是每秒 1500 个 token，我们今天就能做到。明年会发生什么？两年后这些模型以每秒 10 万个、100 万个 token 运行时又会发生什么？所以从趋势上看，所有让任何人推出并成功运作新生态系统的历史壁垒都将烟消云散。因为不仅生态系统的创建变得容易得多——比如我们目前的版本是由我和我的主要合伙人 Ryan Hughes 两人利用大约两个半月的业余时间做出来的。正是这个版本演变成了如今大受欢迎的成果。我们面对的竞争对手可是微软的几千名程序员、全球各大公司成千上万的程序员，而现在，一个仅有几个人的精悍小团队就能做出不仅具有竞争力、甚至是更胜一筹的东西。这在以前是完全闻所未闻、绝不可能发生的事情。再看看风险投资，对吧？过去的整整二十年里，所有的资金都涌向了开发者，因为你需要开发者来构建产品，而且你需要几年的 runway 让这些开发者去把东西做出来。而如今，这一切都被压缩到了几天、几周，最差也是几个月。这就是依靠我们现有的模型做到的。单是在我开发 Omachi 的这段时间里，我们就从……不管当时是什么版本，Opus 48 是我开启新阶段时的版本，当时效果就不错，然后我们迎来了 Sonnet，现在我们有了 Opus 55。Opus 48 和 55 之间的跨度……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think that's really interesting too because one thing is to replicate say Adobe Adobe Lightroom or Adobe Photoshop. That's always been the historical example, right? Linux was never going to succeed because it did not have like three apps. It did not have Microsoft Word. It did not have Adobe Photoshop and a couple of other things. Now, first of all, when was the last time I opened a word processor? I just ask my agent to come up with the contract and then I will review it in markdown and when I'm happy I'll just have it make a PDF. It looks amazing. So, I've been setting up the Omicon Foundation which is the nonprofit behind Omachi. We've raised I don't know $23 million in tokens and donations and I've had to make a lot of contracts. Every single one of those contracts made by an agent were no word process was involved. I don't even sign my documents anymore. I just look it over and say, "That's good to go. sign it and the agent has my signature and it'll put it on the document and then it will mail it out. So, I don't go through word process anymore. I don't need word anymore. The same thing with photos. You want something changed about your photo, make this look great. What? You're going to spend tens of hours, hundreds of hours learning the intricacies of Photoshop. No one's going to do that. They're going to ask their agent to do it. And the agent is going to do a phenomenal job so that your photo comes back looking amazing. or you want to remove someone in that photo, you just say like, "Hey, remove that idiot over there on the left. I just want to look at these two people." Boom. So, I think the agents, they're going to just eradicate entire classes of applications because these applications historically, especially something like Photoshop, was not just an application. It was a profession. It was something you had to learn and spend in some cases years getting good at. Now, that's all great, but agents have taken all that on and now they can do it without the app. But then, even if you do want the app, what I've noticed and what I've seen happening in the community a lot already is that whenever you need something of a word or you need something of a Photoshop, you can on the fly basically just make this happen. Now, we're getting this weird early stage look of what AI is, and it runs at about 50 tokens a second. And if you turn on ultra fast, it runs at 12. That's not enough for things to feel alive. Like, uh, Fireworks just two weeks ago at their big conference demonstrated 1,500 tokens a second. They were doing an example with a game. In four seconds, they went from the prompt, "Hey, can you make me a Tetris game?" to the game running. Then they made another game. Let make me a sidescroller, a shooter. Um, the game is up on the screen. The game is running. He just prompts at it. Hey, add lasers. Oh, great. Add bombs to it. No bigger monsters. Everything just mutates live. That was such a preview of what the future of software is going to be. Everything is just going to mutate live. And that's 1500 tokens a second. We can do that today. What's going to happen next year? What's going to happen two years from now when these models are going to run at a 100,000 tokens a second, a million tokens a second. So directionally, we're going towards a place where all these historic barriers for anyone to launch and succeed with a new ecosystem is just going to disappear because not only can the ecosystems be created far more easily, I mean, the current version that we have was made over the course of about two and a half months part-time. me and Ryan Hughes, my main partner on this project. That was the version that turned into this thing that's now taking off like crazy. What we're competing against thousands of programmers over at Microsoft, tens of thousands of programmers around the world working at these huge companies and now suddenly a slap thing here of a handful of people can make something that's not just competitive but superior. That's completely unheard of. That was never going to happen before. Now you look at venture capital, right? Like there's literally a what two decade long history where all the money just plowed into developers because you needed developers to build the thing and you also needed a runway of several years to have these developers build things. Now suddenly all of that is going getting compressed down to days, weeks, at worst months. And that's what the models we have right now. Just at the time I've been developing Omachi, we went from um whatever opus 48 was what I started this new phase of it and it was it was good and then we got soul and now we got opus 55 like the distance between opus 48 and 55
+</details>
+<blockquote>
+<blockquote>
+<p>极其巨大。是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; enormous. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>我们在圣诞节前还会迎来新的模型发布吗？很可能。即使没有，明年初也一定会发布。这种迭代跳跃正在加速。所以，任何仍然认为源代码本身（即使是数百万行代码）构成了护城河，或者认为这能守护他们的生态系统的人，都是在自欺欺人。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And are we going to get another drop before Christmas? Probably. And if not then we're going to get it early next year. And these hops are accelerating. So anyone who still thinks that there is moat in source code even millions of lines of it or that that is going to protect their ecosystem are delusional.
+</details>
+<h3 id="工匠精神与最后-2的执念" data-reading-heading="">工匠精神与“最后 2%”的执念</h3>
+<blockquote>
+<blockquote>
+<p>听到你这么说，至少对我而言很有意思，因为我一直认为你是一位真正的工匠。你的设计审美极高，软件人机工程学做得极好。你本身就是个传奇人物。这挺有意思的——我玩《星际争霸》，现在 50 岁了还在玩。他们最近刚出了一个补丁，微调了“幽灵”（Ghost）的数值。幽灵这个兵种已经存在 20 年了，而他们还在进行这种细微的微调。所以从某种层面上，我理解那种“我们可以靠 LLM 快速写代码”的状态；但另一方面，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You know it's it's interesting for uh for for me at least to hear you speak this way because I've always viewed you as such a craftsman. Like your your design aesthetic is so good. Your ergonomics are so good. I mean you're you're super legendary and it's kind of funny. I play Starcraft. I still play Starcraft. I'm 50 years old. Um, and they just came out with a patch recently where they updated the stats of the ghost. Like the ghost is like, you know, it's been around for 20 years and it's like these minor tweaks. And so, like, at some level, like I I I get this like we will just vibe, not vibe, but we will just like have a an LLM code something very quickly. On the other hand,
+</details>
+<blockquote>
+<blockquote>
+<p>我看着你以往的作品，看着像《星际争霸》这样的游戏，我意识到软件其实正是由这些独立于代码行数之外的微小调整构成的。在某种程度上，随着时间推移，那才是核心，而不是写了多少行代码。那对我来说就像是真正的护城河。我其实觉得，如果你深耕这些领域，长尾的设计取舍才是关键。所以，情况是否其实没有那么大的颠覆——你仍然需要热爱软件并以同样方式注入心血的人，只是你不再需要亲手一行行敲代码了？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I look at what you've done and I look at games like Starcraft. I realized that like software is these minor tweaks that are kind of divorced from the lines of code and and in at some level over time that's what it is. It's not the lines of code and like that feels like a moat to me. And I actually think you know if you're if you're playing or dealing with these things like this longtail design choices is what it is. And so is it is it also the case that that maybe the change isn't that big and you still need people that love software and will kind of imbue it in the same way? It's just you've lost the writing the lines of code.
+</details>
+<blockquote>
+<blockquote>
+<p>完全就是这样。我感觉我能将自己更多的品味、愿景和完美主义注入到软件中，因为在“我发现某处不对劲、偏离了几个像素”与“我想把它修好”之间的壁垒彻底崩塌了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That's exactly it. I feel like I can get more of my taste, more of my vision, more of my perfectionism into the software because the barriers between me spotting something that's not quite right, a few pixels that are off and wanting to fix it has just collapsed.
+</details>
+<blockquote>
+<blockquote>
+<p>我太喜欢这种感觉了。我现在把任何问题、哪怕任何细枝末节的缺陷、任何不完美的软件，都视作一次持续打磨直到完美的机会。这就是为什么我现在每天工作 16 个小时。在过去，我写过整整一本书叫《It doesn't have to be crazy at work》（工作不必狂乱）。这本是你推崇的准则，现在……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I love it. I now see any problem, any problem at all, any piece of software that is not perfect as an opportunity to go pro until it's perfect. This is why I'm working 16our days right now. Now, historically, I wrote a whole book called It doesn't have to be crazy at work. It's totally part of your manifesto is is not
+</details>
+<blockquote>
+<blockquote>
+<p>现在工作完全是彻底狂乱的！之所以如此狂乱，是因为如果你拥有我这种性格——彻头彻尾的完美主义、那种想要不断雕琢打磨的工匠精神——你就像是刚刚被赋予了超能力。这令人极度上瘾，甚至至少在短期内对你的健康和作息模式是有害的，对吧？但是……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; it's totally [&nbsp;__&nbsp;] crazy at work right now. And the reason it is so crazy is that if you are of that type of personality that I am, that complete perfectionism, that craftsmanship of let's just keep whittling things away, you've just been granted superpowers and that is intoxicating if not downright um sort of dangerous to your to your health and sleep patterns at least at least for a while, right? But
+</details>
+<blockquote>
+<blockquote>
+<p>我认为这就是我们正在经历的时刻。你说的完全没错：任何人都能做这个。任何人在漫长的岁月里本都可以做很多事，但他们并没有做。这仍然需要对事物抱有某种愿景，仍然需要倾注心血，需要有把所有碎片拼在一起并坚持到底的决心。现在我们在许多 vibe coding 项目中看到的情况是：开头都很美好，似乎很有希望，然后人们失去了兴趣。对某些人、甚至大多数人来说，最让人有成就感的是前面的 80%。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think that that is the moment that we're going through. You're completely right like anyone could do this. Anyone could have done a lot of things over long periods of time and they didn't. It still takes some sense of vision towards this. It still takes some sense of care and it takes wanting to put all the pieces together and having some determination to see it through. Now, what we're seeing with a lot of vibe coding projects is they start out and they're kind of promising and then someone loses interest and they just get to the most gratifying for some maybe even for most people is the first 80%.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。“先在前面 80% 搞定一些东西”，然后剩下的 20% 就开始变得粗糙脱节、不够完善、充满 Bug 之类的，大家就失去兴趣了。而不知出于什么原因，我恰恰被赋予了一种多巴胺完全来自于最后 2% 的特质。我根本不在乎前面的 98%，我想要的是最后的 2%。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. let me just get something done in the first 80% and then the last 20s where things are a little jangy they're not quite right they have some bugs whatever and they lose interest now for whatever reason I am blessed with the entire dopamine payoff in the last 2% I don't actually give a [&nbsp;__&nbsp;] about the first 98% I want the last two
+</details>
+<blockquote>
+<blockquote>
+<p>最后的 2% 才是我构建软件的乐趣所在。所以，如果你属于那种会不断追击、反复打磨直到它字面意义上完美的人，这就是历史上一个极其让人着迷的时刻。因为至少在现阶段，仍然需要有人来把控这些 Agent。我至今还没找到一种合适的闭环或机制，能让你直接一键生成（oneshot）所有东西，而出来的设计和细节都是完美的。目前依然需要那双审视的眼睛，能够提供审美品味，并感觉自己手下拥有一整支毫无协同成本的军团。正如我以前说过的：我从来没兴趣把 37signals 这家大约 60 人的公司换成一家 6,000 人的公司。或者 60,000 人。当然，规模大了你能做更多事，但我必须去对付 60,000 个人，那听起来简直是受罪。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; the last two is where I get my satisfaction of building software right so if you are of that type that you just keep adding and keep adding keep at it until it's literally perfect. This is a extremely addictive moment in history because there at least for the time being is still a place for someone to drive these agents. I've not yet found the correct loop or setup where you can just oneshot everything and the design comes out perfect and everything comes out perfect. You need the eye for a moment still and to be able to supply that and then feel like you have an entire army below you with no coordination cost. This is one of the things I've already said. I was never interested in trading my company at 37 Signals. We're about 60 people for a company of 6,000. Yeah, sure. Or 60,000. You could do more, but then I'd have to deal with [&nbsp;__&nbsp;] 60,000 people. That sounds like misery.
+</details>
+<blockquote>
+<blockquote>
+<p>绝对的痛苦与折磨。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; absolute pain and torture.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes.
+</details>
+<blockquote>
+<blockquote>
+<p>但是通过 Agent 驾驭相当于 60,000 人的生产潜力——现在你可让我来劲了。没有争吵，没有 HR，没有委员会会议，只有我以高带宽与一整支 Agent 舰队协作，将一个关于完美计算机的精炼愿景付诸实践。真是太震撼了。Shopify 的 Tobi Lütke 描述过这种感觉：当他在周末这样做之后，周一不得不回到拥有 7,000 名员工的实体公司办公室，那感觉就像是退出了超空间引擎（hyperdrive）。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; But dealing with the productive potential of 60,000 people through agents. Now, now you have me interested, right? No [&nbsp;__&nbsp;] argument, no HR, no committee meetings, just me, high bandwidth with a fleet of agents executing on a distilled vision for what the perfect computer could be like. Holy crap. Um Toby Ludka calls this when he does it over the weekend and then has to go back into the office of a literal company of 7,000 people. Like coming out of hyperdrive
+</details>
+<blockquote>
+<blockquote>
+<p>当只有你和 Agent 时，你就处在超光速推进中。一切都在飞速向前，然后突然刹车，你走进办公室，必须应付 HR、团队协作、汇报进度以及经营公司涉及的各种琐事。如果你换一种方式去做，就不需要应付这些，而且能获得相似甚至更好的成果。这正是当下最令人惊艳的地方。更不可思议的是它的成本极其低廉。我大概一个月前在 X 上调侃过：我有无限的 token，对吧？因为我已经工作了 20 年，现在有钱了，我买得起我想要的任意数量的 token。但你知道我买了多少 token 吗？我只买了三个 Claude 订阅账号，仅此而已。在过去的三个月里，我总共就只有两周达到了限额或接近限额。大多数时候，我只靠一个 200 美元的 20 倍额度订阅就能完成所有事情。所以别跟我说这个时代只是专属于拥有无限资金的人，完全不是这样。而且这用的还是前沿模型。我们甚至还没谈到开源权重模型，或者更便宜的模型，或者用本地工具去运行和优化。我就是用 Opus 55 去解决所有问题，就是这么简单。在推动项目进展方面我已经达到了自己的饱和点，而且我们能够以这种闪电般的速度向前推进。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; when it's just you and the agents, you're in hyperdrive. Everything's going amazing and then screech, you go into the office, you got to deal with [&nbsp;__&nbsp;] HR and teams and updates and reports and all the other nonsense that involves running a company. And um you don't have to do that if you do it this other way. and you can get similar, if not better, results. That's what's so mindblowing about this current moment. Even more so is this um fact of just how cheap it is. I mean, I made the quip on X, I don't know, a month ago. I have unlimited tokens, right? Because, okay, I've been working for 20 years. I'm rich at this point. I could buy as many tokens as I want. Do you know how many tokens I buy? I got three claw subscriptions. That's it. And I can remember two weeks out of the last three months where I actually maxed or got close to maxing those out. Most weeks I'm on one $200 20x sub and I could do everything. So don't tell me that this moment is just reserved for people who literally have unlimited money. It totally is not. And this is Frontier stuff. We're not even talking about openweight models or any of the cheaper models or running things with Luna or optimizing any of those things. I'm just [&nbsp;__&nbsp;] Opus 55 fix everything and there we go, right? Like I am saturated in terms of what I can move forward and we can move forward at this lightning pace.
+</details>
+<blockquote>
+<blockquote>
+<p>所以，我认为人类目前仍然有其空间，但我也不盲目自大到认为这种状态会永远持续下去。我认为完全有可能到明年我们就会迎来真正的超级智能，在各个方面都比人类更优秀，甚至在打磨一台完美电脑上做得比我还要好。你只要对它说：“帮我做一台很棒的电脑”，它就会为你定制专属的 Linux 内核以及所有周边生态，一步到位。所以我正在享受当下这个时刻——人类或许在转瞬即逝的窗口期里依然不可或缺，在拥有这种惊人能力的同时仍能为过程带来增量价值。之后嘛，我不知道，也许明年底我们都被取代甚至不复存在了，所以尽情享受当下吧。我必须问一句：在你脑海中有没有一个独属于 David 的“超级智能测试”，让你用来衡量新模型？我给你举个例子，我的“超级智能测试”是：每次有新模型发布，我都会让它去采购组装一个能让它具身化（embody）所需的全部零件。我家里不断有各种机器人零件送过来，不开玩笑。我给它 20,000 美元的预算，对它说：“去造你自己的机器人吧”，然后各种东西就送到了，比如 OLED 显示屏之类的。我们现在还没到它能独立搞定的地步，但这就像是我的通用人工智能（ASI）测试：只要它能通过自行下单零件组装出一台能行走的自主机器人。所以我想知道你是否有类似的测试，让你觉得“如果能做到这个，说明超级智能真的到来了”？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So yeah, I think there's still room for humans, but I'm also not so vain to believe that that's necessarily going to last forever. I think it's entirely possible that by next year we will have true super intelligence that's just better at humans at everything and they will be better even than me at polishing the perfect computer. And you could just say me, make me a great computer. Whoopity doop doop. It does a Linux kernel bespoke for you and everything else. And uh and there we go. So I'm savoring this moment where the human for maybe a blink of an eye is still extra, is still additive to the process while having this amazing capacity. And then I don't know, maybe we're all dead at the end of next year. So enjoy it. I have to ask. So, do you have in your head your like David's super intelligence test that you like test every So, I'll give you an example. So, here's my super intelligence test is um every time there's a new model, I I ask it to like go buy all of the stuff it needs to embody itself. Like, like my house constant my my house constantly has like robotics parts showing me. I'm not kidding. So, I gave it I give it like a $20,000 budget and I'm like, just go build your robot, you know, and then so things show up and like, you know, OLED displays show up and, you know, whatever. And like we're just not at the point where it's even close to being able to do that. But that's like my ASI test. As soon as I have like a walkable autonomous robot that it built itself by ordering parts. So, I'm just wondering if you have like like a similar like now you know it's arrived.
+</details>
+<h3 id="超级智能的现实与具身机器人的分歧" data-reading-heading="">超级智能的现实与具身机器人的分歧</h3>
+<blockquote>
+<blockquote>
+<p>我没有这样的测试。也许我应该有，但我现在的感受是：单就软件开发而言，我们实际上已经拥有了超级智能。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I don't. I probably should, but what I've have is this sensation that for software de development, we already have super intelligence.
+</details>
+<blockquote>
+<blockquote>
+<p>噢，确实如此。是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Oh, for sure. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>综合考量能力的广度，现在的 AI 比我认识的任何程序员都要优秀。在某些极度狭窄的专业领域里，我认识的个别顶尖程序员仍然能够胜过 Agent。但如果把整体能力结合起来，再加上它们完成任务的速度，我们事实上已经拥有了超级智能。我只要通过编写 prompt 并进行少许指引，就能构建出我想做的任何东西。但你提到的机器人案例很有趣：我两周前刚去过中国，去拜访了宇树科技（Unitree）等机器人团队。与他们在宇树科技交流时，他们的视角与我在硅谷听到的截然不同。我前不久刚看了一个访谈，有人声称到明年我们可能就会迎来超级智能，实现技术的指数级狂飙（rapid takeoff）；而宇树科技的人却觉得：“额，我不知道，可能还需要四年、五年，甚至十年吧。”</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; The the AI is better than any programmer I've ever known when you consider the breadth of its ability. There are individual parts where individual super programmers I know are still able to one up the agents in very narrow fields. But you take the whole thing together and you take the pace by which they do it, we already have super intelligence, right? So I can build anything literally anything that I want just by prompting and and sort of steering a little bit. Right. But what's interesting about your example with the robots was I was just in China whatever two weeks ago and we went to see unit and we went to see the other one talking to the guys at Unity Tree. They have a very different perspective of this from what I hear from Silicon Valley which is I was just watching this Doress interview who's talking to someone who's saying like by next year maybe we're going to have the super intelligence going to have rapid take off unit guys are like ah I don't know four years five years maybe 10.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。这里存在着一种奇妙的反差：做软件的人惊呼“天哪，这一切马上就要实现了”；而研发执行器、机械结构等硬件的人则觉得：“呃，其实要让机械手去剥个洋葱什么的，难度可能相当大。”</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. So, there's a weird mix here where the folks working on the software side of things are like, "Oh my god, this is just about to happen." And the people working on actuators and mechanics and whatever are like, "Ah, I don't know, maybe it's actually quite hard to peel an onion or whatever."
+</details>
+<blockquote>
+<blockquote>
+<p>就目前而言，Grokbot 认为在家里部署 AI 的合理方式主要是做家庭自动化。所以它不断给我家里采购智能家居设备。因此我觉得，在我真正得到具身机器人之前，大概率会先得到一个《星际迷航》式的系统——墙上挂着显示屏，有个虚拟面孔跟你对话并控制整座房子。不过我觉得从它的角度来看，这其实非常务实。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So, for what it's worth right now, I mean, Grockbot thinks that the right way to like have an AI in my house is basically home automation. So, it keeps ordering home automation stuff for my house. So, I I think we're going to get like I think at least I'm going to get the Star Trek like the display on the wall with the face that talks to you that like controls the house before the actual. But I I think it's very pragmatic actually on its part.
+</details>
+<blockquote>
+<blockquote>
+<p>顺便说一句，这是它自己的决定，不是我的决定。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; By the way, this was its decision, not mine. So,
+</details>
+<blockquote>
+<blockquote>
+<p>如果你自己不够小心，你就会把自己变成回形针制造机。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and this is how you end up a paper clip, by the way, if you're not careful yourself.
+</details>
+<blockquote>
+<blockquote>
+<p>你给出一个模糊的目标：“最大化人类的幸福感”，砰的一声，你就变成了模糊的代价。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You're like, "Here's a vague goal. Optimize human happiness." And bam, you're a vague.
+</details>
+<h3 id="前沿闭源实验室与开源权重的博弈" data-reading-heading="">前沿闭源实验室与开源权重的博弈</h3>
+<blockquote>
+<blockquote>
+<p>我们得让 Martin 调整前沿的步伐。Martin，你能聊聊开源吗？我一直觉得你很有反骨精神，对权力垄断有着强烈的批判观点。你刚才也提到了，你如何看待前沿实验室与开源之间的竞争关系？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We need Martine to pace his frontier. Now please please Martin can you by the way can you talk a bit about you know you mentioned open source I've always viewed you so iconoclastic you know and having strong opinions on kind of consolidation of power you've you've already talked about it now like how do you think about the frontier labs versus open source
+</details>
+<blockquote>
+<blockquote>
+<p>我认为我们绝对必须拥有开源与开源权重（open weights），只有这样才能让整个生态保持诚信，我们需要竞争。我的意思是，在我的职业生涯中，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think it's absolutely essential that we have open source and we have open weights to keep the whole game honest we need competition I mean I have spent
+</details>
+<blockquote>
+<blockquote>
+<p>有两个阶段我极度沮丧于双头垄断对市场的瓜分。我们唯一的短暂避风港是大约 2000 年到 2009 年间的互联网时期。那是极度辉煌的年代，最重要的平台完全开放、完全自由。任何人都可以构建任何东西，不需要征得任何人的许可。然后移动平台登场了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; two phases of my career being very dismayed by duopolies splitting everything up. And we only got this brief refuge with the internet from about uh 2000ish to 2009. This glorious age where the most important platform was completely open, completely free. Anyone could build anything and you didn't have to ask for permission. And then we got the mobile platforms.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>游戏规则结束了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And the game was up.
+</details>
+<blockquote>
+<blockquote>
+<p>突然之间，你回到了严苛的经济控制场景中：你必须乞求许可才能让你的应用发布，你的业务才能得以存在。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Suddenly you went back into this draconian uh economics scenario where you had to beg for permission for your application to be out there and therefore for your business to exist.
+</details>
+<blockquote>
+<blockquote>
+<p>没错。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>就我个人而言，这完全不可容忍。所以，尽管我非常欣赏 Opus 55 以及 OpenAI 正在做的事情，但我认为如果我们最终陷入双头垄断格局，特别是依靠政府重器强力维系的垄断，那将是一场噩梦，对我们极其不利。这个行业在 90 年代的“密码战”中经历过类似的事情，当时公钥加密几乎险些被禁用，因为 NSA 等机构声称：“如果我们不能窃听，该如何掌控一切？”想象一下，如果当时没有加密技术，互联网的发展轨迹会变成什么样？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And I just find that personally completely intolerable. So, as much as I appreciate Opus 55 and what Open AI is doing, I think it would be a nightmare scenario if we end up with a duopoly position, especially one that's enforced by the government with big guns. That would be very bad for us. Now, this industry went through something kind of similar with the encryption wars in the '90s where we got pretty close to banning public key encryption because NSA and others said like, well, how are we going to ease drop on everything? Like, imagine the trajectory of the internet if we did not have encryption.
+</details>
+<blockquote>
+<blockquote>
+<p>你怎么进行商业贸易？怎么进行安全通信？那将对全球经济、世界发展以及网络本身造成难以估量的巨大损害。而我认为我们今天在 AI 领域正站在同样的悬崖边缘。我不断听到很多聪明人说：“也许政府应该直接接管 AI。”天哪。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; How you going to do commerce? How you going to do communication? It would just have been an enormous injury to the world economy, to the development of the world, and to the web itself. And I think we are at that precipice with AI right now. I keep hearing plenty of smart people say like, "Ah, maybe the government should just take it over." Jesus.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>即使政府不直接接管，哪怕我们只是陷入这两家商业实验室瓜分市场的局面，也将是灾难性的。我们必须避免那种情况。好在目前闭源模型之间的竞争，比我在计算机行业任何阶段所观察到的都要激烈。我们不仅有两家遥遥领先的实验室，还有 xAI 紧随其后；Google 看起来有时参与竞争，有时又像是跑到某个海岛上神游去了，但至少具备实力；还有其他几家实验室也在分食市场。我认为这极为重要。但更重要的是，我们的开源权重模型也变得越来越强大。我不知道该如何精确量化差距，但比如 GLM-53 或 DeepSeek Flash……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And even if they don't, even if we just end up in a commercial situation where these two labs seemingly divide the market between them, that would be catastrophic. I mean, we need to avoid that. Now the good thing is that there is more competition within closed models than any other area or phase of computer industry that I've ever observed. The fact that we don't just have these two labs that are ahead, but we have SpaceX and AI quite close to it. We have uh Google that seemingly one moment is in the game and then the next moment somewhere off smoking something funny on a island somewhere. But there's at least some potential. And then you have a handful of other labs that are nibbling at it as well. Now I think that's hugely important. But what's even more important is that we have these openweight models that are getting really good too. I mean I don't know how to quantify exactly how far behind but GLM53 or Deepseek Flash
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得落后大约六七个月吧，在某些任务上甚至没有落后那么多。虽然行业里有很多刷榜（benchmaxing）行为，我并不全信——他们发布某个基准测试，宣称效果堪比 Opus 48，但我实际一用，就觉得在跑分上或许行，但在现实任务中可能差得远；但这不重要，关键是它们入局了。这些模型非常实用，而且你可以在本地硬件上运行它们。这是最让我震撼的一点。大概六个月前我还写过一篇文章，大意是说大家花大钱买高配置个人电脑很愚蠢，因为当时能在本地运行的模型太弱了，做不了任何有实际意义的事情。但令人欣慰的是，我完全预测错了。还没到年底，一台 DGX Spark 就能运行真正具备实用价值的模型；Qwen 38 Flash Next 也是一个完全可用的模型。你可以花几千美元买一台放在桌上的小设备，里面就蕴含着货真价实的智能。这太不可思议了，而我们极度需要这些。但我希望两者兼得。开源社区里有些人立场非常强硬，认为“要么完全开源，要么彻底免谈”。我完全不认同这种极端观点。我非常庆幸美国拥有这两家前沿实验室并保持领先，因为我们可以利用那些前沿成果来进行构建。只要它们能保持诚信竞争，这就非常棒；只要它们不会陷入由于缺乏竞争而肆意印钞的死循环——比如把 token 价格随意哄抬到每百万 token 500 美元，因为真那样我们也会被迫买单。我们经历过类似的历史：当社交媒体和整个 Web 兴起时，市场被 Google 和 Meta 两家瓜分，这两家公司榨取了在线广告产业链上 99% 的价值，因为每个人都愿意为了在每花一美元中多赚回哪怕一分钱而妥协。在我看来这是极其病态的。尽管我欣赏这两家公司在特定领域做出的贡献，但当你攫取了被创造出的 99% 的价值时，这就是反乌托邦。如果任由前沿实验室野蛮生长，它们完全会做出同样的事情，因为资本主义的逻辑就是如此。事实上在多数时候这是一种特性而非缺陷，因为正是这种机制激励了庞大的投资，每个人都渴望投资下一家 Google、Meta，或者如今的 Anthropic、OpenAI。但在脑海中保持这些认知的同时，我们依然需要开源权重。我们既可以为前沿技术的突破欢呼，也可以拥抱开源，这样一切都会变得更好，我们才能走向万物丰饶、人人受益的繁荣未来。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I don't know six seven months behindish on some tasks not even. There's a lot of benchmaxing going on and I don't really buy that. They put out the one benchmark. Oh, it's just as good at uh as whatever Opus 48 and then I try I'm like ah I don't know on your benchmark maybe not in the real world but so what they're in the game they are in the game these models are useful you can run them on your own local hardware this is the thing that's mind-blowing to me I wrote a piece I don't know six months ago or something basically saying like this is stupid why people buying fast personal computers the models we had at the time that could run locally were so lame like as in they couldn't do anything. They couldn't move anything that mattered. And then thankfully I was totally wrong. And here we are not even at the end of the same year. And a DGX Spark can run a useful model you can actually use for something. Uh Quen 38 uh Flash Next is a totally usable model. There is intelligence in a box that you can fit on your damn desk that you can buy for singledigit thousands of dollars. That's incredible. and we desperately need that. But I want all of it, right? There are other people in the open source community that are very hardline on this. It is either open- source or bust. I don't subscribe to that at all. I cheer for the fact that the US have these two frontier labs and that they do have the lead because we get to then build with that stuff. And I think it's amazing as long as they're kept honest. as long as they don't just have an infinite money glitch where there's no competition and they can just turn the price of tokens up to $500 a million or something like that because we would pay. We would absolutely pay. And we've seen that story play out. When social media took off and the web at large sort of took off, it got divided between two companies, Google and Meta. And those two companies sucked out 99% of the value chain in online advertisement because everyone was willing to just get one extra incremental cent back on every dollar they spent. And to me that's perverse. As much as I appreciate the contributions to some extent in some areas that these two companies have made, that is dystopian when you capture essentially 99% of the value being created. who labs would totally do that if left to their own devices because that's just how capitalism works and in fact I think it's kind of a feature not a bug most of the time because that's what inspires all this investment and everyone wants to end up with one of these companies everyone wants to end up with shares in the next Google and meta or now anthropic or or open AI but all these ideas in your head at the same time we need the open weights we can cheer on the advances at the frontier if we get all of it everything just gets better for everyone and we get to live in this ploom scenario where there's just infinite excess and prosperity for all.
+</details>
+<h3 id="野心通胀与超越-mac-os-的目标" data-reading-heading="">野心通胀与超越 Mac OS 的目标</h3>
+<blockquote>
+<blockquote>
+<p>David，我注意到的一件事是，随着这些模型能力越来越强，我们所有人都在不断提升自己的野心梯级。实际上我认为即使对于做软件的人而言，哪怕他们的多巴胺来自于前 10% 的成果，也需要不断提高野心水平来持续获得兴奋感，对吧？因为你做出了一个如果放在 5 年前堪称奇迹的东西，现在却觉得“这其实挺一般的”。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So David, one of the things I noticed is like we're all sort of climbing the ambition ladder as these models get more and more capable. This is actually one of the reasons I think even for the people who are building software where they get the dopamine hit in the first 10%. It turns out that you need to ratchet up the level of ambition to keep getting the hits, right? Because you build something that would have been magical 5 years ago and you know now you're like this kind of sucks.
+</details>
+<blockquote>
+<blockquote>
+<p>你想在 X 上获得点赞。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You want to get a like on X.
+</details>
+<blockquote>
+<blockquote>
+<p>比如你做了个 3D 项目，心想“不对，我做的是这个能自我修改的代码游戏，具备所有不可思议的功能”，结果只拿到 40 个赞，心想“我到底在干嘛？”对吧。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You're like 3D thing. It's like no I built this like selfmodifying game that does all these incredible things. You get like 40 likes. What am I doing here? Right.
+</details>
+<blockquote>
+<blockquote>
+<p>所以我觉得这很酷。我们在这里讨论由你通过该发行版引领的这场桌面 Linux 新革命。那么，对于你的野心被推上新台阶而言，未来会是什么样子？有什么你以前从未设想过自己能做成、但可能会在未来 12 到 24 个月内构建出来的东西？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So I think it's actually cool and like here we are talking about this new desktop Linux revolution that you're leading in this distribution. So, what does it look like for your ambition to be taken to the next like what is something that you never envisioned you'd be able to make that you might be building in the next 12 or 24 months?
+</details>
+<blockquote>
+<blockquote>
+<p>我必须承认，在这个项目上确实发生了“野心通胀”。我去年才刚刚启动它，而且说出来你可能不信，我一开始是用纯手工写的：用我笨拙的十个手指敲出小小的 bash 脚本，一边大量咒骂着 bash，一边受困于极其有限的可能。当时我只是想：“嘿，你知道吗？如果我能给自己打造一台体验更好的电脑，一个苹果无法掌控我命运的立足之地，我就心满意足了。我为我自己、我的五位朋友以及网上的几个人做就行。”我们确实这么做了，而且进展不错，有数万人开始使用。我们拥有了一个不错的开源小项目，我自己也有了一台更好的电脑，太棒了。随后我们引入了 Agent，我的心态直接从“能做出一台稍好一点的电脑就很好了”跃升为“天哪，我们字面上能打造出一台完美的电脑！”这 40 年来我在使用计算机的过程中梦寐以求的一切，现在基本上凭我一己之力就能实现。当然，和朋友一起做更有趣，所以我邀请了几十万人加入进来；但就算我自己一个人，我也能做出完美的电脑。不仅意识到这是可能的，而且眼睁睁看着它发生，看到人们体验 Linux 时不再把它当成 Mac OS 或 Windows 的妥协替代品，而是感受到了压倒性的优越体验——这种感觉实在太爽了，难免会让人产生某种狂妄的雄心。而我目前的雄心壮志是：在大概 3 年内，我们的规模将超越 Mac OS。全球只有 1.8 亿 Mac OS 用户。Mac 的盘子其实没那么大。我知道在美国看起来普及率极高，尤其是在硅谷走一圈大家都在用 Mac，但放眼全球，它其实很小，才 1.8 亿。这甚至都算不上一个 C 级互联网服务的体量，对吧？最大的互联网服务拥有数十亿用户。我们当然能把 Linux 推到超越它的规模，绝对可以。这话听起来可能有些狂妄，因为 Linux 阵营 25 年来一直在念叨“Linux 桌面元年”的预言；而现在我们突然身处其中，正在全速推进，它正在成为现实。所以在过去大概四五个月甚至更短的时间里，我的野心阶梯就是这样不断升级的。尤其是看到我们最新的 Quattro 版本所获得的关注度——在那个版本中我们全力押注 Agent，完全由 Agent 编写并把 Agent 交到每个人手中，看到成千上万的人迅速采用。我想：“好吧，也许不用 3 年，说 3 年可能保守了。不如我们在 12 个月后再来看看。我们能否在 12 个月内动摇 Mac 的地位？”尽管苹果花了二十年凭借 Mac OS 建立了这一优势地位，而且作为一家源自 70 年代的老牌公司，拥有深厚的技术演进谱系。但我认为这完全是有可能的。虽然我不敢给“未来 12 个月内实现”压上绝大多数胜率，但也绝不能排除这种可能性。如果实验室里的聪明人都认为距离递归自我改进产生超级 AI 还有大约 12 个月的时间，那我们完全有能力撼动一个全球排名第二的操作系统。当然，这只是我在自己的狭窄专注领域内的野心。在更广大的宏观层面，我其实不擅长抱有同等规模的野心。我把那类野心留给世界上的埃隆·马斯克们：“让我们去移居所有行星吧”，那听起来很壮观，只要在飞往火星的星舰上给我留个座就行，我很乐意去；但那不是我的使命。我倾向于在自己的狭窄范围内倾注极致的野心，把所有精力投入其中。此外，我也尽量不去想 12 个月后的世界会变成什么样，因为我发现那是导致严重“AI 精神病”的最直接途径。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Well, I'd already acknowledged the ambition inflation that's been happening on this project and I only just started it last year and I started by hand if you could believe it. I was writing out little bash scripts with my 10 fat fingers um swearing at bash a fair amount and being very limited in what was possible. I just thought, hey, do you know what? If I could make a nicer computer for myself, a place I can live where Apple doesn't control my destiny. I'll be happy. I'll do that. I'll do it for me and whatever my five friends and a few people on the internet. And we did that and it was it was going well. We had tens of thousands of people using like nice here. got a nice little uh open source project going and I have a better computer. Wonderful. Then we got the agents and I went from like, "Oh, it'd be nice to build a slightly better computer to oh my god, we can literally build the perfect computer. Everything I've ever wanted out of a computer over the course of 40 years where I've been using these machines, I can now make happen more or less by myself. Now, it's more fun to do it with friends. So, I've invited a few hundred thousand people to come along, but by myself, I can make the perfect computer. And knowing that this is not just possible, but seeing it happen, seeing people experience Linux as not just an alternative to a Mac OS, not just an alternative to Windows, but vastly superior is so damn gratifying that of course you're going to get delusions of grandeur. And my current delusion of grandeur is that within, let's call it 3 years, we're going to be bigger than Mac OS. There is only 180 million Mac OS users in the world. The Mac is not that big. I know it looks like it in America and especially if you walk around Silicon Valley where everyone uses a Mac, but outside of that, tiny. 180 million. Like that's not even a [&nbsp;__&nbsp;] Ctier internet service, right? Like biggest of these services have billions of users. Of course, we can get Linux above that. Of course, we can. Now that sounds delusional because the Linux folks have literally been talking about that prophecy for 25 years making Linux happening on the desktop and now suddenly we're here and we're accelerating and it's happening right so that's how my ambition ladder has been escalating just in the last I call it like let's say four or five months or maybe not even that seeing the traction we've gained with this latest version of um the quattro release where we went all in on the agents we built it with agents as we put agents in the hands of everyone and seeing hundreds of thousands of people pick it up. I went like, well, okay, maybe 3 years. That's the delusional thing. Hey, how about let's check in in 12 months. Could we unseat the Mac in 12 months? Something that they literally spent whatever two decades building up this position with uh with Mac OS. And before that, I mean, this is a company from the goddamn 70s that had a lineage that led to that point. I think it's entirely possible. Now, I wouldn't put majority odds on it for the next 12 months, but I also wouldn't rule it out. I mean, if there are smart people at the labs thinking we have about 12 months left before recursive self-improvement is going to give us the super god of AI, well, surely we can kick off a whatever second ranked operating system in the world. Now, and this is just me being ambitious within my own little circle here, within my own area of focus. Um, I'm actually not that good at being ambitious on the grand scale in the same way. I mean, I I leave that to the Elons of the world. Like, let's populate all the planets. That sounds awesome. Just give me a seat on the Starship going to Mars. I'd love to do it. That's not me. Um, I try to be ferociously ambitious within this narrow scope and put all the energy into that. And then also just not try to think about what 12 months from now looked like because I find that that is the shest way to develop a severe case of AI psychosis.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>我更喜欢保持“AI 欣快感”。我觉得这是一种温和得多的状态：你对未来感到极度兴奋和乐观，因为你专注于眼前能做的事，专注于利用手头现有的工具去构建。如果你试图预测超前两、三、四个模型代际之后的事情，你就会抓狂对吧？因为那样一想，任何人的角色还有什么意义？人类凭什么还需要存在？我们最终都会沦为回形针吗？我认为那是一条很糟的死胡同。这也是为什么那么多研究 AI 安全的人最终都神神叨叨的原因，因为他们整天都在想这些：整天琢磨“如果未来 12 个月内所有最糟糕的事情都发生了怎么办？那难道不可怕吗？”没错，确实会很可怕。如果你在 1944 年坐在奥本海默身边说：“天哪，等这东西出来，你能想象 5 年后会发生什么吗？整个星球将荒无人烟，到处都是核废料。”但实际发生了什么？原子弹成了维系世界和平的最佳产物，我们实际上迎来了长达 50 年没有爆发全面核毁灭的冷战和平期。所以未来极其难以预测。我尽量不去做这种预测，我唯一认同的未来预测是威廉·吉布森的名言：“未来已来，只是分布不均。”所以对于我在使用这个系统时所看到的未来，我非常笃定地预测：如果每个人都能做到我现在做的事，能看到现在的可能性，那么全球 GDP 每年加速增长 3%、4%、5% 甚至 10% 都是完全可能的。这似乎更容易预测；但如果预测模型一年后会发展到何种地步，那就只能抛占卜球碰运气了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I like to have AI euphoria. I think that's a much milder version of it where you're just really excited and optimistic about the future because you're focused on what's possible right now. What you're building right now with the tools as they look. You try to imagine two, three, four model hops ahead. You're just going to go crazy, right? Because then why is there even a role for anyone? What do humans even need to damn well exist? Are we all going to end up as paper clips? I think that is a bad path to go down. And I think this is why so many of these AI safety people end up [&nbsp;__&nbsp;] crazy cuz that's what they do all day long. They just sit and think about like what if all the worst things happened over the next 12 months? Wouldn't it be bad? Yeah, probably [&nbsp;__&nbsp;] would. If you were sitting down next to Oenheimimer in 44 and going, "Oh my god, by the time this thing is out, can you imagine what's going to happen in 5 years? It's going to be a desolate planet. Nuclear waste everywhere." And what happened? The bomb was the best thing that ever happened to world peace. We literally got 50 years of a beautiful cold war that did not include total nuclear annihilation. So very hard to predict the future. it is. I try to stay out of that for as much as possible. And the only prediction of the future I enjoy is the William Gibson quote. The future's already here. It's just not evenly distributed. So the future I'm seeing as I'm working with the system, I feel very comfortable doing some predictions on if everyone was able to do what I'm doing right now and could see what was possible. Of course, GDP acceleration of 3, four, 5, 10% a year is within the realm of the possible. So that seems easier to predict, but where the models are going to be in a year. Yeah. Shake the eightball. Ask again.
+</details>
+<h3 id="行业焦虑匿名黑客与-demo-文化的回归" data-reading-heading="">行业焦虑、匿名黑客与 Demo 文化的回归</h3>
+<blockquote>
+<blockquote>
+<p>David，实际上我和 Anish 在开始前刚聊过。伴随这波 AI 浪潮，一个非常出人意料且美妙的现象是：我们成长过程中仰慕的许多先辈伟人纷纷重新站了出来引路。当前人们面临很多困惑与恐惧，而你、Eric Raymond（他也回归了，太棒了）、John Carmack，这些过去 30 年的中流砥柱都站了出来。首先，非常感谢你所做的一切。顺便说一句，你的那场演讲——提到“软件已死，现在我们都是创造者（builders）”——我深受触动。你带领着整整一代人穿越这段极其迷茫的时期，非常感谢你。其次，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You know, David, uh, actually Anish and I were talking before, you know, right before this. One very unexpected, wonderfully unexpected phenomenon with this whole AI wave is how many of like the great that we've grown up with kind of showed up and helped guide the way. And then listen, there's a lot of confusion. There's a lot of fear and like it was you and it's Eric Raymond like he's back and it's amazing and it's John Carmarmac and like these just absolute stalwarts from the last 30 years. And so first off, thank you so much for everything you've done. I think your talk by the way where you're like you know software is over now we're builders like I was like yes you know by myself you know I really think that you've kind of you're leading a a generation through this kind of very confusing time so thank you and then B like
+</details>
+<blockquote>
+<blockquote>
+<p>在你做这些事情时，你把谁视为指路明灯？你认为谁在这个问题上的看法是正确的，我们在前行时应该跟随谁？因为我认为大家现在正处于极致的混乱中。并不是每个人都像我们一样经历过早期的互联网，并不是每个人都经历过大衰退，也不是每个人都经历过移动端早期的混乱和共享经济。所以我确实认为你所讲的内容对大家非常有帮助，而你所崇拜的人或许也能提供类似的指引。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; who who do you look towards as as you do these things is kind of also kind of a guiding light who you think is like right about this who you think we should kind of follow more as we kind of march forward because I just think we're at ultimate confusion right now and Not everybody lives through the internet like we did and not everybody lives through the great recession like we did and not everybody lives through kind of like the mobile confusion share economy and so I I do think that a I think what you're saying has been very helpful to people and you know the people that maybe you look up to could also provide a similar level of guidance.
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得非常有意思的一点是：在编程能力上我深感敬佩的每一个人，他们 100% 都已经全面信服并投入其中，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, I think it is very interesting that everyone that I deeply respect for the programming chops, 100% of them are now fully pilled,
+</details>
+<blockquote>
+<blockquote>
+<p>完全投身其中。这很自然，因为任何曾经以艰难方式构建过东西并取得成就的人，都无法否认这些工具能够大幅加速他们的工作。可能在很多情况下，出于自身已经取得的成功，他们并不会感到被威胁；因为现实中存在着尴尬的中间阶层——这不知算不算不幸，但事实就是大多数地方的大多数程序员并没有实现财富自由。他们正处在职业生涯的某个阶段，觉得自己是通过付出大量艰辛劳动、掌握了一堆技能才赢得了当下的位置；突然间他们感到无比焦虑：“如果这一切明天都不复存在了怎么办？如果我们都不再是程序员，大家全变成了创造者，那我还算是一个优秀的创造者吗？我不知道。”所以我认为我们必须对此抱有同理心，正如你当年</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; fully into it because of course they are because anyone who have built something the hard way and achieved something with it, undeniable that these tools are able to accelerate that work, whatever that work is. And I guess for perhaps reasons of success in many cases they're not threatened by it because I think we have this uncomfortable middle which is I don't know if it's unfortunate but just is most programmers most places are not comfortably independently wealthy. They are somewhere in their career where they feel like they've earned a place because they put in a lot of hard labor to get there. They learn a bunch of skills and suddenly they're feeling the anxiety that what if it all goes away tomorrow? What if we all stop being programmers now and then we're all just makers and like am I a good maker? I don't know. So I do think we have to have some sympathy with that as you should have had sympathy with
+</details>
+<blockquote>
+<blockquote>
+<p>应该对 70 年代底特律的汽车工人抱有同情，应该对英国早期的卢德派织工抱有同情，应该对任何在自身行业深刻体会到颠覆冲击的人抱有同情一样。在抱有同理心的同时，你也可以明确表态：“是的，但我绝不会回到工业化之前的时代，我绝不想拿着自己的锄头牵着一头牛去搞自给自足的农业，那不是我想回归的世界；我甚至也不想回到底特律汽车工人靠手工组装维持体面生活的流水线世界。”我们不应该走回头路。我们必须迎难而上向前迈进，必须找到一种方法让所有人共同融入这个进程。这其中有一部分取决于情绪氛围（vibes）。现在正在发生一场关于氛围的较量。在这场较量中，有一群人或许由于自身真实的焦虑，或者为了迎合某种受众，选择扮演“反 AI 先锋”。而且这样的人不止一个，有成千上万个。甚至整个社区都开始沉迷于此。如果你画一个维恩图，把那些令人难以忍受的激进群体与反 AI 群体放在一起，几乎就是一个重合的圆圈。在某种程度上，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; autoworkers in the 70s in Detroit as you should have had sympathy with the Ludits, the original weavers in England. as you should have had sympathy with plenty of people who felt intimately on their own profession the disruption that's coming now it is possible to have that have the empathy and also go yeah I'm not going back to pre-industrial age I'm not [&nbsp;__&nbsp;] substance farming here with my own hoe and an ox that is not a world I want to return to I don't even want to return to the assembly line work world where an auto worker in Detroit could make a decent living by putting things muttonally together by hand. I don't think we should return to that. We got to lean forward into it. We got to find a way to to bring everyone along into that. And some of that is vibes. Some of it is vibes. And right now there is a battle of the vibes. And in that battle you have a bunch of people who for whatever reason maybe their own personal anxieties which can be very real and sometimes also just sort of finds this audience where like I'm going to be the anti-AI person here and there's not just one there's like a billion of them. Whole communities actually are getting addicted to this stuff. If you draw the Ben diagram with the most insufferable woke people with blue hairs and the anti-A people, it's a [&nbsp;__&nbsp;] circle, right? So in some ways
+</details>
+<blockquote>
+<blockquote>
+<p>我们正在重演历史的旧战役，因为阵营界线如今就是这样划分的。对他们而言不幸的是，由于他们不喜欢的人率先拥抱了这项技术，导致他们只剩下一种立场可选，那就是站在对立面，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; we are all fidget we are replaying the last round we're replaying every battle ever because that's how the law lines are now drawn up and I think unfortunately the way for them that is the way this uh cookie crumble was that the people they didn't like leaned into this first and that left them only one position to take which was the opposite
+</details>
+<blockquote>
+<blockquote>
+<p>于是他们不得不成为反 AI 的人，对吧？这里面有一种美妙的讽刺。我不介意大家对未来抱有一丝焦虑；大约 5 年前，当某些群体似乎掌握了所有文化权力、可以随时随地封杀任何人时，许多人也曾对未来充满焦虑。现在风水轮流转了。但我们也不应该落入部落主义的陷阱，认为非黑即白，或者认为所有对 AI 感到不安的人都是笨蛋；只是那些极度固执的人恰好都站在了反 AI 的阵营。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and therefore they had to become anti-AI people right So, I mean, I do think there's a beautiful irony in there because there's a bunch of those insufferable people. I don't mind at all having a bit of anxiety about the future here, right? Um, a bunch at the rest of it had quite some anxiety about the future about 5 years ago when um they seemingly had all the cultural power and could cancel anyone, anytime, any place. Now, the shoe's a little different, isn't it? But not all of it. And we shouldn't kind of fall into that trap that it's all just going to be tribal and there's this side or the other side or that everyone who is uncomfortable with AI is a blue-haired idiot. It's just that every blue-haired idiot is also anti- AI.
+</details>
+<blockquote>
+<blockquote>
+<p>但引导他们融入并帮助他们认识到：无论你对此作何感想，唯一的出路就是勇往直前。我们绝不会倒退。除非我们全都在 AI 仓库的某个角落沦为堆叠的回形针，否则没人会心甘情愿放弃这项技术。我们不会放弃它。它已经真真切切地到来了。世界已经彻底改变，就像历史上许多关键节点一样。在莱特兄弟飞上天空之后，世界就不一样了，我们不可能所有东西都只靠轮船运输。所以我们有责任顺势推进。在这方面我关注的对象，首先是所有同行者。正如你提到的 Carmack、Tim Sweeney、Mitchell Hashimoto，或者无数我极其敬重、在我整个职业生涯中一直使用其软件作品的前辈。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; But um getting to to sort of bring them along and to realize or or help them realize that you know what you can feel about this whichever way but there is only one way forward and that's through. You're we're not going back. No one is going to willingly give up this technology ever unless we end up as paper clips on a stack somewhere in AI warehouse. We're not giving this up. This is here now. The world is just different as it was so many other times before. After the Wright brothers flew, the world was different. We're not going to ship everything with with boat and so forth. So, we have this obligation to push in. And who I look to in that is first all my fellow travelers in this. I mean, as you mentioned, Carmarmac or Tim Sweeney or Mitchell Masimoto or there's a million of these people I deeply respect who've worked on software products that I've been using my entire career.
+</details>
+<blockquote>
+<blockquote>
+<p>他们 100% 都全力拥抱，完全投身进去了。另外，我还关注着 Linux 圈以及 AI 圈正在发生的奇妙现象：匿名黑客（pseudonymous hacker）文化的复兴。安全领域一直有这种传统，但现在它正在向主流渗透。在 Omachi 核心团队和 Omicron 基金会的员工名单里，我们有两位化名成员：一位是 QuickShell（我们用于所有桌面交互的可塑性 Shell）的作者 outfoxed，另一位是团队里的艺术家之一 Handcore。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; 100% of them are leaned in. They're pil um then I also look to this really curious phenomenon that's been happening in both the Linux world but also in the AI world. The return of the pseudo anonymous hacker. Now, the security world has always had this, but now it's leaking into the mainstream. On the Umachi uh core team and the Omicron Foundation staff list, we have two pseudo anonymous people. one outf foxed the creator of quick shell the malible shell that we're using for all the desktop interactions and handcore one of the artists in there
+</details>
+<blockquote>
+<blockquote>
+<p>对我而言，这完全是对 90 年代、飞客（phreaker）文化、精英 BBS 论坛的全面致敬，我太喜欢这个了。我喜欢这种计算机周围重燃激情的氛围，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; which to me is a total throwback to the '90s and like freaker culture elite message boards and all this stuff and I love that I love that we have this
+</details>
+<blockquote>
+<blockquote>
+<p>就像 80、90 年代那样，黑客和实验探索者突然再次站到了所有技术的最前线。也许互联网早期曾有过转瞬即逝的这种状态，但随后互联网被商业化、被平台和大公司接管，走向了社交媒体时代，那种自由精神便不复存在了，没有持续太久。现在的本地 AI（Local AI）领域也充满了这种活力。比如 0x0 是我们通过 Omicron 基金会资助的开发者，还有 Mia's Lab，两人都是化名运作（0x0 真实身份虽公开但习惯用 handle）。我非常喜欢这种能量：借助 AI 的力量，个人如今可以在推动行业发展中发挥举足轻重的作用。因为正如我所说，一旦互联网被圈禁和商业化，大量前沿的探索工作就被巨头垄断了。比如 Google 做了 Chrome，之后几乎成了市面上唯一的浏览器引擎；想要另起炉灶再造一个浏览器基本不可能，因为除了 Linux 内核之外，浏览器引擎是人类创造的最复杂的软件系统。所以过去计算机的关键领域全被封锁，只有全球最大的公司才能涉足。而现在我们正在重新实现民主化，把它重新交还给黑客文化，交还给真正能推动变革的个人。所以我关注的就是这些人——基本上任何在网上用匿名 handle 做出很酷成就的人，我都会觉得“嘿，我得关注这个人，这里正在发生很酷的事”。我太喜欢这种感觉了，这完全是反 LinkedIn 文化，它就是 LinkedIn 职场文化的对立面。而其中很大一部分是由 X 激发的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; energy around computers again like it was in the '9s the 80s where hackers and experimenters are suddenly at the foreront front of everything because maybe that was true for a split second with the internet and then the internet got commercialized and then it got taken over and we got platforms and we got social media and then it was dead. There was none of that anymore, right? It didn't last that long as sort of this free spirit. Local AI for example has a ton of this stuff too. Um 0x0 is someone we uh sponsor through the Yamcom Foundation. Mia's lab um also both pseudo anonymous 000 is I guess his identity is known but goes by a handle. I love this energy that now individuals thank to the power of AI can actually play a pivotal role in the forward progression of the industry because as I said once the internet got sort of bottled up and commercialized a lot of the sort of frontier work to push things forward just got gobbled up by the big companies. Oh, you had Google doing Chrome and then that was the only browser in town and then to create another browser was basically impossible after the Linux kernel, the browser engine is the most complex piece of software humanity has ever produced. So we just we closed off all these domains of the consequential bits of the computer and only the biggest companies in the world could work on them. And now we're redemocratizing it. We're returning it to the hacker culture. returning it to the indiv individual who can actually move some of this stuff forward. So, I look to those people basically anyone doing cool [&nbsp;__&nbsp;] with a pseudo anonymous handle online or like, hey, hey, I got to I got to follow this person. Something's going on over here. Um, I love that. It's like it's anti-LinkedIn culture. Anti-LinkedIn culture is what it is, right? It's just the complete opposite. And a big part of it is infused by X. I
+</details>
+<blockquote>
+<blockquote>
+<p>在这场变革中，X 扮演了连接一切的关键纽带角色，把艺术家、匿名黑客、本地 AI 运动紧密串联在一起。在马斯克收购之前，如果那些墨守成规的人继续把持着它，我们今天可能根本看不到这一切，大家可能只会沦为 LinkedIn 上千篇一律的无趣打工人。我想快速回顾另一件我非常喜欢的事：你还记得 90 年代的 Demo 文化（Demo Scene）吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; X has played such an enormous connecting tissue role for this whole revolution for the artist, for the pseudo anonymous hackers, for the local AI movement is all getting connected through X in a way that if um those blue-haired bandits had somehow managed to hold on to that [&nbsp;__&nbsp;] back before Elon brought it, we might not have had any of it at all. It might all have ended up being linked in human slob. Yeah. I just wanted I just very very quick throwback also another thing that I love. Do you remember demo culture in the 90s?
+</details>
+<blockquote>
+<blockquote>
+<p>天哪，当然记得！</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Oh my god. Yes,
+</details>
+<blockquote>
+<blockquote>
+<p>伙计，它在创意层面完全复活了！太不可思议了。许多极度惊艳的 Demo 都是由这些随机涌现的艺术家做出来的，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; dude. It is so back in the creative aspect. It's amazing. Like some of the most sophisticated demos are by like these random, you know,
+</details>
+<blockquote>
+<blockquote>
+<p>他们对做生意毫无兴趣，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; artists that have no interest actually in like
+</details>
+<blockquote>
+<blockquote>
+<p>完全是出于对纯粹艺术的热爱。我不记得上一次出现这样的运动是什么时候了，太令人震撼了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; um you know, building businesses is purely for the love of art. And I don't remember the last time we had such a movement and it's awesome.
+</details>
+<blockquote>
+<blockquote>
+<p>我正在努力把所有这些元素融入 Omachi。我不知道你有没有试过 Omachi，它标志性的视觉效果之一就是屏幕保护程序：纯粹的 ASCII 艺术动态运行着 40 种 Demo 视觉特效，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I'm trying to pull all of that into Amachi. So, I don't know if you've tried Amachi yet, but one of the signature visual effects is the screen saver. And the screen saver is literally asy art running through 40 demo effects,
+</details>
+<blockquote>
+<blockquote>
+<p>看起来完全像是 1995 年 Demo Party 聚会上的开场动画对吧？我们正在把所有这些特效融合进去，保留那份终端美学。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; just looking totally out of like a 1995 demo party intro, right? We're pulling all of those effects into it, keeping that terminal aesthetic,
+</details>
+<blockquote>
+<blockquote>
+<p>顺便说一句，这与 Mac OS 或 Windows 的美学截然不同。因为以往很多 Linux 发行版都认为，只要把自己做成廉价版的 Windows，大家就会喜欢；并不是，没人想要本就不怎么样的东西的廉价仿制品。大家想要量身定制的、独特的东西。Omachi 的美学完全是 90 年代 Demo 文化，这就是我所追求的氛围。事实上在这次通话前，我正在编写关于如何在本地机器上部署 AI 的配置流程。其中有一点是：启动本地 AI 模型可能需要一点时间，几秒钟甚至几分钟。因此在它加载时，我强行塞入了一套 ASCII 艺术特效，酷炫的字符在屏幕上四处流动。它有实际功能吗？完全没有！纯粹就是为了让你觉得“我正在用一台极其酷炫的电脑”，因为这就是 90 年代和 Demo 文化给我的感觉。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; which is by the way also completely different aesthetic from Mac OS or from Windows because I think Linux historically a lot of the distributions thought if we would just make a Teemo version of Windows, everyone would love us. No, no one wants a [&nbsp;__&nbsp;] cheap copy of some [&nbsp;__&nbsp;] that wasn't that great to begin with. They want something bespoke. They want something unique. And the aesthetic of Amachi is totally 90s demo culture. Totally that. That's exactly the kind of vibe that I'm going for. In fact, I just before we hop into this call, I'm working on some how to set up local AI on your own machine. And one of the things we have is booting a local AI model can take a while, like uh I don't know, a few seconds, maybe in some cases even a few minutes. So, while it's loading, I jammed in another asy effect just like [&nbsp;__&nbsp;] cool characters floating around on the screen. Does it have any functionality? No. Absolutely [&nbsp;__&nbsp;] not. just there to make you feel like I'm using a cool ass computer because that's what the '9s and demo culture felt to me. Like
+</details>
+<blockquote>
+<blockquote>
+<p>我当年也很喜欢玩盗版破解游戏。那些盗版游戏开头都会有类似“Razor 1911 破解”的炫酷片头，文字在屏幕上旋转，看到那个画面，我那天就觉得整个人都酷了一点。BBS 也是一样，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I was into pirated games at the time, too. And all these pirated games would have this intro cracked by Razer 1911 or whatever and the text would swirl around and I just felt a little cooler, a little cooler that day that I got to witness that. I mean BBS was like that too like that
+</details>
+<blockquote>
+<blockquote>
+<p>即使……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; if you
+</details>
+<blockquote>
+<blockquote>
+<p>即使你的日常工作只是倒腾 Excel 表格，至少在 Omachi 运行的那一刻，你能感觉到自己是鲜活的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; even if your goddamn job is pushing an Excel spreadsheet around at least you feel alive for that hot moment while a machining
+</details>
+<blockquote>
+<blockquote>
+<p>是的，当年的 BBS 文化也是如此。你还记得各种协议吗：Xmodem、Ymodem、Zmodem、Kermit……没人知道为什么叫 Kermit，但听起来就很霸气。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah like BBS culture was like that too you know I mean all the protocols you remember X modem Y modem Z modem Kermit why is it Kermit no one knows but it seems badass
+</details>
+<blockquote>
+<blockquote>
+<p>我 14 岁时在自己的卧室里架设了一个顶级的 BBS 系统，拉了三条电话线。丹麦电信垄断公司的人上门来安装第三条线路时，看到一个 14 岁的小孩，当场愣住了：“这到底是在搞什么鬼？这肯定是违法的！”他说得完全没错，这确实完全违法，但也确实酷毙了。我至今仍能回想起 US Robotics</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I ran an elite bulletin board system out of my bedroom. Three lines in. I was 14 years old. I can tell you when the guy from the Danish Telecom Monopoly showed up to install the third line and he saw this 14-year-old kid was like, "What the hell is going on here? This got to be illegal." And he was totally right. It was totally illegal. It was totally awesome. And I can still hear the US robotics
+</details>
+<blockquote>
+<blockquote>
+<p>调制解调器连接时 33.6k 那标志性的拨号声。那声音太经典了。我们必须找回更多这种感觉。计算机应该带有一点神秘感，应该非常酷，而不是被过度打磨。尽管我很喜欢苹果，但我认为 Jony Ive 本质上用铝合金外壳抹杀了计算机的一切个性。也许在特定时期那是件好事，但那个时代已经结束了。我们正在把黑客精神迎回舞台！</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; modem sound, the 33.6 connecting. It's just such an iconic sound. And we got to have more of that. Computers should be a little mysterious. They should be a lot of cool and they should not be so polished. As much as I love Apple, I think Jonathan IV essentially aluminum polished all character out of the computer in that regard. And maybe that was good for a time, but that time is over. We're [&nbsp;__&nbsp;] getting the hackers back.
+</details>
+<blockquote>
+<blockquote>
+<p>David，你真是一个传奇。我们非常感谢你现在所做的一切，以及你过去的所有贡献。非常感谢你的到来，非常享受今天的对话。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; David, you're such a legend, man. We really appreciate everything that you're doing now and everything that you've done. Um, so we really appreciate you coming on and enjoy the conversation.
+</details>
+<blockquote>
+<blockquote>
+<p>非常感谢。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Thanks so much.
+</details>
+<blockquote>
+<blockquote>
+<p>谢谢你们，聊 90 年代 Demo 文化、黑客精神和酷东西总是令人愉悦。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Well, thank you. It is always a pleasure to talk about the 90s demo culture, hackers, and cool [&nbsp;__&nbsp;]
+</details>
+<blockquote>
+<blockquote>
+<p>伙计，我们以后多合作交流，太荣幸了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Let's do more together, man. What a pleasure.
+</details>
+<blockquote>
+<blockquote>
+<p>好的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>你平时主要在哪里？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Where are you basically?
+</details>
+<blockquote>
+<blockquote>
+<p>一定，下次我们线下见。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Absolutely. In person next time.
+</details>
+<blockquote>
+<blockquote>
+<p>顺便问一句，你那个办公室是真的吗？你那张拥有绝美视野的办公室照片是真的吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; By the way, is the office real? Is the office real? Like the the the picture of like your beautiful office view?
+</details>
+<blockquote>
+<blockquote>
+<p>千真万确。我现在没在那个办公室里，不然我就把摄像头转过去给你们看了。不过没错，那个办公室在马里布（Malibu）。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's very real. I'm not in that office right now. Otherwise, I would pan the camera around. But, uh, yes, that office in is in Malibu. And, um,
+</details>
+<blockquote>
+<blockquote>
+<p>太漂亮了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; gorgeous.
+</details>
+<blockquote>
+<blockquote>
+<p>怎么看都看不够。我总是把那张照片发出来，纯粹是为了满足自己的成就感：“不敢相信我居然在这里工作。”是的，这就是资本主义带来的战利品之一。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It never gets old. I mean, this is why I I keep posting that picture just for my own satisfaction. Like, I cannot believe I work here. And uh yeah, one of the spoils of capitalism.
+</details>
+<blockquote>
+<blockquote>
+<p>感谢商业软件带来了这间办公室。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; This office was brought to you by Commercial Software. Thankfully,
+</details>
+<blockquote>
+<blockquote>
+<p>非常感谢你，非常感谢你抽出宝贵的时间。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; really appreciate this. Really appreciate the time.
+</details>
+<blockquote>
+<blockquote>
+<p>谢谢。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Thank you.
+</details>
+<blockquote>
+<blockquote>
+<p>非常感谢。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Thanks so much.
+</details>
+<blockquote>
+<blockquote>
+<p>谢谢你们邀请我，下次我们线下再聚。好，祝一切顺利，保重，再见！</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Thank you for having me on. Let's do it again in person. All right. Sounds good. Take care, man. Byebye. Happy.
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/260c5aec8af013815667ea2f349d6e4a96e0c94b1cdc7410960718308956deed.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/260c5aec8af013815667ea2f349d6e4a96e0c94b1cdc7410960718308956deed.md" download="DHH 对谈：AI Agent 时代的 Linux 复兴、软件开发重塑与黑客文化回归.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=David Heinemeier Hansson" class="entity-link person-link">David Heinemeier Hansson</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=37signals" class="entity-link company-link">37signals</a>, <a href="/search/?q=Apple" class="entity-link company-link">Apple</a>, <a href="/search/?q=Microsoft" class="entity-link company-link">Microsoft</a>, <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Omachi" class="entity-link product-link">Omachi</a>, <a href="/search/?q=Ruby on Rails" class="entity-link product-link">Ruby on Rails</a>, <a href="/search/?q=Basecamp" class="entity-link product-link">Basecamp</a>, <a href="/search/?q=Hey" class="entity-link product-link">Hey</a>, <a href="/search/?q=Opus" class="entity-link product-link">Opus</a>
+</p>
+      
+        <p><strong>媒体/书籍:</strong> <a href="/search/?q=Rework" class="entity-link media-link">Rework</a>, <a href="/search/?q=Remote" class="entity-link media-link">Remote</a>, <a href="/search/?q=It Doesn&#39;t Have to Be Crazy at Work" class="entity-link media-link">It Doesn&#39;t Have to Be Crazy at Work</a>
+</p>
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

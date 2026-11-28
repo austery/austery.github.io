@@ -1,0 +1,114 @@
+---
+author: AI Engineer
+date: '2026-10-06'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=XTpyNrEgJQ4
+speaker: AI Engineer
+tags:
+  - speculative-decoding
+  - llm-inference
+  - kv-cache
+  - inference-acceleration
+  - gpu-memory
+title: 投机解码实战指南：LLM推理加速原理、权衡与工作负载评估
+summary: 来自Akamai的技术布道师深入剖析了投机解码（Speculative Decoding）的技术机制。通过小模型草稿预测与大模型单次并行验证，该技术能显著降低生成延迟，但在高并发、长上下文或高发散性创意场景下收益有限。文章结合vLLM与Blackwell GPU实测，明确了适合开启投机解码的系统边界与选型法则。
+insight: ''
+draft: true
+series: ''
+category: ai-ml
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - Akamai
+products_models:
+  - vLLM
+  - Llama
+media_books: []
+status: evergreen
+---
+### 双阶段推理瓶颈与投机解码的核心机制
+
+在向**大语言模型**（Large Language Model: 基于海量文本训练的深度学习系统）发起提问时，其底层处理流程通常划分为两个阶段：第一阶段是**预填充/提示处理阶段**（Prefill Phase），模型一次性读取并处理用户输入的所有 Prompt Token，生成**键值缓存**（KV Cache: 保存注意力机制历史状态以避免重复计算的工作内存），该步骤在整个查询生命周期中仅执行一次；第二阶段则是**解码阶段**（Decoding Phase），模型开始自回归式地逐一生成响应 Token。由于解码阶段的每个新 Token 都严格依赖此前生成的序列，传统架构只能以串行单步方式推进。当在生产环境中部署诸如 **Llama 70B** 等大规模参数模型时，每一次 Token 生成都会触发庞大的模型权重搬运和计算，带来极高延迟和显存带宽瓶颈。
+
+为了打破这种串行低效，**投机解码**（Speculative Decoding: 一种利用小型草稿模型前瞻性预测多个 Token，再由大模型单次前向传播统一验证的推理加速策略）应运而生。其核心思想在于：不再直接依赖昂贵的目标模型逐字推演，而是引入一个计算成本低廉且速度极快的小型草稿模型（Draft Model），由其率先“推测”生成 3 到 5 个后续 Token；随后，具备高准确率的**目标模型**（Target Model）在单次前向传递（Forward Pass）中并行验证所有推测 Token。对于验证通过的 Token 直接采纳，若遇到拒绝（Reject）的 Token，则由目标模型纠正并重新计算。该机制在严格保障输出精度与原始大模型完全等价的前提下，将昂贵的单字串行循环转化为高效的批处理验证。
+
+<details>
+<summary>Original English Source</summary>
+
+My name is Sheila. I'm a DA at Akamai, and we're here today to discuss the topic of speculative decoding and how you can figure out whether it's worth enabling for your workloads.
+
+So, usually when you ask an LLM question, there are usually two phases that happen. First, the model reads your query, processes all the incoming tokens, and then creates what's called a KV cache, which is essentially the model's working memory for the rest of the query, and this only happens once. And then you have the decoding phase, which is when the model starts to actually record the response. Since each token depends on the previous tokens, this process usually happens one at a time. And so, imagine you're deploying an application that uses a large model, like the 70 billion Llama model. Usually it requires even up to hundreds of direct model transfers, and that's a very expensive process, right? And this can cause significant latency for your custom applications.
+
+Which begs the question: what if you didn't have to use a larger model to handle token generation? What if you were to use a smaller model to make some guesses to speculate on multiple tokens, which is still an autoregressive process, but the whole point is that because it's smaller, it's a faster process. So, it would be a cheaper process. The output remains the same because the target model, the underlying model that has accuracy, still has to validate the tokens, and it does that in one straight pass. So, this is the idea of speculative decoding.
+
+So, as I said, you have a small model that generates tokens, typically you can set them to three to five for each cycle. The target model will process the predictions, i.e. it will be able to scale, i.e. approve or reject them. And then for all rejected tokens, the target model will recalculate the token for that.
+</details>
+
+### 显存开销与草稿模型选型的系统权衡
+
+尽管投机解码在理论上能够大幅度削减推理耗时，但它并非无代价的免费午餐。系统同时托管两个活跃模型，必须仔细评估 GPU 的显存承载能力。除了小型草稿模型本身的权重体积外，系统还需要为两套模型同时分配额外的 **KV Cache** 存储空间。因此，是否启用投机解码的关键前提，在于 GPU 是否存在充裕的显存与计算余量。如果系统工作负载本身处于高度饱和的高并发请求状态，GPU 算力已被满载调度，强行引入投机解码不仅无法提速，反而会因争抢资源恶化吞吐；反之，若显存与并发尚有富余，投机解码则是利用闲置显存换取延迟下降的绝佳手段。
+
+在决定启用投机解码后，首要挑战便是挑选匹配的草稿模型。架构师必须在**预测准确率**（Prediction Accuracy）与**推理速度/成本**（Speed & Cost）之间取得动态平衡。一个合格的草稿模型通常需要满足以下刚性工程约束：
+* **参数规模比率**：草稿模型的体积通常应为目标模型的十分之一至五十分之一（10x–50x smaller），以确保推测阶段具备数量级的速度优势。
+* **分词器一致性**（Same Tokenizer）：草稿模型必须与目标模型共享完全相同的 Tokenizer，理想情况下应出自同一模型家族（Model Family），否则跨分词器的映射转换将引入不可接受的额外开销。
+* **硬件资源切分**：在单卡部署实验中（例如在 NVIDIA Blackwell GPU 上同时运行基线配置与投机解码测试），目标基础模型可能占用约 16 GB 显存，而草稿模型仅占 2.5 GB，剩余空间得以完整释放给高吞吐的 KV 缓存。
+
+<details>
+<summary>Original English Source</summary>
+
+Good. So, this process is wonderful. It can save you a lot of money in terms of generating logical conclusions, but it is not free because you are now hosting two models. You need to consider the amount of memory required to accommodate the second model. Not much since it's the smaller model, but you'll also have to allocate extra space for the KV cache for both models. Yes, you would usually consider running speculative decoding when you have extra space on the GPU. For example, if your workload is highly parallel execution, your GPUs are probably already busy trying to fulfill all the requests. Therefore, it makes no sense to implement speculative decoding, but if you have extra space on your GPU, it's worth considering, but I'll talk about how to evaluate whether it's worth it.
+
+And the first question is choosing a rough model. So, usually when you decide whether to turn it on, can the draft model predict as accurately as the target model? And then another question is whether it is as fast. Therefore, you usually choose a model that is definitely worth only a fraction of its cost. Well, those are two major decisions that need to be balanced, right?
+
+I'll just leave it here. So, for my situation, I will explain why I chose these two models. For my demo configuration, when I ran it, I had access to a single GPU. I was working on a Blackwell GPU and wanted to run both the base version and the speculative decoding configuration in one. So, to be able to do this, I had to choose a model that was small enough to fit because I had to split the GPU usage between both servers. So, this is what it looked like. For example, the basic version takes up about 16 GB of weight, and the draft model takes up 2.5, so there is a huge amount of space left for caching KV.
+
+And then when you think about choosing a model, some of the things you usually consider are, first of all, as I said, it has to be smaller, usually 10 to 50 times smaller than your target model. It should have the same tokenizer. Ideally from the same model family, otherwise, you know, you would have to manually convert between different tokenizers. Hmm, what else? Yes, these are the main things. I seem to be forgetting one thing. Hmm, and yes, and as I said, cost and accuracy.
+</details>
+
+### 工作负载特征与采纳率对加速收益的决定性影响
+
+投机解码的实际性能表现极度依赖于具体的工作负载特征，其核心衡量指标是**采纳率**（Acceptance Rate: 目标模型采纳草稿 Token 数量与草稿模型生成总 Token 数量的比率）与生成吞吐量（Tokens per Second）。在现场基准演示中，当处理代码编写、JSON 结构体解析或 SQL 查询生成等**高结构化任务**（Structured Output）时，Token 的上下文转移概率具备强确定性，草稿模型预测准确率极高，采纳率随之飙升，整体生成速度可直接达到常规模式的 **1.6 倍**，吞吐量显著抬升。
+
+相反，在开放式头脑风暴、诗歌创作或设置了较高采样温度（Temperature）的**高发散性创意场景**（Creative Tasks）中，生成轨迹存在极大的不确定性和多分支可能性，草稿模型生成的预测结果难以命中目标模型的分布，导致采纳率急剧下跌，投机加速的优势基本归零。此外，任务的**上下文长度**（Context Length）也是决定性维度：投机解码仅仅优化解码阶段的 Token 生成速度，完全不改变预填充阶段的计算开销。在 **RAG**（检索增强生成）或长文档分析场景下，系统大部分计算时间消耗在海量上下文的输入读取与 KV Cache 填充上，生成 Token 占总体 Token 的比例极小，此时启用投机解码所带来的端到端延迟收益微乎其微。
+
+评估系统是否适合引入投机解码，必须建立清晰的多维决策清单：
+1. **结构化程度**：业务输出是确定性强的高结构化代码/数据，还是发散性文本？
+2. **显存预算**：当前硬件环境是否有足够显存容纳第二模型及其伴生 KV 缓存？
+3. **并发压力**：系统是否运行在大批次高并行处理中？（小 Batch Size 场景更容易从投机解码中受益）
+4. **生成比率**：生成阶段的耗时占比是否显著大于长上下文输入预填充耗时？
+
+<details>
+<summary>Original English Source</summary>
+
+Um, okay, so, oops. So when I ran this, three questions, speculative decoding, there are some workloads that benefit from this, compared to others that don't. Usually, since the goal here is to get a smaller model that can predict almost as accurately as the target model, it helps in some use cases where you have a workload that is more like highly structured, like coding use cases. For example, writing JSON or SQL queries. It would probably get more use than if you were using it for a very creative use case, like writing poetry, brainstorming, or something like that.
+
+I think I have it. This is a fast app. I'm not even sure if this will work, but so here I have just two tabs for the first demo. Like I said, this is just to focus on how the acceptance rate works depending on the type of task you have. So the first step here is structured output. When I click on this, it starts at the same time. Wow. Oh my God. I'm just waiting. Technical problems. I'm not sure why my demo isn't working. Hmm, let's see. Oh, do I need to reconnect? Give me 1 second. I think I might have to restart. It looks like I need to restart the VLM servers and my system. Just give me a few minutes. Is this enabled? Oh, hmm? Should I? Yes, I think I need to. Oh, it shows up. Okay, here we go. Yes, I said it was a demonstration.
+
+So when I launch this, I'll redo it. So you can see, as expected, with the speculative approach on the right, it was able to generate much, much faster, 1.6 times faster. The key thing to note is how high the adoption rate is, i.e. the ratio of the number of tokens accepted to the total number of tokens generated by the model project. Another metric here, you can see that with speculative mining enabled, we can generate a lot more tokens per second, which improves throughput.
+
+And then if I run this for another case... So here's another use case. As expected, the same, but in this case, I think the main indicator to look at here is the low acceptance rate. And as I said, it's because it's more...there's more variety in how the next tokens will be generated, because, first of all, the temperature is set high, it's a creative use case...so what else? I think that's about it for this case.
+
+And then another situation where...oh! Oh yeah, that's exactly what I meant...I should have posted it here, just to clarify when it would be useful. And then another use case would be the length of the context. As I mentioned earlier, there are two parts to token generation. Speculative decoding is intended to speed up the generation part, not the part where the model reads the query. So typically, if you have a use case where you need to provide a lot of context to the model, like for RAG applications or analyzing a lot of documents, in those situations, the model will spend a lot more time on the part like building the knowledge base caching, especially if you're using it for fast work where the generated tokens are much smaller than the context, like the input data.
+
+Yeah, so I think the key here is how to think about what your app does? Is it highly structured? Do you have enough video memory to even consider this? Do you use more creative scenarios? Are you using a lot of parallelism? Or not? As if smaller party sizes would benefit from this. Yes. I'll leave this slide here. This is basically a summary of what I just went through.
+</details>
+
+### 开源落地生态、演进架构与基础设施实践
+
+在开源工程落地层面，**vLLM**（高性能高吞吐 LLM 服务框架与推理引擎）提供了成熟且完善的投机解码服务化实现与文档支持，是生产实践中最易于上手的基石工具。除了基础的双模型草稿-目标协作范式之外，推理加速领域还衍生出了更为先进的算法分支，例如无需显式加载独立小模型的 **n-gram** 投机匹配，以及基于轻量级预测头扩展架构的 **Eagle**（一种通过在主模型顶层追加轻量自回归层预测多 Token 的前沿加速架构）。更深入的理论推导亦可参考 Google 等头部实验室发布的原初研究论文以及 General Compute 等社区关于投机解码内核的深度技术博客。
+
+作为部署基础设施支撑，**Akamai** 开发者社区在其 GitHub 和官方技术门户提供了完整的复现配置、代码片段及指南，涵盖如何利用托管 Kubernetes 服务调度 GPU 资源、如何在云边缘优化逻辑推理延迟，以及如何围绕大模型推理构建自主 AI Agent 系统。合理匹配硬件拓扑与推理框架配置，方能释放大语言模型推理加速的最大能效。
+
+<details>
+<summary>Original English Source</summary>
+
+And if anyone has any questions, I'll take one or two questions now. Wow, I can't hear you. Oh, yes. The question was, are there any specific tools I recommend for speculative decoding?
+
+So, I implemented this using vllm, a service mechanism. They have really good documentation on how to get started with it. This is the simplest of the simple versions of speculative decoding. There are a few others, such as the n-gram method, Eagle, which is more like an architecture that is more advanced. But for starters, yes, I would say you can't go wrong by just reading. When I was doing this, there wasn't a lot of content on the topic, but I found a few blogs like the one where you type in "speculative decoding," one of the first blogs to appear on General Compute talks about it in more detail. There are also two research papers published by Google, and what other company? Yes. But it's more like something deeper.
+
+Yes. But I'm also trying to maybe create more content on this. Maybe a video. It was a little difficult to get through that. I'm a little confused, but I would definitely like to maybe post a blog or make a video with snippets. Yeah, on YouTube or somewhere. But you can definitely find resources. Okay, yes. Okay, I should look into that. But I don't have one, I should add a QR code for that. Good.
+
+Oh, as I said, I'm from Akamai, and if you're interested in learning how to replicate this, you can find it on our website, our GitHub, GitHub, Akamai developers. Yes. Yes, we have a lot of different resources here. I'm focusing on optimizing logical inference. We have other people who are focused on building AI-based agents. And on how to use our managed Kubernetes service, how to use Akamai features. So if you have time, please check out our GitHub pages, and we also have a Discord channel that we are currently trying to create. So it would be great to chat with some of you. Thank you.
+</details>

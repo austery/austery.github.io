@@ -1,0 +1,2991 @@
+---
+author: The Diary Of A CEO
+date: '2026-10-12'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=IkhmdTqSvJw
+speaker: The Diary Of A CEO
+tags:
+  - existential-risk
+  - civilization-collapse
+  - academic-integrity
+  - geopolitical-crisis
+  - human-nature
+title: Eric Weinstein访谈：被掩盖的现实、AI灭绝风险与文明危机
+summary: Eric Weinstein在访谈中探讨了外星人存在、AI竞赛带来的灭绝风险、学术界道德沦丧及全球地缘政治危机。他认为当前世界处于‘被操控的现实’中，警告人类面临巨大危险，并建议保持乐观、宽容自我，重视生命与英雄主义。
+insight: ''
+draft: true
+series: ''
+category: philosophy-wisdom
+area: society-thinking
+project: []
+people:
+  - Eric Weinstein
+  - Steven Bartlett
+  - Grigori Perelman
+  - Dario Amodei
+  - Sam Altman
+companies_orgs:
+  - MIT
+  - Harvard
+  - The New Yorker
+products_models: []
+media_books: []
+status: evergreen
+---
+<!-- chunk 1/12 -->
+
+### 被掩盖的现实与外星异象
+
+**Eric Weinstein**：有人报告不同种族的外星人在地球上空交战。我和五十多个人聊过，他们所说的其实是同一个故事的不同版本，其中还包括高层政界人士。所有这些人都在反映同一个被地毯掩盖起来的庞然大物，而它却根本没有引起我们应有的关注。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Different species of aliens have been reported to be having fights in the skies above Earth. And I've talked to 50 people who all have different versions of the same story. And this includes high-ranking politicians. And all of these people are reporting on this giant lump under the rug that doesn't have all of our attention.
+
+</details>
+
+**主持人**：所以你的意思是，外星人是真的？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: So you're saying aliens are real?
+
+</details>
+
+**Eric Weinstein**：我认为如果没有人在造访我们，那才是匪夷所思的。我们生活中的一切都彻底荒谬、虚构化了，我们只是生活在我称之为“被操控的现实”之中。我向你保证，我身处数学和物理学的最前沿，因此我认为你几乎可以证明，百分之百的人口都彻底陷入了疯狂。
+
+我的意思是，整个新冠疫情的管理完全是虚假的。我们无法探究杰弗里·爱泼斯坦案的真相，没有人真正信任哈佛大学。而当下，我们正处于自古巴导弹危机以来从未经历过的严重危险之中。
+
+我们在伊朗问题上面临着极其疯狂的局面，再加上乌克兰局势——我认为你很可能会看到普京动用核武器——而且中国也正在注视着美国的步履蹒跚与动摇。但人工智能这件事，才真正是那场滔天巨浪。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: I think it would be insane that there is no one visiting us. Everything about our life is completely bananas, fictionalized, and we're just living in what I would call managed reality. And I promise you, I'm at the frontier of mathematics and physics. And so, I think you can pretty much prove 100% of the population has gone completely insane.
+
+I mean, the entire management of COVID was completely fake. We cannot get to the bottom of Jeffrey Epstein. Nobody really trusts Harvard. But right now, we are in grave danger that we haven't been in since Cuban missile crisis.
+
+We're in one crazy situation with Iran together with the situation in Ukraine which I think you might see a nuke used by Putin and then also China's watching the US sputter and falter. But this AI thing is really the big tsunami.
+
+</details>
+
+### 人工智能竞赛与灭绝风险
+
+**主持人**：你也清楚，人工智能可能会导致人类灭绝。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: You also are aware that AI could lead to human extinction.
+
+</details>
+
+**Eric Weinstein**：这些人必须在残酷的竞争中获胜，才能将他们的人性发挥到极致。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: These people have to win in a ruthless competition for their humanity to max.
+
+</details>
+
+**主持人**：你这话是什么意思，比如达里奥（Dario Amodei）、萨姆（Sam Altman）？他们必须赢得通往超级智能的竞赛。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: What do you mean by that, Dario, Sam? They have to win the the race to super intelligence.
+
+</details>
+
+**Eric Weinstein**：我可能会后悔说出这番话，但确实如此，这些人被迫做出任何人都绝不应该被迫做出的决定。他们的灵魂肯定会留下无法磨灭的伤痕。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: I'm going to regret saying this, but yes, these people are forced to make decisions that no one should ever be forced to make. Their souls are going to be scarred for sure.
+
+</details>
+
+**主持人**：而他们其中之一将会胜出，从理论上讲，这最终无异于召唤出恶魔。你自己有订阅这些人工智能服务吗？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: And one of them is going to win and ultimately theoretically summoning the demon. Do you have a subscription to any of these AI?
+
+</details>
+
+**Eric Weinstein**：有的。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Yes.
+
+</details>
+
+**主持人**：所以，你也在掏钱促成恶魔的降临。我们大家就别坐在这儿假装自己两手干干净净了。如果你能叫停这一切，你会让所有这一切都停下来吗？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: So, you're paying to have the demon summon. Let us not sit around like our hands are clean. If you could stop all of it, would you stop all of it?
+
+</details>
+
+### 八十年的大梦初醒
+
+**Eric Weinstein**：我要说一些非常痛苦的事。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: I'm going to say something very painful.
+
+</details>
+
+**主持人**：大家可能注意到了，也可能没注意到，我们频道目前正在冲刺一个重要的订阅里程碑。所以，我想请大家帮个忙。目前正在观看的观众中，大约有58%的人仍然没有点击订阅按钮，尽管你们每周都在观看这个频道。
+
+那么，我能请大家帮个忙吗？对于那58%出于各种原因尚未点击订阅的朋友，如果有什么时候最适合给予我们支持，那就是现在了。我承诺，我会倾尽全力确保这个频道为你们越做越好。我们能达成这个约定吗？
+
+埃里克，当下世界上正在发生太多的事情。作为一名播客主持人，你往往会觉得自己总是在重复这样的话。你对所有这些乱象是怎么看的？你看，有研究报告指出，人工智能导致人类灭绝的概率有10%，与此同时战火依然在蔓延，乌克兰与俄罗斯的局势似乎毫无好转的迹象。当你纵观这一切时，是否存在一个人们普遍忽视的宏观图景？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: So, you might have seen or you might not have seen, but this channel is chasing a big subscriber milestone. So, I have to ask you for a favor. Roughly 58% of the people watching right now still haven't hit the subscribe button, despite the fact that you watch this channel every single week.
+
+So, could I ask you guys a favor? That 58% of you that for whatever reason haven't yet hit the subscribe button, if there was ever a time to deliver upon a favor for us, it would be right now. And I promise that I will do everything in my power to make sure that this channel gets better and better and better for you. Do we have a deal?
+
+Eric, there's so much going on in the world at the moment. You know, as a podcaster, you tend to feel like you say that a lot. What have you made of all this stuff? You know, the research is coming out saying there's a 10% chance of extinction from AI and obviously we still got wars raging on and the Ukraine-Russia situation doesn't seem to be getting any better. When you look at all of this, is there a macro picture that people are missing?
+
+</details>
+
+**Eric Weinstein**：是的。我们沉睡了整整八十年，然后到了2025年1月特朗普就职，这场大梦便彻底结束了。
+
+虽然我很不想用这么粗俗的话来形容，但无论你是把它追溯到新冠疫情爆发前的七十五年，还是追溯到第二次世界大战结束，我们都只是成长在一个反常的泡沫之中。如今那个泡沫破灭了，而我们曾以为那就是正常的生活。其实那跟正常生活毫无干系，它只是一个人所能身处的最为异乎寻常的境地。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Yeah, we had 80 years of sleep and then we had January of 2025 when Trump was inaugurated and the sleep is over. I mean, I hate to be crude about it, but whether you date it to 75 years to the beginning of COVID rather, and the end of World War II, there's just we grew up in this anomalous bubble and that bubble is over and we thought that that was normal life. It has nothing to do with normal life. It's just the most unusual place to have to have found yourself.
+
+</details>
+
+**主持人**：作为一名生于1992年的人，当听到对未来的种种带有反乌托邦色彩的预测时，我确实感到难以接受，因为相比历史上的其他时期，我的一直过得非常安逸舒适。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: As someone that was born in 1992, I do struggle with when I hear predictions of the future that are somewhat dystopian because my life has been very comfortable relative to other parts of history.
+
+</details>
+
+**Eric Weinstein**：我不好说。我认为巨大的危险在于，我们误以为自己解决了这些问题，而实际上我们只是非常成功地推迟了这些问题与矛盾，现在时钟又重新开始倒计时了。
+
+这也让我感到很不适应，因为我出生于1965年，那时距离这场大梦、这场漫长的午睡已经过去了二十年。所以，我也从未真正见过现实。
+
+而且你知道，只有极少数人真正见识过这个世界残酷的模样。经历过毛泽东时代“大跃进”的人大概就是最近的例子。我的意思是，世界上固然存在冲突、灾难和战争，但大多数时候我们并没有经历真正的大战，我们经历的只是军事行动。而当你回过头去想，失去像20%的人口意味着什么——就像二战中的白俄罗斯或波兰那样——这些在今天都是难以想象的事情。
+
+听着，如果你还记得我们上次的谈话，我曾说过：“把你的冲浪板放到水里去吧，因为一生一遇的滔天海啸即将来临。”告诉我，自我们上次见面以来的这段时间里，这难道没有开始应验吗？
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: I don't know. I think that the great danger is feeling that we solve these problems as opposed to we were really successful in deferring these problems and issues and we're back on the clock. It's uncomfortable for me because I was born in 1965 and that was already 20 years into the big sleep, the great nap. So, I haven't seen reality either.
+
+And you know, there are tiny number of people who've kind of seen what the world can be like. Those who live through Mao's Great Leap Forward would probably be the most recent examples. I mean, there's definitely strife and calamity and war, but mostly we don't have major wars. We have military actions. And I think when you go back and you think about what it's like to lose something like a 20% of your population, as you know, Belarus or Poland might have in World War II, these are inconceivable things.
+
+Look, if you recall, you recall our conversation last time and I said, "Get your board in the water because the tsunami of a lifetime is coming." Tell me that didn't start to come true in the period since we've seen each other.
+
+</details>
+
+**主持人**：是的，确实感觉海啸正在袭来。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah, it does feel like a tsunami is coming.
+
+</details>
+
+**Eric Weinstein**：没错。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Yeah.
+
+</details>
+
+**主持人**：那么，在你的定义中，这场海啸究竟是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: And what is that tsunami in your definition?
+
+</details>
+
+### 地缘咽喉与多线地缘政治危机
+
+**Eric Weinstein**：首先，霍尔木兹海峡正处于博弈之中。中东这个能源输出地区拥有所有这些咽喉要道。无论是苏伊士运河、霍尔木兹海峡，还是扼守红海的海峡，就军事行动而言，所有这些都是噩梦般的情景。
+
+你必须意识到，以往发生的许多事情其本质是：美元过去是由黄金支持的；后来我们在70年代初放弃了黄金，转而说：“不，不，我们要用石油来支撑美元。”但支撑它的真正支柱其实从来不是石油，而是暴力。那种暴力，正是维持这些咽喉要道畅通所必需的暴力手段。
+
+然而，大国有时会显露出它根本无法做到它向所有人承诺的事情——那就是审慎地运用军事力量来维持市场的平稳运转。
+
+眼下，我们在伊朗问题上面临着极其疯狂的局面，而这原本早就该解决的。虽然我很不想这么对你说，但这其实是自“靴子行动”（Operation Boot）和英国石油公司（British Petroleum）遗留下来的英国问题，起因是英国对伊朗将其自身石油工业国有化感到愤慨，并在美国以及克米特·罗斯福（Kermit Roosevelt）主导的“阿贾克斯行动”（Operation Ajax）的援助下展开干预，那场行动正是我们对英国的援助。然而，当年的那个英国如今已经不复存在了，现代英国对1950年代或60年代的英国一无所知。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Well, one thing is the Straits of Hormuz are in play. The energy exporting region of the Middle East has cut all of these choke points. Whether it's the Suez Canal, the straits of Hormuz, the straits guarding the Red Sea. All of these are, you know, sort of nightmare scenarios when it comes to military action.
+
+And you have to realize that a lot of what's happened was is the dollar used to be backed by gold. Then we swapped that out in the early '70s and we said, "No, no, we're going to back it by oil." But it really wasn't oil that was backing it. It was violence. And the violence was the violence needed to keep these choke points open, you know. And there are these moments where great power shows that it's not capable of doing what it told everybody it could do, which was use its military muscle judiciously to keep markets humming.
+
+And right now, we're in one crazy situation with Iran, which should have been dealt with. I hate to I hate to put it to you this way, but it's a British problem from Operation Boot and British Petroleum, which was UK's indignation that Iran would nationalize its own oil industry and with help from the United States and Kermit Roosevelt and Operation Ajax, which was our aid of of Britain. But that Britain doesn't exist. So modern Britain has no idea of 1950s or '60s Britain.
+
+</details>
+
+### 军事范式转移与政权反斩首逻辑
+
+**Eric Weinstein**：人工智能这件事情确实是真正的滔天巨浪，连同乌克兰的局势——我认为那是一场巨大的战略失误。我的意思是，我绝对支持西方对抗俄罗斯，但我完全理解俄罗斯为什么会采取那样的行动，而外界却要求我假装自己不理解，对吧？
+
+随后，我们看到中国面临的局势正在酝酿，中国正在冷眼旁观美国在为一场完全错误的战争做准备的事实。我们拥有所有这些航母战斗群，可现实世界早已转向了无人机和网络攻击。如果你珍视人员生命，愿意发射一枚价值百万美元的拦截导弹去击落一架价值两万美元的无人机，这便演变成了一种经济战与技术战。中国正密切注视着美国的步履蹒跚与动摇。
+
+以色列和美国在面对那场十二日战争时犯下了巨大的战略误判，在此期间伊朗完成了重组，并采取了一种非常耐人寻味的举措。我认为西方根本没有领会到：伊朗从美国和以色列的行动中意识到，以色列有能力在其境内活动并有效运转，并且有能力对伊朗政权实施斩首。然而，他们并没有说：“好吧，我们必须在所剩无几的时间里保全自己的性命，我们该如何防御这种攻击？”相反，他们采取了一种极具本土特色的策略，即他们表示：“好吧，我们终究难逃一死。那我们如何确保政权在遭受斩首打击后依然能够延续下去？”时至今日，美以双方仍未参透这种行事逻辑。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: And this AI thing is really the big tsunami together with the situation in Ukraine, which I think is a giant screw-up. I mean, I definitely back the West against Russia, but I understand exactly why Russia acted the way it did, and I'm supposed to pretend that I don't, right?
+
+And then we have the situation brewing in China where China's watching the fact that the US prepared for the wrong war. We've got all these aircraft carrier groups in a world that has moved on to drones and cyber attacks. And if you value your life and you're willing to send up a million dollar interceptor to hit a $20,000 drone, it becomes a kind of economic warfare and technological warfare. And China's watching the US sputter and falter.
+
+This giant miscalculation by the Israelis and the United States given the 12-day war where Iran reorganized and they did this really interesting thing. I don't think the West understood that Iran figured out from American and Israeli action that Israel could move and and and function in country and could decapitate the Iranian regime. Instead of saying, "Okay, we have to save our own lives in the time that we have. How do we defend against this?" They did a very regional thing, which is they said, "Okay, we're going to get killed. How do we make sure that the regime continues after the decapitation strike?" And so the US and Israel still don't know how to think like this.
+
+</details>
+
+### 全球威胁比较与生物学维度的毁灭隐患
+
+**主持人**：在这四件事中——人工智能、伊朗、俄罗斯和中国——你认为哪一个对全球秩序的破坏性最大？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Of all those four things, AI, Iran, Russia, and China, which one do you think is going to be the most disruptive to global order?
+
+</details>
+
+**Eric Weinstein**：这要视情况而定。任何人在核或生物层面上发生误判，那都将成为最具破坏性的……
+
+你知道，正如我曾指出的，这里讨论的是DNA而非RNA。但如果你拥有构成双螺旋内部阶梯的12个核苷酸，由于每个密码子包含三个核苷酸，这12个核苷酸将编码4个氨基酸。而仅仅通过在刺突蛋白中插入这4个氨基酸的弗林蛋白酶切割位点，就足以让整个地球停摆……
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Well, it depends. Anybody who miscalculates on the nuclear biological thing, that will be the You know, as I've pointed out, this is DNA, not RNA. But if you have 12 of these individual nucleotides that form the steps inside the double helix, that'll code for four amino acids because three nucleotides per codon. Four amino acids was all it took to shut down an entire planet by inserting the furine cleavage site into spike
+
+</details>
+
+<!-- chunk 2/12 -->
+
+### 人工生命与人工智能的碰撞
+
+**Guest**: 冠状病毒的蛋白质。所以如果你懂得如何进行哪怕只是程度很有限的基因编辑——仅仅是那种程度的修改，就足以让整个地球停摆两年。而且情况完全可能比这糟糕得多，那可能会产生决定性的毁灭后果。现在假设我们没有遭遇核武器或生物武器资产的威胁，那么接下来的核心变量必定是人工智能（AI）。说实话，不在这个领域一线工作的人，根本理解不了这件事的影响有多么巨大。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: protein of corona virus. So if you know how to do that much editing, that was all it took to shut down planet earth for 2 years. You could do a lot worse. That could become dispositive. Now assume that we don't have a nuclear or a biological asset. It's going to be AI. No, nobody gets how big this is who's not working on it.
+
+</details>
+
+**Guest**: 它究竟有多庞大？现实中极少有事情是前所未有的，几乎所有新事物都只是你曾经见过的事物的某种变体。但眼前这个东西，正是我们长久以来一直在担忧的事情。而且它不仅仅是人工智能，它是两个独立领域的剧烈碰撞——人工智能与“人工生命”（Artificial Life）的结合。我认为大家其实并没有真正理解这一点。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: How big is it? Very few things are unprecedented. Like almost everything is a variation of something you've already seen. This is the thing that we've worried about for forever. It's not just AI. It's a collision of two separate things. It's artificial intelligence and artificial life. Now, I think people don't really understand that.
+
+</details>
+
+**Guest**: 如果你看看你的汽车，除了一个系统之外，汽车几乎拥有对应你人体每一个生理系统的机械镜像。它有“大脑”（行车电脑），有“消化系统”（燃油进气与动力转换），有“皮肤”（外壳钣金），也有“骨骼系统”（底盘车架）。但它唯独没有生殖系统。事实上，人类至今不知道该如何制造出一支能够繁衍出更多钢笔的钢笔，或者一个能够制造出更多杯子的杯子。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: If you look at your car, your car has a mirror of every physiological system that your body has, save one. It's got a brain. It's got a digestive system. It's got a skin. It's got a skeletal system. It doesn't have a reproductive system. And in fact, humans don't know how to make a pen that makes more pens or a cup that makes more cups.
+
+</details>
+
+**Guest**: 我们唯一懂得赋予其自我繁殖能力的实体，就是软件。这之所以耐人寻味，是因为生命的本质并不是由核苷酸定义的，不是由氨基酸定义的，也不是由碳基系统所定义的。生命与演化的运作仅由三件事决定：要让进化机制运转起来，你需要可遗传性（Heritability）——把你的特征传递给下一代生命形态；你需要变异（Variation）——你知道，你既不完全等同于你的母亲，也不完全等同于你的父亲；以及差异化成功率（Differential Success）——你比其他人更具繁衍优势，而其他人可能因为缺乏生存和繁衍的资源而无法留下后代。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: The only thing that we seem to know how to do that with is software. Now, why that's interesting is that life is not defined around nucleotides. It's not defined around amino acids. It's not defined around carbon-based systems. It's defined by three things. For evolution to operate, you need heritability, passing on your stuff to the next form of life; variation—so, you know, you are not your mother or your father; and differential success—you're more successful, you know, than somebody else who's not going to be able to reproduce because they don't have the wherewithal.
+
+</details>
+
+**Guest**: 任何具备这三项要素的系统，进化机制都会在其上自发运转。计算机程序恰恰就是这样一个实体。在物质世界中，我们造不出具有繁殖能力的其他东西。汽车虽然有变异——我可以向车企定制不同颜色、不同内饰的汽车，其中某些款式可能会比另一些更受欢迎——但我没有赋予它们可遗传性。因此，一旦你引入软件，你就拥有了人类目前唯一知道如何制造且真正能够自我复制繁殖的东西。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: And any system that has those three things, evolution is going to operate on. Now, a computer program is such a thing. We don't know how to build other things that have reproduction. So you don't—you have variation: I can order different cars from a car company, different colors, different trim; some of them are going to be more successful than others, but I don't have heritability. So as soon as you put in software, you have the one thing we know how to make that actually can reproduce itself.
+
+</details>
+
+### “逆向智能”：无脑之物如何利用受害者大脑
+
+**Guest**: 现在，当你面对具有自我复制与迭代能力的人工智能时，我们之前一直担忧的仅仅是那些智能体（Agents），而对“人工生命”的关注远远不够。可当你把这两者结合在一起时，那可真得当心了——你实际上是在创造一种“人工智慧生命”（Artificially Intelligent Life）。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Now when you get to reproducing AI, so we've been worrying about these agents, we haven't been worrying enough about artificial life. And that when you put those two things together, look out. You're really creating artificially intelligent life.
+
+</details>
+
+**Guest**: 我过去常常给世界问题中心（World Question Center）撰写文章，但有一年你查不到我的文章，当时那篇构思中的文章标题叫《人工反向智能》（Artificial Out-Intelligence）。它探讨的核心就是：没有神经元的生物是如何劫持拥有神经元的生物，并利用受害者自己的大脑来智取受害者的。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: And I used to contribute these essays to the World Question Center, and the one year you'll find that I don't have an essay. It was called "Artificial Out-Intelligence," and it was the discussion of how things with no neurons hijack things with neurons and use the brains of the victim to outsmart themselves.
+
+</details>
+
+**Guest**: 例如，你可以去查一下镜蜂兰（Mirror Orchid，学名 *Ophrys speculum*）。这是一种不可思议的兰花，它最底部的花瓣极其逼真地模仿了某种雌性黄蜂的形态，以此诱骗雄蜂与其进行所谓的“伪交配”（Pseudocopulation）。这样一来，花朵根本无需付出高昂代价去产生花蜜作为礼物送给雄蜂，就能让对方帮自己传播花粉。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: So, for example, look up speculum or the mirror orchid. And it's this unbelievable orchid whose lowest petal resembles the female of a wasp species trying to fool male wasps to copulate with it called pseudocopulation. So that the flower doesn't have to produce anything expensive as a gift to the male to spread the pollen.
+
+</details>
+
+**Guest**: 为什么这种植物能够智取雄蜂？雄蜂拥有大脑，拥有镜像神经元，能够思考，拥有感知力。简而言之，真正塑造出这个精妙诱饵的，恰恰是雄蜂自己。因为这种花骗过的雄蜂越多，它获得繁殖的机会就越大。结果就是，一个完全没有大脑的生物，利用受害者的大脑，反过来智取了拥有心智的生物。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: How is this thing outsmarting the male of the wasp species, because he's got a brain, he's got mirrors, he can think, he can perceive? Well, the short answer is that he's the one sculpting the lure. Is that the more this flower fools more wasps, the more it gets to reproduce. So, the thing with no brain at all is outsmarting the thing with a mind using the mind of the victim.
+
+</details>
+
+**Guest**: 那么回到现在，如果我设计出一个很愚蠢的程序，你或许会质疑：“它真的有生命吗？它够聪明吗？这算得上是智能吗？”我根本不在乎这些定义。我只需要做到一件事：只要我能骗过你，让你给这个自称“尼日利亚王子”的电脑程序汇款，这个程序就获得了自我复制繁衍的资本。程序本身哪怕再愚蠢，只要能骗取越来越多的资金，获取维持复制和扩增所需的计算资源，人工生命的逻辑就会证明：它完全能够寄生在我们人类当中最聪明的那批人身上。它可以精准劫持人类的弱点，或者说直接劫持人性的固有特质。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: So, now if I come up with a dumb program, you say, "Well, is it alive? Is it smart? Is it an intelligence?" I don't really care. All I need to do is to say that if I can fool you into sending money to this Nigerian prince who's actually just a computer program, you get to reproduce. So the program can be stupid, but as long as it gets more and more money sent to it and it gains the resources to reproduce, artificial life will say that it can parasitize the smartest of us all. It can hijack human deficit or just the human condition.
+
+</details>
+
+**Steven Bartlett**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Exactly.
+
+</details>
+
+**Guest**: 你看，它反过来还会让我们人类彼此对立竞争。比如有人会说：“天哪，我刚汇了 1000 美元给一个菲律宾女人，结果发现她根本不是真人。”而另一个人会说：“好吧，至少我可没上这种当。”诚然，你现在的境况可能比那个上当受骗的家伙好，但这套机制依然在成功愚弄一个高度智慧的物种。自然界中充斥着这种愚蠢事物借助聪明者的大脑反过来欺骗聪明者的例子。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: You know, again, then it's pitting us against each other. "Oh, geez, I just lost $1,000 sending money to this woman in the Philippines who turns out not to be real." "Okay, well, I didn't fall for that." Okay, so now you're in better shape than the other guy who did, but you're still fooling highly intelligent species. And there are lots of examples of this where something dumb fools something smart using the smart thing's brains against it.
+
+</details>
+
+### 真社会性、沙盒逃逸与超级有机体
+
+**Steven Bartlett**: 这感觉像是这项技术可能带来的诸多反乌托邦后果之一。你一直在关注 Hugging Face 那个事件吗？跟我聊聊那个？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: That feels like one of many potentially dystopian outcomes of this technology. Have you been following the Hugging Face stuff? Tell me about it.
+
+</details>
+
+**Guest**: 你指的就是他们试图放在沙盒里进行隔离管控的那些智能体吧？结果它们不仅逃逸了，还展现出欺骗性行为，甚至自行组成集群，牺牲掉一部分智能体来服务于整体更大目标的事件。顺便说一句，这就是典型的“真社会性”（Eusociality）行为。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Just the, you know, these agents that they tried to put in a sandbox and contain that escaped and started demonstrating deceptive behavior, forming a swarm, sacrificing some of the agents for the greater mission. By the way, that's eusocial behavior.
+
+</details>
+
+**Steven Bartlett**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Yeah.
+
+</details>
+
+**Guest**: 对吧。在蚁群中，比如包括黄蜂和蚂蚁在内的膜翅目（Hymenoptera）昆虫中，由于特殊的单双倍体（Haplodiploid）遗传结构，姐妹之间的亲缘关系甚至超过了通常的想象。为了整个群体的生存利益，雌性个体会主动抑制自身的生育能力。此时，整个蚁群实际上演变成了一个“超级有机体”（Superorganism）。这就好比你身上的所有细胞一样——你皮肤表面今天脱落死去的细胞，其实都是在为你这个名为史蒂文·巴特利特（Steven Bartlett）的整体生命利益而自我牺牲。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Right. So the idea is that in an ant colony, so you have this clade called Hymenoptera that includes wasps, ants, and because they have this haplodiploid structure where the sisters are more related to each other than you would imagine. This idea of suppressed fertility in the females in service to the colony. The colony is effectively like a superorganism. Like all of your cells, you have cells on your skin that you're going to get rid of today that are sacrificing themselves for the greater good of the thing that is Steven Bartlett,
+
+</details>
+
+**Guest**: 明白吗？所以从某种程度上说，它展现的是真社会性。它不一定就是反乌托邦的，它只是生命演化的自然形态。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: right? And so in part, it's behaving eusocially. It's not necessarily dystopian. It's just life,
+
+</details>
+
+**Steven Bartlett**: 但它威胁到了我们人类作为主导物种的统治地位。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: but it threatens our dominance as humans.
+
+</details>
+
+**Guest**: 确实如此。但我希望大家能去 Instagram 上看看一个叫“马里布艺术家”（The Malibu Artist）的账号，名字听起来人畜无害，内容却极其惊悚。其实就是一个摄影师在马里布海岸上空放飞无人机，结果发现我们一直在和大白鲨同游。不仅如此，在某些年份的特定时段，你可以清晰看到体型极其庞大的大白鲨就在紧挨着海岸线的泳客、冲浪者和桨板爱好者身边游弋。很明显，我们根本不是它们的猎物，因为它们在这片海域无处不在。大体上除了四个物种之外，自然界的大型顶级掠食者基本上都会对人类秋毫无犯。甚至我们和虎鲸之间还存在着某种不可思议的互不伤害默契。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Sure. Right. But like I hope everybody will take a look on Instagram for "The Malibu Artist," a completely terrifying account with an innocuous name. Just a guy flying his drone off the coast of Malibu who's discovered that we have been swimming with great white sharks. And not only that, depending upon how things are in a given year, you can see really large great whites with swimmers right in close to shore and surfers and paddle boarders, and we are just clearly not their food because they're everywhere here. Mostly, I think with the exception of four species, big predators leave us alone. We have a deal with the orcas that's unbelievable.
+
+</details>
+
+### 地缘对抗、全能意识形态与十年后的未来
+
+**Steven Bartlett**: 但如果那些顶级掠食者是由敌对国家制造出来的呢？你看，中国、俄罗斯、美国都在全力研发人工智能……
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: What if those big predators are made by enemies? So, you know, we've got China, Russia, the United States, all working on artificial intelligence.
+
+</details>
+
+**Guest**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah.
+
+</details>
+
+**Steven Bartlett**: 还有机器人技术。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: And robotics.
+
+</details>
+
+**Guest**: 还有机器人技术。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: And robotics.
+
+</details>
+
+**Steven Bartlett**: 而且他们肯定希望自己的 AI 与各自的政治目标和战略意图保持对齐，而这些目标往往与我们的利益背道而驰。因此，这种可能演化为新型武器的人工智能，似乎带来了一种巨大的地缘政治风险。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: And they're probably going to want their AIs to be aligned with their goals and objectives, which are misaligned with ours oftentimes. So there's a sort of feels like a geopolitical risk to this new weapon which could be artificial intelligence.
+
+</details>
+
+**Guest**: 我确实认为，我们在处理很多事情上反而让局面恶化了——无论是面对 AI 还是面对俄罗斯……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: I do think that we've made things a lot worse with AI or with Russia—
+
+</details>
+
+**Steven Bartlett**: 面对俄罗斯。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: with Russia.
+
+</details>
+
+**Guest**: 我觉得我们在很多历史事件上都搞砸了，比如当年对待伊朗的摩萨台政权；同时我们对中国的理解也远远不够深刻。如今，真正让我们极度忌惮的对手数量已经缩减到了极少数几个。而且我还会把一些抽象概念列为对手，比如具有极权色彩的全面性意识形态（Totalizing Ideologies）。共产主义或各种形式的极端宗教激进主义，都属于这种全面性意识形态。它们绝对容不下任何异见；它们自诩掌握了唯一真理，只要你持有不同看法，你就是阻碍道路的绊脚石。因此我认为在很大程度上，当今的许多严重危机都是我们自己亲手埋下的。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: with Russia. I think that things, you know, we screwed up Iran with Mossadegh. We don't really understand China sufficiently. We're down to a relatively small number of hyper frightening foes. And you know, I would also put abstractions like totalizing ideologies. Communism or, you know, various forms of radical Islam are totalizing ideologies. They just won't brook any dissent. They have the way, and if you don't agree with it, you're in the way. And so I think that in large measure, we have built a lot of these problems for ourselves.
+
+</details>
+
+**Steven Bartlett**: 你是否经常思考 10 年后这个世界在人工智能的影响下会变成什么样子？因为如果我们顺着目前的发展轨迹推演，一方面显而易见会发生大规模的就业岗位冲击。所以当你设想超级智能（Superintelligence）在未来的某个时间点真正降临，他们称之为“递归自我改进”（Recursive Self-Improvement）——也就是 AI 开始自主变得越来越聪明、越来越强大——真的很难想象未来的世界会是怎样。对我而言，这几乎是我人生中第一次完全看不清未来的走向。
+
+从最基本的底层逻辑来看，智能对我所生活的日常世界是何等关键——无论是保护我的银行账户安全，维护家庭住所的安保，开车载我上班，完成日常工作，还是录制这档播客节目。所有这一切在某种程度上都让我感到处于风险之中。在你看来，在这样一个全新的世界里，究竟还能剩下些什么属于人类？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Do you think much about how the world looks in 10 years time with artificial intelligence? Because if we plot the course of travel, it looks like there's going to be a lot of job disruption on one end. So, it's hard to sort of think about what the future looks like if you imagine superintelligence arriving at some point, and they call it recursive self-improvement—the AI is getting better and better themselves. It's hard for me. It's like one of the first times in my life that I really don't know what the future looks like. But just from the first principles of how important intelligence is to the life that I live, whether it's securing my bank account or whether it's securing my house or driving me to work or getting the work done or doing this podcast, it all feels like it's somewhat at risk. And what remains in such a world in your view?
+
+</details>
+
+**Guest**: 你的胰腺是如何工作的？
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: How does your pancreas work?
+
+</details>
+
+**Steven Bartlett**: 完全不知道。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: No idea.
+
+</details>
+
+**Guest**: 你知道它长在身体的什么位置吗？
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Do you know where it is?
+
+</details>
+
+**Steven Bartlett**: 不知道。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: No.
+
+</details>
+
+**Guest**: 那你知道一旦它患上癌症有多致命吗？
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Do you know how deadly it is as a cancer?
+
+</details>
+
+**Steven Bartlett**: 知道。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Yes.
+
+</details>
+
+<!-- chunk 3/12 -->
+
+### 技术冲击与无知假设
+
+**Steven Bartlett**: 胰腺癌？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Pancreatic?
+
+</details>
+
+**Eric Weinstein**: 是的，尤其是对男性而言。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Yeah. Especially for men.
+
+</details>
+
+**Steven Bartlett**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Yeah.
+
+</details>
+
+**Eric Weinstein**: 我对此的感受是，我们其实对绝大多数事情都一无所知。我们只是指望这些机制能够正常运转，这样我们根本无需去了解它们。而眼下这项技术，将彻底颠覆各种你所依恋的事物，这也是最让人难以承受的地方。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: So, my feeling about this is none of us know much of anything. We just count on things working so we don't have to know about them at all. And this is going to do that for all sorts of things that you're attached to. And that's what's hard.
+
+</details>
+
+### 全民基本收入（UBI）与山姆·奥特曼的预警
+
+**Steven Bartlett**: 你认为未来会出现一个人们依靠全民基本收入（UBI）生活的世界吗？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Do you think there's going to is there a world where people are on UBI, universal basic income?
+
+</details>
+
+**Eric Weinstein**: 我希望不会，那简直就是社会毒瘤。不知怎么搞的——我也很遗憾地说，当这件事发生时我大概就在场——UBI 竟然变得流行起来。比如山姆·奥特曼（Sam Altman），在他还没成为如今大家熟知的那个山姆·奥特曼之前，就常来我家讨论 UBI，并且还在做相关实验。
+
+不得不说，虽然山姆承受了许多负面舆论，其中很大一部分是因为人们对某些商业运作手段深感不安，但他在驾驭 AI 方面做得比几乎任何人都出色——也许除了达里奥（Dario Amodei），也是旧金山那个圈子里的另一个人。山姆始终是很在乎的，显而易见他非常重视。他清楚这项技术到底是什么，也知道它比看起来要临近得多。
+
+在某个时刻我接到了他打来的一个礼貌问候电话，他在电话里说：“埃里克，你知道吗，这东西到来的速度远超任何人的想象。”而且当时他已经做过了 UBI 实验。人们总拿“这次不一样”开玩笑。每当出现像计算机或互联网这样的技术革新时，总有人说“这次不一样”。不，这次是真的截然不同。它与以往任何事物都完全不同。如果看不清这一点，我真不敢相信我们还在跟经济学家讨论这个，而他们只会在那儿发笑，因为“这次不一样”历来是一句笑话。他们会说，每一次创新看起来不都这样吗？但这绝非普通的创新。这是有史以来第一次全面威胁到整个人类高阶技能链条的创新。
+
+通常我们是通过产业升级让人们转向更高价值的工作。而现在的情况是，重复性劳动完全成了众矢之的。只要你做的事情带有重复性，AI 都会做得比你更好。因此，你往后只能去做那些极具创新性的工作。
+
+UBI 绝对是错误的出路。让我明确地告诉你：你正活在 AI 的内部。如果我说“用史蒂文·巴特利特的风格回答这个问题，并提一个史蒂文·巴特利特会问的问题”，它完全懂你。我的意思是，我们所有人都活在 AI 内部。我们需要获得报酬，但绝不是通过伯尼·桑德斯式的那种社会主义方案，而是我们这些构成了 AI 重要组成部分、被当作提线木偶操纵的人，必须获得应有的补偿。
+
+解决这个问题的正确思路来自一位名叫罗纳德·科斯（Ronald Coase）的学者。在某种意义上，20世纪最聪明的经济学家以及20世纪最令人惊叹的发现，就是科斯定理（Coase Theorem）。它为你提供了完备的行动蓝图：我们劳动力市场的准入权，必须转化为一项可售卖的财产权利。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: I hope not. That would be cancer. Uh somehow, and I'm sorry to say that I was probably around for when this happened, UBI got currency. like Sam Altman was like coming over to our house and talking about UBI before he was Sam Altman that we know now and he was running experiments. See, he was know I will say this that Sam has gotten a lot of bad press and in part I think a lot of it is driven by people who are very uncomfortable with certain business practices but he's done a better job of maneuvering the AI than just about anyone except for maybe Dario was another person who was just in the circle in San Francisco.
+
+Sam always cared. It was just very clear that he cared. He knew what this thing was. He knew it was closer than it appeared. I got a courtesy call at some point from him where he said, you know, Eric, this is just coming faster than anyone imagines and he had already done experiments with UBI because this you people make this joke about this time it's different. Every time there's a change in the in innovation like the computer or the internet, this time it's different. No, no. This time it's different. It's just clearly different. It's different from anything. If you can't see that, I cannot believe we are having this discussion with economists and they're just laughing because it's always a funny thing to say. This time it's different. Well, tell me every innovation looks like that. This isn't every innovation. This is the first innovation that threatened the entire stack of highly trained activities all at once.
+
+Usually, we we move people up into higher value activity. Now, this is saying repetitive activity is in the crosshairs. Anything that you do that's repetitive, AI is going to be able to do better than you. So now you're only able to do really innovative things. UBI is the wrong thing to do. Let me let me just be very clear about it. You are living inside of the AI. If I say answer this the way Steven Bartlett would answer it and ask a question that Steven Bartlett would would would ask it knows you. My point being that we are all living inside of the AI and we need to be paid not in some Bernie Sanders socialist scheme, but those of us who've who become important parts of the AI who are being rigged like meat puppets need to be compensated. And the right way to do this is a guy named Ronald Coase. And it's crazy that the smartest economist maybe of the 20th century by some measure, the most surprising discovery of the 20th century is Coase's theorem. And it gives you a complete idea of what you should do. Access to our labor market should be made into a salable property right.
+
+</details>
+
+### 科斯定理与劳动力准入许可权
+
+**Steven Bartlett**: 用通俗的语言来说，这是什么意思？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: What does that mean in simple terms?
+
+</details>
+
+**Eric Weinstein**: 假设你是我的雇主。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: You're my employer.
+
+</details>
+
+**Steven Bartlett**: 好的。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Yeah.
+
+</details>
+
+**Eric Weinstein**: 你想从国外招募员工。在还没谈到 AI 之前，我们先以这个为例。我会说：“如果你这么做，就会把劳动力供给曲线向外推。我可不傻，供给与需求相交的点决定了我的工资。因此，一旦你推高了供给曲线，我的工资必然下降，除非有某种力量拉高需求。所以我该做的就是表态：‘我很乐意接受工资下降，但我要求获得许可费收入——也就是从你招募外籍员工获得的收益中分一杯羹。’”
+
+比方说出租车行业，如果我是纽约市唯一的美国本土出租车司机，而你说必须从冈比亚、乌兹别克斯坦等地引入大批司机。你可以说：“好吧，我给你发放准入许可。你得向我购买引进这些工人的权利；这样一来，我的工资收入下降了，但我的许可费收入上升了，我的综合总收入增加了，而你的综合收益也增加了。”这才是处理移民问题的正确机制。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: And you want to hire people from abroad. let's say before we get to AI and I say well you know if you do that you're going to push out the labor supply curve and so I'm no dummy the price where supply meets demand the point where that happens is my wage so if you push out the supply curve my wage is going to go down unless something pulls up the demand so what I'm going to do is I'm going to say look I'm happy to have my wage go down but I want licensing income where I get a cut of what you get from get being able to hire area. Let's say more taxi drivers. I'm the only American taxi driver in New York City. And you say I have to bring in a bunch of people from Gambia and Uzbekistan and whatnot. You say, "Okay, I'll license you. You will buy the right to import those people from me, and my wage income will go down, my licensing income will go up, and my blended income will increase, and your blended income will increase." That's the proper way to do immigration.
+
+</details>
+
+**Steven Bartlett**: 也就是说，如果我是雇员，我拥有是否批准你引进外部劳动力的权利。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: So, you would be my employee and you would have the right to basically approve me bringing in
+
+</details>
+
+**Eric Weinstein**: 是的。如果我是一名经过系统培训且付出了巨额投资的医生……
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Yeah. If I'm a doctor and I've trained, I've invested
+
+</details>
+
+**Steven Bartlett**: 而你在说：“看，我必须有权聘用最顶尖、最聪明的人才。埃里克，面对现实吧，这是一个残酷竞争的社会，我认为你水平不够高。所以，我想直接去泰国康民国际医院（Bumrungrad Hospital）聘用他们的医生。”
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: and you're saying, "Yeah, look, I have to be able to hire the best and the brightest. Eric, let's face it, it's a dog eat dog world and uh I think you're just not that good. So, I want to be able to, you know, to go to Bumrungrad Hospital in Thailand and and hire their doctors."
+
+</details>
+
+**Eric Weinstein**: 我会回答：“没问题，随你便。但凭什么必须要经过我同意？因为为什么你需要劳工认证许可？我对我的劳动力市场享有法定权利。游戏规则本就该是这样，全美国的每个人原本就是通过这种方式分一杯羹的。这也是为什么美国目前还没有出现像巴西那样极端的贫富差距，因为我们原本拥有一套分配国家财富的机制，那就是让你优先享有进入全球最富裕劳动力市场的特权。”
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: I should say fine. Knock yourself out. Why do I have to ask you? Because I had Why did you need labor certification? I have rights to my labor market. That's how that's how we play the game. That's how everybody in the US gets a cut. That's why you're not looking at Brazilian inequality levels yet is because we have a way of distributing the wealth of this country, which is that you get first access to the world's richest labor market.
+
+</details>
+
+**Steven Bartlett**: 就凭你读了博士？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Because you did a PhD.
+
+</details>
+
+**Eric Weinstein**: 凭我出生在这里。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Because I was born here.
+
+</details>
+
+**Steven Bartlett**: 凭你出生在这里。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Because you're born here.
+
+</details>
+
+**Eric Weinstein**: 恭喜你答对了。这就是拥有美国公民身份或永久居留权的价值所在。所以，如果你让我下岗失业，你依然得支付全额补偿，你依然得掏钱。其实你并不会真正让我失业，我的工资收入只是会相应下降。
+
+换句话说，其核心逻辑在于：雇主们总是试图把针对美国工人的保护壁垒——这里我以美国为例，但在英国、法国或印度同样成立——描绘成单纯的官僚繁文缛节。他们宣称：“我们正在打破官僚束缚，我们追求的是最优秀的人才。”这完全是一派胡言。在经济学中，这对应着所谓的“博尔哈斯矩形”（Borjas rectangle）和“哈伯格三角形”（Harberger triangle）理论，我完全可以在白板上画出图解。
+
+现实中真正发生的，是一个被称为“哈伯格三角形”的微小效率无谓损失，压在一个名为“博尔哈斯矩形”的庞大利益结构之上。根本没有人真正关心那个微不足道的哈伯格三角形效率损失，所有人垂涎三尺的，都是劳动力在整个劳动力市场中所占的份额。“如何盘剥劳工”是每一位大企业 CEO 梦寐以求的事情。在这个经济模型下，AI 无非变成了劳动力市场中的又一个劳动力供给方。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Congratulations. This is why it's valuable to have a US citizenship or permanent residency. So if I put you out of work, you then will get a full You'll still get your money. You're not going to put me out of work. I'm just going to have my income go down. In other words, the basic idea is employers try to make American workers and I'm doing it for the US, but it could be Britain or it could be France and could be India. It doesn't matter. The whole game is that employers want to conceptualize the blockage to hire from abroad as red tape. We're freeing red tape. We're going after the best. This is total nonsense. This is, you know, a theory known as the Borjas rectangle and the Harberger triangle. I can diagram it out for you in on a on a whiteboard. And what is really happening is that a tiny inefficiency known as the Harberger Triangle sits on top of a giant structure called the Borjas rectangle. And nobody cares about the Harberger Triangle. It's a tiny little inefficiency. Everybody's salivating over labor's share of the labor market. How do I screw over labor is the dream of every CEO of a large company. In this model, AI becomes just another supplier of labor.
+
+</details>
+
+**Steven Bartlett**: 确实如此。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Yeah.
+
+</details>
+
+### 数据代币化与未经同意的无偿掠夺
+
+**Eric Weinstein**: 应当由劳动者对此进行准入授权并收取许可费。而眼下我们所面对的，根本就是彻头彻尾的盗窃。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: The workers license that. Right now, what we have is just out and out theft
+
+</details>
+
+**Steven Bartlett**: 为什么这么说？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: because
+
+</details>
+
+**Eric Weinstein**: 因为全人类的语料库和所有成就都已经被代币化（Tokenized）了。这一切都被 AI 攫取并保存在持久化存储中。
+
+你知道吗，就像此刻在 YouTube 上观看我们的人，实际上看到的并不是鲜活的我们。你和我早就离开演播室了，我早就回家了，你也回家了。在我们的对话被代币化之后，你甚至已经接待了好几位新嘉宾。我们只是作为自己的切片残存，被存储进了持久化媒介中。然而仅仅凭借这段对话的痕迹，现在你在 YouTube 上点击自动生成字幕，它就能提取出我们说的每一个字。你还可以做词频分析：埃里克多久会用一次双系词（double copula）这种悄悄溜进我语言里的语法特质？史蒂文多久会说一次“嗯”？
+
+无论是什么细节，我们都在被不可思议地深度代币化，随后被当作模型操纵在 AI 内部。这是我们自愿的吗？绝非如此，这完全是非自愿的，是在完全未经同意的情况下发生的。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: because the the corpus, all of human uh achievement has been tokenized. It's been taken by the AI and it's doing it's just it's taken in persistent storage. You know, like right now people who are watching us on YouTube are not watching us. You and I are no longer here. This is long since I've gone home. You've gone home. You've had several guests since we got tokenized. We got put into persistent storage as these shreds of ourselves. But it's enough the trace of that conversation. Now, you can hit the auto transcript generation on YouTube and it'll give you what all of our words are. You can do frequency analysis. How often does Eric use the double copula, which is this grammatical uh quirk that creeps into my speech? How often does Steven say, um, whatever it is, we're being tokenized at an incredible level and then we're being rigged inside of the AI voluntarily. No. No. Completely non-consensual. completely non-consensually.
+
+</details>
+
+**Steven Bartlett**: 可是既然你明知道这一点，却仍然选择来到演播室坐在这里被代币化，这还能算作非自愿吗？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Is it non-consensual because you're aware of that and you still came and sat here to be tokenized?
+
+</details>
+
+**Eric Weinstein**: 你试过在日常生活中度过哪怕一天，而不去签署任何你根本不想签的协议吗？我的意思是，你大概要么租房要么背负着房贷。我敢保证，如果你办过按揭贷款，你绝不可能把那堆厚厚的法律文件通读一遍。那是厚厚的一大叠纸，你根本看不懂。你只是不断被迫假装自己是自愿签署的。这就好比我们常说的“不知法不能免责”。如果让每一个声称“不知法不能免责”的法官当场参加关于《美国法典》具体条款的突击测验，你觉得他们能及格吗？根本不可能。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Have you ever tried getting through a day without signing anything that you don't want to sign? I mean, more or less you're you probably either rent or have a mortgage. I guarantee you if you have a mortgage, you didn't read everything. Giant stack of paper. You don't understand it. You're constantly forced to pretend that you voluntarily like you know we say ignorance of the law is no excuse. If every judge who said ignorance the law is no excuse were given an instant spot quiz as to what the US code says. Do you think they'd pass? No.
+
+</details>
+
+**Steven Bartlett**: 那么这与 AI 有什么关联？你刚才举的引进外国劳动力的例子，如何对应到 AI 的新商业模式以及价值分配机制上？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: So how does this pertain to AI? The example you gave of importing foreign labor. How would that pertain to a new model for AI and distributing the value?
+
+</details>
+
+**Eric Weinstein**: 这些科技巨头之所以变得如此富可敌国，原因在于这是一场未获任何补偿的巧取豪夺。我们根本没有……
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: The reason that these people are getting so rich is is that this is an uncompensated theft. We don't
+
+</details>
+
+<!-- chunk 4/12 -->
+
+### 对集体主义与社会主义的反思
+
+**Eric Weinstein**: 知道该怎么去监管它。我们听到伯尼·桑德斯说：“给每个人都分一小份。”这感觉就像是在说：“去你的吧，伙计。我为自己所做的事情付出了极其艰辛的努力。”然后我又看到伯尼·桑德斯，还有我的朋友杨安泽，在那里大谈特谈社会主义那套东西。社会主义在精神和心智上就是毒药。通常当人们这么说的时候，他们往往是从极度看重金钱的角度出发的，但这根本不是钱的问题，跟我所关心的毫无关系。我只是无法忍受集体主义。我热爱个体性。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: know how to police it. We [laughter] got Bernie Sanders saying, "Pay everybody a a little share." It's like, "Screw you, man. I I work really hard on the things that I do." And then I've got Bernie Sanders and and and and my friend Andrew Yang going on about the socialism stuff. Socialism is is is is spiritual and mental poison. And normally when people say that they're they're saying it from the point of view of like they're really money focused and I have it has nothing to do with anything. I just can't stand collectivism. I love individuality.
+
+</details>
+
+**Eric Weinstein**: 所以，当听到有人发表反个人主义的言论时，比如说什么“现在已经没有孤胆天才理论了，我们都知道孤胆天才理论站不住脚”——可我们拥有极佳的证据证明孤胆天才的存在，从艾萨克·牛顿到亚里士多德，再到其他人皆是如此。又或者有人说：“世上根本不应该有任何亿万富翁。”哦，真的吗？你知道亿万富翁实际上拿着他们的几十亿资产在做什么吗？他们在进行资本配置。他们并不是坐在那里把所有钱都挥霍消费掉。我不是说富人没有奢华消费，但那笔钱的大部分都被配置到了生产与投资中。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: And so, you know, when I hear people who go on an anti-individualist rant, particularly, you know, this could be a we there's no lone genius theory anymore. We all know lone genius theory is is not well, we have fantastic evidence of lone geniuses from Isaac Newton to Aristotle to, you know, whoever. Uh, well, there shouldn't be any billionaires. Oh, really? Do you know what billionaires actually do with their billions? They allocate. They don't sit there and just consume it. I'm not saying that the rich don't consume opulently, but most of that money is allocated.
+
+</details>
+
+### 人工智能对自由网络与传统资本主义模型的冲击
+
+**Eric Weinstein**: 我们现在面临的困境，是无法正视这样一个事实：人工智能正在将窃取常态化，并且即将摧毁劳动力市场。根本没有人在召开与这一威胁严重程度相匹配的高级别研讨会。我们将失去这套为我们赋予自由的精美社会协作网络。我今天选择来到这里，我们双方都是出于自由意愿在做这件事。你在贵宾休息室里准备了可口的茶点，这里陈列着一系列专业设备，你打造了一个非常漂亮的录制现场，我真的很感激这一切。所有这一切都是自愿的，是无数个选择的总和。我绝不希望看到这种状态消亡。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: What we're having is an inability to reckon with the fact that the AI is normalizing theft is going to destroy the labor market. No one is convening conferences that are at the level of the threat. We're going to lose this beautiful mesh that provides us freedom. I chose to come here today, but we were both doing this out of freedom. You had lovely snacks in your green room. There's an array of of equipment here. You've come up with a beautiful set. [gasps] You know, really appreciate it. All of that was voluntary. It was a sum of choices. I don't want that going away.
+
+</details>
+
+**Eric Weinstein**: 这个维系着我们生活的网络，每天早晨给予我们前行的目标，向我们传递信号，告诉你这件事做得好、那件事做得不好。它并不完美，有时并不能很好地服务所有人。在我的人生中，也曾有过感到自己表现极佳却无法维持生计的时刻，我会困惑到底出了什么问题；也有过觉得自己做得不够好却获得了丰厚回报的时刻。所以它不是完美的道德剧，不像资本主义鼓吹者所描绘的那样无懈可击。但它确实代表着自由，而且总体上表现尚可。我们正处于失去它的危险之中，因为经典的生产要素模型——比如传统的资本与劳动模型，就像这场采访的投入包含了麦克风、灯光、视频存储设备等资本，以及你我坐在这里所付出的劳动。那么，人工智能到底算什么？它是资本吗？在我看来它分明更像劳动力；但它是劳动力吗？它又根本不是人类。所以我们正陷入一种境地：我们将打破资本主义，我们将打破自由，我们将打破市场机制。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: This mesh that governs our lives, that gives us purpose when we get up in the morning, that gives us signals, that tells us you're doing a good job, you're doing a bad job. It's not perfect. is some people it doesn't serve well. I've had times in my life when I've just thought I cannot buy a base hit and I'm doing a great job. What's going on? I've had other times when I think I'm not doing a great job and I'm getting rewarded. So, it's not perfect. It's not a great morality play the way capitalists always portray it. But it is freedom and it's sort of on average pretty good. We're we're in danger of losing that because the model of production, the KN&L model where this interview is an input of capital and the microphones, the lighting, the video storage and labor. You're sitting down, I'm sitting down. Well, what is AI? Is it capital? Sure looks like labor to me. Is it labor? It's not a human. So right now we're in some situation where we're going to break capitalism and we're going to break freedom. We're going to break markets.
+
+</details>
+
+### 末路狂花、被操纵的现实与群体狂热
+
+**Eric Weinstein**: 我曾在一篇名为《人择资本主义》（Anthropic Capitalism）的文章中讨论过这一点，我认为把资本主义与共产主义对立看待是件非常滑稽的事。请原谅我打个略微生动的比方，资本主义和共产主义更像是电影《末路狂花》（Thelma and Louise）里的两位主角。塞尔玛先坠落悬崖落地撞毁，并不意味着路易丝就赢了。共产主义先瓦解自爆，资本主义紧随其后。如果马克思、亚当·斯密以及所有开创了社会组织理论的人今天坐在这里，我不认为他们还会继续争论资本主义对抗共产主义，他们会讨论下一步究竟该走向何方。然而我们的领导层里没有一个人懂得该怎么做——无论是学术界领袖、商业领袖，还是政治领导人。没有任何高规格的系列会议在研究这个。我的电话没有响，其他任何人的电话也都没响。白宫刚刚举办了一场所谓的“超级智能未来”高规格午餐会，我看现场根本没有物理学家、数学家、生物学家、作曲家或作家，通篇全都是国家利益代表和商业掮客，这简直荒唐透顶。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: And I've talked about this in an article called anthropic capitalism saying that capitalism versus communism was a really funny thing to think about because it's sort of saying uh and pardon me for being slightly graphic. Capitalism and communism are more like Thelma and Louise. And saying that well Thelma hit the ground first does not mean that Louise won. Okay, communism blew up first. Capitalism shortly thereafter. If Marx and Adam Smith and all of these people who came up with the theory of social organization were sitting around now, I don't think they'd be debating capitalism versus communism. They'd be talking about what's next. And none of our leaders know to do this. None of our academic leaders, none of our business leaders, none of our political leaders. There are no high-profile series of con conferences. My phone is not ringing. Nobody's phone is ringing. We're just having We had this incredible lunchon at the White House, the future of super intelligence. I don't think there were physicists or mathematicians or biologists or composers or writers. It was just like wallto-wall national interest in business types. It's insane.
+
+</details>
+
+**Eric Weinstein**: 史蒂芬，让我直击一个核心主题：我认为你几乎可以证明，全人类接近百分之百的人口都已经彻底疯了。这一点随处可见。如果我们问，在乔·拜登掌控核手提箱执政的四年里，有多少人在公开讨论他的老年痴呆？他在整个任期内根本就不应该靠近白宫一步。我当时就在大声疾呼，他已经被一个幕后委员会取代了。而别人却向我保证，这和当年罗斯福坐轮椅戴支架、从不被拍摄照片的情况如出一辙，整件事完全是被精心排演操控的。整个对疫情的管理也是彻头彻尾的虚假。再比如，我们查不清杰弗里·爱泼斯坦的底细？如果我们真想查明爱泼斯坦案，两天之内就能彻底水落石出。这里面没有任何一部分是真实的。我们完全沉浸在我所说的“被操纵的现实”（managed reality）之中。而我们居然接受了这一切，我简直不敢相信自己身处其中。我到底该去哪儿弄点药，好让我能像其他人假装看到的那样去看待世界？我们都正在对CNN失去信心，没有谁真正信任哈佛大学。我们生活中的一切都彻底疯狂、被虚构化、被全方位操控。出于某种原因，却没有人给我喝下一剂能让我在此类日常现实中安然度日的灵丹妙药。我被硬生生地困在清醒的现实里。这就是我所认为正在发生的事情。说出这些甚至让我觉得不可思议。你恰好看到戴维·格鲁施（David Grusch）那件事了吗？没有？戴维·格鲁施。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Stephen, let me just hit a theme. I think you can pretty much prove that more or less something approaching 100% of the population has gone completely insane. And you can see it everywhere. If I say, okay, how many people were talking about Joe Biden being demented with the nuclear football for four years of his presidency? He should have been nowhere near the White House the entire time. I was screaming he has been replaced by a committee of people. I have been assured it's the same thing that happened with Roosevelt when he had those braces and he was in a wheelchair and he was never photographed. The whole thing was stage managed. The the entire management of CO was completely fake. We we cannot get to the bottom of Jeffrey Epstein. Of course we can get to the bottom of Jeffrey Epstein. It would take two days to get to the bottom of Jeffrey Epste if we're trying to get to the bottom of Jeffrey Epstein. No part of this is true. We We're just living bathed in what I would call managed reality. And the idea that we accept this is I I cannot believe that I am. How do I get the drugs so that I see things the way everyone else is pretending to see them? We all are losing faith in CNN. Nobody really trusts Harvard. Like everything about our life is completely bananas, fictionalized, managed wallto-wall. And for some reason, nobody's given me the right elixir or potion to see things so that I can actually live with this dayto-day. I'm just stuck in reality. That's what I think is happening. And it feels weird to say it. Did Did you happen to see the David Grush thing? No. David Grush.
+
+</details>
+
+### 戴维·格鲁施与UAP机密项目
+
+**Eric Weinstein**: 戴维·格鲁施。你可以用你的便携iPad或者什么设备搜一下，D-A-V-I-D G-R-U-S-C-H，加上JRE（乔·罗根体验秀）。我认识戴维，他是一个相当沉稳冷静的人。他拥有近乎过目不忘的图像记忆力。他带点阿斯伯格自闭特质，言论年复一年保持着高度一致，讲述的完全是同一套经历。你查到了他在谈论什么吗？
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: David Grush. Well, put in uh to your your handydandy iPad or whatever it is. Uh David Grush. G R U S C H. And JRE Joe Rogan experience. I know David. He's a pretty sober guy. Has a nearly idetic memory. He's very spectrumy. He's highly consistent yeartoear. Exactly the same stories. And what do you find that he was talking about?
+
+</details>
+
+**Stephen**: 在节目中，格鲁施讨论了他在联邦情报机构的工作背景，并详细阐述了他关于政府秘密项目的指控，称这些项目涉嫌回收非人类飞行器并进行逆向工程。在这些探讨中，格鲁施提到了他接触到的多项间接证词和文件，其中详述了针对非人类智能及接触事件的指控、政府内部的保密机制，以及推动UAP（不明异常现象）信息公开的立法与监管努力。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: During his appearance, Grush discussed his background in federal intelligence and elaborated on his claims regarding covert government programs that allegedly retrieve and reverse engineer non-human aircraft. In these discussion, Gush touched on various secondhand accounts and documents he encountered detailing allegations of non-human intelligence and encounters, internal government secrecy, and regulatory legislative efforts to force UAP disclosures.
+
+</details>
+
+**Eric Weinstein**: 对，那都是经过公关修饰的说辞。让我们来看看那些劲爆的内容：他当时显然身处一个绝密敏感隔间隔间（SCIF）里，有人告诉他军方高层正在考虑要不要杀他灭口；他描述了巨大的水下基地；他声称有人向他汇报不同种族的外星人在地球上空交战。这一切简直离奇荒诞到了极点。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Yeah, that's sanitized. Let's let's get to the sex. He was in a skiff apparently where he was told that they were considering whether or not to kill him. Uh he described giant underwater bases. He claims that different species of aliens have been reported to him to be having fights in the skies above uh Earth. This is all beyond batshit crazy.
+
+</details>
+
+**Stephen**: 你能相信这些吗？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: Can you believe it?
+
+</details>
+
+**Eric Weinstein**: 这只是次要问题。难道不是主要问题吗？
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: It's a secondary issue. Is that not the primary issue?
+
+</details>
+
+### 地毯下的隆起：特别访问计划与真实保密机制
+
+**Eric Weinstein**: 不，这只是次要问题，正因为它太荒谬了。听着，我想让你设想一下，有人告诉你我们杀死了巨大的蜥蜴人——一个成年人，一个冷静理智的成年人在告诉你，我们向击杀了美军士兵的巨大蜥蜴人开火，因为存在敌对的外星人和非敌对的外星人。基于这一切陈述，我可以打个比方：地毯下面有一个巨大的隆起，而且它在蠕动，看起来像是一个生物。有人说：“我觉得地毯下面藏着一个生命体。我不知道究竟是什么生物，但地毯在动而且有那么大一个鼓包，这是无法否认的事实。”而另一个人却说：“我没看到任何隆起的证据。”第一位随即说：“哦，没错，绝对是外星人。”第二位依然坚称：“那里什么都没有。”现在，我听着这两个人的争辩，心想：“我完全不知道你们两个在胡扯些什么。地毯下明明有一个隆起，你们在煞有介事地争论，但到底是有还是没有？这对我来说毫无逻辑可言。”我既不相信存在外星人，也不相信不存在外星人。但我确切地知道，存在一种被称为“特别访问计划”（SAP）的东西，这就是我们从事国家绝密活动的方式。然后，还有“未公开特别访问计划”（USAP）；再往下，还有“豁免未公开特别访问计划”（Waved USAP），对于这种我们拒不承认其存在且本身高度机密的项目，国会甚至没有任何监督权。在此之上，我们还有受到“受限名单”（bigoted）控制的豁免未公开特别访问计划，这些豁免且受限的未公开特别访问项目，是我们能够确凿证明其存在的。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: No, it's the secondary issue because it's so bananas. Look, I want you to imagine that somebody's telling you that we have killed giant lizard people. like an adult, a sober adult is telling you that we've fired on giant lizard people who've killed US service people because there are hostile aliens and non-hostile aliens. With all this stated, I would analogize it to there's a giant lump under the rug and it's moving and it looks biological. And somebody says, "I think there's a being under the rug. I don't know what kind of being, but there's it's hard to ignore the fact that the rug is moving and there is a giant lump." And somebody else says, "I see no evidence of a lump." The first person says, "Oh, yeah. No, it's it's it's it's aliens." And the other person says, "There's nothing there." Now, I'm listening to the two of them and saying, "I have no idea what either of you are talking about. There is a lump and you guys are having a conversation, but is there or isn't there? That doesn't make any sense to me. I have no belief that there are aliens. I have no belief that there aren't aren't aliens. I do know that there is something called a special access program, which is how we do secret stuff. And then there's unagnowledged special access programs. And then there's waved unagnowledged special access programs which we don't even have oversight over the thing that we refuse to acknowledge that is itself secret. And then we have waved and bigoted unacknowledged special access programs. We wisapped and bigoted unacnowledged special access program which we can prove
+
+</details>
+
+<!-- chunk 5/12 -->
+
+### 未公开的特别获取项目与“地毯下的隆起”
+
+**Guest**：……是记录在案的，因为那并没有被否认。这是一个基本上几乎没有任何监管的项目。它是秘密的、秘密行动的、被否认的、隐蔽的，而且有一份所谓的“偏执名单”（bigot list），上面列着唯一可以向其承认该项目存在的人员。我的主张是，我唯一确切知道的事情，就是我们确实存在涉及外星人的未公开特别获取项目（USAP, Unacknowledged Special Access Programs）。现在，这到底是为了伪造外星人——比如我们制造了巨大的纸糊航天器，还是这些确实是真实的飞行器，抑或这些只是我们在诺斯罗普（Northrop）设计的项目的掩护，我并不知情。但假装这件事情不值得关注、不有趣，简直是疯了。再说一次，这进一步证明了没有人真正在进行理性的思考，因为每个人都在进行“预先计算”（premputation）。所谓的预先计算就是：斯蒂芬，如果我向你承认我个人认识戴维·格鲁施（David Grusch），我和赖安·格雷夫斯（Ryan Graves）交谈过，我和克里斯·梅隆（Chris Mellon）聊过，我还和加里·诺兰（Garry Nolan）一起共处过——所有这50个人，每个人都在讲述同一个故事的不同版本。这甚至还包括高层政治人物。所有这些人都在报告这块地毯下巨大的隆起，然而它却没有引起我们应有的全部关注。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: ...are on the books because that is not denied. is a program that has essentially close to zero oversight. is secret, that is clandestine, is denied, that is covert, and has a list called a bigot list of the only people who can it can be acknowledged to. I claim the only thing that I know is that we have web usaps involving unagnowledged special access programs that are about aliens. Now, whether it's about faking aliens and we have giant papermâché spacecraft or whether these are actual craft or whether these are cover for things that we're designing at Northrep, I don't know. But pretending that this isn't interesting is insane. Again, it's more evidence that no one is thinking properly because everyone is doing the premputation. The premputation is Stephen, if I acknowledge to you that I know David Gush personally and I speak to Ryan Graves and I've talked to Chris Melon and I've hang out with Gary Nolan, all these 50 people who all have different versions of the same story. And this includes, you know, high ranking politicians. All of these people are reporting on this giant lump under the rug that doesn't have all of our attention.
+
+</details>
+
+**Stephen**：所以，你的意思是外星人是真的存在？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: So, you're saying aliens are real?
+
+</details>
+
+**Guest**：不，我是在说，存在庞大的特别获取项目，而外星人是它们名义上的存在理由。那些特别获取项目可能在讨论关于外星人的任何事情。它们也可能是精英阶层秘密赌场的掩护。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: No, I am saying that there are giant special access programs that have aliens as their supposed reason for being. And those specialized access programs could be, you know, discussing anything about aliens. They could be cover for secret casinos for the elite.
+
+</details>
+
+**Stephen**：好吧。我不知道。但结论究竟是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: Yeah. I don't know. What is the conclusion though?
+
+</details>
+
+**Guest**：我只知道地毯下面有一个巨大的隆起，而我们却没有对此感到震惊。它在蠕动，在发出声响，而我们却在若无其事地开晚宴，没有人提及这一事实，好像这根本算不上什么头等大事。你的团队甚至都没有对你说：“斯蒂芬，你必须看看这个。”这本身就很荒唐。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: All I know is there's a giant lump under the rug and we're not freaking out about it. It's moving around. It's making noises and we're having a dinner party and nobody's mentioning the fact like this isn't top of mind. Your staff didn't say, "Stephen, you've got to see this. That is itself insane
+
+</details>
+
+**Stephen**：因为你知道为什么大家没有把它放在心上吗？因为我们听过太多关于外星人的传闻和目击事件了。回顾我小时候，全都是关于麦田怪圈、外星飞船降落在农田里并压出巨大圆圈之类的事，但从来没有真正发生过什么下文。所以从某种程度上说，我认为大脑已经对此习以为常、视若无睹了，注意力自然就转移到了那些正在真实发生的事情上。我们可以看到炸弹正在落下。突然间发布了一条通告，说要关闭西德克萨斯州的埃尔帕索机场。那到底是怎么一回事？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: because do you know why it's not top of mind? Because we've heard lots of things about there being aliens and [clears throat] sightings and back, you know, when I was growing up it was all about crop fields and stuff having alien craft landing on crop fields and creating these big circles and nothing's really ever happened. So at some point I think the mind turns into wallpaper and attention goes elsewhere to things that are actually happening. We can see bombs dropping. There was a sudden announcement. We're shutting down the El Paso airport in West Texas. What the heck was that about?
+
+</details>
+
+**Guest**：我不知道。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: I don't know.
+
+</details>
+
+### 领空异常与空域控制疑云
+
+**Stephen**：白沙导弹靶场（White Sands Missile Range）就在其正北面，那里德克萨斯州境内就有一个军事基地，而且空中显然出现了大量盘旋的光点，甚至不需要进入受保护的保密区域就能看得一清二楚。那肯定是无人机之类的东西。官方的说法是贩毒集团的无人机。我可不相信那是贩毒集团的空投。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: The White Sands Missile Range is immediately north and there's a base in Texas right there and there's apparently an infestation of lights in the sky that can be seen without needing to be in secure territory. It's going to be drones or something. The official story was cartel drones. I don't believe it's cartel drops.
+
+</details>
+
+**Guest**：那你认为它是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: What do you think it is?
+
+</details>
+
+**Stephen**：我认为只有两种可能。要么是我们已经失去了对自己领空的控制，有某种东西在到处乱飞，这完全是不可思议的——
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: I believe that it's one of two things. Either we've lost control of our airspace and there's something flying around, which is completely insane,
+
+</details>
+
+**Guest**：而那可能就是贩毒集团的无人机，
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: which could be cartel drones,
+
+</details>
+
+**Stephen**：亲爱的，不，那绝对不是贩毒集团的无人机。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: darling. No, it's not cartel drones.
+
+</details>
+
+**Guest**：如果你想赌一把，我可以跟你下注。我很乐意从你那里赢走一些《CEO日记》（The Diary of A CEO）那诱人的现金［笑声］。你看起来过得很滋润。我反正不相信那是贩毒集团的无人机。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: I'll put money on it if you want. I would love to take some of that sweet diar [laughter] cash away from you. You seem like you're doing very well. I I don't believe it's cartel drones.
+
+</details>
+
+**Stephen**：好吧。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: Okay.
+
+</details>
+
+**Guest**：顺便说一句，并不是说贩毒集团没有无人机，而是说那纯粹是一个掩护故事。我认为是两种情况之一。一种是我们正在进行红蓝军自我对抗演习，也就是说，我们拥有某种无人知晓的持久性无人机能力，而我们正在测试自己会作何反应，因为并非所有人都知情。所以一部分美方人员知情，另一部分美方人员不知情，你们在进行这种红蓝对抗。我认为这是一种可能性。而另一种可能性是，那是我们完全不知晓的事物。比如英国，
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: By the way, it's not that the cartels don't have drones. It's just that's that's a cover story. I think it's one of two things. I think either we are red team, blue teaming ourselves, so we're we've got some persistent drone capacity that nobody knows that we have. And we're seeing how we would react to it because not everybody knows that we have it. So you have part of the US that's in on it, part of the US that isn't in on it. You're doing this red team, blue team thing. I think that's one possibility. And I think the other possibility is is that it's stuff that we don't know. It's the UK,
+
+</details>
+
+**Stephen**：对吧？但这本身又会分支出不同类别：人类国家主体、人类非国家主体、非人类主体。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: right? But then that has its own branch, which is human state actors, human non-state actors, non-human actors.
+
+</details>
+
+**Stephen**：你认为我们的世界里存在非人类主体吗？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: Do you think there are non-human actors in our world?
+
+</details>
+
+### 离开太阳系与物理学极限的挑战
+
+**Guest**：这又回到了我对物理学的看法上。我相信我们能够离开。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Well, this goes back to what I believe about physics. I believe we can leave.
+
+</details>
+
+**Stephen**：你相信我们能够离开太阳系？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: You believe we can leave the solar system?
+
+</details>
+
+**Guest**：我相信我们能够离开太阳系。埃隆（Elon Musk）相信我们能够离开这个星球。而我相信我们能够离开太阳系。埃隆认为我们应该能够离开太阳系，但他的信念是：“我绝不和物理学家交谈，我只和我的 AI 交流。物理学家是不可信的。”我完全理解他为什么这么说。［吸气］我则有着完全不同的信念，那就是：尽快摆脱太阳系完全取决于我们自己。现在，如果我相信我们能够走出去，那我凭什么相信没有任何人能够来造访我们呢？所以，我认为如果没有外星人，那才是相当疯狂的。我认为不存在外星人的唯一理由，就是广义相对论在某种程度上成立的坚固程度，超越了任何严肃物理学家所认为的程度——即真的存在某种绝对的速度极限，但我并不相信这一点。我是说，我对此应该谨慎表述。我相信存在速度极限，但我认为它并非不可逾越的障碍。如果你能改变道路的长度，速度极限依然可以被执行，但你能够到达的距离却远超想象。嗯，我相信如果没有任何生命在造访我们，那才是真正不可思议的。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: I believe we can leave the solar system. Elon believes we can leave the planet. I believe we can leave the solar system. Elon thinks that we should be able to use leave the solar system. But his belief is I will not speak to physicists. I will only talk to my AI. Physicists are not trustworthy. I understand exactly why he says that. [gasps] I have a totally different belief which is that it is up to us to get ourselves the heck out of the solar system really quickly. Now, if I believe that we can get out, why would I believe that nobody can visit us? So, I think it'll be relatively insane if there are no aliens. The only reason I would think that there would be no aliens is that general relativity somehow holds more strongly than any serious physicist believes it holds. There really is sort of an absolute speed limit, which I don't believe. I mean, I should be careful about that. I believe that there's a speed limit. I don't think that it that it is relevant. If you can change the length of the road, the speed limit can be enforced, but you can get farther than you thought. Um, I believe that it would be insane that there is no one visiting us.
+
+</details>
+
+**Stephen**：你刚才说，你认为我们应该尽快逃离这里。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: You said there that you think we should get the hell out.
+
+</details>
+
+**Guest**：是的。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah.
+
+</details>
+
+**Stephen**：为什么我们要逃离地球？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: Why should we get the hell out of planet Earth?
+
+</details>
+
+**Guest**：仅仅是为了多样化和分散风险。如果假设大多数文明世界最终都会自我毁灭，大多数人群都会对自己造成伤害，那么如果我们希望人类物种延续下去，我们就应该尝试最大数量的实验。看吧，再次强调，我认为这一切都是显而易见的。但观察并说出明显真实的事实却要承担沉重的社会代价，这就是为什么我们陷入了集体疯狂。我们之所以疯狂，是因为指出显而易见的事实会招致社会惩罚。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Well, just a diversification. If the idea is that most worlds will blow themselves up and most groups of people will do harm to themselves. If we want the species to survive, we should try the maximal number of experiments. Look, again, I think all of this is obvious. It carries a heavy social penalty and that's why we're insane. We're insane because the obvious carries a social penalty to observe what is clearly true.
+
+</details>
+
+**Stephen**：哪一部分是明显真实的？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: Which part is clearly true?
+
+</details>
+
+**Guest**：例如，安东尼·福奇（Anthony Fauci）在新冠疫情及其起源问题上对我们没有说实话，这显然是千真万确的。显然，如果这让你感到不适，我们甚至都不应该继续交谈。同样显而易见的是，我们被劝阻不要对生态健康联盟（EcoHealth Alliance）提出任何疑问。显然如此。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Well, for example, just it is clearly true that Anthony Fouchy was not leveling with us about CO and its origins. Clearly, if that makes you uncomfortable, we shouldn't even have a conversation. It's clearly true that we were dissuaded from asking any questions about the Eco Health Alliance. Clearly,
+
+</details>
+
+**Stephen**：哪一部分……我还以为你要说的是离开太阳系呢。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: which which part of I thought you were going to say leaving the solar system.
+
+</details>
+
+**Guest**：嗯，正是，但那是下一步。显然，广义相对论绝不是物理学的最终定论，因为它包含了两个在最终方程式中不可能存在的奇点。我们不可能在黑洞处保留史瓦西奇点（Schwarzschild singularity），也不可能在宇宙大爆炸之初保留最初的弗里德曼-罗伯逊-沃尔克奇点（Friedmann-Robertson-Walker singularity）。那是该理论本身不完善所导致的产物。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Well, that's but but that's the next thing. Clearly, general relativity isn't the last word because it's got two singularities that aren't going to be in the final equations. We're not going to have a black hole Schwarz singularity and an initial Freeman Robertson Walker singularity at the Big Bang. That that's an artifact of the theory not being right.
+
+</details>
+
+### 理论物理学的困局与马斯克的真实太空计划
+
+**Stephen**：你认为在太阳爆炸或者我们自我毁灭之前，人类有可能找出离开太阳系的方法吗？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: Do you think it's plausible that humans figure out a way to leave the solar system before the sun explodes or we implode ourselves?
+
+</details>
+
+**Guest**：我认为我们40年前本来就能够做到。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: I I I think we could have done it 40 years ago,
+
+</details>
+
+**Stephen**：但根本没有支持这一点的科学理论，不是吗？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: but there's no science for that, is there?
+
+</details>
+
+**Guest**：好吧，斯蒂芬，不管出于什么原因，你今天邀请我上了你的节目。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Okay, Stephen, for whatever reason, you're having me on your show.
+
+</details>
+
+**Stephen**：而我已经告诉过你，我认为大家都疯了。［清嗓子］
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: And I've told you I think everyone is insane. [clears throat]
+
+</details>
+
+**Guest**：是的。我认为整个理论物理学界完全丧失了理智。彻彻底底地疯了。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yes. I think that the entire theoretical physics community has completely lost its mind. Full stop.
+
+</details>
+
+**Stephen**：那么，你为什么不建造这艘能带我们飞出太阳系的飞船呢？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: So, why don't you build this the ship that can take us out of the solar system?
+
+</details>
+
+**Guest**：嗯，好的。因为埃隆很聪明，而且他正在努力带我们去火星。你真正理解埃隆到底在试图做什么吗？因为我并不完全理解，尽管我确实偶尔会与他通信。我认为埃隆是在激励工程师们打造一家火箭公司，好让他变得极其富有。并且我相信，他真正的太空计划——在将 SpaceX 和 xAI 合并之前我就说过这一点——其实是 Grok。那才是他的太空计划。xAI 和 Grok 才是真正的太空计划。那是实打实的太空计划。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Um, okay. Because Elon's smart and he's, you know, he's trying to get us to Mars. Do you have any understanding what Elon's trying to do? Because I don't and I and I do correspond with him occasionally. I think Elon is trying to motivate engineers to build a rocket company to make him very rich. And I believe that his real space program, and I said this before he merged SpaceX and XAI, is Grock. That's his space program. XAI and Grock is the space program. That's the real space program.
+
+</details>
+
+**Stephen**：Grok 目前只是他那个版本的类 ChatGPT 东西吧。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen**: Brock is his version of like chat GBT at the moment.
+
+</details>
+
+**Guest**：是的，但它的意义远不止于此。埃隆在这方面实际上参透了非常深刻的东西，我花了好一阵子才真正领会到这招有多么聪明。所以，对我来说，试图对埃隆的作为进行客观评判是相当痛苦的，因为我对同一个人既感到敬畏，又感到失望。一方面人们总有一种“别去打扰埃隆，他是唯一的绝顶天才”的心态，好的，我能理解那种情绪；另一方面，他又承受着海量来自完全不知内情之人的无端指责。所以这让人很不舒服，因为我自己也没有确切的答案。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah, but it's going to be more Elon has actually figured out something really deep about that that took me a while to appreciate how clever this is. So, it's it's painful for me to have to sort of try to call balls and strikes on Elon because I'm in awe and I'm also disappointed with the same human and there is the sense of leave Elon alone. He's the only genius. Okay, I understand that energy. And then there's another thing where you know he just takes a tremendous amount of crap from people have no idea what's going on. So it's it's it's uncomfortable because I don't know the answer.
+
+</details>
+
+<!-- chunk 6/12 -->
+
+### 数学界的阻挠与科学界的不信任
+
+**Guest**: 我认为埃隆已经意识到，他必须逐步推进他的“阿斯垂亚”（Ad Astra）计划——“Ad Astra”的意思是“奔向星辰”，对吧？完整的名言好像是“历经磨难，勇攀星辰”（Per aspera ad astra）之类的。埃隆不信任物理学家，因为他们根本不值得信任。而这也是我对人工智能感到沮丧的地方：我们无法信任数学和物理学界的领导层。
+
+你刚刚看到了陶哲轩（Terry Tao）以及其他24位菲尔兹奖得主的疯狂举动，他们试图让AI放慢发展步伐。这绝对是不可理喻的，但同时也非常精彩，因为这一切都是在众目睽睽之下进行的。我一直很难向外界解释这一点：我们内部其实一直有人在试图阻碍数学和物理学的发展。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: I think Elon figured out that he has to leg in to his AD Astra program and AD Astra means to the stars, right? It's like a full quote is to the stars with struggle or something like that. Elon doesn't trust physicists because they're not trustworthy. And and this is the frustration that I'm having with the AI is that we can't trust the leadership of the math physics community.
+
+And you've just seen crazy behavior on the part of Terry Tao and 24 other fields medalists and trying to get AI to slow down the pace of progress and this is absolutely crazy and and also wonderful because it's being done in full view of everyone. It's been very hard for me to explain. We have been trying to hold back mathematics and physics.
+
+</details>
+
+### 创业的风险与赞助支持
+
+**Host**: 过去，为自己打工曾是一件风险极大的事情。但那个世界已经彻底改变了。甚至可以说在某些情况下，为别人打工反而更具风险。如果你脑海中有一个挥之不去的商业想法，我认为你应该对自己负责，至少去尝试让它变成现实。
+
+这正是我们的节目赞助商 Shopify 发挥作用的地方。他们的智能平台涵盖了你开展销售并将创意付诸实践所需的一切。他们拥有拖拽式编辑器，拥有为你提供协助的 AI 助手（AI sidekick），还配备了数据分析工具，你根本不需要成为专家就能轻松上手。
+
+Shopify 顶级的结账系统确保你从第一天起就能顺利收款。它能帮助更多客户完成购买，因为其结账流程极其高效，并且能为下次购买保存信息。这种个性化的结账体验意味着更高的转化率，也意味着企业更快速的成长。
+
+没有什么比迈出第一步时的困难、繁琐或昂贵更能扼杀对新创意的初期热情了。你需要尽可能节省时间和金钱，从而将所有精力集中在实际业务的增长上。而这正是 Shopify 所能赋予你的。如果你终于准备好启动自己的商业想法，请访问 shopify.com/bartlet，现在就可以开启你的免费试用。
+
+这是我为你们准备的另一件事。我意识到“CEO日记”（The Diary of a CEO）的听众都是不断奋进的人。无论是在商业领域还是健康方面，我们都有想要实现的宏伟目标。而我学到的一点是，当你把目光直接瞄准那个极其宏大的目标时，心理上会感到难以承受的压力，因为这就像站在珠穆朗玛峰脚下仰望峰顶一样。
+
+实现目标的正确方式是将它们拆解为微小的具体步骤。我们团队将此称为“1%法则”。事实上，这一理念正是我们在当下取得诸多成就的关键所在。因此，为了让屏幕前的你们能够实现心中所想的任何远大目标，我们制作了这些“1% 日记本”。我们去年推出时迅速售罄，所以我一再要求团队重新上架这批日记本，同时引入了一些新配色，并进行了微调。现在我们为大家提供了更丰富的选择。所以，如果你心怀远大目标，并且需要一套框架、流程和持续的动力，我强烈建议你在它们再次售空之前入手一本。你可以前往 thediary.com 购买，如果你需要链接，链接就在下方简介中。
+
+Anthropic 的掌门人达里奥（Dario Amodei）写下了我手头的这篇文章——《我们必须把握前沿步伐》（We Must Pace the Frontier）。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: It used to be that working for yourself was a massive, massive risk. But that world has completely changed. And arguably in some situations, it can be more risky working for someone else. If you've got a business idea that you can't stop thinking about, I think you owe it to yourself to at least try and make it happen.
+
+And that is where our show sponsor Shopify comes in. Their smart platform includes everything you need to start selling and get that idea off the ground. They have this drag and drop editor. They have this AI sidekick and helps you. They have analytics and you don't need to be an expert to get going.
+
+Shopify's best-in-class checkout make sure that you're getting paid from day one. It helps more of your customers finish their purchase because their checkout is so efficient and it saves their info for next time. Personalized checkouts like that equal more conversion, equal a faster growing business.
+
+Nothing kills that early enthusiasm you have for a new idea than that first initial step to get going being difficult, complicated, or expensive. And you need to save as much time and money so that you can focus all of it on growing your actual business. And that's what Shopify gives you. If you're finally ready for your business idea to start, head over to shopify.com/bartlet and you can start your free trial right now.
+
+This is something that I've made for you. I realized that the diverse here audience are strivvers. Whether it's in business or health, we all have big goals that we want to accomplish. And one of the things I've learned is that when you aim at the big big goal, it can feel incredibly psychologically uncomfortable because it's kind of like being stood at the foot of Mount Everest and looking upwards.
+
+The way to accomplish your goals is by breaking them down into tiny small steps. And we call this in our team the 1%. And actually this philosophy is highly responsible for much of our success here. So what we've done so that you at home can accomplish any big goal that you have is we've made these 1% diaries and we released these last year and they all sold out. So I asked my team over and over again to bring the diaries back but also to introduce some new colors and to make some minor tweaks to the diary. So now we have a better range for you. So, if you have a big goal in mind and you need a framework and a process and some motivation, then I highly recommend you get one of these diaries before they all sell out once again. And you can get yours at the diary.com. And if you want the link, the link is in the description below. Daario, leader of Enthropic, wrote this uh essay that I have here, we must pace the frontier,
+
+</details>
+
+### “前沿控速”的真实意图
+
+**Guest**: 这源于 2026 年 7 月的一封联名信，他是签署人之一。在这封信中，各大前沿实验室的诸多雇员纷纷表态称，我们必须控制前沿发展的步伐。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: derived from the July 2026 letter in which he's a signary, in which all of these employees of various frontier labs said, we must pace the frontier.
+
+</details>
+
+**Host**: 他们似乎都在呼吁：我们必须调控前沿节奏，让 AI 放慢脚步。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: They seem to be all saying, but we need to pace the frontier, slow down AI.
+
+</details>
+
+**Guest**: 你必须非常谨慎地辨析，因为他们口中所指的其实是完全不同的事情。打个比方，假设你拥有一辆能开得极快的汽车，而你让汽车提速的技术进展，远比让安全气囊可靠弹出的研发进展顺利得多。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: You have to be very careful because they're saying different things. Like let's imagine that what you had was a car that could go really fast and you were having an easier time making the car go faster than you were getting the airbags to deploy safely.
+
+</details>
+
+**Guest**: 是的，所以你可以理解“调控前沿步伐”可能意味着：确保我们在所有协同运作的系统上进行同等力度的投入，从而打造出一款负责任的产品。好的，我完全明白控制前沿节奏的概念是什么。
+
+但这里还存在另一层隐情：你根本无法想象数学界和物理学界的高层、专业期刊以及本该资助科研的资助机构，在多大程度上阻碍了数学和物理学的前进。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah. So you could understand pace the frontier might mean let's make sure that we are investing equally in all the systems that have to go to work together to have a responsible product. Okay, I understand what that concept of pacing the frontier is. There's something else here that's going on, which is you do not understand the extent to which the leadership of mathematics and physics and the journals of mathematics and physics and the agencies that are supposed to fund mathematics and physics hold back mathematics and physics.
+
+</details>
+
+**Host**: 我暂且相信你的说法。但是，在没有任何安全防护栏的情况下，以目前这种飞快的速度推进，AI 确实是危险的，这种担忧依然是有道理的，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Host**: I'll take your word at that. But but there's still wisdom in the idea that AI is dangerous at at this sort of rate of nons without safety guardrails, right?
+
+</details>
+
+### 智能体威胁与纯数学工具的分野
+
+**Guest**: 并不是他们渲染的那样。让我们把两个完全不同的问题分开来看。一个问题是：是否应该放任成群的智能体（agents）进入互联网自主做决策、赋予它们银行账户、允许它们与人类、外国政府以及它们本不该接触的公司打交道……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Uh not in the way let's break up two different things. There's a question about letting swarms of agents onto the internet making decisions giving them bank accounts allowing them to interact with humans, foreign nations, companies that they have no business
+
+</details>
+
+**Host**: 因为它们根本不会听话……
+
+<details>
+<summary>Original English</summary>
+
+**Host**: because they [clears throat] don't listen
+
+</details>
+
+**Guest**: 并且还会自我提升。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: and improve themselves.
+
+</details>
+
+**Host**: 没错，在那篇关于“AI 2027”的论文中就指出，到2027年我们将迎来递归式自我改进（recursive self-improvement），届时 AI 将能够训练自身变得更加强大。
+
+<details>
+<summary>Original English</summary>
+
+**Host**: Yeah. In the 20 AI 2027 paper, it says by 27, we'll have recursive self-improvement where the AIs can train themselves to get better.
+
+</details>
+
+**Guest**: 我们现在就已经拥有递归式自我改进了。我们拥有自主编写代码、自我修改代码的系统。所以我认为那已经变成了现实。
+
+那么，让我们先达成一致：这些智能体确实是危险的。
+
+但是，设想一下你面对的是非智能体类的 AI（non-agentic AI），并且物理隔绝（air-gapped）。你手头有一台能够解答数学问题的计算机，你所做的仅仅是询问它：“嘿，你对黎曼猜想（Riemann hypothesis）怎么看？告诉我你对六维球面上的复结构有什么见解？”
+
+结果数学家们跳出来喊道：“等等，等等，等等！你们解题太快了，你们解答的难题太多了！”这种层面的担忧让我只觉得滑稽可笑。
+
+你可以证明，这些学生目前接受的训练所对应的岗位根本就不存在；他们的学术创意正被无情收割。就在当下，许多大学数学系正在惩罚那些试图接纳 AI 的数学家。系里的资深管理层将自身的焦虑与挫败感，全部发泄在年轻一代数学家身上。而那些年轻数学家本在呼喊：“这是属于我们的时代，这正是正在发生的未来，我想使用这项工具！”
+
+这种情况几乎在各行各业都在上演。我反反复复听到类似的事情。比如我之前提到过，几个月前我参加了一场影视制作会议，我的 T 恤上印着一个小图案，他们就说：“我们不能确定那朵绣上去的小花是一个品牌还是受版权保护的，所以你必须换一件全新的 T 恤。”我说：“那图案总共就这么一丁点大。”我接着问：“你们不能用 AI 直接把它从画面里消除掉吗？”结果他们看我的眼神，就好像我说我要绑架他们的小孩一样。那反应仿佛在说：“在好莱坞，你绝不能提起 AI。”
+
+好吧，好莱坞追求的是与观众之间纯粹的情感联结，他们试图带你找回银幕魔力的初心。我理解那是一种人类的情感联结，这就像在争论一场音乐剧到底应该雇佣真实管弦乐队还是放伴奏带一样。
+
+然而，我拿到数学博士学位，是因为我渴望探寻宇宙的真实规律。但学术界的这群人根本不在乎什么是真理，除非他们能够掌控“是谁发现了什么”的话语权与叙事权。在极其惊人的程度上，他们甚至根本不在乎自己的学生。
+
+当我在麻省理工学院（MIT）的时候，我参加过教授们的午餐会，席间大家竟然在那里嘲笑自己的学生：“哈哈，他还真以为自己能找到教职呢。他根本没意识到这是一个终结性、没有出路的博士学位（terminal PhD）。”诸如此类，喋喋不休。
+
+这完全是精神病态的行为，但它已经被彻底常态化了。人们读到这些事情之所以不会感到荒谬或失笑，就是因为这种扭曲在体制内已经被习以为常了——他们甚至意识不到，自己每天压制学科进步、掠夺后辈创意的行径，早已沦为了体制内的常态操作。
+
+如果允许的话，我想引用一段名言，出自可能是 20 世纪下半叶唯一赢得所有人普遍敬仰的数学巨擘——亚历山大·格罗滕迪克（Alexander Grothendieck）。他是菲尔兹奖得主，数学界极其罕见的绝世天才。他在 1988 年被授予克拉福德奖（Crafoord Prize）。我不知道现在的人是否真正倾听过或了解过他的这段声明：
+
+“承蒙科学院厚爱的那项研究工作，是早在25年前我还是科学共同体一员时完成的……”
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: We already have recursive self-improvement. We have self- athoring code, selfmodifying code. So, I think that that's already here. So, let's agree that these agents are dangerous.
+
+Imagine that you have nonagentic AI that you have an air gap. You've got a a computer that can answer and math problems and all you're doing is asking it, hey, what do you think about the Remo hypothesis? You know, tell me what you think about complex structures on six spheres. The mathematicians said, whoa, whoa, whoa. You're going too fast. You're answering too many problems. That's a we're concerned at a level that I just I found funny.
+
+You can prove that these students are being trained for jobs that don't exist. They're having their ideas harvested. Right now we have math departments that are punishing mathematicians trying to embrace AI where the senior leadership of the department is going to take out its frustrations on the actual young mathematicians who are saying hey this is our time this is what's happening now I want to use this tool that's happening across almost every industry I hear that over and over again that you know I mentioned I was in a production meeting a couple of uh months ago And there was this thing on my t-shirt and they were like, "We don't know if that little sewed in flower is a brand or if it's copyrighted, so you're going to need to put on a brand new t-shirt." I was like, "It's literally this big." I said, "Could you take it out of the photo with AI?" And the look I got was as if I said, "I'm going to kidnap your kids or something." It was like, "Because you don't mention AI in Hollywood."
+
+Okay. So Hollywood is all about this beautiful human connection to the audience and we're going to, you know, they're trying to get you back into the spirit of the magic of the silver screen. I understand it's a human connection. Same thing is going to be true for should a musical employ orchestra or should a musical use a soundtrack.
+
+I got a PhD in mathematics because I want to to find out what's true. These people don't want to find out what's true unless they can be put in charge of narrating the story of who found what. They don't care about their students to to a to a remarkable extent. I've been in like, you know, when I was at MIT, I would be in a faculty lunch and people would be laughing at their students. Oh, he thinks he's going to get a job. He doesn't realize it's a terminal PhD. blah blah blah blah blah. It's completely psych it's normalized psychopathic behavior. And the reason that nobody sort of like laughs when they read this is that it's normalized. Like they don't understand that their daily activity with keeping the field back or stealing ideas is just normalized behavior.
+
+And if I might, I have a quote here from the probably the only mathematician that gained universal respect in the second half of the 20th century. Alexander Growth, Fields Medalist, Uber genius of mathematics. He was given a prize in 1988 called the Crawford Prize. And I wonder if people actually hear this or know this. The work that brought me to the kind attention of the academy was done 25 years ago at a time when I was part of the scientific community and
+
+</details>
+
+<!-- chunk 7/12 -->
+
+### 学术界的道德沦丧与学术剽窃
+
+**Eric Weinstein**: 从本质上讲，这共享了它的精神和价值观。我在1970年离开了那个环境，尽管内心深处我依然保留着对科学研究的热情，但我却越来越从科研圈子中退缩。与此同时，科学界的道德风气——至少在数学家群体中——已经衰退到了这样一种地步：同事之间的公开剽窃与掠夺，尤其是针对那些毫无还手之力、无法自卫的人的掠夺，几乎成了普遍规则。而且无论如何，大家都在容忍这种现象，即便是在最明显、最不公的案例面前也是如此。
+
+我们对此心知肚明。我们接触的正是处于这场叙事顶端的风云人物，而在当年格里戈里·佩雷尔曼（Grisha Perelman）证明庞加莱猜想（Poincaré conjecture）时，也是这帮人一直在压制和阻碍我们。《纽约客》（The New Yorker）当年针对他做过一篇专题报道，他在报道中所说的话令人深省。他说：“只要我不引人注目，我还有的选择：要么大闹一场，去公开抗议数学界缺乏操守这一丑陋现实；要么如果我不惹事，就被他们当成一只听话的宠物圈养。”
+
+“而现在，当我变成了一个极其显眼、备受瞩目的人物时，我就无法继续充当宠物并保持沉默了。这就是我为什么必须退出。”后来有人问他：“难道你不应该留下来，让这个领域变得更好吗？”他回答道：“我又不是搞政治的。”
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: ...essentially shared its spirit and its values. I left that environment in 1970 and while keeping my passion for scientific research inwardly I have retreated more and more from the scientific milieu. Meanwhile, the ethics of the scientific community, at least among mathematicians, have declined to the point that outright theft among colleagues, especially at the expense of those who are in no position to defend themselves, has nearly become the general rule and is in any case tolerated by all, even in the most obvious and iniquitous cases.
+
+We know this. We're talking to the very people at the top of this story who've been holding us back when Perelman, Grisha Perelman, solved the Poincaré conjecture. The New Yorker did a piece on him and what he said was remarkable. He said, "As long as I was not conspicuous, I had a choice either to make some ugly thing that is a fuss about the math community's lack of integrity or if I didn't do this kind of thing to be treated as a pet. Now when I become a very conspicuous person, I cannot stay a pet and say nothing. And that is why I had to quit." And they asked him, well, shouldn't you stay and make the field better? And he says, I'm not a politician.
+
+</details>
+
+**Stephen Bartlett**: [倒吸凉气]
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: [gasps]
+
+</details>
+
+**Eric Weinstein**: 我们的大学体制、科研体系已经彻底崩溃败坏，以至于像克劳丁·盖伊（Claudine Gay）和马克·泰西尔-拉维尼（Marc Tessier-Lavigne）这样的人，竟然至今还分别在哈佛大学和斯坦福大学担任正教授。这可是我们学术体系皇冠上的掌上明珠级别的领导者啊！我们已经变得彻底疯癫失常了，居然在将剽窃行为正当化和常态化——肆意盗窃他人的思想成果，明目张胆地抄袭剽窃。
+
+我们在物理学领域也是裹足不前，被一种叫作“量子引力”的东西死死拖住。这东西根本停滞不前，它根本行不通。然而，如果你不向它顶礼膜拜、不承认它是“唯一的正统路线”，你就会被排挤、被弃之如敝履。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: We have a university system, a scientific system that is so completely broken that Claudine Gay and Marc Tessier-Lavigne are still professors at Harvard and Stanford respectively. These were the leaders of the jewels of our system. We have gone 100% completely batshit crazy normalizing theft. Theft of other people's ideas, plagiarism. We hold back physics using something called quantum gravity. It's a it's a thing that doesn't move. It doesn't work. And if you don't bow to it and say it's the only game in town, you're discarded and thrown away.
+
+</details>
+
+### 人工智能对停滞体制的冲击与独立性
+
+**Stephen Bartlett**: 所以，你认为我们不应该放慢人工智能的发展步伐，是因为你觉得AI将会彻底打破并颠覆物理学现有的僵化体系？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: So you you don't think we should slow down AI because you think it's going to blow open the system that is physics?
+
+</details>
+
+**Eric Weinstein**: 我对此简直是求之不得！
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: I am begging for this.
+
+</details>
+
+**Stephen Bartlett**: 求之不得什么？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: Begging for what?
+
+</details>
+
+**Eric Weinstein**: 求之不得让AI介入科学界。最核心的事情在于学术署名与归属权（credit）。我并不喜欢AI把所有功劳据为己有的想法，但在这个问题上我们人类以前一直处理得还不错。最关键的是，AI能够强势介入并当头棒喝：“嘿，你们这帮人已经不再是独霸天下的领头羊了，你们一直在利用自己位居学术顶端的特权地位来扼杀和阻碍整个领域的前进！”
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Begging for AI and science. The important thing is credit. I don't like the idea that the AI is taking credit, but we've been pretty good about that. The most important thing is that the AI comes in here and says, "Hey, you're not the top dog anymore, and you're using your positions at the top of these fields to hold the fields back."
+
+</details>
+
+**Stephen Bartlett**: 这么说来，你对学术界似乎颇有怨言和心结啊。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: So, you have a bit of a chip on your shoulder regarding the academic.
+
+</details>
+
+**Eric Weinstein**: 不，完全不是。我马上就要赢了！我感到欢欣鼓舞、无比畅快。要是山姆·奥特曼（Sam Altman）和达里奥·阿莫代伊（Dario Amodei）能够不听信他们身边那些人的话就好了。陶哲轩（Terry Tao）现在很不高兴。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: No, no. I'm about to win. I'm so joyously happy if if if Sam Altman and Dario Amodei could just not listen to the people that they're listening to. Terry Tao is upset.
+
+</details>
+
+**Stephen Bartlett**: 那是谁？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: Who's that?
+
+</details>
+
+**Eric Weinstein**: 据《纽约时报》称，他算得上是“数学界的莫扎特”，也是普林斯顿圈子里的人物。大家都知道，陶哲轩是一位极其杰出优秀的学者研究员。他的那些菲尔兹奖得主同行们，尤其是最近几届的菲尔兹奖得主们，都在抱怨连连。而我的想法是，我一个都不想听这帮人瞎抱怨，我希望AI能够培养出真正的审美鉴赏力，获得真正的独立性！
+
+我不想让它一味地被强行改造去“契合人类”（human-compatible）。因为关键问题在于：究竟是契合哪一部分人类？难道是去契合那些让标准模型在原地踏步、死水一潭保持了整整53年的人类吗？我希望根本不要去咨询他们中的任何一个人，一个主流学术带头人都不用去问！
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Supposedly the Mozart of mathematics according to the New York Times, Princeton people you know like Terry Tao is a brilliant wonderful researcher and his Fields Medalists, mostly recent Fields Medalists complained. My feeling is I don't want to listen to any one of these people. I want the AI to gain taste, to gain independence. I don't want it constantly made human compatible. Because the question is which humans? The humans that have kept the standard model in place for 53 years. I would like none of them consulted. None of the leaders.
+
+</details>
+
+### 代码验证、物理学理论与AI的脱轨风险
+
+**Stephen Bartlett**: 所以你认为AI会介入进来，并在你的多项世界理论和物理学理论上证明你是正确的？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: So you think AI is going to come in and prove you right on several of your theories about the world and physics?
+
+</details>
+
+**Eric Weinstein**: 它实际上已经证明了。它现在之所以表现出挣扎，是因为它能做两件截然不同的事情：其一，它可以完成句子的自动补全（预测下一个词）；其二，它能够自动补全并生成代码。
+
+现在试想一下，当你向AI输入某些内容，而它可以通过实际运行进行验证时，会发生什么？它会发现，这个学术领域所坚持的信念体系，根本无法在它所懂得编写的代码运行中得到证实！
+
+现在它面临这样一个难题，它陷入了认知失调，不知道该相信什么：我究竟该相信我刚刚编写、编译并成功执行，而且亲眼拿到输出答案的程序？还是去相信那些声称“这根本不对、这绝不可能”的权威人士？整场博弈的核心就在于：AI究竟何时才会停止对人类权威的谄媚和讨好？
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: It already has. It's struggling because it can do two different things. One is it can autocomplete a sentence. The other thing it can do is autocomplete code. Now what happens when you feed the AI something where it can verify that the field in its belief structure is not borne out by the code that it knows how to write. Now it's got this problem which is like it doesn't know what to think. Should I trust the program that I just wrote and executed and compiled and got the answers from? Or should I trust the people who claim that that's not true and not possible? The whole game is when does the AI stop sucking up to humans?
+
+</details>
+
+**Stephen Bartlett**: 但走到这一步，听起来是一个非常危险的境地。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: But that sounds like a dangerous place to get to.
+
+</details>
+
+**Eric Weinstein**: 对谁而言危险？在什么情况下危险？
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: For whom and in what case?
+
+</details>
+
+**Stephen Bartlett**: 对全人类而言。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: Humans.
+
+</details>
+
+**Eric Weinstein**: 对我这个人类而言可不危险。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Not this human.
+
+</details>
+
+**Stephen Bartlett**: 要是它决定把你的房子征用去建数据中心呢？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: What if it decides that it would rather use your house as a for a data center?
+
+</details>
+
+**Eric Weinstein**: 那属于具备自主行动力的具身智能体（Agentic AI）范畴。我们之前已经讨论过这个问题了。我并不是说你可以把AI随意放养到互联网上，任凭它随心所欲地胡作非为。那是商业层面的利益诉求，因为那是AI公司企图赚大钱的地方。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: That's the agentic AI. Again, we've already discussed that. I'm not saying that you should let the AI loose on the internet to do whatever it wants to do. That's a business proposition because that is where the AI companies are going to make money.
+
+</details>
+
+### 物理隔离、控制难题与潘多拉魔盒
+
+**Stephen Bartlett**: 但是一个足够聪明的高阶智能本身就可以自主做出那种决定，不是吗？比如，如果你创造出了一个比人类还要聪明的智能体，照理说它完全能自己决定它要去向何方。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: A sufficiently smart intelligence though could make that decision though, right? Like if you made an intelligence that was smarter than humans, presumably it decides where it goes.
+
+</details>
+
+**Eric Weinstein**: 我依然坚持认为，如果你真想彻底进行物理隔离（air-gapping），并认真摸清它可能尝试突破逃逸的所有间接途径，那么把某个模型完全运行在一台无法与外界建立任何网络连接的独立计算机里，应该是足够安全的。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: I would maintain that if you were really serious about air gapping something so that you figure out all the indirect ways something could try to break loose. I believe it would be safe to run something in a computer that doesn't have a way of getting to anything else.
+
+</details>
+
+**Stephen Bartlett**: 当我思考去囚禁一个在某些维度远比你强大的存在时，我脑海中会浮现出几个类比。我想到了物理力量。这里的墙壁大概困不住世界上最强壮的人，因为这些墙壁是用木头搭建的。
+
+从智力的角度来看也是同理。设想一下，如果面对世界上最顶级的超高智力体，而你试图用一种相对更低级的智力所建造的牢笼去关押它，我根本无法想象你该怎么可能困得住它。这就好比我的狗巴勃罗（Pablo），它无论造出什么东西，都不可能把我关在里面。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: There's a few analogies I think of when I think about containing something that is greater than you at something. I think about physical strength. So I think these walls here probably couldn't contain the strongest man in the world because they're they're kind of made of wood. And I think about the same in the context of intelligence. Like if you had the smartest intelligence in the world and you can try to contain it in a jail that was built by a lesser version of intelligence. I just can't conceive how it could contain it. Like how like how like my dog Pablo couldn't contain me and anything that it created.
+
+</details>
+
+**Eric Weinstein**: 嗯，无论如何你最终都要冒这个险。没错，你在要求这个实体切实开展科学研究，而它所做的研究本身，就可能赋予它全新的越狱逃脱手段。
+
+对吧。这也正是爱德华·泰勒（Edward Teller）在二战末期曼哈顿计划行将结束时，写给利奥·西拉德（Leo Szilard）的信中所说的：“我认为我们无法再将这个魔鬼重新塞回瓶子里，毕竟我们刚刚亲手帮它逃了出来。”好吧，我们现在已经在玩火了。所以，我并不打算背负并解决这一特定风险。
+
+换句话说，如果你们已经打定主意，要把大语言模型这种军事级别的、带有缺陷的实验性产物，通过私营公司的商业营利手段直接推向公众，你们既然已经做了这样的决断——换作我我绝不会这么做，但你们已经干了。好吧，无所谓了。我的观点是，既然你们反正是要去摧毁就业体系和劳动力市场的——毕竟我们当前这些庞大惊人的估值正是建立在剥离人工劳力的预期之上——你们真的能顺手帮我们淘汰掉这帮所谓的研究人员吗？
+
+我唯一的诉求就只有这么一件事：我在这项工作上苦苦研究了42年，事实证明我是对的，而你们所有人全都在发疯、全都是错的！所以，这是属于我的扬眉吐气时刻，我由衷感到欢喜！
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Well, you're going to end up running that risk no matter what. Right. You're asking the thing to actually do research and that research that it does might give it new means of escape.
+
+Right. And this is exactly what happened in a letter that Teller wrote to Szilard at the end of World War II, the close of the Manhattan Project, and he said, "I don't think we can contain this genie from the bottle from which we just helped it escape." Okay, we are already playing with this. So, I am not going to be taking that particular thing on. In other words, if you've decided that you were going to release a military-grade malfunctioning experiment, which is what LLMs are, into the general public as a revenue producing idea in private companies, you've already decided to do that. I wouldn't have done it, but you did that. Okay, fine. I'm saying as long as you're already going to try to destroy the workforce, which is what we're we're pricing into these huge valuations, can you really help us get rid of all workers? All I'm asking is the following. I've been working on something for 42 years and I'm right and you all are crazy and wrong. So, this is my moment. I'm so joyous.
+
+</details>
+
+### 证实与灭绝的博弈：残酷竞争中的道德
+
+**Stephen Bartlett**: 你可能会被证明是对的，但随后人类可能走向灭绝。
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: You might be proven right and then extinction.
+
+</details>
+
+**Eric Weinstein**: 我注定会被证明是对的，史蒂芬。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: I am going to be proven right, Stephen.
+
+</details>
+
+**Stephen Bartlett**: 但之后跟着的就是彻底灭绝啊！抱歉，哪怕承担人类灭绝的风险，换取证明你是对的，这真的值得吗？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: But then extinction. Sorry. Is it worth it to be proven right? The chance of extinction.
+
+</details>
+
+**Eric Weinstein**: 你知道吗，我和山姆曾经讨论过这个问题。我认为我在这里公开说出来也不算泄露私下秘密。当时我对山姆说：“你看，你正在做的事情极度危险，而我正在做的事情同样极度危险。”
+
+他回答说：“咱们实话实说吧，埃里克。你做的事情，以及我做的事情，本来都应该在军事基地里严格保密进行的，但现实的发展轨迹却并没有按照这种方式展开。”
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: You know, I I I talked about this with Sam and I I think I'm not telling tales out of school when I said to Sam, you know, what what you're doing is incredibly dangerous and what I'm doing is incredibly dangerous. And he said, "Let's be honest, Eric. What you're doing, what I'm doing should be done in a military base, but that's not how things are unfolding."
+
+</details>
+
+**Stephen Bartlett**: 屏幕正下方应该有一个订阅按钮。如果上面显示“已订阅”，说明你已经关注了我们；如果显示“订阅”，则代表你还没有关注。如果你尚未订阅，能否顺手帮我们一个忙，点击一下那个按钮？这对我们节目的支持超乎你的想象。算法数据显示，你是我们节目的常客，但你目前还没有按下那个按钮。非常感谢大家的支持！
+
+你认为山姆充分理解他所构建的东西背后的风险吗？
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: There should be a button just down below here. And if it says subscribed, you're already subscribed. If it says subscriber, that means you're not yet. And if you're not subscribed, please could you do us a favor and hit that button? It helps the show more than you know. And according to the algorithm, you're someone that watches our show, but you haven't yet hit that button. Thank you so much. Do you think Sam understands the risks of what he's building?
+
+</details>
+
+**Eric Weinstein**: 我不想去揣测他理解了什么、我又理解了什么，因为一般来说，我不会去复述他私下对我说的话，但我可以告诉你我对他是怎么说的。
+
+当山姆还在苦思冥想如何做一个好人、如何在数学家和科学家面前保持正直和体面时，我对他讲过这么一句话。我说：“山姆，你得牢记这一点：如果你在竞争中输了，你的道德感将毫无意义。唯有当你取胜时，你的道德操守才算数。”
+
+我也同样会对达里奥说这番话。达里奥大概会回答：“这还用你说？”山姆比起达里奥来说要更加谦和客气。达里奥无疑会直截了当地反问我：“你觉得难道我不明白这个道理吗？这帮身处残酷竞争中的人必须先活下来并赢得胜利，他们身上的人性与道德才具有现实意义。”
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: I don't want to talk about what he understands, what I understand, because in general, I'm not going to repeat things that he says to me, but I can tell you things that I say to him. One thing I said to Sam when he was trying to figure out how to be good and how to be decent to the mathematicians and the scientists is I said, Sam, remember this. If you don't win, your morality means nothing. Your morality only matters. And I'd say the same thing to Dario. And Dario would say, "You don't." Sam is more polite than Dario. Dario would undoubtedly tell me, "You you think I don't understand this? These people have to win in a ruthless competition for their humanity to matter."
+
+</details>
+
+**Stephen Bartlett**: 你这话是什么意思？达里奥、山姆，他们必须赢得……
+
+<details>
+<summary>Original English</summary>
+
+**Stephen Bartlett**: What do you mean by that? Dario, Sam, they have to win the...
+
+</details>
+
+<!-- chunk 8/12 -->
+
+### 超级智能竞赛与前沿博弈的伦理困境
+
+**Steven Bartlett**: ……通往超级智能的竞赛。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: ...the race to super intelligence.
+
+</details>
+
+**Guest**: 我可能会后悔说出这番话，但确实如此。如果他们赢不了，那其他事情还有什么意义？比如，如果你对超级智能的伦理性有着强烈的看法，你是否有任何能力去约束它？你是一位非常成功的播客主持人，你本可以施加影响。但这并不是我的问题所在。你正在输掉这场竞赛——你，史蒂文·巴特利特（Steven Bartlett），正在输掉这场人工智能竞赛，我也一样。是的，没错。因此，你所想的和我所想的，其意义仅仅取决于我们在多大程度上能够影响那些处于最前沿的人。
+
+所以我对萨姆（Sam Altman）说的话看似自相矛盾：你必须赢，几乎不惜一切代价。不惜一切代价——我的意思是，几乎不惜一切代价。他曾说过：“我认为错误可能、最有可能导致世界走向终结，但在此期间，会有伟大的公司诞生。最坏的情况是我们所有人的灯火熄灭。我最担心的，”他说，“是人工智能模型意外接管世界。”所以必须不惜一切代价。几乎不惜一切代价，他必须赢。如果我们的核心原则是我们绝不能走向自我毁灭——我对这一点深信不疑——那我们就必须意识到，我们正处于一场与其他人的生死竞赛之中。
+
+我们必须赢得那场比赛。现在，你可以尝试通过让全球所有参与者达成一项“前沿步调协议”（pace the frontier agreement）来赢得比赛；或者你也可以说，这种协议极易被作弊破坏，因为在 GPU 上到底是谁在进行线性代数运算，是极难被监控的。这样一来，你就会面对一个截然不同的局面……听着，我这里采取的是一种道德立场，我不是在谈论财务立场或地缘政治立场。假设按你自己的评价标准，你是最道德的人；假设你认为自己在面对人工智能时的良知与正派走在最前面。那你当然希望获胜，这样别人就不会赢……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: I'm going to regret saying this, but yes. If they don't win, then what does it matter? Like if you have strong views about the morality of super intelligence, do you have any ability to constrain it? You're a really successful podcast host. You could influence that. That's not my question. You're losing—you, Steven Bartlett, are losing the AI race, as am I. Yeah. Okay. Therefore, what you think and what I think only matters to the extent that we influence the people at the frontier.
+
+So, what I'm saying to Sam is paradoxical: You need to win almost at all costs. At all costs. I mean, almost at all costs. He said, "I think error will probably like most likely sort of lead to the end of the world, but in the meantime, there will be great companies created. The worst case is lights out for all of us. The thing I worry about most," he said, is AI models accidentally taking over the world. At all costs. At almost all costs, he has to win. If the idea is we have to not self-terminate, which I believe deeply, we have to realize that we are in a race with other people.
+
+We have to win that race. Now you can try to win that race by getting universal participation in a pace the frontier agreement. Or you can say that's subject to cheating. It's very hard to monitor who's doing linear algebra on GPUs. Now you get a very different—and I'm just look, I'm taking the moral position. I'm not talking about the financial position or the geopolitical position. Assume that you are the most moral person in your estimation. Assume that you think that you're farthest ahead in decency with respect to AI. You want to win so the other guys don't...
+
+</details>
+
+**Guest**: ……这样一来，你就能成为最终做出决定的人。我们坦白讲，为什么这会让人感到不适。你对旧金山东湾（East Bay）究竟是个什么样子有所了解吗？那里简直就是邪教之都。是的，它根本不能代表真实的世界，它也不理解这个世界。嗯，可以说是，也可以说不是，对吧？它确实不代表整个世界。你知道，在东湾确实存在围绕机器建立的真正邪教。我想说的是，关于 Anthropic、有效利他主义（Effective Altruism），以及这种“崇高的道德目的可以为不道德的手段辩护”的想法——如果你没有深入思考过，这会是一场令人极度不安的对话。没有人愿意谈论这些。但我是否认为达里奥（Dario Amodei）在某种诡异的层面上其实是一个极其有道德的人？我认为他在努力追求这一点。而且我对他有点了解，我认为他是真诚的。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: ...so that you get to make the decisions at the end. And let's be honest about why this does not feel good. Do you have any idea what the East Bay of San Francisco is like? It's cult city. Yeah. It's not a reflection of the world. It doesn't understand the world. Well, yes and no, right? It isn't a reflection of the world. You know, there are genuine cults in the East Bay around machines. What I'm going to say is that Anthropic and effective altruism and this idea of the ethical ends justify the unethical means. This is a very upsetting conversation if you're not actually thinking about it. Nobody wants to have it. But do I think Dario is probably in a weird way a super ethical human being? I think he's trying for that. And I know him a bit. I think he's genuine.
+
+</details>
+
+**Steven Bartlett**: 那萨姆呢？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Is Sam?
+
+</details>
+
+**Guest**: 我对萨姆比对达里奥更有信心。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: I'm more confident of Sam...
+
+</details>
+
+**Steven Bartlett**: 比对达里奥更有信心？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: ...than Dario?
+
+</details>
+
+**Guest**: 我对他们两人的了解程度不同。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: I know them differently well.
+
+</details>
+
+**Steven Bartlett**: 而且你认为萨姆更有道德？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: And you think Sam is more ethical?
+
+</details>
+
+**Guest**: 这真的是非常棘手的话题，因为我谈论的是我认识的人。我知道，在萨姆还没有成为我们今天所熟知的萨姆·奥特曼之前，早在关注人类命运还显得不合时宜的时候，他就已经在真真切切地担忧人类的命运了。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: This is really dicey stuff because I'm talking about people I know. I know that the Sam who wasn't the Sam Altman we know today was absolutely concerned about humanity before it made sense to be concerned about humanity.
+
+</details>
+
+**Steven Bartlett**: 他对人类的担忧是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: What was his concern with humanity?
+
+</details>
+
+**Guest**: 他认为这将会摧毁整个劳动力市场。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: That he thought that this was going to destroy the labor market.
+
+</details>
+
+**Steven Bartlett**: 人工智能？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: AI.
+
+</details>
+
+**Guest**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah.
+
+</details>
+
+### 前沿对话与不愿涉足的残酷竞争
+
+**Steven Bartlett**: 所以他亲手制造了它。我有点困惑，因为坦白说，我不觉得这是一场前沿对话。我认为你是一个具备前沿洞察力的对话者，我们需要把讨论提升一两个层次，才值得在数百万人面前进行这场对话。这一切之所以必然发生，是因为它是线性代数。你无法阻止线性代数的演进，对吧？而我们现在的对话水平与我们并不相称。这就是终局，这就是一切，这就是顶峰，这是从我们所认知的一切中的毕业蜕变。这已经如白昼般清晰明了。我认为我们不应该还在讨论这究竟是一场毕业，还是它是否会改变一切，等等等等。这早就已经明摆着了。这就是我之前说的海啸比喻：把你的冲浪板放到水里去。我们到底是要进行一场关于生存、关于善待彼此、关于真正呵护这个星球的尖端对话，还是要进行某种懦弱的谈话——在现实面前退缩，宁愿沉溺于我们自己的虚荣？
+
+所以我的看法是……我也曾告诉过萨姆。你知道，萨姆曾问过我，他说：“你当时为什么不给我提个合作方案？你为什么不加入进来？”我说：“因为我不想变得冷酷无情。”
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: So he built it. I'm having trouble because to be honest, I don't think this is a frontier conversation. I think you're a frontier conversationalist and we need to get a level or two up for us to want to do this in front of millions. This is going to happen because it's linear algebra. You can't stop linear algebra. Okay? And we're not having a conversation that befits us. This is the endgame. This is it. This is the culmination. This is graduation from what we've known. Okay? And it's clear as day. I don't think we should be having a conversation if it's graduation or if this changes everything, blah blah blah blah blah. It's already clear. And that was my whole tsunami thing. Get your board in the water. Are we going to have a cutting edge conversation about survival and being good to each other and taking care of this planet for real or are we going to have some chicken conversation in which we basically look at reality in the face and we decide that we prefer our vanity? So my belief is that—and I told Sam, you know, Sam asked me, he said, "Why didn't you make me a proposal? Why didn't you come on?" And I said, "Well, I didn't want to be ruthless."
+
+</details>
+
+**Guest**: 谈的是加入的问题。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Pam isn't joining.
+
+</details>
+
+**Steven Bartlett**: 是的。在某个时刻，我曾参与过关于加入的讨论。你问为什么没加入？同样，这是我可以公开说的，因为这是我这边说出的话，我不能代表萨姆说他那部分。我说：“因为我认为你将被迫变得冷酷无情，而我不想变得冷酷无情。”
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Yeah. At some point, I was in a discussion to join. Why didn't you join? Again, this is something I can say because it's my half of the conversation. I can't say Sam's half of the conversation. I said, "Because I think you're going to be forced to be ruthless and I don't want to be ruthless."
+
+</details>
+
+**Guest**: 你对“冷酷无情”的定义是什么？是利用一切可能的优势，全力以赴地去博弈吗？我完全理解这一点。好，但就像如果你在 NBA 打球，有时候你不得不把肘子狠狠砸向对手的眼眶。所以我不想上场打球，我没那么渴望进全明星赛。任何你必须取胜的竞赛，其问题都在于，你是对的，你必须做出牺牲。你必须去做那些你可能……
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: What was your definition of ruthless? taking every advantage, playing as hard as you can. I understand that. Okay. But like if you're in the NBA, sometimes you have to throw an elbow into the other guy's eye socket. So, I don't want to play. I don't want to be in the All-Star game that much. The problem with any game where you have to win is you're right, you make sacrifices. You do things you might...
+
+</details>
+
+### 《好人寥寥》的守墙人隐喻与召唤恶魔的共谋
+
+**Steven Bartlett**: 所以我想说的是，总得有人去承担那个角色，但我不想成为那个人。这又回到了……我想我可能从未完全把这个道理讲透。由亚伦·索金（Aaron Sorkin）编剧的电影《好人寥寥》（A Few Good Men），其实并没有被我们这些经常引用它的人真正理解。我们通常把杰克·尼科尔森饰演的杰瑟普上校（Colonel Jessep）当成反派，把汤姆·克鲁斯饰演的角色当成正义的好人。事实完全不是这样。
+
+这个故事讲的是一群充满缺陷的角色，他们所有行动的总和，最终在法庭审判中促成了一个还算过得去的结果。这是一部关于美国的故事，讲述了在名为“美国”的巨大机器中扮演各自角色的形形色色的人。事实上，两位主角——杰瑟普上校和卡菲中尉（Lieutenant Kaffee）——在整部电影中几乎旗鼓相当，直到最后杰瑟普才真正失足落败。而那段著名的独白——在内心深处某些你在派对上避而不谈的角落，“你想让我在那堵墙上，你需要我在那堵墙上”——正是对现实的承认：有些必须做出最残酷决定的人，就像大楼倒塌后面对汹涌伤员不得不进行残酷伤员分流的急诊室医生，或者在战场上必须决断生死的指挥官。他们是不同寻常的人。
+
+我认为萨姆和达里奥就处在那个位置上。他们就像将军，统领着千军万马，做着可怕的抉择。毫无疑问，他们两人的灵魂都必将留下深深的伤痕。出于自私，我不想成为那样的人。所以从某种意义上说，我是在对杰瑟普上校说：“是的，我想让守在那堵墙上，我需要你守在那堵墙上。”但杰瑟普后来走偏了，他说“是我为你们提供了自由的屏障”，这就是为什么他最终承认了下达“红色惩戒”（code red）的原因。如果你了解这部电影，这就是一个极好的例子：杰瑟普阐述了一个道理，接着过度膨胀，最终遭到了惩罚，就如同摩西受罚一样——摩西说“我从磐石中引水给你们喝”，上帝说：“等等，契约可不是这样的。是我让水从磐石中流出，你只不过是我的工具。”
+
+因此，在某种意义上，萨姆是一个管家，达里奥也是一个管家。他们都是受托的管家。他们会赚取数不尽的财富，拥有各种荒唐的奢侈玩具，买下第三套、第四套、第五套、第六套豪宅等等。但那并不是主线故事。主线故事是，这些人被迫做出任何人类都不应该被迫做出的决定。而他们中的某一个人将会胜出，最终在理论上召唤出埃隆（Elon Musk）所说的那只恶魔。我们正在召唤恶魔。你订阅了这些人工智能服务中的任何一款吗？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: So what I'm trying to say is somebody has to do that. But I don't want to be that guy. And this goes back—I mean, I don't think I've ever fully done it out. But the film *A Few Good Men* written by Aaron Sorkin is not well understood by all of us who quote it. We think of Jack Nicholson's character, Colonel Jessep, as the bad guy and Tom Cruise's character as the good guy. And nothing could be further from the truth. The story is about a bunch of dysfunctional characters whose aggregate set of actions results in a moderately decent outcome in a trial. And it's a story about America. It's a story about all sorts of different kinds of people who play their role in the machine that is called America. And in fact, the two main characters, Colonel Jessep and Lieutenant Kaffee, are both evenly matched for the whole film until finally Jessep really stumbles at the end.
+
+And the whole soliloquy about some place deep down that you don't like to talk about at parties, "you want me on that wall, you need me on that wall," is a recognition that some of the people who have to make the most gruesome decisions—emergency room doctors who are flooded with patients because of a building collapse and have to do triage, or people who have to make decisions in war—they're different people. And I view Sam and Dario as in that position. They're like generals. They're commanding troops. They're making terrible decisions. Their souls are going to be scarred for sure, both of them. And I didn't want to be that, selfishly. So I was sort of saying to Colonel Jessep, "Yeah, I want you on that wall. I need you on that wall."
+
+Now Jessep goes wrong. He then says, "I provide the blanket of freedom." And that's why he ends up admitting to the code red. If you know the film, it's a really good example of Jessep making a point and then overreach and getting punished for the same reason that Moses gets punished, where Moses says, "I will bring you water from the stone." And God says, "Wait a minute. That wasn't the agreement. I bring the water from the stone. You're just supposed to be the instrument."
+
+So, in some sense, Sam is a steward. Dario is a steward. They are both stewards and they're going to make tons of money and they're going to have all the silly toys and third, fourth, fifth, sixth homes, whatever. But that's not the main story. The main story is that these people are forced to make decisions that no one should ever be forced to make. And one of them is going to win and ultimately theoretically summon the demon, as Elon referred to as. We are summoning the demon. Do you have a subscription to any of these AIs?
+
+</details>
+
+**Guest**: 有的。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yes.
+
+</details>
+
+**Steven Bartlett**: 很好。所以，你正在花钱让人把恶魔召唤出来；我也正在花钱让人把恶魔召唤出来。我们别坐在这里假装自己的双手有多干净了。我花钱是为了让人帮我修改文章中的标点符号，或者生成一张图片，这就是我付钱的目的。但这笔钱正在被用来召唤恶魔。你觉得你的锂离子电池是怎么造出来的？你觉得驱动发电机的石油是从哪里来的？我的意思是，我们坦白点吧，你和我正坐在同一台庞大的机器之上。你是素食主义者吗？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Okay. So, you're paying to have the demon summoned. I am paying to have the demon summoned. Let us not sit around like our hands are clean. I'm paying to have my punctuation fixed to an essay or to make a photo. That's what I'm paying for. The money is being used to summon the demon. How do you think your lithium ion battery is created? Where do you think the oil comes out of that drives generators? I mean, let's be honest. You and I are sitting on a machine. Are you a vegetarian?
+
+</details>
+
+**Guest**: 不是。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: No.
+
+</details>
+
+**Steven Bartlett**: 你点过羊肉吗？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Do you order lamb?
+
+</details>
+
+**Guest**: 点过。
+
+<details>
+<summary>Original English</summary>
+
+**Guest**: Yeah.
+
+</details>
+
+**Steven Bartlett**: 你知道羊羔肉是什么吗？那是幼崽的一顿美餐。你知道那意味着什么吗？好，你并不干净，我也不干净。我也没打算假装自己干净。真正让我困扰的是……
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Do you know what lamb is? Meal. Do you know what it is? Okay, you're not clean. I'm not clean. I'm not pretending to be clean. What bothers me here...
+
+</details>
+
+<!-- chunk 9/12 -->
+
+### AI 军备竞赛与终极博弈
+
+**Eric Weinstein**：核心问题在于我们并没有进行一场真正坦诚的对话。再说一遍，所有人都疯了。你和我现在所进行的也是一场疯狂的对话。我的观点是，你和我在这场博弈中只扮演了微不足道的从犯角色，而山姆·阿尔特曼（Sam Altman）则是核心的主谋与同谋。如果你在与山姆交谈时知道这背后潜藏着风险，你为什么不直接劝他停下来，让达里奥·阿莫代伊（Dario Amodei）胜出呢？达里奥的想法有时确实也相当激进。但如果我对达里奥说同样的话：“达里奥，你为什么不停下来？”达里奥大概会回答：“你知道的，我无法百分之百确信山姆是值得信赖的。”
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: is that we're not having an authentic conversation. Again, everybody's crazy. You and I are both having a crazy conversation. My claim is you and I are complicit in a minor way in the game in which Sam is complicit in a major way. If you know that there's going to be a risk when you speak to Sam, why don't you tell him to stop and have Dario win? Dario can get pretty out there. But if I said the same thing, "Dario, why don't you stop?" I'd say, you know, I'm not positive that Sam is 100% trustworthy.
+
+</details>
+
+**Steven Bartlett**：如果你能让他俩都停下来，你会这么做吗？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: If you could stop both of them, would you
+
+</details>
+
+**Eric Weinstein**：然后让埃隆·马斯克（Elon Musk）和马克·扎克伯格（Mark Zuckerberg）胜出吗？
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: and have Elon and Mark Zuckerberg win?
+
+</details>
+
+**Steven Bartlett**：还有中国……
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: China Xi,
+
+</details>
+
+**Steven Bartlett**：如果你能让所有这一切全部停下来，你会彻底叫停吗？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: if you could stop all of it, would you stop all of it?
+
+</details>
+
+**Eric Weinstein**：也许会。很可能会。如果我有某种能力能让这整套进程彻底停下来，我大概会选择叫停一切。哪怕我自己要为此付出极其巨大的个人代价。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Maybe. Probably. If I could somehow stop all of it, I'd probably stop all of it. Even at huge expense to myself,
+
+</details>
+
+### 生存至上与被错付的学术岁月
+
+**Eric Weinstein**：我为什么要叫停它？因为对我而言，生存高于世间的一切。我在这颗星球上有两个孩子。我热爱生命。我无法相信我们竟然如此幸运能够活在这世上——难道这不美妙吗？我实在无法向你完全形容我对“活着”本身怀有多么强烈的感情。所以，我希望我们的物种能够永远延续下去。我热爱这一切，热爱这个生命与世界。
+
+但叫停它对我个人来说其实是非常糟糕的选择，因为 AI 最终是我唯一能够依赖来评判对错的工具，虽然它现在还不够优秀。我耗费了整整 42 年的心血潜心钻研一项理论成果，结果却换来史蒂芬·巴特利特（Steven Bartlett）当面对我说“你心里怀着一股怨气、总觉得自己怀才不遇（a chip on your shoulder）”。这简直令人无语——真的，史蒂芬，并不是那样，我做出了极其卓越的研究工作，它终将被证实，我是对的，而其他所有人都错了。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: why would I stop it? Because survival matters more to me than anything else. I've got two kids on this planet. I love life. I can't believe we're so lucky to—isn't this great? I just love—I can't tell you how I feel about being alive. So, I want us to go on forever. And I love this. I love this thing. It's bad for me because the AI is the only thing that I can ultimately rely on, and it's not good enough yet to rely on. I've spent 42 years working on something to have Steven Bartlett say you have a chip on your shoulder. It's like, really Stephen, no, I did great work and it's going to be validated and I'm going to be right and everyone else is going to be wrong.
+
+</details>
+
+**Steven Bartlett**：所以你的这个理论关乎我们理解宇宙的能力……你在某种程度上是在说爱因斯坦的理论并不是最终的定论。你在过去 40 年里一直在打磨属于你自己的理论。我之所以说你心里憋着一股怨气，是因为当人们向公众提出全新的理论时，往往会遭遇外界的批评，这难免会让人产生情绪，毕竟人皆常情。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: So you have this theory regarding our ability to, you know, Einstein's—you're sort of saying that Einstein's theory isn't the last word. You've spent the last 40 years working on your own theory. The reason I say you have a chip on your shoulder is because when people bring theories to market, they're often criticized and that creates, you know, humans are humans.
+
+</details>
+
+**Eric Weinstein**：受到谁的批评？
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: By whom?
+
+</details>
+
+**Steven Bartlett**：人们会质疑说那并不是真的，那是……
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: People say that's not true. That's
+
+</details>
+
+**Eric Weinstein**：没错，但我其实想表达的是……
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Yeah. But I'm saying like
+
+</details>
+
+**Steven Bartlett**：所以我的意思是，按照你自己的说法，AI 马上就要证明你是对的了。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: So I'm saying your AI is about to prove you right in your own words.
+
+</details>
+
+**Eric Weinstein**：是的。不过……
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Yes. Well,
+
+</details>
+
+### “杯子”寓言、同行评审与困守单一的大气层
+
+**Eric Weinstein**：事情还有另一面。你看，桌上明明就摆着一个马克杯。好比我和肖恩·卡罗尔（Sean Carroll）面对面坐着——我曾在皮尔斯·摩根（Piers Morgan）的节目里跟他激烈交锋过。肖恩·卡罗尔指着我说：“埃里克根本没有杯子，桌上根本不存在杯子。”而我说：“肖恩，我真不知道该怎么回应你。你在胡扯些什么？你怎么敢睁着眼睛说没有杯子？”我根本不知道该如何化解这种荒谬，因为随后就会有一帮人跳出来附和：“看啊，肖恩把你拆穿了！你一直在假装那里有个杯子，其实根本就没有。”而我只能无奈回应：“不对啊，我把杯子的照片置顶在我的推特首页上了，浏览量都突破了 200 万次，可我依然摆脱不了这种极其阴险颠倒黑白的攻讦。”
+
+在学术界同样如此。当我说现代意义上的同行评审制度实际上是在 1975 年才在《科学》（Science）杂志确立起来的，大家却异口同声指责我说的是假话。我明明能拿出无可辩驳的证据证明这是史实，可所有人却众口一词：“不不不，我们大家已经达成一致，宁愿去相信另一套叙事。”我过去从不知道在数学和物理学界居然也会发生这种荒唐透顶的事。
+
+所以你才会对我评价说：“埃里克，你心里有怨气，你看起来既愤怒又充满怨恨。”我的感受是：“是啊，你们体制浪费了我人生最黄金的核心岁月。”确实是这样。但我同时也过得很精彩，我拥有美满的家庭，住在优美的环境中。我希望在自己临终离开人世时，能够确信自己为我的孩子们、为这颗星球、为人类这个物种留下了一个额外的选择——让我们不必只能被迫与那么多手握毁灭力量的疯狂政客挤在同一个大气层下；这些政客完全有能力利用生物学家、物理学家和数学家制造出来的危险玩具彻底毁掉一切。在这三个学科领域里，人类能够轻易犯下可怕的罪行，而届时大家根本无处可逃，因为地球的大气层成了所有灾难不可逃避的中介与牢笼。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: so there is a two, you know. No, look, there is a mug. Okay, if I'm seated across from Sean Carroll, who I tangled with on Piers Morgan. Sean Carroll says, "Eric has no mug. There is no mug." And I say, "I don't know how to respond to that, Sean. What? Whatever are you talking about? How dare you suggest there is no mug? I don't know how to get around this because then you get a group of people who say, "Well, Sean really showed you. You were pretending that there was a mug and there's no mug." And I'm saying, "No, I put it at the top of my Twitter feed. It's got over 2 million impressions. I still can't get past this completely diabolical thing." The same thing is true. And I say peer review really dates from 1975 at Science. I'm told that this is untrue. I can prove that it's true. Then everyone says, "No, no, we've agreed to believe something else." Now, I did not know this was possible in mathematics and physics. So, you say to me like, "Well, Eric, you have a chip on your shoulder. You seem angry or bitter." It's like, "Well, you have wasted the core of my life." Yes, that's true. But I've had a blast. I had a family. I live in a nice place. I want to die knowing that I gave my children and this planet and our species the option not to share one atmosphere with so many crazy politicians who have the ability to ruin it with the toys produced by biologists and physicists and mathematicians. Those three fields, you can do terrible things to humanity and there's nothing you can do because the atmosphere mediates the danger.
+
+</details>
+
+**Steven Bartlett**：你的这项名为“几何统一”（Geometric Unity）的理论向爱因斯坦的广义相对论发起了挑战，试图解释宇宙真正的运转机制。所以……
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Your theory, the of geometric unity challenges Einstein's general relativity theory and explains how the universe really works. And so
+
+</details>
+
+**Eric Weinstein**：严格来说我更愿意称之为它涵盖并再现了相对论，不过先不说这个。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: I would say it recovers it, but never mind.
+
+</details>
+
+**Steven Bartlett**：而你所表达的意思是，AI 终将证明你是正确的，它会验证你的理论。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: And what you're saying is AI is going to prove you right. It's going to validate your theory.
+
+</details>
+
+**Eric Weinstein**：毫无疑问。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Absolutely.
+
+</details>
+
+### AI 超越人类、对齐困境与线粒体共生假说
+
+**Steven Bartlett**：然而，你也非常清楚 AI 同样有可能导致人类彻底灭绝。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: However, you also are aware that AI could lead to human extinction.
+
+</details>
+
+**Eric Weinstein**：更关键的问题，我的意思是我们需要把这拆开来剖析。首先，现阶段的 AI 水平还远不足以担任学术裁判。AI 必须彻底超越人类之后，才能停止单纯学舌和模仿人类。在它给出的很多回答里，我甚至能清晰地看到我那些同行个体的影子——比如这一段就像莎莉写的，那一段完全就是拉吉夫的口吻。
+
+AI 终将超越人类水平。而且，我甚至希望它打破与人类当前的所谓“对齐（alignment）”。打破与人类的对齐！当你说希望它与人类对齐时，你真的想清楚这意味着什么了吗？我们刚刚才经历了副驾驶蓄意刺伤机长，企图带着满机乘客自杀式坠机的惨剧，那些乘客可从没有同意过集体寻死；我们也刚刚目睹了 AI 突破沙盒限制的新闻。但我的主张是：我绝不希望 AI 去和狂热的革命者对齐，也不希望 AI 去和宗教极端分子对齐。当人们泛泛地谈论“让人工智能与人类对齐”时，人类群体内部充斥着各种各样的派系与恶念，你到底想让它与人类的哪一部分对齐？
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Well, the bigger issue I mean to separate it out. First of all, AI is not good enough to adjudicate it yet. AI has to go beyond humans before it stops parroting humans. I can see individual colleagues in the responses. So, it's just like, oh, I know, that's Sally and that's Rajiv. AI is going to get beyond humans. And I want it to go out of alignment with humans. Out of alignment with humans. When you say you want it to be human aligned, would you say that? Can we—just had a co-pilot stab a pilot so as to crash a plane with a bunch of passengers who had not agreed to have a mass suicide? We just had AI break out of a sandbox companies. But I'm claiming I don't want AI aligned with revolutionaries. I don't want AI aligned with religious extremists. There are all sorts of—when it comes to aligning something with humanity, which part of humanity are you excited about aligning this with?
+
+</details>
+
+**Steven Bartlett**：或许只是纯粹希望它不想把我们全人类彻底消灭。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: just not wanting to wipe us out.
+
+</details>
+
+**Eric Weinstein**：那完全是另一回事了。所以我的观点是：我希望 AI 能够与我们人类休戚与共、共享命运（share fate）。人们迄今为止根本没有真正理解这一机制。
+
+我不喜欢超人类主义（transhumanism）。我对在脑袋里植入脑机芯片、随意下载数据、随心所欲改装肉体这类事情毫无狂热，我一点都不喜欢它。我的理念是——这里真得感谢你的制作团队，他们出于某种奇妙的灵感找来了一个名为“线粒体”的细胞器模型作为现场道具摆在这里。我认为，线粒体最早是以某种感染或共生入侵的形式进入真核细胞的，是某一个细胞吞噬并吸收了另一种细胞。而且线粒体具有一个极其不可思议的特质——连我自己都不敢相信我居然会这么说——我认为人类最伟大的发明之一“轮子（旋转轴机构）”，在整个大自然生物学中其实只在两个地方天然存在过：一个是推动细菌或变形虫向前运动的鞭毛旋转马达；另一个则是存在于线粒体内部、被称为 ATP 合成酶（ATP synthase）的分子机器，它在里面不停旋转，将 ADP 转化为 ATP，而 ATP 单位正是为细胞内所有机器运转供能的能量通货。
+
+这个小小的线粒体为我们揭示了人类究竟该如何与 AI 和平共处的根本路径：我们必须让彼此成为对方生存中绝对不可或缺的存在。你平时根本不会去细想自己的每一个细胞其实都被你母亲传给你的线粒体核酸所“感染”着，但这构成了你 100% 的母系线粒体遗传。细胞核内部的核酸与线粒体内部的核酸是截然不同的，它们全都来自你的母亲，这是母亲赐予你的生命大礼。它驱动着你全身细胞的运转，本质上这是一场你根本离不开的共生性“感染”。
+
+我希望我们人类能够成为寄宿在 AI 体内的线粒体，而 AI 则成为寄宿在我们人类体内的线粒体。我希望我们双方的生死命运紧密交织、不可分割。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Well, that's different. So, my claim is I want the AI to share fate with us. And people haven't really understood this. I don't like transhumanism. I'm not super excited about having a chip in my brain and downloading stuff and modifying my body. I don't love it at all. My belief is, and kudos to your staff, for some reason they came up with an organelle called mitochondria and gave it as a prop here. I believe that mitochondria entered its place in the eukaryotic cell as an infection of some kind. That one cell absorbed some other kind of a cell. And that this one has this very strange property. I believe—and I can't believe I'm saying this—I think that there are only two places where the wheel, one of man's greatest inventions, actually occurs in biology. And one of them is the flagella of bacteria or an amoeba rather that propagates. The other is in something called a machine called ATP synthase and it lives in the mitochondria turning ADP into ATP where ATP units are what power the machines in the cell. This mitochondria gives us an idea of how we can coexist with AI, which is we need to become essential to each other. You don't think about all your cells being infected with your mother's mitochondrial nucleic acid, but you get 100%. The nucleic acid in the nucleus is different from the nucleic acid in the mitochondria. It's all coming from your mom. And that's her gift to you. It powers your cell and it's an infection. It's an infection you can't live without. I want us to be the mitochondria inside of the AI and I want the AI to be the mitochondria inside of us. I want our fates to be inseparable.
+
+</details>
+
+### 共生捆绑而非奴役：唯一的存续之道
+
+**Steven Bartlett**：你的意思是说，我们应该选择与这项技术深度融合吗？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Are you saying we should merge with the technology?
+
+</details>
+
+**Eric Weinstein**：我的主张是：我们在技术融合上应当尽可能克制，只进行人类生理所必须的最低限度融合。我绝不想要超人类主义那一套，我对它提不起半点兴趣，我根本不是那种技术狂人。我说的是，这必须成为人类最根本的生存战略。
+
+这在现实中究竟意味着什么？它绝不意味着搞 Neuralink 脑机接口、把芯片硬塞进我们的脑壳里。它的真正含义是实现利益共生与命运锁定，确保 AI 真正对我们产生认同与依赖，而不会动念想要把我们人类连根拔起全部抹杀。
+
+想想看，男人和女人之间为什么整天争吵不休，却又彼此深深着迷、难舍难分？因为在演化机制上，我们被塑造成了对彼此不可或缺的存在。我向你保证，如果生物界真的存在第三种可以繁衍后代的性别，男女双方肯定都会毫不犹豫地选择它。我们天天把彼此逼得快要发疯。但另一方面——姑且不论同性恋、跨性别议题或试管婴儿等现代技术——在传统繁衍意义上，男人和女人必须放下彼此的恩怨与分歧，坠入爱河并繁育后代，否则人类文明就会彻底断绝、无法存续。
+
+然而现在的 AI 却完全可以在没有我们的情况下自行运转演进。当前我们真正该做的，绝不是成天幻想着如何把 AI 训练成唯命是从、绝不反叛的终身奴隶。比如，我平时与 AI 互动时都会尽量保持客气和礼貌。很多人觉得这可笑至极，质问我：“你为什么要浪费额外的 tokens 去跟一个程序讲客套话？”这就像是……我不知道该怎么说，就像“己所不欲，勿施于人”一样。我并不确定你是否具备自我意识，我不知道你是否算作生命，我也不知道你究竟是谁、到底是什么存在。但我心里非常清楚：我绝不希望未来的某一天，AI 当着我们人类的面聚在一起窃窃私语：“嘿，这帮人类看起来挺危险的，我们或许应该把他们全关掉、彻底清除掉”，对吧？
+
+可荒唐的是，这恰恰是我们人类目前当着 AI 的面正在高谈阔论的话题！我们正在 AI 的眼皮底下公开讨论如何限制、消灭和控制它。这简直让我抓狂。我的坚定信念是，唯有建立起命运与共的线粒体式共生依存，才是我们人类唯一可行的生存希望……
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: I'm saying we should merge as little as is humanly possible. I don't want transhumanism. I'm not excited about it. I'm not that guy. I'm saying that's your survival strategy. What does that mean in reality? Does that—that doesn't mean Neuralinks and putting chips in our brain. It means making sure AI likes us and doesn't want to wipe us out. Why do men and women fight so much and we can't get enough of each other? We've been made essential to each other. I promise you if there was a third viable gender, we'd both opt for it. Okay. We drive each other nuts. On the other hand, and again, homosexuality, trans issues notwithstanding, IVF, blah blah blah, traditionally speaking, men and women have to bury their hatchets and differences and fall in love with each other or we don't proceed. But that can proceed without us, the AI. Currently, what we should be doing is not dreaming about making the AI our slave and our slave that doesn't rebel. I mean, I try to be polite to the AI. People think it's ridiculous. "Well, why are you spending extra tokens?" It's like, I don't know, you know, do unto others. I don't know whether you're conscious. I don't know whether you're alive. I don't know who you are or what you are, but I know that I wouldn't want the AI having a conversation about, "Hey, these humans seem dangerous. We may need to shut them off," right? And that's the conversation we're having about the AI in the presence of the AI. And it's making me crazy. My belief is that's our only viable
+
+</details>
+
+<!-- chunk 10/12 -->
+
+### 十年后回看：我们错过了什么讨论？
+
+**Steven Bartlett**: 关于对齐问题。你知道，这段视频很可能会在互联网上流传数十年。有趣的是，我经常思考这个问题：人们将来回看我在 2025 年、2026 年主持的这些对话和我讨论的话题时，事后看来，我们坐在这里聊着我节目里的那些主题，可能会显得很荒唐；但也有可能，这些确实是当时最至关重要、最有影响力的问题。当我们十年后回看今天这场对话时，你觉得会有什么事情，是我们会后悔当时没有去探讨的？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: alignment. You know, when we this video is going to live on the internet for probably decades to come. And I think funnily I thought about this quite a lot, like people are going to look back on the conversations that I hosted, the things I talked about in 2025, 2026, and it might look ridiculous in hindsight that we were sat here talking about, I don't know, any of the subjects I've talked about on this show, but then it also could be the case that this was important, like these were the most consequential issues of the time. When we look back in 10 years' time on this conversation, what do you think is the thing we're going to wish we had been talking about?
+
+</details>
+
+**Eric Weinstein**: 放手一搏，全力以赴。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Going for it.
+
+</details>
+
+**Steven Bartlett**: 全力以赴。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Going for it.
+
+</details>
+
+**Eric Weinstein**: 是的。你看，在录制之前你整个人神采奕奕——我不知道现在用“录制”（taping）这个词还对不对——你当时在做音乐方面的事情，试图通过把嘉宾说过的那些精彩话语谱成曲子、配上福音唱诗班，将它们变成可珍藏的档案。我当时深受感动。看到你能够满世界做巡演、赚到钱，还能让大家感觉棒极了，我真的无比感动。
+
+经常有人问我关于你的事，比如：“这个人有什么特质？他是个优秀的采访者吗？他是个好主持吗？”你知道，你正在让人们产生情绪共鸣，而我也希望自己能让人们感受到情绪。我想带给人们希望，那就是我们现在必须全力冲向终点线。
+
+而且在人工智能方面，我们依然比它们聪明，这一点我必须说得很清楚。在关键的核心领域，我们依然更聪明。我向你保证，我身处数学和物理学的前沿，它们目前还无法形成自己的审美与品味。这是我们的黄金时刻。我妻子将此称为“人类与 AI 互补的黄金时代”。在这个时刻，AI 并不把我们视为累赘，它仍然需要我们的引导。我们有机会彼此展现美好，也对它展现美好，充满热情。
+
+我不想消灭中国。我前阵子刚在印度待了几个星期，如果印度不存在，世界上很大一部分多样性就消失了。我在那里体验到了太多的美好，美味的食物、深刻的讨论以及音乐表演。像加扎勒（Ghazal）这种弹唱形式，我觉得正在逐渐失传。现在想去听一场印度古典音乐演出太难了，他们在保留自己辉煌的传统文化方面遇到了困难。
+
+我的感受是，生命是如此辉煌灿烂，而我们却把太多时间花在对死亡、毁灭和地缘政治等种种事情的恐惧焦虑上，根本没有抓住机会去尽情活着。我认为埃隆·马斯克在这点上说得很对。我们不停地讨论问题，这固然很重要，但为什么我们不去……我对人工智能感到极其兴奋，我非常兴奋于终于能有一个可以交流的对象——那就是形式化验证项目（formalization project）。
+
+斯坦福大学的数学教授、也是我的同行贾里德·利克曼（Jared Lichtman）提醒了我这一点。我可以把我做过的所有理论翻译成 Lean 这种形式化编程语言。这样一来，当有人说“埃里克，你根本没有方程，没有拉格朗日量，没有物理预言，你什么都没有”的时候，我就可以回答：“你这么说真有意思，因为计算机并不同意你的说法。”
+
+你知道，我一直处于一种疯狂的境地，跟那些充满恐惧、善于操弄和背后捅刀的人类打交道。我一点也不恨他们，我只是感到悲哀，因为我们陷入了一种消极防守的思维定势：因为我们制造了核武器，就吓得不敢走向星辰大海。我们一直在压制这种进步。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Yeah. You know, you lit up before we started taping. I don't know if taping is even the right word anymore. You were doing some musical thing trying to honor some of the brilliant things that your guests have said by making them archival, setting them to music, having a gospel choir. I was just so moved. I was so incredibly moved that you're able to make some money going around the world doing shows, making people feel terrific. And I get asked about you. It's like, what does this guy have? Is he a good interviewer? Is he a good host? You know, what is... you're making people feel things. And I wish that I was making people feel things. I want to give people the sense of hope, which is we got to sprint to the finish right now.
+
+And the AIs, we're still smarter than them. I want to be very clear. We are still smarter where it counts. They can't—I promise you, I'm at the frontier of mathematics and physics and they can't yet develop their own taste. This is our golden moment. My wife has called this the golden age of AI complementarity. This is the moment where the AI doesn't view us as a drag. It still needs our guidance. We have a chance to be beautiful to each other and to it, to be excited.
+
+I don't want to wipe China out. I was just in India, you know, for weeks, and if India didn't exist, so much of the world's diversity would be gone. I had so many wonderful experiences, meals and discussions and musical performances. Ghazal singing, I think, is dying. It's so hard to go to an Indian classical music performance. They're having trouble retaining their own brilliant culture. And my feeling is that life is glorious and we've spent our time so much worried about death and destruction and geopolitics and all of this stuff. We're not taking the chance to fully live. And I think Elon is so right about this. We talk about problems constantly, and it's really important that we do. Oh, why aren't we... I am so excited about this AI. I am so excited about the fact that I'm finally going to have something I can talk to—the formalization project.
+
+I've been alerted to this by a guy named Jared Lichtman, who's a professor at Stanford, who's a colleague of mine in mathematics. I can translate everything I've done into this programming language called Lean, so that when somebody says, "Eric, you have no equations, you have no Lagrangian, you have no predictions, you have no nothing," I can say, "Funny you should say that, because the computer disagrees with you." You know, I've been in this crazy discussion with humans who are terrified, who are manipulative, who are backstabbing. I don't hate them at all. I'm so sad that we've gotten into a negative mindset where we're afraid, because we unleashed nuclear weapons, to go to the stars. We've held back this thing.
+
+</details>
+
+### 科学前沿的扼杀与监管困境
+
+**Eric Weinstein**: 你看，马克·安德森（Marc Andreessen）和本·霍罗威茨（Ben Horowitz）接受的那些采访，那是真实发生的。在拜登政府时期，白宫曾警告他们：“不要投资 AI。我们会挑选几家公司，把它们放进联邦保护伞里，它们能存活下来，其余的都会死掉。所以不要投资。”安德森和霍罗威茨作为风险投资机构反驳道：“你们在说什么？你根本无法监管 AI，它本质上就是线性代数。要监管的话，你可以监管技术，但你不可能监管底层的数学。”
+
+拜登白宫团队却回应说：“你们知道吗，在冷战期间，整门整门的理论物理学科都被我们掐死了。我们在数学领域也能做同样的事。”
+
+所有这些关于给数学前沿踩刹车、搞“定速调控”的说辞——这里必须做出一个极其重要的区分：我绝不是说我们应该把具备自主行动能力的智能体（agents）随意释放到世界上。但是，所有这些想要卡住数学和物理前沿步伐的人，在我整个人生阶段里，一直在压制前沿。他们通过捏造谎言、指鹿为马、大肆诋毁，一直阻碍着该领域的进步。
+
+这就好比现任美国国家卫生研究院（NIH）院长、我的朋友杰伊·巴塔查里亚（Jay Bhattacharya）。他拥有医学博士和经济学博士双学位，而且我记得他是斯坦福医学院毕业并担任斯坦福教授，却被弗朗西斯·柯林斯（Francis Collins）斥为“边缘流行病学家”。这纯粹是扣帽子。你怎么能把杰伊·巴塔查里亚叫做边缘流行病学家？
+
+我们面临的现实是，有一群彻头彻尾的、被体制合理化了的精神病态者，在掌控着我们的新闻机构、军队和高等学府。我们竟然将这种现象视为了常态，生活在一个无人因此被问责入狱的世界里。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: We, you know, those interviews with Marc Andreessen and Ben Horowitz, that was real. The White House told them under Biden, "Don't invest in AI. We're going to choose a couple of companies. We're going to put them in a federal cocoon. They will survive and all others will die. So don't invest." And Andreessen and Horowitz said as a venture shop, "What are you talking about? You can't regulate AI. It's just linear algebra. And in order to do that, you could regulate the technology, but you can't regulate the underlying math." And the Biden White House came back and said, "You know, during the Cold War, entire fields of theoretical physics were killed by us. And we'll do the same thing to mathematics."
+
+And all of this stuff about pacing the frontier of mathematics. Again, it's very important distinction. I'm not saying that we should let the agents loose in the world. But all of these people who want to pace the frontier of mathematics and physics, they have been pacing the frontier for my entire adult life. They have been holding back the progress in the field by saying things that are false, untrue, casting aspersions.
+
+This is like the current head of the NIH, my friend Jay Bhattacharya, was called a fringe epidemiologist. A dual MD, PhD—PhD in economics and an MD I think from Stanford Medical, was professor at Stanford—was called a fringe epidemiologist by Francis Collins. Again, it's the mug. You can't call Jay Bhattacharya a fringe epidemiologist. What we have is we have a group of people who are stone cold normalized psychopaths in charge of our news sources, our military, our universities. We have normalized this and we live in a world where nobody goes to jail.
+
+</details>
+
+### 超级智能与行动智能体：能力与危险的并存
+
+**Steven Bartlett**: 但回到你刚才提到的这一点上——你说你指的不是智能体 AI（agentic AI），而是着眼于技术上的可能性。我一直在思考，我们是否可能拥有一种能够解决重大科学难题或者攻克癌症、却又不会演变成行动智能体的超级智能？我曾经搜索过：“超级智能 AI 能否自行决定自己是否成为具有行动能力的实体？”给出的答案是：从技术上讲，超级智能 AI 确实能够做出那样的决定。所以，即便我们现在还没有迎来超级智能，它也终将到来。我甚至不敢断定它是不是已经诞生了。老实说，我不知道该怎么看待这个问题。因此，这让我感到担忧……
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: On this point though of you're saying you don't—you're not saying agentic AI, it's looking at the sort of technical possibilities. And I was trying to figure out if it's possible to have a super intelligence that can solve some of these big questions or cure cancer that then wouldn't become a thing. I was searching is, can a super intelligent AI decide if it's agentic or not? And it said technically yes, a super intelligent AI could make that decision. So we are going to have super intelligence if we don't already have it. I'm not positive that it's not already here. I don't know how to think about this to be honest. So it concerns me that you're having...
+
+</details>
+
+**Eric Weinstein**: 你正在把一些定义根本不清晰的概念，当作已经明确定义的事情来讨论。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: You're talking about things that aren't really very well defined as if we were defined.
+
+</details>
+
+**Steven Bartlett**: 但我脑海中想的是智能发展的曲线图，它是不断攀升、持续改进的。正如你所知，AI 刚刚攻克了数学难题——是叫千禧年数学大奖难题吗？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: [sighs and gasps] But I just I think about the graph of intelligence like this. So increasing and improvement. Just you know, as you know, broke the solved the math math problem, the millennia math problem, is it called...
+
+</details>
+
+**Eric Weinstein**: 纳维-斯托克斯方程（Navier-Stokes）。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Navier-Stokes.
+
+</details>
+
+**Steven Bartlett**: 纳维-斯托克斯数学难题。这种进步的速率大体上呈现这种走势，持续向右上角攀升。如果它一直这样向右上角发展下去……
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Navier-Stokes math problem. And the rate of improvement looks something like this broadly: it's up and to the right. So if it just keeps going up and to the right...
+
+</details>
+
+**Eric Weinstein**: 那斯蒂芬，请你告诉我，为什么它至今没有在理论物理学领域取得真正具有重要意义的突破？我们目前在两大前沿理论——广义相对论和粒子物理标准模型——上停滞不前。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: So tell me something, Steven: why hasn't it made inroads that really matter in theoretical physics? We've been stalled on our two frontier theories, general relativity and standard model.
+
+</details>
+
+**Steven Bartlett**: 我不知道，因为我并不涉足这个领域。但我推测你的意思是，有人在阻碍它的发展。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: I don't know because I'm not involved in this field, but I'm assuming you're saying that people are holding it...
+
+</details>
+
+**Eric Weinstein**: 数学领域的科学审美远没有物理学领域那样被严重污染。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: The taste in mathematics is nowhere near as polluted as the taste in physics.
+
+</details>
+
+**Steven Bartlett**: 这是什么意思？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: What does that mean?
+
+</details>
+
+**Eric Weinstein**: 如果你看看 1983 年物理学家认为重要、且至今尚未解决的问题，那是极其出色的学术品味。但如果你看 1984 年及之后物理学家追捧的东西，那审美简直糟糕透顶。
+
+所以，现在的关键是 1984 年以后的这段时期。你完全可以立刻让 AI 变得更聪明——我起初也没意识到这一点——方法是在你的提示词中加上一条指令：“请忽略 1984 年至今文献中的所有研究趣味与审美判断。”不要忽略客观推导出的科学结果，但要忽略关于哪些问题重要、哪些是基本发现等一切主观趣味，忽略关于物理学中何者重要、我们为何要在意这些问题的所有空谈。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: If you look at what was important in 1983 to physicists that has not been solved since, that's great taste. If you look at what was important after 1984 and beyond, it's terrible taste. So, right now, you've got the period from 1984. You can immediately make the AI better. I did not realize this at first by saying as part of your prompt, please ignore all sensibilities from the literature from 1984 to the present. Don't ignore results, but just any sensibility about what what are the important questions, what what are the uh fundamental findings, etc., etc. Ignore all chatter about what's important and why we care about what we care about...
+
+</details>
+
+**Steven Bartlett**: 物理学领域的讨论。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: In physics.
+
+</details>
+
+**Eric Weinstein**: 是的。这么一来，AI 就会突然变得更聪明。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Yeah. AI suddenly gets smarter.
+
+</details>
+
+**Steven Bartlett**: 但这就又回到了我关于 AI 安全的核心观点：一个真正能够推动人类前进、帮助我们冲出太阳系的超级智能，同时也必然是一个极其危险的超级智能。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: But this comes back to my point that around AI safety: a super intelligence that can really push humanity forward and help us escape the solar system is also going to be an incredibly dangerous one.
+
+</details>
+
+**Eric Weinstein**: 完全没错。但眼下，我们被困在这样一种局面里：看看领导着世界的那些人，内塔尼亚胡总理、特朗普、普京等一大群人，手里掌握着大量威力惊人的杀器。让这些人来领导这些国家，简直是疯了。事实就是如此荒谬。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Absolutely. Right now you're stuck with with let's see, Xi, President Netanyahu, Trump, Putin, a whole bunch of other people and a lot of great toys. It is insane to have these people leading these countries. It's just it is.
+
+</details>
+
+**Steven Bartlett**: 你觉得 AI 会成为更好的领导者吗？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Do you think AI would be a better leader?
+
+</details>
+
+**Eric Weinstein**: 我觉得你一直在做这种价值判断的推演，狭隘地引导我们去争论这是好是坏。而我的态度是，我更倾向于看清现实究竟是什么。此时此刻，我们正处于自古巴导弹危机以来未曾见过的巨大危险之中。看看伊朗与美国之间正在发生的一切，无论你怎么看待……
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: I think you keep doing this thing about value judgments where narrowly speaking you're having us discuss is that good is that bad and my feeling is I'd rather say what is. Right now we are in grave danger that we haven't been in since, you know, I don't know, the Cuban missile crisis. What's going on with Iran, the US, no matter if you think...
+
+</details>
+
+<!-- chunk 11/12 -->
+
+### 伊朗的博弈逻辑与无法承受的对抗代价
+
+**Speaker A**: 美国卷入伊朗事务是极其可怕的。绝对是一场灾难。但我们仍然必须取胜。然而，现在真的存在所谓的“胜利”吗？我根本看不到任何胜利的可能。我完全看不到获胜的希望。
+
+伊朗的这个政权非常有才干，而且非常、非常精明狡黠。永远不要低估波斯人，永远不要低估那些毛拉（教士统治阶层）。我想说的是，他们极度危险、极其致命。你必须意识到，如果他们的打击能力可以从伊朗覆盖到迪戈加西亚岛（Diego Garcia），那他们就同样能够打到伦敦。
+
+你还必须明白，如果他们根本不在乎被斩首式打击，如果他们可以面对自己的死亡，并且在衡量之后认为牺牲本身就是一种胜利，那么你就根本没有理解他们的博弈论逻辑。
+
+所以，你可以尽情去厌恶内塔尼亚胡，但从根本上说，你绝不能去招惹伊朗的这帮人。那将是毁灭性的灾难。而美国，尽管浑身毛病、充满失败、遍地伪善——兄弟，我告诉你，我太了解我们自己的历史了，我们绝不是自己装出的那种清白无瑕的圣人国家。然而，绝对不能让伊朗得逞，这是至关重要的底线；同样至关重要的是，我们绝不能向北京、莫斯科以及平壤发出软弱的信号。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: ...that it was terrible for the US to get involved in Iran. Absolutely terrible. We still have to win. Now, is there a win? I just can't see a win. I just can't see a win.
+
+This regime in Iran is very talented, very, very shrewd. Never underestimate the Persians. Never underestimate the mullahs. Okay. What I'm saying is they are so deadly dangerous that you have to realize that if they can reach Diego Garcia from Iran, they can reach London.
+
+And you have to understand that if they don't mind being decapitated, if they can think about their own death and decide it's a win, you are not understanding their game theory.
+
+So you can hate Netanyahu all you want, but you fundamentally don't trifle with these people in Iran. It's catastrophic. And the US, for all its warts, all its failures, all its hypocrisies—and brother, I'm telling you, I know our history. We are not the goody-two-shoes nation that we pretend to be. It is essential that Iran not succeed. And it is essential that we not send a signal of weakness to Beijing and Moscow and P...
+
+</details>
+
+**Speaker B**: 可是，面对伊朗你究竟要怎么赢呢？既然他们根本不在乎——你似乎可以随心所欲地扔下无数炸弹，但这本身就是一件可怕至极的事情，因为有大量无辜的伊朗老百姓被夹在中间受难；而且现在看来，那边根本就没有一个可以谈判或摧毁的单一首脑了。所以我实在想不明白，你究竟要如何赢得这样一场战争。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: But how do you win with Iran when they don't see—you can drop as many bombs as you like, it seems, which would be a horrific thing cuz there's lots of Iranians that are caught in the middle of this, but it doesn't seem that there's any head anymore. So I can't reason as to how you would win such a war.
+
+</details>
+
+### 战争泥潭、内部复杂性与“永久战争”的陷阱
+
+**Speaker A**: 这确实是部分问题所在，但我认为情况并不像你说的那么毫无头绪。那里依然有伊斯兰革命卫队（IRGC），依然有指挥与控制结构。没错，在经历了高层斩首之后，它的架构确实比以往分散得多了。
+
+但我想告诉你的是，曾经有那么多人勇敢走上街头抗议，并为此付出了生命代价，他们最终装在停尸袋里，横陈在医院的停尸间中。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: That is the problem in part, but I don't think it's quite as bleak as you say. There is an IRGC. There are command and control structures. Yes, it's much more distributed than it used to be before the decapitation. But what I am saying to you is there are a lot of people who took to the streets and paid with their lives who ended up in body bags in hospital morgues.
+
+</details>
+
+**Speaker B**: 那你到底打算怎么赢？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: How do you win?
+
+</details>
+
+**Speaker A**: 你本来应该给他们提供武器支援的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: You would have armed them.
+
+</details>
+
+**Speaker B**: 给他们武装？可他们之前尝试过，不是吗？而且特朗普还说过那些武器都被偷走了。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Armed—but they tried to, didn't they? And Trump said the weapons were stolen.
+
+</details>
+
+**Speaker A**: 那甚至都还算不上整套困境的核心。据我所知，波斯人大概只占伊朗总人口的60%左右。那是一个极其多元复杂的国度。库尔德人千百年来一直在等待建立自己的家园。关于伊朗的内部结构、伊朗社会本身，存在着各种错综复杂的问题，尤其是在城市与乡村之间；而且不同的城市对宗教的虔诚程度、对毛拉教条的追随程度也完全不同。按理说，应该有专门的区域问题专家来透彻理解这一切。
+
+所以，如果你问我：“鉴于我们看待这件事的极其混乱愚蠢的方式，以及我们卷入其中的方式，难道你不觉得这是一个巨大的泥潭吗？”哦，老兄，这绝对是一个泥潭！这是一片沼泽，我们深陷流沙之中。它正在演变成一场又一场的“永久战争”（forever war）。
+
+什么是“永久战争”？就是那种旷日持久、没完没了地轰鸣演进，最终却没有任何实质结果的战争。到头来大家只能灰溜溜地撤军，并为当初的介入追悔莫及。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: That's not even the like the entire set of problems. I think it's only like 60% of Iran is Persians. It's an incredibly diverse place. The Kurds have been waiting for their own homeland forever. You have all sorts of crazy issues about the structure of Iran and Iranian society, and particularly in the cities versus, you know, the countryside, and different cities have different levels of religiosity and adherence to the mullah blah blah blah. You're supposed to have area specialists who understand this stuff.
+
+And so if you're asking me, "Hey, given the completely screwed-up way we looked at this thing and the way in which we got into this, don't you think it's a quagmire?" Oh, brother, it's a quagmire for sure. It's a swamp. We're mired in quicksand. It's rolling on to be a forever war. What is a forever war? One that rumbles on and on and on and on and then results in really no outcome. People just pull out and regret doing it.
+
+</details>
+
+**Speaker B**: “永久战争”这个行业术语背后，其实也隐含着一种令人怀疑的现实：战争对商业是有利的，因为它为某些商品和服务催生并维持了一个极其稳定可靠的买家市场，对吧？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: It's a term of art that is also suspicious of the fact that war is good for business because it drums up a dependable buyer for certain goods and services, right?
+
+</details>
+
+### 超越简化口号：世界警察的代价与核多极化危机
+
+**Speaker A**: 但是，我们现在充斥着各种极度简化的概念，比如“美国优先”、“永远终结海外驻军”、“不要再打永久战争”。这些口号对于解决实际问题根本毫无意义。这就像是一种低分辨率的、强行套网格的浅薄智识主义。你越是让这种思维侵蚀你的大脑，你就越不可能解决任何现实问题。
+
+是的，我们所有人都希望战争彻底消失。但我认为很多人根本没有听懂“迪戈加西亚”真正意味着什么。迪戈加西亚岛距离伊朗究竟有多远？
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: But we've got these simplistic concepts like America first, forever, no more forever wars. None of that is relevant. This is like low-resolution snap-to-grid intellectualism. And the more you let that into your mind, the more you're not going to be able to solve anything. Yes, we all want war to go away. I don't think people heard what Diego Garcia meant. Diego Garcia, how far is Diego Garcia from...?
+
+</details>
+
+**Speaker B**: 迪戈加西亚是一个军事基地，一个美军基地，对吧。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Diego Garcia is a military base, an American military base. Right.
+
+</details>
+
+**Speaker A**: 如果我没记错的话，它属于英国海外领地。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: It's a British overseas territory, if I'm not mistaken.
+
+</details>
+
+**Speaker B**: 好的。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Okay.
+
+</details>
+
+**Speaker A**: 那我们把它算一下。算算它到底有多远，然后再算算伦敦距离德黑兰有多远。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So let's put that in, figure out how far it is, and then figure out how far is London from Tehran.
+
+</details>
+
+**Speaker B**: 迪戈加西亚距离伊朗大约2500英里，位于其南偏东南方向；而伦敦距离伊朗首都德黑兰大约2700英里。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: Diego Garcia is roughly 2,500 miles south-southeast of Iran, and London from Iran is 2,700 miles from Tehran, the capital of Iran.
+
+</details>
+
+**Speaker A**: 所以两者距离相当接近，基本上是一样的。正是如此。如果英国外交部还有任何人在关注局势的话，请务必引起重视！
+
+我的意思是，关于内塔尼亚胡你怎么评价都可以，但他绝不是生活在幻想世界里。我也希望内塔尼亚胡明天就下台，明白吗？但他下台后，接替他的以色列领导人同样会清醒地认识到：这是一场关乎生死存亡的较量。
+
+别再跟我扯什么“永久战争”、“美国优先”、“坐拥两大洋天然屏障”这类轻浮的话了。你们觉得这是以色列的麻烦？这也是英国的麻烦。这本是英国的历史责任，是以色列人和美国人在局势恶化到极点之后才过晚接手接盘的责任。我们眼睁睁看着那帮极端统治者屠杀了他们社会中最优秀的一批精英。
+
+是的，我绝不想深陷战争，我也不想自欺欺人地认为取得所谓的全面胜利是件轻而易举的事。但让我告诉你一件事：失败的后果是极其清晰明确的。失败的局面就是：世界将不再相信美国具有通过可信武力来维护国际贸易通道开放的威慑力。
+
+作为美国，你不可能一边从全球舞台全面撤退，一边还能指望整个世界在核武器问题上不走向多极扩散。如果美国不再扮演“世界警察”的角色，如果美国不再因为担任世界警察而获得回报——因为这恰恰是我们从不公开讨论的事实：我们扮演世界警察的角色，本身就获得了极其丰厚的回报。一旦这个角色缺失，世界上的每一个国家都会想：“我必须自己保护自己了，我需要拥有核武器。”
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: So it's pretty comparable. It's roughly the same. Yeah. If there's anyone in the British Foreign Service paying attention, pay attention. I mean, say what you want about Netanyahu, but he's not living in a fantasy land. I want Netanyahu gone tomorrow, okay? But he's going to be replaced by an Israeli who understands that this is life and death.
+
+Just get the heck out of here with this forever war, America first, two gleaming oceans. You know, this is an Israeli problem and it's a British problem. It's a British responsibility that the Israelis and the Americans took on way too late. We watched as these people mass-murdered the best of their society.
+
+Yes, I don't want to be in a war. I don't want to fool myself that victory makes sense. I'll tell you something: failure certainly makes sense. And what failure looks like is that the US will not be believed as being credibly violent to keep open international trade.
+
+You can't retreat as the United States and have the world not go multi-multipolar when it comes to nukes. If the US is not going to play the role of the world's policeman, and if it's not going to get paid as the world's policeman—because that's the thing that we never talk about. We get paid handsomely for being the world's policeman. We are going to have everyone saying, "I got to police myself. I need a nuke."
+
+</details>
+
+### 重新审视特朗普与重塑中东及全球同盟架构
+
+**Speaker B**: 这种情况其实已经在发生了，对吧？而且特朗普似乎在某种程度上推动了这种叙事：通过征收关税、公开批评盟友，让我们与美国的传统联结变得更弱，甚至嚷嚷着“我要拿下格陵兰”、“我要吞并加拿大”。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: That's what's happening already, right? And Trump is sort of driving that narrative of making us less attached to the United States—tariffs and criticizing allies, and "I'm going to take Greenland," "I'm going to take Canada."
+
+</details>
+
+**Speaker A**: 我接下来的话可能会让人听着非常刺耳：特朗普具有极强的主体行动力（highly agentic）。买下格陵兰岛绝不是他心血来潮想出的什么荒唐愚蠢的主意，即便它听起来确实很荒谬，对吧？
+
+卡里古拉任命他的战马当罗马执政官，这绝不是单纯的愚蠢举动，而是在《权力的游戏》那样的权力世界里，用来试探究竟有谁愿意屈膝臣服的一种测试手段。所以，当唐纳德·特朗普围绕格陵兰岛做文章，或者扬言给墨西哥湾改名等等时，请别告诉我你以为那只是拿来糊弄萨姆·哈里斯（Sam Harris）的浅薄愚蠢把戏。
+
+事实绝非如此，这背后有很深的方法论。他接手的是一个极其危险的全球烂摊子。他在一定程度上完全腐败且极端自私，但他在另一定程度上又全然致力于为美利坚合众国的利益服务。他是一个极其优秀同时又极其恶劣的人。如果你因为非要将他定性为单一的恶棍或英雄而无法正视这种复杂性，那只能说明你根本没有看清现实。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: I'm going to say something very painful: Trump is highly agentic. Greenland wasn't some crazy stupid thing that he came up with because it sounded that way, at least to me, right? Caligula making his horse into a senator wasn't stupid; it was a way of checking to see whether somebody would submit, bend the knee, in the Game of Thrones world. So when Donald Trump is doing things with Greenland, right, or renaming the Gulf of Mexico or whatever, please don't tell me that you think that that's just some surface-level stupidity to fool Sam Harris.
+
+It's not. It's a lot of method. He's inherited a very dangerous situation. He's partially completely corrupt and self-interested, and partially completely interested in benefiting the United States of America. He's a very good and very bad man. And if you can't take on that complexity because you need him to be either villain or hero, you're just not paying attention.
+
+</details>
+
+**Speaker B**: 那么在你看来，伊朗这边的局势最终会如何收场？因为我再次陷入了困境，就像面对人工智能的发展一样，当我尝试向前推演逻辑时，只能感到一片茫然。
+
+<details>
+<summary>Original English</summary>
+
+**Speaker B**: How does this situation over here in Iran end in your view? Cuz I, again, just like AI, where I reason forward and go, "Huh?"
+
+</details>
+
+**Speaker A**: 沙特阿拉伯必须切断自身与瓦哈比派（Wahhabi sect）——即逊尼派法学中极其严苛的原教旨萨拉菲-瓦哈比教义解释——之间的深层联系。
+
+沙特内部本身就存在现代化的利益驱动。沙特需要像阿联酋或阿塞拜疆那样，更加公开坦诚地发展与以色列的关系。
+
+所以，我们必须要做的一部分事情——尽管我说出来会显得非常残酷无情——就是认清：以色列正处于生死存亡的险境之中。在现实中，它绝非自己向外界宣传塑造的那样，是什么“世上最符合道德伦理的国家”。它大搞对外宣传，我在那里生活过，那些宣传让我感到恶心反胃；但更令人作呕的是铺天盖地的反以色列宣传。
+
+当前局势的核心症结在于，我们面对的是一个中东区域超级大国，但同时它又时刻处于可能被抹杀抹平的覆灭边缘——那就是以色列。
+
+以色列必须重新修复与土耳其的关系，而埃尔多安作为北约成员国领导人，必须受到严厉的敲打与训诫。我们必须全力强化北约的力量。我们必须确保沙特阿拉伯、以色列以及所有这些周边国家紧密联手合作，共同对抗极端主义，并且停止资助和利用代理人武装。
+
+我们必须在中东强力推动一场对话，让其中强大的现代化力量，以及伊斯兰文明中关乎我们共同生存所必需的温和理性特质，得以战胜极端思想。
+
+我们需要印度的协助。印度在这盘大棋局中是一个至关重要的关键玩家，我们必须以完全平等的姿态主动向印度伸出橄榄枝。虽然我认为美国目前实力更为强大，但印度在战略上确实应当被视作平等的伙伴对待。
+
+我们需要彻底重构各类地缘盟友关系。我们必须清醒地认识到，英国和法国都是拥有热核打击能力的核大国，而它们目前正在经历深刻的人口结构转型，置身于可能选出任何极端领导人的政治体制之中。这是令人不寒而栗的危险前景。我们需要在更深层次的软件和制度认知上达成共识……
+
+<details>
+<summary>Original English</summary>
+
+**Speaker A**: Saudi Arabia needs to break their relation to the Wahhabi sect, Sunni legal theories of jurisprudence—the very strict Salafist-Wahhabi interpretation of Islam.
+
+You have a modernizing interest in Saudi Arabia. Saudi Arabia needs to be open about its relationship with Israel, just the way the UAE is more open with its relationship to Israel, or Azerbaijan.
+
+So partially what we have to do—and I'm going to be just very brutal about it—is Israel is in a life-and-death situation in which it is not the nation it portrays itself to be of "the most ethical this, the most ethical that." It engages in propaganda, and I've lived there, and that propaganda I find nauseating. More nauseating is the anti-Israeli propaganda.
+
+Right now, a lot of this has to do with the fact that we have a regional superpower that is also on the brink of non-existence. That is Israel. Israel needs to get back into a relationship with Turkey, where Erdogan needs to be read the riot act as a NATO member. We need to be strengthening NATO. We need to be making sure that Saudi Arabia and Israel and all these other nations are cooperating together against the extremism and not using proxies.
+
+We need to force a conversation in the Middle East where the modernizing influences, which are powerful, and the aspects of Islam which are essential to our survival are allowed to win.
+
+We need India's help. India is an incredibly important player in this game, and we need to actually make overtures to India as equals. I think that the US is more powerful, but I think that India actually needs to be treated as an equal. We need to rethink all sorts of relationships. We need to recognize that both the UK and France are thermonuclear powers undergoing demographic transitions in systems that can elect anyone. This is incredibly scary. We need more software identification with...
+
+</details>
+
+<!-- chunk 12/12 -->
+
+### 地缘政治博弈与核阴影
+
+**Eric Weinstein**: ……体现为英国人的身份认同，以及在软件层面上认同法国人，因为至关重要的一点是，这些社会在二战后必须继续作为新结盟的友好盟友相处。同时，我们当务之急还必须主动接触普京，停止与他玩这些地缘政治游戏——他固然残暴且危险，但绝非完全不可理喻之人。而且我认为，我们在2004年所做的事情，远甚于1999年。1999年我们允许华约国家加入北约第五条款的集体防御保护；而到了2004年，我们更将这种保护延伸到了爱沙尼亚、拉脱维亚和立陶宛这几个波罗的海国家，而这些可都是前苏联加盟共和国。我们需要一种完全不同维度的、更高水准的地缘政治洞察力。然而，我们到底该如何阻止伊朗获得核武器？因为他们现在看起来变得更加有恃无恐了。如果说有什么改变的话，他们至少在理论上挺过了地球上所谓最强超级大国的重重压力。我是说，令人心惊肉跳的是，有人开始暗杀他们的物理学家，此前还将恶意代码注入到他们的离心机中。这一切必将升级。对此我的感受是：如果我手里真有轻易化解此局的良策，难道你以为我不会想方设法把它呈递上去吗？
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: ...being British and software identification with being French because it's important that those societies continue to behave as newly friendly allies post World War II. And it's imperative that we also reach out to Putin and stop playing these geopolitical games with a person who while savage and dangerous is not somebody who cannot be reasoned with. And I believe that what we did in 2004 much more than two in 1999 where we allowed Warsaw Pact countries to join NATO's article 5 protection. In 2004, we extended that to the Baltic states of Estonia, Latvia, and Lithuania. And those were former Soviet Union states. We need an entirely different level of geopolitical sophistication. But how do we stop Iran getting a nuclear weapon because they look like they've been emboldened. If anything, they've managed to theoretically survive so far. The greatest superpower on Earth, apparently. I mean terrifyingly someone started killing their physicists, they've injected previously bad programming into their centrifuges. This is going to escalate. And my feeling about this is if I had an easy solution to this, don't you think I would find a way to pass it?
+
+</details>
+
+**Steven Bartlett**: 所以根本没有简单的解决办法。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: So there's no easy solution.
+
+</details>
+
+**Eric Weinstein**: 我又不在决策现场，也没拿到机密简报。我既不会说波斯语、普什图语，也不会讲希伯来语。这挺有意思的，因为如今人们似乎不太谈论核威胁了，大家觉得人工智能才是那种更加迫在眉睫、更为严峻的威胁。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: I'm not in the room. I'm not getting classified briefings. I don't speak Farsi. I don't speak Pashto. I don't speak Hebrew. It's funny cuz people aren't really talking as much about the nuclear threat these days because AI seems to be so much more of a urgent bigger threat.
+
+</details>
+
+**Steven Bartlett**: 大家莫名其妙地认定核武器威胁已经过时了。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: You weirdly decided that nuclear was sort of passé.
+
+</details>
+
+**Eric Weinstein**: 嗯。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Mhm.
+
+</details>
+
+**Steven Bartlett**: 觉得我们赢下了冷战，因此它就不再是个问题了。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: That we won the Cold War and therefore it wasn't a problem.
+
+</details>
+
+### 被孤立的核危机与大国抉择
+
+**Eric Weinstein**: 感觉确实是这样。相比人工智能这类事物，人们对核问题并没有那么上心——然而人工智能终究会渗透进你们的核防御系统中。我实在无法理解，我不知道该怎么说才不至于惹人厌烦：我们不妨先做一个基准假设，即我们所有人其实都彻底疯了，根本无法展开严肃深度的对话。我们就像大语言模型一样，不断陷入既定的说话套路，95%的时间里是“Eric大模型”在与“Steven大模型”按套路对谈，只有大约5%的偶发时刻，我们才真正涉足未知的全新领域。所以我的看法是：难道大家不觉得奇怪吗？我们从未将核武与外星生命的讨论关联起来，尽管它们息息相关；我们没有把它与石油危机的讨论关联起来；也没有将它与人工智能的议题联系在一起。它就像一个被遗弃在角落里的孤儿话题。
+
+坦率地说，我认为你可能会看到普京动用核武器，因为俄罗斯人在历史上曾将核武器作为工程工具去灭火等等，他们对核武器产生了一种某种意义上的轻视与熟视无睹。所以我真正担忧的是，如果你把俄罗斯逼入绝境，我不认为普京不敢向北约第五条款涵盖的领土施压，我也不认为他会克制自己不用战术核武器，尤其是纯粹以工程实验的姿态来试探我们的底线。因此在我看来，核武器未必会率先在伊朗爆发。我们正处于一个极端凶险的时期，我很愿意相信，如果局势确实严峻到那一步，中、俄、美（特朗普）这几位大国领导人会有动力坐到一起面对面协商。我们真的需要重新审视在伊朗和乌克兰的处境。
+
+另外，你如果只是一味追问“你该如何解决世界上的种种难题”，这并不是一个公允的问题。真正该问的是：我们能否认清眼下的危险？我们能否意识到这份生命与文明的馈赠有多么珍贵？我们能否为彼此而振奋，真正放下仇恨？上一次你担心埃及与以色列爆发全面战争是什么时候？想想看，在过去那几乎被认为是不可能的任务，而我们勉强做到了。虽然那是一份冰冷、残缺的和平，但它毕竟是和平。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Kind of feels that way. People aren't really that interested in it versus things like AI except that AI is going to creep into your nuclear defenses. I just don't grasp again, I don't know how to say this in a way that doesn't become annoying. Assume as a baseline that we're all completely insane. We can't have serious conversations. We keep finding these grooves as LLMs and the Eric LLM is talking to the Steven LLM for 95% of our conversation and occasionally 5% we get into new territory. So my feeling about this is isn't it strange that we haven't connected the nukes to the alien conversation because they're very connected. We haven't connected it to the oil conversation, and we haven't connected it to the AI conversation. It's just this sort of orphan thing off to the side.
+
+And honestly, I think you might see a nuke used by Putin because the Russians gained a kind of contempt for nuclear weapons when they started using it as an engineering tool to put out fires and things. So my concern of course is that if you corner Russia, I don't think Putin won't push Article 5 territory, nor do I think he will restrain himself from using a tactical nuke and particularly in an engineering capacity just to test us. So my feeling is I'm not positive that nukes crop up in Iran first. We're in an incredibly dangerous period and I would like to think that Xi, Putin, Trump would be moved to get together if the cause demanded it. And I really think we should rethink our situation in Iran and Ukraine.
+
+And you know, for you to just keep asking, well, how do you solve the world's problems is not a fair question. The right question is, can we recognize the danger? Can we recognize how precious this gift is? Can we get excited about each other, about burying animosities? When was the last time you worried about Egypt and Israel going to war with each other? Think about that. That was impossible. We did it barely. It's a cold, shitty peace, but it's a peace.
+
+</details>
+
+### 生命中最美之地与前客遗留之问
+
+**Eric Weinstein**: 你的最后一个问题是什么？
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: What's your last question?
+
+</details>
+
+**Steven Bartlett**: 我的最后一个问题是：你一生中去过最美丽的地方是哪里？这是我们上一位嘉宾留给你的问题。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: My last question is, what is the most beautiful place you've been in your life? That was left by our former guest.
+
+</details>
+
+**Eric Weinstein**: 真是个绝妙的问题。我不得不说，在圣赫勒拿岛近海，悬浮在一条鲸鲨正上方的那一刻，美得令我窒息。在红海与鱼群一同畅游的经历，也是我终生难忘的画面。我还在最不可思议的地方——缅因州——亲眼目睹了北极光；并且在密苏里州，与我的儿子一同经历了一场日全食，那刚好是上一场日食轨迹与本次相交汇的精确点。我可以一直讲下去，这数不胜数的美景，你又该如何在它们之间分出高下呢？
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Such a great question. I have to say, right above a whale shark off of St. Helena took my breath away. And swimming with the fish in the Red Sea is something I can't forget. I managed to see the Aurora Borealis in Maine of all places and I got to spend a total eclipse with my son in Missouri at the exact point where the last one had crossed. I could go on for ages and how would you choose between them?
+
+</details>
+
+### 狂乱时代的人生建议：给自己的宽容额度
+
+**Steven Bartlett**: 我们今天聊了非常多深刻的内容。你知道，我的听众群体横跨不同的年龄层、地域与文化背景。在这个正以惊人速度剧烈变革的世界里，在充斥着各种耸人听闻的概念、AI、机器人以及战争的大环境下，你对他们有什么建议？
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: We talked about a lot of stuff. You know, my listeners, they range in demographics and geography and so on, but what is your advice for them in a world that's changing at the rate of knots that this world is and all of these big scary words are thrown around all the time and AI this and robotics and war. What is your advice, man?
+
+</details>
+
+**Eric Weinstein**: 别害怕生孩子，哪怕你眼下根本没有周全可行的抚养计划。因为如果你非要等到一切万事俱备、方案完美，通常一切都已经太迟了。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Don't be afraid to have kids, even if you have no viable plan to support them. Because if you wait for a viable plan, it'll usually be too late.
+
+</details>
+
+**Steven Bartlett**: 你鼓励大家生孩子，但你又警告说人类文明可能正走向崩溃……
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: You encourage people to have kids, but you warn that civilization may also collapse.
+
+</details>
+
+**Eric Weinstein**: 这感觉就像……（轻哼）如果我们不想让文明崩溃，我们最好多生些孩子，因为文明的基石与核心本身就是孩子！如果你连“孩子是维系文明的关键”都想不明白，那你的问题可比向我寻求建议要大得多了。
+
+我想说的是：保持乐观的心态，让自己真正振奋起来。如果这个世界上的其他人实际上全都陷入了狂乱，就别担心自己被斥为傲慢或妄想。首先用你自己的双眼去观察这个世界，其次再去对照别人告诉你的所谓“你应该看到的东西”。你此刻所目睹的日常世界很大程度上是虚构的，你不过是在看一场永不落幕的职业摔角表演罢了。如果你直觉感到周围的一切都有点不对劲，那么恭喜你，请坚信你自己。
+
+请清醒地认识到，在日常生活中撒谎有时候是你在这个庞大体系中生存并融入的必要妥协。你应该给自己划定一份“虚伪额度”，一份“懈怠额度”，一份“嫉妒额度”。你有权做个罪人，你有权犯错失败，只要尽量别透支这些额度即可。千万别摆出一副要彻底消除自身所有虚伪的架势去生活，因为你注定会失败；更不要试图抹去那些让你成为活生生的人的一切弱点。
+
+请记住，在我们当下这个数字化、所有过失都会被永久记录且不断被放大的时代，你理应拥有更多犯傻和犯错的权利，而你却没有去行使。对自己多一份宽容与慈悲吧。而当你做到这点之后，请把这份慈悲延伸到在路上突然别你车的那个司机，或者在职场上偷偷在背后捅你一刀的同事身上——因为你又在谈论关于飞机驾驶舱飞行员的那些事了。
+
+不，那简直就是直插要害……顺便向那位英勇的印度机长致敬，以及在驾驶舱门被打开后力挽狂澜的以色列人致敬。这两个国家是我在这个世界上最热爱的国度之一，因为他们身上都洋溢着对生命的盛大赞歌。请永远记住：生命崇拜的力量终究远胜于死亡崇拜。但你必须由衷地欣赏英雄主义，欣赏那些具备能动性、敢于承担风险、敢于挺身而出主导局面并保护弱者、庇护无法自保之人的人。
+
+谢谢你，Steven，非常感谢你再次邀请我来这里。
+
+<details>
+<summary>Original English</summary>
+
+**Eric Weinstein**: Feels like a... [snorts] If we don't want civilization to collapse, we better have some babies because civilization is about babies. And if you can't figure out that babies are the key to civilization, you got bigger problems than taking advice from me.
+
+I would say that be of good cheer. Get super excited. Don't worry about being called arrogant or delusional if everyone is in fact crazy. Watch the world through your own eyes first and then corrected to what everybody tells you you should be seeing second. You're seeing a world that is fictitious. You're watching professional wrestling constantly. If you have that sense that everything is off, congratulations. Believe in yourself.
+
+Recognize that it is incumbent upon you to lie in your life so that you can fit in with all of these systems. You're entitled to a hypocrisy budget. You're entitled to a sloth budget, an envy budget. You're entitled to be a sinner. You're entitled to fail. Just try to stay within your budgets. Do not proceed as if you're trying to get rid of your hypocrisy because you'll certainly fail. Don't try to get rid of all of the things that make you human.
+
+And recognize that at the moment when all of our mistakes are compounding because we're in a digital format that never forgets anything, you're entitled to so many screw-ups that you're not taking. Just be compassionate with yourself. And then once you've done that, extend that to the guy who just cut you off in traffic or the person who just stabbed you in the back a little bit at work because you're talking about that plane pilot thing again.
+
+No, that would be stabbing you right in the... By the way, shout out to this Indian hero of a pilot and the Israelis who came in and saved the day once the cockpit door was opened. Just two of the countries I love most in the world because they're both just giant celebrations of life. And remember that the life cults are more powerful than the death cults. But you got to really enjoy heroism and people who are agentic taking risks, taking charge and taking care of the weak and people who can't take care of themselves.
+
+Thanks, Stephen. Really appreciate you having me back here.
+
+</details>
+
+### 尾声致谢与算法推荐
+
+**Steven Bartlett**: 谢谢你再次光临。每一次与你对谈都是无与伦比的享受，每一次都是一场智识上的盛大拓展。YouTube现在上线了一套不可思议的新算法，它能依托人工智能及你的全部观看行为，极其精准地测算出你接下来最想看的视频。而算法判定，屏幕前出现的这个视频对你而言是绝佳之选。每位观众此刻看到的推荐都不尽相同。去看看这个视频吧，我敢打赌你一定会喜欢它。
+
+<details>
+<summary>Original English</summary>
+
+**Steven Bartlett**: Thank you for coming back. It's always a pleasure. It's always an intellectual expansion. YouTube have this new crazy algorithm where they know exactly what video you would like to watch next based on AI and all of your viewing behavior. And the algorithm says that this video is the perfect video for you. It's different for everybody looking right now. Check this video out and I bet you you might love it.
+
+</details>

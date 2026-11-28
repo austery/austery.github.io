@@ -1,0 +1,1146 @@
+---
+author: AI Engineer
+date: '2026-10-21'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=CFbnVpSsDFQ
+speaker: AI Engineer
+tags:
+  - content-creation
+  - ai-agent
+  - workflow-automation
+  - video-production
+  - prompt-engineering
+title: 2亿播放量背后的AI内容创作系统：从灵感到自动化的全流程实战
+summary: Cerebras的Sarah Chieng与OpenAI的Kova分享了利用AI实现高效、高质量内容生产的完整工作流。涵盖选题灵感库搭建、脚本语音访谈、视觉设计系统、API自动化剪辑与排期分发，深入探讨了人机协同中保持个人品味与独特视角的核心方法论。
+insight: ''
+draft: true
+series: ''
+category: ai-workflow
+area: PAI
+project: []
+people: []
+companies_orgs:
+  - OpenAI
+  - Cerebras
+products_models:
+  - ChatGPT
+  - CapCut
+  - Premiere
+media_books: []
+status: evergreen
+---
+### 开场互动与视觉化记忆
+
+**>>**: 在正式开始前，我想先在现场做个快速调查，了解一下大家的情况。曾经制作过某种形式的视频内容的人，请举下手？
+
+太棒了，非常棒。那么，如果你们完全是从零开始制作，完全不使用任何 AI 工具的，请举手？
+
+太厉害了。
+
+最后一个问题，有多少人是因为 AI 和使用 AI 工具才开始创作内容的？
+
+有几个人。好的，太棒了。在开始之前，我想引用约翰·梅迪纳（John Medina）关于记忆的一句非常有启发性的名言或统计数据。
+
+有一项数据显示，3天之后，人们只能记住输入信息的约10%；但是如果有视觉辅助（就像我们今天要教大家做的那样），这个比例会提升到65%。
+
+那么，我们正式开始吧。
+
+首先自我介绍一下。我叫 Sarah Cheng，是 Cerebras 的开发者体验（DevRel）负责人。我们正在构建世界上最快、最大的 AI 处理器，为 OpenAI、Mistral、Cognition 等许多模型提供算力支持。作为开发者体验工作的一部分，我需要制作大量的技术内容，讲述我们硬件背后的故事以及我们如何实现快速推理。除此之外，我个人也会在 YouTube、LinkedIn、Instagram 和 Twitter 上创作很多内容。
+
+对，就是这样。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Really quickly, before we kick off, I think it'd be super helpful to understand for the room, um what percent of people, just raise your hand, like you've created some form of video content before?
+
+Nice. Amazing. And then, raise your hand if you do it from scratch, like no AI.
+
+Amazing.
+
+And then the last question is, what percent of people started creating content because of AI and using AI tools?
+
+A handful. Okay, nice. Um before we get started, I think there's a really helpful quote that or metric that we like to reference, which is from John Medina about memory.
+
+And so, there's a stat that after 3 days, people remember about 10% of the information that they input, but when there's a visual aid, like what we're going to help you learn how to do today, it increases to 65%.
+
+So, let's get started.
+
+So, I'll introduce myself first. My name is Sarah Cheng. I am the head of developer experience at Cerebras, where we are building the world's fastest and largest AI processor. And so, we power a lot of models with OpenAI, Mistral, Cognition, etc. And as part of my job for developer experience, I have to create a lot of technical content telling a lot of the stories behind our hardware and how we power fast inference. But separately, I also create a lot of content on my own personal YouTube channel and LinkedIn and Instagram and Twitter.
+
+Um and and yeah.
+
+</details>
+
+**>>**: 大家好，我是 Kova。我刚刚加入 OpenAI 的开发者体验团队。在此之前，我是一名全职内容创作者，主要制作短视频，比如 Instagram、YouTube Shorts 和 TikTok。是的，我们的使命是让 AI 造福全人类。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Hi everyone, I'm Kova. Um I just joined the developer experience team at OpenAI. Prior to that, I was a full-time content creator, mostly making stuff on short form, so Instagram, YouTube shorts, and TikTok. And yeah, our mission is to make AI beneficial for all of humanity.
+
+</details>
+
+### 工作流全景与六大阶段
+
+**>>**: 好的，先简单介绍一下我们整体的安排。我们的大部分示例都会是一个 PPT，里面包含了大量的提示词、我们使用的具体工作流和工具。作为前言，这里面的很多内容都是构建在 ChatGPT（之前被称为 Codex）之上的。我们使用的是 GPT 5.6 Soul Ultra Fast，这是 Codex / ChatGPT 中由 Cerebras 提供算力支持的模型之一。非常棒的一点是，这个模型每秒可以输出 750 个 token。所以特别是在处理视频、大型脚本和大型文件时，它能提供极大的帮助。
+
+它是 ChatGPT 中速度最快的模型之一。
+
+另外，本场工作坊也有对应的文字版本。我们共同发表了一篇博客，大致呈现了本工作坊的文字版内容，概述了非常相似的概念。因此，如果你想参考或者回顾这些提示词，不一定非要把我们这里展示的所有内容都打下来。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Okay, so to preface how everything is going to run, um most of our examples are it's going to be a deck pretty full of like prompts, exact workflows that we use, tools that we use. And so as a preface, a lot of this is going to be on top of ChatGPT, previously known as Codex. Um and we're using GPT 5.6 Soul ultra fast, which is a one of the models inside of Codex ChatGPT that's powered by Cerebrus. And so one thing that's super helpful is that this model runs at 750 tokens per second. So especially with video, processing large scripts, processing large files, it can be super helpful.
+
+Um and it's one of the fastest models inside of ChatGPT.
+
+So also, another form of this workshop is available in a written form. So we've actually published a blog together, kind of a blog form of this workshop that outlines a very similar concept. So if you want to reference it or look at the prompts again, you don't need to necessarily like type everything we show here.
+
+</details>
+
+**>>**: 而且我觉得还有一点很酷的前情提要，我和 Sarah 虽然都是内容创作者，但我们切入的视角完全不同。所以能一起合作探讨这个主题真的很酷。
+
+我们之前也讨论过，你更倾向于从构建“系统”的角度切入，打造一个能够持续为受众输出优质成果的统一流程；而我可能更偏向于设计背景出身。因此，将系统化视角与设计感视角结合在一起，正是我们想要做的，因为我们希望创造出既能引发共鸣又足够优质的内容。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: And I think something cool also to preface is um myself and Sarah we're both content creators, but we create from different perspectives. So it's like really cool to come together and work on this together. Um like we talked about this before, but like you come from this place of like um being able to do it as like a system and as a like one place where you can consistently put out like good work for your audience. And I think I error more on the side of like coming from it from like a design background. So like the like systems aspect and also the design aspect is something we're combining together because we want to create like good content that resonates.
+
+</details>
+
+**>>**: 是的。我觉得很棒的一点是，我们在内容创作风格上确实大相径庭。她是一位艺术家，大家马上就能看到——在幻灯片右侧能看出一二，非常具有艺术感，有大量精美的文字、动效，她在光影运用上也很有造诣。而我则更加直接（笑），直接讲解技术内容和概念。
+
+为了正式开始，有一点很有参考价值：我们通常严格遵循六个阶段，接下来的整个工作坊也是围绕这六个阶段展开组织的。这六个阶段分别是：构思（Ideating）、写脚本（Scripting）、录制（Recording）、剪辑（Editing）、衍生重构（Repurposing）和发布（Publishing）。
+
+构思，是指我们如何利用 AI 构思出非常酷的概念，从而在当下所有的信息噪音中脱颖而出。我认为尤其是在现在人人都能创作内容的时代，想要脱颖而出变得更加困难了。
+
+接下来是脚本编写：如何使用 AI 创建极其有感染力的脚本、如何设计钩子（Hooks）、如何测试不同的概念；接着是录制、剪辑；衍生重构则是指，例如我们制作了一个长视频，如何将其转化为系列子视频，或者如何以高度系统化的方式进行切片拆解；最后当然就是发布，编写所有那些非常繁琐烦人的文案配文等等。
+
+作为铺垫，这些是我们在整个工作坊中会逐一介绍的工具。我们会逐步讲解，比如“这个步骤我们会使用这个工具，具体用法是怎样的”。为了让大家提前有个预览，我们已经把它们全部列在这里了。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yes. So I think one cool thing is that we do have very different styles of creating content. Um she is an artist. You will see that. You can kind of see it on the right side. They're very artistic. There's a lot of really beautiful text and animations and she does a lot with the lighting. Um and I am more straightforward. [laughter] Text teaching technical content.
+
+And concepts.
+
+So I think to get started, one thing that's kind of helpful is that we generally always follow six stages and the rest of this workshop is really structured with these six stages in mind. And so the stages are ideating, scripting, recording, editing, repurposing, and publishing. So ideating is how do we use AI to help us come up with really cool concepts that kind of stand out from all of the noise that we see today. I think especially now that so many people can create content, it's even harder to differentiate yourself.
+
+Um the next is scripting, how we use AI to create really powerful scripts, how we create our hooks, how we test different concepts, recording, editing, repurposing. Repurposing is referencing like for example if either of us create a longer form video, how do we take that to maybe create sister videos or how do we cut that up in a very systematized way and then of course publishing and writing all these captions and yada yada yada, very annoying.
+
+And so as kind of a preface, these are the tools that we're going to walk through throughout the entire workshop um and we'll kind of talk through them like oh like for this step we'll use this tool and this is how we use it. But just so you get kind of an early preview, we've listed it all in here.
+
+</details>
+
+### 第一阶段：灵感构思与灵感库（Swipe File）
+
+**>>**: 是的，我们经历的第一个阶段始终是构思。你如何构思出一个概念？你如何知道该为哪类受众创作？
+
+我们在构思时非常喜欢从两个主要部分入手。首先是建立你的灵感库（Swipe File）。
+
+所谓灵感库，基本上就是一站式收集你最喜欢的所有参考素材、你正在思考的所有问题，以及任何能激发你灵感的事物。
+
+它可以有多种不同的形式。我的灵感库是一个色彩斑斓的网站，我会把保存的每一个视频、每一张 Pinterest 图片都丢进去。但它也可以存在于备忘录、Obsidian 或 Notion 中。
+
+我们附上了 Swyx 的灵感库策略，因为这也是可以在网上找到并用来创建自己灵感库的方法。
+
+顺便提一句，建立这个一站式参考库的目的，是为了让你的智能体（Agent）能够从中调用参考资料，理解你追求的是哪种创作风格。此外，我们还想弄清楚：我们要如何构建内容？我们想要为谁构建？
+
+为了做到这一点，我们非常喜欢构建定制化工具。
+
+以我为例，我为 YouTube 构建了一个调研工具。我当时想：好吧，我是 YouTube 新人，我该如何理解标题和缩略图封面？这极其重要，因为一个 YouTube 视频 50% 的表现实际上取决于它的“包装”。
+
+而我当时不知从何下手。于是，我使用了这段完全一样的提示词构建了一个调研工具，它可以帮我抓取我最喜欢的创作者的数千个视频，集中在一处查看，并且还能根据我最喜欢的缩略图进行混剪并生成新的封面灵感——大家可以在截图中看到一部分效果。
+
+此外，我在此基础上进一步构建：因为在 YouTube 上，很大程度上取决于你的标题和缩略图与主页上的其他视频相比是否足够显眼。那么，它在首页上够不够突出呢？我创建了这个模拟器（右侧展示了模拟的 YouTube 首页），这样我就能在真正开始制作之前进行调研，看看如何让这个创意脱颖而出。
+
+所以，我认为智能体最棒的一点在于，它允许你在真正动手之前，构建定制工具来帮助你理解该如何做事。这纯粹是我用来理解 YouTube 生态系统的一种方式，而不必非得亲自踩遍制作视频的所有坑才弄明白。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yeah, so the first stage we always go through is ideation. How do you come up with the concept? Um how do you know like which audience to create for?
+
+So there's two main parts we really like to approach ideation with. First is to build your swipe file.
+
+What a swipe file is is basically a one-stop shop for all of your favorite references, all of the questions you're thinking about, absolutely anything that inspires you.
+
+This can come in many different forms. My swipe file comes as this colorful website where I just like put every video, every like Pinterest picture I save. But, it can also come on notes, Obsidian, and Notion.
+
+We are attaching Swyx's swipe file strategy cuz this is also um something you can find online and use to create your own swipe file.
+
+And in addition to having a one-stop shop for references, by the way, this is an order for your agent to be able to pull from those references and understand what kind of creative style you're going for. We also want to understand how do we build things? Like, who do we want to build for?
+
+And to do so, we really like to create custom tools.
+
+For myself, an example is to build a research tool for YouTube. I was thinking, okay, I'm new to YouTube. How do I understand titles and thumbnails? Extremely important because 50% of a YouTube's performance is really based on its packaging.
+
+And I didn't know how to start. So, I used this exact prompt to create a research tool that allows me to pull thousands of videos from my favorite creators, be able to see them all in one place, and also be able to remix and create new thumbnail inspirations from my favorite thumbnails, which you can see a bit of a screenshot of.
+
+In addition, I ended up building upon that tool by thinking, okay, YouTube is so much about seeing if a title and thumbnail stands out in comparison to the other thumbnails, the other videos on the on the YouTube homepage. So, does it stand out on the homepage? I created this simulator, which on the right side simulates the YouTube homepage, and I'm then able to see and basically do research on how can I make this idea stand out before I even start building.
+
+So, I think one of the best things about agents is it allows you to be able to build custom tools for understanding how you can build things before you go ahead doing them. And this was just a way for me to understand the YouTube system uh the YouTube ecosystem without really having to go through, you know, all of the trenches of creating a video and then yeah, doing all of that.
+
+</details>
+
+**>>**: 在 Koda 刚才提到的基础上，我想补充一点：无论你是制作视频还是写文章，有一个被严重低估的要素就是标题和封面图的重要性。那是人们看到的第一眼，决定了大家到底会不会点开阅读或观看你制作的内容。很多时候，大家往往做完了内容，只花 5 秒钟或几分钟去随便想个标题和封面，但实际上你应该把 50% 的时间花在上面。无论是从我们俩的亲身经历，还是行业内的真实案例来看，这往往就是决定你能拿到 500 播放量还是 500 万播放量的巨大差别。
+
+关于灵感库，我的灵感库远没有她的那么漂亮，但它可以简单到像我这样：每当我在 Twitter 上看到喜欢的内容，我就直接把链接粘贴到一个 Notion 页面里。这成了我的 ChatGPT 可以随时参考的依据——代表了“这是我的品味，这是我认为的高质量内容”。Swyx 也写过一篇极好的文章，概述了你该如何看待灵感库，以及如何自己构建一个灵感库作为自己的优质参考库。偶尔，哪怕一年只看一次，你看到它也会记起：“啊对，还有这个东西。”它能将这些创意沉淀下来，持续为你提供灵感。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: And I think adding on one more thing to what Koda just mentioned is that something that is extremely underrated whether you're creating a video or you're creating an article is how important your title and your like title images. It's the first thing that people see. It's going to determine whether or not people actually read or watch whatever you're creating. And often times I think it's common like you create your content and you spend like maybe 5 seconds or a few minutes thinking through your title and your header when really you should be spending 50% of your time on it. And it will make I think both of us from experience and just from anecdotes in the industry like they will make such a big difference of whether or not you get 500 views versus 5 million views.
+
+And then also on the swipe file note, my swipe file is not nearly as beautiful but I it's I can be as simple as my version which is anytime on Twitter that I see something I like I literally just paste a link in this notion page and it's something that my ChatGPT can always reference as like this is my taste. This is what I'm recognizing as good quality content. Um and right, Swyx has a great article as well outlining like how you should think about a swipe file and how you can build one yourself even just as a good reference for yourself. So like and once in a while maybe once a year you look at it and you remember like oh yeah, like this exists. I would love to do it's it's in it's instilling and helping inspire me with these ideas.
+
+</details>
+
+**>>**: 灵感库策略简直是 A+ 级别的，因为我认为智能体最擅长根据参考资料来理解你的真实诉求。单纯用文字描述，极少能达到参考素材所能呈现的效果和冲击力。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: The swipe file strategy is like it's A+ because I think agents they understand the best like what you want off of references.
+
+Text can very rarely get to the impact a reference has.
+
+</details>
+
+### 第二阶段：脚本编写、语音访谈与数据分析
+
+**>>**: 没错。下一个环节是如何编写脚本。我认为大概有两种方式。我很喜欢用 WhisperFlow。
+
+我经常直接口述一个概念。如果你想阐述一个技术概念，最重要的原则之一就是：在创作内容时，你必须始终让它具有教育启发性，对吧？绝不能让人感觉是在做营销。大家可能已经听过无数次了。但我觉得这确实是关键。我非常喜欢的一种方法是：当我直接提笔写作时，很容易写得像营销文案，下意识地用起那些我已经写过无数遍的套路词汇。但如果我大声说出来，就像在教某个人一样——“这是核心概念，为什么它很重要”——然后把这些口述内容一股脑打包输入给 ChatGPT。或者，直接使用语音模式也非常棒，让它像采访你一样向你提问，逐步理清脉络：“这部分不是很清晰，我该如何更好地解释它？”或者“我不太明白这和主题有什么关系，也许我们应该把它删掉。”这真的超级超级有帮助。
+
+这里有一个如何使用 Codex 语音模式的提示词示例：“我正在围绕这个想法写一个视频脚本，请针对它采访我。”
+
+写内容有两个核心准则：始终保持简练（Concise）与清晰（Clarity），这就是内容创作的“双 C 原则”。
+
+同样地，正如 Kova 提到的，我们不能仅仅停留在浏览参考素材、看其他创作者、看 Twitter 上有什么。你必须始终观察：究竟是什么能超越平均水准？举个典型的例子：现在 Alexandr Wang 哪怕发一条很蠢的推文，也大概率能疯传。所以，你必须结合基准去评估相对互动率。比如：我发的这条内容和我过去发过的其他内容相比表现如何？在历史上，这条关于安全测试工程（Harness Engineering）的帖子，与其他同类帖子相比表现如何？
+
+这正是可以通过自动化来实现的绝佳场景。我认为 Dots 特别适合用来持续监控动态。这里有一个我非常喜欢用的提示词。
+
+与此类似，这属于同一思路：这个提示词也非常棒。我们非常喜欢创建技能（Skills）——我们在 ChatGPT 设置中配置了非常多的技能，这也是在脚本撰写环节帮助你打磨脚本的绝佳方式。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Exactly.
+
+Um the next one is is of how you create the script. So I think there's kind of two ways to do it. There's right, there's I love Whisper flow.
+
+Um and I always just like say a concept. Like if I'm trying to create a technical concept, I think one of the biggest things you have to remember is that when you're creating content, you always want it to feel educational, right? It should never feel like marketing. You guys have probably heard this a million times. But, I think it's part of that. Like a really helpful way that I like to do it. I feel like when I just start writing, it can sound very marketing and I'm defaulting to these phrases I've written a million times. Versus if I say it out loud, like teaching someone, like this is the concept and this is why it's important. And then I can basically you can package all of that up into like uh ChatGPT. Or, of course, voice mode is amazing. Having it just interview you and kind of flesh out like this part's not super clear. How do I, you know, understand this better? Or like I'm not really sure how this is related. Like maybe we should cut it. And so, it's super super helpful.
+
+Um and then this is like an example of a prompt for like how you can use Codex voice mode. Be like I'm writing a video about this idea. Interview me about it.
+
+Um there's two keys. Always concise and clarity. The two the two C's of writing content.
+
+And then uh similarly, I think something that Kova mentioned, but it's not just about like looking at all these references, looking at other creators, looking what's on Twitter. But, you always want to look at like what stand out above average. So, I think a good example is right, like right now, like Alexander Wang could tweet anything and it would probably go viral even if it's like a really dumb tweet. And so, you always want to look at engagement relative to other engagement. So, it's always like how did this post that I do compare to other posts that I've done? Um historically, how did this post about this harness engineering topic compared to other posts about harness engineering? Um and this is such a great thing that you can do with automations.
+
+Um I think Dots, especially, is such a great way to be always monitoring what's happening. But, here's like a really good prompt that I like to use.
+
+Um and then I think similarly to this, this is of the same vein. It's like also a prompt that's great in terms of we love creating skills, um so many skills in our ChatGPT setups and this is a great way to just also help you then refine the script in the scripting step.
+
+Yeah, so pretty straightforward. Um
+
+</details>
+
+**>>**: [清嗓子]
+
+<details>
+<summary>Original English</summary>
+
+**>>**: [clears throat]
+
+</details>
+
+### 第三阶段：分镜清单（Shot List）与录制资产管理
+
+**>>**: 一旦你能将自己的语言风格固化为一个脚本技能——理想情况下，你已经发布过几篇内容并仔细梳理过它们，心里明确“好的，这就是我想要的声音”，然后就可以像前面展示的那样构建脚本技能了。
+
+我个人非常喜欢一次性生成 3 个脚本备选方案，以便统揽全局。如果你想进一步完善这个提示词，还可以要求它：“你能按照我期望的优化目标对这 3 个脚本进行排序吗？”比如给它们打分，50% 权重看互动性，50% 权重看精炼度等等。
+
+在完成脚本编写之后，下一步就是要思考：“我如何把它转化为可供拍摄的依据？”
+
+就我个人而言，我喜欢设计很多不同类型的镜头。尤其是在做短视频时，你会意识到必须时刻吸引住观众的注意力。因此，分镜清单（Shot List）对我来说是极其有帮助的工具。
+
+我会根据脚本生成分镜清单。具体形式是：首先做第一轮处理，在已有脚本上添加批注，标注出 A-roll（主讲述镜头）、B-roll（补充空镜）、录屏或图表。接着会有第二轮处理，大家可以在……我知道有人在拍照。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: once you're able to capture your voice as a script skill. And this is ideally you already have a few pieces of content out and you like mold through them. You're like, "Okay, like this is how I want to sound." And now you build your script skill as you saw previously.
+
+Um I've personally really like to always generate three script options just to kind of see the lay of the land. If you want to add on to this prompt, you can also be like, "Oh, do you want to rank the script like the three scripts in terms of what you want to optimize for?" Like rank them in terms of like, I don't know, um score them in terms of 50% on engagement, like 50% on cut, you know, something like that.
+
+And on top of like scripting, the next part is thinking, "How do I turn this into something I can film with?"
+
+And for myself, I personally like to have a lot of different kinds of shots. Especially for short form, you realize that you want to always keep the audience on their toes in a way. So, shot list is something that is extremely helpful for me.
+
+I create a shot list off of my script. And what this looks like is Oh. Basically, I have one pass which annotates my existing script and adds like A-roll, B-roll, screen recording graphic. And I also have a second pass which you can see in the I know people are taking pictures.
+
+</details>
+
+**>>**: 你们会在网上公开这份演示 PPT 吗？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Are you going to be sharing this deck online?
+
+</details>
+
+**>>**: 会的，这次是有录像的。是的，大家都可以获取到，而且内容全都在博客里。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yes, this is recorded. Yes, you guys will have access. And it's all in the blog.
+
+</details>
+
+**>>**: 是的。（笑）
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yes. [laughter]
+
+</details>
+
+**>>**: 没错，我们的博客已经上线了，所有这些都在博客里。不过大家也可以随时拍照。所以第二轮处理就是在最底部生成一个清单（Checklist）。这样一来，你不仅能在带批注的脚本中看到各个镜头的位置，明确哪句话配哪个镜头，还能在拍摄时拿着清单逐项打钩确认：“打钩、打钩、打钩，我把这些镜头全部拍完了。”
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Um Exactly. We have the blog out. So, this is all on the blog. But, feel free to take pictures. So, the second pass is also what creates a checklist at the very bottom. So, not only can you see in the annotated script where these are going, so you can kind of like understand, okay, this is the voiceover, this is the shot, but you can also have a checklist for when filming you're like, okay, tick tick tick, I'm going to just get all these shots in.
+
+</details>
+
+**>>**: 还有一个特别有用的工具，我专门用来查找录屏素材——特别是当我们制作与开发者相关的内容时，经常需要展示 Demo。
+
+我非常喜欢的一款应用叫 Coast，它可以与 Codex CLI 集成。它的功能是全天候在后台记录你的电脑画面，听起来挺不可思议的，但它完全是在本地运行的。它能精准定位到你当时制作某个 Demo 的具体瞬间。我经常把它作为参考依据，找回那些最精彩的 Demo 历史片段，然后再重新录制它们。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: And a really, really helpful tool that I have used for finding, especially screen recordings. And a lot of, you know, especially when we make dev related content, we we want to show demos. Um One app I really like to use is Coast, and it integrates with the Codex um CLI, and what it does is it basically records your computer over all time, which is pretty crazy, but it's able to find, and it's all local, and it's able to find like this instance where you created a certain demo. I like to use this as reference, so I can find what those demos are in some of my favorite demos, and then re-record them.
+
+</details>
+
+**>>**: 顺着同样的思路，另一个极佳的工具是 CleanShot。与它类似的还有 Screen Studio，但我个人极爱 CleanShot，因为添加到系统后非常轻量，录制、截图都极其方便，而且做标注特别出色。很多时候大家可能都见过那种局部打码效果——比如在演示中把邮箱地址打码，或者圈出重点、画箭头、加文字。它能瞬间完成并保存，根本不需要专门打开 DaVinci 或剪辑软件去搞。所以这是我录制演示、编程教程等内容时非常喜欢用的一种方式，体验极佳。
+
+接下来……噢，看来它也在思考。
+
+好的。关于剪辑我还想补充最后一点：一定要整理好你的所有素材片段。说到 A-roll，它就是你的口播主镜头或者真正发生的核心主体画面；B-roll 则是辅助镜头、截图、录屏等等。
+
+如果你的笔记本里堆满了“screen recording 09436”这样命名的文件，那会非常混乱。你必须整理它们，而 ChatGPT 能非常出色地瞬间帮你完成规整。而且它在关联媒体素材方面也极其强大——一旦所有素材都被规范命名并放入文件夹，无论你使用哪款剪辑软件（ChatGPT 甚至可以替你操控剪辑软件），它在附加和链接媒体资产方面都非常拿手。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: And then I think similarly in the same vein, um we also, another great tool is CleanShot. And so, I think a sister to this is like Screen Studio, but I love ScreenShot because it's really easy to it's just like you add it to your to your system, you can very easily like record, screenshot, but it's really great for annotating as well. So, a lot of the times, if you've probably seen anyone will do like a blur effect, like they'll blur a certain like they'll blur their email in a demo, or they'll outline something, or they'll create arrows, or add text. Like, it's so easy to do like instantly, and then just save it. Um there's no like opening DaVinci or a editor, etc. And so, this is a great way that I like to record, like if you're recording demos, coding tutorials, etc. It's so good.
+
+And then I think the la- Oh, it thinks too.
+
+Oh, I guess all right. Oh, I think the last slide um the last um one more note on editing is just again organizing all of your footage to the point of like A- so A-roll, right? It's just like you talking specifically or it's like the actual thing that's happening. B-roll is kind of maybe side shots, screenshots, screen recording, screenshots, etc.
+
+Um it's super helpful to have, you know, all of them is like screen recording 09436 on your laptop. You should organize it and ChatGPT will do such a good job of doing it instantly for you. And then it's also really good at attaching media. So like once everything is organized and named and in the folder, like whatever editor you use, which ChatGPT can control for you, um it's really good at attaching and linking media as well, which yeah.
+
+</details>
+
+**>>**: 确实，再怎么强调素材管理的重要性都不为过。这个清单基本涵盖了制作最复杂视频所需的所有资产类型。通常你不需要这么多，但备着作为参考以防万一还是很好的。
+
+我个人觉得 Astro 在结合 Premiere 进行 Computer Use（电脑操控）方面表现极其优异。DaVinci 也非常非常棒，但我认为在电脑操控和 Premiere 的结合上，Astro 可能是最优秀的。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yeah, cannot emphasize how important it is to organize your assets. This list pretty much covers all the types of assets you need and this is for like the most extensive video you can you can make. Usually you don't need that many, but it's great to still have as reference just in case. Um personally I find Astro extremely extremely good at computer use on if you use Premiere, for example. DaVinci is um DaVinci is also extremely extremely good, but I I think Astro is probably the best for um computer use and yeah, Premiere.
+
+</details>
+
+**>>**: 我顺便插一句：作为一个用过 DaVinci、Final Cut Pro 和 Adobe Premiere 的人，我最喜欢的其实是 CapCut（剪映）。
+
+（笑声）
+
+它虽然起家于 TikTok 剪辑工具，但它出了桌面版，体验简直惊艳。
+
+（笑声）
+
+<details>
+<summary>Original English</summary>
+
+**>>**: And I will add a side note that as someone who's used DaVinci, Final Cut Pro, and Adobe Premiere, my favorite is CapCut.
+
+>> [laughter]
+
+>> It's like the TikTok editor, but there's a desktop version and it's phenomenal.
+
+>> [laughter]
+
+</details>
+
+### 第四阶段：视觉设计系统与智能体搭建
+
+**>>**: 好的，下一件非常有帮助的事情就是构建设计系统（Design System）。我认为在这里，正是由于 Soul Ultra Fast 模型推理速度极快，你完全可以把更多的时间投入到视觉设计层面。
+
+这有几种不同的实现方式。首先，Figma 现在有很多非常棒的 MCP 和插件，大家完全可以好好利用。这里有一个提示词示例：“我想用几种不同的方式进行可视化展示。”这在我们制作这套幻灯片时帮了大忙。
+
+此外，由于拥有极快的推理速度，享受着这种“奢侈”的性能，我非常喜欢做的一件事就是：让 ChatGPT 直接生成整整 10 种不同版本的品牌视觉、Logo 以及我们期望视频呈现的调性氛围，然后你可以从中精挑细选出最满意的一个版本。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Okay, so the next thing that's really helpful is actually creating a design system. I think this is actually one where because Soul Ultra Fast is so fast, um you can really spend a little bit more time on the design aspect of it. And so, there's kind of different ways to do it. I think one, Figma has a lot of great like MCPs and plugins now that you can really take advantage of. Um, and so here's an example of prompt of like I want to visualize several different ways. Like this was really helpful for us creating the slide deck. But then I think also similarly, um, one thing that I actually really like to do is like when you have fast inference and you kind of have the luxury of this, is like we will have
+
+Um, we will have like ChatGPT generate like literally 10 different versions of like the branding and the logos and kind of the feel that we want any video to have. And then you can actually cherry-pick the version that you like best.
+
+</details>
+
+**>>**: 然后结合你的灵感库来做？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: And use your swipe file for this?
+
+</details>
+
+**>>**: 没错。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yes.
+
+</details>
+
+**>>**: 是的。类似于 Sarah 在设计系统上的做法，因为我已经发布过一些视频，明确了“好的，这就是我的风格”，你自然会想把它沉淀为一个系统，从而让智能体更容易辅助你完成这些工作。因此，我直接给 Codex 这样一个提示词：研究我最近的 50 个 Instagram 视频，并将反复出现的视觉风格提取转化为一份 Figma 设计规范文档。同样地，我也基于自己的视频建立起了专属的设计系统。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Uh, yeah. So, um, similarly to what Sarah has done with a design system, because I already had a couple of videos out because I just wanted to be like, okay, this is exactly my style. You kind of want to turn that into a system, which makes it easier for agents to help you with that work. So, I simply gave my Codex as prompt to study my most recent 50 Instagram videos and turned the recurring visual style into a Figma document. So, similarly I created my own design system off of my own videos.
+
+</details>
+
+### 第五阶段：剪辑工作流、API 自动化与视觉增强
+
+**>>**: 接下来谈谈我们具体是如何剪辑的。这就更深入细节了：在没有外聘剪辑师的情况下，你如何搞定这一切？我们俩平时都非常忙，但尽管如此，我们依然产出了可观的内容量。
+
+我非常喜欢的一套工具组合是：利用 ChatGPT / Codex 这类工具，配合各大视频剪辑软件开放的大量优秀 API。比如 HeyGen 的 HyperFrames 就非常酷，它提供了 API。你可以把文档页面直接丢给 ChatGPT 说：“帮我把这个 API 配置好。”它能非常出色地承担所有的重活累活。在剪辑、渲染、审阅方面它的表现极佳。
+
+我通常直接给它一堆原始素材，然后说：“嘿，把这三个机位拼接在一起，加上文字，参考这些参考视频进行剪辑。”剪辑完成后我再提出反馈意见。另外，Hyperframes 和 HeyGen 还有个招牌本领，就是生成数字人分身（Avatars）。虽然我一般不喜欢全片都用 AI 数字人出镜，但偶尔如果你说错了一句话——比如报错了“每秒 token 数”，需要补救修改——你可以用数字人替换短短 0.5 秒，瞬间就能修好。
+
+稍后我们还会深入探讨这一点，但顺便提一句，Hyperframes 和 HeyGen 也极其适合用来将长视频自动拆解为一系列短视频片段，完全自主运行。稍后我们还会介绍 ChatGPT 如何全自动上传、排期并撰写文案，实现全流程端到端闭环。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: So, I guess another one is right how we actually edit. And this is more in the weeds of like, how do you do all of this without an editor? We are both very busy people and I feel like we both create a good amount of content despite how busy we are. Um, so I think one of the tools that I really love using is just generally with tools like ChatGPT Codex, there's actually a lot of great like, uh, APIs that you can use for all of these video editors. So, I think example is like HyperFrames by Haydn is really cool one. It has an API. You can tell ChatGPT, here's the like docs page, set up this API for me. Um, and it does a great job of doing all the heavy lifting. And then it's really great at just like editing, rendering, reviewing. So, I'll just give it a bunch of raw footage. I'll be like, "Hey, stitch these three angles together. I want some text. Here are some reference videos. Edit it." And then I will give it some feedback. I think another thing So, Hyperframes and HeyGen is also really good for Their main thing, bread and butter, is like creating avatars of you. So, like if you want to record a video, let's I generally don't like filming the entire video and having it all be AI avatar, but like once in a while, like let's say I mess something up, like I say the wrong like tokens per second, and I need a fix it, like you can have an avatar for like 0.5 seconds just like fix it for you. Um
+
+And I think similarly, we'll get to this a little bit later, but I think we're just mentioning like Hyperframes and HeyGen now is like it's also really good for if you want to take like long-form video and you want to snippet it into like a bunch of short-form videos. Um it's also really helpful for doing that all by itself autonomously. And then you you can We'll also tell you how ChatGPT can also upload and schedule and write captions too. So, you owns it end-to-end.
+
+</details>
+
+**>>**: 从剪辑软件的角度来看，市面上有很多选择：CapCut、Premiere、Final Cut、DaVinci Resolve 等等。
+
+简单梳理一下现状：使用 Hyperframes，你得到的是预先渲染好的视频。在我的体验中，如果你想调整剪辑，通常需要重新下提示词，它会重新渲染并生成一个新文件。但如果你想要更精细化的颗粒度——想要看清所有的图层、轨道、音频、标题等等——你就需要使用传统的专业剪辑软件。
+
+Astro 在 Premiere 上的电脑操控（Computer Use）非常优秀，这也是我们正在探索的方向。所以如果大家在 Premiere 上利用我们的模型进行电脑操控相关的尝试，我很想听听你们的反馈。Final Cut 则更加成熟，因为它拥有非常完善的 MCP，Soul Ultra Fast 配合 Final Cut 表现极其出色。这是我目前的一些观察。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: And on the the video editor side of things, like there's a lot of video editors. There's CapCut, there's Premiere, Final Cut, Resolve, etc.
+
+I think a bit of a lay of the land is with Hyperframes, you have these videos that are already like pre-rendered. So, if you were to want like an edit, um in my experience at least, you would need to like re-prompt and it would re-render and produce you like the new file. If you want something more granular, so you want to see all of your layers, all of your clips, titles, music, etc., you would need to use, you know, a video editor.
+
+Um Astra is really good for computer use on Premiere. I think that's something we're working on. So, if you're doing some like computer use stuff with our models on Premiere, I would love to hear about it. Um I think Final Cut is a lot better cuz it has a really good um MCP that um yeah, like so ultra fast is extremely good with Final Cut and yeah, there's just like a couple of my notes on that so far.
+
+</details>
+
+**>>**: 好的，再次回到 Hyperframes 的话题。这是一个具体的提示词示例：首先给出文档链接让它配置好 Hyperframes。工具库里有很多工具可用，这只是我们喜欢用的其中一个。Hyperframes 是 HeyGen 出品的，接着你可以非常具体地提出剪辑需求，它会自动搞定所有字幕字幕和文字动画；你还可以喂给它 Figma 里的品牌视觉规范，它就能以极少的提示词全自动搞定一切。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Okay, um and so again kind of with hyper frames, so this is an an example of like you literally just prompt like first, here's the docs set up hyper frames. You can use a bunch of different tools. This is just one example of like one that we like to use. Um hyper frames is by Hagen and then you can basically just be super just like about that edit that you want and it will do all of the captions and the text animations and you can give it kind of brand guidelines from Figma and it will do all of it for you. Yeah. With very minimal prompting.
+
+</details>
+
+**>>**: 你有没有过直接用 Hyperframes 一键生成后，就觉得“行了，这就是最终视频，不需要任何改动了”的经历？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Have you once used like hyper frames and just decided, okay, that's the video. I don't need to like do anything else to it. I don't need to
+
+</details>
+
+**>>**: 有，当然有。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yeah. Yeah, yeah.
+
+</details>
+
+**>>**: 看吧，一步到位。
+
+（笑声）
+
+<details>
+<summary>Original English</summary>
+
+**>>**: There you go. One shot.
+
+>> [laughter]
+
+</details>
+
+**>>**: 另一方面，如果你希望对剪辑拥有更精细的掌控，我通常喜欢构建属于自己的剪辑工具和定制脚本，因为我有点……对，我喜欢掌控叙事的每个细节。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Um yeah, so on the other end of things, if you wanted to be more granular with your editing, I like to always build my own editing tools and my custom tools because I prefer to control every part of the story cuz I'm a bit of a Yeah. I
+
+</details>
+
+**>>**: 她是真正的创作者。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: She's a creator.
+
+</details>
+
+**>>**: 确实。举个例子，我一键生成了这个“音效板（Music Pad）”——就是左下角这个 9 键小面板，本质上是一个音效包。里面包含了呼呼声（Whooshes）、点击声、快门声，我点击按钮，它就会自动将音效插入到指定的轨道上。
+
+这样一来，我既可以使用电脑操控（Computer Use）告诉它：“这是我的音效板，操控我的电脑，按照我的偏好点击音效板添加音效”，也可以自己快速回过头去亲自点击。否则，你就得手动把音频拖进时间线等等。因此我非常喜欢开发辅助小工具来减轻负担，而且做起来极为简单，我非常推荐大家尝试。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yes. Um so for example, I one shotted this music pad, which is the little nine button tab on the bottom left and basically it's a sound pack. So whooshes, clicks, shutter sounds that I could just like click and it inserts it automatically in a certain track. And so this is how I can either use computer use and be like, okay, this is my sound pad, go and use my computer and just tap through my sound pad and just add sound effects exactly as I would choose and I can easily go back and just click through myself. Otherwise, you would probably need to drag a sound to the timeline and things like that. So I like to build tools to make it easier and it's extremely easy to do so. So I would encourage it.
+
+</details>
+
+**>>**: 关于音效的使用场景：转场时用“呼呼声（Whoosh）”非常普遍；快门声也很常用；每当画面中弹出图片或录屏时，通常配上清脆的“点击声（Click）”。这两种是最常见的搭配。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: And so I'm like ways that you can use sound is right like when you have a transition, I think whoosh is a pretty popular one. Shutter click is a popular one. And then whenever you want to insert like an image or a screen recording, you would add like a click sound. Yeah, those are like the most common two.
+
+</details>
+
+**>>**: 没错。我非常喜欢的另一个剪辑技巧是“画面改造”。大约一年前，我之所以能迅速走红并成为全职创作者，核心原因在于我能在研究生宿舍里拍视频。当时宿舍里真的是家徒四壁，墙面空无一物，但我通过技术把它改造了——我加了一个会动的机器人、一扇窗户、置物架、灯光、风扇以及正在旋转的黑胶唱片等等。
+
+那时候还非常早期，还是 Photoshop 生成式填充（Generative Fill）的时代。但现在，大家完全可以在 ChatGPT 中通过图像生成轻松搞定，只需提示：“增强我的背景环境，但保持我本人完全不变”，然后对背景做蒙版填充即可。
+
+这是一个被严重低估的方法。只需要一句提示词，就能让你的视频质感大幅提升，尤其是在你没有豪华摄影棚条件的情况下。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yes. Yeah, so another editing tip trick I really like to use is transforming the visuals. So, the reason I actually blew up and became a creator like full-time like a year ago in the first place was because I was able to make videos out of my like grad school dorm, which was really like there was nothing. Like as you can see like the walls are completely blank and then transform it. Like I added like a robot and it was moving and like a window and I added shelves and lights and like a fan and like a turning vinyl disc and all of that. And this was really early. Like this was back in the days of um like Photoshop generative fill. But now you can easily do this with Image Gen by um in ChatGPT for fun people by just being like, "I want to enhance my background, but keep like but keep myself completely, you know, the same." And then you would mask in the background.
+
+This is a really underrated way of doing it. It's one prompt to make your video look so much nicer, especially if you don't have the luxury of a really nice set.
+
+</details>
+
+**>>**: 我有个疑问：在添加机器人和修改背景时，你的提示词需要写得多具体？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Well, I have a question. How specific did you have to be in terms of adding the robot, adding the background?
+
+</details>
+
+**>>**: 当时用生成式填充，我只需要画个选区——圈出我想要填充的区域，比如在顶部画个圈，直接打上“fairy lights（小彩灯）”。完全不需要很具体。它总会给出 3 个选项供我挑选最满意的。现在的技术比当时强大太多了，当年效果还没那么好，但依然能做出这种效果。
+
+再举几个利用 AI 提升视频视觉效果的例子：比如现在可以用 AI 生成“悬浮物体”。
+
+我尝试过几种不同的方法。我曾经用 Astro 的电脑操控功能直接下达指令：“添加悬浮物体，参考这个视频。”它做的事情就是自动打开 After Effects，在 Blender 中生成模型并导出为 GLB 文件，导入 After Effects 中旋转，最后叠加到我的原始视频上。基本上只需要一句提示词外加灵感库里的参考视频就搞定了。第二个是我之前展示过的早期案例；第三个例子可惜不是 GIF 动图，那是非常炫酷的动态标题——利用图像生成将文字转化为拼贴画和水彩风格，并将它们合成为动图，视觉效果极其震撼。更多教程大家可以看我的账号 @kovacut。顺便打个广告。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yeah, so with generative fill, what I could just do is mask out. So, like draw a circle around the area I want it to be filled in. So, I would draw a circle around the top and just be like literally fairy lights. I was not specific. I always got three options and I could select my favorite option. Now it's a lot better. Back then it was not so good. And yeah, I could still get this result.
+
+Yeah.
+
+So, a couple of other examples of how you can use AI to make better-looking videos. So, floating objects you can create with AI now.
+
+I did this in a couple of different ways. I used computer use with Astra to just be like add floating objects. Refer to this video. And all it did was it went into After Effects. It generated the models in Blender, exported them as GLB files, put them into After Effects, rotated them, put them on top of my original video, and we had floating objects in barely a prompt and a swipe file reference. The second is an older example, which you just saw. And the third example is I wish it was a a GIF, but it was really cool animated titles. That was done because Image Gen took like an you know, like a a text and just turned it into like collages and watercolor and just compiled them all together as a GIF. So, it looked really cool. More tutorials on @kovacut.
+
+Okay, I'm just saying.
+
+</details>
+
+### 第六阶段：衍生重构、排期分发与文案去“AI感”
+
+**>>**: 正如我之前提到的，在录制过程中难免会出现失误。修正失误的极佳方法是：虽然我认为目前的数字人技术还不足以完全替代全片真人出镜，但如果你不小心说错了一个词、报错了一个日期，或者只是很短的一句话，现在的 AI 能极好地单独修正那一小段并天衣无缝地剪辑进去，节省大量时间。
+
+顺着这个思路，无论你使用什么工具，现在的技术已经强大到可以极其轻松地对视频进行深度切片重构。
+
+这是将长视频衍生重构到 YouTube Shorts、TikTok 和 Instagram Reels 的绝佳方式。通常我制作一期深度长访谈，从前期准备、拍摄到剪辑需要花费大约一个月的时间。里面沉淀了大量的精彩语录（Sound bites），我绝对希望能把最精华的部分筛选出来并传播出去。
+
+作为其中的一部分，撰写文案配图（Captions）也是至关重要的一环。
+
+如果一条文案充斥着 AI 味，大家一眼就能看出来。有很多方法可以让你的配文完全不带 AI 感。首先当然是深入学习自己的语调和个人品牌；其次，灵感库在这里又派上了大用场。我通常会把非常喜欢的推文加进书签，这也是灵感库的一种形式。
+
+在研究不同的内容格式时，关键还在于区分不同的语调——比如我个人的语调与公司的官方语调必须有所区分；同时也要区分不同的格式：长访谈、技术演示、简短对谈等各不相同。另外，这里还有一个未在胶片上写明但极其管用的小技巧：维基百科上有一篇名为“AI 写作特征（Signs of AI Writing）”的条目，我经常直接把它粘贴进去要求模型：“绝对不要出现本文列出的任何写作特征。”这招非常灵。
+
+最后我想说的是全流程的最后一环：实际发布与排期。这同样只是工具层面的选择，我使用的是 Buffer——最初还是 Swyx 向我安利的。
+
+试想一下：你做完了一个主视频，剪出了 6 条短视频切片，计划在未来 6 周内的每周二发布一条，并且要跨 5 个不同平台分发，你肯定不想每周都亲手去写文案、挨个平台操作。市面上的消费级产品提供了大量 API，你只需把开发文档丢给 ChatGPT 说：“按照文档帮我配置好。”它就能全套搞定。我现在的很多内容就是通过 Buffer 发布的。我说：“嘿，这是存放所有帖子的文件夹，每周二发布一条，为不同平台设定排期；你自己去调研各个平台的最佳发布时机；写出文案提前让我确认。”就这样，未来数周的内容发布就全搞定了。
+
+是的，这与我刚才提到的非常相似：我为 TikTok、Instagram 和 YouTube Shorts 分别定制了不同的技能（Skills），设定每周三发布，并在发布前将文案发送给我审批。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Um and then kind of Okay, so I did mention this earlier, but similarly like I think a big part of recording is like sometimes you mess up. And so, a great way of just fixing it is like I still think avatars are not good enough to like do the whole thing, but it's great like if you say a wrong word, you say a wrong date, you say something short, like AI now is really good at just correcting that one small part that you can then just cut in. And it saves a lot of time.
+
+And then I think to that point, you can use any tool. I'm just using mentioning the tool that I use, but now it is so good and so easy to just clip the hell out of videos that you create. Um and so, this is a great way of just repurposing for like YouTube shorts, Tik Tok, Instagram reels.
+
+Um and so, I'll take one video, like usually a long interview will take me about a month in terms of preparing for it, filming it, editing it. Um and so, I definitely want There's a lot of great sound bites in there and I definitely want to make sure that I'm being able to identify the best ones and get them out. Um to as part of that, I think one thing that's really helpful is also writing captions.
+
+Um, it is very obvious when a caption is AI generated. There's a lot of things that you can do so that your caption does not sound AI generated. I think one is of course obviously um, kind of studying your voice and studying your brand. I think two, this is a place where the swipe file comes in so handy.
+
+Um, and I you know, I always bookmark a bunch of tweets that I really like and so that's also a form of a swipe file. Um, in terms of studying different formats, I think a key is also like one, you have to make sure that you're differentiating different voices. So like my voice versus my company voice, etc. You always need to make sure that you're differentiating different formats, whether it's a long-form interview, it's a technical demo, it's a short conversation, etc. Um, and I think another thing that is really helpful here actually, which is not mentioned, is I love doing this, but there's this like article on Wikipedia that's called like signs of AI writing and I will always just paste it in and be like, do not do anything that is mentioned in here. And it's actually pretty good.
+
+Um, and then the last thing that I will say and this is again, just one tool that you can use. This is a tool that I use. Swyx was actually the one who put me on to it initially.
+
+Um, but I at the very, very end of the process of course is actually posting all of this and so, you know, you have a video, you have six cutdowns, you want maybe one cutdown to post every like Tuesday for the next six weeks and I want to post it on like five different channels and I really don't want to write the captions and do all this myself. Um, again, this is a great one where there's so many APIs out there for all of these like consumer products that you just tell ChatGPT like, take this docs and do it for me and like set it up and it sets it all up. Um, but this is like basically how I post a lot of my content is through Buffer. I'm like, hey, here's a folder of all these posts, post them one every Tuesday, schedule it for all these different platforms, figure out and like do some research yourself about what the best time is for each of these platforms, um and then write some captions that I approve ahead of time. And then just like that, you have content for weeks.
+
+Um yeah, and so I guess this is very similar to what I just mentioned in terms of I have scripts um sorry, skills for like TikTok versus Instagram versus YouTube Shorts. Um and then I'm saying to publish every Wednesday. And send it captions for approval first. And then this also is um kind of yeah.
+
+</details>
+
+### 复盘与系统迭代：用 AI 审查创作瓶颈
+
+**>>**: 是的。我们建立的所有系统和流程，涵盖了这么多环节，我们希望每周都能持续发布优质内容。但同时我们也需要定期回头复盘：“我们如何在流程上做得更好？”
+
+我们最喜欢的技能之一——绝对是我个人的最爱——就是“复盘工作流”技能：复盘我的视频制作流程，指出我花费时间最多的地方，并对那些可以转化为自动化工具的重复性任务提出建议。
+
+作为忙碌的创作者，很多时候我们把全副精力都放在了创作上，没有时间停下来反思流程中的低效环节。但如果我们想逐步打造更好的系统，从而能把精力解放出来专注于纯粹的创意和真正带给我们乐趣的事情，这一步至关重要。我每周都会运行一次这个技能。
+
+比如，它曾经帮我发现：你可能需要更新 Premiere 技能了，因为目前的执行效率不是最高的等等。这是一个非常简单的提示词，却能为你节省海量时间并帮你迭代出更好的系统。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yeah. Um so with all of our systems and all of our processes and we've went through a lot um and we want to like post every week and we want to make sure it's good. We also kind of want to take a look back and understand, okay, like how can we be better in our process? And one of our favorite skills, like this is for sure like one of my favorite is to review my process, review my video creation process. Show me where I spend the most time and suggest repetitive tasks I could turn into tools or automate.
+
+Um I think a lot of the time as busy people, we spend a lot of time creating and we don't have a lot of time to kind of look back and go through all of our processes and understand inefficiencies, but really if we want to build better systems over time so we can focus more on like the creative aspect and the stuff that gives us the most joy. So, this is something that, you know, I would run every week.
+
+And for example, I would identify like oh like you probably need to update these Premiere skills that you have because they're not being the most effective and so and so. And it's a very simple prompt that would save you a lot of time and build better systems.
+
+</details>
+
+**>>**: 这项技能具体帮你发现了哪些实际问题？能举几个例子吗？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: So, what are some examples of things that this has surfaced?
+
+</details>
+
+**>>**: 有好几点。比如，它发现我每天早晨在两个不同的地方做任务梳理（Triage）。它指出：“你通常会查看 ChatGPT Space（这是我们存放文档、幻灯片等内容的新工作区），虽然你已经把所有内容迁移到一个文档中了，但系统却依然在往一个你从来不看的 Slack 线程里推送通知。”这个技能直接提醒我：“我一直在那个线程里给你发提醒，但你从来不看，导致你的视频进度受到了影响。”
+
+另一个发现则非常细分垂直，是关于 Premiere MCP 以及操作 Premiere 的环节。它指出：“每次打开 Premiere 时，我都会运行一系列检查以确认视频是否正确导入，但这道检查耗费了大量时间，实际上根本没必要做。”于是我直接说：“好，那就把这道检查去掉。”速度瞬间快了许多。
+
+同样，我们不仅可以每月复盘流程效率，还可以复盘发布的帖子表现。正如 Sarah 刚才所说，我们可以去分析：“在我的账号上，究竟哪些帖子的表现显著高出平均水准？”从而总结规律、持续改进内容，并同步更新我们的技能库。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yeah.
+
+>> Yeah, like a few things. So, for example, it identified that I kept two different places for my morning triage of things to do. And so, it was like, "Oh, you mostly check this um ChatGPT space, which is our new kind of like place for putting like docs, slides, etc. Like I've now moved everything to one doc, but it's still surfacing everything over a Slack thread that I never check." So, that's what this skill told me that was like, "Hey, like I'm sending you all these reminders on this thread, but you're never checking this thread. So, like you're not working on your videos properly."
+
+Something else it also identified was like some really niche stuff when it comes to like the Premiere um MCP and like operating Premiere. And it was like, "Oh, like I'm running all these checks on understanding like if like the videos are importing correctly. Like every time I open up Premiere, like this check takes me a lot of time. I don't need to do this check." And I was like, "Okay, let's not do this check." And it was a lot faster.
+
+Yeah, so this is also similarly we can review monthly not just our processes and their efficiencies, but also our posts. And like you know, uh Sarah was saying earlier, we can look at, "Okay, what are the best better performing posts on my account specifically?" So, I can learn from them and improve my content over time. And also update my skills.
+
+Okay.
+
+</details>
+
+### 元思考：创作是手艺，别生产 AI 垃圾（Slop）
+
+**>>**: 我觉得还有一层非常元（Meta）的思考是我们想极力强调的：如果大家参加完这场工作坊，得到的结论是“太好了，我要去批量生产一堆其实全是垃圾（Slop）的 AI 内容”，那我们会感到非常遗憾。
+
+内容创作领域其实有很多模棱两可的东西，我很难生硬地给出一个公式说“只要做到 X、Y、Z，你的视频就一定会爆火”。但我们俩真正想强调的底层逻辑是：归根结底，这些工具的存在是为了帮你将繁琐无趣的杂务自动化，从而让你能真正把内容创作当作一门“手艺（Craft）”来对待，让你能够保持学习并持续进步。如果没有这些工具，除非投入海量时间，否则你很难验证自己做的事情是否奏效，也很难判断自己是否走在通往成功的正轨上。
+
+在脚本编写或灵感构思时，你应该生成多个不同的版本——让 AI 帮你呈现不同可能性，最终由你来进行审视挑选；让它去承担添加字幕等繁重工作。以前做一个旋转物体动效可能要耗费你好几个小时，你明明知道自己想要这个效果，却要浪费大把时间在机械操作上，而现在 AI 能瞬间搞定。
+
+但归根结底，这是你的手艺，这是你的声音。你必须始终牢牢掌握方向盘，否则根本不会有人愿意看你的内容。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Um I think one kind of meta thing that we want to really emphasize is that we would be really sad if your takeaway from this workshop was like, "Ah, I'm going to just go create all this AI content that's actually just slop."
+
+Like I think the way that you really have to think about it and internalize it and believe because everything in content creation is very like wishy-washy and I can't concretely be like, "Do XYZ and your video will be really good." But I think the important thing that I I we both want to emphasize is that at the end of the day these tools, right, are just to help you so like automate away the things that are very tedious so that you can actually treat treat treat content creation like a craft and so that you can learn like constantly and improve. I think without these tools it's very hard to know like unless you spend a lot of time whether what you're doing is working or whether you want to are on a track to be like more successful. And so with scripting or ideating like you should be creating multiple different versions. Like the AIs should be helping you create these different versions that ultimately you are looking at. It should do the tedious work of like adding these captions and normally like the rotating objects like that would take you hours.
+
+And it's like you know you want to do it. You know you want rotating objects. Now you're like wasting hours doing it versus like the AI can do it for you. But at the end of the day like this is your craft and like this is your voice and you always have to be in the driver seat otherwise nobody is going to watch your content.
+
+</details>
+
+**>>**: 100% 赞同。当 AI 能帮我们生成如此繁多的东西，而我们又展示了这么多不同的工具、流程和系统时，我们内心其实产生过很多哲学层面的追问：现在创作流程的真正意义究竟是什么？
+
+但无论如何，终极目标始终是更接近我们真正想表达的核心，更接近我们自己的声音。我认为我们现在的核心角色是构思那些“宏大创意（Big Ideas）”，并将这些工具视为帮我们加速落实执行创意的抓手：
+A. 深度打磨自己的品味（参考资料、灵感库）；
+B. 思考真正想表达的核心大构想；
+C. 借助更加先进的工具，去创造规模更大、品质更卓越的作品。
+
+顺便聊聊我们最喜爱的硬件设备，直接分享我们平时使用的装备。
+
+可以说是创作者的“入门套装”吧——不过实话实说，我的设备不能算入门级。我使用的是索尼 FX3。
+
+好吧，确实有点性能过剩了。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: 100%. I think this like there's been like a lot of like philosophical questions have come up for us when it comes to like um what does like creation routine mean now when like AI can help us generate so many things and we guys we just showed you guys so many different like tools and processes and systems. But yeah like the one goal of it is to like get closer to like the thing we want to say and like our voice. And like I think the role of us now is like to think of like the big ideas.
+
+And treat these tools as like getting closer to help helping us to execute on those ideas. And like A honing in on like our taste you know reference references swipe file. B thinking about like the big ideas we want to create and like C like leveraging all the tools to create bigger things and better things now that we have better tools.
+
+A bit on our favorite equipment. So this is just sharing exactly what we use.
+
+Yeah starter pack. So I would not say my stuff is a starter pack. Not going to lie. I use the Sony FX3.
+
+Um I use so that's just Okay, it's a bit overkill.
+
+</details>
+
+**>>**: 报个价格吧。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Give a price.
+
+</details>
+
+**>>**: 好吧，这台相机是我有史以来最贵的一次消费：机身大概 2500 美元，镜头差不多又要 2500 美元。绝对是我买过最贵的东西。它是一台真正电影级的摄影机，是专业创作者会用的电影机，画质是可以直接上院线银幕的，所以确实有点大材小用。但在买它之前，我用的是最便宜的相机——一台 300 美元的佳能 EOS R50。
+
+我现在使用的是索尼 FX3；三脚架用的是 Peak Design 的碳纤维三脚架，极其轻便坚固；用 Photodiox Gobo 来营造光影效果，比如温暖的百叶窗投影氛围；麦克风用的是大概 60 美元的小型麦克风，音质极佳，甚至能用来在 WhisperFlow 上与智能体流畅对话。非常实用。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Okay, my camera is like my most expensive purchase ever. It's like it's 2.5k for the body and it's about another 2.5k for the lens. It is my most expensive purchase.
+
+It is a cinematic camera that is like the creator camera that is actually like cinema grade. Like you can show it in theaters. So, it's a bit overkill. But before then, I had the cheapest camera. It was a $300 Canon EOS R50.
+
+But yeah, I use the Sony FX3. I use a tripod. Peak Design has carbon fiber tripods which is really good. It's very light, very strong. Photodiox Gobo for creating effects like a warm window effect. And mic mini is like $60 and it's for really good audio that you can use even for talking to agents on WhisperFlow. So, very helpful.
+
+</details>
+
+**>>**: 罗德（Røde）和大疆（DJI）的小型无线麦克风基本是行业标准，价格都很亲民。
+
+对于新手入门相机，我推荐索尼 ZV-1。价格大约在 500 美元左右，是非常划算的投资。大部分 YouTube Vlogger 要么选它，要么选佳能 G7X Mark II——不过佳能那款似乎停产了，大家现在基本都转向了索尼 ZV-1。
+
+在倒数最后几页胶片中，我们想介绍另一位我们都非常敬佩的创作者 Matt Palmer。他之前在 Replit 工作，现在在 SpaceAct。他在居家内容创作方面做得极好，并且发布了一套被我们反复参考的优秀资源。
+
+这是他总结的入门套装，列出了打造居家工作室所需的所有设备。如果你想投入一点资金，或者为公司搭建一个演播室，这是一份极佳的入门指南。我们刚才提到的很多内容里面也有收录。
+
+非常感谢大家的聆听！我们还剩一点时间，大概有 20 分钟可以回答大家的问题。屏幕上是我们在社交媒体上的账号，欢迎随时联系我们。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yeah, I think like Rode and DJI minis are probably the industry standard. They're both pretty cheap.
+
+Um, and then I think a good starter camera is the Sony ZV-1. I think it's probably around $500, but it's such a good investment. And I think most like YouTube vloggers like either default to this or like the Canon Mark like Mark II. But I think that's like no longer sold and everyone's switching to this one.
+
+And then as a very almost last slide, another creator who we both really respect, Matt Palmer, who was previously at Replit and is now at SpaceAct, who has hacks, does great like at home content and he actually published this really great resource that um, we've referenced a lot.
+
+Um, but this is like his starter pack and these are all like what you could do with an at home setup. If you wanted to invest a little money or if you wanted to build out a studio for your company, this is like a great great starter pack. And some of the stuff that we just talked about is also mentioned here.
+
+And yeah, thank you so much for listening to our talk. Um, I think we have a bit of time left. So, we have like 20 minutes to answer any questions you have and this is our account handles on our socials. Feel free to reach out.
+
+</details>
+
+**>>**: 如果大家需要积分或额度方案，直接私信我们。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: And if you want any credits, plans, just DM us.
+
+</details>
+
+**>>**: 没错。还有关于电脑操控（Computer Use）的反馈，我个人对此非常感兴趣，请务必告诉我你们的想法。
+
+大家有什么问题吗？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yes. And feedback, especially like I have a personal interest in computer use, so please let me know what you think.
+
+Questions?
+
+</details>
+
+### 问答环节：知识库、自主提醒与算法机制
+
+**>>**: 我大部分素材其实都存放在 Notion 里。我觉得在结构上其实可以不用设计得太死板，随意一点完全行得通。
+
+我的灵感库在 Notion 里，所有写过的脚本也都在 Notion 里集中管理。我配置了 ChatGPT 的 Notion 连接器，它能自动搞定一切，真的不用把架构想得太复杂。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: So most of my stuff probably lives in Notion. Like I think you can actually be pretty unstructured with it and get away with it.
+
+Um, I think like my swipe file exists in Notion. All of my scripts exist in Notion. I have all of my scripts in one place, like all of my historic scripts in one place. And so, um, I have the Notion connector for ChatGPT and it just There's actually it's very There's actually like you don't have to overthink it. It will do it all for you.
+
+</details>
+
+**>>**: 我有时候确实会想得太复杂，但我完全同意过度思考绝非好事。我也分享一下我的做法。
+
+我过去也重度使用 Notion，最近转到了 ChatGPT Space，因为这样非常顺畅，省去了配置连接器的中间环节。但我依然很喜欢 Notion 的设计风格。我是对自己的流程有着极致掌控欲的人：我为操作 Premiere 的每个细节都配置了专门的技能。
+
+随着时间推移发现的低效环节与最佳实践，我都会更新进去：调色、音效、字幕各个步骤都有专门的技能，它们全部归拢在“Premiere 技能”这个大框架下作为子技能存在。每当我调用 Premiere 时，它会主动判断：“我看到你现在处于剪辑阶段，音效已经完成了，但还没有加字幕。”它内部有一套从 1 排到 12 的完整流程清单，每一步都有对应的技能，我不断对其进行迭代维护，确保它的逻辑清晰易读，因为这对我来说是最核心的技能资产。也许我应该把这个技能开源分享出来。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: I do overthink it, but I also agree overthinking is never good. But I can also share a bit. Um, I used to use Notion a lot. I recently switched to ChatGPT space cuz it's just like very easy to like I think not need to go through the Notion connector, but I love the way Notion is designed. So it's like a give and take. Um, I'm like super like hyper control of like my process. I have like one skill for everything to do with operating Premiere. So like all of the best practices that I update with like the inefficiencies over time I care about, I have everything in there for like color grading, sound effects. I have a caption skill um and it's all grouped under like this Premiere skill bracket as like sub skills. Um, so every time I call upon Premiere I would it would be like, "Oh, like I see you're in the editing stage of the process and I see that your sound effects are done, but I see you don't have captions yet." So like it has like this process list of like 1 2 3 4 5 6 7 to like 12. And it has like skills for each step and I'm constantly updating it over time. Like I'm constantly looking back at it, making sure it's readable cuz that skill's like the most important skill to me. Maybe I should like share that skill.
+
+Yeah.
+
+</details>
+
+**>>**: 对我来说，Dots 最让我兴奋的地方主要有两点：第一是自动化监控。它可以 24 小时持续盯盘 Twitter 或 LinkedIn，主动提醒：“这里有个表现极佳的灵感案例，这里有个正在上升的热门趋势”，持续挖掘并呈现出来。
+
+第二点是持续监控你自己的内容表现。它能定期主动提醒：“这条评论你必须回复一下；这条视频数据爆发了，可能的原因有这些，你可以从中吸取这些经验并更新你的技能库。”
+
+<details>
+<summary>Original English</summary>
+
+**>>**: I think to me the ways that I would be most excited for Dots is probably one, I think with automation. So, in the sense of like it can be constantly monitoring like Twitter or LinkedIn at things that it's like oh, here's some inspo that's performing really well, here's a trending topic like in surfacing that and kind of looking at it constantly.
+
+And I think two, to the point of also monitoring how well your content is performing. I think something that can like regularly be like, okay, it's like constantly looking um this is like a comment that you should reply to. Here's this is like performing super super well, maybe you want to like here's like some wise, here's how you can learn from it. I think you should update your skills, that kind of thing.
+
+</details>
+
+**>>**: 没错，这非常有意思。大家如果有关于 Dots 的使用反馈，我很想听听。Dots 和 Space 的核心差异在于：Dots 是主动发起（Proactive）的。你不需要去设置定时任务说“每天帮我检查一次”，Dots 会主动提示：“嘿，这个视频表现异常优异”，或者“你是不是忘了发布那个视频了？”它不是在固定的刻板时间点提醒你，而是如影随形。我最喜欢的 Dots 任务是：“只要有需要我紧急关注的事项，立刻通知我。”
+
+这样我就不用去翻看杂七杂八的信息，只需要关注我和 Dots 的对话，它就像我的私人助理。而 Space 则是深度集成在 ChatGPT 里的工作台，聚合了你的所有对话线程和任务。所以我现在基本从 Notion 迁移出来了（虽然一些更具创意的构思仍会留在 Notion 里），在 Space 里它可以非常便捷地与对话交互、衍生出子对话，并快速更新 Space 页面。你只需要在 AGENTS.md 里定义好“这是一站式中心，在这个页面更新这些内容”，所有东西就都在同一个地方了。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yeah, this is really interesting to me. If any of you guys have Dots feedback, I would love to hear. Yeah, like the key thing about like Dots and Space is with Dots, it's proactive. Instead of like needing to run like a scheduled like task, which is like oh, check my content every like day.
+
+Um Dots is proactively being like, hey, this video is outperforming, it's like doing really well. Or like oh, like um did you forget to post that video? So, it's like proactive. It's like reminding you not at scheduled moments, but it feels like it's on the go just like um my favorite Dots task is like just tell me if there's anything that needs my immediate attention.
+
+And then like I just like don't look at other stuff and I'm like okay, like I'm just like checking my chat with Dots. It's like literally my own personal assistant. With Space, it's just like a way to be integrated with ChatGPT and all of your threads and all of your tasks. So, I've moved off Notion um even though I do still some things on Notion like the more creative stuff just because it can talk to chat very easily, you can spin off sub threads and like have it quickly update Space um and it's really easy to just like tell your agents MD like this is like my one-stop shop, like update these pages for these things and it's all in one place.
+
+</details>
+
+**>>**: 对我帮助极大的另一点是：我完整配置了 Twitter API 并将其连接到 ChatGPT，拉取数据极其轻松。这带来了巨大的改变——相较于视频脚本本身，文案受其影响最大。
+
+我现在的文案和过去相比简直判若云泥，因为系统能非常明确地告诉我：“对于访谈类视频，这种类型的钩子效果不好，让我们尝试这些不同的风格”，并直观对比哪个表现好、哪个表现差。
+
+做 AB 测试对比的一个极佳方法是：拿一条长视频切出几条不同的短切片，保持基础画面内容一致，专门对文案进行控制变量测试，然后通过 API 对比互动数据，这样得出的结论才更加客观科学。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Um I think the one thing that's really helpful for me is that I've actually like just fully set up the Twitter API and connected to it to chat GPT and then it can like pull data really easily. And so that's really helpful in terms of I think the biggest thing is that it's less so like maybe on your video script, but especially with your caption like the captions that I used to have versus now are like so different because it just really is like, okay, this type of hook is not working for this interview like for interviews like let's try out all these different styles and it can tell me like this performed really well, this didn't perform well.
+
+Um, I think a one nice thing to do it more apples to apples for example is if I like take a longer video and I have several cut downs and then I test different experiments with like the captions and things like that for the different videos and then like using the API can compare the engagement because then your base content is like more similar to each other.
+
+</details>
+
+**>>**: 嗯嗯。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Mhm.
+
+</details>
+
+**>>**: 完全赞同。这确实是成为创作者最快的进阶路径。
+
+关于摸透推荐算法，你肯定也有自己的看法。我个人唯一真正做过深入研究的是：Twitter 其实开源了他们的推荐算法代码，那是一个公开的代码仓库，展示了算法的工作逻辑。你可以把它下载下来丢给 ChatGPT，让它帮你梳理核心洞见。里面详细讲解了 Twitter 算法的评分打分机制等等，全是完全公开透明的。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yeah, completely agree. I feel like the fastest way to like be a creator.
+
+Um, you probably have thoughts on this too. I will say that in terms of understanding the algorithm, the only thing I've really done is that Twitter actually open sources uh or like it's a public repo in terms of how their algorithm works and you can download it and or you can give it to chat GPT and have it like kind of help you talk you through some of the insights. And it talks about like the scoring and things like that for how the Twitter algorithm works. It's all public.
+
+</details>
+
+**>>**: 我们公开分享了大量的提示词，但具体的技能文件似乎还没有公开。
+
+不过我认为技能本身带有极强的个人专属特质，对吧？你可以使用这些提示词来创建属于你自己的技能，但这些技能沉淀的是我个人的语调与声音，我并不认为在座的各位都应该用我的语调去发推文。
+
+（笑声）
+
+如果能开源一些通用框架会很酷，这确实是个好主意。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: We have a lot of our prompts out. I don't think any of our specific skills.
+
+But I also think it's very specific to you individually, right? Like you would use these prompts to create the skill, but like these skills are capturing my voice and I don't necessarily think that everyone here should write tweets in my voice.
+
+>> [laughter]
+
+>> I feel like it'll be cool to open source some stuff, but yeah, I I do Yeah, like framework, exactly. That's a good idea.
+
+</details>
+
+### 问答环节：去 AI 味、个人品味与跨界思考
+
+**>>**: 是的。无论是视频还是博客文章，我的思考方式是：大多数人应该都会同意，我们希望 AI 帮我们完成前期大量的调研工作，但最终的成稿必须由你自己亲自撰写。之后你可以用工具来修正语法，或者明确限制它只能做极其微小的润色。
+
+如果你想彻底消除“AI 味”，有几个非常实用的小技巧：
+多使用具体的指标、确切的数字和真实案例，这能让内容显得非常有人情味；
+在写作时始终融入鲜明的个人色彩，穿插大量的个人轶事。
+市面上有很多让内容更具个人风格的方法论框架，这背后其实有一整套科学机制——比如政客在所有演讲中用来深深吸引听众情绪的框架技巧，大家可以去检索研究一下。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yeah. So, I think the way that I like to think about it for both videos and vlogs is that and I think a most people would agree is that um you would want it to help you do a lot of the preliminary research, but that at the end of the day like or the final product should be written by you and then you can use um a tool to kind of like clean up the grammar or like be very explicit that it should have make very little edits.
+
+I do think when you don't want to sound AI generated, some like really helpful things are like um you should use a lot of like metrics, numbers, examples. Um that kind of makes it feel more human. I think always actually being very personal with how you write, um a lot of anecdotes. There's like the really good um There's a lot of frameworks out there for how you can make content sound more personal actually. Um there's actually a whole science behind it and you can see There's like frameworks that like politicians will use for all of their speeches for how to make people feel really drawn in. Um so you can find things like that.
+
+</details>
+
+**>>**: 哇，这很有意思，我得好好去研究一下这些框架。
+
+这个问题非常好，我想在 Sarah 说的基础上做点补充。作为在 Instagram、YouTube 这种更大众化、更泛娱乐的生态圈里取得过一定成功的人，我还有另外两条强烈建议：
+
+第一，扎根真实世界生活，去亲身经历大量事物，留心观察那些真正吸引你注意力的人和事。
+
+“品味（Taste）”这个词现在可能有点被滥用了，但我认为每个人在生活和体验不同事物的方式中，都拥有一套独一无二的个人视角（POV）。多去体验现实生活是至关重要的，而不是一味地从互联网上生搬硬套别人的东西，想着“我要照搬那种思维模式，我要照搬这个套路”——那会彻底扼杀你形成强烈而独特视角的可能性。我深信，Sarah 和我之所以能在内容创作上取得成绩，很大程度上得益于我们在真实经历中打磨出的极其鲜明的个人视角。
+
+第二点，把自己视为生活的策展人（Curator），对你选择去经历的每一件事保持极高的审慎与自决（Intentional）。这是对待内容创作以及对待生活中任何事情的极佳框架。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Ooh. I That's interesting. I have to look into the frameworks. Um the question is like really good. I I feel like two other things that I would also really recommend, at least like as someone who's like found like success in kind of the more like Instagramy, like YouTubery, like more like normie ecosystem is like one like live in the real world, experience a lot of things, and like pay attention to the things that like draw you to them.
+
+I think people I think taste is a bit of an overused word, but I think everyone has like a personal POV in the way they live in the way they live their lives and experience different things. It is so important. You live more of real life and not try to like absorb things you see from the internet and think like, "Okay, I'm going to like adopt that mindset. I'm going to adopt this." Because it's going to prevent you from developing a very strong and unique POV. I really deeply believe the reason Sarah and I have succeeded in content creation is in part because we have had really strong POVs that we've cultivated over real experiences. And I the second thing to add on is just like treat yourself and think of yourself as a curator of your life and of experiences. And like be very like intentional about the things you choose to do. And I think that's a good framework to also approach content and anything you do in general.
+
+</details>
+
+**>>**: 我再补充两个亲身经历的案例。刚才有人提到“我有工程背景，现在想跨界做内容”。Cloud Code 的开发者关系负责人 Tarik 有一个非常棒的比喻，叫做“耕耘与收获（Reaping and Sowing）”。
+
+想要做出真正真实可信的内容，绝不是随便坐下来拍脑袋想“我要做内容了，让我随便编点什么”。特别是如果你是工程师或创始人，你其实占据着得天独厚的优势，因为你已经投入了大量时间在“耕耘”上——所有你做过的工程实践、写过的代码、亲自动手踩过的坑和收获的经验，正是这些让你能够创作出拒绝泛泛而谈、极具真实感的内容。
+
+另一个例子是 OpenAI 的实习生 Tice Simonian。他曾制作过非常多惊艳的 Astra 演示——比如机器人粉刷金门大桥，或者在旧金山上空飞翔等等。对许多人来说，灵感就像洗澡时的突发奇想，在随机时刻迸发；但他本身也是个极具创意的人。他曾制作过一个关于 AI 智能衣橱的技术视频——只需拍下你的衣橱照片，AI 就会构建数字衣橱并帮你一键搭配衣服。他坦言：“这个创意之所以诞生，纯粹是因为我妹妹非常热衷时尚，我和她聊起时尚话题时偶然碰撞出来的。”
+
+因此，跳出科技圈的狭隘信息茧房，顺应你天然的好奇心去探索真实世界，其价值被严重低估了。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: I think two more like kind of anecdotal things that I will say. I think earlier we had a great example of like I'm coming from this engineering background and then I'm trying to create content. I think like Tarik, if you're familiar, who is like a dev rel at Cloud Code, has this like really great thing that he likes to say which is like reaping and sewing.
+
+So one way to make really authentic content is like you don't just sit down and you're like I'm going to create content. Let me like something. It's like especially if you're an engineer, you're actually in a great position or you're a founder, you're in a great position because you've spent so much time doing the reaping already. And then the reaping, right, is like all the engineering work that you do is all the is like, you know, um all the code that you write, all the learnings that you've had like being really hands-on. And then that also helps you create really authentic content that's not like overly generic.
+
+Um and then the other anecdote that I will say is if you're familiar with um his name is like Tice Simonian who was an intern at OpenAI and he created a lot of the really great Astra demos like the robot um painting the Golden Gate Bridge or um kind of being able to fly over San Francisco etc. And like for him like a lot of his inspiration isn't like it's right it's like shower thoughts, it's like at random moments, but he himself is also like a very creative person. And he cites this like oh like he did this like um this like tech this video about his about like you just take pictures of your wardrobe and then it creates like an AI wardrobe and it makes it really easy for you to dress yourself. He was like "Yeah, like that just came because my sister's like really into fashion and she I was just talking to her about fashion and then that's how this idea came about."
+
+Um so I think it's like very, very underrated of like exiting this tech bubble and just like letting you actually follow your natural curiosities.
+
+</details>
+
+### 问答环节：视听对齐与自动化剪辑边界
+
+**>>**: 对我而言，因为我是个视觉型的人，视频是我个人表达最突出的载体，也是我极度享受去策展和沉淀的领域；其次是音乐。尤其在 Instagram、YouTube 和 TikTok 这类平台上，引爆病毒式传播的核心在于音乐、画面与文字之间的高度对齐（Alignment）。一旦三者产生共振，内容必然大火。要做到完美契合极具挑战，为了无限接近这种对齐感，我通常在动手制作之前就会先选定音乐。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: I mean, I think my voice is my most prominent through video just because I'm such a visual person and it's just something that I really enjoy like curating and developing. Um secondarily it would be music. I think especially on like um platforms like Instagram, YouTube, TikTok.
+
+Like the key thing that makes things go viral is alignment between music and visual and text. If everything is aligned, it will go viral. It's just very hard to make it all align, but I always to get closer to that alignment, I pick the music before I make
+
+</details>
+
+**>>**: “对齐”具体是指什么？
+
+<details>
+<summary>Original English</summary>
+
+**>>**: mean to that um to have alignment?
+
+</details>
+
+**>>**: 氛围的契合。举个例子，不知道大家有没有看过那条黄色小狗跳舞的爆款视频？
+
+在座有人看过那条黄色跳舞小狗的视频吗？
+
+好吧，大概只有两三个人看过。看来我处于互联网的某个小众角落（笑）。那条视频配的是 Steve Lacy 名为《Playground》的歌，画面上是一只黄色小狗在欢快跳舞。它之所以瞬间印在脑海里，就是因为小狗跳舞的律动、音乐的节拍以及画面的质感融合得浑然天成。一大批电影感创作者纷纷跟风翻拍，就是因为那种高度契合的氛围感太能引发共鸣了。这种感觉很难用语言精准定义，但当所有元素严丝合缝地融合在一起时，那种独特的氛围（Vibe）就出来了。
+
+音乐与视觉是我的核心抓手，但不知道对 Sarah 来说是不是也一样。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Like alignment. So for example, if you saw that like dancing dog video, like that yellow dancing dog video,
+
+>> Who's seen the yellow dancing dog video?
+
+>> Okay, like two people. Okay. I'm on some corner of internet, but it's to like Steve Lacy's song, like it's called playground and then there's like this yellow dancing dog and it immediately comes to mind because like the vibe of the dancing dog and that music and like the visuals it's overlaid on is so coherent. Like this particular group of creators on the internet, just cinematic creators, like all made videos because it was just so aligned, it was such a vibe, it was so resonant. Um it's hard to describe what it means, but just like when it all fits together, when it all goes together and it creates a vibe.
+
+So music and like visuals is my favorite, but I don't know if that's the same for you, Sarah.
+
+</details>
+
+**>>**: 我在具体剪辑时的切入点完全不同。对我来说，我的视频不追求电影级质感，更多是教学向、技术演示或者工程原理解释。绝大部分核心都在脚本里，脚本是我最重要的基石，其他一切都只是锦上添花。
+
+正因如此，我极度乐意将繁杂事务外包出去。比如配文校对极其繁琐，AI 生成的字幕总是错漏百出，过去这要耗费我好几个小时；而现在我直接让 ChatGPT 在桌面上操控 CapCut，帮我自动修正所有字幕。
+
+它还会全自动添加所有音效，我会把最喜欢的音效配置给它：“每当画面弹出图片时插入这个音效；每当转场时插入这个音效。”在文字动效方面也是如此：“凡是脚本中需要着重强调的核心关键词，全部在屏幕中央生成醒目的放大动态文字。”
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Um I feel like the way that I like to do it in my actual editing. Like so for me, where my videos are less about being cinematic and they're more so about like being educational or it's some like coding to it's like some technical tutorial or it's like explaining some engineering concept. Um I think most of it is in the script, like that's the most important thing for me and then everything else is kind of icing on the cake. Um and so that's why it's like to me I really like outsourcing. Like captions are super tedious. AI generated captions are always wrong. Uh Um, and so that is what's like taking me hours and I literally just have ChatGPT controlling CapCut on my desktop and they will fix all of the captions.
+
+Um, it will add all of the sound effects as well. Like, it I'm like, "These are my favorite ones. Like, add it so that whenever a video whenever an image pops up on the screen, you use this sound. Whenever you do a transition, you do this sound."
+
+Um, and then in terms of text animations, like I'm like, "I have like favorites." and I'll just like Um, any phrases that you want to really emphasize out of the caption, like have it just be like really big animated text on the screen.
+
+</details>
+
+**>>**: 100% 可行。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: 100% I think it's doable.
+
+</details>
+
+**>>**: 是的。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yeah.
+
+</details>
+
+**>>**: 但这完全取决于你想要制作哪种视频。如果创作者希望更省心，比如在说话的间隙直接说“留这遍拍摄”或“把这遍剪掉”，甚至在念脚本中途停下来说“我希望这里在屏幕上插一张图”——我知道 OpenAI 有一位名叫 Jason 的同事，他录了一段视频，在说话中途随口下达剪辑指示，直接一键搞定了一条完整的 15 分钟长视频。但这取决于你对细节的掌控要求。如果你追求极致掌控，就无法完全放手；如果你不在意让渡部分控制权，这完全行得通。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: It depends on what kind of video you want though. Like, for like a creator who's a bit more hands-off, like, I want to talk and I want to like, you know, even during talking just be like, "Oh, I like that take." or like, "Cut that take." or be like, "Oh, I can like even stopping in the middle of the script to be like, "I want this image to go on the screen." I know like a creator like he's also at OpenAI, his name is like his name is Jason and he just like edited a full like 15-minute video like without just like in one shot through just a single video where you're talking in the middle of the video saying, "I want it to be edited like this." But, it depends on the control. If you want a lot of control, you cannot do it. If you don't mind relinquishing control, you can.
+
+</details>
+
+**>>**: 创作自由与创作掌控权的权衡。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Creative freedom.
+
+>> Okay.
+
+>> Creative control. Yeah.
+
+</details>
+
+### 问答环节：爆款异常值理论与开发者边界拓展
+
+**>>**: 我的理解是：与其盲目追逐“某种类型的内容正在大火”，不如利用它来提炼方法论框架。比如很多人在 LinkedIn 上深谙此道（因为 LinkedIn 本质上就是一套文案框架的游戏）：把那些表现出色的帖子抓取下来，提炼出底层结构，然后将该框架迁移套用到你的垂直话题上。但我也完全赞同你的观点——如果你永远只盯着最热门的内容和话题，那你永远只能步人后尘。
+
+所以我更倾向于将其作为思维框架来借鉴，至少我自己是这么做的。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: So, I think the way that I would think about it is like instead of it's just like, "Oh, this like category of content is doing really well." you like I think it's really helpful at I date at identifying frameworks. So, like for example, like I know a lot of people who do this, but they'll basically look on LinkedIn, especially cuz I think LinkedIn is such a like frameworks captions game. Um, and you can basically like, "These are all the ones that are performing well. Here's the framework. Now, here's how you like apply this to XYZ topic." So, but I agree with your point that like if you're just only looking at the best performing content and the best performing topics, you're like always slightly behind.
+
+>> Right.
+
+>> So, I would just think of it as a framework. At least that's how I do. it.
+
+</details>
+
+**>>**: 抱歉插一句，或许“异常值理论（Outlier Theory）”能提供帮助：有时候频道里会出现某一个数据彻底爆发的单篇爆款，在整个频道里鹤立鸡群，它往往具备某种极端的差异化特质。比如我之前展示的那个 YouTube 调研工具，其核心定位就是筛选这种异常值——它带有一个滑块，可以筛选出播放量达到该频道平均水平 1 倍乃至 20 倍以上的视频。你能直观地看到他们在缩略图封面设计上做出的极其大胆新颖的创新。寻找并分析这种爆款异常值，是我经常明确要求 ChatGPT 去执行的任务。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: I think the one Oh, sorry. Just to quickly add on. The one thing that could help maybe is outlier theory. So like there's sometimes like, you know, for example, a YouTube video that just completely outperforms. And it's just like that one of one on a channel. And maybe it's extremely different. Like for example, the like the tool I showed earlier for the YouTube research tool, it's specifically designed to find outliers. Like it has a slider that goes from like 1x to like 20x the normal like average views on that channel. And you can really see them doing some really interesting thing with a thumbnail especially. Lots of innovation with really cool thumbnails that go viral. Um but yeah, thinking about outlier theory is something I've asked ChatGPT to do explicitly.
+
+</details>
+
+**>>**: 谈到从全职创作者转变为现在的兼职创作、同时在 OpenAI 工作的状态：
+
+坦白讲，以前做自由职业全职创作时，创作就是你的整个人生，尤其是刚起步时，你完全没有生活与工作的边界——从早到晚连轴转。但我非常享受那种状态，因为你切切实实掌握着自己人生的方向盘，片刻不停，毫无闲暇。
+
+加入 OpenAI 后，依然每天忙个不停，但更多是立足于工作职责：一方面与大量用户沟通交流、为官方账号策划并制作内容；另一方面排查 Bug、收集传递用户反馈——这是我们团队的核心职责。但我同时也获得了极大的自由度来为我的个人受众创作，这本身也是工作的一部分。这是成为更广泛开发者布道者的一部分——如今的开发者群体已经突破了传统程序员的定义。因此团队也将我个人的创作视为自身角色的自然延伸。虽然依然是马不停蹄，但这份兼职内容创作与我的本职工作形成了极强的协同效应。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: For going from like full-time to like now like part-time content creator but also at OpenAI.
+
+Like before, I would like transparently when you're self-employed and creation is your entire life and it's your first time doing it, you kind of have no boundaries. Like I was just working like day to night, but I really loved it cuz, you know, you're in the driver's seat of your own life. So it was like constantly all the time. No downtime.
+
+Um now that I'm at OpenAI, it's still like I'm always doing something, but I would say you know, I'm at work. And a lot of time is both like spent talking to a lot of users and thinking of like content on our profiles and I'm producing content for our profiles. And we're also like constantly like fixing bugs, talking with our users, like um relaying product feedback. That's just what our team does. And but I think I also get a lot of freedom to create for my personal audience. That's a part of the job. It's part of like being an advocate for developers who have just expanded not, you know, beyond the traditional devs. So I think my team also sees my own work as Oh, my own work as an extension of my role. So it's still like constantly and all the time, but I would say it's like part-time content creation is quite synergistic with my current work.
+
+</details>
+
+**>>**: 我觉得最显而易见的趋势是：随着各类 AI 个人助手的崛起，创作者面向的受众不仅涵盖了硬核技术人群，更扩展到了广大的知识工作者群体。
+
+对我来说，最直观的非技术受众群体，其实是那些身处科技环境中的非技术岗位人群——比如在科技大厂或 AI 初创公司从事非研发岗位的员工。我们俩都具备技术背景，但平时又花大量时间去面向普通大众受众创作，这让我们能够更好地搭建桥梁，满足这部分人群的需求。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: So I think the most obvious thing is that now that we have all the rise of all these AI personal assistants, right? You're not only technically targeting a technical audience, but now you have all of this knowledge work audience.
+
+To me at least the most immediate like segment of this non-technical audience is like basically people who are non-technical but working in like a technical environment. So may it be like it's a tech company, it's an AI startup, but they're like in these non-technical roles. Um and I think that is also a nice thing for both of us where we are both have these technical backgrounds. We um but we spend so much time like for these consumer non-technical audiences that I think we're more allows us to cater to it a little more.
+
+</details>
+
+**>>**: 确实，我完全同意。放在一年前，“开发者”指的还是传统科班背景的工程师。而现在，在 OpenAI，我们极度关注开发者定义的扩展——我们希望开发者不再局限于小圈子，而是让所有人都能成为开发者。
+
+硅谷的节奏飞快，新事物层出不穷，但不同群体之间依然存在着巨大的认知鸿沟。这是一个尚未完全解决的开放课题，但我们的目标是：让每一个人，都能成为开发者。
+
+<details>
+<summary>Original English</summary>
+
+**>>**: Yeah, I completely agree. Like a year ago, like the the developers is traditional like dev, you know, background. I think right now um OpenAI, we have a very big interest in developers not being that just being that audience, but like expanding to basically everyone.
+
+I think that's who we want all developers to be, like everyone. Um and I I think we're like rethinking I mean I I I think we're rethinking a lot about what it means to be a developer, how we can speak to like a broad spectrum like of people along like especially you know, Silicon Valley is like pacing so fast and there's so much that's been released, but there's also like an education gap between, you know, different segments of people. So it's like an open problem, but we want developers to be everyone.
+
+</details>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will Brown 谈 Primed and Loaded 的开源后训练工具栈：Verifiers V1 与 Primer RL</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Will Brown 谈 Primed and Loaded 的开源后训练工具栈：Verifiers V1 与 Primer RL</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-07-13</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Will Brown 谈 Primed and Loaded 的开源后训练工具栈：Verifiers V1 与 Primer RL</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/post-training/">post-training</a>
+      
+        <a class="tag-link" href="/tags/reinforcement-learning/">reinforcement-learning</a>
+      
+        <span class="tag-pill tag-pill--no-page">evaluation-environment</span>
+      
+        <span class="tag-pill tag-pill--no-page">async-training</span>
+      
+        <a class="tag-link" href="/tags/open-source-ai/">open-source-ai</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">演讲者 Will Brown 介绍其团队的开源后训练工具：Verifiers V1 的任务集、harness、runtime 拆分，Primer RL 的异步强化学习与算法抽象，以及托管训练平台；其中规模与成本数字均为演讲者所述。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=V-EDrhIhHzQ" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-07-13T00:00:00.000Z">2026-07-13</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>10 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BC%80%E5%9C%BA%E4%B8%8E%E5%85%AC%E5%8F%B8%E4%BB%8B%E7%BB%8D">开场与公司介绍</a></li><li class="outline-h3"><a href="#%E6%9C%AC%E6%AC%A1%E6%BC%94%E8%AE%B2%E7%9A%84%E5%86%85%E5%AE%B9%E8%8C%83%E5%9B%B4">本次演讲的内容范围</a></li><li class="outline-h3"><a href="#%E5%90%8E%E8%AE%AD%E7%BB%83%E5%BE%AA%E7%8E%AF%E7%8E%AF%E5%A2%83%E5%8D%B3%E8%AF%84%E4%BC%B0">后训练循环：环境即评估</a></li><li class="outline-h3"><a href="#verifiers-v1%E4%BB%BB%E5%8A%A1%E9%9B%86harness-%E4%B8%8E-runtime">Verifiers V1：任务集、harness 与 runtime</a></li><li class="outline-h3"><a href="#%E4%BB%BB%E5%8A%A1%E5%A5%96%E5%8A%B1%E4%B8%8E%E7%BE%A4%E7%BB%84%E5%A5%96%E5%8A%B1">任务、奖励与群组奖励</a></li><li class="outline-h3"><a href="#%E5%B7%A5%E5%85%B7%E7%94%A8%E6%88%B7%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%B8%8E%E6%8B%A6%E6%88%AA%E6%9C%8D%E5%8A%A1%E5%99%A8">工具、用户模拟器与拦截服务器</a></li><li class="outline-h3"><a href="#trace-%E5%9B%BE%E4%B8%8E-renderers">Trace 图与 renderers</a></li><li class="outline-h3"><a href="#primer-rl%E5%BC%82%E6%AD%A5%E8%AE%AD%E7%BB%83%E4%B8%8E%E8%A7%84%E6%A8%A1">Primer RL：异步训练与规模</a></li><li class="outline-h3"><a href="#%E7%AE%97%E6%B3%95loss-%E4%B8%8E-algorithm-%E7%9A%84%E5%88%86%E8%A7%A3">算法：loss 与 algorithm 的分解</a></li><li class="outline-h3"><a href="#%E6%89%98%E7%AE%A1%E8%AE%AD%E7%BB%83%E5%B9%B3%E5%8F%B0%E4%B8%8E%E7%BB%93%E8%AF%AD">托管训练平台与结语</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="开场与公司介绍" data-reading-heading="">开场与公司介绍</h3>
+<p>大家好，近况如何？谢谢你们到场。这次是比较临时凑起来的。我记得几天前我在跟 Swix 聊，我问他："嘿，我还能做一场 workshop 吗？"他说："我们还剩一个时段，周一 4:30。"我就说："我要了。"</p>
+<p>然后，我想对我们在 Primed and Loaded 一直在构建的一些东西做个更新。如果你不认识我，你好，我是 Will Brown，我在 Primed and Loaded 负责应用研究。我们在 AI 研究基础设施栈的各个环节都做了很多工作。今天要讲的是后训练，这是我花很多时间思考和构建的领域。我尤其想谈我们构建的完全开源的后训练工具，也就是 verifiers 和 Primed RL 这两个库，它们在环境侧和训练基础设施侧是相辅相成的。</p>
+<p>我还想展示一些我们过去几个月一直在做的东西。我认为这是随着 agent 用例变得更复杂、同时人们对 agent 的期望也更清晰之后，事情演进的方式，也是为驱动人们如今正在构建的真实应用所需要做的那类后训练。</p>
+<p>总体来说，在 Primed and Loaded，我们的目标是让大规模开源 AI 研究更容易，并让公司能够训练自己的模型、部署它们，并让它们根据在生产中实际遇到的场景（包括应用、产品、内部任务和工作流的用例）不断改进。同时让人们除了使用已经相当不错的开源模型之外，还能把它们拿来，在自己的用例上做得更好。</p>
+<p>我们用"开放超级智能栈"（the open superintelligence stack）这个说法来描述这件事。一年前我们说这个词的时候，感觉更像营销；现在感觉更像是"哦，对，就是这么回事"。模型变得非常非常好，在很多方面、很多事情上都是超人的。我们想做的是给人们一套开放的工具包，让他们可以用它对这些模型做真正的训练，并拥有所需的控制权，把它部署到需要的地方，并按需要尽量定制，把事情做成。</p>
+<p>这就是我们构建的栈，它全都建立在算力之上。我们运营着一个遍布全球数据中心的市场，其中很多是相当大的数据中心。我们目前运营着超过 10,000 块 GPU，很多在同一个集群内就有数百或数千块。我们有主要的训练框架。我们有用 Verifiers 库和 environments hub 平台构建的环境。我们有研究工作流平台，现在叫 lab，它由许多部分组合而成，包括 environments hub、托管训练、评估，以及推理和沙箱。所有这些都是为了赋能并解锁前沿模型训练。我们自己也做这件事，有我们的 intellect 模型系列，那边很快会有一些令人兴奋的东西。我们也与客户一起训练模型，我们合作的很多人，目标是在他们自己的工作流上做大规模模型训练。</p>
+<p>为了做到这一切，我们需要给人们工具，让他们能组装成流水线、工作流和研究，从而在规模上拿到所需的结果。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Hey guys, how's it going? Thanks for showing up. This was a little bit of a last-minute assembly. I know a few days ago I was like talking to Swix. I was like, "Hey, can I still do a workshop?" And he was like, "We have one slot left. It's Monday at 4:30." And I was like, "I'll take it."
+<p>Um and uh then yeah, um I wanted to kind of just do a bit of an update on uh some of the stuff we've been building at Primed and Loaded. So, if you don't uh know me, hi. I'm Will Brown. I lead applied research at Primed and Loaded. Uh we do a lot of stuff around uh every part of the kind of AI research infrastructure stack. Uh today is going to be about post-training, which is where I spend a lot of my time thinking and building. Um and especially want to be talking about uh the post-training tools that we build uh that are fully open source, uh the verifiers and Primed RL libraries, uh which kind of go hand in hand um both on the environment side and the training infra side. Um</p>
+<p>and show [clears throat] off some things we've been cooking over the past few months that I think is uh kind of the way that things have evolved as the agent use cases have gotten more complex, but also kind of clearer in terms of what people want out of agents and the sorts of things that are needed to like do the sort of post-training that is needed to uh power like the real-world applications people are building nowadays. And so, broadly at Primed and Loaded, we are our goal is to make doing large-scale open-source AI research easier and to enable companies to train their own models and deploy them and have them improve based on the scenarios that they actually see in production in terms of use cases for applications and products and internal tasks and workflows. Um and to give people an option to not just use the open-source models that are getting quite good, but to take them and make them even better on their own use cases. Um and so, we use the phrase the open superintelligence stack to describe what we mean by this. And I think when we said this phrase like a year ago, it felt a little more like marketing and now it feels a little bit more like, oh, yeah, that's that's kind of what it is. Like the models are getting very, very good. They are superhuman in many ways at lots of things.</p>
+<p>Um and what we want to do is give people an open toolkit that they can use to do real training with them.</p>
+<blockquote>
+<blockquote>
+<p>[clears throat]</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>And to have the control that they need to deploy it where they need to deploy it and customize it as much as they need to to kind of get the job done. And so this is the stack that we built. And it all kind of sits on top of compute. So we operate a global marketplace of data centers around the world. A lot of these are like quite large data centers. We currently operate over 10,000 GPUs. Many in like hundreds or thousands within a cluster.</p>
+</blockquote>
+</blockquote>
+<p>We have our primary training framework. We have environments built with the Verifiers library and our environments hub platform. We have our platform for research workflows that we're now calling lab, which is an assembly of many pieces including the environments hub, hosted training evaluations, as well as inference and sandboxes. And all of this is in service of empowering and unlocking frontier model training. And so we do this ourselves. We have our intellect model series with some exciting things there coming soon.</p>
+<p>And we also train models with our customers where we have lots of people we work with who their goal is to do large scale model training on their own workflows.</p>
+<p>And so to do all of this, we need to give people the tools they can assemble into the the the pipelines, the workflows, the research that allows them to actually get the results that they need at scale with everything they need to do it.</p>
+</details>
+<h3 id="本次演讲的内容范围" data-reading-heading="">本次演讲的内容范围</h3>
+<p>这场演讲将深入 Verifiers 和 Primary L，并展示其中一些新东西，但都放在"现代后训练是什么样子"这个大框架下：把一个模型拿来，训练它在你的任务上做得更好，意味着什么？有哪些组成部分？有哪些坑？以及如何把它编排成一个人们真正容易使用的系统，而不需要去组建一个庞大的研究团队，让任何想投入后训练的初创公司或企业里的 AI 工程师都能做到。</p>
+<p>有一个 cookbook 仓库，目前算是 alpha 版本，还在有些变化，但它预览了我们过去几个月构建的所有东西。所以今天我们会在很大程度上沿着这个框架来讲。</p>
+<p>首先要谈的是：什么是环境（environment）。人们在 RL 的语境下谈环境，会想到 RL 环境，但环境不只用于 RL，它们用于后训练和评估中的各种事情。</p>
+<p>我们要讲的是我们称之为 Verifiers 库 V1 版本的东西，这是一次全面的重构。之前的一切仍然可用，但我们想把它全部重做。所以我们有一套做所有事情的新方式，我们认为它会更说得通，对人们今后想做的事情也强大得多。</p>
+<p>我们还会谈 Primer RL 作为一个库是如何演进的。Primer RL 是我们的全栈开源训练框架，用来支持异步强化学习。我们有很多新的花哨功能可以展示，包括规模和特性两方面。其中很多是为自定义算法服务的，让人们更容易去做现代后训练所关心的那类事情。如果你一直关注 on policy distillation、self-distillation，或者人们正在推出的所有其他有趣的新算法，那确实是研究的时代。</p>
+<p>我们不想只训练小模型，我们想训练大模型。我们想非常高效地训练，因为随着模型变大，算力开销会累加起来。如果你想让人们用得起，尤其是想能够迭代，它就必须快、必须便宜、必须负担得起且可靠。</p>
+<p>所有这些都汇入我们的 lab 平台。我们会谈那里已经发布的一些东西，以及即将推出的一些东西。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And so this talk is going to be about going deep into Verifiers and Primary L and showing off some of these new things, but all under the umbrella of what does modern post training look like? What does it mean to kind of take a model and train it to be better at your task? What are all the parts? What are all the kind of gotchas?
+<p>And how do you orchestrate this into a system that is actually easy for people to use without needing to go build a massive research team and to be able to kind of have it be accessible in the sorts of things that anyone who's an AI engineer at</p>
+<p>any like startup or enterprise that wants to invest in post-training can actually do.</p>
+<p>And so there's a cookbook repo that is that's kind of like an alpha release right now. It's still changing a bit, but it's a preview of kind of all the stuff we've been building over the past several months. And so today we'll be kind of following along</p>
+<p>that framing a good bit. And so I think the first thing we'll talk about is just kind of what is an environment. People talk about environment in the context of RL and they think of like RL environments, but environments are more than just for RL. They're for all sorts of things in post-training and evaluation.</p>
+<p>We're going to talk about what we're going to call the the V1 version of the Verifiers library, which is a full overhaul. Everything else still from before still works, but we're kind of we kind of wanted to redo it all. And so we have a new way of doing everything that we think is going to make a lot more sense, be a lot more powerful for what people are looking to do going forward.</p>
+<p>As well as kind of talk about how Primer RL has evolved as a library. And so Primer RL is our like full-stack open-source training framework to support asynchronous reinforcement learning.</p>
+<p>And we've got a lot of fun new bells and whistles to show off in terms of both scale and features. A lot of this is in service of custom algorithms. So making it much easier to</p>
+<p>do the kinds of things that people are interested in for modern post-training. If you have been following the news on on policy distillation or self-distillation or all these other fun new algorithms that people are coming out with. It is the the age of research indeed.</p>
+<p>And we don't want to just like train small models. We want to train big models. We want to train them really efficiently because as models get bigger, the compute starts adding up. And if you want to make this accessible to people, especially if you want to be able to iterate on it, it has to be fast. It has to be cheap. It has to be affordable and reliable.</p>
+<p>And all of these kind of funnel into our lab platform. We'll talk about both some of the things that we've already released there as well as some things that are coming soon.</p>
+</details>
+<h3 id="后训练循环环境即评估" data-reading-heading="">后训练循环：环境即评估</h3>
+<p>在我看来，后训练循环大致围绕环境展开，因为环境是一种用来指定你想让模型做什么的语言。</p>
+<p>它们封装了你可能拥有的数据、你希望 agent 所处的场景、它与该环境交互的方式，以及如何对"好"打分，判断什么好什么坏。</p>
+<p>通常你拿环境做的第一件事就是 evals。我想很多人对进入后训练可能有些紧张，他们会想："哦，这看起来工作量很大，有一整套新的工具链。如果我已经在用前沿模型，并希望从中得到好结果，或者已经得到了好结果，或者我想先看看在 harness 层面或 prompt 优化上能做什么呢？"这都没问题。我们并不一定要求人们把一切都扔掉。我认为在很多情况下，人们会发现，也是我们在客户那里看到的，对他们最有效的系统是两者并用。你要能够做出这些决定：在哪里训练合适，在哪里使用通过某个 API 提供的前沿模型合适。所以评估对此非常关键。evals 是打开后训练大门的东西。环境和 evals 本质上是同一件事。</p>
+<p>但一旦你有了 evals，你就拥有了与做后训练本来就需要的同一种逻辑单元。所以无论你在做什么，构建 evals 对你的产品卫生都是有益的。如果你想决定用 GPT 还是 Claude，或者决定某个任务需要 Opus、Sonnet 还是 Mythos，如果你想在智能与美元之间做最优取舍，evals 是非常好的方式。但 evals 还会解锁这个飞轮。</p>
+<p>就现代后训练而言，我认为历史上人们把先 SFT 再 RL 作为主要的前沿模型配方，不过 on policy distillation 确实已经进入了很多工作流。我想也有些人对 self-distillation 这类算法非常热衷。我们可以聊聊它什么时候有意义、什么时候没有。但有一个领域，做完整的 on-policy distillation 确实有意义，那就是训练专家模型的时候：你有多个不同的事情希望模型擅长。人们发现，如果你有一堆各不相同的环境，希望一个模型在所有这些上都很强，一个不错的做法是在同一个基础模型之上训练各自独立的 RL 专家，然后把这些教师蒸馏到同一个 checkpoint 里。这通常会更可靠。</p>
+<p>然后，有了这些之后，你要部署训练好的模型，它可能是做了全权重训练的完整基础模型，也可能是一个 Lora adapter，你要大规模地提供服务。而这整个过程的价值在于，它不是你只做一次的事情。我想也有人会说："如果前沿模型会变得更好，我为什么还要做后训练？"嗯，你的模型也应该变得更好。一切都会变得更好。重点是拥有能让一切都变得更好的飞轮。所以你真正想要的，不只是像今天这样做一次后训练，而是能有这种迭代式的模型精炼过程，让训练算力只占你整体推理预算中相当小的一部分，并摊销掉，这样随着你从真实世界获得更多信号，你的模型总是越来越好。而从真实世界获取这种信号并不简单。如何把真实世界反馈中的信息带进你的环境，在很大程度上还是个开放问题。这是工程问题，也是研究问题，但这正是我们大家来这个会议要思考和学习的事情。我会在演讲中稍微谈一下我们是怎么想的。但真正的目标是思考这些工具长什么样？你究竟怎么做？有哪些部分？以及我们怎么构建它？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And so the post-training loop in my mind kind of revolves around environments in the sense of environments are a language for specifying what you want your model to do.
+<p>Um, they are an encapsulation of the data you might have, the scenario you might want your agent to be in, uh, the way it'll interact with that environment, uh, as well as how to to score what good looks like, to determine what was good and bad. Um,</p>
+<p>and often this is the first thing you want to do with an environment is just evals. And so I think a lot of people are maybe nervous about getting into post-training. They're like, "Oh, it seems like a lot of work. There's a whole new tool chain. Um, what if I'm already using like the frontier models and I want good results out of them, uh, or I'm getting good results out of them, or I want to like see what I can do at the harness level first or prompt optimization." And that's all good. Like we're not necessarily asking people to just like throw everything away. I think in many cases what people will find and what we see with our customers is that um, the systems that work best for them involve using both. And you kind of want to be able to make these decisions about what is the right where is the right place to train, uh, where's the right place to use a frontier model that is available via some API. Um, and so evaluations are kind of very key to this. And so like evals are the thing that opens the door to post-training. And so environments and evals are essentially the same thing. Um,</p>
+<p>but once you have evals, now this is the same kind of unit of, uh, like logic that you actually need to do post-training anyways. And so, uh, building evals is like just good for your product hygiene no matter what you're doing. If you want to kind of decide whether to use GPT or Claude, or decide do you need Opus or uh, Sonnet or Mythos for a task. Like if you want to min-max on like intelligence versus dollars, um, evals are a very good way to do this. But evals also then unlock this this flywheel. And in terms of modern post-training, I think historically people have done SFT then RL as like the main uh, frontier model recipe, although on policy distillation has certainly found its way into a lot of workflows. Um, and I think some people are also very eager about algorithms like self-distillation. We can talk a bit about that and when it makes sense and when it doesn't, but uh, in particular one area where it does make sense to do like the whole on-policy distillation thing is when you're training experts where you have multiple different things you want your model to be good at, and people have found that if you have a bunch of different environments that are all different things, and you want to have one model be really good at them, a nice way to do this is train individual RL experts on top of the same base model and then do distillation from those teachers into the same uh, checkpoint. Uh, that just generally ends up being more reliable.</p>
+<p>Um, and then once you have this, you want to deploy the trained model, which could be a full uh, base model with a full weight training, or it could be a Lora adapter, and you want to serve this at scale, and ultimately what is useful about this whole process is it's not just a thing you do once. Like I think some people also say like, "Oh, why should I do post-training if the the frontier models are going to get better?" Well, your model should get better, too. Like it's not it like everything's going to get better. Uh, the point of this is to have flywheels that make everything get better. And so what you really want is to be able to not just post-train like today, but to be able to uh, have this iterative process of model refinement, and the sort of thing where you can kind of have the training compute end up be a pretty small fraction of your overall inference budget that you amortize out such that your model is always getting better and better um, as you are getting more signal from the real world. And getting this signal from the real world isn't trivial. Like that's kind of largely an open question as to like how you go about um,</p>
+<p>getting information from real world feedback into your environments. It's an engineering problem, it's a research problem, but it's the sort of thing we're all here at this conference to kind of think about and learn about. And so I'll I'll touch on that a little bit uh, in the talk as to kind of how we we think about this. But but really the goal is going to be thinking about what do these tools look like? How do you actually do this? What are the parts? Um, and how do we build it?</p>
+</details>
+<h3 id="verifiers-v1任务集harness-与-runtime" data-reading-heading="">Verifiers V1：任务集、harness 与 runtime</h3>
+<p>环境作为 evals。什么是环境？我认为把环境分解为任务（task）和 harness 是有用的。这预示着我们过去几个月在 verifiers 中做的一些重构。如果你们有人以前用过 verifiers 库，可能熟悉 multi-turn environment 模式或 tool environment 模式，也就是由环境拥有一个循环，你可以往里插入各种工具。这在很长一段时间里对入门非常好，尤其是在早些时候，人们大多只是想从单轮升级到多轮工具使用。但随着我们对不同模式迭代、以各种方式扩展，我们发现自己在重复大量工作，比如为 CLI agent 添加模式，或为 MCP 添加模式。我们想退一步重新思考：环境应该怎么运作？它真正包含的是 harness 的概念，同时也有任务的概念。我认为这之所以微妙而棘手，也是我们过去 6 个月经过多次迭代的一个设计问题，原因在于有些东西不清楚该归属哪里。有些东西可能既属于 harness 也属于任务。有些工具，在某些情况下是我希望要做的这个任务使用某个工具，在另一些情况下是 harness 自带某些工具。skills、系统提示词，以及在组装你的 agent 或模型将要运行的完整世界时的许多其他拼图碎片也是如此。但最终，我们把所有这些都称为环境的一部分。</p>
+<p>目标是有某种验证的概念：你把模型插入包含 harness 的环境中，给它一个任务，它做一次 rollout，然后你验证它做了什么。这同一个过程既适用于离线评估（只是为了弄清哪个模型更好），也适用于强化学习 RL，也适用于为 SFT 生成数据。我认为很多时候人们把 SFT 看作是想上传一个数据集的事，但实际上他们常做的是拼凑出本质上就是环境的东西，在里面做 rollout，离线保存，放成一种格式并上传，再转成另一种格式，然后接入训练器。而我们的做法是说："你完全可以把这些都省掉，把它当作在环境中做 rollout 的问题来处理，只不过这种情况下有一个教师。"教师可以是另一个模型，也可以是从另一个数据集回放。但归根结底是收集 rollout 并在这些 rollout 上训练。</p>
+<p>on policy distillation 同样是这个形式：你像做 RL 那样在环境里做 rollout，但打分来自教师，用的是教师的 log probs，即教师的似然，而不是奖励信号本身。在我们的框架里，这些都是 Python 包。所以你可以有任何你想要的任务，可以从任何地方拉取数据。我们在这些任务可以长什么样、这些 harness 可以长什么样方面解锁了很大的灵活性。我们的目标就是把它做成一个非常灵活的工具包，涵盖人们想做的所有评估类事情，既针对 API 模型，也针对后训练。</p>
+<p>所以 Verifiers V1 是我们对它的称呼，它其实还没有作为 V1 正式发布，但我们从 VLUM 这样做中得到了启发，决定把它作为新的模式，让一切都围绕它来展开。我们拆分出的关键部分是任务集（task set）、harness 和 runtime。它们都是可组合的，你可以混搭，而且都可以以不同方式单独加载。</p>
+<p>但可以这样理解：任务集是数据，以及应该做什么的规则，与 agent 无关。所以它们是你可以往里插入 agent 的东西。我们想采取非常通用的做法，支持整个生态系统里正在进行的许多出色工作。所以我们原生集成 Hugging Face datasets、Harbor、NeMo Gym 和 Open Ended。你在外面看到的大多数其他属于 RL 环境范畴的工具，我们都会称之为任务集。我们通常发现让它们与 harness 无关是有用的，它们代表服务器后端或你正在交互的某种状态，但并不拥有模型所做之事的全部。所以在某些情况下，把模型插入任务集并不合理。尤其因为我们正在朝一个 agent 世界靠拢：一切都在终端里运行，或者有 skills，或者使用 CLI 工具。这些东西往往比基本循环更复杂。</p>
+<p>但我们也想支持基本循环。所以我们想同时允许旧的方式和新的方式。过去的一切现在都是默认 harness，也就是循环中的系统提示词和工具。但 harness 模式也支持灵活得多的执行，比如递归语言模型，或者 Codex、Cloud Code、Open Code 这样的 CLI agent，或者研究文献中的经典，比如 Mini Sweep Agent，或者用 LangChain、DSPy 这类任意 Python 库构建你自己的。所以我们得以把它们解耦成一种模式，让你可以独立于任务集来编写 harness。有一些基本的健全性检查，涉及 harness 支持或不支持哪些属性、任务集需要或不需要哪些属性。这些东西可以拼合在一起。runtime 是执行的地方。我们仍然大量采用之前的 async IO 模式，但更偏向于把东西做成子进程，你仍然可以在本地运行一切。你不必使用沙箱，但可以使用本地 Docker，或者用我们自己的 Prime sandboxes 层。你可以使用任何你喜欢的其他沙箱层，或者从头构建。所以 harness 的 runtime 后端只是 harness 运行其代码的地方。harness 本质上只需要能在某处把代码当作脚本运行。我们大量使用了 UV 工具链，UV script 是非常强大的模式，可以混搭并包含依赖。</p>
+<p>当你把这些拼起来，就会对任务集中的某个任务运行一次 rollout，并得到一个 trace。这已经在 GitHub 上 prim and elect AI / verifiers 的 verifiers 主分支上线，也作为 dev 版本发布了。稳定的主版本随时会发布到 PyPI，但你可以安装 dev 版本试玩。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, and so environments as evals, uh,
+<p>Uh, what is an environment? Um,</p>
+<p>I think it's useful to decompose environments into tasks and a harness. Um, and this is foreshadowing some of the the refactoring we've done in verifiers over the past months. Uh, if any of you have used the verifiers library before, you may be familiar with the the multi-turn environment pattern or tool environment pattern where there's kind of one loop that is owned by the environment that you can plug in various tools into and that was really great for a very long time for getting started for people, especially back in the day when people were mostly just trying to graduate from single turn into multi-turn tool tool use. Uh, but what we found and as we kind of iterated on different patterns and extended it in various different ways, we found ourselves repeating a lot of work of like adding patterns for a CLI agent or adding patterns for MCP. Um, and we wanted to be able to like</p>
+<p>step back and rethink like how should an environment work. Um, and what it really is there's a notion of a harness. And so and you there's also a notion of a task. And I think one of the reasons that this is kind of subtle and tricky and was a a design problem that we went over many iterations over the past 6 months really is um,</p>
+<p>certain things it's not clear where they live. Like there's certain things that might belong to the harness and might belong to the task. There's certain tools that uh, in some cases it's I want this uh, task I'm going to do to use a certain tool. In some case the harness has certain tools. Same with skills or system prompts or many other pieces of the puzzle in assembling like the full world that your agent is going to be operating in or your model is going to be operating in. Um, but ultimately the we're going to call all of these parts of the environment. Um, and the goal of this is to have some notion of verification where you plug in a model uh, into the environment which includes a harness. You give it a task. It does a rollout and then you verify what it did. Um, and this same process works both for evaluation offline just understanding which model is better as well as for doing reinforcement learning RL uh, as well as for generating data for SFT. Uh, I think in many cases people think of SFT is this thing where they want to like upload a data set, but really often what they're doing there is they're essentially cobbling together something that's essentially an environment and they're doing rollouts in it and saving it offline and putting it in one format and uploading it and then changing it to another format and then plugging it into a trainer. And the way we've kind of approached this is saying, "Well, you can just kind of cut all that out and just like treat it like a a a problem where you're doing rollouts in an environment. Just in this case there's a teacher." And the teacher could be another it could be replaying from another data set.</p>
+<p>But ultimately it's about collecting rollouts and training on those rollouts. And then</p>
+<p>on policy distillation again takes the same form where you are doing rollouts in an environment just as you would for RL, but the scoring is from a teacher and the the log probs of the teacher the likelihood of the teacher rather than the the reward signal itself. And so these all in our framework are Python packages. So you can have any task as you want. You can pull data from anywhere you want.</p>
+<p>There's a lot of flexibility that we've unlocked in terms of what these tasks can look like, what these harnesses can look like.</p>
+<p>And our goal is to just make this a really flexible toolkit for all the kinds of evaluation things people want to do both for API models as well as for post training.</p>
+<p>And so Verifiers V1 is what we're calling it, which is it's not actually released as V1 yet, but we took inspiration from VLUM doing this and decided that we were going to kind of have this be the new pattern that we want to have everything kind of be centered around. And the key pieces we broke things down into were a task set, a harness, and a runtime. And so these are all composable. You can mix and match them</p>
+<p>and they're all individually loadable in different ways.</p>
+<p>But the way to think about it is that task sets are the data and the rules of what should be done that are agent agnostic. So they're the sort of thing you could plug an agent into.</p>
+<p>Um and we wanted to take a very general approach in supporting a lot of the great work being done throughout the ecosystem. So, we integrate natively with Hugging Face datasets, with Harbor, uh with NeMo Gym and Open Ended. And most other tools that you see out in the wild that are kind of under the umbrella of uh an RL environment, we would call these a task set. Um we generally have found that it's useful to have these be harness agnostic where they represent the the back end of the server or some state that you're interacting with, but they don't own everything about what the model is doing. And so, it doesn't In some cases, it doesn't make sense to plug a model into a task set. Especially because we're kind of gravitating towards an agent world where everything is running in a terminal or it has skills or it uh is using CLI tools. Um and these things like often look more complex than just basic loops. Um</p>
+<p>but we also want to support basic loops. So, we want to kind of allow both the old way of doing things and the new way of doing things. And so, uh everything that was the old way is now the default harness where it's system prompt and tools in a loop. Um but the harness pattern</p>
+<p>also supports much more flexible execution of things like recursive language models or CLI agents like Codex, Cloud Code, Open Code, or classics from the research literature like Mini Sweep Agent or building your own with arbitrary Python libraries like LangChain or DSPy. Um and so, we've been able to decouple these into a pattern where you get to write your harness independently of your task set. Uh there are kind of some basic sanity checks about properties that like harnesses either do or don't support and task sets do or don't require. Uh and these kind of click together. And the runtime is where this executes. And so, we've uh still been embracing a lot of the async IO patterns from before, but we've leaned a little more into having things be subprocesses uh where you can still run everything locally. You don't have to use sandboxes, but you can use local Docker, or you can use our own Prime sandboxes layer. You can use any other sandbox layer you'd like or kind of build from scratch. And so the harness the runtime back end</p>
+<p>just is a place where the harness can run its code. And so the harness just needs to be able to run code somewhere as a script essentially.</p>
+<p>We've used a lot of the UV tooling where UV script is a very powerful pattern to be able to kind of mix and match and kind of contain dependencies.</p>
+<p>But what happens is once you plug these together, you run a rollout on a task from a task set and you get a trace.</p>
+<p>This is live on the verifiers main branch for prim and elect AI / verifiers on GitHub as well as it's released as a dev release. The stable main release will be kind of coming to PyPI any minute now, but you can install the dev and play around with it if you want.</p>
+</details>
+<h3 id="任务奖励与群组奖励" data-reading-heading="">任务、奖励与群组奖励</h3>
+<p>那么这些东西长什么样？任务就像数据集中的一行。最基本的版本就是开始从 hugging face 或其他任何地方加载数据集。</p>
+<p>新的模式是 from verifiers V1，我这样做是为了把旧的东西分开。旧的东西仍然完全可用，但这是我们得以解耦并迭代新版本的方式。我们还真正拥抱了这种装饰器模式，发现它非常有用。另外，如果你以前是 rubric 的粉丝，我们把 rubric 砍掉了。如果你在用旧的 verifiers rubric 模式，它已经说不通了。但仍然是有函数和 loader。</p>
+<p>我们大量使用 PyDantic，所以一切都是强类型的。我们有很多强大的配置功能，你可以把一切放在 toml 文件里，也可以在 CLI 里覆盖，一切都很干净，并保证在验证时就做类型检查，而不是等到之后某处出错。</p>
+<p>这方面的例子有 sweet wrapper，可以做 agentic 代码搜索；可以做 Wordle 这样的经典游戏；可以用 judge 做文档搜索；也可以做复杂的事情，比如 harbor，它现在支持很多需要 agent 在终端中运行的热门基准。所有这些都是任务集模式与自选 runtime、自选 harness 的组合。</p>
+<p>奖励和指标也只是函数，它们接收 rollout 中发生之事的记录并返回数字。奖励是推动 RL 进展的主要东西，指标则只是记录发生了什么，比如统计工具使用次数和错误次数。这些东西在仪表盘里展示非常有用。然后是群组奖励（group rewards）。我们努力确保它仍然是一等公民，因为我们认为它对人们想做的很多研究模式非常重要，但我认为它在外面很多工具里也被忽视了。在许多 RL 框架中，做群组奖励其实相当困难，因为各部分高度解耦，并且假设所有 rollout 都是独立存在、不需要彼此交流的。但有很多情况你确实想做成对评判，或者做排序，或者给使用 token 最少的正确答案一个奖励加成。</p>
+<p>所以这些方面非常灵活，我们专门为灵活性而设计，以支持我们读到的最令人兴奋的论文，或我们认为人们可能想创新的所有算法，同时仍让人们拥有他们对 RL 框架所期望的核心原语。</p>
+<p>关于群组奖励，我发现这个模式非常有用。做后训练时经常出现的一个大模式是：如果你放任不管，模型会喜欢一直想、一直想、一直想。如果你不给它们某种变得更高效的压力，我想很多人会注意到开放模型往往有非常非常长的思维链。一方面这对模型是一种有用的策略，但如果你不加以抵消，它也会失控增长。所以在奖励设计中，人们想做的一件大事是类似长度惩罚或简洁性奖励。这之所以棘手，是因为你不知道一个问题的最优长度。比如我给你一道数学题，我可以说"用少于 N 个 token 解出来"，但谁知道正确的 N 是多少。它还会随着模型随时间变聪明而变化，对每个问题也不同。所以你无法事先知道，唯一的办法是利用方差。RL 的好处之一是你通常有多个样本。这让你可以利用有多个样本这一事实来塑造奖励。所以如果一个群组里有多个奖励，你可以看所有答案正确的那些，或者泛泛看所有的，给最简洁的那些一个加成。如果你同时还有一个正确性奖励，这些就能确保你既激励了正确性，也激励了效率。同时兼顾多个目标是 RL 奖励设计中的难题之一。但做群组级别的比较和这类加成，在许多情况下相当有用。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And so what do these look like? So tasks are just like a row of a data set. And the very basic version of it is you just start loading a data set from hugging face or anywhere else.
+<p>And so the new pattern here is from verifiers V1 I just to keep the old stuff separate. The old stuff still works just fine, but this is how we have been able to kind of decouple and iterate on the new version.</p>
+<p>As well as we've really embraced this decorator pattern.</p>
+<p>We found it to be very useful. We also if you were a rubric fan, we killed rubric.</p>
+<p>Didn't make sense anymore if you were using old verifiers rubric patterns.</p>
+<p>But still it's you have functions and loaders.</p>
+<p>We are very heavy on PyDantic so everything is super typed. We have lots of powerful config features where you can have everything in a toml file. You can override it in the CLI</p>
+<p>and everything is kind of clean and guaranteed to kind of type check at like validation time rather than waiting for something to fail later down the road.</p>
+<p>And so examples of this are things like sweet wrapper where you can do a genetic code search. You can do the classic games like Wordle. You can do search over documents with judges. You can do complex things like harbor that support a lot of popular benchmarks now that need agents running in a terminal.</p>
+<p>And all of these are going to be combinations of the the the task that pattern with uh pick your own runtime and pick your own harness.</p>
+<p>Um and so rewards and metrics I think are also kind of uh just functions that take in the kind of records uh of what's happening in a rollout and return numbers. Uh so rewards are the main thing that'll drive progress in RL. Um metrics are just kind of like logging uh what has happened. So counting tool use and counting errors. Um these sorts of things are very useful to be able to expose in your dashboards. Um and then group rewards. I think this is something that we have fought hard to kind of make sure still is first class because we see it as very important to um a lot of the research pattern people want to do, but I think it's also ignored in a lot of like uh tooling out there. Where in in many RL frameworks it's actually quite hard to do group rewards because things are very decoupled and things kind of assume that all rollouts are going to live independently and that they don't need to talk to each other. But there's a lot of things where you really want to do pairwise judging or you want to do ranking or you want to give a bonus to the uh the shortest correct answer uh in terms of tokens used. Um</p>
+<p>and so these sorts of things are really flexible uh in terms of the we really design for flexibility in supporting the the things that we see as like the most exciting papers we've read or all the algorithms that we think people may want to innovate on um while still allowing people to have like the core primitives that they kind of expect out of an RL framework.</p>
+<p>Um and so like in group rewards, I think this concise this pattern is one that I find very useful a lot. I think um like a big pattern that comes up a lot are doing post-training is uh models will love to like think and think and think if you let them. Um and if you don't give them some kind of pressure to like be more efficient, uh I think a lot of people will notice that like open models often have really really long chains of thought. Because on one hand it's like this is a useful strategy for a model, but it's also the sort of thing that will grow like out of control if you don't counteract it. Um and so in reward design like one of the big things people will want to do is uh something like a length penalty um or a conciseness bonus. Um, and so one of the reasons this is tricky is because you don't know the optimal length for a problem. Like if I give you a math problem, I could say, "Oh, solve it in less than N tokens." But also like who knows what the right N is. It's also going to change as the model gets smarter over time. It's going to be different for every problem. And so you kind of can't know this up front. And the only way you can do it is take advantage of variance. So one of the nice things about RL is you have multiple samples typically. Um, and this allows you to use the fact that you have multiple samples to shape the reward. Um, and so if you have multiple rewards in a group, what you could do is uh look at all the ones that were the correct answer or just all the ones in general and give a bonus to the ones that are the most concise. Where if you also have a uh a correctness reward like these are going to uh ensure that um you're both incentivizing correctness as well as incentivizing efficiency. And so juggling multiple objectives simultaneously is kind of one of the hard challenges in RL in reward design. Um, but doing things like group level comparisons and kind of these sorts of bonuses are are quite useful in many cases.</p>
+</details>
+<h3 id="工具用户模拟器与拦截服务器" data-reading-heading="">工具、用户模拟器与拦截服务器</h3>
+<p>我还想谈谈工具和用户模拟器，我认为它们在很多复杂应用中变得越来越重要。很多情况下有一个核心的 agent harness，但很多时候你也是把模型放进某个任务场景，用户会给它额外的工具。在某些情况下你可能想把它们建模为 skills，在某些情况下建模为 MCP 服务器。我们把 MCP 当作一种可以与 runtime 交互的后端框架，既用于工具，也用于用户模拟器。用户模拟器，尤其是当你想做有用户参与循环的训练时，你不只是想让 agent 去完成某个任务，而是想完成一个需要理解用户将如何交互的任务。你本质上可以让这个用户也是一个 MCP，我们让模型把它看作用户，而不是工具。但在幕后，它是一个有某种脚本或其他东西的服务器，并带有某个 LLM，会获得一些上下文，并能在 rollout 的语境下扮演用户。很多基准发现，这对于模拟存在用户参与循环的多轮场景的真实感非常有用，尤其是人们现在构建的产品里就有这些用户参与其中。所以你想要一种一等公民的方式把它纳入你的 RL 环境。我们发现让所有这些东西模块化、可插拔是有用的。harness 可以连接到每一个，它们作为 UV script 运行。除了基本的奖励函数模式之外，我们还为评分提供 UV script 支持。</p>
+<p>我们还使用一种叫拦截服务器（interception server）的思路。对于 harness，我们希望人们能使用真实的 harness，而不必破坏 harness 并把它改造成 RL harness。理想情况下，我们对 harness 代码一无所知。我们用拦截服务器的模式是：我们负责给每个 harness rollout 一个假的 base URL，可以是 OpenAI 兼容的或 Anthropic 兼容的。harness 只认为自己在跟某个端点对话。所以任何能与某个端点对话的 harness，我们都可以支持。然后我们拦截每个请求。我们可以在后端做一些处理，确保拿到 log probs 并设置正确的 temperature。然后我们把它发送到与 RL 训练器配套的推理服务器。完成后，我们把响应送回。所以 harness 不知道自己在做 RL，它就是一个像在真实环境中运行那样运行的 harness。这样你可以非常容易地在 RL 设置和部署设置之间切换，你的 harness 就只是代码，不需要为 verifiers 或 RL 做任何特殊化。</p>
+<p>我们还发现能够从本地到全局，并拥有这种热切换模式非常有用。我们有这个新的 eval CLI，你可以直接选择想要的 harness。你可以有一个任务集，说我要在这组任务上运行一次 eval。好的，我想用递归语言模型 RLM，我想用 Codex，我想本地运行，我想在沙箱里运行，我想在 Docker 里运行。这些都是可互换的。我们发现这在迭代循环中超级有用：从小规模测试某个东西，到扩大规模，再到能够回答诸如"这个模型最好的 harness 是什么？""这个 harness 能否跨任务泛化？"这类问题。同时既有本地原型开发的便利，你可以在 MacBook 上快速运行，而不必等云端作业完成，也可以在需要时直接上云。在这次重构中，我们不得不在很多有趣的模式上创新，我们对结果相当满意。它让我们的客户项目和研究都轻松多了，也让我们对想要训练的 agent 种类拥有了更多灵活性、能力和控制力。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, I also want to talk about like tools and user simulators, which I think have been uh
+<p>becoming more important uh in a lot of complex applications where you have models that are In many cases there's like a core agent harness, but there's also In many cases you are putting a model in a setting where it's going to be in some task where a user is giving it additional tools. Whether these are In some cases you might want to model these as skills. In some cases you might want to model them as MCP servers. We use MCP as a kind of uh a back-end framework um that can interact with the runtime uh both for tools and for user simulators. So user simulators, especially if you want to do training where there's a a user in the loop, um you don't want just your agent to go do some task, but you want to be able to do some task that involves understanding how a user will interact. You can essentially have this user be an MCP as well where we make it so the model sees it as a user, not as a tool. Um but behind the scenes, it is a server that has some script or something and it has some LLM that is going to get some context and it's going to be able to be like a user in the context of a rollout. Uh in many cases, benchmarks have found that this is very useful for simulating the realism of like having a multi-turn setting where there are users in the loop, especially given that people are building products now where there are these users in the loop. And so you want kind of a first-class way to incorporate this into um your uh your RL environments. And so we've found that it's useful to have all of these things be kind of modular and pluggable. And so the harness can connect to each of these which run as a as a UV script. Um we also have UV script support for grading in addition to the basic reward function patterns. Um and we also are using this idea called an interception server. So the harness, we want people to be able to use real harnesses and not have to like break the harness and like retrofit it into like an RL harness. And so ideally, we don't know anything about the harness code. And so the pattern that we use with the interception server is that um</p>
+<p>we are responsible for giving each harness rollout a fake base URL, which could be OpenAI compatible or Anthropic compatible. And the harness just thinks it's talking to some endpoint. So any harness that can just talk to some endpoint, we're good to go. And then we intercept each request. Uh we can do some some back-end maneuvering to make sure that we're getting the log probs and setting the right temperature. Um and then we send this to our uh inference server for with the RL trainer. Uh and then as it completes, we send back the request. And so the the harness doesn't know that it's doing RL. The harness just is a harness running as if it would be running in a real-world environment. And so you can kind of very easily move between the RL setting and the deployment setting where your harness is just code. Doesn't need to be anything specialized to verifiers or RL.</p>
+<p>We also have found it really easy useful to be able to kind of go from this like local to global and like have this hot swap pattern. Um so we have this new like uh eval CLI where um</p>
+<p>you can just like choose the harness you want. You can have a task set where you're going to say I'm going to run an eval on this set of tasks. Okay, I want to use recursive language models and RLMs. I want to use Codex. I want to run it locally. I want to run it in sandboxes. Uh I want to run it in Docker. These are all just like interchangeable. Um and so we found that this is super useful in the iteration loop as you go from testing something out at a small scale towards scaling it up towards being able to understand questions like what's the best harness for this model? Um does this harness generalize across tasks? Um as well as being able to both have the convenience of like local prototyping where you can kind of run things fast on your MacBook um without having to like wait for a cloud job to finish, but also you can like go right to the cloud when you need to. And so there's been a lot of fun patterns we've had to kind of innovate on um</p>
+<p>as we've done this overhaul. And we we're quite happy with how it's turned out. It's made our lives a lot easier for both client projects and research and just uh being able to have have a lot more flexibility and power and control over the the kinds of agents we want to be training.</p>
+</details>
+<h3 id="trace-图与-renderers" data-reading-heading="">Trace 图与 renderers</h3>
+<p>幕后有一个有趣的东西，我们称之为 trace graph。在旧的做法中，这部分一直增长到失控，我们决定这是另一个机会，真正彻底改造我们的系统，使其对子 agent 和并行分支树有很好的支持，同时仍保留 RL 所需的线性顺序依赖，并进行细致的 token 控制。这里有一个分支的概念，大致在消息层面。所以从概念上讲，在环境空间和 harness 空间中逻辑上重要的是消息，也就是文本。harness 不考虑 token，但如果你做过 RL 实验，你可能遇到过这样的问题：重新分词（re-tokenization），或者某些消息，模型说了些什么，你把它变成文本再送回分词器，它可能会有一点变化，因为分词是多对一的。这会导致很多非常微妙的数值问题，尤其是在大规模训练运行的后期。所以你想要消息与 token 之间有良好的来回转换。我们创建的 trace 数据结构部分就是为了实现这一点，我们既可以在 trace 层面存储，又可以按需把它们以正确的序列映射回 token 层面。</p>
+<p>我们最近还发布了一个叫 renderers 的库，它是一个任何人都可以使用的独立工具包，我们发现它是那类我们正在与一些推理工具合作去支持的东西。renderers 本质上就是重新思考分词器和聊天模板，幕后它只是调用分词器。但聊天模板，如果人们花时间调试过，真的很糟糕。Ginger 很糟糕，非常非常痛苦，我们不断遇到很多微妙的问题，比如模型有时会多出一个换行，聊天模板把它去掉了，这会造成训练器与推理之间的不匹配，要么迫使你转为 off policy，因为你现在有了训练器与推理的不匹配，要么造成逻辑分支：因为分词器的细微差别，某个东西在 token 空间里成了分支，尽管它在逻辑空间里不应该是分支。</p>
+<p>renderers 作为一种抽象，是由 OpenAI 随 GPT-OSS 发布的 harmony 开创的，并在 thinking machines 的 cookbook 中也被突出使用（用于 tinker），但我们发现把它做成独立的东西很有用。它只是一个不依赖任何其他 prime 东西的 Python 库。你可以把它与任何你想要的推理引擎一起使用，作为一个独立的东西，它专为管理这种 token 进、token 出的拼接而设计，你自己不必过多去想，因为我们把这些热门模型的每个聊天模板都变成了可编程的产物，你可以做诸如查找历史之类的事情，可以利用 trace 的历史来理解正确的分词是什么：即使重新分词后在 token 空间里没有前缀命中，我在消息空间里是否本质上有一个逻辑上的前缀命中？</p>
+<p>关于这一点，我认为人们一直在来回争论，是否希望 LM API 总体上是有状态的。我想很多人曾希望每个模型 API 都可以是无状态的。也许现在人们对此不那么担心了，因为我们正在走向这个 agent 世界，其中 agent 本身就是有状态的 API。但我认为，把这里所有的事情走一遍，让我们明白了为什么 OpenAI responses 决定做成有状态的。在做大规模 agentic rollout 时，会出现一些不可避免的问题，你确实需要非常小心地管理它，而这仅仅由于分词器的工作方式就不可避免。所以你想要能够维持这种逻辑文本和 token 的双流，并让它们干净地互操作，用户不必太多去想 token，但训练器和推理引擎都能在 token 空间里很好地看到一切。</p>
+<p>从 harness 拦截服务器出发，我们有可以同时用于训练和推理的客户端。所以你可以在这些模式之间切换而不用多想，因为在训练设置中你需要能拿到 log probs 并设置 temperature。有些模型 API 不让你这样做，它们不会返回 log probs，比如带推理的 OpenAI 模型不会给你看推理 trace，所以它们没办法给你所有内容的 log probs。这没关系，那就只做 eval。所以我们有这个客户端层，你可以在 eval 和 train 之间切换，以支持所有这些模型。但无论哪种方式我们仍使用拦截服务器模式，因为它让我们有 dialect 的概念，你可以选择 OpenAI chat completions、responses 或 Anthropic，所有这些都很容易作为翻译层来支持：把原始请求翻译成某种东西，如果你在 train 客户端一侧，可能会经过 renderer，并通过 token 格式化为一条消息。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um and so one of the fun things behind the scenes uh is what we call the trace graph. And so we had kind of been having this grow out of control in terms of the old way of doing things and we decided this was another opportunity to like really overhaul our system to like have really good support for sub agents and parallel branching trees while also still preserving the kind of linear sequential dependencies that you need for RL with uh careful token control. Um and so here uh there's a a notion of a of branches that are kind of like at the message level. So conceptually um the things that matter logically in environment space and in harness space are messages which are just text. Uh the harnesses don't think about tokens, uh but if you've done any RL experimentation you may have uh encountered issues where uh re-tokenization or like some messages if a model will say something and you turn it into text and you put it back through tokenizer, it can change a little bit. That because tokenization isn't is many to one.
+<p>And so this causes lots of very subtle numerical problems, especially late in large scale training runs. And so you want a really nice back and forth between uh messages and tokens. And so the trace data structure that we created here partly is to enable this where we can</p>
+<p>store things both at trace level and then map them back into token level in the right sequences as needed. And we also released a library called renderers recently, which is a standalone toolkit that anyone can use that we have found the sort of thing that we're working with some of the inference tooling to support. So renderers are really all about like essentially rethinking tokenizers and chat templates where behind the scenes it's just making calls to the tokenizer,</p>
+<p>but chat templates if people have spent time debugging with them, it sucks. Ginger is awful.</p>
+<p>It's very very painful and there's so many subtle things that we kept running into where like</p>
+<p>a model would sometimes have an extra new line and the chat template would strip it out and this would like cause a mismatch in your trainer and inference that would either force you to go off policy because you now have a trainer and inference mismatch or it would cause a logical branch where a thing that is a branch in like uh</p>
+<p>it becomes a branch in token space even though it shouldn't be in logic space because of tokenizer subtleties.</p>
+<p>And so renderers as as an abstraction it was kind of pioneered by</p>
+<p>OpenAI's harmony with the GPT- OSS release and used prominently in thinking machines cookbooks as well for tinker, but we found it was useful to just kind of make it a standalone thing. And so this is just a Python library that doesn't depend on any other prime stuff. You could use it with any inference engine you want</p>
+<p>just as a standalone thing that is really designed for being able to manage this token in token out concatenation without thinking about it too much yourself because we kind of turn each of these chat templates for these the popular models into programmable artifacts</p>
+<p>where you can do things like look up a history of secret you can use the kind of history of a trace to be able to understand like what is the right tokenization? Like do I essentially have like a logical prefix hit in message space even if I don't in tokenization space after re-tokenizing?</p>
+<p>And so this is the sort of thing where I think people have gone back and forth on like whether they want LM APIs to be stateful in general. I think a lot of people were hoping that like we could just have every model API be stateless. I think</p>
+<p>maybe people are less concerned about this now because we're moving towards this agent world where agents themselves are going to be stateful APIs.</p>
+<p>But I think this has revealed to us like going through all of the the things here like why opening eye responses decided to be stateful. There are some kind of like unavoidable issues that kind of come up when you're doing large-scale agentic rollouts where you you do need to kind of manage this very carefully and it's kind of unavoidable just because of how tokenizers work.</p>
+<p>And so you want to be able to maintain these dual streams of the logical text and the the tokens and you kind of want these to be cleanly interoperable where users don't have to think about the tokens very much but the trainer gets to see everything nicely in token space as well as the inference engine.</p>
+<p>Um, and so from the harness interception server we have clients that can be used both for training and inference. And so you can kind of like</p>
+<p>swap between these modes without thinking about it because</p>
+<p>certain models like don't need to in in a training setting you need to be able to get log probs and set the temperature. Some model APIs won't let you do this. They won't return log probs because like open eye models with reasoning like won't show you the reasoning trace so there's no way they give you the log probs for everything.</p>
+<p>And so like that's fine, it's just eval only and so we have this this client layer where you can go between eval and train to be able to support all these models, but we still use the interception server pattern either way because it allows us to have like this notion of a dialect where like you can choose</p>
+<p>OpenAI chat completions or responses or Anthropic and all of these are kind of easily supportable as just like translation layers between a raw request into something that'll get passed through a renderer potentially if you're on the train client side and formatted into a a message via tokens.</p>
+</details>
+<h3 id="primer-rl异步训练与规模" data-reading-heading="">Primer RL：异步训练与规模</h3>
+<p>这就把我们带到了 Primer RL。Primer RL 是我们消费环境的训练框架。所以一旦你有了包含任务集、harness、拦截服务器、runtime、renderer 等一切的环境，它就接入我们所说的 orchestrator。</p>
+<p>Primer RL 从一开始就是异步的。我认为异步 RL 是那种人们一直一脚在内、一脚在外的东西，很多训练框架仍然支持同步训练。我想有些人有他们想做同步训练的理由，我不同意他们。</p>
+<p>我认为应该干脆接受 off-policy 这件事，原因来自 agent：你想能让长 rollout 重叠，而不是总在等最慢的那个 rollout。这意味着你不可能完全 on policy，除非你愿意接受总是等待最慢的 rollout。这就是我们全面押注异步的原因。orchestrator 的工作是让推理和训练器成为独立的进程、独立的服务器。它们不共享 GPU，彼此也不太了解对方，只是相互消费。但 orchestrator 的工作是管理整个运行。orchestrator 会确保环境在运行，端点映射到推理服务器。它会做 rollout，把它们打包成一个 batch，把 batch 发送给训练器，而如何处理这个 batch 则由训练器决定，也就是按规格准备一些序列喂进损失函数。我们用于环境的服务器模式就是一个引擎，可以向推理发送请求，并把 batch 发回给你的训练器。这非常像客户端-服务器。我们发现这是一种很有用的方式，也让扩展方面的关注点得以解耦。例如，你可以让很多环境同时运行，也可以只有一个环境在运行。你可以有一堆基础设施副本，也可以只有一个基础设施副本。你可以有沙箱，也可以没有沙箱。训练器不关心这些，推理也不关心这些。系统层面的关注点分离让你不必把这些东西当作组合单元来担心。相比之下，在某些情况下人们想把训练和推理放在同一个栈上，你把逻辑越是折叠进其中一个，有时你甚至连环境都无法在不做 RL 时运行，这意味着你无法真正做实验，也不能把它们用作 evals。把一切拆开成这些部分，并为它们提供良好的 API 互相对话，有很多理由，这会让你的生活轻松得多。</p>
+<p>我们也一直在真正扩大规模。我们在 GLM-5 系列和 Kimi K2.5 2.6 系列上做了很多工作，以确保我们能高效地做出非常好的大规模 RL。这里是我们最近发现的一些结果。这次运行是在 GLM-5 上，在 5.2.1 发布之前（原话如此："the 521 came out"）。它也支持 5.2，但在最新的 primary RL 版本上，我们可以在 28 个节点上用不到 5 分钟完成一个 GLM-5 步，针对长程编码任务，131K 上下文，这意味着你可以在 3 天内完成 1,000 步的运行。按租赁价格大约需要 50K。50K 不算便宜，但如果你是在一个真正的现实世界 agent 环境上对前沿规模模型做完整运行，它比 OpenAI 为此融资的金额便宜得多，也比人们在卖的一些集群便宜得多，而且如果你真的能做到，它对更多企业开始变得合理。如果你能达到拥有工具链、能够构建就绪的验证器（原话"ready valves"）并做这一切的程度，它就变得相当有理由。比如说，你有一堆能代表你编码工作流的任务，想做一次大的 RL 运行，这是相当大的 RL 运行，但人们有时一个月也会在 token 上花这么多。所以如果你考虑做大规模后训练，你可以开始发现很多节省，这也是我们在这里帮助人们做的事。</p>
+<p>再多说说异步这边。你真正想做异步的原因之一是，你的编码 agent 耗时有长尾。比如你启动一个编码 agent 任务，就像想想你的 Claude coder、Codex 任务，它会花你多少分钟？有时是 30 秒，有时是 2 分钟，有时是一个持续 3 小时的目标。这些都可能是 rollout。所以异步 RL 的目标之一，是让你的前进速度不被单个 rollout 的速度所束缚。这意味着你可以允许 rollout 在开始很久之后才结束，然后进入它们能被接受的第一个 batch，即使那来自一个差别很大的模型副本。然后推理服务器就总是采用模型的最新版本。人们普遍发现，我们在实验中也发现，你可以离 policy 相当远。我想 16 是我们通常经常运行的位置，是一个平均值。但这意味着你在速度方面的某些事情上有更多余地不用担心。比如你不需要那么担心沙箱的启动时间，或权重同步时间，或任何环境的时间，或者你的评分。如果这些东西需要时间也没关系，因为如果你用 judge 评分，你不可能强迫 judge 一直超快。所以你想要一个这样的系统：生命周期中有些时段不使用 GPU 时间但确实占用时间，也没关系，你可以让它们重叠，而不浪费 GPU 周期。这就是我们眼中异步 RL 的关键好处。</p>
+<p>我们在损失函数方面也做了很多工作。DPPO 论文我认为已经流行起来，我们也在大量使用，用来保证这些东西保持稳定。我们发现它在上千步内非常稳定。在当前的实验中我们正推向 10,000 步，这是我们试图让这些东西可靠达到的规模。同时是在大 batch size 下做，这需要把并行方面的所有花样都用上。我们发现，我想可以回到训练器上做 expert parallel 以及其他并行；然后在推理上，对大的 MOE 做 wide expert parallel，也就是跨多个节点的多节点专家，以及 disintegrated prefill。你可以把人们为常规服务所做的所有推理花样都扔进你的 RL 栈，在那里也得到同样的收益。</p>
+<p>回顾我们一直推进到栈里的所有进展：我们一直在倾向于 FP8、wide expert YDP、disintegrated prefill，以及路由和 KV offloading 方面的很多东西，还有对东西存放位置的管理。尤其是 router re-place 这类东西。router re-place 实际上是一个非常讨厌的系统问题，因为它需要为每个 rollout 追踪大量元数据，因为每一层都有。所以它相对于你实际必须存储的 token 和 log probs 是一个很大的倍数，尤其是当你每层要多路由到多个专家时。这些存储方面的问题，以及多模态方面，比如你有需要存储的图像，有很多情况下你想把较重的产物卸载到某个对象存储系统或其他文件系统，而不是让它们都在内存里漂着。我们重建了很多系统来支持这一点，也真正推进了很多特殊情况：某些模型会想要某些类型的上下文并行，这对系统其他方面能做什么有不同的考量。所以我们一直在努力精炼这些配方，确保它们尤其对像 JLM（原话）这样的模型运行得很好。</p>
+<p>我们这一切都是建立在 Torch Titan 基础之上。我想很多人会问："你们为什么用 Torch Titan 而不是 Megatron？"这是因为 Torch Titan 真的很容易改，而 Megatron 有点像一个整体巨石，我想有些人会去改它，但我想我们很久以前就从 Torch Titan 开始了，并找到我们想引入的部分，尤其是新模型出来时，你会想在上面训练。或者比如你读到某篇有新想法的论文，你想让一切真正可改、模块化。我们的团队并不大，维护 Prim Rels 的整个研究团队不到 10 个人，公司不到 40 人。所以有很多工作我们想确保人们既能并行，又能快速行动。这些都是我们过去几个月在真正推动规模时一点点摸索出来的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um
+<p>And so this brings us to Primer RL. So Primer RL is our training framework that is consumes the environment. So once you have an environment with your task set and your harness and your interception server and your runtime and your renderer and all those things, this plugs into what we call the orchestrator.</p>
+<p>And so Primer RL has been async from the ground up. Uh so I think</p>
+<p>async RL is one of those things that I think people were kind of one foot in and one foot out and a lot of training frameworks you see them uh will still kind of support synchronous training. Um some people I think have their reasons for wanting to do synchronous training. I don't agree with them.</p>
+<p>Um</p>
+<p>I think</p>
+<p>kind of want to bite the bullet of the off-policyness anyways for reasons that come up with agents</p>
+<p>um in terms of you want to be able to overlap long rollouts and not always be waiting on your slowest rollout. And this kind of means you can't be fully on policy unless you want to kind of accept always waiting on your slowest rollout. Um and so this is really why we went all in on async. And so the orchestrator's job is to allow the inference and trainer to just be separate processes, separate servers. Uh they don't share GPUs. They don't really know about each other all that much. They just consume from each other. Um the but the orchestrator job is to really like manage the run. And so the orchestrator uh will</p>
+<p>make sure that the environment is running with the endpoint mapping to the inference server. It'll do rollouts. Uh it'll package these up into a batch. It'll send this batch to the trainer and it'll be up to the trainer to figure out what to do with the batch, uh which will be kind of printing some uh sequence to feed into a loss function um based on the the specification. Um and so the the server pattern we use for environments is just an engine that can like send requests to inference and like send batches back to your trainers. It's very client-server. Um and we found that this is just a really useful way to uh allow scaling concerns to be decoupled as well. And so like for example, you can have a lot of environments running or you can have one environment running. You can have um a bunch of infra replicas, you can have one infra replica. Um you can have sandboxes or no sandboxes. Uh and the trainer doesn't care about this, the inference doesn't care about this. It's just separation of concerns at a system level uh allows you to kind of not really worry about these things as uh like combined units versus like in some cases uh people will want to like have training and inference on the same stack where it's like especially the the closer that you kind of fold in your logical in one then it's like sometimes you can't even run your environments if you're not doing RL, but that means then you can't really experiment. You also can't use them as evals. There's a lot of reasons why just like pulling everything apart into these pieces and just like having nice APIs for them to talk to each other uh makes your life way easier.</p>
+<p>Um and we've also just been like really scaling it. Um and so we've been doing a lot of work on</p>
+<p>uh like GLM-5 series and Kimi K2.5 2.6 series just to make sure that we can do like really good large-scale RL efficiently. And so some results we found we have recently. This was uh the run was on GLM-5 before the 521 came out. It supports 52 as well, but um on the latest primary RL version, we can do</p>
+<p>um</p>
+<p>a GLM-5 step on 28 nodes in less than 5 minutes for long horizon coding tasks with 131K context, um</p>
+<p>which means you can do a 1,000-step run in 3 days. And that costs for rental prices about 50K. And so 50K is not cheap, but it's like if you're doing a full run on a frontier size model</p>
+<p>on like a proper real world agent environment,</p>
+<p>like it's a lot cheaper than what OpenAI's raising for it. Um it's a lot cheaper than like some of the clusters people are are uh selling, and it's the sort of thing that like just starts making sense for a lot more enterprises if you can like actually do this. It becomes pretty justifiable if you can kind of get to the point where uh you have the the tooling chain to be able to like build ready valves and like uh do all this stuff. Um</p>
+<p>and so this is like the sort of thing where it's like let's say you do you wanted to like you have a bunch of tasks that are like representative of like your coding workflows, and you want to like do a big RL run. Like this is a pretty big RL run, but it's also the sort of thing that like you could people spend this much on tokens in a month sometimes. Um</p>
+<p>and so you can uh</p>
+<p>start finding a lot of savings if you kind of think about doing large scale post training, and that's kind of what we're we're here to help people do. Um I guess more on the async side uh one of the reasons why you really want to do async is that um</p>
+<p>there's a long tail of how long your coding agents take. Like if you fire up a coding agent task, just like think your Claude coder Codex tasks, like how many minutes is it going to take you? Sometimes it'll be 30 seconds. Sometimes it'll be like 2 minutes. Sometimes it'll be a goal that goes for like 3 hours. Um and these can all be rollouts. And so one of the goals of async RL is to have your like forward progress speed not be tied to the speed of your individual rollout. And so this means you can kind of allow your rollouts to finish long after they start and just go into the first batch that they can accept them even if that is from a much different copy of the model. Um</p>
+<p>and so then the the inference server is just always taking the latest version of the model. And so um what people have generally found and what we've done with our experimentation and found as well is that you can go reasonably far off policy. Like I think 16 is where we typically are often operating is like an average. Um</p>
+<p>but this means that you just also can have a lot more room to not worry about certain things about speed. Like you don't need to worry about the boot up time of your sandboxes as much or the weight sync time or like the time of any environment or your or your grading. Like, it's it's fine if you have these things that take time cuz you can't If you're doing like grading with a judge, you can't like force your judge to be super fast all the time. And so, you want to have a system where it's okay if there are pockets of your life cycle that don't use GPU time but do use time um and you can kind of overlap these without kind of wasting GPU cycles. And so, that's really the the key benefit of of async RL in our eyes. Um and we've done a lot of work on the loss function side. The DPPO paper is one that I think has gotten popular that we've been using a lot as well of like how do you make sure that this like stuff stays stable. Um we found that it's very stable up to thousands of uh steps. Um we're pushing towards 10,000 in kind of current experiments um in terms of the the scale that we're trying to kind of get the stuff to reliably. Um</p>
+<p>as well as doing this at big batch sizes where you kind of need to pull out all the bells and whistles on parallelism. And so, what we found is that I guess I can go back to</p>
+<p>uh like doing like this uh expert parallel on the trainer as well as kind of parallel. Um and then on inference doing uh wide expert parallel for the big MOEs uh meaning multi-node uh experts across multiple nodes as well as disintegrated prefill. Um and you can kind of throw all the inference bells and whistles that people would do for normal serving into your RL stack and get same wins there as well.</p>
+<p>Um</p>
+<p>and so, here to kind of fully kind of recap all the the advancements we've been pushing into the the stack. We've been leaning in towards FP8 um wide expert YDP um disintegrated prefill lots of stuff at the routing and KV offloading and management of just kind of where things live. Especially things like router re-place. The router re-place is actually a really nasty systems problem because it requires tracking a lot of metadata per rollout because you have this for every single layer. Um so, it's like it's a big multiple over just the like tokens and log probs uh that you actually have to store um because especially if you're multi routing to multiple experts for layer, um and so the storage concerns for these, as well as like for multi-modal, um if you have like images that you need to store, like there's a lot of stuff where you want to kind of offload the heavier artifacts onto some like object storage system or other file system, um and not just have it floating around in memory. Um and so we've rebuilt a lot of our systems to support this, as well as just really pushing uh there's a lot of kind of like special cases that you need to worry about where it's like certain models will want certain types of context parallelism,</p>
+<p>which have different considerations about what you can do uh in terms of like other aspects of the system.</p>
+<p>Um and so we've just been trying to really refine the recipes for making sure that this works really well, especially for models like JLM.</p>
+<p>Um and we've done this all on top of a Torch Titan base. I think a lot of people are like, "Why do you use Torch Titan and not Megatron?" Um and it's because Torch Titan is just like really easy to like hack, and Megatron is kind of this monolith um that I think some people will hack it, but it's I think uh we just started with Torch Titan a long time ago and kind of find the pieces we want to bring in, and especially when a new model comes out it's like, "Well, you want to train on it." Or you want to let's say you want to there's some new paper that you read that like has some new idea, you want to be able to like make everything really hackable and modular. And so like our our team is not that big, like our whole research team that maintains Prim Rels like less than 10 people,</p>
+<p>um and the company is less than 40 people. Um and so there's a lot of work that we want to make sure people can parallelize, but also move quickly. Um and so uh</p>
+<p>this is all stuff that we've kind of been able to to figure out over the past few months as we've really been pushing it for scale.</p>
+</details>
+<h3 id="算法loss-与-algorithm-的分解" data-reading-heading="">算法：loss 与 algorithm 的分解</h3>
+<p>另一件我觉得有趣的事是算法。我想研究者所关心的很大一部分是……有些人会很喜欢思考规模的系统问题，如果你来找我们聊的话。但如果你不是这样，我想很多人想花时间思考的是算法：on-policy distillation 这类东西，或者 OPSD，或者如果你看过 Echo 论文，我想它让很多人兴奋，思考如何用 RL 做世界建模，并把这些以及像 SFT 这样的基础东西都纳入进来。还有不久前的那篇 Max RL 论文，超级酷。我们看到所有这些论文，就想我们就是想做所有这些。我们希望更容易混搭它们，而不必再加一个埋得很深的 if 语句，并把一堆东西一路传下去。所以我们把东西分解为 loss（取梯度的东西）和 algorithm（我们说是准备数据的东西）。</p>
+<p>我们有不同的 loss，可以往里传信号和 masking，你可以用它们来组装不同的算法。现在 algorithm 是一个类，你可以有一个在打分或群组方面做不同事情的类，然后选择想用它瞄准哪个 loss。我们支持所有热门的算法，你也可以添加自己的，做法类似于加一个给 rollout 分配 advantage 的函数。</p>
+<p>然后从你的配置里，你可以直接说我想要这个算法，它就会从注册表中选一个。如果你愿意，也可以把自己的加进注册表。然后这将成为你训练运行所用的算法。如果你愿意，也可以按环境来设置。</p>
+<p>但人们关注的所有这些算法都可以归入一张表，其中的问题是：你的 rollout 来自哪里？来自你当前的 policy 模型，还是来自某个别的来源，比如教师？人们称为 on policy 或轻度 off policy 的任何算法，就异步 RL 而言，是这样的：RL 意义上的 actor 就是你正在训练的模型，你的 policy 就是你的 actor。在其他情况下，你的 actor 是另一个模型。所以如果你在做 context distillation 或 SFT，这些情况下会有某个别的模型或 prompt 作为教师，生成你要训练的数据。所以所有这些都适配这个家族。</p>
+<p>另一个维度是 advantage。如果你把它泛化成一个分数，你现在可以说交叉熵损失或负对数似然就是一切的 advantage 为 1。所有 OPD 算法都可以看成是 log 概率就是 advantage。而对 RL，你的奖励减去某个基线（通常是群组均值之类）就是 advantage。所以我们退后一步看了所有这些，想："哦，我们可以把这一切相当漂亮地分解出来。"让几乎其他一切共享，只是这些东西被换掉，这样你的基础设施不会因为损失函数要变而需要改变。</p>
+<p>所以对于 on policy distillation，只是用不同的 loss 目标接入，并且与教师对话，说："好，我需要拿到的是来自某个教师的参考 log probs，而我已经有了我的序列。所以我只需要把这些作为 prefill 发送给教师，你可以通过请求一个 token 的响应来拿到 prefill。现在我拿到了我的序列，可以把它们放进来作为我的参考 log probs。"对于 self distillation，你可以在这个教师之前放一个提示（hint）。所以你不是说同样的 prompt，而是说一个不同的 prompt，用 renderers 把它们打包在一起，然后你拿回同样的序列，可以切回原始形式，这样你就可以把它们添加为那里的参考 log probs。</p>
+<p>你可以做 echo，有两个不同的算法组件。可以让一个针对你环境 token 做交叉熵，同时对你的 action token 做 RL 目标。你可以混搭这些。你可以决定用哪个教师，决定从学生还是教师采样。你可以按环境来决定使用哪个算法。我们有一个同时包含普通 OPD 和 GRPO 的例子。</p>
+<p>对，所以这整个家族我们现在都在 Primerl 里原生支持。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um another thing that's I think fun is algorithms. So I think a lot of what researchers care about I think researchers some people will love thinking about the system problems of scale. Um if you do talk to us, um but if you don't, I think what a lot of people want to spend their time thinking about is algorithms in terms of the on-policy distillation stuff or like OP SD or uh if you saw the Echo paper, I think that got a lot of people excited of like thinking about how do you do world modeling with RL um and folding these in as well as just basic stuff like SFT. Um there's also this Max RL paper from a while back that was super cool. And so we were just we were seeing all these papers and we were like we just want to do all of these. We want it to be much easier to kind of like mix and match these and to not have to like add another if statement buried super deep in the code um and like pipe a bunch of stuff all the way through. And so we kind of decompose things into the loss which is like the thing that is taking the gradient as well as the algorithm which we say is the thing that's kind of like preparing the data.
+<p>Um</p>
+<p>and so we have different losses we can kind of like pipe things to um in terms of like the signal and the masking. Uh and you can use these to kind of assemble uh different algorithms. Um and so now algorithm is like a class where you have you can have a class that does different things in terms of scoring or uh the groups.</p>
+<p>Um and and you'd kind of pick which loss you want to target with it. Um</p>
+<p>and so we support all of these all the popular ones and you can kind of add your own that look like adding in a function to like assign advantages</p>
+<p>uh to a rollout. Um</p>
+<p>Uh</p>
+<p>yeah. And so then then from your algorithm then from your configs you can just kind of say hey I want like this algorithm and it's just going to pick one from the registry. You can add your own to the registry if you want. Um and then this will be the algorithm used for your training run. Um and you can do this on a per environment basis if you want. Um</p>
+<p>but all of these algorithms that people are looking at kind of fall into this like table where there's questions about like</p>
+<p>what are your where are your rollouts coming from? Are they coming from your current policy model or are they coming from some other source like a teacher? Um and so any algorithm people call like on policy or like slightly off policy in terms of the async RL stuff. This is one where like your your actor in RL sense is going to be the model you're training your policy. Your policy is your actor. Um in other cases you're doing stuff where your your actor is some other model. So if you're doing context distillation or you're doing SFT, like these are ones where you are uh going to have some other like model or prompt potentially be the teacher that is generating the data that you're going to be training on. And so all of these kind of fit within this family. Then the other thing is the advantage. And so the advantage is just like if you generalize it to like a score, like you can now call like just cross entropy loss or negative log likelihood is like everything has like advantage one.</p>
+<p>Um there's a lot of all of the like OPD algorithms can kind of you can kind of think of it as the log probability is being the advantage.</p>
+<p>And with RL like your your reward minus some baseline usually group mean or something like it is your advantage. And so we just kind of like took a step back and looked at all these things and we're like, "Oh, we can just kind of like factor this all out pretty nicely." And have almost everything else be shared but these things get kind of swapped and so your infra doesn't need to change just because your loss function needs to change.</p>
+<p>And so for on policy distillation like it's just plugging in with a different loss target and it's like talking to the teacher and being like, "Okay, the thing I need to get is reference log probs from some teacher and I already have my like sequences. So I just need to send these to a teacher as prefill in terms of like a like you can get prefilled by just like asking for like a one token response. Now I I get my sequences and I can just like stick these in as my reference log probs." For self distillation you can have like a hint that you're kind of putting in before your</p>
+<p>your</p>
+<p>like</p>
+<p>this teacher. So you're not saying the same prompt you're saying a different prompt using renders to kind of pack these together</p>
+<p>and then you get back the same like sequence that you can slice out into the original form</p>
+<p>so that you can kind of add these as your reference log probs there.</p>
+<p>You could do echo where you have like two different algorithm components. You could have one that is targeting the uh the doing cross entropy on your environment tokens while doing like an RL objective on your your action tokens. And you can mix and match these. So you can have</p>
+<p>like different</p>
+<p>like you can decide which teacher is going to be done your you're going to be sampling from your student or your teacher.</p>
+<p>Um you can like decide which algorithm you're going to be using on a per environment basis.</p>
+<p>Um</p>
+<p>and you can have like this one we have like both um a normal like OPD as well as GRPO. Um</p>
+<p>and then</p>
+<p>Ah yes. So like this whole family we now support within Primerl natively.</p>
+</details>
+<h3 id="托管训练平台与结语" data-reading-heading="">托管训练平台与结语</h3>
+<p>你可能也摸索、看过或试过的一件事是，我们有托管训练平台，这意味着你完全不必操心 GPU。这就是托管的 Primerl。我们目前面向大众的自助版本是多租户 Laura，主要专注于 RL。我们很快就要推出的是全量微调，它支持你在 Primerl 里按需改动模型和其他一切，我们仍然提供同样的抽象，让你不必考虑 GPU，并带有自动扩缩容、神奇的自动重启、可以记录一切的仪表盘，以及沙箱和 judge 等的统一计费。同时你可以在自己笔记本的 CPU 上开发环境，作为环境包推送到平台，并在配置中指定它们。这让你在决定何时深入栈的不同层级时有很大的灵活性。很多情况下你其实不想改训练器里的任何东西，只想改奖励函数，这可以在环境空间里完成。也许你想配置训练器但不改它，这时你要去碰稍复杂一些的旋钮，比如不同的损失函数或学习率。另外，你可能想真正深入训练器，在环境层面、algorithm 类层面或损失函数层面做新算法，或者也许是需要更深入的完全不同的东西。我们用全量微调也支持这一切。</p>
+<p>如果你不熟悉，多租户 Laura 是一种非常有用的模式，让多个人可以在同一个架构、同一份模型权重拷贝上做训练运行。所以你有一个基础模型。这就是基于 token 计价的推理通常的工作方式：你在做多租户推理，有一份大的 Claude 副本，接收所有人的请求，并命中一个被管理的共享 KV 池。这对 Laura 特别好，因为你可以有多个 Laura 可供热切换，每个人可以有自己的 Laura，而不需要替换基础模型。你得到一个同时为所有人服务的推理池，即使他们用的是不同模型。这让你可以做基于 token 的计价，而不需要预留 GPU。</p>
+<p>对于全量微调，它确实必须基于 GPU。但我们一直在获得更多 GPU，所以我们有能力让人们在他们的 GPU 上运行东西。这使得可以进行全参数训练，尤其是对大规模 SFT 或 mid-training 这类算法，你会想要不只是一个 Laura adapter，以及在每一层上真正定制你的算法如何工作的能力。多租户 Laura 版本已经上线，今天就可以使用。全量微调将在接下来几周内推出。之前提到的 V1 部分已经作为 alpha 功能发布，稳定版希望很快发布。然后我之前提到的 cookbook 也已经发布。</p>
+<p>这大致就是我想讲的。有点非正式，如果大家有问题，我可以深入任何大家好奇的部分。我们也在招聘。我们是一个小团队，主要在旧金山，正在快速变成一个大得多的团队。本周晚些时候我们还会有一些其他令人兴奋的消息，来展示我们扩大团队的承诺。但总之，我们在成长，我认为我们处于一个独特的位置：我们做非常开放的研究工作，所有这些代码都在 GitHub 上，你们可以去玩，但我们同时也是一家真正训练大模型并赚钱的真实公司。所以我们认为我们找到了一个做真正开放研究的好商业模式，这一路至今是一段不可思议的旅程，也很希望有充满热情、有才华的人加入团队。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um and one thing you may also have poked around at or seen or tried is uh we have our hosted training platform uh which means you don't have to worry about GPUs at all. Um And so this is just hosted Primerl. The version we have that is kind of the the broad uh self-serve version today is multi-tenant Laura um which is focused mostly on RL. Um what we have coming quite soon that we'll be rolling out is full fine-tuning um which supports changing as much as you want in Primerl in terms of the model and everything else where we still give you all the same abstractions for uh not needing to think about the GPUs and kind of auto-scaling and uh magic restarts and uh having a dashboard where you can log everything and have unified billing for sandboxes and judges and all these things. Um but also you get to develop your environments on CPU on your laptop, push them to the platform as environment packages, and specify them in your configs. Um and then this allows you to um have a lot of flexibility in like deciding when you want to go to different levels of the stack. So in many cases you don't actually want to change anything in the trainer. You just want to change your reward function. And you can do this in environment space. Maybe you want to configure the trainer but not change it in which case you want to kind of poke into like slightly more complex knobs for uh things like different loss functions or learning rates. Um additionally you may want to like actually go deeper into the trainer and like uh do new algorithms at the environment level at the algorithm class level or at the loss function level or maybe something else entirely that needs going even deeper. And so we we support all of this with the the um the full fine-tuning as well. And so uh
+<p>multi-tenant Laura, if you're unfamiliar, is a a very useful pattern for allowing multiple people to do training runs on the same architecture. Um on the same uh model weight copy. It's so you have a base model that's kind of This is how all inference for like token-based pricing usually works as you're doing multi-tenant inference where you have one big copy of Claude uh that is just getting everyone's requests and hitting a shared uh like KV pool uh that is managed um</p>
+<p>with This is really nice with Laura because you can just have multiple Lauras available that you can hot swap and each person can have their own Laura without needing to replace the base model. Uh and you get one kind of inference pool that serves everybody at once even if they're using different models. This allows you to do things like token-based pricing uh and not need to reserve GPUs. Um</p>
+<p>For full fine-tuning, it kind of does have to be GPU-based. Um but we've been getting a lot more GPUs and so we have the ability to let people run stuff on their GPUs. Um and uh this allows going like pretty like going to full parameter training where especially for algorithms like large-scale SFT or mid-training, um you will want to kind of have more than just a Laura adapter um as well as the ability to kind of really customize at at every layer you might want um like how your algorithm is going to work. Um but so we The multi-tenant Laura one is already live and you can go use it today.</p>
+<p>Um full fine-tuning is coming out in the next coming next couple weeks. Um the V1 stuff from before is already uh out uh as a kind of a alpha feature that is a stable release coming the next I don't know, quite soon hopefully. Um and then the cookbook I mentioned earlier is also out. Um</p>
+<p>And that's mostly what I want to talk about. Um bit informal and I can People have questions, I can</p>
+<p>uh dig into any individual parts people think are curious. We're also uh we're hiring. Uh we are small team based in mostly San Francisco um</p>
+<p>becoming a much larger team quickly. Um and uh we'll have some other exciting news about that coming later this week uh to</p>
+<p>I don't know.</p>
+<p>Uh demonstrate our commitment to scaling the team. Um but yeah, we are we're growing and we're</p>
+<p>I think in a unique position of like we do very open research work like all this code is on GitHub if you want to go play with it but we also like our a real company that trains big models and makes money.</p>
+<p>And so yeah, we think we figured out a good business model to do real open research and it's been an incredible journey thus far and would love to have excited passionate talented people join the team.</p>
+<blockquote>
+<blockquote>
+<p>[applause]</p>
+</blockquote>
+</blockquote>
+<p>[music]</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/e58a67f7983fbe3ed6fba541b552ca99af7dadba6f25dceda62b63fa7ea2a507.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/e58a67f7983fbe3ed6fba541b552ca99af7dadba6f25dceda62b63fa7ea2a507.md" download="Will Brown 谈 Primed and Loaded 的开源后训练工具栈：Verifiers V1 与 Primer RL.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

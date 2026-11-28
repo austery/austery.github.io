@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>美研芒格君 · 2026-10-08 · 帖子</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+<div class="x-reading" data-pagefind-body>
+  <header class="x-heading">
+    <p class="x-eyebrow">𝕏 原文阅读 · 帖子</p>
+    <h1 data-pagefind-meta="title">美研芒格君 · 2026-10-08 · 帖子</h1>
+    <span hidden data-pagefind-meta="author">美研芒格君</span>
+    <span hidden data-pagefind-filter="x_author" data-pagefind-ignore>2058239737522204672</span>
+    <span hidden data-pagefind-meta="date">2026-10-08T05:10:12.000Z</span>
+    <p>保留来源原文。时间显示为 Toronto 当地时间；未保存的配图与引用请前往 X 查看。</p>
+    <a href="/x/">返回 X 阅读</a>
+  </header>
+  <p class="x-status">保存说明：除条目另有标注外，正文尚未人工核对 · 图片未保存 · 引用或对话上下文可能不完整。</p>
+
+  
+<article class="x-entry" data-author="2058239737522204672" data-long="true" id="x-post-2108062380643197105">
+  <span id="x-post-heading-2108062380643197105" class="x-post-anchor" aria-hidden="true"></span>
+  <header><a href="/x/authors/2058239737522204672/"><strong>美研芒格君</strong></a> <span class="x-muted">@Kay2289123</span>
+    <div id="x-post-time-2108062380643197105" class="x-post-heading"><time datetime="2026-10-08T05:10:12.000Z">2026-10-08 01:10</time></div>
+    <a class="x-outbound" href="https://x.com/Kay2289123/status/2108062380643197105" target="_blank" rel="noopener noreferrer">原帖 ↗</a>
+  </header>
+  <div class="x-entry-content">
+    <div class="x-original-text">忙碌的 Q3 终于过去了，我们团队有3个比较猛的数字：
+我的团队 Token 用量比 Q2 翻了100%，AI 账单反而下降了；by default 90&#43;% 的会议都有录屏，并有 AI 的直接参与。接近 75% 的内部 ticket AI 都能直接闭环了
+
+此外，我被 escalate 了 5&#43; 次，原因是成员过度依赖 AI，对面团队不满
+
+我在硅谷大厂带 AI 训练管理团队，今天跟大家汇报一下这个季度的 AI 化进展。希望给也在带团队、做训练推理、折腾 AI 的朋友一点具体参考
+
+这个季度让我感受最深的是：模型越来越强，团队能不能吃到这波红利，要看工具、经验和流程是否能 AI Native 化
+
+1/ 先让 AI 真正用上内部工具。
+经过不懈的努力，大约 85% 的内部工具已经完成 CLI / MCP 化，剩下约 15% 通过 Browser Use 补齐操作入口
+
+训练团队的工作里，有大量查日志、看实验状态、比配置的事情。
+
+这一步很关键：把工具接好，AI 才有机会把一个任务往下做完
+
+2/ 把一个人用 AI 的经验，变成整个团队都能用的东西
+我们建立了团队内部的 skill 中央 repo，统一分发给每个人的 Codex/Claude
+
+一个人打磨好的 skill，其他人也能接着用。少一点各自摸索，少一点重复踩坑
+
+我觉得这件事很有复利。工具会换，模型会升级，但团队积累下来的好方法，应该留下来。反馈下来，大家都表示很好
+
+3/ Ticket 也开始接近自动流转，接近 90% 可以 one shot 完成。
+这是让我兴奋的地方。工具接通、skill 共享，最后要落到任务能不能做完
+
+对我们团队来说，很多时候基础 ticket 的 debug 是对人力的一个消耗。用 Harness 自动处理 Ticket 之后，成员的时间才有机会腾出来，花在定义实验、判断结果、找真正的卡点上
+
+当然，任务做完之后，该有的验收标准还是要有。能自动跑起来只是第一步，团队成员仍花不少时间在 evaluate，也存在返工的情况
+
+4/ Token 消耗翻倍，但总账单反而下降
+Q3 相比 Q2，我们团队的 Token 用量上涨了 100%，总体金额却下降了。大家目前最常用、最喜欢的，依然是 Opus 5.5
+
+用得更多，花得更少
+
+但作为 manager，我更想盯着一个数：完成一个经过验收的任务，到底花了多少钱。这个是我们下个 Q 监控的重点
+
+要接着问：GPU、实验和 Token跑出了多少有效结果？从一个想法到拿到可靠结论，究竟快了多少？
+
+5/ 团队成员过度依赖 AI，引发对面团队不满
+
+5/ 团队成员过度依赖 AI，引发对面团队不满
+一个最主要的原因，就是团队成员的文档全是拿 AI 写的。动辄一个小的技术需求，就上来一个万字文档，对面没法读，没法合作，甚至发文档的人自己都讲不清楚在干啥
+
+另外一个原因就是我们团队自动化程度很高，但 CI/CD 没有跟上。
+
+一次团队成员用 AI 写的代码，AI evaluate 都过了，但 CI/CD 不够好，把线上和隔壁团队的整个 pipeline 搞崩了。但又不知道怎么解决，只能无脑 rollback
+
+这个也是让我苦恼的点，暂时没有想到什么好的办法解决，只能告诫大家不要盲目信任 AI，但这也有点奇怪，不知道大家有没有什么好的办法？
+
+6/ 跟全部成员完成了累计 100&#43;人次的 1:1
+说实话，这个把我累个半死。我能感觉到大家对于后训练这个方向还是比较认可的，但有着深深的焦虑感
+
+我觉得当 一个靠谱 manager 很难的是：既要处理一线的事务，又要帮团队成员当心理咨询师。今天 A 有情绪了，明天 B 觉得 C 抢了 scope，D 觉得做的事情无聊，E 又过度依赖 AI
+
+这份 Q3 汇报先分享给大家。</div>
+    <footer>
+      
+      
+      <details><summary>来源与保存记录</summary><p>Post ID: 2108062380643197105<br>保存时间：2026-10-12T13:24:32.899Z<br>正文状态：UNVERIFIED<br>媒体状态：NOT_ARCHIVED<br>上下文状态：PARTIAL<br>已知缺失：Provider results do not establish exhaustive archive coverage</p></details>
+    </footer>
+  </div>
+</article>
+
+  <nav class="x-pagination" aria-label="同来源合集" data-pagefind-ignore> </nav>
+</div>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

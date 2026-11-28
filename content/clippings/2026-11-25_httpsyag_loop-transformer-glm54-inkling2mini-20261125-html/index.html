@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>72 小时内两家实验室同时把循环做进大模型底层，GLM-5.4
+现在能用吗？</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">72 小时内两家实验室同时把循环做进大模型底层，GLM-5.4
+现在能用吗？</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-25</span>
+    
+
+    <header class="article-header">
+      
+      <h1>72 小时内两家实验室同时把循环做进大模型底层，GLM-5.4
+现在能用吗？</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">loop-architecture</span>
+      
+        <a class="tag-link" href="/tags/llm-inference/">llm-inference</a>
+      
+        <a class="tag-link" href="/tags/model-optimization/">model-optimization</a>
+      
+        <a class="tag-link" href="/tags/model-scaling/">model-scaling</a>
+      
+        <span class="tag-pill tag-pill--no-page">local-model</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">两家实验室在72小时内分别发布了开源本地模型 Inkling 2 Mini 和旗舰模型 GLM-5.4，它们都将循环架构做进了模型底层，在不增加物理参数的前提下通过在同一批网络层上反复运算多轮来加深推理。Inkling 2 Mini 瞄准个人电脑本地运行，而 GLM-5.4 则瞄准云端旗舰，智谱在存量模型上通过循环改造，在不增加训练算力的情况下实现了推理改进，但关于其750B模型的性能宣称和定价仍有待验证，且模型在某些任务上可能陷入耗时过长的思考循环。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/loop-transformer-glm54-inkling2mini-20261125.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-25T00:00:00.000Z">2026-11-25</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%B8%8D%E6%83%B3%E7%BB%A7%E7%BB%AD%E5%A0%86%E5%8F%82%E6%95%B0%E4%B9%9F%E4%B8%8D%E6%83%B3%E7%AD%89%E5%8D%8A%E5%A4%A9%E5%BE%AA%E7%8E%AF%E6%9E%B6%E6%9E%84%E6%98%AF%E6%80%8E%E4%B9%88%E7%9C%81%E5%8A%9B%E6%B0%94%E7%9A%84">不想继续堆参数也不想等半天，循环架构是怎么省力气的？</a></li><li class="outline-h2"><a href="#%E5%90%8C%E6%A0%B7%E6%98%AF%E8%AE%A9%E7%BD%91%E7%BB%9C%E5%B1%82%E5%A4%9A%E8%BD%AC%E5%87%A0%E5%9C%88%E4%B8%A4%E5%AE%B6%E5%88%86%E5%88%AB%E8%BF%88%E8%BF%87%E4%BA%86%E5%93%AA%E9%81%93%E5%B7%A5%E7%A8%8B%E5%9D%8E">同样是让网络层多转几圈，两家分别迈过了哪道工程坎？</a></li><li class="outline-h2"><a href="#%E5%AE%A3%E7%A7%B0-750b">宣称 750B</a></li><li class="outline-h2"><a href="#%E6%99%AE%E9%80%9A%E5%BC%80%E5%8F%91%E8%80%85%E7%8E%B0%E5%9C%A8%E8%AF%A5%E6%80%8E%E4%B9%88%E5%BA%94%E5%AF%B9%E8%BF%99%E6%B3%A2%E5%BE%AA%E7%8E%AF%E6%9E%B6%E6%9E%84">普通开发者现在该怎么应对这波循环架构？</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>在过去的两年中，大模型在复杂编程和推理方面要实现进一步的提升，基本上依赖于两种传统的方法。一种是继续增加模型的规模，增大其参数数量，这样虽然模型更大了，但也导致个人电脑无法安装，同时云端的计算成本也会升高。另一种方法是让模型通过更长的文本进行思考，从而通过更多的文字输出（通常几千字）来提升准确性，但这样做会导致用户在每次提问时都需要等待更长时间。</p>
+<p>2026 年 11 月 20 日到 23 日的 72
+小时内，两家实验室一端一云，同时给出了第三条路线的实用化答卷。前 OpenAI
+首席技术官创立的 Thinking Machines Lab 先发布了开源本地模型 Inkling 2
+Mini，三天后智谱发布了旗舰模型 GLM-5.4。两家公司不约而同地把循环架构做进了模型底层，用同一批网络层反复运算多轮，在不增加物理参数的前提下加深推理。智谱甚至宣称，750B
+参数的 GLM-5.4 智能水平可以比肩 2T 到 3T
+参数的传统模型，并顺手把编码订阅计划的周配额上调了 50%。</p>
+<p>这条路线确实把循环架构从论文带进了生产环境，但如果你现在就打算把日常编码工作流切到
+GLM-5.4，先别急。智谱目前还没放出 750B
+模型的公开跑分，开源权重和标准接口也都在等待安全评估，中文社区流传的超低接口单价其实来自第三方中转商。把两家实验室的设计放到同一张桌子上看，你就能明白这项技术真正解决了什么，以及现在该怎么应对。</p>
+<h2 id="不想继续堆参数也不想等半天循环架构是怎么省力气的" data-reading-heading="">不想继续堆参数也不想等半天，循环架构是怎么省力气的？</h2>
+<p>传统的 LLM
+像一条单向流水线，一段话进来，每个词从第一层到最后一层走一遍，每层只做一次计算，然后输出结果。一旦遇到需要多步因果推理的代码重构或漏洞排查，单遍流水线的计算深度经常捉襟见肘。要想补足深度，要么把流水线拉得更长、多加几十层新参数，要么让模型把中间步骤写成显式的思考文本，再重新喂给自己继续算。</p>
+<p>循环架构则采取了不同的策略：它不改物理层数，却挑选模型中间的一段网络层，让数据在同一组权重上连续跑两遍甚至三遍，每一轮都在上一轮的结果上继续修正，最后再交给末尾几层输出。这样在不增加额外参数和权重显存的前提下，每个词在吐出前经历的计算深度大幅加深。</p>
+<p>这个想法在学界早有先例。早在 2018 年，Universal Transformer
+这篇论文就提出了权重共享的深度网络。2025 年，马里兰大学的 Huginn、字节跳动的 Ouro
+等在几十亿参数的小模型上也做了类似的实验。它一直没进旗舰，是因为训练效率一直不划算。智谱在发文中坦言，如果从头预训练，用同样的算力，循环模型还是打不过每层权重都独立的标准模型。</p>
+<p>11 月下旬，这两次发布恰好从两个相反方向绕过了这道坎。Thinking
+Machines Lab 瞄向个人电脑，把 26B 参数的 Inkling 2 Mini 做成 24
+个物理层，让中间 12 层循环跑 3 遍，相当于跑出 48 层的深度。整套权重约
+20GB，可以直接装进 32GB 内存的笔记本本地运行。智谱则瞄准云端旗舰，把
+750B 的 GLM-5 基座里中间 28 层拿出来循环 2
+遍，主打把编码能力扩展到视频脚本、游戏和三维建模等复杂长链条任务。</p>
+<h2 id="同样是让网络层多转几圈两家分别迈过了哪道工程坎" data-reading-heading="">同样是让网络层多转几圈，两家分别迈过了哪道工程坎？</h2>
+<p>把模型改成循环结构，看上去只是写个循环语句，真放到生产环境会遇到两道难题：怎么控制训练成本，怎么防止多跑一圈把数值和显存撑爆。两家实验室因为目标场景不同，做出了不同的取舍。</p>
+<p>从训练路径和内部协作看，Inkling 2 Mini
+因为规模较小，可以直接从头用循环来设计，同时它在 Apache 2.0
+协议下发布了权重。可解释性团队 Goodfire
+在发布前就分析过它的内部结构。Goodfire 发现，Inkling 2 Mini 把 24
+层分成了 4
+个模块，在每次循环中不会覆盖旧数据，会特意回头读取上一轮的模块输出。每个模块的最后一层都会留一些线索，方便下一个模块去读到合适的中间结果。到了第二轮和第三轮循环，后面的循环模块几乎一定会回头读取自己上一轮的结果，反复修正。</p>
+<p>智谱的情况不同，它的基础模型有
+750B，从头训练不现实，只能走存量改造。他们在已有的 GLM-5
+基础上直接继续训练，把中间的 28 层改成两轮循环。同架构的 30B
+对照实验显示，只多用了大约 10%
+的训练算力，就带来了数学、科学推理和长上下文上的明显改进。这一招迅速吸引了开发者的目光，Hacker News
+上就有评论提到，如果不需要从预训练开始，就可以用继续训练的方式给已有模型加入循环结构，接下来可能会有一大批现有模型进行类似的低成本改造。</p>
+<p>在多轮循环之后，还有一个问题是数值稳定性。如果我们直接把现有的基座模型的中间层改成循环两遍，第一轮计算出来的结果原样写回同一个网络层，这会导致内部数值可能越来越大，让后面的网络层出现异常。智谱在每轮循环中增加了一个按词控制的阀门，用来控制每一轮以多大的比例将新的结果写回到主干。在训练完成后，他们发现两轮循环自然地形成了分工：第一轮的阀门开得较小，保守地建立全局上下文，对于难词则多写一些；第二轮则打开阀门，集中精力精炼最终输出。</p>
+<p>数值稳定之后，真正卡部署的是显存。GLM-5.4 虽然支持 100
+万词元的上下文，但每循环一圈再把历史上下文存一遍，显存直接翻倍，难以低价提供在线服务。智谱的省法是让第二轮直接复用第一轮筛出的远程历史缓存，只为自己新算的内容额外拿一小段近距离窗口缓存，连筛选历史位置的索引也直接复用。配合底层优化，官方称
+GLM-5.4 在闲时可达每秒 200 词元的吐字速度，忙时也在每秒 70 到 80
+词元。</p>
+<p>传统单遍架构、Inkling 2 Mini 与 GLM-5.4
+的层循环路径对比</p>
+<h2 id="宣称-750b" data-reading-heading="">宣称 750B</h2>
+<p>顶 2T 到 3T，GLM-5.4 哪些已经证实、哪些还在画饼？</p>
+<p>从架构层面看，这种工程上的巧思确实令人印象深刻。但在实际选型中，GLM-5.4
+这次发布留下的空白也同样明显。把已落地的事实和尚未证实的宣称分开看，能帮助我们避免踩坑。</p>
+<p>首先是性能。智谱在自己的博客中声称 GLM-5.4 实现了 2T 到 3T
+模型的性能，但是并没有公布 750B
+本体的任何公开测试结果。官方的文章中唯一一个带数据的受控实验是用 30B
+的对照模型来做的。独立开发者 Simon Willison
+第一时间自费进行了实测，用 GLM-5.4
+跑自己常用的矢量图编程测试，发现最高档位的 GLM-5.4
+画出来的效果和上一代的 GLM-5.3 非常接近。至于跨级比肩 2T 到
+3T，目前还是厂商自述。</p>
+<p>第二块需要核清的是定价和接入渠道。中文圈不少快讯提到 GLM-5.4
+接口定价低至每百万输入 0.06 美元、输出 0.22
+美元，其实这并不是智谱官方定价。查看 Z.ai 官方文档
+可以看到，标准接口和开源权重目前都没有上线，官方给出的理由是仍在完成安全评估和安全加固。当前普通用户只能通过编码订阅计划（约
+18 美元每月起）、ZCode 或网页端使用 GLM-5.4，市面上流传的按量低价来自
+AIHubMix
+等第三方中转商对订阅通道的转售。另外，账面上吐字速度虽然很快，但模型上线当天
+Hacker News
+主帖 里有不少开发者反馈频繁触发 429
+限流，实际并发稳定性还在承压。</p>
+<p>第三点是官方博客自己暴露出的一个反差。在 30B
+对照实验中，智谱重点展示了一个好处：在 GPQA-Diamond 和 MMLU-Pro
+等推理测试上，循环架构让平均输出长度缩短了 10% 到
+14%，说明一部分推理确实从显式思考链转移到了底层循环中。可到了文章开头介绍
+750B 旗舰 GLM-5.4
+时，官方自己又专门提醒，模型在某些任务上容易陷入耗时过长的马拉松式思考循环。把隐式循环和长思考模式叠在一起后，到底是帮用户省了时间，还是在难题上反而拉长了等待，目前还是要打个问号。</p>
+<p>GLM-5.4
+已落地的工程事实与待验证宣称对照</p>
+<h2 id="普通开发者现在该怎么应对这波循环架构" data-reading-heading="">普通开发者现在该怎么应对这波循环架构？</h2>
+<p>看清了这两家模型的现状后，对大多数日常写代码和选模型的开发者来说，现在就可以分情况处理。如果你的主力使用场景是云端的编程助手，那现在没必要为了循环架构就急着把工作流迁移到
+GLM-5.4。虽然编码订阅计划把周配额提升了 50%，但上线初期限流很明显，750B
+的真实能力也缺乏独立的第三方编码评测对照。更现实的做法是等一两周，看看标准接口、开源权重以及独立编程榜单的结果落地，同时观察它的马拉松式思考在真实代码库里到底会不会拖慢节奏，再决定要不要切换。</p>
+<p>如果你平时会在本地电脑上跑开源模型，那不妨直接试试 Inkling 2
+Mini。它已经用 Apache 2.0 放出了权重，第一天就接上了 llama.cpp 和
+MLX，在 32GB 内存的笔记本上就能跑起来。在 Hugging Face 博客公布的 48
+项公开对比里，它在 32 项上领先于 Gemma 4 31B 和 Qwen 3.8 27B
+等同体量模型，在终端编程测试上也能和 Qwen 3.8 27B 打平。拿它和现有 27B
+本地模型对比着跑几个真实任务，比看任何宣传稿都更能直观感受到循环架构省显存的实际效果。</p>
+<p>如果往后再想半年，循环架构真正决定性的拐点可能还在后面。智谱已经展示了用较小的算力对已有的基座进行改造，就可以实现循环结构；接下来开源界可能会看到一些改造版的模型。但不管是
+GLM-5.4 还是正式版 Inkling 2
+Mini，目前都处于固定次数的阶段：不论面对简单的补全还是复杂的推导，每个词都会强制执行固定次数的循环。Thinking
+Machines Lab
+这次只在其中一个实验变体中加入了手动调节循环次数的功能，智谱也提到按词难度动态分配循环次数是未来的计划。等到模型和推理引擎真正做到简单词跑一遍、难题自动多转几圈，循环架构才会从一种架构技巧变成改写推理成本的标配。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/7b29b30a2c6298430d8cee36a9acc44e5cf3430fa4d6e1ebbb702c57365e4189.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/7b29b30a2c6298430d8cee36a9acc44e5cf3430fa4d6e1ebbb702c57365e4189.md" download="72 小时内两家实验室同时把循环做进大模型底层，GLM-5.4
+现在能用吗？.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, <a href="/search/?q=智谱" class="entity-link company-link">智谱</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Inkling 2 Mini" class="entity-link product-link">Inkling 2 Mini</a>, <a href="/search/?q=GLM-5.4" class="entity-link product-link">GLM-5.4</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

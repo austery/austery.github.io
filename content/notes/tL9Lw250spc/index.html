@@ -1,0 +1,2296 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>生物代谢率与质量的缩放律：从克莱伯定律到WBE分形理论的争论</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">生物代谢率与质量的缩放律：从克莱伯定律到WBE分形理论的争论</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Veritasium</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>Veritasium</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-07-25</span>
+    
+
+    <header class="article-header">
+      
+      <h1>生物代谢率与质量的缩放律：从克莱伯定律到WBE分形理论的争论</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/scaling-law/">scaling-law</a>
+      
+        <span class="tag-pill tag-pill--no-page">metabolic-rate</span>
+      
+        <span class="tag-pill tag-pill--no-page">fractal-geometry</span>
+      
+        <span class="tag-pill tag-pill--no-page">allometry</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章探讨了生物代谢率如何随体型质量缩放。研究者从大象药物实验与心跳规律出发，介绍了基于表面积的三分之二比例、克莱伯定律的四分之三比例以及解释该现象的WBE分形网络理论。目前科学界就代谢缩放指数是否存在统一定律仍存分歧。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/veritasium/">Veritasium</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=tL9Lw250spc" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-07-25T00:00:00.000Z">2026-07-25</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>10 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BF%83%E8%B7%B3%E4%B8%8E%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E7%BC%A9%E6%94%BE%E5%BE%8B">心跳与生命周期的缩放律</a></li><li class="outline-h3"><a href="#%E4%BB%A3%E8%B0%A2%E4%B8%8E%E6%95%A3%E7%83%AD%E8%A1%A8%E9%9D%A2%E7%A7%AF%E5%AE%9A%E5%BE%8B">代谢与散热：表面积定律</a></li><li class="outline-h3"><a href="#%E5%B9%82%E5%BE%8B%E4%B8%8E%E5%85%8B%E8%8E%B1%E4%BC%AF%E5%AE%9A%E5%BE%8B">幂律与克莱伯定律</a></li><li class="outline-h3"><a href="#wbe%E7%90%86%E8%AE%BA%E7%9A%84%E4%B8%89%E4%B8%AA%E5%89%8D%E6%8F%90%E4%B8%8E%E5%88%86%E5%BD%A2%E7%BD%91%E7%BB%9C%E5%81%87%E8%AE%BE">WBE理论的三个前提与分形网络假设</a></li><li class="outline-h3"><a href="#%E8%B1%AA%E6%96%AF%E5%A4%9A%E5%A4%AB%E7%BB%B4%E5%BA%A6%E4%B8%8E%E5%9B%9B%E5%88%86%E4%B9%8B%E4%B8%89%E5%B9%82%E5%BE%8B%E7%9A%84%E6%8E%A8%E5%AF%BC">豪斯多夫维度与四分之三幂律的推导</a></li><li class="outline-h3"><a href="#%E4%BB%8E%E4%BB%A3%E8%B0%A2%E7%8E%87%E6%8E%A8%E5%AF%BC%E5%BF%83%E7%8E%87%E4%B8%8E%E5%AF%BF%E5%91%BD">从代谢率推导心率与寿命</a></li><li class="outline-h3"><a href="#%E5%BF%83%E7%8E%87%E5%AF%BF%E5%91%BD%E4%B8%8E%E5%8D%81%E4%BA%BF%E6%AC%A1%E5%BF%83%E8%B7%B3%E6%B3%95%E5%88%99">心率、寿命与十亿次心跳法则</a></li><li class="outline-h3"><a href="#%E5%9F%8E%E5%B8%82%E7%9A%84%E7%BC%A9%E6%94%BE%E6%B3%95%E5%88%99">城市的缩放法则</a></li><li class="outline-h3"><a href="#%E5%AF%B9%E6%A0%87%E5%BA%A6%E7%90%86%E8%AE%BA%E4%B8%8E%E5%85%8B%E8%8E%B1%E4%BC%AF%E6%B3%95%E5%88%99%E7%9A%84%E8%B4%A8%E7%96%91">对标度理论与克莱伯法则的质疑</a></li><li class="outline-h3"><a href="#%E8%B5%9E%E5%8A%A9%E5%95%86%E4%BF%A1%E6%81%AF">赞助商信息</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><!-- chunk 1/4 -->
+<p>你知道，从生物学角度来说，我说——应该给大象吃多少LSD？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+ou know, biologically, I said- How much LSD should
+<p>you give an elephant?</p>
+</details>
+<p>（柔和的音乐）</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+(mellow music)
+</details>
+<p>嗯，对于一个通情达理的人来说，正确的答案大概是一点都不给。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Well, to a reasonable person,
+<p>the correct answer is probably none.</p>
+</details>
+<p>但如果是为了科学实验必须这么做呢？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But what if you needed to do
+<p>it for a scientific experiment?</p>
+</details>
+<p>20世纪60年代，中央情报局正在进行一项名为“MKUltra”的绝密项目，其主要目标之一是查明如何利用像LSD这样的药物来改变人类行为。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+In the 1960s, the CIA was working on
+<p>a top secret project known as MKUltra,</p>
+<p>and one of their main</p>
+<p>goals was to find out</p>
+<p>how drugs like LSD could be</p>
+<p>used to change human behavior.</p>
+</details>
+<p>大象就是在这个环节登场的，因为大象平时通常非常温顺，但有时它们会突然发狂。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And this is where elephants come in
+<p>because elephants are</p>
+<p>normally quite docile,</p>
+<p>but sometimes they just snap.</p>
+</details>
+<p>当时的一个假说是，这种行为变化可能是由它们大脑中天然产生的一种类似LSD的物质释放所引发的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And the hypothesis was
+<p>that this change in</p>
+<p>behavior might be triggered</p>
+<p>by the release of an LSD-like substance</p>
+<p>that naturally occurs in their brains.</p>
+</details>
+<p>所以，如果这是真的，那么给温顺的大象服用LSD或许就能重现这种行为。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So if that's true, then administering LSD
+<p>to a docile elephant might</p>
+<p>reproduce that behavior.</p>
+</details>
+<p>因此，真正的问题是，你应该给大象服用多少LSD，才能使剂量既大到足以引起心理反应，又不至于大到造成伤害？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So the real question was
+<p>how much LSD should you give</p>
+<p>an elephant so that the</p>
+<p>dose is large enough</p>
+<p>to cause a psychological reaction,</p>
+<p>but not so large that it causes harm?</p>
+</details>
+<p>（柔和的音乐）</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+(mellow music)
+</details>
+<p>研究人员当时并不清楚，以前从未给这么大的动物用过LSD，但他们确实知道猫的安全剂量大约是0.3毫克。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Well, the researchers didn't
+<p>know, LSD had never been given</p>
+<p>to an animal that big,</p>
+<p>but they did know that</p>
+<p>the safe dose in cats</p>
+<p>was around 0.3 milligrams.</p>
+</details>
+<p>由于大象的质量大约是猫的一千倍，他们琢磨着：那就给它一千倍的剂量。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, since an elephant has around
+<p>a thousand times the mass of a cat,</p>
+<p>they figured we'll give it</p>
+<p>a thousand times the dose.</p>
+</details>
+<p>他们获准在塔斯科（Tusko）身上进行这项实验，它是俄克拉荷马州林肯公园动物园的一头亚洲象。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+They received approval to
+<p>perform the experiment on Tusko,</p>
+<p>an Indian elephant at the</p>
+<p>Lincoln Park Zoo in Oklahoma.</p>
+</details>
+<p>在动物园里，他们给它注射了近300毫克的LSD。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And there they injected him
+<p>with nearly 300 milligrams of LSD.</p>
+</details>
+<p>然而不到五分钟，塔斯科便大声嘶鸣、瘫倒、重重地倒在右侧，出现排便，并陷入癫痫持续状态。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But within five minutes,
+<p>Tusko trumpeted, collapsed,</p>
+<p>fell heavily onto his</p>
+<p>right side, defecated,</p>
+<p>and went into status epilepticus.</p>
+</details>
+<p>他们尝试注射了几种其他药物来抢救它，但塔斯科不久后便死去了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+They administered a few other drugs
+<p>in an attempt to revive him,</p>
+<p>but Tusko died shortly thereafter.</p>
+</details>
+<p>他们犯的错误是假定安全药物剂量与质量呈线性比例缩放。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The mistake they made was to assume
+<p>that safe drug dosage</p>
+<p>scales linearly with mass.</p>
+</details>
+<p>事实并非如此。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+It does not.
+</details>
+<p>而且事实证明，很多像这样的事物并不会按照你预期的方式进行缩放。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And it turns out there are
+<p>a lot of things like this</p>
+<p>that don't scale in the way you'd expect.</p>
+</details>
+<p>（柔和的音乐）</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+(mellow music)
+</details>
+<h3 id="心跳与生命周期的缩放律" data-reading-heading="">心跳与生命周期的缩放律</h3>
+<p>例如，以按质量计最小的哺乳动物伊特鲁里亚鼩鼱，和最大的陆生哺乳动物非洲草原象为例。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+For example, take the
+<p>smallest mammal by mass,</p>
+<p>the Etruscan shrew,</p>
+<p>and the largest land mammal,</p>
+<p>the African bush elephant.</p>
+</details>
+<p>你认为哪一个在整个一生中的心跳次数更多？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Which do you think has more heartbeats
+<p>over the course of its entire life?</p>
+</details>
+<p>其实，一头非洲象一生的心跳次数大约在10亿次左右，而一只伊特鲁里亚鼩鼱一生的心跳次数也是10亿次。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Well, an African elephant has
+<p>around a billion</p>
+<p>heartbeats in its lifetime,</p>
+<p>and an Etruscan shrew also has a billion</p>
+<p>heartbeats in its lifetime.</p>
+</details>
+<p>那沙袋鼠呢？也是10亿次。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+What about a wallaby?
+<p>Also a billion.</p>
+</details>
+<p>二趾树懒？又是10亿次。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+A two-toed sloth?
+<p>A billion again.</p>
+</details>
+<p>几乎每一种哺乳动物，无论它们生活在什么环境中、体型有多大，甚至无论它们是活1年还是活100年，从出生到死亡的那天，它们的心跳总数大约都在10亿次左右。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Just about every mammal, no matter
+<p>what environment they live</p>
+<p>in, how large they are,</p>
+<p>or even whether they live</p>
+<p>for one year or 100 years,</p>
+<p>they all get around a billion heartbeats</p>
+<p>between the day they're</p>
+<p>born and the day they die.</p>
+</details>
+<ul>
+<li>为什么是10亿次？为什么不是100万次？为什么不是1000次？偏偏不是其他这些数字。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- Why a billion?
+<p>Why not a million?</p>
+<p>Why not a thousand?</p>
+<p>It's not these other numbers.</p>
+</details>
+<ul>
+<li>除了一种哺乳动物之外，所有哺乳动物都是如此。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- That is every mammal except one.
+</details>
+<p>本视频在很大程度上基于杰弗里·韦斯特（Geoffrey West）所著的《规模》（Scale）一书。如果你想了解更多，我会在下方的简介里放一个链接。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+This video is in large
+<p>part based on the book</p>
+<p>Scale by Geoffrey West.</p>
+<p>If you want to learn more,</p>
+<p>I'll put a link to it</p>
+<p>down in the description.</p>
+</details>
+<p>更令人好奇的是，仅仅通过知道一种哺乳动物的质量，你就能预测出数量惊人的生物特征，从它的脉搏率和繁殖产出，一直到它的总寿命。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+What's even more curious is that
+<p>just by knowing a mammal's mass,</p>
+<p>you can predict a staggering number</p>
+<p>of biological traits from its pulse rate</p>
+<p>and reproductive output</p>
+<p>to its total lifespan.</p>
+</details>
+<p>同样的规律也适用于城市。如果你知道人口和地理位置，就能让你预测从平均工资、专利申请量，到犯罪率、疾病患病率，甚至行人行走的字面速度等方方面面。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The same pattern holds for cities.
+<p>If you know the population and location,</p>
+<p>that allows you to forecast</p>
+<p>everything from average wages</p>
+<p>and patent filings to crime</p>
+<p>rates, disease prevalence,</p>
+<p>and even the literal speed</p>
+<p>at which pedestrians walk.</p>
+</details>
+<p>那么这怎么可能呢？嗯，为此我们必须回到大象塔斯科的案例上。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So how is that possible?
+<p>Well, for that, we have</p>
+<p>to go back to the case</p>
+<p>of Tusko the Elephant.</p>
+</details>
+<p>研究人员假定安全药物剂量与质量成正比。质量翻倍，剂量翻倍。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Researchers assumed that safe drug dosage
+<p>is proportional to mass.</p>
+<p>Double the mass, double the dose.</p>
+</details>
+<p>但事实表明，动物处理化合物的速度并不直接取决于它的质量，它更多取决于它的代谢率，也就是它在给定时间内消耗的卡路里数。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But it turns out that the
+<p>speed at which an animal</p>
+<p>can process chemical compounds</p>
+<p>doesn't depend directly on its mass.</p>
+<p>It depends more on its metabolic rate.</p>
+<p>That is the number of calories it uses</p>
+<p>in a given amount of time.</p>
+</details>
+<ul>
+<li>你的身体里时刻在发生着很多事情。你的心脏在跳动，这需要能量；你在体内运送食物，消化需要能量；维持大脑运转需要能量，呼吸也是。你所做的一切都需要能量。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- There's a lot going on in your body.
+<p>Your heart is pumping, that takes energy.</p>
+<p>You're moving food around.</p>
+<p>Digestion takes energy.</p>
+<p>Keeping your brain going</p>
+<p>takes energy, breathing.</p>
+<p>Everything that you do requires energy.</p>
+</details>
+<p>（柔和的音乐）</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+(mellow music)
+</details>
+<h3 id="代谢与散热表面积定律" data-reading-heading="">代谢与散热：表面积定律</h3>
+<ul>
+<li>[主持人] 就猫而言，单单一整天，它们就需要大约250千卡的热量，由它们数万亿个细胞共同消耗。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- [Host] For a cat, for a single day,
+<p>they require roughly 250</p>
+<p>kilocalories of energy,</p>
+<p>used by all of their trillions of cells.</p>
+</details>
+<p>但是猫的细胞并没有什么特殊之处。如果你取一些猫的细胞和大象的细胞放在显微镜下，你会发现它们大小相似，组成相似，并且执行着相同类型的功能。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But there is nothing
+<p>special about a cat's cells.</p>
+<p>If you take a cat's cells</p>
+<p>and an elephant's cells</p>
+<p>and put them under a microscope,</p>
+<p>you'll find they're a</p>
+<p>similar size, similar makeup,</p>
+<p>and they perform the</p>
+<p>same sorts of functions.</p>
+</details>
+<p>对于其他动物也是如此。换句话说，动物的构成构件总大致是相同的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The same is true for other animals.
+<p>In other words, the building blocks</p>
+<p>of animals are always roughly the same.</p>
+</details>
+<p>因此，一头质量是一千倍的大象，拥有的细胞数量大约是一千倍。所以你会以为它需要一千倍的能量，即每天250,000千卡。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So an elephant that has
+<p>a thousand times the mass</p>
+<p>has about a thousand times as many cells.</p>
+<p>So you'd expect it would need a thousand</p>
+<p>times as much energy.</p>
+<p>So 250,000 kilocalories per day.</p>
+</details>
+<p>但这正是你遇到麻烦的地方。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But that is where you run into problems.
+</details>
+<ul>
+<li>那么这里的问题是什么呢？如果我是一个生物体，一整天都在燃烧能量，那么这部分能量就会以体热的形式辐射出去。因此，我们一直在通过体表、通过皮肤向环境中散失热量。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- So what's the issue here?
+<p>If I'm an organism</p>
+<p>and I'm burning up energy all day long,</p>
+<p>that energy is radiated out</p>
+<p>in the form of body heat.</p>
+<p>So we're constantly losing</p>
+<p>heat through our surface,</p>
+<p>through our skin, to the environment.</p>
+</details>
+<ul>
+<li>为了说明为什么这很重要，让我们简化这个问题，做物理学家标准的做法：假设我们的动物都是完美的球体。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- To see why this matters,
+<p>let's simplify the problem</p>
+<p>and do the standard physicist thing.</p>
+<p>Let's assume our animals</p>
+<p>are perfect spheres.</p>
+</details>
+<p>需要澄清的是，这并不是论证成立所必需的，但它确实让一切变得容易理解得多。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+To be clear, this isn't necessary
+<p>for the argument to work,</p>
+<p>but it does make everything</p>
+<p>a lot easier to follow.</p>
+</details>
+<p>由于动物的体积与其质量成正比，我们这头3000千克重的大象的体积比我们3千克重的猫大一千倍。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Since the volume of an animal
+<p>is proportional to its mass,</p>
+<p>our 3000 kilogram elephant</p>
+<p>has a volume a thousand times</p>
+<p>greater than our three kilogram cat.</p>
+</details>
+<p>因此它的半径必须大10倍。这是因为体积与半径的立方成正比。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So its radius must be 10 times larger.
+<p>That's because volume is</p>
+<p>proportional to radius cubed.</p>
+</details>
+<p>但表面积的增长仅与半径的平方成正比。因此，大象的表面积仅仅增加了100倍。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But surface area only
+<p>grows as radius squared.</p>
+<p>So the elephant's surface area</p>
+<p>only increases by a factor of 100.</p>
+</details>
+<p>产生一千倍的热量，却只有一百倍的表面积来将其辐射散发出去，大象的结局将会非常悲惨。如果真是这种情况，它会被活活煮熟。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Generating a thousand times as much heat
+<p>while only having a hundred</p>
+<p>times the surface area</p>
+<p>to radiate it away would end very</p>
+<p>poorly for the elephant.</p>
+<p>If this were the case,</p>
+<p>it would boil alive.</p>
+</details>
+<p>（柔和的音乐）</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+(mellow music)
+</details>
+<p>因此在1838年，法国科学家提出了一种不同的缩放律。由于代谢产生热量，而热量通过表面辐射，所以代谢率即B，应该转而与表面积A成正比缩放。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So in 1838,
+<p>French scientists proposed</p>
+<p>a different scaling law.</p>
+<p>Since metabolism generates heat</p>
+<p>and that heat is radiated</p>
+<p>through the surface,</p>
+<p>metabolic rate or B,</p>
+<p>should scale in proportion</p>
+<p>to the surface area, A, instead.</p>
+</details>
+<p>这被称为表面积定律。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+This became known as the surface law.
+</details>
+<p>现在，我们可以将其改写，看看代谢率是如何作为质量的函数进行缩放的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, we can rewrite this to see
+<p>how metabolic rate scales</p>
+<p>as a function of mass.</p>
+</details>
+<p>表面积与半径的平方成正比，所以我们可以将其替换进来；如果质量与半径的立方成正比，那么半径必与质量的三分之一次方成正比。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Surface area is proportional
+<p>to radius squared,</p>
+<p>so we can swap that in,</p>
+<p>and if mass is proportional</p>
+<p>to radius cubed,</p>
+<p>then radius must be proportional</p>
+<p>to mass to the one-third.</p>
+</details>
+<p>将这代入R，我们发现代谢率应该与质量的三分之二次方成比例缩放。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Plugging that in for R,
+<p>we find that metabolic rate should scale</p>
+<p>with mass to the two-thirds.</p>
+</details>
+<ul>
+<li>一个非常熟悉的例子来自烹饪的思考。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- Really familiar example would
+<p>come from thinking about cooking.</p>
+</details>
+<p>（柔和的音乐）</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+(mellow music)
+</details>
+<p>也许你想为感恩节做一只大火鸡。人们通常会表述为：每磅需要多长时间？但你会意识到这是线性思维。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Maybe you want to make a
+<p>big turkey for Thanksgiving.</p>
+<p>People commonly phrase it as</p>
+<p>how long do I need per pound?</p>
+<p>But that you realize is linear thinking.</p>
+</details>
+<p>真正重要的其实是禽鸟或烤肉的厚度，因为热量是通过烤箱的传导进来的，必须在肉内部进行热扩散。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The important thing is really
+<p>the thickness of the bird</p>
+<p>or the roast, because</p>
+<p>the heat is coming in</p>
+<p>by conduction from the oven</p>
+<p>and it's got to do thermal</p>
+<p>diffusion into the meat.</p>
+</details>
+<p>扩散所需的时间将与特征长度（在这种情况下就是肉的厚度）呈比例缩放。它会与尺寸的平方相关，而肉的体积则与长度的立方相关，且这与禽鸟或烤肉的重量成正比。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The time for the diffusion will scale
+<p>like the characteristic length,</p>
+<p>which in this case would be</p>
+<p>the thickness of the meat.</p>
+<p>It'll go like the dimension squared,</p>
+<p>whereas volume of the meat is</p>
+<p>going to be like length cubed,</p>
+<p>and that's proportional to the weight</p>
+<p>of the bird or the roast.</p>
+</details>
+<p>所以当你把这些结合在一起时，就会得出烤肉所需的特征时间与其质量的三分之二次方成正比。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So when you put those things together,
+<p>you'll get that the characteristic</p>
+<p>amount of time needed</p>
+<p>to cook the roast will go like its mass</p>
+<p>to the two-thirds power.</p>
+</details>
+<ul>
+<li>那么如果我想烤一块重量是另一块烤肉两倍的肉，要多长时间？是2的三分之二次方倍的时间吗？</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- So if I'm thinking about cooking a roast
+<p>that weighs twice as much as</p>
+<p>another roast, how much longer?</p>
+<p>Is that two to the two-thirds the time?</p>
+</details>
+<ul>
+<li>对，如果你想让重量翻倍，那么你只需要多煮大约60%的时间，而不是100%。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- Yeah, if you wanted
+<p>to double the weight,</p>
+<p>then you only have to</p>
+<p>cook it about 60% longer,</p>
+<p>not 100% longer.</p>
+</details>
+<ul>
+<li>[主持人] 同样，根据这种缩放关系，一头重量是一只猫一千倍的大象，应该只多消耗一百倍的卡路里。也就是25,000千卡，而不是250,000千卡。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- [Host] Similarly,
+<p>according to this scaling,</p>
+<p>an elephant that's a thousand</p>
+<p>times as heavy as a cat</p>
+<p>should only burn a hundred</p>
+<p>times as many calories.</p>
+<p>So 25,000 instead of 250,000.</p>
+</details>
+<p>那么对塔斯科而言，适当的LSD剂量本应只有30毫克。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And the appropriate dose of LSD for Tusko
+<p>would've been just 30 milligrams.</p>
+</details>
+<p>这两个截然不同的预测源于关于代谢率如何作为质量的函数进行缩放的不同假设。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+These two wildly different
+<p>predictions come from different</p>
+<p>assumptions about how metabolic rate</p>
+<p>scales as a function of mass.</p>
+</details>
+<p>但请注意，在这两种情况下，它都只是与质量的某个幂次成正比。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But notice in both cases,
+<p>it's just proportional</p>
+<p>to mass raised to some power.</p>
+</details>
+<h3 id="幂律与克莱伯定律" data-reading-heading="">幂律与克莱伯定律</h3>
+<p>这种关系被称为幂律，所有的幂律都有一个特殊性质。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+These kinds of relationships
+<p>are called power laws</p>
+<p>and all power laws have</p>
+<p>a special property.</p>
+</details>
+<p>如果你对X和Y的值取对数，就会得到一条直线。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+If you take the logarithm
+<p>of the X and Y values,</p>
+<p>you get a straight line.</p>
+</details>
+<p>而这条直线的斜率等于幂律的指数。这使得识别不同类型的幂律变得很容易。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And the slope of the line is equal
+<p>to the exponent of the power law.</p>
+<p>This makes it easy to identify</p>
+<p>different types of power laws.</p>
+</details>
+<p>如果斜率是1，那就是日常的线性缩放。如果小于1，就像表面积定律那样，这被称为次线性缩放。如果大于1，则被称为超线性缩放。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+If the slope is one, that's
+<p>just everyday linear scaling.</p>
+<p>If it's less than one,</p>
+<p>like the surface law,</p>
+<p>that is called sublinear scaling.</p>
+<p>And if it's larger than one,</p>
+<p>that is known as superlinear scaling.</p>
+</details>
+<p>在近一百年的时间里，生物学家普遍赞同表面积定律的三分之二指数对于代谢率是正确的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+For nearly a hundred years,
+<p>biologists generally agreed</p>
+<p>that the two-thirds exponent</p>
+<p>of the surface law was the</p>
+<p>correct one for metabolic rate.</p>
+</details>
+<p>但随后在1932年，瑞士生物学家马克斯·克莱伯（Max Kleiber）决定对此进行检验。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But then in 1932, Swiss
+<p>biologist, Max Kleiber,</p>
+<p>decided to put it to the test.</p>
+</details>
+<p>他选取了从150克的小鸽子到680,000克的大阉牛等不同动物的代谢率，然后在双对数坐标图上将它们与各自的质量绘制在一起。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+He took the metabolic rates
+<p>of different animals from</p>
+<p>a small dove at 150 grams</p>
+<p>to a large steer at 680,000 grams,</p>
+<p>and then he plotted</p>
+<p>them against their mass</p>
+<p>on a log log plot.</p>
+</details>
+<p>正如所预期的，所有的数据点确实落在了一条直线上。但斜率并不是三分之二，而是大约四分之三。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And as expected, all the data
+<p>did fall on a straight line.</p>
+<p>But the slope wasn't two-thirds.</p>
+<p>Instead, it was about three quarters.</p>
+</details>
+<p>这后来被称为克莱伯定律。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+This became known as Kleiber's Law.
+</details>
+<p>它意味着，如果让动物的质量翻倍，代谢率大约会增加到1.68倍，增加了68%，而不是三分之二缩放律所预测的59%。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+It implies that if you
+<p>double an animal's mass,</p>
+<p>metabolic rate goes up by about 1.68,</p>
+<p>an increase of 68% instead of the 59%,</p>
+<p>which would be predicted by</p>
+<p>the two-thirds scaling law.</p>
+</details>
+<p>因此，根据克莱伯定律，一头大象消耗的卡路里大约是一只猫的178倍，即大约45,000千卡。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So according to Kleiber's Law,
+<p>an elephant burns roughly 178 times</p>
+<p>as many calories as a cat,</p>
+<p>or about 45,000 kilocalories.</p>
+</details>
+<p>而塔斯科实际本应接受的LSD剂量是53毫克，大约是研究人员给它的剂量的六分之一。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And the actual LSD dose
+<p>Tusko should have received</p>
+<p>was 53 milligrams, which is</p>
+<p>around a sixth of the dose</p>
+<p>the researchers gave him.</p>
+</details>
+<p>这就解释了大象塔斯科身上的用药灾难。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So that explains the dosing catastrophe
+<p>with Tusko The Elephant.</p>
+</details>
+<p>（柔和的音乐）</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+(mellow music)
+</details>
+<p>克莱伯最初的研究是基于一个较小的数据集，主要是由哺乳动物构成的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Kleiber's original work was
+<p>based on a small data set,</p>
+<p>primarily made up of mammals.</p>
+</details>
+<p>但如果你将更广泛的哺乳动物以及鸟类、爬行动物和鱼类等其他动物的数据绘制出来，你会发现它们都大致遵循相同的缩放关系。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But if you plot the data for
+<p>a larger range of mammals,</p>
+<p>as well as for other animals</p>
+<p>like birds, reptiles, and fish,</p>
+<p>you find that they all follow</p>
+<p>roughly the same scaling relationship.</p>
+</details>
+<p>由于温血动物的基础代谢率高于冷血动物，它们并非全都完美地落在同一条线上，但它们全都按照相同的幂律（质量的四分之三次方）进行缩放。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, they don't all fit
+<p>perfectly onto the same line</p>
+<p>because the base metabolic rate</p>
+<p>for warm-blooded animals is higher</p>
+<p>than for cold-blooded ones,</p>
+<p>but they all scale according</p>
+<p>to the same power law,</p>
+<p>mass raised to the three-quarters.</p>
+</details>
+<p>有人认为，这种关系一直延伸到单个细胞及其内部的分子机器。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Some argue that this relationship
+<p>expands all the way down</p>
+<p>to single cells and the molecular</p>
+<p>machines inside of them.</p>
+</details>
+<p>如果是真的，那么克莱伯定律所统治的生命跨越了超过25个数量级。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+If that's true, Kleiber's Law governs life
+<p>spanning more than 25 orders of magnitude.</p>
+</details>
+<p>但接下来的问题是，如果一头大象拥有多得多的细胞，且每个细胞的大小与较小生物体内的细胞相似，然而它所消耗的能量却按比例更少——就好像它每磅、每千克或每个细胞的代谢率更低——这实际上是在说那些细胞在以少得多的能量运转。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But then the question is,
+<p>if an elephant has so many more cells</p>
+<p>and each cell is a similar size</p>
+<p>to a cell in a smaller creature,</p>
+<p>and yet it's using</p>
+<p>proportionately less energy,</p>
+<p>like it's got a lower</p>
+<p>metabolic rate per pound</p>
+<p>or per kilo or per cell,</p>
+<p>that's really saying that those cells</p>
+<p>are functioning with much less energy.</p>
+</details>
+<ul>
+<li>好像体型大具有某种效率，但很难理解其中的原因。究竟是细胞在互相提供什么，以某种方式进行协作呢？</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- It's like there's some
+<p>efficiency to being big,</p>
+<p>and it's hard to understand why.</p>
+<p>What is it that the cells</p>
+<p>are providing to each other,</p>
+<p>somehow cooperating in some way?</p>
+</details>
+<ul>
+<li>我刚才在计算器里输入了100的四分之三次方，所以如果你有一个体型大100倍的生物体，按照这个规律，代谢率只有31.6倍。所以这似乎是一笔巨大的节省。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- I just put in my calculator
+<p>100 to the three quarters,</p>
+<p>so if you got an organism</p>
+<p>that's 100 times bigger,</p>
+<p>then according to this, only 31.6</p>
+<p>times the metabolic rate.</p>
+<p>So it seems like a big savings.</p>
+</details>
+<ul>
+<li>这是一个巨大的提升，对吧？这是一笔巨大的节省。这是一个生物学事实，但一个世纪以来，人们一直在争论究竟是什么导致了这四分之三。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- It's a massive improvement, right?
+<p>It's a big savings.</p>
+<p>It's a biological fact,</p>
+<p>but people have been</p>
+<p>arguing now for a century</p>
+<p>what accounts for this three quarters.</p>
+</details>
+<p>（柔和的音乐）</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+(mellow music)
+</details>
+<ul>
+<li>在克莱伯提出这一观察后的几十年里，这个谜团只增不减。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- In the decades following
+<p>Kleiber's observation,</p>
+<p>the mystery only deepened.</p>
+</details>
+<p>研究人员发现，大脑大小也大致按照质量的四分之三次方进行缩放，动物的生长速度以及每分钟泵出的血量同样如此。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Researchers discovered that
+<p>brain size also roughly scales</p>
+<p>as mass to the three quarters,</p>
+<p>and so does an animal's growth rate</p>
+<p>and the amount of blood pumped per minute.</p>
+</details>
+<p>但并非所有属性都按质量的四分之三次方进行缩放。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But not every property scales
+<p>as mass to the three quarters.</p>
+</details>
+<ul>
+<li>如果你问一个生物、一只哺乳动物能活多久，那往往与其质量的四分之一次方成正比。是四分之一，而不是四分之三。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- If you ask how long a
+<p>creature will live, a mammal,</p>
+<p>that tends to be proportional to its mass</p>
+<p>to the one quarter power.</p>
+<p>One over four, not three over four.</p>
+</details>
+<ul>
+<li>[主持人] 所以这意味着如果你把哺乳动物的质量翻倍，那么平均而言，它的寿命大约会长19%左右。同样，血液循环时间也按比例缩放</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- [Host] So that means if you
+<p>double the mass of a mammal,</p>
+<p>then on average, its lifespan</p>
+<p>is around 19% longer.</p>
+<p>Similarly, blood</p>
+<p>circulation time also scales</p>
+</details>
+<!-- chunk 2/4 -->
+<p>大致与质量的四分之一次方成正比，而呼吸频率和心率则都与负四分之一次方成比例。它们并不全都是四分之三幂律，但它们都是四分之一的倍数。所以每个人心中的疑问都是，这些四分之一幂标度律到底是从何而来的？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+as roughly mass to the one
+<p>quarter, while breathing rate</p>
+<p>and heart rate both scaled</p>
+<p>to the negative one quarter.</p>
+<p>They're not all three quarters power laws,</p>
+<p>but they are all multiples of a quarter.</p>
+<p>So the question on everyone's mind was</p>
+<p>where are these quarter power</p>
+<p>scaling laws coming from?</p>
+</details>
+<ul>
+<li>20世纪90年代出现了一种流行的理论。</li>
+</ul>
+<p>（悠扬的音乐）</p>
+<p>布莱恩·恩奎斯特当时正在攻读生物学学士学位。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- One popular theory emerged in the 1990s.
+<p>(mellow music)</p>
+<p>Brian Enquist was studying</p>
+<p>for an undergraduate degree in biology.</p>
+</details>
+<ul>
+<li>你当时上的大多数生物学课程，都是学习三羧酸循环，然后你必须死记硬背花朵的所有不同组成部分，然后所有……对于每样东西他们都有一套不同的专业术语。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- Most of the biology
+<p>classes then that you take,</p>
+<p>you learn about the Krebs Cycle</p>
+<p>and then you have to memorize</p>
+<p>all the different parts</p>
+<p>of a flower and then all...</p>
+<p>They have a different</p>
+<p>terminology for everything.</p>
+</details>
+<ul>
+<li>[Henry] 但后来有一天他上了一节动物学课，课上向他展示了那些四分之一幂标度图。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- [Henry] But then one day
+<p>he took a zoology class</p>
+<p>where they showed him those</p>
+<p>quarter power scaling plots.</p>
+</details>
+<ul>
+<li>[Brian] 我简直不敢相信。我当时心想：“你一定是在开玩笑吧。”你看，这某种程度上就像是构成了生物多样性基础的核心本质。就在那一刻，我立刻意识到，我想放弃我那种专门化的植物生理学研究，去从事一些与标度相关的工作。</li>
+</ul>
+<p>（悠扬的音乐）</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- [Brian] I just couldn't believe it.
+<p>I was like, "You got to be kidding me."</p>
+<p>You know, this is kind of</p>
+<p>like something fundamental</p>
+<p>that's kind of like underlying</p>
+<p>biological diversity.</p>
+<p>And there I knew immediately that I wanted</p>
+<p>to kind of quit my specialized</p>
+<p>kind of plant physiology research</p>
+<p>and do something associated with scaling.</p>
+<p>(mellow music)</p>
+</details>
+<ul>
+<li>[Henry] 于是恩奎斯特开始在詹姆斯·布朗教授手下攻读博士学位，布朗教授多年来一直在思考标度律。他们知道，当幂律出现时，底层系统中往往存在某种形式的自相似性。因此他们想知道，那种自相似性可能是什么？他们推测，这可能与资源在体内运输的方式有关，具体来说，就是负责这一功能的网络。他们拥有生物学直觉，但要获得一个完整的理论，他们需要一个正式的数学框架。换句话说，他们需要一位数学家或理论物理学家。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- [Henry] So Enquist started
+<p>studying for his PhD,</p>
+<p>under Professor James Brown,</p>
+<p>who had been thinking about</p>
+<p>scaling laws for years.</p>
+<p>So they knew that often</p>
+<p>when power laws appear,</p>
+<p>there's some form of self-similarity</p>
+<p>in the underlying system.</p>
+<p>So they wondered, what could</p>
+<p>that self-similarity be?</p>
+<p>And they suspected that it</p>
+<p>might have something to do</p>
+<p>with the way resources are</p>
+<p>transported through the body,</p>
+<p>specifically the networks that do this.</p>
+<p>They had the biological intuition,</p>
+<p>but to get a complete theory,</p>
+<p>they needed a formal</p>
+<p>mathematical framework.</p>
+<p>In other words, they</p>
+<p>needed a mathematician</p>
+<p>or a theoretical physicist.</p>
+</details>
+<ul>
+<li>当时，吉姆与圣菲研究所有联系，他开始向周围打听：这里有谁对这些生物标度关系感兴趣吗？当时的主席说：“你猜怎么着？我认识一位物理学家，人在洛斯阿拉莫斯，他之前一直在谈论生物标度关系。”于是我们见到了杰弗里，那一瞬间的感觉就像是，我们就像是多年来一直在谈论同样的事情。就像是，你知道的，找到了一个一直讲着和你相同语言的人，而以前却没有人能听懂你。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- And at the time, Jim was associated
+<p>with the Santa Fe Institute,</p>
+<p>and he started asking around with,</p>
+<p>is there anyone up here</p>
+<p>that's interested in these</p>
+<p>biological scaling relationships?</p>
+<p>And then the president at the</p>
+<p>time said, "You know what?</p>
+<p>I know of this physicist</p>
+<p>who's up at Los Alamos</p>
+<p>who was talking about biological</p>
+<p>scaling relationships."</p>
+<p>And so we met Geoffrey and</p>
+<p>it was like immediately,</p>
+<p>it's like we'd been talking</p>
+<p>about the same things</p>
+<p>for like years.</p>
+<p>It's like, you know, finding,</p>
+<p>someone who's been like</p>
+<p>speaking your language,</p>
+<p>but no one could understand you.</p>
+</details>
+<ul>
+<li>[Henry] 于是韦斯特、布朗和恩奎斯特联手，试图为克莱伯定律寻找一个令人信服的解释。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- [Henry] So West, Brown
+<p>and Enquist teamed up</p>
+<p>to try and find a compelling</p>
+<p>explanation for Kleiber's Law.</p>
+</details>
+<h3 id="wbe理论的三个前提与分形网络假设" data-reading-heading="">WBE理论的三个前提与分形网络假设</h3>
+<ul>
+<li>他们首先假设了三个简单的前提。第一个前提是，分配资源的网络是空间填充的，因为它们需要到达体内的每一个细胞。第二个前提是，这些网络的末端单元，即输送系统外围最薄的管段，无论生物体的大小如何，都具有相同的宽度。也就是说，向大象皮肤细胞输送营养的最外层血管，其粗细程度与小鼠体内的血管大致相当。只是大象拥有的数量要多得多。第三个前提是，随着时间的推移，进化推动了这些运输网络走向高效的设计。那么，这样的网络应该是什么样子的呢？</li>
+</ul>
+<p>（悠扬的音乐）</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- They started by assuming
+<p>three simple premises.</p>
+<p>The first premise is that the networks</p>
+<p>that distribute resources</p>
+<p>are space-filling,</p>
+<p>since they need to reach</p>
+<p>every cell in the body.</p>
+<p>The second premise is</p>
+<p>that the terminal units</p>
+<p>of those networks, the thinnest segments</p>
+<p>on the outer periphery</p>
+<p>of the delivery system,</p>
+<p>have the same width regardless</p>
+<p>of the size of the organism.</p>
+<p>That is the outermost blood</p>
+<p>vessels that carry nutrients</p>
+<p>to an elephant's skin</p>
+<p>cells are about as thick</p>
+<p>as the ones in a mouse.</p>
+<p>The elephant just has many more of them.</p>
+<p>And the third premise is that over time,</p>
+<p>evolution has driven</p>
+<p>these transport networks</p>
+<p>toward an efficient design.</p>
+<p>So what should such a network look like?</p>
+<p>(mellow music)</p>
+</details>
+<p>直观地说，为了尽可能高效地将燃料从一个地方运送到另一个地方，你会希望路径尽可能短。所以基本上就是一条直线。但由于燃料需要到达身体的每一个部位，你也会需要许多不同的路径。而随着生物体越来越大，内部的网络需要覆盖越来越大的体积。实现这一点的一种方法是拉长所有路径，以匹配动物的生长。在这种情况下，动物的体积应当与这些内部路径长度的立方成比例。或者换个形式表述，内部路径长度应该与体积的三分之一次方成比例，就像动物的整体身长一样。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Well, intuitively, to get
+<p>fuel from one place to another</p>
+<p>as efficiently as possible,</p>
+<p>you want the path to be</p>
+<p>as short as possible.</p>
+<p>So basically a straight line.</p>
+<p>But because fuel needs to</p>
+<p>reach every part of the body,</p>
+<p>you would also need many different paths.</p>
+<p>And as you go to larger</p>
+<p>and larger organisms,</p>
+<p>the networks inside need to</p>
+<p>reach a larger and larger volume.</p>
+<p>One way to do this is</p>
+<p>to stretch all the paths</p>
+<p>and match the growth of the animal.</p>
+<p>In this case, the volume of the animal</p>
+<p>should scale as these</p>
+<p>internal path lengths cubed.</p>
+<p>Or if we rearrange that,</p>
+<p>internal path length should scale</p>
+<p>as volume to the one-third,</p>
+<p>just like the overall</p>
+<p>length of the animal does.</p>
+</details>
+<p>但这种设计极具浪费性。以这两个区域为例。将血液输送到这里的两条血管在体内走过了几乎相同的路径，并且仅在到达目的地之前才分开。如果相反，我们在此之前只使用一根血管，仅在路径需要分叉时才将其分开，那么我们就可以用少得多的血管材料和少得多的充盈血管的血液来为这两个区域提供服务。当然，你可以将这个逻辑推广到体内的所有血管，最终得到一个分支血管的高效得多的设计。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But this design is incredibly wasteful.
+<p>Take these two regions.</p>
+<p>The two vessels that</p>
+<p>are bringing blood here</p>
+<p>go through almost the</p>
+<p>same path in the body,</p>
+<p>and they only split up just</p>
+<p>before they reach their destinations.</p>
+<p>If instead we had just one</p>
+<p>vessel up to this point</p>
+<p>and split it only when the</p>
+<p>paths needed to diverge,</p>
+<p>we could serve the two regions</p>
+<p>using a lot less vessel material</p>
+<p>and a lot less blood to fill the vessels.</p>
+<p>Of course, you can extend this logic</p>
+<p>for all the blood vessels in the body,</p>
+<p>and you end up with a</p>
+<p>much more efficient design</p>
+<p>of branching blood vessels.</p>
+</details>
+<p>但现在我们遇到了另一个问题，因为每个分叉点都为部分血液的反弹提供了机会，也就是反射。如果有许多次反射，那就意味着泵送血液需要在能量上有显著更高的消耗。因此接下来，他们主张自然界应当青睐使反射最小化的结构。事实证明，如果血管分叉前后的横截面积保持不变，这种情况就会发生。因此，如果主血管的横截面积为两平方厘米，那么两根分支血管各自的面积都需要为一平方厘米，至少对于大血管而言是这样。对于较小的血管，子分支可以稍微粗一些，以便血液减速并与所到达的组织交换资源。如果你在整个网络中不断重复这种模式，最终得到的就是这个：一个自相似的分形分支。如果你观察循环系统的实际形状，它就具备这种几何结构。因此，他们似乎切中了某些关键。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But now we run into another issue
+<p>because each branching point</p>
+<p>provides an opportunity</p>
+<p>for some of the blood to</p>
+<p>bounce back, that is reflect.</p>
+<p>If you have many reflections,</p>
+<p>that would mean it</p>
+<p>costs significantly more</p>
+<p>energy to pump blood around.</p>
+<p>So next, they argue that</p>
+<p>nature should favor structures</p>
+<p>that minimize reflections.</p>
+<p>And as it turns out, this happens</p>
+<p>if the cross-sectional area of the vessels</p>
+<p>stays the same before</p>
+<p>and after the branching.</p>
+<p>So if you've got a cross-sectional area</p>
+<p>of two centimeters squared</p>
+<p>for the main vessel,</p>
+<p>then each of the two</p>
+<p>branches need to have an area</p>
+<p>of one centimeter squared each,</p>
+<p>for large vessels at least.</p>
+<p>For smaller ones, daughter</p>
+<p>branches can be a bit thicker</p>
+<p>to allow blood to slow down</p>
+<p>and exchange resources with</p>
+<p>the tissue it's reaching.</p>
+<p>If you keep repeating this</p>
+<p>pattern across the network,</p>
+<p>you end up with this, a</p>
+<p>branching self-similar fractal.</p>
+<p>And if you look at the actual shape</p>
+<p>of the circulatory system,</p>
+<p>it has this geometry.</p>
+<p>So it seemed like they</p>
+<p>were onto something.</p>
+</details>
+<h3 id="豪斯多夫维度与四分之三幂律的推导" data-reading-heading="">豪斯多夫维度与四分之三幂律的推导</h3>
+<ul>
+<li>但你如何从这一点走向四分之一幂标度律呢？数学家费利克斯·豪斯多夫发现，自相似分形具有一个有趣的特性。</li>
+</ul>
+<p>（悠扬的音乐）</p>
+<p>以一条直线段为例。它是完全一维的，根本不是分形。豪斯多夫给这条线段赋予了1.0的值。但现在想象一下给它增加几处弯曲，并在这些弯曲上增加更多的弯曲。如果你一直这样做，这条线就会变得越来越像分形。最终，如果你持续施加合适形式的扭曲，那个一维线段就会填满二维平面的整个区域。豪斯多夫为这些空间填充的分形曲线赋予了2.0的值，对应于它们的维度。同样的思想也适用于二维表面。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- But how do you get from this
+<p>to quarter power scaling laws?</p>
+<p>Well, mathematician Felix</p>
+<p>Hausdorff discovered</p>
+<p>that self-similar fractals</p>
+<p>have an interesting property.</p>
+<p>(mellow music)</p>
+<p>Take a straight line segment.</p>
+<p>It's completely one-dimensional</p>
+<p>and not a fractal at all.</p>
+<p>Hausdorff assigned this</p>
+<p>line segment a value of 1.0.</p>
+<p>But now imagine adding a few bends</p>
+<p>and more bends to those bends.</p>
+<p>If you keep doing this,</p>
+<p>the line becomes more</p>
+<p>and more fractal-like.</p>
+<p>Eventually, if you keep applying</p>
+<p>the right kind of contortions,</p>
+<p>that one-dimensional line segment fills up</p>
+<p>an entire region of the 2D plane.</p>
+<p>Hausdorff assigned these</p>
+<p>space-filling fractal curves</p>
+<p>a value of 2.0, corresponding</p>
+<p>to their dimensionality.</p>
+<p>The same ideas apply to a 2D surface.</p>
+</details>
+<ul>
+<li>试想一张纸，对吧？二维的。分形网络所做的全部事情就是揉搓那张纸，它实际上就填满了一个球体的体积。所以你现在可以把那张纸描述为一个球体，而不是一张二维的纸。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- So think about a piece of paper, right?
+<p>Two-dimensional.</p>
+<p>All then the fractal network</p>
+<p>is doing is crumpling up</p>
+<p>that sheet of paper,</p>
+<p>and it effectively fills</p>
+<p>a ball of volume.</p>
+<p>So you can now describe</p>
+<p>that sheet of paper</p>
+<p>as a sphere instead of a</p>
+<p>two-dimensional sheet of paper.</p>
+</details>
+<ul>
+<li>[Henry] 在越来越小的尺度上重复合适的折叠模式，一个二维表面就会填满越来越多的三维体积。在数学极限下，它变成空间填充的，其豪斯多夫维度为3.0。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- [Henry] Repeat the
+<p>right pattern of folds</p>
+<p>at smaller and smaller</p>
+<p>scales, and a 2D surface</p>
+<p>fills more and more of a 3D volume.</p>
+<p>In the mathematical limit,</p>
+<p>it becomes space filling</p>
+<p>with Hausdorff dimension of 3.0.</p>
+</details>
+<ul>
+<li>[Brian] 你知道，从生物学上讲，我说：“那么，这意味着什么呢？”这使得给定大小的生物体能够塞入比预期更多的这种代谢表面积。正是由于这种类似分形的结构，使得你能够把所有这些褶皱和回旋叠合在一起塞进去，从而塞入数量巨大的膜表面。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- [Brian] You know, biologically, I said,
+<p>"Well, what does that mean?"</p>
+<p>That enables an organism for a given size</p>
+<p>to pack in more of these</p>
+<p>metabolic surface areas</p>
+<p>than would be expected.</p>
+<p>And it's because of this</p>
+<p>fractal-like structure</p>
+<p>that enables you then to pack</p>
+<p>in and have all of these folds</p>
+<p>and convolutions and on top of each other</p>
+<p>to pack in an enormous</p>
+<p>amount of membrane surfaces.</p>
+</details>
+<ul>
+<li>结果就是，循环系统表面的豪斯多夫维度大致为3，这意味着它的表面积并非与其长度的平方成比例，而是与长度的立方成比例。既然代谢率取决于穿过该表面积交换资源的速度，那么它也必须与长度的立方成比例。但请记住，韦斯特、布朗和恩奎斯特想要解释的是克莱伯定律。因此，他们需要知道代谢率如何随质量成比例变化。</li>
+</ul>
+<p>（悠扬的音乐）</p>
+<p>既然每个细胞都需要由网络提供服务，这意味着网络周围的体积应该与动物的质量成正比。由于体积就是表面积乘以长度，而表面积与长度的立方成正比，这就意味着体积和质量都必须与长度的四次方成正比，这可以重新改写以表明长度与质量的四分之一次方成正比。如果你把这个代入代谢率的方程，你就会发现代谢率必须与质量的四分之三次方成正比，正如马克斯·克莱伯所发现的那样。韦斯特、布朗和恩奎斯特于1997年发表了他们的成果，很快根据他们姓氏的首字母被称为WBE理论。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- As a result, the Hausdorff
+<p>dimension of the surface</p>
+<p>of the circulatory</p>
+<p>system is roughly three,</p>
+<p>meaning its surface area doesn't scale</p>
+<p>as its length squared,</p>
+<p>but it's length cubed.</p>
+<p>And since the metabolic rate hinges on</p>
+<p>how fast resources can be</p>
+<p>exchanged across the surface area,</p>
+<p>well, it must also</p>
+<p>scale like length cubed.</p>
+<p>But remember, West, Brown and Enquist</p>
+<p>wanted to explain Kleiber's Law.</p>
+<p>So they needed to know how</p>
+<p>metabolic rate scales with mass.</p>
+<p>(mellow music)</p>
+<p>Since every cell needs to</p>
+<p>be served by the network,</p>
+<p>this means that the volume</p>
+<p>around the network should be proportional</p>
+<p>to the animal's mass.</p>
+<p>And since volume is just</p>
+<p>surface area times length</p>
+<p>and surface area is</p>
+<p>proportional to length cubed,</p>
+<p>that means both volume and mass</p>
+<p>must be proportional to</p>
+<p>length to the fourth,</p>
+<p>which can be rewritten to show</p>
+<p>that length is proportional</p>
+<p>to mass raised to the one quarter.</p>
+<p>And if you plug that into the equation</p>
+<p>for the metabolic rate,</p>
+<p>you find that the metabolic rate</p>
+<p>must be proportional to</p>
+<p>mass to the three-quarters,</p>
+<p>exactly as Max Kleiber had found.</p>
+<p>West, Brown and Enquist</p>
+<p>published their work in 1997,</p>
+<p>and it soon came to be known</p>
+<p>as WBE Theory, after their initials.</p>
+</details>
+<ul>
+<li>而且这个理论相当严格。它做出了非常具体的预测。这是严谨的科学。对吧？这是敢于承担风险，而且它是一个极其优美的理论。</li>
+</ul>
+<p>（悠扬的音乐）</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- And the theory is quite rigid.
+<p>It makes very specific predictions.</p>
+<p>This is good science.</p>
+<p>Okay?</p>
+<p>This is sticking your neck out,</p>
+<p>and it's an incredibly beautiful theory.</p>
+<p>(mellow music)</p>
+</details>
+<ul>
+<li>[Derek] 看看杰弗里·韦斯特书中这张表格。这些是WBE理论所预测的标度指数，包括许多不是四分之一倍数的指数，但都源自同一个理论。例如，动物主动脉的半径应该与其质量的八分之三次方（即0.375）成比例。它的肺部面积应该与质量的十二分之十一次方（即约0.92）成比例。这张图表总共做出了26个不同的预测。现在，这些是观察到的数据。主动脉半径，0.36。肺面积，0.95。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- [Derek] Take a look at this table
+<p>from Geoffrey West's book.</p>
+<p>These are the scaling</p>
+<p>exponents WBE theory predicts,</p>
+<p>including many that are</p>
+<p>not multiples of a quarter,</p>
+<p>but all follow from the same theory.</p>
+<p>For example, the radius</p>
+<p>of an animal's aorta</p>
+<p>should scale with its mass</p>
+<p>to the three-eighths or .375.</p>
+<p>And the area of its lungs</p>
+<p>should scale with mass</p>
+<p>to the 11-12ths or about 0.92.</p>
+<p>In total, this chart makes</p>
+<p>26 different predictions.</p>
+<p>Now, these are the observed data.</p>
+<p>Radius of the aorta, 0.36.</p>
+<p>Lung area, 0.95.</p>
+</details>
+<ul>
+<li>[Steven] 这就是他们所做的事情真正令人震惊的地方。他们有一张包含大约20或30个奇异指数预测的表格，而那正是你在数据中真实看到的。所以这一个理论不仅解释了代谢的四分之三次方，还解释了生物学家所测量的切实数十种其他事物。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- [Steven] That's the really shocking thing
+<p>about what they did.</p>
+<p>They had a table with</p>
+<p>something like, I don't know,</p>
+<p>20 or 30 predictions of exotic exponents,</p>
+<p>and that's what you</p>
+<p>really see in the data.</p>
+<p>So this one theory accounts not only</p>
+<p>for the three-quarters</p>
+<p>power of metabolism,</p>
+<p>but for literally dozens of other things</p>
+<p>that biologists have measured.</p>
+</details>
+<h3 id="从代谢率推导心率与寿命" data-reading-heading="">从代谢率推导心率与寿命</h3>
+<ul>
+<li>一旦你得到了代谢的四分之三定律，其中一些标度律就很容易解释了。以哺乳动物的心率为例。心率等于血流速率除以每次心跳的血量或容积。</li>
+</ul>
+<p>（悠扬的音乐）</p>
+<p>人们发现每搏输出的血量与动物的质量成正比。所以那就是M。那么血流速率呢？记住，代谢关乎营养如何在全身分配。因此大多数生物学家都认同代谢率与血流速率彼此成正比。所以心率应当与代谢率除以质量成比例变化。代入克莱伯发现的标度律，得到的是M的负四分之一次方，这意味着体型更大的动物心跳应该比体型较小的动物更慢。而这正是我们在自然界中所观察到的。世界上最小的哺乳动物伊特鲁里亚鼩鼱，其心率达到了非同寻常的每分钟1200次。那就是每秒20次心跳。而最大的陆生哺乳动物非洲草原象，其典型心率仅为每分钟30次。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- Some of the scaling
+<p>laws are easy to explain</p>
+<p>once you've got the</p>
+<p>three-quarters law for metabolism.</p>
+<p>Take a mammal's heart rate, for instance.</p>
+<p>Heart rate is equal to the blood flow rate</p>
+<p>over the amount or volume</p>
+<p>of blood in every beat.</p>
+<p>(mellow music)</p>
+<p>The volume of blood</p>
+<p>per beat has been found</p>
+<p>to scale in direct proportion</p>
+<p>to an animal's mass.</p>
+<p>So that's just M.</p>
+<p>And the blood flow rate?</p>
+<p>Well, remember that</p>
+<p>metabolism is all about</p>
+<p>how nutrients get</p>
+<p>distributed around the body.</p>
+<p>So most biologists agree metabolic rate</p>
+<p>and blood flow rate are directly</p>
+<p>proportional to one another.</p>
+<p>So heart rate should scale</p>
+<p>as metabolic rate over mass.</p>
+<p>Swapping in the scaling</p>
+<p>law Kleiber had found,</p>
+<p>that gives us M to the minus one quarter,</p>
+<p>meaning bigger animals should have slower</p>
+<p>heartbeats than smaller ones.</p>
+<p>And this is exactly what</p>
+<p>we observe in nature.</p>
+<p>The world's smallest</p>
+<p>mammal, the Etruscan Shrew,</p>
+<p>has an extraordinary heart</p>
+<p>rate of 1200 beats per minute.</p>
+<p>That's 20 beats per second.</p>
+<p>Whereas the biggest land mammal,</p>
+<p>the African bush elephant,</p>
+<p>has a typical heart rate of</p>
+<p>only 30 beats per minute.</p>
+</details>
+<p>我们可以对寿命做类似的事情。主要理论之一是动物的寿命取决于代谢损伤的累积。也就是说，随着生物体内的每一块组织在一段时间内处理营养，这会导致损伤累积，随着时间的推移，这会导致动物死亡。因此动物累积损伤的速率就是其单位质量的代谢率，其寿命应该是该速率的倒数。如果损伤累积得更快，它就死得更早。如果累积得更慢，它就活得更长。所以寿命与M除以B成正比，或者代入克莱伯定律，与M的四分之一次方成正比。因此寿命应当随质量增加。你在自然界中确实能看到这一点。</p>
+<p>（悠扬的音乐）</p>
+<p>一只鼩鼱在野外只能活一到两年，而一头强大的非洲象可以活到70岁。所以如果你是一只小型哺乳动物，你每分钟的心跳次数很多，但寿命相对较短。反之，如果你是一只体型较大的哺乳动物，你的心跳慢得多，寿命也长得多。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And we can do something
+<p>similar for lifespan.</p>
+<p>One of the leading theories is</p>
+<p>that an animal's lifespan is based on</p>
+<p>the accumulation of metabolic damage.</p>
+<p>That is, as each chunk</p>
+<p>of tissue in an organism</p>
+<p>processes nutrients over time,</p>
+<p>this causes damage to accumulate,</p>
+<p>and that over time</p>
+<p>causes the animal to die.</p>
+<p>So the rate at which an</p>
+<p>animal accumulates damage</p>
+<p>is its metabolic rate per unit of mass,</p>
+<p>and its lifespan should be</p>
+<p>the inverse of that rate.</p>
+<p>If damage accumulates</p>
+<p>faster, it dies sooner.</p>
+<p>If it accumulates slower, it lives longer.</p>
+<p>So lifespan is proportional to M over B,</p>
+<p>or substituting in Kleiber's</p>
+<p>Law, M to the one quarter.</p>
+<p>So lifespan should increase with mass.</p>
+<p>And you do see this in nature.</p>
+<p>(mellow music)</p>
+<p>A shrew only lives for one</p>
+<p>to two years in the wild</p>
+<p>while a mighty African elephant</p>
+<p>can live up to 70 years.</p>
+<p>So if you're a small mammal,</p>
+<p>you have many heartbeats per minute,</p>
+<p>but you live a relatively short life.</p>
+<p>Conversely, if you're a larger mammal,</p>
+<p>your heart beats much slower</p>
+<p>and you live a lot longer.</p>
+</details>
+<ul>
+<li>所以这就是，你知道的，活得快、耗尽精力、英年早逝，对吧？或者是精打细算、活得非常长久。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- So it's the, you know,
+<p>live fast and burnout</p>
+<p>and die young, right?</p>
+<p>Or spend it frugally and</p>
+<p>live a really long life.</p>
+</details>
+<ul>
+<li>但你可能还注意到了别的事情。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- But you might have also
+<p>noticed something else.</p>
+</details>
+<!-- chunk 3/4 -->
+<h3 id="心率寿命与十亿次心跳法则" data-reading-heading="">心率、寿命与十亿次心跳法则</h3>
+<p>心率按 B 比 M 的比例缩放。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Heart rate scales as B over M.</p>
+</details>
+<p>所以它等于 B 除以 M 乘以某个常数。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So it equals B over M times some constant.</p>
+</details>
+<p>而寿命按 M 比 B 的比例缩放。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>And lifespan scales as M over B.</p>
+</details>
+<p>它们互为倒数。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>They're inverses of each other.</p>
+</details>
+<p>它们以相等且相反的方向缩放。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>They scale in equal and</p>
+<p>opposite directions.</p>
+</details>
+<p>现在，动物一生中的心跳总数，正好就是心率乘以寿命。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Now, the total number of</p>
+<p>heartbeats in an animal's life</p>
+<p>is just the heart rate</p>
+<p>multiplied by the lifespan.</p>
+</details>
+<p>所以当你将这两项相乘时，它们相互抵消，只留给你一个常数。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So when you multiply these</p>
+<p>two terms, they cancel out,</p>
+<p>leaving you with just a constant.</p>
+</details>
+<p>这就表明，无论你说的是哪种哺乳动物，它都应该拥有大致相同的心跳次数。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So that suggests that no matter</p>
+<p>what mammal you're talking about,</p>
+<p>it should have roughly the</p>
+<p>same number of heartbeats.</p>
+</details>
+<p>你只需代入一些例子就能得出那个数值。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>You can find that number by</p>
+<p>just plugging in some examples.</p>
+</details>
+<p>我们从小臭鼩开始。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Let's start with the Etruscan Shrew.</p>
+</details>
+<p>这种鼩鼱每分钟 1200 次的心跳乘以大约 1.5 年的寿命，在鼩鼱的一生中大约会有 9.5 亿次心跳。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>The shrew's 1200 beats per</p>
+<p>minute multiplied by a lifespan</p>
+<p>of around 1.5 years gives you</p>
+<p>around 950 million heartbeats</p>
+<p>in the course of the shrew's life.</p>
+</details>
+<p>与此同时，一只非洲象每分钟 30 次的心跳乘以大约 65 年的寿命，得出的心跳次数略高于十亿次。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Meanwhile, an African</p>
+<p>elephant's 30 beats per minute</p>
+<p>multiplied by a lifespan</p>
+<p>of around 65 years</p>
+<p>gives you a little over</p>
+<p>a billion heartbeats.</p>
+</details>
+<p>我们还可以继续列举下去。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>And we could keep going.</p>
+<p>(upbeat music)</p>
+</details>
+<p>但几乎对于你所观察的每一种哺乳动物，你最终都会落在同一个数字上，即大约十亿次心跳。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>But for nearly every mammal you look at,</p>
+<p>you keep landing at the same figure of</p>
+<p>around a billion heartbeats.</p>
+</details>
+<p>这就是为什么几乎每一种哺乳动物，从小田鼠到瞪羚，从猎豹到河马，它们从出生到死亡的那一天，总共都获得大约十亿次心跳。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>This is why nearly every</p>
+<p>mammal from a tiny field mouse</p>
+<p>to a gazelle, from a</p>
+<p>cheetah to a hippopotamus,</p>
+<p>they all get around a billion heartbeats</p>
+<p>between the day they're</p>
+<p>born and the day they die.</p>
+</details>
+<p>但有一个主要的离群者，有一种哺乳动物获得的心跳次数远远超过十亿次。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>But there is one major outlier, one mammal</p>
+<p>that gets significantly more</p>
+<p>than a billion heartbeats.</p>
+</details>
+<p>那便是我们人类。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>And that is us, humans.</p>
+<p>(mellow music)</p>
+</details>
+<p>我们是幸运的那些。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>We are the lucky ones.</p>
+</details>
+<p>三个世纪前，人类还要接近得多于十亿次心跳这一标准数值。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Three centuries ago,</p>
+<p>humans were much closer</p>
+<p>to the standard value of</p>
+<p>one billion heartbeats.</p>
+</details>
+<p>但到了 1850 年代中期前后，细菌学说和更好的卫生方法得到广泛普及，导致儿童死亡率以及疾病死亡人数急剧下降。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>But around the mid 1800s, germ theory</p>
+<p>and better sanitation</p>
+<p>methods became widespread,</p>
+<p>causing a stark decrease in</p>
+<p>the number of child mortalities</p>
+<p>and deaths from disease.</p>
+</details>
+<p>于是预期寿命开始上升。随之而来的，是一生中心跳的平均次数。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So life expectancy began to climb up.</p>
+<p>And with it, the average number</p>
+<p>of heartbeats in a lifetime.</p>
+</details>
+<p>如果你仔细看，你也可以看到一些显著的下降，比如 1918 年西班牙流感大流行造成的这次下挫，或者在这一边，看起来像是第二次世界大战的影响。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>If you look closely, you can</p>
+<p>also see some significant drops</p>
+<p>like this 1918 dip from</p>
+<p>the Spanish flu pandemic</p>
+<p>or over here, what appears to be</p>
+<p>the impact of the Second World War.</p>
+</details>
+<p>但总的来说，趋势是明确的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>But overall, the trend is clear.</p>
+</details>
+<p>我们系统性地增加了我们在有生之年所能获得的心跳次数，以至于现在的普通人在去世前能获得接近三十亿次心跳。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>We have systematically</p>
+<p>been increasing the number</p>
+<p>of heartbeats we get in</p>
+<p>our lifetime to the point</p>
+<p>where now the average human</p>
+<p>gets nearly three billion</p>
+<p>heartbeats before they die.</p>
+</details>
+<p>我不知道还有没有比这更有利于科学和技术的论据了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>I don't know if there's a</p>
+<p>better argument for science</p>
+<p>and technology than this.</p>
+</details>
+<p>它实实在在地赋予了普通人超过一整条额外的生命。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>It has literally given the average human</p>
+<p>more than a full extra life.</p>
+</details>
+<p>而且不仅是人类。其他哺乳动物在圈养环境下，当远离它们在野外自然会遭遇的危险时，也被观察到拥有长得多的寿命。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>And it's not just humans.</p>
+<p>Other mammals have been observed</p>
+<p>to have much longer lives in</p>
+<p>captivity when they're away</p>
+<p>from the hazards they would</p>
+<p>naturally encounter in the wild.</p>
+</details>
+<p>或者，如果你纯粹从我们获得的年数来看，我们现在的寿命堪比大得多的哺乳动物，介于大象和鲸鱼之间。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Or if you look at it purely</p>
+<p>from the number of years we get,</p>
+<p>we now have the lifespan</p>
+<p>of a much larger mammal,</p>
+<p>somewhere between an elephant and a whale.</p>
+</details>
+<p>但关于这种趋势，有一件耐人寻味的事。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>But there is one curious</p>
+<p>thing about this trend.</p>
+<p>(mellow music)</p>
+</details>
+<p>看一看这张图表。它看起来与之前的那张图表惊人地相似。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Take a look at this graph.</p>
+<p>It looks surprisingly similar</p>
+<p>to the graph from before.</p>
+</details>
+<p>事实上，如果你把它们叠合在一起，它们看起来显著相似。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>In fact, if you overlay them,</p>
+<p>they look remarkably similar.</p>
+</details>
+<p>现在我想让你猜一猜这张图表是什么。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Now I want you to take a</p>
+<p>guess at what this graph is.</p>
+</details>
+<p>你有答案了吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Have you got your answer?</p>
+</details>
+<p>它是生活在城市中的人口数量。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>It is the number of</p>
+<p>people living in cities.</p>
+</details>
+<p>对于这两张图表，我们使用的是英国部分地区的数据，那里的记录可以追溯到几个世纪前，但世界其他地区也遵循了类似的趋势。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>For these two charts,</p>
+<p>we're using data from parts</p>
+<p>of the United Kingdom</p>
+<p>where the record keeping</p>
+<p>goes back several centuries,</p>
+<p>but the rest of the world</p>
+<p>has followed similar trends.</p>
+</details>
+<p>当然，这并不意味着城市导致人们活得更长，但它与将城市视为充满污染和疾病滋生地的看法相悖。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Of course, that doesn't mean</p>
+<p>cities cause people to live longer,</p>
+<p>but it goes against the</p>
+<p>perception of cities</p>
+<p>as being full of pollution and</p>
+<p>breeding grounds for disease.</p>
+</details>
+<p>早在 1889 年，一位医生就写道：</p>
+<p>“城市的有毒病菌和污染，其不洁的空气和水源，糟糕的下水道系统，以及无休止的公害。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Already in 1889, a medical doctor wrote,</p>
+<p>"The poisonous germs and</p>
+<p>pollutions of the city,</p>
+<p>it's impure air and water, bad sewage,</p>
+<p>and endless nuisances."</p>
+</details>
+<p>那么你如何调和这两种观点呢？或者更具体地说，关于较小城市与较大城市相比究竟如何，是否存在任何定量数据？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So how do you reconcile these two views?</p>
+<p>Or more specifically, is</p>
+<p>there any quantitative data</p>
+<p>on how smaller cities</p>
+<p>compare to larger ones?</p>
+</details>
+<h3 id="城市的缩放法则" data-reading-heading="">城市的缩放法则</h3>
+<ul>
+<li>事实证明，这是杰弗里·韦斯特（Geoffrey West）在与布朗（Brown）和恩奎斯特（Enquist）合作之后所探究的课题。他和路易斯·贝当古（Luis Bettencourt）等人等合作者一起研究了城市中的缩放法则。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>It turns out this is something</li>
+</ul>
+<p>that Geoffrey West pursued</p>
+<p>after his work with Brown and Enquist.</p>
+<p>He and collaborators like</p>
+<p>Luis Bettencourt and others</p>
+<p>have looked at scaling laws in cities.</p>
+<p>(mellow music)</p>
+</details>
+<ul>
+<li>[主持人] 他们观察了随着城市人口增加，像犯罪量等不同属性是如何缩放的。他们发现，如果你在双对数坐标图上绘制严重犯罪，数据会聚集在一条斜率为 1.15 的直线周围，这意味着犯罪的增长快于线性，即超线性增长。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>[Host] They looked at</li>
+</ul>
+<p>how different properties</p>
+<p>like the amount of crime scale</p>
+<p>as the population of the city increases,</p>
+<p>and what they found is that if you plot</p>
+<p>serious crimes on a log log plot,</p>
+<p>the data clusters around a straight line</p>
+<p>with a slope of 1.15,</p>
+<p>meaning crime grows faster</p>
+<p>than linear or super linear.</p>
+</details>
+<p>因此，城市人口每翻一番，你就会得到大约 2.2 倍的刑事案件，或者说大约多出 120% 的犯罪，而不是你天真以为的 100%。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So for every doubling</p>
+<p>of a city's population,</p>
+<p>you get around 2.2 times</p>
+<p>as many criminal cases</p>
+<p>or around 120% more crime</p>
+<p>as opposed to the 100%</p>
+<p>you might naively expect.</p>
+</details>
+<p>更糟糕的是，研究人员发现同样的总体模式也适用于废水量，甚至艾滋病病例数量。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>To make matters worse, researchers found</p>
+<p>that the same general pattern</p>
+<p>holds for the amount of wastewater</p>
+<p>and even the number of AIDS cases.</p>
+</details>
+<p>确切的指数略有不同，但总体而言，随着城市规模的扩大，这每一项你系统性地都会得到更多。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>The exact exponents vary a little,</p>
+<p>but overall, as cities grow larger,</p>
+<p>you systematically get more of each.</p>
+</details>
+<p>所以看来那位医生确实说到了点子上。你可能会认为如果我们全都在小城镇生活，地球上的生活或许会更好，但情况可能并非如此。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So it seems like that medical</p>
+<p>doctor was onto something.</p>
+<p>And you might think life on</p>
+<p>earth would be better off</p>
+<p>if we all lived in small towns instead,</p>
+<p>but that might not be the case.</p>
+<p>(mellow music)</p>
+</details>
+<p>2006 年，德克·赫尔宾（Dirk Helbing）、克里斯蒂安·库纳特（Christian Kuhnert）和杰弗里·韦斯特研究了加油站数量如何作为人口的函数进行缩放。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>In 2006, Dirk Helbing, Christian Kuhnert,</p>
+<p>and Geoffrey West looked at how the number</p>
+<p>of gas stations scales as</p>
+<p>a function of population.</p>
+</details>
+<ul>
+<li>如果一座城市规模大一倍，它是否需要两倍那么多的加油站？因为，你知道，我们必须供应的虽不完全算是营养物，但也是能源、汽油，供所有那些汽车使用。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>If a city is twice as</li>
+</ul>
+<p>big, does it need twice</p>
+<p>as many gas stations?</p>
+<p>Because, you know, we have to</p>
+<p>supply not exactly nutrients,</p>
+<p>but energy, gas, for all those cars.</p>
+</details>
+<ul>
+<li>[主持人] 天真的预期是，如果汽车数量增加一倍，你就需要两倍的燃油量，因此加油站数量翻倍。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>[Host] The naive expectation is that</li>
+</ul>
+<p>if you double the number of cars,</p>
+<p>you're going to need to</p>
+<p>double the amount of fuel,</p>
+<p>so double the gas stations.</p>
+</details>
+<p>为了查明这是否属实，他们将数据绘制在双对数坐标图上，并发现了一条直线。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>To find out whether this was true,</p>
+<p>they plotted the data on a log log plot</p>
+<p>and found a straight line.</p>
+</details>
+<p>但指数不是 1，而是大约 0.8。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>But the exponent wasn't</p>
+<p>one, it was about 0.8.</p>
+</details>
+<p>这意味着每一次翻倍，你只需要大约多出 74% 的加油站，这是一笔相当可观的节省。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>This means that for every</p>
+<p>doubling, you only need around 74%</p>
+<p>more gas stations, which</p>
+<p>is a decent savings.</p>
+<p>(mellow music)</p>
+</details>
+<p>道路和电缆的数量也大致以相同的方式缩放。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>The amount of roads and electrical cables</p>
+<p>also scale in roughly the same way.</p>
+</details>
+<p>韦斯特在其书中给出的粗略数字是，它们的缩放指数都在 0.85 左右。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>The rough figure that</p>
+<p>West gives in his book</p>
+<p>is that they all have scaling</p>
+<p>exponents of around 0.85.</p>
+</details>
+<ul>
+<li>很有趣的是，有些东西我们是可以共享的，比如你可以在路上开车，我也可以。当属于共享资源时，是的，城市可以出奇地绿色环保。其论点在于，相比住在荒郊野外，城市甚至可以比你想象的还要环保。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>It is interesting</li>
+</ul>
+<p>that some of the things</p>
+<p>that we can share, like you can drive</p>
+<p>on the road, but so can I.</p>
+<p>When it's shared resources, yes,</p>
+<p>cities can be surprisingly green.</p>
+<p>The argument is that</p>
+<p>cities can be even greener</p>
+<p>than you might think than living out</p>
+<p>in the middle of nowhere.</p>
+</details>
+<ul>
+<li>但城市拥有更大的益处。诸如总工资、GDP 和专利数量等事物都呈超线性缩放，其指数聚集在 1.15 左右，这意味着规模每翻一倍，每一项你就会多得到大约 120%。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>But cities have even bigger benefits.</li>
+</ul>
+<p>Things like total wages, GDP,</p>
+<p>and the number of patents</p>
+<p>all scale superlinearly,</p>
+<p>with exponents that cluster</p>
+<p>somewhere around 1.15,</p>
+<p>meaning that for every doubling in size,</p>
+<p>you get around 120% more of each.</p>
+</details>
+<p>当你将一个比如 50,000 人的小镇与一个其规模 100 倍的城市进行比较时，所有这一切都会变得尤为显著，因为基础设施需求只需要增加大约 50 倍，而总工资、GDP、专利与发明，它们全部都会增加 200 倍。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>All of this becomes especially significant</p>
+<p>when you compare a small</p>
+<p>town of say 50,000 people</p>
+<p>to a city 100 times its size</p>
+<p>because infrastructure needs</p>
+<p>only need to go up by a factor</p>
+<p>of about 50 while total wages,</p>
+<p>GDP, patents and inventions,</p>
+<p>they all go up by a factor of 200.</p>
+</details>
+<p>不幸的是，疾病和犯罪也同样按相同倍数上升。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Unfortunately, disease</p>
+<p>and crime also go up</p>
+<p>by the same factor.</p>
+</details>
+<p>或者这样来看，按人均计算，你只需要大约一半的基础设施，同时你能获得翻倍的所有社会经济因素。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Or look at it this way,</p>
+<p>on a per person basis,</p>
+<p>you'd only need about</p>
+<p>half the infrastructure,</p>
+<p>while you get double all</p>
+<p>the socioeconomic factors.</p>
+</details>
+<p>所以城市不仅没有对世界有害，它们实际上可能是我们最伟大的发明之一，也是很多科学和技术进步的间接推动力。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So cities far from being</p>
+<p>detrimental to the world,</p>
+<p>they might actually be</p>
+<p>one of our best inventions</p>
+<p>and an indirect driver</p>
+<p>of a lot of scientific</p>
+<p>and technological progress.</p>
+</details>
+<p>也许这也是为什么人们常说城市里的生活感觉更快。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Perhaps this is also why people often say</p>
+<p>that life in the city feels faster.</p>
+</details>
+<p>这种感觉似乎是有道理的，因为研究人员调查了人们在不同规模城市中的步行速度。他们发现，在较大的城市里，人们的步行速度确实更快。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>A feeling that seems justified</p>
+<p>because researchers looked at</p>
+<p>how fast people walk in</p>
+<p>cities of different sizes.</p>
+<p>And they found that</p>
+<p>people literally do walk</p>
+<p>faster in larger cities.</p>
+</details>
+<ul>
+<li>事实证明那取决于城市规模。不仅仅是人行道拥堵与否的问题。就是那种氛围会让人们亢奋起来。他们在城市里行动得更快。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>That turns out to depend on city size.</li>
+</ul>
+<p>It's not just that the</p>
+<p>sidewalks are congested or not.</p>
+<p>It's just like the vibe</p>
+<p>gets people amped up.</p>
+<p>They move faster in cities.</p>
+</details>
+<ul>
+<li>因此生活的节奏似乎正在加快，但这可能要付出代价，因为正如有人所说的那样：</li>
+</ul>
+<p>“如今的一切都走向极端。无论在思想上还是在行动中，一切都在不断被超越。没有人再了解自己。年轻人在生命中过早地被煽动，随后被时代的浪潮卷走。财富与迅速是世人所崇拜的。”</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>So the pace of life</li>
+</ul>
+<p>seems to be increasing,</p>
+<p>but that may come at a cost</p>
+<p>because as one person put it,</p>
+<p>"everything nowadays is ultra.</p>
+<p>Everything is being</p>
+<p>transcended continually</p>
+<p>in thought as well as in action.</p>
+<p>No one knows himself any longer.</p>
+<p>Young people are stirred</p>
+<p>up much too early in life</p>
+<p>and then carried away in</p>
+<p>the world of the times.</p>
+<p>Wealth and rapidity are</p>
+<p>what the world admires".</p>
+</details>
+<p>难道生活正在以人类无法跟上的速度加速吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Could it be that life</p>
+<p>is accelerating so fast</p>
+<p>that humans won't be able to keep up?</p>
+</details>
+<p>嗯，很可能不是，因为这段名言是沃尔夫冈·冯·歌德在 1825 年写的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Well, probably not</p>
+<p>because this quote was written in 1825</p>
+<p>by Wolfgang von Goethe.</p>
+</details>
+<p>在过去的 200 年乃至可能更长的时间里，几乎每一代人都觉得生活在加速。然而每一代人都挺过来了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>For the past 200 years</p>
+<p>and probably longer,</p>
+<p>almost every generation has</p>
+<p>felt like life was accelerating.</p>
+<p>And yet every generation has managed.</p>
+</details>
+<p>所以我认为我们很可能会无限期地继续适应下去。随着城市规模的不断扩大，我们所有人都会继续获取规模经济的益处，这与哺乳动物从体型变大中获益的方式非常相似。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>So I think it's likely we can continue</p>
+<p>to adapt indefinitely.</p>
+<p>And as cities continue to grow in size,</p>
+<p>all of us will continue</p>
+<p>to reap the benefit</p>
+<p>of economies of scale in much the same way</p>
+<p>that mammals benefit from being larger.</p>
+</details>
+<h3 id="对标度理论与克莱伯法则的质疑" data-reading-heading="">对标度理论与克莱伯法则的质疑</h3>
+<p>但是，虽然 WBE 理论似乎能预测生物缩放法则中的指数从何而来，对于城市而言，目前还没有普遍接受的解释性理论。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>But while WBE Theory seems to predict</p>
+<p>where the exponents in</p>
+<p>biological scaling laws come from,</p>
+<p>for cities, there is no widely accepted</p>
+<p>explanatory theory yet.</p>
+</details>
+<p>试图解释那些 0.85 和 1.15 的指数从何而来，是理论家们的主要目标之一。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Trying to explain where</p>
+<p>those exponents of 0.85</p>
+<p>and 1.15 come from is one of</p>
+<p>the big goals for theorists.</p>
+</details>
+<p>尽管即使是 WBE 理论也并非被普遍接受。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Although even WBE Theory is</p>
+<p>not universally accepted.</p>
+</details>
+<p>其一，它预测出正确指数这一事实并不一定意味着该理论本身就是正确的。还有少数其他理论也能预测出部分相同的缩放指数，而且也存在一些其他的批评意见。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>For one, the fact it</p>
+<p>predicts the right exponents</p>
+<p>doesn't necessarily mean the</p>
+<p>theory itself is correct.</p>
+<p>There are a few other</p>
+<p>theories that predict</p>
+<p>some of the same scaling exponents,</p>
+<p>and there are also some other critiques.</p>
+</details>
+<ul>
+<li>有很多讨论。它看起来可能很有说服力。就我个人而言，我倾向于认为它非常令人印象深刻。但我有非常优秀的同行，比如佛蒙特大学的彼得·多兹（Peter Dodds），他认为很多数据分析要么做得并不完全正确，要么数据噪声太大，以至于你真的不应该对此太当真。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>There's a lot of discussion.</li>
+</ul>
+<p>It may look convincing.</p>
+<p>And personally, I tend to</p>
+<p>think it is very impressive.</p>
+<p>But I have very good</p>
+<p>colleagues like Peter Dodds</p>
+<p>at University of Vermont,</p>
+<p>and he thinks that a</p>
+<p>lot of the data analysis</p>
+<p>is either not done exactly right</p>
+<p>or that the data are so noisy</p>
+<p>that you shouldn't really</p>
+<p>take this so seriously.</p>
+</details>
+<ul>
+<li>多兹甚至认为克莱伯法则（Kleiber's Law）本身可能都不是真实的。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>Dodds even argues that Kleiber's Law</li>
+</ul>
+<p>itself might not be true.</p>
+<p>(mellow music)</p>
+</details>
+<ul>
+<li>在 1960 年代，有一个关于能量代谢的研讨会，类似于动物中的此类名称，在会议结束时，他们以 29 票对 0 票表决通过定为四分之三，对吧？因为，你知道，你总得定下一些规则。如果你回头去看数据，现在其实已经没人真正这么做了，对吧，数据是行不通的。就是行不通。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>In the 1960s, there's a</li>
+</ul>
+<p>symposium on energy metabolism,</p>
+<p>some name like this in animals,</p>
+<p>and at the end of it, they vote 29 to zero</p>
+<p>that it's going to be</p>
+<p>three quarters, right?</p>
+<p>Because, you know, you</p>
+<p>got to set some rules.</p>
+<p>If you go back and look at the data,</p>
+<p>which no one is really</p>
+<p>doing anymore, right,</p>
+<p>the data does not work.</p>
+<p>Like it doesn't work.</p>
+<p>(mellow music)</p>
+</details>
+<ul>
+<li>[亨利] 这是一张基于一项考察了 391 种哺乳动物的研究绘制的代谢率作为质量函数的图表，其范围远大于克莱伯的范围。看起来四分之三的斜率拟合得相当好。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>[Henry] This is a</li>
+</ul>
+<p>graph of metabolic rate</p>
+<p>as a function of mass based on a study</p>
+<p>that looked at 391 species of mammals,</p>
+<p>much larger than Kleiber's range.</p>
+<p>And it looks like the three-quarter</p>
+<p>slope fits quite well.</p>
+</details>
+<p>但这只是图表的顶部部分，即最大的哺乳动物。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>But this is just the</p>
+<p>top part of the chart,</p>
+<p>the biggest mammals.</p>
+</details>
+<p>如果你缩小视图，你会看到其余的哺乳动物似乎落在一条更接近三分之二的线上。而在近期关于鸟类代谢的研究中，你也会发现斜率看起来更接近三分之二，而不是四分之三。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>If you zoom out, you see that</p>
+<p>the rest of the mammals appear</p>
+<p>to fall on a line that's</p>
+<p>closer to two-thirds.</p>
+<p>And in recent studies of bird metabolism,</p>
+<p>you also find a slope that appears closer</p>
+<p>to two-thirds than three-quarters.</p>
+</details>
+<p>难道几个世纪前那些法国科学家是对的，代谢率真的仅仅与表面积成比例缩放吗？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Could it be that those French scientists</p>
+<p>from centuries ago were right,</p>
+<p>that metabolic rate really does</p>
+<p>just scale with surface area?</p>
+</details>
+<p>嗯，别高兴得太早。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Well, not so fast.</p>
+<p>(mellow music)</p>
+</details>
+<p>首先，许多近期针对冷血动物的研究发现，其斜率显著高于三分之二。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>For one, many recent studies</p>
+<p>of cold-blooded animals find slopes</p>
+<p>that are significantly</p>
+<p>higher than two-thirds.</p>
+</details>
+<p>更大的问题在于测量代谢率本身就很困难。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>The bigger problem is that measuring</p>
+<p>metabolic rates is difficult.</p>
+</details>
+<p>它通常涉及将动物放入容器中，并对其产热量或耗氧量进行非常精确的测量，同时还要确保该动物处于无压力、低活动的静息状态。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>It generally involves putting</p>
+<p>animals in a container</p>
+<p>and taking very precise measurements</p>
+<p>of their heat production</p>
+<p>or oxygen consumption,</p>
+<p>all while ensuring that the</p>
+<p>animal is in an unstressed,</p>
+<p>low activity resting state.</p>
+</details>
+<p>不出意料，这对于大型动物来说尤其难以实现。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Unsurprisingly, this is</p>
+<p>particularly difficult</p>
+<p>to pull off with large animals.</p>
+</details>
+<p>结果，许多研究发现的缩放指数，其误差线同时包含了三分之二和四分之三。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>And as a result, many studies</p>
+<p>have found scaling exponents</p>
+<p>where the error bars include both</p>
+<p>two-thirds and three-quarters.</p>
+</details>
+<p>今天，研究界存在分歧。许多人坚持克莱伯法则和四分之三的缩放关系，而另一些人则认为是三分之二。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Today, the research community is split.</p>
+<p>Many uphold Kleiber's Law and</p>
+<p>the three-quarter scaling,</p>
+<p>while others think it's two-thirds.</p>
+</details>
+<p>但越来越多的人怀疑，并不存在贯穿所有生命的统一缩放指数。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>But a growing number suspect</p>
+<p>that there is no</p>
+<p>universal scaling exponent</p>
+<p>across all of life.</p>
+</details>
+<p>事实上，情况很可能确实是：较大哺乳动物的代谢率按其质量的四分之三次方缩放，而对于较小的哺乳动物，则是其质量的三分之二之方。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>In fact, it may very well be the case</p>
+<p>that the metabolic rate of larger mammals</p>
+<p>scales as their mass</p>
+<p>to the three-quarters,</p>
+<p>while for smaller ones, it's</p>
+<p>their mass to the two-thirds.</p>
+</details>
+<ul>
+<li>你知道，这就像科学中的一切一样，有人在争论，这挺好的。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>You know, it's like</li>
+</ul>
+<p>everything in science</p>
+<p>that there are people</p>
+<p>arguing, and that's good.</p>
+</details>
+<ul>
+<li>我想更大的呼吁是有人去真正地测量它，漂亮地测量事物。你知道，我们身处 2026 年，不能只是某个动物园里的一头大象，需要再次被非常严谨地测量。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>I guess the bigger exhortation</li>
+</ul>
+<p>would be someone to really measure it,</p>
+<p>measure things beautifully.</p>
+<p>You know, we're in 2026,</p>
+<p>has to be not just one</p>
+<p>elephant at one zoo,</p>
+<p>it needs to be measured again really well.</p>
+</details>
+<ul>
+<li>[主持人] 每个人确实都同意的是</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<ul>
+<li>[Host] What everyone does agree on</li>
+</ul>
+</details>
+<!-- chunk 4/4 -->
+<p>规模法则是真实存在的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+is that scaling laws are real.
+</details>
+<ul>
+<li>生活并非总是线性的。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- Life is not linear all the time.
+</details>
+<p>这其中是大有益处的。在现实生活中，往往存在背离正比例关系的情况，你必须意识到这一点。有时事物能够发挥超出其体量的作用，而且随着体型变大，效率也会变得更高。有时体型变大也会带来劣势。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+There are deals to be had.
+<p>There's often in real life</p>
+<p>departures from proportionality,</p>
+<p>and you have to be aware of it.</p>
+<p>Sometimes things punch above their weight,</p>
+<p>and as you get bigger,</p>
+<p>you get more efficient.</p>
+<p>Sometimes there are detriments to size.</p>
+</details>
+<ul>
+<li>所以，了解事物如何按比例缩放是大有裨益的。</li>
+</ul>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+- So it pays to know how things scale.
+</details>
+<p>显然，从能量效率的角度来看，动物体型更大是有好处的。同样地，更多人生活在更大的城市里，我们所有人可能也都有望从中获益。这可能会带来更多的发现与发明，并以此提高我们所有人的生活水平，甚至可能让我们在有生之年拥有更多的心跳次数。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Clearly from an energy
+<p>efficiency perspective,</p>
+<p>animals benefit from being larger.</p>
+<p>Similarly, all of us potentially stand</p>
+<p>to gain from having more</p>
+<p>people living in larger cities.</p>
+<p>It could lead to more</p>
+<p>discoveries and inventions,</p>
+<p>and in doing so, improve</p>
+<p>the standard of living</p>
+<p>for all of us, which</p>
+<p>might even give us more</p>
+<p>heartbeats in our lifetimes.</p>
+</details>
+<p>从表面积定律到克莱伯定律，再到 WBE 理论，代谢率如何随质量成比例变化，数百年来一直是生物学界最大的争论之一。通过收集更优质的数据并仔细分析，下一代研究人员很有可能最终为这场争论画上句号。这可能是正在观看视频的你们中的一员，也可能是你认识的一名学生。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+From the surface law to
+<p>Kleiber's law to WBE theory,</p>
+<p>how metabolic rate scales with mass</p>
+<p>has been one of biology's</p>
+<p>biggest debates for centuries.</p>
+<p>By collecting better data</p>
+<p>and analyzing it carefully,</p>
+<p>there's a good chance</p>
+<p>that the next generation of</p>
+<p>researchers could be the ones</p>
+<p>to finally put this debate to rest.</p>
+<p>It could be one of you watching</p>
+<p>or a student that you know.</p>
+</details>
+<h3 id="赞助商信息" data-reading-heading="">赞助商信息</h3>
+<p>今天的赞助商 Brilliant 正助力培养下一代研究人员，训练他们的思维，以应对未来将面临的重大问题。Brilliant 是一款前沿的个人导师工具，帮助任何学生在数学、科学和编程方面取得优异成绩。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And today's sponsor, Brilliant, is helping
+<p>to train the next</p>
+<p>generation of researchers,</p>
+<p>preparing their minds to solve the huge</p>
+<p>questions they'll face.</p>
+<p>Brilliant is a cutting edge personal tutor</p>
+<p>that helps any student excel</p>
+<p>in math, science, and coding.</p>
+</details>
+<p>说到学习，一对一辅导确实是黄金标准，但这可能费用昂贵且在安排上面临困难。作为替代方案，学生们常常转向人工智能寻求指导。但大多数 AI 平台只是直接给出答案，反而阻碍了学习。因此，Brilliant 的设计初衷则是通过提出启发性问题并一步步拆解问题，引导学生迎来属于他们自己的恍然大悟时刻。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+When it comes to learning,
+<p>one-on-one tutoring really</p>
+<p>is the gold standard,</p>
+<p>but this can be expensive</p>
+<p>and logistically difficult.</p>
+<p>As a substitute, students</p>
+<p>often turn to AI for guidance.</p>
+<p>But most AI platforms hinder learning</p>
+<p>by simply just giving away the answers.</p>
+<p>So instead, Brilliant is</p>
+<p>designed to guide students</p>
+<p>to their own aha moments</p>
+<p>by asking probing questions</p>
+<p>and by breaking problems</p>
+<p>down step by step.</p>
+</details>
+<p>例如，看看当我打开 Brilliant 关于旋转坐标的一堂课，并告诉它的辅导工具我遇到了困难时发生了什么。它向我提出了一个具体的跟进问题，甚至在图表上标出了相关点来给我提示。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+For instance, check out what
+<p>happened when I launched one</p>
+<p>of Brilliant's lessons</p>
+<p>on rotating coordinates</p>
+<p>and told its tutoring tool</p>
+<p>that I was struggling.</p>
+<p>It asked me a specific follow-up question</p>
+<p>and even labeled relevant</p>
+<p>points on the graph</p>
+<p>to give me a nudge.</p>
+</details>
+<p>对于你生活中学习数学和科学的年轻人来说，Brilliant 是一件极好的辅助工具。这是我上学时就希望能拥有的一类工具。因此，点击下方链接或扫描二维码即可免费开始体验 Brilliant 的导师功能，或者升级至高级会员解锁所有课程。目前，Veritasium 的观众在 brilliant.org/veritasium 订阅年度会员可享 20% 的优惠折扣。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Brilliant is an excellent
+<p>aid for the young math</p>
+<p>and science learners in your life.</p>
+<p>It's the kind of tool I wish</p>
+<p>I had when I was in school.</p>
+<p>So click the link below</p>
+<p>or scan the QR code</p>
+<p>to get started with</p>
+<p>Brilliant's tutor for free,</p>
+<p>or upgrade to premium</p>
+<p>to unlock all courses.</p>
+<p>And right now, Veritasium</p>
+<p>viewers can save 20% off</p>
+<p>an annual subscription at</p>
+<p>brilliant.org/veritasium.</p>
+</details>
+<p>所以我想感谢 Brilliant 赞助本期视频，也非常感谢大家的观看。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So I want to thank Brilliant
+<p>for sponsoring this video,</p>
+<p>and I want to thank you for watching.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/b9878c3e74184499e0cc8f1e1b6a54591d774e195b96519412ff2edfcdff1eb7.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/b9878c3e74184499e0cc8f1e1b6a54591d774e195b96519412ff2edfcdff1eb7.md" download="生物代谢率与质量的缩放律：从克莱伯定律到WBE分形理论的争论.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Geoffrey West" class="entity-link person-link">Geoffrey West</a>, <a href="/search/?q=Max Kleiber" class="entity-link person-link">Max Kleiber</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Brilliant" class="entity-link company-link">Brilliant</a>
+</p>
+      
+        
+      
+        <p><strong>媒体/书籍:</strong> <a href="/search/?q=Scale" class="entity-link media-link">Scale</a>
+</p>
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

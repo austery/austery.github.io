@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>本地 AI 生产落地与端侧工程优化</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">本地 AI 生产落地与端侧工程优化</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-21</span>
+    
+
+    <header class="article-header">
+      
+      <h1>本地 AI 生产落地与端侧工程优化</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/local-ai/">local-ai</a>
+      
+        <a class="tag-link" href="/tags/inference-engine/">inference-engine</a>
+      
+        <a class="tag-link" href="/tags/quantization/">quantization</a>
+      
+        <a class="tag-link" href="/tags/continual-learning/">continual-learning</a>
+      
+        <a class="tag-link" href="/tags/open-source-ai/">open-source-ai</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Osmantic 创始人 Ahmad Osman 探讨了本地与开源 AI 生产落地的现状与发展。他指出开源 AI 本质是优化问题，而本地 AI 是用户体验问题。通过对比云端大模型与端侧模型表现，他强调专用小模型、按芯片与工作流深度优化推理引擎、量化及持续学习是推动端侧 AI 替代云端及解决当前基准评测失真问题的核心路径。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=GKSQYbELDzw" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-21T00:00:00.000Z">2026-11-21</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>14 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BC%80%E5%9C%BA%E4%B8%8E%E6%9C%AC%E5%9C%B0-ai-%E7%9A%84%E5%8E%86%E5%8F%B2%E5%AE%9A%E4%BD%8D">开场与本地 AI 的历史定位</a></li><li class="outline-h3"><a href="#rtx-spark-%E6%9C%AC%E5%9C%B0%E6%B8%B8%E6%88%8F%E5%AE%9E%E6%B5%8B">RTX Spark 本地游戏实测</a></li><li class="outline-h3"><a href="#%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95%E4%BA%89%E8%AE%AE%E4%B8%8E-agent-%E8%B6%8B%E5%8A%BF">基准测试争议与 Agent 趋势</a></li><li class="outline-h3"><a href="#%E5%B0%8F%E5%9E%8B%E4%B8%93%E7%94%A8%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%B4%9B%E8%B5%B7">小型专用模型的崛起</a></li><li class="outline-h3"><a href="#%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D%E4%B8%8E%E7%AB%AF%E4%BE%A7%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C%E6%A1%88%E4%BE%8B">自我介绍与端侧视频制作案例</a></li><li class="outline-h3"><a href="#%E4%BA%91%E7%AB%AF%E5%8D%B3%E5%88%AB%E4%BA%BA%E7%9A%84%E5%9C%B0%E4%B8%8B%E5%AE%A4">云端即别人的地下室</a></li><li class="outline-h3"><a href="#%E9%87%8F%E5%8C%96%E6%8A%80%E6%9C%AF%E4%B8%8E%E7%A1%AC%E4%BB%B6%E5%8C%B9%E9%85%8D">量化技术与硬件匹配</a></li><li class="outline-h3"><a href="#%E8%8A%AF%E7%89%87%E6%9E%B6%E6%9E%84%E4%B8%8E%E6%8E%A8%E7%90%86%E5%BC%95%E6%93%8E%E5%AE%9E%E6%B5%8B">芯片架构与推理引擎实测</a></li><li class="outline-h3"><a href="#%E6%8E%A8%E7%90%86%E5%BC%95%E6%93%8E%E9%80%89%E6%8B%A9%E4%B8%8E%E5%BA%95%E5%B1%82%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B">推理引擎选择与底层系统工程</a></li><li class="outline-h3"><a href="#%E6%8E%A8%E7%90%86%E8%B0%83%E5%BA%A6%E4%B8%8E-flashdata">推理调度与 FlashData</a></li><li class="outline-h3"><a href="#%E6%9C%AC%E5%9C%B0%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E4%B8%8E%E8%81%94%E7%BD%91%E8%83%BD%E5%8A%9B">本地基础设施与联网能力</a></li><li class="outline-h3"><a href="#%E8%92%B8%E9%A6%8F%E5%B0%8F%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%AE%97%E5%8A%9B%E7%BB%8F%E6%B5%8E%E5%AD%A6">蒸馏小模型与算力经济学</a></li><li class="outline-h3"><a href="#%E5%8F%82%E6%95%B0%E6%99%BA%E8%83%BD%E5%AF%86%E5%BA%A6%E4%B8%8E%E6%98%BE%E5%AD%98%E4%BC%98%E5%8C%96">参数智能密度与显存优化</a></li><li class="outline-h3"><a href="#%E7%BB%88%E5%B1%80%E6%9E%84%E6%83%B3%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0%E4%B8%8E-n-gram">终局构想：持续学习与 N-gram</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="开场与本地-ai-的历史定位" data-reading-heading="">开场与本地 AI 的历史定位</h3>
+<p>稍微等大家入座一下。</p>
+<p>我有 170 张幻灯片要讲。我觉得我们可能讲不完所有内容，但它们很快就会发布到网上。</p>
+<p>不过概括来说，今天的主题是本地 AI 在生产环境中的运行选择（What Runs Where and Local AI in Production）。目标是梳理本地 AI 的发展历程。我们可能会稍微回顾一下 2023 年，探讨未来的走向，当然也会讨论我们当下的现状。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Just going to give everyone a second to settle in.
+<p>So, I have 170 slides for you. I believe that we're not going to be able to go through all of them, but they will be posted online very soon. Um but yeah, this is basically uh what what runs where and uh local AI in production. And the goal is to go through the history of local AI. Uh you know, probably we're going to go back a bit to 2023 and where we're heading in the future. Uh and of course talking about where we are today.</p>
+</details>
+<p>在 6 月的 AIE 世界博览会上，我们与 NVIDIA 联合举办了本地 AI 峰会。当时我说过，我们基本上正处于 Linux 的“90 年代”。我认为我们终于开始看到越来越多的人对这个生态系统和基础设施进行投资。从那时起，我们看到了更多的超大算子内核（mega kernels），看到了新的推理引擎，也看到很多人在尝试针对每个模型、每个芯片、每个工作流进行深度优化——这正是正确的前进方向。</p>
+<p>开源 AI 本质上是一个优化问题；而本地 AI 则是一个用户体验问题。这两件事需要并行去解决。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So uh in June at AIE World's fair uh we hosted the local AAI summit with NVIDIA and back then I said that we are basically in the '9s of Linux. Uh and I uh I think we're starting to finally see more and more people invest in the ecosystem and the infrastructure. Uh since then we have been seeing more me mega kernels or what people call mega kernels. We've been seeing new inference engines. uh we're seeing a lot of people trying to optimize basically uh per model, per chip, per workflow and that's the way to go.
+<p>Uh so yeah, open source AI is an optimization problem. Uh local AI is a user experience problem and both of those things need to be solved in parallel to each other.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>[清喉咙并咳嗽]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; [clears throat and cough]
+</details>
+<h3 id="rtx-spark-本地游戏实测" data-reading-heading="">RTX Spark 本地游戏实测</h3>
+<blockquote>
+<blockquote>
+<p>这是我们最近与 Nvidia 联合发布的内容。我们为 RTX Spark 构建了一个经过优化的推理引擎。而眼前的这个游戏，就是完全在 Windows 系统的 RTX Spark 上构建出来的。你可以在 ospark.com 上玩这款游戏，并查看所有的 trace 记录。这完全是在本地构建的，没有使用云端，没有 CX，运行在我们自己的 portal 工具上。基本上所有东西都是在本地完成构建的。[清喉咙]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; This is uh this is from our recent launch uh co-launch with Nvidia. We built an optimized inference engine for the RTX Spark. And this game right here, this was built on an RTX Spark on Windows. Um so um you can play this game on ospark.com and you can see all the traces. This was built fully locally. No cloud, no CX, our own portal. uh uh harness. Everything was built um locally basically. [clears throat]
+</details>
+<p>这是在百思买官方正式发售 RTX Spark 时的场景。现场围了很多人想体验这款游戏。我们开始看到越来越多的普通人真正对本地 AI 产生兴趣，关注这里正在发生的事情。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And uh this is from the Best Buy launch was at like you know uh official launch uh for the RTX Park. Uh we had so many people around us that wanted to play this game. So we're starting to see more of everybody like you know everyday person actually showing up for local AI and interested in what's being done in here.
+</details>
+<p>你能看出这两个回答之间的区别吗？</p>
+<p>其中一个是本地模型生成的，另一个来自 GPT 5.5。这是出自我们与 Hugging Face 合作发布的在线视频 Locally AI 2011。当时我们在多种硬件上运行了一些演示，其中一个比另一个更快，而回答质量非常接近。你可以看到，我们在本地运行的模型是 Qwen 3.6 27B 参数版本，它的解码速度达到了每秒 51 个 token；而通过 OpenAI 云端运行的 GPT 5.5 速度是每秒 34 个 token。我不知道大家目前有没有使用 Codex CLI，但相比于任何本地运行的方案，它都相当慢。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, can you tell the difference between these two answers?
+<p>One of them was a local model and another was GBT 5.5. This is from our uh uh video online with Hugging Face. It's Locally AI 2011 and uh we ran some demos back then uh on a bunch of hardware and um one of them was faster than the other. The answers were pretty similar and you can see here that um the model that we ran locally was qu 3.6 6 27 billion parameter and it ran at 51 tokens per second for decoding uh while um GBT 5.5 via OpenAI cloud was running at 34 tokens per second and I don't know if you guys are using Codex CLI at at this point but it's pretty slow uh in comparison to anything local.</p>
+</details>
+<h3 id="基准测试争议与-agent-趋势" data-reading-heading="">基准测试争议与 Agent 趋势</h3>
+<p>这是一个很有意思的现象。有人看过最新的 Artificial Analysis Index v5 吗？他们的数据显示 Anthropic 的 Haiku 5.5 超过了 DeepSeek V4.1 Flash。在我看来，这是一个非常有问题的基准测试。如果你的评测显示 Haiku 击败了 DeepSeek V4.1 Flash，那测试本身肯定存在问题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um this one is an interesting one. Anyone saw the new artificial analysis index v5?
+<p>Uh they have that uh anthropics haiku 5.5 is ahead of deepseek v4.1 flash. And uh that's a very interesting benchmark in my opinion. If your evals are showing that haiko is beating deepseek v4.1 flash there's a problem there.</p>
+</details>
+<p>这张图展示了自 2023 年 3 月以来的进展，展示了机器当前能够解决的人类长周期任务（long-horizon tasks）时长是如何逐步增加的。我们看到这个能力基本每四个月就翻一番，而且这种增长速度丝毫没有放缓。</p>
+<p>我们还看到了另一件更有趣的事情，这是来自 OpenRouter 2026 年 10 月的数据：token 总消耗量已经达到数万亿级别，并且自 2 月份以来，Agent 生成的 token 数量已经超过了人类。人类最后一次在 token 生成量上超过 Agent 是在 2026 年 2 月。我想我们再也回不到过去那种局面了，未来永远都会是 Agent 在为 Agent 制造 token。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, um this one is an interesting one. It's showing the progress since March 2023 and how long um long horizon tasks uh are becoming longer in terms of what humans could do that machines could solve right now. And we're seeing that basically it's doubling every four months. And that rate is not slowing down.
+<p>We're also seeing something else and more interesting which is this is from open router data uh October 2026 that uh the number of tokens are in trillions and since February agents are the ones producing tokens more than humans. The last time a human was the one generating more tokens out there was February 2026. And I guess we're never going to get there again. It's always going to be agents producing tokens for agents.</p>
+</details>
+<p>这是 Artificial Analysis 的智能指数 v4.1。它显示开源模型自 2025 年 1 月以来，指数得分基本从 13 分飙升到了 51 分，与闭源模型的差距正在变得越来越小。但这再次引发了一个疑问：为什么前几张幻灯片里显示 Haiku 5.5 居然超越了 DeepSeek V4.1 Flash？所以在当下，究竟该信任哪个基准测试确实是个大问题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+This is artificial intelligence uh artificial analysis intelligence index v4.1. And it's showing that the open-source uh models since um yep January 2025 basically have jumped up from 13 points to 51 on the index and the gap is becoming smaller and smaller. Yet again um it it it raises the question why a few slides back we're seeing that high 5.5 is the one beating DC v4.1 flash. So which benchmark to trust is a good question to ask nowadays.
+</details>
+<h3 id="小型专用模型的崛起" data-reading-heading="">小型专用模型的崛起</h3>
+<p>[清喉咙]
+这里有三点。我在 2025 年 3 月发过一条推文——不好意思，幻灯片里同一个地方放了两次——我说“未来属于小型且专用的模型”。我相信在 3 年或更短的时间内，我们就会拥有一个能够击败 Opus 5.5 的 10 亿（1B）参数级别模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um [clears throat] so three things this is um one of those tweets are from um oh I bought one in the same place twice. Um my but I have a tweet since uh March 2025 saying the future is small and specialized models and um I believe that in 3 years or less we're going to have a 1 billion parameter model that beats obus 5.5.
+</details>
+<p>这同样是一个有趣的数据，来自 OpenRouter。目前大部分资金支出都流向了闭源模型；然而，实际被消耗的 token 总量中，绝大多数都属于开源模型。</p>
+<p>这是 2026 年 10 月 OpenRouter 的排行榜，它显示在 token 消耗量上，几乎所有人都在使用 DeepSeek V4.1 Flash 处理绝大部分任务；但在资金消耗方面，排在前面的则是 Opus 5.5。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Okay, this is an interesting one. This is from Owen, right? Um, amount of money being spent on models right now mostly closed rates. However, the number of tokens being consumed out there are mostly open source models and um you know this is the leather board from opener October 2026 as well and this is showing that um pretty much in terms of tokens everybody's using deepseek v4.1 flash and Jeff for most tasks but in terms of money spent it's obus 5.5 five.
+</details>
+<p>那么 Agent 现在到底在做什么？为什么我们认为需要设计新的芯片，或者采用更快、更异步的全新软件范式？因为在目前处理的大多数任务中，你大部分时间都在等待 Agent 运行 shell 命令、执行操作并返回结果，而不是真正被每秒 token 生成速度卡住瓶颈。正因如此，即使只是一张单卡 RTX 3090 也能派上很大用场，因为系统的主要瓶颈往往在等待处理的时间上。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So what is what are agents doing right now and why do we think that there is a need for new chips to be engineered out there um for like you know or new paradigms for software that run faster more asynchronous uh it's because most of the tasks are being done right now you're mostly waiting on an agent to run a shell command or do something execute something and get the results pack more than you are uh bottlenecked by tokens per second actually. And there is a reason that even just a single RTX3090 would give you a lot of good information like a good a lot of good use because you're still going to be bottlenecked more by processing time.
+</details>
+<p>[清喉咙]
+开源模型与闭源模型之间的差距，很大程度上取决于你相信哪一个基准测试。根据 HLE Diamond 的评测，两者的差距超过 50%；但根据 Terminal Bench 的数据，开源模型反倒领先了两个点。所以我们面临着显而易见的评测失真问题，而且老实说我不知道这该如何解决。正因如此，有时候 Google 发布了新模型，我甚至懒得看基准测试。我上一次真正喜欢用的 Gemini 还是 2025 年 3 月 25 日版的 Gemini Pro 2.5，之后的版本感觉全是为了基准测试而生的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So [clears throat] the gap between open and closed models um depends mostly on which benchmark you trust. Um according to HLE diamond the gap is more than 50%. Uh terminal bench says that open source models are ahead by two points. So we have an eval problem that's for sure. And u I don't know how it's going to be solved. Honestly there is a reason that sometimes I'm just like okay Google released a new model. Do I care about the benchmarks? Not really. Like when is the last time I used the Gemini? It's Gemini Pro 2.5 the March 25th edition. That's the one that I last lied from them. Since then it feels like it's benchmarks basically.
+</details>
+<p>4 月份有一项由一家安全厂商发布的研究非常引人注目，他们使用专门的小型开源模型成功消除了相同的安全缺陷。这印证了小型模型的价值。现在有人明白为什么 Opus 5.5 比 Fable 5.2 更便宜吗？虽然它在每项任务上并不是都更强，但它在大多数人最关注的任务上更出色。它在编程方面进行了极度的强化学习（RL），但遇到通用的复杂问题排查时我不会信任它。我信任它编写和执行优质代码的能力，生成的废话（slop）更少，但它并不是目前最全能聪明的模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Uh this is an interesting research came out in April and it's from a security vendor. um pretty much was able to reduce the same um security gaps being caught by small specialized open models. So this tells you something about the idea of like small models. Anyone um anyone realizes right now why like OBS 5.5 uh is cheaper than fable 5.5.2 or u while it's more capable or it's not more capable in every task. It's more capable for the tasks that most people care about. It's RL to, you know, to an extreme extent for coding, but I don't trust it when it comes to problem solving. I trust it to execute and write really good code. Uh less slop as you would say, but it's not the smartest model out there right now.
+</details>
+<h3 id="自我介绍与端侧视频制作案例" data-reading-heading="">自我介绍与端侧视频制作案例</h3>
+<p>现场有多少人认识我？有多少人在 X 上关注过我？好吧，只有几位。我叫 Ahmad Osman。请允许我先自我介绍一下。抱歉，我一进门就直接开始讲技术了。[笑声]</p>
+<p>我是 Osmantic 公司的创始人兼 CEO。我的联合创始人刚才在停车，不过他刚才进来了。他常开玩笑说我太低调了。我把公司取名叫 Osmantic 并不纯粹因为我的姓氏。之前有人在私信里问我，“Osman”是不是“Open Source Man”（开源男）的缩写？我觉得这个点子不错，就顺水推舟采用了。</p>
+<p>我创办这家公司的核心论点是：我们并不在每一步都需要前沿通用智能。我们所做的很多事情完全可以通过小型且专用的模型来完成。我甚至认为，相比 Astra 或 Fable，当下的 Opus 5.5 本身就是一个小型专用模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, um you know, the the the the reason I first Okay, how many of you know me? Like how many of you actually follow me on X or like Okay, so only a few of you. Uh, okay. So, my name is Ahmed Osman, by the way. U, let me introduce myself. Sorry, I came in here and I just started talking. [laughter] Uh, I'm the CEO and founder of a company called Osmantic. U, my co-founder is parking his car right now, so he's not here, but he would laugh uh when I say that he he says that I'm very humble. He just came in. Um, so I didn't just call this company Osmanthic uh because it's my last name. Um, somebody in the DMs came up and asked me uh if my last name is short for open source man and I decided that okay, I'm going to take that and run with it. So, we created um and you know the thesis that I built I'm building this company around is that you don't need frontier intelligence at every step. A lot of what we're doing could be done with small and specialized models. I even say that obus 5.5 in comparison to Astra or Fable is a small and specialized model right now.
+</details>
+<p>总共 170 张幻灯片，现在才讲到第 22 张。如果有些跳过，我之后会发在网上。</p>
+<p>有人看过我为这次演讲制作的预告片吗？就是这一段。这是完全使用 Claude Opus 5.5 端到端自动生成的——寻找引述、抓取视频片段、配乐、文字特效、字幕叠加，全部由 AI 模型自主编排完成。我只是给它指定了我的一堆视频和文章，它就提取并搞定了一切。我除了筛选确认“用这个、别用那个”之外，整个流程完全由它编排。</p>
+<p>但在硬件上，这个制作依赖了两块 RTX Pro 6000 来进行图像打标、视频超分辨率和音频放大处理；我的 MacBook 则负责最终剪辑和 AB 测试筛选。整个过程花了我 6 个小时：我晚上 9 点开始动工，凌晨 3 点全部做完。我当时非常震惊：以前必须雇佣专业团队做的事，现在只靠一个 Agent 就能完成。我敢打赌，三年之内，大家在家里用小型专用模型就能做到同样的事。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So again 170 slides or slide uh 22. So if you find me skiping some I will share them online. Um so uh anyone saw the trailer that I created for this uh for this talk? It's this one right here. This was created with uh code obus 5.5 end to end the quotes found the clips the music how it's showing the text how it's putting all of that overlay all of this was from an AI model doing this work on its own. I pointed it at a bunch of videos of mine and a bunch of articles and it just captured everything. I had to select a bunch of like you know use this don't use that but besides that it orchestrated this entire thing however it wasn't able to build this entire thing without let's go back to this without two RTX pros 6000s that it used for uh pretty much tagging photos uh of scaling videos of scaling audio uh my MacBook used like you know handled the edit the the editing and uh picking [snorts] AB winners, basically AB testing for what do I like and what I what do I not like. But pretty much it was straightforward. This took me 6 hours. I literally started working on this on like 900 p.m. and I was done by 3:00 a.m. I was like, "Oh, wow." Like, I could do stuff that you used to need to hire someone to professionally do with just an agent. And I bet you that we're going to have a small and specialized model doing this within three years from now, just at home.
+</details>
+<h3 id="云端即别人的地下室" data-reading-heading="">云端即别人的地下室</h3>
+<p>云端本质上就是别人的地下室。我认为无论是 Astra、Fable 5.2 还是 Qwen，我们使用的每个模型实际上都在别人的地下室里运行，我们必须接受这个事实。</p>
+<p>我们创建了一个名为 Portal 的框架工具，我给它选了一个云朵作为图标，意思是“你现在家里就有云了”，所以多去用本地 AI 吧。这个项目的内部代号是 Cairo。我来自埃及开罗，所以喜欢在项目中加入这种彩蛋。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So um the cloud is pretty much someone's else's basement. Uh I argue that with everyone every model that we use whether it's Astra or Fable 5.2 or Quen or whatever it's someone's basement. So we need to make peace with that. Um and also um you know we started we created this harness called portal and I decided to give it uh the cloud as like an emoji because well you have the cloud at home now so like start using local I more and uh code name for this thing is Cairo. I'm from Cairo Egypt so you know I like to throw in stuff in there that are like you know uh trivia.
+</details>
+<p>所谓的“本地”，就是你桌子底下的机器，或者是某些人的数据中心。归根结底都是在某个人的本地设备上运行。那种“必须用云端因为它是前沿智能”的论调，所谓的“前沿”到底基于什么？基于我刚才展示的充满巨大分歧的基准测试吗？具体针对哪些任务才算得上前沿？</p>
+<p>这里有一些关于 4-bit 量化等偏数学的计算，我们先跳过。长上下文仍然存在瓶颈，内存依然是一个巨大的问题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So local is basically the machine uh that you have under your desk uh or someone's AI it doesn't matter someone's data center it's all local it's local to someone um so the idea of like you know you have to use the cloud because it's frontier intelligence frontier based on what based on which benchmark that I just showed you massive gaps in and for which tasks specifically are you calling it frontier some math uh for uh people like me that like talk about four bits and stuff like that, but we're going to skip this one. Um yeah, uh long context still we haven't uh we haven't found a way to make that work. Memory is still a massive issue and uh there is an interesting slide coming up. Let's skip this.
+</details>
+<p>这是我家地下室的设备。我身后放了 14 张 RTX 3090。这套机器在 2025 年 2 月 DeepSeek R1 发布时勉强能够跑起来。当时我做了一场长达 6 小时的直播，尝试在我的 DDR4 内存上运行它。那感觉不可思议。继 o1 之后，DeepSeek R1 这个 671B 参数的模型出来了，它真的在本地展现出了推理能力。虽然在我的内存上每秒只能输出约 8 个 token，一旦上下文达到 16,000 token 就会变得极慢，但在本地机器上亲眼看到推理过程，是非常激动人心的时刻。</p>
+<p>就在它发布仅仅四个月后，GPT-OSS 就出来了，大概 120B 参数，体积只是前者的几分之一，但能力强大得多。开源模型追赶的速度令人难以置信。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Oh yeah. Uh this is for my basement. This is uh a 14 RTX 3090s behind me right there. Uh this thing was barely able to hold Deep Seek R1 uh which came out in February 2025. I had a live stream 6 hours live stream uh trying to run it on my DDR4 RAMs and I was it was incredible. It was like right after 01 and finally Deepseek R1 came out 671 billion parameter model and I'm like oh it's reasoning. Yeah, it's giving me like eight tokens per second on my RAM and like once it hit like 16,000 tokens it was so slow but I'm seeing some reasoning in this thing locally on my machine. So that was like a very good moment like imagine that like just four months after this thing came out um GBT OSS came out. It's like 120 billion parameter model and it was like one of its size and it was doing a lot more. It was way more capable. So like the trend of how fast open source models are catching up, it's incredible. [snorts]
+</details>
+<p>当我和别人说我在 2025 年二三月份就做出了这个东西时，大家都很惊讶。当时即使是用一个 4B 级别的模型，我也能在一张 RTX 4090 上搭建出本地运行的屏幕截图整理工具。模型早就具备了这种能力，只是之前没人愿意在系统工程上下功夫。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um yeah um actually this is one of those things that like when I tell people that I built this like March or February 2025, people are like really? So like even like with GS3 the full brilliant parameter model I was able to like build a screenshot organizer at home running on an RTX uh 1490. Like you models were already so capable but nobody wanted to put a little bit of systems engineering behind it.
+</details>
+<h3 id="量化技术与硬件匹配" data-reading-heading="">量化技术与硬件匹配</h3>
+<p>我们略过纯理论的技术细节，重点看一些实际进展。我们看到了很多优秀的量化方案，看到了围绕 NVFP4 的更多支持，也看到 Nvidia 在官方实现上的推进。他们招募了专门的团队，为 RTX Pro 6000 推出了全新的推理引擎。Blackwell 架构下的 RTX Pro 6000 与 B300、B200 是不同的。工程界正在针对家用或专业消费级硬件的推理软件进行深度优化。</p>
+<p>此外，量化感知训练（QAT）也非常关键，它让模型在训练过程中自我评估，将使用最频繁的模型层保留在高精度，而将最少使用的层进行深度压缩。像来自 Ensl 的 Daniel 和 Mike 开发的动态量化正是基于这样的思路。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um let's let's skip all of the techy techy stuff. Um I'm trying to focus on well let's not skip it completely. Uh we know that we're getting a lot of good quantizations. We're seeing a lot more stuff around NVI4. We're seeing more from Nvidia when it comes to um proper implementations. They finally hired a bunch of people that released a new uh inference engine specifically for the RTX Pro 6000. So we're seeing some progress in there. We know that Blackwell RTX Pro 6000 Blackwell is different from the Blackwell of the B300 and B200. Um so we're seeing some work being done in terms of optimizing. software for inference at home or like you know bronze proumer not necessarily consumer hardware uh but also there's a lot more to it. There's uh stuff like uh uh quant like um quanti quantization aware training uh which basically is making the model reassess itself as it's training so that you know the most used layers in the model are being kept at higher precision so that the least used are actually the ones being compressed down. um this kind of stuff are very important and this is what like people like Daniel and Mike all from ensl basically built the dynamic quantization based on
+</details>
+<p>动态量化主要有两种形式：一种是在运行时动态进行；另一种是通过运行基准测试，评估哪些层被调用的频率最低，然后决定：“这一层保留在 16-bit，这一层保留在 8-bit，而这一层只被使用了 0.01%，几乎没用，那我就把它压缩到 1-bit。”这就是模型压缩和量化的方法。一刀切地把所有层都压到 4-bit 可能会直接毁掉模型。因此不同量化方案差异巨大，必须关注具体哪一层损失了精度。</p>
+<p>在精度恢复方面，量化技术发展迅速。例如 GLM 5.3 在 4-bit 量化下能够保持约 94% 的原始精度；而在前一年，DeepSeek 3.1 仅能达到 76.1% 的召回率。这表明量化算法越优化，模型的精度保持得越好，我们就能把模型压缩到显存更小的硬件上，同时获得极佳的准确率。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+so bunch of benchmarks um the most important thing yep here I mentioned the dynamic quantization and there are two different ones by the way there's ones that happen at runtime and there's ones that you basically run a bunch of benchmarks and assess which layers get used the least and then decide Okay, this one I'm going to keep it at 16. This one I'm going to keep it at eight. This one right here, it's useless. I'm going it's like barely being used 0.01%. So, I'm going to b it at one bit. Right? That's how you compress down a model and quantize it. There are so many different ways to do this. Just botting everything at four bit is probably going to nuke the model. So, don't just say, hey, it's all the same. Quantizations are not the same. Like, you actually have to be pay attention to which layer is losing what exactly in terms of precision.
+<p>So yeah, this is an interesting one. Um basically the accuracy in terms of uh being able to like for models again um how quantization have evolved we're seeing that something like GLM 5.3 at forth is able to recall um about 94% of its accuracy while a year ago deepc 3.1 was only able to do 76.1 precision recall right so that shows that the more we optimize these quantization algorithms, the better we are in terms of accuracy, the more that we can compress these things and make them work on smaller uh machines or like you know less VRAM basically or less memory and get a lot more accuracy out of them.</p>
+</details>
+<p>在座有多少人了解预填充（Prefill）与解码（Decode）之间的区别？</p>
+<p>预填充是算力受限（Compute-bound）的过程；而解码则主要受显存带宽受限（Memory-bandwidth-bound）。这意味着如果你的 Prompt 非常长，首字延迟（TTFT）就会更久；如果初始 Prompt 较短，生成 token 的速度就会更快。这是大多数人在购买硬件时不会考虑的因素。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Oh yeah. So yeah. Um so basically um how many of you here know the difference between like decode and prefill?
+<p>Okay. So prefill as we know it is compute bound. Decode is pretty much memory bandwidth bound. And uh that means that if you have a long prompt and you're starting off with that, the time to first token is going to take more. If you're starting with a shorter prompt, you're probably going to get more tokens faster. Um so these are things that most people do not think about when they are buying hardware.</p>
+</details>
+<p>不同的使用场景会面临不同的性能瓶颈。更长的上下文意味着在构建 KV Cache 时更加受限于算力；批处理时也需要不同类型的硬件匹配。因此，买什么硬件完全取决于你要运行的工作流和具体需求，而不是盲目购买。在 DGX Spark 上运行稠密模型就是一个例子：当一个 Qwen 3.5 27B 稠密模型在生成每个 token 时都必须调用全部 270 亿参数，其运行速度会显著慢于在同等硬件上运行激活参数量更小的模型。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So yeah, um you have basically different kind of bottlenecks depending on your use case, right? So uh longer context, right? um means that when you're building the KV cache, you're more compute bound, right? Uh patching, which kind of hardware do you need? And that's that's why I'm I'm I'm bringing this up because what you use in terms of hardware and what you buy depends on the workflow that you're going to be running and the needs uh of your use case. Not just I'm going to buy any hardware out there. um [snorts] like the idea of a dense model running on a DGX spark when we know that you need to run the entire like you know when 3.5 27 billion parameter model needs to run every token by the 27 billion parameter parameters that's going to be very slow in comparison to running ane on a DJX park.
+</details>
+<p>在座有多少人使用 iPhone？现在的 iPhone 在智能水平和运行能力上，已经超过了三年前需要整个数据中心才能运行的模型（比如最初的 GPT-4o）。如果在手机上运行 Qwen 3.5，性能比当时的云端模型还要强。这清晰地说明了硬件升级和模型优化的发展方向。我们正从更小的模型中榨取出更多的智能，这也是为什么我敢断言：一二十亿（1B-2B）参数的专用小模型将成为未来的常态。我们会围绕它们构建一套编排调度层，甚至由另一个专门的模型来负责调度，根本无需用户操心。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yeah. And uh how many of you here have like an iPhone?
+<p>Come on guys. Like if you're not feel free don't raise your hand. you're you must be lying about other stuff as well.</p>
+<p>So, uh right now an iPhone is basically more capable um than running intelligence and capabilities than a model that used to require a data center 3 years ago, GBT40. So, right now, if you use Quinc 3.5 on your phone, it's more capable than that. So, that tells you something about where hardware is going and where model optimizations are going. actually we're able to extract a lot more intelligence from much smaller models and that's again my bet on why I'm saying smaller and specialized models one and two billion parameter models are going to be the norm. We're going to have a bunch of orchestration around them and it's probably going to be another model that's doing the orchestration so that we don't even have to bother with it.</p>
+</details>
+<h3 id="芯片架构与推理引擎实测" data-reading-heading="">芯片架构与推理引擎实测</h3>
+<p>M5 Ultra 预计具有大约 1.2 TB/s 的显存带宽，而 DGX Spark 的解码带宽约为 273 GB/s。然而在实际测试中，两台 DGX Spark 依然跑赢了 M5。这就是为什么我说软件优化至关重要。苹果平台目前严重缺乏针对 AI 的高水平软件优化，其生态软件短板明显；而 Nvidia 的 CUDA 遥遥领先。当有人问我该买什么硬件时，我的回答是：这取决于你想花多少时间折腾调试。如果你闲工夫多，可以去买 Intel GPU；但如果你想让东西真正跑起来，并能借助 Agent 持续优化，目前选 Nvidia 和 CUDA 是最靠谱的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yeah, this is an interesting one. Um the M5 uh Ultra is supposed to have something like 1.2 2 terabytes per second bandwidth. Uh, and the DJX Spark has 273 uh, gigabytes per second for decoding.
+<p>Somehow two DJX sparks still beat the M5. And this is where I say we need a lot of software optimizations. Max Abel does not have any good software optimizations for AI at this point. The software is really lacking. Koda Nvidia is way ahead. And there's a reason when somebody's asking me if they should be like what hardware to buy and I'm like how much of your time do you want to like spend trying to get something working and optimizing for it? Because if you have a lot of time, go buy an Intel GPU. But if you want something to actually work and you're able to work with an agent to improve it, it's probably going to be Invidian Koda.</p>
+</details>
+<p>我们在 Hugging Face 的视频里对比了不同硬件的运行情况：RTX Pro 6000、搭载 M5 Max 芯片的 MacBook Pro、DGX Spark 以及 Strix Halo，统一运行 Qwen 3.6 27B 模型。它们的内存带宽差异巨大。从测试视频的生成竞速中可以看到，独立 GPU 彻底击败了其他设备。</p>
+<p>在每秒 token 生成量上，RTX Pro 6000 的输出远超对手，因为它的显存带宽极高。不仅如此，在涉及批处理和并发请求时，性能差距更为夸张。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yeah. Uh we had this thing on with hug and face. We like uh did like a YouTube video with them talking about local AI and we ran a bunch of different hardware, right? Uh we ran um an RTX Pro 6000 with CR 3.6 27 billion parameter. We ran the same model actually in all of them. Uh M5 uh MacBook Pro with an M5 Max chip. Uh a DJX Spark and Stress Halo. And um you can see the different bandwidth that they have and this is the video from that thing the race where they start generating tokens and you can see the GPU beating all of them.
+<p>So in terms of tokens per second, we seeing a lot more out on RTX Pro 6000 because it's memory bandwidth is a lot higher. But not just that, when it comes to batching and running parallel uh parallel like uh requests, we also see that it's right here.</p>
+</details>
+<p>在单机同时处理 50 个并发请求时，RTX Pro 6000 达到了近 1300 tokens/s 的吞吐量，而其他设备只能串行处理。这是一个纯粹的软件支持问题。需要有人为这些不同硬件构建专属的推理引擎。欢迎针对特定硬件平台向 ODS 提交 PR，我们会把你优化的成果设为该模型在该平台上的默认引擎。</p>
+<p>我们急需开源社区有更多人利用自己的硬件为正在使用的模型进行针对性优化，只有这样大家才能共同进步。指望所有人都向 llama.cpp 提交代码是行不通的，因为它为了通用性采用了太多折中妥协——它既要兼容 NPU，又要支持树莓派，结果放弃了针对特定硬件架构进行深度优化的可能。所以我坚信，未来必须走向“按模型、按芯片量身定制推理引擎”。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+50 requests per machine at once. We're seeing that RTX Pro 6000 becomes almost 1300 tokens per second while everything else is sequential. And this is a software problem by the way. Somebody should build an inference engine for these different machines. And please open a BR into ODS for that specific uh machine for that specific uh platform and we will make it the default for the models that you have optimized for. Um, we need a lot more um people contributing in the open source community with their hardware optimizing for the models that they are using right now. That's how we all get better together because otherwise and the idea of everybody contributing to that lama.cbv doesn't work because you're giving away basically the like you you're using a bunch of tricks to just uh uh work for everything, right? you're you support MPUs, you support Raspberry Pies. So, you're taking a lot of shortcuts and you're not able to optimize for the hardware platform. That's why like I believe that an inference engine per model per chip is what we need moving forward.
+</details>
+<p>如果我们在大规模使用 Agent，而 Agent 正在派生出更多子 Agent 并行工作，那么买一台配备专业 GPU 的工作站远比买 MacBook 或 M5 Ultra Studio 更具生产力价值。除非有人专门为苹果硬件写出优秀的推理引擎，届时欢迎提交 PR。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, yeah, again you can see the number over there. So this shows just how much like when I was telling people go buy as you view it's for a reason because if we're using agents and again I was showing that agents since February are what use tokens the most. Uh then they are just going to be spinning off other agents and when you're running them in parallel it makes sense to get a GPU rather than a MacBook or an M5 Ultra Studio. Unless of course you want to build an inference engine optimized for it then please again open up BR uh and a so these are just a bunch of numbers you can read them online.
+</details>
+<h3 id="推理引擎选择与底层系统工程" data-reading-heading="">推理引擎选择与底层系统工程</h3>
+<p>在量化这些模型的过程中，会出现各种引擎、量化精度、文件格式和调优手段。未来几年会出现大量方案。我们创建了自己的 ODS 权重格式。每个人都会有不同的优化路径，当下没必要强求统一出某个最佳标准，关键是挖掘所有的优化可能。未来一年到一年半内构建的很多东西可能都会被淘汰重构，这完全没问题，关键在于弄清究竟应该围绕什么样的优化方向去构建。</p>
+<p>如果你要选择推理引擎，最好能根据自己的工作流自行优化定制，但这很花时间。既然大家多是工程师或对该领域感兴趣的技术人员，可以尝试去把玩那些微型算子内核，例如搞一个 0.8B 参数的轻量内核看看实际运行效果。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um this is about batching. I'm just trying to get through the more important stuff. So again, different engines, different quantizations, different file formats, different optimizations as we quantize these things. Uh ultimately, we're going to have a bunch of these coming up over the next few years. Uh we've created our own ODS weights and we're just like, you know, everybody's going to optimize differently. And I don't think that right now it's necessary to just try to like, you know, find the best standard. It's more important to find all the optimizations.
+<p>most probably everything that's being built for the next year, year and a half is going to be thrown in the trash and that's fine. It just it's more important to actually understand what kind of optimizations should you be building for.</p>
+<p>So if you're building if if you're trying to choose an inference engine, some questions for you. I would say um it's better to just try to optimize one for yourself and like just based on your workflows, but that takes time. I'm assuming most of you here are engineers or people that are actually interested in this space. Um, so start playing with tiny kernels like just get colle.5 like 0.8 billion parameter kernel and see how it works out.</p>
+</details>
+<p>这是来自 OpenRouter 针对 GLM 5.3 在不同硬件上运行的基准数据。从这里可以清楚看出推理引擎的重要性。其中有些是闭源引擎，有些甚至没有公开发布，运行在各异的芯片上。底部的图表展示了十家供应商的对比。这就是我说的“针对每个芯片或每个模型进行优化”的意义：不同平台的指令集不同，硬件能够解包、回写和计算的底层机制各不相同。</p>
+<p>首字延迟（TTFT）、每位用户或每个 Agent 占用的 tokens/s、每秒请求数以及任务准确率，都需要基于你自己的硬件进行测量。千万不能盲目迷信网上的测评数字或照搬别人的调优配方，因为大概率在你这里行不通。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+This is an interesting one. Um this is from open router and it's basically showing the benchmarks of GLM 5.3 and it's showing it on different hardware. This is this is where you can see that an inference engine actually matters. Some of these are clos source some of these are not even available to the public and there are different chips. So we at the bottom we have 10 storing down there, right? Uh so this is what I mean when I say it's like per chip or per model optimization because it's different from one platform to the next. The instruction sets are not the same. What you can do with the hardware, what you can extract, unpack, back up and like do calculations on doesn't work the same.
+<p>Uh so yeah time to first token token per second per user and again per agent I would say moving forward is something you need to optimize for uh request per second and basically task accuracy and all of these things need to be measured based on your own hardware. You can't just be saying hey uh I'm just going to trust the numbers on being posted online or I'm going to just follow this recipe and it's going to work great because most probably it's not.</p>
+</details>
+<p>上个月 Actual Inc 推出了一款用 Rust 或汇编编写的分词器（tokenizer），速度快了 100 倍。然而反映在整个请求的端到端耗时上，整体速度仅提升了 1.1%。但这依然是一个了不起的软件成果。它说明整个大模型流水线是一项严谨的系统工程，你必须对每一个环节都做端到端优化，才能真正榨取算力价值，否则硬件资源在空耗发热，产出却远未达到最优。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um this is a very interesting uh one. This is actually came out just last months from a company called actual inc. Uh and um they built a ra uh tokenizer that was I don't know I can't remember if it was ra or uh if it was written in assembly but it was um basically like 100 times faster but that 100 times faster when it came to the whole request it made it 1.1% faster. And that's still great by the way. Like that doesn't mean that it's like you know what they built was not an excellent piece of software. That just means that everything that we're using in these like you know these LLM pipelines it's system engineering and you need to optimize every part of that pipeline so that you can actually extract more value out of it because the hardware is burning and like you know it's being used without you getting the most optimal output from it.
+</details>
+<h3 id="推理调度与-flashdata" data-reading-heading="">推理调度与 FlashData</h3>
+<p>我们直接跳到后面关于持续学习（Continual Learning）的部分。今年夏天出现了很多新杠杆：投机解码（Speculative Decoding）、针对 AMD 与 Nvidia 硬件的深度适配。很多人一开始通过 Fork llama.cpp 来添加 D-Flash 或 DD3 支持。</p>
+<p>11 月 9 日刚出了一篇让我印象深刻的论文，名为 FlashData。先声明：我只是粗略翻读后把它放进了幻灯片，可能理解有偏差，待我做完深入调研后再做修正。他们的做法是在推理调度中精确记录每一轮对话（turn）的结束位置，而不是任由显存和模型去盲猜。通过更优的调度，在不同模型上实现了每分钟吞吐量（Tokens per Minute）近乎翻倍至 3.14 倍的提升。这再次证明了系统工程层面的优化空间巨大。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, I'm going to skip this one. I'm trying to get, by the way, to uh continual learning. So, that's why I'm skipping a bunch of things here. Um, we saw a bunch of other levers uh over the summer. We started seeing the flash, a lot of people working with speculative decoding, optimizing for AMD, for Nvidia hardware, for different models. Uh, we saw a bunch of like lama.cb forks and a lot of people just started with forking lama.cb, CBB, right? And just adding D flash support or DD3 support um something that just came out yesterday and I'm trying to get to it.
+<p>This this paper came out November 9th and it was impressive to me. Uh it's basically called flash data and uh I still need to so like what I'm saying right now is just me skimming through it and trying to add it to these slides. So, I might be wrong. So, don't hold me accountable on this until I do more in-depth research. And if there's a correction needed, I'm going to post it online. Uh, so I'm saying that as a disclaimer. Uh, but what they are doing is basically uh saving where each turns like ends and instead of just letting VLM guess and it's pretty much better scheduling and this better scheduling is leading to what? It's leading to referral tokens per minute being almost tripled. um on different models it's between 3.14 times to 1.5 like two a time and a half that still is good performance gains right um so when I was saying back in June that we need a lot of more people actually optimizing in the space and trying to come up with like you know these uh hacks to make things go faster this this is what I was talking about and we're finally seeing a lot more people do this uh people are not saying okay I'm going to use lama.cv CV or lama. Thank god uh they are actually doing more than that.</p>
+</details>
+<p>我们在构建 ODS 时的核心理念是：根据用户选择的具体模型和具体硬件平台，自动调用业界最佳的推理引擎，绝不死板捆绑在单一的 llama.cpp 或 vLLM 上。只有这样才能带来最佳的用户体验。开源 AI 解决的是优化问题，而本地 AI 解决的是体验问题。大多数普通用户不想读我写的那些底层推理引擎分析文章，他们只想开箱即用，否则他们转头就去用 ChatGPT 了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um and what I'm building ODS with in mind is that we are going to be using the best inference engine out there for the model of your choice. Uh when you decide to use that model, we're not just sticking to lambda.cb or VLM. Whatever is out there that is best, we're going to be using that for that platform. That's how we make the user experience better. As I was saying, open source AI is an optimization problem. Local AI is a user experience problem and most people don't want to go read my articles on inference engines. You want to actually just use something that works or otherwise you're going to go to chbt.com. So we're trying to solve that.
+</details>
+<p>DeepSeek 在今年一二月份发布的 N-gram 查找表也是突破性的成果。开源社区能拥有 DeepSeek 真的很幸运，他们免费公开了极具创新性的研究与工程思想，这些突破换作任何闭源大厂绝不可能轻易对外共享。此外 Strata 也在做很酷的工作，大家可以去搜索了解。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um [clears throat] enagram table tables are something that uh deepseek released this year uh I think January uh or February and uh we are so lucky to have Deep Seek by the way uh they have released so many great uh like research and like ideas for free for us to use and uh they were breakthroughs that actually like I doubt any uh of the closed models companies uh would share these kind of findings or research with us. Um Strata is doing a lot of good stuff. Um Google it. It just came out now.
+</details>
+<h3 id="本地基础设施与联网能力" data-reading-heading="">本地基础设施与联网能力</h3>
+<p>今年 3 月，Qwen 3.5 27B 发布后，一位朋友买了一张 RTX 5090 并把它接入了 Claude Code。他让模型控制 GPU 风扇的 RGB 灯效颜色，结果本地模型失败了。他跑来问我：“为什么 Opus 轻易就能做到，而本地模型却不行？”我问他：“你给本地模型接入搜索引擎了吗？”</p>
+<p>Claude Code 之所以能做到，是因为它内置了搜索引擎，能够联网抓取该显卡在模型训练截断期之后发布的控制工具与代码库。我帮他配置了网络端口和环境变量，给本地模型接上搜索工具后再次执行相同任务，本地模型顺利调好了风扇颜色。如果你要求的任务涉及模型训练集截断期之后才出的硬件或工具，却不给它联网搜索权限，那是强人所难。这是本地 AI 的基础设施和体验问题。在 ODS 中，我们默认集成了搜索引擎，避免用户踩坑。如果用户第一次尝试本地 AI 的体验极其糟糕，他们就会彻底放弃并终身按月订阅云端服务。这也是我之前劝阻普通用户盲目买苹果硬件跑本地模型的原因，不当的预期管理会破坏整个本地 AI 生态。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yeah, this is an interesting one back in March. uh a friend bought a 5090 after Quinn 3.5 uh 27 UB came out and he tried to he hooked it up to close code and told it to like uh change the color of the RGB on the GPU right on the GB fans and it wasn't able to do that and he came back and he's like hey like Obus was able to do this thing but locomotives did not and I was like did you give it a search engine uh and he's like what do you mean I'm like okay so like quote code comes with a search engine All right. Uh, so it's able to go look on the internet for the necessary data about the tools that came out after the model was trained to figure out how to change the colors of the fast. So I opened my firewall ports. I gave him an AI. Told him to set this environment variable. Told him exactly how to run the command. Ask it the same thing and was a search engine. Surprise, it was able to actually change the RGB colors. It's like wow we're kind of like you know we shouldn't be asking a model of tasks without internet without giving a search access if it was trained on data that didn't have the tool that you're using right now or even was trained on data before this GPU that you're buying and you're trying to work on came out. Um so you know this is an infrastructure problem and this is a user experience problem in local AI. So like ODS comes plugged in with a search engine for you. So you don't have to worry about this stuff. This is what I mean when I say like people try local and it's like the first experience is so bad. I'm like okay this thing doesn't work right? They will never try again. They will just be paying subscriptions for the rest of their lives. And that's why like I remember like uh a year ago I was like uh telling people online like don't go buy like Apple hardware. And I I have no problem with Apple but I'm just like if you try Apple hardware right now with local models you're never going to use local models again. So like there's an issue with the wrong messaging in the space. So again this explains the whole thing.
+</details>
+<p>这里有一篇关于 EXO 框架的论文，探讨了系统如何通过自我重写运行时平台来提高重用率，从而在长期运行中节省 token。这是本地大模型为榨取更多效能必须实践的底层工程思维。</p>
+<p>在 OpenRouter 上，通用编程类任务切换模型的比例最高，大约占 33%，而翻译或总结类任务的用户更倾向于固守单一模型。随着新模型层出不穷，更多人应该适应切换模型的做法，给 DeepSeek V4.1 Flash 一个机会。它在各项实际表现上绝对远超 Haiku 这类入门级闭源模型，而某些基准测试居然能得出相反结论，简直荒谬。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um so yeah um benchmarks I don't like benchmarks so we skip this.
+<p>Yeah this is an interesting one about like EXO. It's a paper um it's a paper called EXO. uh they are not related to XLabs or anything like that and it's basically about an engine um about a harness that we wrote itself uh to actually improve uh its own like uh reuse like basically an engineering platform or an engineering harness around the task that it does more of and how that saved it tokens in the long run. So this is again like another just systems engineering basic first principles engineering that we need to do more around uh local AI models or models in general to extract more value out of them. Check it out.</p>
+<p>How are we doing? Oh, so which accounts change their models on open router? Um, we're seeing generous coding does that more about 33%. But like people that are doing translation or summarization just stick to what they're doing. Uh so a lot of people move models and uh more people should actually be fine with the idea of switching models as newer models come out. Uh but a lot of people are just going to be like no I'm going to stick to open AI or anthropic office 5.5 is great until the next release. Like just try like give Deep Seek V4.1 Flash a chance. Like again it's I swear to God it's better than Haiko. It's better than like the lowest tier anthropic model and somehow artificial analysis is saying that it's better like that haiku is better like what a joke.</p>
+</details>
+<h3 id="蒸馏小模型与算力经济学" data-reading-heading="">蒸馏小模型与算力经济学</h3>
+<p>Airbnb 本月发布的一篇文章显示，他们利用一个 2B 参数的小型专用模型，以仅仅 1% 的成本达到了前沿大模型的同等质量水准。只要你拥有精准的高质量数据、完整的 Agent Trace，并懂得构建合成数据管道和针对特定工作流进行强化学习（RL），就能以极低成本碾压通用前沿模型。针对每个芯片、每个模型、每个工作流做定制优化，能帮你省下 99% 的资金。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So Airbnb had actually uh this month had um an article about how at 1% u at 1% of of the cost uh they had the frontier intelligence quality on a two billion parameter model. again small specialized model if you have the right data if you have the right traces if you know how to build some synthetic data pipeline and I'm giving away a lot of information here by the way like just go ask f.2 do about this stuff and it will build you something. Uh or come to us atmantic. Uh either way uh if you have some data um traces from your agents with the frontier intelligence models you can start to to build an evaluation pipeline and you can decide on building sens data pipeline and RL something that will be very efficient very very fast and at 1% of the cost of those frontier intelligence labs and it will beat it. So again, optimization per chip, per model, per workflow, it's everything. And it will save you 99% of the money. That's not me. That's Airbnb.
+</details>
+<p>包括 Fireworks 在内的很多公司都在提供针对特定领域的专用蒸馏模型。Opus 5.5 本身其实也是基于师生蒸馏架构（比如由 Fable 5.2 蒸馏指导），结合 Anthropic 用户的常见使用分布精心训练出来的。但我绝不会用 Opus 5.5 去做前沿未知的探索性研究，面对分布外（OOD）任务它很容易失效；然而在日常高频的工程任务上，它兼顾了速度与效率。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Let's get this one.
+<p>Yeah. Um there are labs out there like or companies out there uh like Fireworks that are building specialized models and hosting them. So like this tells you something as well like there's a bad like specialization in models uh distillations teaching smaller models. How do we think that obus 5.5 was trained? It's a master student model it's fable 5.1 or fable 5.2 into teaching it and give it giving it a bunch of things based on the normal distribution of anthropic users and finding the most important stuff. But like do I trust uh OBS 5.5 to just go do some frontier research for me and like figure out some um extremely novel stuff? Absolutely not. I wouldn't trust it. Out of distribution tasks, it will fail miserably. Astro 6 would be better than it. But then again, it's like speed and efficiency uh kind of situation.</p>
+</details>
+<p>在购买还是租赁 GPU 的选择上存在一个阈值，低频需求应该直接选择租用云端算力。虽然我日常总推崇本地硬件，但如果你只是用量不大，按需租用完全没问题。不过必须注意：一些廉价 API 供应商声称以极低价格提供高端模型，后台可能偷偷换成了更便宜的小模型进行路由欺骗。因此确认底层运行的基础设施真实可信非常重要。</p>
+<p>开源与闭源模型的价格都在持续下降，两者质量差距的缩小完全是由开源模型的技术进步驱动的。正因如此，有些人出于自身利益甚至想封禁开源 AI。自由市场和良性竞争让研究社区获益、让全人类获益，也让我们以更低的成本获得更好的计算产出。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yeah, this is an interesting one. Uh by the way, uh there's a certain threshold for which uh below that you shouldn't buy GPU, you should be renting. Uh and it's funny that somebody like me like buy GPU. Uh it's kind of telling everyone about the fact that you don't need to go and buy a GPU. you actually can rent one and use it for your task and overflows and there's a lot of ways to run GBS out there. But what I will say is that if you're just using one of those cheap providers, they could be saying that they are offering you chemicase 3.1 Pro at like 30 cents per million tokens or something and they are basically routing you through another model from a different provider. So they could be really just running qu 3.5 uh 35 billion MOE in the back end. Um trusting the infrastructure of the models that you run is very important. So that's why I usually don't tell people to just go use an AI but rather like go get bunch of GPUs, confirm that they work very well. Um make sure that basically they are up to standard and use them from there.
+<p>So we're seeing uh prices drop a lot both for closed models and open source models but that gap between open source and closed models is only closing because open source models have been getting better during that time span. So the effect of open source models that's why like you know um some people want to ban open source AI. I'm not going to name names uh but there's a reason that like you know competition is good for everyone. Uh the free market is great and we all win that way. Uh oven research wins, humanity wins. Uh and also we spend less money and get better tokens.</p>
+</details>
+<p>每百万 token 的价格并不直接等同于模型智能水平。例如 Opus 5.5 最高档收费 8 美元/百万 tokens，在 Web 开发基准上击败了规模是其 6 到 10 倍的超大模型。它的低成本来源于它是经过高度专业化提炼的领域模型。</p>
+<p>此外，GPU 无论处于满载还是闲置状态，租金成本都是相同的。像 Modal 提供了极其出色的 CLI，允许通过命令行按需动态租用 GPU。你可以让本地模型或者 Codex 直接执行 CLI 指令：任务开始时动态启动租用实例，处理完毕后立即关闭。现代开发者绝不该只把 AI 当成逃避系统工程的黑盒，甚至让一个 PR 变成自己都无法解释的死胡同。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Oh yeah. Uh pricing prices per million token doesn't track uh intelligence necessarily. Uh, so this is one of those things where it's like, um, you know, OBS 5.5 max, the highest tier, $8 per million token, and it's beating in webdev. U, again, I don't trust benchmarks, but this is just like a a way to just try to put data next to each other and compare. Uh, but it's way cheaper than something like Astra, but again, it's because Astra is probably six to 10 times bigger in terms of size. So it requires a lot more compute. Um but again OBS 5.5 is being like was distilled or taught to just do good web development and software engineering tasks.
+<p>Yeah. Uh GPUs cost the same uh busier idle. Uh so that's that's the one thing. So like when you're renting them uh so there's a certain threshold that after which it makes sense to actually rent even rent. Uh so like figure out if you if what you're doing just requires a few hours then like figure out the best place to rent from and optimize for that. There's a lot of engineering that could be done around this. And Mudal like Mudal has an amazing uh CLI that allows you to just rent GPUs on the fly, right? So you can even ask codex if you have a codex or even ask a local model to go rent you the GPU with the CLI as a command and get your workflows kicked like started and once it's done stop. So again a little bit of engineering but like I feel like everybody around AI and open source mod is like I don't want to do any more engineering. I just want to offload everything and like if you message somebody what's that code about like what is this BR? It's like they don't get back to you for like an hour and a half, it's because they're probably like sitting down with an agent, making that agent explain to them what they did before and like figuring out the BR themselves. So like it's bad.</p>
+</details>
+<p>自己维护硬件并不轻松，涉及到持续运维、环境依赖、隐性故障、冗余配置以及硬件损耗。这也是云基础设施有其高昂合理性的原因。但对于真正热爱钻研的硬核工程师来说，自己折腾是一件乐趣无穷的事。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Oh yeah. Uh there's a lot of uh again there's a lot of maintenance that goes into owning hardware. So it's not it's not simple or straightforward. There's maintenance, there's dependencies, there's like silent failures, there's hardware that dies in you. um there is like redundancy and stuff like that. So like there's a reason that that cloud exists and it's so expensive depending on which provider you use. Uh but this is also fun if you're like a hardcore engineer. If you like this stuff and you like to thinker, this is fun.
+<p>Oh yeah, like uh this is one like you know scripts could fail on you and like you know the agents would say it's dumb but then it's like go back and check and it's like oh my god I made a mistake. You're absolutely right. Uh, so like we're still like, you know, models are still like not perfect. Like we're not at AGI just yet, guys.</p>
+</details>
+<h3 id="参数智能密度与显存优化" data-reading-heading="">参数智能密度与显存优化</h3>
+<p>行业正在沿着三条主线演进：</p>
+<ol>
+<li>单参数智能密度的持续提升；</li>
+<li>针对特定任务调优的专家模型；</li>
+<li>性能更强悍的底层推理引擎。</li>
+</ol>
+<p>2023 年我身后的 14 张 RTX 3090 只能勉强跑 LLaMA 2 70B；而今天，其中单张显卡就能跑 Qwen 3.5 甚至未来的 Qwen 4，智能水平不可同日而语。所以投资硬件实际上是在为未来的参数智能密度和工程优化做长远布局。现在在加拿大，一张 RTX 3090 据说被炒到了 2700 美元，而我几年前买它们时只要 400 美元。[笑声]</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, yeah. So, three forces of the line. Um, more capable models per parameter. And I don't hear when I say denser here, I don't mean dense models. Just means intelligence density per parameter. Uh so this is one thing that is happening and having happen happening frequently. Then specialist models, models that are trained on special workflows and better engines, right? What else? Oh yeah, uh this is an interesting one. Uh when I was saying what else I saw that we're moving to the uh continual learning part, but we're not there yet. um you know the same machine that I had behind me in that picture was like 14 RTX3090s at like 2023 it was able to run like Lama 2 7TB and then somehow today each one of those GPUs is running like quen 3.5 qu 3.8 8 tomorrow probably Quinn 4 and it's way more intelligent. So you're kind of like when you're buying hardware right now and when you're like getting into this space you're kind of planning for tomorrow's use case and tomorrow's like intelligence density and optimization rather than just today's. There's a reason that like an RTX3090 right now is like in Canada a friend was telling me they're $2,700. So like God with you, man. Like I'm sorry about that. [laughter] Can't believe I bought a bunch of them for $400 a few years ago.
+</details>
+<p>今年 3 月，Qwen 发布了 397B 的 MoE 模型，同时也发布了 27B 的 3.5 稠密版本，当时 27B 还打不过 MoE。但仅一个月后，Qwen 3.6 27B 稠密模型就全面超越了参数量大 15 倍的 MoE 版本。虽然稠密模型每个 token 都要跑满全部 27B 参数，而 MoE 只激活 17B 参数，但 MoE 占用了 15 倍的总显存空间。这体现了参数利用效率的巨大飞跃。过去需要数据中心的 GPT-4o，如今在手机上即可运行。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Oh yeah. Uh so basically uh in March we had the 397 billion MOE come out from CRM 5 and they came out with the 27 billion parameter dense model 3.5 back then and it was not beating the MOE. However, a month later the 3.6 6 of that quen 3 point of that same model the 27 billion parameter model was beating the 15 times larger dense MOE so you know again kind of intelligence like density of intelligence and it makes sense because here you're making the model runs through the entire like 27 27 uh billion parameters for every token however that this model thee had a 17 billion activated parameter so it was only 40% smaller, but it used like it required still 15 times the amount of total memory and it was beating it. Something to keep in mind. Yeah, GBT40 used to be required data center. Now it runs on your phone.
+</details>
+<p>DeepSeek V4.1 Flash 是我认为今年最惊艳的模型发布。它将 40 万 token 上下文占用的显存，从 13 GB 骤降到了 29 MB——将 KV Cache 压缩了整整 437 倍！相比于仅让整体提速 1.1% 的分词器微调，这种在核心工程架构上的突破实现了 437 倍的显存效率飞跃。</p>
+<p>那么未来两三年还有哪些重大突破口？我认为下一个核心议题是持续学习（Continual Learning）。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um, this is one very interesting thing. V4.1 flash most amazing release this year so far for me by the way. um probably even better than quins 3.5. And I know a lot of people will come out will come after me for saying this, but this one made us [clears throat] go down from [sighs and gasps] 13 GB for 400,000 tokens to 29 megabytes in terms of memory for a,000 tokens. pretty much shrunk the KV cache of this deepseek v1 by 437 times. So we've come a long way right since this is one of those optimizations like you know 100 times faster tokenizer only increase your like you know overall performance by 1.1 right uh but we're also seeing that over time this is a 400 437 times performance increase for the same uh for the same area basically for the same like you know engineering task. Um, so what else could be optimized for over the next, you know, year, two or three? That's what I'm usually like thinking about. I think the next big thing is probably continual learning. We'll see.
+</details>
+<h3 id="终局构想持续学习与-n-gram" data-reading-heading="">终局构想：持续学习与 N-gram</h3>
+<p>持续学习不可能在云端大厂的平台上实现，它必须在本地运行。这也是为什么我认为本地 AI 最终必胜。没有任何一家云厂商能为你单独微调并长期托管一个专属于你的专用模型。他们训练模型是面向全体用户的正态分布；而要让模型真正了解你，它就必须完全针对你进行训练。</p>
+<p>否则我们只能依赖一大堆 Markdown 文件和笨拙的提示词上下文记忆 Hack。当上下文变长时，模型经常会精神分裂，甚至在同一个任务里混乱创建好几个冲突的 Skill 文件。各种框架堆砌的所谓 Memory 最终变得臃肿不堪、毫无用处。解决这个问题的唯一出路是端侧的持续学习。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And by the way, continual learning will not happen uh from cloud uh platforms like for continual learning, it needs to run locally. That's why I keep saying like this thing ultimately local has to win because every big provider is not going to train a model and host it for you. They cannot do that and they're not going to train a specialized for you. They're training for their entire like you know normal distribution of users. And in order for something to learn just about you, it has to be trained for you. Otherwise, we're stuck with markdown files and uh [snorts] memory like uh memory hacks around models that doesn't necessarily work. like you know how many times has a model like made a massive uh you know massive mistake because it's a like you know large context and now it's like writing to three different skills while it's already started with its own skill on the same topic right so you end up with like like something like codex or Hermes or whatever you get a bunch of like markdown files and you call that a harness but over time it's becomes like so plotted and useless um the only way to solve that is actually continual learning
+</details>
+<p>我们在 6 月的峰会上就提出要针对每种硬件做深度优化。例如在一台配备 128GB 内存的 RTX Spark Windows 笔记本上运行 Qwen 3.8 Flash，解码速度达到了 72 tokens/s。大家可以在 odsspark.com 上体验它在出差航班上完全脱网构建出来的产品。超大算子内核是不可或缺的优化手段。</p>
+<p>演讲还剩 10 分钟，留给问答。只剩 32 张幻灯片了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Oh yeah, this is we need optimize for every piece of hardware. This is from the loci summit at AIE back in June. Yeah, again we got like a Windows machine with the RTX Spark running quins 3.8 8 uh flash next um on a machine that has 128 GB of memory at the code speed 72 tokens per second. Uh and it's an incredible model for the fact that it's running on a laptop and like go try to play odsspark.com and just see like what it was able to build on something that you can take on a flight. Let's get this. Yeah, mega kernels are part of the optimization.
+<p>And we have 10 minutes left. So, I'm trying to give some space for questions. Only 32 slides left, guys.</p>
+</details>
+<blockquote>
+<blockquote>
+<p>好的，明白。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. Yeah. Yep.
+</details>
+<p>信息量确实很大，谢谢。</p>
+<p>今年 1 月我曾断言：到年底我们能在一张 RTX Pro 6000 上运行 Opus 4.5 级别的模型，当时很多人抨击我。然而到了 4 月，27B 的 Qwen 3.6 就已经在单张 RTX Pro 6000 本地超越了 Opus 4.5。开源模型的进化速度不容小觑。大实验室固然拥有海量算力做递归自我改进（RSI），但开源社区可以通过专用化（Specialization）与系统工程走出一条突破之路。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yeah. I know. I know. It's very dense. Thank you. So January I said that uh and people came after my head for saying this. I said that by the end of the year we're going to have um OBS 4.5 running on an RTX Pro 6000. By April we had that inqu 3.6 27 day in parameter. We already have surpassed OBS 4.5 locally on an RTX Pro 6000 a long time ago. So do not underestimate the kind of acceleration that open source models are having at this point. the gap is closing and uh specialization even if like some people would argue that big labs uh have a lot of compute so they are able to like you know use the compute use agents research more do RSI right and that open source labs cannot do the same thing well the other alternative is basically specialization until we're able to you know deepseek or whoever is able to crack this with some novel research is able to give the open research community something to run with. So, it's going to be a minute, but there's a way around it as well.
+</details>
+<p>为明年你将运行的模型做规划，购买硬件时要着眼未来。这里特别向 Nvidia 的 Chris Alex Neimatron 致敬，他非常优秀。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yeah, plan for the model you will run next year. So, when you're buying hardware, just think about what's next. Um, yeah, 1 billion uh by GPU. Um, shout out to Chris Alex Neimatron from Nvidia. Amazing guy. Uh, and um I'm trying to get to cont learning.
+</details>
+<p>在我看来，该领域的最后三大基石是：N-gram 检索表、决策模型（Decision Models）以及权重动态修改（Weight Edits）。</p>
+<p>N-gram 允许模型直接在 SSD 或内存中建立映射检索，攻克了一大难题；决策模型则把分类决策扩展到每一个具体任务层；再加上权重动态修改，就构成了端侧持续学习的完整实现配方。我在 11 月 4 日发过推文指出：<code>N-gram + 决策模型 + 动态编程 = 持续学习</code>。我们在 ODS 中正在秘密研发相关的架构方案，彻底抛弃当下各个 Agent 框架中泛滥成灾的 Markdown 记忆上下文补丁。这种基于 N-gram 的设计在普通 CPU、SSD 和系统内存上就能极好地运行。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yep. Inagrams. So, enagrams, decision models, and weight edits. These are the last three big things that came out in the space for me. um anagrams allows you to basically have a an equivalent of like a map on your SSD or in your memory for a model to retrieve from. So that is solving a big beast. Decision models allows you like you know we always had classifiers but we never thought about how it expands to every surface single task out there. That's another layer that if you bought on top of an enagram plus and weight edits um you're going to get continual learning and like this is the recipe in my opinion and I'm saying this out right now so that in a year I can point to it and say I told you um we're uh we're very excited about this and like I had a tweet uh on November 4th so you can see even like at the uh at the footnote right there on November 4th that I said anyagramraphs plus decision models plus n8 programming um equal continue learning uh lookup embeddings basically uh we're we're cooking something. That's all I'm going to say right now about this. We're cooking something and keep an eye on ODS. uh because I genuinely believe that the markdown plot that every harness out there is full of right now has to go away and this is probably the best way to do that at this moment. This is not necessarily the the final shape. This is not the final boss but this is one easy way to do it.
+<p>Oh yeah. Uh loops. Uh so we have loops inside models. We have loops around models. We have loops across experiments. Could we also have loops around enagrams and decision models as part of this entire thing, entire recipe to make container learning work? The the same could easily work on CPUs. By the way, anyagrams, just SSDs or RAM work just fine.</p>
+</details>
+<p>在进行模型评测时，一定要警惕无意义的为了刷分而过拟合基准测试。我个人极其反感基准测试，真正的核心在于构建属于自己的执行 Trace、反馈修正以及高质量的数据品味。市面上的公共基准测试已经被刷分行为彻底污染了。</p>
+<p>至于你该不该买 GPU？欢迎在问答环节交流。我们即将出版一本涵盖这些内容的新书，请关注 locally.com。
+演讲时间还剩 9 秒，非常感谢大家！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Yep. Um so learning uh make sure that when you're evaluating something if you're running some bunch of benchmarks that it's not just road hacking. Uh more to come on this. Now we have 5 minutes left. Any questions [gasps]
+<p>I hate benchmarks. Um really it's uh it comes down to the kind of software that I have built my own traces my own corrections and building around them. So like it's kind of like you know the whole idea of like having high taste in data and not necessarily the saying that like you know that that's who I am but like the whole idea of having high taste is very important in data and evaluations. There's a reason that every out there is being hacked right now.</p>
+<p>Um should you buy a GPU? Um good question. Uh you tell me. And uh yeah, um by the way, there's a book coming out that will include a lot of this stuff. Uh locally.com, keep that on your radar. Uh there's a bunch of links in here uh about my articles, videos, etc. And uh I have 9 seconds left. Thank you so much.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/d8aa91e77f698b42865472ac627baf764e99c6470bd5fe1376e9ce6ba5fac7e9.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/d8aa91e77f698b42865472ac627baf764e99c6470bd5fe1376e9ce6ba5fac7e9.md" download="本地 AI 生产落地与端侧工程优化.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Ahmad Osman" class="entity-link person-link">Ahmad Osman</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Osmantic" class="entity-link company-link">Osmantic</a>, <a href="/search/?q=Nvidia" class="entity-link company-link">Nvidia</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=DeepSeek" class="entity-link company-link">DeepSeek</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=RTX Spark" class="entity-link product-link">RTX Spark</a>, <a href="/search/?q=RTX Pro 6000" class="entity-link product-link">RTX Pro 6000</a>, <a href="/search/?q=ODS" class="entity-link product-link">ODS</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

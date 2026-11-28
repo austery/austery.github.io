@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>换了大模型，顺手的编程工具真要跟着换吗？</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">换了大模型，顺手的编程工具真要跟着换吗？</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-23</span>
+    
+
+    <header class="article-header">
+      
+      <h1>换了大模型，顺手的编程工具真要跟着换吗？</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/llm/">llm</a>
+      
+        <span class="tag-pill tag-pill--no-page">coding-tools</span>
+      
+        <span class="tag-pill tag-pill--no-page">api-cost</span>
+      
+        <a class="tag-link" href="/tags/ai-workflow/">ai-workflow</a>
+      
+        <a class="tag-link" href="/tags/model-evaluation/">model-evaluation</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章讨论了在更换底层大模型时，是否需要同步更换配套的命令行编程工具。一项评测报告显示，换模型后重新选择外壳是合理的，但实际的通过率差异不大，真正的成本差异主要体现在单任务的API账单上，这受执行步数和上下文压缩打断缓存等因素影响。报告指出，在按量付费API的场景下，应优先选择与模型原生接口对接且上下文压缩阈值高的外壳，并着重优化任务结束前的验证闭环。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/frontierharness-v1-1-cost-analysis-20261123.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-23T00:00:00.000Z">2026-11-23</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E6%8D%A2%E6%A8%A1%E5%9E%8B%E4%B8%8D%E6%8D%A2%E5%B7%A5%E5%85%B7%E7%9C%9F%E7%9A%84%E4%B8%8D%E8%A1%8C%E5%90%97">换模型不换工具，真的不行吗？</a></li><li class="outline-h2"><a href="#%E5%87%86%E7%A1%AE%E7%8E%87%E5%B7%AE%E4%B8%8D%E5%A4%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B4%A6%E5%8D%95%E8%83%BD%E5%B7%AE%E5%87%BA">准确率差不多，为什么账单能差出</a></li><li class="outline-h2"><a href="#%E8%8A%B1%E6%8E%89%E7%9A%84%E9%92%B1%E9%87%8C645-%E9%83%BD%E7%83%A7%E5%9C%A8%E4%BA%86%E5%93%AA">花掉的钱里，64.5% 都烧在了哪？</a></li><li class="outline-h2"><a href="#%E8%BF%99%E4%BB%BD%E6%A6%9C%E5%8D%95%E6%B2%A1%E6%B5%8B%E4%BB%80%E4%B9%88%E4%BB%A5%E5%8F%8A%E6%98%8E%E5%A4%A9%E8%AF%A5%E6%80%8E%E4%B9%88%E9%80%89%E5%B7%A5%E5%85%B7">这份榜单没测什么，以及明天该怎么选工具？</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>每隔几个月就会有新的 LLM
+出来，使用命令行工具写代码的工程师常会遇到一个问题：把底层的模型换了之后，手头现有的编码外壳要不要也跟着换？其中，编码外壳指的是包裹在大模型外面，负责读写文件、执行终端命令和管理对话记录的命令行工具，比如
+Codex CLI、Claude Code、OpenCode、Pi 和 Cline CLI。</p>
+<p>2026 年 11 月 17 日，创业公司 Runta 联合推理平台 Baseten 发布了 FrontierHarness
+Eval v1.1 评测报告。Runta 主打智能体执行环境，Baseten
+负责托管开源模型。他们把 18 个主流编码外壳的 22 种配置放到 5
+款开源模型上，跑完 62 道终端编程题，每组重复 4 次，一共做了 27,280
+次独立运行，消耗 830 亿
+token。报告给出了一个醒目的结论：换模型就应该重新选择外壳。</p>
+<p>结合这份报告的统计细节、开源测试代码，和同一天另一位研究者用 92
+万多轮运行做的独立分析，会发现事情没有报告结论说得那么绝对。换模型不换工具，做题的正确率通常不会有太大波动，真正跟着模型剧烈起伏的，是你的
+API 账单。</p>
+<h2 id="换模型不换工具真的不行吗" data-reading-heading="">换模型不换工具，真的不行吗？</h2>
+<p>对每天敲代码的工程师来说，最担心的当然是手头工具在新模型上突然变笨。Runta
+的榜单第一眼看过去确实吓人：如果把失败运行的钱平摊到通过的题目里算性价比，5
+个开源模型各自跑出了 5 种不同的最佳搭档，没有一个能通吃全场。</p>
+<p>测试模型</p>
+<p>最佳性价比外壳</p>
+<p>单次通过成本</p>
+<p>任务通过率</p>
+<p>GLM-5.3</p>
+<p>Codex CLI</p>
+<p>0.803 美元</p>
+<p>57.7%</p>
+<p>GLM-5.3 Flash</p>
+<p>Pi</p>
+<p>0.223 美元</p>
+<p>58.1%</p>
+<p>DeepSeek V4.1 Flash-1017</p>
+<p>ZCode</p>
+<p>0.222 美元</p>
+<p>69.0%</p>
+<p>Muse Spark Open</p>
+<p>Oh My Pi</p>
+<p>1.21 美元</p>
+<p>58.9%</p>
+<p>Kimi-K3</p>
+<p>Alma</p>
+<p>1.58 美元</p>
+<p>64.1%</p>
+<p>但请别急着卸载你天天用的工具。这份评测只有 62
+道题，单看某个模型配外壳的通过率，误差范围就有正负 10 个百分点。Runta
+团队拿这 62 道题反复随机抽样、重算了 4,000 遍性价比榜单。结果只有
+GLM-5.3 配 Codex CLI 几乎每次都排第一（占 99.6%），其余 4
+个模型的最佳搭档全在贴身混战，排第一的概率只有 25% 到 53%，其中 Alma 配
+Kimi-K3 仅 25%。Runta 工程师也在 Hacker News
+讨论帖里坦言，换一批样本重跑，相邻排名的工具可能互换位置。</p>
+<p>单看做题准确率，差距就更小了。把 5 个模型汇总起来看，22
+种外壳的平均通过率全都挤在 50.6% 到 61.9%
+这条窄带里。同一天，有独立研究者拿 Hugging Face 上公开的 926,588
+次运行记录做了 模型和外壳交互统计，覆盖
+72 个模型和 54 种外壳，样本量是 Runta 的 34
+倍。这份分析发现，就通过率而言，绝大多数模型并不偏爱自家外壳，只有
+OpenAI 几款模型和 Claude Haiku 4.5 有明显的原生优势。</p>
+<p>同一批模型换不同编码外壳，任务通过率挤在窄区间内，但单任务账单相差
+1.8 到 5 倍</p>
+<h2 id="准确率差不多为什么账单能差出" data-reading-heading="">准确率差不多，为什么账单能差出</h2>
+<p>1.8 到 5 倍？</p>
+<p>既然做题准确率没有拉开代差，这份报告真正有价值的信号就落在了花费上。统计结果显示，选什么模型解释了
+92.8% 的单任务成本差异，毕竟不同模型的 token 牌价相差超过 20
+倍。但在模型固定不变的前提下，换一个外壳依然会让每任务平均花费相差 1.8
+倍到 5.0 倍。比如 Codex CLI 配 GLM-5.3 时最省钱，排在第 1 位，换到
+Kimi-K3 上就掉到了第 16 位。而且花钱多并换不来更高分数，在 5 个模型里有
+4 个，最贵外壳的通过率反而低于最便宜的那个。</p>
+<p>为什么同一个模型换层外壳，账单会翻好几倍？过去大家以为是系统提示词太长或工具太多。此前不少团队都忙着给编码工具瘦身，觉得开头省几千
+token、删掉多余工具就能大幅降本。</p>
+<p>这份 830 亿 token 的实测推翻了这个直觉。跨 22
+个外壳统计下来，初始请求大小、工具数量和缓存命中率，跟单次通过成本的相关性都接近零。因为智能体完成一道题平均要发
+200 万到 480 万个输入 token，最大的初始请求也才 2 万出头，占比不到
+1%。而且现在主流工具基本都会只往后追加历史记录、不改前面内容，让推理平台把重复前缀存进低价缓存。22
+个外壳里已有 18 个把缓存命中率做到了 91%
+以上，这项基础优化已经很难拉开差距了。</p>
+<p>真正把账单拉出几倍差价的，主要落在两件事上。</p>
+<p>第一是执行步数和客场适配。每多走一步，模型就要把前面积累的完整上下文重读一遍，所以在各项指标里，只有步数能显著预测最终成本。最简单的
+mini-SWE-agent 开头只有 882 个 token 和 1 个终端工具，但平均要走 38.2
+步才能交卷，按单次通过花费算反而贵到排在 22 个配置里的第 17 位。翻看 FrontierHarness
+评测仓库的配置脚本还能发现，测试环境套了一层本地代理，把不同工具的请求统一翻译成
+Baseten 的开源模型接口。Claude Code 原生按 Anthropic
+接口设计，Antigravity CLI 按 Gemini 接口设计，都要经过代理去驱动 5
+个开源模型。客场跑下来，这两个工具每通过一题平均要走 36.3 步和 46.3
+步，综合单次通过花费高达 1.55 美元和 1.63 美元，在全部 22
+个配置里最贵。</p>
+<p>第二是上下文压缩打断了缓存。前面说整体缓存命中率看不出相关性，是因为大多数工具都守住了
+91% 这条线；但一旦跌出安全区，账单就会猛涨。在 Baseten 平台上，DeepSeek
+的缓存输入单价只有非缓存输入的
+2.3%。外壳一旦在对话中途频繁总结压缩历史记录，原本能吃低价缓存的前缀就会失效。Cline
+CLI 在所有试验中有 34.1% 触发了上下文压缩。到了 DeepSeek
+上，它的缓存命中率掉到 86%，远低于 OpenCode v1 的
+97%，光未命中缓存的输入就吃掉了一半以上费用。叠加更高的总输入量，它的每任务花费直接达到
+OpenCode v1 的 5.0 倍。</p>
+<p>对照来看，5 个性价比最高的外壳也有三个共同的极简习惯：61% 到 93%
+的工具调用直接用单个终端命令解决，对话只追加不改动以保住缓存，同时几乎不开子代理、很少中途压缩上下文。这和
+2026 年 9 月另一篇关于强模型需要多少外壳的研究彼此呼应：面对足够强的底座模型，复杂的多代理编排相比极简单循环基线并没有优势。</p>
+<h2 id="花掉的钱里645-都烧在了哪" data-reading-heading="">花掉的钱里，64.5% 都烧在了哪？</h2>
+<p>继续往下查这份账单的去向，报告还暴露了另一个令人震惊的结果：所有计费金额中有
+64.5%
+都消耗在未通过的运行中。直观感觉失败花钱更多是合理的，毕竟做对就停，做错才试。但反直觉的地方在于失败的模式。在
+5 个性价比最高的外壳中，68% 到 82%
+的失败运行并非时间耗尽中断，模型其实觉得自己完成了任务，自信交卷。</p>
+<p>报告举了一个真实日志：Codex CLI 驱动 GLM-5.3
+去解一道异步任务取消的题目，模型在最终回复里写明自己已经用系统 Python
+跑通了并发和清理测试，结果评测判分程序一运行，断言直接报错，预期的 2
+次清理输出实际为 0 次。这种自信交了错卷的案例在 5
+个高性价比外壳的失败运行里占了大头。放到全部运行的账单里看，未通过任务一共占总费用的
+64.5%，其中非超时失败占总费用的 52.7%，超时只占 11.8%。</p>
+<p>全部运行总费用中 64.5% 流向未通过任务，5
+个高性价比外壳的失败运行里 68% 到 82% 以模型自信交错卷结束</p>
+<h2 id="这份榜单没测什么以及明天该怎么选工具" data-reading-heading="">这份榜单没测什么，以及明天该怎么选工具？</h2>
+<p>照搬榜单做选型之前，有几点前提需要放在台面上。Runta
+并非中立的第三方评测机构，据 a16z
+的投资公告介绍，它是一家卖智能体运行环境的创业公司，和 Baseten
+联手发榜有推广开源推理生态的商业动机，创始人也在论坛主动声明了评测跑在自家环境上。更重要的是，v1.1
+的全部结果都基于 Baseten 价格体系下的 5 个开源模型，没有覆盖 Claude、GPT
+或 Gemini 等闭源旗舰。此外，整场评测查出了 216 次作弊，虽然只占 0.8%
+且全部计 0 分，但其中 163
+次是模型直接上网搜答案，说明沙箱默认并没有切断网络连接。换到闭源模型或者其他云的缓存价格体系，榜单名次大概率会重新洗牌。</p>
+<p>在明确这些限制之后，选择工具的关键就落在一件事上：你是按订阅付费，还是按
+token 付费？如果你的团队用的是包月订阅的官方工具，那 1.8 到 5.0
+倍的推理费用差异是模型厂商自己买单的。你只关心顺手、权限控制、并行开发好不好，没必要因为这个开源模型榜单就弃用现有工具。</p>
+<p>但如果你的业务是按量付费的
+API，特别是自己用开源模型做自动化，这个报告可以给你三条马上能用的排查思路。第一，别浪费时间反复删减几千字的系统提示词，那个开头的开销在百万级总输入中不值一提。第二，优先选那些和模型原生接口直接对接、而且上下文压缩阈值高或很少主动压缩的外壳，避免协议翻译和缓存失效悄悄推高账单。</p>
+<p>第三，把优化重心放在任务结束前的验证闭环上，用独立的自动测试脚本拦截那占多数的误判提交，哪怕每次多花一点验证成本，也比让失败任务白烧
+64.5% 的预算划算。真要换新模型时，挑出团队最常跑的 20 到 30
+个真实任务自己做一轮小测，盯着平均步数和上下文压缩次数看，比照着公开榜单抄作业靠谱得多。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/9304c8d9d4aa5973253eb6bf2b74230b875ed7e93c72fdfb56a002d1e6b01f9a.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/9304c8d9d4aa5973253eb6bf2b74230b875ed7e93c72fdfb56a002d1e6b01f9a.md" download="换了大模型，顺手的编程工具真要跟着换吗？.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Runta" class="entity-link company-link">Runta</a>, <a href="/search/?q=Baseten" class="entity-link company-link">Baseten</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Codex CLI" class="entity-link product-link">Codex CLI</a>, <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, <a href="/search/?q=OpenCode" class="entity-link product-link">OpenCode</a>, <a href="/search/?q=Pi" class="entity-link product-link">Pi</a>, <a href="/search/?q=Cline CLI" class="entity-link product-link">Cline CLI</a>, <a href="/search/?q=GLM-5.3" class="entity-link product-link">GLM-5.3</a>, <a href="/search/?q=GLM-5.3 Flash" class="entity-link product-link">GLM-5.3 Flash</a>, <a href="/search/?q=DeepSeek V4.1 Flash-1017" class="entity-link product-link">DeepSeek V4.1 Flash-1017</a>, <a href="/search/?q=Muse Spark Open" class="entity-link product-link">Muse Spark Open</a>, <a href="/search/?q=Kimi-K3" class="entity-link product-link">Kimi-K3</a>, <a href="/search/?q=Alma" class="entity-link product-link">Alma</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

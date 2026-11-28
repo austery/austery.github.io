@@ -1,0 +1,7810 @@
+---
+author: The Diary Of A CEO
+date: '2026-11-16'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=1mDHHi398ig
+speaker: The Diary Of A CEO
+tags:
+  - honeypot-operation
+  - intelligence-espionage
+  - psychological-manipulation
+  - chip-export-control
+title: 前CIA特工解析针对英伟达CEO的“美人计”指控及情报操纵心理
+summary: 前CIA特工与作家约翰·黄仁勋探讨针对英伟达CEO黄仁勋的“美人计”指控，分析其通过虚假身份和掩护公司获取芯片的过程，并深入解析情报机构利用心理学进行操纵、隔离目标及选择情报源的策略。
+insight: ''
+draft: true
+series: ''
+category: geopolitics
+area: geopolitics
+project: []
+people:
+  - Jensen Huang
+  - Alice Wong
+  - John Huang
+companies_orgs:
+  - Nvidia
+  - Mega Speed International
+  - CIA
+  - FBI
+  - DIA
+products_models: []
+media_books:
+  - Honey Trap
+status: evergreen
+---
+<!-- chunk 1/14 -->
+
+……针对英伟达（Nvidia）首席执行官实施了所谓的“美人计”（honeypot）行动。
+<details><summary>Original English</summary>
+and they ran what's called a honeypot operation against the CEO of Nvidia.
+</details>
+
+>> 我们现场其实就有一位“美人计”特工。基本上，你以前就是一名色诱间谍。
+<details><summary>Original English</summary>
+>> We actually have a honeypot here. And you were a sex spy basically.
+</details>
+
+>> 基本上是这样。如果把我的经历比作詹姆斯·邦德（James Bond）的电影，我就是去色诱詹姆斯·邦德的那个人。
+<details><summary>Original English</summary>
+>> Basically, yes. If I would compare my life to James Bond movie, I would be the one who would seduce James Bond.
+</details>
+
+>> 以你自身作为间谍、作为中央情报局（CIA）特工的经验来看，什么是“美人计”行动？
+<details><summary>Original English</summary>
+>> And from your experience as a spy yourself, a CIA agent. What's a honeypot operation?
+</details>
+
+>> 就是一名美貌女性愿意为了换取某些东西，与一个位高权重、人脉广泛的男人上床。这类的间谍活动每天在世界各地上演得有多频繁？据联邦调查局（FBI）估计，在华盛顿有1万到1.5万名外国情报人员。而且这里面牵涉很多变数和环节。例如，朝九晚五你是一名博物馆策展人，下午5点之后，你是一名中情局官员。这样一来，就没有人会怀疑你是一名情报人员。眼下，黄仁勋（Jensen）身上存在几种不同的风险，而到目前为止，还没有人真正谈论这一点。
+<details><summary>Original English</summary>
+>> Is a beautiful woman willing to sleep with an important and well-connected man in exchange for something. How much of this espionage stuff is happening every single day all over the world? The FBI estimates that there are between 10 and 15,000 foreign intelligence officers in Washington. And there are a lot of moving parts. For example, you're a museum curator from 9 to 5 and then after 5, you're a CIA officer. So, no one would suspect that you're an intelligence officer. Right now, there are several different risks with Jensen and so far nobody's really talking about that.
+</details>
+
+>> 好吧，那我得问你，他们开始教你的这些非同寻常的技巧都是什么？大约70%到80%全都是关于人类心理学的。如何利用亲密关系来控制男人的大脑。你必须收集关于你目标的信息。比如，你是做什么的？你平时去哪里？你都和谁说话？然后你就进入“爱情轰炸”，也就是赞美。但如果你真的想诱惑你的目标，你必须给自己的大脑设定程序，让自己去喜欢这个人。
+<details><summary>Original English</summary>
+>> Okay, I'm going to have to ask you, what were these unusual techniques they started to teach you? So 70 80% were all about human psychologist. How to control men's brain using intimacy. You need to gather information about your target. For example, what do you do? Where do you go? With whom do you speak? Then you go into love bombing, which are compliments. But if you really want to seduce your target, you need to program your brain to like this person.
+</details>
+
+>> 所以你床前摆着他的照片，对着那张照片自慰。
+<details><summary>Original English</summary>
+>> So you had a photo of him in front of your bed. You'd masturbate to that photo.
+</details>
+
+>> 是的。因为对人类来说，最强烈的情感体验就是性高潮。我们稍后再聊这个。
+<details><summary>Original English</summary>
+>> Yes. Because the strongest emotion is an orgasm for a human being. We will talk about it later.
+</details>
+
+>> 我有几个问题想问。你有没有对你的某个目标产生过真感情？还有，你杀过人吗？
+<details><summary>Original English</summary>
+>> I have some questions to ask. Did you ever catch feelings with one of your targets? And also, have you ever killed anybody?
+</details>
+
+>> 呃……
+<details><summary>Original English</summary>
+>> Uh,
+</details>
+
+### 针对英伟达首席执行官的“美人计”指控
+
+>> 在本期节目开始之前，我想请大家帮个小忙。两个月前，观看这个频道的人里有61%没有订阅。现在我们降到了58%。我的目标是50%。所以，如果你曾经喜欢过我们在本频道制作的任何视频，如果你喜欢这个频道，能否帮我一个小忙，点击一下订阅按钮？这对本频道的帮助超乎你的想象。频道规模越大，我们就能在嘉宾和制作上投入更多。谢谢大家，请收看本期节目。
+<details><summary>Original English</summary>
+>> before this episode starts, I have a small favor to ask you. 2 months ago, 61% of the people that watch this channel weren't subscribed. We're now down to 58%. My goal is 50%. So, if you've ever liked any of the videos we've made on this channel, if you like this channel, can you do me a small quick favor and hit the subscribe button? It helps this channel more than you know. And the bigger the channel gets, the more we can invest in the guests and the production. Thank you and enjoy this episode.
+</details>
+
+约翰·黄仁勋（John Jensen Huang）掌管着堪称历史上影响最重大、最重要的公司之一，也是历史上最有价值的公司之一，他刚刚承认与一名中国间谍有染。
+
+请以你自己作为间谍、作为中情局特工的经验，为我详细梳理一下究竟发生了什么。史蒂芬（Stephen），你说得对，这确实是历史上最具影响力和最重大的公司之一。这是一家价值数万亿美元的尖端科技公司——英伟达。从这场人工智能革命一开始，中方就一直在寻求用最快、最好、最先进的芯片来驱动他们自己的人工智能。
+
+我们一直不愿向他们出售，也不愿允许英伟达向他们出售最先进的芯片。于是他们便着手通过另一种方式来获取这些芯片，他们针对英伟达首席执行官黄仁勋（Jensen Wong）实施了所谓的“美人计”行动。
+<details><summary>Original English</summary>
+John Jensen Huang, who runs arguably one of the most consequential important companies in history and also one of the most valuable companies in history, has just admitted to having an affair with a Chinese spy.
+
+Walk me through from your experience as a spy yourself, a CIA agent, exactly what happened. You're right, Stephen, when you say this is one of the most impactful and consequential companies in history. It's a multi-trillion dollar cuttingedge tech company, Nvidia.
+
+And the Chinese from the very beginning of this AI revolution have sought the fastest, best, most advanced chips to power their own AI.
+
+uh we have not been willing to sell them or to allow Nvidia to sell them the most advanced chips. So they set out to get them in another way and they ran what's called a honeypot operation against Jensen Wong, the CEO of Nvidia.
+</details>
+
+>> “美人计”行动。
+<details><summary>Original English</summary>
+>> A honeypot operation.
+</details>
+
+>> “美人计”行动。
+<details><summary>Original English</summary>
+>> A honeypot operation.
+</details>
+
+>> 什么是“美人计”行动？
+<details><summary>Original English</summary>
+>> What's a honeypot operation?
+</details>
+
+>> 就是一名美貌女性愿意为了换取某些东西，与一个位高权重、人脉广泛的男人上床。现在看来，黄仁勋当时很可能根本不知道这其中存在交换条件，但她最终成功让英伟达售出了价值50亿美元的先进芯片。
+
+他拿到了美国政府对该交易的批准。
+
+而她所代表的那家公司——Megape，我都迫不及待想跟你聊聊这家 Megape 了。它号称是一家总部位于新加坡的科技公司，结果查下来，它在马来西亚不过就一个门面店，在新加坡只有两名员工，而且两人都不是工程师。所以，这显然是一家掩护公司。她购买了价值50亿美元的芯片，并把这些芯片运往了中国。我的身后正好有一份事件顺序的时间线。你能带我梳理一下发生的事情吗？
+<details><summary>Original English</summary>
+>> It is a beautiful woman willing to sleep with an important and well-connected man in exchange for something. Now, he apparently and likely didn't even know that there was a quid proquo here, but she ended up successfully getting Nvidia to sell $5 billion worth of advanced chips.
+
+He got US government approval for the transaction.
+
+and the company that she represented, Megape, and I I can't wait to talk to you about Megape. Supposedly a Singapore based tech company that turns out to have nothing more than a storefront in Malaysia and two employees in Singapore, neither of which is an engineer. So, it's clearly a front company. She bought $5 billion worth of chips and had those chips sent to China. So, I have a a timeline just behind you there of the order of events. Could you walk me through what happened?
+</details>
+
+>> 这是一个经典的情报行动。变数不多，不太复杂，实施起来相对容易。2023年，爱丽丝·黄（Alice Wong）自称先是在湖南卫视（Hunan TV）担任主播——湖南卫视是中国的一家民营电视台——后来又自称调去中央电视台（CCTV，即中国官方广播机构）担任主播。
+
+而这两个职位都不是真的。湖南卫视发表声明称：“我们从未听说过这个女人。她从来不是这里的主播。”中央电视台也确实连一秒钟她主持节目的视频都没有。所以，她自称是记者兼主播。正如你所看到的，她非常有吸引力。随后，她从媒体界跳槽到了这家名为“Mega Speed International”的公司。该公司据称总部位于新加坡。据派出调查人员前往当地的《纽约时报》报道，实际上该公司只有一个小办公室，里面有两个人。这两个人没有一个是工程师，他们甚至都解释不清 Megape 作为一家公司到底是做什么的。结果查下来，它在马来西亚有一间完全空置的办公室，那里根本没有任何员工。然而，它却不知何故坐拥50亿美元来购买英伟达芯片。因此在2023年，她成为了 Mega Speed 的总经理，而这家公司实际上根本不存在。
+<details><summary>Original English</summary>
+>> This was a classic intelligence operation. Not too many moving parts, not too sophisticated, relatively easy to implement. In 2023, Alice Wong, who claimed to have been an anchorwoman for first Hunan TV, Hunan TV is a privatelyowned TV network in China, then claimed to have transferred to be an anchorwoman at CCTV, which is the Chinese state broadcaster.
+
+And neither one of the those positions uh were real. Hunan TV issued a statement saying, "We never heard of this woman. She she was never an anchor woman here." And there is literally not one second of video from CCTV of her anchoring anything. So she claimed to be a journalist and an anchorwoman. She's very attractive as you can see. And then she went from media to this company called Mega Speed International. It purports to be based in Singapore. In fact, it has a small office with two people in it, according to the New York Times, which sent investigators there. Neither one of these people uh was an engineer, and neither one of them could even explain what it was that Megape does as a company. Uh it turns out to have an office in Malaysia that was utterly empty. There were no employees there. Yet it somehow had $5 billion to buy Nvidia chips. So 2023 she becomes managing director at Mega Speed, which again doesn't really exist.
+</details>
+
+>> 一个人是怎么从一名电视主播，变成一家坐拥50亿美元芯片采购资金的公司的首席执行官的？
+<details><summary>Original English</summary>
+>> How does someone go from being a TV anchor to being the CEO of a company that has the funds to buy $5 billion of chips?
+</details>
+
+>> 那就是拙劣的间谍技术手法（trade craft）了。中方在这方面图省事了。当你进行深度潜伏时，无论身份是商务人士，还是共同基金经理，或是野生动物摄影师，不论你的深度潜伏职业是什么，都必须具备所谓的“背景支撑”（backstopped）。对吧？所以如果你作自我介绍说：“你好，我是 Megaspe 的首席执行官”，你递给我一张名片，好吧，那就必须真有那么一个叫 Megaspe 的地方，必须有我可以访问的网站，必须有我可以实地前往的办公室。你必须有年度报告、董事会，以及任何当我着手调查、深入了解其背景时能够查看到的东西。而关于这家 Mega Speed，任何人什么也查不到。但中方只是盘算着两件事之一：要么没人会去核查，要么等有人去核查时，他们想要的东西早就已经拿到手了——在本案中显然就是那些芯片。
+
+你认为她是什么时候被招募的？是在童年早期吗？通常是在他们身居要职之后吗？
+<details><summary>Original English</summary>
+>> That's bad trade craft. The Chinese cut corners there when you are either under deep cover as a business person or you know the manager of a mutual fund or a wildlife photographer whatever your deep cover job is it has to be what's called backs stopped right so if you introduce yourself and say hi um I'm the CEO of Megaspe you give me your card okay there's got to be a place called Megaspe there's got to be a website I can go to. There has to be an office I can go to. You have to have, you know, an annual report and a board of directors and something that if I begin investigating and I look into the background of it, there's going to be something there for me to see. And there was nothing for anybody to see with this mega speed. But the Chinese just figured, well, one of two things. Either nobody's going to check or by the time somebody does check they will have gotten what it was that they were seeking which in this case apparently was the chips.
+
+And when do you think she was recruited by China? Was it do you think early in her childhood? Is it typically when they get into a position of prominence?
+</details>
+
+>> 不。我的推测是，她干这行大概有10年左右了。她肯定接受过大量训练。举例来说，这绝不是你随便把一个人扔过去说一句“去跟这个男的上床，剩下的听天由命吧”那么简单。这很复杂，牵涉很多变数和环节。所以我的推测是，她入行有一段时间了，并且受过良好的训练。
+<details><summary>Original English</summary>
+>> No. My my guess is she's probably doing been doing this for 10 years or so. She had to have gone through extensive training. For example, um this isn't something you just throw a person into and say, "Have sex with this guy and let's hope for the best." Th this is complicated. There are a lot of moving parts. And so my guess is that she was she's been around for a while and she's been well trained.
+</details>
+
+>> 然后英伟达居然就接受了 Mega Speed 这家公司价值50亿美元的芯片订单，并且他们没有进行尽职调查来弄清这是否是一家真实存在的公司。
+<details><summary>Original English</summary>
+>> And then somehow Nvidia accept an order off this company Mega Speed for $5 billion worth of chips. and they don't do their due diligence to figure out if it's a real company.
+</details>
+
+>> 这有多疯狂？但我怀疑他们之所以没有做尽职调查，是因为指令来自黄仁勋（Jensen Wong）。如果黄仁勋说：“放手去办吧。我已经让美国政府同意了。”而且显然他们确实同意了。那就不会有任何尽职调查，也不需要任何尽职调查，因为这是首席执行官亲自下的指令。
+<details><summary>Original English</summary>
+>> How crazy is that? But I suspect that they didn't do the due diligence because the orders were coming from Jensen Wong. If Jensen Wong says, "Go ahead and do this. I got the Americans to agree to it." And apparently they did. There wouldn't be any due diligence. There wouldn't need to be any due diligence because the CEO is ordering it.
+</details>
+
+>> 好。然后到了2024年6月，
+<details><summary>Original English</summary>
+>> Okay. And then in June 2024,
+</details>
+
+>> 是的，他们第一次被拍到在一起。CNN 和《纽约时报》都报道的一点是，他们形影不离。提醒一下，他已经结婚41年了。而他却和这个女人一起公开露面。看看他们坐得多近。报道还指出，她只要拿起电话打给他，他就会立刻出现。对于商业伙伴之间，或者一家公司的总经理与全球顶尖科技公司之一的首席执行官之间而言，这绝不是正常的关系。随后在2025年5月，他们又在台湾被拍到在一起。如果我是黄仁勋的夫人，此时此刻我肯定会质问追查了。这已经是一段相当公开的出轨关系了。他们似乎并没有做出太多掩饰的企图。然后，如你所见……
+<details><summary>Original English</summary>
+>> yeah, they're photographed together for the first time. One of the things that that both CNN and the New York Times are reporting is that they were inseparable. Mind you, he's been married for 41 years. And he's being seen in public with this woman. Look how closely they're sitting. And the reporting also indicates that she could just pick up the phone, call him, and he would immediately show up. That's not a normal relationship between business partners or between the managing director of one company and the CEO of one of the world's foremost tech companies. And here they are again in May 2025 photographed together in Taiwan. If I were Mrs. Jensen Jong, I'd be asking questions at this point. This is this is a pretty public affair. They didn't appear to be making much of an attempt to hide it. And then, as you see
+</details>
+
+<!-- chunk 2/14 -->
+
+在10月25日，他们受到了调查。
+
+他们被调查的原因，恰恰是因为他们做的事情正是她打算做的，也就是获取那批价值50亿美元的芯片。财政部去哪儿了？商务部去哪儿了？中央情报局或外国资产控制办公室去哪儿了？
+
+所有人似乎都两手一摊说：“好吧，既然黄仁勋（Jensen Wong）想要，那黄仁勋就应该得到。”然后显然在白宫，你知道，总统和黄仁勋建立了友谊。她叫爱丽丝·黄（Alice Wong），但两人没有任何亲属关系。嗯，总统和黄仁勋建立了这种友谊。我们知道就在过去几天里，他给黄仁勋打了电话，问他近况如何，确保一切都好，
+<details><summary>Original English</summary>
+ in October 25, they're investigated.
+
+They're being investigated for doing exactly what she set out to do, which is to acquire the $5 billion worth of chips. Where was the Treasury Department? Where was the Commerce Department? Where was the CIA or the Office of Foreign Assets Control?
+
+Everybody just seemed to throw up their hands and say, "Well, if Jensen Wong wants it, then Jensen Wong should have it." And then apparently at the White House, you know, the president struck up a friendship with Jensen. Her name is Alice Wong, but there's no relation. Um, the president struck up this friendship with Jensen. And we know just over the last couple of days, he's called Jensen to see how he's doing, make sure everything's okay,
+</details>
+
+>> 并且问他是否知道她是个间谍。
+<details><summary>Original English</summary>
+>> and to ask him if he knew that she was a spy.
+</details>
+
+>> 对。他说他毫不知情。他很可能确实毫不知情。但我前几天在我自己的播客上也说过，史蒂文（Steven），你看，你都六十多岁了。她看起来三十多岁。其他女人看你，可能觉得你是个令人毛骨悚然的老头。也许你体重增加了几磅。你的头发在变白或者在脱落。但是接着，这位美丽的女人对你微笑，一切都变了。一切都改变了。你整个人神采飞扬。你又变成了一个年轻小伙子。“哦，她想要50亿美元的芯片。没问题。她爱我。”你知道，你就没办法清醒思考了。归根结底，你是在用下半身思考。事情真的就是这样。而且可以肯定，他绝不是第一个落入这种陷阱的男人。
+<details><summary>Original English</summary>
+>> Yeah. And he said he had no idea. He probably didn't have any idea. But I said on my own podcast the other day, Steven, you know, you're in your 60s. She looks like she's in her 30s. Every other woman sees you as maybe a creepy old man. Maybe you're putting on a few pounds. Your hair is turning gray or it's falling out. But then this beautiful woman smiles at you and everything change. It changes. You just light up. You're a young kid again. Oh, she wants $5 billion in chips. No problem. She loves me. You know, and you don't think straight. You're thinking with the wrong head is what it comes down to. That's really what it is. And he's not the first guy that's guilty of falling into this trap. That's for sure.
+</details>
+
+>> 然后在2026年4月，据信特朗普获悉了此事。
+<details><summary>Original English</summary>
+>> And then in April 2026, it's believed that Trump was made aware.
+</details>
+
+>> 没错。中央情报局显然在2026年3月写了一份备忘录。那份备忘录在2026年4月初送交给了总统，上面说：“嘿，我们认为黄仁勋（Jensen Hong）可能已经被一名中国情报人员策反或渗透了。”
+<details><summary>Original English</summary>
+>> Right. So, the CIA apparently wrote a memo in in March of 2026. That memo was delivered to the president in early April of 2026 saying, "Hey, we think that Jensen Hong might be compromised by a Chinese intelligence officer."
+</details>
+
+>> 他们是怎么知道的？
+<details><summary>Original English</summary>
+>> How might they know that?
+</details>
+
+>> 嗯，别忘了中央情报局已经渗透进了中国国家安全部，也就是中国的情报机构。这就是充当外国情报机构渗透人员的关键所在。这种风险是极大的，因为你会让自己相信你潜伏得太深了，你的掩护做得太严密了，以至于周围根本没有其他人实际上在为对方工作。
+
+过去最后两个、呃、美国重大的美国叛徒最终就是这样被抓获的。奥尔德里奇·埃姆斯（Aldrich Ames）和罗伯特·汉森（Robert Hansen）。你知道，他们两人都在为苏联工作，后来在苏联解体后为俄罗斯人工作，却忽视了我们还有其他打入苏联克格勃（KGB）的人员在向我们汇报，说：“你们内部有个内鬼。出问题了。”
+
+嗯，这里发生的事情也是一样的。有人联系了中央情报局说：“科技界出了问题，而且牵涉到黄仁勋（Jensen Hong）。”
+<details><summary>Original English</summary>
+>> Well, don't forget that the CIA has infiltrated the Chinese Ministry of State Security, the Chinese Intelligence Service. This is the thing about being being a penetration of a foreign intelligence service. The risk is incredible because you convince yourself that you're so deep, your cover is so deep that there is nobody else around you that's actually working for the other side.
+
+And this is how the last two uh American major American traders were finally caught. Aldrich Ames and Robert Hansen. you know, they were both working for the Soviets and then the Russians after the Soviet Union fell, ignoring the fact that we had other people that had penetrated the the Soviet KGB that were reporting back to us saying, "You've got a mole. There's a problem."
+
+Well, the same thing is happening here. Somebody reached out to the CIA and said, "There's a problem in tech and it involves Jensen Hong."
+</details>
+
+>> 那他们是怎么知道的？因为既然美国在中国内部有间谍，那么在对方那边就还有其他人。我此前以为可能是他们监听了技术通信。他们能看到她正在往中国国内打电话。当然。我想曾有一份报道或者某种说法，称她通过一段视频将关于黄仁勋的信息传回了中国。
+<details><summary>Original English</summary>
+>> And how might they know that? Because so the US have spies on the inside in China and so there's somebody else on the other side. I assumed that it might be they've tapped technology. They can see she's making phone calls to back to China. Sure. I think there was a report or sort of an assertion that she was delivering information about Jensen back to in a video back to China.
+</details>
+
+>> 她肯定一直在把信息传回去。
+<details><summary>Original English</summary>
+>> She had to have been sending information back.
+</details>
+
+>> 他们是怎么做到的？是通过电话吗？是通过WhatsApp吗？绝对不应该是电话、WhatsApp、Signal或任何此类软件。所有的东西都有后门。那应该得是国安部专门为她或专门为那次行动制造的某种专有中国通信设备。
+<details><summary>Original English</summary>
+>> How do they do that? Is it phone calls? Is it WhatsApp? It should never be a phone call or WhatsApp or Signal or any of that. There are back doors into everything. It should have been some proprietary Chinese commo gear that the MSS built just for her or just for that operation.
+</details>
+
+>> 据称在2026年4月，唐纳德·特朗普获悉了黄仁勋被被该间谍策反渗透的消息。但在数月之后的今年11月，
+<details><summary>Original English</summary>
+>> And it's alleged that in April 2026, Donald Trump becomes aware that Jensen is compromised by by the spy. But months later in November this year,
+</details>
+
+>> 对，
+<details><summary>Original English</summary>
+>> yeah,
+</details>
+
+>> 他在白宫坐在了他身旁。
+<details><summary>Original English</summary>
+>> he sat next to him at the White House.
+</details>
+
+### 白宫内幕与国家安全风险
+
+>> 在我看来这太不可思议了。事情到了4月份。马可·卢比奥（Marco Rubio）不仅是国务卿，他同时还是国家安全顾问，该职位对中央情报局乃至实际上对整个情报界都拥有主导权。他告诉总统：“黄仁勋（Jensen Wong）似乎卷入了一场美人计行动。”而总统似乎根本不在乎。
+
+当总统前往中国时，马可·卢比奥显然阻止了黄仁勋陪同总统前往中国。当总统在阿拉斯加的安克雷奇降落为“空军一号”加油时，他给黄仁勋打了电话说：“我想了想，你为什么不坐飞机来阿拉斯加，在这里和我汇合，跟我一起上‘空军一号’，我们一起飞去中国呢。”
+
+事情就是这样发生的。不仅总统和黄仁勋从安克雷奇一起去了中国，特朗普还向中方坚持要求，让黄仁勋与他、与总统以及中国领导人坐在同一张桌子上。在在这次宴会期间，中国人肯定在暗地里嘲笑我们。
+
+是啊。然后他就被抓了。
+<details><summary>Original English</summary>
+>> This is crazy to me. So, here we are in April. Marco Rubio, who's not just Secretary of State, he's also the National Security Adviser, which has primacy over the CIA or over the the entire intelligence community really. He tells the president, "Jensen Wong appears to be involved in a honeypot operation, and the president doesn't seem to care."
+
+When the president went to China, Marco Rubio apparently blocked Jensen from traveling to China with the president. When the president landed to refuel Air Force One in Anchorage, Alaska, he called Jensen and said, "On second thought, why don't you fly to Alaska, meet with me here, get on Air Force One with me, we'll fly to China together."
+
+And that's what happened. And not only did the president and Jensen Wong go to China together from Anchorage, Trump insisted to the Chinese that Jensen sit at the same table with him, with the president and with Chinese Premier Xihinping. The the Chinese had to have been laughing at us during this this dinner.
+
+Yeah. and then he gets caught.
+</details>
+
+>> 这种事的风险是什么？这到底算不算风险？是不是就只是偶尔有了场婚外情？
+<details><summary>Original English</summary>
+>> What is the risk of this? Is it a risk at all? Is it just occasionally had an affair?
+</details>
+
+>> 这里面有真正的风险吗？
+<details><summary>Original English</summary>
+>> Is there real risks here?
+</details>
+
+>> 是的，有好几种不同的风险。首先，显而易见的是商业风险。中国人当然可能是世界上对这些高技术装置进行逆向工程最厉害的，对吧？他们他们其实只需要一枚芯片，就能够对其进行逆向工程。但更不仅于此，史蒂文，
+
+这两个人之间的枕边谈话又如何呢？
+
+比方说他们正躺在床上。他们聊的可不是芯片。她可能会问：“你和特朗普总统谈得怎么样？他说了些什么？有什么动静吗？有什么新鲜事吗？哦，真让人兴奋。哦，你太重要了，黄仁勋。你随时都能跟美国总统说上话。”他说了什么吗？他对中国人怎么说？他对贸易怎么说？他对中央情报局或国防部怎么说？他们在使用什么样的芯片？DARPA正在研发什么样的芯片？美国国家安全局对这一切有什么说法？
+
+这才是真正的危险所在。而且到目前为止，还没有人真正谈论这一点。
+<details><summary>Original English</summary>
+>> Yeah, there are several different risks. First of all, the obvious one is the business risk. The Chinese, of course, are probably the best in the world at reverse engineering these highly technical gizmos, right? They they only really needed one chip so that they could reverse engineer it. But even more than that, Steven,
+
+what about the pillow talk that was involved between these two?
+
+Let's say they're laying there in bed. They're not talking about chips. She might say, "How was your conversation with President Trump? What did he have to say? Anything going on? Anything new? Oh, how exciting. Oh, you're so important, Jensen. You get to talk to the president of the United States anytime you want." Did he say anything? What's he say about the Chinese? What's he say about trade? What's he say about CIA or DoD? What kind of chips are they using? What kind of chips is DARPA developing? What does NSA have to say about all this?
+
+That's the real danger. And so far, nobody's really talking about that.
+</details>
+
+>> 是什么让黄仁勋容易受到这种手段的接近？
+<details><summary>Original English</summary>
+>> What made Jensen vulnerable to an approach like this?
+</details>
+
+>> 是自我？是……
+<details><summary>Original English</summary>
+>> Is it ego? Is it
+</details>
+
+>> 哦，当然了。
+<details><summary>Original English</summary>
+>> Oh, sure.
+</details>
+
+>> 孤独？到底是什么？
+<details><summary>Original English</summary>
+>> isolation. What is it?
+</details>
+
+>> 是自我。是年龄。
+
+我……我比你大得多。我62岁了。但至少我还有脑子。所以我知道，如果一个25岁或30岁的女人对我微笑，我也就是礼貌地点点头走开。对吧。显然，他是足够孤独的。再说一次，这是一个结婚41年的人。他可能有点厌倦了。你知道，家里的生活平淡无奇。他有权势。他富有。只要他想，他可以拿起电话打给十几个不同的世界领导人。然后，他生命中缺失的那一部分——一个年轻漂亮的女人，跟他有了眼神接触，一切就都改变了。
+<details><summary>Original English</summary>
+>> It's ego. It's age.
+
+I I'm a lot older than you are. I'm 62. But at least I have half a brain. So I know that if a 25year-old or 30-year-old woman smiles at me, I just kind of nod politely and move on. Right. Apparently, he was lonely enough. And again, this is a guy married for 41 years. He's probably a little bored. You know, things are blah at home. He's powerful. He's rich. He can pick up the phone and call a dozen different world leaders if he wants to. And then the one part of his life that's missing, a beautiful young woman, makes eye contact and everything changes.
+</details>
+
+### 前俄罗斯卧底女特工现身说法
+
+>> 说到美人计，我们现场就有一位曾是俄罗斯卧底间谍的“美人计”特工。欢迎，阿莉娅（Aaliyah）。
+<details><summary>Original English</summary>
+>> Speaking of honeypotss, we have a honeypot here who used to be a Russian undercover spy. Welcome, Aaliyah.
+</details>
+
+>> 很高兴见到你。
+<details><summary>Original English</summary>
+>> Pleasure to meet you.
+</details>
+
+>> 谢谢你。
+<details><summary>Original English</summary>
+>> Thank you.
+</details>
+
+>> 很高兴见到你。荣幸。很荣幸见到你。你想过来在这边就座吗？谢谢。
+<details><summary>Original English</summary>
+>> Nice to meet you. Pleasure. Pleasure to meet you. Do you want to come take a seat around here? Thank you.
+</details>
+
+>> 阿莉娅（Aliyah），我得向大家介绍你，这样观众才能知道你是谁，知道你在这种事上的经历。请给我一段相关的自我介绍。
+
+我曾是一个在档案文件上并不存在的女人，拥有不同的名字、不同的外表、不同的样貌，但不知怎的历经了所有这些挑战和各种危险任务幸存了下来。我现在坐在这里，感到非常荣幸能坐在你们面前，因为那个出生在苏联某个阴沉小城市、呃、对生活和未来没有任何信念、没有任何希望、在这个共产主义体制下连说话甚至梦想的权利都没有的女孩，如今能坐在这里亲身分享我的故事，这对我来说是一项巨大的特权。所以，我感到非常荣幸来到这里。
+
+那么有“honeypot”（美人计）这个词。这是个带有冒犯性的词吗？
+<details><summary>Original English</summary>
+>> Aliyah, I have to introduce you so the audience know who you are and you know your experience on this story. So give me the relevant introduction. I was a woman who doesn't exist in the paper, who had different name, different appearance, different look, but somehow surviving through all these challenges and different dangerous missions. I'm right now sitting here and I'm very honored to be in front of you because that girl who was born in Soviet Union, the gray small city, uh without any belief in life and future, without any hope, without the right to speak and even dream in this communism now being here and actually sharing my story, it's a big privilege for me. So, I'm very honored to be here. So there's this term honeypot. Is that an offensive term?
+</details>
+
+>> 并不算。并不算。美人计（Honey pot）、性间谍（sex espionage）和温柔陷阱（honey trap）是一回事。
+<details><summary>Original English</summary>
+>> Not really. Not really. Honey pot sex espionage and honey trap is the same.
+</details>
+
+>> 所以你基本上就是个色诱间谍。
+<details><summary>Original English</summary>
+>> So you were a sex spy basically.
+</details>
+
+>> 基本上是的。没错。
+<details><summary>Original English</summary>
+>> Basically. Yes.
+</details>
+
+>> 好吧。那是怎么发生的？你是在什么年龄加入的，并且你是为俄罗斯做这个吗？
+<details><summary>Original English</summary>
+>> Okay. And how does that happen? What age do you get in and you did this for Russia?
+</details>
+
+>> 我……是的，我是。我出生在苏联，不过后来我是来自一个哈萨克斯坦鞑靼人家庭，但我们最终生活在莫斯科。我的父亲是一名高级军官，当我满18岁时，他真的直接把我带到了我的第一个部门，也就是打击人口贩卖和毒品走私的刑事调查部门，而我当时其实已经把文件交进大学打算成为一名设计师了。我真的很喜欢时尚，我原本想去、你知道、去那里工作，然后我父亲说：“听着，我投入了这么多时间训练你成为一名特工人员
+<details><summary>Original English</summary>
+>> I Yeah, I did. I was born in USSR but then I'm coming from Kazakhstan Tatarstanian family but we ended up living in Moscow. my father that I was a highranking officer and when I turned 18 years old he literally brought me to my first department which was criminal investigation fighting human and drug trafficking and I had already enrolled my papers into university to become a designer. I really loved fashion and I wanted to you know work there and then my dad say listen I've invested so much time to train you to become an operative
+</details>
+
+<!-- chunk 3/14 -->
+
+……一名特工，所以你别无选择，因为这是我们国家、我们家族的荣耀。我的祖父在二战期间参战，他是一位国家英雄。我的意思是，这对我家庭来说当然是巨大的荣耀，但我感到责任重大，因此我无法拒绝我父亲。尤其是他有着穆斯林背景。我其实做过 baptist stilada，后来我在希腊生活时，又皈依了东正教。所以，生活在那样严格的家庭背景中，面对这样一位坚信自己爱国情怀的父亲，他在我18岁时把我带到了我的第一个部门。凡是进入该部门的人，都必须去 Hi 学习——
+<details><summary>Original English</summary>
+an agent so you have no other way because this is the pride of our country of our family my grandfather was fighting during second war he's a national hero I mean it's it's a big pride of course for my family but I was so obliged so I couldn't say no to my dad especially he's coming from Muslim background I actually did baptist stilada so I actually then took um Orthodox religion in Greece when I lived there so living in that strict background with my father who was you know this man believing in his patriotism so he brought me to my first department at 18 years old everybody who would enter the department they had to go to study in the Hi,
+</details>
+
+>> 我能问一下吗，你18岁时以为自己会成为什么样的人？当你来到那所学院时，你以为自己会成为军人、间谍，还是“美人计”特工（honeypot）？当时明确吗？
+<details><summary>Original English</summary>
+>> can I just ask what did you think you were going to become when you were 18? When you arrived at that academy, did you think you were going to become someone in the military, a spy, or a honeypot? Was it clear?
+</details>
+
+>> 不，完全没有。我当时真不知道。所以那时18岁，我还是个处女。我没有男朋友，也从没吻过男孩子。所以我对人际沟通一无所知，尤其是跟男性交往。我父亲只教过我心理学、体能训练和射击。所以当我上第一节课时，我脑子里完全没有任何概念，我们理应成为行动人员，这意味着——
+<details><summary>Original English</summary>
+>> No, absolutely not. I actually didn't. So that time at 18, I was virgin. I didn't have any boyfriend. I never kissed a boy. So I didn't know anything about communication, especially with men. My father taught me only like psychology and uh physical training and gun shooting. So when I came to my you know first lesson and I didn't have any idea so we supposed to become operatives meaning that
+</details>
+
+>> 我是指我们本该在外勤一线，像外勤特工那样，有时会在部门里处理文件等等，但那时我对“美人计”（honey trap）一无所知。事实上，在俄罗斯他们绝不会称其为“美人计”，他们会说你被选中参加这个绝密项目，它是基于克格勃军官和心理学家开发的机密技能。你不得将这些知识透露给你的家庭成员，显然也不能透露给你的同事、朋友或任何人。第一年刚进来的学生大约有350人。我记得第一天我们排队开简报会时，这所学校的校长亲自挑出了几名男女特工，其中包括我。所以总共大约有五个女孩。每个人的身高都必须符合一定标准，不能太高，也不能太矮。最理想的是5英尺6英寸，年龄要在26岁以下。这也是重要参数之一。在场的所有女孩都很年轻漂亮，但风格各异。比如有一个金发碧眼，是典型正统的俄罗斯长相；另一个是一头红发。我当时有个外号，他们给我起的外号叫“异域风情”（exotic），因为我有亚洲背景；还有一个女孩留着一头黑色长发。每个人都不一样，这样做是为了能够将她们安插进不同的行动和任务中，因为大家要在不同的部门工作。那时我对“美人计”（honeypot、honey drop）一无所知。事实上，我是很久之后才明白的，那是在我们学了一些非同寻常的科目、课程和技巧之后，那些东西我后来在任何书籍或互联网上都从未见过，或者——
+<details><summary>Original English</summary>
+>> I mean we supposed to be in the field like field agents and sometimes we would be in the department like working on the papers on our papers and so on but that time I didn't know anything about honey trap in fact in Russia they would never call it honey trap they would say you are chosen for this program which is secret uh based on classified techniques uh developed by KGB officers and psychologists. You're not allowed to share these knowledges with your family members obviously your colleagues, friends or anyone. And it was about 350 students who just came on the first like year. And um I remember the first day when we were like lining up like you know having a briefing our principal of this school he actually handpicked a few male and female agents including me. So altogether we were like five girls. Everybody has to be a certain height not too tall not too short. So ideally 56 and they should be before like 26 years old. So it's also like one of the important parameters. So all the girls who were there, they were like young and pretty but all different. So they were like one blonde, blue eyes, you know, like a proper Russian appearance. Another one was like with ginger hair. I had a nickname. They gave me a nickname exotic. So I had this, you know, Asian background. Another girl was like with the long black hair. So everybody were different and it was for the purpose in order to be able to install them in different operations and missions because everybody were working in different departments and um I didn't know anything about the honeypot, the honey drop. In fact, like I understood it much later only when we studied like some unusual subjects and lessons and techniques which um I actually never found after in any books or internet or
+</details>
+
+### 特殊技能与“爱意轰炸”
+
+>> 他们开始教你们的那些非同寻常的技能是什么？
+<details><summary>Original English</summary>
+>> what were these unusual techniques they started to teach you
+</details>
+
+>> 比如，好，大约70%到80%都是关于人类心理学，尤其是男性心理学，其余的则全都是关于如何利用亲密关系来控制男人的大脑。
+<details><summary>Original English</summary>
+>> like for example okay like 70 80% were all about human psychology especially men psychology and the rest were all about how to control man's brain using intimacy.
+</details>
+
+>> 好吧。我们有些模块，对吧？某个地方。
+<details><summary>Original English</summary>
+>> Okay. We have some blocks, don't we? Somewhere.
+</details>
+
+>> 是的。基本上就是你如何与目标建立关系。一开始你需要收集关于目标的信息。当然，接着你就会进入“爱意轰炸”（love bombing），也就是你知道的，各种赞美。
+<details><summary>Original English</summary>
+>> Yes. Uh it's basically how you establish relationship with your target. And you need in the beginning to um gather information about your target. Of course, then you go into love bombing, which are as you know, compliments.
+</details>
+
+>> 你能对约翰进行一下“爱意轰炸”吗？当然可以。这太让人耳目一新了，对吧？
+<details><summary>Original English</summary>
+>> Could you love bomb John please? Of course. That's way refreshing, right?
+</details>
+
+>> 好的，约翰，做好准备。这是糖衣炮弹，这不是真的。好的。
+<details><summary>Original English</summary>
+>> Okay, John, prepare yourself. This is honey. This is not real. Okay.
+</details>
+
+>> 哦，真有意思。我很喜欢。
+<details><summary>Original English</summary>
+>> Oh, it's funny. I I love that.
+</details>
+
+>> 你看，但我会说：“哦，得了吧。我的年纪都能当你父亲了。”
+<details><summary>Original English</summary>
+>> See, but I would say, "Oh, come on. I'm old enough to be your father.
+</details>
+
+>> “目标没有年龄限制。”
+<details><summary>Original English</summary>
+>> Target doesn't have any age."
+</details>
+
+>> 你看。
+<details><summary>Original English</summary>
+>> See,
+</details>
+
+>> 所以我会接着说：“约翰，你的所作所为让我印象太深刻了。我读了好多关于你的报道，看了你的每一个采访，还订阅了你的 YouTube 频道。”
+<details><summary>Original English</summary>
+>> so I would go, "John, I'm so impressed of what you're doing. I read so much about you and I watched every single your interview and I subscribed to your YouTube channel.
+</details>
+
+>> 你刚才就是这么说的。她一走进来就说了这些。
+<details><summary>Original English</summary>
+>> This is what you said. She said this when she walked in.
+</details>
+
+>> 我用希腊语说了一句类似“很高兴认识你”的话，因为我收集了关于你的信息，而且我——
+<details><summary>Original English</summary>
+>> I said something in like in Greek like nice to meet you because I gathered my information on you and I
+</details>
+
+>> 了解到你懂希腊语，因为你是在——
+<details><summary>Original English</summary>
+>> understood that you know Greek because you were raised
+</details>
+
+>> 希腊家庭中长大的。而且你也是东正教徒。这就是为什么我说我也皈依了东正教。所以那一刻我架起了一座桥梁——
+<details><summary>Original English</summary>
+>> in Greek families. So and you're also Orthodox. That's why I said I'm also I took an Orthodox religion. So I that time I built a bridge,
+</details>
+
+>> 一种融洽关系，一种相似性。于是你的大脑——
+<details><summary>Original English</summary>
+>> a report like a likeness. So your brain
+</details>
+
+>> 开始觉得，哦，她和我有很多相似之处。所以——
+<details><summary>Original English</summary>
+>> starts to think like oh she has like similar things like me. So
+</details>
+
+>> 才过了5秒钟，我们之间就建立了连接。
+<details><summary>Original English</summary>
+>> 5 seconds into it and we have a connection.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 我会从赞美开始，但不是那种“天哪，我好喜欢你的西装，我好喜欢你的发型”。我会去赞美约翰的成就和工作，因为对于一个男人来说——如果谈论的是睿智聪明的男人、成熟的男人，比如现在这种情况，或者对延森（Jensen）也是一样——关键都在于成就，都在于工作。因为这太艰难了，我们都知道要走到那个位置，要有足够的勇气去对抗政府、对抗中情局有多么不易——
+<details><summary>Original English</summary>
+>> I would start from complimenting but not like oh my god I love your suits. I love your hairstyle. I would go into complimenting John's achievements and work because for a man I mean if you're talking about wise intelligent men mature men in this case for example or with Jensen as well it's all about achievements it's all about work because it's so hard and we all know how hard it is to actually get to that position to be brave enough to go against government CIA
+</details>
+
+>> 甚至明知自己会进监狱，却依然坚持自己的信仰。这令人肃然起敬。而且在这种情况下，这显得非常真实，对吧？因为我由衷相信我所说的话——
+<details><summary>Original English</summary>
+>> and even knowing that you would go to jail but still stand for what you believe and this is impressive and in this case it's very authentic right because I genuinely believe in what I'm saying
+</details>
+
+>> 这并不是我在凭空编造——
+<details><summary>Original English</summary>
+>> it's not like I'm making it up
+</details>
+
+>> 你能感受到我是真的因为你敢于发声、有勇气而钦佩你。所以基本上都是赞美，但我会说主要集中在成就和工作事业上。
+
+这非常有意思，因为这一切似乎也适用于商业，比如商业谈判、销售、说服、招聘等等。所以这里面有很多相通之处。所以你的第一步实际上是对他做背景调研。
+<details><summary>Original English</summary>
+>> you feel that I really admire you for this for speaking out and uh you know be brave so it's all mostly about like complimenting but mostly achievement and work career I would say
+
+This is super interesting because this all seems to also apply to business, you know, doing deals in business and sales and persuasion and hiring people and all those things. So, there's a lot of adjacencies here. So, what you step one is actually you've done your research on him.
+</details>
+
+>> 绝对是的。
+<details><summary>Original English</summary>
+>> Absolutely.
+</details>
+
+>> 你走进来，用希腊语同他交谈。你坐下来，给他送上所有这些赞美。
+<details><summary>Original English</summary>
+>> You walked in and you spoke to him in Greek. You sit down, you give him all these compliments.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 这种“爱意轰炸”过程会持续多久？
+<details><summary>Original English</summary>
+>> How long does that love bombing process last?
+</details>
+
+>> 当然取决于具体情况，但你也不应该给予过度的爱意轰炸，不过爱意轰炸也可以持续更长时间。例如，如果建立了联系，我就会像这样说：“约翰，你知道，如果你能帮我这个忙，我真的会非常感激。我现在正在写一本书，是一本有剧本的书，我正在构思一个发生在希腊的任务。我曾经执行过一个任务，去打击一个从乌克兰和波兰拐卖少女的犯罪团伙，我非常想听听你对这件事的看法。请问我能发给你看一看吗？”
+<details><summary>Original English</summary>
+>> Depends from the situation, of course, but uh you shouldn't also give too much love bombing, but love bombing also can last for longer. for example, if establish connection and I would be like, John, you know, really I would really appreciate if you can give me this favor. I'm working on this book right now and it's a scripted book and I'm thinking about one mission happened in Greece and I did one mission like fighting one criminal gang who was kidnapping girls from Ukraine and Poland and I really want your perspective on that. Can you I please send it to you so you can have a look please
+</details>
+
+>> 对。
+<details><summary>Original English</summary>
+>> right
+</details>
+
+>> 但事实上，你知道——
+<details><summary>Original English</summary>
+>> so but in fact you know
+</details>
+
+>> 而且那毫无害处——
+<details><summary>Original English</summary>
+>> and that's harmless
+</details>
+
+>> 那不会引发任何警惕——
+<details><summary>Original English</summary>
+>> that doesn't cause any red flag
+</details>
+
+>> 你为什么要那样做？
+<details><summary>Original English</summary>
+>> why did you do that
+</details>
+
+>> 因为当我们向某人寻求一点小小的帮助时，大脑会立刻觉得：如果我为这个人做了事，投入了我的时间、精力和心血，我就已经喜欢上这个人了，因为我为这个人付出了。那么现在约翰更有可能做什么呢？
+<details><summary>Original English</summary>
+>> because when we ask someone for a small favor the brain instantly feels like if I do something for this person and invest my time invest my energy and efforts I already like this person because I do something for this person. So now John is more likely to do what?
+</details>
+
+>> 嗯，帮我一些小忙。
+<details><summary>Original English</summary>
+>> Well, help me with some little favors.
+</details>
+
+>> 好的。
+<details><summary>Original English</summary>
+>> Okay.
+</details>
+
+>> 或者比如当我的导师，对吧？因为显然后翰比我更有经验、更博学，我对此很赞赏，我也承认这一点。
+<details><summary>Original English</summary>
+>> Or like be my mentor for example, right? Because obviously John is more experienced, knowledgeable than me and I appreciate that and I admit that.
+</details>
+
+>> 而且因为你向他求助，你也让他觉得自己很有价值。
+<details><summary>Original English</summary>
+>> And because you've asked him for help, you've also made him feel valuable.
+</details>
+
+>> 绝对是的。
+<details><summary>Original English</summary>
+>> Absolutely.
+</details>
+
+>> 好的。
+<details><summary>Original English</summary>
+>> Okay.
+</details>
+
+>> 是的。所以这也是爱意轰炸式关注的一部分。当我建立眼神交流时——
+<details><summary>Original English</summary>
+>> Yeah. So this is also part of love bombing attention. when I establish eye contact.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 当我发现共同兴趣时，例如就像我说的，也许我们喜欢做类似的事，比如体育运动；你做公开演讲，你11月70日——11月17日要去某个地方。
+<details><summary>Original English</summary>
+>> When I find mutual interests, for example, as I said, like maybe we like to do something similar like sport activities, you do public speeches, you're going 70th November to somewhere 17th November.
+</details>
+
+>> 所以我就会说，哦，如果我去华盛顿，我就会去捧场，诸如此类的，你知道吧。所以，你研究了这些信息，收集了这些信息，进行了分析，然后你就会像这样说——
+<details><summary>Original English</summary>
+>> So I was like, oh, if I would be in Washington, I would come for example, you know. So, you studied this information, you gathered this information, you analyze it, and then you say like
+</details>
+
+>> 正在冒汗。
+<details><summary>Original English</summary>
+>> is sweating.
+</details>
+
+>> 可不是吗？她……她已经把我拿捏得死死的了。
+<details><summary>Original English</summary>
+>> I know, right? She's she's on to me already.
+</details>
+
+>> 当我听说你会来演播室时，说实话我太激动了，因为这太不可思议了。当然，我早就了解你的工作和所有事迹了。
+<details><summary>Original English</summary>
+>> When I heard that you would be at the studio, I got so excited, honestly, because it's incredible. And of course, I I knew about your work and everything much earlier.
+</details>
+
+>> 谢谢你。
+<details><summary>Original English</summary>
+>> Thank you.
+</details>
+
+>> 所以，好吧。你现在是在……这是演出来的，还是……我不太确定这是什么——
+<details><summary>Original English</summary>
+>> So, yeah. Are you still is this an act or is this I'm not sure what
+</details>
+
+>> 问题在于，我觉得——别人也问过我这个问题——我觉得这已经建立或融入到我的 DNA 里了。所以我觉得这更像是——
+<details><summary>Original English</summary>
+>> the thing is I feel like and people ask me that um question I feel like it's already established or like implemented into my DNA. So I feel like this is more
+</details>
+
+>> 我的天性。我就是这样的人。这就是我的生活方式。而在人际沟通中，它确实给我带来了很多好处，在——
+<details><summary>Original English</summary>
+>> my nature. This is the way I am. This is the way I live. And it actually gives me a lot of benefits in communications in
+</details>
+
+<!-- chunk 4/14 -->
+
+……生意，任何类型的人际关系。所以大家都会说：“天呐，你人太好了、太友善了，你竟然记得关于我们的所有事情。”就像你记得那些小细节，比如我提到你的活动，你在邀请别人——当你记住这些细节时，人们真的会非常感激。
+
+<details><summary>Original English</summary>
+businesses any type of relationship. So everybody would say, "Oh my god, you are so nice and kind and you remember everything about us." Like so when you remember little details like I mentioned about your event and you were inviting people, when you remember these little details, people really appreciate that.
+</details>
+
+>> 嗯。所以现在，你当初出于美人计目的接受的训练，和你现在真实的为人之间，其实并没有区别，因为在与人打交道时，这两者都很有用。嗯，我想说，美人计训练给了我很多非常棒、很有意思的知识，这也是为什么我要把这些知识分享给全世界，因为显然当我意识到这些信息在任何地方都找不到时，我觉得，你知道，它确实帮助了我生存下来，渡过……
+
+<details><summary>Original English</summary>
+>> Mhm. So there's no difference now between what you were trained to do for the honeypot reasons and actually who you are now because they were both beneficial when dealing with humans. Well, I would say honey poet gave me a lot of interesting great knowledges and that's why I share these knowledges with the world because apparently I when I understood that this information doesn't exist anywhere I felt like you know it did help me to survive to go through
+</details>
+
+>> ……危险的任务，而且实际上保住了我的命。我觉得女性，特别是生活在这个父权世界里的女性——抱歉，无意冒犯，但事实依然如此——女性生活在这个世界上真的很难，因为依然没有平等。女性依然要在职业生涯中经历很多困难，拿更少的薪水。很抱歉提到这些，但事实就是如此。所以对于一个在男性主导的世界里工作的女性来说，周围有90%都是男性，而我当时的情况就是这样，对吧？所以这非常不容易。如果你懂得如何妥善运用这些技巧，你就不会成为受害者。而我曾经就是受害者。我曾被虐待。我曾被我的指挥官强奸。我经历过很多事情，我不得不牺牲自己的身体，我有过自杀的念头，有些时候，你知道，我曾试图结束自己的生命，后来我一直在接受心理咨询。所以我理解女性如果孤立无援会有多么艰难，尤其是出生在那些特定国家，比如所谓第三世界国家……
+
+<details><summary>Original English</summary>
+>> dangerous missions and actually kept me alive and I felt like women especially women living in this patriarchal world sorry no offense but still like it's really hard for women to live in this world because it's still there is no equality. Still women have to go through like many difficulties and careers and like less uh salary payment. I'm sorry to speak about it but like it is what it is. So for a woman to work in man's world when they're like 90% of men and that's what happened with me, right? So it's quite hard and if you know how to use these techniques in a nice way so you don't become the victim and I was the victim. I was abused. I was raped by my commanders. I went through you know many things where I had to sacrifice my body and I went through suicidal thoughts and some you know I I was trying to take my life and I was working with therapist after. So I understand how hard it is for a woman if she's by herself especially raised in that particular countries like you know third countries let's say
+</details>
+
+>> ……所以我觉得，当我把这些技巧分享出来，去实际教授女性时，我是在赋予她们力量，这确实让我感到快乐。
+
+<details><summary>Original English</summary>
+>> so I feel like when I share these techniques and I actually teach women I empower them and that's what makes me happy actually.
+</details>
+
+>> 所以你在接受训练的时候……
+
+<details><summary>Original English</summary>
+>> So when you were in training
+</details>
+
+>> ……他们教你进行情感轰炸。
+
+<details><summary>Original English</summary>
+>> they taught you to love bomb.
+</details>
+
+>> 是的。
+
+<details><summary>Original English</summary>
+>> Yes.
+</details>
+
+>> 他们还教了你别的什么吗？
+
+<details><summary>Original English</summary>
+>> Was there anything else that they taught you?
+</details>
+
+>> 噢，当然有。在情感轰炸之后，当我建立了这种好感，并某种程度上打开了信任的缺口——但还没有完全建立充分信任时。我给予了大量的关注之后，接下来我们就会进入信息控制阶段。基本上，信息控制就是我开始分析约翰的核心圈子。
+
+<details><summary>Original English</summary>
+>> Oh yes absolutely. So after love bombing when I establish this um likeability and breach of sort of like trust but not trust enough. So I give a lot of attention right after that we go into information control and basically information control would be um where I start to analyze the inner circle of John.
+</details>
+
+>> 你平时做什么？去哪里？和谁说话？你的兴趣是什么？然后让自己融入到你生活的各个部分，比如去参加相同的活动……
+
+<details><summary>Original English</summary>
+>> Uh what do you do? Where do you go with with whom do you speak? what are your interests and involving myself into your parts of your life like for example going to the same events
+</details>
+
+>> ……就像这样。
+
+<details><summary>Original English</summary>
+>> just like this.
+</details>
+
+>> 对。对。我想说的是，比如他们在台湾的会议上相遇，但在这之前……
+
+<details><summary>Original English</summary>
+>> Yeah. Yeah. I would say like when they met uh at the conference in Taiwan but before
+</details>
+
+>> ……他们其实在加州就见过了，那是一个媒体会议，他们见过……
+
+<details><summary>Original English</summary>
+>> they actually met in California it was a media uh conference and they met
+</details>
+
+>> ……是的。我想那大概是在此之前的20……然后他们又去台湾参加了另一场会议，接着我们就已经发展出了那种关系……
+
+<details><summary>Original English</summary>
+>> in Yes. I think it was like 20 before this and then they went to Taiwan to another conference and then we have like already relationship going on
+</details>
+
+### 间谍规模与情报机构的演变
+
+>> ……说到这个，我的问题是，在间谍活动中，是否像比如中国那样，他们培训了一千个人，然后试图把这一千个人都安插到 Jensen 周围的重要岗位上，希望能有其中一个成功打入？是这样吗？这有时需要多长时间？你明白我的意思吗？
+
+<details><summary>Original English</summary>
+>> with that. My question is in espionage is it like I don't know China they train up a thousand people and they try and get all thousand into an interesting role in and around the Jensen and they hope that one of them gets there. Is that like and how long does it sometimes take? Do you know what I'm saying?
+</details>
+
+>> 在西方，答案是否定的。纯粹是因为你没有人手和财力去开展那样的事情。不过，中国的情况不同。就在过去的20到30年里，中国已经变得老练得多。中国的谍报部门，在我加入中情局那会儿，中国的谍报部门几乎完全专注于技术领域，但他们的英语语言能力非常差，以至于对我们构不成太大威胁。他们的威胁在于他们能够而且确实以美籍华人为目标，但总体而言他们的英语太糟糕了，算不上什么大威胁。我们当时要担心得多的是俄罗斯人、古巴人、朝鲜人以及类似的国家。我可以问你一个问题吗？
+
+<details><summary>Original English</summary>
+>> In the west the answer would be no. just because you don't have the the manpower, the wherewithal to do something like that. Now, the Chinese are are different. The Chinese have become far far more sophisticated just in the last 20 or 30 years. Uh the Chinese intelligence service, when I joined the CIA, the Chinese intelligence service was almost solely focused on technology, but their English language capabilities were so poor that they really weren't much of a threat to us. They were a threat in that they could target and they did target Chinese Americans, but their English was generally so bad that it was no big deal. We were far more worried about the Russians, the Cubans, the North Koreans, countries like that. May I ask you a question?
+</details>
+
+>> 当然可以。
+
+<details><summary>Original English</summary>
+>> Absolutely.
+</details>
+
+>> 我推测，如果你处于这样一个岗位上，你天生一定得是个外向的人。是这样吗？
+
+<details><summary>Original English</summary>
+>> I assume that if you're in a position like this, you have to be a natural extrovert. Is that true?
+</details>
+
+>> 老实说，我不认为我是个外向的人。我也从来不是，因为我一直非常内向，一个非常不自信的女孩……
+
+<details><summary>Original English</summary>
+>> To be honest, I don't think that I'm extrovert. And I haven't been because I've been very shy um a very unconfident girl
+</details>
+
+>> 真的吗？
+
+<details><summary>Original English</summary>
+>> really.
+</details>
+
+>> 是的。就像一直生活在恐惧之中。所以即便到了现在……
+
+<details><summary>Original English</summary>
+>> Yeah. Like living in the spheres all the time. So and even now
+</details>
+
+>> ……我也会去跑各种行程，比如公开演讲活动、走红毯等等。但我必须得回家，把房门关上，自己一个人待上至少几天，仅仅是为了恢复和充电。
+
+<details><summary>Original English</summary>
+>> I would do my things like public speaking events and red carpets and all that. But I would need to go home, close my room and be by myself for at least a few days just to recover and recharge.
+</details>
+
+>> 真的吗？
+
+<details><summary>Original English</summary>
+>> Really?
+</details>
+
+>> 是的。甚至连电话都不打。所以我不认为——我认为这是一种技能，我觉得每个人都可以学习并打磨这些技能。我也想问你，约翰，如果允许我问的话——而且这也是针对刚才那个问题的回应：你是否认为在中国，正因为劳动力如此廉价，所以培养这些未来的特工并把他们派到任何国家才如此容易，就是去碰运气，谁成功了、谁搞定了那个目标就算谁的，对吧。“祝你好运，干得漂亮；但这999名女性没成功，也没关系，至少有人做到了。”
+
+<details><summary>Original English</summary>
+>> Yeah. So even without speaking on the phone. So I don't think I think this is skills and I think everybody can learn and craft these skills. I also wanted to ask you John if if I may say but do and also this is the the the question to your question. Do you think that in China because the labor is so cheap that's why it's so easy to teach this future agents and send them to any countries and just uh try and whoever will win whoever will get that guy you know. Okay, good luck. So, well done. But these 999 women didn't succeed. So, it's okay. At least somebody did it.
+</details>
+
+>> 是的，我认为是这样。回答你的问题，斯蒂芬，在西方不可能，但在中国，确实如此，我完全可以想象。
+
+<details><summary>Original English</summary>
+>> Yeah, I do. In answer to your question, Stephen, I in the West, no. In China, sure. Yeah, I could see that.
+</details>
+
+### 低薪、意识形态与牺牲奉献
+
+>> 因为在俄罗斯也是这样的。像我的工资，换算成现在的钱，每周工作6天大概也就100美元。有时甚至一天工作12个小时。
+
+<details><summary>Original English</summary>
+>> Because in Russia, it's like this. Like my salary was I mean, if it would translate to this money, it was like $100 for working 6 days a week. Sometimes like even like 12 hours.
+</details>
+
+>> 一百美元多久？
+
+<details><summary>Original English</summary>
+>> $100 a what?
+</details>
+
+>> 一个月。你的报酬是一个月100美元。
+
+<details><summary>Original English</summary>
+>> A month. You got paid $100 a month.
+</details>
+
+>> 一个月，是的。所以当大家说“噢，你搞美人计，你过着奢华光鲜的生活”时，我的意思是，这又不是詹姆斯·邦德的电影，对吧？人们根本不理解。我说：“你其实根本拿不到多少钱。”而且你知道，妓女赚的钱可比这些特工多得多了。
+
+<details><summary>Original English</summary>
+>> A month. Yes. So when they say like, "Oh, you did like honey trap and you had all this luxury glomeorous life." I mean, it's not the movie of James Bond, right? So people don't understand. I'm like, "You actually don't get paid." And like, you know, prostitutes, they get paid much more rather than, you know, these agents.
+</details>
+
+>> 我在中东的时候，曾和一位对外情报局（SVR）的官员关系不错……
+
+<details><summary>Original English</summary>
+>> I was friendly with a with a u an SVR officer,
+</details>
+
+>> ……也就是克格勃的继承机构。我和一名克格勃军官挺熟的。所谓的挺熟，就是比如在鸡尾酒会上，我会打个招呼“你好啊，伊万”，他也会说“你好，约翰”。然后我碰巧读到一篇文章——这正好是苏联解体之后。我在《时代》杂志上读到一篇文章，说俄罗斯外交官的平均月薪大概是100美元。后来我在一个酒会上见到他，我就说：“伙计，一个月才100美元？”我心里在想——当时我还不是外勤干事，我只是一名分析师——但我心想我可以把他引荐给我的同事。结果他说：“不然你以为我妻子为什么去教滑冰？这是我们能把饭摆上桌子的唯一办法了。”不久之后，他就辞职去了一家银行工作，收入也稍微多了一点。但是，你刚才提到了很重要的一点：干这行不是为了钱。
+
+<details><summary>Original English</summary>
+>> the successor of the KGB. friendly with a with a KGB officer when I was in the Middle East. Friendly like I'd say hello, you know, Ivonne, even say hello, John, at the cocktail parties. And then I happened to read an article, this is right after the Soviet Union fell apart. I read an article in Time magazine saying that the average Russian diplomat made about $100 a month. And I saw him at a cocktail party and I said I said, "Man, $100 a month?" thinking, well, I wasn't a case officer at the time. I was an analyst, but thinking I'll I'll refer him to a colleague of mine. And he said, "Why do you think my wife teaches ice skating? You know, it's the only way we can put food on the table." Next thing I knew, he resigned and took a job with a bank, so he made a little bit more. But, but you raised an important point here. You're not doing this for the money.
+</details>
+
+>> 是国家自豪感。
+
+<details><summary>Original English</summary>
+>> It's the national prize.
+</details>
+
+>> 绝对不是为了钱。我父亲当时也是那样。他就拿着那点工资，我还记得有那么一段时期，我上学时真就只能喝这么一杯水，没吃的，没早饭，然后空着肚子去学校上6个小时的课，因为家里根本就没有食物。
+
+<details><summary>Original English</summary>
+>> Absolutely not. So, my father was like that. So he had like this salary and I remember that there were time where like literally when I was going to the school I could drink like this glass of water, no food, no breakfast and I would go to the school for 6 hours because we simply didn't have food.
+</details>
+
+>> 嗯。所以他们灌输给你的真的就是爱国主义……
+
+<details><summary>Original English</summary>
+>> Mhm. So it really is the the patriotism that they saw you
+</details>
+
+>> 纯粹是爱国主义，纯粹是意识形态：你做这些是为了你的家庭、为了国家、为了无辜的人民。这也是为什么我当时确实也被洗脑了。所以我相信，只要我为了崇高的使命活着牺牲自己的身体——而且还有这么一种说法，如果你在执行任务中牺牲了，你就是英雄。我不知道你有没有听说过这个。所以死在任务中是一种特权，因为那样……
+
+<details><summary>Original English</summary>
+>> only a patriotism only ideology that you do something for your family, for the country, for innocent people. And that's why I actually was programmed also there. So I believe that if I sacrifice my body alive and there is like a thing that you know if you die on the mission you're the hero. I don't know if you heard about that. So it's a privilege to die on the mission because then
+</details>
+
+>> ……你为伟大的使命牺牲了自己，你没有作为寄生虫虚度光阴。根据你的经验，当给你一个目标时，是多名女性被分配给同一个目标，看谁能打入内部、谁能通过求职面试、谁能谈成生意；还是给你一个目标，就只有你一个人被指派去接近那个目标？
+
+<details><summary>Original English</summary>
+>> you sacrifice yourself for a big mission and you just didn't waste your time living as a parasite. In your experience, when you were given a target, were multiple women given the same target and was it who can get in, who can pass the job interview, who can do the business deal or was it you were given one target and it was only you that was assigned that target.
+</details>
+
+>> 嗯，在我具体的情况中，只有我一个人，因为在这种情况下，要建立起恰当的关系本就非常困难。但是在收集情报和情感轰炸之前，我们会先进行社会工程，至于后面的其他阶段，我们稍后再谈。
+
+<details><summary>Original English</summary>
+>> Well, in my case u particularly it was only me because in this case it would be very difficult to you know establish the right connection. But we would perform social engineering before gathering information and before love bombing and then the rest of the levels we will talk about it later.
+</details>
+
+>> 什么是社会工程？
+
+<details><summary>Original English</summary>
+>> What is social engineering?
+</details>
+
+>> 社会工程基本上就是，当你——当整个团队或者无论谁，你和某些人一起……
+
+<details><summary>Original English</summary>
+>> Social engineering it's basically when you when the team or like whoever like you know you together with someone
+</details>
+
+<!-- chunk 5/14 -->
+
+因为单凭你自己是很难做到的。你要营造出那种虚拟现实，让你的目标虽然意识不到，但在余光里能捕捉到一些信号和迹象。
+<details><summary>Original English</summary>
+because it's very hard to do it by yourself. You create that virtual reality where your target doesn't understand but uh by the peripheral vision would spot some signals and signs.
+</details>
+
+### 美人计行动与心理操控
+
+>> 给我举个真实的例子吧。好。
+<details><summary>Original English</summary>
+>> Give me a real example. Okay.
+</details>
+
+>> 比如你进行社交工程操控的具体事例。
+<details><summary>Original English</summary>
+>> Where you social engineered something.
+</details>
+
+>> 这不是我一个人完成的。在行动中我一直都是诱饵。在整个任务中，我扮演的是这种工具角色。如果把我的生活比作一部詹姆斯·邦德电影，我就是去勾引詹姆斯·邦德的那个人，而你就是M。
+<details><summary>Original English</summary>
+>> I wasn't doing this by myself. I was always a bait in operations. I was the you know this kind of tool in the whole mission. If you would compare my life to James Bond movie, I would be the one who would seduce James Bond and you would be the one who would be an M.
+</details>
+
+>> M是英国情报机构的头目。
+<details><summary>Original English</summary>
+>> M is the the head of the British intelligence.
+</details>
+
+>> 整个行动幕后的操盘大脑。
+<details><summary>Original English</summary>
+>> The brain behind the whole operation.
+</details>
+
+>> 好的。
+<details><summary>Original English</summary>
+>> Okay.
+</details>
+
+>> 当时我的一个目标是一位犯罪头目，可以说是像巴勃罗·埃斯科瓦尔那样的人。他招揽了一大群追随者，因为在1991年苏联解体崩溃之后，社会上有非常多无家可归的年轻人。所以他就把这些年轻男孩收留下来，给他们提供住所和食物，教他们武术和拳击。于是他们后来就成了街头打手，基本上成了罪犯，也就是那种小罪犯。
+
+他们成了他的追随者。指挥官会制定好完整的策略，然后交给我们团队——我们是外勤特工。我们了解到，这位犯罪头目显然爱过一个长相偏亚裔的女孩，因为她来自巴基斯坦；她有着独特的发型，就是那种长长的编发，穿戴也有特定的风格和时尚。于是我们基本上就围绕那个女孩的形象塑造了我的人设。
+
+当年发生的事情是：在俄罗斯服兵役是强制性的，当这位叫弗拉基米尔的犯罪头目去当了两年兵的时候，她并没有等他，而是嫁人了。等他回来时，她迎面走来，挺着大肚子怀孕了，所以他彻底心碎了。从那之后他就走上了犯罪道路，而且事实上他再也没有结婚，我是说，他从没结过婚，再也没谈过长期恋爱，只是把女人当作一夜情的对象。
+
+我们明白这就是他的软肋所在，于是我们展开了社交工程操控。我们在他周围不同的场合、不同的环境下布置场景——比如在拳馆，在街头的某个地方，或者每当他从车里走出来的时候，他总能看到一些情侣。那些情侣里总会有一个身穿军装的男人，外貌特征相似，金发、蓝眼、身材高大，旁边跟着一个亚裔长相的女孩。他们基本上是我们雇来的演员，他们会在他身边上演这种深情戏码。
+
+在第一幕里，他们相互亲吻、牵手，就像一对热恋的情侣；换一天、换一个时间、换一个场景，她会变成孕妇，他们同样在相互亲吻、牵手。但这些戏码不能同时发生，你得给你的目标时间去观察、去在大脑里留下记忆。这样你实际上就在他心中播下了种子：“也许那个人也可以是我，也许最终我也能拥有这份幸福和彼此相爱的真情。”
+
+到了最后，出现了一对长相相似的情侣，抱着一个小婴儿。当时机成熟了，我们团队中有人早已卧底潜伏——他假扮成一个小毒贩，经由他把我引荐给了我的目标。所以，你永远不要主动去接近你的目标，你一定要先制造出渴望。
+
+当我走进那家原本安排好遇见他的俱乐部时，我已经掌握了他喜欢什么、喝什么酒、爱听什么笑话、喜欢哪种类型的女人，以及他的行事风格等所有细节。所以当我走进去的时候，我基本就成了他的完美理想型。我在他面前完整演好了那一出戏，他对我产生了兴趣。我们就在他脑海中植入了一种渴望，让他觉得他一定要得到我，一定要认识我并和我确立关系。因为我成了那个对他说的所有笑话都捧腹大笑、能顺着他的话往下聊的完美女人。我知道他所有的日程安排，还会表现出“噢，这个那个我都能帮你”。其实我知道你的弱点，但我绝不会那样明说。我就这样去迎合，让自己顺应他。这就是所谓的社交工程操控。
+<details><summary>Original English</summary>
+>> So, one of my targets was um a criminal lord. Let's say like Pablo Escobar. He built a huge army of followers because um that time after Soviet Union you know crush dissolved in 1991 there was so many homeless young people. So he would take all these young people boys and give them the roof the food and teach them martial arts and boxing. So they became after the street fighters basically criminals like you know the small criminals. So they were followers of him and the commander would develop the whole strategy give it to us to the team we are field agents and we find out that apparently this criminal lord he had this love to this girl who looked Asian because she was frombakistan and she had particular hairstyle like you know long braided hair and all this she was wearing particular like uh dress and like fashion style and all this. So we kind of like developed my persona around that girl. So what happened when Vladimir and it's compulsory in Russia when this criminal lord his name is Vladimir was he went to the army for two years she didn't wait for him so she got married and when he came back she actually met him being pregnant so he was really heartbroken so after that he went to become a criminal and he actually never remarried I mean he never married he never been in relationship for a long time he just used girls like kind of like for one night And so what we understood this is his kind of weakness and the social engineering what we did. So around him in different situations in different environments for example in the boxing um gym uh ba which is stoner on the street or wherever when he was walking from the car everywhere he would see some couples there always would be a guy wearing military clothes looking similar like blonde blue eyes tall and there would be an Asian-l looking girl so they were basically actors we were hiring them and they would perform this laugh around him so in In the first scene they were like kissing each other and like holding hands you know like this sweetheart couple on another day in another like you know time in another scene there would be she would be pregnant and um you know they were again like kissing each other holding hands but it should happen like not at the same time. So you give your target time to see to remember. So you basically plant the seeds. So maybe that could be me. Maybe I can have this happiness and like mutual love eventually. And then in the end there was a couple similar looking uh with a little baby. And when the time I mean it was the right time and my team already was undercover. He was um pretending he was um a drug dealer like small hand drug dealer. He introduced me to my target. So you never approach your target first. you always make a desire. So the moment I came to the club where I supposed to meet him, I already knew what does he like uh what kind of drinks does he drink, what kind of jokes he likes, what kind of women he takes, what what is his behavior, everything. So when I walked in, I basically became that perfect woman for him. So I performed that whole act for him and he was interested in me. So we kind of like created desire in his head that he definitely needs me. He definitely needs to meet me and start relationship with me because I became that perfect uh woman who would laugh at all his jobs and continue saying what he's saying. I would know all his uh schedule and I would be like oh I can help you with this and that. Well, I know you I know your for example weaknesses but I wouldn't say like that. So I would become like this. I would adapt myself to him. So this is the social engineering.
+</details>
+
+>> 那个阶段持续了多久，后来又发生了什么？
+<details><summary>Original English</summary>
+>> How long did that last and then what happened?
+</details>
+
+>> 收集情报以及实施社交工程操控的整个前期任务大约进行了两个月。我们的情侣关系维系了8个月，在那期间我成了他的女朋友，并搜集了所有情报，因为我和他全天候待在一起。我窃听了他所有的电话，在他屋里安装了窃听器，对谁在干什么、谁在那里都了如指掌。每当我把这些情报传递给我的指挥官——也就是那位M时，他们就会在各个不同地点展开行动，对这整个帮派实施抓捕，查抄他们……
+<details><summary>Original English</summary>
+>> So the whole uh mission uh on you know gathering information and installing social engineering was about 2 months. Uh our relationship went for 8 months where I became his girlfriend and I did collect all the information because I was with him 24/7. I listened to all his telephone calls. I installed bugs in his house. I knew everybody who is doing what who is like there. And when I was you know passing this information to my commander to M uh they would do the whole arrest of the gang in the different places where
+</details>
+
+>> 哇。
+<details><summary>Original English</summary>
+>> wow
+</details>
+
+>> 他们进行毒品分销的窝点。
+<details><summary>Original English</summary>
+>> they would do like the drug uh supplying.
+</details>
+
+>> 我有几个问题想问。你是怎么把情报传回后方的？是……我们刚才还聊到这个。是……
+<details><summary>Original English</summary>
+>> So a couple of questions. How did you pass the information back? Was it We were talking about this a second ago. Was it
+</details>
+
+>> 是的。我们有一套专门的……警方，就是那种秘密特工会设有的秘密死信箱，把便条之类留在那里。对，正是那样。要么是那种方式……
+<details><summary>Original English</summary>
+>> Yes. So, we had like a special um police uh you know like secret agents they have like a hidden spots where they actually leave some sort of uh notes like Yeah. Oh, yes. Exactly that. So, either it was like that
+</details>
+
+>> 你基本上就是把实体纸条留在某个特定地点……
+<details><summary>Original English</summary>
+>> you were just basically leaving physical paper in a certain place
+</details>
+
+>> 写上日期，写明接下来的行动任务、日期和地点。是的。另外，我还假装自己是个大学生，虽然我显然不是。我会对我的目标说：“噢，我要去大学上课了”，
+<details><summary>Original English</summary>
+>> with uh dates with upcoming missions with dates with places. Yes. Um, also I did pretend that I was a student, but I wasn't obviously. So I would say to my target, oh, I'm going to my college
+</details>
+
+>> 然后我就去大学，但我会从后门溜出去，跟我的团队成员接头，把所有事情都汇报给他，向他通报最新情况。
+<details><summary>Original English</summary>
+>> and I would go to the college, but I would walk from my back door and I would meet my team member and would tell him everything and update him everything.
+</details>
+
+>> 这么说来，你和这个人维持了整整8个月的性关系？
+<details><summary>Original English</summary>
+>> So you were in a sexual relationship with this person for 8 months?
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yes.
+</details>
+
+>> 我有些问题不得不问。
+<details><summary>Original English</summary>
+>> I have some questions to ask.
+</details>
+
+>> 当然可以。
+<details><summary>Original English</summary>
+>> Yes, of course.
+</details>
+
+>> 和一个你大概完全不感兴趣的人发生性关系……
+<details><summary>Original English</summary>
+>> um having a sexual relationship with someone that you are presumably not interested in
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 内心很冲突、很艰难、很不适吧。
+<details><summary>Original English</summary>
+>> conflicting, difficult, uncomfortable.
+</details>
+
+### 美人计中的心理锚定与身体控制
+
+>> 在那一套专门的训练项目中，你必须学习几项技巧，也就是我们现在所说的“美人计”。它的核心基本上就是把你的肉体与情感剥离开来。如果换作现在你让我去跟这个男人睡觉，我肯定不会去；但在那个时候，他长什么样、年纪多大都不重要，你根本不会用那种眼光去看待。
+
+而且其中有特定的技术手段，我觉得有些技术我不该在这里细说，因为太涉及性了，但确实有那么一些技巧，能让你在操作层面给大脑完成编程，让你能在面对这个男人时产生唤起……
+<details><summary>Original English</summary>
+>> There are few techniques you have be had to learn in the special program which now we call honey trap. It's basically when you uh dissociate your body from your emotions. So if you would ask me go and sleep with this guy I mean I wouldn't do it now but that time it doesn't matter how does he look how old is he you don't see it like that and there's certain techniques which I think like I shouldn't mention here because it's too sexual but there are certain techniques which you can uh you can basically do it and program your brain how to have aros arousal with this man
+</details>
+
+>> 好吧，那我必须得问你……
+<details><summary>Original English</summary>
+>> okay I'm going to have to ask you
+</details>
+
+>> 我知道，我这里都快憋不住了……
+<details><summary>Original English</summary>
+>> I know right I'm dying over here
+</details>
+
+>> ……说出来，我也没法在节目里公开。
+<details><summary>Original English</summary>
+>> it up and I can't share it here.
+</details>
+
+>> 如果你真的想去引诱你的目标，就把目标的照片摆在你面前。比如贴在冰箱上，或者是床正对面这种你能一直看到这张脸的地方。所以在真正进入亲密接触之前，你需要先给大脑编程去喜欢这个人。
+
+为了做到这一点，还有一招——我不知道你听没听说过，女特工，或者说实际上任何女性只要愿意都可以这么做——她们应该……我是说好吧，我必须进行自慰，在进行的时候通过特定的词语给自己建立锚定，同时还要借助特定的气味，所以当时组织上会发给我们专门的香水。
+
+香水就是一个锚点。词语也是一个锚点。例如，如果你想让自己变得更性感、更自信，你就得挑选一个词。比如对我来说，当时用的是“我是最棒的，我是女王”，这因人而异。所以一旦我看着这张照片——比如看弗拉基米尔的照片，也就是我的目标——我看着他，在进行那项行为时，我就会把注意力锚定在这个词上，同时也锚定在那种气味上。
+
+那么，我去见他之前会怎么做呢？我事先确实会自慰。很抱歉用了这些字眼，但事实就是如此。不过你知道，有时候对于男性来说，人们会说：“噢，如果你要去约会，你应该先……”
+<details><summary>Original English</summary>
+>> If you really want to seduce your target, place the picture of your target in front of you. Let's say fridge, I mean in front of the bed where you can see this face all the time. So, you need to program your brain to like this person before you actually move into intimacy. to do that and there's like I don't know if you heard about it or not female agents um and any actually women can do it if they want they should um I mean okay so I had to perform masturbation with execution anchoring myself on special words and um also on special smells so we've been given a special perfumes there Perfume is an anchor. The word is an anchor. For example, if you want to become more sexy and confident, you have to choose a word. For example, for me it was I'm the best, I'm the queen. Depends. So once I look at this picture like Vladimir, let's say picture who was my target. I look at him and when I execute my performance, I would anchor myself on this word and also on the smell. So what happened when I was going to see him? I did masturbate before. Sorry to say these words, but I mean it is what it is. But you know like sometimes like for men they say oh if you're going for a date you should like
+</details>
+
+>> 没有。
+<details><summary>Original English</summary>
+>> no
+</details>
+
+>> 先释放出来，这样你在面对她时就不会那么快冲动。
+<details><summary>Original English</summary>
+>> executed so you don't like kind of like get aroused very quick with her.
+</details>
+
+>> 行，明白。
+<details><summary>Original English</summary>
+>> Okay. Yeah.
+</details>
+
+>> 但对女人来说恰恰相反。当女人把自己带入到这种唤起状态，但又没有完全释放、没有结束时，她们身上就会带有那种性感的气场。
+
+她们处于被唤起的状态，脸颊会泛红，眼神的闪烁也会有所不同，走起路来姿态都不一样，效果这就出来了。我看到这……
+<details><summary>Original English</summary>
+>> It's opposite for women. When women get themselves to this arousal, but then they don't finish, they have this sense of um you know sexuality. They um have this arousal and you know the cheeks are blushing, the eyes has different blink. Uh they move differently and here you go. I see this
+</details>
+
+<!-- chunk 6/14 -->
+
+想象这张、这张我的大脑已经非常熟悉的面孔，因为我已经训练过我的大脑，让它知道就是这样，而且你每天都这样做。所以我的大脑就会立刻产生费洛蒙，产生这种……你知道的，欲望，而男人是能感觉得到的，他们能察觉到。
+<details><summary>Original English</summary>
+image this this face which are very well known to my brain because I already trained my brain that this is and you do it every day. So and my brain instantly creates pherommones creates this you know um desire and men they feel it they sense it.
+</details>
+
+>> 所以我想跟你复述一遍，看看我理解得对不对。
+<details><summary>Original English</summary>
+>> So I want to play this back to you to check if it's if I've got this correctly.
+</details>
+
+>> 你把他的照片放在床前。你对着那张照片自慰，同时闻着某种气味，并说出一个关键词，
+<details><summary>Original English</summary>
+>> You had a photo of him in front of your bed. You'd masturbate to that photo while smelling something and saying a key word,
+</details>
+
+>> 就像心锚词。是的。
+<details><summary>Original English</summary>
+>> like anchor word. Yes.
+</details>
+
+>> 一个心锚词。是的。然后你不会达到高潮。
+<details><summary>Original English</summary>
+>> An anchor word. Yes. And then you wouldn't come.
+</details>
+
+>> 不，我会。
+<details><summary>Original English</summary>
+>> No, I would.
+</details>
+
+>> 你会
+<details><summary>Original English</summary>
+>> You would
+</details>
+
+>> 靠我自己。我会，因为对人类来说，最强烈的
+<details><summary>Original English</summary>
+>> with myself. I would because the strongest
+</details>
+
+>> 情绪就是高潮。
+<details><summary>Original English</summary>
+>> emotion is an orgasm for a human being.
+</details>
+
+>> 好吧。所以在达到高潮之后，你再去见他。在我的大脑中建立起这些心锚之后，我就会去见他，对自己默念那个心锚词、那个关键词，最理想的情况是身上也喷上这种香水，这样我就能闻到那种气味，因为那对我来说也是一个心锚。
+<details><summary>Original English</summary>
+>> Okay. So after you've orgasmed, you then go and see him. After I establish the the anchors in my brain, then I would go and see him and tell myself the anchor word, the keyword and ideally also spray this perfume on myself so I could feel that scent because it also was an anchor for me.
+</details>
+
+>> 你是在尝试用香水和关键词作为线索，将那种愉悦和唤起的感觉与这个人联系起来。
+<details><summary>Original English</summary>
+>> And you're trying to associate those feelings of pleasure and arousal to this person using perfume and a keyword as the as the cues.
+</details>
+
+>> 是的，你也可以把这种心锚技术用在任何事情上，对吧？比如你可以用它来建立自信，或者在公开演讲之前，当你有点紧张的时候用。我在这儿就有我的心锚。所以在来这里之前我有点紧张，因为……我很高兴能来这里，但老实说我真的很紧张。所以我在这个位置设定了心锚，它意味着：好的，一切都很好，我很自信，你知道的，然后我就像吸气、呼气这样调整呼吸。于是我就让自己平静下来了，但我当时确实非常紧张。
+<details><summary>Original English</summary>
+>> Yeah, you can also use this anchoring techniques for anything, right? You can use it for confidence for example or like for before like public speech and you're like kind of like nervous. I have my anchor here. So before coming here I was like a little bit nervous because like I'm in such a I'm happy to be here but I was so nervous to be honest. So I have the anchor over here which means that okay everything is good. I'm confident you know and I kind of like breathe in breathe out breathing work. So, I calm myself down, but I was very nervous.
+</details>
+
+### 情感依恋与使命转化
+
+>> 你对你的目标动过真感情吗？
+<details><summary>Original English</summary>
+>> Did you ever catch feelings with one of your targets?
+</details>
+
+>> 你知道媒体怎么写吗？他们很喜欢说：“哦，她坠入爱河了。”但我其实从来没这么说过。老实说，我其实很想体验爱情，但我认为我从未体验过
+<details><summary>Original English</summary>
+>> You know what impressed? They love saying that, "Oh, she fell in love." But I never actually said that. I actually would love to experience love to be honest, but I don't think I ever did
+</details>
+
+>> 至今依然没有。
+<details><summary>Original English</summary>
+>> still to this date.
+</details>
+
+>> 是的，很遗憾。老实说，我做不到。这就是为什么我一直保持单身，因为我不想伤害任何男人，因为显然和我在一起的每个男人，他们都会变得痴迷，但对我来说那不是爱，那是诱捕（honey drop），是痴迷。
+<details><summary>Original English</summary>
+>> Yes, unfortunately. And to be honest, I can't. And that's why I keep myself single because I don't want to hurt any man because they obviously every man I am with they become obsessed but for me it's not love it's honey drop it's obsession.
+</details>
+
+>> 你呢，你动过任何感情吗？
+<details><summary>Original English</summary>
+>> You did you ever catch any sort of feelings?
+</details>
+
+>> 我从未想念过任何人。我从未产生过情感依恋。我从来没有——如果你问我在爱情、事业还是工作之间优先考虑什么，我永远会说是工作。
+<details><summary>Original English</summary>
+>> I never missed anyone. I never had emotional attachment. I never if you would ask me what you prioritize the love or career or work I would always say work.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 你也是一样的。当然。所以，嗯
+<details><summary>Original English</summary>
+>> You have the same thing. Sure. So um
+</details>
+
+>> 因为你心中有着高于个人自身的事情。
+<details><summary>Original English</summary>
+>> because you've got this thing that's bigger than you.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 你知道那是为了国家。
+<details><summary>Original English</summary>
+>> You know it's for the country.
+</details>
+
+>> 是的。是的。正是这样。所以你会觉得，即使我现在当然已经不在那里了，而这也是为什么我现在公开露面。但我公开露面有某些原因，也是为了保护自己，而且我觉得我现在所做的事情，基本上完全是一样的。我把那项使命转化为了我现在正在做的事，因为我现在想教会人们保护自己，免受操控者、自恋狂、有害之人、虐待者、掠夺者的伤害。所以对我来说，这完全是同一回事，只是以前我是运用我的技能和我的身体来做的。现在我做的是
+<details><summary>Original English</summary>
+>> Yes. Yes. Exactly that. So you feel like even now I'm not there of course anymore and that's why I'm you know public. But there are certain reason why I went public also for my protection and I feel like now what I'm doing it's exactly basically the same. I transformed that mission to what I'm doing now because now I want to teach people to protect themselves from manipulators, narcissists, toxic people, abusers, predators. So for me it's exactly the same thing but which I was doing before using my skills in my body. Now I do
+</details>
+
+>> 现在是防御性，而不是进攻性的。
+<details><summary>Original English</summary>
+>> defensive now instead of offensive.
+</details>
+
+>> 没错。因为我认为，嗯，我在操纵术方面非常有经验，因为我学过这个，受过这方面的训练，我觉得如果我能让人们看清真相，让他们能够看穿所有的设局、操纵和社交工程——不仅在约会恋爱中，而且在商业、家庭关系中，还有在新闻以及所有这些事情中……你知道，对我来说这全都有点像是一种非常令人困惑的局面。在我看来，这就像是一个针对我的设局。
+<details><summary>Original English</summary>
+>> Absolutely. because I think that um I'm very experienced in manipulation because I studied that I was trained in that and I feel that if I would open eyes to people and they can see through all the setups and manipulation and social engineering not in dating romantic but business family relationship but also in news and all this you know for me it's all kind of like a very confusing situation. For me it's like a setup to me.
+</details>
+
+>> 一个设局
+<details><summary>Original English</summary>
+>> A setup
+</details>
+
+>> 对我来说这就是一个设局。这——这是我个人的看法。
+<details><summary>Original English</summary>
+>> for me it is a setup. It it's my my personal opinion.
+</details>
+
+>> 所以你对延森（Jensen）是有同理心的。
+<details><summary>Original English</summary>
+>> So you you're empathetic towards Jensen.
+</details>
+
+>> 还有一件事，你也会支持我的看法。我们——作为特工、前特工——我们不会对任何人产生这种……嗯，同情。你有点像是……我们总是……这是这份工作的本质
+<details><summary>Original English</summary>
+>> Another thing and you would support me. We don't have like as agents former agents we don't have this um sympathies to anyone. You kind of like we always the nature of the of the job
+</details>
+
+>> 这个职业的本质。我们看待人时总是倾向于从……嗯，你知道，就像工具一样，而他们确实就是工具，这就是事实，我们只根据事实来行动，只去分析事实。
+<details><summary>Original English</summary>
+>> the profession. We always like look at people in terms of um you know it's like a tool and that's what they are and this is the facts and let's just operate on facts and let's just analyze that.
+</details>
+
+### 中场赞助
+
+>> 人生中最难的事情之一，我们往往倾向于回避的事情之一，就是我们自己的健康。我有点逃避健康检查，或者至少在过去是这样，因为这就像是在主动招揽潜在的坏消息。正如我大多数嘉宾所言，预防确实远比治疗重要得多。所以，我对自己说，每年我都要做一堆健康检查。我曾邀请 Function Health 的一位创始人上过这个播客，他们现在也是这个播客的赞助商。他们开发了一种方法，可以让你更全面地了解自己体内的状况。你只需抽一次血，就能获取 160 多项实验室检测结果，然后它会将其转化为一系列个性化、可操作的建议。所以现在在楼下我的办公桌旁，放着几种我正在服用的膳食纤维补充剂，因为我拿到了我的 Function Health 检测结果，它建议我在日常生活中引入几样新东西。Function 让你每年只需 365 美元（大约每天一美元）就能获得 160 项实验室检测。你可以访问 functionhealth.com/doac 加入，并使用优惠码 DOAC25，即可获得 25 美元的减免额度。让了解自己的健康成为你计划的一部分。
+
+你可能会认为 Nespresso 的前总裁会是一个很难被说服转向一家新咖啡公司的人。但只要尝了一口 Cometeer 咖啡，就让他决定投资。
+
+但让我来告诉你我成为投资人的原因。当时在伦敦办公室，有一大盒这个咖啡寄到了我的办公桌上。然后我想在大约一个半小时内，我们的 Slack 频道就开始炸锅了，大家都在问：“留在厨房里的那个到底是什么鬼东西？”它真是令人难以置信。所以他们没有让你自己在家里试着制作并平衡风味，而是在最完美的时刻将其急速冷冻。因此你所要做的就是把它从这里倒进杯子里，倒上热水，它的味道就像你以前从未尝过的任何东西一样。你也可以制作美味的冰咖啡饮品。直接倒进去就行。
+
+不需要机器，不需要用塑料和所有那些讨厌的东西冲泡。你可以在 cometier.com/stephven 享受首单立减 30 美元的优惠。网址是 comedy.com/steeden。
+<details><summary>Original English</summary>
+>> One of the difficult things in life. One of the things we tend to avoid is our own health. I kind of avoid health checks or at least historically I have because it's like signing up for potential bad news. Prevention really is as most of my guests have said way more important than cure. And so what I said to myself is that every year I will take a bunch of health checks. And I had one of the founders of Function Health on this podcast and they are now a sponsor of this podcast. They've developed a way of giving you a more comprehensive view of what's going on inside your body. You do this one blood draw and it gives you access to over 160 lab results which it then turns into a set of personalized actionable insights. So downstairs by my desk right now, I have a couple of fiber supplements that I'm taking because I got my Function health results back and it suggested that I I introduce a few new things into my routine. Function gives you access to 160 lab tests for $365 a year, about a dollar a day. You can join at functionhealth.com/doac and use code DOAC25 and you'll get $25 off as a credit. Make knowing your health part of your plans.
+
+You'd think the former president of Nespresso would be a pretty hard person to convert to a new coffee company. But just one sip of Cometier coffee made him invest.
+
+But let me tell you the reason why I became an investor. So I had a big box of this arrive on my desk in the London office. And then I'd say within about an hour and a half, the Slack channel that we have starts blowing up with people asking, "What the hell is that thing that's been left in the kitchen?" It is unbelievable. So instead of trying to make it yourself at home and balance the flavors, they flash freeze it at the perfect moment. So all you have to do is pop it out of here into a cup, pour hot water on it, and it tastes like nothing you've tasted before. You can also make delicious iced coffee drinks as well. Just pour it in.
+
+No machine, no brewing with plastic and all that nasty stuff. And you can get $30 off your first order at cometier.com/stephven. That's comedy.com/steeden.
+</details>
+
+### 先天、后天与反社会特质
+
+>> 那是你们生来就具备的特质，还是先天与后天兼而有之？
+<details><summary>Original English</summary>
+>> Is that something that you were both born with or is that both nature and nurture?
+</details>
+
+>> 哦，我认为你生来就带有这种种子，而他们对此进行了培养。当我离开我被派驻的其中一个国家时，我正在进行所谓的“温和交接”（warm turnover），也就是我的继任者陪我一起去参加会面，然后我告诉那个……那个情报资产、线人说：听着，我要离开了，你一直做得很出色。这是接下来要和你共事的人。这种情况在我身上发生过两次，那个特工、那个资产、那个被发展的资产当场哭了起来，因为在他心里，我们曾是最好的朋友，对吧？他抱着我哭着说：我爱你，你就像我的亲兄弟一样。我记得我说：如果有来生，你我一定会成为兄弟。而我心里想的却是，
+<details><summary>Original English</summary>
+>> Oh, I think that you're born with the seeds of it and they cultivate that. When I was leaving one of the countries that I was assigned to, I was doing what's called a warm turnover where my successor it comes with me to the meeting and I tell the uh the the asset, the source, listen, I'm leaving. you've been great. This is the guy that you're going to be working with now. And this happened to me twice where the the agent, the asset, the recruited asset started crying because we were best friends, right, in his mind. And he's hugging me and he's crying. I love you. You're like a brother to me. And I remember saying, in another life, you and I would be brothers. And I'm thinking,
+</details>
+
+>> 是的，
+<details><summary>Original English</summary>
+>> yeah,
+</details>
+
+>> 我甚至连他们的名字都记不得了，
+<details><summary>Original English</summary>
+>> I don't even remember their names,
+</details>
+
+>> 但这能给人希望。
+<details><summary>Original English</summary>
+>> but it gives hope.
+</details>
+
+>> 这能给人希望。你说得对。而且——其中的原因，我的意思是，当然，他们做这个可能是为了钱，或者为了刺激，或者为了意识形态等等，但其实最根本的原因是，他们做这个是因为他们爱你。
+<details><summary>Original English</summary>
+>> It gives hope. You're right. And and the reason, I mean, sure, they're doing it for money or they're doing it for excitement or for ideology or whatever, but really the basis of it is they're doing it because they love you.
+</details>
+
+>> 这就是他们这么做的原因。
+<details><summary>Original English</summary>
+>> That's why they're doing it.
+</details>
+
+>> 而且你能让他们爱上你。
+<details><summary>Original English</summary>
+>> And you can make them to love you.
+</details>
+
+>> 而且你能让他们爱上你。
+<details><summary>Original English</summary>
+>> And you can make them love you.
+</details>
+
+>> 你觉得这符合间谍的特征吗，也许也符合你们自己的特征？缺乏同理心。
+<details><summary>Original English</summary>
+>> Do you think does this fit the bill of a spy and maybe yourselves? Lack of empathy.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 操纵。
+<details><summary>Original English</summary>
+>> Manipulation.
+</details>
+
+>> 嗯。欺骗性、冲动性、对安全的鲁莽漠视。
+<details><summary>Original English</summary>
+>> Mhm. deceitfulness, impulsivity, reckless disregard for safety.
+</details>
+
+>> 好吧，真的吗？
+<details><summary>Original English</summary>
+>> Okay, really?
+</details>
+
+>> 不，在我最好的记忆中，这是一位新墨西哥大学的教授写的一本书里的内容。
+<details><summary>Original English</summary>
+>> No, it's a it's a book written by a professor at the University of uh New Mexico to the best of my recollection.
+</details>
+
+>> 你同意所有这些特质吗？是的。
+<details><summary>Original English</summary>
+>> You agree with all of those things? Yes.
+</details>
+
+>> 你能感同身受吗？
+<details><summary>Original English</summary>
+>> Can you relate?
+</details>
+
+>> 哦，能。
+<details><summary>Original English</summary>
+>> Oh, yeah.
+</details>
+
+>> 我刚才在谷歌上搜了一下反社会人格者的核心特征是什么。
+<details><summary>Original English</summary>
+>> I just Googled what are the core traits of a sociopath.
+</details>
+
+>> 哦，谢谢啊。
+<details><summary>Original English</summary>
+>> Oh, thanks.
+</details>
+
+>> 我刚才
+<details><summary>Original English</summary>
+>> I just
+</details>
+
+>> 事实就是如此。我已经说过很多很多次了，中央情报局（CIA）会主动招募具有反社会倾向的人。
+<details><summary>Original English</summary>
+>> That's what it is. I've said many, many times the CIA actively seeks to hire people with sociopathic tendencies.
+</details>
+
+>> 他们不想要反社会人格者，因为你会对他们撒谎，而且你会面不改色地撒谎还能通过测谎仪，而他们不希望那样。有时他们确实想要。正是如此。
+<details><summary>Original English</summary>
+>> They don't want sociopaths because you're going to lie to them. and you're going to do it with a straight face and pass the polygraph and they don't want that. Sometimes they do. Exactly.
+</details>
+
+>> 你能对此产生共鸣吗？
+<details><summary>Original English</summary>
+>> Can you relate to that?
+</details>
+
+>> 当然。100%。
+<details><summary>Original English</summary>
+>> Absolutely. 100%.
+</details>
+
+>> 你认为自己是一个反社会人格者吗？不管这个词到底是什么意思。
+<details><summary>Original English</summary>
+>> Do you think you're a sociopath? Whatever that means.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yes.
+</details>
+
+>> 不。我——我真的
+<details><summary>Original English</summary>
+>> No. I I really
+</details>
+
+<!-- chunk 7/14 -->
+
+相信自己就是这样。你知道，我就是这样，而且当别人坠入爱河，或者比如对我变得痴迷时，我真的会对他们说，我不是适合你的人，我试图保护你，因为你知道，我根本没有那种感觉。我只是与众不同。
+<details><summary>Original English</summary>
+believe that I am. I'm, you know, and I say to people when they fall in love or like they become obsessed, I literally say like I am not for you and I try to protect you because I am, you know, I'm just not there. Have you I'm just different.
+</details>
+
+>> 你一直都是这样，还是这是后天训练出来的？
+<details><summary>Original English</summary>
+>> Have you always been like that or is that something that was trained?
+</details>
+
+>> 我觉得是我小女孩的时候父亲传授给我这些知识的，因为他也是这样的人，而且他总是说一直都很相似。
+<details><summary>Original English</summary>
+>> I think my father gave me this knowledges when I was little girl because he's the same way and he always say like always of similar.
+</details>
+
+>> 好吧。所以你认为这是天生的，你生来就带有这种特质，然后经过了训练和培养，并获得了一些工具。
+<details><summary>Original English</summary>
+>> Okay. So you think you were there was innate you were born with it and then it was trained and cultivated and given some tools.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yes.
+</details>
+
+>> 好吧。你感到孤独吗？
+<details><summary>Original English</summary>
+>> Okay. Are you lonely?
+</details>
+
+>> 我习惯了。我喜欢孤独。你也是这样吗？
+<details><summary>Original English</summary>
+>> I get used to it. I like being lonely. Do you have the same?
+</details>
+
+>> 独自一人（alone）和孤独（lonely）是有区别的。其中一种更多是一种感受到的——
+<details><summary>Original English</summary>
+>> There's a difference between being alone and being lonely. One of them is more of a felt
+</details>
+
+>> 孤独。就是当你晚上独自一人，心中涌起这种悲伤，觉得“要是能和某个人一起看部电影、聊聊这部电影该多好”。不，我没有那种感觉。我宁愿工作。我宁愿读书、学习，也许我不知道，也许以后会吧。但目前，我非常专注于我的工作。
+<details><summary>Original English</summary>
+>> lonely. When you're like alone in the evening and you have this sadness and you feel like, "Oh, it would be great to just watch a movie with someone and discuss this movie." No, I don't have that. I'd rather work. I'd rather read books, learn maybe I don't know, maybe later. But for now, like I'm very focused on my work.
+</details>
+
+>> 你感到孤独吗？
+<details><summary>Original English</summary>
+>> Are you lonely?
+</details>
+
+>> 呃，我曾经孤独过。我现在在和别人交往，但对。对，当然。我很孤独。我喜欢身边有人。我喜欢人。置身于人群中让我获得力量。哪怕是糟糕的人也一样。我相信你也能感同身受。
+
+我哪怕是和一个货真价实的恐怖分子一起出去，都能玩得非常开心。
+<details><summary>Original English</summary>
+>> Uh, I have been. I'm seeing somebody now, but yeah. Yeah, sure. I'm lonely. I like being around people. I like people. I I gained strength by being around people. Even awful people. I'm sure you can relate.
+
+I could go out with a bonafide terrorist and have an awesome time.
+</details>
+
+>> 对，而且去剖析他们。这很有意思。
+<details><summary>Original English</summary>
+>> Yeah. And analyze them. It's interesting.
+</details>
+
+>> 是的，很好玩。
+<details><summary>Original English</summary>
+>> Yeah. It's fun.
+</details>
+
+>> 你们建立起了联系。
+<details><summary>Original English</summary>
+>> You establish a connection.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 你们开始你来我往地讲故事，然后你回到家心想：“哇，那真是个彻头彻尾的精神病态者。”
+<details><summary>Original English</summary>
+>> You start telling stories back and forth and then you you go home and you say, "Wow, that is a that psychopath."
+</details>
+
+>> 是啊。是啊，但我玩得很开心。
+<details><summary>Original English</summary>
+>> Yeah. Yeah, but I had a good time.
+</details>
+
+>> 没错。但收集这些记忆真的很棒。这就是我喜欢做的事。
+<details><summary>Original English</summary>
+>> Exactly. But it's so good to collect these memories. That's what I like to do.
+</details>
+
+### 终极目标与同理心
+
+>> 不过你的目标究竟是什么？因为很多人的话，如果我说，他们努力工作、付出心血、去健身房，本质上全都是因为渴望被爱、被接纳、拥有家庭，或者对他们而言无论是什么。
+
+当我想到你为这个世界所付出的努力时。
+<details><summary>Original English</summary>
+>> What is your goal though? Because I a lot of people if I said, you know, they're working hard, they're putting in effort, they're going to the gym, it's all essentially because they want to be loved and accepted and have a family and whatever it might be for them.
+
+When when I think about the effort you're putting into the world.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 甚至当约翰说到去见恐怖分子时，你的反应是：“对，而且我们可以剖析他们并收集信息。”你做这所有一切事情，目标到底是什么？你的Instagram有上百万粉丝。最终的目标是什么——
+<details><summary>Original English</summary>
+>> You even the when John was talking about meeting a terrorist, you're like, "Yes, and we can analyze them and collect information."
+
+What is the goal for you with all all of these things that you're doing? your Instagram, you have a million followers. What is the what is the end goal
+</details>
+
+>> 对我而言？其实有几个目标。嗯，第一点，而且这其实是源于我的粉丝，你知道，当我开始分享自己的故事时，有非常多女孩给我发短信说：“噢，你是我的榜样。你太坚强了，我想成为像你一样的人。”
+<details><summary>Original English</summary>
+>> for me? Like there are few goals. Um number one, and it came actually from my followers, you know, I when I started to share my story, there were so many girls uh texting me and saying like, "Oh, you're my role model. You're so strong and I want to be like you."
+</details>
+
+>> 但如果你说你没有同理心，那我猜你其实并不真正关心她们。我像母亲一样看待人类，他们都只有三岁大。
+<details><summary>Original English</summary>
+>> But if you're saying you don't have empathy, I'm I'm assuming you don't really care about them. I look at humans as a mother and they're all 3 years old.
+</details>
+
+>> 这听起来像是同理心——
+<details><summary>Original English</summary>
+>> It sounds like empathy
+</details>
+
+>> 对我来说也许是吧。是的。而且我见过了太多，你知道，就像这种恐怖景象。所以我今生的最终目标，是买下一座岛屿，尽可能多地收养孤儿，理想情况下是成千上万名，建一座孤儿院，真正去教育他们、教导他们，远离互联网、TikTok，远离每个政府所拥有的所有这些操纵工具。
+<details><summary>Original English</summary>
+>> for me maybe. Yes. And I've seen a lot, you know, like this horror. So my end goal in this life to buy an island and adopt as many orphan kids I can ideally thousands build orphanage and actually educate them and teach them without internet tik tok without all this manipulative tools which every government has.
+</details>
+
+>> 那么你对孩子们有同理心吗？我对人类抱有同理心、情感同理心，因为我由衷地希望他们变得更强大，能够独立于他们所见和身处的任何操纵。
+<details><summary>Original English</summary>
+>> So do you feel empathy for the children? I feel empathy for emotional empathy for humans because I want them genuinely to become stronger and independent from any manipulation they see and they surround.
+</details>
+
+>> 你上一次哭是什么时候？
+<details><summary>Original English</summary>
+>> When was the last time you cried?
+</details>
+
+>> 好吧，问得好。我不记得了。嗯，绝对有几年没哭了。我不知道。我不，我不记得了。有时我也会哭，但肯定已经有好几年没有过了。
+<details><summary>Original English</summary>
+>> Okay, good question. I don't remember. Um, definitely a few years I didn't cry. I don't know. I don't I don't remember. Sometimes I do, but not for for a few years for sure.
+</details>
+
+>> 这个同理心的问题让我非常强烈地想起《黑道家族》（The Sopranos）最后一季中的一个关键场景。是的。那里他们在讨论反社会人格者。精神科医生梅尔菲医生在谈论反社会人格者，而她圈子里的其他精神科医生都在取笑她，因为每位精神科医生都知道，反社会人格者确实对孩子抱有同理心，并且对动物很友善。
+<details><summary>Original English</summary>
+>> This issue of empathy reminds me very much of a of a critical scene in The Sopranos in the final season of The Sopranos. Yes. Where they're talking about sociopaths. Dr. Melie the psychiatrist is talking about sociopaths and other other psychiatrists in her circle are chiding her because every every psychiatrist knows that sociopaths do feel empathy for children and are kind to animals.
+</details>
+
+>> 噢，对，我养了狗和猫。
+<details><summary>Original English</summary>
+>> Oh yes, I have dog and cat.
+</details>
+
+>> 你看，但只要你不是个孩子，他们转头就能崩掉你的脑袋。像恋童癖这种人。我是说——
+<details><summary>Original English</summary>
+>> See, but they'll just as soon, you know, blow your brains out if you're not a child. people like pedophiles. I mean
+</details>
+
+>> 当然。
+<details><summary>Original English</summary>
+>> sure
+</details>
+
+>> 要是你现在带一个恋童癖到我面前，问我会做什么，我大概会做二十年前做过的事情。我无法容忍不公正、不公平和犯罪，我就是无法容忍，因为我觉得，如果我拥有这些知识，并且觉得自己也许比普通平民更进一步——我不知道该怎么称呼这些人——所以我觉得自己有责任。
+<details><summary>Original English</summary>
+>> if you would show me like pedophile right now if you ask me like what will I do I would probably do the same what I was doing like 20 years ago like I I I cannot stand unjustice and unfair and crime I just cannot stand it because I feel that if I have this knowledges and I feel that I am maybe a little bit more advanced than civilians I don't know how to call these people so I feel responsible
+</details>
+
+>> 所以你确实有道德和伦理上的驱动力。
+<details><summary>Original English</summary>
+>> so you do have a moral ethical motivation.
+</details>
+
+>> 我想那是我父亲抚养我时灌输给我的。是的。
+<details><summary>Original English</summary>
+>> I think that's what my father put in me when he raised me. Yeah.
+</details>
+
+>> 你和你母亲亲近吗？
+<details><summary>Original English</summary>
+>> Were you close to your mother?
+</details>
+
+>> 我跟我妈妈很亲近，但我绝不想成为像她那样的人，因为她仍然活在受害者心态中，而我已经走得远得多了。
+<details><summary>Original English</summary>
+>> I am close to my mom, but I would never want to be like her because she still lives in the victim mentality and I went much like further.
+</details>
+
+### 操控的心理机制与行动动机
+
+>> 你知道，现实中有很多人因为各种各样的原因感到无能为力。嗯，其中之一就是你刚才用的那个词“受害者心态”，他们有时觉得世界只是被动地发生在自己身上。我发现间谍身上很了不起的一点，就是你们几乎受过以非常巧妙的方式去掌控局面的训练。
+
+所以我真的很想听听你对这方面的看法。我们刚才正在梳理其中一些模块。约翰，我不知道你是否还有其他什么经历或训练，能够帮助那些试图掌控自己生活（无论是对他人还是无论什么情况）的受众，我们可以给观众提供一些启发。你提到了轰炸式示爱（love bombing）。好的，我们并不推荐这么做，但我只是对背后的心理机制感到好奇。信息控制，后面还有几个模块。
+<details><summary>Original English</summary>
+>> You know, there's a lot of people out there that feel powerless for lots of reasons. Um, one of them is that they use the word victim mentality there, that they sometimes feel like the world just happens to them. One of the things I find remarkable about spies is you're almost trained to take control of situations in really interesting ways.
+
+So, I really want to get your perspective on that. We were going through some of these blocks. I don't know if what else other experiences or training you had, John, that would help an audience who are trying to sort of take control of their lives, whether it's other people or whatever it might be, um, that we could offer to the audience. So, you're talking about love bombing. Okay, we're not recommending this, but I'm just curious about the psychology behind it. Information control, there's a few more blocks there.
+</details>
+
+>> 接下来我们谈谈情感依赖。
+<details><summary>Original English</summary>
+>> Then we go to emotional dependency.
+</details>
+
+>> 约翰，你在中情局工作的时候，也是物色目标、操控他们、获取情报，或者让他们替你办事吗？
+<details><summary>Original English</summary>
+>> John, when you were working in the CIA, were you also finding targets, manipulating them, getting information, or getting them to do things?
+</details>
+
+>> 噢，是的。而且这是你和总部之间展开的深入交流。我该怎么操控这个人？你们有什么建议？能给我点思路吗？而且我再告诉你另一件事。我在受训期间，在课程间隙、在训练间歇，负责培训我们的老前辈们会讲当年的实战故事。比如1968年在莫斯科时，我执行了这次行动。或者74年在墨西哥城时，我是这么做的。
+
+而主教练总是会说：“嘿，老头子，别讲这些故事了。咱们专注于训练吧。”我跑去找总教官说：“我从这些故事里获益良多。我觉得你们也许该开设一门课，专门让这些老前辈讲这些故事。叫它非传统行动之类的课程。”他们还真就这么办了。所以，当我上完那门课终于派驻海外后，
+
+我就能给这些老前辈中的一些人发机密电子邮件，说：“嘿，我需要接近某某人。我又不可能在外交鸡尾酒会上碰上这个疯子。你们有什么主意吗？”然后他们就会源源不断给我出主意。试试这个、试试那个，或者试试别的。这真的很管用。你能想出一些非常棒的点子。驱动人的本质到底是什么？你刚才谈到了一些驱动因素，特别是针对男性的。然后你在你自己的故事中也提到，意识形态是让你甘愿放弃一切、接受每月100美元的原因。就像我常常对此非常着迷，因为我们往往认为金钱才是最大的驱动力。
+<details><summary>Original English</summary>
+>> Oh, yeah. And and it's a it's a an in-depth conversation that you're having with headquarters. How do I manipulate this person? What do you suggest? Can you give me some ideas? And I'll tell you something else, too. When I was in training, in between classes, in between sessions, the old men who were training us would tell war stories. When I was in Moscow in 1968,
+
+I did this operation. Or when I was in Mexico City in 74, this is what I did. And the lead instructor would always say, "Hey, old man, stop telling these stories. let's focus on the training.
+
+And I went up to the chief instructor and I said, I'm getting a lot out of these stories. I think maybe you should have a class that's just old men telling these stories. Call it non-traditional operations or something. And they actually did that. So, when I finally went overseas after having taken that class,
+
+I was able to send classified emails to some of these old-timers and say, "Hey, I need to approach so and so. I'm not going to run into this lunatic at a diplomatic cocktail party. Do you have any ideas?" And then they would hit me with ideas. Try this, try that, try the other thing. And it really worked. You can come up with some really great ideas. What is the essence of what motivates people? You were talking about some of the things there with men in particular. And then you also in your own story reflected that ideology was the thing that got you to get to accept $100 a month over everything else. Like and I often get quite fascinated by this because we tend to think that money is the great motivator.
+</details>
+
+>> 通常是，但不总是。
+<details><summary>Original English</summary>
+>> Usually not always.
+</details>
+
+>> 不总是。不是对每个人都适用。
+<details><summary>Original English</summary>
+>> Not always. Not for everyone.
+</details>
+
+>> 依你的经验来看，它是什么？
+<details><summary>Original English</summary>
+>> What is it in your in your experience?
+</details>
+
+>> 依我的经验，大约90%的情况下都是为了钱。除此以外，就是意识形态。或是对刺激的渴望。人人都爱看詹姆斯·邦德的电影或杰森·伯恩的电影。或者可能是复仇。你被晋升忽略了，可能还不止一次，你想报复不赏识你才能的上司。
+
+你知道，我们可以利用这一点。
+<details><summary>Original English</summary>
+>> About 90% of the time in my experience it was money. Otherwise, it was ideology. It was a desire for excitement. Everybody loves a James Bond movie or a Jason Bourne movie. Or it could be revenge. You've been passed over for promotion and maybe more than once and you want to get revenge against your boss for not appreciating your abilities.
+
+You know, we can exploit that.
+</details>
+
+>> 还有对留下遗产的渴望。
+<details><summary>Original English</summary>
+>> Also, desire for a legacy.
+</details>
+
+>> 对，那也是重要的一项。而且我会说，对我而言最绝佳的例子就是史蒂夫·乔布斯和埃隆·马斯克。
+<details><summary>Original English</summary>
+>> Yeah, that's an important one. And that's what I would say the example the perfect example for me is Steve Jobs and Elon Musk.
+</details>
+
+>> 是的，我同意。
+<details><summary>Original English</summary>
+>> Yeah, I agree with that.
+</details>
+
+>> 嗯。在这个情感依赖板块中，你接触目标，对他们进行轰炸式示爱，实施信息控制。什么是情感依赖？
+<details><summary>Original English</summary>
+>> Mhm. And on this emotional dependency brick, you meet the target, you love bomb them, you information control. What is emotional dependency?
+</details>
+
+<!-- chunk 8/14 -->
+
+>> 你建立了这种依赖，让你的目标觉得你们心意相通，就像灵魂伴侣一样，觉得“她或他太懂我了。他太了解我了。他给了我这么多的关注、爱和精力。而且只有和他或她在一起，我才能成为最好的自己。”所以诱惑，这种诱惑的艺术，并不是关于去爱某个人。它是关于我们体验到了什么？我们和这个人在一起时处于一种什么样的状态？所以如果你创造出那样一种气泡，让你的目标觉得自己处于最好的状态，他就会迷恋上这种状态。谍报工作是在试图模仿人类坠入爱河时自然发生的事情吗？因为你描述的很多东西听起来就像是一段极佳的恋爱关系，
+
+<details><summary>Original English</summary>
+>> You establish this dependency where your target feels like you're so connected that you're sort of like soulmates that she or he understands me so well. He knows me so well. He gives me so much attention, love, energy. And only with him or her, I can be the best version of myself. So seduction, the art of seduction, it's not about loving someone. It's about what do we experience? What kind of state do we have with this person? So if you create that sort of bubble where your target feels the best version of himself, he will love this state. Is espionage trying to copy what happens naturally when humans fall in love here? Because a lot of what you're describing sounds like some like great relationship,
+</details>
+
+>> 但目的是为了控制它、引导它并影响决策。是的。
+
+<details><summary>Original English</summary>
+>> but to control it and guide it and influence decisions. Yes.
+</details>
+
+>> 因为这里面的很多东西，实际上就是两个相爱的人相遇时所发生的事情。
+
+<details><summary>Original English</summary>
+>> Because a lot of this stuff is actually what happens when two people that fall in love meet.
+</details>
+
+>> 是的。但比如这并不是爱，对吧？我是说，
+
+<details><summary>Original English</summary>
+>> Yeah. But like it's not love, right? I mean,
+</details>
+
+>> 我是说，这不是爱。这是别的东西。而且有那么多的情况，比如淘金女，男人不幸地看不出来，或者他们只是不想看出来，因为这全是交易性的，而他们接受了。
+
+<details><summary>Original English</summary>
+>> I mean, this isn't love. This is something else. And there's so many, you know, situations with gold diggers, for example, and men unfortunately don't see it or they just don't want to see it because it's all transactional and they accept it.
+</details>
+
+>> 但我们确实明白这不是爱。这更像是一种痴迷。然后下一个板块——
+
+<details><summary>Original English</summary>
+>> But we do understand this is not love. This is more like obsession. And then the next break
+</details>
+
+### 隔离与孤立
+
+>> 然后下一个板块，我们进入孤立阶段，你会试图将你的目标与核心圈子、家庭成员、朋友隔离开来，特别是任何对你的感情有看法的人，因为——
+
+<details><summary>Original English</summary>
+>> and the next break we go to isolation where you try to isolate your target from inner circle family members friends especially whoever has the opinion on your relationships because
+</details>
+
+>> 他们会听取意见的人——
+
+<details><summary>Original English</summary>
+>> that they'll listen to
+</details>
+
+>> 他们会听取意见的人。是的。
+
+<details><summary>Original English</summary>
+>> that they listen to. Yes.
+</details>
+
+>> 你这话是什么意思？
+
+<details><summary>Original English</summary>
+>> What do you mean by that?
+</details>
+
+>> 嗯，如果是你的姐姐或妹妹，比方说你跟你的姐妹关系很亲近，
+
+<details><summary>Original English</summary>
+>> Well, if your sister you're close to your sister, let's say,
+</details>
+
+>> 然后她说：“我不喜欢这个女人。我一点都不喜欢她。这里面有问题。我不信任她。”
+
+<details><summary>Original English</summary>
+>> and she says, "I don't like this woman. I don't like her at all. Something's up here. I don't trust her."
+</details>
+
+>> 嗯。然后你说：“我再也不会理我姐妹了。”因为那个我认为是我女朋友的人会说：“你知道吗？你姐妹不是什么好人。”
+
+<details><summary>Original English</summary>
+>> Mhm. and you say, "I'm not going to pay any attention to my sister anymore." Because the person I think is my girlfriend is going to say, "You know what? Your sister's no good."
+</details>
+
+>> 哦。所以，你试图把那些人弄走，那些——
+
+<details><summary>Original English</summary>
+>> Oh. So, you try and get the people out that are
+</details>
+
+>> 是的。从那个核心圈子里弄走。
+
+<details><summary>Original English</summary>
+>> Yes. from that like inner circle.
+</details>
+
+>> “别每天给你姐妹打电话了。她不是好人。她不——”
+
+<details><summary>Original English</summary>
+>> Don't call your sister every day. She's no good. She doesn't
+</details>
+
+>> “她不想让我们好。”或者甚至不是直接的，而是间接的，比如“哦，我听说你姐妹亏了钱”，或者“她说你的生意或者你正在做的事坏话”，或者“她公开说了损害你形象的坏话”，或者诸如此类的事情。所以它并不是很直接地说“哦，我不喜欢你姐妹，因为她对我不好”，而是——
+
+<details><summary>Original English</summary>
+>> she doesn't want us to succeed. or like even not directly indirectly it would be oh I heard your sister lost uh money by you know or like she said something bad about your business or like of what you're doing or like she publicly said bad things about your image or something like this. So it's not direct really like oh I don't like your sister because she's mean to me but
+</details>
+
+>> 它比那更微妙，因而也更有效——
+
+<details><summary>Original English</summary>
+>> it's more subtle than that which is more effective
+</details>
+
+>> 当然。
+
+<details><summary>Original English</summary>
+>> of course
+</details>
+
+>> 因为你让他觉得把他的姐妹推开是他自己的主意。
+
+<details><summary>Original English</summary>
+>> because you make him think it's his idea
+</details>
+
+>> 当然。
+
+<details><summary>Original English</summary>
+>> of course
+</details>
+
+>> 把他的姐妹推开。
+
+<details><summary>Original English</summary>
+>> to push his sister away.
+</details>
+
+>> 是的。而且你绝不会树立直接的敌人。所以你有点像是在他周围播下种子。
+
+<details><summary>Original English</summary>
+>> Yes. And like you never create like a direct enemies. So you kind of like plant the seeds around him.
+</details>
+
+### 情报机构的目标选择
+
+>> 是的。那么这些情报机构会瞄准什么样的人呢？他们会瞄准播客主播，还是会瞄准出租车司机这样的普通人？
+
+<details><summary>Original English</summary>
+>> Yeah. And what type of people do these intelligence agencies go for? Do they go for podcasters or is it do they go for the average people that are taxi drivers?
+</details>
+
+>> 他们会瞄准——
+
+<details><summary>Original English</summary>
+>> They would go
+</details>
+
+>> 如果他们能成为招募者的话。
+
+<details><summary>Original English</summary>
+>> if they can be recruiters.
+</details>
+
+>> 他们会瞄准任何他们认为能提供切实可行情报的人。
+
+我曾和一个家伙共事过，一名DIA特工，
+
+<details><summary>Original English</summary>
+>> They would go for anybody that they think can provide them actionable information.
+
+I worked with a guy, a DIA agent,
+</details>
+
+>> 国防情报局。也就是五角大楼的情报机构。他们有点像是中情局不受待见的穷亲戚。我们在同批受训。他不停地说“我那个人，我那个人，我那个人”。这就是他招募的那个人。“这个人太棒了。这个人……”这个人到底是谁？最后我说：“这个人到底是谁？你整天都在谈论他，天天谈。”他是旧金山的一名出租车司机，
+
+<details><summary>Original English</summary>
+>> a defense intelligence agency. So, it's the intelligence agency of the Pentagon. They're kind of the poor stepchild to the CIA. And um this guy, we were in training together. He kept talking about my guy, my guy, my guy. This is the guy he recruited. This guy is so great. This guy, who is this guy? Finally, I said, who is this guy? You talk about him all day, every day. He was a cab driver in San Francisco
+</details>
+
+>> 而且他在阿富汗有表兄弟。这就好比，你把自己的职业生涯押在旧金山的一个出租车司机身上。所以在那种情况下，当然，那家伙会说：“哦，在贾拉拉巴德发生了什么事。”好吧，行吧。那挺好。但你想要的是能够更直接接触到真正情报的人。比如，你想要的是白宫的男贴身侍从，那个每天为总统备好西装的人。他不跟总统说话。总统也不一定会跟他说话，但他能听到那个房间里发生的一切。那才是你想要的人。
+
+<details><summary>Original English</summary>
+>> and he had cousins in Afghanistan. It's like that's what you're basing your career on, a cab driver in San Francisco. So in that case, sure, the guy's going to say, "Oh, in Jalalabad something happened." Okay, fine. That's great. But you want somebody with more direct access to real intelligence. You want, for example, the valet in the White House, the guy that lays out the president's suits every day. He doesn't speak to the president. The president doesn't necessarily speak to him, but he listens to everything that's happening in that room. That's the guy you want.
+</details>
+
+>> 我同意。是的。他们是最好的线人。
+
+<details><summary>Original English</summary>
+>> I agree. Yeah. They're the best informers.
+</details>
+
+>> 嗯。
+
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 而且他们觉得不受重视。
+
+<details><summary>Original English</summary>
+>> And they feel unappreciated.
+</details>
+
+>> 是的。
+
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 而且他们很便宜。
+
+<details><summary>Original English</summary>
+>> And they're cheap.
+</details>
+
+### 煤气灯效应与伪装技巧
+
+>> 这是廉价劳动力。而最后一块积木就是——
+
+<details><summary>Original English</summary>
+>> It's a cheap labor. And the last brick is the
+</details>
+
+>> 最后一个是煤气灯效应。当然，
+
+<details><summary>Original English</summary>
+>> last one is gaslighting. Of course,
+</details>
+
+>> 也是所有手段中杀伤力最大的。
+
+<details><summary>Original English</summary>
+>> the most damaging of them all.
+</details>
+
+>> 煤气灯效应。你说的煤气灯效应是什么意思？
+
+<details><summary>Original English</summary>
+>> Gaslighting. What do you mean by gaslighting?
+</details>
+
+>> 嗯，基本上就是当你让你的目标不再相信他自己，而且每当你的目标说什么，你都会进行某种指涉，然后播下怀疑的种子，是的，谢谢。我刚才表述得还挺客气的，但不管怎样，你基本上就是让你的目标不再相信他自己，因为你不断地在他脑子里注入很多怀疑，以及很多这种冲突——你如何对某人进行煤气灯操控。操控我一下。
+
+<details><summary>Original English</summary>
+>> Well, it's basically when you make your target stop believing himself and when um everything wherever your target says, you kind of like refer it and um you plant the seeds that Yeah, thank you. I was I put it quite nicely but just in case you basically make your target uh doesn't believe himself anymore because you constantly put a lot of doubts in his head and like a lot of this conflicts how you would gaslight someone. Gaslight me.
+</details>
+
+>> 对你，还是对约翰？
+
+<details><summary>Original English</summary>
+>> Um on you on John.
+</details>
+
+>> 好吧。对约翰来。
+
+好吧。约翰更容易被操控。
+
+<details><summary>Original English</summary>
+>> Okay. Do John.
+
+Okay. John's easier to gaslight.
+</details>
+
+>> 好吧。
+
+约翰，在我看过的某次采访中，你说过美人计本质上就是妓女，而我刚才说美人计是拿不到报酬的，比如美人计特工是拿不到报酬的。
+
+现在我会拿出更多事实和证据来说明为什么不是这样，为什么你的说法是不对的。比如，我会说第一点：美人计特工是为了政府、为了国家、为了祖国、为了家庭、为了他们一生中最重要的使命而做好事；而妓女只是为了现金跟人上床，所以这完全是不同的使命，美人计特工。他们非常聪明。他们很有智谋。他们对工作非常投入。因此，他们根本不可能是妓女，因为妓女只是为了换取一些现金而付出自己的身体。所以你觉得我有改变你对——
+
+<details><summary>Original English</summary>
+>> Okay.
+
+John, in one interview which I watched, you said that honey trap are actually prostitutes and I just said that honey traps they don't get paid like honey trap agents they don't get paid. Um and now I would bring more facts and evidences why it is not like why your statement is not correct which for example I would say number one honey trap agents they do the good for the government for the state for the um homeland for the family for the biggest mission in their life a prostitute just sleeps with someone for just cash so it's much different like you know mission honey trap occasions. They are very smart. They're very intelligent. They are very committed to the job. And um hence they simply cannot be prostitutes because prostitutes they just give away their bodies for some cash. So do you feel like I have changed your perspective on
+</details>
+
+>> 等等，为了自辩——
+
+<details><summary>Original English</summary>
+>> Wait, in my in my defense
+</details>
+
+>> 我当时引用的例子是中情局那时候的——
+
+<details><summary>Original English</summary>
+>> the example that I was using was from when the CIA
+</details>
+
+>> 我知道，但我是故意这么说的。
+
+<details><summary>Original English</summary>
+>> I know but I did speak on purpose.
+</details>
+
+>> 不，你说得对，她确实是在对我进行煤气灯操控，因为那根本不是我真正——
+
+<details><summary>Original English</summary>
+>> No, you're right that she is gaslighting me cuz that's not really what I
+</details>
+
+>> 没错，因为当然了，你指涉的是不同的事情。你其实说的是中情局在1970年以后就没有美人计项目了，因为这不符合人权，而且我也同意，因为正如你所说的，如果你去大学里对一个年轻女性说：嘿，
+
+<details><summary>Original English</summary>
+>> exactly because of course yes you refer to different things. You actually said that CIA doesn't have honey trap program anymore after 1970 because it's not like according to human rights and I do agree because like if you come to the college like you said and and you say like to a young female, hey,
+</details>
+
+>> “你想在中情局工作、周游世界并成为一名妓女吗？”
+
+<details><summary>Original English</summary>
+>> do you want to work in CA and travel the world and become a prostitute?
+</details>
+
+>> 没错。
+
+<details><summary>Original English</summary>
+>> Exactly.
+</details>
+
+>> 你懂的，我确实同意这一点。是的。
+
+<details><summary>Original English</summary>
+>> You know, and I do agree with that. Yes.
+</details>
+
+>> 而且你也会对别人进行煤气灯操控。
+
+<details><summary>Original English</summary>
+>> And you would gaslight people too.
+</details>
+
+>> 哦，当然。一直都在用。煤气灯效应的威力何在？
+
+那就是削弱他们的自我意识，
+
+<details><summary>Original English</summary>
+>> Oh, sure. All the time. What is the power of gaslighting?
+
+It's to it's to dull their sense of self,
+</details>
+
+>> 让他们质疑自己。
+
+<details><summary>Original English</summary>
+>> make them question themselves.
+</details>
+
+>> 是的。这样他们就更容易被操纵，方法就是极其微妙地重复某些可能是真、可能不是真、或者可能只有部分属实的事情，让他们怀疑自己，怀疑自己的能力，怀疑自己迄今为止深信不疑的事情是否正确。一旦他们开始质疑自己，你就可以——
+
+<details><summary>Original English</summary>
+>> Yes. So that so that they're more easily manipulated by very subtly repeating something that may or may not be true or may only be partially true to make them doubt themselves, to doubt their abilities, to doubt whether they're even right about something that they here for believed strongly in. And once they start questioning themselves, you can
+</details>
+
+>> 你就可以操纵他们。
+
+<details><summary>Original English</summary>
+>> you can manipulate them.
+</details>
+
+>> 操纵他们。
+
+<details><summary>Original English</summary>
+>> Manipulate them.
+</details>
+
+>> 嗯。
+
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 阿莉娅，你看起来大不一样了。你当时是如何必须改变外表，那背后的思路又是什么？
+
+<details><summary>Original English</summary>
+>> Aliyah, you look quite different. How how did you change have to change your appearance and and what was the thinking there?
+</details>
+
+>> 嗯，我其实……嗯，当然要大量使用伪装。这取决于任务，对吧？取决于你的目标，你的目标偏好什么、喜欢什么样的外表。所以我……我会戴不同的假发。我会化不同的妆，采用不同的风格、穿搭风格，甚至不同的肢体语言。当然大家都知道像镜像模仿这样的技巧，你去适应调整自己，甚至调整你的声音、你的目标所用的词汇，使用完全相同的词，甚至让自己的呼吸去配合目标的呼吸，以此来建立这种连接。所以——
+
+<details><summary>Original English</summary>
+>> Um I actually well of course you use disguise a lot. Depends from the mission, right? Depends from your target what your target does prefer, what kind of look. So um I would wear different wigs. I would have like different makeups, different style, fashion style. uh even different body language. Um and of course everybody knows about techniques like mirroring where you adapt yourself even adapt your voice words your target user use exactly the same words even adapt your breathing to your target's breathing in order to have this connection. So the
+</details>
+
+>> 这些我全都不知道，我甚至对此一无所知。太不可思议了。不，我以前不知道这个。好吧，
+
+<details><summary>Original English</summary>
+>> I don't know about any of this stuff I don't even know about that. That's fascinating. No, I didn't know that. Okay,
+</details>
+
+>> 那才是真正的连接。
+
+<details><summary>Original English</summary>
+>> that's a real connection.
+</details>
+
+>> 确实是。确实是。而且这也是搭讪艺术家们会使用的手段。这也是我在我的俱乐部里跟我的女会员们分享的内容。我对她们说，你们必须看清这些危险信号并保持警惕。
+
+<details><summary>Original English</summary>
+>> It is. It is. And that's what actually pickup artists also use. And that's what I share to my women in my club. I said to them, you have to see these red flags and be aware.
+</details>
+
+>> 哪些是危险信号？给我列举一下。你说肢体语言是第一个。
+
+<details><summary>Original English</summary>
+>> What are the red flags? So list them for me. So you said body language is the first one.
+</details>
+
+>> 好的。比如初次见面、第一次约会时的肢体语言。如果你看到这个人瞬间肢体语言变得和你一模一样，你可以测试一下。比如，如果你注意到我一直坐得和约翰一模一样。
+
+<details><summary>Original English</summary>
+>> Okay. So body langu language on the first meeting, the first date for example. If you see that you instantly the body language of this person becomes exactly like yours and you can check it. So for example, if you notice I'm sitting exactly like John all the time.
+</details>
+
+>> 我刚才就那么做了。
+
+<details><summary>Original English</summary>
+>> I did that.
+</details>
+
+>> 我开玩笑的。我开玩笑的。当然——
+
+<details><summary>Original English</summary>
+>> I'm joking. I'm joking. Of course
+</details>
+
+<!-- chunk 9/14 -->
+
+……不是。不，这只是很方便。或者像史蒂文那样做，我在某个时刻也那样做了。
+<details><summary>Original English</summary>
+ not.
+
+No, it's just like very convenient. Or like Steven did like this and I also did that at some point.
+</details>
+
+>> 你是故意那么做的吗？
+<details><summary>Original English</summary>
+>> And did you do that intentionally?
+</details>
+
+>> 不，关键就在这里。我不是故意那么做的，因为这已经根植在我的大脑里了。
+<details><summary>Original English</summary>
+>> No, that's the whole thing. I don't do it intentionally because it's just installed in my brain.
+</details>
+
+>> 这是训练的一部分。
+<details><summary>Original English</summary>
+>> It's part of the training.
+</details>
+
+>> 它成了我的一部分。他们彻底把它变成了你日常生活的一部分，以至于你想都不用想就会这么做。就像反监视侦察一样。
+<details><summary>Original English</summary>
+>> It's part of me. They they so make it a part of your everyday life that you do it without even thinking about. It's like surveillance detection.
+</details>
+
+>> 我自2004年离开中央情报局（CIA）以来，至今仍习惯性地不断扫视侧视镜和后视镜。
+<details><summary>Original English</summary>
+>> I've been out of the CIA since 2004 and I'm still constantly scanning my side view and rearview mirror.
+</details>
+
+### 镜像模仿与操控测试
+
+>> 我也是。但这对你自己来说是一项好技能。而且我认为对每个人来说，你总是需要扫视房间以防万一。那么，这种操控的第一个迹象，或者说当有人试图搭讪你、或出于某种目的利用你时，首先就是当有人试图建立这种肢体语言，比如镜像模仿……
+<details><summary>Original English</summary>
+>> Me too. But this is a good skill just for yourself. And I think for everyone, you always need to scan the room just in case. And then so the first sign of this manipulation or like when somebody tries to pick you up or use you in the uh whatever purpose is first of all when somebody tries to establish this body language like mirroring
+</details>
+
+>> 但他们会不会也是因为真的对你感兴趣才这么做？当你对某人感兴趣时，开始模仿他们，这难道不是一种自然的人类反应吗？
+<details><summary>Original English</summary>
+>> but can they also be doing it because they are actually interested in you is it like a a natural human response to being interested in someone that you start mirroring them
+</details>
+
+>> 有可能，也有可能不是，因为这有不同的层次。第一层次可能是这样，但如果你想真正弄清楚，你就去测试，测试很简单：比如我一直都在模仿约翰对吧，如果我想测试这种连接，我就会换一个不同的动作，如果约翰也做了完全一样的动作，那就意味着我们之间已经建立了连接……
+<details><summary>Original English</summary>
+>> can be and cannot because there's different levels. So the level number one can be but if you want to genuinely understand you test and the test is simple if like for example I'm mirroring John right all this time and then if I would test the connection I would do a different gesture and if John would do exactly the same it means that we already connected
+</details>
+
+>> 你也可以对这个人做完全相同的测试，看看他会不会做出同样的反应，然后你就能明白这到底算不算法某种操控了。另外一点是，在第一次约会、第一次见面时，这个人好像对你的一切了如指掌，问你很多问题，感觉就像你说“哦，我在这所大学读书”，对方就说“哦，我也是”，或者“我喜欢这支运动队”——我不知道，棒球队之类的——对方就说“哦，我也是”，或者“我有两个堂表亲”……有太多的相似之处，让人觉得“哦，我们认识好久了”，或者“这是我的灵魂伴侣”，又或者“我们好像上一世就认识”等等无论你怎么说。有时他们会直接说出来。我过去总是对我的目标这么说，但我现在依然会这么做。
+<details><summary>Original English</summary>
+>> and you can do exactly the same test to this person and see if he will do the same or not and then you understand if it's like uh manipulation or not. Then another thing when on the first date on the first meeting this person like knows everything about you asks you a lot of questions and it feels like you say like oh I studied in this college oh me too or like I love this uh sport team I don't know baseball team whatever and like oh me too or I have like two cousins u and there's so many similarities and it feels like oh we know each other for so long or like it's my soulmate or like we know each other for like from another lifetime or whatever you say. And sometimes they say it. I always say to my I used to say to my targets, but I still do.
+</details>
+
+>> “我觉得我们是灵魂伴侣。”
+<details><summary>Original English</summary>
+>> I think we're soulmates.
+</details>
+
+>> 你现在还会对别人说这个？
+<details><summary>Original English</summary>
+>> You still you still say this to people?
+</details>
+
+>> 我还是会这么做。我不想这样，但我依然会这么做。我不知道你说它是对谁说的……
+<details><summary>Original English</summary>
+>> I still do it. I don't want to do it, but I still do it. I don't know who you say it to who
+</details>
+
+>> 对男人。
+<details><summary>Original English</summary>
+>> to to men.
+</details>
+
+>> 你喜欢这些男人吗？你被他们吸引了吗？
+<details><summary>Original English</summary>
+>> Do you fancy these men? Are you attracted to them?
+</details>
+
+>> 我想说我这么做只是出于无聊（borderhood）。就像我只是觉得无聊……
+<details><summary>Original English</summary>
+>> I would say I do it just for out of borderhood. like I'm just bored
+</details>
+
+>> 我这么做只是因为我有时想调情，纯粹为了好玩，仅此而已，然后我就离开了。
+<details><summary>Original English</summary>
+>> and I just do it because I sometimes want to flirt and just do it just for fun and that's it and then I leave.
+</details>
+
+### 特工经历对情感生活的长期影响
+
+>> 自你做“美人计”（honey trap / honey pot）的那段时期以来，有没有哪怕一个男人让你动心过？
+<details><summary>Original English</summary>
+>> Has there ever been a man since the your your time as a honey trap honey pot that you have been attracted to?
+</details>
+
+>> 整个过程下来，没有。
+<details><summary>Original English</summary>
+>> The whole thing. No,
+</details>
+
+>> 一个你被吸引过的都没有。
+<details><summary>Original English</summary>
+>> there's not been one you've been attracted to.
+</details>
+
+>> 没有，一个都没有。
+<details><summary>Original English</summary>
+>> No, there's not.
+</details>
+
+>> 过去15年来我一直在看心理咨询师，试图解决这个问题，但如你所知，依然没有解决。我对男人的大脑太了解了。所以对我来说，很难放松下来去信任别人，或者去喜欢一个或许能理解我大脑思维的人。也许得是个前特工，或者军队里的人。
+<details><summary>Original English</summary>
+>> I I work with therapists for the last 15 years in order to fix this problem and it's not still, you know, fixed. I know too much about man's brain. So for me, it's very hard to relax and probably trust or like somebody who probably would understand my brain. Maybe it's a former agent or somebody in the military.
+</details>
+
+>> 在我听来这很像创伤后应激障碍（PTSD）。我有一个朋友也是完全一样。她有过三段长期恋爱关系，对象是三名情报官员。我个人并不推荐这样，因为你们总是在试图对彼此执行行动。
+<details><summary>Original English</summary>
+>> That sounds like PTSD to me. I have a I have a friend who is exactly the same way. She's had three long-term relationships. It's been with three intelligence officers. And uh I I wouldn't recommend it because you're always trying to run operations against each other.
+</details>
+
+>> 但很有意思。
+<details><summary>Original English</summary>
+>> But it's interesting.
+</details>
+
+>> 确实很有意思。你们有很多可聊的。
+<details><summary>Original English</summary>
+>> It is interesting. You have a lot to talk about.
+</details>
+
+>> 是的，没错。
+<details><summary>Original English</summary>
+>> Yes. Exactly.
+</details>
+
+>> 但后来走不下去的时候，我引用一下我自己离婚案法官的话。她说：“我再也不接这种案子了。你们无时无刻不在针对彼此执行行动。我受不了了。”
+<details><summary>Original English</summary>
+>> But then when things don't work, I'll tell I'll I'll quote the judge in my own divorce case. She's like, I'm never taking one of these cases again. You are constantly running operations against each other. I can't do this anymore.
+</details>
+
+>> 你前妻也是特工？
+<details><summary>Original English</summary>
+>> And your ex-wife was a agent as well?
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yes.
+</details>
+
+>> 但你现在结婚了吗？
+<details><summary>Original English</summary>
+>> But now you're married?
+</details>
+
+>> 没有。
+<details><summary>Original English</summary>
+>> No.
+</details>
+
+>> 噢，哇。我之前不知道。噢，那挺有意思的。
+<details><summary>Original English</summary>
+>> Oh, wow. I didn't know that. Ooh, that's interesting.
+</details>
+
+>> 好吧，抱歉。
+<details><summary>Original English</summary>
+>> All right. Sorry.
+</details>
+
+>> 我刚刚听到她小声嘀咕了一句“我是女王”。
+<details><summary>Original English</summary>
+>> I just heard a whisper. I'm the queen under her breath.
+</details>
+
+### 赞助商信息与肢体语言培训
+
+>> 过去，自己创业是一项极其巨大的风险。但那个时代已经彻底改变了。如果你有一个挥之不去的商业想法，我认为你至少应该给自己一个机会去尝试实现它。而这正是我们节目赞助商Shopify发挥作用的地方。他们的智能平台包含了你开始销售并让想法落地所需的一切。他们有拖拽式编辑器，有为你提供协助的AI助手，有数据分析，你不需要成为专家就能轻松上手。Shopify业界领先的结账系统能确保你从第一天起就获得收益。它能帮助你更多的客户完成购买，因为他们的结账流程非常高效，而且能为下次购买保存信息。像这样个性化的结账体验等同于更高的转化率，等同于业务更快速地增长。没有什么比刚起步的第一步变得困难、复杂或昂贵更能扼杀你对新想法最初的热情了。你需要尽可能节省时间和金钱，这样你才能把精力全部集中在拓展实际业务上。这就是Shopify带给你的。前往shopify.com/bartlet，你现在就可以开始免费试用。作为一名在二十出头就开始创业的创始人，我想我一直有一种强烈的冒名顶替综合征，因为总有一件事是我不擅长的，那就是财务。作为一家小企业，财务状况以及对自身财务状况的了解，是你实现所有梦想的巨大推动力。我过去一直在逃避它，直到我发现了一个名为Zero的平台。Zero是一个专门针对小型企业的会计与财务管理平台。它将记账、支付、薪资和分析全部整合到了同一个地方。即使对于那些不喜欢处理财务的人，Zero也能为你分担财务工作。但它的核心目标不仅限于记录财务账目，因为Zero希望帮助你了解自己企业正在发生的事情，而且越来越重要的是——这也许是最重要的一点——帮助你做出决策。终于，我们有了一个能以简单方式为左脑型或右脑型思维者赋能并助力我们梦想的合作伙伴。你可以通过访问zero.com来了解更多关于Zero的信息。感谢Zero，感谢你们赞助本播客，但也感谢你们帮助我拓展业务——作为一个坦白说从未那么喜欢过财务的人。
+
+那么，肢体语言，你在职业生涯中对肢体语言思考得多吗？
+<details><summary>Original English</summary>
+>> It used to be that working for yourself was a massive, massive risk. But that world has completely changed. If you've got a business idea that you can't stop thinking about, I think you owe it to yourself to at least try and make it happen. And that is where our show sponsor Shopify comes in. Their smart platform includes everything you need to start selling and get that idea off the ground. They have this drag and drop editor. They have this AI sidekick and helps you. They have analytics and you don't need to be an expert to get going. Shopify's best-in-class checkout makes sure that you're getting paid from day one. It helps more of your customers finish their purchase because their checkout is so efficient and it saves their info for next time. Personalized checkouts like that equal more conversion, equal a faster growing business. Nothing kills that early enthusiasm you have for a new idea than that first initial step to get going being difficult, complicated, or expensive. And you need to save as much time and money so that you can focus all of it on growing your actual business. And that's what Shopify gives you. Head over to shopify.com/bartlet and you can start your free trial right now. As a founder building a business when I was in my early 20s, I think I always had a deep sense of imposter syndrome because there was something that I wasn't good at and that thing was finances. Finance and understanding your financial position as a small business is the great enabler of all of your dreams. I was running from it until I discovered a platform called Zero. Zero is an accounting and financial management platform specifically for small businesses. And it brings accounting, payments, payroll, and analytics all into one place. Even for people that don't love doing finances, Zero wants to do the financial work for you. But its core ambition is to go beyond keeping the financial record because Zero wants to help you understand what's happening in your business and increasingly and this is maybe the most important thing is help you make decisions. Finally, we have a partner who can enable us in a simple way for those people that are both leftrain or rightrain and enable our dreams. You can learn more about Zero by going to zero.com. Thank you to Zero. Thank you for sponsoring this podcast, but also thank you for helping me to scale my business as somebody that quite frankly has never loved finances that much.
+
+So, body language, do you did you think much about body language in your career?
+</details>
+
+>> 我们实际上接受过肢体语言方面的培训课程。
+<details><summary>Original English</summary>
+>> We actually went through training classes on body language.
+</details>
+
+>> 是的。比如该做什么，如何镜像模仿，嗯，在别人的肢体语言中要留意什么——他们是在倾向你还是远离你，是不是直视你的眼睛，各种各样的事情。眼神接触重要吗？
+<details><summary>Original English</summary>
+>> Yeah. And what to do, how to mirror, um what to look for in others body language, are they leaning toward you, away from you, looking you right in the eye, all different kinds of things. Does eye contact matter?
+</details>
+
+>> 重要。在哪个方面？
+<details><summary>Original English</summary>
+>> Yes. In what regard?
+</details>
+
+>> 最重要的之一，我的意思是取决于……如果我可以讲的话。比如对于“美人计”来说，
+<details><summary>Original English</summary>
+>> One of the most important I mean depends if if I may. For example, for honey trap,
+</details>
+
+### 美人计中的肢体信号与破绽暴露
+
+>> 你应该给出第一种暗示，对吧？你有点像是在示意他接近你，但与此同时，你又不能太有侵略性。所以你可以看着你目标的眼睛。
+<details><summary>Original English</summary>
+>> you should you should do the first kind of like sign, right? You you kind of like offering him to approach you, but at the same time, you cannot be too pushy. So you can look at your target eyes.
+</details>
+
+>> 多远的距离？
+<details><summary>Original English</summary>
+>> How far away?
+</details>
+
+>> 呃，其实无所谓。我的意思是，在那种他能看到我的距离，
+<details><summary>Original English</summary>
+>> Uh doesn't really matter. I mean like uh you know in a distance that he could see me
+</details>
+
+>> 2米或更短。还有，我的身体姿势，我必须对他保持开放。所以理想情况下，很多女性去酒吧时——我总是告诉她们，我教导她们——不要把包放在大腿上，因为这样你就像是设下了一种保护。是的，一种屏障。所以你的肩膀要朝向我的目标，在这个例子里也就是约翰。肩膀也要放松。嗯……我的意思是，你可以玩弄你的头发，就像我们在这段视频里看到的那样。我简直忘不掉那一幕，因为视频里的爱丽丝（Alice）一直在整理自己的头发，所以对于任何女性来说，当她触碰头发时，这是一个非常重要的工具。为什么？因为即使在最古老的艺伎学校里，当你向男人展示这些部位时——因为这是最脆弱的部位，你的颈部是身体里最脆弱的部位。
+<details><summary>Original English</summary>
+>> 2 m less. And um also my body position I have to be open to him. So ideally a lot of women when they come to bars and I always tell them I teach them don't put your bags on your um lap because in this case you kind of like put a sort of um protection. Yeah. A barrier. So your shoulders looking to my target in this case who is John. Um relax shoulders as well. Um I mean you you can kind of like play with your hair and that's what we see like u there in this video. I just cannot forget it because like Alice was constantly grooming herself and like you know so this is a very uh important tool for any woman when she uh touches her hair. Why? Because even in geisha school which is like you know the most ancient one when you show to men uh this parts because this this is the most vulnerable parts and your neck the most vulnerable in the body.
+</details>
+
+>> 也就是你的手腕、你的颈部。
+<details><summary>Original English</summary>
+>> So your wrists your neck
+</details>
+
+>> 你的手腕和颈部。所以当女人整理头发时，男人会感受到并看到这种脆弱感，对吧，所以这就好比在传达“我……我愿意接受接触”。这是其中一种……
+<details><summary>Original English</summary>
+>> your wrist and the neck. So when women would groom their hair and men would feel and see this vulnerability right so it's kind of like I'm I'm open for a contact. So this is one
+</details>
+
+<!-- chunk 10/14 -->
+
+……可以说的小窍门，当然还有眼神接触。所以是的，镜像模仿。我可能会采取同样的坐姿，而且最理想的是不要翘腿，因为如果你翘着腿，而且你坐着……比如说面朝这里的白板，对吧？我这样也有点把自己封闭起来，就像这是一种封闭的姿势。所以最好就是保持放松的姿势，带着开放的仪态和眼神接触，对吧？
+
+看着对方几秒钟，然后眼神往下落，就像你觉得有点害羞，然后你若有所思，接着你好像想起了什么。你摸摸嘴唇，觉得“哦，这个男人让我想起詹姆斯·邦德”。然后你看向别处，可能又摸摸脸颊、摸摸脸。这总是很好的，因为再次强调，手腕——你露出手腕，然后你有点进入这种脸红的情绪，你很兴奋但又很害羞，而且你依然显得脆弱、优柔寡断。然后你再看回去几秒钟，然后再往下看，然后你懂的，循环往复。
+
+所以基本上就像一个三角，然后你看着对方的嘴唇微笑，因为我在映射你的面部表情。你对我微笑，我就对你回以微笑，然后眼神再次往下落，并且……
+
+<details><summary>Original English</summary>
+of the you know trick let's say and the eye contact of course. So yeah, mirroring. So I would sit maybe in the same position and ideally also not to cross your uh legs because if you cross and you sit um towards let's say the the the board here, right? So I'm kind of like closing also myself like this is the closing position position. So it's better to just like be in relaxed position and with the open, you know, posture and the eyes contact, right?
+
+So it's a few seconds then down like you kind of like think you're a little bit shy and then you like wonder and then you like remember something. You touch your lips you feel like oh this man reminds me about James Bond. Then you look somewhere and you touch again maybe your cheeks, your face. It's always good because like again wrist, you show your wrist and then you kind of like got into this blushing uh mood that you're excited but you're shy and you're still like you know vulnerable and indecisive and then you look back for a few seconds and then again down and then you know again.
+
+So it's like a triangle basically and then you look at the lips and smile because I reflect your facial expressions. So you smile to me, I smile you back and then again down and like
+</details>
+
+>> 非常撅嘴撒娇。
+
+<details><summary>Original English</summary>
+>> very pouty.
+</details>
+
+>> 是的。很小女孩样。
+
+<details><summary>Original English</summary>
+>> Yeah. Like girly.
+</details>
+
+>> 脆弱。是的。调皮俏皮。
+
+<details><summary>Original English</summary>
+>> Vulnerable. Yes. Playful.
+</details>
+
+>> 嗯哼。肢体语言我们了解了，眼神接触也了解了。还有什么其他重要的吗？
+
+<details><summary>Original English</summary>
+>> Uhhuh. So we've got the body language, we've got the eye contact. Is there anything else that's important?
+</details>
+
+### 牛奶联想技巧
+
+>> 我不知道你听没听说过“牛奶技巧”。
+
+<details><summary>Original English</summary>
+>> I don't know if you heard about milk technique.
+</details>
+
+>> 牛奶。
+
+<details><summary>Original English</summary>
+>> Milk.
+</details>
+
+>> 牛奶？不，我不知道。
+
+<details><summary>Original English</summary>
+>> Milk? No, I don't know that
+</details>
+
+>> 它的运作方式是，例如这个词会带给你什么联想，比如“牛奶”——
+
+<details><summary>Original English</summary>
+>> the way it works is for example what association this word brings to you like milk
+</details>
+
+>> 童年。
+
+<details><summary>Original English</summary>
+>> childhood.
+</details>
+
+>> 很好。
+
+<details><summary>Original English</summary>
+>> Good.
+</details>
+
+>> 是的。还有什么？
+
+<details><summary>Original English</summary>
+>> Yeah. What else?
+</details>
+
+>> 呃，母亲。
+
+<details><summary>Original English</summary>
+>> Uh mother.
+</details>
+
+>> 没错。还有什么？
+
+<details><summary>Original English</summary>
+>> Yes. What else?
+</details>
+
+>> 还有什么？美眉。对。
+
+<details><summary>Original English</summary>
+>> What else? Babes. Yeah.
+</details>
+
+>> 看吧，就在仅仅问了一个问题之后，在大概一分钟甚至更短的时间里，我就了解了这么多。对你而言，我可以说你与母亲很有连接。你对童年充满怀念。因此，你拥有一个非常美好的童年。你很想念它。你想要……
+
+<details><summary>Original English</summary>
+>> See, so I learned so much during just like after like one question in like one minute even less. With you I could say that you were connected to your mother. You are nostalgic about your childhood. Hence, you had a really nice childhood. You miss it. You want to
+</details>
+
+>> 我现在还留着我的泰迪熊。
+
+<details><summary>Original English</summary>
+>> I still have my teddy bear.
+</details>
+
+>> 没错。所以，如果我表现出滋养抚育的样子，如果我成为那种走过来、化身为母亲原型的女人，说：“约翰，亲爱的，你太累了。过来，让我抱抱你。让我抱着你走。就像，来来，就过来这里。让我给你揉揉背，让我给你挠挠背。”妈妈们就是这么做的，对吧？就像，“来这里吧”。
+
+所以这是一种滋养型的母亲原型立场。而你提到了胸部，我说得对吗？对，好的，所以……
+
+<details><summary>Original English</summary>
+>> Yes. So, if I will be nurturing, if I would be that woman who like come and be in the archetype of mother and say, "John, darling, you're so tired. Come here. Let me hug you. Let me carry you. Like, let let me just like come here. Let me massage your back. Let me scratch your back." That's what mommies do, you know? Like, just come here. So this is nurturing a mother um archetype position where you said boobs am I cor right yes okay so
+</details>
+
+>> 这意味着什么？所以这绝对表明我不应该……我不应该以母亲这个立场原型切入。在这里，我也许应该以情人、诱惑者的原型切入。
+
+<details><summary>Original English</summary>
+>> what does it mean so it's definitely I should not I shouldn't come from the position archetype being mother here I probably would come as archetype of lover seducer
+</details>
+
+>> 如果我说的是“牛”呢？
+
+<details><summary>Original English</summary>
+>> what if I said cow
+</details>
+
+>> 问得好。
+
+<details><summary>Original English</summary>
+>> it's a good question
+</details>
+
+>> 这是第二个词。好的，牛。牛又意味着什么？嗯，稳定、食物、大地、脚踏实地、你踏实稳固、依靠支持。牛代表的就是这些，你明白我的意思了吗？所以牛奶技巧确实就是这样起作用的。
+
+但这起到什么作用呢？我会通过制造对话，找出你过去或者你生活中所有这些对你很重要的东西，在这些地方我可以把自己植入进去，变成那个完美的人，给予你所缺乏的东西。
+
+<details><summary>Original English</summary>
+>> it's the second one okay cow How again means what? Um stability, food, um ground, grounded, you're grounded, support. That what cow means you see what I'm saying? So milk technique really works like that. But um what does it do? So I would create conversations and find all these important things for you in your past uh or in your life where I can install myself and become this perfect person and give you what you're lacking.
+</details>
+
+### 间谍活动的规模与英伟达风波
+
+>> 约翰，这种事情发生的频率有多高？像这种间谍活动有多频繁，它发生在哪里，哪些国家是最大的……
+
+<details><summary>Original English</summary>
+>> How much of this stuff goes on, John? Like how much of this espionage stuff is happening and where is it happening and which countries are the biggest
+</details>
+
+>> 每天都在发生。全世界每一天都在发生。
+
+你知道，我多次说过，中情局通常已经不再使用这一套了，而且已经很久没用了，纯粹是因为如果你要建立长期的关系，它必须至少建立在特工与情报官员之间的诚实与直接之上。呃，如果你只是想把芯片卖掉，好吧，当然可以。
+
+但俄罗斯人会这么做，法国人会这么做，以色列人会这么做，其他少数几个国家，还有中国人也会这么做。
+
+所以在这方面，它时时刻刻都在发生。就在我们说话的此时此刻，它正在发生。它很可能就发生在我们所在的华盛顿这里。华盛顿的间谍比地球上任何其他地方都多。联邦调查局估计，华盛顿有1万到1.5万名外国情报人员。所以，它现在正在发生。
+
+<details><summary>Original English</summary>
+>> every day. every single day all over the world. You know, I I've said many times the CIA generally doesn't use this anymore and hasn't for a long time just because if if you're building a long-term relationship, it has to be built um on at least honesty and directness between the the agent and the officer. Uh I if you're trying to get chips sold, okay, sure. Um but the the Russians do it, the um the French do it, the Israelis do it, a handful of other countries, the Chinese do it. Um so in that respect, it happens all the time. It's happening right now as we're speaking. It's probably happening right here in Washington. There are more spies in Washington than there are anywhere else on the planet. The FBI estimates that there are between 10 and 15,000 foreign intelligence officers in Washington. So, it's happening right now.
+</details>
+
+>> 让人感到疑神疑鬼。
+
+<details><summary>Original English</summary>
+>> Makes you feel paranoid.
+</details>
+
+>> 是的，确实如此。确实如此。好吧，我再告诉你一件让你疑神疑鬼的事。你在我们刚才的谈话中提到了秘密死信箱。就在我们此时此刻坐着的这个街区里，就存在着成千上万个潜在的死信箱。你知道，桥下有一座小步桥，灌木丛后面，当地图书馆前面，数不胜数的地方。
+
+<details><summary>Original English</summary>
+>> Yeah, it does. It does. Well, I'll tell you another thing that makes you feel paranoid. You mentioned earlier in our conversation, dead drops. Well, there are thousands of potential dead drops right here in the neighborhood that we happen to be sitting in. You know, there's a little foot bridge underneath the bridge, behind the uh the bush, in front of the local library, unlimited number of places.
+</details>
+
+>> 太引人入胜了。那你觉得黄仁勋的世界里现在会是怎样一种状况？你觉得正在发生什么？
+
+<details><summary>Original English</summary>
+>> So fascinating. So what what would what would be going on in Jensen's world right now, do you think? What do you think's happening?
+</details>
+
+>> 全面危机公关和损害控制。他面临着两个不同的难题，也许是三个不同的难题。
+
+首先，他正在接受英伟达董事会的调查，对吧？他们请来了外部调查人员来查个究竟，看看这里到底在发生什么。
+
+其次，他必须担心联邦调查局正在调查的内容，因为联邦调查局还在与中情局、国家安全局和五角大楼沟通，而那在潜在层面可能是刑事犯罪。
+
+第三，正如你所说，他没有婚前协议。
+
+<details><summary>Original English</summary>
+>> Total damage control. And he has two different problems, maybe three different problems. First of all, he's being investigated by the Nvidia board, right? They brought in outside investigators to look to see what exactly is happening here. Second, he has to worry about what the FBI is investigating because the FBI is also talking to the CIA and NSA and the Pentagon and that could be potentially, you know, criminal. And third, as you said, he's got no prenup.
+</details>
+
+>> 这会让他损失半万亿美元。他到底在想什么呢？所以我……我今天可不想成为黄仁勋。
+
+<details><summary>Original English</summary>
+>> This is going to cost him half a trillion dollars. Well, what was he thinking? So he's I I wouldn't want to be Jensen Wong today.
+</details>
+
+>> 我看到一些报道。我觉得，我觉得可能大概是1000亿。
+
+<details><summary>Original English</summary>
+>> I saw some reports. I think I think it might be about 100 billion.
+</details>
+
+>> 就……就那样。
+
+<details><summary>Original English</summary>
+>> That that's it.
+</details>
+
+>> 我记得他持有英伟达3%的股份。所以……
+
+<details><summary>Original English</summary>
+>> I think he owns 3% of Nvidia. So
+</details>
+
+>> 好吧。
+
+<details><summary>Original English</summary>
+>> okay,
+</details>
+
+>> 这将是……这将是历史上数额最大的一笔婚前协议赔款。但你知道……是的，在……
+
+<details><summary>Original English</summary>
+>> it's it would be the biggest the biggest prenup payment in history. But you know Yeah. at the
+</details>
+
+>> 那如果他们谈判协商呢？
+
+<details><summary>Original English</summary>
+>> well what if they will negotiate
+</details>
+
+>> 也许吧。
+
+<details><summary>Original English</summary>
+>> maybe
+</details>
+
+>> 如果……
+
+<details><summary>Original English</summary>
+>> if
+</details>
+
+>> 但是，你懂的，基于所有这些信息，我一开始就说有点让人困惑，但还有——11月17日对吧，英伟达要开……
+
+<details><summary>Original English</summary>
+>> but then like you know what it's a little bit confusing based on like all this information when I said in beginning but also
+</details>
+
+>> 财报会。是的，他们必须公布自己赚了多少钱。
+
+<details><summary>Original English</summary>
+>> 17th November right Nvidia they'll have um meeting yes where they have to disclose how much money they make
+</details>
+
+>> 没错。
+
+<details><summary>Original English</summary>
+>> that's right
+</details>
+
+>> 对，而关于涉嫌中国间谍这一丑闻的整件事情，是在三周前公开曝光的，这导致股价暴跌。
+
+<details><summary>Original English</summary>
+>> right and this whole situation about this affair with alleged Chinese spy I uh went out publicly 3 weeks ago which made the shares drop down.
+</details>
+
+>> 是的，跌了大概20%。
+
+<details><summary>Original English</summary>
+>> Yeah. By like 20%.
+</details>
+
+>> 对。所以如果我有很多钱，我难道不会去抄底买这些股票吗？
+
+<details><summary>Original English</summary>
+>> Yeah. So if I would have a lot of money, wouldn't I go and buy this shares?
+</details>
+
+>> 我会去买的。
+
+<details><summary>Original English</summary>
+>> I would
+</details>
+
+>> 因为这是唯一一家拥有这种GPU芯片的公司。
+
+<details><summary>Original English</summary>
+>> because this is the only one company who has this cheaps GPU.
+</details>
+
+>> 低买高卖，而它现在正处于低位。
+
+<details><summary>Original English</summary>
+>> Buy low, sell high, and it's low right now.
+</details>
+
+>> 没错。那我为什么现在不买呢？我才不管她是不是间谍，不管他有没有所有这些问题，或者他的婚前协议和离婚怎么样了。我不在乎。
+
+<details><summary>Original English</summary>
+>> Exactly. So why wouldn't I buy it right now? And I don't care if he if she is a spy, if he has all these problems or whatever happened with his prenup and like divorce. I don't care.
+</details>
+
+>> 你说得完全对。
+
+<details><summary>Original English</summary>
+>> You're totally right.
+</details>
+
+>> 是的。但是……
+
+<details><summary>Original English</summary>
+>> Yeah. But that's
+</details>
+
+>> 英伟达会度过这场难关的。
+
+<details><summary>Original English</summary>
+>> Nvidia is going to survive this.
+</details>
+
+>> 绝对会。因为这是世界上唯一一家拥有这种实力的公司。
+
+<details><summary>Original English</summary>
+>> Absolutely. Because this is the only one company who has that power in the world.
+</details>
+
+>> 没错。
+
+<details><summary>Original English</summary>
+>> That's right.
+</details>
+
+>> 而且现在全都关乎人工智能。
+
+<details><summary>Original English</summary>
+>> And it's now it's all about AI.
+</details>
+
+>> 嗯。
+
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 全都关乎人工智能。
+
+<details><summary>Original English</summary>
+>> It's all about AI.
+</details>
+
+>> 所以你的意思是买入……
+
+<details><summary>Original English</summary>
+>> So you're saying buy
+</details>
+
+>> 买英伟达？
+
+<details><summary>Original English</summary>
+>> buy Nvidia?
+</details>
+
+>> 我同意。我也会，你知道，如果我有……如果我有多余的现金，我现在就会去买这只股票，能买多少买多少。所以，万一这可能是某人做的一个局……
+
+<details><summary>Original English</summary>
+>> I agree. I I would you know if I have like if I would have extra cash I would go and buy this stock right now as much as I could. So what if it could be someone's setup
+</details>
+
+>> 为了……
+
+<details><summary>Original English</summary>
+>> to
+</details>
+
+>> 制造出这种局面，最终去抄底买入股票并大赚一笔呢？因为不管有没有黄仁勋，英伟达都会变得更加强大、更有利润。嗯。而且董事会根本没人提让他辞职的事。
+
+<details><summary>Original English</summary>
+>> create that and eventually to buy the shares and become rich because with Jensen or without Jensen the Nvidia will become even more powerful and stronger and profitable. Mhm. And nobody's talking about the board asking him to resign.
+</details>
+
+>> 确实如此。
+
+<details><summary>Original English</summary>
+>> Exactly.
+</details>
+
+>> 对。
+
+<details><summary>Original English</summary>
+>> Right.
+</details>
+
+>> 甚至……
+
+<details><summary>Original English</summary>
+>> Even
+</details>
+
+>> 不过他们没有接班人，不是吗？
+
+<details><summary>Original English</summary>
+>> there's no successor though, is there?
+</details>
+
+>> 没有，真没有。
+
+<details><summary>Original English</summary>
+>> No, not really.
+</details>
+
+>> 这是一家非常有趣的公司，有60个人直接向他汇报，
+
+<details><summary>Original English</summary>
+>> Really interesting company where he has 60 direct reports,
+</details>
+
+>> 对吧？这太疯狂了。
+
+<details><summary>Original English</summary>
+>> right? Which is crazy.
+</details>
+
+>> 60个人直接向他汇报。他搞了这种奇特的扁平化架构。而且以前有人问他有没有接班人，他就说没有。
+
+<details><summary>Original English</summary>
+>> 60 people reporting directly to him. He has this weird flat structure. And also when he's been asked previously, is there a successor? He says, nope.
+</details>
+
+>> 没有。
+
+<details><summary>Original English</summary>
+>> No.
+</details>
+
+>> 我希望内部有一个，但他说没有。
+
+<details><summary>Original English</summary>
+>> I hope there's one internally, but nope.
+</details>
+
+>> 所以我觉得董事会现在的处境，怎么说呢，挺尴尬的。而且你刚才在录音棚后面听的时候也提到了，你提到了一个非常关键的事情，其实这也让我产生了疑问。
+
+英伟达每年花……我也读到了，每年花大约1000万美元在黄仁勋的安保上。
+
+<details><summary>Original English</summary>
+>> So I think the board's you know, they're in a position I should say. And also you mentioned um when I listened like behind uh the studio so you mentioned very important thing actually it also gave me this question Nvidia spent and I read that spent about $10 million annually on Jensen's security.
+</details>
+
+>> 那他们怎么就没去查查黄爱丽丝呢？这段时间她可一直公开和他亲吻，
+
+<details><summary>Original English</summary>
+>> So how come they didn't check Alice Huang who is for all this time kissing him publicly
+</details>
+
+>> 比如他们还一起坐同一辆车去某个地方。这显然不是业务关系。那么怎么着？他们竟然没告诉他说：“你好，我们做了背景调查，她显然是个间谍。”
+
+<details><summary>Original English</summary>
+>> like they go together at the same car somewhere. So it's obviously not business relationship. So what? They didn't tell him that. Hello, we did the background check and she's apparently a spy.
+</details>
+
+>> 她现在会在哪里呢？她逃回中国藏起来了吗？她是不是被……
+
+<details><summary>Original English</summary>
+>> Where will she be now? Is she back in China hiding out? Is she being
+</details>
+
+>> 换作是我我早就跑了。
+
+<details><summary>Original English</summary>
+>> I would be.
+</details>
+
+>> 是的，换我我也早就跑了。
+
+<details><summary>Original English</summary>
+>> Yeah, I would be.
+</details>
+
+>> 还没有人真正解答过这个问题，那就是，你知道，想必她在某个时刻意识到了自己已经……
+
+<details><summary>Original English</summary>
+>> No one's really answered this question, which is, you know, presumably at some point she figured out that she'd been
+</details>
+
+>> 哎，而且……而且还有一个……
+
+<details><summary>Original English</summary>
+>> Well, and and there's a
+</details>
+
+<!-- chunk 11/14 -->
+
+这里还有一个随之而来的问题。她是已婚的，她丈夫是这位亿万富翁，呃，风险投资家。
+<details><summary>Original English</summary>
+ there's
+
+ a
+
+
+
+
+
+correlary
+
+
+
+
+
+question
+
+ there,
+
+ too.
+
+ She's
+
+ married
+
+ and
+
+
+
+
+
+her
+
+ husband
+
+ is
+
+ this
+
+ billionaire
+
+ uh
+
+
+
+
+
+venture
+
+ capitalist.
+</details>
+
+>> 我的天啊。对。
+<details><summary>Original English</summary>
+>> Oh
+
+ my
+
+ god.
+
+ Right.
+</details>
+
+>> 但那是假的吗？
+<details><summary>Original English</summary>
+>> But
+
+ is
+
+ that
+
+ fake?
+</details>
+
+>> 是假的吗？他戴绿帽子了吗？我是说，他可能，呃，他现在感到被羞辱了吗？
+<details><summary>Original English</summary>
+>> Is
+
+ it
+
+ fake?
+
+ Is
+
+ he
+
+ a
+
+ cuck?
+
+ I
+
+ mean,
+
+ he
+
+ may
+
+
+
+
+
+be
+
+ uh
+
+ is
+
+ he
+
+ humiliated
+
+ now?
+</details>
+
+>> 他在这一切中扮演什么角色？他是中国情报人员吗？
+<details><summary>Original English</summary>
+>> What's
+
+ his
+
+ role
+
+ in
+
+ all
+
+ this?
+
+ Is
+
+ he
+
+ a
+
+
+
+
+
+Chinese
+
+ intelligence
+
+ officer?
+</details>
+
+### 深入潜伏与掩护身份
+
+>> 当你当间谍的时候，事情是怎么运作的？在你的经历中，美国或者俄罗斯会那样做吗？他们会为你伪造整个人生吗——
+<details><summary>Original English</summary>
+>> How
+
+ does
+
+ it
+
+ work
+
+ when
+
+ you're
+
+ a
+
+ spy?
+
+ Do
+
+
+
+
+
+that
+
+ does
+
+ the
+
+ US
+
+ or
+
+ Russia
+
+ in
+
+ your
+
+ case.
+
+
+
+
+
+Do
+
+ they
+
+ build
+
+ you
+
+ a
+
+ fake
+
+ life
+</details>
+
+>> 尤其是如果你处于深度潜伏状态？是的。你的整个人生都是假的。
+<details><summary>Original English</summary>
+>> if
+
+ you're
+
+ especially
+
+ if
+
+ you're
+
+ under
+
+
+
+
+
+deep
+
+ cover?
+
+ Yes.
+
+ Your
+
+ entire
+
+ life
+
+ is
+
+
+
+
+
+fake.
+</details>
+
+>> 那么，你会过多久这种虚假的生活？
+<details><summary>Original English</summary>
+>> So,
+
+ how
+
+ how
+
+ long
+
+ do
+
+ you
+
+ live
+
+ a
+
+ fake
+
+
+
+
+
+life?
+</details>
+
+>> 嗯，我和一些做这行干了30年的人共事过。
+<details><summary>Original English</summary>
+>> Well,
+
+ I
+
+ worked
+
+ with
+
+ some
+
+ guys
+
+ that
+
+ did
+
+
+
+
+
+it
+
+ for
+
+ 30
+
+ years.
+</details>
+
+>> 解释一下。跟我说说具体细节。他们会把你送到另一个国家去。比如，带我了解一下整个流程。
+<details><summary>Original English</summary>
+>> Explain.
+
+ Give
+
+ me
+
+ some
+
+ specifics
+
+ here.
+
+
+
+
+
+So,
+
+ they'll
+
+ they'll
+
+ ship
+
+ you
+
+ off
+
+ to
+
+
+
+
+
+another
+
+ country.
+
+ Like,
+
+ walk
+
+ me
+
+ through
+
+
+
+
+
+the
+
+ process.
+</details>
+
+>> 好。中央情报局有一个名为“NOC项目”的项目。非官方掩护（Nonofficial cover）。意思是你在海外并不是以国务院官员、国防部官员、商务部官员的身份出现。你是作为，你知道，一个野生动物摄影师去海外。
+<details><summary>Original English</summary>
+>> Okay.
+
+ There's
+
+ a
+
+ program
+
+ at
+
+ the
+
+ CIA
+
+
+
+
+
+called
+
+ the
+
+ Knock
+
+ program.
+
+ Nonofficial
+
+
+
+
+
+cover.
+
+ Meaning
+
+ you
+
+ don't
+
+ go
+
+ overseas
+
+ as
+
+
+
+
+
+you
+
+ know
+
+ a
+
+ state
+
+ department
+
+ officer,
+
+
+
+
+
+defense
+
+ department
+
+ officer,
+
+ commerce
+
+
+
+
+
+department
+
+ officer.
+
+ You
+
+ go
+
+ overseas
+
+ as
+
+
+
+
+
+you
+
+ know
+
+
+
+
+
+a
+
+ wildlife
+
+ photographer.
+</details>
+
+>> 嗯哼。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 或者是博物馆策展人。这些是我随便编的。你可以是任何身份。你干那份工作。朝九晚五的时候，你是个野生动物摄影师，或者是个博物馆策展人。然后五点之后，你是一名中情局官员，你去参加鸡尾酒会，试图物色能接触到重要信息的有趣人物。
+
+有官方掩护的人是在美国大使馆工作，待上2年、3年或者4年就会调走，而你将在那个职位上待20年或30年。这样就绝不会有人怀疑你是一名情报人员。
+
+与此同时，你要么是在一家正规公司工作——听着，美国公司的首席执行官，或者美国公司的安全主管，他们也是爱国者。所以如果中情局找上苹果、微软或者随便哪家公司，说：“嘿，听着，国家需要你们。我们需要你们为我们的一名深度潜伏人员提供一份掩护工作。”他们总是说：“当然可以，没问题，我们绝对配合。”所以你就有了那种掩护；
+
+或者你没去这些公司，你知道，你是个野生动物摄影师。所以你就一直干那个。但通常都会有背景支撑安排（backstopping），而不像现在这种疯狂的情况：临街店铺里坐着两个人，俩人都不是工程师，他们甚至不知道这家公司是干什么的，你知道吗？“噢，我为Mega Speed工作。”“噢，Mega Speed是做什么的？”“你知道，我不太清楚。”
+<details><summary>Original English</summary>
+>> Or
+
+ a
+
+ museum
+
+ curator.
+
+ I'm
+
+ making
+
+ these
+
+
+
+
+
+up.
+
+ You
+
+ can
+
+ be
+
+ anything.
+
+ And
+
+ you
+
+ do
+
+ that
+
+
+
+
+
+job.
+
+ You're
+
+ a
+
+ wildlife
+
+ photographer
+
+ or
+
+
+
+
+
+you're
+
+ a
+
+ museum
+
+ curator
+
+ from
+
+ 9
+
+ to5.
+
+ And
+
+
+
+
+
+then
+
+ after
+
+ five,
+
+ you're
+
+ a
+
+ CIA
+
+ officer
+
+
+
+
+
+and
+
+ you're
+
+ going
+
+ to
+
+ cocktail
+
+ parties
+
+
+
+
+
+trying
+
+ to
+
+ spot
+
+ interesting
+
+ people
+
+ with
+
+
+
+
+
+access
+
+ to
+
+ important
+
+ information.
+
+
+
+
+
+Where
+
+ an
+
+ official
+
+ cover
+
+ person
+
+ is
+
+ going
+
+
+
+
+
+to
+
+ work
+
+ from
+
+ an
+
+ American
+
+ embassy
+
+ and
+
+
+
+
+
+transfer
+
+ out
+
+ after
+
+ 2
+
+ years
+
+ or
+
+ 3
+
+ years
+
+ or
+
+
+
+
+
+maybe
+
+ four
+
+ years,
+
+ you're
+
+ going
+
+ to
+
+ be
+
+ in
+
+
+
+
+
+that
+
+ position
+
+ for
+
+ 20
+
+ years
+
+ or
+
+ 30
+
+ years.
+
+
+
+
+
+And
+
+ so
+
+ no
+
+ one
+
+ would
+
+ would
+
+ suspect
+
+ that
+
+
+
+
+
+you're
+
+ an
+
+ intelligence
+
+ officer.
+
+ Then
+
+ in
+
+
+
+
+
+the
+
+ meantime
+
+
+
+
+
+either
+
+ you
+
+ are
+
+ working
+
+ for
+
+ a
+
+ legitimate
+
+
+
+
+
+company
+
+ and
+
+ listen
+
+
+
+
+
+CEOs
+
+ of
+
+ you
+
+ know
+
+ American
+
+ companies
+
+ or
+
+
+
+
+
+heads
+
+ of
+
+ security
+
+ of
+
+ American
+
+ companies
+
+
+
+
+
+are
+
+ patriots
+
+ too.
+
+ And
+
+ so
+
+ if
+
+ the
+
+ CIA
+
+ goes
+
+
+
+
+
+to
+
+ Apple
+
+ or
+
+ Microsoft
+
+ or
+
+ whatever
+
+ and
+
+
+
+
+
+says
+
+ hey
+
+ listen
+
+ the
+
+ country
+
+ needs
+
+ you.
+
+
+
+
+
+We
+
+ need
+
+ for
+
+ you
+
+ to
+
+ provide
+
+ a
+
+ cover
+
+ job
+
+
+
+
+
+for
+
+ one
+
+ of
+
+ our
+
+ deep
+
+ cover
+
+ officers.
+
+ They
+
+
+
+
+
+always
+
+ say
+
+ absolutely
+
+ yes
+
+ absolutely
+
+
+
+
+
+we'll
+
+ do
+
+ it.
+
+ So
+
+ then
+
+ you've
+
+ got
+
+ that
+
+
+
+
+
+kind
+
+ of
+
+ cover
+
+
+
+
+
+or
+
+
+
+
+
+you
+
+ don't
+
+ go
+
+ with
+
+ one
+
+ of
+
+ these
+
+ companies
+
+
+
+
+
+and
+
+ you
+
+ know
+
+ you're
+
+ a
+
+ wildlife
+
+
+
+
+
+photographer.
+
+ So
+
+ you
+
+ just
+
+ do
+
+ that
+
+
+
+
+
+forever.
+
+ But
+
+ there's
+
+ backstopping
+
+
+
+
+
+normally,
+
+ not
+
+ like
+
+ this
+
+ crazy
+
+ situation
+
+
+
+
+
+where
+
+ there
+
+ are
+
+ two
+
+ people
+
+ in
+
+ a
+
+
+
+
+
+storefront,
+
+ neither
+
+ one
+
+ of
+
+ which
+
+ is
+
+ an
+
+
+
+
+
+engineer,
+
+ and
+
+ they
+
+ don't
+
+ even
+
+ know
+
+ what
+
+
+
+
+
+the
+
+ company
+
+ does,
+
+ you
+
+ know?
+
+ Oh,
+
+ I
+
+ work
+
+
+
+
+
+for
+
+ Mega
+
+ Speed.
+
+ Oh,
+
+ what's
+
+ Mega
+
+ Speed
+
+
+
+
+
+do?
+
+ You
+
+ know,
+
+ I'm
+
+ not
+
+ really
+
+ sure.
+</details>
+
+>> 游戏公司。
+<details><summary>Original English</summary>
+>> Gaming
+
+ company.
+</details>
+
+>> 游戏。是的，是一家游戏公司。所以，会有背景支撑支持。如果有人在谷歌上搜你的公司，搜出一个电话号码并拨打过去，他们当然不会意识到电话是在中情局总部内部响起的。对方会说：“您好，这里是Art Vanderlay进出口公司”，他们能回答各种问题；或者他们在某个地方设立了一个办事处，弗吉尼亚州雷斯顿、弗吉尼亚州泰森角、新加坡、伦敦或随便什么地方，那是一个真正的办公室，有人在那里上班。
+<details><summary>Original English</summary>
+>> Gaming.
+
+ Yeah,
+
+ it's
+
+ a
+
+ gaming
+
+ company.
+
+
+
+
+
+So,
+
+ there's
+
+ backstopping.
+
+ So,
+
+ if
+
+
+
+
+
+somebody
+
+ Googles
+
+ whatever
+
+ your
+
+ company
+
+
+
+
+
+is
+
+ and
+
+ a
+
+ number
+
+ comes
+
+ up
+
+ and
+
+ they
+
+ call
+
+
+
+
+
+the
+
+ number,
+
+ not
+
+ realizing,
+
+ of
+
+ course,
+
+
+
+
+
+that
+
+ the
+
+ phone
+
+ rings
+
+ inside
+
+ CIA
+
+
+
+
+
+headquarters.
+
+ They
+
+ say,
+
+ you
+
+ know,
+
+ Art
+
+
+
+
+
+Vanderlay
+
+ import
+
+ export
+
+ company
+
+ and
+
+ they
+
+
+
+
+
+can
+
+ answer
+
+ questions,
+
+
+
+
+
+you
+
+ know,
+
+ or
+
+ they've
+
+ set
+
+ up
+
+ an
+
+ office
+
+ in
+
+
+
+
+
+wherever,
+
+ resting,
+
+ Virginia,
+
+ Tyson
+
+
+
+
+
+Corner,
+
+ Virginia,
+
+ Singapore,
+
+ London,
+
+
+
+
+
+whatever,
+
+ and
+
+ it's
+
+ an
+
+ actual
+
+ office
+
+ with
+
+
+
+
+
+people
+
+ working
+
+ there.
+</details>
+
+>> 我看到报道说在新加坡，这家Mega Speed有数量极其庞大的这种芯片。他们甚至连箱子都没拆。天哪。
+<details><summary>Original English</summary>
+>> I
+
+ read
+
+ that
+
+ in
+
+ Singapore
+
+ this
+
+ mega
+
+
+
+
+
+speed,
+
+ they
+
+ have
+
+ like
+
+ enormous
+
+ amount
+
+ of
+
+
+
+
+
+these
+
+ chips.
+
+ They
+
+ it
+
+ didn't
+
+ even
+
+ unpack
+
+
+
+
+
+it.
+
+ Oh
+
+ my
+
+ god.
+</details>
+
+>> 所以这也是另一个证据。
+<details><summary>Original English</summary>
+>> So
+
+ this
+
+ is
+
+ another
+
+ evidence.
+</details>
+
+>> 天哪。
+<details><summary>Original English</summary>
+>> Oh
+
+ my.
+</details>
+
+### 婚姻与社交工程
+
+>> 刚好在读一些报道。爱丽丝（Alice），那个和黄仁勋（Jensen）睡过、和他发生过婚外情的人。
+<details><summary>Original English</summary>
+>> Just
+
+ reading
+
+ about
+
+ some
+
+ of
+
+ the
+
+ reports.
+
+
+
+
+
+Alice
+
+ who
+
+ slept
+
+ with
+
+ um
+
+ Jensen
+
+ and
+
+ who's
+
+
+
+
+
+had
+
+ this
+
+ affair.
+</details>
+
+>> 她嫁给了Kangwi，
+<details><summary>Original English</summary>
+>> She
+
+ is
+
+ married
+
+ to
+
+ Kangwi,
+</details>
+
+>> 对吧？
+<details><summary>Original English</summary>
+>> right?
+</details>
+
+>> 他是一名中国投资和基金高管，之前管理过一家基金，并创立了总部位于上海的私募股权机构Hexi Investment Management。报道指出，Kangwi——也就是这位女士、这个“美人计”施展者的丈夫——自2010年起就认识黄仁勋。而且据报道，最初正是他引荐了爱丽丝。
+<details><summary>Original English</summary>
+>> And
+
+ he's
+
+ a
+
+ Chinese
+
+ investment
+
+ and
+
+ fund
+
+
+
+
+
+executive
+
+ who
+
+ previously
+
+ headed
+
+ up
+
+ a
+
+
+
+
+
+fund
+
+ and
+
+ founded
+
+ the
+
+ Shanghai
+
+ based
+
+
+
+
+
+private
+
+ equity
+
+ firm
+
+ Hexi
+
+ Investment
+
+
+
+
+
+Management.
+
+ Reports
+
+ indicate
+
+ that
+
+
+
+
+
+Kangwi,
+
+ who
+
+ is
+
+ this
+
+ lady's
+
+ this
+
+
+
+
+
+honeypot's
+
+ husband,
+
+ had
+
+ known
+
+ Jensen
+
+
+
+
+
+since
+
+ 2010.
+
+ And
+
+ he
+
+ is
+
+ reportedly
+
+ the
+
+ one
+
+
+
+
+
+who
+
+ originally
+
+ introduced
+
+ Alice.
+</details>
+
+>> 哎呀，天哪。
+<details><summary>Original English</summary>
+>> Oh
+
+ man.
+</details>
+
+>> 哎呀。要是我作为丈夫，我会亲自开车去英伟达的办公室把他杀了。
+<details><summary>Original English</summary>
+>> Oh
+
+ boy.
+
+ I
+
+ would
+
+ drive
+
+ over
+
+ to
+
+ the
+
+ to
+
+ the
+
+
+
+
+
+Nvidia
+
+ offices
+
+ and
+
+ I'd
+
+ kill
+
+ him
+
+ myself
+
+
+
+
+
+if
+
+ I
+
+ were
+
+ the
+
+ husband.
+</details>
+
+>> 完美的社交工程。
+<details><summary>Original English</summary>
+>> Perfect
+
+ social
+
+ engineering.
+</details>
+
+>> 等等。所以，所以这位丈夫，这个叫Kangwi的家伙——顺便说一下，Kangwi也面临过来自中国官方的大量审查，包括罚款和证券监管方面的某种刑事制裁，以及针对他诸如涉嫌股票操纵之类行为的行动——
+<details><summary>Original English</summary>
+>> Wait.
+
+ So,
+
+ so
+
+ the
+
+ husband,
+
+ this
+
+ guy
+
+
+
+
+
+called
+
+ Kangwi,
+
+ by
+
+ the
+
+ way,
+
+ Kangwi
+
+ was
+
+
+
+
+
+also
+
+ faced
+
+ a
+
+ lot
+
+ of
+
+ scrutiny
+
+ from
+
+
+
+
+
+Chinese
+
+ authorities,
+
+ including
+
+ fines
+
+ and
+
+
+
+
+
+securities
+
+ reg
+
+ um
+
+ sort
+
+ of
+
+ criminal
+
+ um
+
+
+
+
+
+sanctions
+
+ against
+
+ him
+
+ and
+
+ actions
+
+
+
+
+
+against
+
+ him
+
+ for
+
+ things
+
+ like
+
+ stock,
+
+
+
+
+
+alleged
+
+ stock
+
+ manipulation,
+</details>
+
+>> Kangwi娶了一个叫爱丽丝的女人。
+<details><summary>Original English</summary>
+>> Kangwi
+
+ marries
+
+ a
+
+ woman
+
+ called
+
+ Alice.
+</details>
+
+>> Kangwi把爱丽丝介绍给了黄仁勋。
+<details><summary>Original English</summary>
+>> Kangwi
+
+ introduces
+
+ Alice
+
+ to
+
+ Jensen.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yes.
+</details>
+
+>> 爱丽丝窃取机密，并与黄仁勋发生关系，然后汇报回中国。所以问题是，Kangwi究竟知道些什么？
+<details><summary>Original English</summary>
+>> Alice
+
+ steals
+
+ secrets
+
+ and
+
+ sleeps
+
+ with
+
+
+
+
+
+Jensen
+
+ and
+
+ reports
+
+ it
+
+ back
+
+ to
+
+ China.
+
+ So
+
+
+
+
+
+the
+
+ question
+
+ is
+
+ what
+
+ did
+
+ Kangwi
+
+ know
+
+
+
+
+
+exactly?
+</details>
+
+>> 你怎么看？你怎么看？
+<details><summary>Original English</summary>
+>> What
+
+ do
+
+ you
+
+ think?
+
+ What
+
+ do
+
+ you
+
+ think?
+</details>
+
+>> 也许Kangwi就是现在会买下所有股票的人，以一种类似……
+<details><summary>Original English</summary>
+>> Maybe
+
+ Keni
+
+ is
+
+ the
+
+ one
+
+ who
+
+ will
+
+ buy
+
+ all
+
+
+
+
+
+the
+
+ shares
+
+ right
+
+ now
+
+ for
+
+ like
+
+ a
+</details>
+
+>> 你知道吗？这个观点很有道理。我之前没想过这点。
+<details><summary>Original English</summary>
+>> You
+
+ know what?
+
+ That's
+
+ a
+
+ good
+
+ point.
+
+ I
+
+
+
+
+
+hadn't
+
+ thought
+
+ of
+
+ that.
+</details>
+
+>> 为什么不呢？
+<details><summary>Original English</summary>
+>> Why
+
+ not?
+</details>
+
+>> 谁知道呢？
+<details><summary>Original English</summary>
+>> Who
+
+ knows?
+</details>
+
+>> 完全做得出来。如果说他是个非常有钱的人。看起来他想拥有权力。为什么不呢？
+<details><summary>Original English</summary>
+>> Totally
+
+ do
+
+ that.
+
+ If
+
+ like
+
+ he
+
+'s
+
+ a
+
+ very
+
+
+
+
+
+rich
+
+ man.
+
+ Looks
+
+ like
+
+ he
+
+ wants
+
+ to
+
+ have
+
+ a
+
+
+
+
+
+power.
+
+ Why
+
+ not?
+</details>
+
+>> 而且她姐姐也卷入了这件事。我不记得她姐姐的名字了。叫王什么来着。呃，你认为爱丽丝嫁给Kangwi，会不会有可能——
+<details><summary>Original English</summary>
+>> And
+
+ her
+
+ sister
+
+ is
+
+ involved
+
+ in
+
+ this
+
+ too.
+
+
+
+
+
+I
+
+ don't
+
+ remember
+
+ the
+
+ sister's
+
+ name.
+
+ It's
+
+
+
+
+
+it's
+
+ Wong
+
+ something.
+
+
+
+
+
+Um
+
+ Uh,
+
+ do
+
+ you
+
+ think
+
+ that
+
+ Alice
+
+ married
+
+
+
+
+
+Kangwi
+
+ potentially
+</details>
+
+>> 只是作为接触到黄仁勋的跳板？
+<details><summary>Original English</summary>
+>> as
+
+ a
+
+ fast
+
+ to
+
+ get
+
+ to
+
+ Jensen
+
+ Jensen?
+</details>
+
+>> 如果，如果Kangwi自2010年起就认识黄仁勋，
+<details><summary>Original English</summary>
+>> If
+
+ if
+
+ if
+
+ Kangwi
+
+ has
+
+ known
+
+ Jensen
+
+ since
+
+
+
+
+
+2010,
+</details>
+
+>> 嗯哼。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 那么她通过精心布局建立起这段关系，是完全有可能的。
+<details><summary>Original English</summary>
+>> it
+
+ is
+
+ conceivable
+
+ that
+
+ she
+
+ engineered
+
+
+
+
+
+her
+
+ way
+
+ into
+
+ a
+
+ relationship.
+</details>
+
+>> 你看，那将是一个周期长得多、复杂得多的行动。
+<details><summary>Original English</summary>
+>> See,
+
+ that
+
+ would
+
+ be
+
+ a
+
+ much
+
+ longer
+
+ term
+
+
+
+
+
+much
+
+ more
+
+ sophisticated
+
+ operation.
+</details>
+
+>> 16年。
+<details><summary>Original English</summary>
+>> 16
+
+ years.
+</details>
+
+>> 而且此外，万一Kangwi——不管他叫什么名字——真的爱他妻子呢，对吧？他为什么会这么做？或者说这只是一笔商业交易。
+<details><summary>Original English</summary>
+>> And
+
+ then
+
+ besides,
+
+ what
+
+ if
+
+ can
+
+ she
+
+
+
+
+
+wherever
+
+ his
+
+ name
+
+ is
+
+ really
+
+ loves
+
+ his
+
+
+
+
+
+wife,
+
+ right?
+
+ Why
+
+ would
+
+ he?
+
+ or
+
+ if
+
+ this
+
+ is
+
+
+
+
+
+a
+
+ business
+
+ transaction.
+</details>
+
+>> 哎，太疯狂了。
+<details><summary>Original English</summary>
+>> H,
+
+ it's
+
+ so
+
+ crazy.
+</details>
+
+>> 这不是很糟糕、很讽刺吗？
+<details><summary>Original English</summary>
+>> Isn't
+
+ it
+
+ awful
+
+ and
+
+ cynical?
+</details>
+
+>> 我觉得这会是个很好的电影题材。
+<details><summary>Original English</summary>
+>> I
+
+ think
+
+ it
+
+ would
+
+ be
+
+ good
+
+ plot
+
+ for
+
+ the
+
+
+
+
+
+movie.
+</details>
+
+>> 我觉得你说得对。你觉得这会被拍成电影吗？
+<details><summary>Original English</summary>
+>> I
+
+ think
+
+ you're
+
+ right.
+
+ You
+
+ think
+
+ it's
+
+
+
+
+
+going
+
+ to
+
+ be
+
+ a
+
+ movie?
+</details>
+
+>> 嗯，最终肯定会。我是说，看看这个。这真的是载入史册了。我们遇到了如此惊人、疯狂且危险的案件。这关乎国家安全——
+<details><summary>Original English</summary>
+>> Well,
+
+ eventually
+
+ yes.
+
+ I
+
+ mean,
+
+ look
+
+ at
+
+
+
+
+
+this.
+
+ It's
+
+ uh
+
+ it's
+
+ in
+
+ the
+
+ history
+
+
+
+
+
+really.
+
+ We
+
+ have
+
+ such
+
+ a
+
+ amazing
+
+ crazy
+
+
+
+
+
+dangerous
+
+ case.
+
+ It's
+
+ like
+
+ national
+
+
+
+
+
+security
+</details>
+
+>> 每个人都——
+<details><summary>Original English</summary>
+>> where
+
+ everybody
+</details>
+
+>> 不过，我对总统的回应态度感到非常困惑。
+<details><summary>Original English</summary>
+>> I'm
+
+ perplexed
+
+ though
+
+ as
+
+ to
+
+
+
+
+
+the
+
+ nature
+
+ of
+
+ the
+
+ president's
+
+ response.
+</details>
+
+>> 是的，我也有同样的疑问。
+<details><summary>Original English</summary>
+>> Yeah,
+
+ I
+
+ have
+
+ the
+
+ same
+
+ question.
+</details>
+
+>> 比如我简直不敢相信他会以那种方式回应。“谁在乎呢？”
+<details><summary>Original English</summary>
+>> Like
+
+ I
+
+ can't
+
+ believe
+
+ he
+
+ responded
+
+ in
+
+ the
+
+
+
+
+
+way
+
+ that
+
+ he
+
+ did.
+
+ Who
+
+ cares?
+</details>
+
+>> “欢迎他登机。”
+<details><summary>Original English</summary>
+>> Welcome
+
+ him
+
+ onto
+
+ the
+
+ plane.
+</details>
+
+>> 你觉得他为什么会那样回应？
+<details><summary>Original English</summary>
+>> Why
+
+ do
+
+ you
+
+ think
+
+ he
+
+ might
+
+ have
+
+ responded
+
+
+
+
+
+like
+
+ that?
+</details>
+
+>> 我觉得他可能是真不在乎。
+<details><summary>Original English</summary>
+>> I
+
+ think
+
+ he
+
+ genuinely
+
+ doesn't
+
+ care.
+</details>
+
+>> 或者也许他早就知情。
+<details><summary>Original English</summary>
+>> Or
+
+ maybe
+
+ he
+
+ knew
+
+ about
+
+ that.
+</details>
+
+>> 也许早在2026年4月之前就知道了。
+<details><summary>Original English</summary>
+>> Maybe
+
+ from
+
+ before
+
+ April
+
+ of
+
+ 2026.
+</details>
+
+>> 也许他也是这整个行动的一部分。爱丽丝大约在2015年加入了Kangwi——也就是她丈夫的公司，担任高管和股东。所以人们会，你知道，会想——
+<details><summary>Original English</summary>
+>> Maybe
+
+ he's
+
+ like
+
+ also
+
+ a
+
+ part
+
+ of
+
+ this
+
+
+
+
+
+whole
+
+ operation.
+
+ So
+
+ Alice
+
+ joined
+
+ Kangwi,
+
+
+
+
+
+so
+
+ her
+
+ husband's
+
+ firm
+
+ as
+
+ a
+
+ senior
+
+
+
+
+
+executive
+
+ shareholder
+
+ around
+
+ 2015.
+
+
+
+
+
+So
+
+ one
+
+ would
+
+ you
+
+ know
+
+ there's
+</details>
+
+>> 那些钱是从哪儿来的？
+<details><summary>Original English</summary>
+>> where
+
+ did
+
+ that
+
+ money
+
+ come
+
+ from?
+</details>
+
+### 长期行动与幕后操盘手
+
+>> 我不知道。也许我不知道。这一切都太奇怪了。非常奇怪。我对这些行动为了达到这个目的所能持续的时间深感着迷——为了能让她坐到——
+<details><summary>Original English</summary>
+>> I
+
+ don't
+
+ don't
+
+ know.
+
+ Maybe
+
+ I
+
+ don't
+
+ know.
+
+
+
+
+
+It's
+
+ all
+
+ very
+
+ strange.
+
+ Very
+
+ strange.
+
+ I
+
+ I
+
+
+
+
+
+I
+
+ get
+
+ quite
+
+ fascinated
+
+ by
+
+ the
+
+ length
+
+ of
+
+
+
+
+
+time
+
+ these
+
+ operations
+
+ can
+
+ persist
+
+ for
+
+ to
+
+
+
+
+
+get
+
+ to
+
+ get
+
+ to
+
+ this
+
+ point
+
+ where
+
+ she
+
+ sat
+
+
+
+
+
+next
+
+ to
+</details>
+
+>> 地球上最有权势的人之一身边。你看，这就是中情局不擅长的地方。中情局通常不会开展需要耗费这么长时间的行动。
+<details><summary>Original English</summary>
+>> one
+
+ of
+
+ the
+
+ most
+
+ powerful
+
+ men
+
+ on
+
+ planet
+
+
+
+
+
+Earth.
+
+ See,
+
+ and
+
+ this
+
+ is
+
+ where
+
+ the
+
+ CIA
+
+ is
+
+
+
+
+
+not
+
+ good.
+
+ The
+
+ CIA
+
+ doesn't
+
+ generally
+
+
+
+
+
+doesn't
+
+ do
+
+ operations
+
+ that
+
+ take
+
+ that
+
+
+
+
+
+long.
+</details>
+
+>> 为什么不呢？
+<details><summary>Original English</summary>
+>> Why
+
+ not?
+</details>
+
+>> 因为那样你没法获得晋升。
+<details><summary>Original English</summary>
+>> Because
+
+ you
+
+ can't
+
+ get
+
+ promoted
+
+ that
+
+ way.
+</details>
+
+>> 我不是想显得玩世不恭，但如果我在一个岗位上待2年或3年，我就必须发展出线人（recruitment）。这是我在职业生涯中往上走的唯一途径。我不可能去规划一个需要10年、15年才能最终见效的行动。
+<details><summary>Original English</summary>
+>> I
+
+ don't
+
+ mean
+
+ to
+
+ sound
+
+ cynical,
+
+ but
+
+ if
+
+
+
+
+
+I'm
+
+ in
+
+ a
+
+ job
+
+ for
+
+ 2
+
+ years
+
+ or
+
+ 3
+
+ years,
+
+ I
+
+
+
+
+
+need
+
+ to
+
+ make
+
+ recruitments.
+
+ That's
+
+ the
+
+
+
+
+
+only
+
+ way
+
+ I
+
+ get
+
+ ahead
+
+ in
+
+ life.
+
+ I
+
+ can't
+
+
+
+
+
+plot
+
+ out
+
+ an
+
+ operation
+
+ that's
+
+ going
+
+ to
+
+
+
+
+
+take
+
+ 10,
+
+ 15
+
+ years
+
+ to
+
+ finally
+
+ come
+
+ to
+
+
+
+
+
+fruition.
+</details>
+
+>> 好吧。
+<details><summary>Original English</summary>
+>> Okay.
+</details>
+
+>> 我就没法晋升了。你眼中的世界和普通人有什么不同？莉亚（Leah），
+<details><summary>Original English</summary>
+>> I'm
+
+ not
+
+ going to
+
+ get
+
+ promoted.
+
+
+
+
+
+How
+
+ do
+
+ you
+
+ see
+
+ the
+
+ world
+
+ differently
+
+
+
+
+
+from
+
+ the
+
+ average
+
+ person?
+
+ Leah,
+</details>
+
+>> 问得好。我觉得我，嗯，熟悉我的人都是这么评价我的。我觉得我非常谨慎。我非常有分析能力，而且，嗯，我看到很多事情在发生，我能看透它们，但我觉得这就是他们训练我们去做的，去看透所有这一切。对我来说，所有公开的新闻，总是像扔在狗面前的肉一样。所以，所有大众和公众就会说：“是的，她是间谍，他是个不忠的丈夫。”现在社交媒体上充斥着大量的梗。太好笑了。
+<details><summary>Original English</summary>
+>> great
+
+ question.
+
+
+
+
+
+I
+
+ think
+
+ I
+
+ um
+
+ that's
+
+ what
+
+ they
+
+ say.
+
+
+
+
+
+People
+
+ who
+
+ know
+
+ me
+
+ well.
+
+ I
+
+ think
+
+ I
+
+ am
+
+
+
+
+
+very
+
+
+
+
+
+careful.
+
+ I'm
+
+ very
+
+ analytical
+
+
+
+
+
+and
+
+ um
+
+ I
+
+ see
+
+ a
+
+ lot
+
+ of
+
+ things
+
+ happening
+
+
+
+
+
+and
+
+ I
+
+ see
+
+ through
+
+ but
+
+ this
+
+ is
+
+ what
+
+ I
+
+
+
+
+
+think
+
+ like
+
+ they
+
+ train
+
+ us
+
+ to
+
+ do
+
+ to
+
+ see
+
+
+
+
+
+through
+
+ all
+
+ this.
+
+ For
+
+ me,
+
+ all
+
+ public
+
+
+
+
+
+news,
+
+ it's
+
+ always
+
+ like
+
+ this
+
+ uh
+
+ meat
+
+ in
+
+
+
+
+
+front
+
+ of
+
+ the
+
+ dog.
+
+ So,
+
+ all
+
+ the
+
+ crowd
+
+ and
+
+
+
+
+
+public
+
+ would
+
+ be
+
+ like,
+
+ "Yes,
+
+ she's
+
+ a
+
+ spy,
+
+
+
+
+
+he's
+
+ like
+
+ unfaithful
+
+ husband."
+
+ And
+
+ like
+
+
+
+
+
+there's
+
+ so
+
+ many
+
+ mems
+
+ in
+
+ social
+
+ media
+
+
+
+
+
+right
+
+ now
+
+ going
+
+ on.
+
+ It's
+
+ hilarious.
+</details>
+
+>> 然后人们却看不到隐藏在这一切背后最重要的东西。
+<details><summary>Original English</summary>
+>> And
+
+ then
+
+ people
+
+ do
+
+ not
+
+ see
+
+ the
+
+ most
+
+
+
+
+
+important
+
+ thing
+
+ which
+
+ is
+
+ behind
+
+ all
+
+
+
+
+
+that.
+</details>
+
+>> 这就是我们刚才讨论的。一定有人为了自己的利益组织并策划了这一切。这个人是谁？没错。
+<details><summary>Original English</summary>
+>> And
+
+ that's
+
+ what
+
+ we
+
+ just
+
+ discussed.
+
+ There
+
+
+
+
+
+must
+
+ be
+
+ somebody
+
+ who
+
+ organized
+
+ and
+
+
+
+
+
+orchestrated
+
+ everything
+
+ for
+
+ his
+
+ own
+
+
+
+
+
+benefit.
+
+ Who
+
+ is
+
+ this
+
+ person?
+
+ That's
+
+
+
+
+
+right.
+</details>
+
+>> 谁会从这一切中获利？
+<details><summary>Original English</summary>
+>> Who
+
+ will
+
+ make
+
+ the
+
+ profit
+
+ out
+
+ of
+
+ all
+
+ this
+
+
+
+
+
+situation?
+</details>
+
+>> 难道不仅仅是中国获取了情报、拿到了芯片吗？
+<details><summary>Original English</summary>
+>> Is
+
+ it
+
+ not
+
+ just
+
+ China
+
+ get
+
+ information
+
+ and
+
+
+
+
+
+they
+
+ get
+
+ chips?
+</details>
+
+>> 但是，中国情报部门和其他任何情报机构一样，也是一个官僚体系。人员一直在来来去去，进进出出，升迁、退休，诸如此类。过去这15或16年里，必须有人让这项行动一直运转下去。
+<details><summary>Original English</summary>
+>> But
+
+ but
+
+ the
+
+ Chinese
+
+ intelligence
+
+ service
+
+
+
+
+
+is
+
+ a
+
+ bureaucracy
+
+ just
+
+ like
+
+ every
+
+ other
+
+
+
+
+
+intelligence
+
+ service.
+
+ People
+
+ are
+
+
+
+
+
+constantly
+
+ coming
+
+ and
+
+ going,
+
+ moving
+
+ in
+
+
+
+
+
+and
+
+ out,
+
+ promoting,
+
+ retiring,
+
+ all
+
+ that
+
+
+
+
+
+stuff.
+
+
+
+
+
+Somebody
+
+ has
+
+ had
+
+ to
+
+ keep
+
+ this
+
+ operation
+
+
+
+
+
+going
+
+ for
+
+ the
+
+ last
+
+ 15
+
+ or
+
+ 16
+
+ years.
+</details>
+
+>> 我同意。我百分之百同意。
+<details><summary>Original English</summary>
+>> I
+
+ agree.
+
+
+
+
+
+I
+
+ agree
+
+ 100%.
+</details>
+
+>> 非常令人印象深刻。
+<details><summary>Original English</summary>
+>> Very
+
+ impressive.
+</details>
+
+>> 那个人会是谁？
+<details><summary>Original English</summary>
+>> Who
+
+ Who
+
+ would
+
+ that
+
+ person
+
+ be?
+</details>
+
+>> 不知道。不管他是谁，我们都应该尝试，你知道，招募他。
+<details><summary>Original English</summary>
+>> No
+
+ idea.
+
+ Whoever
+
+ it
+
+ is,
+
+ we
+
+ should
+
+ try
+
+
+
+
+
+to,
+
+ you
+
+ know,
+
+ recruit
+
+ him.
+</details>
+
+>> 嗯，我倒不这么觉得。不管他是谁，他绝对是个心理变态。
+<details><summary>Original English</summary>
+>> Well,
+
+ I
+
+ don't
+
+ think
+
+ so.
+
+ Whoever
+
+ it
+
+ is,
+
+
+
+
+
+he
+
+ definitely
+
+ is
+
+ a
+
+ psychopath.
+</details>
+
+>> 是的。你知道，关于这个世界的运转方式，有太多阴谋论了。而且你知道，在我成为播客主之前，
+<details><summary>Original English</summary>
+>> Yes.
+
+
+
+
+
+You
+
+ know,
+
+ there's
+
+ so
+
+ many
+
+ conspiracy
+
+
+
+
+
+theories
+
+ about
+
+ the
+
+ way
+
+ that
+
+ the
+
+ world
+
+ is
+
+
+
+
+
+run.
+
+ And
+
+ you
+
+ know,
+
+ before
+
+ I
+
+ became
+
+ a
+
+
+
+
+
+podcaster,
+</details>
+
+<!-- chunk 12/14 -->
+
+我以前觉得，相信这些东西的人简直就是疯子。如果你告诉我存在所谓的“美人计”、间谍以及所有这些事，我过去肯定会觉得：“简直一派胡言。”这也是我问那个问题的原因之一：关于世界究竟是如何运转的、媒体、掌权者、光明会，所有这些普通人不知道的事情，你现在知道了些什么。
+<details><summary>Original English</summary>
+I just thought people were just like whack jobs for believing this stuff. If you told me that there was these like honeypotss and spies and all of this stuff, I would have thought, "Oh, nonsense." That's part of the reason I asked this question about like what is it you now know about how the world actually operates, the media, people in power, the Illuminati, all of these things um that the average person doesn't know.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 就像我们过日子的时候，往往就觉得事情正如我们眼见的那样。
+<details><summary>Original English</summary>
+>> Like as we go through our lives kind of just thinking things are as we see them.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 然后当我进行这样的对话时，对我来说就像是打破了原有的认知范式。你的播客。
+<details><summary>Original English</summary>
+>> And then when I have these kind of conversations, it's like a paradigm breaker for me. your podcast.
+</details>
+
+>> 听着，作为一个做播客的人，我是从这儿起步的——六年前我刚上 YouTube 时，这就是我厨房餐桌的复刻版。显然播客做得很成功，然后大家就开始觉得你是间谍了，对吧？
+<details><summary>Original English</summary>
+>> Well, listen, as a podcaster, I started this on my this was the replica of my kitchen table 6 years ago when I first came to YouTube. And obviously podcast does well and then people start thinking you're a spy, right?
+</details>
+
+>> 或者他们觉得你像个……什么的。
+<details><summary>Original English</summary>
+>> Or they think you're like a or whatever.
+</details>
+
+>> 毫不夸张地说，我每天都会遇到这种情况。
+<details><summary>Original English</summary>
+>> Literally every day I get that.
+</details>
+
+>> 嗯，我明白你为什么会遇到这种事。
+<details><summary>Original English</summary>
+>> Well, I understand why you might get it.
+</details>
+
+>> 当然，但你本来不应该去应付这些的。
+<details><summary>Original English</summary>
+>> Sure, but you shouldn't have to deal with that.
+</details>
+
+>> 不，但没关系。所有的播客主播，我们最终都会遇到。但我现在能理解人们为什么会有阴谋论倾向了。我懂了。以前我只是评论区里的一个小孩时，我根本不理解。
+<details><summary>Original English</summary>
+>> No, but it's fine. All podcasters, we all get it eventually. But I understand now why people are like conspiratorial. I understand it. I didn't used to understand it when I was just a kid in the comment section.
+</details>
+
+>> 现在我理解了。世界并不是我们所看到的那样。你谈到过你认为真的存在一个深层政府在掌控……
+<details><summary>Original English</summary>
+>> Now I understand it. The world isn't as we as we see it. You've talked about how you think like there's a really a deep state that run
+</details>
+
+>> 噢，我确实这么认为。
+<details><summary>Original English</summary>
+>> Oh, I do.
+</details>
+
+>> 掌控世界还是美国，还是什么？
+<details><summary>Original English</summary>
+>> The world or America or what?
+</details>
+
+>> 不，至少掌控着美国。
+<details><summary>Original English</summary>
+>> No. America at least.
+</details>
+
+>> 而且我一直说，你不必把它叫作“深层政府”。你大可以直接称之为联邦官僚体制。因为总统每四年、每八年换一届，而在中央情报局（CIA）、国家安全局（NSA）、联邦调查局（FBI）、国防部（DoD），以及这些情报承包商那里，人员一待就是二十五年、三十年、三十五年。要是他们不想执行总统命令他们做的事情，他们就只会说：“好的，长官，我这就去办。”然后他们就干等着，直到那个人不再当总统为止。
+<details><summary>Original English</summary>
+>> And I I say all the time, you don't have to call it the deep state. You can just call it the federal bureaucracy. But presidents come and go every four years, every 8 years. and at the CIA, at NSA, at FBI, DoD, these intelligence contractors, people are there for 25, 30, 35 years. And you know, if they don't want to do something that a president is ordering them to do, they just say, "Yes, sir. I'll get right on that." And then they just wait until he's not president anymore.
+</details>
+
+>> 不像在俄罗斯的体制里。
+<details><summary>Original English</summary>
+>> Not like in Russia systems.
+</details>
+
+>> 噢，是的。在俄罗斯，绝对是……
+<details><summary>Original English</summary>
+>> Oh, yeah. In Russia, it's definitely
+</details>
+
+>> 你能怎么办？就比如或者在中国，或者像任何其他地方，比如你知道的朝鲜，你能怎么去执行……
+<details><summary>Original English</summary>
+>> what can you do? It's like or in China or like any other like you know North Korea what can you do to execute
+</details>
+
+>> 这项任务？
+<details><summary>Original English</summary>
+>> this task?
+</details>
+
+### 敏感问题与监视阴影
+
+>> 你见过弗拉基米尔·普京吗？
+<details><summary>Original English</summary>
+>> Did you ever meet Vladimir Putin?
+</details>
+
+>> 你笑什么？
+<details><summary>Original English</summary>
+>> Why'd you laugh?
+</details>
+
+>> 因为我不知道我能不能……说“见过”是否安全，或者我是不是应该……你知道，坦白讲，你的播客非常受欢迎。你刚采访了泽连斯基……
+<details><summary>Original English</summary>
+>> Because I don't know if I can if it's safe to say yes or should I just you know let's be honest your podcast is very popular. You just had Zelinski
+</details>
+
+>> 就在那之前不久。所以我不知道该怎么回答这个问题。
+<details><summary>Original English</summary>
+>> just like you know just before that. So I don't know how to answer this question.
+</details>
+
+>> 所以你见过他。
+<details><summary>Original English</summary>
+>> So you have met him.
+</details>
+
+>> 我们可以换个问题吗？
+<details><summary>Original English</summary>
+>> Can we move to another question?
+</details>
+
+>> 当然可以。我们当然可以。我只是很好奇为什么那个问题会……会……
+<details><summary>Original English</summary>
+>> Of course we can. Of course we can. I'm I'm I'm curious as to why that question is is
+</details>
+
+>> 让人触动警惕……
+<details><summary>Original English</summary>
+>> triggering
+</details>
+
+>> 因为我心里仍有恐惧。
+<details><summary>Original English</summary>
+>> because I still have fears.
+</details>
+
+>> 好吧，行。而且我的家人依然住在俄罗斯，比如我的父母……
+<details><summary>Original English</summary>
+>> Okay. Fine. And uh my family still live in Russia like my parents
+</details>
+
+>> 而且我身边依然有……有人在监视我。
+<details><summary>Original English</summary>
+>> and I still have um people watching me.
+</details>
+
+>> 而且，嗯……
+<details><summary>Original English</summary>
+>> And um
+</details>
+
+>> 有人在监视你？
+<details><summary>Original English</summary>
+>> you have people watching you?
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yes.
+</details>
+
+>> 你怎么知道的？
+<details><summary>Original English</summary>
+>> How do you know?
+</details>
+
+>> 这个我们心里有数。
+<details><summary>Original English</summary>
+>> Well, we know.
+</details>
+
+>> 你们训练有素。
+<details><summary>Original English</summary>
+>> You're well trained.
+</details>
+
+>> 我们能看出来。
+<details><summary>Original English</summary>
+>> We know.
+</details>
+
+>> 是啊，受过发现这些的专业训练。
+<details><summary>Original English</summary>
+>> Yeah. Well trained to spot it.
+</details>
+
+>> 好的。
+<details><summary>Original English</summary>
+>> Okay.
+</details>
+
+>> 我现在没有了。我已经很多年没见到他们了。我刚出狱的时候，FBI经常、按部就班地盯梢我。后来他们退去了，我偶尔才会看到他们一次……
+<details><summary>Original English</summary>
+>> I don't anymore. I haven't seen them in years. When I got out of prison, the FBI was on me regularly, routinely. Then they backed off and I'd see them every once in a while
+</details>
+
+>> 在你的后视镜里之类的地方。
+<details><summary>Original English</summary>
+>> in your rearview mirrors and stuff.
+</details>
+
+>> 是的。我去参加一个……前同事邀请我一起吃午饭。为了上高速公路，我像这样穿过我的居民区，结果他们就盯上我了。根本没人会像那样开车跟在我后面穿过我的居民区，所以那其实挺容易发现的。我把这帮跟踪的人一路带到了吃午饭的地方。我对那个人说：“你被人跟踪过来了吗？”他说：“没有。”“你被跟了？”我说：“是啊。”于是我给他们买了披萨，派人送到了外面的车里。
+<details><summary>Original English</summary>
+>> Yeah. I went to a I I had an invitation from a by from a former colleague uh to meet for lunch. So to get to the highway, I cut through like this through my neighborhood and they're on me. Well, nobody's going to be driving like this, you know, behind me through my neighborhood. So that was kind of easy. I dragged this surveillance all the way to the lunch place. I said to the guy, "Were you followed here?" He said, "No." "Were you?" And I said, "Yeah." And I bought them a pizza and I sent it out to the cars.
+</details>
+
+>> 挺不错。
+<details><summary>Original English</summary>
+>> Nice.
+</details>
+
+>> 我当时就想：“你们这帮家伙怎么回事？要跟踪我一整天吗？看我吃午饭，然后呢？看我吃晚饭？拜托，你们觉得我一整天都在干嘛？”然后过了一阵子，他们就不跟了。
+<details><summary>Original English</summary>
+>> And I was like, "What are you guys? You going to follow me all day? Watch me have lunch and then what? Watch me have dinner? Come on. What do you think I'm doing all day long?" And then after a while they just stopped.
+</details>
+
+>> 要是你现在还是个间谍，那你肯定会相当……相当高效。
+<details><summary>Original English</summary>
+>> It would be pretty You'd be pretty effective if you were still a spy.
+</details>
+
+>> 我想是的。
+<details><summary>Original English</summary>
+>> I think so.
+</details>
+
+>> 我完全乐在其中。
+<details><summary>Original English</summary>
+>> I thoroughly enjoyed it.
+</details>
+
+>> 但甚至我是说，你看，即便以你现在的公众形象，以你现在的公开身份，这真是一个令人难以置信的……
+<details><summary>Original English</summary>
+>> But even I'm saying, look, even in the persona that you have now, in the public profile you have now, what an unbelievable way to
+</details>
+
+>> 那会是一个很好的掩护。
+<details><summary>Original English</summary>
+>> it would be good cover.
+</details>
+
+>> 那会是极好的掩护。你知道，比如我经常上各类播客，我对着中情局竖中指。还有什么比这更好的掩护？
+<details><summary>Original English</summary>
+>> It would be great cover. You know, like I go on podcasts all the time and I give the CIA the middle finger. Like what better cover than that?
+</details>
+
+>> 是啊。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 这也是为什么我一直被人指责是——最近一次就在今天早上——所谓的CIA卧底。这对我来说从来都说不通，因为你会以为他们想要我说支持CIA的话。而我说的全都是反CIA的话，
+<details><summary>Original English</summary>
+>> Which is why I'm accused all the time as recently as this morning of being, you know, a CIA plant, which never made sense to me because you would think I would they would want me to say pro-CIA things. I say exclusively anti-CIA things,
+</details>
+
+>> 这反而建立了信任，让一切更可信。
+<details><summary>Original English</summary>
+>> which builds trust and makes it more believable.
+</details>
+
+>> 瞧，就是这样。我怎么做都不对。所以通常当有人说“一日为CIA，终身为CIA”时，我就会说，这是你自己一个人想出来的吗，爱因斯坦教授？
+<details><summary>Original English</summary>
+>> There it is. I can't win. So usually I say like when people say once CIA always CIA and I I say you came up with that all by yourself, Professor Einstein,
+</details>
+
+>> 你是坐弱智校车过来的吗？
+<details><summary>Original English</summary>
+>> did you ride the short bus to come over here?
+</details>
+
+>> 不是想……不是想跳回那个问题，但是，回答你是否见过弗拉基米尔·普京，为什么会给你带来麻烦呢？
+<details><summary>Original English</summary>
+>> Not to not to jump back to the the question, but um why would answering the question if you've met Vladimir Putin get you in trouble?
+</details>
+
+>> 不，我真的超级好奇。但这是不是因为仅仅说出自己是否见过某个人，就会侵犯某种隐私？
+<details><summary>Original English</summary>
+>> No, but I'm super curious about it. But is it because even saying if you've met someone would is a violation of some sort of like privacy?
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yes.
+</details>
+
+>> 好的。
+<details><summary>Original English</summary>
+>> Okay.
+</details>
+
+>> 还有就是，人们至今也依然称我为间谍，
+<details><summary>Original English</summary>
+>> And then again people also still call me a spy
+</details>
+
+>> 当然了。
+<details><summary>Original English</summary>
+>> of course
+</details>
+
+>> 因为他们说法一样：“噢，她公开露面，还有那些故事，但你知道，这是完美的掩护，
+<details><summary>Original English</summary>
+>> because they say the same. Oh she's public but and all the story but you know it's a perfect cover
+</details>
+
+>> 而且现在她又在华盛顿了。”再加上，如果你……如果你还是个间谍，
+<details><summary>Original English</summary>
+>> and now she's on Washington. Plus, if you're if you're still a spy,
+</details>
+
+>> 你受人瞩目这一事实，就会把公众的兴趣和视线从其他间谍身上转移开。
+<details><summary>Original English</summary>
+>> the fact that you're high-profile takes takes public interest and the public view off the other spies.
+</details>
+
+>> 没错。所以这就是我要说的。当这一切发生时，还有你的社交媒体，
+<details><summary>Original English</summary>
+>> Exactly. So, that's what I'm saying. When all this going on and your social media,
+</details>
+
+>> 对。
+<details><summary>Original English</summary>
+>> right,
+</details>
+
+>> 你在所有地方都公开抛头露面，而在这背后，正发生着无人知晓的事情。
+<details><summary>Original English</summary>
+>> and you're like public everywhere behind this, there's something going on which nobody sees.
+</details>
+
+### 潜伏特工与休眠机制
+
+>> 你是什么时候离开的？嗯，你是什么时候结束你的“美人计”特工生涯的？
+<details><summary>Original English</summary>
+>> When did you leave? Um, when did you end your career as a honeypot?
+</details>
+
+>> 官方层面上。是的，在我离开俄罗斯的时候。但后来我在伦敦、希腊、瑞士、意大利、法国生活过，然后五年前我搬到了美国。
+<details><summary>Original English</summary>
+>> Officially. Yeah. when I left Russia but then I lived in London, Greece, Switzerland, Italy, France and then five years ago I moved to United States.
+</details>
+
+>> 这么说你在欧洲时还在做这个。
+<details><summary>Original English</summary>
+>> So when you were in Europe you were still doing it.
+</details>
+
+>> 我并没有正式以……你刚才指的是休眠特工。
+<details><summary>Original English</summary>
+>> I wasn't officially working as and you were referring to sleeping agents.
+</details>
+
+>> 你曾是一名潜伏特工。
+<details><summary>Original English</summary>
+>> You were a sleeper agent.
+</details>
+
+>> 所以你们俄罗斯人非常非常擅长这个。
+<details><summary>Original English</summary>
+>> So you Russians are very very good at that.
+</details>
+
+>> 什么？所以你离开了俄罗斯，你正式声明自己退出了。
+<details><summary>Original English</summary>
+>> What? So you leave Russia, you officially say I'm done.
+</details>
+
+>> 官方在文件上、手续上结束了。但你并没有结束。
+<details><summary>Original English</summary>
+>> Officially on documents on papers done. But you weren't done.
+</details>
+
+>> 但是……
+<details><summary>Original English</summary>
+>> But
+</details>
+
+>> 如果他们需要你，潜伏特工就是……
+<details><summary>Original English</summary>
+>> if they need you, you a sleeper agent is
+</details>
+
+>> 如果他们不给你任何选择……
+<details><summary>Original English</summary>
+>> if they don't give you any options
+</details>
+
+>> 或者如果他们不给，而这恰恰就是他们的运作方式。说得好。我给你举个例子。在我住的弗吉尼亚州阿灵顿社区，FBI一年半前突击抓获了一名潜伏特工。这是一位在弗吉尼亚州阿灵顿当小学老师的女士。她被安插在这个岗位上，他们交代她就过你自己的生活，做你自己的事。如果我们有需要，我们就会激活你。这可能是一年、十年、三十年。嗯，一年、一年半前我为我的播客采访过一名潜伏特工，他当时住在布鲁克林，只是在休眠，然后爱上了一个女人，结了婚，他们有了一个女儿。他说：“当我一看到那个婴儿美丽的小脸，
+<details><summary>Original English</summary>
+>> or if they don't, which which is exactly how they operate. That's a good point. I'll give you an example. In my neighborhood in Arlington, Virginia, the FBI swooped in a year and a half ago and arrested a sleeper agent. This was a woman who was an elementary school teacher in Arlington, Virginia. She was placed in this position and they said just live your life, do your thing. If we need you, we'll activate you. You could go a year, 10 years, 30 years. Um, I interviewed a sleeper agent for my podcast a year, year and a half ago, and he was living in Brooklyn, just sleeping, and fell in love with a woman, got married, and they had a daughter. and he said, "As soon as I saw that baby's beautiful little face,
+</details>
+
+>> 他就知道自己再也回不去了。”果不其然，他们激活了他。他没有理睬那次激活。他说有一天他在地铁上，正抓着吊带拉手。一个男人走近他，低声对他说：“你知道你必须回应。如果你不回应，你知道我必须杀了你。”
+<details><summary>Original English</summary>
+>> he knew he could never go back." And sure enough, they activated him. And he ignored the activation. And he said he was on the subway one day. He's holding the strap. A man walked up to him and whispered to him, "You know that you have to respond. And if you don't, you know I have to kill you."
+</details>
+
+>> 那是哪个国家？
+<details><summary>Original English</summary>
+>> Which country was that?
+</details>
+
+>> 这发生在纽约布鲁克林。
+<details><summary>Original English</summary>
+>> This was Brooklyn, New York.
+</details>
+
+>> 实际上是哪个国家……
+<details><summary>Original English</summary>
+>> Which country was it that was actually
+</details>
+
+>> 俄罗斯？他是……我可以问一下是不是杰克·巴尔斯基（Jack Barski）吗？
+<details><summary>Original English</summary>
+>> Russia? Was he am I? Can I ask Jack Barski?
+</details>
+
+>> 是的，就是杰克·巴尔斯基。所以，关于这一点他是公开的，我不是在曝光杰克，他自己写过一本关于这事的书。他说他那天没有去原本要去的地方，
+<details><summary>Original English</summary>
+>> Yeah, it was Jack Barski. So, and he's public about this. I'm not outing Jack, but he wrote a book about this. He said that instead of going to wherever his it is he was going that day,
+</details>
+
+>> 相反，他在FBI纽约外勤办事处那一站下了地铁，直接走进去说：“我是俄罗斯潜伏特工。”
+<details><summary>Original English</summary>
+>> he instead got off of the subway at the FBI New York field office, walked right in and said, "I'm a Russian sleeper."
+</details>
+
+>> 这么说，你在欧洲做了好几年的俄罗斯潜伏特工。好吧，为了以防万一，我不会具体用这个词，为了以防万一，因为我们都……你知道这是在录视频，而且你知道，就为了以防万一。但我想说的是，我……非官方地，我当时是指挥官要求的，而且仅仅是因为他给了我离开那个国家的自由，否则你知道别人会怎么说，而且也是真的——你知道一旦你成了线人，你真的……
+<details><summary>Original English</summary>
+>> So, you were a Russian sleeper in Europe for several years. Well, I wouldn't say particular like this ter just in case just in case because we all you know it's a video and you know just just in case but I would say this I um unofficially I was requested by my commander that time and only because he gave me that freedom to leave the country otherwise you know what people say and like it's true You know once you are an asset you really
+</details>
+
+<!-- chunk 13/14 -->
+
+不能离开那个机构。所以你必须想尽一切办法，如果你真想离开，就必须想尽一切办法正式辞职，好去开启新生活。所以这就是我决定为自己做的事，仅仅是因为到那时，我的主要目标弗拉基米尔（Vladimir）被杀了，而在他死之前——
+<details><summary>Original English</summary>
+cannot leave the agency. So you have to find any way if you really want to leave you have to find any way to officially resign and like start a new life. So that's what I decided to do for myself simply because by the time my main target Vladimir um was killed and before his death
+</details>
+
+>> 整个犯罪界都知道我是卧底，并把我当作目标，企图杀我。
+<details><summary>Original English</summary>
+>> all the criminal world knew about me as a mole and targeted me and trying tried to kill me.
+</details>
+
+>> 他们企图杀你。
+<details><summary>Original English</summary>
+>> They tried to kill you.
+</details>
+
+>> 他们企图杀我。是的。
+<details><summary>Original English</summary>
+>> They tried to kill me. Yes.
+</details>
+
+>> 你经历过最接近生死关头的情况是什么？
+<details><summary>Original English</summary>
+>> What was the closest you came to sort of a life and death situation?
+</details>
+
+### 生死边缘与指挥官的背叛
+
+我指的是，我曾在和尼尔·斯特劳斯（Neil Strauss）以及 iHeart 合作的播客《To Die For》中公开分享过这件事。我们到了那样一个地步，当时另一个部门的我的指挥官，他是腐败的。
+<details><summary>Original English</summary>
+I mean I shared it publicly in the podcast to die for with Neil Strauss and iheart and um we came to the point where another my my commander of another department he was corrupted
+</details>
+
+>> 他搞了整个圈套，那就是我所指的所有的设局，所以他设了那个局，在局里他——
+<details><summary>Original English</summary>
+>> and he did the whole setup that's what I'm referring to all the setups so he did the setup where he
+</details>
+
+>> 把我当成诱饵，去成为这个犯罪头目的情人。弗拉基米尔会不会坠入爱河，或者我们之间会不会有任何感情关系，其实根本不重要。根本不重要，因为只要这个团伙的头目——我们完全可以把这对应到简森（Jensen）身上，因为这些故事极其相似。可以说这位弗拉基米尔和简森一样权势滔天。他手下有一个庞大的犯罪帮伙，拥有巨大的权力和金钱。把他放在那里，去败坏他、挑衅他，由像你所知道的我或者随便什么人去诱惑他——其实当时刚好就是我——这对弗拉基米尔来说无论如何都意味着悲惨的结局，因为和一个卧底睡觉，按照犯罪界的规矩，你必须被处死。根本不会有什么“哦，你会去坐牢”或者你会怎么样，犯罪界按照完全不同的——
+<details><summary>Original English</summary>
+>> put me as a bait to become the lover of this criminal lord where He and it didn't really matter if Vladimir would fall in love or we would have any relationship. It didn't really matter because as long as the leader of this group and we can really refer this to Jensen because it's such a good similarity of the stories. This Vladimir let's say was so powerful as Jensen. He had like huge criminal gang with a lot of power and money and putting there and compromising him and provoking him and seducing him by like you know me or anyone else really. It's it was just me that time. It meant anyway the bad ending for Vladimir because sleeping with a mole and according to criminal world you have to be killed executed. There is no like oh you will go to jail or you will like criminal world they live in different according to different
+</details>
+
+>> 他们在追问，他到底确切告诉了你什么——
+<details><summary>Original English</summary>
+>> they're asking what exactly did he tell you exactly
+</details>
+
+>> 随后你又汇报给政府的内容，每个人都处于危险之中——
+<details><summary>Original English</summary>
+>> that you then passed back to the government everybody's at risk
+</details>
+
+>> 到了那个时候，八个月过去了，他们这个犯罪帮伙损失了那么多钱，那么多海洛因，他们全都在质疑。然后那个指挥官就出面，交出了我的名字：“这就是那个卧底，这就是用美人计对付你们犯罪头目的特工，而你们那么信任他，像神一样崇拜他。”
+
+所以我的指挥官，他为什么要这么做？他为什么要出卖我的名字？
+<details><summary>Original English</summary>
+>> and by the time you know 8 months have passed they lost the criminal gang lost so much money so much heroine and they were all questioning and then that commander comes and gives my name and this is the mall this is the agent who is honey dropped your criminal leader whom you trust and you worship him as a god.
+
+So my commander, why did he do it? Why did he give up my name?
+</details>
+
+>> 好，
+<details><summary>Original English</summary>
+>> Okay,
+</details>
+
+>> 我后来才查明这事。他这样做是为了设法除掉弗拉基米尔。他想在那里扶植自己的亲信来替代弗拉基米尔，因为弗拉基米尔不想再继续做来自阿富汗的毒品供应和走私了。因为，你懂的，他其实想变得更加……他想让自己合法化，想成为阿布拉莫维奇（Abramovich）那样的人。
+<details><summary>Original English</summary>
+>> I find out out about it later. So he did it in order to remove Vladimir somehow. He wanted to install there his own protetéé instead of Vladimir but because Vladimir didn't want to continue doing drug supplies and trafficking from Afghanistan because like you know he actually wanted to become more like he wanted to legalize himself and wanted to become somebody like Abramovich.
+</details>
+
+>> 这……这就是《洛城机密》（LA Confidential），她描述的就是这个。电影《洛城机密》讲的就是……
+<details><summary>Original English</summary>
+>> It's it's LA Confidential is what she's describing. the the the film LA Confidential where
+</details>
+
+>> 我其实没看过这部电影。
+<details><summary>Original English</summary>
+>> I actually haven't seen it
+</details>
+
+>> 讲的是洛杉矶警察局在二十世纪四十几年代还是什么年代打击有组织犯罪。然而，他们打击有组织犯罪的全部原因，是因为警察局长想要接管有组织犯罪。
+<details><summary>Original English</summary>
+>> where the LA Police Department in the 19 whatever it is 40s is going after organized crime. Well, the whole reason they're going after organized crime is because the chief of police wants to take over organized crime.
+</details>
+
+>> 啊，所以你的指挥官不喜欢身为贩毒帮伙头目的弗拉基米尔，可能是因为他无法控制弗拉基米尔，而弗拉基米尔想洗白，在某种程度上变得遵纪守法。
+<details><summary>Original English</summary>
+>> Ah, so your commander didn't like Vladimir who was the leader of the the drug gang because maybe he can control him and Vladimir wanted to go straight and sort of become law abiding.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yes.
+</details>
+
+>> 所以他想除掉他——
+<details><summary>Original English</summary>
+>> And so he wanted to take him out
+</details>
+
+>> 来安插自己的亲信。
+<details><summary>Original English</summary>
+>> to install his protege.
+</details>
+
+### 树林绑架与最后的对质
+
+>> 好吧。行。负责把海洛因从阿富汗运到俄罗斯的人。最终那些犯罪分子没有……嗯，他们显然没告诉我，我并不知情。那是一个寻常的傍晚，我像往常一样从我的公寓下楼，盛装打扮去赴约见弗拉基米尔吃晚餐。我下楼，总归是同一辆车，同一个犯罪分子司机。
+<details><summary>Original English</summary>
+>> Okay. Fine. who was responsible for bringing heroine from Afghanistan to Russia and um eventually criminals didn't well they didn't tell me obviously I didn't know so they um it was usual evening so I would go downstairs from my apartment uh dress up for meetings to see like you know for a dinner Vladimir as always and um I come downstairs it's always like the same car the same driver criminal.
+</details>
+
+>> 所以我一坐进车里，就看到了其他手下，我意识到：噢——
+<details><summary>Original English</summary>
+>> So the moment I you know I sit in the car I see other guys and I understand that oh
+</details>
+
+>> 出事了，有情况。
+<details><summary>Original English</summary>
+>> something is wrong something is up.
+</details>
+
+>> 于是他们拿走我的包，把麻袋套在我头上，让我什么也看不见。
+<details><summary>Original English</summary>
+>> So they take my back they put the potato back on my hat so I cannot see anything.
+</details>
+
+>> 我开始琢磨，好吧，他们究竟知道了什么，到底发生了什么？因为当时我并不知道我的指挥官背叛了我并交出了我的名字。我听到……你知道，我的手机，那时候我拿的是手机，你懂的，就是以前那种。我记得听到了很多未接来电，所以弗拉基米尔大概一直在给我打电话，想弄清楚出了什么事，为什么我没跟他在一起。他们把我带到了树林里，实际上正是我以前和我的团队一起执行侦察的那片树林，看着这些犯罪分子如何杀人并埋进那片泥土里。他们恰好把我带到了同一个地方。所以我明白了，好吧，这是我的——
+<details><summary>Original English</summary>
+>> Um I started to think like okay so what do they know what's happening? because that time I didn't know that my commander betrayed me and give back my name and I hear that um you know my telephone that time I had mole you know it was like back the day so I I I remember listening so many like missed calls so Vladimir probably was calling me to find out what's happening why I'm not there with him and they brought me to the forest actually the forest where I used to spy with my team looking like these criminal guys would kill someone and bury in that soil. So they brought me exactly to the same place. So I understood that okay this is my
+</details>
+
+>> “我要杀了你，把你埋了。”
+<details><summary>Original English</summary>
+>> I'm going to kill you and bury you.
+</details>
+
+>> 没错。那就是他们企图对我做的事。但随后弗拉基米尔终于给那个领头的人——就是那个司机兼犯罪分子——打了电话，并命令他把我带到他面前。他们说，让我们就在这儿解决她吧，因为反正我们人都已经到现场了，你何必浪费时间，而且别让你的双手沾上血，她是个卧底，就让我们在这儿把她干掉。他们把我打得很惨，因为后来我不得不去做了骨骼复位手术。我这里到处都是伤疤。所以当时情况非常糟糕。最终他们把我带到了弗拉基米尔面前。他们答应了，因为他们不敢说不。
+
+当我来到弗拉基米尔面前时，我已经在流血了。他把整件事都想明白了。他问我的唯一一个问题是：曾有任何建议吗？
+<details><summary>Original English</summary>
+>> Exactly. That's what they like that's what they are were trying to do. But then Vladimir called eventually to the main guy you know this driver dash criminal and told him he gave him an order to bring me to him and they said like let us finish her here because you know we already here at the spot so why would you waste your you know time and like don't cover your hands with blood she's a mole let's just finish her hair um they beat me up pretty bad because I then I had to do restructure of my bones. I have like uh scarves over the over here. So, it was pretty bad. And eventually they brought me to Vladimir. They agreed because they couldn't say no.
+
+And when I came to Vladimir, I was already bleeding and um he understood the whole thing. And the only one question he asked me is was any suggestions?
+</details>
+
+>> 是“你爱过我吗？”
+<details><summary>Original English</summary>
+>> Yeah. Did you love me?
+</details>
+
+>> 太神了。约翰（John），你真厉害。是的，他原话差不多就是这么问我的：“那真的是爱吗？你真的爱过我吗？还是对你来说这一切全都是一场游戏？”
+
+所以，当然，我必须……我的求生本能就激发出来了。所以我——
+<details><summary>Original English</summary>
+>> Bravo. John, you're the best. Yeah. He literally asked me like, "Was it really love? Do you really love me? Or was it all game for you?"
+
+So, of course, I had to My instinct of survival like, you know, kicked in. So, I
+</details>
+
+>> 你的求生本能？
+<details><summary>Original English</summary>
+>> Your instinct of survival?
+</details>
+
+>> 是的，我是说，我用尽了我所有的诱惑技巧，所有说服与影响的心理学手段，以便从我的角度来解释整件事。
+<details><summary>Original English</summary>
+>> Yes, I mean I used all my seduction, all my psychological techniques of persuasion and influence in order to explain the story from my perspective.
+</details>
+
+>> 那么从你的角度来看，那是一个怎样的故事？
+<details><summary>Original English</summary>
+>> And what was that story from your perspective?
+</details>
+
+>> 那就是：我是受害者，我事先不知情，那是我接到的命令——这也是实情——我被派去诱惑他是为了切断来自阿富汗的毒品走私，我只是在执行我的工作，仅此而已；但在那期间，当然，因为你那么出众、英俊、聪明、善良、高尚，并且对我那么好，我坠入爱河了。
+<details><summary>Original English</summary>
+>> That um I'm the victim. I didn't know. I um that was my order which was truth. uh I was sent to seduce him in order to stop drug trafficking coming like you know from like Afghanistan and I was simply doing my job that's it but then alongside of course because you're so amazing and you're so handsome and you're so clever and you're so nice and you're so noble and you were so kind to me I fell in love
+</details>
+
+>> 他相信了你。
+<details><summary>Original English</summary>
+>> and he believed you
+</details>
+
+>> 这是唯一的正确答案。
+<details><summary>Original English</summary>
+>> that's the right answer
+</details>
+
+>> 他相信了你。
+<details><summary>Original English</summary>
+>> and he believed you
+</details>
+
+>> 他信了。要不然我现在怎么还能坐在这里呢，对吧？
+<details><summary>Original English</summary>
+>> he did well I'm sitting here right
+</details>
+
+>> 那么他就放你走了？他——
+<details><summary>Original English</summary>
+>> then so he lets you go he he
+</details>
+
+>> 不，他放了。基本上我们一直谈到了深夜……其实是清晨。当时差不多已经是凌晨4点了。所以他把所有这些人都打发离开了房子。我们单独留在屋里，我把所有这些事情都告诉了他，随后我才搞清楚，我们把所有线索拼凑在一起，明白了我的指挥官只是想设法除掉弗拉基米尔，并换上自己的亲信来继续搞走私毒品的操作。归根结底全都是为了钱。
+
+当我们想通了这一点，弗拉基米尔就给一个不是犯罪圈子的朋友打了电话，那个人真的赶过来接上我，开车把我送去了安全屋。弗拉基米尔还亲自给了我一些万一有情况可以联系的渠道和现金，他们把我送到了一个安全的地方。然后在过了一段时间之后，实际上过了两个月，我从报纸上得知弗拉基米尔被杀了。这在网上的新闻里是能查到的，而且——
+<details><summary>Original English</summary>
+>> no he did So basically we spoke till like late late like early morning. It was already like 4:00 a.m. So he called so he set all these guys to leave the house. So we were like in private and I was telling him all these things and then actually I find out and we kind of like put all the puzzles together and we understood that my commander just wanted to somehow get rid of the Vladimir and bring his own protege to continue with this you know drug trafficking operations. It's all about money in the end of the day.
+
+So when we understood that, Vladimir called his friend which was not criminal and he literally came and picked me up and drove me away to the safe house and Vladimir was the one who actually gave me uh some contacts to reach if something cash and they brought me to a secure place and then after some time after actually 2 months and from the newspapers I find out that Vladimir was killed. It's actually online in the news and
+</details>
+
+>> 他是被谁杀的？
+<details><summary>Original English</summary>
+>> who was he killed by
+</details>
+
+>> 被他自己手下的犯罪分子。但话说回来，归根结底死在谁手里已经不重要了，因为最终我的指挥官、前指挥官安插了自己的亲信，而他们还在继续做同样的事。
+<details><summary>Original English</summary>
+>> by his own criminals. But again in the end of the day it doesn't matter by whom because eventually my commander former commander installed his protetéé and they were continuing doing the same.
+</details>
+
+### 内疚与无法摆脱的阴影
+
+>> 当你听说弗拉基米尔被杀时，你心里是什么感觉？
+<details><summary>Original English</summary>
+>> And how did you feel when you heard that Vladimir had been killed?
+</details>
+
+>> 内疚。
+<details><summary>Original English</summary>
+>> Guilt.
+</details>
+
+>> 内疚。所以你确实感到了内疚。那是一种同理心的体现。
+<details><summary>Original English</summary>
+>> Guilt. So you did feel guilt. That's that's a form of empathy.
+</details>
+
+>> 我至今仍感到内疚。是的。我……那是巨大的痛苦。我不知道你是否曾体验过那种感觉。我无法把它称作孤独，但那是一种痛楚，你只能将它深埋在内心，似乎没有任何事情能让你真正感到超级快乐，或者说你永远无法感到内心平静。
+<details><summary>Original English</summary>
+>> I still feel guilt. Yeah. I I I it's a lot of pain. I don't know if you ever experience that. Um I I cannot call it loneliness, but it's like pain when you just carry it inside of you and like nothing really makes you super happy or like you never feel in peace.
+</details>
+
+>> 这成了一种诅咒，因为我总觉得自己有义务去做些善事。或许这就是我想在孤儿院做的事，比如奉献自己、帮助他人等等。也许是因为内疚。也许是因为我觉得因我而死了那么多人，以至于我甚至不该离开，因为——
+<details><summary>Original English</summary>
+>> And it's a curse because I constantly feel that I am obliged to do something good. Then maybe that's what I want to do with the orphanage and like give myself and help people and all that. Maybe because of the guilt. Maybe because I I feel that because of me there's so many people died that I'm not really allowed to leave because
+</details>
+
+<!-- chunk 14/14 -->
+
+### 内疚与行动中的死亡
+
+我曾试图自杀，那是我人生中一段非常黑暗的时光。我无法……你知道，那真的非常艰难，而且……
+<details><summary>Original English</summary>
+I tried to suicide and it was a really dark time in my life. I cannot um you know it was really hard and
+</details>
+
+>> 因为你，有那么多人死去了，
+<details><summary>Original English</summary>
+>> because of you so many people died
+</details>
+
+>> 还有这种内疚与痛苦。
+<details><summary>Original English</summary>
+>> and of this guilt and pain.
+</details>
+
+>> 那些人都是谁？首先，在这些行动中，我团队的两名成员被罪犯杀害了。然后是弗拉基米尔。接着还有其他任务，倒不是我亲自动手，而是清理小组……
+<details><summary>Original English</summary>
+>> Who are those people? First of all, two members of my team during this operations were killed by criminals. Then Vladimir then there were other missions where not me personally but the cleaning team
+</details>
+
+>> 他们……所以我是那个负责色诱、开门、把团队带进去的人，然后他们会去清理……
+<details><summary>Original English</summary>
+>> they so I was the one who would seduce open the door bring the team in and then then they would clean
+</details>
+
+>> 清理。
+<details><summary>Original English</summary>
+>> clean
+</details>
+
+>> 清理，就像定点清除……
+<details><summary>Original English</summary>
+>> clean like terminating
+</details>
+
+>> 杀戮。
+<details><summary>Original English</summary>
+>> killing
+</details>
+
+>> 清除目标。是的。
+<details><summary>Original English</summary>
+>> terminating the target. Yes.
+</details>
+
+>> 噢，杀戮小组。
+<details><summary>Original English</summary>
+>> Oh, the the killing team.
+</details>
+
+>> 是的。清理。也就是清理局面。噢，清理。
+<details><summary>Original English</summary>
+>> Yeah. Clean. Well, you're cleaning up the situation. Oh, cleaning.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 所以，再说一遍，我就是那个……
+<details><summary>Original English</summary>
+>> So, and again, I was the one
+</details>
+
+>> 开了门，并真正把这家伙带到那个地方的人。我的意思是，他们当然都是坏人，这也是我给自己的唯一借口。
+<details><summary>Original English</summary>
+>> opened the door and actually brought this guy to that place. I mean, of course, they were bad guys and that's what the only excuse I give myself.
+</details>
+
+>> 他们全都像是罪犯、恋童癖，你知道的。难道我对爱泼斯坦不会做同样的事吗？
+<details><summary>Original English</summary>
+>> They were all like criminals, pedophiles, you know. Wouldn't I do the same to Epstein,
+</details>
+
+### 是否杀过人
+
+>> 对吧？你杀通过任何人吗？斯蒂芬，你为什么问这么难的问题？
+<details><summary>Original English</summary>
+>> right? Have you ever killed anybody? Stephen, why do you ask such a difficult question?
+</details>
+
+>> 难？我有权提问，你也有权不回答。规矩就是这样。
+<details><summary>Original English</summary>
+>> Difficult? I'm within my right to ask. You're within your right not to answer. That's the way.
+</details>
+
+>> 上次我们交谈时你就问过我这个问题。
+<details><summary>Original English</summary>
+>> You asked me that question the last time we talked.
+</details>
+
+>> 你当时怎么回答的？
+<details><summary>Original English</summary>
+>> What did you answer?
+</details>
+
+>> 我说没有。从来没有。那么……
+<details><summary>Original English</summary>
+>> I said no. Never. Well,
+</details>
+
+>> 这种情况下算什么？我不想撒谎。
+<details><summary>Original English</summary>
+>> what in this case? Like I don't want to lie.
+</details>
+
+>> 阿利亚，你杀过人吗？
+<details><summary>Original English</summary>
+>> Aliyah, have you ever killed anybody?
+</details>
+
+>> 嗯，是有意的还是意外的？有时候意外也会发生，你知道的。
+<details><summary>Original English</summary>
+>> Um, intentionally or like accidentally? Sometimes it happens too, you know.
+</details>
+
+>> 意外杀人。
+<details><summary>Original English</summary>
+>> Accidentally kill someone.
+</details>
+
+>> 没错。你怎么会……你怎么会意外……给我换一种犯罪形式呢？
+<details><summary>Original English</summary>
+>> That's right. How did you how can you accidentally give me a different kind of like crime?
+</details>
+
+>> 还记得你问我是否杀过人，我说没有。然后我说，有那么一次，科林·鲍威尔问了我一个问题。科林·鲍威尔一天早晨给我打电话，问我是谁在负责刺杀前总统乔治·H·W·布什的行动。长话短说，我说那会是伊拉克情报局局长萨比尔·阿卜杜勒-阿齐兹·杜里。他人在哪里的实体位置？我说：“在巴格达的伊拉克情报局总部大楼里。”于是我们向那座大楼发射了47枚巡航导弹，但当时是半夜，我们炸死了一名看门人。第二天我去上班，对我的上司说：“我昨晚杀了那个看门人。”他说：“我就知道你会这么说。你没有杀那个看门人，是鲍威尔杀了那个看门人。”
+<details><summary>Original English</summary>
+>> Remember you asked me if I had ever killed anybody and I said no. And then I said well there was this one time where Colin Pal asked me a question. Colin Pal had called me one morning and asked me who would be in charge of an operation to kill former President George HW Bush. I said that would be to make a long story short Saber Abdulaziz Adori the head of the Iraqi intelligence service. Where does he physically sit? I said, "In Iraqi intelligence service headquarters in Baghdad and we fired 47 cruise missiles into the building, but it was in the middle of the night and we killed the janitor." And I went to work the next day and I said to my boss, "I killed that janitor last night." And he said, "I knew you were going to say that. You didn't kill the janitor. Powell killed the janitor."
+</details>
+
+>> 但你感到内疚吗？
+<details><summary>Original English</summary>
+>> But do you feel guilt?
+</details>
+
+>> 我确实感到内疚。
+<details><summary>Original English</summary>
+>> I do feel guilt.
+</details>
+
+>> 所以你意外导致了别人的死亡。好吧，我会说这非常类似于《小丑》里的情境。
+<details><summary>Original English</summary>
+>> So you accidentally killed somebody. Well, I I would say like very similar situations like Joker.
+</details>
+
+>> 轮子已经在转动了，你停不下来。有时候……
+<details><summary>Original English</summary>
+>> There there are the wheels are moving and you you can't stop them. Sometimes
+</details>
+
+>> 你提供了错误的情报，从而导致了死亡。
+<details><summary>Original English</summary>
+>> you gave the wrong information and that resulted in the death.
+</details>
+
+>> 我想说的是，我提供了正确的情报，然后结果就是目标被清除。但因为……
+<details><summary>Original English</summary>
+>> I would say like I would give the right information and then the result was the termination of the target. But because like
+</details>
+
+>> 所以你……所以当我问你是否杀过人时，你描述的情形就是你提供了情报，那个人就被除掉了。
+<details><summary>Original English</summary>
+>> so you have so that's when when I say have you killed someone that's the what you're describing is you gave information that person was taken out.
+</details>
+
+>> 好吧。
+<details><summary>Original English</summary>
+>> Okay.
+</details>
+
+>> 嗯，那是行动的一部分。或者说你想要我回答像那种……哦，你有没有拿枪或者下毒？
+<details><summary>Original English</summary>
+>> Well, it is part of the operation. Or do you want like me to answer like oh did you like take the gun or poison?
+</details>
+
+>> 我不知道。你有过吗？我不知道。我不想……我只想要真相。
+<details><summary>Original English</summary>
+>> I don't know. Did you I don't know. I don't want I just want the truth.
+</details>
+
+>> 你知道，问题在于这方面有太多疑问了，而詹姆斯·邦德式的回答会是：好吧，如果我告诉你真相，我就得杀了你。
+<details><summary>Original English</summary>
+>> You know the thing is there's so many questions about that and the James won't like answer would be well if I will tell you the truth then I have to kill you.
+</details>
+
+>> 是啊。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 现实中，我想说直接动手是没有的，但类似的故事是有的。是的，绝对有。那就是我工作的一部分。
+<details><summary>Original English</summary>
+>> Um in reality um I would say directly no but similar stories. Yes. Absolutely. That was part of my job.
+</details>
+
+### 新书与结语
+
+>> 我们生活在一个多么疯狂的世界。疯狂的世界。你们两位都有极其精彩的书。约翰，你写了不少书。
+<details><summary>Original English</summary>
+>> What a crazy world we live in. Crazy world. Um, you both have the most fantastic books, John. You've got quite a lot of them.
+</details>
+
+>> 我写了一大堆。是的，写了一大堆。最上面这本昨天刚出版。
+<details><summary>Original English</summary>
+>> I've written a bunch. Yeah, written a bunch. The one on top just came out yesterday.
+</details>
+
+>> 恭喜。
+<details><summary>Original English</summary>
+>> Congratulations.
+</details>
+
+>> 非常感谢。
+<details><summary>Original English</summary>
+>> Thank you very much.
+</details>
+
+>> 《美人计》。
+<details><summary>Original English</summary>
+>> Um, Honey Trap.
+</details>
+
+>> 《美人计：如何不再落入陷阱》。里面全是关于如何识别操纵手段的技巧。
+<details><summary>Original English</summary>
+>> Honey Trap. How never be trapped again. It's all about techniques how to spot manipulation.
+</details>
+
+>> 识别操纵者、掠夺者，并重获自己的力量。你在互联网上拥有大量追随者，你在那里教导女性以及大众如何在这个世界上立足……
+<details><summary>Original English</summary>
+>> Spot manipulators, predators, and reclaim your power. And you have a big following on the internet where you teach women and people generally how to navigate in this world
+</details>
+
+>> 以及如何保持女性特质，如何拥有自信，如何把这种女性特质找回来，但并不是为了……
+<details><summary>Original English</summary>
+>> how to also stay feminine as well and how to be confident and how to like you know bring this femininity back but not as um
+</details>
+
+>> 你知道，为了某人的利益或某种好处，不是用它来对抗男人，而是让你感到自信、感到美好。
+<details><summary>Original English</summary>
+>> you know for someone's or like for some benefits not using it against men but for you to feel confident to feel good.
+</details>
+
+>> 这难道不是重要的一点吗——这些技能实际上都是可以迁移通用的。嗯。
+<details><summary>Original English</summary>
+>> Well isn't that isn't that an important point that these skills are actually all transferable. Mhm.
+</details>
+
+>> 确实如此。
+<details><summary>Original English</summary>
+>> Absolutely.
+</details>
+
+>> 它们确实如此。
+<details><summary>Original English</summary>
+>> They really are.
+</details>
+
+>> 美人计并不只是恶意的操纵手段。美人计实际上可以用来做好事。就像我们刚才讨论的那样，运用这些技巧，你可以让某人的感觉好得多。你可以给予激励，而这正是我教给我的……对吧，
+<details><summary>Original English</summary>
+>> Honey trap is not just like bad manipulation. Honey trap can be actually used for good. The way you we just discussed like with these techniques, you know, you can make someone to feel much better. You can motivate and that's what I teach my right,
+</details>
+
+>> 你知道的，比如你可以稳固你的丈夫，让他变得更成功，因为你不断激励他，引导他并支持他。这就是理想的女性，也是我们一直渴望的伴侣。一个永远支持你、永远在身边陪伴你的人。还有约翰，你写了很多书。我会把它们全部附上链接。
+<details><summary>Original English</summary>
+>> you know, like you can anchor your husband where he will become more successful because you constantly motivate him and you like guide him and you like support him. This is like ideal woman and that's the partner we always want. Somebody there who is always for you, who always supports you. And John, you have many a book. I'm going to link them all.
+</details>
+
+>> 问题在于我没有个人生活。
+<details><summary>Original English</summary>
+>> I have no life is the problem.
+</details>
+
+>> 无论是口头讲述还是文字呈现，你都是一名出色的故事讲述者。所以我强烈建议大家去买这些书。引人入胜的历程，引人入胜的人生。
+<details><summary>Original English</summary>
+>> You're a remarkable storyteller both and and in written form. So, I highly recommend people go get these books. Fascinating, fascinating journey, fascinating lives.
+</details>
+
+>> 第一本是昨天刚出来的。
+<details><summary>Original English</summary>
+>> The first one came out yesterday.
+</details>
+
+>> 请收下它。
+<details><summary>Original English</summary>
+>> Please take it.
+</details>
+
+>> 谢谢。
+<details><summary>Original English</summary>
+>> Thank you.
+</details>
+
+>> 谢谢。
+<details><summary>Original English</summary>
+>> Thank you.
+</details>
+
+>> 我们录完了。
+<details><summary>Original English</summary>
+>> We're done.
+</details>
+
+>> 非常感谢。
+<details><summary>Original English</summary>
+>> Thank you so much.
+</details>
+
+>> 谢谢。YouTube推出了这种全新的疯狂算法，它能根据人工智能和你的所有观看习惯，精准推算出你接下来想看什么视频。算法显示这个视频对你来说是最完美的。对现在观看的每个人来说推荐都各不相同。去看看这个视频吧，我敢打赌你可能会喜欢它的。
+<details><summary>Original English</summary>
+>> Thank you. YouTube have this new crazy algorithm where they know exactly what video you would like to watch next based on AI and all of your viewing behavior. And the algorithm says that this video is the perfect video for you. It's different for everybody looking right now. Check this video out and I bet you you might love it.
+</details>

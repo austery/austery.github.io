@@ -1,0 +1,491 @@
+---
+author: New York Times Podcasts
+date: '2026-11-23'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=ufIjkkDLBis
+speaker: New York Times Podcasts
+tags:
+  - prediction-market
+  - financial-regulation
+  - retail-investing
+  - market-structure
+  - algorithmic-trading
+title: DealBook峰会：Polymarket、纳斯达克与Robinhood掌门人共话预测市场与全天候交易
+summary: 在2026年DealBook峰会上，Polymarket创始人Shayne Coplan、Robinhood联创Vlad Tenev与纳斯达克CEO Adena Friedman探讨了预测市场性质、散户参与、监管边界、24/7交易及AI Agent交易的前沿变革。
+insight: ''
+draft: true
+series: ''
+category: investment-assets
+area: finance-wealth
+project: []
+people:
+  - Shayne Coplan
+  - Vlad Tenev
+  - Adena Friedman
+  - Andrew Ross Sorkin
+companies_orgs:
+  - Polymarket
+  - Robinhood
+  - Nasdaq
+  - CFTC
+  - SEC
+products_models: []
+media_books: []
+status: evergreen
+---
+### 开场与赞助商信息
+
+Meet Emma.
+<details><summary>Original English</summary>
+Meet Emma.
+</details>
+
+>> 哎哟。
+<details><summary>Original English</summary>
+>> Ow.
+</details>
+
+>> 她想自己动手打造一个冬日仙境，但却被金葱条缠住了。等等，纸黏土里粘的是猫毛吗？
+<details><summary>Original English</summary>
+>> She wants to DIY a winter wonderland, but she's tangled in tinsel. And wait, is that cat hair in the paperier-mâché?
+</details>
+
+>> 我甚至都没养猫。
+<details><summary>Original English</summary>
+>> I don't even have a cat.
+</details>
+
+>> 艾玛需要 Instacart，在那里她可以轻松从 Michaels、Walgreens 等商店买到闪烁的彩灯、磨砂花环和雪花挂饰。
+<details><summary>Original English</summary>
+>> Emma needs Instacart, where she can easily get twinkly lights, frosted wreaths, and snowflake ornaments from Michaels, Walgreens, and more.
+</details>
+
+>> 这可比做纸黏土容易多了。
+<details><summary>Original English</summary>
+>> That was easier than the papier-mâché.
+</details>
+
+>> 我们每个人都有自己的长处，艾玛。也许你的长处就是下载 Instacart 来订购节日装饰品。
+<details><summary>Original English</summary>
+>> We all have our strengths, Emma. Maybe yours is downloading Instacart to order holiday decorations.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 呃，艾玛，你需要帮忙从金葱条里挣脱出来吗？
+<details><summary>Original English</summary>
+>> Uh, Emma, do you need help getting out of the tinsel?
+</details>
+
+>> 需要。立即下载 Instacart 应用，开启今日节日采购。本期节目节选自2026年 DealBook 峰会。本届 DealBook 峰会的赞助商包括首席赞助商埃森哲（Accenture），联合赞助商美国合众银行（US Bank）、先锋领航（Vanguard）、第一资本（Capital One）、戴尔科技（Dell Technologies）、基因泰克（Genentech）以及道富投资管理行业ETF（State Street Investment Management Sector ETFs），支持赞助商塔吉特（Target），以及特约赞助商 Atlassian 和 Nscale。我不想成为那个告诉你不能交易某样东西的人，或者告诉你有些富人拥有的机会对你却不开放。我们当然必须设立护栏并承担责任。但我们又是谁，能对人们指手画脚说他们能交易什么、不能交易什么呢？我是《纽约时报》的安德鲁·罗斯·索尔金（Andrew Ross Sorkin），您正在收听的是我们在11月18日于纽约市录制的年度 DealBook 峰会访谈。谢谢大家。[掌声] 呃，我想对于在座的大多数人来说，这非常清楚：股票市场正在进入一个新纪元——全天候交易、可以对选举或赛事下注的市场。你甚至现在就可以下注——尽管我并不鼓励这么做——下注今天在 DealBook 舞台上究竟会说些什么。一整天都有人在下注。嗯，很多过去对普通人关闭的投资门槛被打破，AI Agent 正在进行交易，而在投资的终点与投机的起点之间，也浮现出了新的问题。我希望将三位真正处于这场变革中心的人士聚在一起，不论你如何定义这场转变。弗拉德·特内夫（Vlad Tenev）来到了现场，他是 Robinhood 的联合创始人；零佣金交易真正带来了一整代全新的投资者，将2900万客户带入了市场。阿德娜·弗里德曼（Adena Friedman）当然也在，她掌管着纳斯达克；今年，她主持了 SpaceX 的上市，这是规模最大的 IPO，而且可能在今天下午或今晚我们就会知晓——Anthropic 预计明天开始在纳斯达克挂牌交易，规模甚至可能更大。还有谢恩·科普兰（Shayne Coplan），他在21岁时创立了 Polymarket；他彻底革新了人们对几乎任何事情下注的能力，在这个过程中也引发了相当多的争议，我们今天就来谈谈这些。因此，让我们欢迎这三位嘉宾。[掌声] 我……我想弄明白——我的意思是，这几乎是一场哲学层面的对话，因为我认为世界已经改变了，谢恩，我认为你正是这种改变的重要组成部分。阿德娜，你也是其中的一部分。弗拉德，你也是这场变革的一份子。但这是一种转变，关乎什么是投资、什么是投机、什么是交易，以及在这样一个时代我们应该如何思考这些问题——正如我所说，你现在可以押注这个台上会讲什么，可以押注我们是否会重回与伊朗的战争，可以押注利率会上升还是下降，或者几乎任何其他事情。作为将其中许多概念变为现实的人，你在哲学层面上是如何思考这一点的？
+<details><summary>Original English</summary>
+>> Yeah. Download the Instacart app and shop for the holidays today. This episode was recorded at the 2026 Dealbook Summit. This year's Dealbook Summit sponsors include premier sponsor Accenture, associate sponsors, US Bank, Vanguard, Capital 1, Dell Technologies, Janentech, and State Street Investment Management Sector ETFs, supporting sponsor Target, and contributing sponsors at Lassen and Nscale. I don't want to be the one telling you that you can't trade something or that there's an opportunity some rich [music] person has that's not available to you. We have to of course have guard rails and be responsible. But who are we to tell people what they can and can't [music] trade? This is Andrew Osorin with the New York Times and you're listening to interviews from our annual [music] Dealbook Summit recorded on November 18th in New York City. Thanks everybody. [applause] Uh it is uh very clear I imagine to most people in this room that the stock market is entering a new era trading around the clock markets where you can bet on an election, a game. You can even bet right now, though I'm not going to encourage it, on what is actually said on the stage here at Dealbook. There are bets being made throughout the day. Um, and a lot of investments that used to be closed to ordinary people, trading being done by AI agents and new questions where investing ends and speculation begins. And I wanted to bring together three people who are really at the middle of whatever you believe this transformation is. Vlad Tennov is here. He's the co-founder of Robin Hood. uh commission free trading brought a really a whole new generation of investors, 29 million customers uh into the market. And Dina Freeman of course runs uh the NASDAQ uh this year. She listed SpaceX, which was the largest IPO and potentially this afternoon or tonight, we'll find out. Anthropic expected to start trading on the NASDAQ tomorrow and potentially could be even bigger. And Chen Copin is here. He founded Poly Market at 21 years old. he's revolutionized the ability uh to bet on just about anything uh and created a lot of controversy uh if you will in the process and we're going to talk about uh that. So please uh welcome all three of these folks. Um [applause] I I want to understand I mean and this is really almost like a philosophical conversation because the world I think has changed and I think Shane you've been a big part of that change. Adena you've been part of it. glad you've been part of this change, but it is a change um in terms of what investing is, what speculation is, uh what trading is, um and how we should be thinking about these things at a time where, as I said, you can bet on what's being said on this stage. You can bet on whether we're going to go back to war in Iran. You can bet on whether you think interest rates are going up or down or or or uh just about anything else. and how you philosophically have thought about this as somebody who's uh sort of brought a lot of this to life.
+</details>
+
+### 预测市场：价格发现与赌博的界限
+
+>> 好的。嗯，首先，感谢邀请我。呃，我一直是你忠实的粉丝，非常感谢你能邀请我。嗯，我认为最核心的事情是，当人们使用“下注”（bet）这个词时，往往带有这样一种涵义，即你站在老虎机前，期望所有图案都落在同一行。你看，你提到了这些地缘政治冲突。当人们在交易石油、交易许多受影响的企业以及在你们的平台上受影响的大宗商品时，他们实际上是在形成自己的先验认知，或者评估他们认为的概率大小，以及针对所有这些分支事件概率是如何波动的。这就是为什么当看到伊朗局势升级时，石油价格会出现波动并变得动荡。因此，我一直以来的思考方式是，当你为某件事物建立一个金融市场时，你就能获得价格发现、价格形成的美妙之处。我一直觉得这很酷。你看，一只股票在财报发布前，它的定价完全体现了华尔街的预期；而一旦公布了新的每股收益（EPS），它就会重新定价。不仅如此，即便你看体育赛事，看盘口，比如“尼克斯队让3.5分”，比赛往往最终分差就是三分或四分。这对我来说一直非常引人入胜。而真正启发我的是弗里德里希·哈耶克（Friedrich Hayek）——可能有人了解他——还有罗宾·汉森（Robin Hanson），这位学者写了大量关于观念期货（idea futures）和预测市场的文章，以及未来法则（Futarchy）。我一直感到非常兴奋的是：如果你能创建一个金融市场，其设计初衷就是为极具信息价值的事物提供价格发现，那会发生什么？因此，对我来说非常酷的一点在于，当涉及这些地缘政治问题时，人们总想把它定义为赌博。而现实是，它并不是那种有趣的赌博。你坐在那里，价格波动非常小，即便有波动，顶多也就波动到1美元。但这里存在的是围绕事件发生的可能性而产生的流动性和价格形成。人们已经将其作为一种信息来源。这就是我真正感到兴奋的地方。这就是为什么中期选举时如此酷，因为在所有的混乱之中，它是一个提醒：世界变得更好了，作为美国人关注政治走向是我们的公民责任，而 Polymarket 的存在让这件事变得更好。所以，我们必须坚守我们所做的事情，这非常重要。
+<details><summary>Original English</summary>
+>> Yeah. Um first of all, thanks for having me. Uh always been a big fan big fan of yours and really appreciate you having me. Um and I think the the biggest thing is when people use the word bet, like there's this connotation of, you know, you're at like a slot machine and you're hoping everything lands in the same row. You know, you talk about these geopolitical conflicts. When you think about people trading oil, trading a lot of the, you know, a lot of the businesses that are affected, um, and the commodities that are affected on your guys' platforms, um, they're effectively going and coming up with their priors or what they think the probabilities are and how it's fluctuating for all these different sube events. And [snorts] that's why when you know you see escalation in Iran, the price of oil fluctuates and gets gets volatile. So, the way that I always thought about it was when you go and create a financial market for something, you get the the beauty of price discovery, price formation. I always thought that was really cool. You know, the the way that a stock when you're looking at it before earnings, it's pricing in exactly what the street says and the moment that you know what the new EPS is, it it it reprices. Um, as well as even when you look at sports, when you would look at the spread, oh, the Knicks minus 3.5, like so often it was a three or four point game. It was always fascinating to me. And what I was really inspired by was, you know, this guy Frederick Hayek, some people may know him, this this guy Robin Hansen, academic who wrote all about idea futures and prediction markets. Um, and Futurki. And what I was always really excited about is what happens if you were able to create a financial market that was designed to go and provide price discovery for something that was reallyformationally useful. So what has been so cool for me is when it comes to these geopolitics, you know, people want to go and frame it as gambling. And the reality is it's not it's not fun gambling. You know, you're sitting here and there's very little volatility and if there is volatility, it can only go to up to $1. But what there is is there's liquidity and price formation around what the likelihood of the event is to be. And people have gravitated that as an information source. And that's the thing that I'm really excited about. That's why the midterms was so cool because you know it was a reminder in the midst of all the chaos like hey the world is better you know our civic duty as Americans to be able to go follow what's going on in politics it's better that poly market exists. So you know we got to stay true to what what we do. It's really important.
+</details>
+
+>> 我想先问弗拉德几句，因为你也涉足了预测市场领域，我想知道你认为它的社会效益是什么？顺便说一句，我非常清楚下注战争或利率走向所具有的社会效益，这几乎可以作为对冲市场上其他资产风险的工具。但至少在我看来，当你开始考虑对我们即将在舞台上说什么进行下注时，事情就变得复杂得多了；或者比如，你们之前上线过一笔交易——我以前在康奈尔大学读书，在伊萨卡当地兄弟会发生那起可怕的事件之后，你们上线了一笔交易，人们可以交易这些人是否会被起诉……
+<details><summary>Original English</summary>
+>> I'm going to go to Vlad just for a second if I could because you're also in the prediction market uh space and I want to know what do you think the social good is? I get, by the way, very clearly the social good of being able to maybe uh make a bet uh on what's happening with a war or interest rates or this and that almost potentially as a hedge against something else that's uh in the market. It becomes much more complicated, at least in my mind, when you start to think about betting on what we're about to say uh on the stage uh or uh about uh for example, you had a you had a trade going I went to Cornell. There was a trade after this terrible situation uh up in Ithaca uh uh with the fraternity uh where you could trade on whether these guys were going to charge
+</details>
+
+>> 是否会被起诉，后来下架了。
+<details><summary>Original English</summary>
+>> going to get charged taken down
+</details>
+
+>> 或者是否免于被起诉。你们把它下架了，也许我们该聊聊为什么要下架。但我想了解你是怎么看待……
+<details><summary>Original English</summary>
+>> or not get charged. You took it down and maybe we should talk about why you took it down. But I want to understand sort of how you think about
+</details>
+
+>> 怎么看待那部分内容，因为这确实意味着我们简直是在对一切事物下注。嗯，我想告诉你的是，我们三个人上一次聚在一起，是几个月前在华盛顿特区举行的美国商品期货交易委员会（CFTC）圆桌会议上。是这么说的吧？当时我说了一段不是很讨喜的话，我想我当时受到了台下的一些反对，但是——Robinhood 并不上线“提及市场”（mention markets）。我当时说的是，你知道，“提及市场”确实很有娱乐性，这一点毫无疑问；但是，它们也非常容易被操纵，而且在绝大多数情况下，它们可能并没有太大的财务影响或对冲效益。而谈到……所以我想说，我们尽量保持……预测市场是一种新的资产类别，它显然是有用的，也是有益的。当你观察像体育这样的领域时，我认为毫无疑问，如果以超级碗为例，超级碗的结果显然是对许多人和公司具有重大经济意义的事件。而在另一端，你可能会说，一场棒球比赛的第一球是坏球还是好球，可能并没有太大的经济或对冲效益。因此，关于体育市场的很多争论，实际上在于你在哪里划定界限。而我们的观点是，应该有规则，监管是合理的，监管应当是明智的。我认为目前大家看到的核心问题正是：为了让某项资产成为受联邦监管的事件合约，这条界线到底应该划在哪里？是涵盖所有事物吗？我认为最终的答案不可能是字面意义上的所有事物。但在这一光谱上，界线究竟划在何处？我认为参与其中令人兴奋。我们两个人以及行业内的许多其他人都在试图弄清楚这一点。但显而易见的是，客户喜欢这种资产类别，它很有用；它的益处不仅限于交易者，因为很多人只是通过查看赔率来更好地了解世界上将要发生什么。因此，它具有新闻和信息层面的效益。所以它会长期存在，现在的疑问只是具体细节是什么，作为行业，我们必须在未来几年内解决这些问题。
+<details><summary>Original English</summary>
+>> that piece of it because it does mean that we're really just betting on everything. Well, uh, what I'll tell you is the last time the three of us hung out was at the CFTC roundt in Washington DC a couple months ago. And is that how you say it? I said something that wasn't very popular. It was kind of a um I think I I got a little bit of push back from the crowd, but uh Robin Hood doesn't list mention markets. And what what I said was, you know, mention markets are entertaining, that's for sure. But um yeah, they're they're also easy to manipulate and for the vast majority of cases there's probably not a ton of financial impact or hedging benefit and and now when when it comes to so I I'd say we try to be the prediction market's a new asset class. It's clearly useful and there is benefit. And when you look at something like sports, I think there's no doubt that if you take the Super Bowl, the outcome of the Super Bowl is like u clearly an event of massive economic significance for lots and lots of people in companies. And then on the other side, um you you might say that whether the first pitch of a baseball game is a ball or a strike, um maybe doesn't have much economic or hedging benefit. And so a lot of this debate on sports is really about, you know, where you draw the line. Um, and our point is there should be rules. Regulations make sense. They should be sensible. And and I think right now what you're seeing is uh this this question of where exactly is the line going to be drawn uh for something to be an event contract that's federally regulated. Is it, you know, is is it everything? I don't think the answer at the end of the day is that it's literally everything. But but where on that spectrum is is the line? And I think it's exciting to be a part of it. You know, both of us and many others are in that industry trying to figure this out. But what's clear is customers love the asset class. It's useful. um it has a benefit not just for traders because a lot of people are just looking at the odds to get a better idea of what's going to happen in the world. So there's like a news and information benefit and uh and so it's here to stay and it's just a question of what are what are the details and and we'll have to work that out as an industry over the next few years.
+</details>
+
+### 监管红线与市场操纵
+
+>> 阿德娜，在纳斯达克，你代表着建制派，可以说。我知道你也想做个创新者，但是看着这一切的发展，你怎么看？
+<details><summary>Original English</summary>
+>> Adena, you you represent the establishment, if you will, uh at the NASDAQ. I know you want to be you're an innovator as well, but I you what do you think of all of this as you watch this playing out?
+</details>
+
+>> 我33年前就加入了纳斯达克。所以我在那里待了挺长一段时间，可以说，我们最初是一家颠覆性的新秀，但今天我们既属于建制派，也是创新者；同时，我们也在深刻思考我们对所服务的投资界所承担的责任。在预测方面，我其实同意，随着它们的成熟以及监管格局变得更加清晰，预测市场的某些要素确实可以具备很大的现实金融价值和经济价值，能够提供信息并具备对冲能力。我也认为存在……我同意弗拉德关于划界的观点，但除界限之外还有法律的存在。也就是说，不仅存在娱乐与实际金融资产——由金融监管机构管辖的资产——之间的分界线，还存在围绕赌博和体育赛事的现存法律。因此，我认为在监管机构试图理清在金融光谱中规则应该是什么的同时，这一问题也不得不在法院层面逐步厘清。核心关注领域在于操纵风险：我们是否在为客户和投资者创造一种公正合理的体验？再者是杠杆：是否引入了某种杠杆机制，使得人们可能承受不对称的损害，从而对其财富创造造成极其严重的破坏？还有整体的公平性：思考人们用于进行这些押注或预测的信息时，是否存在实质性的信息劣势导致其不公平？对我们而言，公平、透明、诚信，以及坦率地说控制系统中的杠杆，这些全都是金融市场极为重要的基石。
+<details><summary>Original English</summary>
+>> So I I started at NASDAQ 33 years ago. So I I have been there a while and I could say that you know we started as an upstart but today we sit at both the establishment and as an innovator but we also really think deeply about the responsibility that we have to the investing universe that we serve. And in the case of predictions, I actually agree that there are elements of predictions that can have a lot of that can have real financial value, economic value that can inform and and provide hedging capabilities as they mature and as the regulatory landscape becomes a lot more clear. I also think that there's I agree with Vlad on the line, but there's also the law, you know, so there's the line of what's entertainment and what's actual, you know, financial, what should be a finan considered a financial asset that's govern, you know, that's governed by the financial regulators, but there's also the law that exists around gambling and around sports. And so I think that is going to have to play out in the courts while the regulators are trying to figure out where where in the financial spectrum you know what what should be the rules and and the key area of concern is manipulation. So are we creating the right fair experience for clients and for investors? Um leverage. So is there any sort of levers that's being introduced that can make it so that pe people can be harmed in an asynchronous way that could be really really damaging to people's wealth creation and also um just overall fairness you know in terms of how you think about the information that people are using to place these bets or place these predictions you know is there a real you know information disadvantage that's going to make it so it's not fair um and that's for us fairness transparency integrity you know, and and and actually, frankly, controlling the leverage in the system. Those are all really important aspects of the financial markets.
+</details>
+
+>> 而且你也看到了监管的收紧。我的意思是，最近 CFTC 明确表态称：“关于提及市场，我们不希望看到针对美国总统演讲的合约。”所以，我认为在过去两年里，我们经历了一个相当宽松的环境，应该预料到这种环境会发生一些转变。谢恩，你认为娱乐属性在何处开始或结束，投资属性又在何处开始或结束？另外秉持公平原则我必须提一句——你刚才说是我粉丝这很好心，但等这场对话结束时你可能就不是我的粉丝了。因为……
+<details><summary>Original English</summary>
+>> And you're seeing a tightening, too. I mean, recently the CFTC came out and said, "Well, mention markets. We don't want them for the US president's speeches." Um, so I think for the past 2 years, we've had an environment that was pretty permissive, and we should expect that that kind of shifts a little bit. Shane, where do you think the entertainment side starts or ends and the investing side uh starts or ends? And I I should mention just in fairness, and I it's very kind that you said you're a fan of mine. You're not going to be a fan by of mine by the time this is over. Uh because
+</details>
+
+>> 我知道自己来参加的是什么局。
+<details><summary>Original English</summary>
+>> I knew what I was signing up for.
+</details>
+
+>> 今年9月，纽约州总检察长莱蒂西亚·詹姆斯（Letitia James）起诉了 Polymarket 的美国业务，称其为非法、无牌照的赌博经营行为。她说该平台允许18岁的人下注，而在该州法定年龄是21岁。她说：“通过规避纽约法律，Polymarket 正在将目标对准最脆弱的群体。”所以，我只是想了解你是如何看待这一切的。
+<details><summary>Original English</summary>
+>> In September, the attorney general of New York, Leticia James, sued uh Poly Marcus US Business, and she says it's an illegal unlicensed gambling operation. And she says it lets 18-year-olds bet in a state where the legal age is 21. She says, "By skirting New York laws, Poly Market is targeting the most vulnerable." And so I just want to try to understand how you think about all of that.
+</details>
+
+>> 好的。听着，我认为归根结底你必须审视各方的利益动因。首先，我第一个承认预测市场存在许多合理的批评意见。它经历了如此迅猛的崛起，有巨大的关注度和大量的广告。当你处于某项事物的“新柏拉图阶段”（早期探索阶段）时，你难免会犯错。就会出现像弗拉德刚才说的那种情况，你必须主动收缩回撤。我们已经准备好去沟通应对这场涉及各州的纷争——因为他们针对的是所有的预测市场。其基本前提是：在 Polymarket 和预测市场出现之前，运作机制是如果你想获得体育赛事的风险敞口、想要对体育下注，你就必须使用体育博彩公司（sportsbook）。而博彩公司的运作模式是它们作为对手盘：它们站在你的对立面，当消费者输钱时，它们就赢钱。而且它们掌握着关于消费者的所有数据。因此，如果消费者开始盈利，它们可以封禁消费者；如果消费者的交易规模较大，一旦连赢，就会被限制只能下小注。甚至有些报道（我想你们自己也写过）提到，这造成了一种扭曲的动机：博彩公司想要去寻找最脆弱的人群，把他们吸引回来，然后让他们输个精光。
+<details><summary>Original English</summary>
+>> Yeah. Look, I think at the end of the day, you got to look at people's incentives. First of all, I'll be the first to say there's a lot of valid criticism for prediction markets. Like there's been such a rise. There's so much traction. There's a lot of advertising. Um, you know, when you're in like the the, you know, the new Plato stage of something, uh, you're going to make mistakes. There's going to be things like, you know, like uh what Vlap was saying where you're going to have to peel back um and like we're ready to engage and you know the the state battle that's been happening because you know we're not they've gone after all the prediction markets and um the fundamental premise is that how it works prior to poly market and prediction markets is that if you wanted to get exposure on sports, you wanted to bet on sports, you had to go and use uh a sports book. And the way the sports books work is that they're the counterparty. They take the other side and when the consumer loses, they win. And they have all this data about the consumer. So if the consumer starts winning, they can block the consumer. Um if the consumer is doing large size, then they'll get capped to do lower size. if they go on a win streak. There's been some, you know, stuff, I think even you guys wrote about it, where it's like that creates this perverse incentive where the sports books want to go and find people who are most vulnerable because they want to go and bring them back in and then they lose.
+</details>
+
+>> 现在事情变得极具争议的地方在于：传统博彩公司之所以能在所有这些州获得批准，是因为它们提出：“当客户输钱时，我们会分一部分给州政府，我们会缴纳高额税款。”虽然这是一种奇怪的、甚至可能有些不正当的安排，但它确实为这些州资助了许多有益的公共事业。因此各州陷入了一个两难境地：我认为完全可以肯定地说，预测市场——即在金融交易所交易相同市场的能力，而不是在庄家通吃、庄家对你具有完全不对称优势的赌场里赌博，在这里你只需下一个市价单就能以最优价格成交——这种模式从根本上对消费者更好。但双方在税收收入上产生了冲突。我认为这才是根本原因所在。我要说的是，我必须高度称赞我们的律师团队，同时也要赞扬各州和各州的总检察长们。我们的律师正飞往不同的州，与总检察长们会面并展开对话。我认为这最终带来了好的结果，我们并没有陷入过多的正面冲突；我们的姿态没有那么激进强硬，我知道这打破了某种既定叙事——因为外界以为我们会是那种蛮横反抗的人，但我们并不是。我认为他们提出的观点是合理的，归根结底关键在于沟通并找到共同点。我认为在商业和经济层面上，终究有办法解决这些问题。但我们在这里，我们准备好进行对话了。不过说实话，你们大家是否认为公众对“什么是交易”以及“长期持有”对比“短期持有”正在发生哲学层面的变化？或者说大家倾向于认为可以更快速地下注或买卖，而不是沃伦·巴菲特（Warren Buffett）那种“买入并祈祷”的学派？
+<details><summary>Original English</summary>
+>> Now, where it gets really, you know, polarizing is that the way that the sports books were able to go and get the green light in all these states is they were saying, "Hey, when customers lose money, we'll give a cut to the state. We'll pay really large taxes." And you know, while that is kind of this weird maybe potentially crooked thing, you know, it does fund a lot of useful stuff for these states. So they're in a conundrum where I think it's safe to say that prediction markets, the ability to go and trade the same market on a financial exchange as opposed to a casino where you know you're you're it's against the house and the house always wins and the house is all this asymmetric advantage over you as opposed to just making a market order and getting it filled at best price. That is fundamentally better for consumers. Um, but there's this butting of heads in terms of the tax revenue. So I think ultimately that's the root of this. And what I'll say is, you know, I got to give a lot of credit to our lawyers. You know, we've and also a lot of credit to, you know, the states and the AGs. Our lawyers are flying around to these different states. They're going and [snorts] and um, you know, they're meeting with the AGs and and and uh, you know, they're engaging. And I think that's ultimately played out where, you know, maybe we haven't gotten as into as many uh, but of heads. you know, we're less gung-ho about it, which I know is a narrative violation because we're supposed to be the people like that, but we're not. And um so, you know, I think that they have valid points and ultimately what it's about is engagement and going and finding a common ground. And I think ultimately there's a way, you know, commercially, economically, to go and sell these things. Um but we're here. We're ready to engage. Real quick though, do you guys think that there's a philosophical change taking place among the public about what trading is uh and what long-term ownership is about uh versus short-term ownership uh or the idea that you can just either bet or uh buy and sell something much more quickly than the sort of Warren Buffett school of hold it and hope.
+</details>
+
+### 散户主权、合格投资者与市场护栏
+
+>> 我确实认为存在代际差异。我也认为当今的投资者拥有更强的自主权（agency）。我认为新冠疫情确实改变了投资者群体的性质，因为人们有了时间坐下来去学习并参与其中。我也认为人们正在对自己资金拥有更多的控制权。过去十年我们一直在观察股票所有权的趋势，散户直接持有美股的比例持续上升，目前达到40%。美股40%的市值是由散户直接持有的。但在散户群体内部存在巨大的跨度：有些人是高度自主决策的，有些人则使用投资顾问账户。在某些人群圈子中，关于什么是长期、什么不是长期的讨论很多：“把所有工具都给我，我想随时随地对任何东西进行全天候交易。”
+<details><summary>Original English</summary>
+>> I do think I mean I do think that there are generational differences. I think there's also a lot of agency out there among investors today. I think I think co really did change the nature of the investor universe because people had the time to sit down and to learn and to get engaged. Um I also think that people are taking more control of their money. You know, we've been looking at the trends in equity ownership now for the last 10 years and there's been a a rise of retail direct retail ownership of US equities today sits at 40%. 40% of US equity value is owned directly by retail. Um but there's a big wide gap, you know, range of that retail. Um in terms of some that are very very self-directed and some that are in advised accounts. So whether in a certain pocket of the population, I think that there is um a lot of discussion about what is long-term, what is not. Give me everything. I want to trade anything anywhere, anytime, all the time.
+</details>
+
+>> 我认为这也是……
+<details><summary>Original English</summary>
+>> I think it's also
+</details>
+
+>> 但也有其他人确实是为了财富创造而来的。他们是为了做长期的下注。过去十年里被动指数基金也翻了一倍。这表明也有大量资金在寻求……
+<details><summary>Original English</summary>
+>> but there's others that are really are there for wealth creation. I mean, they are there to make a bet, a long-term bet. They are there, their passive funds have also doubled over the last decade. So, that shows you there's also a lot of money looking for
+</details>
+
+>> 你的公司在一定程度上因 GameStop 事件而声名鹊起。
+<details><summary>Original English</summary>
+>> your company that became famous in part during the GameStop phenomena.
+</details>
+
+>> 这其中还有技术因素。在30年前，每笔交易的佣金要40或50美元，你无法获取如此多的信息，事物的变化也没有这么迅速。过去你只有三个电视频道，大家都在看，都在关注，那就是新闻的来源。而现在，新闻随处可见，24小时不间断传播。万事万物在变动，市场在变动。当我与许多算法交易员交流时，他们非常喜欢永续合约、预测市场和24/7全天候交易这类事物。而我们的哲学始终是：我不想成为那个告诉你不能交易某样东西的人，或者告诉你某个富人拥有的机会对你却不开放的人。我不应该做这个决定。对于台下的观众，如果有人对你说：“不行，我要告诉你你能交易什么、不能交易什么，而且你不适合投资 IPO、一级私募市场或预测市场”，你会有什么感受？有谁愿意接受这种管束？好的，举手的为零。所以，我们算老几，凭什么去告诉人们能交易什么、不能交易什么？我认为我们当然必须设立护栏并承担责任，但是“富人有资格或被允许拥有某样东西，而它却不对所有人开放”这种理念，我认为是非常……
+<details><summary>Original English</summary>
+>> There's also a technology component to this. Um, you know, it used to be that 30 years ago, commissions were $40, $50 a trade. You just weren't plugged in to as much information. things weren't changing as quickly. You know, you'd have your three TV channels that everyone would watch and kind of be focused on and that was the source of the news. Now, you get news everywhere. It's 24/7. Things are moving, markets are moving. And when we talk when I talk to a lot of algorithmic traders, they love things like perpetual futures, uh, prediction markets, 247 trading. And our philosophy always has been um I I don't want to be the one telling you that you can't trade something or that there's an opportunity that some rich person has that's not available to you. I I shouldn't be making that decision. And I would hate um I mean for those of you in the audience, how would you feel if someone's like nope uh I'm going to tell you what you can and can't trade and you know you're not suitable for you know investing in an IPO or private markets or prediction markets. Who who would be into that sort of thing? Okay. Zero hands. So I mean who are we to tell people what they can and can't trade? I think that um we have to of course have guard rails and be responsible but the idea of like wealthy people being eligible or allowed to have something but it not being open to everyone I think is very
+</details>
+
+>> 你用了“护栏”这个词，所以我很好奇你认为这些护栏正在发生什么变化。因为我观察到的一个现象似乎是，护栏正在被拆除——当你思考现任政府下监管机构所采取的方式时，实际上就是在降低这些护栏。我刚才查阅了纽约大学 Cornerstone Research 的数据，发现 SEC 今年提起的内幕交易案件比前一年减少了71%，是2010年以来的最低水平。因此我很好奇，当你看到这些现象并与监管机构合作时，你是怎么看待这一点的？你可能觉得这是件大好事，我不知道。
+<details><summary>Original English</summary>
+>> you use the word guardrails and so I'm curious about what you think is happening to the guardrails because one of the things that I see happening it seems like is that the guard rails are coming down when you think about uh the approach that the regulatory uh bodies uh under this administration are taking uh is effectively uh to lower those guard guardrails. I was just looking uh Cornerstone Research NYU found the SEC uh brought 71% fewer cases um uh this year um on insider trading um than they did the year before. It's the lowest it's been since 2010. And so I'm curious when you see that um and you're working with the regulators, how how you think about that. You may think that's a great thing. I don't know.
+</details>
+
+>> 我认为仍有一些不应该存在的护栏。例如，我们在后台与帕尔默（Palmer Luckey）聊天，他走过来对我说：“我们到底该怎么解决这个合格投资者（accredited investor）的问题？”这太荒谬了……
+<details><summary>Original English</summary>
+>> I think I think there's still some guard rails that don't that that shouldn't exist. For example, we were talking backstage with Palmer uh and he comes up to me, he's like, "What are we going to do about this accredited investor thing?" Like, it crazy that
+</details>
+
+>> 也就是说某人必须拥有100万美元净资产才能成为合格投资者。
+<details><summary>Original English</summary>
+>> And this is this is somebody needs a million dollars to be able to be an accredited.
+</details>
+
+>> 是的，在一个企业保持私有化直至估值达到一万亿美元的世界里，你必须是一个高净值人士才能投资私营公司。因此，我们如今所处的世界，已经不同于当年你可以投资微软 IPO 或亚马逊 IPO 并获得千倍回报的时代了。所以，我认为私募市场正是需要开展更多工作的一个典型例子。
+<details><summary>Original English</summary>
+>> Yeah, you have to be a high net worth individual to invest in private companies in a world where you've got companies staying private until they get to a trillion dollars. So, we're in a different world from when you could invest in like the Microsoft IPO or Amazon IPO and you could see a thousandx return. Um, so I think I think private mark that's an example of where more more work needs to be done.
+</details>
+
+>> 是的，确实需要做更多工作。我必须说，我完全理解关于合格投资者的论点——凭什么仅仅因为某人钱多，他们就可以投资其他人无法投资的事物？我完全理解。但身处公开市场的核心，我也理解为什么公开市场会存在。从私营公司——你拥有非常精选的股东群体，你控制股东基础，你也控制流向这些股东的信息好坏——走向公开市场——每个人在同一时间获得平等的信息获取权，我们是一个以信息披露为核心的市场——为什么需要这一步跨越和准入门槛？这些信息披露极为重要。并非所有的披露都必要，SEC 正在解决一些可能走过头的披露要求。但我同样坚信，要让你的股权成熟并让十亿或更多人成为你公司的股东，他们理应获得信息获取权。而在私募市场中，普通人无法获得这些信息。因此，无论富有与否，我认为我们必须思考如何构建私募和公开市场，确保在正确的时间向正确的人提供合适的信息。也许你可以说，对于私营公司，与其允许直接购买私营公司股票，不如允许投资风投基金，因为即便对于合格投资者，你也必须通过专业管理的基金进行投资。这是监管可以推动变革的地方。但我绝不会把那里的所有护栏全都拆除，因为走向上市需要付出努力是有原因的。
+<details><summary>Original English</summary>
+>> Yeah, more more work needs to be done. I I have to say I I I totally understand the argument on the credit investor, you know. So, just because someone has more money, why do they get to invest in things that other people don't? Totally understand that. But I also understand sitting at the center of the public markets why the public markets exist, right? So why is it why is there a step and why are there gates necessary to go from being a private company where you have a very curated shareholder base, you control that you control your shareholder base and you also control information that good does or does not go out of your company to those shareholders versus a public market where everyone gets equal access to information in equal time and we are a disclosure market. Those disclosures are really important. Not all of them because some of them, you know, the SEC is addressing some of those disclosures that probably have gone overboard. But I also believe very much that to go and bake your equity and to get a billion people or more to be owners of your company, they deserve to have access to information. And in the private markets that that information is they don't have access to that information. And so whether or not you're wealthy or not, I do have to say I think that we have to think about how do you shape the private and public markets to make it so that there's access to information, the right information at the right time to the right people. And maybe you say, well, you know what, maybe for private companies, instead of being able to buy a private company share, you should be able to invest in a VC fund because even accredited investors, you can only be accredited if you even in invest in a in a you know, professionally managed fund. That's where regulation could shape kind of a change there. But I would not just take all the guardrails off there because there is a reason why it takes it takes effort to go public.
+</details>
+
+>> 谢恩，你提到过……
+<details><summary>Original English</summary>
+>> Shane, you mentioned
+</details>
+
+>> 我只补充一点。显然这些都是细致入微、错综复杂的问题。如果你允许任何散户投资者投资私营公司，存在信息不对称，他们可能随时被割韭菜。但你看看模因币（memecoins）。我认为现在出现了一群金融素养高得多的年轻人，他们希望寻找获得优势（edge）的方法。在金融市场中你可以获得优势。回顾以往的金融市场，很多曾与你坐在一起的人，抓住了某种新金融资产类别的浪潮，建立起交易策略并围绕它构建了机构。但你看模因币，它们相当于私营公司，但实际上毫无内在价值。市场上存在这种极度饥渴的投资欲望，资本会流向任何可投资的途径。因此我认为，毫无疑问弄清楚如何让散户投资私营公司很困难；我知道你们两位都在做这件事，纳斯达克私募市场和 Robinhood 在这方面走在前列。但这比去投资字面意义上毫无价值的资产要好太多了。所以，我对这一点感到兴奋。
+<details><summary>Original English</summary>
+>> I'll just add one thing. Uh, you know, so like you know, you always have obviously these are nuanced issues. They're they're difficult. Okay. So, you know, if you go and let any retail investor invest in a private company, there's information asymmetry. They'll get ripped off all the time. But you look at memecoins. I think that there's a new class of much more financially literate people, young people, and um they want to go and figure out ways to get edge. In financial markets, you can get edge. You know, the the the financial markets of the past, a lot of the people who've been up here with you, they caught a wave at a new financial asset class, were able to go and figure out and build a strategy and build an institution around it. But like you look at memecoins, they're the equivalent of private companies, but they actually are worthless. And it's like there's this insatiable desire to be able to go and invest. and there's this route to capital of whatever is available. Um, so that's why I think that, you know, without a doubt, it's difficult to figure out how private companies can be invested by retail. And, you know, I know you guys are both doing this. NASDAQ private markets and Robin Hood, you guys lead the way on this stuff. But, um, it's just so much better than the alternative of investing in literal worthless assets. Um, so, you know, I'm excited about that.
+</details>
+
+### 广告插播
+
+>> 我们马上回来。本期播客由 Nurtec ODT（瑞美吉泮）赞助播出。我们知道你并不希望被打扰，但偏头痛在发作时同样不会挑选时机。它直接侵袭而来，占用你的时间，打乱一切。因此，当偏头痛侵占你的时间时，服用 Nurtec。它用于成人有或无先兆偏头痛的急性发作治疗。Nurtec 可以在2小时内缓解疼痛，疗效最长可持续2天。请咨询您的医疗保健服务提供者，了解 Nurtec 是否适合您，因为您的时间属于您自己，而非偏头痛。如果对 Nurtec ODT 过敏请勿服用。使用数天后仍可能发生过敏反应。若出现呼吸困难、皮疹、面部、口腔、舌头或咽喉肿胀，请立即寻求医疗救助。可能发生高血压及雷诺综合征。若出现高血压，或手指、脚趾麻木、发冷、疼痛或颜色改变，请立即寻求医疗帮助。常见副作用为恶心。欲获取完整处方信息，请致电 1-833-4-NURTEC 或访问 nurtec.com。好的，回到播客节目。
+<details><summary>Original English</summary>
+>> We'll be right back. This [music] podcast is supported by Nerkche ODT Remediapant. We know you didn't ask for an interruption, but migraine doesn't wait for the right moment to interrupt either. [music] It just barges in, takes your time, and throws everything off. So, when migraine [music] takes your time, take Nerkch. It's for the acute treatment of migraine with or without aura in adults. Nertk [music] can provide pain relief in 2 hours, which can last up to 2 days. Ask your health care provider if NERTK [music] is right for you because your time is for you, not migraine. Don't take if allergic to Nertk ODT. [music] Allergic reactions can occur even days after use. Get help right away for trouble breathing, rash, swelling [music] of face, mouth, tongue, or throat. High blood pressure and reo syndrome can occur. Get help for high blood pressure, numbness, coolness, pain or color changes in fingers and toes. [music] Common side effect is nausea. For full prescribing information, call 18334 or visit nurture.com. All right, back to your [music] podcast.
+</details>
+
+### 华盛顿政治动态与牌照审批
+
+>> 我能问你一个稍微带点私人性质、但同时也很棘手的问题吗？你经常和监管机构打交道。而 CFTC 确实是允许这一切发生的核心机构。你邀请了总统的儿子小唐纳德（Don Jr.）加入你的顾问委员会。耐人寻味的是，他当时也曾同时担任 Kalshi 的顾问委员会成员，并且现在还投资了你的公司；此后他已经离开了 Kalshi 的董事会。当你做出这个决定时，背后的考量是什么？你是否认为这改变了你在华盛顿取得成功的动态，是否对此有所助力？
+<details><summary>Original English</summary>
+>> Can I just ask you just this a somewhat personal question, but it's but it's a an difficult question. Um, you deal with regulators a lot. Um, and the CFTC is really the one that's allowed a lot of this to even happen. Um you brought uh uh the president's son Don Jr. uh onto your advisory board. He also was related interestingly uh was on the advisory board at Khi too at the same time uh and has now made an investment in your company. uh he's now since left Kshi's board. When you did that, what was the thinking around it and do you think it changed the dynamic with which you were able to um to the extent succeed in Washington that it's helped?
+</details>
+
+>> 是的。澄清一下，他在一家基金工作，是那家基金进行了投资，基金里有很多人。我认为这类事情……我知道这在媒体叙事中可能很吸引眼球，但它被严重夸大了。我们有各种各样的投资者。嗯……
+<details><summary>Original English</summary>
+>> Yeah. I mean to clarify, he's he works at a fund and the fund invested and um there's a lot of people at the fund. I think that that stuff's like I know it's maybe not a great medionaire, but it's like it's heavily overblown. We have all types of investors. Um,
+</details>
+
+>> 你是否曾有过那么一刻想过：鉴于他与此关联，甚至宁可……
+<details><summary>Original English</summary>
+>> was there ever a part of you that said that given that he's associated with it that you know what, maybe it's not it's it's almost preferable he
+</details>
+
+>> 我认为对局势变化的客观务实评估是这样的：你看，我是在距离这里三个街区的公立高中 Beacon 读的高中，我就在拐角处长大。这听起来可能很离谱，但我以前曾经在咱们身后的哥伦布圆环（Columbus Circle）弹吉他卖艺赚钱，之后去楼下的 Whole Foods 买吃的。所以你要谈美国梦？可不是模因币那种。因此我认为最重要的一点是，从上届政府到本届政府，节奏上的变化确实是一种全面欢迎人们去开创事业的态度。这太棒了。你可以说我天真，也许这不是标准的话术，但我认为美国梦、负责任地创新的能力，这不是共和党或民主党专属的事情，而是一项属于美国的事业。当我们在……我认为从上届政府中吸取了教训，特别是从我们接触过的所有民主党人那里，大家觉得：“嘿，我们希望参与对话，希望允许人们负责任地创新。”也许此前在另一端走得太远了；正如弗拉德所说，也许现在天平偏向了另一端，或许需要找到平衡点，这完全没问题。我们准备好参与对话，我们持开放态度，我想在说这番话时我可以代表所有从事这个行业的人。但最核心的是，当我们去拜访一些民主党政界人士时，对话非常富有成效。这并不是说他们认同我们做的一切，也不是说我们没有受到批评，但他们是理性、务实的，他们希望找到一种让他们感到放心的监管方式。当我在打造 Polymarket 时，目前正处于火热期，存在很多泡沫；但我们的意图是走得长远。我几乎认为这是一种倒逼机制：“嘿，改变将会发生，而这些改变既不会带来灭顶之灾，也不会是坏事。”这些监管者是真正讲理的人，双方可以展开协作。
+<details><summary>Original English</summary>
+>> I think the the practical assessment of how things have changed is look, you know, I I grew up like I I went to high school, public high school like three blocks from here, Beacon and um, you know, I grew up around the corner. I I this is gonna sound crazy, but I used to like busk. I used to play guitar in in Columbus Circle behind us for money and go get Whole Foods after downstairs. Um so you want to talk about the American dream? Uh not meme coins. Um so I think that the the biggest thing is like the change in tempo from the last admin to this admin was really just a universal welcoming of people trying to build things. And that's amazing. I I you know call me naive and maybe this isn't you know what one is supposed to say but like I think the American dream I think the ability to innovate responsibly that is not you know a Republican or a Democrat thing um it's an American thing and when when we've gone I I think there was a lesson learned from the last admin particularly from all the Democrats we've we've met where it's like hey we're going to want to engage we're going to want to let people innovate responsibly maybe there was a bit too far on the other side and and you know like like Vlad said and said like maybe there's been a shift to the other end of the spectrum and maybe there needs to find equilibrium and that's okay and we're we're ready to engage and we're openminded and I think I speak for all the people who do this when I say that but I think that the biggest thing is you know when we've gone and met some of the you know the Democratic politicians like it's been really productive conversations and you know that's not to say that they agree with everything they do that's not to say we don't get criticism but they're rational they're pragmatic they want to go and figure out a way to regulate it in a way where you know they feel comfortable with it and when I'm when I'm building Poly Market like right now you know it's a hot time there's a lot of froth um but you know our intent is to to you know go the distance and I [snorts] almost think that this is a forcing function of like hey you know there's going to be changes those changes are not going to be existential or or uh you know or bad it's going to these are genuinely reasonable people and you can go and have collaboration and what do you
+</details>
+
+>> 在公众心目中这让事情变得更复杂，因为在这里我提出了关于小唐纳德的问题。而且我假设一家如此成功的公司，你们可以拿任何人的钱。所以如果资金是同质可替代的，他的资金对你是有利还是有弊？
+<details><summary>Original English</summary>
+>> It makes it harder in the public's mind because here I am raising the issue about Don Jr. and you're and I I assume a company so successful you could take money from anybody. Um, and so if if money's funible, is his money uh help you or hurt you?
+</details>
+
+>> 否则我们也不会讨论这个话题了……
+<details><summary>Original English</summary>
+>> All of this otherwise we wouldn't be talking about,
+</details>
+
+>> 当我和他相处时，通常大多只是关于打猎的轻松对话。对此我一无所知，但听这些故事很有意思，听起来很过瘾。另外，通过介绍我认识了他的合伙人，那是一位非常棒的人，我很喜欢他思考商业的方式，我从他身上学到了很多，我认为这纯粹是以一种无可非议的方式。你只需回顾上一届政府：我当初收购了这家指定的合约市场与清算机构（DCM/DCO），为了进入美国市场我放弃了很大一部分公司股权。而在这届政府下——首先，在临时执掌 CFTC 的卡罗琳（Caroline Pham）领导下，她批准了此前所有积压的申请，那些极其繁复的 CFTC 交易所和清算所申请全部获批。那些人曾等待了数年，得到的只有音讯全无，或者等待三周才得到一次答复，尽管他们一直试图以负责任的方式推进。而在新一届政府下，或许我感到有一点“买家的懊悔”，因为人们如今直接就能拿到牌照，他们做合规的事情，满足所有规则要求，但现在的审批节奏对任何试图在美国建设事业的人来说都具有普遍益处。我认为这很好。我有信心，无论政府如何更迭，这种局面都会保持下去，在需要妥协的地方也会达成妥协。
+<details><summary>Original English</summary>
+>> you know, when I've spent time with him, it's it's usually [snorts] just more, you know, uh, fun conversations here about hunting. Um, which I don't know anything about, but uh, but it's fun to hear the stories. It sounds like a really good time. and um you know there his his partner is someone that I got introduced to that I've met who's been uh you know just a great guy in terms of just I like the way he thinks about how to you know business um and I've learned a lot from him not in you know I would say in an innocuous way I think that uh you you can look no further than the last admin to go in you know I bought this DCMCO and I gave up a big chunk of my company to go buy it to get into the US and you know in this admin First of all, under Caroline, who was interim running the CFTC, she approved all the backlog of people who'd gotten their applications, these really, really tedious CFTC exchange and clearing house applications, and they got them all approved. And these were people who'd been waiting for years and just getting radio silence or waiting 3 weeks to respond, trying to go and do this responsibly. And then in the new admin, you know, maybe I feel a little bit of buyers remorse, like people are just going and and getting their licenses and they're doing things the right way. they're going and and satisfying all the all the rules, but there's a pace that is universally beneficial to anyone who's trying to build in America. I think that's great. I, you know, I'm confident that regardless of what happens with the government, that's going to that's going to stay and there'll be, you know, compromise on on whatever there needs to be compromised on.
+</details>
+
+### 全天候市场与代币化趋势
+
+>> 让我问你们两位关于24小时交易的问题。顺便说一句，我提出这个问题的背景是：我们过去之所以有周末休市等机制，原因之一是在发生金融危机或系统故障时，大家可以利用周末来真正修复问题，然后在周一重新开市。我们正在迈入一个未必再有机会“重启”的世界。因此我很好奇，对于这种我们再次迈向每天24小时不间断交易的想法，你们是如何看待的？它是否会把我们置于某种危险之中？
+<details><summary>Original English</summary>
+>> Let me ask you both about 24hour trading. Um and by the way I ask it in the context that one of the reasons we used to have um you [snorts] know weekends and things you know when we had a financial crisis if there's an outage or something used to be let's get to a weekend so that they can actually fix things and then you know you can restart on a Monday. Um we are moving into a world that there's going to be no opportunity necessarily for restart. Um, so I'm curious how you think about sort of this idea that we just do this again 24 hours a day and does it put us in any kind of peril?
+</details>
+
+>> 我先说两句：纳斯达克股票市场将于12月6日推出每周5天、每天23小时的交易；我们还与一家名为 Bruce 的公司合作，这是一家 Robinhood 和纳斯达克均有投资的另类交易系统（ATS），他们目前已经实现了 24/5 交易，并准备在此之前推进到 24/7 交易。
+<details><summary>Original English</summary>
+>> So I I would start by saying so we are launching 23 hours a day, 5 days a week trading on the NASDAQ stock market on December 6th and we partner with a company called Bruce, which is an ATS that Robin Hood and NASDAQ have both invested in to they are already at 245 trading and they're going to move to 247 trading um before.
+</details>
+
+>> 是的。因此，确实存在向“全天候市场”发展的趋势，你必须看这种趋势源自何处。对此有巨大的需求。如今美股有 12% 到 15% 的交易发生在下午4点之后至上午9点之间。
+<details><summary>Original English</summary>
+>> Yeah. So, so there's there is a move to towards always on markets and you have to look at where where is it coming from. There's a lot of demand for that. Today between 12 and 15% of trading in US equities occurs after 4:00 and before 9.
+</details>
+
+>> 这是由个人投资者推动的，还是顺便说一句，全部由我们的 AI Agent 来完成？
+<details><summary>Original English</summary>
+>> Is that going to be individuals or by the way all of our agents are going to be
+</details>
+
+>> 各种情况都有可能。但我必须指出，针对 Agent 显然必须确保在准入门槛上设有控制机制。但我认为需求确实存在，主要来自散户。但我们必须记住：我们坐在美国，可能会说“天哪，我们能整天交易真是太棒了”；我们依然会像往常一样设有开盘和收盘，美国常规交易时段将完全保持原样。但在全球范围内存在着一个庞大的投资者群体，他们渴望接触美国公司。正如你所说，我们是世界上最具创新力的国家，全球各地的人们都希望有机会依托美国经济的力量进行投资并积累自身财富。因此，我们的观点是去迎合这一需求。现在的关键是确保全球范围内的交易体验与美国本土一样优质。因此，我们将在该时段对股票价格波动的幅度设立护栏；对报价和交易保持完全透明；配备市场运营与市场监控团队。届时将拥有一套目前尚不存在的完备市场基础设施。所以我们确实感到正在为投资者提供更好的体验，随着时间的推移，我们应该能够吸引越来越多的资金参与其中，甚至可能包括机构的参与。但我必须说明的一点是，这确实需要底层基础设施的变革。你刚才问这是否会引入新的风险——确实必须对基础设施进行改造以确保安全运营：第一，风险管理必须变成全天候机制……
+<details><summary>Original English</summary>
+>> so it could be anything but I would say agents obviously a agents have to make sure that they're you know there's controls on those agents you know on on the way in the door but I but I would say that um that the that the demand is there it is primarily from retail but we have to remember we're sitting here in the United States and we're saying gosh we can trade all day it's really great we are going to have an open and close like we always have the US trading session will be exactly the same but there's a huge world of investors out there who want to get access to US companies. We have, as you said, we are the most innovative country in the world and there are people all over the world who want to have the opportunity to be able to invest and grow their own wealth against the the power of the US economy. So, our view is that we're meeting the demand where it is. Now, it's a matter of making sure though that that experience all around the world is um becomes as good as the experience in the US. So we're going to put guard rails on how much price movement there can be in stocks during that time. Complete transparency of the quotes and trades. Um there's market ops, market watch. There will be a complete market infrastructure available now which does not exist today. So we do feel like we're getting we're giving the investors a better experience and over time we should be able to move more and more interest into it potentially with institutional engagement as well. The one thing I would say though is it does require a change in the infrastructure and so you asked does it introduce new risk and there are changes in infrastructure that have to be made to make it so you can do this safely two one is just risk management has to become always on
+</details>
+
+>> 对。
+<details><summary>Original English</summary>
+>> right
+</details>
+
+>> 始终在线、全天候运作，这正是 AI 在防御端发挥巨大作用的地方。因此，要考虑全天候交易基础设施、全天候风险管理、全天候合规监控等所有环节，AI 在其中扮演着重大角色。第二点是我们构建市场的架构方式现在有所不同了。因此，你可以在提供全球交易时段的同时，拥有保护美国本土交易时段安全性的机制。
+<details><summary>Original English</summary>
+>> always on all the time that's where AI actually plays a huge role in the defensive side and so thinking about always on trade infrastructure always on risk management always on surveillance always on all of that so that's where AI plays a huge role and the second thing is the way we're architecting the markets is different now. So, you'll have a way to protect the safety of the US session while you're offering the global session.
+</details>
+
+>> 谈到24小时市场，我正好想问问关于 AI Agent 的问题，因为我认为这是个重大课题。你们能想象未来我们所有人都会有代理代表我们进行交易吗？顺便问一句，如果出了差错——但愿一切顺利——但如果出了问题，在这一切之中谁来承担责任？
+<details><summary>Original English</summary>
+>> Um, talking about 24-hour markets, I just want to ask about agents because I think it's a big question. Do you imagine that we're all going to have agents trading on our behalf? And by the way, if something goes wrong, and hopefully things go right, but if they go wrong, who's liable in all of it?
+</details>
+
+>> 这是一个深刻的问题。首先，24/7 交易时代正在到来。正如阿德娜所提到的，我们正携手合作，很快将其推向全球。因此，未来你将能够在周六以及全天候随时进行交易。我知道谢恩也……
+<details><summary>Original English</summary>
+>> That's a it's a deep question. Well, f first off, 247 is coming. Uh, as Adena mentioned, we're partnering on bringing that to the world imminently. So, you'll be able to trade on Saturdays and around the clock. Um, I know Shane also,
+</details>
+
+>> 难道你不想过个清静的周六吗，还是不想？
+<details><summary>Original English</summary>
+>> don't you want your Saturdays back, though, or no?
+</details>
+
+>> 你说什么？
+<details><summary>Original English</summary>
+>> What's that?
+</details>
+
+>> 你想要周末吗？你真的希望能在周六交易吗？
+<details><summary>Original English</summary>
+>> Do you want your Saturdays? Do you want to be able to trade on a Saturday?
+</details>
+
+>> 听着，如果在周六发生了什么事，我不希望在对冲风险时处于劣势。另外一点是，你刚才几次提到了模因币。最初的模因币——比特币——如果你看看它背后所赋能的技术：24/7 全天候、碎片化的资产所有权，以及后来任何人只需点击一个按钮就能创建在全球交易、拥有数十亿美元流动性的产品的能力。这是一项强大的技术。也许这就是阿德娜刚才提到基础设施必须改变时所指的方向。但我确实认为，最令人兴奋的领域之一在于：我们能否真正将更多资产——不仅仅是比特币或模因币——引入区块链技术，受益于去中心化，并拥有具备基础实用价值的现实世界资产（RWA）。
+<details><summary>Original English</summary>
+>> Hey, if something happens on a Saturday, I don't want to be at a disadvantage in hedging my risk. And the the other thing is, I mean, you mentioned memecoins a couple of times. So, the original memecoin, Bitcoin, uh, if you look at the technology behind what that enabled, 24/7 fractionalized asset ownership, and later the ability for anyone to create a product that trades around the world, billions of dollars in liquidity, and uh, do that just with the with the click of a button. Now, that that's a powerful technology. Maybe this is what you were alluding to when you said the infrastructure has has to change. Um, but I do think uh that's one of the most exciting realms is can we can we actually get more things not not just Bitcoin, not memecoins on blockchain technology benefit from decentralization and have real world assets with fundamental utility.
+</details>
+
+>> 是的，这就是代币化（tokenization）。
+<details><summary>Original English</summary>
+>> Yeah. And that's tokenization.
+</details>
+
+>> 没错。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> “代币化”这个词的本质就是：让我们尝试将所有资产类别都转移到区块链上。我非常同意弗拉德的观点，将每个资产类别代币化确实具有实质效益。有趣的是，正如你所说，这种效益最初始于散户端，因为比特币被创造出来等等，正如你所说的一切；但现在的效益在于，我认为机构也开始认识到了这一优势。全球资本的自由流动，以及抵押品流动性和抵押品灵活性的提升，其意义将极其重大，它将真正有力推动更多资本进入市场并提振流动性。因此机构领域现在正在全面跟进，特别是在《GENIUS法案》出台之后，该法案明确了关于代币化货币的法律框架。这是市场上推进全天候交易的巨大突破，但其实在代币化之前，我们已经在将全天候机制引入市场了，代币化则是下一步。
+<details><summary>Original English</summary>
+>> That's so the word tokenization is let's try to get every asset class onto the blockchain. And I and I do agree with Vlad that there is a real benefit to tokenizing every asset class. Um and there's and it's interesting because the benefit started in retail as you said it was started because um Bitcoin was created etc and everything you said but now the benefit is I think institutions are starting to recognize the benefit as well. the free flow of capital around the world and the ability the coll the collateral mobility and the collateral flexibility is going to be so significant that it will really really help drive more capital into the markets and drive more liquidity. So the institutional world is coming on board now today particularly on the back of the genius act where they've clarified the laws around tokenized money. So that's a huge huge advancement in markets that will facilitate that always on but we're going always I mean we're already bringing this to the markets before tokenization. Tokenization is the next step.
+</details>
+
+### AI Agent 实盘模拟与未来展望
+
+>> 我们的时间快到了，不过请继续。
+<details><summary>Original English</summary>
+>> Um we're going to be out of time. Oh but go ahead.
+</details>
+
+>> 只是为了让大家领略一下这个“美丽新世界”：我现在在贵宾休息室的手提电脑上就有 AI Agent 正在进行实盘交易。所以……
+<details><summary>Original English</summary>
+>> Just so people know Brave New World. I've got agents on my laptop in the green room trading right now. So
+</details>
+
+>> 我们已经身处其中了。
+<details><summary>Original English</summary>
+>> we're here
+</details>
+
+>> 它们在交易什么？在 Polymarket 上交易，还是……
+<details><summary>Original English</summary>
+>> and they're trading what on poly market or they're tra
+</details>
+
+>> 是与预测市场相关的，是的。
+<details><summary>Original English</summary>
+>> they it's it's prediction market related. Yeah
+</details>
+
+>> 预测。那你押注了什么？
+<details><summary>Original English</summary>
+>> prediction. And what do you what do you what's your bet?
+</details>
+
+>> 我把决定权留给它们，我懂什么呢？
+<details><summary>Original English</summary>
+>> I leave it to them. What do I know?
+</details>
+
+>> 不，等等，解释一下。所以你……
+<details><summary>Original English</summary>
+>> There was no No, no, hold on, hold on. Explain this. So you
+</details>
+
+>> 谁来承担责任？
+<details><summary>Original English</summary>
+>> Who's liable?
+</details>
+
+>> 不不，你是怎么做到的？
+<details><summary>Original English</summary>
+>> No, no, but so how have you done this?
+</details>
+
+>> 你给 Agent 设定了什么指令？
+<details><summary>Original English</summary>
+>> So what have you agent?
+</details>
+
+>> 你指示它去做什么？
+<details><summary>Original English</summary>
+>> So you've told you've told it to do what?
+</details>
+
+>> 在这种情况下，你可以将不同的 Agent 连接到不同的数据源。可以让接触不同数据的不同 Agent 进场交易。这有点像一种模拟。
+<details><summary>Original English</summary>
+>> I mean in this case uh you can like connect different agents to different data sources. Um it can have different agents that are diff are basically exposed to different data and they can go trade. It's kind of like a a simulation.
+</details>
+
+>> 那么你的交易战绩如何？
+<details><summary>Original English</summary>
+>> And how are you doing?
+</details>
+
+>> 这在交易层面上是非常硬核极客的做法。
+<details><summary>Original English</summary>
+>> It's really really nerdy with your trading.
+</details>
+
+>> 盈利了吗？当我思考这个问题时，核心更多在于价格发现。这是我一直觉得非常有趣的地方。但人们谈论的一种方式是：有一次我见到埃隆·马斯克时，他曾对我说了句极其精辟的话，他说“智力的最佳定义是预测未来的能力”，我觉得这太精辟了。我知道有些人正将 Polymarket 与他们的 Agent 结合使用，基本上给不同的 Agent 相同的资金余额，观察哪一个随着时间推移在预测未来方面盈利最多，从而了解哪一个与现实拟合校准得最精准。这是窥见未来的一瞥。
+<details><summary>Original English</summary>
+>> Um are you well the idea when I think about it is more about price discovery. That's the thing I always find really interesting. But one thing that people talk about is a way to go. Uh there's this brilliant quote that actually uh Elon told me one time that I met him and he said the best definition of intelligence is the ability to predict the future which I thought was excellent and you know I know some people are using poly market with their agents and basically giving them giving different agents the same balance and seeing which one's most profitable at predicting the future over time to know which one is most calibrated to reality. little little uh glimpse into the future.
+</details>
+
+>> 所以你目前是赚是赔？你在给 Agent 设定提示词吗？难道不是给每一个 Agent 不同的提示词去执行不同的任务吗？如果是这样……
+<details><summary>Original English</summary>
+>> So, you up or down? Are you prompting the agents? So, aren't they prompting each of those agents to do something different if that's
+</details>
+
+>> 对于这些 Agent，提示词其实就是：“嘿，尽可能多赚钱。”
+<details><summary>Original English</summary>
+>> with with the agents? You know, the prompt would just be, hey, you know, make money as much money as possible.
+</details>
+
+>> 那么你现在到底是赚是赔？
+<details><summary>Original English</summary>
+>> And so, are you up or down right now?
+</details>
+
+>> 呃，有多个 Agent 在所有这些预测市场模拟中相互进行交易。
+<details><summary>Original English</summary>
+>> Um, so there's multiple agents going and trading with each other across all these these prediction market sims.
+</details>
+
+>> 所以你不会告诉我们你是赚是赔？[笑声]
+<details><summary>Original English</summary>
+>> So, so you're not going to tell us whether you're up or down? [laughter]
+</details>
+
+>> 好的，你看，你给 Agent 提供资金……
+<details><summary>Original English</summary>
+>> Yeah. I mean, look, you're funding agents.
+</details>
+
+>> 我得去核实一下。好的，你会去查看的。我也会去查看 Anthropic 明天上市的整个背景；这将是一场巨型 IPO，规模可能超过 SpaceX 的上市。我认为一个核心问题是：鉴于目前市场的整体状况，市场中是否有足够的流动性来承接所有这些公司——OpenAI 的山姆（Sam Altman）和格雷格（Greg Brockman）早些时候也来到了这里——在接下来的这一年里，你认为这看起来会是怎样一种局面？
+<details><summary>Original English</summary>
+>> I got to go check. Okay, you'll go check. I I'll go check my whole wall behind going public tomorrow and it's going to be huge maybe bigger than the SpaceX IPO and I think one of the big questions is is there enough liquidity in the marketplace overall uh to absorb all of these companies OpenAI Sam and Greg were here earlier um what that even looks like to you over the next year given where we are in the markets right now
+</details>
+
+>> 我只想指出：目前全球股票市场的资本规模约为150万亿美元。也就是说，全球公开股票市场有150万亿美元。因此，公开市场上有大量的可用资本。投资者有机会在每一天的任何一秒做出表达，决定他们希望如何配置这些资本。而这些公司对于经济和社会的未来而言，是具有极其重大影响力的企业。因此我认为，对于这些公司而言，公开市场是一个极佳的归宿和关键的下一步，基本上能让数十亿人接触并投资于它们的未来，同时也让这些企业步入一个承担问责与保持透明的新阶段。这就是我们的看法。
+<details><summary>Original English</summary>
+>> I just want to point out so there's about 150 $50 trillion of capital in the global equities markets today. So of public equities markets around the world. So there's a lot of capital available in the public markets. Um and and investors have a chance to express themselves in any second of the day determining how they want to allocate that capital. And these in um these companies are remarkably consequential companies for the future of the economy, the future of society. So I think that the public markets are a great place and a great next step for these companies to be able to basically make it so billions of people can access them and and invest in their future and that they also are entering in a new phase of uh accountability and and transparency. So that's how we see it
+</details>
+
+>> 而且他们允许散户股东参与 IPO。
+<details><summary>Original English</summary>
+>> and they're letting retail shareholders in the IPO.
+</details>
+
+>> 确实，他们至少表示了会有20%的配额，拭目以待吧。
+<details><summary>Original English</summary>
+>> They are 20% well at least they indicated a 20% allocation. We'll see.
+</details>
+
+>> 这在四年前简直是不可思议的疯狂构想，对吧？但现在散户已经成为一流的核心利益相关群体。普通人真正参与投资……
+<details><summary>Original English</summary>
+>> That was like unheard of crazy four years ago, right? But now retail is a first class constituency. Normal people actually investing in in
+</details>
+
+>> 看到散户如此深入参与其中令人兴奋。
+<details><summary>Original English</summary>
+>> it's exciting to see how retail is getting engaged there.
+</details>
+
+>> 我想感谢你们。你得回后台去看看那些 Agent 的表现了。阿德娜、弗拉德、谢恩，感谢你们参与这场对话。非常非常感谢大家。
+<details><summary>Original English</summary>
+>> Um I want to thank you. You got to get backstage to find out how these agents are doing. Uh Adena Vlad Jane, thank you for the conversation. Thank you very very much.
+</details>
+
+>> DealBook 峰会由《纽约时报》制作。本期节目由 Evan Roberts 制作。混音由 Katie McMurran 和 Daniel Ramirez 完成。原创音乐由 Daniel Powell 创作。DealBook 活动团队的其他成员包括 Julie Zan、Chantal Renier、Melissa Tripoli、Dana Prescowitz、Matt Kaiser、Ezra Lee、Marissa Fina、Jesse Bratengier、Nico Gallagley，并特别鸣谢 Sam Dolnick、Nina Lassom、Abe Seder 以及 Maddie Masiella。
+<details><summary>Original English</summary>
+>> Dealbook Summit is a production of the New York Times. [music] This episode was produced by Evan Roberts. Mixing by Katie McMurin and Daniel Ramirez. [music] Original music by Daniel Powell. The rest of the Dealbook Events team includes Julie Zan, Shantal Renier, Melissa Tripoli, [music] Dana Prescowski, Matt Kaiser, Ezra Lee, Marissa Fina, Jesse Bratengire, [music] Nico Gallagley, and special thanks to Sam Dolnik, Nina Lassom, Abe Seder, and Maddie Masiella.
+</details>

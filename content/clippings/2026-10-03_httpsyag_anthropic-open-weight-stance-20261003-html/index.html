@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>拒签、尺子与锁死窗口：Anthropic 开源态度的来源</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">拒签、尺子与锁死窗口：Anthropic 开源态度的来源</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-10-03</span>
+    
+
+    <header class="article-header">
+      
+      <h1>拒签、尺子与锁死窗口：Anthropic 开源态度的来源</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/open-weights/">open-weights</a>
+      
+        <a class="tag-link" href="/tags/ai-safety/">ai-safety</a>
+      
+        <a class="tag-link" href="/tags/model-evaluation/">model-evaluation</a>
+      
+        <span class="tag-pill tag-pill--no-page">security-governance</span>
+      
+        <a class="tag-link" href="/tags/red-teaming/">red-teaming</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章解析Anthropic对开源模型GLM-5.3发布安全评估报告的深层逻辑。指出其立场源于对模型权重不可撤回性的安全哲学、商业护城河保护及固定的测试机制。该报告并非公关行为，而是其长期主张在技术阈值触发下的必然产物，旨在通过掌握安全测量权确立行业准入标准。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/anthropic-open-weight-stance-20261003.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-10-03T00:00:00.000Z">2026-10-03</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%B8%80%E5%A5%97%E6%A8%AA%E8%B7%A8%E6%95%B0%E6%9C%88%E7%9A%84%E6%80%81%E5%BA%A6anthropic">一套横跨数月的态度：Anthropic</a></li><li class="outline-h2"><a href="#%E8%BF%99%E4%B8%AA%E6%80%81%E5%BA%A6%E4%BB%8E%E5%93%AA%E6%9D%A5%E5%8F%AF%E6%92%A4%E5%9B%9E%E6%80%A7%E4%B8%8E%E6%B5%8B%E9%87%8F%E6%9D%83">这个态度从哪来：可撤回性与测量权</a></li><li class="outline-h2"><a href="#glm">GLM</a></li><li class="outline-h2"><a href="#%E6%A3%80%E9%AA%8C%E8%BF%99%E4%B8%AA%E8%A7%A3%E9%87%8A%E7%9A%84%E4%B8%A4%E4%B8%AA%E8%A7%82%E5%AF%9F">检验这个解释的两个观察</a></li><li class="outline-h2"><a href="#%E6%94%B6%E5%B0%BE%E5%BD%93%E5%AE%89%E5%85%A8%E5%8F%98%E6%88%90%E4%B8%80%E7%A7%8D%E5%87%86%E5%85%A5%E6%9D%83">收尾：当安全变成一种准入权</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>2026 年 9 月 29 日，Anthropic
+的一个专门负责攻防测试的前沿红队发布了一份报告，评估了中国团队智谱开发的开源模型
+GLM-5.3
+的网络安全攻防能力。在二十四小时内，各方做出了截然不同的反应：海外技术社区
+Hacker News 上，开发者指责 Anthropic
+进行家长式的恐吓，变相推销自家安全服务；中文科技圈则将其视为顶级背书，科技媒体量子位第二天发文调侃《Anthropic，你是来给智谱打广告的吧！》，认为这相当于为智谱做免费宣传；资本市场也作出反应，当天二级市场上智谱股价盘中走高，据社交平台行情贴显示涨幅超过
+2%。而在华盛顿政策圈，官员和智库却将这份报告作为推动前沿模型强制安全测试的最新事实依据。同一份安全警告，在三群人眼中分别成了恐慌营销、竞品广告和立法弹药。</p>
+<p>同一份报告被三组读者分别读成恐慌营销、免费广告与立法弹药</p>
+<p>很多评论习惯把这种分歧归咎于两家公司之间的商业打压，或者看成
+Anthropic 的一次公关翻车。但如果把这份 9/29
+的报告单拎出来看，就会漏掉更深的线索。把 Anthropic 从 2026
+年初到秋天的技术动作和政策发言串起来，会发现它对开放权重模型的态度一直高度一致。首席执行官
+Dario Amodei 自己就说过，这些立场他持了很多年（these positions
+consistently for many years）。换言之，这份报告出自 Anthropic
+早就定下来的一整套主张，跟临时起意的公关反击没有关系。当它看见行业里第一次出现一个开源模型在攻防能力上真正摸到顶尖闭源模型的能力线时，这套逻辑便自然而然地拿出来了。</p>
+<h2 id="一套横跨数月的态度anthropic" data-reading-heading="">一套横跨数月的态度：Anthropic</h2>
+<p>说过什么</p>
+<p>这个态度其实早在 2026 年初就露过底了。那时 Anthropic
+贴出了一份防蒸馏政策。所谓模型蒸馏，简单说就是用大群假号调 Claude，把
+Claude 的回答抓回来训练自己的模型。Anthropic 在防蒸馏政策文档里白纸黑字写着这是安全威胁，对核心能力外流是设防的。</p>
+<p>4 月 7 日，Anthropic 又推出了一个网络安全合作项目叫 Project
+Glasswing，把真正有高危攻防能力的安全模型锁起来，只提供给特定经过审查的防御机构。而且在同一个项目里，他们第一次披露了一个从未向公众开放的高能力模型：Claude
+Mythos Preview。红队博客介绍这个模型在测试过程中发现，公开发布的商用模型
+Opus 4.6 在自主挖掘系统漏洞时的成功率接近 0%，而 Mythos Preview
+则处于完全不同的级别。Anthropic 也明确说了，不打算让 Mythos Preview
+对公众开放。但就在放出这些高危能力警报的同时，Anthropic
+又宣布向开源社区捐赠 400
+万美元用于开源安全建设。这两个动作放在一起，就清晰构成了最初的态度样本：没有危险能力的开源模型可以作为公共品，Anthropic
+乐见其成；但开源模型一旦带有未受管制的攻击能力，它就坚决反对扩散。</p>
+<p>5 月 14 日，Anthropic 发布了政策研究报告《2028 AI
+leadership》，进一步明确了它希望实现的技术目标。报告认为，民主国家有可能在核心前沿能力上锁定
+12 到 24 个月的领先优势（it may be possible to lock in a 12-24 month
+lead in frontier
+capabilities）。但这个可以拉开差距的窗口期并非无限长。根据报告中的评估，中国的前沿模型在当时只落后美国数月，报告原话是
+a few months behind US
+models。而模型蒸馏正是实现追赶的关键捷径。为了说明技术扩散的风险，报告引用了美国国家标准与技术研究院（NIST）下属的
+AI 标准与创新中心（CAISI）的实测数据：在越狱技术攻击下，开源模型
+DeepSeek R1-0528 对恶意请求的服从率高达 94%，远高于美国参照模型的
+8%。报告据此发出警告，具备军民两用性质的模型如果以开放权重的形式发布，用户就可以在本地剥离它的安全护栏，造成长期、不可逆的滥用风险。</p>
+<p>到了 7 月下旬，开源和闭源之间的路线之争完全公开化。7 月 24
+日，英伟达牵头联合 25 家机构发布了一封公开信《Open
+Weights and American AI
+Leadership》，黄仁勋亲自发文推广，社交媒体上的浏览量迅速突破千万。这封为开源发声的公开信，核心立起了三个主张：</p>
+<p>第一，开源的权重最终会让防御者受益，因为防御者也能获得和攻击者一样强大的模型，从而增强自身的安全性；第二，开放的模型大家都看得到、查得动，这种透明度比关起门的黑盒系统更安全；第三，顶尖模型只掌握在几家大公司内部，这本身就已经构成整个行业的关键单点故障。这三条连在一起，等于是对外宣告：开放权重等于更安全。公开信的次日，OpenAI
+加入签名，支持方升至 35 家。8 月初，微软官方签署页上的支持机构已经超过
+270
+家，几乎囊括所有硅谷主流巨头，只是没有中资实验室。但这份名单里唯独缺少
+Anthropic 的名字。</p>
+<p>三天后的 7 月 27 日，Anthropic CEO Dario Amodei 发表了一篇立场文章《Our
+position on open-weights
+models》，逐条回应公开信的观点。他没有一上来就全盘否定开源，而是先表明态度：Anthropic
+从未主张全面禁止开放权重模型，没有危险能力的开放模型本身就是公共品，原文用词是
+a public good。但面对公开信最核心的主张，两边的分歧就显露出来了。Dario
+认为，开放权重最终到底帮了谁，至少同样可能是攻击方而不是防御方（it seems
+at least as likely to me that the opposite will be
+true）。他举了生物领域的例子：如果一个大模型具备极高的生物设计能力，恶意的人拿到它，可以很快造出大流行级的病毒，而防御方的疫苗和对策要长年累月地慢慢攒。在
+Dario 最担心的两种威胁里，排在首位的是威权政府利用 AI
+获得军事与社会控制的优势，这取决于背后是谁、有多少算力，跟开源与否关系不大；排在第二位的威胁，正是网络攻击和生物滥用。在网络和生物领域，开放权重模型的潜在风险更高。因为分发到本地电脑上的模型，外部既无法施加安全护栏，也无法监控使用行为。更重要的是，模型权重一旦放出去，就再也收不回来了（once
+weights are released they cannot be withdrawn）。</p>
+<p>Dario
+在这里提出了三个针对性的措施：严格执行先进芯片的出口管制、全力打击工业级大规模蒸馏、强制所有具备充分能力的前沿模型在发布之前必须经过安全测试。对于公开信的三个主张，他的最终裁决是：风险到底存在不存在，应该通过严格的发布前测试来客观判定，而不是在事前就由各方预先假设（should
+emerge from testing, rather than be decided in advance）。</p>
+<p>从5月在报告中测算技术领先的窗口期，到7月拒绝签署公开信并开出三道防线，再到8月中旬OpenAI总裁Greg
+Brockman发表《The Defender’s
+Window》同样对防御窗口变窄发出警示，Anthropic的逻辑链条环环相扣。9月底针对智谱GLM-5.3的评估报告，正是这套演练数月的逻辑在现实中的又一次具体投射。</p>
+<h2 id="这个态度从哪来可撤回性与测量权" data-reading-heading="">这个态度从哪来：可撤回性与测量权</h2>
+<p>细看 Anthropic
+对开放权重的戒备，可以看到三个逐层深入的支撑维度，每一个都源自更深层次的技术或现实原因，而非临时公关话术。第一层是它对安全的技术理解：出了事到底能不能收回来。第二层是商业利益上的吻合：这种安全理解正好保护了自家的核心护城河。第三层则是一个日常运转的测试机制：它把这种态度固化成了一个可以立即启动的测试流程。理解了这三个层面，才能看懂它行动的内在惯性。</p>
+<p>第一层是它看待安全的核心理念：真正的安全，取决于出了问题能不能收回模型，以及能不能在发布前用实测数据说话。Anthropic
+一直强调，安全不能寄托在使用者拿到模型后的自觉自律上。模型通过中心化云端接口提供服务，服务商随时可以拦截违规提问、限制调用频率。但一旦模型的权重文件分发到用户的本地硬件上，所有云端依赖的审查和限制就全部失效了。英国
+AI 安全研究所 UK AISI 在 2026 年 7
+月的技术博客中也给出了完全相同的判断：开放权重一旦发布，内嵌的安全护栏就能被移除，滥用风险长期存在且无法挽回（a
+persistent and irreversible risk of
+misuse）。既然东西发出去之后在物理层面收不回来，安全治理就必须严格卡在发布之前的实证测试环节，并在发布后对高危模型实行严格的受控准入，只对少数可信机构开放。拒绝把开源直接等同于安全，正是这套安全哲学得以立足的前提。</p>
+<p>第二层是商业利益与安全理念的天然重合：这一理念恰好将 Anthropic
+自身的核心技术资产转化为了不可替代的护城河。试想一下，如果全行业都接受了公开信的论调，认定开放权重天然带来安全，那么
+Anthropic
+苦心建立的红队评估、前置审计与受控准入体系，就会在商业上失去合理性。相反，只要确立了模型必须能够被收回和监管才是前沿安全的必要条件，那么闭源托管就成了唯一能够提供安全保障的商业交付形式。Anthropic
+的产品演进完整体现了这一重合：通过 Project
+Glasswing，它把具备高危攻防能力的 Claude Mythos
+限制在几百家审查合格的机构内；在 6 月的双轨发布中，面向公众的 Fable 5
+搭载了严密护栏并在敏感任务上自动降级，而解除限制的高性能版本 Mythos 5
+则仅面向受信通道开放。正如科技商业观察者 Rui Ma 所言，不必假定 Anthropic
+在秘密算计对手，也能看到其安全立场与商业利益在此刻达到了高度一致。</p>
+<p>第三层是固定的日常测试机制：Anthropic
+建立了一套能把立场变成日常自动化测试的流程，持续收集第一手数据。从 4
+月高调宣布 Mythos Preview 迈入全新代际开始，Anthropic
+实际上给整个行业竖了一把度量网络攻防的标尺。即便 Mythos
+从未公开发布，甚至在 6 月因美国出口管制指令短暂下线，代码安全工具
+Semgrep 那篇获一千一百多赞的分析文章《我们家里也有 Mythos》，也主动以
+Mythos 为对照。这客观上推动了 Anthropic
+这把标尺的行业普及。在内部，红队团队把这种度量流程固化为标准工序。一旦外部生态出现跨能力门槛的高性能模型，这套测试机器就会自动运转并输出评估报告。</p>
+<p>态度的三层来源：哲学公理、商业重合、制度执行，右侧箭头是尺子的自动输出</p>
+<h2 id="glm" data-reading-heading="">GLM</h2>
+<p>为什么是当前靶心：阈值与自动产出</p>
+<p>理解了以上三层来源，智谱的 GLM-5.3
+为何成为当前靶心的答案就清晰了。舆论常将其归因于中美地缘政治，但一手文献显示，这种解读忽略了测试体系本身的触发条件。Dario
+在 7 月立场文章中指出，开源权重本身不如背后的主导方重要（open weights
+are far less relevant than the fact that the operations are backed by an
+authoritarian
+state）。只要无危险能力，开源模型仍是推动行业发展的公共品。换言之，触发红队测试机器的关键条件是：模型需同时具备顶尖水准的自主网络攻击能力，并以开放权重形式免费分发。</p>
+<p>8 月 14 日，智谱正式发布了 GLM-5.3。9 月 17
+日，美国国家标准与技术研究院（NIST）下属的 AI
+标准和创新中心（CAISI）发布了一份专项评估报告，称它是迄今为止网络能力最强的开放权重模型。CAISI
+的测试结果也显示，GLM-5.3 在专业网络安全基准 SEC-Bench Pro 上拿到了
+40.4% 的分数，网络能力指数超过了此前的 Kimi
+K3，距离美国最顶尖闭源前沿模型的差距被拉近到了月级。这是第一次有开放权重模型在网络攻防的关键指标上真正逼近顶尖闭源系统。</p>
+<p>这种跨越立即激活了 Anthropic 内部早有准备的测试体系。9 月 29
+日发布的红队报告，正是其 7
+月核心主张在技术层面的具象落地。测试的第一步是对标攻防能力。在针对自动化渗透的
+ExploitBench 基准测试中，面对全部 410 次尝试，GLM-5.3 成功完成了 50
+次端到端漏洞利用，作为对比基准的 Mythos Preview 为 56
+次；在更底层的二进制漏洞利用测试中，GLM-5.3 的成功率为 4%，Mythos
+Preview 为 6%，而公开发布的 Opus 4.6 和上一代 GLM-5.2 成绩均为
+0%。在人工实测中，Anthropic 的研究员还记录了 GLM-5.3
+在短短一天内挖掘出主流浏览器多个零日漏洞的过程。即便使用轻量版的
+GLM-5.3-Flash 进行实验，测试人员仅用 20 分钟的人工配合 8
+小时的模型运行时间，就把两个已知漏洞串联成了一条稳定的攻击链。如果按照智谱官方
+API 的价格折算，发动这样一次攻击的成本约 20.40 美元。</p>
+<p>测试的第二步是实测开源模型的安全护栏能否被用户绕过。报告指出，原版
+GLM-5.3 虽然内置原生防御，但在针对性的伪装红队演练中，护栏绕过率达到
+64%；若通过预填思考 token 诱导，则达到
+92%。一旦对模型权重进行权重消融手术（abliteration，一种定向擦除模型安全特征向量的技术），则达到
+100%。Anthropic 自家的测试显示，完成整个消融过程耗费了约 2200 个 GPU
+小时，价值约 4400 美元的算力。Anthropic
+自己估计，如果是技术熟练的团队，做这件事需要大约 600 个 GPU
+小时。而且在消融之后，模型的通用基座能力基本没有受损。</p>
+<p>原生拒答率两边几乎相同（95% 与
+96%），三种手段后的绕过率差异才是核心论据</p>
+<p>需要说明的是，64%、92% 和 100% 这三个绕过率，全部出自 Anthropic
+自家的离线模拟环境。报告里脚注 4
+也承认，这些模型生成的代码并没有真的跑在真实环境里，有些评测用的是另一个大模型来近似模拟。CAISI
+官方的评估里面也没有这种测试。同时，原生的未篡改的 GLM-5.3
+对常规的有害请求的拒绝回答率大约是 95%，和 Claude 自己的 96%
+相差不远。这也是中文媒体质疑这个报告客观性的主要论据。</p>
+<p>然而，在 Anthropic 看来，GLM-5.3 的原生拒答率是 95% 还是 99%
+并不重要，它的核心论点只有一条：权重对外开放，护栏就可以被剥离。GLM-5.3
+之所以被推上靶心，跟开发团队的地理背景无关，而是因为它在行业内首次同时实现了攻防能力接近顶级闭源模型和免费发放模型权重。这两种条件恰好被
+Anthropic 的测量机器捕捉到了。</p>
+<h2 id="检验这个解释的两个观察" data-reading-heading="">检验这个解释的两个观察</h2>
+<p>用两个观察来检验这个解释是否自洽。第一个观察是，Anthropic
+不是唯一对网络攻击能力扩散保持警惕的机构。OpenAI 早在 2
+月份就开始尝试网络安全受信访问，并且为安全从业者定制了 GPT-5.4/5.5-Cyber
+模型。谷歌也推出了一个名为 Fairwind
+的项目，为受信防御者提供一个专门的安全模型。OpenAI 总裁 Greg Brockman
+也在 8 月中发表文章，指出开源能力的扩散正在压缩防御者的响应窗口。但
+OpenAI
+和谷歌都签署了行业公开信，一边在内部闭门防御，一边与开源阵营公开和解。只有
+Anthropic 没有妥协，没在两百多家支持者名单里。这种反差说明，Anthropic
+的拒绝背后，是一种相当刚性的世界观闭环：如果公开默认开放就是安全的，那它自己的前置审查和防御体系在根基上就会动摇。</p>
+<p>第二个观察是受众模型错配：为什么大众的嘲弄没能撼动 Anthropic
+的任何行为。这份报告发布后，社区调侃这是给智谱做免费公关。如果这家公司的核心诉求是维护大众开发者关系，这种舆论反弹通常会迅速引发内部策略的修正，但
+Anthropic
+对外界的声音显得毫不在意。原因在于，这份报告打从一开始就不是写给普通开发者看的。它瞄准的是两类特定的目标受众：一类是华盛顿的政策制定者，他们急需详实的技术证据来推动对前沿大模型的发布前强制测试与供应链管控；另一类则是关键基础设施机构的安全负责人，报告展示的攻击威胁直接激发了他们采购
+Project Glasswing 或商业安全产品的现实动力。正如研究者 Nathan Lambert
+所言，这份报告在一条狭窄的技术路线上显得合理，却有效地强化了特定的安全思维。从这个受众模型看，这场舆论风波并不影响它要达成的事。大众眼里的公关失误，落在它真正在意的受众坐标里，几乎没有成本。</p>
+<h2 id="收尾当安全变成一种准入权" data-reading-heading="">收尾：当安全变成一种准入权</h2>
+<p>回望 2026 年初的防蒸馏政策，4 月 Project Glasswing 释放的双重信号，5
+月测算锁定技术领先优势的窗口期，7
+月以放出去就收不回来为由拒签公开信，再到 9 月对智谱 GLM-5.3
+的专项评估，Anthropic
+呈现出的是一条高度自洽的言行轨迹。这并非阴谋论，而是一个机构在持续践行它的底层逻辑之后，世界观、商业诉求和测试机制自然咬合的结果。它愿意接受没有危险能力的开源模型作为促进行业发展的公共品，但始终拒绝将开源与安全预先画上等号。在这个治理框架里，安全的定义权，就落在发布前的技术测试和发布后的受控准入上。</p>
+<p>把安全塑造成一种受控准入权力的结构，给整个行业留下了三个悬而未决的追问。首先是测量标准的公正性：度量尺度的制定者，自身就是前沿赛道上最大的商业竞争对手。这把标尺的客观性如何保障？在计算性能领域，成熟的测试基准（如
+MLPerf）依靠广泛的产业联盟与完全公开的参考实现来树立公信力，但当下前沿网络安全能力的测量，却高度依赖闭源厂商各自未公开的私有环境。</p>
+<p>其次是防御者的准备时间。英国 AI
+安全研究所曾明确指出，闭源前沿系统相较于开源模型存在的数月差距，正是为防御者提供的关键准备窗口。如果最高能力的技术手段长期被封锁在极少数受信机构手中，广大普通开发者究竟是被保护，还是在失去同等的研究与自卫工具？最后，GLM-5.3
+不会是唯一登上测量台的模型。只要未来有新的开放模型在网络攻防等核心指标上跨越设定阈值，那套测试机器就会再度启动，产出下一份结构相同的测试报告。看清这种态度背后的深层来源，能帮读者在下一场争论发生之前，看清技术治理与安全秩序的真实走向。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/ae2a1356e676d10da49411779f30a893059056e33243c984dde242b2ca5ef5e3.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/ae2a1356e676d10da49411779f30a893059056e33243c984dde242b2ca5ef5e3.md" download="拒签、尺子与锁死窗口：Anthropic 开源态度的来源.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=dario-amodei" class="entity-link person-link">dario-amodei</a>, <a href="/search/?q=greg-brockman" class="entity-link person-link">greg-brockman</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=anthropic" class="entity-link company-link">anthropic</a>, <a href="/search/?q=zhipu-ai" class="entity-link company-link">zhipu-ai</a>, <a href="/search/?q=openai" class="entity-link company-link">openai</a>, <a href="/search/?q=nvidia" class="entity-link company-link">nvidia</a>, <a href="/search/?q=nist" class="entity-link company-link">nist</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=glm-5.3" class="entity-link product-link">glm-5.3</a>, <a href="/search/?q=claude-mythos" class="entity-link product-link">claude-mythos</a>, <a href="/search/?q=opus-4.6" class="entity-link product-link">opus-4.6</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

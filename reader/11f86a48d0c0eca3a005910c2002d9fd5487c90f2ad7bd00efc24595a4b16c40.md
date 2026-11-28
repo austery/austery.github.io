@@ -1,0 +1,636 @@
+---
+author: The Ezra Klein Show
+date: '2026-11-20'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=IFFUOrW30rc
+speaker: The Ezra Klein Show
+tags:
+  - congressional-oversight
+  - political-corruption
+  - government-ethics
+  - legislative-reform
+title: 众议院监督委员会如何调查特朗普政府的腐败与利益冲突：对话罗伯特·加西亚议员
+summary: 在民主党重夺国会控制权后，即将出任众议院监督委员会领导职务的罗伯特·加西亚议员探讨了对特朗普家族资金往来、国土安全部利益输送、企业腐败及爱泼斯坦案的调查计划，并强调监督工作将以推动反腐立法与问责为核心目标。
+insight: ''
+draft: true
+series: ''
+category: politics-society
+area: society-thinking
+project: []
+people:
+  - Robert Garcia
+  - Donald Trump
+  - Jared Kushner
+  - Donald Trump Jr.
+  - Eric Trump
+  - Corey Lewandowski
+  - Kristi Noem
+  - Jeffrey Epstein
+companies_orgs:
+  - House Oversight Committee
+  - Department of Homeland Security
+  - Department of Justice
+  - FBI
+products_models: []
+media_books:
+  - The Death and Life of Great American Cities
+  - The Siren's Call
+  - 'Y: The Last Man'
+status: evergreen
+---
+当民主党在1月重新夺回国会控制权时，他们将突然掌控众议院和参议院中一系列拥有调查权的国会委员会。[音乐] 因此，他们承诺了数月的事情将真正发生，那就是调查、监督与问责。
+
+在他们试图应对特朗普政府内外显而易见的腐败、权钱交易和自私自利时，所面临的问题与历届新国会通常面临的情况恰恰相反。通常情况下，存在的是寻找丑闻的党派举动。而现在的问题是，当你面前有如此多的丑闻时，你该怎么办？在一个你可能追逐如此多[音乐]腐败报道以至于最终没有一件能落实的环境中，你如何做到不迷失方向？在我看来，特朗普政府围绕腐败的策略[音乐]往往就是制造如此多的腐败，以至于没有人知道首先该关注哪里，它变得庞大到不仅选民无法在脑海中[音乐]完全理清，国会也是如此。
+
+即将上任的民主党国会中有几位成员将被赋予比其他人更多的职责，去试图走出这片泥潭。其中包括罗伯特·加西亚（Robert Garcia）议员，他将领导众议院监督委员会，该委员会将对特朗普政府所做的大部分最恶劣的行为拥有[音乐]核心调查权。加西亚于2022年当选国会议员。[音乐] 他来自加利福尼亚州第42选区，曾任长滩市市长。因此，摆在加西亚面前的工作是一项非常非常[音乐]艰难的任务。不仅因为有太多可能需要调查的事情，而且他还面临着一个竭尽全力步步阻击他的行政当局。他们已经开始给他发函，暗示将对他展开调查并对他进行法律报复。将会有顽抗。[音乐] 将会有反弹。获取民主党人想要且公众理应了解的信息，其过程简直会如同[音乐]拔牙般艰难。
+
+那么，面对一个会如此激烈反击、且在有限时间内有如此多不同领域需要关注[音乐]的行政当局，他的调查策略是什么？他现在加入我们。
+
+[音乐]
+
+<details><summary>Original English</summary>
+When Democrats retake control of Congress in January, they are going to suddenly take control of a number of different congressional committees in the House and the Senate which have investigatory power. [music] And so something they've been promising for months will actually happen, which is investigations, oversight, accountability.
+
+The problem they're going to face as they try to take on the apparent corruption and paytoplay and self-deing in and around the Trump administration is the opposite that incoming Congresses usually face. There's very often a partisan effort to find a scandal. Now the question is what do you do when there are so many scandals in front of you? How do you not get lost in an environment where you could be chasing so many [music] stories of corruption that none of them end up sticking? It often seems to me that the Trump administration's strategy around corruption [music] is to just do so much of it that nobody knows where to focus first that it becomes larger than what the voter to say nothing of a Congress can keep [music] in its head.
+
+There are a couple members of the incoming Democratic Congress who are going to be charged with trying to figure out their way through this morass more than others. Among them is Congressman Robert Garcia, who's going to be leading the House Oversight Committee, which will have [music] central authority on investigation on much of the worst of what the Trump administration has done. Garcia was elected to Congress in 2022. [music] He is from California's 42nd district, the former mayor of Long Beach. So the job in front of Garcia is a very very [music] tough one. Not just because there is so much possibly to investigate, but you're also facing he's also facing an administration that will do everything it can to fight him every step of the way. They are already sending him letters suggesting they're going to investigate him and bring legal reprisal against him. There is going to be intrigence. [music] There is going to be backlash. there is going to be just a [music] pulling teeth nature to getting the information that the Democrats want and that the public actually deserves.
+
+So what is his strategy for investigating an [music] administration that is going to fight him this hard and where there is so many different places to focus [music] with limited time to actually get all of this done? He joins me now.
+
+[music]
+</details>
+
+### 特朗普家族资金往来与库什纳的中东投资
+
+>> 罗伯特·加西亚议员，欢迎来到节目。
+
+<details><summary>Original English</summary>
+>> Congressman Robert Garcia, welcome to the show.
+</details>
+
+>> 很高兴来到这里。谢谢。
+
+<details><summary>Original English</summary>
+>> Happy to be here. Thanks.
+</details>
+
+>> 好的，你列举了众议院监督委员会计划调查的若干腐败领域。其中的第一个涉及围绕特朗普家族以及政府内部其他一些家族流动的资金。让我们从一个具体事例开始。你想要调查的那种交易、资金流动的一个例子是什么？它发生了什么？你希望通过调查了解到什么？
+
+<details><summary>Original English</summary>
+>> So, you have named a number of areas of corruption that the House Oversight Committee is planning to look into. And the first of them has to do with the money flowing around the Trump family, some of the other families around inside the administration. Let's start in a specific story. What is an example of the kind of deal transaction money flow that you want to investigate? What has happened on it? And what do you want to learn through investigation?
+</details>
+
+>> 是的，我的意思是，听着，我认为首先认识到目前特朗普家族、其同僚和朋友所发生的腐败程度是前所未有的，这一点很重要。以前从未有过这种程度的腐败、权钱交易以及人们获取利益的情况。总统的身家暴增了数十亿。他的家族身家暴增了数十亿。为什么从腐败角度切入调查如此重要，是因为它也直接关系到生活成本负担问题。如果你想想人们现在谈论的事情，他们付不起油钱、杂货费、食品开销，特朗普家族及本届政府的腐败与人们如何生活以及他们负担得起什么之间存在直接关联。
+
+正在发生的事情有太多的例子，无论是指小唐（Don Jr.）、埃里克（Eric）还是贾里德（Jared），但我认为对每一个人，美国公众都有非常严肃的疑问。所以让我们来看其中的一个例子。以贾里德·库什纳（Jared Kushner）为例。显然贾里德是一个与总统非常亲近的人。在特朗普第一任期白宫时，他代表总统参与了各种外交政策事务和倡议。
+
+他在白宫进进出出，然后在离开白宫短短几个月内，基本上就带走了一笔通过沙特进行的20亿美元投资交易。而这仅仅是在离开白宫几个月之后。因此，现在的贾里德当然正在从他通过沙特以及整个中东地区建立的关系中获利。
+
+你快进到今天，贾里德仍然参与了特朗普第二任期的白宫事务。而且更令人震惊、这也是为什么会引发如此严肃质疑的原因在于，你现在实际上是总统的一名特使。你表面上是加沙和整个中东局势的某种调解人。并且你继续通过其他政府向该基金注资而获利，无论是阿联酋，还是继续与沙特政府保持关联。因此他继续获得更多资源。顺便说一句，这笔钱中的很多部分，我们根本不知道是谁真正投入到该基金中的。我们不知道它是如何被支出的。我们不知道监管控制是什么。而他是总统派往中东的实际特使，却没有真正的政府头衔或公职。
+
+<details><summary>Original English</summary>
+>> Yeah, I mean look, I think first I think it's important to recognize that the level of corruption that's happening right now with the Trump family, Trump family, associates, friends is unprecedented. There there has never been this level of corruption of paytoplay of people benefiting me. president is billions richer. His family is billions richer and why the corruption angle for investigation is so important is because it also directly ties back to affordability. And if you think about what folks are talking about right now where they can't pay the gas, the groceries, the food, there's a direct correlation between the corruption of the Trumps and the administration back to how people live and what they can afford. And there are so many examples of what's going on, whether it's Don Jr., whether it's Eric, whether it's Jared, but each one, there are real serious questions I think the American public has. And so let's let's look at one for example. So take Jared Kushner. Obviously Jared is someone that is very close to the president. In the first White House, Trump won. He is involved in all sorts of foreign policy questions and initiatives on behalf of the president.
+
+uh is in and out of the White House and then within months walks away essentially with a $2 billion deal through for an invest for investments through the Saudis. And this is just months after leaving the White House. And so now Jared of course is benefiting from the relationships he built through the Saudis and and other other relationships across the Middle East. You fast forward to today and Jared is still involved in the second Trump White House. And what's more, I think damning and why there's such serious questions is you are now essentially an envoy of the president. You are supposedly uh some some type of peacemaker in what's happening in Gaz and across the Middle East. and you continue to benefit into this fund from other governments, whether it's the UAE, whether it's continued association with the Saudi government. And so he is continuing to get more resources. A lot of this money, by the way, we have we we don't know who've actually put into the fund. We don't know how it's being spent. We don't know what the controls are. And he is the envoy of the president to essentially the Middle East without a real government title or job.
+</details>
+
+>> 那么告诉我，你希望通过调查在这里了解些什么。听起来最起码的第一层是，到底是谁把钱投进了这个基金？
+
+<details><summary>Original English</summary>
+>> So tell me what you are hoping to learn here through investigations. It sounds like at the first level who has put money into this fund.
+</details>
+
+>> 当然。听着，首先我们需要知道——通常根据我们从其他人那里了解到的情况来看也是如此——可能有一笔资金注入该基金，但它是通过多种途径募集来的，因此是一帮人在往基金里投钱。政府、外国领导人，当然还有企业、利益集团，或者在另一体制中代表政府行事的富人。
+
+<details><summary>Original English</summary>
+>> Absolutely. Look, first we need to know and and oftent times from what we understand from others as well is uh there might be a source of money that goes into the fund but it's been collected but through a variety of ways and so a bunch of folks are putting money into the fund. Um, governments could be foreign leaders, certainly corporations, interests, rich people in another system who are acting on behalf of the government.
+</details>
+
+>> 当然。美国公众理应知情。贾里德·库什纳在中东各地奔走。他正在制定重建加沙的计划。我们完全不知道那实际上是什么样的。我们已经目睹了那里发生的惨状。他自己也投资了许多不同的公司。而且没有任何公开的账目。当你向总统询问，或者你问这里究竟是怎么回事、库什纳是否会被问责时？他现在干脆不是政府雇员。根本没有任何问责。所以获取……
+
+<details><summary>Original English</summary>
+>> Absolutely. And the American public deserves to know. Jared Kushner is going around the Middle East. He's creating plans to rebuild Gaza. We have no idea what that actually looks like. We've seen the horrors of what's of of what's happened there. He's also invested in a bunch of different companies himself. And there's no public accounting. And when you turn to the president or or you ask uh what's going on here, is Kushner going to be accountable? He's now just not a government employee. There there's no accountability. And so getting
+</details>
+
+>> 那么，按照你的用法，这里的“问责”是什么意思？理论上，我想你可以传唤库什纳作证，但你是在指控他做了什么违法的事吗？听起来并不完全是那样。
+
+<details><summary>Original English</summary>
+>> >> Well, what does accountability mean here in in the way you're using it? You can in theory, I guess, call Kushner to testify, but are you alleging he's done something illegal here? It doesn't quite sound like that.
+</details>
+
+>> 我……首先，我认为我们有责任查明真相。如果有个人代表总统在世界各地奔波，并获取数十亿美元用于投资，我们有权知道。这是总统的女婿，他代表总统和美国政府在中东制定政策。公众有权知道是谁在资助他的投资。
+
+<details><summary>Original English</summary>
+>> >> I I Well, first of all, I think we have a responsibility to get to what the truth is. And if you have someone that is on the behalf of the president uh going traveling around the world and gaining billions of dollars to invest, we have a right to know. This is the son-in-law of the president who is creating policy in the Middle East on behalf of the president and the US government. The public has a right to know who is funding his investments.
+</details>
+
+### 行政阻力与国会调查权力
+
+>> 那么，凭借你拥有的权力，你打算如何查明这些？
+
+<details><summary>Original English</summary>
+>> So how do you find this out with the powers you have?
+</details>
+
+>> 总统建立了一套体系。这除了腐败之外，他还扩大了对行政特权的界定。他不会回答问题。他不想回应传票。他不想参与任何形式的监督。他安排了托德·布朗奇（Todd Blanche），此人基本上就是他的私人律师，甚至公开这么说过，而这显然不是司法部长的职责。托德·布朗奇在加入司法部之前是唐纳德·特朗普的前私人律师。因此，他在司法部内部建立了一套机制，其工作就是保护唐纳德·特朗普及其家族。通过这种方式，他将竭尽所能来阻止、拖延或扼杀调查。
+
+我们对此非常清楚。所以我们必须尽一切努力及早启动这些调查，因为司法部将要进行的阻挠是真实存在的，而且已经发生了。因此对我们而言，索取文件、记录在案、让他们在国会面前当着美国公众的面回答问题，这个程序需要立即启动，因为司法部和白宫会试图拖延。因此我们必须……
+
+<details><summary>Original English</summary>
+>> The president has set up a system. This is this is besides the corruption. He has expanded the view of what what is executive privilege. He's not going to answer questions. He doesn't want to respond to subpoenas. He doesn't want to engage with any type of oversight. He's put in Todd Todd Blanch who basically is uh his personal lawyer who who has said so as much which is not obviously the job of the AG. Todd Blanch was Donald Trump's former personal lawyer before he joined the DOJ. So he has created a system within the Department of Justice whose job is to protect Donald Trump and his family. And through that he is going to do everything that he can to stop, slow or kill investigations. And so we're we're very aware of that. And so we've got to do everything we can to start these investigations early because the amount of stonewalling that's going to happen at the DOJ is real and it's already happening. And so for us getting requesting documents, getting them on the record, having them in front of the Congress to answer questions in front of the American public, that process needs to start immediately because the DOJ and the White House are going to try to stall. And so we're going to have to bring this out to me.
+</details>
+
+>> 首先，你能动用哪些权力？假设你要求白宫提供相关文件，比如说贾里德·库什纳与白宫就涉及伊朗或加沙的各种问题进行的沟通，或者你希望库什纳本人作证，而白宫拒绝了。库什纳拒绝了。在另一种情况下本可以参与进来确保法律在这里得到执行的联邦检察官——在具有管辖权的华盛顿特区——是珍妮·皮罗（Jeanine Pirro）法官。那你该怎么办？
+
+<details><summary>Original English</summary>
+>> What first, what are the powers you can bring to bear? say that you demand documents from the White House related to, I don't know, Jared Kushner's communications with the White House on different matters uh around Iran or around Gaza or you want Kushner himself to testify and the White House says no. Kushner says no. The federal prosecutor who might in another context be be somebody who would be involved to to make sure the laws followed here in DC where this will have jurisdiction is Judge Janine Piro. So what do you do?
+</details>
+
+>> 所以这就是为什么我认为拥有多数席位、以及选民在上次选举中委托给民主党人的权力如此重要的原因，因为我们在多数党地位上能做的事情，与我们作为少数党民主党人所拥有的权力非常不同。其一，我们实际上可以代表众议院向法院提起诉讼。这是少数党无法做到的。因此，我们将有能力由众议院诉诸法院，由国会将藐视国会指控转交法院系统，而不是转交给司法部。而且我们一次又一次发现，特别是在过去的几年里，法院——虽然并非每一次，但多数时候——都站在宪法一边，做出了正确的裁决，促使特朗普白宫停止行动或采取行动。因此，我们的希望是通过陈述有力的理由，我们将能够诉诸法院并强制采取行动。
+
+<details><summary>Original English</summary>
+>> So this is why I think having the majority and what voters interested Democrats in the last election, why this is so important because what we're able to do in the majority is very different than the powers we have in the minority as Democrats. So one is we can actually go to the courts on behalf of the House. That's that's something that the minority party cannot do. So we will have the ability for the House to go to the courts for the Congress to refer contempt charges not to the DOJ but to the court system. And we have found time and time again in the last particularly the last few years that the courts not every time but the courts more times than not have sided with the constitution have done the right thing uh have pushed the the the the Trump white house either to stop actions or to take action. And so it is our hope that by laying out a strong case that will be able to go to the courts and force action.
+</details>
+
+### 特朗普子女与国防部合同调查
+
+>> 我们刚才在谈论库什纳。本届政府的一个模式是围绕主要当事人的子女进行不断的利益交易。小唐（Don Jr.）、埃里克·特朗普（Eric Trump）、作为女婿的贾里德·库什纳，还有年轻一代的维特科夫家族（Witkoffs）、年轻一代的卢特尼克家族（Lutnicks）。
+
+根据你目前所知，你看到了怎样的模式？然后，你试图通过调查了解到什么，从而使美国人民能够对此产生超越他们可能从持续报道中获得的认知？
+
+<details><summary>Original English</summary>
+>> We were talking about Kushner. The pattern in this administration is this constant dealmaking around the kids of the major players. Don Jr., Eric Trump, Jared Kushner as a son-in-law, but the younger Woodoffs, the younger Lutnicks.
+
+What is the pattern that you see from what you currently know? And then what are you trying to learn through the investigations that you think would allow the American people to um have a perspective on it beyond you know what they've maybe gotten from ongoing reporting.
+</details>
+
+>> 我认为这种模式显然是，特别是总统及其亲信认为他们是不可动摇的。他们认为自己凌驾于法律之上，他们的家族凌驾于法律之上，人们要么不会发现这些捞油水的行为，要么他们会阻止针对捞钱行为的调查；或者坦率地说，正如他以前说过的那样，无论他做什么，他的基本盘都不会在乎。无论政府内部存在多少腐败，他都能逃脱惩罚。在某些情况下，他还得到了基本盘的奖赏。他的基本盘视而不见。
+
+我认为现在情况正在发生变化，因为人们的切身钱袋子受到了直接影响，包括右翼人士在内的人们正看到自己在苦苦挣扎，然后他们打开电视，看到这些儿子们得到了这些奢华的礼物或合同。所以我确实认为情况发生了转变，但我确实相信他们自以为凌驾于法律之上。
+
+以小唐为例。小唐自第一天起就认为并且试图从政府中谋利。所以只有通过新闻报道，我们才知道普京——正如我们所知，关于普京、其核心圈子及其与唐纳德·特朗普的关联一直存在疑问。这些疑问自第一届政府以来就一直存在。我们知道小唐已经并建立了关系，并且试图与尤其是整个俄罗斯的人士建立关系。因此，当有普京圈子里的人——尽管小唐声称并不认识对方很久——为他的婚礼买单，然后婚礼却没有公开披露时。这只是通过ProPublica的优秀报道才被发现的。[嗤之以鼻]
+
+在那个节点上，有些问题需要被提出来。那里究竟发生了什么？为什么这场婚礼要由别人出资？为什么一个与普京有联系的非常富有的人要为婚礼买单？是否存在信息交换？因此，这些子女，无论是小唐——顺便说一句，他也正在获得来自五角大楼的合同。我认为我们现在看到的金额已经达到二三十亿美元了。
+
+<details><summary>Original English</summary>
+>> I think the pattern is that clearly uh particularly the president um and his close associates believe that they are untouchable. They believe that they are above the law, that their family is above the law, and that either people aren't going to find out about the grift or they are going to stop investigations around the grift or quite frankly that his base, like he has said it before, won't care no matter what he does. Uh no matter how much uh how much corruption there is in government, that he can get away with it. And in in some cases, he's been rewarded by his base. His base has turned the other way. I think that's changing now that people are being affected directly in their pocketbooks where people including those on the right are are seeing how they are struggling and then they're turning on the TV and they're seeing that the Suns are getting these extravagant gifts or these contracts. So I do think there has been a shift but I do believe that they they think that they are above the law.
+
+Take Don Jr. for example. Don Jr. thinks and has tried to from day one benefit from the government. So there's only through reporting do we understand that Putin as we know and there's always been questions about Putin, his inner circle and his connections to Donald Trump. Those have been questions that have been around from the first administration. We know that Don Jr. has and has built relationships and has tried to build relationships with folks ac particularly across across Russia. And so when you have a someone that is in Putin's circle though Don Juno doesn't know for a very long time that pays for his wedding and then there's no public disclosure of the wedding. This is only found out through good reporting from ProPublica. [snorts]
+
+And there are questions at that point need to be asked. What was there? Why was this wedding paid for? Why is a very wealthy person connected to Putin paying for the wedding? Is there information being exchanged? And so the kids whether it's Don Jr. who also by the way is getting contracts from the Pentagon. I think we're up to now what two or3 billion dollars.
+</details>
+
+>> 我想宣读一封信——我认为在这里宣读你今年5月寄给国防部监察长的一封信很有帮助。你写道，特朗普政府在一些公司与总统的儿子们建立关联后，屡次向这些公司授予利润丰厚的国防部合同，包括上周宣布向一家无人机公司授予合同，而埃里克·特朗普和唐纳德·特朗普在短短几周前才选择投资了该公司。但是，那种他们投资某项业务然后该业务就获得合同的模式，感觉既非常连贯又非常腐败。
+
+<details><summary>Original English</summary>
+>> I want to read from a letter I just think it's useful here to read from a letter you sent in May to the inspector general of the DoD. You wrote the Trump administration is now repeatedly awarded lucrative DoD contracts to companies after they became affiliated with the president's sons, including last week's announcement of a contract awarded to a drone company that Eric Trump and Donald Trump Jr. choice to invest in just weeks earlier. But but that pattern of them investing in something and then it getting the contract that feels both very consistent and very corrupt.
+</details>
+
+>> 当然。我的意思是，这感觉很腐败，因为它很可能就是腐败。事实是，任何总统的儿子都不应该从联邦政府那里获得合同，绝无例外。更不用说价值数十亿美元的合同了。小唐纳德·特朗普在五角大楼的军工合同方面并没有丰富的经验。因此，这些儿子们是在利用他们父亲的总统职位牟利。我认为美国公众看得到这一点。
+
+<details><summary>Original English</summary>
+>> Absolutely. I mean it it it it feels corrupt because it it likely is. I mean the the truth is is that no son of a president should be getting contracts from the federal government, period. Let alone contracts that are worth billions of dollars. uh Donald Trump uh Jr. uh has doesn't [clears throat] come with a ton of experience as it relates to a military contract from the Pentagon. And so the sons are profiting off their father's presidency. I think the American public see that.
+</details>
+
+>> 我想你会从许多共和党人那里听到这样的论调：“那亨特·拜登呢？乔·拜登不是也有一个儿子利用与白宫的关系牟利吗？他在乌克兰能源公司的董事会任职，鉴于他缺乏能源行业的背景，其薪酬远高于你的预期。”你对此有何回应？
+
+<details><summary>Original English</summary>
+>> I think what you're going to hear from a lot of Republicans is and what about Hunter Biden? You know, didn't Joe Biden have a son who is profiting off of his connection to the White House? you know, is on, you know, Ukrainian energy company boards being paid a lot more than you would think given his uh lack of background in the energy industry. What's just your response to that?
+</details>
+
+>> 我想说，首先，我认为任何总统的儿子，或者家庭中的任何成员，都不应该利用他们的父亲或父母牟利，绝无例外。无论是亨特·拜登还是小唐。但我想要提醒特朗普家族的是，亨特·拜登来到了委员会面前，实际上在监督委员会面前公开回答了提问。所以我们的要求是特朗普家族也照此办理。他们喜欢拿亨特·拜登说事。我同意。我们应该制定更完善的法律，以确保总统的任何家庭成员在任何时候都不能牟利。这些家庭成员也应该像亨特·拜登那样来到监督委员会，在宣誓后回答实质性问题。
+
+<details><summary>Original English</summary>
+>> >> I mean, well, first, um I don't think any son of a president or uh anyone that's, you know, engaged uh in a family should be profiting off their father or their parent, period. Whether that's Hunter Biden or Don Jr. But I would remind the Trump family that Hunter Biden came before the committee and actually spoke to the oversight committee to answer questions in public. And so our our demand is that the Trumps do the same. They they want to refer to Hunter Biden. I agree. We should have better laws in place to ensure that no family member from a president is profiting at any time. We those members of the family should also come in to the oversight committee like country Biden did and answer real questions under oath.
+</details>
+
+### 加密货币项目与国土安全部的权钱交易
+
+>> 在我看来，腐败往往显得最赤裸裸、且特朗普和特朗普家族财富的增长显得最明显和惊人的地方，是围绕他们的一系列加密货币操作。并非所有操作都围绕World Liberty Financial这家公司，但很多都是。那么，我们为什么不用一分钟来关注一下World Liberty Financial？你如何描述我们目前对此的了解？在你看来，这个故事现在呈现出什么面貌？还有在那里或更广泛的加密货币领域，你认为通过调查可以了解到什么？
+
+<details><summary>Original English</summary>
+>> The place where the corruption has often seem most bald-faced to me and the rise in Trump and the Trump family's wealth has seemed most stark and staggering has been around a bunch of their crypto plays. And not all of them are around this company, World Liberty Financial, but but a lot are. So, so why don't we focus for a minute on World Liberty Financial? How would you describe sort of what we know about that? What that what that story looks like to you right now, but then there or in the broader crypto space, what you think can be learned through investigation.
+</details>
+
+>> 我认为关于World Liberty以及更广泛的整体情况，最引人关注的是我们知之甚少。唐纳德·特朗普基本上建立了一个秘密资金池，通过这种加密货币计划、通过这种稳定币机制，我们毫无实质账目记录的个人向其中注入巨额资金，而总统基本上从中获利。我认为对我们监督委员会而言，我们需要了解到底是谁在实际投资。事实上没有任何实质性的公开报告表明投资者是外国政府、其他国家的亿万富翁，还是大公司。顺便说一句，还创建了这些空壳组织和公司。我认为这些问题值得进行真正的调查。
+
+而且，这当然超出了家族的范围。他们那种认为没有人会被追究责任的信念已经渗透到了政府当中。这显然包括像苏西·怀尔斯（Susie Wiles）这样的人，[音乐] 包括像科里·莱万多夫斯基（Corey Lewandowski）和克里斯蒂·诺姆（Kristi Noem）这样的人。针对他们两人的涉嫌腐败指控数量是极其惊人的。
+
+如果你[音乐]还不是《纽约时报》的订户，我们有个消息要告诉你。现在你可以在《纽约时报》App内探索首月完全没有任何付费墙的内容。[音乐]
+
+<details><summary>Original English</summary>
+>> Well, what's I think what's the most interesting about World Liberty and just the the the broader story in general is that we don't know a ton. Donald Trump has essentially created a slush fund where it's through through this crypto scheme, through this stable coin scheme where individuals that we have no real accounting of are dumping in enormous amounts of money that essentially the president is profiting from. And I think for us in oversight is we need to understand who actually is investing. the fact that there's no real public reporting whether the investors are foreign governments, uh, billionaires in other countries, uh, large corporations, there's these Shulk organizations and companies, by the way, that that have been created. I mean, those questions, I think, deserve real investigation. And, and it goes beyond, of course, the family. Their their belief that that no one's going to be held accountable has seeped through the government. It's it's it's obviously it's folks like Susie Wilds. It [music] is folks like Corey Luwendowski and Christy Noam. I mean, the amount of alleged corruption about those two is insane. If you're [music] not a subscriber to the New York Times, we have some news for you. You can now explore the Times for free without any pay walls at all during your first [music] month in the New York Times app.
+</details>
+
+>> 这属于你主要调查的第二大板块，即国土安全部一直以来的情况。因此，也许值得花几分钟谈谈前部长克里斯蒂·诺姆，以及职位更为模糊的科里·莱万多夫斯基，以及为什么他们成了你的重点关注对象。
+
+<details><summary>Original English</summary>
+>> This is in your second bucket of major investigations, what's been happening at the Department of Homeland Security. So maybe it's worth talking for a couple minutes about both Christian the former secretary there Cory Luwendowski whose position was more opaque and why they've become such a focus for you.
+</details>
+
+>> 巨大的重点。听着，首先我认为我们必须非常明确，移民与海关执法局（ICE）在全国各地的所作所为是不人道的。它应该让每一个美国人感到恶心。本届政府试图建立一套体系，让拘留和驱逐人类变成该国少数公司和极少数富人的牟利途径。事实上，我们看到美国公民在美国城市的街道上被杀害，我们看到那些只是在努力工作、在餐馆打工、做司机的人被按倒在地、被拘留，这是这个国家的一个极其黑暗的时刻，我希望每个美国人都看到了这一点。我很高兴越来越多的人终于站出来反对它。
+
+在这个政策的核心，在形成我们如今在全国各地所见景象的早期阶段，一直是克里斯蒂·诺姆和科里·莱万多夫斯基。正如你所知，莱万多夫斯基与总统相识很久，并且长期非常接近总统。这个人基本上参与了特朗普政治品牌的创立。他非常深入地参与了竞选活动，现在又在这第二任期的国土安全部中扮演角色。
+
+据我们所知，当然我们现在正在与举报人交谈。我们在自己的调查工作中正在与向我们提供信息的人交谈，莱万多夫斯基基本上正在建立一个权钱交易体系：如果你向他提供我们所理解的资源，就会发生利益交换，基本上就是在出卖准入权、出卖合同。现在我们当然在调查这一切。这目前仍属于严重的指控，但我们相信其中确实有问题。克里斯蒂·诺姆和他建立了这个系统，少数几家大公司现在正如大家所见，正在赚取巨额资金，超出他们本应获得的5倍、10倍。
+
+<details><summary>Original English</summary>
+>> Huge focus. Look, first I think we got to be very clear about what what ICE is doing across this country is inhumane. It should sicken every single American. They the administration has tried to create a system where the detention uh the deportation of human beings is turning into a profit for a handful of companies and very wealthy people in this country. And the fact that we have US citizens being killed on the streets of American cities, that we're having people that are just here hardworking, that are working in diners, that are working in in in uh as drivers are being thrown to the ground, are being detained, uh is is such a dark moment in this country, and I hope every American is is seeing that. I'm glad that that more and more are finally standing up against it. And at the center of this policy has been Christine Owen and Corin Lundowski in the early days of the creation of what we're now seeing across the country. Luwendowski is someone that as you know has known the president and very close to the president for a very long time. I mean this person was involved in essentially creating the Trump political brand. Uh been very involved in the campaigns and now is involved in DHS in this second iteration. What we understand and certainly there we are now talking to whistleblowers. We are talking to folks that are giving us information in our own investigative work where Luwendowski is essentially setting up a system that is a pay-to-play system where if you are providing him uh essentially what we understand is uh resources uh there could be a there's a trading of favors that is happening and essentially selling access uh selling contracts. Now we're of course investigating all this. It's still all al serious allegations, but we believe there's something there. And Christine Nome and him create this system where a handful of of large corporations are now, as you as we've seen, making enormous amounts of money above and beyond five, 10 times what they should be, what they should be essentially.
+</details>
+
+>> 你如何回应那些从愤世嫉俗的角度说这种话的人：“嗯，在我听来，这不就是政府里一直在发生的事情吗？总是存在所有这些公司——很多如今位于阿灵顿，或者在各处设有大型游说机构——它们在每一个政府项目上牟利，对吧？无论是民主党对太阳能的补贴，还是共和党对ICE拘留中心的补贴，公众总有一种‘他们全都在这么干’的感觉。你如何将你在这里描述的情况与那种向来存在的牟取暴利和从政府合同中赚钱的行为区分开来？”
+
+<details><summary>Original English</summary>
+>> >> How do you say, how do you respond to somebody who says, "Well, this sounds to me from a cynical perspective, like what is always happening in the government? There's always all these companies, you know, many of them now in Arlington or with big lobbying shops here or there, who are making money off of every government project, right? Whether it is Democratic subsidies for solar energy all the way Republican, you know, subsidies for ICE detention centers that there is always a feeling for the public of they're all doing it. How do you distinguish what you're describing here from, you know, the kind of profiteering and the making money off of government contracts that is always happening?
+</details>
+
+>> 巨大的区别在于，这些人是在政府任职的。当你看看诺姆和莱万多夫斯基，他们是在为政府工作。我的意思是，有身处权力位置的人在利用其职位牟利。我们谈论的是这些拘留中心。我们正在调查，我们看到有些拘留中心基本上被卖回给政府。以其价值和评估价值的10倍卖给政府。价值的10倍。这就是腐败。这是不应该被允许的，任何纳税人监督团体都应该关注这个事件。
+
+除了权钱交易的腐败之外，还建立了一种不人道的、当然也是违宪的方式，派遣ICE在全国范围内伤害、恐吓和拘留这个国家的人。因此所有这些都必须予以问责。
+
+<details><summary>Original English</summary>
+>> The big difference is these folks are working when you look at Noam and Luwendowski, they're they're working for the government. I mean, they're I mean, you have someone that are in a position of power that are profiting from their position. We're talking about these detention centers. We're looking, we're seeing some detention centers are being essentially sold back to the government. Being sold to the government 10 times their worth and value. 10 times their worth and value. That is corruption. Uh that should not be allowed that that anyone that's a taxpayer watchdog group should be invested in in the story. And separate of the pay-to-play corruption, you have the creation of an inhumane uh certainly unconstitutional way of sending ICE around the country to harm, intimidate and detain people in this country. So all there needs to be accountability.
+</details>
+
+### 四大调查领域与应对调查超载
+
+>> 那么，请在这个第二部分上多停留一分钟，也就是说你在多大程度上指控腐败正在驱动某些政策，抑或反过来仅仅是政策本身就是腐败和违法的？当你深入讨论这部分时，唐纳德·特朗普或多或少承诺过要这么做，而他的所作所为是可怕的，并导致了美国人在明尼阿波利斯的街道上被枪杀，更不用说一路上大量普通人的生活被毁了。有人在谋取私利，但对政策本身是否存在调查或监督职能？
+
+<details><summary>Original English</summary>
+>> Well, stay on that second part for a minute, which is how much are you alleging either that corruption is driving some of the policy or is it vice versa simply the policy itself is corrupt and lawless? When you move more into that part, which is Donald Trump more or less promised to do this and what he did was horrible and led to, you know, Americans being gunned down in the streets of Minneapolis, not to mention a huge number of just people's lives ruined along the way. There's people selfdeing, but there's also is there an investigative or oversight function on the policy itself? I
+</details>
+
+>> 我认为两者皆有。听着，我认为国会的特点之一显然是会有许多委员会审查ICE和国土安全部的政策，不仅是我们。当然会有国土安全委员会，会有司法委员会。所以这里会有很多工作，但绝对特别是涉及谁从拘留中获利时，哪些公司——这些基本上是在购买或创建这些大型拘留中心的大公司——存在驱逐或拘留人类的利益驱动。这是值得调查的事情。为什么人们的正当程序权利被剥夺了？为什么执法人员会去人们家里侵犯他们的法律权利？这理应受到真正的调查和监督，正如权钱交易一样。
+
+我们是调查委员会，国会中将会有许多委员会重点关注围绕生活成本负担的大量问题。所以人们总会问：“特朗普家族希望我们猛烈反击他们。他们希望我们去调查，希望我们去施压，因为那是他们希望聚焦的焦点。”我们明白重点必须放在生活成本负担上，但腐败问题也是这个委员会的工作，美国公众要求两者兼顾。
+
+<details><summary>Original English</summary>
+>> I think there's both. Look, I think one of the things about Congress obviously is there will be many committees looking at the policies of ICE and DHS and it won't be just us. It'll certainly Homeland Security, it'll be judiciary. So there's going to be a lot of work here, but but absolutely particularly when it comes to who profits from detention, what companies, these large companies that are essentially create purchasing or creating these large detention centers, there's an incentive for the deportation or for the detention of human beings. And that's something that that deserves investigation. Why are people's due process rights being stripped away? Why are agents going to people's homes uh and and violating their their legal rights? That that that deserves real investigation and oversight as does the paytoplay. We're the investigations committee and there is going to be many committees across the Congress that are going to be focused on a lot of issues around affordability. So folks always ask, you know, hey, you know, the Trumps want us to go after them hard. They want us to investigate. want is to to uh to push because that's where they want the focus. We understand that the focus has to be on affordability, but the corruption piece is also the job of this committee and there's a demand from the American public to do both.
+</details>
+
+>> 我从来不像其他人那样确信这些事情必须始终被联系在一起。我认为公众在某种程度上能够在脑海中同时关注多件事。但在我看来，这里深刻的挑战在于，当你面对70项腐败调查时，实际上等于没有腐败调查。这太多了。甚至在准备这次采访时，甚至在我们谈话时，它都带有这种充斥着大量不端行为的性质。有小唐和埃里克，有贾里德，有克里斯蒂·诺姆，还有你提到了苏西·怀尔斯——我们刚才甚至还没来得及谈她。你如何将这些聚焦成一个人们真正能够抓住的故事，而不让人觉得这只是针对特朗普政府在一切可能战线上开战、试图碰运气看哪项能坐实？我认为在2020年至2024年间发生针对特朗普的起诉之后，人们确实有这种感觉。
+
+<details><summary>Original English</summary>
+>> I've never been as sure as other people are that these things need to be like constantly connected. I think that the public is able to keep multiple things in its head to some degree at at one time. But what does seem to me to be the profound challenge here is when you have 70 corruption investigations, what you have is no corruption investigations. It's too much. Even preparing for this interview, even as we talk, it has this quality of just a blizzard of wrongdoing. And it's Don Jr. and Eric, you know, and it's Jared and it's Christy Noam and it's, you know, and you mentioned Susie Wilds. We didn't mention anything then about her that it has this um How do you focus this
+</details>
+
+>> 聚焦成一个人们真正能够抓住的故事，从而不至于感觉像是针对特朗普政府开辟了所有可能的战线，试图抓住点什么——我认为这确实是人们在2020年至2024年间对特朗普的起诉发生后的感觉。
+
+首先，我认为这是一个非常重要的问题，我实际上经常思考这个问题，因为这是前所未有的腐败程度、前所未有的指控，以及我们显然从整个政府人员那里收到的信息。所以你是对的，必须有所聚焦。
+
+因此，在监督委员会，我们非常明确我们有四大主要调查领域，我们已经讨论了其中的一些，对吧？其一是特朗普家族本身；其二是针对ICE和国土安全部，特别是围绕莱万多夫斯基和诺姆的权钱交易指控。我们的第三个调查领域将重点关注随着调查推进、在我们发现时出现的其他企业腐败。例如委内瑞拉目前正在发生的事情与石油公司的关系，资金账目不明，在我们美国纳税人的钱不知去向的同时油价依然居高不下。我们的最后一个调查领域是围绕杰弗里·爱泼斯坦（Jeffrey Epstein）的调查。那是一项将继续进行的持续工作。我对为幸存者争取正义持坚定态度。我认为美国公众也是如此。
+
+所以对我们来说，这就是我们的四个主要领域。我们正在与司法委员会的杰米·拉斯金（Jamie Raskin）以及其他委员会的领导人合作，以便我们大家都专注于我们所看到的整个政府中巨量腐败的不同部分。而我们不能……
+
+<details><summary>Original English</summary>
+>> >> into a story people can actually hold on to and such that it doesn't just feel like a opening every possible front you can against the Trump administration trying to make something stick which I do think is a feeling people had after the Trump prosecutions that took place between 2020 and 2024. So first I think this is like a really this this is an important question I actually think about a lot because and it's an unprecedented level of corruptions of allegations of uh of information that we're getting obviously from folks across the government and so you're right like we there has to be a focus so on oversight we've been very clear that we have four major areas of investigation and you know we've talked about some of those right so one is the Trump family itself the second is ICE and DHS in particular uh this pay-to-play allegations around Luwendowski and Noom. Our third area of investigation is going to be focused on other corporate corruption as it develops and as we find it. For example, what's happening right now in Venezuela and the oil companies, the unaccounting of money, uh not knowing uh where all of our American taxpayer dollars are going while your gas prices still stay high. And our last area of investigation is around the Jeffrey Epstein investigation. And that's something that will be continue that's ongoing. I feel strongly about justice for the survivors. So I think so does the American public. And so for us, those are our four main areas. And we're working with Jamie Raskin in judiciary, other leaders of other committees so that we're also all focused on different parts of what we see as as an enormous amount of corruption across the government. And we we can't
+</details>
+
+>> 我得说，这并没有完全回答我的问题。我理解你在这里描述的四个领域，但这其中的每一个领域——当然是特朗普家族、企业腐败——都可能衍生出几十个子调查。然后你准确地指出了还将会有所有这些其他委员会分别承担一部分调查，这对他们的委员会来说合情合理。而且我们这里仅仅是在谈论众议院，此外参议院也在这么做。
+
+你说你经常思考陷入过度繁杂的可能性。当你对某件事有源源不断的报道时，公众就很难抓住其中的要点，它可能就演变成民主党人在追着特朗普、特朗普家族以及任何与他们接触过的人不放。因此，鉴于你刚才描述的范围实际上如此庞大，你如何防止它变成多到让人感觉要么像党派争斗、要么根本应接不暇的状态？
+
+<details><summary>Original English</summary>
+>> I got to say this doesn't quite answer my my question. And I I understand the four areas you're describing here, but every one of those areas certainly Trump family, corporate corruption, um they could have dozens of sub investigations and then you describe correctly, I think, that there will be all these other committees that are also biting off a piece of investigations. It makes sense for their committees. And we're just talking here about the House, then there's like the Senate, which is also doing this.
+
+You said you think a lot about the possibility of overwhelm. The way if you have just constant stories about something, it becomes hard for the public to grab onto a piece of it and it can just dissolve into Democrats going after Trump and the Trump family and anybody's ever touched them. So given actually how large that universe you just described is, how do you keep it from becoming so much that just feels either like partisan food fighting or there's just more than people can actually keep up with?
+</details>
+
+>> 我的意思是，听着，我认为这就需要确保委员会本身的运作管理……你在实际推动调查的叙事，传达正确的信息，这同样是我们工作的一个极其重要的组成部分。我们不能仅仅因为“哦，腐败太多了”就对此视而不见而不去解决它。我们肯定会努力把重点放在最严重的腐败节点上，但同时也会放在我们认为能够产生立法成果的地方。我们不能为了调查而调查。
+
+我们还必须修改法律，以确保这种事情不再发生。因此，我们在决定要调查什么时，很大一部分考量在于：这项调查是否存在立法目的？这在进行监督时非常重要；以及可能的结果是什么？因此，如果我们在调查特朗普家族的腐败，我们能否完善国家的法律，以确保这种事情不会再次发生？
+
+我们能否设置更多保障措施，确保总统的家族不能利用其父亲在位而牟利？顺便说一句，这应该适用于政府、国会或行政部门的任何人。
+
+针对国土安全部和ICE，我们能否在合同和政府任命方面制定新法律，以防止目前正在发生的、莱万多夫斯基极有可能在做的事情再次发生？因此，对于我和委员会来说，立法目的是我们如何选择将实际推进哪些调查的关键。如果我们能通过优秀的法律，使之在国会通过并获得签署——也许不是被现任总统签署，而是被未来的总统签署——那就是成功。
+
+<details><summary>Original English</summary>
+>> I mean look I think that's where al where ensuring that that the management of the committee itself uh that you are actually driving the storytelling of the investigation uh that you're communicating the right message is such an important part also of our work and we can't just turn a blind eye on just because oh there's too much corruption we're not going to address it. We're definitely going to try to focus on the most serious point points of corruption, but also where we believe there could be a legislative outcome. We we can't just investigate for the sake of investigations.
+
+We have to also change the law to ensure it doesn't happen again. And so a big part of the decisions that we make about what we're going to investigate is is there a legislative purpose to this investigation, which is important when you're doing oversight, and what is a possible outcome? And so in if we're investigating uh corruption with the Trump family, can we strengthen our nation's laws to ensure that it doesn't happen again?
+
+Can we put in more protections to ensure that the families of presidents can't can't profit from their father being in office? And by the way, this should apply to to anyone in the in the government or in the Congress or in the executive branch.
+
+With DHS and ICE, can we put in new laws around contracts, government appointees that would prevent what's happening, what's likely happening with Luendowski to not happen ever again? And so a legislative purpose for for me and for for the committee um is critical in how we select the investigations that we're actually going to move forward. And if we can pass good laws, get them through Congress and get signed maybe not by this president but a future president, that is success.
+</details>
+
+### 立法目的与企业腐败调查
+
+>> 所以你的意思是，你希望至少在一定程度上根据哪些调查看起来能够推动未来的道德和反腐败法律来确定优先次序？
+
+<details><summary>Original English</summary>
+>> So you're saying you want to prioritize investigations at least in part based on what seems like it could feed into ethics and anti-corruption laws going forward?
+</details>
+
+>> 当然。
+
+<details><summary>Original English</summary>
+>> >> Absolutely.
+</details>
+
+>> 你现在对你想要修改的一些法律有眉目了吗？
+
+<details><summary>Original English</summary>
+>> Do you have a sense right now of what some of the laws you would like to change are?
+</details>
+
+>> 是的，听着，我认为我们有一定的概念，但我认为通过调查和监督，我们将对实际需要做的事情有更清晰的认识。我经常和杰米·拉斯金讨论这个问题。显然存在一些我们需要推动通过的法律。我的意思是，有最基本的事情。我们一直听到相关讨论，对吧？股票交易禁令、股票交易改革、内幕交易，必须延伸到行政部门的改革，而如今预测市场又成了一个真正的新话题，我们必须切实加以应对和关注。因此有一系列法律是我们认为可以提出的，有可能在参众两院通过。它们是否会被唐纳德·特朗普签署则是另一个问题。听证程序不仅仅是把人找来作证。它还关乎获取信息、引入专家、围绕调查进行访谈，并真正提出新法律和新想法，在未来切实改善局面。
+
+我一直担心的一件事，我认为整个国家都在担心的一件事是，大家对唐纳德·特朗普有这样一种看法，在我看来，他总是能逃脱腐败和敛财的制裁，我们在特朗普第一任期内确实看到了这一点，我认为国会必须做的一件事就是确保特朗普及其家族现在正在做的事情绝不能被另一位总统重演。
+
+<details><summary>Original English</summary>
+>> >> Yeah, I mean, look, I think we have a sense of it, but I think through investigation and oversight, we'll get a much a much clearer picture of what we actually have to do. Um, and and so I I talked to to Jimmy Raskin often about this. Um, there there there clearly are laws that we need to get past. I mean, there's basic stuff. We hear about them all the time, right? stock trading bans, stock trading reform, insider trading, uh reform that got has to go to the executive branch where now prediction markets are now a new a real new topic where we've got to actually address and focus. And so there's a series of laws that that we think can be presented um can possibly pass both houses. Whether they're signed by Donald Trump or not, it's a different question. And the hearing process is not just about bringing folks um to testify. It's also about getting information and bringing in experts and doing interviews around the investigation and really putting forward a a new laws, new ideas to actually make things better in the future. I one of the things I worry about all the time and I think the country does is like you know there's this idea about Donald Trump and he's in my opinion he just gets away with his corruption and his grift and we saw that certainly in the first Trump administration and I think one thing that we've got to do as a Congress is ensure that what Trump and his family are doing now can never happen again by another president.
+</details>
+
+>> 为什么他们这次有可能做出如此多的此类行为？我之所以问这个问题，是因为我从2000年代初就开始报道政治了。在那段时间里，我可能目睹了半打道德法案方案的通过。我一次又一次地看到这种情况。在此之前也通过了许多法案。存在所有这些不同的法律。
+
+[叹气]
+
+这些漏洞怎么会如此巨大，以至于这次围绕特朗普发生的那种“狂欢”成为了可能？
+
+<details><summary>Original English</summary>
+>> Why was it possible for them to do so much of it this time? And and the reason I ask that is I have covered politics since the early 2000s. And I have probably watched in that time a halfozen ethics packages pass. I've seen it over and over and over again. There are many that passed before that. There are all these different laws.
+
+>> [sighs]
+
+>> How were the holes so gaping that the kind of festival that has taken place around Trump um this time was possible?
+</details>
+
+>> 我想对很多人来说，我是国会的新人。我进入国会这是我的第二任期，所以我带着震惊目睹着这一切的发生。我认为很多人——当然在国会里——没有预料到特朗普会行动如此之快，会直接绕过法治，并在第一天就着手试图让自己发财。
+
+第一任期和现在的一大区别在于特朗普财富大增，他赚取的金钱数量极其惊人。而且我认为从进步派与民主党的角度来看，人们在输掉选举后感到士气低落。人们不信任政府，不管是共和党还是民主党。体制遭到了攻击，所以我认为我们对唐纳德·特朗普的这一版本没有做好准备。
+
+<details><summary>Original English</summary>
+>> >> I think for a lot of folks I mean look I'm new to Congress. I've been in Congress for is my I'm in my second term and so I I'm watching this all with like horror as as it's happening and I think that a lot of folks didn't anticipate certainly in Congress that Trump would move so fast would just skirt the rule of law and work on day one to try to enrich himself. I mean, the big difference between the first administration and now is that Trump is incredibly more wealthy and he's I mean, the amount of money that he's making and I think also from a progressive perspective versus Democrats. I mean, people were we lost the election and people were demoralized. People don't trust government, Republicans or Democrats. there was a there the instit institutions had been attacked and so I think that there we we weren't prepared for this iteration of Donald Trump.
+</details>
+
+>> 你几分钟前提到过，你的调查板块中有一块是关于企业腐败的。你刚才谈到了一点委内瑞拉以及石油和天然气行业的情况，但我很好奇属于那一范畴的到底有什么。我们是在谈论英伟达（Nvidia）和黄仁勋（Jensen Huang），以及关于商务部发生了什么、谁在何时知情的那些疑问吗？企业腐败何时会成为你管辖范围的一部分？
+
+<details><summary>Original English</summary>
+>> You mentioned a few minutes ago the bucket of this for you that is around uh corporate corruption. Uh you talked there a little bit about Venezuela and the oil and gas industry, but I'd be curious sort of what falls under that ambit. I mean, are we talking about Nvidia and Jensen Huang and the the you know, the questions about what happened with the commerce department and who knew what when? When does corporate corruption become part of your purview?
+</details>
+
+>> 企业腐败显然会有许多委员会在进行调查，对吧？你提到了英伟达。那是情报委员会和其他委员会正在深度参与的事情，属于外交或外交政策委员会的范畴。
+
+有些特定的调查之所以让我们格外感兴趣，是因为它们与白宫以及特朗普家族有直接关联。所以让我们来看看宴会厅和捐赠者的例子。
+
+其一，我不确定大家是否都看过了在建宴会厅的最新照片。这栋庞然大物本质上是唐纳德·特朗普为自己建造的一座纪念碑；而这座实质上由企业捐赠者、亿万富翁和总统的朋友买单的纪念碑，在规模上将使白宫相形见绌。它矗立在那里，就像是给唐纳德·特朗普树立的一座纪念碑，他和他的富豪捐助者可以在那里举行奢华的派对，在他人的陪伴下享乐，而与此同时美国公众却在苦苦挣扎。我认为这确实触痛了美国公众，我在回到家乡时经常听到这种声音。
+
+我们需要了解向宴会厅捐款的捐赠者。我们需要了解是否存在交易，是否有回报要求。因为我们收到的报告以及从众多媒体机构看到的报道指出，总统非常热衷于亲自给各位首席执行官和高管打电话，要求他们为宴会厅捐款。
+
+<details><summary>Original English</summary>
+>> So, I think obviously corporate corruption is something that you're going to have many committees looking at, right? Um, you talked about Nvidia. Uh, that's something that the intelligence committees and others are are are really engaged in foreign or foreign policy uh committees.
+
+There are certain there are certain investigations that we're especially interested in because of the way they they tie back particularly to uh the White House and the Trump family. And so let's take a look at for example like the ballroom and and the donors.
+
+One is I'm not sure if folks have all seen the latest photos uh from what the ballroom is actually looking like under his construction. The idea that this monstrosity, it's a essentially a monument that Donald Trump has built to himself, the idea that this monument, which essentially is being paid for by corporate donors, billionaires, uh, friends of the president, is going to dwarf the White House. And it stands as this kind of monument to Donald Trump where him and his wealthy donors can throw lavish parties uh enjoy, you know, enjoy each other's company while American the American public is struggling. I think is something that really gets to the American public and I hear it all the time when I'm back home.
+
+the we need to understand that the donors that gave to the ballroom. We need to understand what was the exchange was there was what was the demand in return because the reports that we're getting and certainly reporting that we've seen from numerous uh media organizations report that there was a president who was incredibly interested in making calls himself to CEOs and executives about donating to the ballroom.
+</details>
+
+>> 但请允许我再次尝试站在持怀疑态度的听众角度发问：这与历任总统为他们的总统图书馆所做的事情有很大不同吗？他们在任内也募集巨额资金。奥巴马图书馆对这类图书馆项目而言是一项巨大的工程。这与他们为超级政治行动委员会所做的事情有很大不同吗？总有一种感觉，两党的总统、两党的成员都在持续从企业筹集资金，包括筹集到就职典礼委员会中。特朗普只是规模做得更大，但他并不一定是发明者。因此，对于正在收听这段对话并说“哦，民主党人现在盯上唐纳德·特朗普，仅仅是因为他在做他们一直在做、两党都在做的事情”的人，这到底有什么不同？还是说你认为这一切都应该是非法的，因为你们打算通过新的道德准则？请带我理清如何应对那种认为你只是因为他是唐纳德·特朗普而感到愤怒的观念。
+
+<details><summary>Original English</summary>
+>> So, but let me again try to take the skeptical listeners viewpoint here and say, is it so different than what presidents do with their libraries where they are raising money while in office, huge amounts of money? The Obama library is a gigantic undertaking for these libraries. Is it so different than what they are doing for their super PACs and they're like the sense that, you know, presidents of both parties, members of both parties are constantly raising money from corporations into including into inaugural committees. Trump is doing it at a larger scale. He didn't necessarily invent it. So to somebody who is listening to this and saying, "Oh, Democrats are now going after Donald Trump for doing something that they do all the time that both parties do." Again, what sets this apart? Or are you saying this should all be illegal because you're going to pass new ethics rules? Walk me through the kind of the dealing with the sense that you're just mad because it's Donald Trump.
+</details>
+
+>> 不，我感到愤怒是因为你面对着一座国家纪念碑——人民的殿堂——而你却通过亿万富翁和私营企业的捐款，建立了一座唐纳德·特朗普为自己打造的纪念碑，其规模使人民的殿堂相形见绌；并且我们从多位首席执行官和公司那里听到了实质性的指控，他们感到自己受到了强迫或威胁。
+
+<details><summary>Original English</summary>
+>> No, I I'm I'm upset because you have a a national monument, the people's house, and you're building through donations of billionaires and private companies, uh a monument to that Donald Trump's creating for himself that dwarfs the people's house of which there are real allegations of that we've heard from CEOs and companies that feel they were forced or they were threatened.
+</details>
+
+>> 你能分享这些案例吗？
+
+<details><summary>Original English</summary>
+>> >> Can you share those stories?
+</details>
+
+>> 听着，在进入具体细节之前，我认为这一切都会通过调查浮出水面。有报道称，一些公司和首席执行官感到受到威胁，如果他们不捐款，他们就不会得到某项利益；或者其他公司可能通过捐款获得了好处或合同。这就是权钱交易的腐败。这与奥巴马总统试图为他的图书馆筹款是不同的。
+
+现在听着，我们应该进行广泛的道德改革。我并不是说回顾过去一二十年，毫无疑问，在政治巨额资金方面，在我们规范捐款方式的治理方面，必须进行改革。但在这种情况下，为什么要让这些公司捐款？是否存在利益交换？人们如何看待自己的殿堂被美国企业建造的这座纪念碑所压倒？我认为这理应受到调查。
+
+<details><summary>Original English</summary>
+>> I I look before before getting into specifics, I think this will all be uh will come out through investigation, there are reports of companies and CEOs that have felt threatened that if they didn't donate that they weren't going to get X or other companies that perhaps got a benefit or a contract by donating. That is pay-to-play corruption. That is different than President Obama trying to fund raise for his library. Now look, we should have broad ethics reforms. I'm not saying and that that if you look back through uh you know the last 1020 years, there's no question there's got to be reform as it as it relates to big money in politics in uh in the way that that that we that we govern how donations are made. But in this case, why were these companies being asked to donate? Was there an exchange? And how do people interpret their house being dwarfed by this monument that built by corporate America? And I think that then I think that deserves investigation.
+</details>
+
+### 监控定价与委员会管辖权
+
+>> 因此，在我听来，将这与其他人企业腐败区分开来的似乎有两点。在委内瑞拉的案例中，你描述的是企业实际参与公共合同，以及它们是否公平地赢得了这些合同。而在这里，听起来你描述的情况几乎是相反的：由于受到联邦政府的强迫而捐款，同时隐秘的威胁悬在头上——对他们的合同、他们的利益、他们进入白宫的机会构成威胁。
+
+<details><summary>Original English</summary>
+>> And so what separates this from other kinds of corporate corruption is it sounds to me like two things. In the Venezuela case, you're describing something where corporations are functionally entering into public contracts and are they winning those contracts fairly. And here it's almost reversed, it sounds to me, is what you're describing. a situation where maybe they're being coerced by the federal government into donating money with the implicit threat to their contracts, to their interests, to their access to the White House, you know, kind of being dangled there on the table.
+</details>
+
+>> 当然。在委内瑞拉的例子中，我们都看到了唐纳德·特朗普与这些大型石油公司负责人会面的报道，向他们承诺他们对他的个人或竞选投资将获得回报。我们对所有的资金流向缺乏真正的账目记录。所以我认为委内瑞拉问题存在真实的疑问。我们一直在关注这一点。我们将继续关注，正如我们将调查宴会厅一样，正如我们将调查其他问题一样。
+
+当你审视是否有任何人在敲诈美国公众时，存在着大量的问题，我认为国会应该介入调查。人们对美国企业影响普通大众的方式很感兴趣。监控定价（surveillance pricing）、为什么食品成本如此之高？这些都是我认为至少值得调查的事情。而调查并不意味着结论总会是腐败。[嗤之以鼻] 调查可以催生新法律，也可以确保各项事务切实按照应有的方式运行。
+
+<details><summary>Original English</summary>
+>> >> Absolutely. And and look, and in the Venezuela uh example, I mean, we we've all we've all seen the reporting about Donald Trump meeting with, you know, the heads of these of these large oil companies, uh, you know, promising them they're going to they're going to, you know, have returns, uh, on their investments into him or his campaign. Uh, we don't have a real accounting of where all the money has gone. So, I think there are real there are real questions in Venezuela. We've been we've been looking at this. We're going to continue to as we will look into the ballroom, as we will into other issues. There's an enormous amount when you look if anyone is ripping off the American public, I think the Congress should should take a should take a look. And people are interested in the way people are are being impacted by corporate America. Uh surveillance pricing, why are food costs so high? These are all things that I think deserve at minimum investigation. And and investigation doesn't mean that you're going to that the conclusion is always going to be corruption. [snorts] investigation could produce new laws, could also ensure that things are actually working the way they should.
+</details>
+
+>> 是的，我看到你提到了监控定价。也许我们应该说明那是什么，这引起了我的兴趣，因为这看起来属于那种如果国会不希望它发生、你们就可以宣布它违法的范畴。
+
+<details><summary>Original English</summary>
+>> >> Yeah, I've seen you bring up surveillance pricing here. Maybe we're saying what that is and and and that struck me as an interesting one because that struck that seems like something where if Congress doesn't want it to happen, you make it illegal.
+</details>
+
+>> 我认为是这样。但我认为我们还需要了解这些公司实际在做什么。这些企业是如何获取数据的？它们从哪里获得数据？人们是否甚至知晓他们的数据可能被用来对你购买的商品定出与你邻居不同的价格？毫无疑问，企业一直在朝这个方向发展。因此我认为这是美国公众理应知情的事情。而且我认为在全国上下都如此关注生活成本负担的情况下，这也是一种切入点。我认为通过调查和监督，我们也可以开始解决其中的一些问题。
+
+<details><summary>Original English</summary>
+>> I think that's right. But I think that we also need to understand what the companies are actually doing. How are these corporations accessing the data? Where are they getting the data from? Do people even know that their data is being possibly used uh to have to to have a different cost for a good you you're going to purchase versus the one of your neighbor? And it's no question that companies have been going in this direction. And so I think that's something that deserves that the American public deserves to know. And that's a way I think also when someone is so focused when the country is so focused on affordability. I think through investigation and oversight we can also begin to address some of those issues.
+</details>
+
+>> 请跟我谈谈你的权力或者委员会的管辖权到哪里为止。因为当我们转向监控定价时，我们讨论的事情非常不同于政府通过公共合同中饱私囊、特朗普的子女通过了解特朗普政府可能采取的行动或通过影响力的感觉而谋利。在这里，当我们谈论的是一种商业行为时，据我们所知它是合法的，只是你不喜欢或者你认为民众不喜欢，而你打算利用委员会的权力把首席执行官们传唤过来，彻底搞清那里到底发生了什么。你能做什么，不能做什么？什么是超出你们委员会权力范围的？
+
+<details><summary>Original English</summary>
+>> Tell me a bit about where your powers or where the the ambit of the committee stops. Because when we moved into surveillance pricing there, we're talking about something very different than, you know, the government enriching itself through public contracts or the Trump kids enriching themselves through knowledge of what the Trump administration might do or a sense that they can influence it. here when we're saying there's a business practice. It is legal as best we understand that you don't like or you think the people don't like and you're going to you're going to use the power of the committee to sort of haul in the CEOs and and kind of understand exactly what's happening there. What can you do and what what can't you do? What is outside of your committee's power?
+</details>
+
+>> 监督委员会的极佳之处在于我们的管辖权涵盖一切。我们并不直接对某个政府部门进行对口监督。我们可以挑选当时具有新闻价值的事项，或者我们发现了有举报人报告的事项。关于我们委员会的一点是，我们有一个非常活跃的举报人计划，不断收到来自政府官员、公务员和公众的信息。我们的调查——尽管公众当时可能并不知晓——往往是由我们从某个线人那里收到的报告所驱动的。因此那通常是我们开展调查工作的起点。我们的举报人计划非常广泛、极易接入，它推动了我们的很多工作。
+
+<details><summary>Original English</summary>
+>> So, the great thing about uh the oversight committee is our jurisdiction is everything. We're not directly overseeing an agency of the government. we we kind of can pick and choose what kind of perhaps is something that happens in the moment that's newsworthy um or that we find where the we're getting whistleblower reports. One thing about our committee is we we have a very active whistleblower program where we are consistently getting information from government officials, civil servants, the public. Uh, and oftentimes our investigations and it may not be known at the time, you know, to the public, but oftentimes are driven by reports that we might be getting um, from a source. And so that's oftentimes where we where we begin our investigative work. And our whistleblower program is is is very extensive. It's very accessible. Um, and that drives a lot of our work.
+</details>
+
+### 自我致富还是制度性寡头统治
+
+>> 在我们进行这次对话时，我一直在思考的一个问题是，你在多大程度上认为特朗普政府内部的腐败不仅仅是谋取私利，而是从根本上旨在让他、他的家族和他身边的人自我致富；又在多大程度上你是在描述或调查某种更像在俄罗斯看到的情况——那是一种治理结构，一种权钱交易和利益交换的结构，在这里它不仅仅是关于人们变得更富，他们还利用这一点来巩固联盟并建立权力，这既是政府控制企业的一种手段，也是企业获得收益的方式。你可以认为这些就是单纯的盗窃……
+
+<details><summary>Original English</summary>
+>> One of the things I've been thinking about while we're having this conversation is to what degree you see corruption in the Trump administration as I don't want to say mere self-deing but fundamentally aimed at self-enrichment for him, for his family, for people around him. and and how much you're describing or investigating something that is more like what you see in Russia, which is a structure of governance, a structure of paytoplay and favor trading where it isn't just about people getting richer. They're also using this to entrench alliances and to build power and to sort of, you know, this is a way that the government keeps the corporations line, but also the corporations get some, you know, you can have these that are they are simply theft
+</details>
+
+>> 你也可以这么看。黑帮的运作也是如此，它们实际上构成了一种关于权力和金钱如何流动的清晰结构，以巩固某种统治政权或企图。我很想知道你是否考虑过这一层面，或者你如何看待这一层面。
+
+<details><summary>Original English</summary>
+>> >> and you can have them. them. I mean, mafias work like this, too, where they are actually a legible structure of how power and money flow in a way that entrenches a certain governing regime or or or project. And I'm curious about that, whether or not you are thinking about that layer of it or how you see that layer of it.
+</details>
+
+>> 听着，我认为两者皆有。在我看来，毫无疑问唐纳德·特朗普首先是希望为自己和家族获取财富。他终于[清嗓子]成为了他一直想成为的亿万富翁，并利用总统职位让自己发家致富。为了让自己和家族发财，这毫无疑问。
+
+但与此同时，他一直渴望改造我们的政府、我们的制度以及总统的权力，这也是他崇拜某些世界领导人而不崇拜其他领导人的原因。他确实拥有这些独裁倾向，以及对如何看待自己、总统职位和他作为领导人的观念。我的意思是，他对任期限制的试探、对权力的玩笑、他不仅讨好普京而且讨好世界各地的其他威权统治者的方式。
+
+所以这不仅仅关乎财富。我也认为这关乎将自己塑造成国王，凌驾于所有人之上，视所有人为臣民，使自己拥有至高无上的权力和财富。我认为你在大事小情上都能看到这一点：从他决定如何改变外交政策的方式，到他试图重修纪念建筑、在一座纪念伟人肯尼迪的纪念建筑上写下自己名字的方式。我认为这非常危险。在此时此刻，[音乐] 这不仅是我们在监督委员会的工作，而且是全院乃至广大民主党人的职责，[音乐] 我们必须挺身而出予以抵抗。
+
+[音乐]
+
+<details><summary>Original English</summary>
+>> >> Yeah, I mean, look, I I think it's it's some of both. I I it appears to me I mean there's no question that Donald Trump is um first and foremost wants wealth and for him and for his family. Uh he's he's finally [clears throat] the billionaire he's always wanted to be and he's used the presidency to enrich himself. I mean there's there's just no question and to enrich his family. Um, but then at the same time, I mean, there's there's there's this constant desire of his to want to transform our government and our systems and the power of the presidency and why he admires certain world leaders and not others. And he he certainly has these authoritarian tendencies and this view of how he views himself, the presidency, and him as a leader. I mean, his flirtation with term limits, the jokes he makes about power, uh his how he cozies up not just to Putin, um but to other authoritarians around around the world. And so it's not just about the wealth. I also think it is about kind of creating uh himself as king you know himself as better than everyone else where everyone is a subject uh where he has ultimate power and and wealth and I think that you know you see that in both large and small ways you see it uh in how he's decided to change foreign policy you see it in the way he's trying to remake monuments uh putting his name uh on a memorial for a great man, JFK. And I think that um that's very dangerous. And in this moment, [music] it's not just our job in oversight, but across the Congress and I think Democrats broadly, [music] we have to stand up to that.
+
+[music]
+</details>
+
+### 跨党派合作前景与爱泼斯坦案调查
+
+>> 这在实际展开过程中不单纯演变为党派斗争是否重要？这甚至可能实现吗？在1月6日事件后的调查中，利兹·切尼（Liz Cheney）参与其中。你之前提到了爱泼斯坦档案，显然托马斯·马西（Thomas Massie）也参与其中。我想许多人想知道，既然唐纳德·特朗普带领共和党在中期选举中惨败，他对共和党的控制力会变成什么样。
+
+<details><summary>Original English</summary>
+>> Is it important that is it even possible that this is not purely partisan in the way it plays out? So I mean you had in the kind of post January 6 investigations. Liz Cheney was part of that. You were talking about the Epstein fellows earlier. Obviously Thomas Massie was part of that. I think a lot of people wonder what Donald Trump's control over the Republican party will be now that he has led it to a midterm annihilation.
+</details>
+
+>> 是的。
+
+<details><summary>Original English</summary>
+>> >> Yeah.
+</details>
+
+>> 你还可以设想这些调查可能走向的不同路径。可能或多或少对共和党人保持开放，你可以设想一些人决裂并希望表明他们至少反对某些腐败行为。你如何看待在这个项目中保持某种两党合作的必要性或可能性？
+
+<details><summary>Original English</summary>
+>> And you can also imagine different ways these investigations can go. There could be, you know, more or less open to Republicans. It could be uh you can imagine some breaking and wanting to show that they were, you know, against a corruption at least against certain parts of it. How are you thinking about either the Yeah. the necessity of or the possibility of having any kind of bipartisanship in this project?
+</details>
+
+>> 我认为在调查中实现跨党派合作，特别是涉及腐败问题时，现在比以往更有可能。不仅是因为选举，而且因为你看到更多的共和党人终于因为自己家庭面临的经济状况而建立了这种联系，他们看到了特朗普家族及其财富的现状。而且在特朗普时代，也确实存在过共和党人能够与总统决裂的两党合作领域。
+
+爱泼斯坦案的调查可能是全国最具有两党共识的调查或关注领域。在某些方面它范围很窄。有超过1000名女性，许多在还是年轻女孩或儿童时期显然遭到了强奸、虐待或贩运。因此这是为了为她们伸张正义。但我认为无论是共和党人还是民主党人，大家都有同感并希望确信：如果有人报告发生在其身体上的可怕遭遇并向政府举报，政府不会掩盖此事。
+
+而唐纳德·特朗普竭尽全力不仅试图阻止《爱泼斯坦档案透明法案》（Epstein File Transparency Act）的实施，而且试图驳回该调查。对我来说，那是上一届国会中唯一真正看到共和党人决裂的时刻。不仅对该项正在进行的调查，而且对我们如何通过爱泼斯坦调查接触共和党人，其中都有经验可循。我个人与监督委员会中在爱泼斯坦案上有共同利益的其他共和党人建立了关系，这种关系现在仍在继续，我希望继续与其中一些共和党人合作，不仅在爱泼斯坦调查问题上，还在其他腐败问题上展开合作。
+
+<details><summary>Original English</summary>
+>> I think I think bipartisanship in investigations, particularly as it relates to corruption, are more possible now than they've been in the past. Not just because of the election, but because you're seeing more Republicans that are finally making the connection because of their where they are in their own economy of their home and their family and they're seeing the what's happening with the Trumps and their wealth. And also there have been real there have been areas where there has been bipartisanship even in the Trump era where Republicans were able to break away from the president.
+
+The Epstein investigation, it might be the most bipartisan uh investigation or area of interest in the country. And in some ways it's in some ways it's narrow. I mean it's it's there's over 1,000 women who many as girls or children were obviously either raped or abused or trafficked. And so it's about justice for them. But it's also I think people Republicans and Democrats want feel and want to know that if if someone is going to report something horrific that happens to them in their body and they report it to the government that they're not going to cover it up. And Donald Trump went all in on trying to stop not just the Epstein file transparency act from being uh implemented but from dismissing that investigation. And I for for me it was the one moment in the last Congress where you really saw Republicans breaking away and there's lessons in that not just for that investigation which which is ongoing but for how we engage Republicans through the Epste investigation. I personally built relationships with other Republicans in the oversight committee that where there was shared interests in Epstein, but that relationship now continues and I hope to continue to work with some of these Republicans on issues not just around the Epstein investigation, but other corruption issues.
+</details>
+
+>> 那么，你希望爱泼斯坦案调查达成什么目标？显然许多文件已经公开，但并非全部。在那个板块中，你们委员会还有什么工作可做？
+
+<details><summary>Original English</summary>
+>> So, what do you want the Epstein investigation to to do? Obviously, many of the files came out, not not all of them. What is there left for your committee uh in in that bucket? I
+</details>
+
+>> 有很多。明确地说，司法部仍有250万份文件尚未公布。总统想尽办法称这是一场骗局以驳回调查。幸存者因文件公开以及他们公开这些文件的方式而陷入危险。当你与幸存者交谈时，正如我在集体或一对一交流中所做的那样，她们希望确保文件公开、保持透明。而对于我们的工作，我们希望确保如果有共谋者、其他参与强奸和虐待妇女及女童的男性或同伙的证据，能够予以问责。
+
+我经常说，因为有些人会说：“哦，我们为什么要关注这项调查？它并没有影响到全国每一个人。”我不认为那是真的。我认为对全国绝大多数关注此事的女性来说，她们需要知道如果她们举报针对自身及肉体的可怕行径，她们的政府会作出回应，不会进行掩盖，联邦调查局（FBI）不会将其驳回，她们填写的材料会真正得到回应。此外这还有一个实质性的立法目的：我们如何确保这种事情不再发生？我们能否改变FBI和执法机构在涉及性贩运和性暴力方面的运作方式？
+
+<details><summary>Original English</summary>
+>> Well, I mean, there's a lot. I mean, to be to be clear, there's 2.5 million documents that have not been released by the DOJ. The president's done everything he can to call this a hoax, to dismiss investigation. Uh survivors have been put in danger through the the release and the way they release the the files that they did. And when you talk to survivors, when I as I've done either in groups or one-on-one, they want to ensure that the files get released that there's transparency. And for our work, we want to ensure that if there is evidence of co-conspirators and other men or associates, that we're engaged in the rape and abuse of of women and girls, that there is accountability.
+
+And I oftenimes say, because some folks say, "Oh, why why are we focused on this investigation? It's not, you know, it doesn't impact everybody across the country yet. I I think I I don't think that's true. I think for for most women across this country that are following this, they need to know that if they report uh this, you know, a a a horrific action against them and their body that their government is going to respond, that they're not going to cover it up, that the FBI is not going to dismiss them, that uh their the paperwork that they filled out is going to actually be responded to. And there is also a real legislative purpose. How can we ensure this doesn't happen again? That we can change the way the FBI inter law enforcement agencies work as it relates to sex trafficking and sexual violence.
+</details>
+
+>> 那么这项调查在多大程度上会传唤FBI的人员？听起来你在这里指控的是FBI掌握了可采取行动的情报但没有跟进，真正的监督对象是FBI对该案的处理。
+
+<details><summary>Original English</summary>
+>> >> So to what degree is this investigation calling in members of the FBI? And it sounds to me like what you're alleging here is that the FBI had actionable intelligence that it did not follow up on and that the actual oversight here is of the FBI's handling of the case.
+</details>
+
+>> 我认为有几点。第一，为什么政府在多年来掩盖了我们认为是掩盖爱泼斯坦调查的行为？顺便说一句，这涉及民主党和共和党两届政府。你的政府去调查爱泼斯坦的性贩运团伙，却从未询问过杰弗里·爱泼斯坦的律师、会计师或亲密同伙。为什么？为什么不想和与杰弗里·爱泼斯坦关系最亲密的人交谈？FBI或其他机构在掌握了如此多虐待证据的情况下，从未真正展开任何实质性调查。
+
+<details><summary>Original English</summary>
+>> I think I think there's a couple things. I think one is why did the government cover up what we believe to be a cover up the Epstein the Epstein investigation over the years? And by the way, this is this is on both Democrat and Republican, you know, uh Democratic and Republican administrations. the idea that your own government is going to investigate uh the the Epstein's sex trafficking ring and never interview uh Jeffrey Epstein's lawyer or accountant or close associates. Why? I mean, why wouldn't you want to talk to the people that are closest to Jeffrey Epste? and he never the FBI or other agencies never actually engage in any sort of real investigation having having so much evidence of abuse.
+</details>
+
+>> 所以你的问题包括传唤拜登政府时期的人并询问“你们当时为什么没这么做”吗？
+
+<details><summary>Original English</summary>
+>> >> So your question is calling people like say the Biden administration up and saying why didn't you do this?
+</details>
+
+>> 听着，我认为梅里克·加兰（Merrick Garland）没有切实解决这项调查给国家造成了巨大的损害，无论是拜登政府还是特朗普政府，都有非常严肃的疑问。
+
+第二部分不仅是发生了什么以及为什么会发生，还包括当前的掩盖行为。他们为什么试图把整个调查掩盖过去？为什么在公布的文件中缺少了部分文件随后又被放回？为什么帕姆·邦迪（Pam Bondi）带着一堆交给社交媒体网红的奇怪活页夹试图扼杀调查？总统进行的干预程度极其诡异。为什么JD·万斯（JD Vance）会带领苏西·怀尔斯、卡什·帕特尔（Kash Patel）等人举行白宫战情室会议，讨论吉丝兰·马克斯韦尔（Ghislaine Maxwell）以试图为唐纳德·特朗普开脱？我认为这些都是严肃的问题，理应得到解答。为什么吉丝兰·马克斯韦尔被转移了？为什么没人能给我们一个解释？我认为公众理应知道真相。
+
+<details><summary>Original English</summary>
+>> >> Look, I think that Merrick Garland did a massive disservice to the country by not actually addressing this investigation of it could be whether it's the Biden administration, whether it's the Trump administration, but there there are real there are real questions. And the second part of it, it's not just it's it's the piece of what happened and why it did, but it's also the current cover up. I mean, why did they try to sweep this whole investigation under the rug? Why were documents missing from the files that got released and then put back in? Why did uh, you know, Pam Bondi go out and try to kill the investigation with with a bunch of strange binders she gave the social media influencers? I mean, it is bizarre the level of interference the president ran. Why are we having situation room meetings led by JD Vance with Susie Wilds, Cash Patel, and others discussing Galain Maxwell to exonerate Donald Trump? I think these are these are serious questions and they and they deserve answers. Why was Galain Maxwell moved? And why can't anyone give us an explanation? And I think the public deserves the truth.
+</details>
+
+### 总统赦免权与白宫的反击
+
+>> 唐纳德·特朗普的赦免权、最高法院在其履职过程中赋予他的豁免权，以及他的政府成员和周边人士认为他会实行全面赦免的感觉——无论是在现在还是在他卸任时——给调查增加了多大的难度？早先已有报道称，我们在谈话中提到过的莱万多夫斯基认为自己会得到赦免。免罪感部分来自于知晓需要时会得到赦免，这也会让政府内外的人更容易敷衍你们委员会。
+
+<details><summary>Original English</summary>
+>> How much harder does Donald Trump's pardon power, the immunity the Supreme Court gave him in the uh carrying out of his duties and the sense that I think people in his administration have and around him have that he will just do blanket pardons either, you know, now or on his way out the door? Um, you know, there was reporting already that Luwendowski, who we've mentioned earlier in this conversation, believes he'll be pardoned. that part of the impunity comes from the knowledge that the pardons will come if they're needed or even if they're not needed, but also that that will make it easier for, you know, people in the administration and around it to sort of, you know, give, you know, brush your committee off.
+</details>
+
+>> 是的。我想谈两点。第一，赦免的威胁不应该阻止或减缓工作。我一直在与其他委员会沟通，特别是在新一届国会初期，你将看到司法委员会就赦免和制度改革展开真正的对话，这虽然不会出自我们委员会，但我们非常关注，因为我们非常清楚唐纳德·特朗普想做什么且可能做什么。
+
+同时，我们一直与各州总检察长保持接触与合作，他们都启动或正在推进各种不同的调查，因为总统赦免并不能让你逃脱州法院的审判。我认为在此时此刻，让人们认识到我们各州及其总检察长的工作在应对腐败方面将比以往任何时候都更加重要，因为唐纳德·特朗普可能会实施赦免。
+
+<details><summary>Original English</summary>
+>> Yeah. I mean, I I would say two things. I think one is the the the threat of pardons shouldn't stop or slow work. And I've been talking to other particularly what you're going to see out of the judiciary committee I think very early in this new Congress is a real conversation about pardons and uh and and and reform of the system and that's something that won't be coming out of our committee but of but of high interest to us because we're very aware of what Donald Trump is going it wants to do and is likely going to do and at the same time we have been engaged and have work been working with states attorneys general who all have aar variety of different investigations that that they've either launched or or are working on because a pardon isn't going to get you out uh of state court. And I think it's really important that at this moment people recognize that the work of our states and our attorneys general is going to be more important than ever as it relates to taking on corruption because of the pardons that Donald Trump will likely implement.
+</details>
+
+>> 特朗普政府正在——你之前也提到过这一点——进一步表示他们不打算配合。他们暗示你们正在做的事情可能是非法的，需要进行报复。我想引用白宫法律顾问威尔·沙夫（Will Scharf）寄给你的一封信中的话。他引用了你关于即将展开的调查所发表的若干言论，指控你主持了“出于敌意、琐碎怨恨和仇恨所驱动的非法程序”。他写道：“国会调查必须推进合法的立法任务。国会不能利用调查来行使分配给行政部门和司法部门的刑事起诉权力。”
+
+这些信件很多也是基于你所说的一些话，对吧？比如其中带有某种琐碎的计较。其他民主党人谈论调查时带着某种幸灾乐祸，而这种情绪正被特朗普政府转化为一种书面证据，用以表明这无关立法，而是关乎报复。你如何回应他们？
+
+<details><summary>Original English</summary>
+>> So the Trump administration is and and you've made reference to this already. going further and saying that they are not inclined to cooperate. They are suggesting that perhaps what you are doing is is illegal and will require reprisal. I want to quote from a letter that was sent to you by Will Sharf, the White House counsel. He quoted a number of statements you made about forthcoming investigations. He accused you of overseeing quote unlawful process motivated by animist pettiness and hatred. He wrote quote congressional investigations must further a legitimate legislative task. Congress cannot employ them to exercise powers of criminal prosecution assigned to the executive and the judiciary. Um, a lot of these letters also are built on some things you've said, right? Like that there is pettiness in this. Um, other Democrats have talked about uh investigations with a kind of glee that is being sort of turned by the Trump administration to a kind of paper trail showing that this is not about legislation, but it is about vengeance. How do you respond to them?
+</details>
+
+>> 首先，这很有意思，他提到了——我认为右翼有时就是这样将事情武器化的——他提到了我开的一个关于“小肚鸡肠”的玩笑。我想这就像……也许是因为我是同性恋，所以这种小家子气是有由来的，我确实很生气。但他实际上指的是那个玩笑，而不是我紧接着说的话；如果你看完整的视频片段，我实际上严肃地说过，这不是出于小肚鸡肠，这是对真正正义的渴望，我认为我们不应该在这方面松懈。
+
+但右翼和特朗普的人当然会选择性地截取片段，不给出完整的背景，然后在信中引用它试图恐吓我们。这是关乎问责和正义的。白宫法律顾问说我们应该专注于立法成果，我对此表示赞同。我完全同意，而且我们将专注于立法成果。我们希望聚焦并确保无论是通过特朗普的家族、同僚还是政府官员发生的腐败，都永远不会重演。我们希望撰写立法来确保阻止它，并建立一个对每个人都更公平的制度。
+
+我们不会被这些信件吓倒。无论是写给我的信，还是现在寄给伊丽莎白·沃伦参议员、布卢门撒尔参议员、埃利莎·斯洛特金的信，这种情况都将继续下去。我认为全院的民主党人必须坚强，必须积极进取，并倾听选民非常明确的呼声。他们希望我们不仅关注生活成本负担，还要关注问责制。
+
+<details><summary>Original English</summary>
+>> Well, first, you know, it's funny that he he brings up uh the the and this is how I think sometimes the right weaponizes things. He brings up the joke I made about pettiness. You know, I think it's like I mean, maybe it's maybe it's cuz I'm I'm like I'm gay, but like you know, like like pettiness is a thing. Like I I'm I'm mad. which he he actually is referring to the joke and not what I what I say immediately after where if you look at the full clip I actually say in seriousness it's not it's not pettiness it's it's a it's a desire for for for real justice and I think that we should not let up on that but of course the right and uh and Trump's folks uh they selectively choose clip things in a certain way and don't give the full picture and then reference it in a letter to try to intimidate us and I this is about accountability and and about justice. And look, I agree with the White House counsel when he says that we should be focused on a legislative outcome. I couldn't agree more and we are going to focus on a legislative outcome. We want to focus and ensure that corruption that happens, whether it's through Trump's family or associates or admin officials, doesn't ever happen again. And we want to write legislation to ensure that we that we stop it and that we create a system that is more fair for everybody. And we're not going to be intimidated by these letters. Whether that's a letter to me, whether it's letters that are now going out to Senators Elizabeth Warren or Senator Blumenthal, Alyssa Slaken, this is going to continue. And I think Democrats across the Congress, uh, have to be strong, have to be aggressive, and and listen to the voters who spoke to us very clearly. They wanted us to focus on not just affordability, but also on accountability.
+</details>
+
+### 书籍推荐与结尾
+
+>> 最后一个问题，你会向观众推荐哪三本书？
+
+<details><summary>Original English</summary>
+>> >> And then as a final question, what are three books you'd recommend to the audience?
+</details>
+
+>> 我想推荐的第一本书是简·雅各布斯（Jane Jacobs）的《美国大城市的死与生》（The Death and Life of Great American Cities）。我曾担任长滩市市长八年。我认为自己是一名城市主义者。显然，她在人口密度、打造适宜步行的城市方面的著作，我认为是所有市长都应该阅读的入门读物。那确实奠定了你希望如何建设美国城市的基础。
+
+我推荐的第二本书是你在节目中谈论过的克里斯·海耶斯（Chris Hayes）的《塞壬的呼唤》（The Siren's Call）。我认为在注意力经济时代，突破重围获取注意力非常重要。但同时，我们的沟通方式正在发生改变，我们获取和消费信息的方式、在人们消费信息的所有渠道中如何实现突围，我认为这确实很重要。
+
+最后一本，我平时看漫画。我长期以来都是漫画读者，所以我一直在想该推荐哪一部。可以说是任何漫画中最佳的单套60期作品，可能就是布赖恩·K·沃恩（Brian K. Vaughan）的《Y：世上最后一个男人》（Y: The Last Man）。我不确定你是否读过。作为一个完整的故事，我强烈推荐它。整整60期讲述的都是当一夜之间地球上除了一个男人之外所有男人基本上都消失了会发生什么。这是一个关于女性如何适应、如何取得成功的故事，也是关于作为地球上最后一个男人究竟遭遇了什么的故事。
+
+<details><summary>Original English</summary>
+>> So the first book I want to I would recommend is the death and life of great American cities by Jane Jacobs. Uh I was mayor of eight for of Long Beach for eight years. I consider myself an urbanist. Um obviously her her work around uh density uh creating cities that are walkable. Think all mayors that is like the primer to read. Um that really kind of sets up how you want to build American cities. Um, the second book I would recommend is one that you actually talked about on your show, which is Sirens Call by Chris Hayes. I think obviously like in the like attention economy age, um, cutting through on getting attention, uh, is is so important. Um, but also, um, the way we communicate is changing and how we consume information, how we get information, how we break through with all of the ways people can consume information, I think, is is really important. Um, and the last one, I read comics. I've been a longtime comic book reader, so I was thinking which one I would recommend. Um, and it probably the best single 60 issues of of any comic is probably Why the Last Man by Brian Kvon. And I'm not sure if you've read it or not. I would highly recommend it as as a complete story. All 60 issues are about what happens when essentially all but one man overnight uh disappear on the planet Earth. And uh it's a story of how women uh adjust, how they succeed, uh and actually the story of what happens to this one guy uh as the last guy on the planet.
+</details>
+
+>> 很好的推荐。那些书太棒了。罗伯特·加西亚议员，非常感谢你。
+
+<details><summary>Original English</summary>
+>> >> It's a great recommendation. Th those books are amazing, Congressman Robert Garcia. Thank you very much.
+</details>
+
+>> 谢谢你。
+
+[音乐]
+
+[音乐]
+
+<details><summary>Original English</summary>
+>> Thank you.
+
+[music]
+
+[music]
+</details>
+
+>> [音乐]
+
+<details><summary>Original English</summary>
+>> [music]
+</details>

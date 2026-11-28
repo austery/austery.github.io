@@ -1,0 +1,790 @@
+---
+author: AI Engineer
+date: '2026-10-26'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=UGuNt2_Oz8s
+speaker: AI Engineer
+tags:
+  - agent-evaluation
+  - self-improvement-loop
+  - trace-observability
+  - living-fixtures
+  - automated-debugging
+title: 在睡眠中自我改进的 AI Agent：Arize 的闭环自我迭代机制
+summary: Arize 产品经理 Fouad Ali 介绍了通过追踪、评估、活体测试集与编码智能体构建的 Agent 自我改进闭环。该机制利用 Signal 智能体自动分析生产追踪、聚类错误、提议评估指标、定位根因并生成带有实验验证的 PR，同时探讨了置信度路由与人机协同在闭环中的最佳切入点。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people:
+  - Fouad Ali
+companies_orgs:
+  - Arize
+  - GitHub
+products_models:
+  - Signal
+  - Arize AX
+  - Alex
+media_books: []
+status: evergreen
+---
+### 开场与研讨会介绍
+
+[音乐]
+
+>> 好的，非常感谢大家来参加这个工作坊。真的很感谢你们。我叫 Fouad Ali。
+
+<details>
+<summary>Original English</summary>
+[music]
+
+>> Well, thank you guys for coming to the workshop. Really appreciate you. My name is Fouad Ali.
+</details>
+
+我是 Arize 的一名产品经理。Arize 致力于帮助大家为自己的智能体构建自我改进闭环。今天我将深入讲解这个闭环是什么、它是如何构建的，并且我还会演示一个简单的示例智能体，来直观展示该智能体是如何运作的。
+
+<details>
+<summary>Original English</summary>
+I am a product manager at Arise. Arise is helps you guys build the self-improvement loop for your agents. Today today I'm going to be talking through what that loop is, how it gets built, and I'm going to be walking through a little bit of an example agent as well to kind of show how that agent works.
+</details>
+
+我们这次工作坊的时间是一小时。考虑到这一点，我知道工作坊现场可能会比较混乱，Wi-Fi 可能会断开。所以我已经把所有东西都在我的屏幕上准备好了。我会带着大家演示整个流程。你们跟随操作是完全自愿的，不过我强烈建议大家动手试一试。就我个人而言，动手敲键盘时我能学得更好。但如果你遇到问题，别担心。我们现场还有 Lori，她非常乐意协助大家排查问题。
+
+<details>
+<summary>Original English</summary>
+Now we have an hour for this workshop. With that in mind, I know that workshops can be hectic, Wi-Fi can go out. So I have everything ready on my screen. I'll be walking through it. It's optional for you guys to follow along. Highly recommend you do. I personally learn a lot better when I have hands to the keyboard. But if you are having issues, don't worry. And we also have Lori in the house who is more than happy to kind of help troubleshoot along as well.
+</details>
+
+听起来不错吧？太酷了。
+
+<details>
+<summary>Original English</summary>
+Sound good?
+
+Cool.
+</details>
+
+### 智能体的不确定性与失效痛点
+
+我是 Fouad，在 Arize 负责产品，我们与大量的智能体打交道。我猜大家对智能体是什么、它们如何失效以及它们的非确定性特征都已经非常熟悉了。
+
+<details>
+<summary>Original English</summary>
+So I'm Fouad, I work in product at Arise, and we work with a lot of agents. And I'm assuming you guys are all very familiar with what agents are and how they fail and how they are non-deterministic.
+</details>
+
+你们知道，这有点像一个经典的工程难题重新抬头，而且因为非确定性，在智能体身上严重了十倍，对吧？所以当你的智能体能够完成许多任务，并且有着很多不同的方式去完成很多事情时，理解它们的失效模式就变得更加棘手了。
+
+<details>
+<summary>Original English</summary>
+And you know, this is sort of like a classic engineering problem that has reared its ugly head, you know, 10 times worse with agents because of the indeterminism, right? So when you have agents that can do a lot of things and have a lot of different ways of doing a lot of things, understanding their failure modes becomes trickier.
+</details>
+
+再加上事实上有成千上万个这样的智能体。也许我有内部智能体，也许我有编码智能体。你有营销智能体，显然还有面向客户的智能体。所有这些都给这个问题增加了大量的噪声。
+
+<details>
+<summary>Original English</summary>
+And then add on to that the fact that there are thousands of these agents. Maybe I have internal agents. Maybe I have coding agents. You have marketing agents. And you have obviously customer-facing agents as well. And that all adds a ton of noise to the problem.
+</details>
+
+那么，你该如何真正着手构建一个闭环，让这些智能体能够利用你作为人类提供的反馈、客户的反馈，以及显然必不可少的实际证据（比如追踪链路 traces 等等），来指引它们如何改进呢？这就是我今天要讲的内容。Signal 是我们开箱即用的版本，我今天会重点展示它。我们拥有一个托管智能体平台，允许你根据自己的规则来定义这些智能体的行为。显然，数据集、评估、实验，所有这些都会是其中的一部分。
+
+<details>
+<summary>Original English</summary>
+And so how do you actually start to build to a loop where these agents use the feedback that you provide as a human being, customer feedback, and obviously actual evidence, so things like traces, um to inform how they can improve. Uh and that's what I'll be talking about today. Uh Signals are out-of-the-box version of this, which I'll be showing heavily today. We have a managed agents platform that lets you kind of define on your own terms what these do. Um obviously data sets, evals, experiments, uh all that will be part of this as well.
+</details>
+
+### 从生产事故到自我修复
+
+但这就是我们要解决的问题，抱歉放了这个梗图。Claude 的幽默感不太好，但我认为这很好地说明了这个使用场景。
+
+<details>
+<summary>Original English</summary>
+Uh but this is what we're trying to solve, and uh apologies for the meme. Claude's uh sense of humor is not that good, but um I think it illustrates the use case pretty well. Um
+</details>
+
+在以往的软件工程世界里，你们的 SRE 很可能会出现在第一张图里，对吧？经典的场景：凌晨 4 点 PagerDuty 通知响了。你的智能体在生产环境中搞坏了某些东西。
+
+<details>
+<summary>Original English</summary>
+in the previous world of software engineering, um your SRE would probably be in the first picture, right? So, classic situation, PagerDuty uh notification goes out 4:00 a.m. Your agent broke something in production.
+</details>
+
+在这个案例中，我们做的是一个小型的购物助手，购物助手在对生产环境中的所有客户说：“我们卖零款桌游。”这可不是你想陷入的境地。还有过更糟糕的智能体使用案例，不知道大家知不知道加拿大一家汽车经销商发生的事：有人通过聊天机器人竟然以大概 5 美元买下了一辆 Prius 之类的车。车行显然没有履行这笔交易，但那现在变成法务部门的问题了。
+
+<details>
+<summary>Original English</summary>
+Um in this case, we're we're doing like a little, you know, uh shopping assistant, and shopping assistant is saying, "We sell zero board games to all your customers on production." Not a situation you want to be in. Uh there have been worse use cases of agents as well, where uh I don't know if you guys are familiar with what happened in Canada with a car dealership, where someone was able to get um a uh I think it was like a a Prius or something for like $5 uh through a chatbot. They obviously didn't honor the sale, but that's legal's problem now. Um
+</details>
+
+因此，这些智能体会由于各种各样的原因以多种不同的方式失效，努力迈向“发生后”的阶段就变得至关重要，在这个阶段中，智能体能够学会如何修复自己，并将这种反馈闭环内建其中。我稍后也会稍微讲一讲在这样的世界里人类依然在哪里创造价值。
+
+<details>
+<summary>Original English</summary>
+and so, these agents can fail in a number of different ways for a variety of reasons, and it becomes really important to try to move to a world where we're in the after stage, where the agents can learn how to fix themselves and build that feedback loop into it. And I'll talk a little bit about what where humans still add value in in that sort of world as well.
+</details>
+
+### 动手准备与环境要求
+
+所以，这是跟进操作所需要的东西。再次强调，正如我所说，这是完全自选的。我会为大家演示整个流程。我们确实有一小时时间，剩下的时间可以用来答疑，大家也可以花些时间体验这个闭环。我建议如果有时间的话——我在这里留大约 30 秒到 1 分钟左右——大家可以注册一个完全免费的 Arize AX 账号。你需要一个 Space ID 和一个 API Key，我可以演示如何获取。
+
+<details>
+<summary>Original English</summary>
+So, this is what you'll need to follow along. Again, like I said, this will be optional. I'll be walking through the flow for you guys. Um we do have an hour. Um we can spend the rest of the time with questions. You can spend some of the time trying out the loop. Um I would recommend if you have some time I'll I'll put up here for you know 30 seconds ish to a minute. Um if you can sign up for a completely free Arise X account uh you'll need a space ID and an API key which I can show you how to get.
+</details>
+
+你需要某种编码……不好意思，是 LLM API 提供商的密钥，OpenAI 或 Anthropic 的都可以。机器上需要 Node 和 Python，如果没有也不用担心，我们依然会带大家了解整个流程。Cloud Coder 或者 Cursor 也能帮你们完成这些配置。我猜大家对这些工具也都不陌生。这非常简单。
+
+<details>
+<summary>Original English</summary>
+Um you'll need some sort of coding um API or sorry um LLM API provider key OpenAI or Anthropic both work. Uh you'll need Node and Python on your machine if you don't have that don't worry we'll we'll still talk you through it. Um Cloud Coder Chris will help kind of set this up for you as well. Um I assume none of you guys are strangers to those tools either. Uh and it's very simple.
+</details>
+
+这就是我们准备的应用。它是一个基于聊天的玩具选购体验，叫 Wonder Toys，对吧？非常简单。你可以在聊天中询问有哪些产品，可以聊天进行购买。这全部在我的机器本地运行。这就是我们今天要处理的智能体。我们将会一步步演示如何对它进行插桩，如何配置它，从而构建起这个反馈闭环。我在这里稍作停顿，给大家 30 秒时间尝试操作其中的一部分，再次说明这是可选的，我绝不想让整个工作坊被卡在 API 密钥上。
+
+<details>
+<summary>Original English</summary>
+So this is kind of the app we have. So it's a chat base toy buying experience. It's called Wonder Toys, right? Very simple. You can ask in the chat about different products that are available. You can chat to purchase. Um this is all running locally on my machine. So this is the agent that we're going to be dealing with today. Uh we're going to be walking through how we instrument it, how we set it up so that we can build that feedback loop. Um so I'll pause here real quick. I'll give you guys 30 seconds to try and do some of this again optional. I don't want to you know block the entire workshop on API keys for sure.
+</details>
+
+好的。核心就是三件事：拉取代码仓库，运行实际的应用，确保你有一个真正驱动智能体的 API 密钥——不是像 OpenAI 或 Anthropic 这样的提供商 API 密钥。接着这里的这部分是安装技能（skills），帮助你的编码智能体以一种更有主见的方式与我们的工具配合工作。Node 和 Python 只是用来运行仓库，大致就是这样。
+
+<details>
+<summary>Original English</summary>
+Cool. So really three things getting the repo running the actual app making sure you have an API key that actually powers the agent. Um so not uh a provider API key like OpenAI or Anthropic. Um then this this part here is about installing the skills that helps your coding agent work with our tools uh in a more kind of opinionated manner. Um Node and Python just to run the repo and that's about it. Cool.
+</details>
+
+### 成熟度五阶段：从追踪到闭环
+
+为了节约时间，我继续往下讲。给各位提一个开放性问题：在这六个……我数对了吗？五个方框。在这五个方框中，你们会把自己的团队归入哪一个？通常起点是：“好的，我们在追踪我们智能体的行为。因此，我们知道它们何时失效，知道它们调用了什么工具。我们可以看到智能体交互节点的完整追踪树。”这是第一个方框。举手示意一下，现在有谁为自己的智能体做了追踪？
+
+<details>
+<summary>Original English</summary>
+I'm going to continue in the interest of time. So open question for you guys of these you know six Did I count that right? Five boxes. Five boxes. Which of these boxes would you classify your team is in? And, you know, the usually it starts from, "Okay, we are tracing what our agents are doing. So, we know when they fail, we know what tools they call. We can see the entire trace tree for the interaction points of the agent. Uh and that's box one. Show of hands, does anyone have tracing for their agents right now?
+</details>
+
+太棒了。好的，其实还挺多的，很好。下一个阶段是：“好的，我知道智能体在做什么，但它做的是正确的事吗？我该如何真正对它进行打分和评估？”我们在业内称之为 evals（评估）。我想部分人可能处在这个方框里。你们当中有人在评估自己的智能体吗？你们有在追踪链路上运行评估吗？好的，有几个。好的，很多，很好。
+
+<details>
+<summary>Original English</summary>
+Cool. Okay, we got a bunch, actually. It's good. Then the next stage of that is, "Okay, well, I know what what the agent is doing, but is it doing the right thing?" Um and how do I actually score and evaluate that? So, we call those evals in the industry, and so I would say, you know, some people probably are in that box. Are Are any of you guys evaluating your agents? You have evals running on traces? Okay, we got a couple. Okay, a lot. Yep.
+</details>
+
+然后大概会有人去阅读这些追踪链路。这某种程度上正是我们在这里试图用智能体来释放的瓶颈，对吧？但实际上，如果你内部有编码智能体，根本不可能有人去通读所有这些追踪，对吧？或者一个服务数百万客户的聊天机器人，没有任何一个单独的人类能读完那些追踪，对吧？
+
+<details>
+<summary>Original English</summary>
+Then there's someone reading the traces, presumably. Uh and that's sort of what we're trying to unlock here, right, with the agents. Um but realistically, if you have coding agents internally, there's no way someone's actually reading all these traces, right? Or, you know, a chatbot serving millions of customers, no one single human being is going to be able to read those traces, right?
+</details>
+
+接着，你实际上希望能把那些失败用例保存为测试，对吧？这样每当发生故障时，你就能捕获它，并能够将其用作后续的回归测试，以免在同一个地方犯两次错。最后，你想要做出修复，并证明你确实把问题修复了，对吧？在最后这三个方框里，有谁处于真正进入这一阶段的状态吗？太棒了。很好，有几位。
+
+<details>
+<summary>Original English</summary>
+Then you actually want to be able to save those failures as tests, right? So, every time something fails, you capture that, and you're able to use that as a regression test moving forward, so you don't, you know, mess the same thing up twice. Um and then finally, you want to prove that you want to make the fix, and you want to prove that you actually fixed the thing, right? So, in those last three boxes, have you got anyone kind of in in there, in that stage where they're actually Awesome. Cool. We got a couple.
+</details>
+
+### 自我改进闭环的工作流程
+
+那么，你究竟该如何把所有这些环节串联起来？又该如何让这个工作流尽可能地简单，让渡人类在这个工作流中处于最高价值的杠杆点，而不必去阅读海量的追踪记录呢？大体上的流程是：追踪 -> Signal（这是我们开箱即用的 SRE 智能体，我会在平台上向大家展示）。
+
+<details>
+<summary>Original English</summary>
+Cool. So, how do you actually thread all these things together, and how do you make this workflow as easy as possible, and, you know, have humans in that workflow in their highest value leverage points, but not necessarily reading tons of traces, right? Um the flow generally goes trace signal, which is our out-of-the-box kind of SRE agent, which I'll show you guys in the platform.
+</details>
+
+接着 Signal 会读取追踪，根据失败用例创建数据集，为你提议一个评估项，自动修复发生的问题，然后运行一个实验，来切实证明该修复是有效的。之后你审查这个修复，选择合并该修复，然后重新回到闭环中。随着智能体不断改进、不断拓展到新的用例（比如我想在这个智能体上添加一键结账功能），这里的每一个步骤都会构建出额外的上下文。这不仅反哺你的产品路线图，也反哺你的工程可靠性团队。
+
+<details>
+<summary>Original English</summary>
+Signal then runs reads the traces, creates a data set off the failures, proposes an eval for you, automatically fixes what's going wrong, and then runs an experiment that actually proves that that fix is um something that's valid. And then you review that fix, you choose to merge that fix, and you go back into the loop. And every single one of these steps builds additional context as your agent continues to improve, continues to, you know, move into new use cases. Let's say I want to add, you know, one-click checkout on this on this agent or something like that. Um that then feed not just your product roadmap, but your engineering reliability organization as well.
+</details>
+
+这就是我们将要讨论的内容。我会完整梳理这个闭环。我会向大家展示一下这个智能体及其追踪链路、Signal 审查智能体、失败数据集、基于该失败数据集构建的评估、修复问题、通过实验来证明修复有效、智能体自行完成了什么、哪些依然需要人工介入、大家在何处能带来最大的价值，随后我们还会留出一些提问时间。
+
+<details>
+<summary>Original English</summary>
+So, uh this is kind of what we'll talk through. I'll walk through the loop. Uh I'll show you a bit of the agent and its traces, signal reviewing the agents, the failure data set, the eval that we build off of that failure data set, fixing it, proving it with an experiment, what the agents did themselves, and what still needs a person, um and where you guys can add the most value, and then we'll have some time for questions as well.
+</details>
+
+### 演示案例：Wonder Toys 智能体及其 Bug
+
+Wonder Toys 是我们今天演示的购物助手智能体。里面有一个 bug，是我们专门为了这次演示植入的。不过，我希望大家可别在自己的智能体里植入 bug。
+
+<details>
+<summary>Original English</summary>
+So, Wonder Toys of the Shopping is assistant agent that we're doing today. Uh it's got a bug in it um that we planted for the purpose of this demo. Although, I hope you guys are not planting bugs in your own agents. Um
+</details>
+
+它的构建……正如我所说的，这个代码仓库包含了很多市面上不同的智能体框架。主要是 FastAPI、Next.js、Chroma DB，以及智能体 SDK。它将追踪发送到 Arize AX。它拥有几个可用的工具。而这些工具中的一个——具体来说就是带有 bug 的那一个——错误触发了过滤器。接下来我将从基础层面展示追踪体验是什么样的。我们让追踪的配置变得非常非常简单，这样你就不必为了从智能体中获取信息而手动进行复杂的插桩。
+
+<details>
+<summary>Original English</summary>
+it's built with uh like I said, the repo has a bunch of different agent frameworks out there. Um Mostly Fast API, Next.js, Chroma DB, uh and then agent SDKs as well. Uh and it sends traces to Arize AX. It has a few tools available to it. Um and one of those tools, specifically the one with the bug, um, misfires a filter. And so, I'll kind of show you at a base level what the tracing experience looks like. Um, we made it very, very easy for you to set up traces, so you're not instrumenting things manually to get, you know, the information out of your agents.
+</details>
+
+我们配置了封装我们 CLI 和 MCP 的技能（skills），帮助你快速上手追踪。我们已经为所有主流提供商配置了自动插桩工具，主流的智能体框架也都支持。全部都是开源的，因此非常容易开始追踪。听起来你们很多人都熟悉追踪，所以你们对追踪树的形态会非常熟悉。用户提问：“给我看看适合 9 岁孩子的玩具。”
+
+<details>
+<summary>Original English</summary>
+Uh, we have skills set up that wrap our CLI and our MCPs uh, that help you get started uh, with tracing. We have provider um, all the major providers uh, instrumented already with auto instrumenters uh, and all the major agent frameworks as well. It's all open source, so very easy to get started with tracing. Sounds like a lot of you guys are familiar with tracing, and so you'll be very familiar with what the trace tree looks like. Um, a user asks, "Show me toys for 9-year-olds."
+</details>
+
+这会穿过整个请求路径，对吧？智能体被调用，智能体调用模型，智能体有底层的 LLM 调用。它有一些可用工具，比如搜索商品等等。你可以看到所有可用的信息，去探寻智能体底层究竟在做什么。所有这些属性显示了开始时间、结束时间、延迟、输入内容、传递了什么元数据、处于计算图的哪个阶段、从数据库拉取的结果，以及在每一个单独的阶段，智能体可以获取哪些信息。这很有价值，但再次强调，你可能不想在凌晨 4 点读这个。我觉得在凌晨 4 点读上千条这样的记录仅仅为了找出错误在哪里，会相当痛苦。
+
+<details>
+<summary>Original English</summary>
+Um, and that goes through an entire request path, right? So, the agent's called, the agent calls a model, the agent has an end uh, LLM call. It has some tools available to it, whether it's searching products, etc. Um, and you can kind of see all the information available um, to ask it what the agent's doing under the hood. Uh, so all these attributes kind of show, you know, start time, end time, latency, what the input was, what metadata was passed, what stage in the in the graph it is, um, results that it fetches from the DB, uh, and what at every single one of these stages, what information is available to the agent. Uh, so this is valuable, but again, you probably don't want to read this at 4:00 a.m. Um, I think it would be kind of tough to read through thousands of these at 4:00 a.m. just to find where an error lies.
+</details>
+
+### 插桩与 Signal 的自主审查
+
+所以我们想要做的，是让智能体能够利用这些信息，进而看看我们如何切实闭合那个自我改进闭环。刚才我大致展示了追踪。如果你想要插桩，我们使用的是 AX CLI。
+
+<details>
+<summary>Original English</summary>
+Um, so what we want to do is we want to enable agents to make use of this information, and then see how we can actually close that self-improvement loop. So, I kind of walked through the trace. If you want to instrument, the AX CLI is what we use.
+</details>
+
+它有一个向导式的设置流程，上手非常容易。你只需要一个来自 Arize 的 API 密钥，它就会负责把所有那些繁琐零碎的属性转换成你们刚才看到的优美追踪树。对于每一次工具调用，你都会得到一个包含参数和结果的 span。你会获得模型调用、Prompt Token 计数，以及实际监控系统运行所需的所有基础信息。此外还有分组功能，因此你可以查看会话（sessions）——即与客户多次往返的交互，而不是仅仅查看单次往返的孤立追踪。
+
+<details>
+<summary>Original English</summary>
+Um it has a guided setup. It's very easy to get started with it. All you need is an API key from Rise and it will take care of translating all those nasty little attributes into the beautiful trace tree that you saw there. Uh you'll get a span per tool call with arguments and results uh to the tool call. You'll get model calls, prompt token counts, all all the basics that you need to actually monitor what's going on. Um as well as grouping. So, you can see sessions uh where there's multiple back and forth with a customer instead of just individual traces that are single back and forth with a customer.
+</details>
+
+现在进入 Signal，这是该平台的第二步，对吧？当你拥有了这些追踪后，Signal 所做的是：它是一个常驻运行的智能体，能够按设定的时间表读取你的追踪。你可以在平台中进行配置，设定为你想要的任何调度。默认情况下，它设置为每 6 小时运行一次。你将它指向一个有实时追踪流入的项目。你启用它，它便会审查这些追踪，然后能够通过其技能执行许多不同的操作，对吧？
+
+<details>
+<summary>Original English</summary>
+So, enter Signal which is sort of the second step in this platform, right? So, once you have these traces, what Signal does is Signal is an always-on agent that is able to read your traces on a schedule. Uh and you can configure this in the platform to be kind of like whatever schedule you want. Um by default, it's uh set to every 6 hours. Uh you point it to a project that's, you know, has live traces coming into it. Um you enable it and it reviews those traces and can then do a number of different actions via its skills, right? So,
+</details>
+
+[清嗓子] 我们今天展示的基础操作，是将 Signal 连接到 GitHub 上的一个代码仓库。这个名为 Signal 的智能体正在读取另一个智能体的追踪记录。它正在读取那个智能体的源代码，基于生产环境中该智能体实际发生的追踪情况以及代码定义，它能够切实为你看到的现象提议修复方案。我现在很快给大家演示一下那是什么样子。
+
+<details>
+<summary>Original English</summary>
+[clears throat] the base action that we're going to show today is Signal connected to a repo on GitHub. So, this agent Signal is reading another agent's traces. It's reading the source code of that agent based on sort of what's actually happening in production traces from that agent and the coding definition, it's able to actually propose fixes to what you're seeing. Uh so, I'll show you guys what that looks like here real quick.
+</details>
+
+### 定位根因并生成 Pull Request
+
+我们有这个 Wonder Toys 智能体。它正在向系统推送追踪。我们可以看到所有的用户请求。可以看到在今天下午 1 点本场演示之前，我触发了大量的请求。我们可以看到基础指标，比如运行这个项目的延迟、Token 数量、成本。然后你会看到这个 Signal 标签页。
+
+<details>
+<summary>Original English</summary>
+So, we have this Wonder Toys agent. It's publishing traces in. We can see all the user requests. You can see I did a lot right before uh this presentation at 1:00 p.m. We can see, you know, kind of base facts like latency, token count, cost uh of running this project. And you'll see this signal tab.
+</details>
+
+Signal 所做的是对它在追踪中发现的问题进行聚类，并切实提议并找出针对这些问题的修复方案。针对这个智能体，我们植入的 bug 导致了冗余的搜索重试。Signal 所发现的是：根据进入该项目的追踪，我们在搜索产品调用时发生了某些状况，导致了三次连续的 LLM 调用以及高延迟。具体发生的情况是，用于过滤的某些查询的大小写匹配失效了。
+
+<details>
+<summary>Original English</summary>
+So, what Signal is doing is it's clustering issues it finds with the traces and actually proposing and identifying um a fix for for these issues. Um so, for the purpose of this agent, the bug we planted uh is causing redundant search retries. And so, we're see what Signal is seeing is that based on the traces that are coming into this project, we are uh causing three sequential LLM calls and high latency because of something that's happening with the search products call, right? And specifically, what that's happening what's happening is that um the casing on some of these queries for the filtering is not working, right?
+</details>
+
+所以 Signal 做的是：如果你还记得演示开头那张梗图的话，与其让你在凌晨 4 点被叫醒，Signal 会发现这个问题，分析这些问题的集群，编写概览与分析，为你写好修复方案；接下来你能做的，就是创建评估项以便未来自动捕获该问题，并根据这些评估触发警报。这样，如果在接下来的 30 天内任何时候遇到该问题，系统都会自动发出告警，并立即由我们的团队进行分诊。
+
+<details>
+<summary>Original English</summary>
+So, what Signal does is instead of you getting paged at 4:00 a.m. uh if you remember the meme in the beginning of this presentation, um Signal's finding this issue, analyzing, you know, clusters of these issues, writing an overview and analysis, writing a fix for you, and then what you can do is you can create evals to catch this issue moving forward automatically and trigger off those uh evals. So, you know, if we run into this issue at any point in the next, you know, 30 days, we automatically fire an alert and that gets triaged by our team immediately.
+</details>
+
+你也可以在这里把失败案例添加到数据集中，从而保留一份快照，用于未来专门针对这种失效模式的回归测试。你还会在这里看到一个 GitHub 图标，用于连接并提交 PR 或创建 Issue，这样你就可以直接让 Signal 来编写 PR。实际上我已经完成了这一步，所以你们可以看到 Signal 为了修复此问题所发起的 PR 尝试。我现在点进这个会话中。
+
+<details>
+<summary>Original English</summary>
+You can add failure cases to the data set here as well. So, that you have a snapshot uh for future regression tests on exactly this failure mode. You'll see a GitHub icon here as well to connect and open a PR or open issues well, so that you can actually get Signal to write a PR. I've actually already done that, and so you can see the PR attempts uh that Signal has done to fix this, right? So, I'm going to go click into the session.
+</details>
+
+这个智能体工作了 6 分钟，基于追踪在代码仓库中定位到了根因，发现产品分类在存储时使用的是小写连字符的 slug，但传入的元素却是带有首字母大写和空格的易读名称。因此，举例来说，当有人搜索“car games”时，如果没有经过标准化，我们实际上永远拿不到任何返回结果。随后智能体就会转而去搜索每一个单独的产品，对吧？所以你们可以想象为什么这会导致延迟飙升到 14 至 17 秒。
+
+<details>
+<summary>Original English</summary>
+And the agent worked for 6 minutes, found the root cause within the coding repo as well, based on the traces, and found that product product categories are stored as lowercase hyphenated slugs, but the element is passing human-readable names with title case and spaces. Uh so, when someone is searching for car games, for example, without that normalization, we actually never get back any results. The agent is then going and searching every single product, right? So, you can imagine why that causes the latency spike up to 14 17 seconds.
+</details>
+
+到目前为止大家都能跟上吗？我们有一个智能体，遇到了一个问题。Signal 为你读取追踪，结合 GitHub 提议修复——实际读取该智能体的定义，为你完成分析，并确保将其呈现给你。这只是你可以连接到 Signal 的众多技能之一。在托管智能体平台上，你可以看到你有能力使用我们开箱即用的模板，让 Signal 定期审查你的项目追踪、聚类失败、提出修复建议。我们还有一个成本智能体，可以标记执行廉价任务的高成本模型，推荐更具性价比的路由，并切实量化你的成本节约。但有趣的是，你完全可以从零开始构建。
+
+<details>
+<summary>Original English</summary>
+So, everyone following along so far? We have an agent, we have an issue. Signal is reading the traces for you, proposing a fix in connection with GitHub. Uh so, actually reading the the definition of this agent, uh and then doing some analysis for you, and kind of making sure that that's available to you. So, this is one of many skills you can connect to Signal. Um you'll see here on the manage agents platform, you have the ability to use one of our out-of-the-box templates, so Signal is reviewing your project traces on a schedule, clustering failures, suggesting fixes. We have a cost agent that can flag expensive models doing cheap work, recommend cheaper routing, and actually quantify your savings. Uh but, the interesting part is you can actually start from scratch. Um
+</details>
+
+### Agent Studio：灵活的技能集成与沙箱环境
+
+Agent Studio 允许你做的是：选择智能体配置，将其指向一个有追踪数据流入的项目，给它分配任务，同时你还可以为其挂载技能。正如我提到的，GitHub 就是这些数据源之一。也许你拥有一个保存 RBAC 权限信息的第三方系统，你想借此检查该智能体的权限，确保智能体调用的内容确实在其权限边界之内，你可以编写一个技能来实现这一点。
+
+<details>
+<summary>Original English</summary>
+And so, what the agent studio allows you to do is you choose an agent config, you point it to a project where traces are coming in, you give it a task, and you can connect skills to it as well. So, like I mentioned, GitHub is one of those sources. Maybe you have um you know, a third-party system that holds your R back information that and you want to check permissions on this agent. You want to make sure what the agent is calling is actually within its permission boundaries. You can You can a skill to do that.
+</details>
+
+如果需要拉取更多日志，你可以将技能连接到另一个像 DataDog 这样的 APM 系统。只要你拥有 API 密钥并且它能够从智能体运行容器（harness）中调用，你所能定义的技能就几乎没有限制。在底层，我们在平台内部将它们作为 Arize 托管的沙箱来运行。你也可以自带 harness，自带沙箱提供商，无论你使用的是 Modal、Daytona、E2B 还是其他任何工具，或者无论你使用何种 harness，我们支持 Codex、Cursor、Claude Code 和 OpenCode，并且还在逐步推出对更多 harness 的支持。
+
+<details>
+<summary>Original English</summary>
+You can connect a skill to uh another APM system like DataDog if there's more logs you want to pull in. Um there's really no limit to what skills you can define as long as you have an API key and it's callable from the agent harness itself. Um and we're actually under the hood running these as a Rise managed sandboxes uh within the platform. Uh you can bring your own harness, bring your own sandbox provider as well uh to kind of you know whether you're using Modal, Daytona, E2B, whatever it is or whatever harness you're using as well we support Codex, Cursor, Cloud Code, and Open Code with more harness support rolling out.
+</details>
+
+大家是否大致理解了我们平台里由托管智能体来做这件事的机制？你可以设置自己的自动化，让它根据时间调度或者警报来触发。这样，一旦发现延迟飙升超过 10 秒，我们就会自动启动该智能体展开调查。调查智能体正是其中的一部分。这既解决了 SRE 的使用场景，也有成本视角的应用，还有产品分类视角的应用。你可以通过很多种方式利用这个智能体平台在你的追踪数据上开展工作。
+
+<details>
+<summary>Original English</summary>
+So, does everyone kind of understand, you know, we have a managed agent doing this in the platform. You can set up your own automations to you know either be triggered on a time schedule or off of an alert. So, anytime you see latency spike above 10 seconds, we automatically kick off this agent to do an investigation. Um and investigation agents are part of it. Kind of solves the SRE use case. There's a cost lens to this. There's a product classification lens to this. Um there are many ways in which you can kind of use this agent platform to operate on your traces.
+</details>
+
+### 活体测试集与持续改进机制
+
+好的，我继续往下讲。Signal 会读取你的追踪，记录它所发现的内容。它像代码审查者一样，针对每个问题只建一张工单，因此你不会针对同一段证据收到成百上千个重复工单。它会提出这些问题。你来修复它。如果你认为问题已解决，可以将其标记为已解决；你也可以忽略它。它后续会对这些问题进行去重，从而避免你被噪声淹没。
+
+<details>
+<summary>Original English</summary>
+Cool. Uh I will continue through these. So, Signals are reading your traces, filing what it finds. It keeps one ticket per problem uh the way a reviewer would. So, you're not getting hundreds and hundreds of issues on the same uh piece of evidence. Uh it opens those. You fix it. You can either resolve it if you think it's resolved, you can ignore it um and it will dedupe those issues moving forward so you don't, you know, kind of get inundated with noise.
+</details>
+
+我认为“添加到数据集”（Add to dataset）这一字段或流程是这里最重要的部分之一。因为你究竟该如何构建实际的持续改进？你必须对过去发生过的失败留有记录，并在未来将其作为回归检查加以防范，对吧？因此，将这些案例添加到数据集中，能赋予系统一种**活体测试集**（living fixtures）的特质。
+
+<details>
+<summary>Original English</summary>
+Um the add to data set field or uh flow I think is one of the most important parts here because how do you build the actual continuous improvement? You have to have a record of what's failed in the past and guard against those as regression checks moving forward, right? So, adding these two data sets give you that sort of living fixture quality.
+</details>
+
+你在发布代码之前会在代码中定义测试用例。每个人都应该这样做，希望我们现在在某些智能体的帮助下都在落实这一点。然而，这种活体测试集的概念——随着你添加新用例、发现新失效模式而随时间演进——是一个非常新颖的思路。它有助于实现自我改进闭环：你不再受限于某个单一时间点对“什么是失效”以及“失效模式有哪些”的定义，而是随着智能体在生产环境中发生故障，有机地扩充对失效模式的定义。
+
+<details>
+<summary>Original English</summary>
+So, you know, you define test cases in code before you ship code. Everyone should be doing that, and hopefully we are all doing that with the help of some agents now. Um but this idea of living fixtures that change over time as you add new use cases, as you see new failure modes, is a pretty novel one and that kind of helps with the self-improvement uh loop where, you know, you're not beholden to one definition at one time of what has failed and what are failure modes, but you're organically growing that definition of failure mode as your agent is failing in production, right?
+</details>
+
+不妨打个比方：每次你去练习骑自行车时，你都会注意到自己骑行过程中的某些细节，久而久之，这些认知在你的记忆中变得根深蒂固，以至于骑自行车变得轻而易举。你甚至根本不会去想可能发生的摔倒情况。我两个月前确实从自行车上摔下来摔断了脚，这也是为什么我提到这个小插曲，但通常情况下你不会再刻意想着把左脚踩在左脚踏板上，因为这已经深深融入了你的学习过程。这正是我们试图通过这些智能体实现的目标。
+
+<details>
+<summary>Original English</summary>
+So, um think of it like, you know, every time you go to try and ride a bike, you notice something about how you're riding, and then over time, those become so ingrained in your memory that riding a bike feels like nothing. You don't even think about the failure modes of um I actually fell off a bike and broke my foot 2 months ago, which is why I'm mentioning this this little anecdote, but typically you don't think about, you know, putting your left foot on left pedal anymore because it's been so ingrained into your learning process. And that's what we're trying to kind of accomplish with these agents.
+</details>
+
+### 评估的多样性：代码检查、LLM 裁判与决策模型
+
+在数据集方面，一旦你获得了这些活体测试集，你实际上需要将针对这些测试集的行为规范化编码下来，对吧？这正是 eval 发挥作用的地方。刚才我看到现场有几个人举手表示正在运行评估。我能快速了解一下现场的情况吗？在座的各位有谁正在运行 LLM as a Judge 评估，又有谁在运行代码评估器？
+
+<details>
+<summary>Original English</summary>
+Um so, on the data set side, once you get these living fixtures, you actually want to codify the behavior on these fixtures, right? And that's where the eval comes in. Um so, I saw a few show of hands of that people are running evals. Uh can I get a quick gauge of the room? Who here is running LLM as a judge evals or you're running code evaluators? Cool.
+</details>
+
+如果你参加了 Arize 较早的任何一场工作坊，我们曾非常深入地探讨过评估器。评估器的形式多种多样。这里做个快速概览：
+- **代码检查（Code checks）**：运行成本极其极其低廉，适用于确定性检查，例如：字段是否存在？是否为合法的 JSON？规则是否完全吻合？是否应用了特定过滤器？工具调用时是否传入了正确的参数？处理这些非常非常轻松，对吧？
+
+<details>
+<summary>Original English</summary>
+So, if you were in any of the earlier workshops of the Rise, we went into evaluators in great depth. Um there are many, many different forms of evaluators. Um so, just quick quick overview. There are code checks that are, you know, really, really cheap to run that are for deterministic checks, right? Is this field present? Is this valid JSON? Exact rules. Was this filter applied? Was this tool called with the right arguments? >> [clears throat] >> Very, very easy for that, right?
+</details>
+
+>> [抽鼻声]
+
+>> **LLM as a Judge 评估**也适用于这种场景：你需要对追踪进行更多定性或模糊性质的分析，对吧？这是使用另一个 LLM 模型来为某个模型追踪的结果进行打分。单条记录的成本显然会更高，因为你多发起了一次模型调用。当然，你可以设置自己的采样和过滤规则，不必在 100% 的追踪链路上都运行它们。在评估设计方面存在一些权衡，我们可以稍后讨论，但这就是 LLM as a Judge 的用途。
+
+<details>
+<summary>Original English</summary>
+>> [snorts]
+
+>> LLM as a judge, evals also help with this use case where you need to have more of a qualitative or nebulous kind of analysis of the trace, right? And so, this is using another LLM model to score the results of one model's trace. Um obviously costs will be higher here because you're making another model call. Um per record, obviously you can, you know, kind of set your own sampling, filtering. You don't have to run these on 100% of the traces that you're running at. Um there's some trade-offs in terms of eval design that we can discuss, but that's sort of what an LLM as a judge is for.
+</details>
+
+接着，面对更加开放的场景，你还有**Agent as a Judge**的概念。在这种情况下，你实际上不确定要评估什么，你心里有一个目标，并将“该目标是否达成”的判断交由智能体来决定。因此智能体可以自行挑选护栏、自行确定打分、自行跑完整个流程。因为底层发生了多次 LLM 调用，这显然是成本最高的方式。
+
+<details>
+<summary>Original English</summary>
+Then you have for the even more open-ended use cases, you have this concept of agent as a judge. So, where you're not actually sure what you're evaluating, you have a goal in mind, um and you leave kind of the the determination of whether that goal has been achieved to the agent. So, the agent can actually pick its own rails, it can actually pick its own scores, it can go through that process itself. And that's obviously the highest cost method because there's multiple LLM calls happening under the hood.
+</details>
+
+[抽鼻与清嗓] **决策模型（Decision models）**问世大概也就一个月左右吧，Arize 的同事其实已经发表了大量关于对其进行基准测试、它们如何运作以及决策模型存在哪些权衡的资料。我想说的是，与使用传统 LLM 相比，它们是对追踪运行某些检查的一种极其便宜的方式。它们能为你提供离散分类选择：是/否、多选、打分。
+
+<details>
+<summary>Original English</summary>
+Um [snorts and clears throat] decision models have been around for, you know, what? A month-ish now, and with Lower actually at Arize has published a ton of material on sort of benchmarking them and how they operate, and what trade-offs are present with decision models. I will say they are a very, very cheap way to run some of these checks on your traces versus um using a classic LLM. Um and they give you, you know, type type choices, yes, no, choice, score.
+</details>
+
+### 人机协同的关键切入点
+
+一旦你拥有了这种评估信号——你在定性层面上了解这是否朝着正确的方向发展、是否通过了评估检查，并且你手握追踪数据——这一切就构成了极其丰富的上下文，供编码智能体去实现修复。在这个案例中，Signal 在一个配置了编码 harness 的 Arize 托管沙箱中运行，为你实现这些修复；但如果你处于开发阶段，实际上也可以通过 CLI 将这些追踪实时拉取到本地。这是能够提供给其他智能体来切实为你处理那些 PR 的即时上下文。
+
+<details>
+<summary>Original English</summary>
+So, once you have sort of this eval signal, right? So, you you understand, you know, qualitatively is this in the right direction? Is it not in the right direction? Is it passing my eval checks? And you have the trace data. That's all really rich context for a coding agent to go um implement a fix, right? So, signal in this case is is running on on an Auri managed sandbox with a coding harness, implement those fixes for you, but if you're in your development phase, you can actually pull these traces live into Auri through the CLI as well, right? So, it's instant context to feed other agents to actually work on those PRs for you.
+</details>
+
+而这里就是我们保留人类制衡机制的地方。我认为人类在此处贡献最高价值的环节包括：
+1. **验证修复方案**：通读 PR。或许我们当中有些人不想逐个审查人类提交的 PR，但我相信如果你处于金融等高风险场景，你绝对属于坚持在合并前让人类通读 PR 的阵营。所以这是人类介入的一个非常高杠杆的环节。
+2. **测试集策展阶段**：将案例添加到数据集的过程之所以保持手动，原因正在于此——这些发现是否足够优秀、值得添加到我的测试集里？这是流程中的一个手动步骤，依赖于人类的判断。
+3. **评估设计**：我们虽然有智能体来协助你编写这些评估，但评估设计环节绝对需要人类参与，因为你是在向智能体传授你关于“什么是好”的品味，无论这体现为 LLM as a Judge 还是更具确定性的检查。
+
+将所有这些信息汇总给编码智能体，便为它的工作提供了非常丰富的上下文。
+
+<details>
+<summary>Original English</summary>
+Um and this is where we have kind of the human check and balance in in the room. Um so, I would say the the places a human adds the most value here are one, obviously validating the fix, right? Reading the PR. There are, you know, maybe some of us in the camp of we don't want to validate every human PR. I assume if you're in a high-stakes use case like finance, you're very much in the camp that humans read the PR before the merge, right? So, that's one very high-leverage point for a human to be here. In the data set curation phase as well, so adding that to a data set is part of why we left it manual is are these good enough findings to add to my fixture, right? So, that's a manual step in the process, uh and that relies on kind of human judgment as well. Um the eval design, so we have agents that kind of help you write these evals, um but the eval design portion is something where humans can definitely be in the mix because you're imparting your taste of what is good onto the agent, whether that's in the form of an LLM as a judge or a more deterministic check. Um and then folding all this information into the coding agent gives it really rich context for it to work from.
+</details>
+
+举个例子说明如何据此创建评估：我现在进入追踪标签页，正在查看 Wonder Toys 项目。Signal 正在运行，目前为止发现了两个问题。一个是孤立 span（orphan spans）问题，其实只是我在插桩时犯的错误，但它确实捕获到了；另一个是冗余的搜索重试，这是我们植入的 bug。我只需点击一下，就可以基于此生成一个新的评估器。
+
+<details>
+<summary>Original English</summary>
+Um so, just as an example of kind of like how you would create an eval off this, I'm going to go to my traces tab. I'm working off of this Wonder Toys project. I have signal running and signals found two issues so far. One is the orphan spans issue, um, which was actually just my mistake instrumenting this. Uh, but it did catch it. Um, and two is the redundant search retries. That's the bug we planted. Um, so I'm able to create a new evaluator with one click off of this.
+</details>
+
+这实际上……看起来我需要换一个模型。这实际上打开了 Alex——这是我们的内部智能体，我明天会就它做专题演讲——它能够基于该证据去为我生成那个评估。基于此处证据中支持的追踪，我们可以在 Prompt 模板中规范化未来应该期待的行为，以及如何确保评估能够触发并在发生任何错误时报错。
+
+<details>
+<summary>Original English</summary>
+And that actually, uh, looks like I need to use a different model. That actually opens up Alex, uh, which is our in-house agent that I'm doing a talk about tomorrow, um, that is able to go and create that eval off of that evidence for me, right? So, based on the traces that are supported in the evidence here, we can kind of codify in a prompt template what we should be expecting moving forward and how we how we make sure that the eval fires and fails on any mistakes that are made.
+</details>
+
+>> [抽鼻声]
+
+>> 这就是我得出的评估 Prompt：
+> “你是一个乐于助人的 AI 机器人，负责检查冗余的商品搜索重试。检查包含工具调用在内的完整轨迹，查看是否存在任何不必要的工具调用。当 `search_product` 被调用超过一次时返回冗余重试，并将得分和分类选择记录在追踪本身上。”
+
+随后你可以在流入项目的追踪上运行该评估，从而确保能够捕获该问题，你可以对其进行监控、绘制图表、根据它创建告警，还可以跟踪与该评估相关的花费。随着时间的推移，你的开发流程可能已经将此规范化为一个回归检查，你不再需要在生产数据上部署该评估，不希望把模型 Token 花费在对每条追踪运行该检查上。你可以查看其随时间的成本并下线该评估。
+
+<details>
+<summary>Original English</summary>
+>> [snorts]
+
+>> So, this is the eval I came up with. You're a helpful AI bot that checks for redundant search product retries, inspect the complete trajectory including tool calls, see if there's any unnecessary tool call, return a redundant retry when search product is called more than once, um, and put the score and classification choice on the trace itself. And then you can run this eval on incoming traces that are coming into your project, so you make sure you catch that, you can monitor that, you can graph that, you can create an alert off of that, uh, and you can track spend associated with that eval as well. So, over time, you know, maybe your development flow has codified this as a regression check and you no longer need to deploy this eval on production data. You don't want to spend the model tokens on running this on every trace. You can actually view the cost over time and retire that eval as well. Cool.
+</details>
+
+### 智能体实验与回归验证
+
+接下来的部分是：好的，我们有了一个修复方案。Signal 发现了问题，分析了代码仓库，我们创建了一个评估以便下次捕获它，并将证据添加到了数据集中。现在我们有了一个随着时间推移不断演进的活体测试集。
+
+<details>
+<summary>Original English</summary>
+So, the next part of this is okay, we have a fix. Signal found something. It analyzed the repo. We created an eval to catch it for the next time. We added the evidence to a data set. So, now we have a living fixture that's growing with time.
+</details>
+
+我们怎么知道这个修复是正确的？怎么确定这不仅仅是智能体胡乱生成的粗制滥造代码（slop code）、试图去修复一个根本不存在的问题？这就是**智能体实验**发挥作用的领域。这是一个非常非常广阔和深奥的领域。我不会花时间去讲市面上所有的框架和提供商。Phoenix 团队今天早些时候做得很棒，谈到了他们在 Phoenix 中的 Harbor 集成。但我们真正关心的只有两点：**证明修复有效**，以及**证明我们没有搞坏其他任何东西**，对吧？
+
+<details>
+<summary>Original English</summary>
+How do we know that the fix is right? How do we actually know that, you know, it wasn't just slop code that the agent produced and tried to find an issue that didn't actually exist? Um and this is where the world of agent experimentation comes into play. And this is a very, very rich and deep world. Um so, I won't spend, you know, time talking about all the different frameworks and providers that exist out there. Phoenix team did a good job earlier today talking a little bit about the harbor integration they have in Phoenix. Uh but really what we're concerned about is prove that the fix works and prove we didn't break anything else, right?
+</details>
+
+在很多情况下，在这个非确定性的世界里，如果你对系统提示词做了一个微小的改动，可能会波及你认为不可能出错的其他工具，产生冗余问题等等。因此，确保我们能够证明这个修复确实生效且没有破坏其他东西，是至关重要的。这也就是实验阶段的意义。
+
+<details>
+<summary>Original English</summary>
+Um and there are many cases where, you know, in this non-deterministic world, if you make a small change to a system prompt, it can then have ramifications on other tools that you didn't think were going to break. Uh and, you know, kind of um redundancy issues there. Um and so, making sure that we can prove that this fix actually worked and that nothing else broke is really, really important. And that's kind of the experimentation stage. Um
+</details>
+
+结合这个流程我再多讲一点。在 Arize 中，我们支持多种不同类型的实验。这是我刚刚运行的分类枚举修复实验。你会看到我们在该实验上运行了实际的评估。我们实质上在做的是：我们手头有这个失败用例的活体测试集，我们有了提议的修复方案；我们希望在这些失败用例上重新运行智能体，并对结果打分。如果它们达到了某个阈值——这个阈值由你自己定义。在我的案例中，我觉得 88.9% 相当不错了，于是我就决定直接发布。
+
+<details>
+<summary>Original English</summary>
+so, I will talk a little bit about this through the flow as well. So, in the Rise, we support a bunch of different types of experiments. Um this is the category code enum fix experiment that I just ran. And so, you'll see here that we have actual evals running on this experiment. So, what we're essentially doing is we have this living fixture of failure cases. We have this proposed fix. We actually want to rerun the agent on these failure cases and score the results. And if they meet a certain um threshold, that's kind of up to you to define. In my case, 88.9% I thought was pretty good. So, I was like, ship it.
+</details>
+
+如果达到了那个阈值，你就获得了来自智能体能够证明修复有效的实际测试结果。智能体还可以通过 AX CLI 替你运行这些测试。当 Signal 发现这些失败案例并且拥有智能体代码的访问权限时，它实际上可以导入这些失败案例，并在第二版修复后的智能体上重放它们，然后自行对这些结果进行打分。这样，当你早上醒来时——你不需要在凌晨 4 点被叫醒——你不仅获得了一个包含提议修复的 PR，而且还拿到了一些验证结果，上面写着：
+> “嘿，我已经证明了这个修复有效，因为我拿了我们之前失败的测试用例，重新测量了延迟和工具调用重试，我看到我们不再进行冗余的工具重试，延迟降低了。顺便说一句，你还有另外三个不想失败的评估，我也确认过那些评估没有发生退化。”
+
+随着活体测试集不断扩充、新案例不断增加，这些实验会变得越来越稳健。在平台上你显然可以查看这些实验结果、查看输出内容、查看评估情况。如果你不同意智能体的判断，你可以对该输出进行标注，这便会成为下一次运行的又一条上下文信息。
+
+<details>
+<summary>Original English</summary>
+Um if they meet that threshold, you actually have results to prove that fix from the agent, right? And the agent can actually run these tests for you through the AX CLI as well. So, as Signal is going and finding these failure cases, and it has access to the agent code, it can actually pipe those failure cases through and replay them through the agent with the version two fix, and then score those results themselves, right? So, you come back in the morning, you weren't working up at 4:00 a.m. You not only have a PR that has a proposed fix, you have some validation results that say, "Hey, I proved this fix because I actually took the test cases that we failed on, and I re-measured latency or tool call retries, and I saw that we were no longer retrying tools, and latency was lower. And hey, by the way, you had three other evals that you don't want to fail on, either. So, I made sure to check that those evals are not regressing, right? And so, as that living fixture grows over time, you have new cases, these experiments become more and more robust, right? Um and in the platform, obviously, you can go view those experiment results, see what the output is, see what the evals are. If you disagree with the agent, you can annotate that output, and that becomes another piece of information to the context for the next run, right? So,
+</details>
+
+大家在高层面上对这种实验流程是否清楚了？即如何运行这些实验，把测试用例和创建的基准评估结合起来，在代码发布到生产环境之前对修复进行切实验证。你可以把这一步集成到 CI/CD 流程中。具体如何配置取决于你。显然，运行智能体可能会带来成本。因此，如何运行由你自行斟酌。
+
+<details>
+<summary>Original English</summary>
+everyone kind of clear on this experiment flow at a high level, like how you can run some of these experiments to take a test case, take an eval that you've created as a benchmark, and actually validate your fix before it goes out, before it goes to prod. Um and you can shove this into the CI/CD process as well. Um up to you on how you want to configure it. Obviously, running the the agent may be expensive. Um so, your discretion on how you want to run that.
+</details>
+
+评估也是一样。如果你使用的是 LLM as a Judge 评估，你需要审慎选择模型、决定何时运行这些评估，以及以何种采样率运行，以确保不会导致成本暴增，避免在每次代码推送时耗费巨额资金去验证这些修复。
+
+<details>
+<summary>Original English</summary>
+Evals as well, right? If you're using an LM as a judge eval, you want to be careful about which model you're picking, when you're running those evals, what sampling rate you're running those evals at, to make sure you're not just ballooning costs and you know, just sending a ton of spend on validating these fixes on every push. Cool.
+</details>
+
+### 闭环运转与人工审核清单
+
+继续往下看：我们批准修复，检查任务完成率，验证这些结果；而当你离开这个流程后，系统依然在持续运行的是：你创建的评估会在每一条新的追踪上运行，并成为下一次 Signal 运行的补充上下文。Arize 中的任务系统还可以自动将未通过的评估结果添加到新的数据库或数据集中，使测试集随着时间不断壮大。Signal 每 6 小时重新运行一次，或者根据告警及触发的监控器重新运行，确保新的故障能够浮出水面、新的评估得以创建，并且数据集能随着新示例的积累不断丰富。我们还提供每周摘要，方便你以更易读的汇总形式了解智能体的运行动态。
+
+<details>
+<summary>Original English</summary>
+So, kind of continuing on, we approve the fix, we look at the task completion rates. Um we validate those results and while you kind of step away from this process, what keeps running is that the eval that you created runs on every new trace and becomes additional context to the next signal run. The task system that we have in arise can also automatically add failed eval results to new databases or data sets so that that fixture grows over time. And signal keeps rerunning every 6 hours or off of an alert or off of a triggered monitor and make sure that new failures are surfaced, new evals are created and that data set grows with those new examples over time. We also have, you know, weekly digests where you can kind of consume these in a little bit more of an easy-to-read result where you just have a summary of what's going on with the agent.
+</details>
+
+需要你来做的事情是：
+1. **确认这些问题是否真实**：你不能盲目相信这个智能体抛出的每一个问题。我建议把它们当作起点，验证这些修复，并用你的判断力去决定这些问题是否真实存在。
+2. **写下正确答案应该是什么样**：这属于标注流程。你运行了实验，得到了新的输出，也许你认为这并不是智能体最完美的回答或轨迹，你可以使用标注产品来规范化这种品味。
+3. **合并修复**：这取决于你。你可以自动合并这些 PR，我把决定权留给你们。
+4. **切实部署并推广新版本**：比如我有 V2 版本，我验证了它，我认为问题是真实的，我创建了评估，查看了得分，验证了修复，满意其代码并完成了代码审查，现在就是切实升级智能体的时候了。
+
+<details>
+<summary>Original English</summary>
+What is waiting for you is confirming that these issues are real, right? You can't just trust every single issue that comes out of this agent. I would say use it as a starting point, validate these fixes and use your judgment on when those issues are actually real. Writing down what the right answer looks like, so this kind of goes in the annotation flow, right? You run the experiment, you get a new output, maybe you don't think this is the perfect answer or the perfect trajectory for the agent and you can actually use the annotations product to kind of codify that taste. Merging the fix, this is up to you. You can auto merge these PRs. I will leave that to your discretion. Uh and then actually deploying and promoting the new version, right? So, I have V2, I validated it, I think the issue is real, I created the eval, I looked at the score, I validated the fix, I like the code, I reviewed the code. Now it's time for me to actually upgrade the agent.
+</details>
+
+### 置信度路由与端到端愿景
+
+我认为另一件非常有趣的事是：你可以将置信度打分规范化下来，特别是借助那些能够返回明确置信度得分的 Decision-1 模型，并将它们自动路由到标注队列中的人工审核员。
+
+<details>
+<summary>Original English</summary>
+Um I think the the other thing that's really interesting about this is like you can codify the confidence scores, especially with these decision one models that actually return an explicit confidence score, and have those auto route to human beings uh in annotation queues, right?
+</details>
+
+这样，你不仅负责审查输出，而且系统会为你准备好一个现成的队列，里面全都是低置信度的结果。在我们的部分基准测试中，我们发现这些置信度得分表现相当不错。当然这取决于你的具体用例以及具体的行业情况。所以我不会说 80% 的置信度得分对所有人都适用，但设定这些阈值非常重要；一旦定义了这些阈值，你就可以将低置信度案例自动分流给人工进行标注。
+
+<details>
+<summary>Original English</summary>
+So, um not only are you, you know, responsible for reviewing the outputs, but you actually get a ready-made queue for you that is based on all the low confidence results, and um you know, in some of our benchmarking uh we've seen these confidence scores to be pretty good. It depends on your use case and uh specifics in the industry, for sure. Uh so, I wouldn't say that an 80% confidence score is the right threshold for everyone, uh but setting those thresholds is important, and then once you have those thresholds defined, you can kind of auto route those low confidence cases to a person to go annotate.
+</details>
+
+举个例子，在我们见到的垃圾邮件测试中，4.6% 的案例置信度得分处于 0.3 到 0.7 之间并被分配给人工，剩下的案例准确率达到了 99.5%。这是一个具体的行业案例，特别是垃圾邮件检测场景，其置信度阈值可能定义得更明确。这当然取决于用例。
+
+<details>
+<summary>Original English</summary>
+Um So, I mean, there's, you know, in the spam test that we saw, 4.6 % of cases scored between 0.3 and 0.7 confidence to people, left the rest at 99.5% accuracy, right? So, that is one example of an industry where, you know, specifically for spam detection, where those confidence thresholds might be more defined. It It depends on the use case, for sure. Um
+</details>
+
+我刚才大致介绍了我们目前通过 Signal 托管智能体和追踪构建的一些功能：大规模读取追踪的能力、向数据集添加数据的能力、借助编码智能体运行这些实验并在界面上直接审查结果的能力。你还可以中断会话、查看模型的推理过程、继续会话，或者将其切换到本地智能体，以便在不想完全由 Arize 托管时在本地继续开发。
+
+<details>
+<summary>Original English</summary>
+So, I kind of talked about some of the stuff we've built so far with signal manage agents and traces, right? So, the ability to actually read those traces at scale, the ability to add things to data sets, uh the ability to run those experiments with the help of a coding agent, um, and actually review those results in line. You can also interrupt sessions. You can look through the model's reasoning. You can kind of continue a session, kick it off to a local agent, uh, so that you can continue development on your own side if you don't want this all managed by a rise. But,
+</details>
+
+但我们对未来的愿景是：运行这个完整的端到端闭环，几乎实现零人工介入，直到你需要亲自测试某些东西——比如需要在 UI 中点击并验证某些功能。市面上有很多提供实验环境的供应商，比如 Harbor 等等，测试智能体有许多许多不同的途径。我认为其中大部分——也是很多讨论正在发生的焦点——在于：要运行这个智能体，你必须跑多少依赖项？在实验阶段运行智能体，是否意味着你要连接到一个 Mock 数据库？是否需要打桩某些工具？你是否真的要在 Docker 镜像里跑完整套环境？你能否安全地做到这一点？
+
+<details>
+<summary>Original English</summary>
+I think our vision for the future is this running this full end-to-end loop with almost zero human involvement until you need to go test something, right? Until you need to go click around in a UI and validate something. Um, and so there are a lot of providers out there for that experimentation setup, right? There's the harbors of the world. There's many, many different ways that you can test the agent. Um, I think most of it, and and this is where a lot of the discussion is happening, is how many dependencies do you have to run to run this agent, right? Um, running an agent in the experimental phase, does that mean you connect it to a mock DB? Do you stop some tools? Um, do you actually run the entire thing in a docker image? Can you even do that safely? Um,
+</details>
+
+当大家开始思考这个实验流程时，我鼓励你们思考这些问题。对于我们这个智能体来说非常简单，我们直接重新完整运行该智能体即可，没有任何依赖，它会自行启动自己的数据库，然后我们让请求通过它。这可能是一个非常简单的场景，但当你拥有至关重要的外部依赖时，情况可能会变得复杂得多。
+
+<details>
+<summary>Original English</summary>
+those are all sort of questions that I would encourage you guys to think about as you start thinking about this experimentation flow. With this agent, you know, it's very simple. We just rerun the agent in its entirety. There are no dependencies. It spins up its own DB, and then we run requests through that. So, that might be a very simple use case. But, when you have external dependencies that really matter, your use case become can become bit more convoluted. Um,
+</details>
+
+### 工作流集成与健康管理
+
+我们为此设立的目标是实现从 Issue 到实验的一键触发：“嘿，我有了这个提议的修复，去测试它吧，拉起测试所需的一切基础设施。”除此之外——我们围绕这方面改进了 CLI——是将 Signal 连接到你开展工作的地方。无论是在 Slack 中通过 @ 标签与 Signal 交互，还是通过 API、CLI 和技能连接你的本地智能体，你都可以让本地智能体汇总 Signal 发现的问题并进行核对。
+
+<details>
+<summary>Original English</summary>
+so our goal for this is really enabling the one click from issue to experiment. Hey, I have this proposed fix. Go test it. Spin up all the infrastructure necessary to go test it. Um, in addition to this, and we've we've worked on the CLI around this, is connecting signal where you work as well. So, whether that's in Slack, so tagging uh, from Slack to communicate with signal, whether that's your local agents, which we have through the API, CLI, and skills, where you can actually ask your local agent to go do a digest of what signal is finding and and check those.
+</details>
+
+确保我们能够直接从 Issue 及其追踪中起草修复方案——这属于我们已经完成的工作——并内嵌实际证据。因此，PR 描述中会直接附带实际发生失败的 5 条追踪，便于你去核对验证。现在 Signal 还会为你提议评估项，它会检查你的评估并识别其健康状态：如果某个评估在 99.999% 的时间里都是通过的，也许我们就不想继续为该评估消耗 Token，进而可以在未来退役该评估，我们对它已足够放心；反之，如果某个评估处于不健康状态，则让其变得更加稳健。我们有一整套关于“评估对齐”（eval alignment）的流程，即如何确保裁判模型的评判与我的认知保持一致，而不是输出我不认同的分数。
+
+<details>
+<summary>Original English</summary>
+Um making sure that we have the fix drafted straight from the issue and its traces and that's part of what we've done already and actually having the evidence in line. So, here are the actual five traces that failed in the PR description so you can actually go validate those. Um we have signal now proposing evals as well for you so it'll actually check your evals see which ones are healthy as in, you know, if this eval is passing 99.999% of the time maybe we don't want to spend the tokens on this eval and so we can retire this eval going forward. Uh we feel pretty confident on it. Or, you know, vice versa if any eval is in poor health, making that eval more robust. And we have a whole process on eval alignment which is how do I make sure the judge is actually aligned to what I think and isn't just outputting scores that I don't believe in. Um so there's a whole process for doing that.
+</details>
+
+再次强调实验流程：无论智能体运行在哪里，都可以针对它运行这些数据集。不管是在你自己的笔记本电脑上（比如我演示的这个极简智能体），还是在更复杂的基础设施之上。
+
+<details>
+<summary>Original English</summary>
+And then, again, the experimentation flow, running your agent against running these data sets against your agent wherever it lives. Uh whether it's your laptop, in my case for this very simple agent, or whether it's on more complicated infrastructure.
+</details>
+
+好的。从这些内容着手将会非常棒。我有工作坊的代码仓库链接，我们也有针对智能体实验的文档页面。本周内我们还有其他几场演讲。明天下午 3:20 有一场关于智能体修复及其连锁影响的分享——你在某处修复了某些东西，最终会产生下游影响。我明天下午 3:45 还有一场分享，专门探讨 Alex，这是我们的内部智能体。我们用 Alex 来构建 Alex，因此对我们来说这是智能体领域最完美的“吃狗粮”工具。我会讲讲我们如何设计该智能体、如何设计上下文和记忆，以及我们在过程中做出的一些决策和吸取的教训。
+
+<details>
+<summary>Original English</summary>
+Cool. So, I think it would be really great to get started with some of these. Uh so I have the workshop repo URL. Um we have docs pages as well for agent experimentation. And um we have a few other talks throughout this week as well. Um So, if you has one tomorrow at 3:20 about um agent fixes and their run-off um implications. So, you know, you fix something somewhere and that eventually has impact downstream. Um and I have a talk tomorrow at 3:45 talking about Alex which is our in-house agent. Um and we use Alex to build Alex so it's all kind of the perfect dog fooding tool for us in the agent space. So, I'll talk a little bit about how we designed that agent, you know, how we design context, memory, and some of the decisions and lessons we learned along the way.
+</details>
+
+我真诚地鼓励大家尝试从智能体中获取一些追踪数据。我们已经为大家搭建好了现成的环境，但如果你有自己的示例且尚未对其进行追踪，安装我们的技能和 CLI、让它为你的智能体插桩并将追踪发送到 Arize 是非常非常简单的。一旦追踪数据流入，一键即可启用 Signal，接着你就可以开始在追踪链路上观察到问题的聚类与模式了。
+
+<details>
+<summary>Original English</summary>
+Really, I would encourage you guys to try to get some traces from the agent. We have this built out for you, but if you have an your own example and you haven't traced your agent yet, it's very, very simple to install our skills and CLI, have it instrument your agent for you, and send those traces to Arize. Um once you get those traces in, it's one click to enable signal, and then you can start to see the clustering of issues and patterns across your traces as well. Um
+</details>
+
+所以，是的。我想留给大家的核心要点是：
+- 阅读大量数据的苦活累活，绝对应该完全交由智能体来做。
+- 理解在何处加入最高杠杆的人工节点，是本次演示的主题。
+- 能自动化并不意味着应该完全自动化，但你应该利用自动化来切实辅助审查者。因此，像将低置信度阈值的结果自动路由到审查队列这样的做法是非常关键的。
+- 确保所有上下文都被反馈回同一个系统中。显然我们代表 Arize，在这里向大家介绍 Arize 有多棒，但从根本上说，你必须确保这些上下文被记录在某个地方。只有当人类判断、评估得分、追踪记录和追踪证据都汇集在同一处，并为下一次运行补充上下文时，你才能构建起自我改进闭环，从而不断捕获新问题，而不是仅仅苦苦挣扎于维持现状。
+
+这就是我要分享的内容。非常感谢大家。我很乐意在场内走动，协助大家上手实践。你们可以查看代码仓库、克隆该智能体。如果不打算克隆，也可以安装技能并为你自己的智能体插桩。如果大家有疑问，我现在也可以解答。
+
+<details>
+<summary>Original English</summary>
+so, yeah. I would say the things I want to leave you guys with are the hard work of reading a ton of data should definitely be just be done by an agent. Understanding where to add the highest leverage human points is kind of the theme of this presentation. Just because you can automate something doesn't mean it should be automated, but you should use that automation to really inform the reviewer. So, things like auto routing low confidence threshold scores to that reviewer queue are really important. Um and making sure that all the context is fed back to the same system, and obviously we're here with Arize, and you know, we're telling you how great Arize is, but really I you want to make sure that this context is recorded somewhere, right? And that's the only way you build the self-improvement loop is when the human judgment, the eval scores, and the traces, and the the trace evidence are all held together in the same place feeding that context for the next run, so you're catching new issues instead of just fighting to stay afloat. Um and that's what I have for you guys. Thank you so much. Um I'm happy to walk around and kind of help you guys get started on some of these. Um you can check out the repo, clone down the agent. If not, uh we you can install the skills, instrument your own agent, and yeah, I can take questions as well if you would like.
+</details>
+
+### 问答环节：评估设计的难点与方法论
+
+我认为可以从两个视角来看待我们实际是如何进行评估的。其一是我们如何将 Signal 作为一个产品线来进行评估，其中的关键指标之一是：它提议的 PR 正确率有多高？这有点像内部评估。你指的是我们如何评估自己的产品，还是泛指通常情况下如何评估一个智能体用例？关于 Alex 的评估我们明天会有整场演讲，但长话短说：作为一名 AI 产品经理，我认为我的首要职责就是设计出切实能够衡量正确维度的优秀评估。
+
+<details>
+<summary>Original English</summary>
+I would say there's like two lenses to take how we're actually evaluating. There's how do we evaluate signal as a product line, and that one of the key factors there would be, okay, how often is this right about our PRs, right? That's sort of like an internal evaluation. Do you mean more of that how we evaluate our own product or how you can evaluate an an agent use case, generally speaking? Uh we will do a whole talk about evals for Alex tomorrow, but to give you the long and short of it, um eval design is you know, as an as an AIPM, I think that's probably my primary job is like how do I actually design good evals that actually measure the right things?
+</details>
+
+简要的回答是：我认为将定性决策规范化是非常困难的。规范化延迟、重试次数等指标属于相对传统的工程问题，例如 Signal 发现的那个问题就比较简单：发现了大小写不一致，在重试中看到了证据，执行修复，重新测量延迟，这很容易做到，对吧？
+
+<details>
+<summary>Original English</summary>
+The shorter answer to that question is I think codifying qualitative decisions is very hard. Codifying things like latency, retry count, like these are more classical issues that, for example, the issue signal found, I think, is relatively simple, like you found an inconsistency in casing, you saw evidence in retries, make the fix, measure the latency. That's really easy to do, right?
+</details>
+
+然而定性结果要更棘手一些，对此我认为需要关注几个要点。首先，关于“什么是好”的实际定义，只有在你能够提供尽可能多的信号（signal）时才会涌现出来——这里我说的是广义上的信号。我的意思是：我可以看一个例子说它是对是错，但我不能指望智能体从单个例子中学习，因为那样它就会对这单一例子过拟合，或者该例子无法很好地泛化。这正是为什么我刚才谈到了活体测试集和人工标注。
+
+<details>
+<summary>Original English</summary>
+Now, qualitative outcomes, I think, are a little bit harder, and I would say there's there's a couple things to index on there. One is the the actual like definition of what is good is only emergent from as much signal as you can give it, and I use signal as like the word signal. Um so what I mean by that is, okay, I can look at one example and say it's right or wrong. I can't get an agent to learn from one example because then it's just going to overfit to that one example, or that example might not generalize properly. Um and so part of what I was talking about with the living fixtures and the annotations is a lot of what we do.
+</details>
+
+举个例子：Alex 生成过滤查询。平台中有 Alex，我们设计了一个流程：如果你想搜索智能体或搜索追踪，你既可以直接输入过滤条件，也可以让 Alex 用 AI 来进行过滤。我们究竟该如何衡量这一功能的表现？这里没有绝对的对错，因为它返回的过滤条件可能成功执行了，没有解析报错，也给出了结果，但你如何知道这是否算是一个好结果？
+
+<details>
+<summary>Original English</summary>
+So I'll give you an example, Alex generating um filter queries, right? So we have Alex in in platform. Uh we have a flow where, okay, if you want to search agents or search traces, you can obviously type in a filter, or you can ask Alex to filter with AI. How do we actually measure the performance of that? There's no right or wrong answer, cuz it could return a filter that succeeds, and it doesn't, you know, parse this JSON, and it will give you some results, but how do you know that's actually a good result?
+</details>
+
+这里有几点：
+1. 我们会观察用户的完整会话。我们不只是评判“针对这一轮，回答好不好”，而是看用户是否追问了？他们对结果满意吗？他们额外创建了多少过滤条件？这可以作为用于评估的一种信号。
+2. 人工标注。比如由清楚业务预期的产品经理去阅读：当时查了什么？这看起来像正确的过滤器吗？它返回了正确的评估结果吗？并进行人工手动标注。
+
+随后将这两者与新用例结合起来，这种丰富的上下文就变成了评估模板。你可以利用另一个编码智能体输入这些上下文，写出非常出色的 Prompt 模板，随后这在本质上就变成了 Prompt 优化问题：我该如何在成本最低的模型上将这个评估模板优化到最佳，以便进行规模化运行？
+
+<details>
+<summary>Original English</summary>
+So, there's a few things. One, we look at the entire session of users, right? So, we're not just saying, "Okay, for this turn, was this a good response?" But, did that user ask again? Did it Was it happy with the results? How many additional filters did they create, right? So, that can be one thing to as a signal for you to evaluate on. The second is, I mean, annotations like reading through, okay, what was the query? Does this look like a right filter? Did it return the right eval results? And actually annotating that by hand as a PM who knows what to expect. Um, and then you combine both of those with new use cases, and that rich context becomes the eval template, right? So, you can actually use another coding agent to feed that context in and write a really good prompt template, and then it becomes like a a prompt optimization essentially, right? So, like, how good can I get this eval template on the lowest cost model so I can run this at scale?
+</details>
+
+这就是我们的思考方式。明天会有更具体的演讲，届时我会介绍我们选择哪些模型，以及我们如何权衡哪些用例值得运行评估、哪些不值得。简短的回答就是这样。这有点像“后此谬误”（post hoc ergo propter hoc）：我们如何确保被我们定义为健康的状态切实是健康的？我们该在何处界定系统何时失效？如果准确率达到 99.9%，但剩下的 0.1% 失效是灾难性的、需要全部捕获，那就是一个完全不同的讨论了。
+
+<details>
+<summary>Original English</summary>
+Um, so, that's kind of how we think about it. We have some more specifics to talk tomorrow where I'll talk through a little bit of which models we choose, and um, how we think about which use cases are worth running an eval on or not. Um, but yeah, that's the short answer. So, it is kind of like a, you know, post hoc algo propter hoc, like, where can we make sure like what we define as healthy is actually healthy, and where should we define where it breaks? So, So, what I mean by that is, okay, it's right 99.9% of the time. If that 0.1% is catastrophic, and we need to catch all of those, it's a very different discussion, right?
+</details>
+
+### 问答环节：开发期与生产期的 ROI 权衡
+
+谈到评估时有两个视角：
+- **开发流程中的评估**：作为 CI/CD 检查、作为代码部署前的回归检查运行。
+- **针对实时追踪运行的评估**：这变成了一个成本效益比的问题。如果我在 100% 的实时追踪上运行，在所有追踪上调用该模型的成本，相比于防范那 0.1% 失效所带来的损失，是否合算？
+
+<details>
+<summary>Original English</summary>
+And then evals, when I when I say like Evals there's kind of two lenses. There's the Evals that you can run in the development flow as CICD checks, as regression checks before you deploy code. There's Evals that you're running on live traces, which that becomes a cost-benefit ratio question, right? If I'm running this on 100% of live traces is the cost of running this model on all my traces worth it compared to the cost of this 0.1% failure, right?
+</details>
+
+我认为归根结底取决于 ROI。通常的指导原则是：凡是能在 CI/CD 中捕获的问题，都应该在 CI/CD 中解决。我理解运行其中某些检查并说服团队在 CI/CD 中落地存在挑战。我会把其中的某些检查设为 CI/CD 流程中的必选检查：你拥有一个展示了评估在 0.1% 情况下失效的测试集，每次推送代码或 PR 合并前都基于评估打分重新运行这些测试。这样你至少能确信这批测试用例不会失败。接着，你在生产追踪上运行带有采样率的评估。
+
+<details>
+<summary>Original English</summary>
+So I think a lot of it boils down to ROI. I think general guidelines are whatever you can catch in CICD you should, and I understand it's a challenge to run some of these. So like and and convince teams to run some of these in CICD I would probably make some of these non-optional checks in the CICD process, right? So you have a data set of fixtures that shows where this Eval has actually failed on the 0.1% of cases and you run you rerun those with an Eval score every single time you push or before a PR is merged. So you're at least you at least have some confidence that that set of cases is not going to fail. And then you run an Eval that has a sampling rate on your prod traces, right?
+</details>
+
+与其说“我们要完全忽视开发流程，只对生产环境中的一切进行评估”——这可能成本极高；或者反过来“完全忽视生产环境，仅在开发阶段测试并试图捕获每一个用例”——在覆盖率有限的数据集中这大概率是做不到的，然后任由故障在生产中发生。我认为这两种都是极端，答案在两者之间。这在一定程度上取决于评估的 ROI，以及你选择使用的模型对成本等产生的影响。
+
+<details>
+<summary>Original English</summary>
+Um so instead of saying, "Okay, we're going to ignore the development process, evaluate everything that comes in production." That can be a very high cost thing to do versus "Okay, we ignore prod completely and only test in development and try to capture every case, which you probably can't do um in a data set with coverage, and then just let it happen in prod." I would say both of those are extremes, and the answer is somewhere in the middle. And it depends a bit on the ROI of the Eval, right? Um and what model you decide to use has an implication on cost, etc., etc.
+</details>
+
+### 问答环节：递归评估与边界
+
+这是一个非常好的问题，而且非常 Meta。我希望大家没有觉得我们目前的讨论太过于 Meta——我已经在多种不同场景下使用 Signal 了。简而言之：你可以把整个闭环再做一遍。
+
+<details>
+<summary>Original English</summary>
+It's a very good question, and it gets very meta, and uh I I hope I hope you haven't noticed how meta this conversation has gotten so far where I'm using signal in multiple different ways. Um the short answer is you can do that entire loop again, right?
+</details>
+
+我们有一个用于存放评估追踪（eval traces）的项目，这是 Arize 创建的。所有评估本身也都被追踪了，你可以安排一个智能体去读取评估追踪，确保评估本身的质量。然后，每一个这样的智能体实际上都会生成自己的追踪。当你运行 Signal 时，这里就是 Signal 自身的追踪。你可以看到提示词写着：“你是 Signal，Arize 的自动化审查员。这是你需要完成的步骤，这是操作指令。”这就是 Signal 在底层实际调用的内容：执行了几次 Bash 调用，调用了我们内部的 MCP 展开调查，然后将其作为 Issue 提交，对吧？然后你也可以在 Signal 之上再运行 Signal，来确保……这就是我们在内部进行评估的方式。这也是我刚才暗指的终极“吃狗粮”工具。
+
+<details>
+<summary>Original English</summary>
+So, we have a project for eval traces. This is a Rise created. These are all the evals, and those evals are traced, right? And you you can have an agent reading the eval traces and making sure the evals are good. And then, each of those agents actually produces their own traces, right? So, when you're running Signal, these are Signal's traces. So, you'll see here you are Signal, an automated reviewer for Rise. These are these are steps you have to do. These are the instructions. This is what Signal actually called under the hood. So, made a few bash calls. It called our MC internal MCP to go do this investigation and then mits it, writes it as an issue, right? And then, you can run Signal on top of Signal as well to make sure that And that's kind of what how we evaluate internally, right? Uh, it's kind of what I was alluding to as the the ultimate dog fooding tool.
+</details>
+
+我想你的问题更多是在问：这套机制什么时候会失效？什么时候这样做才有价值？我认为调整 harness 在一定程度上是有用的，我明天在关于 Alex 评估的分享中会谈及这一点。存在某些特定的用例，过了某个临界点之后你就不需要继续评估了，再往下成本收益只会递减。我们发现的情况是：我们监控 Signal，有来自 Signal 的追踪流入，我们制定了评估打分准则，但到了一定程度，除了客户自身的认知之外，我们其实并不知道对客户而言到底什么是好的。
+
+<details>
+<summary>Original English</summary>
+Um, now I I assume your question is more of like a when does this break down? When is this useful to do? Um, I think the harness changes are useful up to a certain point, and I'll talk a little bit about this in in my talk tomorrow on like how we evaluate Alex. So, like there are certain use cases where you just a- after a certain point, you don't need to continue evaluating, uh, and there's just diminishing returns on cost from there. Um, where we've seen it is, you know, we monitor Signal and we have, you know, traces coming in from Signal. We have some evaluation score criteria, but there is a certain point at which we actually don't know what is good for our customer beyond what the customer knows themselves.
+</details>
+
+你可以开启 Signal，它可以提议 PR，我们可以使用一些代理指标，比如 PR 的合并率、会话转录文本、会话是否移交、数据集或评估是否成功创建作为反馈机制；但除此之外以及 PR 合并率之外，我们无法获知更多信息了。因此再深入评估下去边际效应就会递减。因为到那时你只是在依赖智能体的转录记录，手上缺乏事实基准（ground truth），只能跟着智能体的输出自我感觉良好，假装正在为股东创造价值。我认为那并没有意义。
+
+<details>
+<summary>Original English</summary>
+Um, so, I mean, you can turn on Signal and it can propose the PR, and we can use some proxy metrics like merge rate on the PR, or the session transcript or whether session was handed off or whether data set was created or eval was created as feedback mechanisms, but beyond that and beyond that and the merge rate of the PR, we can't really tell that much more. So, it becomes, you know, diminishing returns to continue to evaluate from there. Um cuz then you're just kind of relying on an agent transcript and you have no ground truth, right? You're just vibing with the agent's output and pretending you're increasing shareholder value, right? So, um I don't think that's useful.
+</details>
+
+但回答你的问题：我们在内部确实也用 Signal 来评估 Signal。我认为在执行期进行的检查，由于延迟极低，可能是最令人兴奋的方向——你可以在执行过程中实时对请求进行路由。你们现在看到的这些评估属于事后评估，即智能体已经运行完毕，我们再据此进行评估。鉴于决策模型的超低延迟，对于将其引入执行循环中，我发自内心地感到兴奋。
+
+<details>
+<summary>Original English</summary>
+Uh but I think we have, to answer your question, we have used signal to evaluate signal as well. I think in execution time checks, because such low latencies like probably the most exciting, like where you can actually route a request during execution time. So, these these evals that you're seeing are are, you know, post talk where the the agent has already run and we're evaluating it from that. So, due to the low latency of decision wall models, I think that's something I'm actually genuinely excited for uh in the execution loop. Um
+</details>
+
+出于我个人的喜好，我很欣慰看到大家现在更倾向于使用评估，因为评估变得更便宜了。这对于生态系统的健康绝对是一件纯粹的好事：更多人思考评估，更多人思考对自己的追踪进行分类，仅仅因为成本更低就会在很大程度上释放这种能力。
+
+<details>
+<summary>Original English</summary>
+Like selfishly, or maybe not even selfishly, but like for my personal enjoyment, I like that people are much more likely to use evals now because they're cheaper. Um so, that's like just, you know, purely good for the ecosystem health. Uh like more people thinking about evals, more people thinking about actually classifying their traces. I think it'll unlock that to a large degree just because it's cheaper. Um
+</details>
+
+另外与本次演讲可能关系不大，纯粹是我个人的看法：由于这些模型体积极小，在端侧可以实现很多非常有趣的探索，我对此极为期待。我们也在率先将其应用于某些多模态评估中，因为多模态评估受制于延迟可能会非常复杂，同时也极具主观定性色彩。在多模态评估领域，比如依赖智能体的审美去判断生成的一张图片、或者评价它如何解读一个点击框，可能会非常困难；但获取明确的置信度得分至少能让你更快地将其分流给人工，所以这也是决策模型能大显身手的领域。
+
+<details>
+<summary>Original English</summary>
+And then, maybe not related to to this talk, but like just my my personal opinion is I think like um because these models are so small that there's some really interesting stuff you can do with on-device stuff um that I'm really, really excited for. Um we're also like kind of pioneering it for some multimodal evals as well. Um because I think multimodal evals can be really complicated because of latency. Um and they can also be super, super qualitative. So, in the multimodal eval space, like trusting an agent's taste on an image that was generated, for example, or how it interpreted a click box can be very hard, but getting confidence scores allows you to at least route this to human a lot faster, so I think that's also a space where decision models will help a lot.
+</details>
+
+### 问答环节：系统指标与成本控制
+
+是的，完全可以。我在谈到技能时简要提及过，你完全可以创建自己的智能体。我们显然有开箱即用的 Signal 智能体。
+
+<details>
+<summary>Original English</summary>
+Yes, 100%. So, I kind of briefly alluded to this when I talked about skills, but you can actually create your own agents. Um And we have the out-of-the-box signal agent, obviously. Um Let me do this one.
+</details>
+
+在这里你可以看到我们还有一个 DataDog 技能，你可以据此调出告警周边的指标、日志和 APM 追踪。我们提供了大量供应商集成支持你做这项工作。你也可以编写自己的技能，这样智能体不仅能够访问智能体本身的追踪，还能触达下游系统的应用指标。你可以将它连接到几乎任何数据源。当然接入数据源需要有所取舍：接入你真正需要的数据源，确保其拥有正确的访问权限和范围密钥，确保你没有让过载的上下文泛滥成灾，因为在排查告警时上下文并非越多越好。但总的来说，我们完全支持这些操作。
+
+<details>
+<summary>Original English</summary>
+So, you'll see here we have a DataDog skill as well where you can pull up metrics, logs, and APM traces around the alert. Um we have a bunch of providers available for you to do that as well. You can also write your own skills, so the the agent is doesn't just have access to the agent traces, but downstream system application metrics as well. Um so, you can connect it to basically any data source. Um Obviously, there's like an element of taste to the data source like connect the ones that you need to connect, make sure it has the right access, make sure, you know, the scope key, make sure that you're not over flooding context because more isn't always better to actually triage the alert. Um but yeah, we have the ability to do all that as well.
+</details>
+
+大家惯用的敷衍回答是“视情况而定”，但确实在很大程度上取决于场景。例如：你使用的是什么 harness？底层使用的提供商是哪家？你多久运行一次？我们将这些全部作为配置项暴露给你们。我们也允许你监控成本。在这里你可以看到这是 Signal 的追踪，显示了它……我看数据目前还在流入，但就像你可以查看 Wonder Toys 的成本一样，你也可以查看 Signal 的成本。我们让你很容易看清 ROI：如果这个购物助手智能体花了我 8 美元，而用自我改进闭环改进它花了我 20 美元，这到底值不值得做？
+
+<details>
+<summary>Original English</summary>
+The the shitty answer that everyone always gives is it depends, but it it does kind of depend. So, for example, like what harness are you using? Um what underlying providers are you using? How often are you running this? And we expose those as configurations. We allow you to kind of monitor the cost, too, so you'll see here that this is the signal traces. This is how much it's Oh, I guess this is still flowing in right now, but the same way that you can view kind of your cost for like Wonder Toys, you can view the cost of signal. Um so, we make it easy for you to understand the ROI like, okay, if this shopping assistant agent cost me $8, and it cost me 20 bucks to improve with the self-improvement loop, is that really worth doing or not?
+</details>
+
+我这里没有一个硬性指标说“你应该把智能体预算的 5% 分配给自我改进闭环”。我认为这完全取决于具体情况。但这些数据对你是可见且可用的，你有多种方式根据你看到的效果去调控杠杆，让成本更低或更高：
+1. **提供的上下文数量**：在达到某个临界点之前你包含了哪些技能，而不是为了喂给它并未真正起效的多余信息而徒增成本。
+2. **评估设计考量**：运行这些评估的频率、采样率等等。
+3. **分流至外部编码智能体**：虽然你可以直接使用平台的这一部分，但所有这些能力也都可以通过 API 调用。因此，如果你想将其分流到你享有折扣补贴的编码智能体上，你可以直接将数据导出给外部编码智能体，由它来完成大量类似的工作。
+
+非常感谢大家提出的精彩问题。接下来三天我都会在场。我们还设有 Arize 展台。欢迎大家注册并亲自尝试这个闭环。完全免费注册，完全免费使用。祝大家排查调试顺利！
+
+>> [掌声]
+
+<details>
+<summary>Original English</summary>
+Um Now, like I don't have like a hard number as like 5% of your agent budget should be allocated to the self-improvement loop or something like that. I think it really just depends. Um but I will say like that is exposed to you and available to you and there many ways in which you can kind of pull the levers to make that a little bit cheaper or more expensive depending on how you're seeing results. Um so one is the amount of context you're providing, right? So which skills are you including up to a certain point without like just spending more money to give it more information that doesn't actually help. Um and then the other is like the eval kind of design question, how often you're running these evals, sampling rate, etc. Um And then the other thing is like you I mean you can use this part of the platform, but all these are consumable via API as well. So if you want to shunt this to coding agents, which you get a subsidized cost for or something like that, you can just export that to a coding agent and have it do many many of the similar things. Thank you for the wonderful questions. I'll be around over the next 3 days. We have the Rise booth as well. Um feel free to sign up. Try this loop out for yourself. Completely free to sign up. Completely free to use. Um and yeah, happy debugging.
+
+>> [applause]
+</details>

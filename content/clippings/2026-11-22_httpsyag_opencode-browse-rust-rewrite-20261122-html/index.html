@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>60 美元用 AI 重写近 4.2 万行代码：OpenCode Browse
+0.1.0 省掉的钱和留下的坑</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">60 美元用 AI 重写近 4.2 万行代码：OpenCode Browse
+0.1.0 省掉的钱和留下的坑</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-22</span>
+    
+
+    <header class="article-header">
+      
+      <h1>60 美元用 AI 重写近 4.2 万行代码：OpenCode Browse
+0.1.0 省掉的钱和留下的坑</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/ai-tooling/">ai-tooling</a>
+      
+        <span class="tag-pill tag-pill--no-page">rust</span>
+      
+        <a class="tag-link" href="/tags/software-development/">software-development</a>
+      
+        <span class="tag-pill tag-pill--no-page">frontend</span>
+      
+        <a class="tag-link" href="/tags/deployment/">deployment</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">OpenCode 发布了开源工具 Browse 0.1.0，它允许编程代理使用真实浏览器，并展示了使用 AI 重写底层代码的成本。核心开发者 Dax Raad 使用 Claude Opus 和 DeepSeek，花费约 60 美元将本地程序用 Rust 从头重写，实现了内存占用和打包体积的显著降低。文章指出，重写代码的成本是写代码的钱，而长期维护的故障排查、安全漏洞和自动更新的信任代价才是真正的成本。Browse 的新版本在功能上引入了标签页 ID 机制，并强调了安全隔离的必要性，建议用户对只读模式和域名白名单保持警惕，建议将核心账号与代理操作物理隔离。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/opencode-browse-rust-rewrite-20261122.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-22T00:00:00.000Z">2026-11-22</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E5%AE%83%E5%88%B0%E5%BA%95%E8%A7%A3%E5%86%B3%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4%E8%BF%99%E6%9D%A1%E8%B7%AF%E6%97%A9%E5%B0%B1%E6%8C%A4%E6%BB%A1%E4%BA%86%E4%BA%BA">它到底解决了什么问题，为什么说这条路早就挤满了人</a></li><li class="outline-h2"><a href="#60-%E7%BE%8E%E5%85%83%E9%87%8D%E5%86%99%E4%BA%86%E4%BB%80%E4%B9%88%E5%8F%88%E7%95%99%E4%B8%8B%E4%BA%86%E4%BB%80%E4%B9%88">60 美元重写了什么，又留下了什么</a></li><li class="outline-h2"><a href="#%E5%86%99%E4%BB%A3%E7%A0%81%E5%8F%AA%E8%A6%81-60">写代码只要 60</a></li><li class="outline-h2"><a href="#%E6%83%B3%E5%AD%A6%E5%AE%83%E9%87%8D%E5%86%99%E6%88%96%E8%80%85%E6%83%B3%E7%8E%B0%E5%9C%A8%E5%B0%B1%E7%94%A8%E8%AF%A5%E6%80%8E%E4%B9%88%E9%80%89">想学它重写，或者想现在就用，该怎么选</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>2026 年 11 月 16 日，OpenCode 的开发团队 Anomaly 发布了开源工具 Browse 0.1.0。它可以让
+Claude Code、Cursor、Codex 和 OpenCode
+等编程代理使用你电脑上正在运行的真实浏览器。这样它们就可以复用已有的登录账号、Cookie
+和插件，遇到密码、双重验证或者付款步骤，页面会弹出一个卡片让你确认。你点击确认之后，代理就会从原来的位置继续工作。</p>
+<p>这次更新最吸引眼球的是核心开发者 Dax Raad 公开的重构成绩。他用 Claude
+Opus 搭配 DeepSeek，花了大约 60 美元的模型调用费，就把原来的本地程序用
+Rust 从头重写了一遍，换掉了底层的 Node.js 和老牌浏览器自动化框架
+Playwright。官方宣称，新版内存占用降了 25 倍，打包体积缩了 23 倍。</p>
+<p>很多人看到的第一反应是 Rust 真快，或者 AI
+现在能搞定真实浏览器了。但翻一下代码库、更新日志和社区讨论你会发现，真正的重点在另一头。用真实浏览器的路径上已经堆满成熟工具，Browse
+0.1.0 真正的新意不在那上面，而在 AI 把重写底层代码的成本压到了 60
+美元。只是写代码的钱省下来以后，频繁修补故障、安全护栏的漏洞和静默自动更新带来的信任代价，全都留在了后面。</p>
+<h2 id="它到底解决了什么问题为什么说这条路早就挤满了人" data-reading-heading="">它到底解决了什么问题，为什么说这条路早就挤满了人</h2>
+<p>过去让 AI
+操作网页，常规做法是另外起一个不显示界面的空白浏览器，或者放在云端沙箱里跑。这种环境没有你的登录状态和浏览记录，稍微严格一点的网站就会弹出验证码，甚至直接封禁会话。OpenCode
+Browse 的做法是在你日常用的 Chrome、Edge、Brave 或 Arc
+里装一个扩展，同时在电脑后台跑一个负责传话的本地中继程序。</p>
+<p>实际用起来，代理会在你当前使用的浏览器后台打开一个折叠的标签页组，默默读取网页、点击按钮、填写表单、截图或录像，不会弹窗打扰手头的工作。遇到必须人工参与的登录或支付界面，页面弹出人机交接卡片，要求你亲手操作并点一下
+Continue
+按钮。你也可以随时点浏览器工具栏上的图标，把自己正在浏览的标签页借给代理，需要收回时再点一下即可。如果代理跑在另一台机器上，扩展还支持通过加密内网跨电脑连过去。</p>
+<p>这套体验看起来顺滑，但在 2026 年 11 月的生态里已经不算新鲜事。让 AI
+接管你日常打开的浏览器，市面上早就有好几款成熟工具，不少通过模型上下文协议
+MCP 这套通用接口把 AI 和浏览器连起来。</p>
+<p>工具</p>
+<p>GitHub 星标</p>
+<p>本地端语言</p>
+<p>接入浏览器方式</p>
+<p>主要特点</p>
+<p>Chrome
+DevTools MCP</p>
+<p>58,541</p>
+<p>TypeScript</p>
+<p>启动或挂载运行中的 Chrome</p>
+<p>Google 官方出品，提供性能分析与深度调试</p>
+<p>agent-browser</p>
+<p>53,083</p>
+<p>Rust</p>
+<p>命令行驱动浏览器</p>
+<p>纯命令行操作，主打轻量简洁</p>
+<p>Playwright
+MCP</p>
+<p>39,941</p>
+<p>TypeScript</p>
+<p>扩展接管 Chrome 或 Edge</p>
+<p>微软官方出品，支持后台标签页分组</p>
+<p>Playwriter</p>
+<p>4,112</p>
+<p>TypeScript</p>
+<p>Chrome 扩展加本地程序</p>
+<p>默认占用 19988 端口，主打脚本沙箱执行</p>
+<p>OpenCode
+Browse</p>
+<p>960</p>
+<p>Rust</p>
+<p>Chrome 扩展加本地程序</p>
+<p>单文件体积极小，强调人机交接与跨机连接</p>
+<p>从上面的表格可以看到几个参照。Vercel 的 agent-browser
+已经用 Rust 实现了原生命令行工具，星标超过 5 万；微软官方的 Playwright
+MCP
+也支持通过扩展接管你当前使用的浏览器，并自带后台运行和标签页分组。独立项目
+Playwriter 默认占用 19988 端口，而 Browse
+也选了同一个默认端口，导致 Browse 仓库里已经因为和 Playwriter
+抢端口冒出过两次问题单。</p>
+<p>Browse 仓库创建于 2026 年 10
+月底，是个刚满三周的后来者。它真正引起讨论的地方不在连上真实浏览器，而在
+0.1.0 这次用 AI 动的大手术。</p>
+<h2 id="60-美元重写了什么又留下了什么" data-reading-heading="">60 美元重写了什么，又留下了什么</h2>
+<p>老版 Browse 基于 Node.js 和 Playwright 实现，打包大小在 53 到 64 MB
+之间，运行时往往占一两百 MB
+内存。对于一个要长期驻留在后台的小程序来说，这个开销太重了。团队想把它压成一个几
+MB 的原生程序，把命令行、后台中继和 MCP
+接口整合进去，同时无缝兼容已有的浏览器扩展。</p>
+<p>11 月 15 日，第 264
+号拉取请求合并落地，新增近 4.2
+万行代码（旧版代码先留在仓库里做对照）。The New
+Stack 报道说，Dax Raad 用 Claude Opus 当主程序员、DeepSeek
+当子代理，整个重写只花了 60 美元。按团队自测，改完之后单个 Rust
+二进制文件缩到 4.3 到 5.6 MB，每个连接的内存占用从大约 190 MB 降到 5.6
+MB。</p>
+<p>旧版 Node 加 Playwright 重栈与新版 Rust
+加 QuickJS 轻量架构及双面工具接口对比</p>
+<p>官方宣称内存降了 25 倍、体积缩了 23
+倍，这组概括数字目前还没有外部独立复测。对比作者自己贴出的明细会发现，体积从
+53 到 64 MB 压到 4.3 到 5.6
+MB，大概是十几倍的降幅；中继服务内存则是拿刚启动占 6 MB 的 Rust
+版本，去对比连续运行 6 天涨到 353 MB 的老 Node
+进程，后者明显混进了长跑后的内存膨胀。不过从百兆级压到几兆级，体感确实轻了很多。</p>
+<p>在 Rust
+架构设计文档里能看到，这次重写换掉了 Node 和 Playwright
+运行时本身，同时也砍掉了时区与语言环境模拟以及文件下载工具，但并没有完全放弃
+Playwright 的代码。为了保证识别网页按钮和页面结构的准确度，团队继续借用
+Playwright
+原本插进网页里的那段开源代码，省去了从零造一套识别逻辑的麻烦。同时，为了让其他编程代理仍能用脚本批量操作网页，Rust
+程序里内嵌了一个轻量级 JavaScript 引擎 QuickJS。</p>
+<p>相比换语言，这次重构里有两个接口设计更有参考价值。第一个是看客户端给菜单。OpenCode
+习惯自己写逻辑拼装细粒度操作，后台程序认出它连进来，就会提供打开网页、点击、填表、截屏等二十多个独立工具。换成
+Claude Code、Codex 或 Cursor
+连进来，后台程序会自动收起这堆零碎工具，只留状态查询、标签页管理和一个
+execute 脚本工具。多步网页操作交给内嵌的 QuickJS
+一次跑完，不用把几十个工具的说明反复塞进模型的对话窗口。</p>
+<p>第二个是砍掉抽象的会话概念，改用标签页 ID
+当唯一标识。以前很多浏览器工具要先建会话再去管页面，状态容易乱。新版里打开网页直接返回一个标签页
+ID，后面点击、截屏、关页面全传这个 ID，甚至能给常用页面起固定别名，比如
+work-mail。域名白名单、只读限制和标签分组，全都能干净利落地绑在单个标签页上。</p>
+<h2 id="写代码只要-60" data-reading-heading="">写代码只要 60</h2>
+<p>美元，后面的代价藏在哪里</p>
+<p>60 美元买来近 4.2
+万行能跑的代码确实便宜，但这是写代码的钱，不是长期维护的钱。v0.1.0 在 11
+月 16 日上线，不到两天团队就连发到了
+v0.1.5。翻看发版后几天的故障记录，能看到不少典型的 AI
+重写边界漏洞。有人敲 --help
+想看帮助说明，程序竟然直接开始更新、配对和重启；文档里写明的一项前台窗口开关在
+Rust 版压根没接上，记录网络请求时，短于 16
+个字符的敏感查询参数也会泄漏进响应数据。</p>
+<p>更特别的是，Browse
+在项目说明里明确写着，团队不接受外部贡献者的代码合并请求，大家只管提问题单，团队的
+AI 代理会很快修复。短期看响应确实快，但把 Playwright 换掉意味着未来
+Chrome
+升级接口、反检测策略变化或者底层协议出新坑，都得由这个小团队和它的 AI
+代理自己扛。</p>
+<p>比功能上的小毛病更令人不安的，是它运行在真正的浏览器里面。Browse
+驱动的 Chrome 是你已经登录了邮箱、代码托管网站和支付网站的
+Chrome，如果里面有一个网页藏了恶意提示词来诱导代理，后果会比在沙箱环境里严重得多。</p>
+<p>OpenCode Browse
+护栏能拦住的操作、页面脚本绕过路径以及默认每小时静默自更新的信任面</p>
+<p>一位用户在第
+306
+号问题单里追问只读模式到底能防住多少，团队据此改写了安全文档。文档坦诚说明，只读模式只拦住模拟点击和输入这类常规操作，排查时还发现之前连下拉选择和文件上传都漏拦了，事后才补上。只要允许执行网页脚本，代理在只读模式下照样能读数据、点按钮和发请求；域名白名单也只管住主页面跳转，拦不住内嵌页面和网页自己发出的后台请求。</p>
+<p>在 Hacker
+News
+上获得三百多赞的讨论帖里，不少开发者对这套做法表达了强烈戒心，核心担忧就是代理同时握着你的登录账号、逛着陌生网页，还能往外发数据。项目说明里还藏着一处容易忽略的细节：Browse
+的后台程序默认开启自动更新，每次启动和随后每小时都会检查官方发布服务，发现新版本就直接下载替换本地程序。就算下载带了文件校验，也可以手动关掉，但一个拿着
+Chrome
+调试器高权限的程序默认静默更新，等于把整个浏览器的安全直接押在了发布服务器上。</p>
+<h2 id="想学它重写或者想现在就用该怎么选" data-reading-heading="">想学它重写，或者想现在就用，该怎么选</h2>
+<p>如果你正在纠结要不要学 OpenCode，用 AI
+把项目的重框架重写成轻量原生程序，Browse 是一个很诚实的参考样本。AI
+确实把重写轻量底层代码的门槛打下来了，花几十美元就能从重框架里抽出一小块核心功能自己实现。但前提是你能接受后续的高频修补，也有精力长期跟进上游生态的兼容性变化。如果团队本来就没人力维护底层协议，省下这几十美元买来的可能是持续不断的技术债。</p>
+<p>如果你只想今天就让手头的 AI
+编程助手在网页上干点活，可以根据自己的习惯来做选择：</p>
+<p>追求省上下文、喜欢纯命令行工作流：优先看看 Vercel 的 agent-browser，本身是 Rust 原生，靠简洁的命令行交互省掉大片 MCP 工具的繁琐定义。</p>
+<p>追求大厂背书和标准调试能力：可以用微软的 Playwright MCP，或者 Google 的 Chrome DevTools MCP，两个项目都有几万星标，官方维护链路也更清晰。</p>
+<p>频繁需要人机交接登录、临时借出标签页，或者想通过 Tailscale 这类加密内网让远程机器上的代理操控本机浏览器：OpenCode Browse 的交互细节目前确实方便，单文件部署也够轻。</p>
+<p>不论最后选哪一款工具，有一条底线要守住：不要把工具自带的只读模式或域名白名单当成安全隔离墙。Browse
+的作者也在第
+286 号问题单里建议，如果不想让代理接触日常环境，最好另外配一个干净的
+Chrome
+配置文件专门配对。把网银、主邮箱和核心后台物理隔开，只把允许代理操作的测试账号放进那个独立窗口里，同时顺手关掉默认自动更新。这样既能减少空白浏览器频频触发验证的麻烦，又能把日常核心账号和代理操作隔离开来。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/d891fc7b29ff3e4e6ac946d138d5ca13b03f5c748bdac04c38aeac4f6a8d8099.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/d891fc7b29ff3e4e6ac946d138d5ca13b03f5c748bdac04c38aeac4f6a8d8099.md" download="60 美元用 AI 重写近 4.2 万行代码：OpenCode Browse
+0.1.0 省掉的钱和留下的坑.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Dax Raad" class="entity-link person-link">Dax Raad</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=OpenCode" class="entity-link company-link">OpenCode</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=OpenCode Browse" class="entity-link product-link">OpenCode Browse</a>, <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, <a href="/search/?q=Cursor" class="entity-link product-link">Cursor</a>, <a href="/search/?q=Codex" class="entity-link product-link">Codex</a>, <a href="/search/?q=OpenCode" class="entity-link product-link">OpenCode</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

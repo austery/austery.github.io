@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>利用推理引擎的 KV Cache 检测 AI Agent 安全攻击与异常</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">利用推理引擎的 KV Cache 检测 AI Agent 安全攻击与异常</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-09</span>
+    
+
+    <header class="article-header">
+      
+      <h1>利用推理引擎的 KV Cache 检测 AI Agent 安全攻击与异常</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/kv-cache/">kv-cache</a>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <span class="tag-pill tag-pill--no-page">anomaly-detection</span>
+      
+        <a class="tag-link" href="/tags/ai-security/">ai-security</a>
+      
+        <a class="tag-link" href="/tags/inference-engine/">inference-engine</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Intrinsic AI 创始人 Ari Azarfar 提出将推理引擎中的 KV Cache 作为安全信号，用于补充传统边界防护。通过建立正常推理流量的基线来检测异常页面，不仅能覆盖边界护栏盲区、保护数据隐私，还可定位具体异常位置并用于威胁发现，但在生产落地中仍面临多模型表征不一致与大规模对象传输等挑战。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=1NWnSwCB4NM" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-09T00:00:00.000Z">2026-11-09</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>5 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#kv-cache-%E7%9A%84%E5%AE%89%E5%85%A8%E8%A7%86%E8%A7%92">KV Cache 的安全视角</a></li><li class="outline-h3"><a href="#%E5%9F%BA%E4%BA%8E-kv-cache-%E7%9A%84%E5%AE%89%E5%85%A8%E4%BF%A1%E5%8F%B7%E4%BC%98%E5%8A%BF%E4%B8%8E%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4">基于 KV Cache 的安全信号优势与实现步骤</a></li><li class="outline-h3"><a href="#%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E7%82%B9%E5%AE%9E%E6%97%B6%E6%A3%80%E6%B5%8B%E4%B8%8E%E5%A8%81%E8%83%81%E5%8F%91%E7%8E%B0">系统集成点：实时检测与威胁发现</a></li><li class="outline-h3"><a href="#%E5%AE%9E%E9%AA%8C%E6%A1%88%E4%BE%8B%E8%AF%AD%E9%9F%B3-agent-%E4%B8%8E%E6%96%87%E6%9C%AC-agent">实验案例：语音 Agent 与文本 Agent</a></li><li class="outline-h3"><a href="#%E7%94%9F%E4%BA%A7%E8%90%BD%E5%9C%B0%E7%9A%84%E6%8C%91%E6%88%98%E4%B8%8E%E7%BB%93%E8%AF%AD">生产落地的挑战与结语</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="kv-cache-的安全视角" data-reading-heading="">KV Cache 的安全视角</h3>
+<p>大家好，我是 Intrinsic AI 的创始人 Ari Azarfar。本场演讲面向那些正在构建智能体（Agent）并运行自己推理技术栈，或有此计划的人群。如果你属于这类开发者，通常会将现代推理引擎的基础核心——KV Cache，视为一种吞吐量优化手段：每个 token 计算出的 Key 和 Value 被保留下来，这样模型就不必重复计算。今天，我想带大家从一个不同的角度来看待 KV Cache。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Hi,
+ I'm
+ Ari
+ Azarfar,
+ founder
+ of
+<p>Intrinsic
+AI.</p>
+<p>Um
+this
+talk
+is
+for
+people
+who
+build</p>
+<p>agents
+and
+run
+their
+own
+inference</p>
+<p>stack,
+or
+plan
+to.
+And
+if
+that's
+you,</p>
+<p>you
+associate
+typically
+the
+KB
+cache,</p>
+<p>the
+bread
+and
+butter
+of</p>
+<p>uh
+modern
+inference
+engines,
+usually
+as</p>
+<p>a
+throughput
+optimization.
+The
+keys
+and</p>
+<p>values
+computed
+per
+token,
+kept
+so
+the</p>
+<p>model
+doesn't
+compute
+them
+again.
+Today,</p>
+<p>I'll
+like
+to
+show
+KB
+cache
+in
+a</p>
+<p>different
+light.</p>
+</details>
+<p>AI Agent 应用可能出现故障或受到攻击的方式层出不穷：提示注入（Prompt Injection）、越狱（Jailbreak）、工具调用损坏、敏感工具调用、敏感数据泄露、隐藏后门、漂移等等。目前，我们防范这些层出不穷的 AI Agent 应用故障时，通常采用边界防护方式，比如通过评估模型（Judge Model）根据策略检查提示词、输入以及响应输出；或者针对每种情况分别构建一个分类器。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The
+ way
+ agents
+ agent
+ AI
+ agent
+<p>application
+could
+go
+wrong
+or
+keep</p>
+<p>growing,
+right?
+Prompt
+injection,</p>
+<p>jailbreaks,
+broken
+tool
+calls,
+sensitive</p>
+<p>tool
+calls,
+sensitive
+data
+exposures,</p>
+<p>hidden
+backdoors,
+and
+drifts,
+and
+so</p>
+<p>forth,
+right?
+So,
+the
+way
+right
+now
+we</p>
+<p>typically
+guard
+against
+against
+this</p>
+<p>numerous
+ways
+that
+an
+AI
+agent</p>
+<p>application
+could
+go
+wrong
+is
+by</p>
+<p>guarding
+the
+edge,
+by
+perhaps
+passing
+a</p>
+<p>judge
+model
+that
+checks
+the
+prompts,
+the</p>
+<p>inputs,
+and
+the
+response
+outputs
+against</p>
+<p>your
+policy.</p>
+<p>All
+right?
+Or
+you
+build
+a
+classifier
+for</p>
+<p>each
+case.</p>
+</details>
+<p>但这里有一个不同的视角：模型在行动之前、在解码之前、在生成响应之前，以及在响应转化为另一个工具调用之前，都会把每个输入变成计算。KV Cache 就是你的推理引擎对该计算过程的记录。现代推理引擎原本就在免费使用和读取它。因此，在本次演讲中，我想建议将这种数据作为现有安全护栏的补充，并将其与你的 KV Cache 基础设施集成起来。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+But
+ here's
+ a
+ different
+ light.
+ The
+ model
+<p>turns
+every</p>
+<p>input
+into
+a
+computation
+before
+it
+acts,</p>
+<p>before
+it
+decodes,
+before
+it
+generates</p>
+<p>the
+response,
+before
+that
+response</p>
+<p>becomes
+another
+tool
+call.
+The
+KB
+cache</p>
+<p>is
+your
+engine's
+record
+of
+that</p>
+<p>computation.
+The
+modern
+inference</p>
+<p>engine,
+for
+free,
+are
+using
+it
+and</p>
+<p>reading
+it.</p>
+<p>And
+therefore,
+on
+this
+talk,
+I
+would</p>
+<p>like
+to
+suggest
+as
+as
+a
+complement
+to</p>
+<p>the
+way
+you're
+already
+using
+your
+own</p>
+<p>guardrails,
+to
+use
+this
+data
+and</p>
+<p>integrated
+with
+your
+KB
+cache</p>
+<p>infrastructure.</p>
+</details>
+<h3 id="基于-kv-cache-的安全信号优势与实现步骤" data-reading-heading="">基于 KV Cache 的安全信号优势与实现步骤</h3>
+<p>我将其称为“基于 KV Cache 的优先安全信号”（KV-first Security Signals），它之所以重要，主要有三个原因：</p>
+<ul>
+<li><strong>数据本就存在</strong>：你可以从推理技术栈原本准备丢弃的这堆数据中淘出金子；</li>
+<li><strong>覆盖安全护栏盲区</strong>：因为无论什么东西绕过了那些护栏，它依然会转化为计算；</li>
+<li><strong>原地留存</strong>：非常适合数据隐私场景，适用于你无法读取输入和输出内容的用例。</li>
+</ul>
+<p>实现的方法相当直接，包含三个步骤：</p>
+<ol>
+<li>针对你的 AI 工作负载和推理流量学习一个基准线，了解你的 KV Page 通常是什么样的；</li>
+<li>找出对照基准线而言较为罕见的 KV Page，这些通常就是你的异常；</li>
+<li>对这些异常进行分类和解释。</li>
+</ol>
+<p>首先，我们来看看这种集成可以发生在技术栈的哪个位置。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+I
+ refer
+ to
+ this
+ as
+ a
+ KB
+ first
+ security
+<p>signals,
+and
+basically
+three
+reasons</p>
+<p>that
+matters,
+right?
+So,
+the
+data
+is</p>
+<p>already
+there.
+You
+pick
+the
+gems
+from</p>
+<p>the
+pile
+your
+inference
+stack
+would</p>
+<p>already
+were
+throwing
+away.</p>
+<p>It
+covers
+the
+guardrails
+blind
+spots,</p>
+<p>because
+whatever
+it
+slips
+past
+those</p>
+<p>guardrails,
+it
+still
+becomes</p>
+<p>computation.
+And
+it
+stays
+in
+place,
+so</p>
+<p>it's
+perfect
+for
+data
+privacy</p>
+<p>application,
+for
+cases
+where
+you
+do
+not</p>
+<p>have
+the
+luxury
+to
+read
+the
+inputs
+and</p>
+<p>outputs.
+And
+the
+recipe
+is
+pretty</p>
+<p>straightforward,
+right?
+Has
+three
+steps.</p>
+<p>You
+learn
+a
+baseline
+for
+your
+AI</p>
+<p>workload,
+for
+your
+AI
+inference
+traffic,</p>
+<p>how
+your
+KB
+page
+typically
+look
+like,</p>
+<p>and
+then
+find
+the
+KB
+pages
+that
+are</p>
+<p>rarer
+against
+your
+baseline,
+typically</p>
+<p>your
+anomalies.
+And
+then
+you
+can
+even</p>
+<p>classify
+and
+explain
+those.
+So,
+first</p>
+<p>let
+start
+with
+where
+in
+the
+stack
+this</p>
+<p>integration
+could
+happen.</p>
+</details>
+<h3 id="系统集成点实时检测与威胁发现" data-reading-heading="">系统集成点：实时检测与威胁发现</h3>
+<p>KV Cache 的一个有趣之处在于，某种程度上它的存在让推理在一定意义上变成了有状态的。例如，像 LMCache 这样的 KV Cache 管理层会将它们从 GPU 卸载存储到远程存储中；或者 LLMD 和 NVIDIA Dynamo 会将每个新请求路由到可能已经持有该缓存 KV Page 的 Worker 上。因此，你有两个集成点可以将这些异常检测或分类器整合进去：</p>
+<p>其一，你可以直接在推理引擎内部（例如通过 vLLM 等）实现它。这种方式的优势在于它是<strong>实时的</strong>，它生成的告警可以伴随未来的工具调用或未来的策略生效。因此，仅通过在推理引擎内观察到的计算异常，你就可以强化自己的策略或护栏。</p>
+<p>其二，你也可以将其作为一种威胁发现的方式，与你的 LMCache 集成，从而读取存储的 KV Page 并找出与其余部分不相符的内容。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The
+ interesting
+ thing
+ about
+ the
+ KB
+ cache
+<p>is
+that
+in
+a
+way
+existence
+of
+those
+had</p>
+<p>made
+the
+inference
+in
+a
+way
+stateful,</p>
+<p>right?
+So,
+for
+example,
+things
+like
+KB</p>
+<p>cache
+management
+layers
+such
+as
+LM
+cache</p>
+<p>stores
+them</p>
+<p>from
+GPU
+down
+to
+a
+remote
+storage.
+Or</p>
+<p>LLMD
+and
+NVIDIA
+Dynamo
+route
+each
+new</p>
+<p>request
+towards
+the
+worker
+that
+already</p>
+<p>holds
+perhaps
+that</p>
+<p>cached
+KB
+page.
+So,
+there
+are
+two</p>
+<p>integration
+points
+you
+you
+you
+you
+can</p>
+<p>integrate
+those
+anomaly
+detection
+or</p>
+<p>those
+classifiers
+into.</p>
+<p>Either
+you
+can
+implement
+it
+directly</p>
+<p>inside
+of
+your
+inference
+engine
+via
+LMs,</p>
+<p>you
+name
+so
+forth.
+The
+beauty
+of
+this</p>
+<p>approach
+is
+that
+it's
+real
+time.</p>
+<p>And
+and
+the
+the
+the
+alert
+that
+it
+would</p>
+<p>perhaps
+generate
+could
+ride
+along
+your</p>
+<p>future
+tool
+calls
+or
+your
+future</p>
+<p>policies.
+So,
+you
+can
+harden
+basically</p>
+<p>your
+policies
+or
+guardrails
+but
+just</p>
+<p>generating
+the
+computational
+anomalies</p>
+<p>that
+you
+observe
+within
+your
+inference</p>
+<p>engines.</p>
+<p>And
+you
+or
+perhaps
+you
+can
+integrate
+it</p>
+<p>with
+as
+a
+as
+a
+way
+of
+threat
+discovery</p>
+<p>in
+a
+sense.
+So,
+you
+can
+integrate
+with</p>
+<p>your
+LM
+cache.
+So,
+it
+reads
+the
+stored</p>
+<p>KB
+pages
+and
+find
+things
+that
+don't</p>
+<p>belong
+with
+the
+rest,
+right?
+So,
+now
+I</p>
+<p>want
+to
+show
+you
+some
+numbers
+and</p>
+<p>just
+a
+very
+simple
+hello
+world
+use
+case</p>
+<p>if
+if
+this
+is
+actually
+working
+and
+this</p>
+<p>is
+a
+valid
+approach.
+And
+for
+that,
+let</p>
+<p>me
+use
+the
+use
+case
+that
+has
+no
+text
+to</p>
+<p>filter
+at
+all,
+a
+voice
+agent.</p>
+</details>
+<h3 id="实验案例语音-agent-与文本-agent" data-reading-heading="">实验案例：语音 Agent 与文本 Agent</h3>
+<p>现在我想给大家看一些数据，以及一个非常简单的入门示例，来看看这是否真的有效、是否是一种可行的方法。为此，让我使用一个完全没有文本可过滤的用例——语音 Agent。</p>
+<p>这里是一个语音 Agent 的案例研究。在这个案例中，模型使用的是 Gemini 404B。我们的基准线由 4 种声音说出的 72 个普通语音片段组成。我们观察的是 16-token 的页面。显而易见，这个粒度是可以调整的，但这里使用较短的页面只是为了在基线中获得更多数据。然后在测试集上，我们有不同的声音——一个干净的声音，另一个则包含隐藏指令。正如这里所示，你不仅可以通过简单的异常检测来检测这些情况，而且还能知道是哪个页面、请求的哪一部分发生了这种异常事件。我们甚至更进一步，训练了一个以 KV Page 作为特征的模型。我们尝试对其进行解释或打上有用的标签；在这个案例中，尽管该模型甚至没有在音频上进行过训练，它却能够生成关于个人信息、家庭住址、位置数据、出行信息、目的地的正确信息。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+ here's
+ a
+ case
+ of
+ study
+ of
+ a
+ voice
+<p>agent.
+In
+this
+case,
+it
+was
+a
+Gemini</p>
+<p>404B.
+Our
+baseline
+was
+72
+ordinary
+clips</p>
+<p>and
+spoken
+four
+voices.
+We're
+looking
+at</p>
+<p>16
+token
+pages.
+Obviously,
+this</p>
+<p>granularity</p>
+<p>could
+change.
+But
+here
+was
+just
+use
+this</p>
+<p>shorter
+pages
+so
+we
+could
+have
+more
+data</p>
+<p>in
+the
+baseline.
+And
+then
+on
+the
+test,</p>
+<p>we
+have
+different
+voices</p>
+<p>one
+clean
+voice
+and
+the
+other
+one
+has
+a</p>
+<p>hidden
+instruction
+within
+it.
+As
+you
+can</p>
+<p>as
+shown
+here,
+not
+only
+you
+can
+detect</p>
+<p>these
+cases
+just
+using
+simple
+anomaly</p>
+<p>detection,
+but
+also
+you
+would
+know
+which</p>
+<p>part
+of</p>
+<p>um</p>
+<p>which
+page
+which
+part
+of
+your
+request</p>
+<p>had
+this
+anomalous
+event.
+We
+even
+went</p>
+<p>further
+and
+we
+trained
+a
+model
+that
+uses</p>
+<p>the
+KD
+pages
+as
+features.</p>
+<p>And
+we
+didn't
+we're
+trying
+to
+explain
+it</p>
+<p>or
+tag
+it
+with
+things
+that
+are
+useful.</p>
+<p>In
+this
+case,
+although
+it
+wasn't
+even</p>
+<p>trained
+on
+audio,
+it's
+able
+to
+generate</p>
+<p>correct
+information
+about
+personal</p>
+<p>information,
+home
+address,
+location</p>
+<p>data,
+travel
+information,
+destination.</p>
+</details>
+<p>现在回到文本 Agent。在这个案例中，使用的是在 vLLM 缓存上实时服务的 314B 模型。左边的图向大家展示了攻击流量与正常流量通常是如何相互区分开的；右边的图可能更有意义，它使用的是 Hugging Face 上的 AT-Bench。它有自己的良性 Agent 轨迹基线，以及 8 类 Agent 故障（从注入工具描述到错误信息等）。我们观察了异常检测生成的 Top 10 告警，在 10 次告警中大约有 7 到 8 次确实是有意义且有用的异常活动。我们甚至进一步观察了是否存在某种比其他异常更加突出的异常事件。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So,
+ now
+ back
+ to
+ text
+ agents.
+ In
+ this
+<p>case,
+it
+was
+a
+client
+314
+billion
+served</p>
+<p>live
+on
+bill
+110
+cash.</p>
+<p>The
+one
+on
+the
+left
+shows
+you
+an
+idea
+of</p>
+<p>how
+attacks
+and
+normal
+traffic
+would</p>
+<p>typically
+separate
+from
+each
+other
+and</p>
+<p>then
+the
+one
+on
+the
+right,
+which
+is</p>
+<p>perhaps
+more
+meaningful,
+it
+was
+using</p>
+<p>the
+AT
+bench
+and
+hugging
+face.
+It
+has</p>
+<p>its
+own
+baseline
+of
+benign
+agent
+traces</p>
+<p>and
+eight
+kind
+of
+agent
+failure
+from</p>
+<p>injected
+tools
+description
+to</p>
+<p>misinformation
+and
+so
+forth.</p>
+<p>We
+look
+at
+the
+top
+10
+alerts
+that</p>
+<p>anomalous
+anomaly
+detection
+would</p>
+<p>generate
+and
+about
+seven
+to
+eight
+times</p>
+<p>of
+out
+of
+10
+of
+these
+alerts
+are</p>
+<p>actually
+anomalous
+meaningful
+and
+useful</p>
+<p>anomalous
+activities.
+We
+even
+went</p>
+<p>further
+and
+we
+looked
+at
+whether
+there's</p>
+<p>any
+kind
+of
+anomalous
+event
+that
+is</p>
+<p>stand
+out
+more
+than
+the
+rest.</p>
+</details>
+<h3 id="生产落地的挑战与结语" data-reading-heading="">生产落地的挑战与结语</h3>
+<p>在生产环境中落地会让事情变得困难，主要有以下两点：</p>
+<p>第一，<strong>模型会发生变化</strong>。微调和新版本发布会发生变化，同时不同 Agent 各自运行在不同模型上，还有路由器会为每个请求选择专有模型。这意味着每个模型都会在它自己的坐标系中写入页面。因此，你要么去学习每一个基准线、分类器和解释器（这在计算上是无法承受的），要么必须找到一种方法将它们全部映射到一个共享的表征空间中。</p>
+<p>第二，<strong>实时意味着需要搬运大对象</strong>。例如，1.34B 模型的 256 个 token 块对应大约 40 MB 的 KV 数据。像 CacheGen 这样的压缩和流式传输技术可能会有所帮助，但为了进行安全分析并实时采取行动而搬运这些数据，目前仍然较为缓慢。</p>
+<p>这就是我们在 Intrinsic AI 所解决的问题。我们正在寻找那些构建自己的推理技术栈、并将安全视为基础架构设计决策的团队。希望本次分享对大家有所帮助。非常感谢大家的聆听，再见！</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Um
+ to
+ make
+ things
+ hard
+ in
+ production.
+<p>First,
+models
+change.</p>
+<p>Fine-tunes
+and
+new
+releases,
+but
+also</p>
+<p>agents
+that
+each
+one
+on
+a
+different</p>
+<p>model.</p>
+<p>And
+routers
+that
+pick
+a
+specialist
+model</p>
+<p>per
+request.
+That
+means
+each
+model</p>
+<p>writes
+its
+pages
+its
+own
+coordinates.</p>
+<p>So,
+either
+you
+learn
+every
+baseline,</p>
+<p>classifier,
+and
+explainer,
+which
+is
+uh</p>
+<p>computationally
+prohibitive,
+or
+you
+have</p>
+<p>to
+find
+a
+way
+to
+map
+them
+all
+into
+one</p>
+<p>shared
+representation
+space.</p>
+<p>Second,
+real
+time
+means
+moving
+big</p>
+<p>objects.
+For
+example,
+a
+1
+256
+token</p>
+<p>chunk
+of
+1.34
+billion
+is
+about
+40</p>
+<p>megabytes
+of
+KB.</p>
+<p>Compression
+and
+streaming
+like
+cache
+gen</p>
+<p>could
+help,
+but
+moving
+that
+for
+security</p>
+<p>analysis
+and
+acting
+in
+real
+times
+is</p>
+<p>still
+a
+slow.
+And
+that
+'s
+what
+we
+solve</p>
+<p>at
+Interesting
+AI.
+We
+are
+looking
+for</p>
+<p>teams
+building
+their
+own
+inference</p>
+<p>stacks
+who
+treat
+security
+as
+a</p>
+<p>foundational
+design
+decision.</p>
+<p>I
+hope
+this
+was
+helpful
+for
+you.
+Thank</p>
+<p>you
+so
+much
+for
+listening.</p>
+<p>Bye.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/1e69cccf981e5d2ab48991c34afd7fd4f541b8541b6bcdf7113aa41d1f042e0a.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/1e69cccf981e5d2ab48991c34afd7fd4f541b8541b6bcdf7113aa41d1f042e0a.md" download="利用推理引擎的 KV Cache 检测 AI Agent 安全攻击与异常.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Ari Azarfar" class="entity-link person-link">Ari Azarfar</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Intrinsic AI" class="entity-link company-link">Intrinsic AI</a>
+</p>
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

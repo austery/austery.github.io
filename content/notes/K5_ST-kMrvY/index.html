@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>在 Glean 中使用 Jev 实现快速且结构化的 AI 决策</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">在 Glean 中使用 Jev 实现快速且结构化的 AI 决策</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-27</span>
+    
+
+    <header class="article-header">
+      
+      <h1>在 Glean 中使用 Jev 实现快速且结构化的 AI 决策</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">ai-decision-making</span>
+      
+        <a class="tag-link" href="/tags/model-efficiency/">model-efficiency</a>
+      
+        <span class="tag-pill tag-pill--no-page">query-classification</span>
+      
+        <a class="tag-link" href="/tags/latency-optimization/">latency-optimization</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Glean 的软件工程师 Chinmay 分享了如何利用 Jev 解决 AI 产品中的有界决策问题（如查询分类、专家路由、排序及安全检查）。相比通用 LLM，Jev 在降低延迟、降低成本、提高输出一致性以及简化模型微调流程方面具有显著优势。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=K5_ST-kMrvY" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-27T00:00:00.000Z">2026-11-27</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>7 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E8%AF%84%E4%BC%B0%E4%B8%8E%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B">评估与发布流程</a></li><li class="outline-h3"><a href="#%E5%9C%BA%E6%99%AF%E4%B8%80%E6%9F%A5%E8%AF%A2%E5%88%86%E7%B1%BB">场景一：查询分类</a></li><li class="outline-h3"><a href="#%E5%9C%BA%E6%99%AF%E4%BA%8C%E4%B8%93%E5%AE%B6%E8%B7%AF%E7%94%B1">场景二：专家路由</a></li><li class="outline-h3"><a href="#%E5%9C%BA%E6%99%AF%E4%B8%89%E6%8E%92%E5%BA%8F%E5%99%A8q-%E7%B3%BB%E7%BB%9F">场景三：排序器（Q 系统）</a></li><li class="outline-h3"><a href="#%E5%9C%BA%E6%99%AF%E5%9B%9B%E4%BD%9C%E4%B8%BA%E8%AF%84%E5%88%A4%E8%80%85%E7%9A%84-llmllm-as-judges">场景四：作为评判者的 LLM（LLM as Judges）</a></li><li class="outline-h3"><a href="#%E5%9C%BA%E6%99%AF%E4%BA%94%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4">场景五：安全防护</a></li><li class="outline-h3"><a href="#%E6%80%BB%E7%BB%93%E4%B8%8E%E9%80%89%E5%9E%8B%E5%8E%9F%E5%88%99">总结与选型原则</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>[音乐]</p>
+<blockquote>
+<blockquote>
+<p>大家好，我叫 Chinmay，是 Glean 的一名软件工程师，负责 Glean Assistant 的产品工程方面的工作。今天我要演讲的主题是 Glean 如何使用 Jev，演讲标题是《超越生成：在 Glean 使用 Jev 实现快速且结构化的 AI 决策》。仔细想想，大多数 AI 产品步骤其实都是有界决策问题，而不是生成问题。举几个例子：用户查询意图分类、排序器从 n 个选项中挑选一个建议、检查引用是否有效、路由到正确的模型或专家等等。到目前为止，为了解决所有这些有界问题，我们一直在付出完整的大语言模型（LLM）成本和延迟代价。Glean 使用的 Jev 填补了通用 LLM 和微调分类器之间的空白。分类本身并不是一个新问题，人们一直在尝试解决它。我们有多种解决方式，我们尝试过的一些方法包括：使用通用 LLM、使用像 LLaMA 这样的开源模型、微调该开源模型，或者使用 Jev。所有这些方法和途径都有各自的优缺点。使用通用 LLM 会产生很高的成本和延迟，而使用像 Jev 这样的工具，则不会产生文本输出。我们在使用 Jev 时看到的另一个优势是，当决策空间的分类体系发生变化时，我们不需要一次又一次地微调这些模型，只需稍微修改一下提示词，就能直接开箱即用。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>[music]</p>
+<blockquote>
+<blockquote>
+<p>Hi everyone. My name is Chinmay and I am a software engineer at Clean. I work on the product engineering side of Clean Assistant. Today I'm going to give a talk on how Clean uses Jev. The title of the talk is Beyond Generation. Fast and structured AI decisions with Jev at Clean. If you look at it, most AI product steps are bounded decisions and not generation problems. So to give a couple of examples, user query intent classification, a ranker picking a suggestion out of n options, checking whether a citation is valid or not, routing to the correct model or expert, so on so forth. Till now we have been paying the full LLM cost and latency to get an answer to all these bounded problems. Jev at Clean fills the gap between general LLMs and fine-tuned classifiers. Classification itself isn't a new problem. Like people have been trying to solve it since forever. We can have multiple ways to solve it. Some of the things that we have tried out include using a general purpose LLM, using an open model, something like LLaMA, fine-tuning that open model, or using Jev. Now all these approaches and all these different ways have their pros and cons. With a general purpose LLM, we incur a lot of cost and latency, while with something like Jev, we get no generated text output. Another advantage that we have been seeing with Jev is that as the taxonomy of the decision space changes, we don't have to fine-tune these models again and again. We can just change our prompt a bit and boom, it works out of the box.</p>
+</blockquote>
+</blockquote>
+</details>
+<h3 id="评估与发布流程" data-reading-heading="">评估与发布流程</h3>
+<p>接下来，我将详细介绍我们在 Glean 是如何集成并使用 Jev 来解决这些分类问题的。我会深入探讨其中的几个具体问题。在进入具体问题之前，我想先谈谈我们如何评估这些改动。我们拥有庞大的客户群，有数百万用户，因此我们不希望我们做的任何改动导致产品体验倒退。对于我们所做的任何改动，我们都有一套多阶段的发布方法。这包括为几乎所有可能的地方准备一个黄金评估集（golden eval set）。只要是用到生成式 AI、只要是涉及任何形式智能的地方，我们都有相应的黄金评估集。我们会在内部使用场景中对所有这些改动进行一段时间的充分测试。比如，目前 Glean 大约有 1500 名员工，我们会在自己的 Glean 实例中将这些改动测试运行几周时间，收集积极的反馈。我们从内部用户那里获得了非常活跃的反馈循环。我们会根据这些反馈进行改进，然后再面向客户进行 AB 测试。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Now I'll walk you through how we have integrated Gen or these classification uh how we have used Jev at Glean to solve these classification problem statements. I'll go into some of these problems in great detail. Before we go into these individual problems, I wanted to touch upon how we evaluate these changes. Like we have a huge customer base having millions of users, so we don't want any of the change that we make to regress our product. We have a multi-phase approach, a rollout approach to any change that we are making. This includes having a golden eval set for almost every possible thing. Like any place where we have generative AI, any place where we have any form of intelligence involved, we have a golden eval set for that space. We soak all of these changes for a significant amount of time for our internal use case. Like we have around 1500 people at Glean right now. We soak all of these changes within our Glean instance for like couple of weeks. We get active feedback. We have a very active feedback loop from our internal users. We work upon that and then we go for an AB testing with our customers.</p>
+</details>
+<h3 id="场景一查询分类" data-reading-heading="">场景一：查询分类</h3>
+<p>我们用决策模型尝试的第一个问题是查询分类。查询分类是指我们想要了解用户查询的性质，这有助于我们了解人们在使用 Glean 处理哪类工作。比如说，如果人们更多地用于销售类的查询，我们就会更关注这方面；如果人们更多地用于工程类的使用场景，我们就会更关注工程类。我们在这里尝试了三种不同的方法，这些数据来自我们的测试平台：我们使用了开源的 Llama 模型，然后尝试了 Jev，接着又在我们自己的计算资源上对 Llama 模型进行了微调。在我们看来，Jev 是最好的无需训练的选项。它的输出质量几乎是基础 Llama 模型的两倍，并且与微调后的 Llama 模型相比，能够达到 90% 的质量水平。使用 Jev，我们不需要经历非常繁琐的数据收集、数据清洗过程，不需要承担计算成本（比如一次次地训练模型，以及随着分类体系变化而反复微调模型），同时也不必担心模型托管或推理成本的问题。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>The first problem that we tried out with a decision decision model was query classification. Query classification is when we want to know the nature of user queries. This helps us realize what kind of what kind of jobs are people using Glean for? What kind of Say for example, if people are using more for sales like queries, we focus more on that. If we people are using more for engineering type use cases, we focus more on that. We tried out three different approaches over here and this is data from our test bed. We used an open source Llama model. Then we tried out Jev and then we fine-tuned the Llama model on our own compute resources. Jev is the best no training option in our opinion. It nearly doubles the output quality of a base Llama model and is 90 is able to perform at a 90% quality in comparison to a fine tuned model a fine tuned Llama. With Jev we don't have to go through the very tedious process of data collection, data cleaning, incurring the cost for compute like training the model, fine tuning the model again and again as the taxonomy changes and at the same time we don't have to worry about hosting the model or incurring the inference cost.</p>
+</details>
+<h3 id="场景二专家路由" data-reading-heading="">场景二：专家路由</h3>
+<p>我们接下来解决的问题是专家路由。这目前在业界是一个相当常见的问题，也就是当用户查询进来时，我们应该把它路由到哪个专家，以及如何确保给用户的回复达到尽可能高的质量。Glean 解决这个问题的做法是，先接收用户的查询，然后决定由哪个最佳专家来回答这个查询。到目前为止，我们一直在使用通用 LLM 来路由到正确的专家。我们为 Jev 搭建了一个包含 N 个专家的测试平台，在实验中我们发现，使用 Jev 不仅准确率显著提高，而且延迟几乎降低了 8 倍。为了将 Jev 集成到我们产品的这一特定阶段，我们不得不对实现方式和基础设施进行大幅调整，但延迟的降低证明了系统引入这种固有复杂性是值得的。我们在 Glean 一直致力于以尽可能简单的方式构建系统，而这是少数几个我们认为复杂性物有所值的环节之一。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>The next problem we went to is expert routing. This is a pretty common problem statement in the industry right now like hey when the user query comes in what expert do we route it to like how do we ensure that the user user the response to the user is of the best possible quality. Glean receives the way we have been solving this is Glean receives the user query and then decides what's the best expert to answer the query. Till now we have been using a general purpose LLM to route to the correct expert. We set up a test bed for Jev we set up a test bed with N experts and in our experiments found a significantly high precision when using Jev and that too at an almost 8x reduction in latency. We had to change our implementation or our infrastructure significantly to integrate Jev into this specific stage of our product but the reduction in latency justifies that inherent complexity in the system. We at Glean have been trying to build systems in the most in the simplest possible manners. This is one of the rare pieces where we believe complexity is worth it.</p>
+</details>
+<h3 id="场景三排序器q-系统" data-reading-heading="">场景三：排序器（Q 系统）</h3>
+<p>接下来我将介绍我之前提到的排序器问题。当我们收到用户查询时，我们还希望为用户生成最佳的后续建议，这有助于提升我们产品的可发现性，并确保用户获得最佳体验。我们还希望推荐或者说预判用户的下一个查询可能是什么。同样，这也是整个行业一直在努力解决的一个相当常见的问题。在内部，我们把这个系统叫做 Q，就是字母 Q。它的工作方式是，我们有大概 10 到 15 个不同的来源或方式，各自独立地生成建议。这些建议由自然语言 LLM 生成，形式上是标准的自然语言查询。一旦这些建议生成完毕，我们就会进入排序步骤。排序器会接收所有这些建议、用户的初始查询、Glean 给出的输出，以及该上下文中的所有建议。然后要求排序器做出判断：你有这些建议，你认为哪一个是最好的？我们在这里遇到的一个很有趣的瓶颈是，我们希望响应速度够快。我们不能出现这样的情况：先把文本回复给用户，然后还要等 5 秒钟才生成后续建议。我们必须做到快速响应。这就是为什么我们对这些建议设置了时间限制。目前，这一步的时间限制是 1.5 到 2 秒。毫无疑问，Jev 为我们带来了比通用 LLM 更好的质量和低得多的延迟，但有两点特别突出。第一，我们在 99.2% 的情况下都能在时间限制内给出建议，而使用通用 LLM 时这个比例大约是 90%。这确保了我们现在拥有更高的用户参与度和多得多的用户查询。第二点是，在 Glean，每当我们使用这些 LLM 时，我们都有护栏（guard rails）。这里的护栏指的是，LLM 可能不擅长生成某种回复，或者可能会犯某些特定类型的错误，因此我们对所有可能出现的错误都设置了检查和制衡机制，并随时记录所有触发的检查。使用通用 LLM 时，我们在大约 90% 的情况下能够生成有效建议，但仍有一些情况 LLM 要么用另一种语言生成回复，要么输出不符合我们以编程方式设定的某些其他标准。而使用 Jev 时，我们发现输出无效的情况为零。当然，一个很自然的问题是：那你们肯定用了不同的提示词吧？是的，提示词确实有所不同，但我们尽量让两种情况下的提示词保持最大程度的一致，以免产生偏差。正如我所说，我们在 Glean 希望让系统尽可能保持简单。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Next I'll walk you through the ranker problem statement that I talked about. When we receive a user query we also want to generate the best follow up suggestions for the user like this helps us in getting discoverability for our product. This helps us in ensuring that the user has the best possible experience. We also want to recommend or say preempt what the next user query might be. Again, a pretty common problem statement that the entire industry has been trying to solve for. Internally, we call this system Q like Q as in the literal Q. The way this works, we have like 10 or 15 different sources or 10 or 15 different ways, uh 10 or different 15 different sources that are generating suggestions independently of each other. Once those suggestion these suggestions are generated by natural language LLMs and it's like a proper natural language query. Once these suggestions are in, we have a ranking step. So the ranker takes in all these suggestions, takes in the the first user query, takes in the output that Clean gave, and then all these suggestions in that context. The ranker is then asked to decide like, hey, you have these suggestions, what do you think is the best one? A pretty interesting bottleneck that we had over here is we want the response to be snappy. I cannot we cannot have a state where we give the textual response to the user and then wait 5 seconds for generating the follow-up suggestion. We have to be snappy. That's why we have time limits on these suggestions. So right now this step had a time limit of 1 1.5 to 2 seconds. Jeff, no doubt gave us a better quality than better quality and far better latency than what we had with a general purpose LLM, but two things stood out over there. First, we were able to give a suggestion within our time bounds in 99.2% cases. With the general purpose LLM, this was almost 90%. So this ensures that we have user engagement and far more user queries now. The second thing is at Clean, whenever we use these LLMs, we have guard rails. Guard rails in the sense that here LLM might not be good at generating a response or LLM might be making some specific kind of mistakes. So we have checks and balances for all those possible mistakes that we see. We keep a log of like we keep a log of all these checks that are incurred at any point of time. With a general purpose LLM, we were able to generate a valid suggestion in almost 90% of the use 90% of the cases. We still had some places where LLM was either generating a generating a response in a different language. The output did not meet certain other criteria that we had that we had written programmatically. With Jev, we found zero cases to be there when the output was invalid. Now a natural question is like, hey, but you would have used a different prompt. Yes, the prompt was somewhat different, but we tried to mimic the prompt in the two cases to the largest extent possible so that we don't have a divergence. Like again, we at Glean want to keep the system as simple as possible.</p>
+</details>
+<p>使用决策模型的另一个好处是我们可以控制阈值，因为在这个排序器问题中，我们能得到每个输出的具体概率，而不局限于非是即否的二元回复。我们可以得到类似“这是五个选项，以及这五个选项各自的概率”。借此，我们能够根据具体的部署环境来微调阈值。我们引入了自学习系统，能够根据用户的具体客户部署情况以及该客户的使用性质，自动微调阈值。这确保了每一位客户都能根据他们使用 Glean 的方式获得最佳体验，而不是套用一个千篇一律的通用解决方案。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Another benefit we see with using a decision model is how we can control the thresholds because in this ranker problem statement, we are getting specific probabilities of each output. We are not restricted to a binary yes or no response. We get like, hey, these were the five options and these are the probabilities of these five options. With this, we are able to fine-tune the thresholds based on the deployment. We have put in self-learning systems which based on the user based on the customer deployment and the nature of usage that the specific customer has fine-tunes the thresholds by itself. This ensures that the experience in each and every customer out there is the best possible based on how they use Glean, not a general purpose solution that fits all.</p>
+</details>
+<h3 id="场景四作为评判者的-llmllm-as-judges" data-reading-heading="">场景四：作为评判者的 LLM（LLM as Judges）</h3>
+<p>好的，接下来这个也很有意思。除了改善终端用户的生活和体验之外，我们还尝试在开发流水线的其他一些环节中使用 Jev，其中一个就是“用 LLM 作为评判者”。大家使用 LLM 作为评判者已经有很长一段时间了：有一个输入，有一个输出，然后我们用 LLM 来评判输出的质量如何。通常情况下，每当我们使用 LLM 作为评判者时，我们都会多次重复实验，以应对回复中的波动性。在 Glean，我们在评估流水线的一个非常具体的环节中使用了 Jev。Glean 的回复和其他所有 AI 产品一样，都带有引用。人们正是通过这些引用来信任 Glean 的回答是正确的，并且有正确的文档作为依据。我们对这些引用有着极高的标准，在评估流水线中有一个专门的环节，用来检查被引用的文档是否真正支持回答中所提出的论断。这看起来又是一个相当简单的“是或否”的问题，即该论断是否得到支持。毫无疑问，正如幻灯片上所展示的，使用 Jev 后我们在延迟和成本方面都有了极大的改善。我们在这里注意到的一个有趣现象是，与比如 Luna 这样的模型相比，Jev 的结果非常一致且可复现。在我们测试的 28 或 30 个用例中，只有一次运行出现了回复差异，除此之外，所有结果都是一致的。这对我们 Glean 的工程师或开发者来说确保了两件事：我们不再只是以线性的方式提升产品质量或改进 Glean。在开发流水线中取得这种程度的改进，会带来产品改进速度的指数级增长。如果我作为一名开发者能够以 5 倍的速度交付功能，这就是延迟上的显著降低。如果我在成千上万条数据上运行这个实验，这能节省大量时间。而且，我不需要对同一组输入输出反复运行多次，因为 Jev 的结果相当稳定。因此，如果我能将自己的生产力提高 5 倍或 6 倍，我就能向客户交付 6 倍的功能，而这种情况在 Glean 大约 300 或 500 名工程师中都会发生。所以，一个优秀的决策模型带来的影响不再是线性的，而是对产品改进的指数级推动。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Okay, this is an interesting one. Now moving on from how we have been making the lives or the experience of our end users better, we also tried using Jev and some of the some some other parts of our development pipeline. One of them was how we use LLM as judges. Like all of us have been using LLM as judges for quite some time now. There's an input, there's an output, and we use an LLM to judge how the quality of the output is. Now naturally, whenever we use LLM as a judge, we repeat the experiment multiple times because to account for the variability in the response. At Glean, we used Jeff for a very specific part of our evaluation pipeline. Glean responses are like any other AI product out there has like citations. This is how people trust that Glean Glean's answer was correct and it it is grounded in the correct document. Now these site we hold these citations to a very high bar and we have a specific part in our evaluation pipeline where we check whether the cited document really supports the claim made in the answer or not. This again seems to be a pretty simple yes or no question like hey whether the claim is supported or not. With Jeff, no doubt we had a far better latency and cost like visible in the slide over here. The interesting thing we noticed over here is how consistent and reproducible Jeff results were in comparison to something like say Luna. In the 28 or 30 use cases that we had, like only one run had like a difference in response. Apart from that, everything was consistent. What this ensure this this ensures two things for us as engineers or us as developers at Glean. We are not only improving the quality of our product or we are not only improving Glean in a linear fashion anymore. Any improvement of this extent in the development pipeline leads to an exponential increase in how we can improve the product. So if I'm if I as a developer am able to ship things like 5x faster, like this is a significant reduction in latency. Like if I run this experiment across thousands and thousands of entries, this is a lot of time. And again, I don't have to run the same input-output pair multiple times because the result from Jeff are quite consistent. So if I'm able to increase my own productivity by like 5x or 6x, I can ship 6x times the features to our customers and this happens across like 500 engineers or 300 engineers at Clean. So the impact of a a good decision model is no longer linear, it is exponential on how we can improve the product.</p>
+</details>
+<h3 id="场景五安全防护" data-reading-heading="">场景五：安全防护</h3>
+<p>好的，说完产品体验和 LLM 作为评判者，接下来是我们如何使用客户数据中非常关键的一环。安全性是所有客户对我们的期望。例如，我们会对来自工具的所有输入输出，以及来自 LLM 的所有输入输出进行检查和制衡。到目前为止，我们在 Glean 采用的是一种多阶段方法，分为两个阶段：第一阶段侧重于高召回率，第二阶段是最终的重负载 LLM。所有这些调用都是与实际的工具输入输出调用并行进行的。此前，我们一直使用 T4 GPU 在所有客户环境中托管一个 virtue 分类器。Glean 是一个单租户解决方案，我们不会跨客户使用或共享资源，每个客户都有自己独立的部署、独立的实例和全部资源。假设我们有一千个客户，我们就必须在这上千个客户中维护这些 virtue 分类器，这本身就成了一个相当棘手的问题，占用了 Glean 工程师大量的时间。从这里的结果来看，我们将第一阶段原本使用的 virtue 分类器替换为 Jev 后，整体召回率从 31.5% 提升到了 90.2%。与此同时，我们看到成本显著降低。这里提到的成本还仅仅是资源成本，实际上我们还节省了工程资源成本——我们不再需要投入两三名全职工程师去跨客户维护那些 virtue 分类器或 T4 GPU。我们获得的提升或节省远远超过了 50%。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>Okay. Now moving on from product and LLM as judges, there's a pretty import this this this is a pretty important part of how we use our customer data. Like security is something that all our customers expect from us. So for example, we have checks and balances on all the inputs and outputs coming from a tool, all the inputs and outputs from an LLM. Till now we at Glean have like a multi phase approach. There is like there are two phases to this. The first one is like recall heavy phase and the second one is the final heavy loaded LLM. All these calls are made in parallel to like the actual tool input output calls. Till now we used to host a virtue classifier using T4 GPUs across all our customers. So Glean is a single tenant solution like we don't use or share resources across customers. Every customer gets gets its own deployment, gets its own instance and gets all the resources. So assuming we have thousand customers out there, we had to maintain like virtue classifiers across all these thousand customers, which becomes a pretty difficult problem statement in itself which takes up a lot of time from Glean engineers. So looking at the results over here, the overall recall of the first phase where we used to have a virtue classifier, we replaced that with Jev, went from 31.5% to 90.2%. At the same time, we are seeing a significant reduction in cost. Now this cost is only the resource cost mentioned over here, but we are also saving cost on the engineering resources over here. We don't have to invest like two or three engineers who are full-time maintaining those virtue classifiers or T4 GPUs across customers. The the improvement or the savings that we have are far more than 50%.</p>
+</details>
+<h3 id="总结与选型原则" data-reading-heading="">总结与选型原则</h3>
+<p>这一页总结了我到目前为止讲过的所有成果。Jev 在 Glean 已经成功影响了用户的产品体验，影响了我们作为开发者在 Glean 的工作方式，最重要的是，它还对我们为客户提供的安全性产生了非常积极的影响。最后，我们在 Glean 一直遵循一条简单的规则：输出是否可以提前列举？如果不能，那就是一个自由文本生成问题，请回到能够生成自由文本的模型。如果可以，那就使用 Jev。标签是否稳定且数据量很大？如果标签稳定（如今这种情况已经很少见了），我们也可以对模型进行微调；但如果标签经常变化（在我看来如今这非常普遍），那么同样应该使用像 Jev 这样的方案。当然，如果你需要动态文本，完全可以尝试将 Jev 与自由文本 LLM 结合使用的混合方案。我的演讲到此结束，感谢大家的聆听。我附上了一篇博客文章的链接，我们在里面详细发布了完全相同的数据结果。如果大家还有更多问题，欢迎在会后随时找我交流。谢谢。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+<p>This slide concludes all the results I have talked about till now. Jev at Glean has been able to influence the product experience of the users, has been able to uh impact how we as developers have been working at Glean and most importantly it also has a very good positive impact on the security that we provide to our customers. A simple rule that we have been using is can the out in conclusion a simple rule that we have been using at Glean is can the output be listed in advance? If no then it's a free form generate generative text problem statement. Go back to something that can generate free form text. If yes then use Jev. Are labels stable and volume high? If this is the case where the labels are stable which is rarely the case anymore uh we can also fine tune a model but if the labels change which in my opinion is quite frequent these days then again use something like Jev. Obviously if you need dynamic text we can like feel free to try out more hybrid approaches like Jev along with free form text LLMs. This ends my presentation. So thank you everyone for listening. I have added a blog like a link to the blog post where we have posted the exact same results in great detail. Feel free to catch me on the outside if you have more questions. Thank you.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/96d3d704476160a0bbbe095f480e5ebcb9e18b28c0a773c64b88f68ff5cb9e40.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/96d3d704476160a0bbbe095f480e5ebcb9e18b28c0a773c64b88f68ff5cb9e40.md" download="在 Glean 中使用 Jev 实现快速且结构化的 AI 决策.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Glean" class="entity-link product-link">Glean</a>, <a href="/search/?q=Jev" class="entity-link product-link">Jev</a>, <a href="/search/?q=Llama" class="entity-link product-link">Llama</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

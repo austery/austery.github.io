@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>现在的 Agent Harness
+越来越复杂，哪些技巧在跑分里真正管用</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">现在的 Agent Harness
+越来越复杂，哪些技巧在跑分里真正管用</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-09</span>
+    
+
+    <header class="article-header">
+      
+      <h1>现在的 Agent Harness
+越来越复杂，哪些技巧在跑分里真正管用</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/agent-harness/">agent-harness</a>
+      
+        <a class="tag-link" href="/tags/ai-tooling/">ai-tooling</a>
+      
+        <a class="tag-link" href="/tags/testing/">testing</a>
+      
+        <a class="tag-link" href="/tags/workflow-automation/">workflow-automation</a>
+      
+        <a class="tag-link" href="/tags/model-evaluation/">model-evaluation</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章讨论了当前 Agent Harness 的复杂性，以及在工程评测中哪些技巧真正有效。研究通过对比不同方案，发现派多代理开会（如 Compound Engineering 插件）的成本极高，而调高单个模型的思考档位或在主循环中设置“先写失败测试”和“回合末目标核对”这两个小关卡，能以更低的成本获得显著的性能提升。此外，通过对底层框架进行改造（如慢命令转后台、长输出写文件留预览、追加式摘要保缓存）和编写单元测试，可以有效解决长程任务中的卡死和上下文压缩问题，从而提升最终得分。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/agent-harness-tricks-benchmark-20261109.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-09T00:00:00.000Z">2026-11-09</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B4%BE">为什么派</a></li><li class="outline-h2"><a href="#%E5%A6%82%E6%9E%9C%E4%B8%8D%E6%90%9E%E5%A4%9A%E4%BB%A3%E7%90%86%E5%BC%80%E4%BC%9A%E6%8E%A7%E5%88%B6%E5%BE%AA%E7%8E%AF%E9%87%8C%E7%95%99%E5%93%AA%E4%B8%A4%E4%B8%AA%E5%B0%8F%E5%85%B3%E5%8D%A1%E5%B0%B1%E5%A4%9F%E4%BA%86">如果不搞多代理开会，控制循环里留哪两个小关卡就够了？</a></li><li class="outline-h2"><a href="#%E5%8D%95%E6%AD%A5%E6%80%9D%E8%80%83%E5%92%8C%E5%BE%AA%E7%8E%AF%E5%85%B3%E5%8D%A1%E9%83%BD%E9%85%8D%E9%BD%90%E5%90%8E%E9%95%BF%E4%BB%BB%E5%8A%A1%E9%87%8C%E7%9A%84">单步思考和循环关卡都配齐后，长任务里的</a></li><li class="outline-h2"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%A1%B6%E5%B0%96%E5%9B%A2%E9%98%9F%E6%9C%80%E5%90%8E%E8%BF%98%E8%A6%81%E7%BB%99%E5%A4%96%E5%9B%B4%E6%A1%86%E6%9E%B6%E5%86%99%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95">为什么顶尖团队最后还要给外围框架写单元测试？</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>以前我们做一个编程智能体，用一个大模型加百来行主循环就可以跑起来了。但是现在再去看看大厂开源的工程框架或者社区流行的几万星项目，包裹在模型外层负责调用工具和管理上下文的那层代码，业内称为
+Harness，也就是外围框架，如今正变得越来越庞大，内置了数十种技能、十几个子代理开会机制，以及各种各样的上下文压缩钩子。确实，如果只用最简陋的主循环让智能体连续跑几个小时的大任务，它很容易在中途卡死或跑偏；但个人开发者想自己搭一套顺手的框架时，面对这堆复杂的工程设计，很难分清哪些真能提分省钱，哪些只是徒增账单的花架子。</p>
+<p>2026 年 11 月初，数据评测公司 Surge AI 和加州大学洛杉矶分校联合团队的
+FireFlash
+项目在同一周发布了各自的实测报告。两家团队把流行的工作流插件和底层框架技巧逐个拆开，在真实工程题和长程终端任务上做了对照实验，帮我们筛出了真正有用的工程技巧。</p>
+<h2 id="为什么派" data-reading-heading="">为什么派</h2>
+<p>17 个子代理轮流开会，还不如让单个模型多想一会儿？</p>
+<p>让现在的旗舰大模型写一段局部代码并不难，难的是改动大型代码库时不漏掉上下游的隐患。Surge
+AI 找资深工程师从真实公司的生产代码库里提炼出 60
+道高阶工程题，建了一套叫作 sudo L7
+的工程评测基准。这套测试每道题满分 100 分、75
+分及格，评分标准像资深工程师审代码一样严苛：如果只看眼前的报错有没有修好、局部功能能不能跑通，几家主流大模型都能拿到八成左右的高分；但评分表里还会检查模型有没有把下游调用方改坏、有没有放着库里现成的工具函数不用而重复造轮子，以及有没有发现需求本身隐藏的业务漏洞。把这些工程扣分项全算进去之后，能够跨过
+75 分及格线的题目比例一下子掉到了三四成。</p>
+<p>为了解决这个问题，最流行的方法是在智能体上添加一个模拟软件公司开会的多代理插件。比如开源社区中流行的
+Compound Engineering 插件，它提供了 37
+项技能，让多个代理按照计划、执行、审查的流程依次进行。在 Surge
+AI
+的外围框架实验中，有一个问题是修复活动报名系统中的一个漏洞，用户在填写报名信息后，在付款前，系统会发送一封包含线上会议密码的确认邮件。</p>
+<p>把这道题交给 Compound Engineering 处理时，它直接派出了 17
+个子代理来审查计划、精简代码、检查代码质量。遗憾的是，这批子代理全都通过了审查，没有一个发现确认邮件在付款之前就已经发送。这是因为最初写计划的主代理没有考虑到付款的时序，所有子代理都根据同一个错误的计划来审查代码格式。</p>
+<p>整场实验跑下来，这个复杂的插件把每道题的调用成本推高到了原来的 8
+倍，但分数只是从默认的基线 31.1 分微涨到 32.9
+分，差别落在随机波动的范围内。甚至插件作者的代码库最近也专门合并了一条限制子代理派发条件的更新，改为只在确实划算的场合派发子代理。</p>
+<p>与其花大价钱雇十几个浅层思考的分身开会，不如把钱直接砸在单个模型的思考深度上。最直接的一招往往不用装任何外部插件，只要把同一个
+Claude Opus 5.5 模型的思考档位从默认的中档调到高档
+xhigh。在另一个视频剪辑软件缺失首帧导致崩溃的题目里，中档思考的模型只把眼前的报错堵上就停手交卷了，只拿到
+14
+分。调到高档思考后，模型修完第一处报错，又顺着回退路径往下游多查了一步，发现另一处代码也默认第一帧必然存在，顺手把两处隐患一起修好并拿到了
+100 分满分，单题只多花了 0.29 美元。</p>
+<p>如果把整个测试汇总起来，不装任何花哨插件、单纯调高单模型的思考档位，总分直接跃升到
+42.4 分。这 11.3 分的跨越只花了基线 3.5
+倍的成本，在验证彻底性和性价比上都把多代理开会的方案甩在了身后。</p>
+<h2 id="如果不搞多代理开会控制循环里留哪两个小关卡就够了" data-reading-heading="">如果不搞多代理开会，控制循环里留哪两个小关卡就够了？</h2>
+<p>在把单模型的思考档位调高之后，模型在单步推理上已经相当深入，但在多轮循环中仍然会出现两个典型错误。一个是拿到模糊需求时不写测试直接改代码，另一个是修改完第一个报错就自我感觉良好提前交卷。</p>
+<p>解决这两个问题也不需要搞一个多代理委员会，只需要在单主干循环里面做两个小改动。开源插件
+Superpowers
+把多人评审的复杂场面去掉了，只要求一件事：在写功能代码之前必须核对清楚需求规格，跑通先写失败测试再写代码让它变绿的测试驱动开发循环。这个改动只让调用成本增加了
+10%，就把总分提高了 2.4 分（达到 33.5
+分），拿到了具有统计显著性的提升。</p>
+<p>另一个有效的关卡是防止过早提交。Claude Code 自带的 /goal
+目标核对命令结合代码审查插件，可以在每一轮模型想要停止并提交的节点，额外执行一次完成条件检查。如果检测到初始目标并未真正实现，就会把任务抛回下一轮，让模型继续干活。这个简单的回合末闭环只用了
+1.8 倍的成本，就把总分推高了 3.3 分（达到 34.4
+分），在所有外挂工作流里拿到了最高分。</p>
+<p>控制层越轻越好，这一点在加州大学伯克利分校团队的 HarnessTax
+评测报告里也得到了印证。研究团队把重型商业框架和只有 100
+行代码的极简框架放在 492
+道标准编程题上做了横向对比，发现重型框架在第一轮的系统提示词和工具定义中多消耗了近
+20 倍的词元，让单题账单贵了 3 到 5 倍，但最终的解题准确率差距还不到 2
+个百分点。</p>
+<p>在 60 道真实工程题上，派 17
+个子代理开会将成本推高至 8 倍却仅带来 1.8
+分的无显著性微涨，而直接调高单模型思考档位以 3.5 倍成本换取了 11.3
+分的跃升。</p>
+<h2 id="单步思考和循环关卡都配齐后长任务里的" data-reading-heading="">单步思考和循环关卡都配齐后，长任务里的</h2>
+<p>4.4 分是从哪抠出来的？</p>
+<p>既然控制流如此简单，为什么工业级外围框架的底层代码仍然很厚呢？这是因为在长程终端任务中，即使模型一开始就调到了最高的思考档位，受制于终端环境的物理限制，它仍可能中途卡死。在
+FireFlash
+项目的长程智能体技术报告中，研究团队使用开源的 GLM-5.3-Flash
+模型，将其锁死在最高思考档位，并只给它保留了在终端执行命令、读写和编辑文件这
+4 个基础工具。但如果直接使用官方默认的 Claude Code 框架去跑终端评测基准
+Terminal-Bench 4.0，它只能得到 35.8
+分；而换成研究团队改造的底层框架，不做任何模型训练，就可以得到 40.2
+分。</p>
+<p>这额外的 4.4
+分，全来自底层框架帮模型扛住了长程任务里三种具体的死法。第一种死法是终端日志糊眼和超时误杀：跑一次大型编译或测试，终端会掉出几万行输出，直接丢进对话就会把上下文淹没；若是编译慢一点撞上超时阈值，普通框架直接杀进程，前面做的努力全费了。FireFlash
+的做法是让每个命令的标准输出默认都落到一个临时文件里，模型只看到一小段截断预览和文件名，想看细节就再去按需读文件；碰到慢命令超时也不杀进程，而是自动转到后台异步继续跑。</p>
+<p>第二种死法是上下文压缩：任务做久了，对话快满 85%
+容量就要压缩历史。如果直接把老的对话删掉换摘要，就改写对话的开头，打碎大模型用来省算力的前缀缓存，后面每一轮都全价重算。FireFlash
+换了个巧办法：保留最新的一截原文，把老记录压成摘要，再用追加式的分段提示词接在已有历史后面，这样既腾出空间，又保住了前缀缓存。就这三项改造（慢命令转后台、长输出写文件留预览、追加式摘要）已经把单次尝试的成本砍掉大约三分之一。</p>
+<p>疏通了管道以后，团队又针对第三种死法，在提示词里立了三条反废操作的规矩。智能体在终端里常干三件烧钱的傻事：用
+sleep
+命令死循环轮询后台任务、为改几行代码把整个大文件从头重写一遍、以及分多次零碎写入同一个文件。提示词明确禁止
+sleep
+空转、强制使用就地修改工具、要求文件单遍写完后，单次运行成本又在砍掉三分之一的基础上额外省下了
+16%。</p>
+<p>FireFlash
+的底层框架通过慢命令转后台、长输出落盘预览、追加式摘要保缓存与反废操作规矩提升
+4.4 分并大幅压降成本，配合保持框架一致的强化学习后总计提升 10.4
+分。</p>
+<h2 id="为什么顶尖团队最后还要给外围框架写单元测试" data-reading-heading="">为什么顶尖团队最后还要给外围框架写单元测试？</h2>
+<p>在修好底层管道后，FireFlash 团队又用强化学习补了后半程的 6.0
+分，把终端基准推到了 46.2 分。而他们的开源方案单次成本只要 0.72
+美元，一举反超了闭源方案 Fable 5（44.5 分，单次成本 22.02 美元）。</p>
+<p>后半程的提升则源于一个容易忽视的细节：模型在出厂预训练时从未见过这种自定义的追加式摘要和截断文件预览格式。为了让模型真正吃透这套自定义管道，团队专门写了一套自动化单元测试，强行锁死强化学习训练采样时用的外围框架和最后考试评测时用的外围框架，保证两边的代码逻辑与提示词一字不差。接着他们用
+64 张显卡跑了不到 5
+天的全参数强化学习，同时对用更少词元解出题目的尝试给予长度加分，把成功解题的词元消耗压到了原来的
+84%，让模型在训练中摸透了这套底层管道的脾气。</p>
+<p>这也解释了为什么今天大厂开源的外围框架往往看起来神秘莫测，因为顶尖团队已经把底层管道和模型的后训练拧在了一起。但对不用自己从头训模型的个人开发者而言，剥掉那层复杂的外壳后，真正经受住跑分检验的做法其实就握在自己手里。与其去搭十几个子代理轮流开会的形式主义班子，不如先把单模型的思考档位调高，在主循环里守住先写失败测试和回合末目标核对这两个小关卡，再把长输出写文件留预览、慢命令转后台、追加式摘要保缓存以及禁止轮询空转写进自己的底座里，用几百行干净的代码就能拿走工业级框架最核心的红利。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/f2e3f24b8cfb4a0b7432d91c61083729dc0899ae6b5fe867acad36ffd3501c72.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/f2e3f24b8cfb4a0b7432d91c61083729dc0899ae6b5fe867acad36ffd3501c72.md" download="现在的 Agent Harness
+越来越复杂，哪些技巧在跑分里真正管用.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Surge AI" class="entity-link company-link">Surge AI</a>, <a href="/search/?q=University of California, Los Angeles" class="entity-link company-link">University of California, Los Angeles</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Claude Opus 5.5" class="entity-link product-link">Claude Opus 5.5</a>, <a href="/search/?q=GLM-5.3-Flash" class="entity-link product-link">GLM-5.3-Flash</a>, <a href="/search/?q=Compound Engineering" class="entity-link product-link">Compound Engineering</a>, <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

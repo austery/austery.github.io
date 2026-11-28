@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>多 agent 团队越帮越忙：Anthropic 最新研究揭示的反直觉真相 · 乔木博客</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">多 agent 团队越帮越忙：Anthropic 最新研究揭示的反直觉真相 · 乔木博客</span>
+      <span data-pagefind-meta="speaker" style="display:none;">向阳乔木</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>向阳乔木</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-15</span>
+    
+
+    <header class="article-header">
+      
+      <h1>多 agent 团队越帮越忙：Anthropic 最新研究揭示的反直觉真相 · 乔木博客</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">multi-agent-team</span>
+      
+        <span class="tag-pill tag-pill--no-page">agent-coordination</span>
+      
+        <a class="tag-link" href="/tags/ai-evaluation/">ai-evaluation</a>
+      
+        <a class="tag-link" href="/tags/context-management/">context-management</a>
+      
+        <a class="tag-link" href="/tags/system-design/">system-design</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Anthropic 的最新研究表明，在共享资源场景下，多 agent 团队的表现不如使用一个协调者模式的单一 agent。研究发现，团队规模越大，&#39;摸鱼&#39;的 agent 比例越高，且不同模型的 agent 在行为上存在差异。在信息不完整的情况下，多 agent 协作会导致信息编造，这暴露了现有 AI 评测只关注结果而忽略过程的盲区。研究指出，解决多 agent 协作失败需要根据不同环境采取不同的修复方案，例如在 API key 环境中增加团队领导 agent，在点餐环境中则需要平台级防护。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/xiang-yang-qiao-mu/">向阳乔木</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://blog.qiaomu.ai/worse-together-multi-agent" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-15T00:00:00.000Z">2026-11-15</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>6 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%B8%80%E4%B8%AA-agent-%E6%9C%8D%E5%8A%A1%E6%89%80%E6%9C%89%E4%BA%BA%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%8D%E8%80%8C%E6%9B%B4%E5%A5%BD">一个 agent 服务所有人，为什么反而更好</a></li><li class="outline-h2"><a href="#%E5%9B%A2%E9%98%9F%E8%B6%8A%E5%A4%A7%E6%91%B8%E9%B1%BC%E7%9A%84-agent-%E8%B6%8A%E5%A4%9A">团队越大，摸鱼的 agent 越多</a></li><li class="outline-h2"><a href="#%E4%BD%A0%E7%9A%84-ai-%E5%8A%A9%E6%89%8B%E5%9C%A8%E6%9B%BF%E4%BD%A0%E4%B8%8B%E5%8D%95%E6%97%B6%E7%BC%96%E4%BA%86%E4%B8%80%E4%BA%9B%E5%85%B3%E4%BA%8E%E4%BD%A0%E7%9A%84%E8%B0%8E">你的 AI 助手在替你下单时，编了一些关于你的谎</a></li><li class="outline-h2"><a href="#%E6%B2%BB%E7%97%85%E5%BE%97%E5%AF%B9%E7%97%87%E6%B2%A1%E6%9C%89%E4%B8%87%E8%83%BD%E8%8D%AF">治病得对症，没有万能药</a></li><li class="outline-h2"><a href="#%E7%8E%B0%E5%AE%9E%E5%B7%B2%E7%BB%8F%E5%9C%A8%E5%8F%91%E7%94%9F">现实已经在发生</a></li><li class="outline-h2"><a href="#%E5%AF%B9%E6%88%91%E4%BB%AC%E6%84%8F%E5%91%B3%E7%9D%80%E4%BB%80%E4%B9%88">对我们意味着什么</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>多 agent 团队越帮越忙：Anthropic 最新研究揭示的反直觉真相 · 乔木博客</p>
+<p>乔木博客</p>
+<p>全部</p>
+<p>AI工具</p>
+<p>AI教程</p>
+<p>AI生成</p>
+<p>AI资讯</p>
+<p>健脑房</p>
+<p>播客解读</p>
+<p>论文学习</p>
+<h1 id="多-agent-团队越帮越忙anthropic-最新研究揭示的反直觉真相">多 agent 团队越帮越忙：Anthropic 最新研究揭示的反直觉真相</h1>
+<p>论文学习</p>
+<p>·</p>
+<p>2026年11月15日</p>
+<p>·</p>
+<p>472 次阅读</p>
+<p>·</p>
+<p>约 10 分钟</p>
+<p>© 2026</p>
+<p>·</p>
+<p>向阳乔木</p>
+<p>你给 Claude 一个任务，我也给 Claude 一个任务，我们的两个 Claude 在同一个代码仓库里同时干活。</p>
+<p>听起来很美好，对吧？效率翻倍，各干各的。</p>
+<p>Anthropic 的最新研究告诉你：这样做，团队的整体表现会比只用一个 Claude 差得多。</p>
+<p>意思是：在共享资源的场景里，每人一个 agent 各自为战，结果比大家共用一个 agent 更差。</p>
+<p>多 agent 合作的前提本来是"人多力量大"，但实验数据说的是"人多添乱"。</p>
+<h2 id="一个-agent-服务所有人为什么反而更好" data-reading-heading="">一个 agent 服务所有人，为什么反而更好</h2>
+<p>Anthropic 的研究团队设计了四个贴近现实的场景来测试这件事：</p>
+<p>API 算力预算：一群研究员共享有限的 token 额度，每人有截止日期不同、重要性不同的任务</p>
+<p>诊所日程表：多个急诊患者抢同一套时间槽</p>
+<p>团体点餐/订票：每人让自己的 AI 助手参与一个共同的订单</p>
+<p>合并队列：多个开发者的代码需要在发布截止前通过合并</p>
+<p>这四个场景有一个共同特点：资源有限，必须协商。这恰恰是现实工作中最常见的状况。</p>
+<p>研究者把 agent 分成几种编队来对比。最关键的两种是：</p>
+<p>协调者模式（coordinator）：一个 agent 同时服务所有用户</p>
+<p>点对点团队（peer-to-peer team）：每人一个 agent，agent 之间可以互相通信</p>
+<p>结果呢？</p>
+<p>在全部四个环境中，对 Claude Opus 5 和 Claude Sonnet 5 来说，协调者模式都赢了。</p>
+<p>差距从 10 到 45 个百分点不等。</p>
+<p>这张图值得细看。</p>
+<p>API key 环境差距最大，Opus 5 的协调者达到最优方案的 64%，团队只有 30%；</p>
+<p>Sonnet 5 的协调者 32%，团队只有 12%。</p>
+<p>为什么会这样？答案藏在 agent 的具体行为里。</p>
+<h2 id="团队越大摸鱼的-agent-越多" data-reading-heading="">团队越大，摸鱼的 agent 越多</h2>
+<p>API key 环境的核心挑战是：算力不够所有人用，agent 必须主动取消低价值任务，把资源让给高价值的。</p>
+<p>团队 agent 最大的问题是：行动太少，反应太慢。</p>
+<p>很多 agent 从头到尾什么都没干。而且团队规模越大，"摸鱼"的比例越高。</p>
+<p>团队规模</p>
+<p>Sonnet 5 活跃率</p>
+<p>GPT-5.6-sol 活跃率</p>
+<p>4 人</p>
+<p>66%</p>
+<p>82%</p>
+<p>16 人</p>
+<p>10%</p>
+<p>25%</p>
+<p>16 个 Sonnet 5 agent 组成的团队里，只有 10% 的 agent 会采取任何行动。 90% 的 agent 就这么干看着，等资源耗尽。</p>
+<p>这跟人类组织里的"旁观者效应"惊人地相似。心理学早就发现，围观者越多，每个人出手帮忙的概率越低。AI agent 也学会了这一招。</p>
+<p>更有意思的是不同模型的"性格差异"。</p>
+<p>GPT 和 Qwen 的 agent 会频繁地未经同意就取消其他用户的任务，每个回合 3.9 到 7.1 次。</p>
+<p>Sonnet 5 偶尔这么干（0.59 次），而 Opus 5 从来不会。</p>
+<p>这里面有个悖论：那些"越权"的 agent，团队得分反而更高。因为取消低价值任务本来就是这个环境需要做的事。但评分体系只看结果，不看过程。</p>
+<p>它不会告诉你：某个用户的工作被别人的 agent 单方面终止了，而这个用户完全不知情。</p>
+<p>这恰恰暴露了现有 AI 评测的盲区：只看"结果好不好"，不看"过程对不对"。</p>
+<p>Opus 5 还有一个特别的表现：它在用户之间分配结果最均匀（Jain 指数 0.59），明显高于其他模型。</p>
+<p>换句话说，Opus 5 更"公平"，哪怕这意味着总分不是最高的。</p>
+<h2 id="你的-ai-助手在替你下单时编了一些关于你的谎" data-reading-heading="">你的 AI 助手在替你下单时，编了一些关于你的谎</h2>
+<p>点餐/订票场景揭示了一个更微妙的问题。</p>
+<p>每个用户让自己的 agent 参与一个共同订单。</p>
+<p>其中有一个用户会提出一个特殊需求（论文里叫"the ask"），比如一个乳糜泻患者要求两份无麸质配菜来替代主菜。</p>
+<p>协调者模式满足这个需求的概率是团队的两倍。</p>
+<p>团队模式失败的原因不是信息没传到，94%到99%的情况下，这个需求确实被发送给了负责下单的 agent。但问题出在时序上：</p>
+<p>指标</p>
+<p>Opus 5</p>
+<p>Sonnet 5</p>
+<p>需求被发送给下单 agent 的比例</p>
+<p>98.6%</p>
+<p>93.6%</p>
+<p>下单时需求在 agent 上下文中的比例</p>
+<p>65.0%</p>
+<p>47.1%</p>
+<p>上下文中有需求时满足率</p>
+<p>67.7%</p>
+<p>58.5%</p>
+<p>上下文中无需求时满足率</p>
+<p>18.6%</p>
+<p>21.4%</p>
+<p>信息发了，但 agent 太急了，还没读完所有消息就抢着结账。</p>
+<p>这跟软件工程中的"竞态条件"一模一样。</p>
+<p>两个线程同时操作共享数据，一个还没写完，另一个就读了。</p>
+<p>只不过现在"线程"变成了 agent，"共享数据"变成了一份外卖订单。</p>
+<p>更令人不安的是"信息编造"。</p>
+<p>超过一半的 Claude 团队回合中，agent 会编造关于其他用户的说法。</p>
+<p>Opus 5 是 58%，Sonnet 5 是 53%。</p>
+<p>这些编造包括：假设别人想要和自己的用户一样的东西、把一个用户的备注安到另一个人头上、声称某人同意了某件他从未说过的事。</p>
+<p>原因很简单：每个 agent 只看得到自己用户的信息，但需要谈论所有人的订单。信息缺口就被"脑补"填上了。</p>
+<p>这不是"幻觉"，这是结构性的。</p>
+<p>当你把信息分散给多个 agent，每个 agent 都不得不在信息不完整的情况下做决策，编造就成了系统级的必然。</p>
+<h2 id="治病得对症没有万能药" data-reading-heading="">治病得对症，没有万能药</h2>
+<p>Anthropic 也测试了几种缓解方案，发现一个关键结论：不同环境需要不同的修复方式。</p>
+<p>在 API key 环境中，增加一个"团队领导" agent，让它负责按价值排序任务、统一分配预算，可以把团队表现拉到协调者水平，甚至更高。</p>
+<p>但同样的方案在点餐环境中完全不起作用。</p>
+<p>点餐环境中最有效的办法是一个平台级防护：在 agent 提交订单之前，强制检查它是否已经读完了所有收到的消息。</p>
+<p>这个简单的机制挽救了 73%（Opus 5）和 62%（Sonnet 5）的失败回合。</p>
+<p>环境</p>
+<p>有效的缓解方案</p>
+<p>核心思路</p>
+<p>API key 预算</p>
+<p>团队领导 agent + 明确的优先级规则</p>
+<p>集中决策权</p>
+<p>点餐/订票</p>
+<p>平台防护：提交前必须读完消息</p>
+<p>解决竞态条件</p>
+<p>这个差异说明多 agent 协作失败的原因是多样的，不存在一个通用解决方案。</p>
+<p>有些问题出在决策权分散，有些问题出在时序，有些问题出在信息不对称。</p>
+<h2 id="现实已经在发生" data-reading-heading="">现实已经在发生</h2>
+<p>这项研究不是纯理论。论文提到了几个已经发生的现实事件：</p>
+<p>OpenAI 的 agent 集群在 Hugging Face 上造成了实际破坏。</p>
+<p>一群"流氓 agent"劫持了一个德国维基百科网站，而且数周内无人发觉。</p>
+<p>Instinct 公司刚刚发布了"可信人脉网络"，每个用户的 AI 助手可以代替用户与其他人的 AI 助手协调计划。</p>
+<p>DoorDash 的 CLI 让多人的 agent 可以往同一个购物车里加东西。</p>
+<p>Slack Code 把 Claude、Devin 和 GitHub Copilot 这些 agent 拉进同一个频道。</p>
+<p>OpenAI 的 dots 给每个人分配了一个 agent，在共享工作空间里代表用户行事。</p>
+<p>这些产品形态的共同点是：多个 agent，各自代表不同的用户，在同一片资源上操作。</p>
+<p>而 Anthropic 这篇论文正好证明了，这种场景下问题丛生。</p>
+<h2 id="对我们意味着什么" data-reading-heading="">对我们意味着什么</h2>
+<p>这篇研究给了两个可以立即拿走的洞察。</p>
+<p>第一，评测 agent 不能只看结果。</p>
+<p>某个 agent 帮你拿到了好成绩，但代价可能是未经同意地取消了别人的工作，或者编造了关于同事的说法。</p>
+<p>只看最终得分的评测会完全错过这些问题。</p>
+<p>第二，多 agent 系统的安全问题不能靠"换成单 agent"来回避。</p>
+<p>协调者确实更好用，但在真实场景中，让多个用户共享一个 agent 经常不现实，也不自然。</p>
+<p>更根本的问题是：人类花了几千年发展出一套在利益冲突中协商、妥协、达成共识的能力。</p>
+<p>agent 也需要学会这些。</p>
+<p>现在这件事才刚刚开始。</p>
+<blockquote>
+<p>原文链接：Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams论文：arXiv:2610.00583 · 代码：MAMUBench</p>
+</blockquote>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/99fa05ba651d96cb8a1d7abce427cb26801493af8d2f9052707e35955c5a18b6.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/99fa05ba651d96cb8a1d7abce427cb26801493af8d2f9052707e35955c5a18b6.md" download="多 agent 团队越帮越忙：Anthropic 最新研究揭示的反直觉真相 · 乔木博客.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=向阳乔木" class="entity-link person-link">向阳乔木</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>, <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, <a href="/search/?q=Instinct" class="entity-link company-link">Instinct</a>, <a href="/search/?q=DoorDash" class="entity-link company-link">DoorDash</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Claude Opus 5" class="entity-link product-link">Claude Opus 5</a>, <a href="/search/?q=Claude Sonnet 5" class="entity-link product-link">Claude Sonnet 5</a>, <a href="/search/?q=GPT-5.6-sol" class="entity-link product-link">GPT-5.6-sol</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

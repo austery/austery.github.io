@@ -1,0 +1,409 @@
+---
+author: New York Times Podcasts
+date: '2026-11-23'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=V4TPGKTf0n0
+speaker: New York Times Podcasts
+tags:
+  - measles
+  - vaccine
+  - public-health
+  - epidemiology
+title: 美国失去麻疹消除状态并出现地方性流行
+summary: 由于疫苗接种不信任及疫情扩散，美国失去麻疹消除状态。专家指出，目前出现了成年人感染及孕妇并发症等新情况。报道提及得州和宾州的疫情数据，并对比加拿大应对措施，强调保护脆弱人群的重要性。
+insight: ''
+draft: true
+series: ''
+category: health-wellness
+area: life-family
+project: []
+people: []
+companies_orgs: []
+products_models: []
+media_books: []
+status: evergreen
+---
+### 美国失去麻疹消除状态
+
+这里是《纽约时报》，我是娜塔莉·基特罗夫（Natalie Kitroeff）。这是《每日新闻》（The Daily）。上周，[音乐] 美国失去了麻疹消除状态，这意味着麻疹现在正式 [音乐] 再次成为地方性流行病。这是美国公共卫生的一次历史性倒退，也是全国各地对疫苗深度不信任 [音乐] 的标志。今天，我的同事泰迪·罗森布鲁斯（Teddy Rosenbluth）将为我们解释这是如何发生的，以及需要做些什么 [音乐] 才能击退这种病毒。[音乐] 今天是 11 月 23 日星期一。[音乐] 泰迪，欢迎回到《每日新闻》。
+<details><summary>Original English</summary>
+From the New York Times, I'm Natalie Kitroeff. This is the Daily. Last week, [music] the United States lost its measles elimination status, meaning measles is now officially [music] endemic again. It was a historic setback for American health and a marker of the deep distrust of vaccines [music] across the country. Today, my colleague Teddy Rosenbluth explains how this happened and what it would take [music] to beat the virus back. [music] It's Monday, November 23rd. [music] Teddy, welcome back to The Daily.
+</details>
+
+>> 很高兴回来。
+<details><summary>Original English</summary>
+>> Good to be back.
+</details>
+
+>> 我们上次请你上节目，还是我们国家正在应对西得克萨斯州那场大规模麻疹疫情的时候。那时大约是一年半前，情况虽然糟糕，但相对局限在门诺派（Mennonites）这一个群体里。但你当时告诉我们，令人担忧的是它会扩散。而现在看来，这种情况确实已经大规模发生了。
+<details><summary>Original English</summary>
+>> So, the last time that we had you on the show was when we as a country were contending with this massive measles outbreak in West Texas. And back then, which is about a year and a half ago, it was bad, but it was relatively contained to this one community of Mennonites. But you told us that the worry was that it would spread. And it seems as though that has in fact happened at scale.
+</details>
+
+>> 是的，而且我认为情况比与我交谈过的最悲观的流行病学家所设想的还要糟糕得多。
+<details><summary>Original English</summary>
+>> Yes, and I think it was so much worse than even the most pessimistic epidemiologists I talked to thought it would be.
+</details>
+
+>> 所以基本上，自得州疫情以来，这种病毒已经跳窜到了全美各地。我们已经看到了数百例住院治疗。我们看到了数千个病例。而且它基本上已经扩散了这么久，以至于现在美国处于失去了这一令人梦寐以求的消除状态的境地。
+<details><summary>Original English</summary>
+>> So essentially, since the Texas outbreak, this virus has hopped all over the country. We've seen hundreds of hospitalizations. We've seen thousands of cases. And it has essentially spread for so long that now the US is in the position where we have lost this coveted elimination status.
+</details>
+
+>> 好的，这也许显而易见，但拥有“消除状态”究竟意味着什么？我们失去它到底有多重大？
+<details><summary>Original English</summary>
+>> Okay, and this is maybe obvious, but what exactly does it mean to have elimination status? And how significant is it that we lost it?
+</details>
+
+>> 是的，其实并不显而易见。它是一个相当书卷气、偏学术的公共卫生定义。它本质上意味着该国境内没有持续超过 12 个月的麻疹传播。过去我们也有过麻疹疫情暴发，但那些都与国际旅行者的输入相关联。它仅仅意味着麻疹在美国不再是地方性流行的，没有在四处传播。
+<details><summary>Original English</summary>
+>> Yeah, it's actually not obvious. like a pretty wonky public health definition. It essentially means that there's not continuous spread of measles in the country for more than 12 months. So we've had outbreaks of measles in the past, but you know, those were linked to, you know, importations from international travelers. And it just means that measles isn't endemic in the US. It's not spreading around.
+</details>
+
+>> 明白了。
+<details><summary>Original English</summary>
+>> Got it.
+</details>
+
+>> 事实上，许多人没有意识到的是，起初要获得消除状态到底有多艰难。在我们拥有麻疹疫苗之后，花了 40 年时间。耗费了巨额资金。需要历届多任总统政府的全力投入。我们实际上是世界上最早做到这一点的富裕国家之一。我们树立了可能达成的范例。因此，失去它不仅因其对我们国家健康的意味而令人难过，坦白说，也令人难堪。
+<details><summary>Original English</summary>
+>> And actually what a lot of people don't realize is just how hard it was to get elimination status in the first place. It took 40 years after we got the measles vaccine. It took tons of money. It took buy-in from multiple different presidential administrations. And we were actually like one of the first wealthy countries in the world to do this. And we kind of set the example of what was possible. And so losing that is not just sad because of what it means for the health of our country, but it's also just embarrassing, frankly.
+</details>
+
+>> 与你交谈过的专家们——我想你跟很多专家都聊过——对此是怎么说的？
+<details><summary>Original English</summary>
+>> And what are the experts that you're talking to, and I assume you're talking to many, saying about that?
+</details>
+
+>> 是的，我认为他们大致呼应了那种看法。有一位专家甚至说，这是我们声誉上的一个污点。
+<details><summary>Original English</summary>
+>> Yeah, I think they're sort of echoing that that sentiment. I mean, one went so far as to say that it's a stain on our reputation.
+</details>
+
+>> 哇。
+<details><summary>Original English</summary>
+>> Wow.
+</details>
+
+>> 许多与我交流过的麻疹专家，他们的职业生涯如今被这样一种充满希望的时刻所定格：我们消除了麻疹，也许我们甚至能在全球范围内根除它。而出现这种倒退，不仅令人难堪，对于那些耗费了几十年职业生涯将这种病毒控制住的人们来说，也非常令人难过。
+<details><summary>Original English</summary>
+>> You know, a lot of the measles experts I spoke to, their career has now been bookended by sort of this really hopeful moment of, you know, we eliminated measles. Maybe we can even eradicate it globally. And to have this backslide is not only embarrassing, but but also sad for the people who spent many decades of their career getting this virus under control.
+</details>
+
+### 疫情如何蔓延全国
+
+>> 好吧，那么我们是如何走到现在这种麻疹疫情几乎四处开花的局面的？给我讲讲病毒扩散的经过。
+<details><summary>Original English</summary>
+>> All right, so how did we get to this point where now measles outbreaks are kind of all over? Tell me the story of the spread.
+</details>
+
+>> 是的，我们上次谈到的时候，得州正暴发这场大规模疫情。它感染了数百人，而联邦卫生官员的反应却颇为平淡。你会期望他们介入并表态说：接种疫苗非常重要，这是我们提高该地区疫苗接种率的计划。而我们所看到的完全不是那样。最初，卫生部长小罗伯特·F·肯尼迪（Robert F. Kennedy Jr.）在谈论麻疹的治疗方法。可根本就没有特效疗法。他谈到了鱼肝油可能是一种潜在的疗法。他有些淡化了麻疹疫情暴发的严重性，当然在成为卫生部长之前很久，他在过去就一直如此。从本质上说，我们在此之后看到的就是病毒彻底暴发了。
+<details><summary>Original English</summary>
+>> Yeah, so I mean, the last time we talked, we had this big outbreak in Texas. It was infecting hundreds of people, and there was sort of a a muted response from federal health officials. You would expect them to be coming in and saying, you know, vaccinations are important. Here's our plan for boosting vaccination rates in this area. And what we saw was not that at all. Initially, Robert F. Kennedy Jr., Health Secretary, was talking about treatments for measles. There is no treatment. You know, he talked about cod liver oil being a potential treatment. He sort of underplayed the seriousness of of measles outbreaks, which of course he has in the past long before becoming Health Secretary. And essentially what we saw after that was the virus just exploded.
+</details>
+
+>> 麻疹病例再次冒头，对新学年造成严重破坏。
+<details><summary>Original English</summary>
+>> Measles cases are bubbling up again and wreaking havoc on the school year.
+</details>
+
+>> 它开始在全美所有这些州接连出现。有些时候连我都很难跟上追踪进度。
+<details><summary>Original English</summary>
+>> It started popping up in all of these states around the country. It was even hard for me to keep track of at some points.
+</details>
+
+>> 这一切始于得克萨斯州盖恩斯县（Gaines County）距离我们大约一个半小时车程的一个小型门诺派群体。
+<details><summary>Original English</summary>
+>> This all started in a small Mennonite community about an hour and a half away from us in Gaines County, Texas.
+</details>
+
+>> 我们在得克萨斯州 [音乐] 看到的是，它是一个相当封闭的庞大宗教群体，门诺派群体。
+<details><summary>Original English</summary>
+>> What we saw in [music] Texas was it was this big sort of insular religious group, Mennonite community.
+</details>
+
+>> 公共卫生官员表示，盖恩斯县一名后来检测呈阳性的女性曾前往 400 多英里外的圣马科斯和圣安东尼奥。
+<details><summary>Original English</summary>
+>> Public health officials say a Gaines County woman who later tested positive traveled more than 400 miles to San Marcos and San Antonio.
+</details>
+
+>> 我们在全国其他地区也看到了这种情况。所以在宾夕法尼亚州
+<details><summary>Original English</summary>
+>> And we've also seen that in other parts of the country. So in Pennsylvania
+</details>
+
+>> 目前已在 46 个县累计报告超过 1,500 例病例，其中 305 例住院治疗。
+<details><summary>Original English</summary>
+>> has now recorded more than 1,500 cases across 46 counties with 305 hospitalizations.
+</details>
+
+>> 在兰开斯特（Lancaster）曾经暴发过、现在仍有一场大规模疫情，那里是一个阿米什人（Amish）和门诺派群体。
+<details><summary>Original English</summary>
+>> There was like a huge outbreak, still is a huge outbreak in Lancaster, which is uh Amish and Mennonite community.
+</details>
+
+>> 蒙图尔县（Montour County）一名居民死于麻疹，这是宾夕法尼亚州持续疫情中该县报告的首例死亡病例。
+<details><summary>Original English</summary>
+>> A Montour County resident has died from measles, marking the county's first death during Pennsylvania's ongoing outbreak.
+</details>
+
+>> 我们 [音乐] 在南卡罗来纳州也看到了这种情况。那是一个相当封闭的斯拉夫裔群体中的大规模暴发。[音乐]
+<details><summary>Original English</summary>
+>> We've [music] seen this in South Carolina. It was sort of this big outbreak in a pretty insular Slavic community. [music]
+</details>
+
+>> 联邦卫生数据显示，这是美国 30 多年来最大规模的麻疹疫情暴发。
+<details><summary>Original English</summary>
+>> Federal health data show it's the largest US measles outbreak in more than 30 years.
+</details>
+
+>> 而且大部分病例都是儿童。
+<details><summary>Original English</summary>
+>> And the majority of the cases are children.
+</details>
+
+>> 因此，我们看到许多历史上 [音乐] 疫苗接种率极低的群体，突然在全美各地暴发了 [音乐] 这些大规模疫情。
+<details><summary>Original English</summary>
+>> So we're seeing a lot of these communities that [music] have historically had very low vaccination rates, suddenly having [music] these massive outbreaks all over the country.
+</details>
+
+>> 如今，尽管这个群体地处偏远难以抵达，但病毒向外传播却并不困难。
+<details><summary>Original English</summary>
+>> Now, even though this community is hard to get to, it's not hard for the virus to get out.
+</details>
+
+>> 犹他州卫生官员表示，它的传播距离可能比你想象的更远。
+<details><summary>Original English</summary>
+>> Utah health officials say it's traveling farther than you may think.
+</details>
+
+>> [音乐]
+<details><summary>Original English</summary>
+>> [music]
+</details>
+
+>> 但我们也看到了另一种版本的情况，这也许更令人担忧或更不同寻常：[音乐] 它已经扩散到了这些群体之外，因为普通大众的疫苗接种率不够高，[音乐] 不足以将其遏制在这些封闭群体内部。
+<details><summary>Original English</summary>
+>> But we've also seen a different version of this, which is perhaps more alarming or more unique, where [music] it has spread out of these groups because the vaccination rate in the general public is not high [music] enough to keep it contained to these insular groups.
+</details>
+
+>> 卫生官员表示，这已不再是一起孤立的暴发，目前已达到社区 [音乐] 传播的程度。
+<details><summary>Original English</summary>
+>> Health officials say there is no longer an isolated outbreak and it is now reached the point of community [music] spread.
+</details>
+
+>> 今年全美已经记录了超过 5,400 例病例。这比去年的 [音乐] 总数翻了一倍多。
+<details><summary>Original English</summary>
+>> Already the country has recorded over 5,400 cases this year. That's more than double last [music] year's total.
+</details>
+
+>> 美国几乎每一个州最终都报告了某种程度的麻疹病例。
+<details><summary>Original English</summary>
+>> In almost every state in the US ended up reporting some level of measles cases.
+</details>
+
+### 传播机制与群体免疫
+
+>> 泰迪，我可以问一个听起来可能有些天真的问题吗？鉴于这些群体按定义并不怎么与大批外人接触互动，麻疹究竟是如何从一个封闭群体传播到另一个封闭群体的？
+<details><summary>Original English</summary>
+>> And can I ask what might sound like a naive question, Teddy, which is how does measles actually spread from insular community to insular community just given that these communities by definition aren't interacting a ton with a bunch of outsiders?
+</details>
+
+>> 是的，这是一个非常好的问题，而这实际上就是我们不断下降的疫苗接种率发挥作用的地方。麻疹是已知最具传染性的病毒。它极具传染性。它通过飞沫传播，就像我们认为流感的传播方式一样，但它也通过空气传播。这意味着它可以在空气中存留两个小时。过去的情况是这样的——我举一个 2019 年的例子——当时我们在纽约市的哈西迪犹太人群体（Hasidic Jewish population）中确实暴发了非常大规模的麻疹疫情，这也是接种率较低的封闭群体之一。病毒在群体内部传播，但围绕在他们周围的其他社区疫苗接种情况非常好，以至于病毒自行熄灭了，如果你愿意的话可以说起到了防火墙的作用。如今我们看到的是，确实有这些发生大规模疫情的庞大封闭群体，但还有其他人生活在宾夕法尼亚州的兰开斯特。而且，或许接种率已经低于群体免疫所需的 95%。所以他们可能接触到了这个封闭群体，或者他们旅行去往别处，接触到了来自另一个封闭群体的某个人，于是在大半个国家之外，另一场疫情突然被引燃了。
+<details><summary>Original English</summary>
+>> Yeah, it's a really good question and it's actually kind of where our declining vaccination rates come into play here. So measles is the most contagious known virus. It is extremely contagious. It spreads through droplets like how, you know, we think about the flu spreading, but it is also airborne. So what that means is it can linger in the air for two hours. And how this used to work, and I'll give an example of from 2019 was we had this really big measles outbreak in New York City actually in a Hasidic Jewish population and this is one of these insular groups that has low vaccination rates. The virus spread through the community, but the rest of the community surrounding them was so well vaccinated that it sort of burned itself out, acted as a firewall, if you will. Now what we're seeing is that there are these big insular groups that have big outbreaks, but you know, there are other people living in Lancaster, Pennsylvania. And you know, maybe the vaccination rates are below the 95% needed for herd immunity. So maybe they come into contact with this insular group, you know, they're traveling to somewhere else, they come into contact with someone else from a different insular group and suddenly another outbreak has ignited halfway across the country.
+</details>
+
+>> 基本上意味着，有更多不属于这些封闭群体的未接种疫苗者感染了麻疹，并在广泛传播它。
+<details><summary>Original English</summary>
+>> Meaning basically that there are way more unvaccinated people who aren't in these insular communities and are contracting measles and spreading it far and wide.
+</details>
+
+>> 没错。这正是为什么你需要群体免疫，就是为了防止这些群体引爆成大规模疫情。
+<details><summary>Original English</summary>
+>> Exactly. And this is exactly why you need hard immunity is to, you know, prevent these groups from igniting into a massive outbreak.
+</details>
+
+>> 那么接种过疫苗的人呢？比如我们是否知道他们中是否有人感染？
+<details><summary>Original English</summary>
+>> And what about vaccinated people? Like do we know if any of them are getting it?
+</details>
+
+>> 根据我们掌握的数据，我们知道这个比例非常低。两剂 MMR 疫苗的有效率为 97%。这在数据中得到了证实。我认为今年大约有 2% 的病例发生在未接种疫苗的人群中。
+<details><summary>Original English</summary>
+>> Based on the data that we have, we know it's a very low percentage. You know, two doses of the MMR vaccine are 97% effective. That bears out in the data. I think like 2% of cases this year have been in in unvaccinated people.
+</details>
+
+>> 基本上几十年前接种过疫苗的人，现在仍然受到保护。
+<details><summary>Original English</summary>
+>> Basically people who were vaccinated decades ago are still protected now.
+</details>
+
+>> 是的。我认为很多人感到担忧，是因为他们有过针对新冠（COVID）的经历，即病毒每年都在进化并学会逃逸我们研发的疫苗。而麻疹并非如此。它并没有逃逸最初在 1960 年代获批的疫苗，它是一种优先考虑传播能力而非逃避免疫系统的病毒。因此，接种过疫苗的人，事实依然是你受到了针对该病毒的保护，这并不是你需要那么担心的事情。
+<details><summary>Original English</summary>
+>> Yes. I mean, I think a lot of people get concerned cuz they've had this experience with COVID where, you know, the virus is evolving every year and learning to evade the vaccine that we've developed. And measles is not like that. It has not evaded the vaccine that first became approved in the the 1960s and it's it's sort of this virus that has prioritized transmissibility over evading the immune system. So people who have been vaccinated, it is still the case that you are protected against the virus and this is not something that you have to be as worried about.
+</details>
+
+### 成人感染与新的医学隐患
+
+>> 所以你描述的是这样一种情况：我们拥有一种堪称完美的疫苗，但现在接种的人却不够多，这把我们带到了当下这一刻。在麻疹如今猖獗流行并持续扩散、同时我们又面临这种疫苗接种问题的世界里，究竟是一番什么景象？
+<details><summary>Original English</summary>
+>> So you're kind of describing a situation where we have a kind of perfect vaccine that now not enough people are getting, which brings us to the present moment. What does this world look like where measles is now rampant and continuing to spread and we have this vaccination problem?
+</details>
+
+>> 是的。在过去的一年半里，我们已经看到了超过 7,000 例病例，这可不是我们在 1990 年代初以来见过的数字，而那比我们最初获得消除状态还要早十年。
+<details><summary>Original English</summary>
+>> Yeah. So in the last one and a half years, we've seen more than 7,000 cases, which is not those are not numbers that we have seen since like the early 1990s, which is a decade before we got elimination status in the first place.
+</details>
+
+>> 艰难。
+<details><summary>Original English</summary>
+>> Rough.
+</details>
+
+>> 是的。我们已经看到了 11 例死亡。其中许多是年龄太小而无法接种 MMR 疫苗的婴儿。我们看到了对学校造成的干扰。孩子们不得不留在家中隔离。而这里非常重要的一部分在于，我们正在美国看到一种新版本的地方性流行麻疹。在有疫苗之前，几乎所有美国人在小时候都得过麻疹，这意味着成年人感染这种病毒其实并不常见。
+<details><summary>Original English</summary>
+>> Yeah. We've seen 11 deaths. Many of those have been babies who are too young to get the MMR vaccine. We're seeing disruptions to schools. Kids are having to stay home and in quarantine. And And part of what is so significant here is that we're seeing a new version of endemic measles in the US. You know, before the vaccine, almost all Americans got measles as a kid, which means it was really not common for adults to have this virus.
+</details>
+
+>> 因为一旦你在童年时得过它，最终就会对它产生免疫力，所以成年后就不会再得了。
+<details><summary>Original English</summary>
+>> Because once you get it as a child, you eventually develop immunity to it, so you don't get it as an adult.
+</details>
+
+>> 没错。但现在我们看到的是，我们处在一个成年人经常感染麻疹的世界里。在我们的病例中，这占了很大的份额。这引发了一整套全新的担忧，医生和公共卫生官员告诉我，他们以前从未处理过这类问题。
+<details><summary>Original English</summary>
+>> Exactly. But now what we're seeing is we're in this world where adults are getting measles often. I mean, it's a big share of the cases that we've seen. And this is creating just a whole new host of concerns that doctors and public health officials have told me they've never had to deal with before.
+</details>
+
+>> [音乐]
+<details><summary>Original English</summary>
+>> [music]
+</details>
+
+>> 我们马上回来。[音乐] 我们正进入一个从未真正涉足的现实：这种疾病不仅被年轻人感染，而且在未接种疫苗的成年人中大范围传播。泰迪，你提到这引发了新的担忧。具体有哪些？
+<details><summary>Original English</summary>
+>> We'll be right back. [music] So we're entering this reality that we've never really been in where this disease is being contracted not just by young people, but by unvaccinated adults on a wide scale. You said, Teddy, that this was raising new concerns. What are they?
+</details>
+
+>> 是的，我认为我们对成年人感染麻疹的表现知之甚少。我们根本没有足够的时间来进行能告诉我们这些情况的研究，比如成年期最常见的并发症是什么？这一群体中哪些人的风险最高？我们面临的一个大问题是它将如何影响孕妇。这是我们第一次真正开始大规模看到的情况。我们知道孕妇发生麻疹严重并发症的风险更高。我想实际上她们死于麻疹的可能性是常人的 10 倍。我们知道它可以增加流产的可能性，但我们也开始看到这种被称为“先天性麻疹”（congenital measles）的现象，那本质上是指由于母亲在怀孕期间感染了病毒而出生时即带有该病毒的婴儿。我们不一定知道那会带来什么长期后果。我们知道这可能会让婴儿面临更高的患上这种通常致命的极其严重神经系统疾病的风险，但这在很大程度上仍处于我们对该病毒认知的边缘。
+<details><summary>Original English</summary>
+>> Yeah, I think we don't know that much about what measles looks like in adults. You know, we just haven't had the time to sort of do the studies that would tell us these things, like what are the most common complications in adulthood? Who within this group are at most risk? You know, one big question we have is how this will affect pregnant women. And this is something that we're really starting to see at scale for the first time. You know, we know that pregnant women are at higher risk of severe measles complications. I think they're 10 times as likely to die from measles actually. We know it can increase the likelihood of miscarriages, but we're also starting to see this phenomenon called congenital measles and that's essentially babies who are born with the virus because their mothers had the virus during pregnancy. And we don't necessarily know the long-term repercussions of that. You know, we know it probably puts babies at a much higher risk of this really devastating neurological condition that's often fatal, but this is really still at the edge of our knowledge about the virus.
+</details>
+
+>> 公共卫生官员还担心什么？
+<details><summary>Original English</summary>
+>> What else are public health officials worried about?
+</details>
+
+>> 他们担心的事情很多，但我听得很多的一点是对免疫系统影响的担忧。即使有人在麻疹感染中幸存下来，该病毒的作用也是会抹去免疫系统对其他病毒和病原体的记忆。因此，在麻疹感染后的数月甚至数年内，你都会处于这种脆弱的状态，你的免疫系统在应对所有这些原本应该已经知道如何应对的事物时，显得猝不及防。这就是所谓的“免疫失忆症”（immune amnesia），这是每个人都会出现的，而不仅仅是一小部分感染者。所以，我们可能会看到这样的后果：患者在感染麻疹之后，会因为完全不相关的另一种病毒而住进医院。
+<details><summary>Original English</summary>
+>> So there's a lot that they're worried about, but one thing that I've heard a lot about is this concern about the effect on the immune system. So even after someone survives a measles infection, what the virus does is it sort of wipes away your immune system's memory of other viruses and pathogens. So you're in this vulnerable state for months or potentially years after that measles infection where, you know, your immune system is kind of caught flat-footed in responding to all of these things that you should presumably already know how to respond to. And this is what's called quote unquote immune amnesia and it's something that everybody gets. It's not just a small portion of people infected. So I mean we might see effects where patients land in the hospital after a measles infection for something entirely unrelated, a different virus.
+</details>
+
+>> 所以麻疹感染的影响远远超出了实际患病的当下阶段。
+<details><summary>Original English</summary>
+>> So the impact of measles infections just lasts way beyond the moment of actual sickness.
+</details>
+
+>> 是的。甚至还有一种非常罕见的并发症叫做亚急性硬化性全脑炎（SSPE），它实际上可以在最初感染长达 10 年后显现，它是退行性的，可以让人们陷入昏迷，而且几乎在所有情况下最终都是致命的。
+<details><summary>Original English</summary>
+>> Yes. And there's even a very rare complication called subacute sclerosing panencephalitis SSPE that can actually rear its head up to 10 years after the initial infection and it is degenerative and it can, you know, send people into comas and is ultimately fatal almost all of the time.
+</details>
+
+### 医疗系统准备与联邦应对
+
+>> 医生和其他医护人员在应对这种情况上的准备有多充分？按理说，这些人当中可能很多人此前从未真正见过任何一例麻疹。
+<details><summary>Original English</summary>
+>> How equipped are doctors and other healthcare workers to take this on? Like presumably a lot of these people have never actually ever seen a single case of measles before.
+</details>
+
+>> 是的。医疗系统确实不得不重新学习如何应对这种病毒。我们如何确保患者不会来到急诊室并感染一群人？我们如何在医院里运送麻疹患者而不置他人于险境？所以他们不得不重新翻出 80 年代和 90 年代的所有这些规程，以弄清楚如何应对。实际上我上周在预约皮肤科门诊时，他们已经在询问我是否有任何麻疹症状了，我觉得这非常耐人寻味，而且……
+<details><summary>Original English</summary>
+>> Yeah. I mean, the health systems are really having to relearn how to deal with this virus. You know, how do we make sure that a patient isn't coming to the emergency room and infecting a bunch of people? How do we transport a patient with measles in the hospital without putting other people at risk? So they're having to dust off all these protocols from the '80s and '90s to figure out how to deal with this. I actually had a I was scheduling an appointment a dermatology appointment last week, and they were already asking if I had any symptoms of measles, which I thought was so interesting and and
+</details>
+
+>> 哇，不会吧。
+<details><summary>Original English</summary>
+>> Wow, no way.
+</details>
+
+>> 是的，这些事情已经在发生了。在治疗麻疹方面属于未知领域的另一部分是，正如你所说，许多医生以前从未见过麻疹病例。此外，也许他们甚至在医学院里都没有学过麻疹。我们关于治疗重症麻疹的大量数据来自 50 年代和 60 年代，这些数据对于现在来说未必适用。
+<details><summary>Original English</summary>
+>> Yeah, these things are already happening. And the other piece of this that is uncharted territory for treating measles is, you know, like you said, many of these doctors have not seen a case of measles before. And furthermore, maybe they haven't even learned about measles in medical school. A lot of our data about treating severe measles comes from the '50s and '60s, which isn't necessarily relevant to now.
+</details>
+
+>> 联邦政府能对此做些什么？他们实际上正在做什么？本届政府在采取什么行动？
+<details><summary>Original English</summary>
+>> What can the federal government do about this situation? And what are they actually doing? What's the administration doing?
+</details>
+
+>> 实际上，对这些疫情的大部分应对发生在州和地方公共卫生层面。所以我们可能会看到各州加强废水检测，以便我们能够在人们来到急诊室或紧急护理诊所之前识别出麻疹病例。他们可以加强接触者追踪。也就是地方层面上的这类工作。联邦政府可以协助这些工作。他们可以进行投资。我们已经看到联邦政府拨付了 1 亿美元，用于协助州和地方卫生部门应对这些疫情。但实际上他们能做的最有用的一件事，也是专家们表示希望联邦政府去做的，就是就疫苗的重要性发出非常强烈、明确的信息，澄清不实信息，诸如此类。
+<details><summary>Original English</summary>
+>> Yeah, so actually a lot of the response to these outbreaks happen at the state and local public health level. So we might see states beef up their wastewater testing so we can identify cases of measles before people are coming to emergency rooms or urgent care clinics. They can strengthen their contact tracing. You know, that sort of stuff at the local level. The federal government can help with those efforts. They can invest. So we've already seen the federal government send $100 million to, you know, help state and local health departments respond to these outbreaks. But really the most helpful thing they can do, and what experts say they expect the federal government to do is really strong, clear messaging about the importance of vaccines, debunking misinformation, that sort of thing.
+</details>
+
+>> 那我们在这一点上进展如何？显然卫生部长小肯尼迪一直直言不讳地对疫苗持怀疑态度。目前的宣传发声情况如何？
+<details><summary>Original English</summary>
+>> And where do we stand on that? I mean, obviously the health secretary RFK has been an outspoken skeptic of vaccines. How is the messaging going right now?
+</details>
+
+>> 我认为自得州疫情以来，麻疹卷土重来已经变成了一个更大的政治包袱。我们看到他稍微改变了调门。他公开表示麻疹疫苗是保护自己免受感染的最佳途径。但与此同时，与我交谈过的专家表示，作为卫生部长，他的许多 [清喉咙] 举措在一定程度上削弱了那一信息。例如，他启动了针对儿童疫苗安全性的调查，而我们知道这些疫苗已经被安全使用了几十年又几十年。所以我觉得很难说这是清晰明确的信息传递。我想很多专家可能会说这充其量是一片混乱。
+<details><summary>Original English</summary>
+>> So I think since Texas, the measles resurgence has just become a bigger political liability. And we have seen him change his tune a little bit. You know, he's come out and said that the measles vaccine is the best way to protect yourself against an infection. But at the same time, the experts I've spoken to have said that many of his [clears throat] actions as health secretary have sort of undermined that message. So one example of this is he launched an inquiry into the safety of childhood vaccines, which we know have been used safely for decades and decades. So I think it's difficult to say that this is clear messaging. I think a lot of experts would probably say it's muddled at best.
+</details>
+
+>> 我想，混乱的信息传递使得作为一个国家全面扭转局面、重获消除状态变得困难得多。
+<details><summary>Original English</summary>
+>> And I presume that muddled messaging makes it a lot harder to reverse this wholesale to get back to elimination status as a country.
+</details>
+
+>> 是的，绝对如此。我认为在加拿大我们有一个关于重获消除状态需要做什么的绝佳范例。去年他们在门诺派群体中发生大规模疫情后失去了该状态。他们投入了大量资金来提高那里的疫苗接种率。他们在那些地区设立了疫苗诊所，并开展了大规模的公共教育活动，以澄清有关 MMR 疫苗和麻疹感染的不实信息。因此，加拿大虽然尚未正式重获消除状态，但他们正走在正轨上，因为他们已经成功阻止了麻疹在其国内的传播。我与许多专家探讨过这个问题，他们表示，投入这么多精力用于澄清疫苗虚假信息，根本不是他们能想象本届政府会做的事情。
+<details><summary>Original English</summary>
+>> Yeah, I mean, absolutely. I think we have a really good example of what it takes to regain elimination status in Canada. They lost their status last year after they had a really big outbreak in a Mennonite community. And they've invested a lot into boosting the vaccination rates there. They have stood up vaccine clinics in those areas and they have a really big public education campaign to sort of debunk misinformation about the MMR vaccine and measles infections. And so Canada has not officially regained their elimination status, but they are on track because they have successfully stopped measles spreading in their country. And I've talked to a lot of experts about this and they said that investing this much in this kind of effort to debunk vaccine misinformation is just not something that they can imagine this administration doing.
+</details>
+
+### 前景与接种建议
+
+>> 也就是说，你基本上是在描述这样一个世界：麻疹会一直蔓延，直到发生什么？到底有什么能改变这一进程？
+<details><summary>Original English</summary>
+>> I mean, so basically you're describing this world in which measles just keeps spreading until what? I mean, what could change the course of this?
+</details>
+
+>> 是的，我认为对此有两种流派的观点。一类是偏向永远乐观的公共卫生人士，他们认为如果我们严厉打击学校疫苗接种要求的豁免，或许我们就能重新控制住局面。但还有另一群更悲观的人认为，也许我们不得不坐视随这些疫情而来的患病和死亡发生，直到人们被重新提醒为什么疫苗起初如此重要。
+<details><summary>Original English</summary>
+>> Yeah, I think there are two schools of thought on this. There are sort of the eternal optimist public health people who think that maybe if we crack down on exemptions from school vaccination requirements, we could get this back under control. But there's another more pessimistic group of people who think that, you know, maybe we're just going to have to see the sickness and death that comes with these outbreaks until people are reminded of why vaccines are so important in the first place.
+</details>
+
+>> 好吧，关于疫苗这一点，我知道你提到过疫苗高度有效，但你也说过已接种疫苗的人群中仍有一小部分可能感染麻疹，我想你说的大约是 2%。因此我想知道，对于我们这些接种过麻疹疫苗的人来说，我们应该担心吗？
+<details><summary>Original English</summary>
+>> Well, okay, on that, on vaccines, I know you said that the vaccine is highly effective, but you also said that a small share of the vaccinated population can still contract measles, something like 2 %, I think you said. And so I guess I'm wondering for those of us who are vaccinated against measles, should we be worried?
+</details>
+
+>> 这是个极好的问题，我可能收到了数百封 [清喉咙] 询问同样事情的电子邮件。在宏观层面上，如果你接种了疫苗，你可能没问题。官方并没有出台新的指导方针告诉人们去打加强针或类似的事情。但当我与医生交谈时，他们表示有几类人群可能需要向医生咨询是否需要再打一针。那是 1968 年之前但 1957 年之后出生的人，我知道这是个挺小众的小群体。
+<details><summary>Original English</summary>
+>> It's a great question and I've probably gotten hundreds [clears throat] of emails asking the same thing. At a very high level, if you're vaccinated, you're probably fine. There haven't been new official guidelines that have come out on this telling people to go get an extra dose or anything like that. But when I've talked to doctors, they've said that there are, you know, a few groups who might want to talk to their doctor about potentially getting another shot. So that's people who were born before 1968 but after 1957, which I know is like a sort of niche little slice.
+</details>
+
+>> 属于这个群体的人自己心里清楚。是的。
+<details><summary>Original English</summary>
+>> You know it if it's you. Yeah.
+</details>
+
+>> 对。这个群体有可能接种了一种效果较差、现已不再提供的疫苗版本。然后还有另一个群体，即在 1968 年至 1989 年之间接种疫苗的人。这一群体很可能只接种了一剂 MMR 疫苗。所以这并不意味着你必须急匆匆跑去接种疫苗，但你可能想要更仔细地审视自己的风险。例如：你是否生活在活跃的疫情暴发区？你是否有基础疾病使得麻疹对你来说尤其危险？在这些情况下，你可能想要咨询医生是否再接种一剂。但这主要是 [音乐] 未接种疫苗的人真正必须最担心的问题。我们正在进入一个针对这部分人群风险大得多的时代。那可能 [音乐] 是父母选择让他们放弃接种疫苗的孩子。那可能 [音乐] 是年龄太小而无法接种疫苗的婴儿。我们正在步入的这个新时代，极其不幸地，对我们社会中最脆弱的人群来说是 [音乐] 最糟糕的。我们在那里看到了大多数病例。而只要我们没有重新获得消除状态，[音乐] 这种病毒就会继续扩散再扩散。而不幸的是，那些婴儿和孩子们将是 [音乐] 承担这一代价的人。好了，泰迪，非常感谢 [音乐] 接受我们的采访。
+<details><summary>Original English</summary>
+>> Right. It's possible this group got sort of a less effective version of the vaccine that's no longer available. And then there's another group, people vaccinated between 1968 and 1989. And this is a group who likely only got one dose of the MMR vaccine. So that doesn't mean you have to necessarily race out to get vaccinated, but you might want to take a closer look at your risk. So do you live in an active outbreak zone? Do you have an underlying condition that would make measles especially dangerous for you? Like in those cases, you might want to talk to your doctor about getting another dose. But mainly this [music] is an issue that the unvaccinated really have to be most concerned about. You know, we're entering a much riskier era for this group of people. That could [music] be kids whose parents have opted them out of the vaccines. That [music] could be babies who are too young to get the vaccine. This new era that we're entering is really, unfortunately, the worst [music] for people who are the most vulnerable in our society. Like that's where we've seen the majority of cases. And as long as we don't regain elimination status, [music] this virus will just continue to spread and spread. And those babies and kids, unfortunately, will be the ones who [music] bear that cost. Well, Teddy, thanks so much [music] for joining us.
+</details>
+
+>> 感谢邀请我。
+<details><summary>Original English</summary>
+>> Thanks for having me.
+</details>
+
+### 今日其他要闻
+
+>> 星期五，[音乐] 弗吉尼亚州卫生官员报告称，一名幼儿在麻疹检测呈阳性后死亡，使全美与该病毒相关的死亡总人数 [音乐] 达到 12 人。我们马上回来。以下是今天您需要了解的其他内容。[音乐] 民主党人赢得了三十年来最大规模的众议院多数席位，在众议院获得了至少 258 个席位。他们在周日凭借北卡罗来纳州的胜利达到了这一里程碑，当时民主党人、前报社记者查克·哈伯德（Chuck Hubbard）击败了连任 11 届的共和党众议员弗吉尼亚·福克斯（Virginia Foxx）。[音乐] 在重新计票完成后，该竞选结果正式公布。自 1992 年比尔·克林顿赢得总统大选、民主党斩获 258 席以来，[音乐] 没有任何一个政党在全国大选中赢得过这么多席位。[音乐] 此外，联合国气候谈判在周日破裂，原因是某些试图逐步结束化石燃料时代的国家与另一些旨在维持这一时代的国家之间 [音乐] 存在紧张关系。欧盟和许多易受气候灾害影响的小国拒绝了一项提议的 [音乐] 协议，因为他们表示该协议剥离了保护措施，并偏袒出口石油、天然气和煤炭的国家。包括沙特阿拉伯和俄罗斯在内的一组石油生产国阻止了协议中对化石燃料的任何 [音乐] 提及。这是自 2009 年以来气候谈判首次就最终协议陷入停滞，这被 [音乐] 视为联合国进程可能无法胜任应对地球过热任务的迹象。今天的 [音乐] 节目由亚历克斯·斯特恩（Alex Stern）、阿德里安·赫斯特（Adrian Hurst）和埃里克·克鲁普克（Eric Krupke）制作。[音乐] 由德文·泰勒（Devon Taylor）在佩奇·考伊特（Paige Cowett）的协助下编辑。包含由黛安·黄（Diane Wong）、艾丽西亚·B·埃图佩（Alicia B. Etoupe）[音乐] 和丹·鲍威尔（Dan Powell）创作的音乐，音频工程由阿里萨·莫克斯利（Alissa Moxley）完成。我们的主题音乐由 Wonderly 创作。特别感谢阿普尔瓦·曼达维利（Apoorva Mandavilli）。[音乐] [音乐] 《每日新闻》今天就到这里。我是娜塔莉·基特罗夫。明天见。
+<details><summary>Original English</summary>
+>> On Friday, [music] health officials in Virginia reported that a young child had died after testing positive for measles, bringing the total number of fatalities linked to the virus across [music] the country to 12. We'll be right back. Here's what else you need to know today. [music] Democrats have won the largest House majority in three decades, securing at least 258 seats in the chamber. They reached that milestone on Sunday with a win in North Carolina when Chuck Hubbard, a Democrat and a former newspaper reporter, beat Representative Virginia Foxx, an 11-term Republican. [music] The race was officially called after a recount had been completed. Neither party has won so many seats in a national election since 1992 [music] when Democrats clinched 258 as Bill Clinton took the presidency. [music] And climate talks at the UN broke down on Sunday over tensions between some nations [music] seeking to wind down the fossil fuel era and others aiming to keep it going. The EU and many smaller countries vulnerable to climate disasters rejected a proposed [music] agreement because they said it stripped out protections and favored countries that export oil, gas and coal. A group of oil producers, including Saudi Arabia and Russia, had blocked any [music] mention of fossil fuels in the agreement. It was the first time the climate talks have stalled over a final agreement since 2009 and it was [music] seen as a sign that the UN process may not be up to the task of confronting an overheated planet. Today's [music] episode was produced by Alex Stern, Adrian Hurst, and Eric Krupke. [music] It was edited by Devon Taylor with help from Paige Cowett. Contains music by Diane Wong, Alicia [music] B. Etoupe, and Dan Powell and was engineered by Alissa Moxley. Our theme music is by Wonderly. Special thanks to Apoorva Mandavilli. [music] [music] That's it for the Daily. I'm Natalie Kittroeff. See you tomorrow.
+</details>

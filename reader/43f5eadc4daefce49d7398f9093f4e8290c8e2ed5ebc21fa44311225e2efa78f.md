@@ -1,0 +1,518 @@
+---
+author: New York Times Podcasts
+date: '2026-11-23'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=qIsvdP8xQHg
+speaker: New York Times Podcasts
+tags:
+  - media-industry
+  - entertainment-business
+  - mergers-and-acquisitions
+  - artificial-intelligence
+title: David Ellison 谈媒体巨头掌舵与 Skydance 的未来
+summary: 在 2026 年 DealBook 峰会上，David Ellison 讨论了 Skydance 收购派拉蒙与华纳兄弟探索后的整合战略，涵盖债务偿还、编辑独立性、电影税收返还以及人工智能在内容创作中的应用。
+insight: ''
+draft: true
+series: ''
+category: business-entrepreneurship
+area: finance-wealth
+project: []
+people: []
+companies_orgs: []
+products_models: []
+media_books: []
+status: evergreen
+---
+**>>**: 在过去的一个世纪里，高尔夫运动取得了长足的发展。今天，The R&A 与埃森哲（Accenture）携手合作，在弘扬其传统的同时共塑未来。The R&A 与埃森哲正利用数据和技术重塑高尔夫运动的未来，提升您的比赛体验，并推动高尔夫运动在全球范围内的发展。精彩不止于此，未来更值得期待。埃森哲是 The R&A 的官方商业与技术咨询合作伙伴。欲了解更多信息，请访问 accenture.com/rrenna。
+<details><summary>Original English</summary>
+Golf has come a long way in the past century. Today, the RNA and Accenture are partnering to celebrate its heritage while shaping what's to come. Together, the R&D and Accenture [music] are reinventing the future of golf using data and technology to enhance your experiences of the game and drive the growth of golf worldwide. All this and there's more to come. Accenture, the official business and technology consulting partner [music] of the R&A. Learn more at accenture.com/rrenna.
+</details>
+
+### DealBook 峰会开场与 Skydance 商业版图
+
+**>>**: 本期节目录制于 2026 年 DealBook 峰会。今年 DealBook 峰会的赞助商包括首席赞助商埃森哲，协办赞助商美国合众银行（US Bank）、先锋领航（Vanguard）、第一资本（Capital One）、戴尔科技（Dell Technologies）、基因泰克（Genentech）以及道富投资管理行业 ETF（State Street Investment Management Sector ETFs），支持赞助商塔吉特（Target），以及赞助伙伴 Atlassian 和 Nscale。如果你看最新的民意调查数据，对传统新闻的信任度正处于历史低点。在传递新闻时，真正以事实为基础、基于真相、跨党派且不偏不倚，是极其重要的。我是《纽约时报》的安德鲁·罗斯·索尔金（Andrew Ross Sorkin），您正在收听的是我们于 11 月 18 日在纽约市录制的 DealBook 年度峰会访谈。大卫·埃里森（David Ellison）来到了现场。他是好莱坞最新的巨头，我认为可以说是目前美国媒体界最有权势的人物。我不知道大家是否认同这一点。六周前，他完成了对华纳兄弟探索公司（Warner Bros. Discovery）价值 810 亿美元的交易。合并后的公司现名为 Skydance。他旗下拥有的资产我来列举一下：CBS、CNN、HBO、TNT、TBS、Food Network，两大主要电影制片厂，两大主要流媒体服务 Paramount+ 和 HBO Max（我们稍后会聊到它们的合并），超过 2 亿订阅读户。旗下的顶级 IP 包括《蝙蝠侠》、《超人》、《哈利·波特》、《星际迷航》、《碟中谍》、《权力的游戏》、《指环王》、《壮志凌云》、《黄石》，我知道我肯定还遗漏了一些。当然，他的父亲是甲骨文联合创始人拉里·埃里森（Larry Ellison），后者为促成这笔交易提供了约 400 亿美元的个人担保。我们将深入探讨好莱坞、科技、债务、政治、新闻业，当然还有家庭。掌声欢迎大卫·埃里森登台。谢谢。
+<details><summary>Original English</summary>
+>> This episode was recorded at the 2026 Dealbook Summit. This year's Dealbook Summit sponsors include premier sponsor Accenture, associate sponsors, US Bank, Vanguard, Capital 1, Dell Technologies, Janentech, and State Street Investment Management Sector ETFs. supporting sponsor Target and contributing sponsors at Lassian and Nscale. [music] If you look at the most recent polling data, trust in legacy news is at record lows. It's really important to be truly [music] truthbased, fact-based, bipartisan down the middle as you're delivering news. This is Andrew Osorin [music] with the New York Times and you're listening to interviews from our annual Dealbook Summit recorded on November 18th in New York City. David Ellison is here. He is uh Hollywood's uh newest mogul and arguably the most powerful person I'm going to argue in American media right now. I don't know if you believe that. Uh six weeks ago he closed the $81 billion deal for Warner Brothers Discovery. The combined company is now called Sky Dance. And he owns and I'll give you the list. CBS, CNN, HBO, TNT, TBS, Food Networks, two major movie studios, two major streaming services, Paramount Plus and HBO Max. We'll talk about when they get combined. Uh more than 200 million subscribers. Uh, the franchises include Batman, Superman, Harry Potter, Star Trek, Mission Impossible, Game of Thrones, Lord of the Rings, Top Gun, Yellowstone, and I know I'm missing some. His father, of course, is Larry Ellison, who co-ounded Oracle, and personally guaranteed some $40 billion to make this deal happen. And we're going to talk about Hollywood, technology, debt, politics, journalism, and yes, family. So, please welcome David Ellison to the stage. Thank you.
+</details>
+
+**>>**: 非常感谢。今天能来到这里真是深感荣幸。
+<details><summary>Original English</summary>
+>> Um, thank you so much. It is uh it's it's truly an honor to be here today.
+</details>
+
+### 童年、航空与叙事热情的萌芽
+
+**>>**: 很高兴邀请到你。我们原本大约一年前就打算进行这场对话，当时你正深陷于围绕这家公司的争夺战之中。在我们深入探讨公司层面的问题之前，坦白说，我认为很多人并不真正了解你，不一定了解你的背景故事。他们了解 Skydance 以及你所创办的一切，我们稍后会聊到。但我想了解一下你和你的家庭，你童年是怎样长大的，以及你与父亲的关系——他现在也是你所有这一切的合伙人。能给我们聊聊吗？
+<details><summary>Original English</summary>
+>> Um it is great to have you. We were going to ha uh have this conversation about a year ago when you were in the middle of uh this uh battle uh over this company. Before we get into the company part of all of this, I think that um frankly a lot of people don't necessarily know you. They don't necessarily know your backstory. Um uh they know about Sky Dance and what you created and we'll get to that. But I want to know about you and your family if I could, about how you grew up. um about your relationship with your father who's now your partner uh in all of this. Um tell us a little bit about it.
+</details>
+
+**>>**: 当然可以。其实童年很大程度上造就了今天的我。我两岁的时候就迷上了电影。我是由单身母亲抚养长大的。我父母在我三岁时离婚了，直到我 13 岁时，我和父亲才通过航空真正开始建立父子关系。
+<details><summary>Original English</summary>
+>> No, no. Uh absolutely. So, uh so look, one of the things actually childhood is a big part of what kind of uh you know, kind of brought me here today. I fell in love with movies when I was a 2-year-old kid. Um you know, I was uh I was raised by a single mother by my mom. Uh, you know, my parents got divorced when I was three and I really started building my relationship with my father when I was 13 years old through aviation.
+</details>
+
+**>>**: 等等，你直到 13 岁才和父亲建立关系？
+<details><summary>Original English</summary>
+>> Go back. You didn't have a relationship with your father till you were 13?
+</details>
+
+**>>**: 我们那时一年或者每两年才见一次面。但现在我们关系非常亲密。我想说清楚，我们是通过航空真正建立起了非同寻常的关系。我们最初从玩航模开始，然后逐渐升级——基本上我们是一起学习开飞机的。当时的周末例行安排是，每周六和周日，我去进行一小时的飞行训练，他在地面学习理论；接着换他去进行一小时飞行训练，我在地面学习。从最初每个周末飞行，慢慢走入了人生非常不同的一章。我后来成为了全美顶尖的特技飞行员之一，获得了赞助，并在全国巡回参加航展，还有机会在奥什科什（Oshkosh）飞行。对于不了解的人来说，奥什科什就像是航空界的“超级碗”，每天能迎来 25 万观众。这在我早年生活中是一段不可思议的经历。
+<details><summary>Original English</summary>
+>> Um, we saw each other, you know, once a year, every other year. Couldn't be closer now. Want to want to want to be clear, we really built a phenomenal relationship uh through aviation. We started flying model airplanes and then uh actually graduated to uh basically we we learned how to fly together. And kind of the weekend ritual was every Saturday, every Sunday, I'd go do an hour of flight training. He'd be on the ground and study. He'd go do an hour of flights training, I'd be on the ground and study. And and basically went from basically flying every weekend to very different chapter in life. Uh became one of the best aerobatic pilots in the country and uh got to got a sponsorship, got to, you know, travel the country flying air shows, got to fly Oshkosh, who for those who don't know is kind of like the Super Bowl of aviation events. It's a crowd of 250,000 people a day and it was uh it was an incredible thing to get to do in my uh you know my my early life.
+</details>
+
+**>>**: 你小时候知道你父亲的事业成就吗？
+<details><summary>Original English</summary>
+>> Were you aware of what your father had done while you were a kid?
+</details>
+
+**>>**: 答案是绝对知道，但回到电影这个话题上，我非常感激的一点是，我的父母确实共同付出了努力，以确保我们拥有一个非常脚踏实地、坦率说是正常的童年。就像我说的，我是由母亲抚养长大的，每个周末我们都会去看电影，坐在漆黑的影院里，真正迷上了叙事的力量。在影院里，你会大笑，会流泪，当你看到一个真正精彩的故事时，它会永远留在你心中。而我最喜欢叙事的一点是，当你走出影院时，外面的世界看起来真的变得不一样了，曾经不可能的事情变成了可能。能每天从事这份工作是一件令人极其兴奋的事。激励我们所有人的动力之一就在于，如果我们在这个行业中把工作做好，我们讲述的故事实际上可以永流传。童年时期有许多故事对我产生了深远的影响。如今能够与我们合作的这些杰出电影人和制片人们一起，站在参与讲述这些故事的位置上，让人感到无比兴奋。
+<details><summary>Original English</summary>
+>> So the the answer is absolutely but one of the things I am really grateful for in bringing it back to movies is uh my parents definitely made a concerted effort to make sure that we had a really grounded and honestly normal childhood. Uh, you know, I guess I said I was raised by my mom and every single weekend we went to the movies, uh, and basically sat in a dark theater and and really fell in love with the power of storytelling. You know, you basically you you you laugh, you cry, and when you see a truly remarkable story, it stays with you forever. And my my favorite thing about storytelling is when you walk out of that theater, the world actually looks different. things that were impossible are now possible. And that's an incredibly exciting thing to get to do every day. And one of the things all of us are really motivated by is that if we do our jobs well in this business, the stories we tell actually can last forever. And that's there are stories that impacted me dramatically when I was a kid. And to now be in a position to be able to be a part of telling those stories with the incredible filmmakers and showrunners that we get to work with uh is incredibly exciting.
+</details>
+
+**>>**: 让我们稍微倒退一点，因为我想搞清楚——你姐姐也在电影行业。
+<details><summary>Original English</summary>
+>> Go back just a bit here for just one moment cuz I want to understand I mean your sister's also in the movie business.
+</details>
+
+**>>**: 是的，没错。
+<details><summary>Original English</summary>
+>> Yeah, absolutely.
+</details>
+
+**>>**: 你父亲喜欢电影吗？你母亲喜欢电影吗？你觉得是什么促使你走上了这条道路？因为在这之后你凭借 Skydance 取得了巨大的成功，我们稍后会聊派拉蒙，但先回到这一切的起点。
+<details><summary>Original English</summary>
+>> Was your dad into the movies? Was your mother into movies? What was the thing that you think led you down this path? because then we can speed up and you have obviously extraordinary success with Sky Dance on a tone and we'll get to Paramount in a second but just just go back to the the sort of the genesis piece.
+</details>
+
+### 创立 Skydance 与艺术与技术的融合
+
+**>>**: 从个人角度来说，我和我母亲以及我姐姐都非常热爱电影，我父亲同样也喜欢电影，但这确实是我们三个人从小一起深爱的事物。毫不夸张地说，我们家里有一套我至今还保留着的 VHS 录像带收藏，大概有 3,000 盒。我们常开玩笑说那就像家里的百视达（Blockbuster）。对孩子来说，周日是一周中唯一可以随心所欲的日子，我和梅根（Megan）就会说“我们把五部《洛奇》全看一遍吧”或者“我们看《星球大战》三部曲吧”。所以那确实是童年打下的深厚热爱基础，让我对我每天所做的事情充满激情。
+<details><summary>Original English</summary>
+Yeah. Know on on the personal bit like uh both I mean my me my mom and my sister my father loves film as well but you know it was really something the three of us kind of all loved growing up. Uh literally we had I still have it a VH collection that was like 3,000 VHS's. We used to joke it was like Blockbuster at home and kind of like Sunday was the one day when you're a kid where you can kind of do whatever you wanted and me and Megan would be like let's watch all five Rocky movies or you know let's watch the Star Wars trilogy and so it really was kind of that foundational you know kind of love and childhood where I'm I'm very passionate about what we get to do every day.
+</details>
+
+**>>**: 好。之后你取得了巨大的成功。你创办了自己的制片公司 Skydance 并大获成功。我想象着，你肯定在几年前的某个时刻在餐桌上对你父亲说：“我们取得了这么大成功，我想去收购派拉蒙。”餐桌上的对话当时是怎样的？事情是这样发生的吗？
+<details><summary>Original English</summary>
+Okay. So then you have this uh enormous success. You go on and you create your own production company Sky Dance. It has great success and I imagine you tell me a couple of years ago you must say to your father at some point we've had all this success I want to go by Paramount. What what is that conversation at the dinner table like? Is that how it happens?
+</details>
+
+**>>**: 要理解那场对话，让我再往前退一步。我曾在南加州大学（USC）电影学院就读，然后在 2010 年创立了 Skydance，最初是在一个机库后部仅凭三个人起步的。我们几乎走出的每一步，听到的声音都是“这绝不可能成功，这注定要失败”。我们制作的第一部电影是 2010 年与科恩兄弟合作的《大地惊雷》（True Grit）。当时我们听到的评价是：“你们为什么想拍西部片？西部片没有海外市场，而且已经有 20 年没出过成功的西部片了。”结果该片获得了 10 项奥斯卡金像奖提名，全球票房达到 2.5 亿美元，成为当时上映最成功的西部片。以此为基础，我们有幸拓展了《碟中谍》系列，从《幽灵协议》开始；我们制作了《星际迷航》系列电影，包括该系列有史以来最成功的电影，以及《僵尸世界大战》。我们建立了一个独立的电视制片厂，为 Netflix 推出了《同妻俱乐部》（Grace and Frankie）等热门剧集；为亚马逊制作了《侠探杰克》（Reacher）和《杰克·莱恩》（Jack Ryan）；也为苹果提供了大量热门内容。我们把一家原本只有三人的公司打造成了一家估值达到 47.5 亿美元的机构，当时吸引了 RedBird Capital 和 KKR 等投资方。正是这 16 年的积累，使我们具备了收购派拉蒙和收购华纳兄弟的实力。我们的核心指导理念始终是娱乐业的未来走向。正如格雷茨基（Wayne Gretzky）的名言：“滑向冰球将要去的地方，而不是它去过的地方。”从公司创立初期起，这就是我们的核心原则，也是促使我们及早布局流媒体的原因。我们在接下来的迭代中看到，伟大的艺术与卓越的叙事必须与技术携手并进，唯有这种结合才能真正指引这个行业的未来。如果你看看今天的 Skydance，看看我们现在的平台规模，我相信我们拥有世界上最顶级的知识产权（IP）。你刚才开场时提到了一部分，但如果要进一步量化，我们在过去十年中拥有 15 个票房突破十亿美元级的特许经营 IP。我们在流媒体上具备巨大规模，全球拥有超过 2 亿付费在线视频（SVOD）订阅读户，Pluto TV 上拥有 7,500 万月活跃用户。我们拥有全美收视第一的广播网 CBS，拥有体量最大的体育赛事转播权组合。因此，我们在内容竞争中处于极其有利的地位。这一新篇章的不同之处在于，内容只是等式的一部分。回顾 15 年前，硅谷跨界进入好莱坞，从根本上颠覆了传统中介模式。Netflix 建立了一家令人惊叹的公司，亚马逊推出了 Prime Video，但人们留在这些平台上依然是因为内容，因为叙事。凭借我们在 Skydance 内部建立的产品与技术团队，我们有能力构建出一个足以与之竞争的平台层。我们深信，尤其是在人工智能的时代背景下，艺术与技术的结合将引领我们走向未来的道路。
+<details><summary>Original English</summary>
+Uh well first I think to kind of understand that conversation let me back up a little bit further. So uh so I went to film school at USC and then uh you know basically started skydancing in 2010 literally with three people in the back of a hanger and the entire story was which was the story of I think pretty much every um step that we've taken is this will never work and this is basically doomed to fail. Um you know the first film we ever produced was a picture called True Grit with the Cohen brothers in 2010. What we heard was why do you want to make a western? They don't travel and you know one hasn't worked in 20 years. We'll cut to TEDM Academy Award nominations, $250 million at the box office, the most successful western at the time of release. Building from that, we were fortunate enough to get to really, you know, evolve the Mission Impossible franchise, starting with Ghost Protocol. Uh we got to produce the Star Trek franchise, including the most successful Star Trek film of all time, World War Z. We built a standalone television studio that put hits on companies like Netflix with Grayson Frankie. Um, you know, we made, you know, Reacher and Jack Ryan for for Amazon, put a tremendous amount of hits on Apple, and we built a company that was three people into, you know, a an institution that was valued at $4.75 billion with investors like Red Bird Capital and KKR at the time. And it was really that 16 years of work that put us in the position to be able to acquire Paramount and acquire Warner Brothers. And one of our guiding thematics has always been where entertainment is heading. Right? You know, it's that great Gretzky quote, skate to where the puck is going, not to where the puck has been. And that's been a core tenant from the early days from when we first started the company. It's what led us to streaming early, right? And what we saw in this next iteration was that it was going to be the combination of great art and great storytelling working handinhand with technology is what was really going to chart the future of this industry. And if you now look at what Skidance is today the scale of the platform we have I believe the best intellectual property in the world. you named some of them on the top of that, but just to further contextualize it, it's 15 billion dollar franchises and you know, basically over the la over the last decade, uh we're at scale and streaming with over 200 million global fod subscribers, 75 million monthly active users on Pluto. We have the number one broadcast network in CBS, the largest collection of sports rights, and so we are incredibly well positioned to win in content. What's new about this chapter is that is only part of the equation. And again going back 15 years, Silicon Valley came into Hollywood and fundamentally disintermediated the business. Netflix built an amazing company. Amazon Prime Video was created, but people are still there because of the content, because of the storytelling. And what we are able to do with the product and tech team that we have built inside of Skyance is to actually build a platform layer that competes with that. And again, we really do believe it is that combination of art and technology, especially in a world of AI that is going to uh help navigate the past of the future.
+</details>
+
+### 收购派拉蒙的幕后与拉里·埃里森的参与
+
+**>>**: 那么，带我回到你和你父亲的餐桌前吧。我问这个是因为大家都想了解幕后细节。你肯定在某个时刻打电话给你父亲说：“我们把派拉蒙买下来吧。”顺便提一句，雪莉·雷石东（Shari Redstone）今天可能也在现场，如果雪莉在场，她可以作证，我们过去曾定期共进早餐，每次我都会问她是否有意出售公司。好几年里她的回答一直是否定的。直到有一天，答案变成了“愿意”。
+<details><summary>Original English</summary>
+So, take me back to the dinner table with your dad. And no, I I asked because I think people just want to be inside the room. They want to understand you call your father. I assume you must call your father at some point and say, "Let's do this paramount thing." By the way, I think that Sherry Redstone might actually even be here today. I don't know if she she's she's here. But if Sherry is here, she can attest to we used to have a standing breakfast where I would ask her if she would ever be open to selling the company. Several years the answer was always no. And uh one day the answer was yes.
+</details>
+
+**>>**: 但你当时并没有足够的资金来完成收购，对吧？
+<details><summary>Original English</summary>
+>> And but you didn't have the did you you didn't have the money to do it? I don't think
+</details>
+
+**>>**: 所以……
+<details><summary>Original English</summary>
+>> so. So So uh
+</details>
+
+**>>**: 你是如何说服他的？
+<details><summary>Original English</summary>
+>> how did you convince him?
+</details>
+
+**>>**: 我想大家需要明白一点，我也想打破某些传闻：我父亲是一位极好的合伙人。在整个过程中，能够每天与他共事建立这家公司，可以说是莫大的荣幸。但他对这项投资要求极高的业绩回报和出色的成果。看看我们的投资伙伴，比如我相信今天也在场的杰里·卡迪纳尔（Gerry Cardinale），他是一位无比老练精明的投资人；还有作为合作方的各主权财富基金，也都是极其专业的投资机构。我们建立这家公司是为了创造长期的股东价值。这是激励我父亲的动力，也是激励我们所有投资人的动力。这关乎我们作为一家公司的立足点，我们对这个价值前景感到非常乐观。
+<details><summary>Original English</summary>
+>> This look one of the things I think people have to understand and I want to dispel what might be a myth is my father and I'm is an incredible partner. I mean throughout this entire process to be able to work with him every day to build this company is the very definition of a privilege. But he demands an incredible performance and incredible result as a result of this investment. And when you look at the you know our you know Jerry Cardell who I believe is here who is an unbelievably sophisticated investor. Um you know the sovereigns are incredibly sophisticated investors who have partnered in this. We are building a company for to create long-term shareholder value. That's what you know my father is motivated by. That's what all of our investors are motivated by. And it is really about where we sit as a company. We feel really good about the value.
+</details>
+
+**>>**: 大家很想知道他的参与度到底有多深。你说你每天都和他交流。
+<details><summary>Original English</summary>
+>> People want to know I mean people do want to know how involved he is. You said you talk to him every day.
+</details>
+
+**>>**: 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+**>>**: 当你操盘这件事而他需要拿出 400 亿美元时，如果有事情不顺利，他会为难你吗？当时具体情况是怎样的？
+<details><summary>Original English</summary>
+>> Um when you're doing this and he's got to put up $40 billion. Is he giving you a hard time if if something's not right? What what what is happening here?
+</details>
+
+**>>**: 答案当然是肯定的，拜托。
+<details><summary>Original English</summary>
+>> The answer is of course. So I mean come on.
+</details>
+
+**>>**: 明白。所以他经常找你。
+<details><summary>Original English</summary>
+>> Right. So you hear from him a lot.
+</details>
+
+**>>**: 正如我所说，在推进交易的整个过程中，我们几乎每天都在沟通。现在我们平均每周大概通话四天，讨论公司战略，讨论我们在创意层面希望把公司带向何方。就在昨天，我们还在探讨人工智能及其将如何影响我们的业务。但这一切归根结底都是围绕着一个核心：我们如何为股东创造回报并建立持久的价值。
+<details><summary>Original English</summary>
+Uh look, one of the things I'll say we, as I said, we talk throughout the deal process literally every day. Uh you know, we probably talk on average for four days a week and we we talk about strategy. Um you know, we we talk about where we want to creatively take the company. Literally just yesterday we were we were talking about basically artificial intelligence and how that's going to impact our business. Um but again, it's all through the lens of how do we deliver for shareholders and and build lasting value.
+</details>
+
+### 政治立场与新闻独立性
+
+**>>**: 好。在公众观念中，围绕你、你父亲以及这家公司，一个备受关注的核心焦点是其背后的政治色彩，因为公众目睹了这一切在台前的展开。正如你所知，总统曾公开称你的父亲是“我的朋友、我的重要支持者”。他说这会成为一家伟大的公司，他们是了不起的人等等。在政治层面上有一种观点——我们稍后会具体聊到新闻业务、CBS 新闻部以及 CNN 等——但有一种政治观点认为，你打算对这家公司进行某种重组或调整。所以我想从你的角度了解一下，当你和他共进晚餐时，我们基本了解他的政治立场，你的政治立场是什么？
+<details><summary>Original English</summary>
+Okay. So, one of the big things uh that I think has emerged in the public consciousness about uh you know, David Ellison and this company is the politics of it all because we watched all of this play out uh in public. Uh the president, as you know, has called your father a quote friend of mine, a big supporter of mine. Uh he said it's going to be a great company. They're terrific people. Uh all of that. Um, and there was a view uh politically uh and we can get to the news piece of all of this and CBS news in a moment, but or CNN and everything else, but there was a view politically uh that you were going to sort of realign this company. And so I just want to understand from your perspective when you have dinner with him, what are I think we know his politics. What are your politics?
+</details>
+
+**>>**: 我想从几个方面来回应。首先，在谈到政府时，我们有幸能够与本届政府保持密切合作，但当初启动派拉蒙交易时是在拜登政府时期，我们当时同样与那届政府保持了非常紧密的合作。我们还与 70 个国家和地区的监管机构进行沟通以推动交易获批，他们最终都得出了相同的结论，即这是一笔促进竞争的交易。我们还与各州总检察长密切合作达成了诉讼和解。我们希望未来也能与任何一任当选总统保持良好合作。我们是一家跨国公司，与全球各地的当选领导人保持对话极其重要，这是一件积极的好事。至于新闻业务，我们的态度始终如一：我们的信念是基于真相、基于事实、跨党派、居中客观，展现争论的双方，根本上让受众自行判断是非。在这个很快就会让人无法完全相信自己眼睛的世界里，拥有能够日复一日赢得公众信任的机构是极其重要的。我们在 CBS 新闻部和 CNN 拥有一批杰出的记者，他们每天都在极其努力地赢取信任。如果未来我们有幸再次站上这个讲台，我们的目标是确保明天的我们比今天更值得信赖。
+<details><summary>Original English</summary>
+>> So look, one I want to address that in a couple place. One, when you talk about the administration, we've been fortunate enough to be able to work closely with this administration, but also when we started the Paramount deal, that was under the Biden administration. We were working very closely with that administration. We also worked with regulators in in 70 countries to basically get this deal approved, all of whom came to the same conclusion, which is a pro competitive transaction. And, you know, and we also worked really closely with the state attorney generals to settle that lawsuit. So, and you know, our hope is to be able to work with whoever the next president is as well. We are we are a global company and I think it is really important to be able to have dialogue with the elected leaders around the world. Uh I think that is a good thing and that is a positive thing. Uh as as it relates to news, we've been really consistent about this. Our belief is truthbased, fact-based, bipartisan, down the middle, and you know, present both sides of the argument and fundamentally let the audience decide what is right for them. And in a world, you know, where very quickly you're not going to be able to believe your eyes, we think having institutions that earn trust every single day is incredibly important. And we have incredible journalists at CBS News and at CNN that are working very very hard to earn trust every single day. And our goal is when we are back on this stage, if we have the privilege in the future to make sure that we are more trusted tomorrow than we are today.
+</details>
+
+**>>**: 好，但回到政治本身。他投票给了特朗普，你投给谁了？
+<details><summary>Original English</summary>
+>> Okay. But back to the politics chief. So he voted for Trump. Who' you vote for?
+</details>
+
+**>>**: 我其实从未公开透露过。对我而言，我基本上整个人生中都曾给两党投过票。
+<details><summary>Original English</summary>
+>> I have actually never disclosed that. And look, the what I'll say is for for me, I have voted both sides of the aisle basically my my entire life.
+</details>
+
+**>>**: 你们私下会辩论政治吗？
+<details><summary>Original English</summary>
+You guys debate politics?
+</details>
+
+**>>**: 我不是一个党派偏见强烈的人。如果你要谈论家庭，我家里一半是民主党人，另一半是共和党人。这会让餐桌上的交流稍微有点挑战性。但回到我们在这里的原因，关键在于我们业务的核心。我之所以深爱叙事的力量，是因为它能够跨越这些分歧，从根本上让我们庆祝彼此之间的共通之处远多于分歧。我认为这极其重要，我们需要做更多这样的事情。
+<details><summary>Original English</summary>
+>> I'm I'm not I'm not a partisan. Uh I mean, you want to go back to family. Half my uh half my family's Democrat, half my family is Republican. Uh that can make dinner table conversations a little bit uh challenging. Um but again, going back to why we're here, it's really about what the core of our business is. And again, what I love about the power of storytelling, right, is if but wait, give me a second. I mean, it bridges those divides basically, you know, and and and fundamentally, you get to celebrate that we have far more in common than what separates us. And I I think that's incredibly important and we need to do more of that.
+</details>
+
+**>>**: 但这正是双刃剑所在。我之所以询问政治层面的问题，是因为在这笔交易谋求交割的过程中发生了很多事情。例如有报道称，总统曾与你父亲探讨是否应该解雇 CNN 的埃林·伯内特（Erin Burnett），以及他希望谁来担任这些职位。一年前，据说他还推动拍摄《尖峰时刻 4》（Rush Hour 4）。你们在制作《尖峰时刻 4》吗？
+<details><summary>Original English</summary>
+But here, I'll tell you why it cuts both ways. And the reason I'm asking about the politics part of it, the politics part of it is as this deal is trying to close, um, you have all sorts of things uh happening. We get reports for example that the president is talking to your father about whether you know Aaron Bernett at CNN should be fired uh and who he wants in those roles. Uh a year ago uh there I don't you can even tell us uh apparently he pushed for Rush Hour 4 to be made. Are you making Rush Hour 4?
+</details>
+
+**>>**: 我们正在与布雷特（Brett Ratner）合作筹拍《尖峰时刻 4》，这是一个极其成功的系列电影的续集。其实是我们电影制片厂的一位负责人走进我的办公室提出这个项目的，事情实际是这样发生的。
+<details><summary>Original English</summary>
+>> Uh we we we are working with Brett on rush hour 4 which is a sequel to an incredibly successful franchise. That was actually one of the heads of our film studio walked into my office with that. That's how that actually
+</details>
+
+**>>**: 所以这并非因特朗普而起？
+<details><summary>Original English</summary>
+>> it did not happen because of Trump.
+</details>
+
+**>>**: 是乔什·格林斯坦（Josh Greenstein）走进我的办公室，那才是我们关于《尖峰时刻 4》的第一次讨论。
+<details><summary>Original English</summary>
+>> Josh Greenstein walked into my office. That is the first conversation we had about rush hour 4.
+</details>
+
+**>>**: 你从未从你父亲或总统那里听说过关于《尖峰时刻 4》的事？那完全是编造的故事。
+<details><summary>Original English</summary>
+>> And you never heard from your father or from the president or anything about rush hour 4. That's completely madeup story.
+</details>
+
+**>>**: 外面有很多编造的故事。我不想去一一回应在这期间出现的每一个虚假传闻。但我认为非常重要的一点是，在新闻报道方面，我曾多次公开声明，我们坚信编辑独立性。这一点绝不会改变。
+<details><summary>Original English</summary>
+There's a lot of madeup stories. I'm not going to go into addressing every single basically madeup story that we've addressed with this. But what I also think is really important is when it comes to the news, and I've said this publicly multiple times, we believe in editorial independence. That will never change. Period.
+</details>
+
+### 监管博弈与联邦电影税收返还
+
+**>>**: 我之所以在反面提到这一点，是因为外界此前认为你与本届政府关系如此密切，导致加州总检察长在另一端对你发起了施压。因此我很好奇你如何看待这些相互博弈的力量，以及如果你能回到过去，是否会采取不同的做法——比如是否会尽量避免让人觉得你与总统过于亲密，或者是否会改变处理 CBS 新闻部重大调整的方式？正是那些调整引发的外界认知，导致了加州方面如此强烈的施压。
+<details><summary>Original English</summary>
+So I and the reason I mentioned this though on the flip side is then it because the perception was that you were so close to the administration then the California AG went after you on the other side. And so I'm so curious how you think about these sort of competing uh forces at play and whether you think if you could go back in time for example what you would have done differently uh whether it would have been around um making yourself look like you were closer to the president than it seems like you're suggesting you are or whether you would shift how you approached dealing with CBS News and some of the big changes that you made which also created this perception that I think led California to be to push as hard as they did.
+</details>
+
+**>>**: 我可以从几个方面来回答。首先，我们的目标是完成派拉蒙的交易以及华纳兄弟的交易。我们达成了目标。我们与两党的监管者都进行了合作，最终大家都得出了相同的结论。从这个角度来看，今天能坐在这里完成了对派拉蒙和华纳兄弟的收购，顶住了外界普遍认为不可能完成的巨大阻力实现了使命，我感到非常高兴。另外针对你提到的非常重要的一点，在面对美国司法部（DOJ）时，我们是正大光明走司法部正门推进的。任何没有经历过被包括职业公务员在内的所有人连续几个小时盘问的人，恐怕无法体会，我个人并不享受那个过程。但从监管推进的角度来说，我们与欧盟的里贝拉委员（Teresa Ribera）进行了沟通，与英国文化大臣南迪（Lisa Nandy）进行了沟通，在应对过程中也与加州总检察长罗布·邦塔（Rob Bonta）等民主党州总检察长保持了紧密合作。我认为与各方建立沟通至关重要。作为一家全球化公司，必须与全世界的监管机构保持沟通与对话。
+<details><summary>Original English</summary>
+>> Well, I'd answer that a couple of ways. I mean, one, let's start with our our goal was to close the Paramount transaction, close the Warner Brothers transaction. We accomplished our goal. We worked with regulators basically on both sides of the aisle and and ultimately everybody came to the same conclusion. So you so from that standpoint I'm really happy that we are sitting here today having acquired Paramount, acquired Warner Brothers and really persevered through what I think were some pretty uh significant odds where a lot of people didn't think it was possible to ultimately accomplish our mission. And also to your point which I think is actually really important we one when it comes to the DOJ we went through the front door of the DOJ. anyone who has not had the experience of basically having everyone including the career staff grill you for hours on end. I I you know I don't enjoy it. Um but but from that but from that standpoint we worked with Commissioner Rivera across the EU. We worked with Culture Secretary Nandy in the UK. We worked closely with Rob Bont in the Democratic state attorney generals as we navigated through that. I think it is really important to have a relationship with with both sides. And again we're a global company. You need to have a communication and a dialogue with regulators around the world.
+</details>
+
+**>>**: 如今民主党即将掌握权力，你是否与舒默（Chuck Schumer）或杰弗里斯（Hakeem Jeffries）沟通过？
+<details><summary>Original English</summary>
+>> Have you talked to Schumer or Jeff now that the Democrats are going to be in power?
+</details>
+
+**>>**: 我最近没有和他通话，但我过去多次与哈基姆·杰弗里斯交流过，与舒默也是如此。此外，我们一直在紧密推进的一项工作——这也呼应了你刚才关于沟通重要性的问题——是从去年 10 月开始，我们一直在推动一项联邦税收返还政策，以将电影制作带回美国本土。实际上，我们与总统之间最主要的沟通渠道是通过已故的格雷厄姆参议员进行的，我们举行了三次会议，讨论由于美国相比世界其他地区不再具备竞争力，电影制作在很大程度上已经流失到海外的事实。举例来说，合并后的公司生产的电影中，在美国本土制作的比例大约仅为 5% 左右。我们希望看到这项返还法案能在今年年底前通过，使美国重新具备竞争力，将我们最宝贵的文化出口产业带回美国本土。这对就业大有裨益，对创意群体大有裨益，保持该产业在美国本土的活力至关重要。这是一项完全跨党派的努力。我去了五次华盛顿特区，与两党的参议员和众议员都进行了会面。我们正在全力以赴促成此事，这对我们的产业和我们的国家都将是一件大好事。
+<details><summary>Original English</summary>
+>> Uh I I've not spoken to him recently, but I mean I I I' I've spoken to Hakee Jeff multiple times in the past. Uh I same with Schumer. I also, one of the things we've been working very closely on, which goes to your point about why I think this is so important, is starting October of last year, we've been working on a federal rebate to basically bring film production back to the United States of America. Actually the the most conversations we have had uh with the wii with the president was really through the late senator Graham uh where we had three meetings talking about the fact that film production had largely exited the United States because we were no longer competitive with jurisdictions around the the rest of the world. For example, our combine company round numbers produces about 5% of films uh in the United States of America. And we would like to see a rebate get passed by the end of the year that will actually make the United States competitive so that we can bring one of our greatest cultural exports back to the United States of America. That will be great for jobs. That'll be great for the creative community. And and we think it's really important that that business stays vibrant here. So when you start talking about those relation and that is a completely bipartisan effort. I've done five trips to Washington DC. I've met with senators on both sides of the aisle, House members on both sides of the aisle and we're working really hard to see if we can get this done which will be a great thing for our industry and a great thing for our country.
+</details>
+
+**>>**: 我们稍后马上回来。
+<details><summary>Original English</summary>
+>> We'll be right back.
+</details>
+
+**>>**: 在过去的一个世纪里，高尔夫运动取得了长足的发展。今天，The R&A 与埃森哲携手合作，在弘扬其传统的同时共塑未来。The R&A 与埃森哲正利用数据和技术重塑高尔夫运动的未来，提升您的比赛体验，并推动高尔夫运动在全球范围内的发展。精彩不止于此，未来更值得期待。埃森哲是 The R&A 的官方商业与技术咨询合作伙伴。欲了解更多信息，请访问 accenture.com/rrenna。
+<details><summary>Original English</summary>
+>> Golf has come a long way in the past century. Today, the RNA and Accenture [music] are partnering to celebrate its heritage while shaping what's to come. Together, the R&DA and Accenture are reinventing [music] the future of golf, using data and technology to enhance your experiences of the game and drive the growth of golf worldwide. All this and there's more to come. Accenture, the official business and technology consulting partner of the R&D. Learn more at accenture.com/rrenna.
+>> [music]
+</details>
+
+### 电影补贴的经济账与创作者合作
+
+**>>**: 我想问你关于补贴的问题，因为我思考这个问题很久了。从文化角度看，将电影制作带回美国固然很好，但在经济层面上这要复杂得多。我想念一段话给你听，这是来自税务政策中心（Tax Policy Center）的观点：“电影补贴确实会影响剧组选择在哪里拍摄，但吸引制作并不等同于在就业、工资和经济增长方面带来可衡量的增长。所谓可衡量，意味着需要核算剧组是否只是将工人从酒店、餐饮服务和旅游等其他行业中拉走。”实际上他们认为从经济角度看这并不划算，也就是说，文化理由站得住脚，但经济理由并不成立。
+<details><summary>Original English</summary>
+>> Can I ask you about the subsidies because I've thought about this a long time. Uh look, I think culturally it would be great to get the movies back in the US. Um economically it's a much more complicated story. The argument I want to read you something. This is the tax policy center. Film subsidies do appear to influence where productions choose to shoot. But attracting production is not the same as generating measurable gains in jobs, wages, and economic growth. Measurable means, for example, accounting for whether productions are simply pulling workers away from other employment in things like hospitality, food services, and tourism. And effectively, they say it's actually not from an economic perspective actually worth it. That basically could make the cultural argument, but not the economic one.
+</details>
+
+**>>**: 请原谅我直言，这种说法完全不属实。首先，当你观察英国的税收返还政策时，它极大地提振了当地经济；加拿大和澳大利亚也是如此。所有这些国家设立返还机制，都是因为在经济核算上切实可行。在得克萨斯州，派拉蒙参与推动了为泰勒·谢里丹（Taylor Sheridan）的所有制作项目设立 31% 返还的政策。我们最近与该州的副州长开会，他们独立的审计报告明确指出，州政府每投入 1 美元，就能获得 4.70 美元的回报。再看看这项激励措施究竟惠及了谁，外界的误解往往是“你们在给汤姆·克鲁斯免税”。事实并非如此。汤姆·克鲁斯和世界上最大牌的明星，无论在世界何处拍摄都能拿到既定的片酬。真正得到补贴的是工会工人、化妆师、手工艺人和置景师。这在创造就业、帮助小企业，其他国家过去实施这一举措正是因为其经济可持续性。我们认为美国也应当实施，因为这在经济上是完全可持续的。
+<details><summary>Original English</summary>
+So, so, so forgive me category, that's just not true. Um, so one, when you actually look at the the rebate in the United Kingdom, it has been a boom to their economy. Uh, same is true in Canada, same is true in Australia. They all of those other countries have that rebate because it pencils out. If you look at, uh, Texas, uh, Paramount was a part of actually building a 31% rebate for all of Taylor Sheridan's productions. We had a meeting recently with the with the deputy governor down there that literally said for every their own independent audit for every dollar that was invested by the state returned $4.70. And when you look at who this incentive helps, the the misnomer out there is like you're giving Tom Cruz a tax break. That's not true. [clears throat] Tom Cruz, the biggest talent in the world are going to get paid whatever they get paid no matter where they shoot in the world. It is the union workers. It is the makeup artists. It is the craftsmen. It is the set builders that fundamentally are being subsidized. You are creating jobs. You are helping small businesses and every other country that has done this in the past does it because it is economically sustainable. We think it is important that the United States does it because it is economically sustainable.
+</details>
+
+**>>**: 你提到了泰勒·谢里丹，我也正好想问你关于他的事情。据我所知，你们与他仍有为公司制作电影的合作安排，但不再制作电视剧了。
+<details><summary>Original English</summary>
+Um you mentioned her Sheridan and I wanted to ask you about him. Um I know you still have an arrangement with him um to make movies for the company uh but not to make TV shows.
+</details>
+
+**>>**: 那也不是事实。
+<details><summary>Original English</summary>
+>> That is also not true.
+</details>
+
+**>>**: 可是他之后的新合约是与 NBC环球（NBCUniversal）签订的。
+<details><summary>Original English</summary>
+Well, but the the new the new contract for him is going to be uh with NBC Universal
+</details>
+
+**>>**: 那是在 2029 年之后生效。
+<details><summary>Original English</summary>
+>> post uh basically after 2029
+</details>
+
+**>>**: 因为他原本有合约，但下一份合约就不归你们了。在完成交易后，你立即专程去拜访了他。
+<details><summary>Original English</summary>
+>> because he had a contract and now and that but then but the next contract is not yours. Uh right after you made the deal, you went to go visit him.
+</details>
+
+**>>**: 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+**>>**: 据外界了解，你觉得发生了什么？
+<details><summary>Original English</summary>
+>> From what we all understand.
+>> What do you think happened?
+</details>
+
+**>>**: 你是否希望他能继续留在你们这里？
+<details><summary>Original English</summary>
+>> Uh and do you wish that he had stayed with you?
+</details>
+
+**>>**: 安德鲁，我对泰勒怀有极大的尊重和钦佩。我最近刚在周末与他通过话。他正全力为彼得·博格（Peter Berg）编剧《使命召唤》（Call of Duty），我们认为这会是一个极为亮眼的系列开篇。我们还有即将上映的《弗里斯科之王》（Frisco King），《石油天王》（Landman）也在制作中。对我们而言，我们的目标是成为全球顶尖创意艺术家的首选之地。
+<details><summary>Original English</summary>
+>> Look, Andrew, I have an incredible amount of respect and admiration for for Taylor. I actually I spoke to him uh basically over the weekend recently. He's literally hard at work writing uh Call of Duty for Pete Berg which we think is going to be a phenomenal franchise launch. Um you know we have Frisco King that is up that is upcoming uh you know basically in production on Land Man. And for us what we want to be is the number one home for the most talented creative artist in the world.
+</details>
+
+**>>**: 我猜你肯定也希望他未来能继续为你们制作电视剧。
+<details><summary>Original English</summary>
+>> I assume you wish that he was doing TV for you too into the future.
+</details>
+
+**>>**: 顺便说一句，我们与他的关系非常好，我们希望在未来继续保持这种良好的关系。但如果泰勒做出了决定，我们尊重他的决定，这并不意味着我们不再……
+<details><summary>Original English</summary>
+>> By the way the answer is we have a great relationship with him. We want to continue to have a great relationship with in the future. But at the end of the day, if Taylor made a decision that we respect that decision, that doesn't mean that we're not
+</details>
+
+**>>**: 从非常个人的层面来说，我猜你接到了他经纪人或其他人的电话，告知他要去另一家公司了。你晚上睡觉前会不会心想：“我当时说了什么？我本可以说些不同的话吗？究竟发生了什么？”这正是我试图与你探讨的，那段经历对你而言有何经验教训？
+<details><summary>Original English</summary>
+>> saying on a very personal level, I assume you get the call from some from his agent or whomever says he's going with these other guys. And you say to yourself before you go to sleep at night, what did I say? Could have I said something different? What what happened? How do So that's what I want. That's the conversation I'm trying to have with you about about sort of what was the lesson of that experience for you.
+</details>
+
+**>>**: 我还是回到刚才的观点。我们与泰勒的关系非常好，即使他未来转投 NBC环球，我们在很多业务上依然会保持合作。坦白讲，我认为他是同代人中最具高产能力、最具才华的叙事者之一。我们对双方共同完成的所有作品感到无比自豪，并希望将这种合作关系延续到未来。他在 NBC环球所做的所有项目中，我唯一确信的是，那些作品绝对会非常精彩。
+<details><summary>Original English</summary>
+Um, again, I'll go back to the same piece. We we have a we have a great relationship with Taylor and there's going to be a lot of things that we are in business on basically once he goes over to NBC Universal. And candidly, I think he's one of the most prolific and most talented storytellers of his generation. We're incredibly proud of all the work that we're doing together. And we want to continue that relationship going on into the future. And and in everything he does at NBC Universal, the only thing I'm certain of is the work will be spectacular.
+</details>
+
+### 新闻机构管理与重塑公众信任
+
+**>>**: 让我换个关于新闻业务的问题。外界有许多关于 CNN 和 CBS 最终是否会合并的疑问。但在探讨这个问题之前，你任命了巴里·韦斯（Bari Weiss）掌管 CBS 新闻部。他们正在改版《60 分钟》（60 Minutes）。如你所知，一大批声名显赫的名嘴离开了，或是险些辞职。我不知道莱斯莉·斯塔尔（Lesley Stahl）今天是否在场，她经常坐在那边。当你看到这一切发生时，看到斯科特·佩利（Scott Pelley）等人经历这些变动时，你心里在想什么？
+<details><summary>Original English</summary>
+>> Let me ask you a different question about the news. uh because there's a lot of questions about whether CNN and CBS are going to ultimately merge. But before we get there, um you installed Barry Weiss to run CBS News. Uh they're redoing uh 60 Minutes. A whole number of of very famous names left as you know uh or went out and almost quit. I don't know if Leslie Stall is here. She often sits right over there. Um when you saw all this happen, when Scott Pits, when you see all of this, what are you thinking to yourself?
+</details>
+
+**>>**: 首先，我们对两家新闻机构的所有记者所做的工作感到非常自豪。安德鲁，我认为必须退一步，看看当今新闻业作为一个整体机构所处的处境。如果你看最新的民调数据，对传统新闻的信任度只有 28%，处于历史极低水平，而十年前的高点曾达到 75%。因此我认为，在面对受众这样的反馈时，每天努力重建信任是非常重要的。同时我也认为，在播报新闻时，做到真正基于真相、基于事实、跨党派且不偏不倚至关重要。我们在新闻领域的探索刚走过一年，目标是确保能够将信任度重新恢复到以前的水平，甚至更高。让我感到非常自豪的是，我们拥有一群极其出色的记者，他们每天都在为实现这一目标而努力。这是我们今天的使命，也是我们明天的使命，以及五年后的使命。在重新赢得这份信任之前，我们绝不会停止努力。而在采编层面上，我们坚守编辑独立性。我们绝不干预这些具体的报道决策，我们充分信任记者们能够出色地完成本职工作。
+<details><summary>Original English</summary>
+So again, one, we are really proud of the work that basically all of our journalists are basically doing across both news organizations. And again, I think Andrew, you got to step back and talk about where everything currently sits as an institution. And if you look at the most recent polling data, trust in legacy news is at 28%. Which is record record lows uh coming off highs of, you know, 75% 10 years ago. And so I think it's important when you are getting that feedback from the audience to make sure that you are working to rebuild trust every single day. Uh I also think it's really important to be truly basically truthbased, fact-based, bipartisan down the middle as you're basically delivering news. And again, when you look at what our goal for for news is and we're we're one year into this journey is to make sure that we can rebuild trust back to at least where it was previously, if not even higher. And the thing that I am also very proud of is we have incredible journalists that are showing up every single day to accomplish that goal. That is our mission today. That is our mission tomorrow. That will be our mission 5 years from now. And fundamentally, we will not stop working until we earn that trust. And from an editorial standpoint, you know, we believe in editorial independence. We don't get involved basically in those decisions, but we trust the journalists will do their jobs incredibly well. I
+</details>
+
+**>>**: 我知道出于稳定考虑，你曾表示马克·汤普森（Mark Thompson）将继续掌舵 CNN，巴里将负责 CBS 新闻部。但你是否预见到在一年或两年后，这两家机构会走向合并？
+<details><summary>Original English</summary>
+>> I know for stability sake, you've said uh that Mark Thompson's going to continue to run CNN and Barry's going to run uh CBS News, but do you see a point a year from now, two years from now where these institutions merge?
+</details>
+
+**>>**: 目前维持现状运作让我们感到非常满意。未来可能会有一些新闻资源共享，但目前我们很满意它们维持现状运作。
+<details><summary>Original English</summary>
+Uh right now we are incredibly happy operating them basically within the status quo. Uh I think you also have you know there might be some new sharing in the future but but but right now we're happy operating them as they are.
+</details>
+
+### 埃隆·马斯克入股与纪录片分发
+
+**>>**: 另一件占据头条并引起广泛关注的事情是，埃隆·马斯克（Elon Musk）刚刚向 Skydance 投资了大约 10 亿美元。鉴于他与你父亲的关系，大家很想知道这是否预示着长期来看与星链（Starlink）会有更宏大的合作，还是仅仅是一次单笔投资？你认为这背后的实质是什么？
+<details><summary>Original English</summary>
+Um one of the other things that happened uh that's been in the headlines a lot of people uh I think noticed because we're going to be talking to them later in the day. Elon Musk just put about a billion dollars uh into Skyance and I think some people wanted to know whether this is uh the beginning of something bigger uh with Starlink long term uh or as a one-off uh as a uh given his relationship with your father. What What do you think it really is?
+</details>
+
+**>>**: 对埃隆，我怀有极大的钦佩与尊重。我不知道大家最近有没有看，当亲眼目睹星舰（Starship）发射并被两根筷子精准夹住完成回收着陆时……
+<details><summary>Original English</summary>
+>> So So look, I have so much admiration and respect for Elon. I mean, I don't know if you saw recently, but but but literally watching, you know, Starship basically,
+</details>
+
+**>>**: 那真是一个奇迹。
+<details><summary>Original English</summary>
+>> it's a Marvel.
+</details>
+
+**>>**: 那确实是个奇迹。他在我眼中集特斯拉与爱迪生于一身，是我心目中当代最伟大的创业家。他很少投资公司，因此能获得他的信任票并让他成为我们的股东，是一种荣誉和荣幸。未来如果有任何与他合作的机会，对我们来说都将是荣幸之至。
+<details><summary>Original English</summary>
+It's a marvel and then effectively get caught by basically two chopsticks in selfland. I mean he is both the you know Tesla Edison he is he is the from my perspective he is the greatest entrepreneur of our time and he doesn't invest in a lot of companies. So to have his vote of confidence and to have him as a shareholder is an honor and a privilege and if there was any opportunity to be able to collaborate with him in the future from our perspective be a privilege.
+</details>
+
+**>>**: 但这种合作目前在你们的规划蓝图之中吗？
+<details><summary>Original English</summary>
+But is that something that's on on offer in the plan in your mind?
+</details>
+
+**>>**: 正如我所说，如果未来有合适的机会，我们非常乐意合作，但目前并没有具体的计划。
+<details><summary>Original English</summary>
+>> As I said, anything if there was the appropriate opportunity in the future, we'd be thrilled to do so, but there there's nothing that we can come up with.
+</details>
+
+**>>**: 好，我这里有一个更棘手的问题：亚历克斯·吉布尼（Alex Gibney）制作了一部关于埃隆·马斯克的纪录片，HBO 原定将发行该片。现在埃隆·马斯克成为了你们公司的股东。这直接涉及到了独立性问题。你是否打算在你们的网络上播出这部纪录片？
+<details><summary>Original English</summary>
+>> Okay. I got a more complicated one for you, which is that um Alex Gibney has a documentary out about Elon Musk. HBO is supposed to be um distributing that uh that film. Elon Musk now owns a piece of your company. This goes to the independence question. Um, do you plan to put his documentary on your network?
+</details>
+
+**>>**: 我们与制作该片的 A24 公司签有第一付费期（Pay-One）协议。我们当然会履行这项协议。
+<details><summary>Original English</summary>
+>> Uh, we we have basically a pay one deal with A24 who produced that movie. Of course, we're going to honor the deal.
+</details>
+
+**>>**: 所以你会履行协议。我之所以问，是因为大家都好奇在错综复杂的人际关系与政治因素交织下会发生什么。
+<details><summary>Original English</summary>
+>> So, you are going to honor the deal. That's not No, but I only asked because people people wonder what's going to happen if if this goes to the whole relationship, politics, this and that that everyone's always wondering about.
+</details>
+
+**>>**: 是的。但安德鲁，我已经多次强调过，我们坚信独立性。我们反对任何形式的审查。我们与 A24 签有协议，当然会严格履行。
+<details><summary>Original English</summary>
+>> Yeah. But I mean, Andrew, I I I've I've said it like I we we we believe in in independence. We don't believe in censorship of any kind and uh and again we we we have that deal with A24. Of course, we'll honor it.
+</details>
+
+### 债务化解、财务协同与内容投资
+
+**>>**: 关于债务的问题。如你所知，这家公司目前背负着极其庞大的债务。你已经提出了一项偿债计划，但你认为此时此刻市场上有什么信息是尚未完全认同或了解的？因为市场似乎还没有完全买账这一方案。
+<details><summary>Original English</summary>
+Um question about debt. There's an extraordinary amount of debt on this company as you know. Um and you've laid out a plan about how you plan to uh pay down uh that debt, but what is it you think that you know that the market doesn't at this moment about that debt? Because the market doesn't seem to be necessarily fully buying into the plan yet.
+</details>
+
+**>>**: 我觉得最直接的方式就是梳理具体数据。公司目前的年营收接近 700 亿美元。我们给出的业绩指引——我可以拿上个季度的数据来作推导——是指引主营业务收入实现中等个位数增长。上个季度派拉蒙单体的主营收入增长了 5%；我们对流媒体业务的指引是实现双位数增长，上个季度在我们接手满一年的情况下，Paramount+ 单体增长了 21%，备考（pro forma）口径下的整体流媒体业务增长了 15%。自接管这项业务以来，我们在增加内容投资的同时，大幅提升了息税折旧摊销前利润（EBITDA）。此外，根据测算，我们指引的协同效应规模为 60 亿美元。当我们收购派拉蒙时，原本预期的协同效应是 20 亿美元，我们最终超额完成了 50%。按照这套执行方案走下去，公司有一条非常明确的路径，在三年内将杠杆率降至 3 倍。到 2030 年，我们将在内容投资规模超过所有同行的同时，产生 100 亿美元的自由现金流。这就是我们业务增长的强劲燃料。以备考口径计算，我们今年在内容上的支出超过 300 亿美元。作为对比，迪士尼对明年的内容支出指引才刚刚定为 260 亿美元。因此从这个角度来看，我认为外界并没有完全领会这家公司的规模优势：明年将推出超过 30 部电影、180 部电视剧集、拥有收视第一的广播网，以及整个行业中最强大的体育赛事版权组合。顺便提一句，凭借出色的产品和技术团队，我们的直接面对消费者（D2C）业务已经具备了庞大体量，确保我们能够与行业内的任何对手竞争。长期来看，我们将为股东创造巨大的价值，逐步降低公司杠杆，坚决执行预定计划。
+<details><summary>Original English</summary>
+So uh I think the easiest way to do that is let's just talk through the numbers just a way to basically walk through that right uh company today is basically nearly $70 billion in topline revenue what we have guided towards it and I'll use our last quarter as I think a good way to be able to extrapolate back to this we've guided towards basically mids singledigit topline revenue growth we g we grew Paramount standalone at 5% topline last quarter we've guided towards basically double digit basically streaming growth. Last quarter, Paramount Plus standalone a year of ownership grew 21%. Proformer streaming company grew 15%. We've significantly grown Ibida since we basically bought have owned the business. We did that while increasing our investment in content. And in addition to that, if you if you run the math, we've guided towards $6 billion in synergies. When we bought Paramount, it was $2 billion in synergies. We will have overd delivered by 50%. And if you run that playbook out here, the company has a very clear path to delivering to three times in three years. We'll generate $10 billion in free cash flow by by 2030 while investing more in content than any of our peers. So when you talk about like that is the rocket fuel for growth in our business. Proforma this year we spent over $30 billion in content. To contextualize that, Disney just guided to $26 billion for next year. So, so from that standpoint, the scale of this company I do not think is fully appreciated. Over 30 movies a year next year, 180 television series, the number one broadcast network, most powerful sports portfolio basically across the business. And by the way, we are now at scale in our DTOC business with a remarkable product and tech team that can ensure that we can compete with anybody in the industry. We are going to create a lot of value for our shareholders long term. we will de we will delever basically this company and we'll execute the plan.
+</details>
+
+### 电影制作考量与团队决策机制
+
+**>>**: 你们明年计划制作 30 部电影，之后会增加到 32 部。我很好奇哪些类型的电影是你们不会拍的，以及你们如何看待这些电影的投入规模与风险？我想问的一部电影是华纳兄弟最近在交割尾声上映的《小丑 2》（Joker: Folie à Deux）。展望未来，你们承担风险的尺度会有多大？
+<details><summary>Original English</summary>
+>> Um you got to make 30 movies next year goes up to 32. I'm curious what kind of movies you think you wouldn't um make and and sort of how you think about the numbers the scale of these movies. Um one of the one of the movies I was going to ask you about because it was one of the ones that was released right at the end here by Warner Brothers uh was Digger. Like how risky do you think you will be going forward?
+</details>
+
+**>>**: 很高兴你提到这个。我和汤姆·克鲁斯合作过八部电影。他是我们这个时代最具开创性的艺术家之一。我们目前正在紧锣密鼓地筹备《雷霆壮志》（Days of Thunder）的续集，之后希望能直接推进《壮志凌云》的新作。过去 16 年我一直身处电影制作的第一线：我常驻片场，睡过汉斯·季默（Hans Zimmer）家的沙发，在剪辑室里连续工作过 20 个小时。我深刻理解这个行业的创作流程。制作任何一部电影，核心目标都必须是如何让特定的故事触达尽可能广泛的受众，绝不存在一刀切的方法。我们会拍摄知名 IP 续作，会拍摄原创故事，也会拍摄类型片，讲述面向各个圈层受众的故事。最关键的是要根据潜在目标受众的规模来量体裁衣设定预算。
+<details><summary>Original English</summary>
+>> So uh I'm I'm glad you bring that up. I've made eight movies with Tom. Uh, look, I think he's one of the seminal artists of our time. We're literally working on a sequel to Days of Thunder right now and then we want to try to roll right into Top Gun uh after that. And look, our goal, what I think is really important, and look, I spent the last 16 years of my life on the film making side in this business. I I have I have lived on set. I've slept on Han Zimmer's couch. I've been in editorial rooms for 20 hours non-stop. I I I do understand the creative process of this business and the goal has to be in any film that you make is how do you reach the broadest possible audience for that particular story and and there is no one-sizefits-all approach. We will make franchise movies. We will make original stories. We will make genre pictures. We will tell stories aimed at audiences from every single walk of life. What is important is that you size basically the budget to the potential addressable audience.
+</details>
+
+**>>**: 你处于这家公司的顶峰，在创意层面你喜欢亲自参与许多事务。在公司里是否有人能对你说“不”？
+<details><summary>Original English</summary>
+um you're at the top of the the the heap of of of this company. Creatively, you like to get involved in a lot of these things. If is there somebody who you think can say no to you?
+</details>
+
+**>>**: 如果达娜·戈德堡（Dana Goldberg）坐在这里，你会发现答案显然是“能”。
+<details><summary>Original English</summary>
+>> If you Dana Goldberg were sitting here, you would see the answer to that is very clearly yes.
+</details>
+
+**>>**: 你觉得在决定是否为电影开绿灯时，她的判断力比你更好吗？
+<details><summary>Original English</summary>
+>> And do you think he has better judgment than you do when it comes to greenlighting films?
+</details>
+
+**>>**: 她在 Skydance 与我共事搭档了 16 年。我极为自豪的一点——也是我的核心信念——电影是一项团队运动，绝非个人单打独斗。任何认为这是一项个人运动的人，都没有真正涉足过这个行业的实际操作。看看我们的团队，我优秀的合伙人阿南德（Anand）今天也在台下，每天与他共事是一种荣幸；达娜·戈德堡和乔什·格林斯坦负责电影制片厂；凯西·博伊斯（Casey Bloys）在 HBO 的品味可以说是出类拔萃的代名词；乔治·奇克斯（George Cheeks）领导着我们的电视部门。我们拥有一支卓越的世界级团队来承担眼前的重任，我们没有任何理由达不成目标。
+<details><summary>Original English</summary>
+>> Uh so uh so she has been my partner at uh basically at Skyance uh for 16 years. And look, one of the things that I am incredibly proud of and this this goes to like what I believe in is this is a team sport, right? Like this is this is not an individual sport. And anybody who thinks it's an individual sport has not actually executed in this business. And when you look at the team that we have, my my incredible partner Anan is basically here in the audience. It is an honor and privilege to get to work with him every day. You have Dana Goldberg and Josh Greenstein who are running the film studio. You have Casey Boy who is just his taste at H at HBO is the very definition of exceptional. Uh we have you know you have George Tees who's running our television group. We have a remarkable worldclass team that is capable of of basically the task at hand and there's no world we're not going to accomplish our goals.
+</details>
+
+### 人工智能带来的创作解放与未来愿景
+
+**>>**: 我们的时间快到了，但我想最后再聊一聊家庭。因为我对这一点很着迷，大多数人也想了解。我们尚未触及的一个话题是，通过甲骨文，你们与 TikTok 存在关联。从长远来看——我们还没真正聊到 AI 等话题——你是否预见到 Skydance 帝国未来会吸纳 TikTok，整合科技板块，融合为一个庞大的整体？
+<details><summary>Original English</summary>
+Um we're out of time but I want to go back to the family for just a moment. Um no because I'm fascinated by it and I think most people uh want to under understand it. Um, one of the things we haven't touched on is that uh through Oracle there's a connection to Tik Tok. Uh, and I wonder whether you think long-term, and we haven't even really gotten into AI or anything else, but, uh, long term that you could see the [snorts] Sky Dance Empire, include Tik Tok, include tech, it all becomes one big thing.
+</details>
+
+**>>**: 那么……
+<details><summary>Original English</summary>
+>> So, so look,
+</details>
+
+**>>**: 你和你父亲讨论过这个吗？
+<details><summary>Original English</summary>
+>> talk about that with your father
+</details>
+
+**>>**: 关于 TikTok 方面，如果深入观察其公司架构，我认为这属于外界的另一种误解。不过，我确实想谈谈科技层面，因为我们此前还没聊到，而这极其关键。所有人必须关注的一点是：人工智能将对我们的业务带来怎样的变革，以及它如今所具备的能力。首先，它对创作者而言是一种工具，但我相信它将成为现代历史上最重要的创意解锁机制之一。目前生成内容的可控性问题已经基本得到解决，这将使创作者能够更快地进行迭代。就像皮克斯创立早期的信条：尽可能快地去犯错。在四个月内完成分镜，投上大银幕，收集反馈，推倒重来，重新打磨。
+<details><summary>Original English</summary>
+>> on on the Tik Tok side. If you really look at the structure of the company, I think it's I think that's another thing that's kind of misunderstood. But look, what I do want to address is basically the the the technology aspect of that because we haven't talked about that. And I think that's actually really important. And I think one of the things that people have we all need to focus on is what artificial intelligence is going to do across our business and what it is capable of today. first is it is it is a tool for artists but I believe it is going to be one of the most significant creative unlocks in in in modern history. the the controllability problem is very very largely solved and that is going to allow artists to you know and again it is a tool to iterate faster like going back to the early days of Pixar the lesson was always be wrong as fast as possible right you you board the movie basically in four months you you put it up on the screen you get notes you break it down you put it back together
+</details>
+
+**>>**: 我们将进入一个在电影正式公映前可以将其推翻重拍 20 遍而不是 10 遍的世界。我们如今也身处这样的现实：由于制作成本居高不下，新人创作者的声音被排挤在外，很难再看到一部成本 75 万美元的电影拿下 5 亿美元的票房。回溯到 1983 年詹姆斯·卡梅隆拍摄第一部《终结者》时，成本只有 400 万美元；如果今天想拍同一部电影，需要 7,000 万美元。通过部署和使用这些工具，我们将迎来一次全新的释放，重新以能与观众产生共鸣的方式去制作所有那些原创故事，从而为新生代创作者赋能。我们希望成为这些艺术家首选的叙事平台，全力为他们服务。我们与人才建立的深厚关系，我们对技术的理解，以及将这两者融为一体的反馈闭环——艺术向技术提出挑战，技术激发艺术灵感——正是应对当前时代契机、构建面向未来的娱乐公司所必需的核心能力。
+<details><summary>Original English</summary>
+>> we're going to be living in a world where you can make the movie not 10 times but 20 times before it actually gets put out and there's also So, we're also living in a world to where a $750,000 movie made $500 million at the box office because the cost of production has boxed out new voices. Go back to 1983 when James Cameron made the original Terminator, $4 million. You want to make that same movie today, it is $70 million. By using and deploying these tools, there is going to be an unlock to be able to make all of those original stories again in a way that can connect with audiences that will empower new voices. And again, we want to be the platform where those artists want to come and tell their stories all in service of them. And the relationship that we basically have with talent, our understanding of technology and how those two things are fused together and it's a feedback loop, right? It is the art challenges technology. Technology inspires the art feedback loop. That is what is necessary to meet this moment in time and build the entertainment company of the future.
+</details>
+
+### 家族、荧幕映射与生活重心
+
+**>>**: 最后一个问题，先好好想想再回答。这是一个关于家庭和电视剧的问题。你旗下现在拥有《继承之战》（Succession）、《黄石》（Yellowstone）、《教父》（The Godfather），我不知道你是否清楚，你还拥有我参与联合创作的《亿万》（Billions）。顺便说一下，因为我看到前 HBO 高管莱诺·马托（Len Amato）今天也在场，你其实还拥有《大而不倒》（Too Big to Fail）的版权。那么，你自己的家庭更像哪一部里的家族？罗伊家族（The Roys）、达顿家族（The Duttons）、柯里昂家族（The Corleones），还是鲍比·阿克塞尔罗德一家？
+<details><summary>Original English</summary>
+Um, final question. Think about this one first. Um, it's a family question. It's a TV show question. So, you now own Succession, Yellowstone, uh, The Godfather, and I don't even know if you know this, but you own Billions, which I helped co-create. And by the way, you actually own Too Big to Fail. I realized cuz I see Lenomato over here from HBO or formerly of HBO. So which one is your family? The Roy, the Dutton, the Corleó, or the Axel Rods?
+</details>
+
+**>>**: “以上皆非”算一个选项吗？
+<details><summary>Original English</summary>
+Is none of the above an option?
+</details>
+
+**>>**: 你可以试着选一个。
+<details><summary>Original English</summary>
+You could try to pick one. [laughter]
+</details>
+
+**>>**: 事实上，我非常喜欢所有这些故事，由衷地喜欢。你刚才提到了家庭，我想回到对我而言最重要的事情上。你之前问到为什么我过去很少公开露面，我吸取到的经验教训之一是，我以前或许确实应该更多地站出来发声。但我向来非常重视个人隐私，我有两个女儿，分别只有三岁和五岁。我非常感恩的一点是，尽管有这样的家族姓氏，我的家人依然在很大程度上保护了我的童年，免受外界纷扰——坦白说是免受在座各位的过多打扰。我想给我的孩子们同样的童年环境，希望她们能过上脚踏实地的正常生活，而不是整天关注爸爸在工作上做了什么，这对我来说极其重要。当我思考家庭时，没有什么比我的孩子更重要。我和妻子今年 10 月结婚满 15 年，彼此相伴已经 20 年了。家庭对我而言无与伦比。如果大家觉得我有点无趣，我深表歉意，因为我的生活基本就是工作，然后陪伴家人和孩子，这些才是对我真正重要的事情。
+<details><summary>Original English</summary>
+The the the answer is I actually love all of those stories. I I I I I really do. Um and and look, you you mentioned family. So I'll come back to actually one of the things that's uh that is actually the most important to me and you asked earlier around you know why why I haven't spoken as much publicly and one of the answers to learning lessons is I as I probably should have done more of that previously. I I I I've always valued privacy and I've got girls that are three and five. And one of the things that I am really grateful for is despite the last name, my family was able to shield a very large part of my childhood from all of that. Candidly from everybody in this room, a [laughter] um and I think it is really I want to give the same to my kids. You know, I I want them to have a grounded life. I don't want them to, you know, be focused on what dad's doing at work. Uh I think that's really important. And so, you know, like when I think about, you know, family, uh there's nothing more important to me than my kids. My my wife and I, we've been married for 15 years this October. We've been together for for 20 years. And, you know, family could not be more important to me. And apologies if uh I mean, a little boring because I pretty much work and I hang out with my family, my kids, and those are the things that really matter to me.
+</details>
+
+**>>**: 各位，掌声感谢大卫·埃里森！非常感谢。
+<details><summary>Original English</summary>
+David Ellison. Everybody, thank you. Appreciate it.
+</details>
+
+**>>**: 非常非常感谢。
+<details><summary>Original English</summary>
+Thank you very, very much.
+</details>
+
+**>>**: DealBook 峰会由《纽约时报》制作。本期节目由埃文·罗伯茨（Evan Roberts）制作，凯蒂·麦克默林（Katie McMurran）与丹尼尔·拉米雷斯（Daniel Ramirez）负责混音，原创音乐由丹尼尔·鲍威尔（Daniel Powell）创作。DealBook 会务团队成员还包括朱莉·詹（Julie Zhan）、尚塔尔·雷尼尔（Chantal Renier）、梅丽莎·特里波利（Melissa Tripoli）、达娜·普雷斯科夫斯基（Dana Prescowsky）、马特·凯泽（Matt Kaiser）、埃兹拉·李（Ezra Lee）、玛丽莎·菲娜（Marissa Fina）、杰西·布拉滕盖尔（Jesse Bratengire）以及尼科·加拉格利（Nico Gallagley）。特别感谢萨姆·多尔尼克（Sam Dolnick）、妮娜·拉松（Nina Lassam）、阿贝·塞德（Abe Seder）和麦迪·马谢洛（Maddie Masiello）。
+<details><summary>Original English</summary>
+Dealbook Summit is a production of the New York Times. This episode was produced [music] by Evan Roberts. Mixing by Katie McMurin and Daniel Ramirez. [music] Original music by Daniel Powell. The rest of the Dealbook events team includes [music] Julie Zhan, Shantal Renier, Melissa Tripoli, Dana Prescowski, [music] Matt Kaiser, Ezra Lee, Marissa Fina, Jesse Bratengire, [music] Nico Gallagley, and special thanks to Sam Dolnik, Nina Lassom, Abe Seder, and Maddie Masiello. [music]
+</details>

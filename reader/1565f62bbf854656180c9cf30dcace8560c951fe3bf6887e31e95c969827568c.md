@@ -1,0 +1,609 @@
+---
+author: TED
+date: '2026-11-26'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=1YlG1FeOqoQ
+speaker: TED
+tags:
+  - friendship
+  - loneliness
+  - social-connection
+  - mental-health
+title: 建立“凌晨两点”的朋友圈：应对友谊衰退的革命
+summary: 作者通过回顾在领养研讨会中被问及“凌晨两点能给谁打电话”的经历，探讨现代人面临的孤独危机。文章指出由于流动性、忙碌和文化忽视，成年人难以建立深厚友谊。作者提出将友谊视为一种“神圣的召唤”，并倡议通过建立互惠关系、优先考虑人际连接以及在彼此中共同成长来建立“友谊革命”。
+insight: ''
+draft: true
+series: ''
+category: psychology
+area: society-thinking
+project: []
+people:
+  - Jim Hayes
+  - Groucho Marx
+  - Robin Dunbar
+  - Helmut
+companies_orgs:
+  - Friendship Lab
+  - Office of National Statistics (ONS)
+products_models: []
+media_books: []
+status: evergreen
+---
+## 凌晨两点,你能打给谁?
+
+凌晨两点,一切都出了问题的时候,你能打电话给谁?不是下午两点,那时一切都好;是凌晨两点,那时你最脆弱,而对方最被打扰。
+
+<details><summary>Original English</summary>
+Who could you call at 2am
+when everything has gone wrong?
+Not 2pm, when everything's fine,
+2am, when you're at your most vulnerable
+and they're at their most inconvenienced.
+</details>
+
+2008年,我和妻子坐在一间沉闷的研讨室里。我们已经为组建家庭努力了八年,而这最终会成为一段十年的旅程。那天,我们和其他人聚在一起,了解领养的事。
+
+<details><summary>Original English</summary>
+In 2008, my wife and I found ourselves
+sitting in a drab seminar room.
+We were eight years into what
+would become a 10-year journey
+trying to start a family.
+And on this day, we gathered
+with others to find out about adoption.
+</details>
+
+我们每个人眼中都满怀希望,以为领养的孩子会满足我们灵魂深处想要成为父母的渴望——当然,到那时为止,这个愿望还没有实现。这时,主持人神情严肃起来。她说:"没错,做领养父母会很棒,会有很多喜悦,但也可能很艰难。你们身边需要一个支持圈。"
+
+<details><summary>Original English</summary>
+And seeing the hope in all of our eyes
+that an adopted child would fulfill
+the deepest longings of our soul
+to be parents,
+which, of course, until this point
+in time had not happened,
+our facilitator got serious.
+She said, "Yes, being an adoptive
+parent is going to be great.
+There's going to be great joy involved,
+but also it could be difficult.
+You're going to need
+a support group around you."
+</details>
+
+然后她问了一个问题,这个问题钻进我的心里,再也没有离开。她说:"一切都出了问题的时候,凌晨两点你能打给谁?"
+
+<details><summary>Original English</summary>
+And then she asked a question
+that burrowed under my skin
+and never left.
+She said, "Who could you call at 2am
+when everything has gone wrong?"
+</details>
+
+我发现自己坐在那里,笔悬在练习册上方,因为我想不出该写下谁的名字。你呢?谁是你的凌晨两点朋友?
+
+<details><summary>Original English</summary>
+And, you know,
+I found myself sitting there
+with my pen hovering over the workbook
+because I couldn't think
+of whose name to write down.
+What about you?
+Who's your 2am friend?
+</details>
+
+## 孤独与友谊
+
+你看过那些新闻标题。称它为孤独危机也好,友谊衰退也好——总之出了很严重的问题。看看你的职场、你的社区、你的火车车厢,你看到的每四个人里,就有一个经常感到孤独。如果那就是你——在座的也会有一些人——不必担心,首先,你并不孤单。问题出在我们一直停留在那种状态里。
+
+<details><summary>Original English</summary>
+You've seen the headlines.
+Call it a loneliness crisis
+or a friendship recession --
+something is drastically wrong.
+Look around your workplace,
+your neighborhood, your train carriage.
+Every fourth person you see
+is regularly lonely.
+Now if that is you -- and there will be
+some of us here in the room --
+do not worry,
+you're not alone for a start.
+The problem comes when we stay there.
+</details>
+
+数十年的研究如今证实了我们凭直觉就知道的事:孤独不只是伤害我们的情绪。它会增加焦虑和抑郁,耗尽我们的意义感和幸福感,削弱我们的心脏,甚至缩短我们的寿命。
+
+<details><summary>Original English</summary>
+Decades of research now confirm
+what we intuitively know to be true --
+that loneliness doesn’t
+just hurt us emotionally.
+It increases anxiety and depression.
+It drains us of meaning and happiness.
+It weakens our heart.
+It even shortens our lifespan.
+</details>
+
+但好消息是,友谊能逆转这一切。有亲密朋友的人更快乐、更健康,也更长寿。友谊是一种超能力,也是我们这个时代最被忽视的关系。数十年的研究告诉我们这一点。
+
+<details><summary>Original English</summary>
+But here's the good news.
+Friendship reverses all of this.
+People with close friends are happier,
+healthier -- and they live longer.
+Friendship is a superpower.
+And the most overlooked
+relationship of our time.
+Decades of research tell us
+what we now know to be true.
+</details>
+
+## 成年人友谊的三大障碍
+
+但问题是,那天我坐在研讨室里,并没有真正把自己看作一个需要朋友的人。我做了多年主持人,和陌生人交谈对我毫无困难。总的来说,我的社交自信相当高。我不是你想象中那种需要朋友的人。但那天坐在研讨室里,我面对着成年人在友谊中如今面临的三大障碍。
+
+<details><summary>Original English</summary>
+But here's the thing.
+When I was sitting
+in that seminar room that day,
+I didn't really take on the picture
+of somebody needing friends.
+I've spent years as a presenter.
+I don’t have any trouble
+talking to strangers.
+In general, I’ve got fairly high
+social confidence.
+I wasn't your typical picture
+of somebody who needs friends.
+But as I sat in the seminar room that day,
+I was facing three of the biggest
+barriers that adults face
+in their friendships today.
+</details>
+
+第一个障碍:流动性。请举手,你们当中有多少人现在居住的城镇或城市,和出生地不同?如果那之后搬过两次家,请继续举着手。三次、四次、五次。我们还可以一直数下去。那就是我。我最近搬了城市,在别处有朋友,但我没有和他们保持联系。
+
+<details><summary>Original English</summary>
+First barrier, mobility.
+Hands up, how many of you
+are living in a town or city
+different from where you were born?
+Keep your hands up
+if you've moved two times since then.
+Three times, four times, five times.
+We could keep on going on.
+That was me.
+I'd recently moved cities,
+I had friends in other places,
+but I wasn't keeping in touch with them.
+</details>
+
+第二个障碍:忙碌。老实告诉我,你们当中有多少人在人生中某些时候忙得顾不上和朋友保持联系?谢谢你们的坦诚。那也是我。但你们知道吗,要让一段关系从熟人变成普通朋友,需要50小时的有意义的接触,更别说成为好朋友或凌晨两点的朋友了。五十小时。简单地说,我没有投入这些时间。
+
+<details><summary>Original English</summary>
+Second barrier, busyness.
+Be honest with me.
+How many of you
+have had times in your life
+where you've been too busy
+to keep in touch with your friends?
+Thank you for your honesty.
+That, too, was me.
+But did you know that it takes
+50 hours of meaningful contact
+to move a relationship
+from an acquaintance
+to a casual friend,
+let alone a good friend or a 2am friend?
+Fifty hours.
+Simply put, I wasn't putting the hours in.
+</details>
+
+第三个是忽视。因为几十年来,我们的文化把友谊推到了阴影里,却把聚光灯打在它更漂亮的兄弟姐妹——爱情——身上。(笑声)如果有人不信,只要打开你的Spotify歌单。今天下午回到家,我挑战你,在你的歌单里找一首、仅仅一首关于友谊的歌。我说的可不是《玩具总动员》里那首可爱的歌。(笑声)如果你找到了那一首关于友谊的歌,你会发现它不过是情歌汪洋中的一滴水。
+
+<details><summary>Original English</summary>
+And thirdly, there's neglect.
+Because for decades now,
+our culture has pushed
+friendship off into the shadows
+while we've shone the spotlight
+on its prettiest sibling: romance.
+(Laughter)
+If there's anybody who doesn't believe me,
+all you have to do is take
+out your Spotify playlists.
+When you get home
+this afternoon, I ask you,
+I challenge you to find
+one song in your playlist,
+one song about friendship.
+And I'm not just talking
+about that cutesy song from "Toy Story."
+(Laughter)
+If you find that one
+song about friendship,
+you will find that it is a mere drop
+in an ocean of love songs.
+</details>
+
+人人都知道情人节是哪一天。你们当中有多少人知道国际友谊日是哪一天?我们的学校有性教育,却很少有友谊教育。我们有书、应用、课程,还有整个机构来帮助我们约会、结婚和养育孩子。我感激所有这些资源,但直到最近,几乎没有什么东西能帮助成年人建立和维持深厚、高质量、美好、充满生命力的友谊。
+
+<details><summary>Original English</summary>
+Everybody knows the date
+of Valentine's Day.
+How many of you know the date
+of International Friendship Day?
+Our schools have sex ed,
+but little friendship ed.
+We have books and apps and courses
+and whole organizations to help us date
+and marry and raise kids.
+And I'm grateful for all
+of those resources,
+but up until recently,
+we have had next to nothing
+to help adults form
+and maintain deep, good-quality,
+wonderful, life-giving friendships.
+</details>
+
+## 什么是朋友
+
+正因为这种忽视,我们甚至不再知道朋友是什么。我的同事是我的朋友吗?我通过本地慈善机构帮助的人是朋友吗?那个比你配偶更了解你点单习惯的咖啡师是吗?(笑声)那个知道你所有家庭纠纷、甚至还知道几件你自己都没意识到的事的理发师是吗?
+
+<details><summary>Original English</summary>
+And because of this neglect,
+we don't even know
+what a friend is anymore.
+Are my workmates my friends?
+Is the person I help
+through my local charity a friend?
+Is it your barista who knows your order
+better than your spouse does?
+(Laughter)
+Is it your hairdresser who knows
+all of your family dramas
+and even a few you
+didn't even realize you had?
+</details>
+
+喜剧演员们试图填补这个空白,给我们提供某种友谊的定义。Jim Hayes说:"朋友是帮你搬家的人,最好的朋友是帮你搬尸体的人。"(笑声)或者,借用Groucho Marx的话:"朋友是去监狱探望你的人,好朋友是把你保释出来的人,最好的朋友是在牢房里转向你说'刚才真好玩!'的人。"(笑声)
+
+<details><summary>Original English</summary>
+Comedians have tried
+to step into the breach
+and kind of provide us
+with a definition of friendship.
+Jim Hayes said, “A friend is someone
+who helps you move house.
+A best friend is someone
+who helps you move a body."
+(Laughter)
+Or, to paraphrase Groucho Marx,
+“A friend is someone
+who visits you in jail,
+a good friend is someone
+who bails you out,
+and a best friend is someone
+who turns to you in the cell
+and says, ‘That was fun!’”
+(Laughter)
+</details>
+
+在我所领导的组织Friendship Lab,我们把朋友定义为:你可以与之交谈、可以依靠、可以共同成长、并且能一起享受的人。这四个要素都很重要。
+
+<details><summary>Original English</summary>
+At Friendship Lab,
+the organization that I lead,
+we define a friend as someone
+you can talk to, depend on,
+grow with and enjoy.
+And all four elements are important.
+</details>
+
+可以交谈:谈小事也谈大事,从足球比分和假期计划,到我们最深的希望和恐惧。可以依靠:他们是我们在一切出错时可以打电话的凌晨两点朋友。共同成长:朋友帮助我们迎接人生的挑战,成为我们应当成为的人。还有享受:没有享受,就几乎没有友谊,无论只是因为我们一起欢笑,或者你壁球打得很棒,又或者像我一样,喜欢带字幕的阴郁欧洲电影。(笑声)你知道的,那种每个人最后都死了,但死得那么有意义的电影。(笑声)
+
+<details><summary>Original English</summary>
+Talk to about the little
+things and the large.
+From football scores and holiday plans
+to our deepest hopes and fears.
+Depend on.
+They're the 2am friends we can call
+when everything has gone wrong.
+Grow with.
+Friends help us rise
+to meet life’s challenges,
+become the people we're supposed to be.
+And enjoy.
+There is little friendship
+without enjoyment,
+whether that's just
+because we laugh together
+or you play a great game of squash,
+or perhaps because you, like me,
+enjoy moody European films with subtitles.
+(Laughter)
+You know, the kind where
+everybody dies in the end,
+but they die so meaningfully.
+(Laughter)
+</details>
+
+追求这样的友谊,不只是平息我们的孤独。据牛津大学这方面的常驻专家Robin Dunbar说,友谊不只是一个因素。不,不,不。友谊是影响我们健康、福祉和幸福的那个因素。
+
+<details><summary>Original English</summary>
+Pursuing this kind of friendship
+does more than just quell our loneliness.
+According to Oxford University's
+resident expert in this, Robin Dunbar,
+friendship is not just a factor.
+No, no, no.
+Friendship is the factor
+influencing our health,
+well-being and happiness.
+</details>
+
+## 友谊革命的三项承诺
+
+我们需要改写这个故事。我们需要建立一个有凌晨两点朋友的世界。与其面对友谊衰退,我们需要一场友谊革命。想一起发起一场吗?
+
+<details><summary>Original English</summary>
+We need to change the story on this one.
+We need to build a world of 2am friends.
+Instead of a friendship recession,
+we need a friendship revolution.
+Want to start one together?
+</details>
+
+革命需要宣言,宣言需要承诺。这里有三条。
+
+<details><summary>Original English</summary>
+A revolution requires a manifesto,
+and a manifesto requires commitments.
+Here are three.
+</details>
+
+当我们把友谊视为一种使命时,革命就开始了。如果你我把做朋友看得和做父母、做诗人或做专业人士一样重要,会怎样?因为它本来就同样重要。做朋友是神圣的召唤,拥有朋友是神圣的托付。正如我们读书来成为更好的父母,练习来成为更好的诗人,上课来提升我们的职业,把友谊视为使命就意味着要掌握技能。朋友们,是时候重新发现,甚至也许是第一次发现,那些被遗忘的、从未言明的友谊规则了。
+
+<details><summary>Original English</summary>
+The revolution will begin
+when we treat friendship as a vocation.
+What if you and I were to treat
+being a friend as just as important
+as being a parent,
+a poet, or a professional?
+Because it is.
+Being a friend is a sacred calling.
+Having a friend is a sacred trust.
+And just as we read books
+to become better parents
+and we practice to become better poets,
+and we take courses
+to progress our professions,
+treating friendship as a vocation
+means getting skilled.
+People,
+it is time that we rediscovered,
+maybe even discovered
+for the very first time,
+the forgotten, the unspoken
+rules of friendship.
+</details>
+
+当我们把朋友放在屏幕之前时,革命就开始了。一直把友谊推进阴影里的爱情之一,就是我们与设备之间的爱情。一小时又一小时,我们深情地凝视它的眼睛,(笑声)抚摸、抚摸、再抚摸。(笑声)
+
+<details><summary>Original English</summary>
+The revolution will begin
+when we put friends before screens.
+One of the romances
+that continually puts friendship
+into the shadows
+is the romance we have with our devices.
+Hour upon hour we gaze
+lovingly into its eyes,
+(Laughter)
+caressing, caressing, caressing.
+(Laughter)
+</details>
+
+是的,我们都很忙,但当普通人每天独自看五个小时流媒体视频时——这是英国国家统计局(ONS)的数据,每天五个小时——问题就不在于时间,而在于优先级。给朋友发一条问候短信只需要10秒钟,一通叙旧电话大约10分钟,一次见面只占你一周中的一个小时。做到这些,你仍然有时间去看别人翻修你永远买不起的房子。(笑声)或者看人被投票淘汰出岛。(笑声)
+
+<details><summary>Original English</summary>
+Yes, we're all busy,
+but when the average person
+spends five hours a day
+watching streaming video alone,
+that's the ONS figures,
+five hours a day,
+the problem is not so much time.
+It's priority.
+A check-in text to your friend
+will take you 10 seconds.
+A catch-up call will take you
+about 10 minutes.
+A meet-up will take
+just one hour out of your week.
+Do that, and you’ll still have time
+to watch people renovate homes
+you'll never afford.
+(Laughter)
+Or get voted off an island.
+(Laughter)
+</details>
+
+我们需要把目光转回最重要、最有价值、最被需要的地方。把人放在像素之前,把朋友放在屏幕之前。
+
+<details><summary>Original English</summary>
+We need to return our gaze
+to where it's most important,
+to where it's most valued,
+where it's most needed.
+Putting people before pixels
+and friends before screens.
+</details>
+
+当我们拥抱互惠的风险时,革命就开始了。如果你总是付出的一方,那不是友谊,那是慈善。如果你总是接受的一方,那也不是友谊,那是依赖。友谊是一支给予与索取的舞蹈:看见与被看见,倾听与被倾听,了解与被了解。说来有趣,恰恰是这种互惠让它有了风险。
+
+<details><summary>Original English</summary>
+And the revolution will begin
+when we embrace the risk of mutuality.
+If you are always the giver,
+that is not friendship.
+That is charity.
+And if you are always the receiver,
+that is not friendship.
+That's dependence.
+Friendship is a dance
+of giving and taking,
+seeing and being seen,
+hearing and being heard,
+knowing and being known.
+And funnily enough,
+it's this mutuality
+that actually makes it risky.
+</details>
+
+一直做付出的一方可能很容易,它让你不必暴露自己的需求。一直做接受的一方当然也很容易,每个人都围着你、关注你、听你说话、照你想做的去做。这让我们免于友谊所要求的牺牲:他们生病时做饭,他们需要离开、搬家时牺牲周末,他们凌晨两点打来电话时牺牲睡眠。但没有这种相互的脆弱与牺牲,就没有友谊。当我们真正尝到它的滋味时,它能让我们热泪盈眶。
+
+<details><summary>Original English</summary>
+It can be easy always being the giver.
+It saves you from being vulnerable
+about your own needs.
+And it's sure easy
+always being the receiver.
+When everybody kind of surrounds you
+and focuses on you
+and listens to you
+and does what you want to do.
+It saves us from the sacrifices
+that friendship requires.
+Cooking meals when they're sick,
+giving up weekends
+when they need to leave,
+move house,
+giving up sleep when they call at 2am.
+But there is no friendship
+without this mutual
+vulnerability and sacrifice.
+And when we taste it for real,
+it can bring a tear to our eyes.
+</details>
+
+## Helmut的故事
+
+2018年,我父亲被诊断出癌症。更复杂的是,他还是我母亲的照护者。他们住在澳大利亚,所以在我们设法弄清楚该怎么办的那几天里,压力很大。就在那时,父亲教会里的一位男士走进了我们的生活。他叫Helmut。他不认识我们,我们也不认识他。但他听说了我们的情况,想要帮忙。
+
+<details><summary>Original English</summary>
+In 2018, my father
+was diagnosed with cancer.
+To complicate matters,
+he was also my mother's carer.
+And they lived in Australia,
+so there were a few stressful days
+as we tried to work out what to do.
+That’s when a man from Dad’s
+church stepped into our lives.
+His name was Helmut.
+He didn't know us, we didn't know him.
+But he'd heard about our situation
+and he wanted to help.
+</details>
+
+两天后,他拿着一个记事本出现在前门。他走进来,坐下,开始逐条过他列好的清单。他说:"好,化疗开始后,你们需要有人送饭。我来安排一个做饭轮值表。草坪,谁来打理你们的草坪?没人打理?好,我也来安排。垃圾桶,你们哪天倒垃圾?"他一条条往下列,把一切都安排妥当。
+
+<details><summary>Original English</summary>
+Two days later, he appears
+on the front doorstep with a notepad.
+He comes in, he sits down.
+He starts making his way
+through a list that he's made up.
+He says, "OK, when
+the chemotherapy starts,
+you're going to need somebody
+to deliver meals to you.
+I'll arrange a cooking roster.
+Lawns. Who does your lawns?
+Nobody does your lawns?
+OK, I'll organize that as well.
+Bins. What day do your bins go out?"
+Down the list he went, sorting everything.
+</details>
+
+两年里,Helmut每周二和周四开车送我父亲去化疗。两年里,冰箱里总是装满饭菜,草坪被修剪,垃圾桶按时拿出去。感觉就像我们被天使拜访了一样。但尽管这很美好,Helmut和我父母在那一刻所拥有的还不是友谊。那是美好的、牺牲的、改变生命的慈善。我们都要像Helmut一样。
+
+<details><summary>Original English</summary>
+For two years, Helmut drove
+my dad to chemotherapy
+every Tuesday and Thursday.
+For two years,
+the fridge was full of meals,
+the lawns were mown,
+the bins went out on time.
+It felt like we'd been
+visited by an angel.
+But as beautiful as that was,
+what Helmut and my parents
+had in that moment wasn't yet friendship.
+Instead, it was beautiful,
+sacrificial, life-changing charity.
+Let's all be like Helmut.
+</details>
+
+但随着时间推移,有些东西改变了。随着一个个周二和周四累积起来,Helmut发现在我父母身上,他有了可以交谈小事与大事的人,可以依靠他们来解决自己的问题,可以在彼此鼓励中共同成长,也可以一起享受。事实上,周二和周四成了他一周中最喜欢的日子。
+
+<details><summary>Original English</summary>
+But as time went on, something shifted.
+As those Tuesdays and Thursdays racked up,
+Helmut found that in my parents,
+he had somebody that he could talk to
+about the little things and the large
+and depend on to work
+through his own problems
+and to grow with
+as they encouraged each other,
+and to enjoy.
+In fact, Tuesdays and Thursdays
+became his favorite days of the week.
+</details>
+
+我父亲与癌症的抗争在2021年9月结束。Helmut在场,抬着灵柩。并非所有的慈善关系都能、或者说都应该变成友谊,但这一段做到了。平等、互惠、充实。友谊在停滞的时期给我们所需的改变,在危机的时期给我们所需的延续。
+
+<details><summary>Original English</summary>
+My father's battle with cancer ended
+in September 2021.
+Helmut was there, carrying the coffin.
+Not all relationships of charity can
+or indeed should become friendship,
+but this one did.
+Equal, mutual and fulfilling.
+Friendship gives us the change
+we need in times of stagnation
+and the continuity we need
+in times of crisis.
+</details>
+
+我梦想有这样一天:关于友谊的歌曲充满我们的歌单,国际友谊日和情人节一样受到庆祝。(笑声)当我们把友谊视为使命,当我们把朋友放在屏幕之前,当我们拥抱互惠的风险时,那一天就会到来。这就是我们改写故事的方式,这就是我们建立一个有凌晨两点朋友的世界的方式。朋友们,这就是革命开始的地方。出发吧。谢谢。(欢呼和掌声)
+
+<details><summary>Original English</summary>
+I dream of the day when songs
+about friendship populate our playlists,
+and when International Friendship Day
+is celebrated as much as Valentine's Day.
+(Laughter)
+That day will come when we treat
+friendship as a vocation,
+when we put friends before screens
+and when we embrace the risk of mutuality.
+This is how we'll change the story.
+This is how we'll build
+a world of 2am friends.
+This, my friends, is where
+the revolution begins.
+Let's go.
+Thank you.
+(Cheers and applause)
+</details>

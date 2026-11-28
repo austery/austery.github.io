@@ -1,0 +1,913 @@
+---
+author: TVO Today
+date: '2026-11-25'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=ZGTq8poJt48
+speaker: TVO Today
+tags:
+  - trade-agreements
+  - foreign-policy
+  - international-law
+  - geopolitics
+title: 加拿大总理卡尼访华及亚洲贸易多元化战略分析
+summary: 加拿大总理马克·卡尼在访华及亚洲多国后，宣布寻求扩大贸易并提升加拿大经济联系度。文章探讨了加拿大与菲律宾、中国等国的贸易协定及风险，并解析了国际条约的制定与批准流程。
+insight: ''
+draft: true
+series: ''
+category: geopolitics
+area: geopolitics
+project: []
+people:
+  - Mark Carney
+  - Jeyan Jeganathan
+  - Lynette Ong
+  - Andrew Coyne
+  - Jeff Mahoney
+  - Ferdinand Marcos Jr
+  - Xi Jinping
+  - Donald Trump
+  - Chrystia Freeland
+companies_orgs:
+  - University of Toronto
+  - The Globe and Mail
+  - StrategyCorp
+  - TVO
+  - Global Affairs Canada
+products_models:
+  - The Rundown
+media_books: []
+status: evergreen
+---
+>> 现在我们正寻求抓住该地区的更多机遇，同时认识到，即使在我们采取行动之际，我们也才刚刚触及自身潜力的表面。
+
+<details><summary>Original English</summary>
+
+>> Now we're looking to seize more of the opportunities in this region, recognising that even as we move, we're just beginning to scratch the surface of our potential.
+
+</details>
+
+>> 这是总理马克·卡尼（Mark Carney）上周在中国深圳发表的讲话。
+
+这是他国际之行的最后一站，此行还带他去了爱尔兰、菲律宾和柬埔寨。这些访问的目标是加强加拿大的经济关系并达成新协议。在菲律宾，加拿大完成了两项新自由贸易协定的谈判。而在中国，卡尼与习近平主席就渥太华所称的将进一步扩大两国贸易的新措施达成了一致。渥太华表示，此行给加拿大工人和企业带来了重大收益，总理甚至更进一步表示，加拿大现在是“世界上联系最紧密的经济体”。
+
+好吧，这些都是相当大的声明，但实际上完成了多少，又有多少仍然只是承诺和潜力？我们将深入剖析这些协议，以及与亚洲建立更紧密的联系对我们与美国紧张的关系可能意味着什么。我是杰扬·杰加纳坦（Jeyan Jeganathan），这里是《The Rundown》。
+
+林奈特·翁（Lynette Ong）是多伦多大学（University of Toronto）中国政治杰出教授。安德鲁·科因（Andrew Coyne）是《环球邮报》（The Globe and Mail）的专栏作家，杰夫·马奥尼（Jeff Mahoney）是StrategyCorp地缘政治咨询业务副总裁。
+
+很高兴你们三位来到我们《The Rundown》的演播室，我先来开个头。
+
+<details><summary>Original English</summary>
+
+>> That was Prime Minister Mark Carney speaking last week in Shenzhen, China.
+It was the last leg of an international tour that also took him to Ireland, the Philippines and Cambodia.
+And the goal of those visits to strengthen Canada's economic relationships and strike new agreements in the Philippines, Canada concluded negotiations for two new free trade agreements.
+And in China, Carney and President XI Jinping agreed to what Ottawa called new measures that will further expand trade between their two countries.
+Ottawa says the trip delivered major gains for Canadian workers and businesses, and the prime minister went even further, saying Canada is now, quote, the best connected economy in the world.
+Okay, those are some pretty big claims, but how much was actually accomplished and how much of this is still just promises and potential?
+We're breaking down the deals and what stronger ties with Asia could mean for our strained relationship with the United States.
+I'm Jeyan Jeganathan, and this is The Rundown.
+Lynette Ong is a distinguished professor of Chinese politics at the University of Toronto.
+Andrew Coyne is a columnist for The Globe and Mail, and Jeff Mahoney is a vice president of StrategyCorp Geopolitical Advisory Practice.
+Great to have you all three in our studios on The Rundown, I'm going to start talking.
+
+</details>
+
+### 菲律宾自由贸易协定
+
+我们来谈谈菲律宾。马克·卡尼总理和菲律宾总统小费迪南德·马科斯（Ferdinand Marcos Jr）讨论了一项将于明年生效的自由贸易协定。总体而言，该协定将扩大加拿大在农业、林业、采矿和能源领域的出口。同时，也有向航空航天和人工智能等更先进领域转变的趋势。安德鲁，为我们剖析一下。你喜欢或不喜欢这项协议的哪些方面？
+
+<details><summary>Original English</summary>
+
+Let's talk Philippines Prime Minister Mark Carney and Philippine President Ferdinand Marcos Jr discussed a free trade agreement that will come into effect next year.
+And the deal, broadly speaking, will expand Canadian exports in agriculture, forestry, mining and energy.
+There's a shift toward more advanced fields such as aerospace and AI.
+Break this down for us, Andrew.
+What do you like not like about this deal?
+
+</details>
+
+>> 我想我的态度是，有什么好不喜欢的呢。我的意思是，我知道人们有时喜欢看这些事情，然后说，我们放弃了什么，我们得到了什么？我的态度是，听着，你从自由贸易条约中获得的最大好处就是取消你自己的贸易壁垒。在我看来，你从对方国家得到的任何东西都是额外的甜头。这是克服这个国家保护主义情绪的好方法，因为你可以说，好吧，看看我们获得了进入另一个市场的机会，这太棒了。我认为真正令人兴奋的是，将此放在我们正在签署的一系列自由贸易协定的背景下来看。你知道，我们与印度尼西亚、东盟国家（东南亚国家联盟）有协定，你知道，我们即将与印度达成协定。看起来还有南方共同市场（Mercosur）国家集团。我拼不出那个词。但这些南美国家，当你把它们全部加起来，大约有30亿人口和约16万亿美元的GDP。那种市场准入变成了另一回事，因为现在你可以说，好吧，在加拿大设厂，你就可以进入所有这些不同的市场。这是在加拿大投资的强大动力。
+
+<details><summary>Original English</summary>
+
+>> What's not to like, I guess is my attitude.
+I mean, I know people sometimes like to look at these things and say, what did we give up and what did we get?
+My attitude is, look, the the biggest benefit you get from free trade treaty is the removing your own trade barriers.
+Anything you get from the other country, in my view, is gravy.
+It's a good way of getting over protectionist sentiment in this country, as you can say.
+Well, look at the access we got to this other market, but that's great.
+I think what's really exciting is looking at this in the context of a chain of free trade agreements that we're signing.
+You know, we have with Indonesia, the Asean Countries Association of Southeast Asian Nations, you know, we got India coming up.
+Looks like the Mercosur group of countries.
+I'm not going to be able to spell that one out.
+But the South American countries, when you add it all up, it's about 3 billion people and about $16 trillion U.S. in GDP.
+That kind of access becomes a different thing, because now you can say, okay, to plant in Canada, you can you can have access to all those different markets.
+That's a powerful incentive to invest in Canada.
+
+</details>
+
+>> 林奈特。
+
+<details><summary>Original English</summary>
+
+>> Lynette.
+
+</details>
+
+>> 不，我想我喜欢这项协议。我认为菲律宾的特点在于，它不仅是一个印太国家，还是一个民主国家。所以从这个意义上说，我们可以做，你知道，我们可以做农业、食品、矿产之类的事情。但我们也正在进入人工智能等其他领域，在印太地区与非民主国家打交道时，这些领域可能会有点敏感。但我想提醒的一件事是，我认为很多批评人士都正确地指出了菲律宾等国的人权和环境标准问题。因此，我们与这类国家达成的任何贸易协议，我们都要确保这不会以牺牲菲律宾人民的利益为代价。对。所以这些是我认为我们应该注意的事情。除此之外，我喜欢这项协议。
+
+<details><summary>Original English</summary>
+
+>> No, I think I like the deal.
+I think the thing about the Philippines is that it's not only an Indo-Pacific country, it's also a democracy.
+So so in that sense, we can do you know, we can do agriculture, food, minerals and things like that.
+But we also are going into sectors such as artificial intelligence and other sectors that might be a little bit sensitive to deal with non-democracies in the Indo-Pacific.
+But one thing I would caution is that I think a lot of critics have rightly pointed out about human rights and environmental standards issue in countries such as the Philippines.
+So any sort of trade deals that we deal with, countries like that, we want to make sure that this is not at the expense of the Filipino people.
+Right.
+So those are the things that I think we should we should watch out for.
+Otherwise, I like I like the deal.
+
+</details>
+
+>> 好的。杰夫，这是积极的一步吗？
+
+<details><summary>Original English</summary>
+
+>> All right.
+Jeff, positive step.
+
+</details>
+
+>> 是的，是的。
+
+<details><summary>Original English</summary>
+
+>> Yes, yes.
+
+</details>
+
+>> 有点是，也许吧，好吧。那么在“是”的方面。绝对是。我们需要与亚洲开展更多合作。那是增长所在。当你把东盟作为一个地区来看时，大约有11个国家。我想那里有7亿人口。而这个……但它在文化和经济背景方面相当多元化。你有新加坡，那里非常富裕，但也有柬埔寨和其他地方相当贫困，然后还有中等收入国家。但那里都有的是大量的增长机会。这意味着将有很好的机会来增加我们的出口。
+
+在“有点是”的方面，我想说加拿大长期以来一直专注于全面协定。而且，你知道，例如，东盟协定花了五年时间才谈判完成。现在，我们正在大力推动多元化。我们希望快速取得成果。我们希望为加拿大公司提供有意义的市场准入。未来我们也应该着眼于那里的特定行业协定，以此作为一种推动更有针对性的深度融合、但焦点不那么宽泛的方式。
+
+而在“也许”的方面，这是因为归根结底，事件的全部意义是随着时间推移而显现的。贸易政策目前正处于转型期。因此，要看这是否会产生持久、深远的影响，同时为加拿大企业带来巨大利益，这需要时间来证明。
+
+<details><summary>Original English</summary>
+
+>> Ish and maybe okay.
+So on the yes front.
+Absolutely.
+We need to be doing more with Asia.
+That is where the growth is.
+When you look at Asean as a region, there are about 11 countries.
+And I think 700 million people there.
+And what this.
+But it's fairly diverse in terms of its cultural and economic background.
+You have Singapore, where it's very wealthy, but then you've got Cambodia and others where it's quite poor, and then you have the middle income countries.
+But what all is there is there's a lot of opportunity for growth.
+And that means there's going to be great opportunities to grow our exports.
+On the yes ish, I would say Canada for the longest time has been focussed on comprehensive agreements.
+And, you know, for example, the Asean agreement took five years to negotiate.
+Right now, we're on this big push for diversification.
+We want to get quick wins.
+We want to have meaningful access for Canadian companies.
+We should be looking also at sector specific agreements there in the future as a way to drive some more tailored deep integration, but less broad in the focus.
+And on the maybe side, it's because because at the end of the day, the full significance of event unfolds over time.
+Trade policies and in transition right now.
+So to see if this is going to be a durable, lasting impact that also brings big benefits to Canadian business, that will take time to tell.
+
+</details>
+
+### 对华贸易与风险考量
+
+>> 我们来谈谈中国。卡尼总理今年第二次与习近平主席会面，并表示加拿大在2030年前将对华出口提高50%的计划正遥遥领先。安德鲁，这是个好消息吗？我们是否需要读懂其中的弦外之音？
+
+<details><summary>Original English</summary>
+
+>> Let's talk China.
+Prime Minister Carney met with President XI Jinping for the second time this year and said, Canada is well ahead of the scheduled to boost exports to China by 50% by 2030.
+Andrew, good news story here.
+Do we need to read between the lines here?
+
+</details>
+
+>> 我想这取决于我们怎么去做。我的意思是，你看，光靠经济增长你大概就能获得大约25%的增长，对吧？但我们肯定在努力尝试。而且看起来今年他们已经朝着那个150%的目标扩大了相当大的幅度。但是，你知道，你不希望出口有任何人为的上限，但你要确保自己不会陷入依赖、脆弱或敞口过大的境地。对我来说，这更多是一个定性而非定量的判断。你得看这样的事情，比如，如果这是一个关键行业，如果你向中国出口，万一中国决定切断我们的贸易，你是否有另一个买家？如果你从中国进口，你是否有另一个供应商？因为我们当然知道中国并不羞于将贸易作为武器。他们过去对我们这样做过。他们对澳大利亚也这样做过。这有点像是大国如今的做法。所以你对待这件事要比对待与菲律宾的贸易协定更加谨慎一些。
+
+<details><summary>Original English</summary>
+
+>> I think it depends how we do it.
+I mean look you probably get about 25% just from economic growth right?
+But we're certainly aiming to try.
+And it looks like in this year that they've already expanded quite a fair degree towards that 150% target.
+But, you know, you don't want to have any artificial cap on the exports, but you want to make sure that you're not getting yourself in a position of dependence or vulnerability or exposure.
+That to me is more a qualitative than a quantitative judgement.
+You want to be looking at things like, do you you know, if it's a critical sector, do you have if you're exporting to China, do you have another buyer in case China decides to shut us down?
+If you're importing from China, do you have another supplier?
+Because we certainly know that China is not shy about using trade as a weapon.
+They've done it to us in the past.
+They've done it to Australia.
+It's kind of the thing that great powers are doing these days.
+And so you approach it with a bit more caution than you would a trade deal with Philippines.
+
+</details>
+
+>> 林奈特。
+
+<details><summary>Original English</summary>
+
+>> Lynette.
+
+</details>
+
+>> 不，我同意。我认为，你知道，我认为中国是我们贸易多元化应该开始的地方，而不是应该结束的地方。所以，你知道，比如从中国走向东盟国家和其他一堆国家，这是一个非常好的主意。我想提醒的另一件事是，我认为在这个国家很长一段时间以来，我们一直在争论是否应该与中国接触。很长一段时间以来，这一直是一场非黑即白的二元争论。我认为我们……我也有点高兴我们已经跨过了这场争论。我认为答案是肯定的，我们应该与中国接触，但问题是我们应该如何接触。所以安德鲁提到了多元化。但我们应该如何实现多元化呢？比如不要把所有的鸡蛋放在一个篮子里，对吧？但我们应该注意哪些数字，以免过度依赖中国？那么，30%、40%的市场份额是否太多了？是否有任何特定行业的事情我们应该注意？我认为这些才是我们应该参与的更高层次的辩论。
+
+<details><summary>Original English</summary>
+
+>> No, I agree.
+I think, you know, I think China is the way we our trade diversification should start.
+Not not way it should end.
+So, you know, like going from China to Asean country and a bunch of other countries, it's a, it's a, it's a, it's a very good idea.
+The other thing that I would caution about is I think in this country for a long time, we have been having this debate of whether we should engage with with China.
+It has been a binary debate for a long time.
+I think we.
+I'm also kind of glad that we have gotten past this debate.
+I think the answer is yes, we should engage with China, but how we should do so.
+So Andrew mentioned diversification.
+But how how should we go about diversifying?
+Like not putting all our eggs in one basket?
+Right.
+But what are the numbers that we should be looking out for, not over relying on China?
+So it's 30%, 40% of its market share too much.
+And is there any sector specific things that we should, we should watch out for?
+And I think those are those are things that is kind of next level debate that we should be engaging.
+
+</details>
+
+>> 杰夫。
+
+<details><summary>Original English</summary>
+
+>> Jeff.
+
+</details>
+
+>> 所以我认为说到……
+
+<details><summary>Original English</summary>
+
+>> So I think when it comes.
+
+</details>
+
+>> ……我们与中国的关系，设定这些目标很好。它们给了我们……正如安德鲁所说，一种可量化的方法来衡量我们是否取得了成功。但为了实现这一目标，我们需要与中国达成一种新的临时妥协（modus vivendi）。这意味着重新思考接触的性质。这又回到了林奈特和安德鲁刚才提出的观点，因为这不仅仅关乎扩大贸易。这关乎你如何以及在何处扩大贸易。我认为，对于加拿大来说，要想破解这个难题，找出哪些领域可能会触及我们的国家安全利益，同时也要兼顾我们的长期经济繁荣利益。我们需要采取一种同时审视这两者的视角，你知道，从那个角度去审视一个项目、一个机会或一个行业，这样我们就能弄清楚哪里存在实际的具体风险。如何缓解这些风险？以及，我们如何向中方发出明确信号，让他们清楚地知道在哪些领域他们可以自由投资，在哪些领域他们不会受欢迎，以及在哪些领域他们也许可以进入，但必须满足某些条件。
+
+<details><summary>Original English</summary>
+
+>> To our relationship with China, having these targets, they're nice.
+They give us.
+Andrew said a quantifiable way to measure if we're having success or not.
+But in order to get there, we need to strike a new modus vivendi with China.
+And that means rethinking the nature of the engagement.
+And that would then get back into the points that Lynette was making and Andrew as well, because it's not so much about just growing trade.
+It's about how and where you grow trade.
+I would argue that for Canada to be able to crack this nut of finding out where there are going to be areas that could either run into our national security interests, but also our long term economic prosperity interests.
+We need to take a focus that looks at both of those, you know, looks at a project or an opportunity or a sector.
+But from that lens so we can figure out where are there actually concrete risks.
+How can they be mitigated?
+And also, how can we send clear signals to the Chinese so they can have clarity on where they're welcome to invest freely, where there are areas where they're not going to be welcome, but areas where maybe there can come, but under certain conditions.
+
+</details>
+
+### 美加中三角关系
+
+>> 好的，我们来谈谈，你提到了风险，这是加拿大现在必须走的一步平衡木。中加之间的亲密关系正在惹恼华盛顿。我们对此非常清楚。特朗普的贸易顾问彼得·纳瓦罗（Peter Navarro）在X上对卡尼发表了一些非常严厉的言辞。它被写成一份备忘录的形式。正如你们很多人可能知道的那样，上面写道：你真的威胁要打中国牌来对抗美国吗？这简直是极端的冒犯。你应该更加担心才对。中国将会像现在正在做的那样，把加拿大生吞活剥。安德鲁，加拿大该如何应对这里的摩擦？
+
+<details><summary>Original English</summary>
+
+>> Okay, well, let's talk you mentioned risk a bit of a balancing act that Canada has to do right now, a cosy relationship between China and Canada is ruffling feathers in Washington.
+We know that very well.
+Peter Navarro, trade adviser to Trump, had some very strong words for Carney on X.
+It was framed as a memo.
+As many of you probably know, and it was read.
+Are you really threatening to play China off the US?
+This is offensive in the extreme.
+You should be far more worried.
+China is going to eat Canada alive as it is already doing.
+Andrew, how does Canada navigate this friction here?
+
+</details>
+
+>> 就是不要太理会世界上的彼得·纳瓦罗们？我觉得他抗议得有点过头了。MAGA世界的一个魔咒就是他们总是在吹嘘美国有多强大。如果你非得把它挂在嘴边，你就懂了。但我们当然要确保，与中国开展更多贸易的意义在于，我们在这里某种程度上经历了第三个阶段。我们在90年代和2000年代经历了天真的阶段，当时一切都是关于“我们要把他们拉入国际社会大家庭”。但那没有奏效。然后我们在“两个迈克尔”事件等之后经历了可以理解的退缩。现在我们进入了第三个阶段，在很大程度上是一边盯着美国，一边试图扩大并实现摆脱美国的多元化。除非你与中国打交道，否则你无法在很大程度上做到这一点。但我们应该绝对保持清醒，中国，这个政权并没有改变。它仍然有着令人发指的人权记录，威胁邻国等等。所以我们要小心，不要变得过于依赖中国。但请记住，这一举动的意义在于摆脱像彼得·纳瓦罗这样的人的控制，而他们不会喜欢这样。我们有时会说，哦，我们将实现摆脱美国的多元化，而特朗普政权会对此感到满意。不，他们不希望我们多元化。所以如果我们要这么做，我们就得有点胆量，并准备好惹恼华盛顿的一些人。
+
+<details><summary>Original English</summary>
+
+>> By not paying too much attention to the.
+Peter Navarro's of the world?
+I think he protests a bit too much.
+One of the spells with the Maga world is they're constantly boasting about how powerful America is.
+If you have to say it, you know.
+But we certainly want to make sure that the point of entering into more trade with China, we've kind of gone through a third phase here.
+We had the naive phase in the 90s and 2000 when it was all about, we're going to draw them into the international comity of nations.
+And that didn't work.
+And then we had the understandable pullback after the two Michaels affair, etc. now we're into a third phase where it's very much with one eye.
+In the United States, we're trying to expand and diversify away from the United States.
+You're not going to be able to do that to a great extent unless you're dealing with China.
+But we should be absolutely remain clear eyed that China, the regime has not changed.
+It's still an appalling human rights record, menaces its neighbours, etc. so we want to be careful that we don't become too dependent on China.
+But let's remember, the point of this exercise is to get out from under the thumb of people like Peter Navarro, and they're not going to like that.
+We sometimes talk as if, oh, we'll diversify away from the United States, and the Trump regime will be fine with that.
+No, they don't want us to diversify.
+So if we're going to do this, we've got to be a bit nervy and be prepared to upset some people in Washington.
+
+</details>
+
+>> 看，我们70%的出口都流向美国，我们真的能多元化吗？我们真的能改变那个数字到一个……
+
+<details><summary>Original English</summary>
+
+>> Look, 70% of our exports go to the U.S. can we really diverse?
+Are we really going to change that figure to a to a?
+
+</details>
+
+>> 我们在某种程度上已经做到了。现在，有一些短期因素，但我们已经从几年前的约75%或73%下降了。我想过去几个季度我们已经降到了66%。正如我所说，其中一部分是油价等因素，但每一点都有帮助。你知道，我们把所有的鸡蛋都放在了美国这个篮子里。这在40年前是有道理的，当时没有人能预料到白宫里会出现一个疯子。但现在那个疯子已经来了。既然黑天鹅事件已经发生，现在我们必须意识到：好吧，世界已经变了。我们不能……不可能的事情也可能发生。因此，多元化是绝对必要的。
+
+<details><summary>Original English</summary>
+
+>> We already have to some extent.
+Now, there are some short term factors, but we've come down from about 75% or 73% a few years ago.
+I think we're now down last couple of quarters to 66.
+As I say, some of that is oil prices, etc. but every bit helps.
+You know, we, we, we put all our eggs in the United States basket.
+It made sense 40 years ago, nobody could tell that you'd have a mad man in the white House.
+But now that mad man has arrived.
+Now that the black swan event has happened, now we have to realise.
+Okay, the world has changed.
+We can't.
+The impossible can happen.
+And so diversification is just an absolute necessity.
+
+</details>
+
+>> 杰夫，寻求与中国建立更紧密的联系，值得拿我们最大的经济伙伴来冒险吗？
+
+<details><summary>Original English</summary>
+
+>> Jeff is seeking closer ties with China, worth risking our biggest economic partner.
+
+</details>
+
+>> 是也不是。不是。所以这……
+
+<details><summary>Original English</summary>
+
+>> Yes and no.
+No.
+So it.
+
+</details>
+
+>> ……归根结底还是看你怎么做。对华关系——加拿大、中国和美国之间存在一个三角关系。我们对中国采取的行动将受到我们与美国关系的制约。但正如安德鲁所说，这意味着我们不应该完全受制于他们。加美贸易战中最敏感的一些领域，同时也是加中贸易和解的核心领域，这并非巧合。这在汽车行业——也就是电动汽车领域，以及钢铁和铝业。我们需要做的是找到一种方法，在这些领域与中国合作，同时不越过美国人可能拥有的合理红线和关切。但我们需要弄清楚那些红线是什么，因为我们知道归根结底，在这些领域与中国合作将能够在加拿大创造一些机会，特别是在汽车行业。不过，在钢铁和铝业方面，我个人认为我们是在玩火。总理和西杜（Sidhu）部长最近促成的协议刚刚给了我们两年的延期。这所做的就是取消了中国对农产品的一些关税。但这不是一个持久的解决方案。你不能有这些产能过剩的行业，在这些行业中我们需要确保我们能够在加拿大发展壮大，最好能融入美国市场，但同时又不能让我们的农产品被当作人质。所以我们需要找到一种与中国合作的方法，能够将这些溢出效应隔离开来。但我们只有通过在其他领域与他们进行更多接触才能做到这一点。
+
+<details><summary>Original English</summary>
+
+>> Comes down to, again, how you do it.
+The the China relation.
+There's a triangle between Canada, China and the United States.
+What we do with China is going to be framed by our relationship with the United States.
+But to Andrew's point, that means we shouldn't be under their thumb completely.
+It's not a coincidence that some of the most sensitive areas in the Canada-U.S. trade war are also areas that are at the centre of Canada's China trade.
+You know, rapprochement.
+It's in automotive.
+So the EV sector, but then also steel and aluminium.
+What we need to do is we need to find a way to work with China in those areas that don't cross what legitimate red lines concerns the Americans can have.
+But we need to find out what those are, because we know at the end of the day, working with China in these areas are going to be able to create some opportunities in Canada, particularly in the automotive sector.
+We are playing with fire, though.
+My own personal opinion when it comes to the steel and aluminium aspects.
+So the deal that the Prime Minister and Minister Sidhu broke brokered recently just gave us a two year extension.
+And what that's done is that taken some Chinese tariff off agricultural commodities.
+But that's not a durable solution.
+You can't have these overcapacity sectors where we need to make sure that we're able to grow out in Canada and ideally integrate in the US market in those areas, but not being held hostage for or not having our agriculture, agricultural commodities held hostage.
+So we need to find a way to work with China to be able to separate these types of spill-over spill-overs.
+But we can only do that by engaging with them more in other areas.
+
+</details>
+
+>> 我会听听你的看法，但我也很好奇，在涉及中国时，多少贸易才算过多，以至于可能会陷入与美国类似的境地。
+
+<details><summary>Original English</summary>
+
+>> I'll get your take on that, but I am curious as well how much trade is too much trade when it comes to China as well, where it might be in a similar situation with the US.
+
+</details>
+
+>> 你知道，我认为我们与中国的贸易实际上是从一个非常低的基数开始的。所以让我们记住，我想，你知道，你问到过去我们75%的出口都流向了美国。我认为这正在向其他国家多元化，但我们的起点非常低。所以今年我们对华出口增长了约50%。但请记住，这种增长实际上非常必要，而且起点非常非常低。我要说的另一件事是，我们对华出口实际上集中在极少数几个行业。农产品、食品，以及石油和天然气等等。还有很多其他东西我们可以探索。服务业、金融服务，这些是其他国家做得非常非常好的事情，而我们才刚刚开始做，你知道，但让我们记住，中国是一个非常非常大的国家。直到最近，从北京的角度来看，与加拿大打交道一直只是一个事后的想法。但这就是我们的机会，因为中美之间的大国竞争，因为我们的地理位置，因为特朗普2.0。我认为我们拥有一个我们真的应该加以利用的战略优势。中国显然希望加拿大站在它这一边。我们应该留意即将到来的更多机会。所以我认为这是更广泛贸易关系的开端，对吧。当然，其中涉及风险，但我们应该留意的机会要多得多。
+
+<details><summary>Original English</summary>
+
+>> You know, I think our trade with China is actually starting from a very low base.
+So let's let's let's bear in mind that I think, you know, you asked about 75% of our exports you use to go to the United States.
+I think that is diversifying towards other countries, but we are starting very low.
+So our exports to China has grown about 50% this year.
+But bear in mind, the growth is actually very necessary and starting very, very low.
+The thing the other thing I would say is our exports to China is actually concentrated in a very few sectors.
+Agri agri food, as well as oil and gas and so forth.
+There's a lot more things that we can explore.
+Services sector, financial services, things that, you know, other countries have done very, very well that we are only starting to do that, you know, but let's bear in mind that China is a very large, large country.
+And until very recently, dealing with Canada from Beijing's perspective, has always been an afterthought.
+But this is our opportunity because of great power competition between the United States and China, because of our geographical position, because of Trump, 2.0.
+I think we have a strategic advantage that we should really take advantage of.
+China obviously wants Canada to be on its side.
+We should watch out for more opportunities to come.
+I so I see this as a beginning of greater trade relations, right.
+Of course, there are risks involved, but there are a lot more opportunities that that we should watch out for.
+
+</details>
+
+### 外国干涉与国内政治挑战
+
+>> 好的。我想谈谈其中一些机会。但另一个棘手的问题当然是来自中国的外国干涉。这在这里仍然是一个大问题。加拿大如何在做生意的同时保持……
+
+<details><summary>Original English</summary>
+
+>> All right.
+I want to get to some of those opportunities.
+But another sticking point, of course, is foreign interference from China.
+Still a big concern here.
+How does Canada balance doing business but keeping.
+
+</details>
+
+>> 安全？外国干涉不应该……不应该成为我们的主要担忧。
+
+<details><summary>Original English</summary>
+
+>> Safe foreign interference shouldn't shouldn't be shouldn't be on the shouldn't be a concern, shouldn't be a major concern to us.
+
+</details>
+
+>> 安德鲁。
+
+<details><summary>Original English</summary>
+
+>> Andrew.
+
+</details>
+
+>> 我认为它应该成为我们的主要担忧。但现实政治（realpolitik）依然存在。你仍然面临着这种前所未有的战略局势，你最大的贸易伙伴、历史上的保护者、最亲密的盟友刚刚某种程度上背弃了你，我们希望不是永久性的，但我们不能……我们必须……所以你知道，你被迫必须与中国进行这类谈判。但我不认为我们应该掉以轻心。他们一直在干涉我们的政治。他们打算继续这样做。他们一直在压迫我们的一些公民。他们一直在绑架我们的一些公民。所以我们应该对此保持清醒，并准备好大声疾呼。但现实是，我们仍然必须与他们进行贸易。
+
+<details><summary>Original English</summary>
+
+>> I think it should be a major concern for us.
+But but there's still realpolitik.
+You still have you still have this strategic situation unprecedented where your biggest trading partner, historic protector, closest ally has just kind of turned on you, we hope not permanently, but we can't.
+We have to.
+So you know, your your your your, your force have to do these kind of negotiations with China.
+But I do not think we should take our eye off the ball.
+They have been interfering with our politics.
+They intend to continue.
+They've been repressing some of, you know, our citizens.
+They've been kidnapping some of our citizens.
+So we should be clear eyed about it and prepared to call it out.
+But the reality of it is we still have to trade with them.
+
+</details>
+
+>> 好的，在请杰夫发言之前，我先让你回应一下。
+
+<details><summary>Original English</summary>
+
+>> Okay, I'm going to get before I get to Jeff and then I'll get you to respond.
+
+</details>
+
+>> 是的，简短地说，我认为应对这一问题的首要方法是执法。因此，如果中国在加拿大领土上做违法的事情，我们需要能够监控它、抓获它，然后起诉它，用这种方式处理。我们处理这个问题的另一种方式是将其置于阳光之下，并在工作层面和政治层面与中方相关官员进行直接、坦诚的讨论；而如果你站在讲台上指责中国，你是不会取得太大成功的。那样做的话，我们就会发现自己陷入那场冲突，进而波及我们的其他利益。
+
+<details><summary>Original English</summary>
+
+>> Yeah, briefly, I would say the number one way to deal with that is through enforcement.
+So if China is doing something illegal on Canadian territory, we need to be able to monitor it, capture it, and then prosecute it, deal with it that way.
+The other way that we deal with it is additionally by shining the light and having direct, candid discussions with the Chinese, the relevant officials on that side at both the working and political levels, where you're not going to have a big success is if you're standing up on the podium wagging your finger at China.
+That's where we're going to find ourselves bleeding into that conflict, bleeding into our other interests.
+
+</details>
+
+>> 林奈特。
+
+<details><summary>Original English</summary>
+
+>> Lynette.
+
+</details>
+
+>> 外国干涉是一个非常重大的问题。但我刚才想说的是，我认为它应该与贸易问题分开。它们并不完全是相伴而生的。你知道，我们与中国有更深入的贸易往来，并不意味着我们的外国干涉就会增加。我认为外国干涉是因为我们非常开放的政治体系没有足够的护栏，因此我们在各种事情上都很脆弱，比如我们的候选人是如何被提名的，这些过程可能会被外国人操纵。而这一系列问题是安全和政治问题。它们几乎独立于贸易问题之外。所以无论我们是否与中国做生意，我们仍然会面临外国干涉，因为他们有兴趣干涉我们的政治，这与贸易几乎没有任何关系。对。所以我认为把这两场辩论混在一起，我不确定这是否真的有帮助。因此我认为这两个问题应该分开。
+
+<details><summary>Original English</summary>
+
+>> Foreign interference is a very major issue.
+But I guess my point early on is, is that I think it should be separated from trade issues.
+They do not exactly go hand in hand.
+You know, the fact that we have greater trade engagement with China doesn't mean that our foreign interference will go up.
+I think foreign interference is a function of not having sufficient guardrails to our very open political system, and therefore, we are vulnerable to various things like how our candidates are being nominated, that those processes could be potentially manipulated by foreigners.
+And those set of issues are security and political issues.
+They are almost independent of trade, of trade issues.
+So whether or not we trade with China, we are still going to get foreign interference because they are interested in interfering in our in our in our politics, which has almost nothing to do with trade.
+Right.
+So I think having these two debates together, I'm not sure they are actually exactly helpful.
+And I think those two issues should be separated as a result.
+
+</details>
+
+>> 安德鲁，我来听听你的看法。
+
+<details><summary>Original English</summary>
+
+>> Andrew, I'll get you.
+
+</details>
+
+>> 我同意它们应该分开。但这正是为什么你要确保你不会过度暴露和过度依赖中国。这样你才能继续说“不”。这样你才能继续点名批评他们。但我也绝对同意，我们必须清理好国内的事务，比如政党政治。你知道，提名竞选如何运作等等，事实证明这些地方是一个敞开的入口，是对任何外国势力利用它的公开邀请。所以我认为这两方面都有一点，我想。
+
+<details><summary>Original English</summary>
+
+>> I agree they should be separate.
+But this is why you want to make sure you're not overly exposed and overly dependent on China.
+So you can continue to say no.
+So you can continue to call them up.
+But I absolutely also agree we have to clean up our act at home on things like party politics.
+You know, how nomination races run, etc. where they're they've been shown to be an open entry, an open invitation to foreign powers of whatever description to take advantage of it.
+So it's a bit of both, I think.
+
+</details>
+
+>> 好吧，我们顺着这个话题往下说。渥太华如何才能不仅让各省、行业、企业，还让其他政党认同这项长期的亚洲战略？批评者称其充满风险且是政治分心。
+
+<details><summary>Original English</summary>
+
+>> Well, let's pick up on that.
+How can Ottawa get not only the province's industry, businesses and other political parties to buy into this long term Asia strategy?
+We're critics call it risky and political distractions.
+
+</details>
+
+>> 我认为你必须表明你正在认真对待这些关切。如果人们认为你只是，你知道，为了“万能的美元”（借用史蒂芬·哈珀（Stephen Harper）的话）而抛弃了一切，那么我想你就会理所当然地引起人们极大的担忧。如果人们认为我们不准备为自己和我们自己的利益挺身而出，不准备为在中国受压迫的人挺身而出，不准备为台湾和一些受到中国威胁的邻国挺身而出，那么如果人们认为与中国的贸易正在限制我们在这些方面的选择，他们就会理所当然地退缩。所以你必须表明，表明你准备在世界上开辟自己的道路，并将与中国的贸易作为一项审慎的必要之举，而不是变得过度依赖它。
+
+<details><summary>Original English</summary>
+
+>> I think you have to show that you're taking these concerns seriously.
+If people think you've just, you know, thrown everything away for the sake of the almighty dollar, you use a phrase of Stephen Harper's, then you're going to, I think, rightly encourage people to be very concerned.
+If people think that we're not prepared to stand up for ourselves and our own interests, not prepared to stand up for people who are being oppressed in China, not prepared to stand up for Taiwan and some of China's neighbours, that it's menacing, then people will rightly recall if they think that trade trade with China is limiting our options in that.
+So you've got to show that, show that you're prepared to cut your own path through the world and doing doing trade with China as a prudent necessity, but not becoming overly dependent on it.
+
+</details>
+
+>> 杰夫。非常简短地说。
+
+<details><summary>Original English</summary>
+
+>> Jeff.
+Very quickly.
+
+</details>
+
+>> 我认为我的同事们在这里提出了一些很好的观点。这将是一个问题。我确实同意它需要被分开，但要做到这一点很难。要让商界支持，你在那里是在推一扇本就敞开的门；要让各省支持，情况就会参差不齐。一些省份对中国的兴趣浓厚且持久，希望开展更多贸易。其他省份可能会更关心其他国内选民及其利益。但总的来说，只有通过与中国接触，同时也在联邦-省-地区（FPT）层面以及与企业接触，让他们知道机会在哪里。而且正如安德鲁所说，明确表示加拿大确实有红线，我们会捍卫它们，但我们也将以比过去更聪明的方式来应对。
+
+<details><summary>Original English</summary>
+
+>> I think my my colleagues here have made made some good points.
+It's going to be an issue.
+I do agree that it needs to be separated, but it's going to be hard to do so to get the province to get the business community onside.
+You're going to be pushing on an open door there to get the provinces on side.
+It's going to be mix and match.
+Some provinces have a deep, abiding interest in China and would like to do more trade.
+Others might be more concerned to other domestic constituents and what their interests are.
+But overall, it's only through engaging with China but also engaging at the FPT level and with businesses, letting them know where the opportunities are.
+And to Andrew's point, making clear that Canada does have red lines and we're going to stand up for them, but we're also going to go about them in a smarter way than we have been in the past.
+
+</details>
+
+### 加拿大的国际地位与机遇
+
+>> 好的，林奈特，你刚才谈到了这里的机会。所以我想谈谈这是否是加拿大大放异彩的时刻。多年来一直有很多关于加拿大作为一个中等强国、未能发挥出超越自身实力影响力的争论，加拿大现在终于做到了吗？
+
+<details><summary>Original English</summary>
+
+>> All right, Lynette, you talked about opportunity here.
+So I want to talk about if this is Canada's moment to shine here.
+There's been so much debate over years of Canada as a middle power, not punching above its weight as Canada finally arrived here.
+
+</details>
+
+>> 我认为加拿大一直是一个中等强国。我认为这里的问题，这里相关的问题是，这是否是我们发挥出超越自身实力影响力的机会，这又回到了你早先关于中国提供了什么样的机会和风险，以及卡尼总理能否动员不同省份的人民给予支持的问题。我认为有两点。我认为他正乘着高合法性的东风。他的支持率非常高。我认为这是他大放异彩并动员民众的政治机会。我更希望看到的不仅是推销“这是我走过的里程数，这是我设法签署的自由贸易协定数量”，而是“我们因此将创造多少就业机会”，以及“这将给加拿大消费者带来什么机会”。我认为很多与发展中国家的贸易协议会带来很多消费福利，而这些在政治上并没有被推销出去，通常也不会以这种方式来表述。
+
+另一件事是，我认为大声说出我们的价值观有多重要也非常重要。比如环境标准、人权。我认为这些事情还没有得到足够的强调。有人批评卡尼在中东、中国方面的政策，比如让议员过早撤出台湾，以及他访问土耳其。我认为人们有点担心他可能在贸易实用主义的道路上走得太远，而对人权关注不够。我认为我的解读是，在过去20年的不同届政府中，我们看到了太多从一个方向摇摆到另一个方向的情况——纯粹谈论价值观，纯粹谈论贸易，来回摇摆。我认为为了能够广泛动员民众，你需要在两者之间取得平衡。如果他能处理好这一点，我想，你知道，他“可变几何”（variable geometry）的概念实际上会很有市场，并让加拿大发挥出超越自身实力的影响力。
+
+<details><summary>Original English</summary>
+
+>> I think Canada has always been a middle power.
+I think the question here, the relevant question here, is whether this is an opportunity for us to punch above our weight, and this is coming back to your earlier question about what sort of opportunities and risks that China offers, and whether Prime Minister Carney can mobilise people across different provinces to support.
+I think two things.
+I think he is writing on high legitimacy.
+His popularity is very high.
+I think this is the political opportunity for him to shine and to mobilise people.
+What I would like to see more is not just selling that this is the this is how much miles I have travelled.
+This is how many free trade agreements that I have managed to sign.
+But how many jobs that we are going to create as a result, and as well as the opportunities that this is going to bring to Canadian consumers, I think a lot of, you know, trade deals with developing countries will bring a lot of consumption benefits, which are not sold politically, not typically frame frame.
+That way.
+The other thing is, I think it is also very important to say, say out loud how important our values are.
+Things like environmental standards, human rights.
+I think those things are not Emphasized enough.
+They are criticism about Carney policies with respect to the Middle East.
+China pulling out of MPs prematurely, out of Taiwan.
+He visits to Turkey.
+I think there is a little bit of concern that he may go too far down the trade pragmatism road and not enough about human rights.
+I think my reading is that throughout different administrations in the last 20 years, we have seen too much from one direction to another, purely about values, purely about trade going, going back and forth.
+And I think to be able to mobilise a lot of people across the board, you need to balance between the two.
+If he could get it right, I think, you know, his concept of variable geometry would actually sell and allow Canada to punch above our weight.
+
+</details>
+
+>> 安德鲁，加拿大终于登上世界舞台了吗？
+
+<details><summary>Original English</summary>
+
+>> Andrew, has Canada finally arrived at the world stage?
+
+</details>
+
+>> 有这种潜力。我们有点是被迫走上这条路的，因为我们现在发现自己与美国所处的局势。所以我们现在不得不开辟一条比过去独立得多的道路。那里有机会，但我们必须记住，我认为过去几十年的教训之一是，软实力只能带你走这么远。我们正处于一个非常危险的时期。欧洲的领导人现在正在与他们的公众磋商，讨论为战争做准备的必要性。在那样一个世界里，硬实力是绝对必不可少的组成部分。那是我们过去忽视的部分。但结合起来——我们在世界上有良好的声誉。我们现在被迫在治国方略上非常有创意。如果我们能建立起我们的军事和安全组成部分，那么是的，我们可以拥有超乎寻常的影响力。
+
+<details><summary>Original English</summary>
+
+>> There's the potential for it.
+We've been sort of forced into it because of the situation we now find ourselves in with the state.
+So we're now having to strike out on a much more independent path than we would have in the past.
+There's opportunity there, but we've got to remember, I think one of the lessons of the last couple of decades is soft power only gets you so far.
+We're in a very perilous time.
+Leaders in Europe are now, you know, consulting with their public on the need to prepare for war in that kind of a world.
+Hard power is an absolutely essential component.
+That's the part we've neglected in the past.
+But the combination of.
+We have a good reputation in the world.
+We're forced right now to be very creative in our statecraft.
+And if we can build up our military and security component, then yeah, we can have outsize influence.
+
+</details>
+
+>> 杰夫，我这里挤一点时间给你，因为我确实想听听你对此的看法。加拿大终于登上世界舞台了吗？
+
+<details><summary>Original English</summary>
+
+>> Jeff, I'm going to squeeze you in here because I do want your take on this.
+As Canada finally arrived at the world stage.
+
+</details>
+
+>> 如果加拿大登上了世界舞台，如果我们是一个中等强国，借用本杰明·富兰克林（Benjamin Franklin）的话来说：是的，只要你们能保住它。而且我想说，你知道，借用安德鲁的话，我们谈到了潜力，还有你如何去实现它。力量可以是动能，也可以是势能。我认为加拿大在过去十年中浪费了一些潜力，我们现在正站在一个必须做出一些非常艰难决定的时期。而且我确实认为我们正在做出正确的决定，但我们最终需要执行它们，并为加拿大外交政策带来真正的机遇和长期改变。
+
+<details><summary>Original English</summary>
+
+>> If Canada's arrived, the world stage, if we're a middle power, to paraphrase Benjamin Franklin, we are.
+If you can keep it.
+And I would say, you know, to borrow from Andrew, we talked about the potential.
+And also you were realising it.
+Power can be either kinetic or it can be potential.
+I think Canada squandered some of its potential over the last decade, and we're now standing at a period where there's some really tough decisions to be made.
+And I do think that we're making the right calls, but we need to ultimately execute on them and bring real opportunity and a long term change to Canadian foreign policy.
+
+</details>
+
+>> 安德鲁、杰夫、林奈特，非常感谢你们带来这场信息丰富、富有洞察力的讨论。非常感谢。
+
+<details><summary>Original English</summary>
+
+>> Andrew.
+Geoff, Lynette, I want to thank you so much for this very informative, insightful discussion.
+Thank you so much.
+
+</details>
+
+>> 谢谢邀请我们。
+
+<details><summary>Original English</summary>
+
+>> Thank you for having us.
+
+</details>
+
+### 国际法与条约如何制定
+
+>> 好的，我们一直在谈论的所有这些事情——贸易、协议和经济关系，都是建立在国际法的基础之上的，国际法指导着各国谈判的条约和协议。但从谈判到达成协议是一个复杂的过程。下面由《Unravelled》制片人桑吉塔·帕特尔（Sangita Patel）来为我们剖析。
+
+<details><summary>Original English</summary>
+
+>> Okay, so all the stuff we've been talking about, trade and deals and economic relationships is built on a foundation of international law, which informs the treaties and deals countries negotiate.
+But getting from negotiation to agreement is a complicated business.
+Here's unravelled producer Sangita Patel to break it down.
+
+</details>
+
+>> 国际法是由各国制定并供各国遵守的一套复杂规则，这些规则维持着世界的运转。它们规范着从我们吃的食物到战争的一切事物。那么，利益往往不同且有时相互竞争的国家是如何就这些规则达成一致的呢？让我们来剖析国际法是如何制定的。
+
+国际法有几个渊源。我们将重点关注两个主要的渊源：习惯法和条约。让我们从习惯法开始。必须有一种许多国家一贯采取的做法。而且这种做法被接受为法律，即使它没有被写下来。这有点像一种社会规范。比如你进入别人家时要脱鞋。习惯国际法的一个例子是海上救人的理念。任何船只遇到遇险人员都有义务提供帮助。或者再举一个例子。外交豁免权。外交官在职期间不能因犯罪而被起诉的理念。这两者在被写入条约之前，都作为习惯法被接受了多年。
+
+国际法的第二个主要渊源是条约、协定或带有正式名称和头衔的公约。这些可以通过双边谈判（即两国之间）或多边谈判（即多国之间）达成。有时多边协定是通过联合国等组织进行谈判的。事实上，联合国的众多工作之一就是保存条约图书馆或汇编。这样每个人都知道哪些国家签署了哪些条约，以及这些条约说了什么。
+
+好的，那么条约是如何制定的呢？那是一个漫长、复杂、多步骤的过程。第一步是找到一个需要通过条约解决的问题。
+
+<details><summary>Original English</summary>
+
+>> International law is a complex set of rules that are made by countries for countries to follow, and these rules make the world tick.
+They regulate everything from the food we eat to war.
+So how do countries which often have different and sometimes competing interests come to agree on what these rules are?
+Let's unravel how international law is made.
+There are several sources of international law.
+We're going to focus on the two major ones customary law and treaties.
+Let's start with customary law.
+So there must be a practice that many countries consistently do.
+And that practice is accepted as law, even if it isn't written down.
+It's kind of like a social norm.
+Like take your shoes off when you enter someone's home.
+An example of customary international law is the idea of rescuing people at sea.
+Any ship that comes across people in distress is obligated to provide help.
+Or take another example.
+Diplomatic immunity.
+The idea that diplomats can't be prosecuted with a crime while they're on the job.
+Both of these were accepted as customary law for years before they were written into a treaty.
+The second major source of international law are treaties, agreements, or conventions with official names and titles.
+These can be negotiated bilaterally, meaning between two countries or multilaterally, meaning between several countries.
+Sometimes multilateral agreements are negotiated through organisations such as the United Nations.
+In fact, one of many jobs the UN does is to keep a library or collection of treaties.
+And that's so everyone knows which countries signed, which treaties and what those treaties say.
+Okay, so how are treaties made?
+That is a long, complicated, multi-step process.
+And the first step is finding an issue that needs to be sorted out through a treaty.
+
+</details>
+
+>> 它可能是一个需要解决的共同问题，比方说臭氧层损耗、航行自由或保护南极洲，凡此种种。或者它可能是解决某种潜在的争端。例如，如果各国存在贸易壁垒，最终他们希望达到消除这些贸易壁垒的地步。所以第一件事就是确定问题。
+
+<details><summary>Original English</summary>
+
+>> It could be a common problem to solve, let's say ozone depletion or freedom of navigation, or protecting Antarctica, you name it.
+Or it could be settling some kind of a potential dispute.
+If countries have trade barriers, for example, and eventually they want to arrive at a place where those trade barriers are removed.
+So the first thing is to identify the issue.
+
+</details>
+
+>> 接下来是谈判。这是相关国家决定条约内容的部分。字面意义上的，条约的文本将是什么。
+
+<details><summary>Original English</summary>
+
+>> Then comes negotiation.
+This is the part where interested countries decide what goes into the treaties.
+Literally, what the text of the treaty will be.
+
+</details>
+
+>> 一旦就存在问题达成一致，谈判就会启动。关于谁应该参与这些谈判可能会出现问题。这是一个需要普遍参与的事情，还是仅仅是一个区域性问题？
+
+<details><summary>Original English</summary>
+
+>> Once there is agreement that there is an issue, negotiations will be launched.
+Issues might arise as to who should participate in these negotiations.
+Is this something that requires universal involvement or is it only a regional issue.
+
+</details>
+
+>> 在加拿大这里，内阁授权启动这一程序，外交部长负责代表我们谈判国际条约。嗯，至少在纸面上是这样。在实践中，其他部门也会根据条约的内容进行谈判，并在加拿大全球事务部（Global Affairs Canada）的监督下进行，内阁负责任命谈判代表并向他们提供谈判指导方针。
+
+一旦条约谈判完成，各国将签署以示对协定文本的支持。总理和外交部长有权代表加拿大签署国际条约。协定签署后，不得再对文本进行任何修改。
+
+接下来的一步叫做实施（implementation）。这意味着条约必须反映在加拿大法律中。
+
+<details><summary>Original English</summary>
+
+>> Here in Canada, cabinet authorises the start of this process, and the Minister of Foreign Affairs is responsible for negotiating international treaties on our behalf.
+Well, that's the case on paper, at least.
+In practice, other departments also carry out negotiations depending on what the treaty is about, with the supervision of Global Affairs Canada, cabinet is responsible for appointing negotiators and giving them guidelines for negotiations.
+Once the treaty is negotiated, countries will sign in showing the support.
+The text of the agreement.
+The Prime Minister and the Minister of Foreign Affairs have the power to sign international treaties for Canada.
+No more changes should be made to the text of an agreement after it's signed.
+Now what comes next is called implementation.
+What that means is that treaties must be reflected in Canadian law.
+
+</details>
+
+>> 你会发现实施立法有时分散在不同类型的国内立法中，有时其中一些主题事项可能属于省级管辖权，其中一些可能属于联邦管辖权。所以这可能会相当复杂。
+
+<details><summary>Original English</summary>
+
+>> You will find implementing legislation sometimes scattered over different types of domestic legislation, sometimes some of the subject matter might be provincial jurisdiction.
+Some of it might be federal jurisdiction.
+So it can be quite complicated.
+
+</details>
+
+>> 在某些情况下，这涉及修改现有的国内法律以使其与条约一致，或者制定一部全新的法律。但有时条约已经反映在加拿大国内法中，在这种情况下就不需要采取进一步行动。这就把我们带到了下一步：批准（Ratification）。批准是指内阁批准该条约，这使其对一个国家具有法律约束力，意味着一个国家有义务遵守它。
+
+<details><summary>Original English</summary>
+
+>> In some cases, that involves either changing existing domestic law to make it consistent with the treaty, or creating a brand new law.
+But sometimes a treaty is already reflected in domestic Canadian law, in which case no further action is needed.
+That would take us to the next step.
+Ratification.
+Ratification is when cabinet approves the treaty, and that makes it legally binding on a country, meaning a country's obligated to follow it.
+
+</details>
+
+>> 当一项条约由加拿大批准时，当加拿大选择加入并约束自己时，那么该条约在国际法下就对加拿大具有约束力。
+
+<details><summary>Original English</summary>
+
+>> When a treaty is ratified by Canada.
+When Canada opts in and binds itself, then that treaty is binding on Canada.
+Under international law.
+
+</details>
+
+>> 最后一步是条约在商定的日期生效。这发生在所有缔约方都批准之后。从那天起，各国必须遵守协定的条款。
+
+好的，我们已经概述了这些步骤。现在让我们来看一个例子，比如《加美墨协定》（CUSMA）。它是《北美自由贸易协定》（NAFTA）的继承者。NAFTA于1994年1月1日生效。2016年，当时的美国总统候选人唐纳德·特朗普称该协定为……
+
+<details><summary>Original English</summary>
+
+>> The last step is a treaty coming into force on an agreed upon day.
+That happens after all parties have ratified it.
+Countries have to abide by the terms of the agreement from that day forward.
+Okay, so we outlined the steps.
+Now let's take a look at an example like CUSMA, the Canada, United States Mexico agreement.
+It's the successor to NAFTA, the North American Free Trade Agreement.
+NAFTA came into force on January 1st 1994.
+In 2016, then US presidential candidate Donald Trump called the agreement.
+
+</details>
+
+>> ……或许是有史以来签署的最糟糕的贸易协议。
+
+<details><summary>Original English</summary>
+
+>> The worst trade deal maybe ever signed anywhere.
+
+</details>
+
+>> 他认为，这项当时已有20多年历史的条约需要重新谈判，替代NAFTA的谈判于2017年8月16日开始。加拿大团队由时任外交部长克里斯蒂娅·弗里兰（Chrystia Freeland）领导，经过数月的谈判，三国于2018年11月30日签署了该协定。
+
+<details><summary>Original English</summary>
+
+>> He argued that the treaty, which at that point was over 20 years old, needed to be renegotiated, and negotiations for NAFTA replacement began on August 16th, 2017.
+Canada's team was led by then Minister of Foreign Affairs Chrystia Freeland, and after months of negotiations, all three countries signed the agreement.
+On November 30th, 2018.
+
+</details>
+
+>> 我们走，我们走，我们走，我们走。
+
+<details><summary>Original English</summary>
+
+>> Let's go, let's go, let's go, let's go.
+
+</details>
+
+>> 新条约CUSMA需要在国内制定实施立法。
+
+<details><summary>Original English</summary>
+
+>> The new treaty CUSMA needed implementation legislation here at home.
+
+</details>
+
+>> 一项名为《实施加拿大、美利坚合众国和墨西哥合众国之间协定的法案》，现进行一读并付印。
+
+<details><summary>Original English</summary>
+
+>> A bill entitled An Act to Implement the agreement between Canada, the United States of America and the United Mexican States.
+Be now read a first time and be printed.
+
+</details>
+
+>> 该法案于2020年3月13日获得通过。加拿大几周后正式批准了CUSMA，该条约最终于2020年7月1日生效，到期日定为2036年。该条约还允许各国在到期前重新谈判该协议，这将使整个过程重新开始。
+
+<details><summary>Original English</summary>
+
+>> That bill passed on March 13th, 2020.
+Canada officially ratified CUSMA a few weeks later, and the treaty finally came into force on July 1st, 2020 with an expiration date set to 2036.
+The treaty also allows the countries to renegotiate the deal before it expires, which would start this process all over again.
+
+</details>
+
+>> 你认为加拿大应该寻求与中国建立更紧密的联系吗？促进与美国以外国家的贸易是正确的举措吗？请告诉我们。发邮件至TheRundown@TVO.org。或者一如既往，你可以在我们的YouTube页面上给我们留言。在此之前，我们明天见。
+
+<details><summary>Original English</summary>
+
+>> Do you think Canada should be pursuing closer ties with China and is boosting trade with countries that aren't the United States the right move?
+Let us know.
+Send us an email to TheRundown@TVO.org.
+Or as always, you can drop us a comment on our YouTube page.
+Until then, I will see you tomorrow.
+
+</details>

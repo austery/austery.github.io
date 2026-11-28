@@ -1,0 +1,2973 @@
+---
+author: AI Engineer
+date: '2026-07-08'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=xUnRQ9vLXxo
+speaker: AI Engineer
+tags:
+  - ai-evolution
+  - software-engineering
+  - skeuomorphism
+  - agentic-workflow
+title: 重构开发边界：AI编排时代下的拟物化突围与级次滑移
+summary: 本文深度解析了Theo Browne在演讲中关于AI时代开发范式转移的洞察。文章阐述了模型从工具调用演进至自主编排的过程，批判了软件工程界在终端、Git与编程语言身份认同上的“拟物化”认知惯性，并揭示了开发成本的级次滑移及Markdown执行层的崛起。最后，探讨了个人开发者如何通过范围化竞争挑战Slack、AWS和Salesforce等行业巨头。
+insight: ''
+draft: true
+series: ''
+category: tech-trends
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - Apple
+  - AWS
+  - Slack
+  - Salesforce
+products_models:
+  - Claude
+  - Vercel
+  - OBS
+  - S3
+media_books: []
+status: evergreen
+---
+### 从“工具时代”到“编排时代”：AI演进下的范式转移
+
+在探索如何应对当下的**AI精神分裂**（AI Psychosis: 面对AI快速迭代而产生的认知与心理冲击）时，我们必须回顾模型发展的几个关键纪元。在**Claude 3.5 Sonnet**风靡的“工具调用时代”，模型首次能够稳定且可靠地在代码库上下文里执行基本的工具调用，让日常开发流程得以半自动化。随后推出的**Claude 4.5 Opus**则代表了“长时运行任务阶段”的到来，它能自主执行跨越数小时的复杂、多步骤任务而不会迷失方向。而最新一代的**Mythos**模型则正式开启了“自主编排”的纪元。它不仅理解代码库，更拥有强大的自我认知，能够自主生成并调度其他子模型，将庞杂的开发任务拆解为小模块进行分发，并在任务结束后执行多维度的自我验证。这意味着开发人员不再需要构建繁琐的“软件工厂”或复杂的脚手架，而只需通过提示词引导模型向更深处探索。
+
+事实上，模型能力的增长速度已经远远超越了人类自身的进步速度。过去我们曾断言AI技术即将触及物理与数据的天花板，但事实证明这一预测完全错误。为了在智能加速的曲线中生存，我们必须打破过去处理简单Jira工单的思维惯性，将视野投向规模更大、逻辑更复杂的系统构建。
+
+<details>
+<summary>Original English Source</summary>
+
+Hello.
+ Hello.
+ Fantastic
+ to
+ see
+ you
+ guys
+here.
+ I
+ still
+ can't
+ believe
+ they're
+letting
+ me
+ take
+ a
+ stage
+ at
+ something
+like
+ this,
+ a
+ YouTuber
+ apparently.
+ But
+can't
+ wait
+ to
+ share
+ a
+ bit
+ about
+ how
+ I've
+been
+ thinking
+ because
+ if
+ I'm
+ being
+ real,
+kind
+ of
+ going
+ through
+ some
+ AI
+ psychosis.
+Who
+ here
+ would
+ classify
+ how
+ they
+ feel
+right
+ now
+ as
+ some
+ form
+ of
+ AI
+ psychosis?
+I
+ want
+ to
+ see
+ some
+ hands.
+The
+ those
+ who
+ don't
+ have
+ their
+ hands
+ up
+yet,
+ don't
+ worry.
+ We'll
+ get
+ you
+ there
+ by
+the
+ end
+ of
+ this
+ talk
+ if
+ I
+ do
+ everything
+right.
+ In
+ order
+ to
+ talk
+ about
+ this,
+ I
+want
+ to
+ start
+ with
+ a
+ bit
+ of
+ a
+ personal
+journey
+ of
+ my
+ own.
+ And
+ I'm
+ going
+ to
+ go
+through
+ this
+ the
+ way
+ anybody
+ does
+ in
+modern
+ timelines
+ with
+ the
+ models.
+ Who
+here
+ used
+ Sonnet
+ 3.5
+ when
+ it
+ was
+ the
+creme
+ de
+ la
+ creme,
+ the
+ cream
+ of
+ the
+ crop
+model
+ available
+ to
+ us?
+ It
+ was
+unbelievably
+ better
+ than
+ what
+ we
+ had
+used
+ before,
+ right?
+ Like
+ having
+ used
+ all
+of
+ these
+ different
+ models
+ and
+ trying
+them
+ in
+ tools.
+ Sonnet
+ 35
+ was
+ a
+ big
+moment
+ for
+ me
+ because
+ it
+ felt
+ like
+ these
+models
+ could
+ suddenly
+ complete
+ much
+ more
+endto-end
+ tasks
+ like
+ actually
+ get
+ real
+work
+ done
+ that
+ takes
+ multiple
+ steps.
+ And
+then
+ we
+ got
+ Opus
+ 45.
+ Who
+ felt
+ or
+ I'll
+ go
+different
+ way
+ differently
+ here.
+ who
+didn't
+ feel
+ a
+ big
+ jump
+ when
+ they
+switched
+ over
+ to
+ Opus
+ 45.
+That's
+ a
+ relief.
+ There
+ were
+ not
+ too
+ many
+hands
+ because
+ Opus
+ 45
+ is
+ probably
+ when
+my
+ psychosis
+ started
+ in
+ November
+ and
+December
+ of
+ last
+ year.
+ Having
+ a
+ model
+that
+ couldn't
+ just
+ write
+ the
+ code
+ and
+call
+ tools,
+ but
+ could
+ go
+ way
+ further.
+ A
+model
+ that
+ could
+ test
+ the
+ work
+ and
+actually
+ get
+ it
+ into
+ a
+ good
+ state
+ and
+complete
+ tasks
+ that
+ take
+ hours
+ instead
+of
+ minutes.
+ It
+ was
+ unbelievable.
+Then
+ we
+ got
+ Mythos.
+ Who
+ here's
+ a
+ chance
+to
+ play
+ with
+ mythos
+ and
+ fable
+ so
+ far?
+ We
+agree
+ it's
+ a
+ pretty
+ damn
+ good
+ model,
+right?
+ But
+ why?
+ It's
+ not
+ just
+ better
+ at
+coding.
+ If
+ you
+ handed
+ a
+ prompt
+ that
+ you
+would
+ have
+ handed
+ to
+ these
+ other
+ models
+before,
+ it's
+ not
+ going
+ to
+ feel
+ that
+different.
+ I
+ think
+ of
+ these
+ almost
+ as
+eras
+ now
+ where
+ Sonnet
+ 35
+ is
+ the
+ tool
+call
+ era.
+ Not
+ that
+ it
+ was
+ the
+ first
+model
+ that
+ could
+ do
+ tool
+ calls.
+ rather
+it
+ was
+ the
+ first
+ one
+ that
+ did
+ them
+consistently
+ and
+ reliably
+ enough
+ in
+context
+ of
+ a
+ codebase
+ where
+ you
+ could
+use
+ this
+ for
+ day-to-day
+ coding
+ work.
+Then
+ we
+ got
+ Opus
+ 45
+ which
+ was
+ able
+ to
+ do
+much
+ longer
+ running
+ tasks
+ without
+ losing
+track
+ of
+ what
+ it's
+ working
+ on.
+ It's
+ no
+longer
+ okay
+ build
+ step
+ one
+ and
+ then
+ it
+does
+ it
+ then
+ you
+ say
+ okay
+ can
+ you
+ build
+this
+ next
+ part
+ and
+ then
+ the
+ next
+ part
+you
+ can
+ just
+ tell
+ it
+ what
+ you
+ want
+ and
+it
+ could
+ figure
+ it
+ out
+ a
+ lot
+ of
+ the
+time.
+ Mythos
+ is
+ another
+ jump
+ to
+orchestration.
+It
+ feels
+ to
+ me
+ like
+ it's
+ the
+ first
+ model
+that
+ doesn't
+ just
+ understand
+ your
+codebase,
+ but
+ it
+ understands
+ itself
+ and
+it
+ knows
+ how
+ to
+ spawn
+ additional
+ models
+and
+ break
+ up
+ work
+ in
+ a
+ way
+ where
+ it
+could
+ be
+ completed
+ more
+ reliably
+ and
+then
+ verified
+ afterwards.
+ And
+ if
+ you
+tell
+ the
+ model
+ to
+ do
+ that,
+ it
+ will
+ just
+do
+ it.
+ You
+ don't
+ need
+ some
+ custom
+tooling,
+ some
+ custom
+ systems,
+ some
+ fancy
+software
+ factory.
+ You
+ just
+ need
+ to
+prompt
+ it
+ to
+ go
+ a
+ little
+ further.
+ I
+think
+ you'll
+ be
+ surprised
+ how
+ far
+ it
+ can
+go.
+ What
+ I'm
+ trying
+ to
+ say
+ here
+ is
+ we
+need
+ to
+ go
+ bigger.
+You're
+ not
+ going
+ to
+ see
+ the
+ benefits
+going
+ forward
+ if
+ you're
+ not
+ pushing
+ the
+model
+ further.
+ You're
+ not
+ pushing
+yourself
+ further
+ with
+ what
+ you're
+building.
+ Most
+ of
+ the
+ juror
+ tickets
+ I
+closed
+ at
+ my
+ previous
+ job
+ could
+ be
+trivially
+ solved
+ with
+ a
+ model
+ like
+ Opus
+45.
+ My
+ previous
+ work
+ would
+ not
+ benefit
+from
+ a
+ model
+ like
+ Mythos.
+ If
+ the
+ models
+are
+ going
+ to
+ keep
+ getting
+ better,
+ and
+ at
+this
+ point
+ I'm
+ confident
+ saying
+ they
+are.
+ I
+ was
+ wrong
+ when
+ I
+ claimed
+ that
+ we
+were
+ hitting
+ a
+ wall
+ before.
+ The
+ models
+are
+ getting
+ better
+ faster
+ than
+ we
+ are.
+So
+ we
+ can't
+ necessarily
+ get
+ better.
+ So
+instead
+ we
+ have
+ to
+ go
+ bigger.
+
+</details>
+
+### 克服“软件拟物化”：跳出工具与语言的身份囚笼
+
+要实现“向更大规模进军”的目标，开发者首先必须克服自身的心理障碍与路径依赖。正如早期的iOS系统界面高度依赖模仿实体罗盘或皮革纹理的**拟物化设计**，直到iOS 7才彻底转向注重信息效率与交互本质的扁平化设计一样，当下的软件工程界也正处于其自身的“拟物化阶段”。我们极度迷恋那些源自几十年前的工具链：终端、SSH、Git、**Vim**，甚至在团队协作中为了传输一个隐藏的`.env`环境配置文件而额外构建一整套复杂的安全分发系统，却忽视了Git本身的局限性。
+
+这种路径依赖甚至内化成了开发者的身份认同。我们习惯于用所掌握的编程语言来定义自己的技术层级（如“我是写JavaScript的”），或用特定的编辑器工具建立技术优越感。在AI赋能的新时代，这些曾经不可或缺的技能和界限正在迅速失效。此外，我们还深受**沉没成本思维**的毒害，即便某个PR逻辑并不是最优解，但因为成员耗费了数周时间，团队往往会出于“愧疚”而选择合并。而在AI智能体（Agent）的时代，这种由于人际沟通成本带来的妥协将不复存在，因为我们对智能体产出的低效代码可以毫无心理负担地予以废弃并重写。
+
+<details>
+<summary>Original English Source</summary>
+
+In
+ order
+ to
+ do
+ that,
+ we
+ have
+ to
+ get
+ over
+ourselves.
+ This
+ was
+ really
+ hard
+ for
+ me
+as
+ someone
+ who
+ spent
+ a
+ long
+ time
+ writing
+software.
+ Who
+ here
+ has
+ written
+ code
+ for
+more
+ than
+ 10
+ years?
+I
+ was
+ using
+ GNU
+ screen
+ and
+ eventually
+T-Mox
+ back
+ in
+ the
+ day.
+ I
+ learned
+ how
+ to
+use
+ those
+ tools
+ and
+ SSH
+ and
+ Git
+ before
+ I
+even
+ wrote
+ code
+ and
+ those
+ have
+ all
+ been
+really
+ ingrained
+ in
+ my
+ workflow.
+I
+ think
+ back
+ to
+ the
+ old
+ days
+ in
+ a
+ weird
+way.
+ Hear
+ me
+ out.
+ You
+ talk
+ about
+ iOS
+ for
+ a
+ second.
+ Who
+ owned
+ an
+ iPhone
+6
+ or
+have
+ you
+ guys
+ written
+ code
+ for
+ 10
+ years
+when
+ a
+ fourth
+ of
+ you
+ are
+ that
+ old?
+ I'm
+confused.
+ Hopefully,
+ you're
+ all
+ Android
+people
+ or
+ something.
+This
+ is
+ how
+ iPhone
+ apps
+ used
+ to
+ look.
+You
+ might
+ notice
+ it's
+ different
+ from
+ how
+they
+ look
+ now.
+ It
+ looks
+ less
+ like
+ an
+ app
+and
+ more
+ like
+ somebody
+ took
+ a
+ picture
+ of
+a
+ compass
+ and
+ put
+ it
+ in
+ the
+ phone.
+ This
+is
+ how
+ apps
+ used
+ to
+ look.
+But
+ now
+ they
+ look
+ like
+ this.
+ And
+ most
+people
+ look
+ at
+ that
+ and
+ they're
+ like,
+"Oh,
+ that's
+ an
+ obvious
+ downgrade.
+ That's
+so
+ much
+ worse.
+ Why
+ would
+ Apple
+ ever
+ do
+that?
+ This
+ is
+ the
+ downfall
+ of
+ Apple
+ and
+the
+ beauty
+ of
+ their
+ design."
+ I'm
+ going
+ to
+ fight
+ you
+ guys
+ on
+ that.
+ iOS
+ 7
+ was
+Apple
+ moving
+ away
+ from
+ trying
+ to
+convince
+ you
+ that
+ these
+ devices
+ can
+replace
+ the
+ old
+ reass.
+Apps
+ had
+ to
+ be
+ designed
+ to
+ convince
+ you
+to
+ use
+ them,
+ not
+ to
+ be
+ useful.
+ And
+ iOS
+ 7
+represents
+ the
+ shift
+ to
+ not
+ focusing
+ on
+convincing
+ you
+ anymore.
+ Apple
+ won.
+ By
+that
+ point,
+ everyone
+ knew
+ their
+ iPhone
+could
+ do
+ all
+ of
+ these
+ different
+ things.
+The
+ point
+ of
+ iOS
+ 7
+ was
+ to
+ stop
+convincing
+ and
+ start
+ embracing,
+ start
+making
+ a
+ better
+interface.
+ And
+ this
+interface,
+ as
+ much
+ as
+ we
+ might
+ not
+ like
+how
+ it
+ looks,
+ it's
+ so
+ much
+ more
+ useful.
+You
+ have
+ clear
+ indications
+ of
+ the
+difference
+ between
+ what
+ direction
+ you're
+walked
+ on
+ and
+ where
+ you're
+ currently
+pointing.
+ That
+ red
+ block
+ is
+ a
+ super
+ nice
+way
+ to
+ know
+ that
+ you're
+ not
+ in
+ the
+direction
+ you
+ intend.
+ The
+ current
+direction
+ you're
+ facing
+ is
+ way
+ clearer,
+too,
+ with
+ the
+ giant
+ 228
+ at
+ the
+ bottom.
+You
+ just
+ get
+ way
+ more
+ info
+ here
+ than
+ you
+did
+ before.
+ It's
+ so
+ much
+ clearer.
+ Even
+if
+ we
+ don't
+ like
+ it
+ because
+ it's
+ not
+ the
+thing
+ we're
+ used
+ to,
+ we
+ got
+ over
+ it.
+We're
+ currently
+ in
+ our
+ skumorphic
+ phase
+as
+ software
+ developers.
+ Skeuomorphism
+ is
+this
+ design
+ aesthetic
+ trying
+ to
+represent
+ the
+ way
+ things
+ used
+ to
+ look,
+the
+ physical
+ goods
+ that
+ we
+ relied
+ on,
+and
+ trying
+ to
+ make
+ them
+ digital.
+ We're
+doing
+ this
+ right
+ now
+ with
+ software.
+terminal,
+ but
+ we
+ pretend
+ it
+ does
+ because
+the
+ terminal
+ is
+ familiar.
+ It's
+ what
+ we
+it's
+ what
+ we're
+ used
+ to.
+ It's
+ what
+ we
+love.
+ It's
+ where
+ we
+ like
+ to
+ think
+ of
+ourselves
+ when
+ we're
+ thinking
+ about
+coding.
+ Who
+ here
+ is
+ an
+ aspiring
+ Vim
+ user
+that
+ like
+ wishes
+ you
+ could
+ use
+ Vim
+ or
+even
+ does
+deeply
+ about
+ our
+ tools,
+ the
+ systems
+ we
+pick,
+ the
+ frameworks,
+ the
+ languages.
+ We
+like
+ to
+ think
+ it
+ all
+ matters.
+ And
+ we've
+blinded
+ ourselves
+ in
+ this.
+ We
+ think
+things
+ that
+ just
+ don't
+ make
+ sense
+ when
+you
+ take
+ one
+ step
+ back.
+ Like,
+ why
+ can't
+we
+ commit
+ our
+ environment
+ files?
+It
+ sounds
+ stupid
+ when
+ I
+ put
+ on
+ a
+ slide
+like
+ this,
+ but
+ I
+ want
+ you
+ to
+ really
+think
+ about
+ this
+ for
+ a
+ second.
+ When
+ I
+have
+ a
+ team
+ of
+ engineers
+ that
+ are
+working
+ on
+ a
+ project,
+ why
+ do
+ I
+ have
+ to
+build
+ another
+ system
+ to
+ share
+ this
+specific
+ file,
+ but
+ all
+ the
+ other
+ files
+can
+ go
+ and
+ get
+ just
+ fine?
+It's
+ dumb.
+ It's
+ just
+ how
+ Git
+ was
+ built
+because
+ it
+ was
+ built
+ for
+ a
+ very
+ specific
+thing
+ and
+ then
+ it
+ took
+ over
+ our
+ industry
+and
+ it
+ took
+ over
+ our
+ brains
+ and
+ we
+aren't
+ letting
+ go
+ of
+ that.
+ There's
+ a
+ lot
+of
+ these
+ things
+ in
+ our
+ heads
+ that
+ we
+have
+ to
+ start
+ fighting.
+ We
+ have
+ to
+ take
+the
+ step
+ back
+ and
+ think,
+ is
+ this
+ how
+ we
+do
+ things
+ because
+ it's
+ right
+ or
+ is
+ this
+how
+ we
+ do
+ things
+ because
+ it's
+ just
+how
+ we've
+ always
+ done
+ it?
+ And
+ as
+ you
+ start
+to
+ think
+ more
+ about
+ this,
+ you'll
+ realize
+there
+ are
+ so
+ many
+ things
+ that
+ we
+ do
+ this
+with.
+ Like
+ why
+ do
+ we
+ qualify
+ ourselves
+by
+ the
+ languages
+ we
+ know?
+ I
+ used
+ to
+think
+ this
+ was
+ a
+ junior
+ thing.
+ Like
+ I
+can't
+ tell
+ you
+ how
+ many
+ times
+ I
+had
+ a
+ junior
+ engineer
+ I
+ was
+ talking
+ to.
+I was
+ like,
+ "Oh,
+ you're
+ a
+ coder.
+ What
+languages
+ do
+ you
+ write?
+ I
+ write
+JavaScript."
+ I
+ thought
+ this
+ was
+ a
+ junior
+problem.
+ But
+ then
+ you
+ talk
+ to
+ senior
+engineers,
+ they're
+ like,
+ "Oh,
+ he
+writes
+JavaScript.
+ He's
+ not
+ a
+ real
+ developer.
+We
+ care
+ too
+ much.
+ We
+ pride
+ ourselves
+ in
+these
+ things.
+ They're
+ our
+ identity.
+These
+ weird
+ facts,
+ these
+ weird
+ choices,
+these
+ things
+ that
+ feel
+ essential
+just
+ don't
+ matter
+ that
+ much
+ anymore."
+And
+ they
+ didn't
+ then.
+ and
+ they
+ matter
+less
+ now.
+ We
+ got
+ away
+ with
+ it
+ because
+ it
+was
+ so
+ hard
+ to
+ find
+ engineers
+ that
+ we
+could
+ just
+ tell
+ the
+ company
+ what
+ we
+ were
+doing
+ and
+ they
+ couldn't
+ really
+ say
+ no
+because
+ the
+ alternative
+ is
+ spend
+ six
+months
+ trying
+ to
+ hire
+ someone
+ else.
+They're
+ not
+ going
+ to
+ do
+ that.
+And
+ along
+ that
+ note,
+ why
+ are
+ we
+ so
+scared
+ of
+ deleting
+ code?
+ I
+ cannot
+ tell
+you
+ how
+ many
+ times
+ I've
+ been
+ in
+ a
+conversation
+ with
+ someone
+ where
+ the
+solution
+ is
+ to
+ just
+ delete
+ it
+ and
+ reset.
+But
+ we
+ have
+ such
+ a
+ bad
+ sunk
+ cost
+ mindset
+in
+ this
+industry.
+ We
+ care
+ so
+ much
+ about
+the
+ code
+ we
+ wrote
+ and
+ we
+ care
+ so
+ much
+ about
+it
+ still
+ being
+ there
+ that
+ I
+ feel
+bad
+ working
+ with
+ my
+ team
+ sometimes
+ when
+somebody
+ files
+ a
+ PR
+ that
+ isn't
+ quite
+ the
+right
+ solution
+ but
+ they
+ spent
+ a
+ week
+ or
+two
+ on
+ it.
+ Like
+ who
+ here
+ has
+ guilt
+merged
+ a
+ PR
+ before
+ where
+ you
+ just
+ felt
+bad
+ because
+ somebody
+ put
+ a
+ lot
+ of
+ work
+in.
+ It's
+ not
+ quite
+ the
+ right
+ thing
+ but
+you
+ merge
+ it
+ anyways
+ because
+ the
+alternative
+ was
+ a
+ conversation
+ you
+didn't
+ want
+ to
+ have.
+Why
+ do
+ we
+ do
+ this
+ to
+ ourselves?
+ One
+ of
+the
+ nice
+ things
+ about
+ agents
+ you
+ don't
+have
+ to
+ feel
+ bad
+ when
+ you
+ shut
+ down
+their
+ work.
+But
+ we
+ we
+ just
+ care
+ too
+ much
+ is
+ the
+point
+ I'm
+ trying
+ to
+ make.
+ And
+ the
+ things
+we
+ care
+ about
+ are
+ not
+ necessarily
+ the
+things
+ that
+ matter
+ anymore.
+ And
+ I
+ hope
+we
+ can
+ finally
+ start
+ to
+ challenge
+some
+of
+ these.
+ Going
+ to
+ get
+ a
+ little
+ more
+personal
+ here
+ by
+ showing
+ some
+ of
+ the
+ideas
+ I've
+ built
+ because
+ the
+ goal
+ here
+is
+ that
+ when
+ you
+ guys
+ go
+ out
+ of
+ this
+talk,
+ you
+ have
+ a
+ better
+ mindset
+ for
+coming
+ up
+ with
+ ideas
+ that
+ make
+ sense
+ now
+by
+ rejecting
+ the
+ things
+ that
+ made
+sense
+before.
+
+</details>
+
+### 级次滑移与“Markdown层”：重新定义项目边界
+
+在AI能力的加持下，软件项目的边界和开发成本模型发生了颠覆性的**级次滑移**（Tier Shift: 技术进步导致项目开发门槛整体下降、各层级研发成本向下滑动一级的现象）。在传统的开发维度中，项目通常被划分为三个层级：底层的“业余项目”（如作者在2021年开发的OBS直播协作工具**Ping**）、中层的“创业公司”（如集成了身份验证与数据库的**全栈云平台**），以及顶层的“过于庞大而无法实现的目标”。然而现在，所有的层级都向下滑动了一级：曾经需要多名工程师研发数月的创业公司级产品，如今已缩水为单人即可搞定的业余项目。
+
+更具革命性的是，金字塔的最底层诞生了一个全新的**Markdown执行层**（Markdown Tier: 将自然语言Markdown文件作为可执行脚本，通过大模型及定时任务直接运行复杂业务逻辑的轻量化架构）。在今天，许多初创公司的完整核心业务逻辑，其本质上完全可以用一个简单的Markdown文件来表达。通过将Markdown文件直接作为指令管道，输送给大语言模型进行解析并挂载到定时任务（Cron Job）中，就能实现复杂的自动化工作流。例如，一个用于审查GitHub代码仓库中所有PR并根据AI意见进行优先级排序的日常分析系统，不再需要编写数百行后端代码，而只需在Markdown中声明任务要求，设定每天早上九点运行，最终自动生成静态HTML并推送到**Amazon S3**生成访问链接。这种基于文档即代码（Doc-as-Code）的极简工程模式，正在以难以置信的速度重构自动化软件的定义。
+
+至于金字塔最顶端那个“大到无法想象”的空缺，目前依然是一个谜。这意味着对于个人和小型团队而言，技术的上限已经被无限拓宽，我们必须不断向更深处探索，才能找到这个时代的真正极限。
+
+<details>
+<summary>Original English Source</summary>
+
+These
+ are
+ three
+ of
+ the
+ things
+ that
+ I
+ have
+built
+ or
+ currently
+ working
+ on.
+We're
+ going
+ to
+ go
+ from
+ the
+ bottom
+updator
+with
+ it
+ was
+ called
+ Ping.
+ I
+ wanted
+ to
+make
+ it
+ easier
+ for
+ live
+ content
+ creators
+to
+ do
+ high
+ quality
+ collaborations
+ in
+ the
+software
+ they
+ already
+ used.
+ OBS
+ the
+ full
+stack
+ cloud
+ is
+ let's
+ just
+ imagine
+ versel
+but
+ it
+ goes
+ further
+ each
+ direction.
+ They
+have
+ off
+ built
+ in
+ but
+ they
+ also
+ have
+databases
+ built
+ in.
+ These
+ are
+ all
+ things
+that
+ I
+ benefit
+ from
+ existing
+so
+ that
+ I
+built
+ in
+ 2021.
+ The
+ top
+ one
+ I'm
+ working
+on
+ right
+ now.
+These
+ are
+ also
+ kind
+ of
+ tiers,
+ different
+levels
+ that
+ we
+ can
+ build
+ at.
+ If
+ I
+ was
+ to
+try
+ and
+ categorize
+ them,
+ I
+ would
+ call
+the
+ bottom
+ one
+ side
+ project,
+ call
+ the
+middle
+ one
+ startup,
+ and
+ call
+ the
+ top
+ one
+too
+ big.
+ It
+ just
+ doesn't
+ make
+ sense.
+Well,
+ this
+ is
+ how
+ I
+ would
+ have
+categorized
+ this
+ even
+ just
+ a
+ year
+ ago.
+But
+ things
+ have
+ changed.
+ Now
+ the
+ models
+are
+ bigger.
+ The
+ tiers
+ have
+ shifted.
+Everything
+ is
+ now
+ one
+ tier
+ lower.
+And
+ this
+ is
+ a
+ crazy
+ thing
+ for
+ me
+ to
+process.
+ The
+ fact
+ that
+ what
+ used
+ to
+ be
+ a
+startup
+ is
+ now
+ a
+ side
+ project.
+ In
+ fact,
+some
+ of
+ the
+ startups
+ I've
+ talked
+ to,
+even
+ at
+ an
+ event
+ like
+ this,
+ their
+ whole
+startup
+ could
+ have
+ arguably
+ been
+ a
+ side
+project
+ or
+ this
+ bottom
+ tier,
+ which
+there's
+ a
+ weird
+ gap
+ there.
+ What's
+ that?
+It's
+ the
+ G-rain
+ tier.
+ It's
+ a
+ markdown
+file.
+ Do
+ you
+ know
+ how
+ many
+ companies
+ are
+at
+ this
+ event
+ where
+ their
+ whole
+ product
+could
+ just
+ be
+ a
+ markdown
+ file?
+It's
+ insane.
+>> [applause]
+>> And
+ like,
+ okay,
+ seriously
+ though,
+ the
+fact
+ that
+ you
+ can
+ now
+ execute
+ markdown
+by
+ just
+ piping
+ it
+ to
+ codeex
+ or
+ claude
+ is
+unbelievable.
+ And
+ I
+ think
+ most
+ of
+ us
+haven't
+ fully
+ appreciated
+ how
+ insane
+that
+ is.
+ I
+ had
+ a
+ service
+ that
+ would
+triage
+ all
+ of
+ my
+ PRs,
+ have
+ them
+ all
+ get
+reviewed
+ with
+ AI,
+ and
+ then
+ help
+ me
+prioritize.
+ That
+ service
+ is
+ a
+ markdown
+file.
+ Now,
+ I
+ just
+ literally
+ wrote
+ like
+go
+ to
+ these
+ four
+ GitHub
+ repos,
+ look
+ at
+all
+ the
+ open
+ PRs,
+ figure
+ out
+ what
+ the
+current
+ status
+ of
+ the
+ work
+ is,
+ and
+ then
+help
+ me
+ prioritize
+ it.
+ And
+ then
+ when
+you're
+ done,
+ go
+ update
+ the
+ static
+ HTML
+file
+ and
+ send
+ it
+ to
+ S3
+ and
+ give
+ me
+ the
+URL.
+ And
+ every
+ morning
+ at
+ 9:00
+ a.m.,
+this
+ runs
+ on
+ a
+ cron.
+ And
+ around
+ 9:15
+ to
+9:20,
+ my
+ markdown
+ file
+ generates
+ me
+my
+work
+ for
+ the
+ day.
+can
+ exist
+ that
+ are
+ literally
+ just
+ a
+markdown
+ file
+ running
+ on
+ a
+ chrome.
+ But
+what
+ about
+ Okay,
+ two
+ more
+ things
+ I
+ want
+to
+ change
+ about
+ this
+ though.
+ First
+ is
+the
+ full
+ stack
+ cloud.
+ This
+ is
+ mine.
+Don't
+ do
+ it.
+ Like
+ bid
+ coming
+ soon.
+ Very
+excited.
+ I
+ wouldn't
+ want
+ to
+ compete
+ with
+me
+ on
+ this
+ one.
+ Trust
+ me,
+ it's
+ going
+ to
+be
+ really
+ cool.
+ But
+ there's
+ still
+something
+ else.
+ There's
+ a
+ gap
+ here.
+ And
+I'm
+ going
+ to
+ be
+ real
+ with
+ you
+ guys.
+ I
+don't
+ know
+ what
+ goes
+ in
+ this
+ gap.
+ I
+don't
+ know
+ what
+ too
+ big
+ means
+ anymore.
+Is
+ it
+ training
+ your
+ own
+ model
+ from
+scratch?
+ Is
+ it
+ building
+ your
+ own
+operating
+ system?
+ Is
+ it
+ trying
+ to
+compete
+ with
+ npm
+ and
+ node
+ directly?
+ I
+don't
+ know.
+ I
+ don't
+ know
+ what
+ too
+ big
+ is
+right
+ now.
+ And
+ that's
+ scary,
+ but
+ it's
+also
+ exciting.
+ It
+ means
+ I
+ need
+ to
+ keep
+pushing
+ myself
+ to
+ go
+ bigger
+ than
+ makes
+sense
+in
+ order
+ to
+ find
+ these
+ limits.
+ But
+what
+ does
+ that
+ even
+ mean?
+ What
+ does
+ it
+ mean
+to
+ think
+ bigger
+ in
+ this
+ scenario?
+
+</details>
+
+### 范围化竞争的崛起：挑战Slack、AWS与Salesforce
+
+长久以来，业界普遍认为初创公司应当避开巨头的宽广产品线，选择在特定细分领域做深做透。例如，**Vercel**并不试图覆盖**AWS**的所有领域，而是专注于在全栈前端服务器这一垂直象限提供极其精细的**深度特征**（Depth: 针对特定垂直领域提供极其专业、精细的功能设计）。因为在过去，想要在广度上与拥有数千名工程师的巨头竞争无异于以卵击石。
+
+然而，AI彻底打破了这一广度维度的垄断。如今，在业务覆盖广度上的**范围化竞争**（Range-based Competition: 借助大模型快速低成本地覆盖多个业务板块与水平维度的竞争策略）已经成为现实。凭借强大的提示词工程与模型理解力，一个开发者可以在一两天内为自身产品集成一个可用的数据库平台，并在产品广度上快速扩张。只要系统底层架构设计得当，即使在某些特定功能上存在缺失，用户也完全有能力利用AI工具自行开发补齐。正如**Slack**并非最完美的协作工具，但因其恰到好处的架构平台化和**Slackbot API**的易拓展性，使得用户可以非常方便地在其中部署各种AI智能体。现在的我们必须转换思维：不再追求单一功能的无限深耕，而是大胆地去挑战**Salesforce**、Slack乃至重构整个AWS服务。当前的开发上限早已不复存在，我们需要不断推进自身极限，去探索新秩序的边界。
+
+<details>
+<summary>Original English Source</summary>
+
+I
+ would
+ argue
+ that
+ bigger
+ is
+ probably
+the
+ wrong
+ word
+ for
+ most
+ of
+wider
+spectrum.
+ And
+ I'm
+ sorry
+ I
+ have
+ to
+ do
+ a
+diagram.
+ If
+ you
+ watch
+ my
+ videos,
+ you
+understand
+the
+ range
+ of
+ things
+ that
+ your
+ software
+covers
+ and
+ the
+ depth
+ is
+ the
+ number
+ of
+features
+ in
+ a
+ given
+ area.
+ Let's
+ look
+ at
+a
+ company
+ like
+ Versell.
+ Verscell
+ does
+not
+ offer
+ all
+ of
+ the
+ features
+ that
+ AWS
+does.
+ They
+ never
+ will.
+ It
+ doesn't
+ make
+sense.
+ But
+ Versell
+ offers
+ deep
+ but
+Versel
+ offers
+ deeper
+ features
+ in
+ the
+space
+ they're
+ in,
+ which
+ is
+ full
+ stack
+front-endleaning
+ servers.
+ If
+ you're
+ a
+front-end
+ developer
+ and
+ you're
+ not
+ using
+Verscell,
+ you're
+ feeling
+ some
+ amount
+ of
+pain
+ because
+ they're
+ just
+ further
+ ahead
+with
+ this.
+ So
+ much
+ so
+ that
+ even
+ the
+agents
+ prefer
+ it.
+ And
+ this
+ was
+ kind
+ of
+ how
+ you
+ had
+ to
+ build
+ your
+ startups.
+Because
+ if
+ you
+ were
+ competing
+ with
+ a
+company
+ like
+ AWS,
+ you're
+ never
+ going
+ to
+have
+ all
+ of
+ the
+ features
+ they
+ have.
+You're
+ never
+ going
+ to
+ cover
+ the
+ range
+that
+ they
+ cover.
+ And
+ it
+ made
+ no
+ sense
+ to
+try
+ because
+ you
+ don't
+ have
+ the
+ thousands
+of
+ engineers
+ they
+ do
+ doing
+ that.
+At least
+ you
+ didn't.
+But
+ now
+ things
+ have
+ changed.
+ All
+ of
+ a
+sudden
+ that
+ range
+ is
+ viable
+ in
+ a
+ way
+that
+ it
+ never
+ was
+ before.
+ I'm
+ not
+ saying
+you
+ can
+ build
+ something
+ as
+ reliable
+ as
+RDS.
+ I'm
+ saying
+ that
+ you
+ can
+ build
+ a
+database
+ platform
+ into
+ your
+ product
+ in
+ a
+day
+ or
+ two
+ of
+ work
+ with
+ enough
+ prompting
+and
+ enough
+ effort.
+ And
+ if
+ you
+ build
+ your
+stuff
+ right,
+ if
+ you
+ play
+ your
+cards
+ correctly
+ and
+ you
+ think
+ about
+ things
+ the
+right
+ way,
+ you'll
+ realize
+ that
+ you
+ can
+build
+ enough
+ across
+ a
+ spectrum
+ of
+ things
+you
+ care
+ about
+ to
+ enable
+ most
+ users
+ to
+at least
+ start
+ trying
+ the
+ thing.
+ And
+when
+ they
+ have
+ features
+ they
+ need
+ in
+ a
+given
+ vertical
+ that
+ you
+ don't
+ support,
+it's
+ not
+ your
+ problem
+ as
+ long
+ as
+ you
+build
+ it
+ right
+ because
+ they
+ can
+ build
+the
+ features
+ that
+ are
+ missing
+themselves.
+ If
+ you
+ architect
+ your
+systems
+ and
+ you
+ architect
+ your
+ products
+in
+ such
+ a
+ way
+ that
+ users
+ can
+ do
+ things
+that
+ they
+ you
+ never
+ would
+ have
+ guessed
+like
+ Slack
+ accidentally
+ did
+ this
+ because
+Slack
+ is
+ now
+ the
+ platform
+ people
+ run
+their
+ agents
+ in
+ half
+ the
+ time
+ which
+ is
+crazy.
+ Slack
+ sucks.
+ It's
+ not
+ a
+ good
+product,
+ but
+ it's
+ the
+ right
+ shape
+ for
+people
+ to
+ build
+ the
+ features
+ they
+ want
+into
+ it
+ through
+ the
+ somewhat
+ functional
+Slackbot
+ API.
+This
+ is
+ all
+ crazy
+ because
+ I'm
+ basically
+sitting
+ here
+ telling
+ you
+ like
+ it's
+ time
+to
+ compete
+ with
+ Slack.
+ It's
+ time
+ to
+build
+ your
+ own
+ AWS.
+ It's
+ time
+ to
+challenge
+ Salesforce
+ directly.
+Not
+ big
+ enough.
+I
+ think
+ that's
+ all
+ I
+ have
+ to
+ say.
+ Thank
+you
+ so
+ much.
+ AIE
+
+</details>

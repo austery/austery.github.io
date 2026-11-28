@@ -1,0 +1,3180 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clay 创始人分享其在 GTM 工程与 AI 智能体方面的产品逻辑与技术挑战</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">Clay 创始人分享其在 GTM 工程与 AI 智能体方面的产品逻辑与技术挑战</span>
+      <span data-pagefind-meta="speaker" style="display:none;">Latent Space</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>Latent Space</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-26</span>
+    
+
+    <header class="article-header">
+      
+      <h1>Clay 创始人分享其在 GTM 工程与 AI 智能体方面的产品逻辑与技术挑战</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <span class="tag-pill tag-pill--no-page">gtm-engineering</span>
+      
+        <a class="tag-link" href="/tags/software-architecture/">software-architecture</a>
+      
+        <a class="tag-link" href="/tags/model-evaluation/">model-evaluation</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Clay 的 AI 负责人 Jeff 介绍了公司如何将“增长”视为一种创意工作，并定义了“GTM 工程师”这一概念。他分享了在构建基于 CLI 的编码智能体（Sculptor）过程中遇到的挑战，包括模型在处理复杂轨迹时的局限性，以及团队如何通过手动编写技能和建立评估体系来优化智能体性能。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/latent-space/">Latent Space</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=qjPcaZf_plo" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-26T00:00:00.000Z">2026-11-26</time></dd></div>
+        </dl>
+      </div>
+      
+
+    </header>
+    <div class="article-body"><!-- chunk 1/2 -->
+<p>我们有一个包含4000万家公司的公司数据集。你可以想象这样提一个问题："这个客户是否适合我的产品或服务？"然后对全世界每一家公司都跑一遍，我想大概要花1500美元左右。我们的用户讨厌我们的模型选择器。我觉得大多数客户都不想看到它。他们一看到就会不高兴。我们明确不希望我们的智能体明显优于直接使用 Clay 加 Claude Code。我们当时在做一项分析，看有多少 YC 公司在使用 Clay。我们直接问了我们的智能体，它大约60秒就找到了。我当时在想，一年前这要花多少时间。看了很多智能体轨迹之后，有一点是：模型仍然有点笨。它们会用相同的输入反复尝试 CLI 命令，而且不会纠正。我们是 ChatGPT 应用的首批发布合作伙伴之一，大概投入了工程团队25%的人力，持续一个月。我想在我们原定发布的前两天，他们说要无限期推迟。我们请到了 Clay 的 Jeff Lar。你是 AI 负责人。能否请你介绍一下自己和公司业务？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+We have a a company data set of 40 million companies. You can imagine just asking a question like is this customer a good fit for my product or service and you could run that across every company in the world and it comes out to I think around 1,500 bucks. Our users hate our model selector. I think most most customers like don't want to see it. Like they're upset when they see it. We explicitly don't want our agent to be marketkedly better than just using clay and cloud code. We were doing some analysis on just how many YC companies are using clay. We just asked our agent for this [music] and it found it in like 60 seconds. I was just thinking like a year ago this would have taken so much time from looking through so many agent traces is one like the models are still kind of dumb. Trying CLI commands with the same inputs over and over again and just not correcting them. We were one of the launch partners for chatbt apps [music] probably 25% of the engineering team for a month. I think 2 days before we were supposed to launch they were like we're going to postpone this indefinitely. We have Jeff Lar here from Clay. Um, you are the head of AI. Could you maybe introduce yourself and the business?
+</details>
+<blockquote>
+<blockquote>
+<p>好的，当然。首先谢谢邀请。我是 Jeff，在 Clay 大约两年了。我们喜欢把 Clay 看作一个面向增长的创意工具。具体来说，我们帮人们建立公司和联系人名单，用于开拓客户、获取客户，或者为他们的业务找到新的优质客户。我们用智能体和其他数据提供商来帮助筛选这些名单，基本上就是添加数据点，比如收入或融资金额、谁是 CEO、他们有哪些办公地点，然后用这些来过滤，找出他们最好的客户是谁。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, absolutely. Well, first, thanks thanks for having me. So, yeah, I'm I'm Jeff. Uh, I've been at Clay for about 2 years. And Clay, we like to think of ourselves as a creative tool for growth. And so, really what that means is we help people build lists of companies and contacts um for the purpose of prospecting or getting customers or finding, you know, new and great customers for their business. Um, so we help qualify those lists using agents and other data providers to basically, you know, add data points like the amount of revenue or funding they've gotten or who their CEO is or different locations that they have and use that to basically filter down to figure out who their best customers um who their best customers are.
+</details>
+<blockquote>
+<blockquote>
+<p>对于在 YouTube 上观看的观众，不知为何你们真的和这个电子表格紧密绑定在一起。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh, for those watching on YouTube, you are actually really identified with this spreadsheet for some reason.
+</details>
+<blockquote>
+<blockquote>
+<p>我和其他 AI 构建者谈到电子表格这种形态时，他们通常会把 Clay 作为成功的例子。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; When I talk about when I talk about like the spreadsheet form factor with other AI builders, they usually point to Clay as the the success example.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。挺有意思的。Clay 七年前起步时，其实是电子表格里的一个低代码工具，所以这很合理。我们已经做了很久，确实是在那个电子表格的基础上发展起来的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. Uh, and yeah, it's funny. I mean, Clay started seven years ago really as a low code tool in the spreadsheet. So, it makes a lot of sense. Uh, you know, we've been around for a while and really have built up on on that spreadsheet. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>另外我也要指出，你说它是个创意的东西。这里没有任何创意可言，上面写的是构建增长收入的系统。这听起来更像是：赚钱吧。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh, and then I'll also identify you said you it's a creative something. There's nothing nothing creative here. It says build systems to grow revenue. That's that sounds a lot more like Yeah. Like let's make money.
+</details>
+<blockquote>
+<blockquote>
+<p>所以很有创意。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So creative.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。其实，跟我们讲两秒钟，你们为什么总是这么开朗，而且不低调？Clay 的品牌塑造真的很到位。我确实认为，把进入市场（go to market）视为一种创意工作是核心论点的一部分。我觉得我们的竞争对手似乎都不相信这一点，也没有尝试这样做。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Actually, like let's give us give us two set two uh seconds on like what why are you guys always so cheery and uh not noticeable like like Clay's branding is like really on point. Well, I do think it's it's a core part of the thesis um that go to market really is a creative endeavor. And I don't know, I think like actually none of our competitors really seem to believe that or or try to do that.
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得这增添了一种氛围，帮助我们建立起这样一个社区，里面的人会尝试各种很酷、很有创意的做法来发展他们的公司。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And I think it just um you know adds to the ethos is like I think it it helps us build you know this community of people who I don't know try really cool and creative stuff to grow their companies. So
+</details>
+<blockquote>
+<blockquote>
+<p>顺便问一下，你们一开始就是这样吗？这个业务一直是这样的吗？我觉得我们一直花很多时间思考品牌，以及我们如何呈现自己。但不是，我们是后来才真正聚焦到 go to market 的。这是在我加入公司之前，大约三年前，我们当时在决定，是该聚焦招聘，还是聚焦 go to market。我们选择聚焦 go to market，然后在那里加倍投入。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; did you guys start that way by the way like the business was always this? I think we've always spent a lot of time thinking about brand and how, you know, we present. Um, but no, like we we we really narrowed in on go to market. Um, this was before I joined the company, but I think around 3 years ago, we really focused in on we were deciding like, oh, should we focus on recruiting or should we focus on go to market? Focus on go to market and then, you know, really double down there.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。原因是什么？只是一个论点吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. What was the reason for that? Just like a thesis.
+</details>
+<blockquote>
+<blockquote>
+<p>这里有一张不错的历史图表。我不知道它播放什么，不过</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um, there's this like little nice history chart. Uh, I don't know what this plays, but
+</details>
+<blockquote>
+<blockquote>
+<p>是的。[笑]是的。我也不知道。我是说，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. [laughter] Yeah. Yeah. I mean, I I don't know. I mean,
+</details>
+<blockquote>
+<blockquote>
+<p>在这开始的五年里，可能经历了很多演变，不过</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; there was probably a lot of evolution in the in the 5 years that that this started, but
+</details>
+<blockquote>
+<blockquote>
+<p>我们一开始用很多不同的方式来思考这家公司、这门生意，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; um you know, we really started with a bunch of different kind of ways to think about the company or think about the business,
+</details>
+<blockquote>
+<blockquote>
+<p>但起初非常横向，后来我们就是想聚焦到单一的用户画像上。这帮助我们构建出了最终让 Clay 成功的东西。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; but it started very horizontal and then I think we just really wanted to focus in on kind of a singular persona. Um and that helped us sort of build the things that ended up, you know, really making Clay successful.
+</details>
+<blockquote>
+<blockquote>
+<p>很好。我觉得很多人跟我说起 Clay，说它和我发展 Latent Space 和 AIE 的方式有很多相似之处，因为我识别出了市场中的一个细分群体，我称之为 AI 工程师，并且专注于服务他们。你们现在基本上与 GTM 工程师同义。能描述一下那是什么吗？我觉得这是我和 Basil 上这个播客很有意思的原因之一：Basil 关注 FTE，你们关注 GTME，我关注 AIE。我们确实把这个词打造成了品牌：go to market 工程师。想法是，比如在 2010 年代，公司花了很多时间试图建立销售管线，或者通过投入更多人手来发展公司。你大概可以用工程的方式解决很多这类问题，你大概真的可以构建系统来为你寻找客户。我觉得这与 LLM 以及后 ChatGPT 时代恰好重合：你真的可以让智能体去爬取网络，或者筛选客户，基本上是运用判断力，以那样的规模去寻找潜在客户。所以，你有了这样一个多重因素汇合的局面：有了能够有效筛选或给账户打分的新系统，加上该领域持续走向自动化的趋势，我们看到越来越多的人在工程化地构建 go to market 系统，于是我们尝试围绕它打造这个词的品牌。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Cool. I think you know the thing that a lot of people tell me about clay uh is that there's a lot of parallels with how I grew lat space and AIE because I identified this sort of segment of the market called that I call the AI engineer and I really focus on serving them and you guys are basically synonymous with the GTM engineer now can you describe what that is you know I think this is one of the reasons why it's interesting for Basil and I to be on this pod because Basil is focusing on the FTE you guys are on the GTME and I'm on the AIE you know we really branded this term the good market engineer and the idea was just um companies in let's say the 2010s really spent a lot of time trying to build pipeline or trying to you know grow their companies through just throwing more people at the problem you can probably just engineer a lot of these problems like you can probably actually build systems to find customers for you and I think this kind of coincided with LLM and you know the post chatbt era where you could actually have agents go and crawl the web or you know qualify customers and basically exert judgment agement um for finding potential customers in a scale that way. And so, you know, you kind of had this confluence of things where you had these new systems that could effectively qualify or, you know, score accounts for you and just kind of a continued trend towards automation in the space and we were seeing more people basically engineering go to market systems and tried to, you know, brand that term around it.
+</details>
+<blockquote>
+<blockquote>
+<p>在此之前，做这件事的人担任什么角色？我相信人们尝试这样做已经很久了，但我觉得，如果你想想 go to market 工程涉及的不同学科，可能有一些智能体工程，要弄清楚如何写出最好的提示词来真正筛选某个对象。所以实际上是在理解 LLM 系统。可能还有一些数据工程，你确实在构建一堆名单，转换它们，丰富它们，过滤，并在其上建立不同的视图。还有常规的软件工程，比如，当有人在你的网站上填写联系表单时，系统大概会调研那家公司，然后也许把它发给销售代表，或发给一个外联活动。所有这些事情都只是传统的软件工程。我觉得这个职能的老名字可能是营销工程师、运营人员，我可能还听说过，软件工程师可能是其中一部分，增长工程师也可能是一部分。但增长也许更偏营销，而你们更偏销售，对吗？是的，我觉得这个职能以前大概会归入收入运营（revenue operations），那大概就是它所属的范畴，而且直到今天我们仍然向收入运营团队销售，但我觉得它作为一门学科有些独特，我会说它相当新。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; What was the role of a person doing that before? I'm sure people have tried to do this for a long time, but I I think it's sort of, you know, if you were to think about the different disciplines that go into good to market engineering, it's probably some agent engineering to figure out how to write the best prompts to actually qualify something, right? So, it's actually, you know, understanding LLM systems. There's probably some data engineering in there, right? Like you're actually building a bunch of lists, you're transforming them, you're enriching them, you're filtering down and building different views on top of that. And there's sort of just regular software engineering built in there, too, right? you're, I don't know, actually orchestrating systems that when someone fills out a get in touch form on your website, probably research that company and then maybe like send it to a rep or send it to an outbound campaign, right? All these sort of things that are kind of just traditional software engineering. Yeah, I think the old school name for this might be marketing engineer, ops person, I may even heard of it, software engineer might be part of it, but a growth engineer might as well be a part of it. But growth maybe is more focused on marketing and yours is more sales, right? Yeah, I I think probably like this function would have fallen into revenue operations like that's probably the bucket of things and still today we sell into re revenue operations teams but yeah I think it's it's somewhat distinct as a discipline like I'd say it's it's pretty new.
+</details>
+<blockquote>
+<blockquote>
+<p>成功的 go to market 工程师通常有什么样的背景？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; What kinds of backgrounds do successful go to market engineers to NAV?
+</details>
+<blockquote>
+<blockquote>
+<p>哦，各种各样都有。我们看到很多传统软件工程师转入这个角色，这挺有意思的，他们是从非常第一性原理的软件工程角度来处理问题。也有雄心勃勃的 RevOps 人员成长到这个角色。所以我们看到各个方向的人都转入了这个岗位。我觉得，没做过这份工作的人通常没有意识到的一点是，这里基本上有大量的数据挖掘、实体解析，还有一点知识图谱，也许你可以谈谈，就是为了给人们获取所有这些用于开拓客户的名单。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Oh man, it's pretty uh it's pretty across the board. Uh I think we've seen a lot of actually a lot of traditional software engineers move into the role and so that's been pretty interesting to see is like actually just people approaching the problem from like very kind of first principles software engineering uh standpoints. Um definitely like ambitious RevOps folks have grown into the role as well. So we've kind of seen like all different directions of people move into it. Yeah. I think you know one of the things that people who have never done this job before don't really appreciate is that basically there is a lot of data mining and entity resolution and a little bit of knowledge grass maybe you can talk about that uh just to get all this kind of lists for people just for prospecting.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>我不确定，可能还有开拓客户以外的用例。显然，名单是非常强大的东西，它结合了大量信息，多家价值数百亿美元的公司就是靠做一个数据库创建起来的，而这个数据库会输入到 Clay。我的典型例子比如 ZoomInfo 或 RocketReach，你听说过所有这些需要数据丰富的东西：我有一个邮箱，这就是我手里的全部信息，然后问，好，他们在哪家公司工作？公司规模多大？他们是不是买家？他们是不是刚换了公司？我不知道还有什么其他相关细节。当然，Clay 处于市场之中。我们与许多不同的数据提供商和合作伙伴合作。非常多的</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um I'm not sure like I think there's probably other use case other than prospecting. Obviously a list is a very powerful thing that actually combines a lot of information like multiple tens of billions of dollar companies are created just as a database that feeds into clay right uh so like my canonical examples like zoom info like or rocket reach like you've you've heard of all these things where you need enrichment from like I have an email that's all I have to like okay what company do they work at what size what size is that company like are they the buyer did they just move companies like I don't know what other details are relevant there you know definitely clay We're we're clay sits in the market. We work with a bunch of different data providers and and partners. So many um
+</details>
+<blockquote>
+<blockquote>
+<p>具体数字我不确定，但肯定是数百家，而且作为一个平台它非常灵活。回到其他竞争对手，或者过去试图构建销售工具的不同的人，我觉得很多人尝试做单点解决方案，而 Clay 非常通用，对吧？就像你说的，你可以用名单构建很多东西，我们见过人们在 Clay 里构建出疯狂的东西，这是有意图的。这也带来了一系列权衡。非常灵活意味着有很多出错的方式，你可以用很多不同的方式构建出不按预期工作的系统，但它会变得非常强大。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I number but you know in the hundreds uh in the hundreds for sure and it's really flexible as a platform. Like if I think about kind of again back to like other competitors or different people who have tried to build sales tools in the past.
+&gt;&gt; Um I think a lot of people try to build point solutions and clay is like really generic, right? Like to your point, you can build a lot of stuff with lists and we've seen people build crazy things in clay and that's intentional, right? And that comes with a bunch of trade-offs. I think it's being very flexible means there's a lot of ways that you can make mistakes. There's a lot of different ways that you can, you know, build systems that that don't work as you'd expect, but it it becomes really powerful.
+</details>
+<h3 id="从-avenue-到-clay" data-reading-heading="">从 Avenue 到 Clay</h3>
+<blockquote>
+<blockquote>
+<p>我们能否退一步，回到你创办 Avenue 的时候，然后谈谈这如何引导你加入 Clay？你能简单描述一下 Avenue 吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Can we take a step back to when you started Avenue and then maybe like how that led you to joining Clay? So, yeah. Could you describe Avenue a little bit?
+</details>
+<blockquote>
+<blockquote>
+<p>我是通过收购我之前的公司 Avenue 加入 Clay 的，那是我和一位高中朋友共同创办的公司。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So, I I joined Clay through the acquisition of my previous company uh Avenue, which was a company I co-founded with a friend of mine from high school
+</details>
+<blockquote>
+<blockquote>
+<p>把它放到屏幕上。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; in it up on screen.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，网站还在。Avenue 是我们大概在 2020 年初创办的公司。我和一位高中朋友一起做的。我们其实在初中和高中时就一起做应用，所以我们在当年 iPad 商店最早的 500 个 iPad 应用里有一款。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. The website's still up. Yeah. So, so Avenue was a company uh we started in uh I think early 2020. And Avenue, you So, I built this with a friend of mine from high school. We actually had been building apps together back in middle school and high school. So, we had one of the first 500 iPad apps on the iPad store back in the day. And
+</details>
+<blockquote>
+<blockquote>
+<p>不错。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; nice.
+</details>
+<blockquote>
+<blockquote>
+<p>所以我们一直在琢磨各种想法。我的联合创始人在 Uber 工作过，我毕业后在 Amazon 工作，我们都想一起创办点什么，也都有这样的想法：我们在非常不同的领域处理不同类型的运营问题，但似乎合理的是，这些市场运营团队其实和工程团队一样需要可观测性解决方案。所以，甚至可以说，贯穿到 Clay 的主线是，我们当时试图把很多工程最佳原则带给运营团队。我们做了大约四年半。我们参加了 YC，拿了 Excel 的投资。我们卖给了一批很棒的公司，比如 Ramp、Angelus、Valon、Door Dash。都是很酷、很有意思的客户。到了 24 年底，业务增长得相当不错。我们通过一个共同的联系人认识了 Kareem 和 Verun。但当时有其他一些业内玩家找过我们，我会说是一些数据工程公司，他们一直有兴趣收购我们的业务。所以我们当时的心态是：我们可以融 A 轮。我们对业务增长相当兴奋，但并不确定，我们不知道这是否会成为我们创业之初想要达到的十亿美元级别的结果。于是我们想，也许应该加入一家已经有更多发展势头的大公司。结果就是真的和 Kareem、Verun 很投缘。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So, we'd always been kind of tinkering on ideas and we my co-founder had worked at Uber, I worked at Amazon out of school and we' both wanted to start something together and both kind of had the idea of hey, we're kind of working on different types of ops problems in very different domains. Um, but kind of makes sense that actually these marketplace operations teams actually need observability solutions like engineering would. So almost like I'd say the through line even to Clay is there were a lot of kind of you know engineering best principles that we were trying to build to oper uh bring to operations teams and um but yeah so we we worked on this for about four and a half years. We went through YC, we raised from Excel. Um, we sold to a bunch of really cool companies like Ramp, Angelus, Valon, Door Dash. Um, you know, so some really cool and interesting customers to work with. And yeah, so you know, in late 24, we ended up uh, you know, so the business was growing pretty well. We ended up meeting Kareem and Verun uh, through I think a mutual connection. Um, but at the time we had been approached by some other players in the space. some other um I'd say like data engineering companies and who'd always been interested in acquiring the business and so uh we were kind of in that mindset of like we could raise the series A. Um we're pretty excited about the business growth but weren't necessarily like we didn't know if like this was going to be then you know the billion dollar outcome that you know we were trying to to get to when we set out to to start the business. Um, and so then it was like, well, we should probably join up with a bigger company that already has more traction. And it ended up just really connecting with Kareem and Verun.
+</details>
+<blockquote>
+<blockquote>
+<p>所以他们那时已经有很多发展势头了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So they already had a lot of traction at that point.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I mean, I you know,
+</details>
+<blockquote>
+<blockquote>
+<p>顺便问一下，当时公司多大？抱歉。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; how big was the company by the way? Sorry.
+</details>
+<blockquote>
+<blockquote>
+<p>我想我们加入时他们正好是 50 个人。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It was I think we joined right as they were 50 people
+</details>
+<blockquote>
+<blockquote>
+<p>你们有多少人？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and you were how many?
+</details>
+<blockquote>
+<blockquote>
+<p>我们是五个人。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We were five.
+</details>
+<blockquote>
+<blockquote>
+<p>好，所以你们占了公司的 10%。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Okay. So you were like 10% of the company.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。我觉得我们低估了他们在我们身上下了多大的赌注。一天之内引入公司 10% 的人，这是个相当大的赌注。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I think I think we underappreciated how much of a bet they were taking on us. um like to bring in 10% of the company in just like one in one day is is kind of a Yeah, it's it's a pretty big bet.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得引入一个成型的团队很好，而且也许你们更偏自动化这一侧，你觉得相比最初的 Clay 团队，你们更突出的强项是什么？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think it's nice to bring in a scaled team and also perhaps like you guys were more on the automation side like what do you what do you think you spiked more versus the original Clay team?
+</details>
+<blockquote>
+<blockquote>
+<p>是的。首先，我们在构建非常稳健的系统方面很深入。我喜欢讲的故事是，Clay 当时非常专注于 PLG，而且把 PLG 的打法做到了极致。我们加入公司时，收入可能是 1500 万到 2000 万，但最大的合同其实很小。就是有非常多的公司发现了 Clay，注册了，并从平台中获得了价值。但他们还没有进入中端市场或企业销售。我认为这是我们在 Avenue 真正懂得怎么做的事情。Avenue 就是构建能够进入 Door Dash 和 Angel 这类规模更大的公司的系统。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I mean I I think one just we we're really deep in in building I don't know just like very robust systems. I think like maybe the the story I like to tell is like Clay was really focused on PLG and they had really nailed the PLG motion. So like we joined the company when it was maybe like 15 to 20 million in in revenue, but the biggest contract was was really small. Like we it was just like so many companies who had found Clay and had just you know signed up and you know ended up getting value out of the platform. Um but they hadn't really moved into mid-market or enterprise sales yet. And I think that was something that we we really knew how to do uh at at Avenue Avenue was hey build systems that could go into Door Dash and and Angel kind of more scaled outcome companies.
+</details>
+<blockquote>
+<blockquote>
+<p>你会说这是你从 Avenue 获得并应用到 Clay 的最大收获吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Would you say that was the I guess biggest learning that you took from Avenue and then applied it to Clay?
+</details>
+<blockquote>
+<blockquote>
+<p>我认为 Clay 做得非常好的一点，就是非常深入地聚焦于一个客户画像，比如 go to market 工程师。我觉得我们做的一切都是为了 go to market 工程师。而在 Avenue，我们有一些商业上的进展，但从未真正想清楚我们的核心客户是谁，我们横跨了几种不同的画像和不同的公司类型。所以我觉得 Clay 给我留下深刻印象的一点，就是对单一客户画像的专注程度。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; One of the things that I think Clay has done really well is focus really deeply on one customer persona like the good to market engineer. And I feel like everything we do is for the good to market engineer and I think at Avenue we you know we had some commercial traction but we never really figured out who our core customer was right like we were kind of across a couple of different personas like different company types and so I think one of the things that is really impressed about Clay is the amount of focus on the single customer persona.
+</details>
+<blockquote>
+<blockquote>
+<p>好。你们加入时，你的 90 天计划是什么？你能否描绘一下当时业务的状况，以及你们接下来六个月的计划是什么？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Okay. So you guys join like what was like what was your 90-day plan like like can you maybe like paint a picture of the business at that point and you like okay well what's the plan for the next six months?
+</details>
+<blockquote>
+<blockquote>
+<p>我们加入 Clay 时，我们想做的主要事情是：Clay 在静态名单上有很好的业务。比如你办了一场晚宴，想弄清楚来参加晚宴的人是否是你的好客户，你可以在 Clay 里做到，这在当时对他们是一门不错的生意。但如果你想构建收入系统（我想这现在是我们新的口号），比如某人换了工作，他们在上一家公司买了 Clay，也许会在下一家公司再买 Clay，也就是你想构建这类面向收入的在线系统，我们当时没有一个很好的系统来做这件事。所以我们帮助构建了他们最初的 signals 产品，效果就是这样：监控新员工入职，监控晋升之类的事件，任何我们能在市场中看到、你可能想据此采取行动并围绕它构建打法的事件。所以我们头几个月其实就在做这个，而且和我们在 Avenue 构建的东西有很多技术重叠。领域非常不同，产品空间也非常不同，但最终问题相当相似，因为这是一种市场可观测性，不是运营可观测性。就是看看我们能在市场中看到的所有这些事件，并能够围绕它们构建打法。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So yeah, so so we joined uh Clay and I think the main thing that we were trying to do at Clay when we joined was Clay had a really good business on sort of static lists, right? So I don't know, you throw a dinner, you want to figure out if any of the people who came to the dinner like are are good customers for you and you could you can do that in clay and like that was a good business for them at the time. But if you're trying to build revenue systems, which I guess now it's, you know, uh now our new new tagline, but if you wanted to build these sort of online systems of someone changes jobs and like you know, they had bought clay at their previous company, but then maybe they would buy Clay at their their next company or like, you know, you kind of wanted to build these online systems for revenue. We didn't really have a great system in place to do that. And so we helped build out their original signals product, which was effectively that. So monitor for new hires, monitor for things like promotions, like any of these events that we could see in the market that you might want to act on and build plays off of. So yeah, so we spent actually the first couple of months doing that and there was a lot of tech overlap with what we had built at Avenue. Like we had like very different domains, very different product spaces, but uh it just ended up being a pretty similar problem. Uh because it was kind of market observability, wasn't operational observability. It was just like, hey, like look at all of these events that we can see in the market and be able to, you know, build plays off off of that.
+</details>
+<blockquote>
+<blockquote>
+<p>构建 signals 产品最难的部分是什么？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; What was the hardest part about building the signals product?
+</details>
+<blockquote>
+<blockquote>
+<p>有很多困难的地方，我认为我们在构建时没有意识到的一点，是使用它的客户的多样性。我们过去习惯于和一组核心设计合作伙伴一起构建东西，但 Clay 有很多不同的客户，他们有很多不同的需求。就像关于 go to market 工程师的那一点，他们真的很有创造力，所以人们在这个基础上构建了各种疯狂的东西。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; There's a lot of things that were were difficult about it and I think one of the things that we didn't appreciate kind of building this was just the diversity of customers that would use it, right? Like I think we've been used to really building things alongside a core set of design partners, but Clay has a lot of different customers and they just have a lot of different needs and different and to the point about good to market engineers like they're really creative and so uh people were building just kind of crazy stuff on top of this
+</details>
+<blockquote>
+<blockquote>
+<p>如果可以分享的话，有哪些例子？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; like what are some examples if you can share
+</details>
+<blockquote>
+<blockquote>
+<p>也许是些让人意外的用例？我觉得有些规模就是很疯狂，我不记得确切的数字，但有些人真的想追踪他们曾经交谈过的每一位客户，比如他们的职业发展、他们发布的各种内容，还有新闻报道，规模铺得非常大。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; surprising use cases maybe? I I think it was just like some some of the scale was just crazy and like I don't I don't remember the exact numbers but you know some people were like really trying to track every customer that they'd ever talked to like where they were like like their career progressions like different things that they were posting. So like news articles like it was just like a very scaled out um scaled out thing.
+</details>
+<blockquote>
+<blockquote>
+<p>好。社交媒体提及、产品评论、Gong 通话。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Okay. Yeah. Social mentions, product reviews, gong calls.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>好。[笑]网站访客。有太多了。我觉得这类事情很容易让人迷失。第一天使用时很容易就觉得：天哪，我可以对所有这些事情做出反应。然后你就不再反应了，因为你淹没在这一切之中。是的，这就是 Clay 美妙又可怕的地方：你能做的事情太多了，它是个非常强大的平台，但确实可能有点让人不知所措。那么你加入时是工程经理，现在是 AI 负责人，这个转变是什么时候发生的？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Okay. [laughter] Website visitors. There's just a lot. I mean, I think it's one of those things where it's easy to get really lost if you It's easy to just like on day one of play just go like, "Oh my god, I can I can like react to all these things." And then you just stop reacting cuz you just drown under all these things. Yeah. I mean, that that's the kind of the the beauty and the the scary part about Clay is just like there's a ton you can do and like it's a really powerful platform, but um yeah, it can be a little overwhelming. So did you join as uh like an engineering manager and now you're head of AI like like when did that transition happen?
+</details>
+<blockquote>
+<blockquote>
+<p>是的。其实我加入是为了构建 signals 产品，那几乎不算 AI，只是一种</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. So actually I you know so I I joined to build out uh the signals product which is almost not not really AI right it's just sort of you know
+</details>
+<blockquote>
+<blockquote>
+<p>管道（pipelines）</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; pipelines
+</details>
+<blockquote>
+<blockquote>
+<p>对，管道，就是任何公司都可能构建的常规系统。我会说很多人过去用 Zapier 做这类事情。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; pipelines yeah it's just sort of a regular system that you might build at kind of any company I would say a lot of people used to use Zapier for this kind of stuff right
+</details>
+<blockquote>
+<blockquote>
+<p>是的，但 Zapier，客气地说，没有与时俱进。[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah and but like Zapier kind of let's just call it politely didn't evolve [laughter] with the times
+</details>
+<blockquote>
+<blockquote>
+<p>把这个系统和你在 Clay 里能做的其他所有东西放在一起构建，有各种好处。我把 Zapier 看作只是 A 到 B 的数据搬运，对吧？而如果你把所有这些数据都导入同一个地方，你就可以做很多有趣的事情，比如：我只想在有三个人从这家公司调到同一家公司时才做出反应，诸如此类。你还拥有状态性（statefulness），挺好的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; there's all sorts of advantages of kind of building the system with all of the other stuff that you you can do with clay right like I don't know if I think of a zap year as just A to B data movement, right? Like if you have all of this data piped into the same place, you can kind of do all these interesting things where it's like, hey, I only want to react when there's like three people from this company that move to the same same company or something like that, right? Like um you kind of have the statefulness as well. It's kind of nice.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。回到向 AI 负责人的转变。你构建了 signals 产品，然后呢？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Back to the transition to like head of AI. So like so you built the signals product. What now?
+</details>
+<blockquote>
+<blockquote>
+<p>嗯，当时我们加入时公司有 50 个人，工程团队大约 20 来人。Clay 当时，其实直到今天，业务的一大部分都是用智能体来筛选和丰富数据，比如搜索网络，查找关于公司的数据点，然后真正用这些数据点去做事。当时只有一个人在做这件事，我想他大概 24 岁，刚毕业不久，后来他离开去创办自己的公司了。我们为他感到非常兴奋，但我们是一家非常 AI 前沿的公司，却没有任何人在做 AI。这有点吓人。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Well, yeah. So at the time, I mean, you know, we joined when the company was 50 people, engineering team was about 20 20 folks. Um, I mean Clay at the time, yeah, I mean to this day there was a huge part of the business was using agents to qualify and enrich stuff like search the web, find data points about companies, like actually use those data points to do things. And at the time there was one person working on that and so I think he was maybe 24 so you know like pretty fresh out of school and he actually ended up leaving to go start a company of his own. you know, was super excited for him, but you know, we were this, you know, really AI forward company that had zero people working on AI. So, it was kind of scary.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>所以我们基本上说，我们真的需要重新确定优先级，确保我们确实在这方面投入。当时我们还想在 AI 上做其他很多事情。我们当时只是把 AI 作为工作流的一部分，而不是构建工作流，或者其他最终在过去一年半里变得非常重要的东西。所以我把注意力转了过去，首先是努力把它带到一个好的状态，帮助建立那个团队，帮助制定路线图，弄清楚我们想在 AI 和智能体上做什么，并制定战略。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um, and so like we were basically like, hey, like we really need to rep prioritize like make sure that we're actually investing in this. And there was all this other stuff that we wanted to do in AI at the time. Like we really just had AI as part of our workflows, but not I don't know building workflows or sort of all the things that ended up becoming really important in the last year and a half. Um, so yeah, so basically I shifted my attention over to one just kind of trying to get that into a good place and help build out that team, help build out the road map and figure out kind of what we wanted to do is AI and agents and kind of build out the strategy.
+</details>
+<blockquote>
+<blockquote>
+<p>你说那时 AI 只是工作流的一部分，并不是很大的一部分。那些东西是什么？你的路线图上有什么，让你觉得"我们要彻底改造这个"？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You said at that point in time like AI was like part of workflows. It wasn't really a big part of it.
+&gt;&gt; What were those things? And then like what was on your road map that you were like, "Oh, we're going to like totally overhaul this."
+</details>
+<blockquote>
+<blockquote>
+<p>其实我们很早就在 Clay 里有一个智能体产品，大概是 2023 年 11 月，也就是 ChatGPT 之后一年，我们有一个会搜索网络的智能体产品，能从中做结构化数据提取，你可以在 Clay 工作流里使用。你可以想象构建一列，比如"这家公司的 CEO 是谁"，它就会去搜索网络，把这些数据结构化成单元格输出。这直到今天都是 Clay 业务的重要部分，但它作为"AI 将改变 go to market"来说并不特别鼓舞人心。我的背景是工程师，我用 Cursor。Claude Code 在 25 年 2 月发布，我当时觉得，这和工程师以往的做法很不一样。我们就觉得，这显然是工程的发展方向，go to market 里大概也会有类似的东西。基本上就是试图把 Cursor 给工程带来的转变，带到 go to market 领域。我会说我们路线图的大部分，其实就是把智能体构建进产品，让人们用智能体构建和配置 go to market 打法。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You know, we we had an agent product in Clay actually really early. So I think like November of 2023, so like a year after chat GBT, we had an agent product that would search the web like actually structure data like do structured data extraction from that and you could use that in your clay workflow. So you could imagine building a column that's like hey who's the CEO of this company and it would go off and search the web and kind of structure this data into a a cell output. And I think I mean this is a huge part of the clay business to this day, but it's not super inspiring as like hey AI is going to change go to market. You know I'm an engineer by background. I used cursor cloud code came out in February of 25 and I was like you know this is a pretty different thing than what engineers had been doing. Um and so you we were like hey this is clearly the direction that engineering is going and you know there's probably something in go to market as well that we're going to see as well. you know basically trying to bring the same shift um you know that cursor brought to engineering actually to go to market in that domain that was the majority of our road map I would say was actually just building agents into the product letting people build and configure go to market plays with agents
+</details>
+<blockquote>
+<blockquote>
+<p>在 signals 之后，你们先做的、真正成为爆款的第一个东西是什么？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; what what's the first thing after signals that you start with that was like a real hit
+</details>
+<blockquote>
+<blockquote>
+<p>我们发布了……我们试图走的方向是让智能体构建更多你的 go to market 打法，并随着时间改进它们，但那是稍后的事。我们先发布了 sculptor。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah so we launched um so like that was the direction that we were trying to go into was just agents building more of your go to market plays and you know improving them over time but that that came a bit later but We launched sculptor.
+</details>
+<blockquote>
+<blockquote>
+<p>哦，先是 sculptor。好。我之前调出来的是 clients。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Oh, sculptor first. Okay. I had clients pulled up.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。所以 clentions。Clent 是我们工作流里的东西。clentions 基本上是这样的：你有一个智能体去爬取网络，把数据结构化并放进表格，同样，这是 Clay 平台的重要部分。我认为大多数人其实把 Clay 看作是这个，而且我们在 client 上做了大量更多的工作。基本上我们重建了整个 client 技术栈，做了大量工作，让它扩展到今天的规模。同样，自从我们加入以来，业务基本上增长了 10 倍。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. Yes. So, clentions. Clent is what we had in in workflows. Yeah. So, it's just like clentions were basically you would have an agent that would crawl the web like structure data and put it in a table and it's again like it's a huge part of the clay platform. I think actually most people think of clay as
+&gt;&gt; and yeah, we we did a ton more work on client. So, I I don't know. I mean I I we basically rebuilt the entire client stack. We like did a ton of work to just make this scale to the level that it is today. I mean again like the business has basically 10xed since we joined and like
+</details>
+<blockquote>
+<blockquote>
+<p>你可以想象，使用 Clay 智能体的人甚至比业务增长还要多，所以要把它做到一个好的状态，有大量工作要做。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; you can imagine that more people are actually using clay agents even than the business growth and so uh there was just a ton of work to get that into a good place.
+</details>
+<blockquote>
+<blockquote>
+<p>我正想说，你说自从你加入后业务增长了 10 倍。你可以在这里画一个不错的图表，比如"Jeff 在这里加入，看看我们增加的股东价值"。[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I was going to say uh you know you made the statement about the business 10x since you joined. You could draw draw a nice chart here uh was like you know uh Jeff joins here and look [laughter] look at the shareholder value that we've added. That's right.
+</details>
+<blockquote>
+<blockquote>
+<p>没错。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That's right. Yeah, I have a new acquisition.
+</details>
+<blockquote>
+<blockquote>
+<p>在哪里？是的，[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh where is it? Yeah, [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>没错，我有一次新的收购。我是说，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I mean, you know,
+</details>
+<blockquote>
+<blockquote>
+<p>所以我们在这里，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; so we're here, right?
+</details>
+<blockquote>
+<blockquote>
+<p>是的。是 [笑] 24 年底，所以非常……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Was I I [laughter] uh late late 24, so just uh very uh
+</details>
+<blockquote>
+<blockquote>
+<p>好。再次为很多是工程师、或者刚接触整个 GTME 生态的人解释一下：Clay 智能体基本上就是同一个 Clay 界面，但一切都向智能体开放。智能体可以做人类能做的一切。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Okay. Uh yeah. So So I mean Okay. So and again uh just for people who again uh many of whom they are engineers uh they or they are new to the overall uh GTME ecosystem. Clay agents are just basically the same clay interface but everything is exposed to the agent. Agent can do everything that a human could do.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。我几乎会把 Clay 智能体看作几年前销售代表会做的事情，比如：对于我所有的线索，我要去弄清楚，他们是水管公司还是新闻公司？他们会做一些分类。他们可能会调研：他们的员工数量是不是我预期能卖给这家公司的数量？你可以想象，它们能使用你在 Clay 里能做的一切，它们原生就在你的表格里，也可以访问网络。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I I I would almost think of clay agents as like what sales reps would have been doing like a few years ago, right? which is like, hey, like for all of my leads, I'm going to go figure out like, I don't know, like are they a plumbing company or a news company, right? Like they'll do some categorization. They might research like, oh, do they have the number of employees that I would expect to be able to sell to this company. You can imagine they have access to all of the things you can do in Clay. They're just natively in your table and they have access to the web as well.
+</details>
+<blockquote>
+<blockquote>
+<p>这些数据不是来自 ZoomInfo 之类的其他数据提供商吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Doesn't that data come from like Zoom Info like all these other data providers?
+</details>
+<blockquote>
+<blockquote>
+<p>我几乎会把 clients 看作一种以智能体方式获取其中一些数据的办法，但主要是公共网络。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I would almost think of clients as one an agentic way to to get some of this data. Um but primarily it's the public web. Okay. So yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>然后是 sculptor。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And then so sculpture.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。sculptor 我们大概差不多一年前发布。sculptor 的想法是，我们可以往上抽象一个层级：clients 是做你工作流中每个任务的东西，比如筛选、打分、丰富，还有文案写作。Sculptor 是真正构建这些工作流、协调这些 clients 的东西。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. So sculpture we launched I think almost just about a year ago. Um and the idea with sculpture was like hey we we can go like one level of abstraction up which is like you know clients are sort of the the things doing each of the tasks in your workflow right like they're they're qualifying they're scoring enriching like I don't know doing copywriting. Sculptor is the thing that's actually building those workflows to you know coordinate these clients together.
+</details>
+<blockquote>
+<blockquote>
+<p>好。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Okay.
+</details>
+<blockquote>
+<blockquote>
+<p>你几乎可以把它看作</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You can think of it almost like
+</details>
+<blockquote>
+<blockquote>
+<p>编排器。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; orchestrator.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。sculptor 构建表格结构，然后 clients 填充表格的单元格。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. Like sculpture is like building the table structure and then like clients are filling in the table table cells.
+</details>
+<blockquote>
+<blockquote>
+<p>你能谈谈构建它所用的技术栈吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Can you talk about like what the stack is you used to build it?
+</details>
+<blockquote>
+<blockquote>
+<p>我来描述一下。自那以后我们学到了太多。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think we uh I'll describe it. I I think we we we've just learned so much since then. I I can describe sort of what we've
+</details>
+<blockquote>
+<blockquote>
+<p>也许谈谈演变过程，我觉得会很有意思。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; maybe like talk about the evolution. I think that would be really interesting.
+</details>
+<blockquote>
+<blockquote>
+<p>好的。我们是去年 9 月发布 Sculptor 的，基本上整个去年夏天都在构建它。我想当时大概是 sonnet 33 35，或者差不多那个时候，所以模型远没有那么先进。我觉得人们对如何正确构建智能体了解得也更少，真的是在摸索。Sculptor 最终是这样的：我们有一堆不同的工具接口来访问、读取、更新 Clay 平台，基本上就是把它们交给一个循环中的模型，我们花了很多时间在系统提示词优化和工具定义优化上。我觉得它做得不错，但表达力远不如当时的 Claude Code，更不用说现在人们构建的智能体。我们在长时程任务上的能力要弱得多。我的描述方式是：Sculptor 很擅长做类似"添加这一列，做这件事"的事情，却不擅长做"为我构建一个外联活动，在我的日历上带来 10 个合格会议"这样的事情。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. So, so we we we launched Sculptor in September of last year. So, we we basically were building it through the summer of last year and I think at the time, you know, it was like sonnet 33 35 or maybe it was around then I think, you know, so uh the models were way less advanced. I think like people just knew less about how to build agents properly. This is like really figuring things out. Sculptor ended up being, you know, we had a bunch of different tool interfaces to, you know, access, read, update the clay platform and we basically gave it to a model in a loop and, you know, we spent a lot of time on sort of system prop optimization and tool definition optimization and, you know, I think it it it came out well, but it was way less expressive than I think even cloud code was at the time and definitely like the agents that people are building now. I think we just had way less ability to sort of do these, I don't know, long horizon things. too. The way I describe it is like Sculptor was really good at doing things like, "Hey, add this column that does, you know, does does this." It was not good at doing things like build me an outbound campaign that's going to deliver 10 qualified meetings on on my calendar.
+</details>
+<blockquote>
+<blockquote>
+<p>当你说"帮我构建一个外联活动"时，那是什么样子？它连接到你的系统吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Well, what does that look like when you say, "Hey, go build me an outbound campaign." Like, is it connected to your systems?
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得它没有。这是另一点：它缺乏你的销售代表会拥有的很多上下文。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I mean, yeah, I think that like it wasn't. I'd say like I think that was that was the other thing. It it just lacked a lot of the context that you know, your sales reps would have.
+</details>
+<blockquote>
+<blockquote>
+<p>好，那就是它的起点。你认为让它随时间改进的最大经验是什么？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Okay. So that's how it started. Like what would you say were the biggest learnings that got it to um improve over time?
+</details>
+<blockquote>
+<blockquote>
+<p>同样，它其实相当不错，它完成了人们想用它做的很多事情。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Again, it was pretty good. Like I think it it accomplished a lot of the things that people were trying to do with it
+</details>
+<blockquote>
+<blockquote>
+<p>那时你们在跑评测（evals）吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and you guys were running emails at that point.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。我们在写评测，但我觉得我们没有衡量对的东西。我们发布后，立刻看到很多人只是想对他们的表格做分析，我们就想：哦，我们没有为这个做规划。另外，有一堆评测对小公司是好的，但我们有企业客户，他们的表格里有数百万条记录，东西就崩了。所有这类事情可能事先都是可预测的，但我们是在生产环境中观察到的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. Yes. Uh we were running writing writing evals, but I don't think we were measuring the right things. So like we launched it and immediately we saw a ton of people trying to just do analysis on their tables and we were like, "Oh, we didn't plan for that." And I don't know like a bunch of the evals were good for small companies but then we had enterprise customers who had like millions of records in their tables and like things would break down. So like all these sorts of things that were probably predictable in advance but you know we I don't know we observed them in production. So
+</details>
+<blockquote>
+<blockquote>
+<p>对于这样的东西，评测到底是什么样的？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah like what do emails even look like for for something like that?
+</details>
+<blockquote>
+<blockquote>
+<p>我会说我们做的是相当标准的事情，就是看输出，判断建议是否正确的质量。基本上就是 LLM 作为评判者。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We were doing pretty standard stuff I'd say of like just looking at the the outputs like judging the quality of whether the suggestions were correct. Um, so like LM is a judge basically, you know,
+</details>
+<blockquote>
+<blockquote>
+<p>但你们衡量的输出是什么？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; but like what are the outputs that you're that you're measuring?
+</details>
+<blockquote>
+<blockquote>
+<p>基本上就是它实际调用的工具。比如提示词是"构建一个表格来做这些事"，就看它是否真的添加了这些列。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's basically the the actual tools that were it was calling, right? So it's like hey, like if it's if the prompt is build a table to do these things, it would be like did it actually add these columns
+</details>
+<blockquote>
+<blockquote>
+<p>因为我想说，在这个情境下，最终目标是"帮我构建一个外联活动来获取客户"，那样的数据可能很难拿到。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; cuz I was going to say it might be like in in this context, right? Like the ultimate objective is to, you know, hey, go build me an outbound campaign to get me customers. Might be hard to get that data.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，所以这是个非常独特的评测用例。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. So it's like very unique use case of emails. I guess
+</details>
+<blockquote>
+<blockquote>
+<p>这和我们现在所处的位置可能是非常不同的转变。我觉得现在我们还没到真正衡量其中一些下游效果的地步，但我们肯定在衡量实际质量方面做得好得多。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; this is probably a very different shift to where we are now. I think like now we're doing uh I don't think we're at that point where like uh we're actually measuring some of the like downstream effects of these things, but we're definitely I think doing doing a much better job of I think measuring actual quality.
+</details>
+<blockquote>
+<blockquote>
+<p>所以你们在构建这个 harness。为什么不直接用现成的？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So you're building this harness. Um why not just use something off the shelf?
+</details>
+<blockquote>
+<blockquote>
+<p>是的。如果让我总结经验：第一，事实证明编码智能体非常强，模型在编码智能体中运作得非常好，编码智能体很擅长使用 bash 或 Python 来真正写脚本、做事。第二，我们有的一些工具的表达力太小了。我们其实需要让智能体能把这些工具串联起来，或者一次构建五列，或者做一堆事情。最后一点是，我觉得它能访问的原语太受限了。就你说的数据而言，我们没有 CRM 数据，如果有人要发送一个活动，我们也无法获取该活动的实际结果。所以这是一次平台范围的工作，我们重建了系统的很多部分：我们现在有一个核心数据上下文层，叫作 audiences，我们引入 CRM 数据、Gong 数据，你可以把它们全部做实体解析在一起，你可以想象它就是你的客户和联系人的权威、规范的电子表格。我可以问个有点俏皮的问题。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. So I would see like the if I were to summarize the learnings, one it turns out coding agents are really good like the models are really good at you know operating in coding agents. the coding agents are really good at using things like bash or using things like Python to actually write scripts and do things. Two was like, hey, the expressivity of some of the tools that we had was just too small. Like we kind of needed actually ways for the agents to chain these tools together or like I don't know build five columns at once or kind of do a bunch of stuff. And then I'd say the last thing is um I I think it was just too constrained in terms of the primitives it had access to. to your point about data like we didn't have CRM data and we didn't have you know if someone was going to send a campaign we didn't have access to the actual results of that campaign and so that this was like a platformwide effort where we rebuilt a ton of parts of the system where like we now have a core data context layer where it's like this is called audiences like we bring in CRM data we bring in Gong data you can entity resolve it all together like you can imagine it's like the authoritative canonical spreadsheet of like your customers and contacts can ask a cheeky question there Yeah,
+</details>
+<blockquote>
+<blockquote>
+<p>这里很多是跨客户的重复工作。你们是多租户，还是有单租户保证？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; a lot of this is duplicate work across customers. Do you multi-tenant it or do you have like single tenants guarantees?
+</details>
+<blockquote>
+<blockquote>
+<p>是单租户，对所有人都是。这有很多缺点，但是的，我们实际上……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It is single tenant. So, u yes for everyone. Yes, there's there's a ton of downsides to that but but yes, uh we we effectively have
+</details>
+<blockquote>
+<blockquote>
+<p>因为对观众来说，你可以节省大量成本，因为你只需要为一个人接入一次，否则每个抓取 google.com 的人都得……或者你作为客户抓取 openai，那你就得再去抓取它们。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; because you know and for the audience you can save a ton of cost because you just onboard one person once in instead everyone who's scraping google.com has to or what whatever or like you know you scrape openai as a customer well you have to go scrape them again. Yes. Yes. Yeah. And like there's a lot of downsides of doing that, but I think it it ends up being both simpler and then I think also I think there's less duplicative work than you would think. Like people are doing
+</details>
+<blockquote>
+<blockquote>
+<p>是的。这样做有很多缺点，但我认为最终既更简单，而且重复工作也比你想象的少。人们在做</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; very custom things.
+</details>
+<blockquote>
+<blockquote>
+<p>非常定制化的事情。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Like
+</details>
+<blockquote>
+<blockquote>
+<p>是的。比如</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I want to find out I want to find out their employee size. I want to find out like their phone number, name of their first born, like [laughter] as soon as you get to that part then you know then then it devolves a bit. Uh we do have our our own data sets of companies and contacts and like those are out of the box right like you can just bring them in. So like if I if I just want to start with a list of companies like we'll help you build that and like that that just comes from our database and like you know
+</details>
+<p>我想查出他们的员工规模，想查出他们的电话号码、头生子的名字，[笑]一到这一步，事情就有点退化了。我们确实有自己的公司和联系人数据集，这些是开箱即用的，你可以直接引入。所以如果我只想从一个公司名单开始，我们会帮你构建，这直接来自我们的数据库。</p>
+<blockquote>
+<blockquote>
+<p>这背后没有特别的品牌。我在数据市场上看不到它。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; there is not there's not like a specific branding behind that. I can't
+&gt;&gt; uh I can't see it on the data market. We brand it as search if we brand it as anything but the idea is like you um
+</details>
+<blockquote>
+<blockquote>
+<p>我们如果要给它起品牌的话，叫它 search，但想法是，你……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; there's data marketplace there's there's other things in product but it's not really like like clay itself has data instead it is the messaging is like we have all these integrations
+</details>
+<blockquote>
+<blockquote>
+<p>有数据市场，产品里还有其他东西，但并不是说 Clay 本身有数据，我们的信息传达是：我们有所有这些集成。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; that's right yeah we we do have a data set that you can start with and so if I'm just like hey I want you know
+</details>
+<blockquote>
+<blockquote>
+<p>没错，我们确实有一个你可以起步的数据集，所以如果我只是想……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I mean you know maybe maybe the framing is like well this is what you'd have to do if you built it in-house
+</details>
+<blockquote>
+<blockquote>
+<p>也许这个框架是：如果你在内部自己构建，你就得这么做。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; right like so clay is simply like the the software as a service that you install and it house. Yeah. I mean, you can think of it as like just an infrastructure provider like go to market flavored.
+</details>
+<blockquote>
+<blockquote>
+<p>对，所以 Clay 就是你安装的软件即服务，在内部使用。是的，你可以把它看作一个基础设施提供商，只是带有 go to market 风味。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I guess back to the agency. Okay. Um you said you started with whatever it was like set 35. It was not not great. Obviously like models are getting insanely good now. Also open source models are getting really good now. So are you guys, you know, thinking about that? Are you guys, you know, fine-tuning them?
+</details>
+<blockquote>
+<blockquote>
+<p>是的，回到智能体。好。你说你一开始用的是 sonnet 35 之类，不太好。显然现在模型好得离谱，开源模型现在也变得很好。你们在考虑这个吗？你们在微调它们吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Starting to think about this way more. I think um since since I've been at Clay, I think we've flirted with the idea of doing post- training like I don't know training your own models and I think you know it just realistically hasn't been viable for a number of reasons for I'd say the past or like the first 18 months uh of of when I joined Clay. I'd say in the past couple of months like it's started to be more potentially viable in some areas
+</details>
+<blockquote>
+<blockquote>
+<p>我们开始更多地考虑这个了。自从我在 Clay 以来，我们一直在试探要不要做后训练，也就是训练自己的模型，但现实中，在我加入 Clay 后的头 18 个月左右，由于若干原因，这并不可行。我会说在过去几个月里，在某些领域它开始变得更有可能可行。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; like why areas
+</details>
+<blockquote>
+<blockquote>
+<p>为什么是某些领域？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; the main thing I'd say this is true for both openw weight models and post training but I I think just call savings once you're at a certain level of inference like you can get pretty good performance and just go a model class smaller and if you're post training on like just that model set of tools or like just that model's you know the input distribution of what you think like what queries that you want that uh model or agent to be optimized I think you get pretty good results. Um, we're pretty early here, I'd say, on the post training front. Like we're starting to explore. I think we'll launch something pretty soon in like in this area. Um, yeah. Yeah. Yeah. Um, the general goal is to keep the capabilities constant but reduce cost and speed. Uh, increase speed.
+</details>
+<blockquote>
+<blockquote>
+<p>主要的一点，这对开放权重模型和后训练都成立：一旦你的推理量达到一定水平，成本节省就体现出来了。你可以获得相当不错的性能，只需降一个模型级别；如果你针对那组特定工具，或者针对你认为希望该模型或智能体优化的查询输入分布做后训练，我觉得能得到相当不错的结果。在后训练方面我们还相当早期，刚开始探索。我想我们很快会在这个领域推出一些东西。总体目标是保持能力不变，但降低成本和速度……提高速度。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That's right. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>没错。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. And like what do you think is reasonable for other heads of AI let's say exploring this process? What is a good goal? It's like 50% 75%.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。你认为对于其他正在探索这个过程的 AI 负责人，合理的目标是什么？是 50%，75%？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; There's kind of two things that uh you can do. So, one is just like offthe-shelf openweight models are are pretty good now. Like I I don't know like you can get K3 at like decent prices. Like K3 is still pretty expensive even and like but it's pretty good. Um and still cheaper than Opus by a good margin. And then like beyond that it's like hey you can probably get actually like a maybe not GLM 53 flash but like a smaller weight weight class of model to perform at like opus level. And so uh there's kind of two jumps in cost reduction that I think you can you can achieve. I don't know. I think like still maybe the the pitfalls are like what I see people doing prematurely is one I I still think training a frontier model is really hard. So like if you're trying to get post frontier performance like you're trying to exceed fable like achieve or exceed fable level for like a domain even it's pretty hard and I think the other thing is like hey cost savings are great but you have to kind of do that on a substantial enough base where the cost savings are actually matter for for that. And so I don't know I think a lot of companies are jumping into this just too early right like they don't have enough of enough inference spend where the savings are going to you know be material to the business.
+</details>
+<blockquote>
+<blockquote>
+<p>你可以做两件事。一是现成的开放权重模型现在已经相当不错，比如你能以不错的价格用到 K3。K3 甚至仍然相当贵，但它相当好，而且仍然比 Opus 便宜很多。再往后，你大概能让一个也许不是 GLM 53 flash、但权重级别更小的模型表现到 Opus 的水平。所以我认为你可以实现两次成本降低的跳跃。我看到人们过早做的陷阱是：第一，我仍然认为训练前沿模型真的很难。如果你想获得后前沿性能，比如试图超过 fable，或者在某个领域达到或超过 fable 的水平，那都相当难。另一点是，成本节省固然好，但你必须在足够大的基数上做，成本节省才真正有意义。所以我觉得很多公司太早跳进去了，他们的推理支出不够多，节省下来的钱对业务并不重要。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So what would that be 10 million 100 million?
+</details>
+<blockquote>
+<blockquote>
+<p>那这个门槛是多少，1000 万，1亿？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's uh you know somewhere in the 10 to 100 like is where you like that that starts to be I don't know chunky
+</details>
+<blockquote>
+<blockquote>
+<p>大概在 10 到 100 之间，那就开始有点可观了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; chunky yeah [laughter] you know I think that is in line with expectations. I think you know maybe u this is like very timely cuz uh you know a week ago we did the Jev podcast and Jev is all all talk of the town. But you as a head of no strangers classifiers
+</details>
+<blockquote>
+<blockquote>
+<p>可观，是的。[笑]我觉得这符合预期。这个话题很应景，因为一周前我们做了 Jev 播客，Jev 是现在人人谈论的东西。而你作为负责人，对分类器并不陌生。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; a lot of
+</details>
+<blockquote>
+<blockquote>
+<p>很多</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. There's a lot of stuff. Uh there's a lot of overlap with what what we're doing and uh what uh you know the goals of Jeff.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。有很多内容，与我们正在做的事和 Jeff 的目标有很多重叠。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Is it actually editive or were you already I mean you're already doing classification right in like spades.
+</details>
+<blockquote>
+<blockquote>
+<p>它真的有启发性，还是说你们本来就已经在做大量分类了？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. And like you know
+</details>
+<blockquote>
+<blockquote>
+<p>是的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; we haven't done anything yet with Jev in production. I I think um I do think the name is really accurate where I could imagine people just use Jev way more and so like I I don't know people people do use client to qualify but people are still restricting their list of like oh maybe you'll like take 10,000 companies and just qualify across them but the thought experiment I can think of with Jev is like we have a a company data set of 40 million companies right and you can imagine that I don't know every company's LinkedIn is maybe like a thousand tokens and maybe your company's ICP like ideal customer profile is like 500 tokens and so it's 1500 tokens across your ICP and their um you know and their LinkedIn. You can imagine just asking a question like, is this customer a good fit for my product or service? And you could run that across every company in the world and it comes out to I think around 1,500 bucks, right? You just multiply 1,500 tokens times 42 billion, you know, $42 per billion tokens. It's like that's crazy. You just kind of like across and you get a probability of like is this a good customer for me across every company in the world. Um pretty like a pretty cool starting point. In clay, what's a budget for enrichment? Now, maybe you have a target for that.
+</details>
+<blockquote>
+<blockquote>
+<p>我们还没有在生产中用 Jev 做任何事。我确实觉得这个名字很准确，我可以想象人们会多用得多。人们确实用 client 来筛选，但人们仍然限制名单的规模，比如取 10,000 家公司来筛选。而我对 Jev 能想到的思想实验是：我们有一个 4000 万家公司的数据集，你可以想象每家公司的 LinkedIn 大概是一千个 token，而你公司的 ICP（理想客户画像）大概是 500 个 token，所以你的 ICP 加上他们的 LinkedIn 一共是 1500 个 token。你可以想象就问这样一个问题："这个客户是否适合我的产品或服务？"你可以对全世界每家公司都跑一遍，我想大概要 1500 美元左右，对吧？你就是把 1500 个 token 乘以 42 亿，也就是每十亿 token 42 美元。这太疯狂了。你就这么跨过去，得到一个概率：这对我来说是不是一个好客户，覆盖全世界每一家公司。这是个相当酷的起点。在 Clay 里，数据丰富的预算是多少？也许你们有个目标。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It varies a lot, but I'd say like, you know, $1 to $10 per qualified lead is like a pretty good range. You know, if you're booking a a call with someone, it's like, you know, on the order of 10 to 100 is not crazy.
+</details>
+<blockquote>
+<blockquote>
+<p>差异很大，但我会说每个合格线索 1 到 10 美元是个相当不错的范围。如果你是在预约和某人的电话，大概 10 到 100 美元的量级并不离谱。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So, wow.
+&gt;&gt; 10 to 100.
+</details>
+<blockquote>
+<blockquote>
+<p>哇。10 到 100。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. [laughter]
+&gt;&gt; It depends on the type of business.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。[笑]这取决于业务类型。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It totally depends on Yeah. the type of business like the expected value of like each customer for for someone. But uh
+</details>
+<blockquote>
+<blockquote>
+<p>完全取决于业务类型，比如每位客户对某个人的期望价值。不过，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; maybe one thing we can talk about is just like where do you like in your agents need frontier intelligence and where do you not need frontier intelligence?
+</details>
+<blockquote>
+<blockquote>
+<p>也许我们可以谈谈：你们的智能体在哪里需要前沿智能，在哪里不需要？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; There are definitely examples of um to the point about go to market engineering being engineering. I think there's a huge variance in terms of how you orchestrate some of these go to market plays and the kind of intelligence or reasoning that are required there. And so like I don't know something sculptor-l like or having an agent that actually builds endto-end plays for you is something where still I think like the difference between the best and the average is you know a 10x 100x in output like variation right so like I think like kind of the higher level of extraction you are frontier intelligence still matters the stuff on like task agents or you know the qualification step I don't know I think like our eval saturated there for about a like new models come out and like they might be better for some of the harder tasks. I actually think this is where model routing is pretty helpful for stuff like Claggent where people are still doing deep research tasks and trying to prospect into companies really deeply and they're like Fable is much better at than something like I don't know GLM 5.3 Flash but you know if you're just trying to get I don't know the most recent funding announcement for a company. I mean any model that's come out in the last year can do this quite effectively for for any company and so yeah it's just started to move higher up the stack I think right like the more orchestration level things or the more kind of creative like trying to break into very specific types of companies right like you're still seeing benefits from frontier level intelligence but yeah yeah you said model routing is important uh do you have your own router or is there what's the state of the art there
+</details>
+<blockquote>
+<blockquote>
+<p>确实有一些例子，就 go to market 工程本质上是工程这一点而言。我觉得在如何编排这些 go to market 打法，以及所需的智能或推理类型上，差异非常大。像 sculptor 那样的东西，或者一个真正为你端到端构建打法的智能体，我认为最好和平均之间的差距在输出上是 10 倍、100 倍的变化。所以抽象层级越高，前沿智能仍然越重要。至于任务智能体，或者筛选步骤，我觉得我们的评测在那里已经饱和了，新模型出来，可能对一些更难的任务更好。我其实认为这正是模型路由很有帮助的地方，比如对 Claggent 这类东西，人们仍然在做深度研究任务，并试图非常深入地开拓公司客户，Fable 在这方面比 GLM 5.3 Flash 之类要好得多；但如果你只是想获取某家公司最近的融资公告，过去一年里出来的任何模型都能对任何公司相当有效地做到。所以它开始向技术栈更高层移动，比如更偏编排层面的事情，或者更有创意的事情，比如试图打入非常特定类型的公司，你仍然能看到前沿智能的好处。你说模型路由很重要，你们有自己的路由器吗？这方面最先进的做法是什么？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; we will we will launch a model router quite soon yeah
+</details>
+<blockquote>
+<blockquote>
+<p>我们很快会推出一个模型路由器。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; scooped it yeah [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>抢了独家，是的。[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think uh that's one of those things where um so I have this the thesis about what I call the agent labs which is where you know look like your customers are not necessarily in there all day like clicking the model toggle and picking models and like some of them want to like maybe 5% of them want to the rest of them just want to get on with their jobs and they trust you as the technology provider to choose for us right
+</details>
+<blockquote>
+<blockquote>
+<p>我有一个关于我称之为 agent labs 的论点：你的客户不一定整天待在那里点模型开关、挑模型，也许其中 5% 想这样做，其余的人只想继续做自己的工作，他们信任你这个技术提供商替我们做选择，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah I would say like our our users hate our model selector like they hate it like
+</details>
+<blockquote>
+<blockquote>
+<p>是的，我会说我们的用户讨厌我们的模型选择器，他们真的讨厌它。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; are you going to get rid of it or
+</details>
+<blockquote>
+<blockquote>
+<p>你们会去掉它吗？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; no we'll keep it
+</details>
+<blockquote>
+<blockquote>
+<p>不，我们会保留它。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; that's the aggressive position right
+</details>
+<blockquote>
+<blockquote>
+<p>那是很激进的立场，对吧？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah [laughter] I think most Most customers like don't want to see it. Like they're upset when they see it. And we get a bunch of complaints about that.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。[笑]我觉得大多数客户不想看到它。他们一看到就会不高兴。我们收到了很多这方面的投诉。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. The the analogy I've had recently is um you got Tesla self-driving, right? Uh and then like you just want to put in a self-driving most of the time, but some people want to steer, some people want uh stick shift, all more power to them. Most people are just going to self drive.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。我最近的类比是特斯拉自动驾驶，对吧？大多数时候你就想开自动驾驶，但有些人想自己掌舵，有些人想要手动挡，那就随他们去。大多数人只会用自动驾驶。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. No, I I [laughter] think it makes sense. Like I I I um I think customers are not in the position to like look at the eval specific use case for every new model that comes out like it just doesn't make sense for them to be you know and I mean for some for the customers who want to do that great like you know we'll keep the our model selector like makes sense but
+</details>
+<blockquote>
+<blockquote>
+<p>是的，[笑]我觉得有道理。客户没有条件去针对每个新出的模型查看特定用例的评测，这对他们来说没有意义。对于想这样做的客户，很好，我们会保留我们的模型选择器，这很合理，不过</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah yeah so like I think uh the way that for example Cognition is doing it is they they have some branding around they call it like devon fusion or whatever is there like clay fusion or like clay one model or whatever you want to do.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。比如 Cognition 的做法，他们有一些品牌化的叫法，比如叫 devon fusion 之类，那你们会有 clay fusion 或者 clay one model 之类吗，随你们怎么叫。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; No I think we'll we'll just do auto. Yeah. Yeah. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>不，我觉得我们就叫 auto。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We're not trying to get fancy with it. We just want to help people out. I think uh Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>我们不想搞花哨，只是想帮助大家。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; The one downfall, which I don't think is a huge one, but you want to watch it, is people do get suspicious of like, well, how do I know you're spending my tokens? Well, you know, like it's this is basically like a trust as mode, and then you just have to provide analytics, I guess.
+</details>
+<blockquote>
+<blockquote>
+<p>有一个缺点，我不觉得很大，但需要留意：人们确实会起疑，比如"我怎么知道你在花我的 token？"这基本上是信任作为护城河，然后你就得提供分析数据，我想。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I mean, like I it's totally a hard problem. I think you know hopefully we uh you know we build enough trust with people that they that they want to use auto mode actually like um and the idea is actually it should be better than you know selecting your own model for for different things because like hey I can actually do it on the task level. It's like hey like I don't know finding the CEO of Apple is very different than finding the CEO of like a random company in you know somewhere that is not so well known.
+</details>
+<blockquote>
+<blockquote>
+<p>是的，这完全是个难题。希望我们能和人们建立足够的信任，让他们愿意使用 auto 模式。而且想法其实是，它应该比你自己为不同事情选择模型更好，因为我可以在任务层面做到。比如找到 Apple 的 CEO，和找到某个不那么知名的、随便哪里的公司的 CEO，是非常不同的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's actually interesting cuz your users are I would think like power users kind of right? Um they're like go to market engineers. A lot of your customers are agencies, right? Yes. I would assume that they would want that level of control.
+</details>
+<blockquote>
+<blockquote>
+<p>这其实很有意思，因为我认为你们的用户有点像高级用户，对吧？他们是 go to market 工程师。你们很多客户是代理机构，对吧？是的。我会假设他们想要那种程度的控制。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. I don't think the agency owners uh will stop selecting their own models. So, yes. Uh I think this is actually just for kind of everyone else, right? Like just like um we have we have a ton of customers at Clay. We have a ton of people who come to Clay with some idea of go to market engineering, but they're still new to a lot of this stuff.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。我不认为代理机构的所有者会停止自己选择模型。所以这其实只是针对其他所有人。我们在 Clay 有大量客户，有很多人带着一些 go to market 工程的想法来到 Clay，但他们对其中很多东西仍然是新手。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; What percentage would you say is like agency customers versus everyone else?
+</details>
+<blockquote>
+<blockquote>
+<p>你会说代理机构客户与其他所有人的比例是多少？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Now, I think it's there's a lot of just the everyone else category. Like there's a lot of people who just come to Clay and find Clay. you know, we have a lot of brand and marketing and I think like a lot of people just uh find us, you know, through mouth.
+</details>
+<blockquote>
+<blockquote>
+<p>现在，我觉得"其他所有人"这一类占了很多。有很多人就是来到 Clay、发现了 Clay，我们有很多品牌和营销，我觉得很多人是通过口口相传找到我们的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Can we go back to emails a little bit? So maybe we can talk specifically about sculptor. So for sculptor like I'm assuming you have buckets of like the types of evals that you're doing like what are those buckets?
+</details>
+<blockquote>
+<blockquote>
+<p>我们能回到评测上吗？也许我们可以专门谈谈 sculptor。对于 sculptor，我假设你们做的评测有一些分类，那些分类是什么？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So yes. So so one like we uh we've done a ton of work since we launched sculptor. I think now we're uh well one we we basically rebuilt the entire agent architecture. So like it is no longer just a tool loop tool loop model. It is like a proper coding agent. It has uh we launched our CLI um publicly and the new version of our agent uh just uses a CLI. It uses it in a cloud sandbox and it's just way more expressive. It can use like all different parts of the clay platform. So that's uh that's one thing. It's just like we completely rebuilt it from the ground up to leverage all the clay primitives. In terms of the categories of things that we're looking at, I think it's largely use case based still. So it's like the types of things customers do in Clay or try to use our agent for and then trying to describe both the trajectories that we think should get there. It's like hey like it should probably use you know if it's asking about first party data it should probably query the data context layer that we have and then also just the actual quality of the response and things that happen right so we measure like hey if the user asked to build a workflow did it actually build that workflow and did the workflow actually have these these properties about it
+</details>
+<blockquote>
+<blockquote>
+<p>是的。自从发布 sculptor 以来我们做了大量工作。首先，我们基本上重建了整个智能体架构，它不再只是一个工具循环加模型，而是一个真正的编码智能体。我们公开发布了我们的 CLI，新版本的智能体就是使用 CLI，在云沙箱中使用，表达力强得多，可以使用 Clay 平台的各个不同部分。这是一点：我们从头完全重建了它，以利用所有 Clay 原语。至于我们关注的类别，我觉得仍然主要基于用例，也就是客户在 Clay 里做的、或试图用我们的智能体做的事情类型，然后尝试描述我们认为应该达到那里的轨迹，比如，如果它在询问第一方数据，它大概应该查询我们的数据上下文层；还有回应的实际质量以及发生的事情。所以我们衡量，比如用户要求构建一个工作流，它是否真的构建了那个工作流，这个工作流是否真的具备这些属性。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; maybe how do you see that evolving over the next I don't know 6 months
+</details>
+<blockquote>
+<blockquote>
+<p>你觉得这在接下来大概六个月会如何演变？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; it's hard to know I think yeah um I I mean I I really would love to get um just actually synthetic like output generation like measuring the second order effects to some of these things would be really cool.
+</details>
+<blockquote>
+<blockquote>
+<p>很难说。我真的很希望能做到合成式的输出生成，衡量其中一些事情的二阶效应会很酷。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Like second order effects,
+</details>
+<blockquote>
+<blockquote>
+<p>二阶效应？</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; second order effects as in like if it if the user asked to build an outbound campaign to reach out to, you know, this list of people, it's like could we measure if it if those people actually respond. So not only did they build the list and not only did they build the workflow to engage with those people, but like did that actually work? You know, did uh you know, and and ideally that's the metric that we want to improve over time is the measured output for people.
+</details>
+<blockquote>
+<blockquote>
+<p>二阶效应，比如用户要求构建一个外联活动去联系某个名单上的人，我们能否衡量这些人是否真的回应。不仅是构建了名单、构建了与这些人互动的工作流，而是它是否真的有效。理想情况下，这是我们希望随时间改进的指标，也就是为人们衡量出的产出。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I see. But you can't really own all of that because some of it is my skill issue, right? like of like well you know maybe I don't work at a good enough company my my cold email wasn't good enough whatever
+</details>
+<blockquote>
+<blockquote>
+<p>我明白了。但你们无法真正对这一切负责，因为有些是我自己的能力问题，对吧？比如也许我所在的公司不够好，我的陌生邮件写得不够好，诸如此类。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; that's kind of the trouble with some of these evals broadly like
+</details>
+<blockquote>
+<blockquote>
+<p>这大体上就是其中一些评测的麻烦所在。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; this is my problem with like people saying like real money is the real eval and I'm like yeah well that's you know that's everybody's a real eval there's part of me that always wants to build an eval platform into the into the product too or something that's eval like either own the outcome for people or kind of build something into the product where they can start to build these tests and like build that assurance
+</details>
+<blockquote>
+<blockquote>
+<p>这就是我对"真金白银才是真评测"这种说法的问题，我觉得，是啊，那每个人都是真评测。我内心有一部分总是想把评测平台也构建进产品里，或者类似评测的东西：要么为人们承担结果，要么在产品里构建一些东西，让他们可以开始构建这些测试，并建立那种保证。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; um that's actually holding you back almost as as a company because you can you can never own the outcome cuz you are a tool for people to do like mass volume basically.
+</details>
+<blockquote>
+<blockquote>
+<p>这实际上几乎在拖累你们作为一家公司，因为你们永远无法为结果负责，因为你们基本上是供人们做海量操作的工具。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Well,
+</details>
+<blockquote>
+<blockquote>
+<p>是的。嗯，</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; which is fine like you're like you're you're like state of the art in your category but like like a Sierra will be like no you just pay us for outcomes that's yes that's true. No I I I I don't think we're we're trying to do the you know full outcome based type of thing
+</details>
+<blockquote>
+<blockquote>
+<p>这没问题，你们在自己的品类里是最先进的，但像 Sierra 会说：不，你只需为结果向我们付费。是的，没错。我不认为我们在尝试做完全基于结果的那种模式。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; but even Sierra I think you know Sierra has an eval platform built into into Sierra. So I think uh you know there's something there where like you know if something can't be expressed in our internal evals it's probably like a product feature to be built around it but I [snorts] mean it's it's a bit tricky. I don't know.
+</details>
+<p>但即便是 Sierra，我想 Sierra 里也内置了一个评测平台。所以我觉得这里有点东西：如果某件事无法用我们内部的评测表达，那大概就是一个值得围绕它构建的产品功能。不过，这有点棘手。我不知道。</p>
+<!-- chunk 2/2 -->
+<blockquote>
+<blockquote>
+<p>那你们的团队构成是什么样的?比如,有没有专门只做 evals 的人,他们是不是恰好是 go to market 工程师?大概是什么样子?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So what is your like team composition look like maybe like do you have specific people working on evals only and do they happen to be like go to market engineers like yeah what does that look like?
+</details>
+<blockquote>
+<blockquote>
+<p>不是,他们大多就是工程师背景。就团队构成来说,我觉得大概是比较平均的划分。有些人在传统机器学习方面比较突出;有些人你大概会把他们看作 applied AI engineers,也就是做过 evals、也喜欢做这类工作的人;然后还有标准的软件工程师背景的人。就像是说,这是一个工程系统,你可以围绕它搭建很多东西。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; No they're they're mostly mostly just engineer profile like I think uh just in terms of the team breakdown I'd say it's probably a pretty even split. We have people who spike in kind of traditional machine learning. We have people who you would probably consider like applied AI engineers. So like people who have built evals and like kind of like like to do that type of work. And then you have just the sort of standard software engineering profile. It's like hey like I don't know this is an engineering system and you can like build a bunch of stuff around that.
+</details>
+<blockquote>
+<blockquote>
+<p>这些不同的人头衔不一样吗,还是都是工程师?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Do you have different titles for those different people or are they all engineers?
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得大家就是软件工程师。对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think everyone's just a software engineer. Yeah. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>不错。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Nice.
+</details>
+<blockquote>
+<blockquote>
+<p>现在是 AI 工程师了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; AI engineer now.
+</details>
+<blockquote>
+<blockquote>
+<p>对。[笑] 对。对。招聘时最难找的能力是什么?比如说你想再多招一个人,你希望他具备什么?我是说,真的很难招到人,你知道,我不知道……Clay 在纽约,所以你可能会希望他们加入的是湾区。[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. [laughter] Yeah. Yeah. Yeah. What is the hardest capability to hire for? Like let's say you're you would like to add one more additional person. What do you wish they had? I mean it's it's really hard to get people you know I I don't know how much of this Clay's in New York and so like there's there's a sort of you wish they joined in the Bay Area. [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>不不,只是情况不一样。真正很难找的,是有亲手构建生产环境 agents 经验的人。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; No no there's just a different set of pro. So I the thing that's really hard to find is people who have like hands-on experience building production agents
+</details>
+<blockquote>
+<blockquote>
+<p>纽约没有。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and New York doesn't have it.
+</details>
+<blockquote>
+<blockquote>
+<p>只是没那么常见。[笑] 对。我觉得在纽约更难找。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's just it's not as common. [laughter] Yeah. I I yeah I I I think it's it's it's harder to find in New York.
+</details>
+<blockquote>
+<blockquote>
+<p>不不不不。好吧,我们会努力证明你错了。我第二大的会议就是纽约的 AI 会议。我们在把这些人都聚集起来。不,这很令人难过,你知道有多少纽约人跟我说:“哇,这里根本没有 AI 圈子。”</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; No, no, no, no, no. Okay. Well, we will we will strive to prove you wrong, you know, like uh you know, my second largest conference is AI in New York. Like like we are gathering all these people like uh No, it's very sad like like you know how many people New Yorkers tell me like, "Wow, there's just no AI scene here."
+</details>
+<blockquote>
+<blockquote>
+<p>对。对。对。我是说,</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. Yeah. I mean,
+</details>
+<blockquote>
+<blockquote>
+<p>就只有你们和 Moto,还有 Runway,就这些。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; it's just you and Moto and like Runway and that's it.
+</details>
+<blockquote>
+<blockquote>
+<p>对。[笑] Ram 的存在感还是挺大的。对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. [laughter] Ram still has a pretty big presence. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>不过,我在纽约长大,所以我很爱纽约。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; But yeah. No, I I grew up in New York, so I'm I I love New York. Uh
+</details>
+<blockquote>
+<blockquote>
+<p>Silicon Alley 本来应该是个东西的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Silicon Alley is supposed to be a thing.
+</details>
+<blockquote>
+<blockquote>
+<p>我知道。只是很难找到构建过生产环境 agents 的人。一方面有时间因素,对吧?ChatGPT 才四年。所以如果你花了一年做 agent 工程,这就已经限制了人才池。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I know. Well, it's it's just hard to find people who have built production agents, you know, one, it's just there's a time element of it, right? Like TATBT is, you know, still only four years old. So like I don't know if you've spent a year working in agent engineering, it's got a lot of, you know, that's kind of limits the pool.
+</details>
+<blockquote>
+<blockquote>
+<p>对。我是说关于技术栈,我离这个比较近,也许 Basil 没注意到而我注意到了,就是所谓的 workflows 和 pipelines、批处理。我有 temporal 的背景,你们用 temporal 吗?还是用别的东西作为后端编排器?可调整的可靠性编排栈里,有什么你想谈的吗?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I mean the more the stack and you know I think something that I'm closer to that maybe maybe Basil didn't pick up on but I did which was kind of like let's call it workflows and pipelines batching um so I come from the temporal background you work temporal uh do you use that do you use something else as like a backend orchestrator anything in the reliability orchestration stack that you want to go into
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得不好意思,我们</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I feel bad we
+</details>
+<blockquote>
+<blockquote>
+<p>langraph</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; langraph
+</details>
+<blockquote>
+<blockquote>
+<p>呃,不是 langraph</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; uh uh no langraph
+</details>
+<blockquote>
+<blockquote>
+<p>很遗憾,以上都不是,是自己手写的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; none of the above unfortunately yeah handrolled
+</details>
+<blockquote>
+<blockquote>
+<p>对,自己手写的。系统有几个不同的部分,用于 agent 的一些持久性。我们大体上仍然是建立在 Bull MQ 之上的,</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; no hand rolled yeah Yeah, there's a couple different parts of the system for some of the agent durability. Um, we have still gotten away to the large for the most part building on top of Bull MQ the
+</details>
+<blockquote>
+<blockquote>
+<p>JavaScript。对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; JavaScript. Yep.
+</details>
+<blockquote>
+<blockquote>
+<p>很勇敢。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Very brave.
+</details>
+<blockquote>
+<blockquote>
+<p>对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yep.
+</details>
+<blockquote>
+<blockquote>
+<p>有什么痛点吗,还是都挺好?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Any any pain points or all good?
+</details>
+<blockquote>
+<blockquote>
+<p>大体上都挺好。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; For the most part, all good.
+</details>
+<blockquote>
+<blockquote>
+<p>什么?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; What?
+</details>
+<blockquote>
+<blockquote>
+<p>对。我不知道我们在 BMQ 上能不能撑过再一个 10 倍增长,不过</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I I don't know if we'll survive another 10x on BMQ, but
+</details>
+<blockquote>
+<blockquote>
+<p>如果撑不过去,最可能的瓶颈点是什么?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; what's the most likely choke point if it if you don't survive?
+</details>
+<blockquote>
+<blockquote>
+<p>顺便说一下,我是个超级数据栈爱好者,对吧?你们内部嵌入了整个数据仓库,还有 ETL、反向 ETL 管道。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; By the way, I'm I'm like a huge data stack guy, right? Like there's this whole like you like you embedded inside of you. There's a whole data warehouse and a ETL reverse ETL pipeline.
+</details>
+<blockquote>
+<blockquote>
+<p>对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>对吧。你们基本上得把这些全都吸收进来。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Right. You had to basically subsume all of these guys.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。所以[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. So there's [laughter] a
+</details>
+<blockquote>
+<blockquote>
+<p>我以前为其中一些公司工作过,它们基本上都死了,因为你可以直接 vibe code。我是说,我们 Avenue 大概把自己看作在这种数据监控领域,比如 Meta Plane,这和我们做的事情有点相邻。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So I used to work for some of these, you know, and they're all dead basically cuz you can just vibe code your I mean I would say like we you know a Avenue was like probably like we we sort of thought of ourselves as kind of in this data monitoring like you know like Meta Plane like this was like sort of adjacent to what we were doing.
+</details>
+<blockquote>
+<blockquote>
+<p>对。Kevin,我以前常和那些人混在一起。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Kevin I used to used to hang out with those guys.
+</details>
+<blockquote>
+<blockquote>
+<p>对。我是说,这是个很有意思的市场。我很喜欢数据领域。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. I mean like I you know it's uh it's very interesting market. I really like the the data space. Um
+</details>
+<blockquote>
+<blockquote>
+<p>好吧。哇。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Okay. Wow.
+</details>
+<blockquote>
+<blockquote>
+<p>好吧,这回答很短。[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; All right. That was a very short answer. [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>哦不。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Oh no. Uh
+</details>
+<blockquote>
+<blockquote>
+<p>不。所以我想,以前的数据人,我给自己算大概三分之一的数据人,基本上被吸收进了 AI 工程里、应用里。大家假定它就是能用,但你知道你得构建一整个上下文层和知识图谱,并做所有这些管道,有时它们会坏,各位,它们不会神奇地自己就能用。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; no. So I think okay like uh I do think like uh basically the the former data guys let's let's I'll put like myself I'll give myself maybe like onethird credit as a data guy you are basically subsumed inside the AI engineering inume inside the app. It is assumed to just work but you know that you have to build a whole context layer and a knowledge graph and like do all these pipelines and like sometimes they break guys and they don't just magically work.
+</details>
+<blockquote>
+<blockquote>
+<p>而且这些你们都是内部做的。我们大量使用 click house,既用于产品,也用于我们自己的东西。我们用 snowflake 做分析,但产品里大部分东西都是手写的,建立在 postgress 之上,在</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh and like you don't you you do all this in house. We use click house a bunch both in product and then for our own stuff. We're snowflake users uh for like analytics but no I mean like most of the stuff in product is hand rolled so it's on top of postgress on top of
+</details>
+<blockquote>
+<blockquote>
+<p>现代数据栈完蛋了,哥们[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; modern data stack is cooked man [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>我只能说这么多</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; that's all I can say
+</details>
+<blockquote>
+<blockquote>
+<p>看看这个。不过我们的一些内部数据集用的是 Dagster,我想我们正在重做其中一部分,但是</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; uh look at this yeah um no I mean like you know for for some of for some of our internal data sets we were using Dagster and I think like we're we're reworking some of that some of that but um yeah it's uh
+</details>
+<blockquote>
+<blockquote>
+<p>哇[笑],佩服,佩服。因为我一直在维护其中一些东西,对吧?所有的连接器。那曾经是个巨大的生意。光是维护这一切。我想现在你不需要了,或者它们都有 MCP 之类的。我不知道。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Wow [laughter] impressed impressed yeah because like you I've been uh maintaining some of these things, right? All the connectors. It used to be a huge business. Yeah. Just maintaining all of that. And I guess like now you don't need to or they all have MCPs or whatever. I don't know.
+</details>
+<blockquote>
+<blockquote>
+<p>对。我是说,我不知道。有很多人非常努力地在维护和构建这些东西,但确实,我觉得团队比你预想的要小得多。比如我们刚上线了大概 25 或 30 个新集成,瓶颈并不在工程工作,而是在所有的合同和周边事务。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I mean, you know, I I don't know. I mean, there there are a lot of people who work who work who work quite hard at like maintaining and building these, but but yes, I it's definitely like I think they the team's much smaller than I think you would expect. And like I I don't know like we just launched I think like 25 or 30 new integrations and like the the bottleneck was not engineering work right it's just like all of the contracting and the stuff around it
+</details>
+<blockquote>
+<blockquote>
+<p>还有质量控制,对吧?让一个基本集成跑起来很容易,但你真的测试过吗?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; also quality control right like it's good to it's easy to get a basic integration working but like did you really test it
+</details>
+<blockquote>
+<blockquote>
+<p>嗯,好吧,我闭嘴了,我以前的雇主 airte,还有一堆,像五个那样的……我有几个问题,你们的 agents 在规模扩大时什么地方出了问题?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; um and uh yeah I don't know I'll shut up my former employer airte and there's there's a bunch like five all those I have a couple questions on like what broke with your agents as you scaled
+</details>
+<blockquote>
+<blockquote>
+<p>对,什么出问题了[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah so yeah what broke [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>哦,没什么,就</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; oh nothing just
+</details>
+<blockquote>
+<blockquote>
+<p>我刚加入 clay 时,当时马上要做的工作就是 claggent,而 claggent 有太多东西在出问题。首先,我们对正在发生的事情没有很好的可观测性,所以我们接入了 lang,非常有帮助,能理解 agent 在做什么、调用了什么工具、它在处理什么,都是你会预期的那些东西。另外在我们的规模下,因为人们在表格里运行东西,我们的推理负载往往非常有尖峰。你可以想象有人有一个 50,000 家公司的表格要做调研,你为每家公司运行一个 agent。所以会有大量推理很快涌向推理提供商。所以很多工作是围绕限流,确保我们能够在推理提供商宕机或对我们限速时,暂停执行并恢复,我们在这上面花了很多时间</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah so when I joined clay like the the immediate work that we were working on was claggent and claggent I think is just there was so much stuff breaking one like we didn't have great observability for what was happening so I don't know we we onboarded lang like very helpful I think just to understand what was like what the agent was doing like what tools was it calling I don't know like what was it working um kind of all the things that you you'd expect I think also at our scale because people are running stuff in in a table like our inference workloads tend to be quite spiky, right? So it's like you could imagine someone has a table of 50,000 companies that they're trying to research over and you run an agent for each of those companies. So there's just like a ton of inference going to an inference provider like I don't know like quite quickly. Um so I don't know a lot of the work was around throttling making sure that we were actually could fall over to like if you know if an inference provider went down or it was rate limiting us we could kind of pause execution and resume all of that work I think was we spent a lot of time
+</details>
+<blockquote>
+<blockquote>
+<p>那你们对所有推理有双源策略吗?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; across uh so do you have like a sort of like a dual sourcing policy for all all infrance
+</details>
+<blockquote>
+<blockquote>
+<p>双源,意思是总有备用?我们没有。出于各种原因,我们现在可能会做,更多是因为我们的客户分布。我们非常在意公平性。我想不出能说出名字的客户例子,但如果我们的一个大型企业客户要对一百万个东西做 enrich,我们不希望这挤占了刚注册 Clay、只想做一个十人规模 workflow 的人。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; uh dual sourcing meaning like you always have a fallback
+&gt;&gt; we don't um and yeah like for for a variety of reasons we'll we'll probably do this now is more just like because of of our customer distribution. We care a lot about fairness. So like I'm trying to think of a customer example I can name, but you know if one of our large enterprise customers runs a million things that they want to uh enrich, we don't want that to you know crowd out like the person who just signs up for Clay and just wants to do like a 10erson workflow or something like that.
+</details>
+<blockquote>
+<blockquote>
+<p>可以叫吵闹邻居。对。我不知道这个类比对不对,但</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Let's call it noisy neighbor. Yes. I don't know if that's the right analogy, but
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得是。对。也要向你之前在 Langmith 大会上的演讲致意,想了解可以去看。我们不会详细讲那些,不过它们现在都是楼下的邻居。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think that's Yes. Yeah. And a shout out to your uh previous talks at the Langmith conferences if you want to check into those things. that we won't cover those in detail, but uh you know they're all downstairs neighbors for now.
+</details>
+<blockquote>
+<blockquote>
+<p>对。[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>嗯</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um
+</details>
+<blockquote>
+<blockquote>
+<p>这个双源的事也很有意思。我基本上是想提炼:你是一家知名 AI 垂直公司的 AI 负责人,我在播客上见到并报道很多你们这样的同行,我看到相同的模式,对吧?我看到确实更小的团队能做很多事。我看到,你想做 router,但不想拿掉模型选择器。我看到你最终想把一切都双源。我看到你想从闭源模型转向开源模型。基本上我们大概可以建一本每个 AI 负责人都需要知道的手册。我不知道,这里面还有别的吗?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; it's interesting also this this whole like dual sourcing thing like I I'm basically I'm trying to basically distill you're you know you're a head of a uh AI at at at a at a notable um AI vertical company and like there I meet like a lot of you and we cover a lot of you in your peers on a on a podcast and I see the same patterns, right? I see like yes actually smaller teams can do a lot. I see. Yes, you want to do a router, but you don't want to take away the model picker. Yes, I see that you eventually want to dual source everything. Yes, I see that you want to go move from close to open model uh open models. You know, basically I like probably we can build out this handbook of like what every head of AI needs to know. I I don't Is there is there anything else in there?
+</details>
+<blockquote>
+<blockquote>
+<p>这些都是不错的起点。对,[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Those are all good starting points. Yeah, [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>我确实觉得很多人在探索他们的 agent 基础设施里要给 agent 多大权力、给 agent 什么样的沙箱、</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I do think that a lot of people are exploring uh let's call it their let's in their agent infrastructure how much power they want to give the agent. what kind of sandboxing you want to give the agent
+</details>
+<blockquote>
+<blockquote>
+<p>多大自主权。你们的似乎更偏 pipeline,所以自主权可能比较有限,但其他人在探索实际上完整的 chbt 克隆,chbt 能做的一切、codex 或 cloud code 能做的一切,我们就给用户发布一个那样的版本。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; um how much autonomy yours seems more pipeliney so maybe there sort of more limited autonomy but other people are exploring like effectively complete chbt clones like everything chbt can do or codex can do uh or cloud code can do like we will just basically ship a version of that for our users
+</details>
+<blockquote>
+<blockquote>
+<p>这是个很有意思的问题,我们实际上会这么做</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; this is like a very interesting one so like we will effectively do this
+</details>
+<blockquote>
+<blockquote>
+<p>因为我们一开始就说文件系统很好,对吧?这是大家都在说的同一套说法</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; because we started out saying file systems are like good right like so that's the talk track for everyone saying the same thing
+</details>
+<blockquote>
+<blockquote>
+<p>对,我们实际上会这么做:产品里会有一个 agent,它有沙箱,能做的事相当不受限制,并且可以访问所有 clay 原语。不过我想说,我们的理念,以及我们花了很多时间思考如何正确参与这件事,是我们希望 clay 平台对所有 agent 都很好,不管是我们自己的 agent 还是外部 agent。所以我们明确不希望自己的 agent 比单纯用 clay 加 cloud code 明显更好。如果你用 clay 加 cloud code,那很好。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah no like we will effectively do this where we have we'll have an agent in the in the product that does have a sandbox is like quite unconstrained in terms of what you can do and you know has access to all of the clay primitives but I'd say like almost our our ethos and I don't know we spent a lot of time thinking about the right way to engage with this but we want the clay platform to be great for all agents like whether it's our agent or external agents so like we explicitly don't want our agent to be marketkedly better than just using clay and cloud code like if you use clay and cloud code that's great like
+</details>
+<blockquote>
+<blockquote>
+<p>是 clay MCP 还是 Clay CLI?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; is that clay mcp or Clay Clay CLI.
+</details>
+<blockquote>
+<blockquote>
+<p>Clay CLI。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Clay CLI.
+</details>
+<blockquote>
+<blockquote>
+<p>是。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes.
+</details>
+<blockquote>
+<blockquote>
+<p>MCP 死了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; MCP is dead.
+</details>
+<blockquote>
+<blockquote>
+<p>我不知道。对。[笑] 对。MCP</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I I don't know. Yeah. [laughter] Yeah. Yeah. Uh MCP
+</details>
+<blockquote>
+<blockquote>
+<p>正在卷土重来。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; making a comeback.
+</details>
+<blockquote>
+<blockquote>
+<p>正在卷土重来。对。真的很好笑,我们也有 MCP。但那个团队基本上把重点转向构建 CLI 了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's making a comeback. Yeah. I I uh It's really funny. The uh the team who we have an MCP as well. Um and but that team basically re like shifted their focus to build out the CLI.
+</details>
+<blockquote>
+<blockquote>
+<p>我是说这只是集成,对吧?就是 API、SDK、CLI、MCP。对。这是向前的方向。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I mean, it's just integrations, right? It's just like here's consumate hardware like API uh SDK, CLI, MCP. Yeah. Right. That's the forward thing.
+</details>
+<blockquote>
+<blockquote>
+<p>完全是。这只是一种形态,不该那么重要。但现在我们想,哦,我们也许应该</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Totally. Like it's just a form factor and it shouldn't matter that much. But yeah, now now we're like, "Oh, we should probably
+</details>
+<blockquote>
+<blockquote>
+<p>人们对这些东西会变得很教条。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; People get really religious about this stuff."
+</details>
+<blockquote>
+<blockquote>
+<p>嗯,好吧。不,这挺酷的,检查一下偏见是好事。不过也许可以查一下市场份额,比如 clay 在 cloud code 或外部 harness 里的份额与你们自己的东西相比。我原以为会更多是 clay harness,我忘了确切比例,但比我想象的更接近 50/50,因为我在和一个做 GTM 的人约会,她爱 Grockbot。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um, yeah. Okay. No, I mean it's just cool. I think it's it's like good to check biases. But like I I do think like uh maybe maybe one thing to check is what's the market share I guess of like clay in cloud code or you know clay in external harness versus your your stuff. Yeah, I would have assumed it would be more the clay harness and I think I forget the exact breakdown, but it it's much closer to 50/50 than I would have thought because I find like um you know I'm I'm dating a GTM uh person and she loves Grockbot.
+</details>
+<blockquote>
+<blockquote>
+<p>对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>你永远没法把 Grockbot 从她冰冷的死手里撬走。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And like you're never going to ply pry Grockbot from her cold dead hands.
+</details>
+<blockquote>
+<blockquote>
+<p>完全是。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Totally.
+</details>
+<blockquote>
+<blockquote>
+<p>那为什么不呢?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And so why not?
+</details>
+<blockquote>
+<blockquote>
+<p>我们并不是想……这就是关键,我们花了很多时间思考是否需要掌控这里的界面面积。其实没关系,人们可以用 Grockbot 做 go to market,我们希望他们拥有所有</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And and and we're not trying to I think that's the that's the thing that like I I mean we spent a lot of time just thinking about like do we do we need to own the surface area here? It's really okay like people can do good go to marketing rockbot and we want them to have all the
+</details>
+<blockquote>
+<blockquote>
+<p>我想说,不知道你有没有想法,这是另一件事,也许 Salesforce 的 Mark Benny off 在防御这一侧也有了类似的信念,因为作为事实来源或 SAS 提供商,你可以说我要你们都付我每月 20 美元、200 美元并使用我的东西,但把自己暴露为 API 基本上意味着你失去了第一触点界面。但然后你只要把 API 做得非常好。对。我觉得我们在自己的 agent harness 上花了很多时间,我希望人们使用它。但那其实不是重点,我们只是想让 Clay 成为这种 agentic go to market 基础设施,我觉得它在很多不同地方都会有价值。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I will say I don't know if you you have any like thoughts on this like this is another thing that maybe Mark Benny off at Salesforce had also come to sort of that religion on that side of defense because as a source of truth or as like a SAS provider you can just be like no like I want you all to pay my $20 a month $200 a month and use my thing but uh exposing yourself as an API basically means you lose the first touch interface But then you just make your API really good. Yeah. I mean I I think like you know I we spent a lot of time on our agent harness and like I hope people use it. Uh that's actually not the point, you know, like I think we just want Clay to be this agentic go to market infrastructure and like I think it'll be valuable in a lot of different places.
+</details>
+<blockquote>
+<blockquote>
+<p>那你们本质上是想自动化 go to market 吗?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; So I guess would you say you guys are trying to automate go to market essentially?
+</details>
+<blockquote>
+<blockquote>
+<p>不,我会换一种说法。我认为我们是想做同样的事,带来 claude code 给工程带来的那种转变。所以 go to market 仍然会有 go to market 工程师,他们只是会做多得多的事情,会构建一堆 plays。我从 Clay 的角度想这个:Clay 有一个很棒的 go to market 团队,也许凭直觉如此,但有太多事情我们没在做,比如我们没有运行一堆不同的 go to market plays,我大概能想出 10 个我们现在没在做的 go to market 想法,我觉得 Clay 的目标就是我们会把这些全做了。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; No, I mean I would I would frame it differently. I I think we're trying to do the same thing, you know, bring the same shift that claude code brought to engineering. So it's like I think you know go to market will you'll still have go to market engineers they'll just do way more they will I don't know build a bunch of plays and like I think about this from the perspective of Clay where like you know Clay has a really great go to market team maybe maybe intuitively but there's so much stuff we're not doing like I I don't know uh we're not running a bunch of different go to market plays that like I could probably think of 10 different go to market ideas that we're not doing right now and I don't know I think the the goal of Clay is like we'll do all of that we'll just Yeah, one thing I like about go to market businesses is that your basically your GTM team can just tell your sales team what your engineering team what you need.
+</details>
+<blockquote>
+<blockquote>
+<p>有什么例子是来自你们内部需求、让你们觉得“对,这真的合理”的?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh what's an example that's come from your internal needs that like you guys were like oh yeah that really makes sense.
+</details>
+<blockquote>
+<blockquote>
+<p>对。[笑] 对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. [laughter] Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>我是说大概 CLI 就是其中很大一部分。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I mean probably the CLI was like a big part of that.
+</details>
+<blockquote>
+<blockquote>
+<p>他们向你们要的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; They asked you for it.
+</details>
+<blockquote>
+<blockquote>
+<p>是。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes.
+</details>
+<blockquote>
+<blockquote>
+<p>多说说。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Say more.
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得很多人就待在 cursor 里,和 Grockpot 类似,很难从他们手里撬走。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I I think a lot of people were just in cursor and it was you know similar to Grockpot like really hard to pry it out of their hands.
+</details>
+<blockquote>
+<blockquote>
+<p>哇。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Wow.
+</details>
+<blockquote>
+<blockquote>
+<p>对。他们说我们不能……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. And they were like we we can't you know.
+</details>
+<blockquote>
+<blockquote>
+<p>对。而你们的 go to market 团队大多是工程师。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. And your go to market team is mostly engineers.
+</details>
+<blockquote>
+<blockquote>
+<p>我们的销售团队在 codeex 里做很多事,比如 deal prep,但不是,我们确实有一个 go to market ops 团队,命名有点混乱,但他们大概就是我们所说的 go to market 工程团队。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Our sales team is in codeex doing a bunch of stuff on like deal prep, but no, I mean like we do have a go to market ops team that it's probably like our I don't know the naming is a bit confusing, but they're probably like what we would call a go to market engineering team.
+</details>
+<blockquote>
+<blockquote>
+<p>就是些很厉害的人。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Just cracked people.
+</details>
+<blockquote>
+<blockquote>
+<p>就是前工程师做 go to market 工作的那种人,在 clay 之上为我们的销售团队构建一堆内部工具。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That's like the profile of like former engineers doing go to market work like building out a bunch of internal tools like built on top of clay um for our sales team.
+</details>
+<blockquote>
+<blockquote>
+<p>对,有道理。我还是没想通这个 50/50 的事,clay harness 的目的不是要打败 cloud code harness,那为什么还要做?为什么不干脆全力做最好的、面向 agents 的 CLI MCP?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, that makes sense. Yeah, I I say it's still like I'm still not over this whole like it's 50/50 like you it's not the point of your the clay harness to beat cloud code harness then like why do it at all? Like why not just go all in on on like just being the best uh CLI MCP for agents?
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得人们想要在 Clay 里有点东西,人们在 Clay UI 里构建东西,会想在那里使用 agent。对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think people like want something in Clay like people are in in the Clay UI building stuff and would want to use an agent there. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>所以某种程度上就是跟随客户需求,</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um, so it's somewhat just following the customer demand where like
+</details>
+<blockquote>
+<blockquote>
+<p>你可以把 cloud code 装在容器里发布,完全可以,或者 pie 或 open code,不管那个开源的是什么。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; you could ship cloud code in a container, you know, like totally I mean all right pie or open code whatever the open source one is.
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得很多就是实际上这样。这是另一件怪事:在 harness 构建、agent 构建里,alpha 的来源是什么?很多人说在大家已有的东西之上没有多少东西。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I feel like that's effectively what a lot of these are. All right. That's another weird thing of like well where you know what are the sources of alpha in harness building agent building. A lot of people saying there's not that much on top of what everyone already has.
+</details>
+<blockquote>
+<blockquote>
+<p>对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>哇。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And like wow.
+</details>
+<blockquote>
+<blockquote>
+<p>对。我们的 agent harness 是建立在 Pi 之上的,所以我们从 Pi 开始,然后在其上做了更多构建和定制,但是</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. Our agent harness is built on top of Pi and so you know we're starting with Pi and you know it's it's somewhat more you know built out and customized on top of it but
+</details>
+<blockquote>
+<blockquote>
+<p>一开始就是这样吗?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; did it start that way?
+</details>
+<blockquote>
+<blockquote>
+<p>对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>哇。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Wow.
+</details>
+<blockquote>
+<blockquote>
+<p>哦,就像在 post sculpted 的世界里,所以在我们之后,对,我们</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Oh like in a post sculpted world so like after we yeah we uh
+</details>
+<blockquote>
+<blockquote>
+<p>看起来……顺便说,Pi 是 Python,你们似乎是 JavaScript 栈。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah it seems like uh and by the way Pi Python you seem to have a JavaScript stack.
+</details>
+<blockquote>
+<blockquote>
+<p>对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes.
+</details>
+<blockquote>
+<blockquote>
+<p>你们就合并语言,可以把整个东西重写。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You just merge languages you could just rewrite the whole thing.
+</details>
+<blockquote>
+<blockquote>
+<p>我们用 versel AI SDK。对,用他们的集成。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; We use the versel AI SDK. Yeah. Use uh you know their their their integration there.
+</details>
+<blockquote>
+<blockquote>
+<p>对。非常酷。我觉得我们在研究中遇到的一点是,你总是谈到勇气和情绪代谢。能不能谈谈这是什么样子,尤其是在某件事没有成功的时候?我强烈地觉得,制度性勇气可能是现在公司里最重要的东西。而且它很难。我加入 Clay 时是 50 人,现在大概 600 人。变化很大,惯性就是让事情僵化,要做事需要越来越多的勇气。所以一方面,作为原则我觉得它相当重要;另一方面,随着事情变化很大,有很多不确定性。我能想到几个例子。我之前发过帖子,我们是 chatbt apps 的发布合作伙伴之一,也就是 chatbt 上第一批商业应用。我们和团队松散地合作支持这件事,然后我们基本上重新排了优先级,大概在季度中把工程团队的 25% 投入一个月来完成它,这是一个巨大的冲刺,去和 chatbt 集成。chatbt 有大量需求,所以我们有很大激励去做。但团队基本上没给我们任何迹象说明这是否会成,他们只是说,嘿,也许如果不错我们就一起发布。所以我们基本上把公司四分之一的人重新排优先级来做这件事。我想在我们本应发布的 2 天前,他们说我们要取消了,我们要无限期推迟,如果再做会告诉你们。所以我想那是……</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. Yeah. Very cool. I think one of those things where uh we we come across in the research is that you always talk about courage and emotional metabolism. Can you talk about like what that looks like especially with with something that didn't really work? I feel very strongly that you know institutional courage is probably the most important thing right now at companies. Uh and it's really hard. I I don't know like I joined Clay at 50 people. We're now probably around 600. it changes a lot like the momentum is just for things to calcify and I don't know just to do things requires more and more courage so I don't know one is just as a as a principle I think it's is quite important two I I don't know I think there's a lot of uncertainty as things change a lot and so um I I can think of a couple examples so one like we um uh I think I've posted about this before but we were one of the launch partners for chatbt apps or like the kind of the first wave of of business apps on chatbt and you know we loosely been working with the team uh on like on supporting this uh and then I think maybe you know so we basically rep prioritized I mean probably 25% of the engineering team for a month like midquarter to to get this done it was like a huge sprint to like you know integrate with chatbt and you know chatbt is has a ton of demand like so there's a lot of you know incentive for us to do it but basically the team was giving us kind of no indication of whether this was going to work or not they were just like hey maybe maybe if it's cool like we'll we'll launch with that And uh so we rep prioritized like a quarter of the company basically to work on this. I think 2 days before we were supposed to launch they were like we're going to cancel it. We're going to just uh we're going to postpone this indefinitely. We'll let you know if we we do this again. So I think it was like
+</details>
+<blockquote>
+<blockquote>
+<p>抱歉,是他们做的这个决定?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; sorry made that decision. Yes. So we were like oh man
+</details>
+<blockquote>
+<blockquote>
+<p>是的。所以我们当时就想,天哪。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. So we were like oh man
+</details>
+<blockquote>
+<blockquote>
+<p>简而言之这是个很缺德的举动,对吧,但我猜他们不是轻易做出这个决定的,他们还有其他要平衡的优先事项。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; that's [laughter] you know TLDDR is a dick move right cuz but like I I assume they didn't make that decision lightly and like you know they have other balancing priorities.
+</details>
+<blockquote>
+<blockquote>
+<p>但愿如此。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; One would hope.
+</details>
+<blockquote>
+<blockquote>
+<p>嗯[笑],我觉得你说得对。我其实不确切知道发生了什么,但我们当然有点沮丧,不过我们想,嘿,这个赌注仍然说得通,我们就是需要做它,于是继续做,假设他们大概会改变主意。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Um [laughter] no I I think I think that's right. I I I don't actually exactly know what happened, but you know, like we uh we were just of course a little bummed out, but I think we were just like, hey, like this bet still made sense. Like we we just needed to do it and actually just kept working on it with the assumption like they'll probably change their minds.
+</details>
+<blockquote>
+<blockquote>
+<p>我想大概 3 或 4 天后,他们改变了主意。我们确实需要继续做。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And I think like 3 or 4 days later, they they changed their minds. Like we actually like needed to keep working.
+</details>
+<blockquote>
+<blockquote>
+<p>他们 3 天内改变了主意。对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; They changed their minds in 3 days. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>在一次非常公开的取消之后,什么?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; After a very public cancellation, like what?
+</details>
+<blockquote>
+<blockquote>
+<p>呃,他们只是告诉我们他们要取消,所以我不知道。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh well, they they just told us they were canceling, so I don't know. You know that
+</details>
+<blockquote>
+<blockquote>
+<p>我是说,甚至做出告诉你们取消的决定,本身就是</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I mean no even making that decision to tell you they're cancelling is like
+</details>
+<blockquote>
+<blockquote>
+<p>对,一件很有意图的事。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah a very intentional thing.
+</details>
+<blockquote>
+<blockquote>
+<p>你对他们为什么改变主意有假设吗?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Do you have a hypothesis for like why they changed their minds?
+</details>
+<blockquote>
+<blockquote>
+<p>也许有足够多的人说,我已经把这些东西都做好了。我觉得就是一切……我很难去推测,但我觉得现在事情非常动态,所以围绕它的决策过程也非常动态,而且……任何和实验室打过交道的人都会说[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Maybe enough people were like you like [laughter] I already engineered all this stuff. I think it's just like everything I mean I don't know I it's hard for me to speculate but it's like I think things are just very dynamic right now and so the decision-m processes around that are very dynamic as well and that that has through you know like anyone who's dealt with the labs they're like [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>他们有很多事情在发生,内部很混乱,我们同情他们,他们在尽力做到最好。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; they have a lot of stuff going on it's it's it's chaotic inside we have sympathy for them they're trying they're trying to do their best
+</details>
+<blockquote>
+<blockquote>
+<p>这完全说得通。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; which totally makes sense like um
+</details>
+<blockquote>
+<blockquote>
+<p>可以更好,但看,我们处在 AI 时代,事情在快速变化。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; could be better but look we're in we're in AI times like things are moving
+</details>
+<blockquote>
+<blockquote>
+<p>这大概是我们 20 个优先事项之一,而且是我们最重要的优先事项之一。好吧,其实我会质疑,如果我是你,我会质疑为什么把它列为最高优先级。你知道,每一次 dev day,我们是在第四届 dev day 前夜录这个,他们总是试图发布某种市场之类的东西,总是失败,那为什么把它作为最高优先级?[笑] 这大概是在我们刚开始弄清楚,关于 CLI 的那种界面面积问题的时候,就是我们想在哪里参与,是不是要在 clay 里做一个完整的 chatbt 克隆,那也许说得通,但大概也该利用已有的东西。所以一方面,感觉这是值得尝试的正确赌注。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; it was probably one of [clears throat] 20 priorities for us and it was like one of our top priorities. Okay. Actually, I question uh if I were had been you, I would have questioned why you made it the top priority. Yeah. You know, let's call it every single dev day, you know, recording this on the eve of uh the fourth dev day. They've always tried to launch some kind of marketplace thing. It's always flopped and like why make this top priority? [laughter] This is probably at the beginning of when we were figuring out like the the same surface area questions about the CLI. It's like where where do we want to play with this? like do we want to have a full chatbt clone in clay and like that might make sense but like it probably makes sense to leverage the things that exist as well. So, I think one it was just like I don't know. It felt like the right bet to try.
+</details>
+<blockquote>
+<blockquote>
+<p>这像博弈论,对吧?如果你有个竞争对手做了,而这次真的……对。我会说每年都会变好。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's like a game theory thing, right? It's like, oh, if you have a competitor that does it and this time it actually Yeah. Yeah. I will say each year it does get better.
+</details>
+<blockquote>
+<blockquote>
+<p>确实。更精致了。它不会席卷世界,但成为第一页很有价值。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It does. They It's more polished. It just No, it's not going to take over the world by storm. Like, but it is very valuable to be page one.
+</details>
+<blockquote>
+<blockquote>
+<p>对。我想这就像回到 iPad 开发的日子,我是商店里最早 500 个 iPad 应用之一,感觉是类似的时刻:AI 在某些方面显然是平台转变,但我不知道人们是否已经搞清楚平台这部分,人们搞清楚了 AI 转变这部分,但是</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I will say that. I mean, I think, you know, I this is like back to the iPad development days. is like, you know, I was one of the first 500 iPad apps on the store and it's like this feels like a similar moment where like AI is clearly a platform shift in some ways and like but I don't know if like people have figured out the platform part yet like people have figured out the sort of the like AI shift but yeah
+</details>
+<blockquote>
+<blockquote>
+<p>我是说某种程度上,每个人都有自己想成为平台的单一视窗,你是很多其他人的平台,很多人把你放在优先位置,比如我们要通过展示集成来做大。你的活动快到了,大概很多合作伙伴也会做同样的发布。别取消他们。[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I mean in some ways you know I think everyone has their sort of single pane of glass that they want to be the platform you are the platform for a lot other people like a lot of people prioritize you as like we will make it big by demoing our integrations. uh you have your event coming up presumably a bunch of your partners are going to make that same announcement. Don't cancel on them. [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>但是,我觉得这很好。就这样。情绪代谢基本上就是挨打来了就接着。我猜</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; But no, I I think I think that's uh that's great. That's it. Like emotional metabolism basically just like take hits as they come. I guess
+</details>
+<blockquote>
+<blockquote>
+<p>要有勇气。对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; having courage. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>对。我觉得你需要它,现在很容易做出错误决定,这是现实,你只能继续前进。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I I think you need it like I don't know like it's uh just very easy to make wrong decisions right now. That's the reality. And like you just have to keep moving like
+</details>
+<blockquote>
+<blockquote>
+<p>首先,还有一种 founder mode 的版本,比如收购一家公司的原因之一,当你们是 50 人而你有五个人时,他们需要不断注入 founder mode 的能量:我不是作为普通员工来的,我可以搅动局面,我是带着搅动局面的授权被雇来的,我可以去做。大概 Clay 做过其他收购,也发生过这种事。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; so first of all there there is a version of founder mode as well like you know one of the reasons to acquire a company when you know you're 50 people and you got five is they just like they need to keep injecting the founder mode energy of like look I didn't come here as a regular employee I can like shake things up. I was hired with the mandate to shake things up and I can go do that. Presumably Clay has done other acquisitions where they've this has happened.
+</details>
+<blockquote>
+<blockquote>
+<p>是。对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>对吧。这是很标准的收购理由,就是从常规渠道进来的人只想让事情保持原样,而作为创始人我不想。[笑] 我觉得另一件很有意思的事,我做 latent space 这大概 5 年里,看到所谓的坚持信念的勇气:有时你从第一性原理认为一件事是对的,它不行、不行、不行、不行,坚持住,它最终会行。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Right. Um yeah this is a very standard reason to acquire. It's just like well like the people I get into the regular door just want things to stay the same and I don't as a founder. [laughter] I think the other thing that I think is really interesting in my let's call it 5 years uh doing latent space and whatever is like I see the let's call it the courage of your convictions like like sometimes you think a thing is right on first principles and it doesn't work doesn't work doesn't work doesn't work just hang on it it works eventually.
+</details>
+<blockquote>
+<blockquote>
+<p>对。比如整个 Clay 的历史,Kareem 做这家公司 5 年,基本上什么都没成。所以我觉得他灵魂深处觉得,只要你坚持推进足够久,事情就会成。我们有很多产品的例子,刚推出时说不通。我们刚推出 workflows 产品,很多代理机构的老板非常喜欢,这个功能有自发的热情,但我们第一次给人看时,人们不理解,他们困惑,有些情况下甚至不高兴,他们说你们为什么要这样做?给我 list 就行。我们喜欢电子表格。你们为什么做这种没用的东西?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. I mean like one just like the whole history of Clay. I mean Kareem was building this company for 5 years with basically nothing working. So like I think just deep in his soul he kind of feels that you know things will work if you just keep pushing long enough. And I don't know I think we have plenty of examples of products that like when when we first launched them it just didn't make sense. We just launched our workflows product and uh I think a lot of agency owners are really really liking it. There's just organic excitement about the feature but when we first showed it to people did not understand it. They were confused. They were in some cases just upset. They were like they they were like why are you doing this? Just give me list. We like the spreadsheet. Why are you doing worthless?
+</details>
+<blockquote>
+<blockquote>
+<p>这就是 Zapier,对吧?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; This is I mean this is Zapier, right?
+</details>
+<blockquote>
+<blockquote>
+<p>是,我会这么说。有些东西我们做得不同,如果 Zapier 是今天才做的,大概会融入类似这样的东西。这也是 agent 优先、CLI 优先,大多数 workflows 是用 CLI 或 agent 构建的。而且对 workflows,这是我做过不少的东西,这一直是梦想:Clay 的一个宗旨是让每个人都有编程的能力,包括 GTM 工程师,也许他们不是 Python 大神,也许在 cursor 里不能被信任,因为他们不该访问所有基础设施,但这里是一个被认可的地方,你所有工具、所有数据都在一处,专门让你尽情发挥。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. I I would say yeah. I mean there probably things that you know I'd say we we do differently and and you know if Zap year was built today there's you know probably things that would would be incorporated like this. Uh you know this is also sort of you know it's agent first CLI first. That's the majority like majority of workflows are built with the CLI or or agent. Yeah, I would say you know like and and for workflows again something I've I've worked in quite a bit. This is always the dream like you know uh one of the statements of Clay is like to give everybody the you the ability to program and like do that stuff including GTM engineers and maybe they're not Python gods maybe they are not cannot be trusted in cursor right because like they should not have access to all the infra but here here's like a a blessed place where you can all your tools all your data all in one place and it's made for you to just go nuts
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得这也在改变我们在 clay 内部做事的方式。我们做了一些分析,看有多少 YCU 公司在用 clay。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think it's changing how we do stuff internally at clay too we were doing some analysis on just how many YCU companies are using clay. Um,
+</details>
+<blockquote>
+<blockquote>
+<p>有多少?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; how many?
+</details>
+<blockquote>
+<blockquote>
+<p>一定很高。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It must be really high.
+</details>
+<blockquote>
+<blockquote>
+<p>全部。确实很高。一个好的大概数字是……我想 superbase 有个数字,每个批次的 70% 是 superbase。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; All them. It uh it it is it is high. A good ballpark is like let's let's call I think superbase has a number of like 70% of each batch is superbase.
+</details>
+<blockquote>
+<blockquote>
+<p>对。好吧,我不会披露这个数字[笑],但它是个健康的数字,不过我们只是问了我们的 agent,它在大概 60 秒内就找到了。嗯</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. All right. I I won't disclose the number but [laughter] uh uh but it but uh you know it's it's a healthy number but I I was just like we just asked our agent for this and it found it in like 60 seconds. M
+</details>
+<blockquote>
+<blockquote>
+<p>我当时在想,一年前这会花很长时间,我需要找到并把 YC 批次抓取到我电脑上的某个 CSV 里,然后需要想办法拿到 snowflake 权限,在那里交叉引用,看他们是不是客户,或者也许 Salesforce,所有这些不同系统,而你现在都不需要,你只要问 Clay,它会拉取列表,交叉引用一切。你们所在领域的美妙之处,是别人没有的特权:你们大部分东西都是半公开的,一个员工看到另一个他不一定有权访问的东西也没有敏感性。都是半公开的,对吧?而其他人会说,绝对不行,你说你对我的 snowflake 有自由进出是什么意思?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; it's like oh man this I was just thinking like a year ago this would have taken so much time I would need to find and scrape the YC batch into some CSV on my computer then I would need to get snowflake access somehow and you know cross reference there to be like are they a customer or like maybe Salesforce you know just like all these different systems and you don't need any of that you can just like ask Clay it'll like you know pull the list it'll you know cross reference everything the beautiful thing about the domain that you're in that other people don't have the privilege of is that most of your stuff is publicish, like there's no sensitivity if one one employee sees another thing that they don't necessarily have access to. It's all publicish, right? Um whereas other people they're like, "No, absolutely not. What do you mean you have like free reign into my my snowflake?"
+</details>
+<blockquote>
+<blockquote>
+<p>对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>就像,[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Like, [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>对。对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>这和我们多少有关。也确实有公司想要更细粒度的权限。但大体上,这也是拥有数据上下文层的优势,你可以只引入与 go to market 相关的信息,不需要一切。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; This is somewhat relevant to us. Like it's not like there they're there definitely companies where they want, you know, more fine grain permissions. But yeah, for the most part, I mean, I think that's the the advantage also of having the data context layer is like you can bring in just the information that's relevant for for good market. You don't need everything.
+</details>
+<blockquote>
+<blockquote>
+<p>你们什么时候上线 workflows 产品的?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; When did you launch the workflows product?
+</details>
+<blockquote>
+<blockquote>
+<p>是今年夏天早些时候。我们在 12 周内做了 12 次发布。我不知道为什么选在夏天做,但是对,我们在 12 周内做了 12 次发布,这是其中一次发布。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh, this was earlier this summer. So, we we did 12 launches in 12 weeks. I don't know why we did this in the summer instead of I don't know, but uh so uh yes, we did 12 launches in 12 weeks. Uh this was this was one of the launches.
+</details>
+<blockquote>
+<blockquote>
+<p>进展如何?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And how's it going?
+</details>
+<blockquote>
+<blockquote>
+<p>进展很好。对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh it's going great. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>你们看什么指标?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; What metrics do you guys look at for this?
+</details>
+<blockquote>
+<blockquote>
+<p>我们在追踪很多东西。有一件很酷的事是人们在 workflows 与表格中做事的百分比。人们把 Clay 看成电子表格工具,那是产品核心,而我们看到很多人基本上把 workflows 切换成主要模式。无论是按每个客户,还是按表格与 workflows 的百分比,我们都看到它增长得相当快。所以它有可能成为主要界面。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, I mean there's there's a bunch of things that we're tracking. Um, one of the things that's cool is just the percentage of things people are doing in workflows versus tables. So like you know again like people think of Clay as the spreadsheet tool and that's like the core of the product and we're seeing a lot of people just switch to workflows basically as their primary mode. Um, so both on a per customer basis but just like as a percentage of like tables versus workflows, we're seeing that like grow pretty quickly. So there's a potential this could become the like main interface.
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得有。对,确实肯定有这个潜力。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think there's Yes. I mean like there there's there's for sure potential there. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>你们现在有没有哪些产品发布或在做的事让你特别兴奋?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Are there any product launches or things that you're working on right now that you're like particularly excited about?
+</details>
+<blockquote>
+<blockquote>
+<p>有。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes.
+</details>
+<blockquote>
+<blockquote>
+<p>是你能谈的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That you can talk about.
+</details>
+<blockquote>
+<blockquote>
+<p>有。[笑] 一个是我们对 sculpture 的重新架构,现在以一些有限形式在产品中上线,但我们会向所有人广泛发布,覆盖 clay 的每个界面。这是我们的第一方 agent,这大概是我最兴奋的。我们很快就会发布。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. Yes. [laughter] Um so one uh our rearchitecture of sculpture uh this is live in some limited forms in our product now but we are going to launch that broadly for everyone across every surface and clay. This is like our first party agent. Um, that's probably what I'm most excited about. That's, uh, yes, we'll launch this very soon.
+</details>
+<blockquote>
+<blockquote>
+<p>为什么需要重新架构?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Why does it have to be rearchitected?
+</details>
+<blockquote>
+<blockquote>
+<p>这是我们为围绕编码 agent 重建它所做的所有重新架构工作,对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh, this is the, you know, the all of the rearchitecture work that we've done to rebuild it around a coding agent and, um, you know, all Yeah. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>就是更强大。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; It's just more powerful.
+</details>
+<blockquote>
+<blockquote>
+<p>这就是告诉我们 YC 批次有多少人在用 clay 的那个 agent,你也可以那样做。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; This is the this is the agent that uh told us how many people were how many how much of the YC batch was using clay and you know, you could do that.
+</details>
+<blockquote>
+<blockquote>
+<p>你预期重新架构的结果会是什么?哦,就是轶事性地说,就是更多使用,对吧?它的表达力和实用性强得难以置信,</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; What do you expect the outcomes of the like rearchitecture to be? Oh, I mean just anecdotally it's it's just more usage, right? It's unbelievably more expressive and and useful,
+</details>
+<blockquote>
+<blockquote>
+<p>更可扩展,</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; more extensible,
+</details>
+<blockquote>
+<blockquote>
+<p>更高的 NR。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; higher NR.
+</details>
+<blockquote>
+<blockquote>
+<p>对。[笑] 对。我觉得有一件事可能值得分析,不知道你们是不是有足够数据,就是它如何改变人们提的问题类型。我最大的遗憾之一是,我很早就有机会投资 perplexity,但我没真正理解。我想我就守着我的 Google,我不需要每次搜索都调用 LLM。但当你每次搜索都有 LM 调用时,你会问不同的问题。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. [laughter] Yeah. No, I think like one one of the things like uh that it could be interesting to analyze which I don't know if you you probably have enough data is how it changes the type of questions people ask, right? Like one of my I guess biggest regrets is like let's call it I had the chance to invest in perplexity very early on and I didn't really get it. I was like I'm going to stuck to my Google. Oh, I don't need an LLM call for my every search. But then like when you have an LM call for every search, you ask different questions.
+</details>
+<blockquote>
+<blockquote>
+<p>完全是。我最兴奋的是人们开始构建的那些奇怪的 go to market 想法。因为我觉得 Clay 里有些东西我们没在做。我做了这个 YC 分析,我想,对于目前不是客户的所有人,他们在做什么?为什么不用 clay?而我们现在并没有系统地做这件事。我们应该直接让 agent 去做,告诉它每周去跟进他们,问问为什么不用 clay。[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah, totally. Yeah, I'm most excited for just the like kind of weird weird go to market ideas that people start building. Uh cuz I feel like that's again like just there's stuff at Clay where we're not, you know, uh so I did this YC this like YC analysis and I was like for everyone that's not, you know, that's not currently customer like what Yeah. What are they doing? Like why why are they not using clay? And it's like we're not really systematically doing that right now. And like we should just have the agent do that like just tell it like hey every week like check in with them [laughter] like just why are you not using clay?
+</details>
+<blockquote>
+<blockquote>
+<p>你们有数据比较用 clay 和不用 clay 的 YC 公司的增长吗?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Do you guys have data on like the growth of the YC companies that use clay versus don't use clay?
+</details>
+<blockquote>
+<blockquote>
+<p>哦,我们应该做这个。[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Oh we should do that. That's [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>想去争取那些不用的,哥们。没错。Stripe 就这么做,我想连在 Cognition 我们也这么做过,但这肯定是自选择,偏向更技术原生的人,他们会增长更快。你基本上是在混淆相关与因果,对吧?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; trying to get the ones that don't man true. It's true. This is a thing that Stripe does and I think even at Cognition we we did this but it's definitely self- selecting for like people that are more tech native which are going to grow faster. It's like the you're basically you're basically confusing correlation with causation, right?
+</details>
+<blockquote>
+<blockquote>
+<p>对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>这是找到没用它的公司的一种方式,对吧?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; That's a way to get the the companies that are not on it on it, right?
+</details>
+<blockquote>
+<blockquote>
+<p>对。不过好吧,总之,采用 clay 并不意味着你会成为 clay 模型的客户,但确实是一步。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. But like Okay. Anyway, it's not just [laughter] just because you adopt clay doesn't mean like you will become a clay model customer, but yes, it is a step.
+</details>
+<blockquote>
+<blockquote>
+<p>有这个潜力。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; There's a potential.
+</details>
+<blockquote>
+<blockquote>
+<p>是的。[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes, it is. [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>完全是。我是说,我们不太聚焦在 YC 上大概有原因,但我觉得为什么不呢,我对 agent 去接手这些事情并直接做完感到兴奋。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Totally. Yeah. I mean, it's almost like I there's probably a reason why we don't like really focus in on on YC, but it's like I know why not, you know, like that's kind of where that's where I'm excited for, you know, the agent to just take some of these things and just do them.
+</details>
+<blockquote>
+<blockquote>
+<p>有没有某种模型能力?比如我们现在有 G6,cloud 有 55 系列。假设下一代,有没有什么你在等、想做却还没准备好的东西?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Is there a um model capability? Let's say, you know, we have G6 now and, you know, the the 55 series for cloud. Uh let's say the nextG, is there something that you're holding back on that you would love to build and it's not ready?
+</details>
+<blockquote>
+<blockquote>
+<p>哦,这是个好问题。我是说,看了这么多 agent traces,一点是模型仍然有点笨。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Oh, it's a great question. You know, I I mean, one of the things that just from looking through so many agent traces is one like the models are still kind of dumb. Like there
+</details>
+<blockquote>
+<blockquote>
+<p>对。你脑子里想到的例子是什么?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. What's what's an example that comes to mind? I can
+</details>
+<blockquote>
+<blockquote>
+<p>比如反复用相同输入尝试 CLI 命令,却不纠正,这并不是火箭科学,但我想,哦,即使在你以为已经解决的基础层面上仍有空间。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; just like, you know, like trying CLI commands with the same inputs over and over again and just not correcting them, you know, it's like things that aren't it's not rocket science, but I'm like, oh, there's still room just even on the the kind of basic kind of what you would think is solved.
+</details>
+<blockquote>
+<blockquote>
+<p>你们有和实验室的合作吗?我猜你们和这些人共用 Slack,对吧?你们只要给他们一个 lagmith 的 thread ID,然后说,嘿</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Do you have lab partnerships? Like I assume you share Slack with all these guys, right? you just give them like a lagmith like thread ID and just go like hey yeah I mean it's always an interesting relationship we probably could do that I think this
+</details>
+<blockquote>
+<blockquote>
+<p>对,他们就是这样要反馈的,对吧,他们说把反馈 ID 给我。但我确实觉得你们作为 agent 构建者,基本上需要自己的一个版本来回馈给实验室,更强大的版本是你把所有 bug 报告打包,称之为 benchmark,</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah yeah this is how like they ask for feedback right they just go like give me the the feedback ID but I do think like you guys as agent builders basically need your own version of that to share back with the labs and then the the more powerful version of this is you wrap all your bug reports up and call it a benchmark
+</details>
+<blockquote>
+<blockquote>
+<p>然后就说,看,你们在这方面很差。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; and then just be like look you guys are bad on this
+</details>
+<blockquote>
+<blockquote>
+<p>对,你怎么看?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah what do what do you think about that
+</details>
+<blockquote>
+<blockquote>
+<p>我觉得很好。需要多做一点工作,但你大概可以找个研究生和你一起做。然后说,嘿,这是我过去的 500 个 bug 报告,分类、分组、清理、去除 PII,这就是一个 benchmark,也是你的一篇论文。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; I think it's good it look it takes a bit more work, but you could probably have like a grad student work on it with you. Yeah. And just go like, "Hey, like these are my past like 500 bug reports." Like categorize them up, group them up, clean them up, remove PII, and that's a benchmark. And that's a paper for you.
+</details>
+<blockquote>
+<blockquote>
+<p>对。这是我们正在思考的领域,我觉得这是和公司合作的好领域,我觉得有公司整天做这个。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. Yeah. This is like an area where I mean, we're thinking about this. Uh I think it's a great area to partner with companies like I feel like there companies do this all day and like
+</details>
+<blockquote>
+<blockquote>
+<p>比如 Sierra 很早就做了这个,因为显然 Cartek 是 GPT3,他们说,好,我们每个主要垂直领域做 tobench,航空、零售、电信,请为此优化,基本上就是请让我的业务对我更好,谢谢。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; like Sierra was super early to this because obviously Cartek was GPT3 and like they were like okay like each of our main verticals we do tobench airline retail telecom and like please optimize for this and like like it's basically the please make my business better for me thanks
+</details>
+<blockquote>
+<blockquote>
+<p>对,我们确实花了一些时间思考 go to market 或销售中的表现是什么样子,一个针对销售优化的模型会是什么样。但我们还早,没研究过做公开 benchmark,不过我觉得可能说得通。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; yeah I mean we we do spend some time thinking about like what does performance in go to market or performance in sales look like kind of what is you know what would a sales optimized model look like but Yeah, I mean we're we're early on like we haven't looked into doing a public benchmark, but I think it could make sense.
+</details>
+<blockquote>
+<blockquote>
+<p>对。我觉得研究生会愿意和你们合作,而且纽约有很多,你会找到的。我只是觉得,作为一个营销人,我主要是营销人,也许一点社区、一点内容,这既达成你的目标,也达成实验室的目标,是双赢,在社区理解你的问题方面也是。所以如果我能鼓励你发布这类东西,它可能是高杠杆的。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. No, I think the grad students will love to work with you and look, New York has tons of them like Yeah, you'll find you'll find somebody. I just think like this is one of those things where like uh as a marketing guy and you know, I'm primarily a marketing guy and maybe a bit of community, maybe a bit of like content and and all that. Um this achieves your goals and it achieves the the lab's goals. This is like a very much a win-win uh win in terms of community understanding of your problems too. So this is one of those things that if I can encourage you to publish those kind of things, you know, it's it can be high leverage.
+</details>
+<blockquote>
+<blockquote>
+<p>你能让纽约所有工程师都从洞穴里出来,[笑] 做到这个。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; You'll get all the engineers in New York to like come out of their den, you can [laughter] do that.
+</details>
+<blockquote>
+<blockquote>
+<p>对。这只是另一种迫使他们看数据、做 evals 并标注的方式,而他们不想做。所以你得想出有创意的办法,让他们享受本来通常不会做的工作。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. Yeah. Yeah. I mean, it's it's it is just another way of like forcing them to look at data and like do evals and label them and uh which they don't want to do. So you have to come up with creative ways to make them enjoy their work that they actually normally wouldn't do.
+</details>
+<blockquote>
+<blockquote>
+<p>对。[笑] 我确实觉得我们内部有一个不错的飞轮,我们有很棒的 go to market 工程师,花很多时间思考,比如我们如何找到应该联系的客户群,或者我怎么给客户构建评分之类的,所以内部有一些人才,但我们大概没有把这个飞轮连接到应有的程度。你谈了很多编码 agents,有没有什么你希望编码 agents 在未来六个月、12 个月里大幅变好、并且会帮助 Clay CLI 的?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah. [laughter] Yeah. I I do think we have a good flywheel of this internally where like we have real good market engineers who like you know spend a lot of time thinking about like oh like like how would we find pockets of customers that we should reach out to or like okay who like how would I build scoring for my customers or whatever like all these things and so have some in-house talent there but we probably haven't connected that flywheel as much as we should. Um, actually you talked about coding agents a lot. Do you have any, you know, things you want coding agents to get a lot better at over the next, you know, six months, 12 months, and that would help the Clay CLI?
+</details>
+<blockquote>
+<blockquote>
+<p>有。也许这和问题相连,模型能力是能够查看 agent trace 并找出哪里出了问题。也许这太自我反思了,但它仍然真的不行。所以我们在尝试构建松散形式的持续改进,甚至不是持续改进,而是,嘿,这是一个 trace,很长,agent 大概困惑了,你能告诉我它在哪里困惑吗?我觉得 agents 仍然不擅长这个。它们对出了什么问题的直觉是错的,比如说,哦,这花了很长时间,而其实不是,那是合理的。我认为大多数时候就是完全错的。所以如果你试图把整条路连通,比如下载坏的 traces,让 agents 去看,然后随时间改进,那就是行不通。类似地,agents 写自己的 prompts 在某种意义上也许行得通,但如果你只是说根据这个东西修复 agent 性能,那真的不行。所以我们仍然在手写很多 skills,做很多这方面的事,而那感觉也是个可处理、可解决的问题。你们好像有 sculpt 快要发布了,对吧。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh, yes. And maybe this connects the question, but like model capability is being able to look at an agent trace and figure out what's wrong with it. I mean, maybe it's just like too self-reflective, but it still really doesn't work. So, like we're trying to build, you know, the the loose forms of continual improvement, but it's not even continual improvement, but like, hey, here's a trace. It was really long. The agent probably got confused. Can you tell me where it got confused? And I think agents are still not good at this. Like, they just are they have the wrong intuition about what's wrong. They're like, "Oh, well, like this took a long time." And it's like, "No, no, that that makes sense." It's just like completely wrong, I think, most of the time. Um and so if like you try to connect it the whole way where it's like hey just download the bad bad traces like have agents look at those and then you know improve those over time that just like doesn't work. I think it you know similarly like you know agents writing their own prompts maybe works in some sense but like if you're just like hey fix the agent performance based on this thing that doesn't really work. So like I don't know we're still handwriting a lot of skills like we're doing a lot of stuff there and like that feels like a tractable solvable problem too. Uh you guys have [snorts] uh sculpt I think coming up. Yes.
+</details>
+<blockquote>
+<blockquote>
+<p>你们要发布的东西里有什么可以预告一下的吗?</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Is there anything that you are going to be launching that you could potentially tease?
+</details>
+<blockquote>
+<blockquote>
+<p>显然是 sculptor。[笑]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Clearly sculptor. [laughter]
+</details>
+<blockquote>
+<blockquote>
+<p>10 天后。[倒吸一口气]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Uh in 10 days. [gasps]
+</details>
+<blockquote>
+<blockquote>
+<p>是的。我确实觉得我们会为我们对 good market 工程师的押注发布一整批新功能,也就是给他们工具箱里新增的工具。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yes. So uh I do think we uh will launch a a whole host of new features for our bet on the good market engineer and so giving them I would say new new tools in their toolbox.
+</details>
+<blockquote>
+<blockquote>
+<p>好的。你还有什么吗?我觉得你对自己的历程一直很坦诚。我觉得没试过 clay 的人,老实说我在概念上理解 clay,但没理解它的深度,没理解你们做的工作。我现在为我的两个业务有了使用场景。当你向工程师朋友解释 clay 时,你通常会告诉他们试什么?我不知道。我觉得就是你在 go to market 里想做的事,我会试着问 Clay,试着让 agent 去构建它。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; All right. Do you have anything? I think no I think it's really you've been really open about your journey. Um I I I think like people who who haven't tried clay you know honestly I conceptually understood clay I didn't understand the depth I didn't understand the work that you've done. I have use cases now for uh my two businesses and you know what is like when you explain clay to an engineer friend what do you usually tell them to try? I don't know. I I think it's like kind of the stuff that you're trying to do in go to market like I would just try asking Clay like try asking the agent to build that.
+</details>
+<blockquote>
+<blockquote>
+<p>对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>然后看看会发生什么。对。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; And and see what happens. Yeah.
+</details>
+<blockquote>
+<blockquote>
+<p>看看会发生什么。好,非常感谢你花时间和我们交流,祝你们的大会顺利。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; See what happens. All right. Well, thank you so much for spending some time with us and good luck for your uh big conference.
+</details>
+<blockquote>
+<blockquote>
+<p>非常感谢。谢谢。谢谢。</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; Thank you so much. Thank you. Thanks.
+</details>
+<blockquote>
+<blockquote>
+<p>[音乐]</p>
+</blockquote>
+</blockquote>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+&gt;&gt; [music]
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/76082b63a27b7a189675cfe4c6aca3b7599ddf28e8bd2b625be6df154c0d34ba.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/76082b63a27b7a189675cfe4c6aca3b7599ddf28e8bd2b625be6df154c0d34ba.md" download="Clay 创始人分享其在 GTM 工程与 AI 智能体方面的产品逻辑与技术挑战.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Clay" class="entity-link product-link">Clay</a>, <a href="/search/?q=Sculptor" class="entity-link product-link">Sculptor</a>, <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, <a href="/search/?q=ChatGPT" class="entity-link product-link">ChatGPT</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

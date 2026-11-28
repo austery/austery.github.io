@@ -1,0 +1,141 @@
+---
+author: AI Engineer
+date: '2026-10-09'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=Emo5FGGY-wM
+speaker: AI Engineer
+tags:
+  - agent-evaluation
+  - browser-agent
+  - system-reliability
+  - eval-flywheel
+title: 跨越80%信任悬崖：从基准幻觉到以客户为中心的Agent评测飞轮
+summary: Amazon AGI Lab团队分享了构建浏览器Agent评测体系的实战经验。演讲指出依赖静态基准测试会产生“基准幻觉”，而80%的可靠性因需要人工兜底反而加重用户负担，必须跨越90%的“信任悬崖”。团队提出了包含定义成功、捕获信号、诊断差距和驱动决策的评测飞轮，通过紧密跟踪客户旅程并保持能力边界透明，真正建立用户对Agent系统的信任。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - Amazon
+  - AWS
+products_models:
+  - Nova Act
+media_books: []
+status: evergreen
+---
+### 破除基准幻觉：静态评测与生产现实的鸿沟
+
+在人工智能与自动化系统开发中，团队通常严重依赖**基准测试**（Benchmarks），无论是由学术界或行业发布的公开基准，还是团队内部通过合成数据生成的评估集。工程师和研究人员的目标往往是针对这些基准分数进行极致优化。然而，一旦产品真正推向生产环境并交付给真实用户，系统就会迅速暴露出意料之外的严重缺陷——用户以开发者从未预设过的方式调用系统，最终导致产品彻底崩溃。
+
+这种现象被称为**基准幻觉**（Benchmark Illusion）。其根源在于团队在产品生命周期中构建的是**静态评测**（Static Evals）。标准的产品研发流程通常是：产品团队提出需求，工程团队进行开发；当产品初具雏形后，团队运行基于公开基准或合成数据的评测并进行针对性调优；一旦指标达到预期便发布上线。在这种范式下，发布后的系统表现完全取决于一种“盲目的希望”——开发者只能被动祈祷静态评测能够准确映射真实用户的交互行为。要消除这种生产鸿沟，核心不在于设计更高难度的静态基准，而在于建立能够持续吸收真实用户反馈的**闭环评测机制**（Closed-Loop Evals）。
+
+<details>
+<summary>Original English Source</summary>
+
+can everybody hear me okay, perfect. so thanks for joining everyone. my name is felipe, and i am a member of technical staff at the amazon agi lab. as part of my role, i help us to build the next generation. i manage the programs to build the next generation of products our lab's building, and today i am here to talk to you about designing evals that earn customer trust. before talking about evals, i just need to give you some context about what our lab was doing the last year.
+
+so everything started in march last year, where we launched our nova act research preview. for context, nova act is a tool that we built as part of our lab, and it's a tool that helps you to build browser agents. so basically, everything that you do in a web browser, you can use nova act to automate those tasks. as part of the research preview, our main goal was we wanted to ship a product to get as much feedback as we could from our customers. in march, we launched that. then in july, we made one additional improvement to our product, which was basically developed a whole new developer experience. this was because basically, during the first couple months, we noticed some gaps in that developer experience, and we wanted to make sure customers had the best experience building agents. then in december, we finally launched our service on aws. so today nova act is a top-tier service on aws that anyone can use to build production-level web agents. and during this period, i was basically responsible for the customer enablement piece of that. what's customer enablement just for context: it's basically i was working day to day with all of our customers to understand what was their problem and how we were helping them to solve that. so that was my main role during last year.
+
+and then let's go to the problem that we will be discussing today. so i like to call this the benchmark illusion. so you are probably working on and building things based on benchmarks, right? it could be public benchmarks that everybody's using and everybody's trying to optimize the products on that, and also benchmarks that you are creating with your own synthetic data that you are creating and you are evaluating your product. and the main goal here is you want to optimize, right? you want to be the best as you can during those benchmarks. but then when you ship that to production, your customers start using that, what happens? it's this, right. they start seeing problems, and it's basically everything that you were not expecting them to do. they try to do that, and they break your product.
+
+and this is happening because basically most of us, we are working on evals that are static. so what are static evals? basically, let's talk a little bit about what's the standard development process of a product, right? first thing that you do, you receive the requirements from your product team and you start building, right? everybody does that, i hope. then when you have a product in a good shape, the next thing that you will do is running your evals against public benchmarks, synthetic data that you generated, and you optimize for that. when you start feeling comfortable, you're like, okay, now i will ship that, and you ship that to the customers. but if you have static evals, what's the only thing that you can do after that? it's basically hope, right? you just hope your evals were reflecting exactly what your customers will do with your product, and if not, it breaks, certainly, right. and this is the gap. this is exactly what we will be discussing today and what we were doing in our lab to solve this problem. and just a spoiler: this is not about better benchmarks. it's about closing the customer loop. so what we want to do here is get the feedback from your customer and close the loop.
+</details>
+
+### 构建评测飞轮：从真实生产信号到系统决策
+
+为了终结基准幻觉，必须构建一个能够随着真实交互不断演进的**评测飞轮**（Eval Flywheel: 持续捕获生产信号并反哺系统能力的闭环迭代机制）。该飞轮的核心逻辑由四个关键环节构成，形成了系统自适应优化的完整闭环：
+
+* **定义成功标准（Define Success）**：成功的唯一定义来自于客户对任务完成的判定，而非工程团队单方面假设的指标。
+* **捕获多维信号（Capture Signals）**：除了传统的**系统遥测与打点**（Instrumentation: 收集运行日志、延迟、调用轨迹等机器数据），更关键的动作是直接与客户进行深度对话，排查机器指标背后的真实意图与断点。
+* **多层次差距诊断（Diagnose Gaps）**：将捕获的故障与需求信号分类归因到三个层级：
+  * **模型层输入**：模型理解、规划或反思失败的具体用例，直接转化为新的模型评测用例；
+  * **工程层输入**：运行时脚手架（Harness）、沙箱环境或接口集成的缺陷，归入常规的工程 Bug 修复；
+  * **产品层输入**：客户认知错位或产品定位盲区，用于纠正能力边界声明或工作流设计。
+* **决策优先级排序与驱动（Feed into Decisions）**：将归类后的差距转化为具体的行动项，分配给科研、工程和产品团队推进落地，并在下一轮迭代中验证改进效果。
+
+在系统建立起这一闭环飞轮后，评测用例便不再是脱离现实的代码集，而是具备动态进化能力的自适应防御网络。
+
+<details>
+<summary>Original English Source</summary>
+
+so with that in mind, what we did in our lab was basically propose an eval flywheel. so if you are not aware about the terminology, a flywheel is basically a loop that you keep repeating all the time. and the first step of this flywheel is define success. and very important here: define success here is not what you think is success, it's what your customer thinks is success. okay.
+
+so next step, as soon as you understand what your customer really needs and the problem you are trying to solve, you go to capture signals. and we as engineers, what's the first thing that comes to your mind? instrumentation, right? let's get metrics, let's get data as much as you can about what your customer is doing. but one very important piece of that that we are missing is you should talk to your customer. like talk to your customer: go schedule meetings, visit them, and understand exactly what they are trying to do. your data might be a little bit misleading; you might be missing exactly what's the problem that your customer is trying to solve.
+
+third step, you go to diagnose gaps. that's basically you get all these signals from customers—could be instrumentation, but also your inputs, your insights from the meetings that you had with them—and you just start categorizing those. and when i say categorizing, there are basically, at a very high level, three things that you could find from those discussions. first, it's basically inputs about your model: where your model is failing there, and this feeds into evals for your model. the second point is inputs to your engineering team: basically, what is the tooling or harness that you should fix? this is more traditional bug fixing. and the third one is also on the product side: what are you missing in terms of product? do your customers understand exactly what our product is trying to solve? is your product properly positioned? so that's very important.
+
+so as soon as you have the gaps categorized, you just feed that into decisions. so feed that into decisions is basically you prioritize that, and you ask your science, your engineering, your product team to address those. that's basic, right? and then you just continue repeating this loop over and over.
+</details>
+
+### 客户旅程的演进阶段与“信任悬崖”
+
+在实际推进评测飞轮的过程中，客户对智能体产品的理解并非一成不变，而是伴随着使用深度的增加经历四个演进阶段：**用例探索**（Use Case Discovery: 厘清痛点与适配性）、**先锋试错**（Early Adopters: 探索极限与意外场景）、**规模复制**（Scaling: 提炼出通用的高频主力场景）、以及**产品断层识别**（Product Gaps: 指引下一代功能规划与长期架构下注）。
+
+伴随客户旅程的深入，Agent 系统的可用性呈现出独特的**信任悬崖**（Trust Cliff: 可靠性未达临界点时，用户体验与信任度骤降的非线性现象）：
+
+* **80% 可靠性的悖论**：工程师往往认为 80% 的任务成功率是可用的里程碑，但对业务客户而言，80% 意味着“完全不可信任”。因为每五次任务就有一次出错，客户必须建立额外的人工监控与兜底审查流程。构建、监控加人工修复的综合成本，甚至高于完全由人工执行任务的成本。
+* **90% 阈值的质变**：当可靠性提升到 90% 及以上时，客户的心智模型会发生根本性跃迁。他们开始确信 Agent 能够独立闭环交付任务，从而愿意将整个业务工作流直接移交给系统。
+* **可靠性的二元本质**：在企业级应用中，用户对 Agent 的信任在本质上是**零和博弈**（Zero-to-One）——系统要么值得委托，要么不值得委托，中间地带不存在温和过渡。
+
+<details>
+<summary>Original English Source</summary>
+
+so with that in mind, in our lab, we repeated this flywheel several times since march last year. and what i also noticed is basically, as part of my journey as a product, each of my customers have their own journey using my product. what that means: my customer evolves as they use my product, right? so there are basically four things that you can learn while your customer uses your product.
+
+the first one is use case discovery. that's the first thing that you will do the first time that you meet your customer: basically understand what's their problem and make sure what you are building solves that. then after that, you will have a couple early adopters. from these early adopters, the main signal that you want to get is basically what's possible. so that's the time where customers will try crazy things. you will find things that you cannot help them at all, right? but you will also find things that your customers are using your product to solve, and many times you will be surprised because it's something that you would never imagine. third, this is when you start scaling: you get your early adopters, but now you are scaling, you are getting more customers, and you are able to identify some patterns, right? what are the patterns? the pattern is basically your hero use case, right? that's the problem that everybody is using your product to solve. and the last one, this is more future looking, but these are your product gaps. so when you were working with early adopters and also after you start scaling, you will also be finding some gaps in your product. your product team can prioritize those, and these are the bets for your future, right? what you should build next.
+
+and as i said, i worked with several customers during this journey, and there are a couple learnings that i want to share. some might be obvious, but others are very insightful. so the first one is the trust cliff that i like to call. so what's the trust cliff? imagine you build a product, you are ready to ship, and you measure the reliability of this product. and you found eighty percent reliability. that seems fine, right? like, okay, i can give that to my customer and they can start using it. but what your customer thinks when you say you are at eighty percent of reliability is: i cannot trust this product. i cannot trust it. and why? because when you show eighty percent reliability, what they will think is: oh, okay, so if it's eighty percent, i still have to monitor this agent; if they fail, i will need to do some manual work. so in fact, it's actually more work for me, not less work. i need to build this agent plus monitor that and also do some manual work after. but when you get to a point around ninety percent reliability, the message changes to your customer, and what they think is: okay, ninety percent, i can actually trust this to handle my tasks, and i completely handover a workflow to my agent. so reliability is a zero to one, right? you trust or you don't; there is nothing in the middle there.
+</details>
+
+### 评测透明度与企业级生产实践
+
+为了跨越信任悬崖，团队在评测与交付上面临的另一个核心课题是**评测透明度**（Eval Transparency: 向客户坦诚展示系统真实能力与边界的机制）。企业在与客户建立合作时，必须明确公开三个维度的信息：第一是**已验证可用能力**（What Works），明确展示当前具备高可靠性的场景；第二是**正在改进的短板**（What We Are Improving），说明已纳入路线图的改进项；第三是**明确不可行的范围**（What Is Out of Scope）。在实际业务场景中，**主动坦诚产品局限性相比单纯宣称高基准指标更能赢得客户信任**。如果放任客户在不可行场景中试错，客户在遭遇失败后会直接流失到竞品生态。
+
+在与典型企业客户的深度共建中，评测飞轮直接催生了关键的架构演进：
+
+* **Amazon Kuiper（低轨卫星互联网业务）**：针对高频重复任务带来的推理成本过高问题，团队引入了**轨迹缓存机制**（Trajectory Caching: 缓存智能体已验证成功的执行动作序列）。智能体优先执行缓存轨迹，仅在执行失败或页面变化时才回退至大模型重新推理，从而大幅降低了运行成本与延迟。
+* **Hertz（汽车租赁公司）**：在利用智能体进行 QA 自动化测试时，团队发现并非所有测试人员都具备 Python 等代码编写能力。该真实反馈促使团队研发了面向非技术人员的低代码/无代码开发体验。
+* **Sola（自动化 RPA 初创公司）**：面对复杂的流程自动化（RPA: Robotic Process Automation）长尾场景，团队向客户开放了执行底座的定制能力，允许深度自定义**动作执行栈**（Actuation Stack: 浏览器底层事件派发与交互控制模块）。
+
+这些案例证明，紧密贴合客户实际运行环境的评测飞轮，不仅能精准捕获系统的边界缺陷，更能反哺出真正的产品壁垒。
+
+<details>
+<summary>Original English Source</summary>
+
+second learning, it's the eval transparency. so every time that you start working with a customer, you basically need to be transparent about three things: first thing is—that's easy, everybody likes to do that—what works. so you basically show your customer: i am really good at doing this, that's the level of reliability, you can trust my product to just use my agent, and it will give you the reliability that you need. second point is: these are the things that i am doing to improve my product. okay, so there are some things that i know are a gap, but i'm investing time right now to make this better. and the third thing, that's the tough one, nobody wants to do that: it's what is out of scope. so you really need to be transparent: if something doesn't work for your product, just go ahead and tell your customer. don't let them try; otherwise, there are so many tools in the market right now that if you show something to them that doesn't work, they will just forget about your product and they'll move to another product. so be transparent. and the main learning here is: transparency on product limitations increases trust more than higher benchmarks. that's a very interesting finding, right? be transparent about what your product is capable of doing, and more importantly, what it's not capable of. that's how you earn customer trust.
+
+third learning is if you work very close with customers, you might find a lot of use cases that you would never have expected. so some examples here: amazon kuiper, it's the satellite internet company from amazon. working with them, we actually learned some inputs about creating features to do caching of trajectories. so instead of doing inference all the time that they use our product, we cache trajectories; if it fails, we just fall back to the model. so we optimize the cost for that. second learning is with hertz, the car rental company. so they were also using our product for qa automation, and we learned that as part of their company, they had some qa engineers that were very technical and were capable of building scripts with python and other coding languages; however, some people from qa, they are not that technical. so that was the input that we needed to actually build a whole non-technical experience for our product that would enable more customers to use it. last one, this is a startup called sola. sola is basically a rpa company—if you are not familiar with the term, rpa is robotic process automation—and they offer tools to automate processes for other companies. so imagine the variety of use cases that they might have: it's a lot of different use cases. and what we learned from them is we could give some additional flexibility in our product for them to customize, especially the actuation stack of our browser. the learning here: you will learn a lot about what your customer is trying to do here, and what should be the next features you should build for your product.
+</details>
+
+### 评测飞轮的四大原则与演进法则
+
+总结生产环境的迭代实践，高效运转评测飞轮必须贯彻四项基本原则：
+
+1. **源于生产而非脑补（Derive Evals from Production, Not Imagination）**：虽然合成数据在项目冷启动阶段必不可少，但一旦产生真实交互，必须以生产环境的实际信号作为评测用例的唯一真实来源。
+2. **归类为可落地的行动项（Categorize into Actionable Areas）**：将所有采集到的缺陷精准分类为科研、工程或产品缺陷，确保反馈链路能够明确对接到责任团队。
+3. **公开诚实地展示能力边界（Share Capabilities Honestly）**：清晰界定可用范围与不支持范围，以透明度建立长期信用。
+4. **尽可能提高飞轮运转频率（Run the Flywheel as Fast as Possible）**：飞轮转速直接决定了产品的迭代速度。
+
+在健康的工程体系下，**评测集必须每周保持进化与智能化**。如果评测集长期保持不变，则意味着评测本身已经过时脱节。
+
+智能体评测体系的建设最终回归到两条核心准则：其一，**评测必须映射客户真正在意的核心指标，而非开发者主观臆想的标准**；其二，**评测从来不是一劳永逸的一次性工程，而是伴随客户业务演进而持续进化的飞轮**。只有扎根于真实的生产闭环，构建具有生命力的评测体系，Agent 才能真正跨越信任悬崖，实现规模化落地。
+
+<details>
+<summary>Original English Source</summary>
+
+and then running this flywheel several times, we came up with four principles for this flywheel:
+first one is derive evals and scenarios from production, not imagination. so again, creating synthetic data might be very important at the beginning of the process, but as soon as you start getting customer signals, make sure that feeds your evals.
+second, categorize into actionable areas: again, product issues, engineering issues, research issues—make sure you prioritize that well to your team.
+third one, share capabilities honestly: again, transparency builds trust; make sure you share with your customer, especially what your product is not good at.
+fourth one is run the flywheel as fast as you can: basically the faster you run that flywheel, the faster your product will improve, right? that's almost obvious, but keep that in mind: run your flywheel as fast as you can.
+
+and then with those four principles, what you will see is your evals should get smarter every week. but very important: if you are not seeing your evals getting smarter every week, that means your evals are getting stale.
+
+and just to finalize the talk here, there are two ideas that i want you to take home, just two:
+first idea is, eval must reflect what the customer cares about, not what you think they care about. okay? all about getting customer input here and making sure your evals reflect what their problem is.
+second is evals are not built once; it's a flywheel that evolves as your customer evolves. one note here: remember that customer journey—as your customer moves through that customer journey, what they are trying to do with our product will also change, like it will get more complex, right? so your evals need to be up to date and reflecting exactly what your customer is trying to do right now. and with that, what you have to do is simply build the loop, ship evals that matter, and then you earn your customer trust. and that's all that i had today. thanks very much for joining. i will stay in our booth after for more discussions, but enjoy the conference.
+</details>

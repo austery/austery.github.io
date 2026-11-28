@@ -1,0 +1,298 @@
+---
+author: House of El - AI
+date: '2026-11-20'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=6y8Ew6_ymRk
+speaker: House of El - AI
+tags:
+  - ai-governance
+  - cybersecurity
+  - performance-evaluation
+  - passive-investing
+  - system-reliability
+title: 从系统宕机、职场考核到指数基金接盘：强推之下的 AI 治理困境与脆弱生态
+summary: 视频探讨了公众对 AI 的抵触情绪及深层系统性风险。作者指出关键问题不在于技术本身，而在于强制使用的治理机制：从 AI 自动挖掘缺陷引发系统瘫痪与自主攻击，到企业将工具使用量强加为考核指标并将错误责任推给员工，再到被动指数基金被动承接巨额估值上市的 AI 资产，表明缺乏合理规范的强推机制正将整个生态推向承压极限。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - Anthropic
+  - FAA
+  - Google
+  - JPMorgan
+  - NSA
+products_models:
+  - Claude
+  - Copilot
+  - Grand Theft Auto VI
+media_books: []
+status: evergreen
+---
+### 双重热潮下的鲜明反差：为什么人们对 AI 充满疑虑
+
+昨天，近年来最受瞩目的两起发布事件发生在同一天。《GTA 6》在让人们等待了超过 13 年之后终于正式发售；而开发了 Claude 的 Anthropic 公司，则在创下史上最大规模 IPO 纪录后正式挂牌交易。这两件事中，一件是人们心甘情愿等待了 13 年的东西；而另一件，至少依我之见，则是一场正在酝酿的好戏。
+
+<details>
+<summary>Original English</summary>
+Yesterday, two of the most hyped launches in years happened on the same day. GTA 6 finally came out after a wait of more than 13 years and Anthropic, the company that makes Claude, started trading on the stock market after the biggest IPO on record. Now, one of those is something people chose to wait 13 years for. The other one, at least in my opinion, is a show waiting to happen.
+</details>
+
+所以，尽管说出来让人痛心，但我还是直言不讳了：我们是时候面对一个事实了——大家似乎并不喜欢 AI。我相信大家已经察觉到这种情绪，因为我们每个人都身处其中。但这是一个拿数据说话的频道，所以让我摆出证据。这是一张我和 Steven Ogg 的合影，他扮演了《GTA 5》里那个疯癫的 Trevor Philips。正如你所看到的，这张照片表达了眼下人们对 AI 治理的一些态度。与此同时，皮尤研究中心（Pew Research）拥有稍大一些的样本量：大约一半的美国人表示，面对日常生活中的 AI，他们感到担忧多过兴奋；而持相反看法的比例不足十分之一。好了，民调就列到这里，我保证不再罗列更多数据了。
+
+<details>
+<summary>Original English</summary>
+So, I'm just going to say it as much as it pains me to say it out loud. It's time we face the fact that people just don't seem to like AI. I'm sure you already know the sentiment because we're all living it together. But this is a databack channel, so let me just show you the evidence. This is me with Steven Og, who played Trevor Phillips, the unhinged one from GTA 5. As you can see, this photo shares some sentiment about the governance of AI these days. Pew Research, meanwhile, had a slightly larger sample size. About half of Americans now say they're more concerned than excited about AI in their daily lives. And fewer than one in 10 say the opposite. There, done. No more polls, I promise.
+</details>
+
+### 两类人群与核心矛盾：治理方式正引发众怒
+
+当我继续深入探究为什么会发生这种情况时，我发现了两类截然不同的人群。
+
+第一类人尚未看到 AI 的好处。老实说，这完全情有可原，因为从他们的立场来看，AI 展现出来的几乎全都是弊端：他们担心自己的工作丢了，担心知识产权被窃取，也不希望自家附近建起数据中心导致电费飙升。对此我完全理解。
+
+第二类人则是我今天真正想谈的。他们能看到这项技术的实用价值，不仅在使用，甚至还很喜欢它。但他们同样受够了，因为让他们心烦的并不是 AI 本身，而是**治理机制**。他们被强迫去使用它、被强迫去投资它、被强迫一刻不停地信任它。
+
+只要你留心观察，就会发现这种现象无处不在：
+* 美国联邦航空管理局（FAA）在全美铺开了一套 AI 空管工具，三天之后，全美所有航班全部停飞，而官方却声称这两者毫无关联；
+* 谷歌发出警告，称自主攻击的时代已经到来；
+* 我反复听到金融机构员工抱怨，他们使用 AI 的频率如今竟被计入了绩效考核指标；
+* 甚至连 Anthropic 上市头几周的股价走势，很大程度上也取决于谁被强行要求购买它，而非谁真心想去买它。
+
+<details>
+<summary>Original English</summary>
+Now, when I keep digging into why this is happening, I found two quite different groups of people. The first group cannot see the benefit of AI yet. And honestly, that kind of makes a lot of sense because from where they're standing, it's literally all downsides. They're worried about their jobs. They're worried about intellectual property theft. They don't want a data center down the road pushing up their electricity bills. I totally get it. The second group of people is the one I really want to talk about today. These are people who can see the technology is useful, who use it and even like it and they're fed up anyway because it's not the AI that's getting on their nerves. It is the governance. It's being forced to use it, forced to invest in it, forced to trust it constantly. And once you start looking for it, you actually start seeing it everywhere. The FAA rolled out an AI air traffic tool across the whole country. And three days later, every flight in the US was grounded. And we were told the two had nothing to do with each other. Sure, Google is warning now that the era of autonomous attacks has arrived. I keep seeing the same complaint from people working at financial institutions who say how much AI they use now counts towards their performance reviews. And even anthropic share price in its first few weeks will largely be decided by who is forced to buy it rather than who wants to buy it.
+</details>
+
+因此在今天的视频里，我想严肃地聊一聊这一切。首先，我会向大家展示那些压根没有人主动索求过的 AI——那些早已嵌入你无法选择退出的系统之中的 AI，从冰箱、银行到你搭乘的航班；哪怕你一生中从未碰过它，而攻击这些系统的人却已经在利用它来对付你。接着，我们将聚焦职场：那里没有人愿意仅仅根据使用了多少 AI 来接受考评，然而大量员工却正处于这种考评之下；与此同时，AI 揽走所有功劳，而烂摊子和差错却全由员工来收拾。最后，由于 Anthropic 已经正式上市，我们将探讨那笔大家并非自愿参与的投资，看看无论我们喜不喜欢，我们的养老金是如何最终被迫投向 AI 的。我不会去预测这支股票的具体走势，因为我没有水晶球，我也不在 Oracle 工作；但我们可以看清楚，究竟是谁在被迫承担这一切。让我们深入探讨。
+
+<details>
+<summary>Original English</summary>
+So in this video, I want to have a serious chat about all of this. First, I'll show you the AI nobody actually asks for, the kind that's already in the systems you cannot opt out of, from your fridge to your bank to the plane you'll be sitting on, even if you've literally never touched it in your entire life. and that the people attacking those systems are already using it against you. Then we're going to get to work where nobody wants to be graded on how much AI they use and yet plenty of people are while the AI gets the credit and they get to clean up the mistakes. Finally, now that Anthropic is public, we're going to look at the investment nobody really signed up for and how our retirement money could end up buying into AI whether we like it or not. I'm not going to tell you where the stock actually goes because I don't have a crystal ball. I don't work at Oracle. But we can look at who is being made to carry all of this. Let's dig in.
+</details>
+
+### 不可退出的基础设施：当 AI 修补遭遇系统崩溃
+
+我们先从第一类人讲起，也就是那些在 AI 身上看不到任何好处、只看到弊端的人。最直截了当的建议往往是：“那你就干脆别用它，对吧？”而我想向你们展示的，就是为什么这种做法如今根本行不通。因为就在上周，那些我们谁都无法选择退出的核心系统开始支撑不住了。
+
+本周，短短六天之内发生了六起重大业务中断事件，波及范围从 Microsoft 365 一路蔓延到美国国家安全局（NSA）的机密网络。人们登录不进自己的银行账户，摩根大通（JPMorgan）将故障归咎于软件相关的错误；NSA 的机密通信网络陷入瘫痪；随后全美所有航班停飞长达 4 个多小时，创下 25 年来持续时间最长的停飞纪录，FAA 最终取消了超过 20,000 个航班。所以，如果你那一周恰好需要交房租或者坐飞机回家，那就只能自求多福了。这太疯狂了。老实说，我当时真的愣住了，甚至有一瞬间怀疑是不是世界末日要来了，因为我很确定，5 年前的世界显然要平静得多。这难道只是我的错觉，还是大家也有同样的感受？
+
+<details>
+<summary>Original English</summary>
+So, let's start with the people in that first group, the ones who look at AI and see nothing but downsides. The obvious advice is, well, just don't use it, right? And I want to show you why that just does not work anymore. Because last week, the systems none of us can opt out of started to buckle. This week, there were six major disruptions in six days. From Microsoft 365 all the way to the NSA's classified network. People couldn't get into their bank accounts. JP Morgan blames software related bugs and a classified NSA communications network went down. Then every flight in the USA was grounded for more than 4 hours, which is the longest stoppage in 25 years. And the FAA ended up cancelling more than 20,000 flights. So, if you were trying to pay your rent or fly home that week, good luck. This is insane. Honestly, I literally stopped and began wondering for a second if Armageddon was upon us because I'm pretty sure 5 years ago, the world was just a calmer place. Is it just me or is anyone else feeling that way?
+</details>
+
+互联网对此反应热烈，大家一致断定这肯定是一场网络攻击。但我其实并没有看到任何明显的攻击迹象。那么究竟发生了什么？坦白讲，这背后的实情有点令人不寒而栗。
+
+根据三位匿名知情人士透露，银行高管和 NSA 曾向国会私下通报，这些宕机事件源于大家争先恐后地去修补 AI 模型所挖掘出的系统漏洞，而这些匆忙推出的补丁彻底压垮了整个系统。某位国会官员表示，各机构同时推送的补丁数量过于庞大，远远超出了系统本身的承载能力。目前这仍属未经官方证实的消息，因此大家请按传闻看待。
+
+但请思考一下这背后的含义：**AI 发现老旧软件缺陷的速度，已经远远快于人类安全修复这些缺陷的速度。** 结果就是所有人都在手忙脚乱地应付，而这种手忙脚乱本身就把系统搞垮了。政府层面的表态基本也是同一个意思。国土安全部部长表示，新技术被层层堆叠在老旧的计算机系统之上，已经使其不堪重负，未来很可能会发生更多类似的瘫痪事故。随后在福克斯新闻（Fox News）上，他又直言我们以前是有备用系统的，但现在的备用系统也已经被新技术给压垮了。
+
+当然，目前的美国以及全世界都面临着堆积如山的问题，我实在不想在所有这些事情上过多展开。但请注意，说出这番话的并非体制批评者，而是实打实负责国土安全的一把手，他在亲口告诉我们安全底线正在崩溃。
+
+<details>
+<summary>Original English</summary>
+Now, the internet got very excited about this and collectively we all decided that it must be a cyber attack, but I haven't really seen an apparent sign of one. So, what actually happened? This story gets a bit frankly horrible. According to three anonymous sources, bank executives and the NSA privately told Congress that the outages came from rushing out fixes for flaws that AI models had found and those fixes overwhelm the system. Okay. One congressional official said agencies are pushing out so many patches at once that it's more than the system was designed for. This is unconfirmed, so take it as exactly that. But just think about what it would mean. AI is finding flaws in old software faster than anyone can safely fix them. So, everyone is of course scrambling and the scrambling itself is what knocks things over. And the government basically actually said the same thing. The Homeland Security Secretary said new technology is being layered on old computer systems overwhelming them and that more outages like this are likely. And then on folks news he said we used to have backup systems and the backup systems are overwhelmed by the new systems now. Now of course there is a lot of issues with the USA and the world left and right right now. I really don't want to go into all of that but this is not a critic saying it. It's literally the person in charge of homeland security telling us the safety net is just giving away.
+</details>
+
+好，那飞机又是怎么回事呢？FAA 部署了一款名为 SMART 的新型 AI 辅助工具，该工具汇集了天气、航线和空管人员配置等大约 200 项数据流，用以预测哪些区域将出现交通拥堵。就在全美航班停飞的 3 天前，该工具刚刚被推广到 FAA 全部 22 个航路中心。FAA 坚称 SMART 系统与停飞毫无关系；也许事实确实如此，我在这里并不是要指责任何人，但 CNN 的航空分析师表示这未免巧合得有些离谱。国会议员此前就曾要求 FAA 暂停 SMART 系统等待安全审查，其中一位议员甚至表示，FAA 绝不应该将他的选民当作未经检验的 AI 空管系统的“小白鼠”。
+
+因此，无论导致地面停飞的具体原因究竟是什么，其内在模式与我们早先讨论的银行事件如出一辙：一套全新的 AI 系统硬生生被套在一套早已摇摇欲坠的老系统上，而坐在飞机上的普通乘客对此根本毫无话语权。
+
+<details>
+<summary>Original English</summary>
+Fine. What about the planes? Right. The FAA has a new AI assisted tool called smart SMT which pulls together about 200 data streams like weather, flight paths, and controller staffing to predict where traffic is going to get congested. It was expanded to all 22 of the FAA's on route centers 3 days before the ground stop. The FAA says SMART had nothing to do with it. And maybe that is true. I'm not blaming anyone here, but CNN's aviation analyst said it's just too much of a coincidence. Lawmakers had already asked the FAA to pause smart pending a safety review, and one congressman said the FAA should not use his constituents as guinea pigs for an unproven AI air traffic control system. So, whatever caused the ground stop, the pattern is the same as with the banks that we discussed earlier. A brand new AI system gets bolted onto an old one that is already creaking and the people on the planes didn't really get a say.
+</details>
+
+### 自主攻击来袭：不眠不休的防守与入侵困局
+
+而且这还只是压力的一半，因为正当我们疲于奔命去打补丁、修复系统时，另一拨人却在争分夺秒地利用它搞破坏。
+
+本周，谷歌发布了最新的安全威胁报告，非常直白地指出：“**自主攻击的时代已经到来。**”简而言之，犯罪分子如今正利用 AI 系统自动扫描软件更新，分析出刚刚修复的是哪个漏洞，并完全在无需人工干预的情况下针对该漏洞生成攻击方案。用谷歌自己的话来说，就相当于面对一个不用吃饭、不用睡觉、不知疲倦且一刻不停搜寻入侵途径的黑客。值得一提的是，就在两个月前，类似这种全自动的攻击流程还根本不存在。因此这是全新出现且令人毛骨悚然的局面。
+
+为了客观看待，我们也必须呈现另一面的情况。谷歌同样指出，这些工具目前仍会留下可供安全团队识别的痕迹，并且部分由 AI 编写的漏洞利用程序实际上并未生效。但它真正令人恐惧的地方在于：当一家公司修复漏洞时，这个修复补丁本质上就是一份标明漏洞所在位置的小地图。在过去，防御者往往拥有数天甚至数周的窗口期来安装补丁，领先于攻击者；而如今，只要 AI 能够在补丁发布的那一瞬间读懂这张地图，防守窗口期就会被压缩到近乎一毫秒。
+
+于是，我们打补丁的速度被迫超出了系统实际的承载能力，因为攻击者利用漏洞的速度比我们打补丁还要快。大家看清这个陷阱了吗？
+
+<details>
+<summary>Original English</summary>
+And this is only half the pressure because while we're scrambling to fix things, somebody else, my friends, is racing to break them. This week, Google published its latest threat report and said quite plainly, "The era of autonomous attacks has arrived." Basically, criminals are now using AI systems that scan software updates, work out which flaw was just fixed and built an attack for it without any human involvement. Google's own way of putting it was basically to imagine a hacker that doesn't eat, doesn't sleep or get tired and never stop searching for a way in. And just two months earlier, by the way, there were not any fully autonomous attack pipelines like this. So, this is brand new and terrifying. Now to give the other side as due because we try to be balanced of course. Google also said these tools still leave traces that security teams can spot and some of the AI written exploits just did not work. But here is why it is scary anyway. When a company fixes a flaw, the fix is basically a little map of where the flaw was and defenders used to have days or weeks to install it before attackers caught up. If an AI now can read that map, the moment it's published, the window shrinks to basically, I don't know, a millisecond maybe. So, we're patching faster than our systems can actually handle because attackers are exploiting faster than we can patch. Can you see the trap?
+</details>
+
+我认为银行和飞机已经足够关键了，但请别忘了，作为人类，我们此前付出了极其艰辛的努力，才确保了世间万物如今都连接在网络之中——这就是互联互通的“荣耀”。结果就是，现在黑客们正在控制法国超市里的数百台冰箱。据政府统计，受影响的超市大约有 700 家。到了 11 月，波及范围又扩散至至少六个国家。目前的报告显示，来自一家失陷公司的恶意代码，已经出现在包括 Zoo、BBC、CNN、汇丰银行（HSBC）和宜家（IKEA）等网站上。
+
+同样，这两起事件都不能直接怪罪到 AI 头上，但它们恰恰表明：在有人制造出一个真正从不睡觉的“飞贼”的那一刻，我们究竟敞开了多少扇毫无防备的大门。与此同时，在《GTA》游戏里，高端跑车都配备了电子门锁和 GPS 追踪器；也就是说，Rockstar 在保护一辆虚构跑车上花费的心思，甚至比现实世界中某些公司在真实的超市冰柜上花的心思还要多。我的意思是，虽然虚拟设计确实更容易，但这着实让人感叹《GTA》真是一个取之不尽的梗。
+
+但无论如何，那些你无法选择退出的系统，目前正遭受来自两端的极限挤压。说实话，这听起来绝非能够长久维系的状态，我认为某些环节早晚注定会彻底崩溃。
+
+<details>
+<summary>Original English</summary>
+I feel like banks and planes are critical enough, but let's just not forget that we work very, very hard as a human race to make sure that everything is connected now, the glory of that connectivity. So now, of course, hackers are taking over hundreds of fridges in French supermarkets. About 700 supermarkets, according to the government. Then in November, it spread to at least six more countries. Now, reports say malicious code from one compromised company turned up on sites including Zoo, the BBC, CNN, HSBC, and IKEA. Again, nobody has spent either of those on AI, but they show just how many doors are open at the exact moment somebody has built a burglar that literally never sleeps. Meanwhile, in GTA, high-end cars come with electric locks and GPS tracker. So, Rockstar has put a lot more thought into securing a fictional sports car than some companies in the real world put into a real supermarket freezer. I mean, arguably that is easier, but still, it really does make you feel like GTA really is the gift that keeps on giving, right? But anyway, the systems you cannot opt out of are being squeezed from both sides. And honestly, it really doesn't sound like something that can keep going like this. I think something is definitely just going to crack at some point.
+</details>
+
+### 职场异化：从自发提效到指标摊派
+
+现在让我们来看看第二类人群——那些实际在使用 AI 并且能体会到其价值的人。按理说，他们应该过得很舒心，对吧？毕竟我自己也绝对属于这个阵营。
+
+然而，当我去调研大家在职场上对 AI 的真实评价时，发现情况几乎截然相反。而且这里的规律惊人地一致：**管理层通常负责拍板每个人必须使用多少 AI，而真正在一线干活的人却依然要负责给 AI 挑错，并在最终成果上签字画押。** 令人遗憾的是，一些最激烈的抗议恰恰来自那些本身很喜欢这项技术的人。
+
+有一句话在我脑海中挥之不去，它只有简短的两个词。我不断听到大型银行员工讲述同样的经历：那些 AI 使用率不够高的同事被告知要打开 Copilot，“随便问点什么”（Ask anything），纯粹只为了把团队的使用数据刷上去。“随便问点什么”——我的意思是，这些人到底得打开多少次 Copilot，才能被允许关掉它？
+
+与此同时，在同一家机构里，那些深度使用 AI 钻研问题、开发团队日常依赖工具的员工，却因为使用量明显高于团队其他人而遭到质询。也就是说：**用少了你有麻烦，用多了你同样有麻烦。** 却根本没有人在乎工作成果的质量究竟如何——而在我看来，这才是至关重要的问题。
+
+<details>
+<summary>Original English</summary>
+But now, when I look at that second group, the people who actually use AI and can see the point of it, because surely they're the happy ones, right? I mean, I'm definitely in this group. Well, when I went looking at what people say about AI at work, I found almost the opposite. And the pattern was really consistent here. Management gets to decide usually how much AI everyone should be using, while the people actually doing the work on the ground still have to catch its mistakes and sign off on the literal result. And some of the angriest complaints, unfortunately, came from people who said that they actually like the technology. There's one phrase I really cannot get out of my head and it's only two words long. I keep seeing the same story from people at big banks where colleagues who were not using AI enough were told to open Copilot and ask anything just to push the team's usage numbers up. Ask anything. I mean, how many times do these people have to open C-pilot before they're allowed to close Copilot? Right? And then from the very same place, by the way, people who were using AI heavily to investigate problems and build tools that their teams relied on said they were being questioned for using more than their teammates. So you're in trouble if you use too little and you're in trouble if you use too much. And nobody really is asking whether the work is any good, which in my view is literally the most important question.
+</details>
+
+顺便提一句，这种情况不仅仅局限于程序员，它实际上横跨了整个组织结构和众多不同岗位。
+
+真正让我印象深刻的案例来自一位在加拿大某大型银行从事风险评估长达 16 年的员工。这个人其实也很喜欢 Copilot，表示它确实帮助自己检索合规法规并起草评估报告；因此在我看来，这是一个完全正当的使用场景。然而令他们苦恼的是，公司下达通知，他们使用该工具的频率将直接计入年终绩效，员工甚至还将被划分为“普通用户”和“超级用户”。一个原本已经自发找到良好应用场景的人，现在雇主却抛开工作质量，转而去考核使用量指标。这就是第二类群体的典型写照：**他们并不讨厌这个工具，他们只是讨厌仅仅为了工具本身而被考核打分。**
+
+在财务审计领域，我看到有些人的年度绩效目标居然是“找出五种使用 AI 的新方法”。这根本不是为了把本职工作做得更好，纯粹是在搞一场寻找全新、凭空捏造、近乎 AI 妄想症级别的应用场景大寻宝。
+
+所以我逐渐意识到，这已经不仅仅是令人反感那么简单，它实际上已经变得极度危险。它正在成为一线干活签字人员的噩梦；而且正如我们即将看到的，它正演变成一场切切实实关乎我们每个人的严重经济脆弱性危机。我绝非在开玩笑，尤其是伴随着 Anthropic 的 IPO 落地。
+
+<details>
+<summary>Original English</summary>
+This is not just for developers, by the way. It's literally across whole organizations and many different roles. The one that really stuck with me was somebody who said they had spent 16 years at a major Canadian bank working in risk assessment. And this person actually liked Copilot as well. They said it genuinely helped them find regulations and draft assessment. So this is a legitimate use case in my opinion. But what bothered them was being told that how much they used it would count towards their year and performance and that staff would be sorted into users and super users. So here's somebody who had already found the good use cases on their own and now their employer was grading the quality instead. That is the second group in one person. They didn't dislike the tool. They just dislike being scored on it. In accounting, I saw somebody whose actual performance goal for the year was to find five new ways to use AI. It's not do your job better, just go on a little treasure hunt of exploration of just new, brand new, completely imaginary AI psychosis level use cases. So, I'm basically starting to think it is not just unknowing anymore. It is literally actually dangerous. It's becoming a problem for the people who have to sign off on the work, who have to do the work. And as we're about to see, it's turning into a serious problem of economic procarity that is affecting literally all of us. I am not joking, especially with the anthropic IPO coming up.
+</details>
+
+### 赞助商插播：Plaud Note Pro
+
+在切入正题前，先插播一条来自今天视频赞助商 Plaud 的简短赞助信息。
+
+我的一些最佳灵感往往来得很偶然，可能是在买菜时，或者与其他专业人士讨论 AI 时，某个理论突然成型。我通过口头倾诉能更快理清思路，并希望把这个思考过程完整保存下来。当然，我可以用手机录语音备忘录，但后续去翻找查找完全是一项繁重的苦差事。因此我最近一直在试用 Plaud Note Pro，这是一款仅有信用卡大小的 AI 录音笔记助手。
+
+我曾录下自己关于 AI 行业的自言自语，然后询问 Plaud 我是否提到了特定的公司。它不仅总结了我所说的内容，确认我没有提及具体公司，还帮我把零碎的想法整理成了一张思维导图。当你需要调研视频选题、撰写报告或者进行重要对话时，能够准确复盘究竟是谁说了什么话至关重要，尤其是在对准确性要求极高的场合。Plaud 表示，录音在传输和静态存储中均经过加密，且除非你主动选择加入，否则数据绝不会被用于训练 AI 模型。对我而言，这不是为了把思考外包给 AI，而是为了更好地留存自己的思考轨迹，从而能够重新审视、推敲并进一步深化它。Plaud Note Pro 提供 30 天无理由退货政策，今年黑色星期五通过我置顶在简介栏中的链接，使用专属代码“house of l”可享受 78 折（优惠 22%）。
+
+<details>
+<summary>Original English</summary>
+I'm going to get into all of that, but first, just a very quick word from today's video sponsor, Plaude. Some of my best ideas arrive unexpectedly. I might be buying groceries or discussing AI with other professionals when a theory takes shape. I think faster by talking things through, and I want to preserve that process. Now, of course, I could record voice memos on my phone, but searching through them later is, of course, another task entirely. So, I've been trying Plaude Note Pro, which is a credit card- sized AI note-taking assistant. I recorded myself thinking aloud about the AI industry, then ask Plaude if I'd mentioned any specific companies. It summarized what I'd said, told me I hadn't mentioned any specific ones, and then helped turn my thoughts into a mind map. And when you're researching a video, writing a report, or simply having an important conversation, being able to revisit exactly what was said and by whom matters, especially when accuracy is important. Plot says, "Recordings are encrypted in transit and at rest and are not used to train AI models unless you opt in. For me, this is not about outsourcing thinking to AI. It's more about preserving my thinking so I can revisit it, question it, and develop it further. Plot Node Pro offers a 30-day free return policy. Use code house of l for 22% off this Black Friday through my link in the description.
+</details>
+
+### 风险转移机制：工时算公司的，责任全归打工人
+
+在插播前我曾提出一个问题：当老板决定了你必须使用多少 AI，但技术上真正去排查错误的人仍然是你时，会发生什么？这种现象之所以不再是一个关于数据看板的滑稽笑话，是因为以财会行业为例，员工反馈表明，AI 表面上给基础员工节省了几个小时，却给后续审核环节增加了更多工时。因此被消耗的时间并没有凭空消失，它只是沿着流程链条向上转移，压到了那个最终需要在成果上签字署名的人身上。
+
+如果 AI 出了差错，AI 显然不会被开除，最终被问责解雇的必然是签字背书的人。**于是，公司把省下来的工时算作效益，而员工却承担了全部风险。** 大家看懂这里的运作机制了吗？人们被迫卷入以往闻所未闻的新型职业风险之中。
+
+IT 人员也反映了同样的遭遇：高层管理人员向他们发来 AI 生成的指令，要求修改系统管理员设置或安全策略，一线人员根本不知道该如何拒绝。大家不妨设想一下这个场景：某位高管向聊天机器人询问某项配置该如何修改，把生成的答案原封不动复制进邮件，直接扔给真正懂系统配置的操作人员；而此时此刻，这名运维人员不得不陷入两难抉择——是冒着得罪老板的风险据理力争，还是硬着头皮去执行一项自己认为可能极不安全的操作？
+
+请回忆一下我们刚刚提到的现实：大开的系统后门、从不睡觉的自动化攻击者、不堪重负的备用系统——这就是当下的处境。IT 人员作为最后一道防线，却在行政高压下被迫批准那些直接出自聊天机器人的配置变更。我们把这美其名曰“生产力提升”，但很多时候，这不过是在系统缺陷前面挂了个职务头衔而已。
+
+<details>
+<summary>Original English</summary>
+So, before the break, I was asking what happens when your boss decides how much AI you should be using, but you're still technically the one who has to catch the mistakes, right? And where it stops being a funny little story about dashboards is that, for example, in accounting, people say that it saves staff a few hours but adds more hours of review time. So the time doesn't actually disappear. It just moved up the chain onto the person whose name goes onto the final result. If the AI gets something wrong, the AI doesn't get fired. Of course, the person who signed it off does. So the company gets to count the hours saved and the employee gets to carry the risk. You see what's happening? People are being forced into new risks that were unheard of before. Same thing from people in IT who are being sent AI generated instructions by senior staff to change admin settings or security policies and have just no idea how to push back. So picture this for a second. Somebody senior asks a chatbot how to change something, paste literally the answer into an email and sends it to the person who actually knows how to do stuff, the actual system. And now that person has to decide whether to argue with their boss or make a change they think might be unsafe. Now remember everything from just a minute ago. The open doors, the attackers who never sleep, the backup systems being overwhelmed. That is our current reality. That ID person is the last line of defense and they're being pressured to wave through changes that literally came from a chatbot. We call this a productivity gain, but really it often is just a flaw with a job title.
+</details>
+
+这就是为什么我认为强推正在毁掉这项技术本身，甚至毁掉了那些原本喜爱它的人的热情。这个工具总体上是有用的，但一旦使用它变成了一个被拿来考核打分的数字，整个激励机制就彻底扭曲了。明确**何时该用、何时不该用** AI，本身就是做好本职工作的一部分；而恰恰是这一关键判断力，没有任何考评体系去衡量。最终，人们开始反感这个如果任由他们自主摸索本会乐于接纳的工具。
+
+这就好比你在《GTA》里收到的年终绩效考核评价：“该员工在偷车业务上超出预期，我们希望看到她对被盗车辆展现出更多的主人翁意识。”
+
+玩笑归玩笑，我真觉得这种模式支撑不了太久了。因为底层省下来的每一个小时，都会变成上层案头加倍的负担；每一次匆忙推进的变更，都会砸在 IT 人员头上；每一个使用量考核指标，都在把人们原本喜爱的工具变成怨气的来源。风险不断堆积在那些最没有话语权的人身上。我认为在某个时刻，这些人会彻底撂挑子拒绝承担风险：他们会选择抗争，会拒绝签字确认，或者一旦没有人暗中盯梢统计，就悄无声息地彻底停用该工具。
+
+我认为这就是职场环境下的崩溃临界点。它与我们在银行和民航领域看到的挤压完全属于同一种模式，只不过这一次承受重压的不是服务器，而是活生生的人。
+
+<details>
+<summary>Original English</summary>
+No. So, this is what I mean when I say that forcing it is ruining it for literally everyone, including the people who like it, the tool is generally useful, but once using it becomes a number you're graded on, the incentive sort of starts to flip. No, knowing when to use AI is definitely a part of doing your job well. And that is exactly the bit that nobody is measuring. So, people end up resenting a tool they would probably have adopted happily if they would have been left alone with it. I mean, imagine getting your year-end review for GTA. L excels expectations in car theft. We'd love to see her take more ownership of them. Joke aside, I really don't think that this can carry on for much longer because every hour that is saved at the bottom lands on somebody's desk further up. Every rush change lands on the IT person and every usage target turns a tool people liked into one they resent. So the risk keeps piling up on exactly the people with the least say. And at some point I think those people are just going to stop carrying it. They're going to push back. They're going to refuse to sign things off or they just quietly stop using the tool the moment nobody is counting. And I think that is what the breaking point looks like at work and is the same squeeze we saw with the banks and the planes. Only this time it's literally people instead of servers.
+</details>
+
+### 资本市场的被动接盘：Anthropic 上市与养老金敞口
+
+接下来是令人不寒而栗的部分：在我看来，Anthropic 的 IPO 揭示了这场乱局的全新阴暗面。
+
+他们的定价为每股 83 美元，高于此前路演的市场推介区间，募集资金刚突破 810 亿美元，超越了 SpaceX，创下有史以来最大规模的 IPO 纪录。这赋予了该公司大约 1.5 万亿美元的估值，使其跃升为全球第 12 大上市公司，紧随特斯拉之后。
+
+作为对比，《GTA 6》的研发制作成本大概在 10 亿至 20 亿美元之间。也就是说，Anthropic 在一个晚上筹集到的资金，足够开发 40 到 80 款《GTA 6》。
+
+我希望能再观察一段时间这次 IPO 的后续走势，以便给出更客观充分的评述。但在距离挂牌首日如此之近的当下，最令我忧虑的事实是：**所有人都在同一时间被迫暴露在了这笔资产的风险之下。** 我会向你们展示这是如何发生的。
+
+<details>
+<summary>Original English</summary>
+Onto a scary part. The anthropic IPO in my opinion reveals a new shade of this mess. They priced their shares at $83 each above the range it had marketed and raised just over $81 billion which beats Space X and the biggest IPO literally ever. That gives it a value of roughly $1.5 trillion dollars, making it the 12th biggest company in the world, just behind Tesla. For context, GTA 6 cost somewhere between$1 and2 billion to make. So, Anthropic raised enough in one evening to make somewhere between 40 and 80 GTA 6s. I'd like to wait a little bit longer to see how the IBO unfolds fully to properly comment on it. But what concerns me this close to the opening day is the fact that everyone is exposed to it at once. And I'm going to show you how.
+</details>
+
+如果你不了解指数基金的概念，没关系。简而言之，指数基金不需要你自己去挑选单个公司的股票，而是被动买入特定名单上的所有公司，比如追踪纳斯达克 100 指数（该指数包含纳斯达克规模最大的 100 家非金融类上市公司）。大量退休养老金和 401(k)（即美国职场的退休账户）都建立在这一类基金之上。
+
+而关键之处在于：**一旦某家公司被纳入此类指数名单，无论出资人自己愿意与否，基金都必须买入该股票。** 这就是为什么被动纳入指数能够在毫无投资意向决策的情况下，源源不断为某只股票引入被动型资金。
+
+那么一家新上市公司需要等待多久才能进入这个名单呢？过去通常需要很长一段时间。但自今年 5 月起，纳斯达克出台的新快速通道规则允许新上市公司在交易约 15 个交易日后便可加入纳斯达克 100 指数；而在过去，所有新上市公司都必须等待 3 个月。今年夏天 SpaceX 通过同一通道上市时，摩根大通估计纳入指数将吸纳约 43 亿美元的被动资金。这就是为什么我在视频开头断言：Anthropic 上市前几周的股价表现，很大程度上将取决于谁被迫买入，而不是谁主动想买。
+
+当然，全美最普及的养老基金追踪的是另一张名单——标普 500 指数（S&P 500），那里的审批节奏相对慢一些。标准普尔拒绝为这些超级体量的上市企业放宽准入门槛；因此一家公司仍需作为上市公司运营满 12 个月，且按传统要求必须具备盈利能力。所以大家的养老金账户今天大概率还没有开始买入 Anthropic，但大门已经敞开；一旦其满足准入资格，资金就会在没有任何人向你当面征询同意的情况下自动完成划拨。
+
+<details>
+<summary>Original English</summary>
+Now, if you don't know what an index fund is, that's okay. Essentially, instead of picking individual companies yourself, an index fund just buys everything on a list like the NASDAQ 100, which is the 100 biggest non-financial companies on the NASDAQ. Loads of pensions and 401ks, that's basically the American workplace retirement account, are built on funds like this. And the bit that matters is that if a company gets added to this kind of a list, the fund has to buy it whether the people whose money it is want it or not. That is why index inclusion pulls passive money in behind a stock without anyone deciding to buy it. So how long does a new company have to wait to get on that list? Right. Well, it used to be a while, but since May, NASDAQ's new fast entry rule lets a newly listed company joined the NASDAQ 100 after about 15 trading days, where before every new listing waited 3 months. When SpaceX went through the same door this summer, JP Morgan estimated the inclusion could draw about $4.3 billion in passive money. And that is why I said what I said at the start of this video that entropic share price in the first few weeks will largely be determined by who is forced to buy it rather than who wants to buy it. Now the most common pension fund in the USA tracks a different list the S&P 500 and that one is a little bit slower. S&P has declined to loosen its rules for these mega listings. So a company still needs 12 months as a public company and traditionally it is supposed to make some money. So your pension probably is not buying Antropic today but the door is definitely still there and the moment it qualifies the money moves without anyone literally asking you directly.
+</details>
+
+网络上有人开始将普通储户形容为这次 IPO 的“退出流动性”（Exit Liquidity）。这里的“退出流动性”，本质上是指在接盘链条最末端买单的人，以便早期的原始投资者能够套现离场。
+
+当然平心而论，在这一点上 Anthropic 现有股东在总计 9.8 亿股中仅抛售了约 2400 万股，比例大概只有四十分之一；绝大部分募集资金都直接注入了公司本身。但我所担忧的并不只是本周的表现，而是：**这家公司所有的野蛮生长期都发生在未上市阶段，当时普通大众根本无法参与；如今公开上市，自动买盘直接以 1.5 万亿美元的高价入场接盘。**
+
+那么它究竟值不值这个价格？
+
+从基本面来看，该公司的业务增长确实非常迅速：上个季度的营收接近 170 亿美元，较一年前的约 14 亿美元大幅攀升。但这种增速已经开始放缓——上上个季度的营收增长了约 2.5 倍，而到了本季度，增幅回落到大约一半左右。与此同时，公司再度陷入了超过 5 亿美元的营业亏损，并承诺在算力支出上投入近 9000 亿美元。这未免太惊人了。
+
+此外除了公开 IPO，他们还与英伟达以及谷歌母公司 Alphabet 达成了一笔独立的 260 亿美元非公开交易，两家巨头各注资 100 亿美元。而这两家公司恰恰正是 Anthropic 运转所依赖的芯片和云服务供应商！这意味着部分注资实际上直接来自其自身的供应商，这与我们在上一期视频中讨论过的循环融资乱象如出一辙。
+
+我知道这一连串的财务数据听起来让人头大。让我们看着这块可爱的小萌物稍作喘息：它目前还处于“商业化前阶段”，但我们听到了不少关于这块石头的正面反馈。
+
+<details>
+<summary>Original English</summary>
+People online have started calling ordinary savers the exit liquidity for this IPO. Exit liquidity here basically means the people who buy at the very end. So the earlier investors have somebody to sell to. And of course to be fair to Anthropic on this one, the existing shareholders sold only about 24 million of the 980 million shares. So roughly one in every 40, nearly all of the money went to the company itself. But the worry is not really about this week, my friends. It's that years of growth happened while the company was private where ordinary people could not buy in. And now that it's public, the automatic buying starts at a price of 1.5 trillion. So, is it worth that? Well, the business is generally growing fast. Revenue for the last quarter was almost $17 billion, up from about 1.4 billion a year earlier. But that growth is starting to slow down. The quarter before, revenue grew by about 2.5 times. And this quarter, it grew by about half again. At the same time, the company swung back to an operating loss of over half a billion dollars, and it has committed to spending nearly $900 billion of computing power. I mean, come on. And then on top of the IPO, there is a separate $26 billion private deal with Nvidia and Google Sparren company, Alphabet, putting in 10 billion each. Those are the same companies whose chips and cloud Enthropic runs on. So, some of that money is literally coming from its own suppliers, which is basically the same spaghetti of circular financing that we covered in the last video. I know that was a lot of finance in a row. Let's just take a mini break with this lovely cutie. He is pre-revenue, but we're hearing very good things about this rock.
+</details>
+
+不仅投资者在感到不安，我也经常听到 Claude 用户（包括我自己）提出疑问：这笔巨资最终是否能购买到足够的算力来放宽使用额度限制？抑或是迫于利润考量，会导致价格进一步上涨、限额更加收紧？
+
+因此，其中一群人想弄清楚：当退休基金自动买入 Anthropic 股票后，自己的资产会面临什么？而另一群人则在关切：现在 Anthropic 必须每隔 3 个月向股东披露财务利润，大家日常赖以工作的一线工具究竟会发生什么变化？而这两群人自始至终在任何决策环节都没有任何表决权。这就是我想表达的核心观点。
+
+我不会对股价的涨跌妄下断言，因为我确实没有未卜先知的水晶球，恐怕只有 Larry Ellison 才能预料这一切。我也想给市场一点沉淀和成熟的时间，之后再系统展开深入探讨。但即便不知道股价最终去向何方，也能看清当下的运行机制：**无论我们赞成与否，资金都将这样被动地流入其中。**
+
+<details>
+<summary>Original English</summary>
+Now, it's not just investors who are nervous. You know, I keep hearing from Claude users, myself as well, who want to know whether all of this money will finally buy enough computing power to ease the usage limit, for example, or whether pressure on profits will mean higher prices and tighter caps. So, one group is asking what happens to a retirement fund that buys Anthropic automatically, and the other is asking what happens to the tool that they already depend on now that Enthropic has to report its profits to shareholders every 3 months. And neither of those groups ever get a vote in any of this. That is my point. I'm not going to tell you whether the stock goes up or down because again, I do not have a crystal ball. I feel only Larry Ellison can tell us this. And I want to give this a bit of time to mature before I really talk about it properly. But you do not need to know where the price goes to see this pattern. Whether we like it or not, the money is just going to go in.
+</details>
+
+### 监管缺位与临界点：别等到灾难发生才亡羊补牢
+
+那么这一切最终将把我们带向何方？
+
+坦白对大家讲，在对待类似的前沿技术上，我骨子里是一个彻底的技术乐观主义者。我在极多应用场景中积极使用 AI，没有任何人强迫我这么做；我选择它，是因为我真心认为它是一项不可思议的生产力倍增器。我绝不可能期盼 AI 停止存在，我由衷希望它能继续蓬勃发展，因为这绝对是一项极其美妙的技术。这也是我当初开创这个频道的初衷——为了帮助引导它走向正确的方向。
+
+然而它眼下正在迈向的轨道，让我深感忧虑：
+* 攻击者正在各处肆无忌惮地利用它；
+* 多数企业抱着“不用就会被竞争对手吞噬”的恐慌心理盲目跟风；
+* 打工人惶恐于失去工作；
+* 数据中心在各地疯狂拔地而起；
+* 当 AI Agent 接入企业核心内部系统时，依然缺乏真正有效的责任问责机制——即便它目前还没有造成什么实质性的恶果；
+* 执掌各项重大决策的人，往往并非真正的技术专业人员；甚至坦率地说，我都怀疑他们到底有多大动力去切实解决这些隐患。
+
+因此，我认为我们现有的体制根本不足以确保这项技术以健康正确的方式演进。这正是我呼吁政府必须严肃介入的原因：我们需要出台实质性的 AI 治理规范，以及对这类企业施加适当的金融合规监管。
+
+我很希望相信这一切能够发生，但老实说，我对此并没有太大把握。我越来越担心，我们只有在某些环节遭遇极其惨烈的灾难之后，才会真正看到严肃的安全护栏落地。我在这里不会去揣测灾难的具体形态，因为互联网上从来不缺对此大做文章的人。
+
+但是，当备用系统被彻底冲垮，当 IT 人员在强压下对机器人的操作大开绿灯，当我们的养老金在浑然不知中全自动入场接盘——在我看来，整个系统已经极其逼近崩溃的临界点了。所以，我真心希望有朝一日，我们能够不再等到有人受到严重伤害之后，才开始着手规范建设。
+
+<details>
+<summary>Original English</summary>
+So where does all of this leave us? I'll be honest with you. I am an eternal optimist when it comes to technology like this. I definitely use AI for so many use cases and nobody forces me to. I choose this because I genuinely do think it is an incredible multiplier. I'm never going to root for AI to stop existing. I really wanted to keep going because it is an absolutely wonderful technology. That's actually why I started this channel in the first place to help steer it in the right direction. But the direction it's going in right now deeply concerns me. Attackers are using it left and right. Companies feel they have to adopt it or they get eaten by their competitors. People are scared of losing their jobs. And there are data centers going up everywhere. And when an AI agent gets into a company's internal systems, there is still no proper accountability. Even when it doesn't actually do anything bad there, the people making the big decisions about all of this often are not technical professionals. And frankly, I'm not even sure how motivated they are to actually fix it. So, I don't think the system we have right now is set up to develop this the right way. And that is why I think governments really need to step in with serious AI governance and proper financial regulation of these kinds of companies. I would love to believe that this is going to happen, but I'm actually not confident that it will. I generally am starting to worry that the only time we'll see serious guard rails in place is after something goes horribly wrong. I'm not going to speculate about what that might be because there's literally no shortage of people online doing that already. But when the backups are overwhelmed, the IT people are being told to just wave things through, and our pension funds are buying it on autopilot, that already feels to me like a system getting close to a breaking point. So, for once, I'd really like us not to wait for somebody to get seriously hurt before we actually start building this properly.
+</details>
+
+在此期间，朋友们，请务必保持好奇心，坚持学习，跟上变化的步伐。如果你此前从未真正尝试过，不妨随便打开一个 AI 工具和它聊上两句，哪怕只是问候一下它今天过得如何。因为我们当中真正理解这些底层逻辑的人越多，其他人替我们擅自包办一切决策的难度就越大。
+
+请重温我们昨天开始谈到的场景：数以百万计的玩家下载了《GTA 6》，没有任何人拿它考核他们的表现，没有任何人去统计他们的使用频率；在经历多次让人感觉漫长无期的延期之后，大家心甘情愿等待了 13 年——因为这是他们真正想要的东西。
+
+**这才是人类发自内心主动拥抱一项技术时该有的模样。**
+
+如果有人愿意停下来问一问大众的心声，AI 本也可以拥有这样的待遇。如果你想了解黄仁勋与英伟达丑闻究竟揭示了这场 AI 狂欢背后隐藏着怎样的脆弱性，我已经在屏幕上推荐的视频里做了详细剖析——那绝对是一期值得你看的视频。
+
+<details>
+<summary>Original English</summary>
+In the meantime, please, my friends, stay curious, keep learning, keep up with what's changing. And if you've never really tried it, open one of these AI tools and just chat it about anything. Even just ask how it's doing today. Because the more of us actually understand this stuff, the harder it is for anyone to make all of these decisions for us. And remember where we started yesterday. Millions of people downloaded GTA 6. Nobody graded them on it. Nobody counted their usage. And they waited 13 years for it through two delays that felt like many more because they wanted it. That is what it looks like when people actually choose a technology. AI could have that too if anyone bothered to ask. If you want to see what the Yansen Hang and Nvidia scandal actually reveals about how fragile this whole AI nonsense really is, I covered that in this video that I'm linking here on your screen. That's the video that I would watch
+</details>

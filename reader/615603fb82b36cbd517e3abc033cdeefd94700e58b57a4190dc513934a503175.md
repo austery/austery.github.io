@@ -1,0 +1,153 @@
+---
+author: AI Engineer
+date: '2026-11-25'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=Xyb1Bn_L2U4
+speaker: AI Engineer
+tags:
+  - agent
+  - software-engineering
+  - organizational-structure
+  - ai-productivity
+title: Sourcegraph CEO 分享如何利用 Agent 变革软件开发与组织架构
+summary: Sourcegraph CEO 分享了在 2025 年初发现 Agent 潜力的经历，并描述了如何从公司内部抽调 20 人组建 Amp 团队。文章强调了在 Agent 时代，传统的企业级销售和产品管理模式可能失效，提倡建立由极少数成员、高度利益攸关且由 Agent 驱动的新型高效组织架构。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - Sourcegraph
+  - Amp
+products_models:
+  - Amp
+  - Claude Code
+  - Codex
+media_books:
+  - Thorsten Ball 的编译器书籍
+status: evergreen
+---
+## 2025 年 1 月的顿悟与 Amp 团队的起步
+
+好。2025 年 1 月有那么一个时刻，当时我正在写代码，想看看如果直接做一个 agent 会怎样。那是在 Claude code 之前，当时做的东西蠢透了，比如改一下这个背景颜色之类的，但当我第一次看到一个 agent 真正运转起来时，我彻底震撼了。它会运行命令，会审视自己，还能给自己提供反馈循环。这让我大受震撼，我想每个人在第一次看到 agent 时都会有这种感觉：在这之后，一切都将改变。关于如何构建软件的一切都将改变。我想我们都有过这种感觉。关于如何组建公司来开发软件、如何销售软件、如何分发软件的一切都将改变。所有其他工作也将改变，那真是一个绝对疯狂的时刻。当时我其实正和我们团队的 Thorsten Ball 在法兰克福机场。他写过那本编译器方面的书。在座有人认识我们团队的 Thorsten 吗？是的，他是个很酷的家伙。我们在法兰克福机场简直惊呆了，我们知道一切都将改变。我们不知道这一切会走向何方，但我们就是想冲上去。我们就是想放手一搏。
+
+<details><summary>Original English</summary>
+
+All right. Uh there was a moment in January of 2025 when I was just coding and I wanted to see what if you just make an agent. This was before Claude code and it was like the dumbest stuff ever. It was like change this background color, but it just blew my mind when I saw an agent actually work for the first time. It ran commands, it looked at itself, it gave itself its own feedback loops. That blew my mind and I had this sense I think that everyone has when they first see an agent that everything is going to change after that. Everything is going to change about how you build software. I think we've all felt that. Everything is going to change about how you form companies to work on software and how you sell software, how you distribute software. All other work is going to change and it was just a an absolutely crazy crazy moment. Um I was actually at the Frankfurt airport with Thorsten Ball on our team. Um he wrote that compiler book. Anyone who knows Thorsten on our team? Yeah, he's a cool guy. Um we were just like minds blowing at the Frankfurt airport and we knew that everything was going to change. We didn't know where this was all going to go, but we just wanted to go. We just wanted to go run at it.
+
+</details>
+
+所以在 Sourcegraph 内部——那是一家有 200 人的企业软件公司，我是 CEO，我们做代码搜索——我们决定直接开始做这件事，屏蔽掉其他所有事情，专心做这个东西，不去参加销售电话，不去参加高管会议，那些事一概不管，屏蔽掉所有干扰。当时我处在一个很多人可能会说“哇，我是公司里的一名软件开发者，我想做出改变，我想让我的公司更积极地拥抱 AI，但我做不到”的位置上。要知道，我是 CEO，理论上我可以改变任何事情。我可以调整团队。我可以说你们不需要做 pull request 代码审查，不需要做我们以前做的任何其他流程。然而，这依然非常困难。我们最终的做法是从公司里抽调了 20 个人，仍在 Sourcegraph 内部，组建了一个小团队，也就是 amp 团队。这就是我们的尝试。所以对于在座那些正试图在公司内部推动变革、想让公司变得更适合 agent 的人，我非常同情你们，也希望你们能从这里带走一些收获。我知道这有多难，也请对你们的 CEO 多一点同理心。对他们来说这同样很难。这真的是一种非常艰难的变革和转型。
+
+<details><summary>Original English</summary>
+
+So inside of Sourcegraph, which was a 200-person enterprise software company, I was the CEO and we made code search. We decided to just start building this to tune out everything else and just start building this thing, not go to sales calls, not go to like exec meeting, none of that stuff, just tune out all the distractions. And I was in this position that I think a lot of people say, you know, wow, you know, I'm a software developer at a company and I want to change. I want my company to be more AI forward and I can't. Um you know, I was the CEO and in theory I could change anything. I could change teams. I could say you don't need to get pull request code review. Uh you don't need to you know do any of the other processes we used to do. And yet it was very hard. What we did is we ended up taking 20 people uh from the company and inside of Sourcegraph still we made a little team, the amp team. And uh that's what we tried. So for those of you who are trying to push back against your company to try to make it more agent friendly, I have a lot of sympathy for you and I hope that you can take away some things from here. Um I know how hard it is and also have some empathy for your CEO too. It's hard for them too. This is a really hard kind of change and transformation.
+
+</details>
+
+但我们知道有些事情是一定会改变的，这些现在看起来似乎很明显，但回到 2025 年初，当时大家还有这种“企业级就绪”的想法：你把产品做出来，然后就可以组建一个销售团队去卖它。我们知道那种做法会彻底消亡。你必须站在最前沿。如果你尝到了一点成功的甜头，然后就开始去勾选所有企业级清单，好让普通企业买家满意，那你的产品大概在 3 个月内就会过时。整个游戏规则必须改变。除了让其他公司里的人爱上你的产品之外，一切都不重要，而对于 CEO 来说，预算是无限的，一切常规都失效了。所以我们知道，我们还不完全清楚自己会遇到哪些挑战。另外，在这个 agent 可以构建产品或构建功能的世界里，你甚至该如何思考差异化？我的意思是，直到今天还有人问：为什么 amp 更好？为什么 Claude code 比 Codex 或其他什么更好？很多人都迫切希望得到“是因为这三个功能”这样的答案。比如 amp 有 orbs（非常棒的云端 agent），我们还有多人协作功能。但疯狂的是，你们都知道，如果我们能做到并证明这一点，那我们的任何竞争对手也能做到。所以，为什么还要玩那个游戏呢？构建和销售软件究竟意味着什么？如果你连一个月后产品会是什么样子都不知道，为什么还要去雇佣一个销售团队？为什么要按传统方式去做任何事情？而且如果你甚至不知道如何实现差异化，那就没有可持续的差异化。对于 Amp，人们最终会爱上它，但你甚至可以看到，比如 Tailwind 的那个家伙 Adam Wathan，他很喜欢 Amp，但他也说，这是那种你用过之前无法理解的东西，你无法理解它为什么好，直到你真正去用它。你能想象如果这是你营销产品的最佳方式，你却还要养着一整个产品管理团队、设计团队、工程团队——一个与真实客户如此脱节的庞大公司机器吗？这真的太难了。
+
+<details><summary>Original English</summary>
+
+But we knew that there are some things that we're going to change and this all seems kind of obvious now but back in 2025 early 2025 with this idea of enterprise ready, you do this thing and then you can build a sales team and go sell it. We knew that that was just going to totally die off. You had to be on the frontier. If you had you know a taste of success and then you started doing all the enterprise checklist to make the median enterprise buyer happy, your product was going to go obsolete in like 3 months. And the whole game had to change. Nothing mattered other than making it so that the people at these other companies loved your product and the CEO, the budget was infinite and all bets were off. So we knew that we didn't quite know uh all the challenges we'd run into. Um also you know in this world where agents can build a product or build a feature, how do you even think about differentiation? I mean to this day there's people who say well why is amp better? Why is you know Claude code better than Codex or whatever? And so many people are begging to have the answer in the form of well it's these three features. You know uh amp has orbs which are really good cloud agents and we have multiplayer. But the crazy thing is you all know that if we can do that and if we prove it then any of our competitors could as well. So you know why even play that game? Like what does it even mean to build and sell software? Why would you go and hire a sales team? Why would you go and do anything in the traditional way if you didn't even know what it's going to look like in a month? And if you don't even know how to differentiation, there's no sustainable differentiation. Um, you for Amp, you know, people end up loving it, um, but you can even see like, um, you know, Adam Wathan, who's the uh, Tailwind guy, he loves Amp, but he's like, you know, it's one of those things where you can't understand it. Uh, you know, it's can't understand why it's good until you use it. Can you imagine having a whole product management team, a design team, an engineering team that's so disconnected from the actual customers, a whole company apparatus, if that's the best way that you can market a product? It's really tough.
+
+</details>
+
+## 拆分独立与“利益攸关”的约束
+
+所以我们知道我们必须改变一切，而且因为我们在某种程度上无意中处于一些奇怪的约束之下，我们重新思考了很多事情。我们决定将 Amp 拆分出去。对于在座那些曾经在公司里待在一个小团队里、试图用不同方式做事、试图成为“创业公司中的创业公司”的人，你们大概都幻想过“干脆直接出去另起炉灶吧”。好吧，我们真的这么做了。我们按正确的方式妥善处理了投资者和员工的权益，每个人都在两边持有股份，但我们确实拆分出去了，而且在长达一年的时间里，直到上周五为止，我们不能招任何人，不能授予期权。法律上的拆分过程非常痛苦，我们被迫只能靠带过来的 21 个人维持运转。在这个疯狂竞争的环境里，我们没有时间——我们不能为了做强制性的 pull request 而放慢速度。我们不能开会。我们不能把时间消耗在那些需要花好几个月才能做决定的企业客户身上。于是我们被迫进入了这种截然不同的工作方式。同时，我们也有这样一个环境：团队里的每一个人在公司里都持有很大的股份。当 AI 让你能够用少得多的人来运营时，你所拥有的那种“利益攸关”（skin in the game），对优秀人才的灵魂来说就像是一种精神力量。它让他们在所做的每件事上都变得更好，让他们成长得更快。这就是我们所看到的。我想，当你见过一家像这样没有任何多余负担而运转的公司时，你就会很清楚这样的公司将如何碾压其他所有公司，以及未来的每一家公司都会变得更像那样。
+
+<details><summary>Original English</summary>
+
+So we knew that we just had to change everything and we we rethought so many things because kind of unintentionally we were in under some weird constraints. We decided to spin out Amp. So for those of you who've been at a company like a small, uh, you know, you're on a small team in a company, you're trying to do things different, you're trying to be the startup within a startup. You probably have these fantasies of let just go off and start a new company. Well, we actually did that. We, you know, did the right thing by investors and employees and everyone has ownership in both, but we actually spun out and for a year until last Friday, we couldn't hire anyone. We couldn't grant options. The legal spin-off process was a huge pain and we were forced to make do with the 21 people that we brought over. We didn't have time in this crazy competitive environment to do uh, you know, we couldn't move as as slowly in order to do, um, you know, mandatory poll requests. We couldn't have meetings. We couldn't have our time be sucked up by enterprises that would need to take, you know, many months to decide on something. And so we were forced into this radically different way of working. And we also had this environment where every single person on the team has a huge stake in the company. And that skin in the game that you get when AI makes it so you can operate with way less people. Skin in the game, it's like this spiritual thing for the soul of of great people. It makes them better at everything they do. It makes them grow faster. And so this is what we have seen. Uh, this, I think, when you've seen a company that operates like this without any of that it's obvious how companies like this are going to crush everyone else and how every company in the future is going to look a lot more like that.
+
+</details>
+
+所以，是的，我们把 Amp 拆分出去了，我们必须在这些我们完全没料到会面临的约束下，摸索出许多新的工作方式。正如我所说，我们不能招人。结果就是——顺便说一下，这是一张对数图表——当这个领域里所有其他大型竞争对手都在扩张并建立老式公司来利用 AI 这项惊人技术时，我们不得不维持在 21 个人。但这太棒了，因为它成了一种倒逼机制，迫使我们以不同的方式工作，去思考在不能招人的情况下，如何借助 agent 做到多得多的事情。其实有一个人说，我不在乎大概 8 个月拿不到期权，我就是要加入，Hamish 真的很棒。
+
+<details><summary>Original English</summary>
+
+So, yeah, we spun Amp out and we had to figure out a lot of new ways of working with these constraints that we had no idea that we were going to be under. And we couldn't hire as I said. So, as a result, while our This is a log chart, by the way. While, you know, all the other big competitors in the space were growing and building old-fashioned companies in order to go and exploit this amazing technology of AI, we had to stay at 21 people. But that was awesome because it was a forcing function for us to work differently and to figure out how can you do so much more with an agent where we we couldn't hire people. There's actually one guy who is like, I don't care that I can't get options for like 8 months and I'm going to come join and Hamish is pretty awesome.
+
+</details>
+
+## 围绕 Agent 构建一切
+
+所以我想谈谈，围绕这些约束迫使我们采取的工作方式，我们是如何打造 Amp——也就是我们的 agent 产品——以及我们是如何在这里围绕 agent 成长起来的。我们扔掉了所有其他工具。我们扔掉了所有其他你必须去查看的东西。显然没有 Jira，没有任务追踪。我们没有客服系统。我们所有的事情都在 agent 里完成。在 Amp 里，它们叫作 threads。我们甚至都在 agent 里沟通。你可以说，我做了个什么东西，产品里有个地方出问题了，我们来处理一下。Agent 可以监听所有内容，然后去修复它。如果你用的是那种只跑在你笔记本电脑上的本地 agent，当你意识到自己搞不定的时候，你没法把别人拉进来。这非常有价值。我们推送（push）得非常频繁。我想展示一下我们在这里是如何真正降低风险的，因为你可能会问——让我重新说一下。你可能会说，好吧，如果你们一直在推送，那怎么不会一直把网站搞挂呢？区别在于，当你随时随地自己一个人就能推送时，你可以把工作切分成小得多的块。在去做一个大改动之前，你可以先说：让我加上日志，确保我对系统的理解以及 agent 对系统的理解是正确的。让我推送一个小改动、一个小改动，然后 agent 可以监控它一个小时，再推送下一个改动。你可以让一整套影子系统与旧系统并行运行，看看它在每一种情况下是否计算出完全相同的结果。这种工作方式实际上降低了风险，因为如果按老办法来做，考虑到如今事情必须推进的速度以及客户的期望，等你做完的时候，你大概早就忘了自己在做什么，而且结果糟透了。我再发点帽子吧。谁还想要帽子？好，给。哦抱歉，那位在用笔记本电脑的兄弟，这就是个教训，对吧？好，接着说。
+
+<details><summary>Original English</summary>
+
+So, I want to talk about the ways in which we built Amp, which is our agent product around the way that these constraints forced us to work and how we grew up around the agent here. We got rid of all of the other tools. We got rid of all of the other things you got to check. Obviously not Jira, no task tracking. We don't have a support system. Everything we do in the agent. In Amp, they're called threads. We even communicate in the agent. You can say, you know, I made a Something's bad in the product. Let's do it. The agent can listen to everything and then go fix it. If you're in like a a local agent that runs on your laptop, you can't bring someone else in if you realize you're in over your head. Really valuable. We push way too often. And I want to show, you know, how we actually reduce the risk here because you might say Let me Let me start that again. You might say, well, if you're pushing constantly, then how do you not take down the site all the time? And the difference is when you can push and you can do it anytime a day just by yourself, you can chunk up your work into way smaller pieces. Before you're going and doing a big change, you can go and say, let me add the logging to make sure that my understanding of the agent's understanding of the system is correct. Let me push a little change, a little change, you know, and then the agent can monitor it for an hour and then push the next change. You can run a whole shadow system side by side with the old system to see does it compute the exact same results in every single case. And that way of working actually reduces the risk because by the time, you know, you finish the old way of doing it and the pace that things have to move these days and what your customers expect, you probably forgotten what you're building and it just totally sucks. Um, let me give out some more hats. Who wants some more hats? All right. There we go. Oh, sorry. The one guy who's on his laptop, that's a lesson, right? There we go. All right.
+
+</details>
+
+另一件事是让 agent 能够无可辩驳地证明它正在构建的东西是正确的。有很多方法可以做到这一点。事实证明它们非常擅长证明这些事情。比如，如果你想消除 UI 中的抖动，确保加载时画面清晰利落，你可以让 agent 去做一件没有任何人类会有耐心去做的事，那就是截取每一帧并在视觉上进行对比。我这里就是这么做的。你可以让 agent 去做出一大堆不同版本的东西。你永远没法要求一个人类这么做，比如如果你让一个设计师去做 9 个迭代或 9 种风格，他们会非常烦躁。我知道，因为我和设计师合作过，我知道他们不喜欢那样。但对于 agent 来说，是的，你可以让它做出一大堆不同的东西。这就是 amp 里语音听写的波形图。这也是解决人们说“我不喜欢干等我的 agent”的方法之一。他们每次只让它做一件事，然后说做这个小改动。你不应该那样做。让它一次做出一大堆东西，你的效率会高得多。
+
+<details><summary>Original English</summary>
+
+Um, another thing is making it so the agent's able to irrefutably prove what uh the you know the thing it's building is correct. Um, there's a lot of ways you can do this. Turns out they're really good at proving these things. So if you're trying to remove like jitter in the UI, make sure that when you load it's like nice and crisp, you can ask the agent to do something that no human would ever have the patience to do, which is take every single frame and compare them visually. And that's what I did here. You can ask the agent to go make a ton of different versions of something. You can never ask a human to like, you know, if you ask a designer go make nine iterations or nine styles of this, they're going to get really annoyed. I know cuz I've worked with designers and I know they don't like that. But for the agent, yeah, you know, you can have it make a ton of different things. This is the uh waveform for dictation in amp. And this is one of the solutions to people who say I don't like waiting on my agent. You know, they're asking for one thing at a time and then they say make this little change. You shouldn't do that. Go have it make a ton of things at once and you're going to get a lot more done.
+
+</details>
+
+我们有一个神奇的系统，如果你在 amp 中报告了一个 bug——在座有人在 amp 里报告过 bug 吗？好，很酷。我为那个 bug 道歉，但我们有一套闭环系统：当你报告一个 bug 时，我们会修复它，当然，包括 Android 应用。我们显然会用 agent 来修复。我想现在大家都会这么做，至少大多数人会。很多时候工程师和客服团队仍然是分开的，这有点疯狂。我们会给那个人发一封邮件，送他们一些免费额度，这总是挺好的。我觉得如果产品里出了 bug 而公司却不道歉，那就太糟糕了。我只是觉得那样在道德上是不对的。然后我们会做的是去翻查日志，做一件人类自己永远不会去做的事：我们会找出所有其他受该问题影响的人，因为无风不起浪。于是你找到了另外 17 个遇到同样隐蔽错误的人。他们大概还记得这件事，然后你主动告诉他们。你有多少次收到过某个产品的邮件说：“嘿，我知道你昨天遇到了一个错误，那真的很烦人。我对此非常抱歉。这是 10 美元。我们已经修复了。”顺便说一下，这是一个自我强化的循环，收到邮件的人知道你在乎，他们以后就会发来更多反馈。然后你把这些修复全部发布出去，接着，砰，这就是那个循环。人们常说靠 vibe coding 做出来的产品都是垃圾。Amp 基本上 100% 是用 AI 构建的，而人们说它的质量非常高。这就是你可以用 agent 做出改变的地方之一。但如果你每次都必须经过 PM，或者去找负责这个 bug 的团队和设计师，你绝对不可能做到这一点。
+
+<details><summary>Original English</summary>
+
+We have this magical system where uh if you report a bug in amp. Has anyone here reported a bug in amp? All right. Cool. Uh I apologize for the bug, but we have a system that is a full loop where when you report a bug, we will fix it, of course, you know, Android app. We'll fix it obviously with the agent. I think everyone does that now. I mostly everyone. A lot of times still the engineers are different from the support team, which is kind of crazy. Um, we'll send an email to the person them. We give them free credits, which is always kind of nice. I think it sucks. I think it sucks when there's a bug and a product and the company doesn't apologize. I just think that's like morally wrong. And then what we'll do is we'll go through the logs and there's something that no human would ever do by themselves. We'll see everyone else who is affected by that issue because where there's smoke, there's fire. So you find the 17 other people that hit that same obscure error. They remember it probably and you proactively tell them. How many times have you got an email from some product that says, hey, I know that you saw an error yesterday and that was really annoying. I'm really sorry about that. Here's $10. We fixed it. And by the way, that it's a self-perpetuating cycle where then people who get that know that you care and they're going to send more feedback in the future. And then you ship those all out and then, you know, boom. And that's the cycle. That people talk about vibe coded products being junk. Amp is basically 100% built with AI and people say it's very high quality. And this is one of the things that you can do differently with an agent. But there's no way in hell you could do this if you had to go through a PM or go to the team that owns this bug and the designers each time.
+
+</details>
+
+语音听写（dictation）。谁会对着自己的 agent 口述输入？哇，挺不错的，比我想象的要多得多。这是把信息比特从你大脑传递给 agent 最快的方式。而且我觉得这大概还会推动远程办公的回归，因为今天我刚和另一位 amp 联合创始人 Beyond 在办公室里，他在口述输入，真的非常吵人。如果你还没开始用语音听写，你得用起来。只要克服那种尴尬感就行了，学学 Nathan Fielder，告诉自己无论说话时多么尴尬你都能忍受。
+
+<details><summary>Original English</summary>
+
+Um dictation. Who dictates to their agents? Yeah. Wow, that's that's pretty good. That's a lot more than I thought. It is the fastest way to get bits of information from your brain to the agent. And uh I think that there's probably something around it uh ushering in the return of remote work because I was just in an office today with Beyond, another amp co-founder dictating and it was very annoying. Um dictation, if you're not doing it yet, you got to do it. Just overcome the embarrassment of, you know, uh channel Nathan Fielder and tell yourself that you can withstand any amount of awkwardness as you talk.
+
+</details>
+
+## 自建工具与 SaaS 模式的瓦解
+
+我们已经把 agent 接入了许多不同的工具。我想很多公司也已经走到这一步了。我们在生产环境中这样做已经很长时间了，我们发现，当越来越多地开始使用这些工具——也就是只有 agent 在直接使用它们——我们甚至不再需要另一端的软件产品了。对我们来说，真正还有粘性的产品寥寥无几。比如我们在 Amp 里构建了一些新东西，例如一个 CRM。一年前你会听到人们说，哦，不会有人从零开始靠 vibe coding 写出一个 Salesforce 的。是的，那完全没错。你为什么要那样做呢？你用过它吗？如果你 vibe coding 出了那样一个东西，你会为此感到自豪吗？而且你也只用到 Salesforce 大约 2% 的功能。所以其实，虽然人们嘲笑这个想法，但实际上，你会去编写 Salesforce 功能中那 2% 的子集，再加上另外 2% 能以最完美方式与你其余技术栈集成的功能，因为 agent 在这方面太擅长了，对吧？加起来也就是 Salesforce 总功能的 4%，这很容易。而且你比 Salesforce 更清楚自己想要什么，你肯定也不想把时间花在跟某个 Salesforce 产品经理沟通上，听他们说“我会向我的 PM 和高管团队争取，把这个排进我们第四季度的路线图”之类的。相比之下，直接从零开始构建你想要的工具正变得越来越容易。
+
+<details><summary>Original English</summary>
+
+We've hooked up our agent to a lot of different tools. I think a lot of companies have gotten here, you know, to this point. We've been doing this in production for a long time and what we've found is the more that we start using these tools where just the agent is using it directly, we don't even need the software product on the other end. And it's a very small number of products that we think actually have sticking power for us. So um you know we built some um new things in Amp, for example a CRM. And a year ago you heard people talking about, oh no one's going to vibe code Salesforce from scratch. And yeah that's totally true. Why would you want to? It's Have you ever used it? You know would you be proud if you vibe coded that and that came out the other end? And also you use like 2% of the features of Salesforce. So actually, you know this people ridiculed this idea, but actually would you code the 2% subset of Salesforce features and then another 2% that integrate with the rest of your stack in the most perfect way because the agent is so good at that? And that, you know 4% of Salesforce total, that's like the easy And you know what you want out of that better than Salesforce and you certainly don't want to spend your time talking to some Salesforce product manager and hearing from them, I'm going to advocate with my PM and my executive team to get that on our Q4 roadmap, all that So compared to that, it's actually getting easier and easier to just build the tools that you want from scratch.
+
+</details>
+
+这又回到了我们第一次试用 agent 时感受到的那种存在主义式的恐惧，但同时也是令人震撼的感觉。这就是我们当时预想会发生的事情：它会改变软件行业的一切。如果连 Salesforce——它就像是 SaaS 界的眼镜王蛇，拥有最可靠的客户、最可靠的续约率，几乎是它开创了这个品类——如果我们都开始思考“我们为什么还要用它？”，那么一切都在开始瓦解，整个 SaaS 行业都在开始崩溃，因为你再也不能假设你可以付给销售人员 10 万（100k）去签下一单，然后那一单会持续 10 年并且还会增长一点点。现在这一切都受到了质疑。所以，如果你在一家软件公司，而那就是你们最终赚钱的方式，你正试图敲响警钟、试图发出警告。绝对应该敲响警钟，并且走出你所在的那个笼子，因为在我看来，一旦你见过这种新型公司——规模小两个数量级，每个人都能做所有事情，每个人都利益攸关——那么你就不会再想要任何其他模式了。
+
+<details><summary>Original English</summary>
+
+And this goes back to some of the existential kind of dread but also mind-blowing feeling that we felt when we first tried an agent. This is what we kind of thought would happen. That it would change everything about the software industry. If Salesforce, which is like the king cobra of SaaS, they have the most reliable customers, most reliable renewals, all that, they like invented the category. If we're starting to see, you know why would we use them? Well everything is starting to fall and all of SaaS starts to break down if you can no longer assume that you can pay a salesperson 100k for closing a deal and that deal is going to last for 10 years and it's going to uh you know get bigger by a little bit. Not all of that is called into question now. So if you're at a software company and that is how you ultimately make money and you're trying to ring the bell, you're trying to raise the alarm here. Uh, absolutely raise it, and get out of the cage that you are in, because uh, in my opinion, once you have seen how the new kind of companies that are two orders of magnitude smaller, where everyone can do everything and where everyone has skin in the game, then, you know, you don't want anything else.
+
+</details>
+
+## 新型公司与“走出笼子”
+
+这就是我们所说的新型公司：我们拿掉旧的组织架构图，现在 Amp 只有 21 个人。我们没有 PM。每个人都直接和客户沟通。Brady 是之前在 Sourcegraph 做 SDR 的一个小伙子，非常聪明，我很喜欢他。有一天他说，我要做一个 ACH 电汇转账功能，这样如果金额太大刷不了信用卡，客户也能给我们付款。他大学毕业才两年左右，就直接去做了。而另一端的人根本不知道。这就像《纽约客》那幅老漫画：在互联网上，没人知道你是一条狗。没人知道他是个 SDR，也没人知道我们其实某种程度上都是开发者、什么都做。但你就是可以做到。而且你还能得到对客户非常坦诚的人。我觉得有时候客户需要的就是大实话。比如我们团队的 Alex Kemper，就在今天，他对一个想要我们东西的客户说：“听起来我们只会陷入一堆扯皮（BS）里，我觉得这对谁的时间都不是好用法。”如果你能做到让团队里的人觉得自己有底气说这样的话，真正说出对客户最有利的话，那太棒了。你在拿佣金的销售人员那里是得不到这种坦诚的。
+
+<details><summary>Original English</summary>
+
+And so this is what we call this new kind of company, where, you know, we take that old org chart, and now we just got 21 people on Amp. We have no PMs. Everyone talks to customers. Brady is this guy who is uh an SDR at Sourcegraph, really smart guy. I love the guy. And one day he's like, I'm going to make a wire uh ACH wire transfer thing so customers can pay us, you know, if it's too big for a credit card. And I'm And he's like two years out of college, and he's just doing that. And nobody knows on the other end. It's like that old New Yorker cartoon on the internet, nobody knows you're a dog. You know, nobody knows that he's an SDR, that we're all kind of, you know, devs and doing everything. But you can. And you also get people that are really real with customers. And I think sometimes customers need real talk. So Alex Kemper on our team, you know, just today uh he was like, hey, you know, to a customer who wanted our stuff, that sounds like we're just going to get bogged down in a bunch of BS, and I don't think that's a good use of anyone's time. If you can get to a place where you have people that feel empowered to say that and to truly say the best thing for the customer, that's great. You're not going to get that out of a salesperson who is commissioned.
+
+</details>
+
+这是有些人最喜欢的部分：我们每周只开一次会，除此之外，指导原则就是“顺应你的精力（follow your energy）”。你没法用这种方式去经营大多数公司，但如果公司里的每个人都在公司持有巨大的股份——你知道，把 100% 除以 21 之类的——你就可以真正信任大家，因为再说一次，当人们利益攸关时，这会让他们在所做的每件事上都变得更好。这就像一种激励机制，让他们从整个公司的角度思考，让他们做得更多、工作更努力。这就是为什么我把周六和周日也算进去了。而且我们交付的东西多得多。我想对很多人来说，Amp 是一款他们喜爱的产品。我们的业务也做得很好，我们正在证明这种新型公司——盈利、ARR 超过 1 亿、按投入产出比计算比老式公司高效 40 到 50 倍——是完全行得通的。
+
+<details><summary>Original English</summary>
+
+We have, this some people's favorite part, uh we have one meeting per week, and then everything else, the guidance is follow your energy. Um, you couldn't run most companies like that, but if everyone at the company has a massive stake in the company, you know, take 100% divide it by 21, you know, and all that, you can actually trust people because again, when people have skin in the game, it makes them better at everything they do. It's like an incentive to make them think whole company, to make them do more, to make them work harder. And that's why I included Saturday and Sunday as well on this. And we are shipping uh just, you know, so much more. Um, I think that, you know, Amp for many people is a product that they love. We also have a great business and we're serving as proof that this new kind of company that is profitable, that's more than 100 million ARR, that is doing so on a dollar in, dollar out, you know, basis that's 40 to 50 times more efficient than old-fashioned companies here, that that that can work.
+
+</details>
+
+所以，如果这对你有吸引力，如果你想推动你的公司朝这个方向发展，如果你想去创办一家这样的公司，那么请联系我，我很乐意帮忙。我的建议就是：走出那个笼子。我听过太多人说，我讨厌公司里有个八卦频道，大家都在上面谈论变革。你知道吗？你在那个八卦频道里待得越久，你在一家拿着高薪、自己又很聪明却什么都不做的公司里待得越久，你就越开始成为问题的一部分。当 agent 已经彻底改变了游戏规则时，你越是让自己继续只当一个普通开发者，就越是在伤害自己。所以，如果今天你只带走一件事，那就是走出那个笼子，让 agent 真正塑造你的工作方式，去加入一家愿意被 agent 塑造的公司。谢谢大家。如果你想试试 Amp，可以到台上去复制那个链接。我这里还有更多帽子，结束后可以来找我，我大概会去 Chipotle 之类的地方吃晚饭，想聊这些的话随时来找我。好了，谢谢大家。
+
+<details><summary>Original English</summary>
+
+And so if this is appealing to you, if you want to push your company in this direction, if you want to go start a company like this, then um reach out. I'm happy to help. And my guidance is just get out of the cage. I've heard from so many people who say I hate that there's a gossip channel with the people at my company. We're all talking about the change. You know what? The the longer that you are in the gossip channel, the longer that you are at a company getting paid a lot of money and you're really smart and you're not doing about it, you're starting to become part of the problem. And the longer that you let yourself be just a developer when agents have completely changed the game, you're really hurting yourself. So if this is, you know, the one thing that you take away, just get out of that cage, let agents really shape how you work and get to a company that's willing to be shaped by the agents. Thank you. And um if you want to try Amp, you can get up there, you can copy that. I've got more hats, so find me afterwards and I'll probably be getting dinner at Chipotle or something, so come find me if you want to chat about all this stuff. All right, thank you all.
+
+</details>

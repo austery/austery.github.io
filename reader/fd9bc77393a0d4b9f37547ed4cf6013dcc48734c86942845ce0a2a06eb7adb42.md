@@ -1,0 +1,345 @@
+---
+author: AI Engineer
+date: '2026-10-22'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=Wk2bUUGFC_o
+speaker: AI Engineer
+tags:
+  - compute-market
+  - gpu-cluster
+  - credit-risk
+  - physical-settlement
+  - ai-infrastructure
+title: 为什么没有算力市场，AI初创公司将会消亡
+summary: San Francisco Compute创始人Evan Conrad指出，AI初创企业面临的最大瓶颈并非电力，而是信贷风险与算力保证金门槛。由于缺乏高流动性与实物交割的算力市场，巨额沉没资本与长期合约正迫使行业走向垄断。建立集软硬件运营与订单簿于一体的算力市场是初创生态存活的关键。
+insight: ''
+draft: true
+series: ''
+category: tech-trends
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - San Francisco Compute
+products_models: []
+media_books: []
+status: evergreen
+---
+### 为什么需要建立算力市场
+
+这是一场关于算力市场的演讲。不过，它更关乎于我们为什么要去建立一个算力市场。
+
+如果不认识我，我是 Evan。我们运营着一家名叫 San Francisco Compute 的公司。我们打造了一个实物交割的订单、实物交割的远期合约市场。如果你听了上一场演讲，上一场基本上是在讲为什么所有 GPU 集群的运营商运作得其实并不太好。
+
+当我们说实物交割时，意思是说我们就是运营商。我们既是硬件的运营商——就像云厂商是硬件的运营商那样，同时我们也是市场。这有点像算力领域的电网。
+
+<details>
+<summary>Original English</summary>
+
+So, this is a talk about compute markets. Um, but it's kind of more of a talk about why to make a compute market.
+
+Um, if you don't know me, I'm Evan. Um, we run a company called San Francisco Compute. Um, we make a physically settled order, physically settled forwards market. Um, so if you were here for the last talk, last talk was basically why all the operators of GPU clusters um don't really work very well.
+
+Um, when we say physically settled, we mean we're the operator. We're both the operator of the hardware in the same way that a cloud is the operator of the hardware and then we're also the market at the same time. It's kind of like a grid for compute.
+
+</details>
+
+这里的核心要义在于：为了运行和运营一台超级计算机，我们认为问题从设计超级计算机那一刻就开始了——就在物料清单（BOM）的设计中，还在于对背板架构（backplane fabric）的控制，在于裸机编排控制，也在于其上的服务、虚拟机等等。整个技术栈有太多不同的环节需要被高效处理，否则那些拥有一座数据中心、希望通过转型为 GPU 云来赚更多钱的人，最终都会在客户面前掉链子。
+
+这就是我们在做的事情。我们提供所谓的“超级计算即服务”（supercomputing as a service）。我们去接洽那些想要成为云厂商的人——比如那些想成为英伟达所谓的 NCP 的人，或者是希望为被投企业配置集群、并希望在像 Instinct 这样的公司腾飞时能够重新分配算力的风投机构，或者是希望获得算力残值、因为他们意识到这对自身财务状况非常重要却又不想运营超级计算机的 AI 公司。
+
+这就是实物交割。在此之上，我们运营着一个实时的容量订单簿，你可以购买现货或未来的预留容量。
+
+<details>
+<summary>Original English</summary>
+
+So the general gist of this is that in order to run and operate a supercomputer um we think problems start right at the design of the supercomputer um right in the design of the bill of materials um it's control of the backplane fabric as well it's also control of um bare metal orchestration it's also services on top VMs and so on um there's a lot of different parts of the stack that you have to do effectively otherwise um the folks who have a data center um and would like to make more money on that data center by becoming the GPU cloud um end up failing for the customer.
+
+So that's what we do. We offer what's called supercomputing as a service. We go to folks who want to become a cloud. That's like folks who want to become what Nvidia would call an NCP um or venture firms that want to have clusters for their portfolio um and want to be able to reallocate that capacity when a company like Instinct is taking off. um or AI companies who would like the residual value on the compute because they've realized that's really important to their financials um but don't want to operate a supercomputer.
+
+So that's physical settlement and then on top of that we run a live order book for capacity that you can buy reserved either right now or in the future.
+
+</details>
+
+### 从被动当黄牛到建立算力市场
+
+这一切加在一起，完全不是我们最初设想自己要做的事。最初，我们是一家名为 Junlark 的公司，试图做类似于 Suno 或 Udio 的东西，但比他们都早。当时，想要切实创办一家实验室，你需要筹集一大笔定金，一笔巨款，在当时是 1000 万美元。我们觉得那是笔天文数字。于是我们想：不，这太蠢了，我们要去融 50 万美元，然后显而易见，我们要去租别人的。
+
+显然，今天这个数字已经不是 1000 万美元了，而变成了 10 亿美元。不过无论如何，我们融到了 50 万美元。我们买了一个大集群，然后每个月在集群上都在亏钱（处于潜水状态）。要不是把集群转租出去，我们就破产了。如果你听说过 GPU 黄牛（broker），我们就是第一批 GPU 黄牛，因为我们是被迫成为 GPU 黄牛的。公司创办的第一年，我们纯粹就在疲于奔命地抛售集群，不然就要关门大吉。
+
+我当时就在 NeurIPS 现场拿着这些纸片到处晃悠，纸上同时写着 H100 和 A100，因为我当时赶制海报太仓促了。
+
+<details>
+<summary>Original English</summary>
+
+Um this um together is not at all what we thought we were going to be doing. Originally, we were this company called Junlark um that was trying to make kind of like Suno or UDIO, but prior to Suno or UDIO. Um at the time, um what you needed to do to realistically start a lab was you needed to raise a big deposit, a huge one, which was $10 million at the time. Um we thought that was a crazy amount of money. Um and so we thought, no, that's stupid. We're going to raise 500k and obviously what we're going to do is we're going to rent from somebody else.
+
+Um obviously today um it's not $10 million, it's a billion dollars. And um [snorts] nonetheless, um we had raised our 500k. We buy a big cluster and then we're underwater on our cluster every month. Um and if we didn't sublease our cluster, we would have gone bankrupt. Um so if you've heard of GPU brokers, we were the first GPU broker because we were forced into being a GPU broker. So the first year of the company was us just trying to sell our cluster, otherwise we would go bankrupt.
+
+Um, so I would wander around with these like actual um pieces of paper at NeurIPS which both say H100 and A100 at the same time because that's how I made uh I made the uh poster so quickly.
+
+</details>
+
+所以这场演讲并不必然是在讲算力市场是如何运作的，而是在讲一个算力市场是如何得以存在的。
+
+我们喜欢把它想象成一本宣传手册：手册的封面上写着“天哪，创办一家 Neolab 太难受了”，列满了各种财务和经济难题；而在手册的背面，写着“算力市场”。在翻开手册之前，你很难看清这两者是如何联系起来的。但一旦你翻开它，就会惊呼：“天呐，这里面的内容也太多了”，而且层层叠叠，折页无数。
+
+这是一个极其艰巨且充满挑战的问题，因为你需要同时解决两个奇迹级的问题才能跑通：你必须建立一个市场——这是一个独具挑战的难题，因为它存在冷启动问题；你还必须建立一个云，并且你还要努力不让自己变成一个普通的云，这本身是另一个完全独立的挑战。
+
+但这些正是各类实验室目前正在面临的问题，而且很快就会变成所有人即将面临的问题。如果你在一家初创公司工作，这现在就是你的问题了。
+
+<details>
+<summary>Original English</summary>
+
+Um, and so this talk is not really about um necessarily like how a compute market works. It's how a compute market um gets to exist.
+
+Uh we like to think about it like there's this pamphlet and on the pamphlet on the front side it's like man starting a Neolab sucks. There's all these different like financial and economic problems and on the back of the p back of the pamphlet it says compute markets. It's it's not super clear how one gets to the other until you open the pamphlet and then like oh my holy there's like so much stuff in this pamphlet and it keeps going and there's so many folds.
+
+It's just a very difficult and challenging problem because you need to solve two like miracle problems to get working. You have to both make a market which is uh a uniquely difficult problem because it has a cold start problem. You also have to build a cloud and then you have to not become a cloud. Um which is a whole separate challenge.
+
+But these are the problems that the labs are facing and it's about to be the problems that everyone is about to facing. So if you work at a startup these are your problems now.
+
+</details>
+
+### AI 初创公司的信贷死结与交付风险
+
+眼下，所有人的算力都售罄了。这种情况大概率在相当长一段时间内不会改变。这意味着你必须去买一个全新的集群，一个完全新建的集群，而这存在交付周期（lead time）。
+
+你根本没办法付钱让集群现在就上线。你只能付钱等它以后上线。市场上没有任何东西能切实让你现在就把集群弄上线。与此同时，你得把银行账户里的全部余额都作为定金交出去。
+
+你之所以要把全部银行存款作为定金，是因为贷款方完全不知道该如何对 AGI 进行信贷审核。天底下怎么会有人懂这个？在旧金山或者纽约，有两个人的初创团队跑出来说：“我们要打造超级智能。”没有任何贷款机构懂如何对超级智能做风控核保，他们完全不知道这项资产值多少钱。
+
+<details>
+<summary>Original English</summary>
+
+Um right now everybody is sold out of compute. Um this is um probably not going to change for a while. Um, so that means that you're going to have to buy a new cluster, a net new one, and there's a lead time. You have no way to pay for that cluster to come online now. You're going to pay for it to come online later. There's nothing in the market that can realistically get that cluster on online for you now.
+
+Um, meanwhile, you're going to pay your entire bank balance as a deposit. Um, the reason you're paying your entire bank balance as a deposit is because the lender has no idea how to render under underwrite AGI. Um, how in the world are you supposed to do that? You've got two person startups in San Francisco who or maybe New York um who say I'm going to build super intelligence. No lender knows how to underwrite super intelligence. Um so they have no idea what the asset is worth.
+
+</details>
+
+与此同时，你的集群极有可能会延期。这是因为贷款方需要针对客户的信用风险进行风控审核，所以他们必须在部署集群之前先确定客户是谁。因此，客户签字的那一刻，恰恰是整套运作中最危险的节点。
+
+你本来希望的情况是：先建好集群，然后再去销售。这还有助于减少集群故障等各种类型的问题。与此同时，大多数搭建集群的人，是那些拥有让算力变便宜的核心资产的人——比如你已经拥有了数据中心机房空间。但机房空间并不能直接赋予你超级计算的专业能力，正如在上一场演讲中所看到的那样。
+
+与此同时，你还会遇到和 Junlark 一模一样的问题：你要么极度超买，要么极度少买。这是因为 AI 的利润率根本不像 SaaS 公司那样丰厚，因此你几乎没有犯错的容错空间。你因为少买而导致竞争对手以正确姿态赢下竞争的概率，或者因为过度超买而沦为下一个 Stability AI、要么直接暴雷走向 Character.AI 结局的概率，都非常之高。
+
+所以这些归根到底都是同一个问题。它们只是不同维度的风险：技术风险、财务风险、信用风险。它们是一个庞大且捆绑在一起的复合风险问题。
+
+<details>
+<summary>Original English</summary>
+
+Um meanwhile your cluster is very likely to be delayed. That's because the lender needed to underwrite against the credit risk of the customer and so they needed to know who is the customer first before you deploy the cluster. So right when the customer signs is the riskiest point in the entire operation. um you wanted it to be the case that you built the cluster first and then you sell it. This also helps reduce all sorts of different types of problems um where clusters break.
+
+Meanwhile, most of the people who are setting up clusters are people who have the actual asset that makes the thing cheap. Like you've got the data center space already. What that doesn't get is supercomputing expertise. um as we saw in the last talk if you've um watched that one.
+
+Um meanwhile, you're going to run into the exact same problem that Junark did, which is you're going to either way overby or you're going to weigh underby. Um that's because AI doesn't have margins that look like SAS companies. And so you don't have very much margin for error. And so the chances that you either underby and somebody else wins because they did it correctly or you over buy and then you just become stability AI or you blow up. you um end up like character AI um are really high.
+
+So these are all the same problem. They're all just different types of risk. They're technical risk, their financial risk, their credit risk. Um they're all one big bundled risk problem.
+
+</details>
+
+### 算力与 SaaS 的本质差异：信贷才是首要瓶颈
+
+这正是我们最终要去解决的问题，也是我们认为算力市场乃至整个行业要去解决的问题。因此，我们来逐项梳理一下这些问题，看看它们是如何导向算力市场的。因为如果不理解这些背景，你就很难明白为什么需要算力市场，这甚至会让人觉得像是个空想：“哦哇，算力市场听起来很酷，那我就去创办一个吧。”
+
+我们认为，市场必须从人们所面临的实际问题中推导出来。
+
+首先第一点：所有人的算力都售罄了。为什么会售罄？因为如果拿不到长期包销协议（offtake agreement），贷款方就无法为集群提供融资。
+
+在 CPU 时代，情况完全不是这样，因为 CPU 的买家是 SaaS 公司。SaaS 公司有着极高的毛利率。正因为拥有高利润率，你可以打造一款产品，依靠 CPU 带来高昂利润回报。不妨这样思考：如果你是一家 SaaS 公司，底层的云厂商将价格翻倍，你不会破产；你会痛恨那家云厂商，你会很生气，但你不会倒闭。但如果你是一家 AI 公司，你的底层云厂商把价格翻倍，除非你换去另一家云，否则你立刻就会破产。
+
+<details>
+<summary>Original English</summary>
+
+Uh which is the problem that we end up solving and it's also the problem that we think compute markets broadly the entire industry solves. Um so we'll walk through each one of these and walk how that gets to a compute market because if you don't understand these, it's kind of like unclear why you would want a compute market. Um, and it almost seem like this problem that somebody thinks, "Oh, wow. Compute markets are cool, so I'm going to go start one." We think they should be derived from the actual problems that people face, which is first, everyone is sold out.
+
+Why are they sold out? Because the lender couldn't finance the cluster unless you had a long-term offtake agreement. In CPUs, uh, this wasn't the case because CPU buyers are SAS companies. SAS companies have high margins. And because they have high margins, um you can build a product that rewards you for having um a great um that rewards you with high margins um for your um your CPUs.
+
+Um think about it like this way. If you're a SAS company and your underlying cloud doubles their prices, you don't go bankrupt. You hate your cloud, you're mad, but you don't go bankrupt. If you're an AI company and your underlying cloud doubles their prices, you go bankrupt unless you go to some other underlying cloud.
+
+</details>
+
+这意味着你对价格极其敏感。正因为你对价格极度敏感，而且没有任何东西能将你死死绑定在某一家特定的云上，所以他们无法按需零售（on demand），因为客户会立刻流失到任何更便宜的地方去。
+
+这就意味着，为了给 GPU 集群融资，你必须签署长期的照付不议（take-or-pay）合同，而且最好是与具备投资级信用评级的主体签约。
+
+然而，如果你在这些合约上缺乏流动性——如果你卖的是预留实例（reserved），而你的客户根本无法脱身退出——那么这也意味着，另一家此时此刻急需算力的客户（比如像 Instinct 那样业务正在爆发式增长的公司），却掏出钱也买不到任何算力。他们必须去给新集群融资，而受制于物理世界的客观规律，建新集群需要交付周期，这得耗费漫长的时间，有时你甚至还得先去把那该死的数据中心给盖起来。
+
+既然你要去为新集群融资，你就必须支付定金，因为在 AI 领域几乎没有任何人拥有合理的信用资质。正因为这是一门全新技术，所有的公司都是新生的。
+
+与此同时，即使你开始沿着阶梯向上扩张，在整个过程中你也依然会不断撞上信贷天花板。这是当下 AI 领域的第一大瓶颈，根本不是电力问题。在撞上电力瓶颈之前，你早就会先撞上信贷瓶颈。
+
+<details>
+<summary>Original English</summary>
+
+And what that means is that you're actually price sensitive. And because you're actually price sensitive, um, and there's nothing keeping you at any particular cloud. So you can't sell on demand because your customers will immediately leave to whoever is cheaper. And so um, that means that in order to finance GPU clusters, you have to have long-term take-pay contracts, hopefully with someone who has investment grade credit.
+
+However, if you don't have liquidity on those, if you're selling reserved and your customer can't get out, then that also means that some other customer who wants the capacity right now because they're like instinct and their product is taking off can't pay for anything. They have to finance a new cluster which has a lead time because the physical world just exists and it's going to take a while. Sometimes you even have to build the damn data center.
+
+Um, and then because you're financing a new cluster, you're going to pay a deposit because almost nobody in AI has any reasonable credit. And because this is a brand new technology, all these companies are new. Meanwhile, even as you um start to scale up that ladder, you're still going to run into credit issues all the way through. It's the number one bottleneck of AI at the moment. It's not power. You hit credit way before you hit AI or way before you hit um um uh power.
+
+</details>
+
+### 风投的资本流向与硬件交付死循环
+
+这意味着每一家推理公司、每一家新型实验室，其业务瓶颈全都在于银行账户里到底趴着多少现金。于是他们跑去找风险投资人，而 VC 会说：“哦，我只投资模型层、应用层、推理层，因为我不想承担那些资本支出（capex）相关的重资产。”然而紧接着，风投实际上还是为所有这些资本支出买了单——他们开给新型实验室或新型推理公司的支票，最终还是被这些公司原封不动送到了云厂商手里，沦为了支撑集群的定金，而这就是贷款方用来做客户信贷风控的方式。
+
+因此，集群迟迟延期，就是因为云厂商在客户真正到手之前根本无法实质性部署集群。那是整个链条中风险最高的一环。因此，本来应该发生的合理流程是：云厂商提前把集群采购好，等它已经在数据中心落地之后再进行销售。这意味着集群延期的概率会大幅降低。
+
+与此同时，当你作为客户拿到集群时，它非常容易出现故障，因为这里面毫无流动性。如果节点故障率超出了你的预期，而你又没有能力调配一个新节点进来，你就没有任何可以临时抽调节点的地方。这意味着如果你需要新节点来顶替坏掉的节点，你就必须走退货换保（RMA）流程，也就是重新拿一台新节点。
+
+于是，这又把我们拽回了前面的几个步骤——你再次撞上了交付周期的问题。结果就是，所有人随时都在遭遇硬件故障与宕机。
+
+<details>
+<summary>Original English</summary>
+
+So, um what that means is every inference company, um uh every Neol, they're bottlenecked by how much cash do they have in the bank account. And so they go back to the venture capitalist who says, "Oh, I'm going to fund at the model layer, the application layer, the inference layer because I don't want to fund all of that capex stuff." Um, and so the venture capitalist then funds all the capex stuff by giving the um the new neolab or new inference company um the check that they then send to the cloud um which is the deposit for the cluster and that's how you underwrite the customer.
+
+So um the clusters then are delayed because um the c the cloud couldn't actually deploy the cluster until they had the customer in hand. And so that was the riskiest point. So therefore um what should have happened was the cloud had bought the cluster ahead of time and then waited until it was landed in the data center and then sold it. And that means you have way less likelihood of delays.
+
+Meanwhile, the cluster is very likely to break when you get the cluster as the customer because you don't have liquidity. And so, if the failure rate is higher than what you expect and you don't have the ability to transition a node in, then you don't have anywhere you can pull nodes from, which means that if you need new nodes to make up for the failed ones, you have to RMA them, which means you have to get a new node. And then that gets us back to several steps before where you have uh the lead time problem again. And so, everything breaks for everybody all the time.
+
+</details>
+
+当你作为一家新型 AI 实验室好不容易挺过了所有这些难关后——你历经了人人的算力都售罄、经历了漫长的交付周期、掏空了家底支付巨额定金、遭遇了延期交货、经历了机器宕机损坏，在终于闯过这一切之后——你准确预测自身算力需求的概率依然微乎其微。
+
+你要么会陷入严重的配置过剩，要么会陷入严重的配置不足，而且你无路可退：你没有任何渠道把冗余算力卖给别人，如果你急需更多算力，也根本没有现货途径能买得到。
+
+因此，为了解决这些难题，算力市场必须同时攻克一整套环环相扣的麻烦。你需要针对 GPU 集群本身的内在价值进行承保和信贷支持，而不是针对客户微弱的信用风险去做核保。
+
+这是它可以行得通的路径。但这并不保证一定能按这种方式实现。在其他行业中，历史上的演变路径往往是全面走向寡头整合：出现一个资信极高的大买家，彻底垄断通吃整个该死的行业。这正是当前 AI 行业正在滑向的轨道。
+
+未来的走向很可能不是一个所有人都能参与的流动性市场，而是会变成类似台积电（TSMC）那样的格局：只剩下一家或少数几家充当买方的巨头云厂商，只剩下屈指可数的几家大模型 AI 实验室，而其他的初创企业将彻底绝迹。
+
+<details>
+<summary>Original English</summary>
+
+Once you have gotten through all of that as a new AI lab, um your problems are you you you know you nobody was sold like everyone was sold out. Um you then had to wait a lead time, you paid this big deposit. Um the thing was delayed and then it broke and finally you got through all of that. Um and the likelihood that you predict your demand correctly is very low. And so you're either going to be way overprovisioned or way underprovisioned and you have no way out. Um there's no way to sell your capacity to somebody else and there's no way to buy more capacity if you need it.
+
+So, computer markets um to solve these problems, you need to solve a bunch of different problems all at once. Um you need to underwrite the value of the GPU cluster rather than underwriting the value or underwriting the credit risk of the customer. Um this is how it could work. Um it's not guaranteed to work like this. In other industries, what happened is everything just consolidated. You got one big creditworthy customer that does the whole damn industry.
+
+That's what the path of AI is currently on track to do. It's instead of going to be um a liquid market where anybody can participate, it's going to look like TSMC. You're going to get one buyer um or a few buyers that are the clouds. You're going to get a few model labs that are the AI labs. And then you won't get other startups.
+
+</details>
+
+我们认为这就是即将发生的事情。这也是为什么三年前我们还在做自己的 AI 实验室时，我们本有一个选择。我们完全可以说：“算了吧，我们不要再死撑好几年就为了让这家转售公司活下去了，我们直接转头去做一家新的 AI 实验室。”
+
+但我们看到了这个死结，我们当时就意识到：“如果我们不针对这个问题做点什么，三年后的今天我们依然会撞死在这堵墙上。”
+
+而现在，整整三年过去了，我们果然撞上了这堵墙，而且所有人都在撞上这堵墙。
+
+正如你看了上一场演讲所知道的那样，除非你同时掌控并运营市场和底层集群，否则你几乎不可能解决这个问题。
+
+这位是 Dylan Page。Dylan 是 CNCF 基础设施工作组的联席主席（也就是打造 Kubernetes 的开源基金会组织），此前曾在 Lambda 从事底层基础设施工作。他之所以加入 San Francisco Compute，就是因为目前的 GPU 算力还不够标准化、不够稳定可靠，根本无法允许市场运营商与实体物理基础设施相割裂。
+
+如果你不是实际采购硬件并掌控底层的人，这一套根本玩不转；或者说，如果你采购的交易对手本身并不实际运营它，这就根本无法成立。
+
+<details>
+<summary>Original English</summary>
+
+Um this is what we think is going to happen. And this is why 3 years ago when we were doing our AI lab, we had a chance. We could have said, "No, we're not gonna do our new um we're not gonna like, you know, stick it out for several years just trying to keep our company alive. Um we're just going to go do a new AI lab." But we saw this problem and we said, "Oh if we don't do anything about this, then we will just hit this 3 years from now." And here we are 3 years from now hitting this problem and where everyone's going to hit this problem.
+
+So um as if you watched the last talk um it's very hard to do solve this problem unless you are operating both the market and the clusters at the same time. Um so this is Dylan Page. Um Dylan is a co-chair of the CNCF infrastructure group. That's the organization that makes Kubernetes formerly worked at um Lambda doing infrastructure there. Um and the reason and he joined San Francisco compute because um GPU compute isn't sufficiently standardized reliable for the market operator to be divorced from the physical infrastructure. It doesn't work if you aren't the one who's buying the thing. Sorry, it doesn't work if the person you're buying from isn't operating it.
+
+</details>
+
+举个例子说明为什么中间商倒手走不通：在座的各位肯定有人是从外地乃至海外飞过来的，住着酒店房间。如果你能把你的酒店房间转卖给别人，听起来是不是很棒？我找到你，想买下你的酒店房间，然后我问：“我能叫客房服务吗？有人来帮我打扫房间吗？我的房间出故障了，我该找谁报修？”
+
+如果你自己不经营这家酒店，这些问题你一个也解决不了。
+
+这就是为什么纯粹倒买倒卖算力集群（brokering clusters）根本行不通。你必须像运营酒店一样去亲自运营整个集群。你必须全权掌控整套设施，否则你根本无法构建起一个真实有效的市场。它跑不通，你无法做到实物交割。
+
+那么，为什么没有人去做实物交割呢？问题在于，整个市场存在着一股极其强烈的诱惑，阻碍着人们去做实物交割。因为如果你真为算力构建出了一套完整的实物交割体系，从字面意义上讲，你其实已经建成了整套 GPU 云的完整运营能力。而一旦你拥有了一整座 GPU 云的全部运营能力，你就应该直接转型去做一家 GPU 云——因为摆在眼前的事实是，那样做可以赚到多到吓人的钱。你可以签下一笔又一笔数十亿美元的巨额大单。
+
+于是大家都会想：“算了吧，别去搞什么算力市场了，我们干脆直接做成一家 GPU 云算了。”基本上所有人最后都走了这条路，因为那些数字实在是太天文级了，这种商业选择本身也完全合情合理。
+
+而我们最终之所以坚持构建实物交割，是因为我们深知，如果不把这套市场基础设施做出来，我们自己回头就根本无法重新创办一家 AI 实验室——而那才是我们打心底里真正想干的事情。我们想要创办一家实验室。只要这套基础设施一天不存在，我们就一天无法创办它。
+
+<details>
+<summary>Original English</summary>
+
+To give an example of why this doesn't work is I'm sure some of you are flying in from overseas or sorry um out of town um and you have a hotel room. Um wouldn't it be great if you could, you know, sell that hotel room to somebody else. I go to you and I want to buy that hotel room. Um and I say, "Can I get room service? Can I get my room cleaned? Um I've got a problem with my room. who do I call? Um, if you don't operate the hotel, you can't fix any of those problems.
+
+That's why brokering clusters doesn't work. You have to operate the cluster like the hotel. You have to run the whole damn thing. Otherwise, you can't actually make a market. It doesn't work. You can't do physical settlement.
+
+Um, so why does nobody do physical settlement? Um, the problem is there's a very strong incentive to never do physical settlement. Um, that's because if you build out physical settlement for compute, what that literally means is you're building out the entire operating capacity of a GPU cloud and if you are building out the entire operating capacity of a GPU cloud, you should just be a GPU cloud because it looks to be the case that you will make an ungodly amount of money. Um, you will sign billion dollar deal after billion dollar deal. And so, it. Let's not make a GPU or let's not make a compute market. let's instead just become a GPU cloud, which is what basically everybody does because the numbers are astronomical and it's a very reasonable thing to do.
+
+Um, the reason why we ended up building physical settlement was because we knew that if we didn't start this, um, we would then not be able to start an AI lab, which was the real damn thing that we wanted to do in the first place. We wanted to make a lab. We didn't get to make a lab unless this exists.
+
+</details>
+
+### 代币化信贷挤压与初创企业的生存危机
+
+当年我们刚起步时，创办一家新实验室需要缴纳的保证金是 1000 万美元。这就是跨过信贷风险门槛的代价。随后，集群规模越来越大，进入这个赛道的起步门槛筹码也水涨船高：接着变成了 1 亿美元，如今已经暴涨到了 10 亿美元。
+
+我们认为这种模式根本无法持续。我们认为在这个世界上，根本不存在还没拿到营收、没有市场验证数据、甚至产品连影子都还没有，就能一上来直接融资 100 亿美元的道理。
+
+这意味着，如果不把这个问题彻底解决，我们眼下正一步步滑向“未来整个 AI 领域将不会再有任何初创企业”的境地。
+
+此时可能有人会想：也许未来会出现新的推理公司和新的模型实验室，他们解决信贷问题的方式，无非是把这种风险转嫁给下游的应用层。他们会说：“看，我必须解决我自己的信贷难题，所以我的策略是：我只签约具备投资级信用评级的客户（比如财富 500 强企业）；我只签为期五年的 Token 采购长约；我只签那些需要提前支付巨额保证金的 Token 客户。”
+
+真到了那一步，一切就彻底完了。
+
+<details>
+<summary>Original English</summary>
+
+So, when we started, it was 10 million um, as the deposit that you had to pay um, to start a new lab. This is like how you get over the credit risk problem. Um then the cluster sizes got bigger. The sort of minimum ante into the space got bigger. Then it was 100 million. Now it's a billion.
+
+We don't think it can continue. We don't think there is a world in which you can get a $10 billion round right out the bat before you raise uh before you have revenue or traction or your product or anything. Um and what that means is that if you don't solve this problem, we are currently on track to not have any startups in AI.
+
+Um, now one of the things that you could think could happen um is maybe there can be new inference companies and new model labs. And the way that they solve the credit problem is that instead they just ship the risk to the application layer. They say look I will um I I need to get over my credit um problem. So what I'm going to do is I'm going to only sign customers who are investment grade um credit, you know, Fortune 500. Um, I'm going to only sign customers on five-year contracts for tokens. I'm going to only sign customers for tokens that require a big deposit upfront.
+
+Um, that is the end of everything.
+
+</details>
+
+如果推理层开始被信贷全面卡死，接下来的后果就是：除非你拥有极高的信用资质，或者掏得出天价保证金，否则你根本拿不到 Token。
+
+而这里面的致命问题在于，整套经济体系的方方面面都要用到 Token。没有任何一条规则规定初创企业必须存在。如果每一家初创公司在获取智能的过程中，突然全都在信贷门槛前被卡死，那么现存的大型既得利益集团将直接横扫一切。他们自己就能做出一模一样的产品，因为他们拥有现成的信贷额度；他们通过产品赚取充沛的现金流，反过来让他们的信用评级变得更加优质——这是一个巨大的马太飞轮，它将推动垄断在整个经济体内无情蔓延。
+
+如果跨不过这个瓶颈，初创公司将不复存在。
+
+这就是为什么我们开始做这件事。因为在我们看来，大约在三到五年后，你会放眼望去，心里想着：“我想做一家新的初创公司。”但为了达成目标，你必须购买海量的 Token 才能与现有的巨头或既有玩家抗衡。你可能需要购买价值 1 亿美元的 Token。
+
+我们认为，这就是你未来创办一家新公司真正需要承受的代价，因为别人都在豪掷数亿美元去消耗 Token。如果顺着逻辑画出走势线，必然会是这种结局。
+
+<details>
+<summary>Original English</summary>
+
+Um, if you have inference layer getting bottlenecked by credit, what happens is you can't get tokens unless you have credit or you have a big deposit. And the problem of that is that tokens are used by the whole damn economy. There is no rule that says that startups have to exist.
+
+Um if every startup is suddenly bottlenecked by credit um in order to access intelligence, what happens is existing firms just ship everything. They themselves get to make the product um because they've got credit and then they make the revenue from that product and then it makes their credit better and that's a flywheel that makes consolidation happen throughout the entire economy. If you don't fix this bottleneck, there aren't any startups.
+
+This is why we started doing this and because at one point um uh or what we think is going to happen is you're going to end up in like 3 to 5 years you're going to look out and say I want to start a new startup and to get there you need to buy so many tokens in order to compete with the existing partner or like existing players. So you need to buy a hundred million dollars of tokens. Um we think this is what you are actually going to have to do in order to start a new company because other people are spending hundreds of millions of dollars of tokens. If you just draw the line out, this is what happens.
+
+</details>
+
+你必须付出一笔极其庞大的定金，因为你们只是两个根本不知道自己在干什么的新手，根本没有人会信任你们。所以你得跑去找风投融 1 亿美元。与此同时，根本没有人愿意跟你们合作，因为你们只是一家只有两个人的小微创业团队。
+
+接着，你会被要求为那 1 亿美元签下一份长达五年的捆绑合同，除非你把它们全部当成定金一次性砸进去。
+
+结果就是：你再也看不到新的模型实验室诞生，你再也看不到新的初创企业涌现，整个行业走向彻底的寡头垄断。
+
+我们也曾是这样一家小微实验室。我们当时生活在旧金山，我们结识了所有其他人——他们同样也是刚刚起步、怀揣梦想创办了一家初创公司、渴望能参与到这个时代最重要技术浪潮中的两个普通年轻人。
+
+我希望这些人能够继续存在。我希望这个人能存在，我也希望这个人能存在。我希望这家初创公司能够活下来，希望这家初创公司能存在，希望这家、这家、这家、这家、这家、这家、还有这家初创公司都能存在。
+
+如果能让这些公司顺利运转起来，也许他们当中的某一家未来就会成长为参天大树，攻克治愈癌症的疗法，或者创造出前所未见的事物，而不是任由那些劣质粗糙的 AI 垃圾充斥于世。
+
+这正是算力市场所要解决的核心问题。如果你不去解决它，我们认为，未来将不会再有任何初创公司。
+
+<details>
+<summary>Original English</summary>
+
+So, you need a big giant deposit because you're two people who have no idea what they're doing and so nobody trusts you. So, you're going to go and raise $100 million from your venture capitalist. Um, meanwhile, nobody wants to work with you because you're a twoerson startup. Then, you're going to be asked to pay for um that hundred or you're going to be asked to pay for a 5-year contract on that 100 million um if you're not paying it all as a deposit. And then you just don't get new model labs. You don't get new startups. um you get a consolidation in the industry.
+
+So we at one point um uh were this little lab um and what we did is we lived in San Francisco um and we knew all the other people who were also just two little folks um who had started a startup and wanted to be able to participate in the most important technology of our time. Um so I want these people to exist. I want this person to exist and I want this person to exist. I want this startup to exist and this startup to exist and this startup to exist. This one and this one and this one and this one and this one and this one and this one and this one.
+
+If you get these companies going, maybe they'll become big folks that build your cancer cures or they build something that nobody thought of um or something that wasn't just sort of AI slopped out.
+
+This is kind of the problem that compute markets solve. And if you don't solve it, we don't think there's going to be any startups.
+
+[applause]
+</details>

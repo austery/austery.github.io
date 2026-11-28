@@ -1,0 +1,257 @@
+---
+author: 硅谷101
+date: '2026-10-28'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=hrQBNhpIFlc
+speaker: 硅谷101
+tags:
+  - astronomy
+  - artificial-intelligence
+  - space-telescope
+  - data-science
+title: 天文学的AI革命：从韦布望远镜到应对天文数据洪流
+summary: 西湖大学助理教授结合詹姆斯·韦布空间望远镜等前沿观测成果，探讨天文学正迎来的海量数据洪流，并阐述AI在引力透镜识别、自监督噪声处理、自动化望远镜运维等方面的应用与未来展望。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - NASA
+  - Westlake University
+  - Harvard University
+  - Tsinghua University
+  - University of Arizona
+products_models:
+  - James Webb Space Telescope
+  - Nancy Grace Roman Space Telescope
+  - Vera C. Rubin Observatory
+media_books: []
+status: evergreen
+---
+### 自我介绍与詹姆斯·韦布空间望远镜概述
+
+大家好。我目前在中国杭州的新建西湖大学担任助理教授，杭州现在也是一座因AI而非常闻名的城市。在此之前，我是哈佛大学的博士后，并且是詹姆斯·韦布空间望远镜（JWST）近红外相机（NIRCam）科学团队的成员。JWST是詹姆斯·韦布空间望远镜的缩写，它是人类历史上发射到太空中最大的望远镜。NIRCam是JWST上的主要科学仪器，你们刚才看到的所有美丽图像都是由它拍摄的。今天我将向大家展示我们领域的一些进展，包括我们的图像有多么美丽，以及AI如何正在改变我们的领域——教我们如何为宇宙制作动态影片，并教我们如何审视我们的数据。
+<details>
+<summary>Original English</summary>
+Hello everyone. My name is and I'm a assistant professor at the new Westlake University in Hangzhou, China, which is also very famous city for for AI right now. And before that I was a postdoc at the Harvard University and I was a a member of the JWST near cam science team. So JWST is a short name for the James Webb Space Telescope. That's the biggest telescope that we launched to into space in the human history. Near cam is the primary instrument on on JWST that's taking all of the beautiful image that you just saw. And today I'm going to show you some progress in our field including how beautiful our other image are and and also how AI is changing our field in teaching us how to make movies of the the universe and teaching us how to how to look at our data.
+</details>
+
+好的。
+<details>
+<summary>Original English</summary>
+Okay.
+</details>
+
+### 首张深场图像与红外观测原理
+
+我想大家应该都看过这张图像。这是JWST最早公开发布的图像之一。它实际上是由乔·拜登在白宫发布的。在当时COVID疫情期间，这是整整一年里屈指可数的几个好消息之一。正如大家所见，图像中几乎所有的东西都是一个星系。它们距离我们大约有1000亿年（注：光行时间/距离），每一个星系中又包含着另外数十亿颗恒星。这座望远镜早在1996年就已设计，花了将近25到30年的时间来建造、全面测试，并最终在法属圭亚那库鲁使用阿丽亚娜5号火箭发射升空。
+<details>
+<summary>Original English</summary>
+So I think I believe also people have been looking at this image. This was one of the first image that JWST released. It's actually released by Joe Biden at the at the White House. And at that time during the COVID this is one of the few good news over the the whole year. And as you can see nearly everything that in in the in the picture is a galaxy. That they are something like a 100 million 100 billion years away from us and each of the galaxy will have another billion of stars. And uh the telescope was uh designed back in 1996 and uh uh it take almost 30 years to 25 years to build the telescope, test everything, and launch it to the space with uh Ariane 5 in Kourou.
+</details>
+
+这是我们在12月25日望远镜被送往第二拉格朗日点之前看到的最后景象。
+<details>
+<summary>Original English</summary>
+And these are our last view of the of the of the telescope when before it sent out to the the second Lagrangian point on December 25th.
+</details>
+
+大家可能会好奇，为什么NASA要花费100亿美元建造这样一台口径6.5米、甚至比校车还要巨大的望远镜送入太空。
+<details>
+<summary>Original English</summary>
+And you may wonder why NASA spend the 10 billion dollars to build this this telescope, 6.5 meter telescope, even bigger than a school bus uh to to the space.
+</details>
+
+我想稍微介绍一下我们河外天文学家日常是如何做科研的。基本上，我们就像这位在钢铁厂里的工人。大家可以看到，这位工人手里可能只握着一小块熔化的金属，但是周围的背景辐射却非常高。考虑一下地球：地球本身就是一个300开尔文的黑体。如果你想真正进行红外观测，背景噪音实在是太高了。只有当你把背景冷却下来，把望远镜发射到远离太阳、远离地球的地方，置于一个永远不会接收到阳光或地球反射光的位置，你才能在更低的背景干扰下辨认出你的科学目标。这就是“寒冷”的力量。詹姆斯·韦布空间望远镜的整个设计思想，就是利用一面巨大的反射镜来收集更多光线，并将自身冷却以压制背景噪声。这就是詹姆斯·韦布空间望远镜的造就之道。
+<details>
+<summary>Original English</summary>
+Uh I'm going to introduce a little bit on how us extragalactic astronomers are doing research every days. Basically, we are like this this worker in the iron factory. Uh you can see that this man may hold a very small um melting metal in his hand, but the background is so high. Consider the Earth. The Earth itself is 300 Kelvin blackbody. And if you want to observe something really in the infrared, the background is so so so high. And only when you cool down the the background, launching the telescope far away from the from the Sun, from the from the Earth, in a place that you will never receive any sunlight or Earth light, you will identify your scientific target from a lower background. And that's the power of being cold. And the whole design of the James Webb Space Telescope is you have a large mirror to collect more light and make it cold to suppress the background noise. And that's makes the James Webb Space Telescope.
+</details>
+
+可以说，这是人们从詹姆斯·韦布空间望远镜看到的最美丽的图像之一。它展示了我们所称的“宇宙悬崖”，因为你能清楚地看到星风的前沿。恒星是由氢气构成的。而要形成氢分子气体，你必须依靠太空中的尘埃颗粒来聚集氢原子使它们发生反应。在星云的一侧，仍然有大量的尘埃正在经历恒星形成；而在另一侧，年轻的恒星已经形成，吹散了那里的气体，形成了这样一条前沿线。
+<details>
+<summary>Original English</summary>
+And for arguably, this is one of the most beautiful image that the people have been seeing from the James Webb Space Telescope. It shows we call it cosmic cliff because you can clearly see the uh the the the the the the front of the of the star wind. So, galaxies are made of Sorry, stars are made of hydrogen gas. And to form a hydrogen gas, you have to use the dust grains in in the in the space to to accumulate the hydrogen atoms to let them react. And on one side of the the nebulae that you you you you you are still having a lot of dust undergoing star formation. And the on on the other side, the young stars have already formed and they the blow away gas there's from such kind of front line.
+</details>
+
+同样地，如果对比哈勃望远镜和詹姆斯·韦布望远镜拍摄的银河系恒星形成区图像，你会看到明显的差异。在左侧是非常经典的景象，我们称之为“创生之柱”。这里的尘埃主要起到了阻挡来自恒星形成区光线的作用。但在右侧，如果切换到韦布的波段，你肯定会看到更多的恒星，因为进入红外波段后，光线能够更容易地穿透尘埃。并且你实际上看到的是尘埃的发光辐射，而不再仅仅是吸收暗区。这就是走向红外波段的强大威力。
+<details>
+<summary>Original English</summary>
+And the similarly if you can compare the the image taken by Hubble and the James Webb's for the star-forming regions in in the Milky Way, you can see a clear difference. But on the left hand side that is a very iconic view or the we call it the pillar of creations. The dust here the main purpose is to to to the dust here obscure the light coming from the the the the star-forming region. But on the right hand side if you go to the web view lens, you will definitely see more star that because you go to infrared the light can penetrate the the dust more easily. And you actually see the dust in emission but not in absorption anymore. So that's the power of going to the infrared.
+</details>
+
+### 深场探测与寻找宇宙早期天体
+
+谈谈我自己的研究，我主要专注于深场探测。我们研究团队及合作项目的主要科学目标，是试图寻找宇宙中的“第一缕光”。宇宙中最早形成的天体是什么？在何处能找到它们？它们长什么样子？通常我们有两种方法：第一种，我们直接把望远镜对准某个没有明亮恒星的天区，进行尽可能长时间的积分观测，就是盯着它持续曝光采集数据，右边就会呈现出这样的图像；另一种更巧妙的方法，是把望远镜对准被称为“星系团”的结构，由于爱因斯坦的广义相对论，这个星系团的引力场会起到类似放大镜的作用。也就是说，你实际上是用JWST这一副放大镜，对准了星系团这一副天然放大镜，借此寻找宇宙黎明时期那些极其微弱、极其遥远的天体。
+<details>
+<summary>Original English</summary>
+Talking about a little bit about my own research, my own research focus on deep field. The main science goal of of our group our collaboration is trying to find the first light in the universe. What is the first astronomical object that form in the universe and how where you can find them and what are how do they look like? And the usually we do two ways. One, we we just point telescope to to some place that do not have a very bright star and just integrate as long as possible. Just take a data stare at it and that will be some image on the on the right. And there are some little bit smarter way that you actually point into a structure we call it the galaxy cluster and because of the Albert Einstein's general relativity, the gravitational of this galaxy cluster will form something like a magnifying glass. So you are actually pointing a magnifying glass which is JWST to another magnifying glass which is galaxy cluster to find very faint very far away astronomical object at the beginning of the universe.
+</details>
+
+事实上，我们在JWST上的观测非常成功，而这也正是建造JWST的核心初衷。这是我们团队获得的最深场图像之一。在空无一物的背景正中，我们发现了一个微小的红点。我们对它在不同波长下的光进行了色散分析，证实该星系存在于大爆炸后仅3亿年。目前宇宙的年龄大约是138亿年，这相当于宇宙诞生之初仅2%到3%年龄的时候。
+<details>
+<summary>Original English</summary>
+And actually we are quite successful with JWST. That's the whole purpose of why JWST was was built. So this is the one of the deepest image that that we our team received. And just in the middle of nowhere we identify a small red dot there and uh, we split the light at different wavelengths and confirmed this galaxy was uh, existed 300 million years after the Big Bang. Right now, the universe has a history of roughly 13.8 uh, billion years, and this is roughly 2 or 3% of the uh, at the 2 or 3% of age when the when the universe just formed.
+</details>
+
+最不可思议的是，如果你在其他不同的波段进行观测，光谱中实际上探测到了氧元素信号。想想看：那个时期的星系内部已经在通过恒星演化爆炸制造氧气了，它们制造了我们今天在这个房间里呼吸的全部氧气，而这一切从大爆炸后3亿年就已经开始了。
+<details>
+<summary>Original English</summary>
+And most amazingly, if you observe at the other different different wavelengths, you actually get the oxygen uh, detection in in the spectrum. And uh, think about this. The galaxy is already producing oxygen by exploring stars at that time and they produce all of the oxygen that we are breathing today in this room. Okay? Starting from the 300 million years after the Big Bang.
+</details>
+
+在我们发现它时，它曾是我们所知最遥远的星系。而现在，随着进一步的研究，这是我们迄今确认的最遥远天体。依然是在漆黑背景的浩瀚宇宙中，你仔细审视每一个天体，测量它们各自的距离，最终在如此庞大的数据集中找到了这样一个目标。
+<details>
+<summary>Original English</summary>
+And that was not that I thought when we discussed when discovered this this object, this was the most distant galaxy we know. And right now, this is the most distant object that we have confirmed so far. A little bit of more further, and still in the vast universe with you know, back black background and you you you you look through each of the object, measure each of their distance, and you finally find one target uh, through such kind of uh, large data set.
+</details>
+
+天文学家如今关注的另一个有趣现象是，如果你回头看白宫发布的第一张图像，其实在那个区域里存在一个微小、致密的红色天体。数据刚发布时，大家对它到底是什么非常好奇。后来天文学家为它起了名字——大家可能知道天文学家很不擅长起名字，我们直接称它们为“小红点”（little red dots）。因为它们体积小、颜色偏红，而且看起来像个圆点。这是JWST确认的一类新天体。它们在几乎所有的特征上看起来都极像恒星，但实际上我们推测，正因为它们如此遥远却又如此明亮，其实是由黑洞驱动的。可以认为是一个黑洞正在吸积气体，它在“吞噬”气体，当气体落入黑洞时，引力势能转化并释放出强烈的光辐射。
+<details>
+<summary>Original English</summary>
+Uh, another interesting that the astronomers are paying attention these days is if you go to look back at the first image that the White House released, actually in this region, there's a small red compact object in in this in this region. We were very curious about what that is when the data was released. And later, people astronomer come up with a name for that. And uh, you probably know that astronomer are very bad in giving names, and we just call them little red dot. Uh, and uh, because it's a little and also red and also look at dot. This is a type of new type of star that JWST identified. They look like a star, exactly look like a star in nearly all of the features, but actually we believe because they are so far away and so bright, they're actually powered by black hole. Uh, so it's considered that a black hole is accreting gas It's eating gas and then when the gas fall into the black hole is emitting light from the gravitational potential into into the the light.
+</details>
+
+如果我们把视线拉回距离我们较近的天区，你会看到像这样美丽的星系，上面布满了许多“气泡”。每一个气泡都是由超新星吹开的——某颗恒星死亡并在大约几亿年前发生爆炸。它们同样制造了氧和碳，从而造就了这个星球上的所有生命。
+<details>
+<summary>Original English</summary>
+Uh if we go back to the the place that is near to us, you will see beautiful galaxy like this. And then you see so many bubbles. Each of the bubbles was blown away by a supernova that the star died and explode maybe a few hundred million years ago. And they also produce oxygen carbon that make all of the life on the on the on the on this planet.
+</details>
+
+说到我最喜欢的图像，其实是这张木星照片。自1609年第一位天文学家伽利略将望远镜指向天空以来，木星就是他最早观测的目标之一。自那时起，每一台望远镜几乎都观测过木星。而这是我见过的最好的木星图像：这里是大红斑，而在顶部和底部，实际上是极光，也就是北极光。如果你当时站在木星表面，头顶上方就会看到极光。另外这是土星，你可以清晰地看到它的光环和环缝。
+<details>
+<summary>Original English</summary>
+And speaking about my my favorite image, this is actually Jupiter. So since 1609, when the first astronomer Galileo pointed his telescope into the sky, this is one of the first object that he observed. And since then every telescope actually observed the Jupiter. And this is the best image of Jupiter I have ever seen. This is the the Great Red Spot. And on the top and bottom, that's actually the aurora light. So the northern light. If you go if you stand on the on the Jupiter at the time, you will see aurora above your head. And uh uh this is the the Saturn that you can see the the the ring and the gap.
+</details>
+
+### 新一代巡天望远镜与数据爆炸
+
+好的。我向大家展示了许多图像，它们都是二维图像，对吧？但我们知道宇宙是四维的，具备三维空间轴，并且随时间演化。所以它是四维的。天文学家正在竭尽全力，试图为整个宇宙制作一部连续的动态影片。
+<details>
+<summary>Original English</summary>
+Okay. So I'm showing you a lot of image. They are they are they are 2D image, right? But we we know that the universe is four-dimensional, right? You have a space three axis and also it's evolve as a function of time. So it's it's 4D. And astronomers are making working very hard to try to make a movie of the the whole universe.
+</details>
+
+这对于我们刚才讨论的世界模型或许能提供更丰富的信息。想想看：我们在詹姆斯·韦布空间望远镜上开展这样的工作，可以在长达两年的时间里观测同一片天区，你会发现有的光点在某一年亮起，随后又在另一年变暗消失。我们称之为超新星，本质上是恒星走向生命的终点。NASA计划发射的新型空间望远镜之一是罗曼空间望远镜（Nancy Grace Roman Space Telescope）。罗曼空间望远镜的核心目标之一，就是通过搜寻超新星来为宇宙拍摄影片；通过搜寻它们——它们就像“标准烛光”，你可以把蜡烛放在不同的地方并测量距离，从而测出绘制宇宙图景的速度。
+<details>
+<summary>Original English</summary>
+Uh and perhaps that's a more informative for the world model that we just discuss, right? And and think about this. We are actually we are actually working on this universe the James Webb Space Telescope. So you can look at the same region of same region of the sky over the 2 years, and you can identify some adults that goes off in one year and and they fade away in the other year. And we call that supernova. Uh basically a star end of their life. And one of the new telescope space telescope that NASA is launching NASA launched in August 30s is a so-called Nancy Grace Roman Space Telescope. And one of the main purpose of Roman Space Telescope is try to make a movie of the universe by finding supernovae, which by finding them we sort of know they are they are like candles. You can put candles at different place and measure the the distance to it. So it's actually how fast to map the universe.
+</details>
+
+这是罗曼空间望远镜的概念艺术图。它没有JWST那么大，口径只有2.4米。但是这台空间望远镜的强悍之处在于它配备了极其先进的探测器。这是焦平面部分，它拥有18块探测器，基本上与手机中使用的探测器类似。每块探测器都有4K×4K像素。将这18块芯片组合在一起，单次曝光就能获得3亿像素。
+<details>
+<summary>Original English</summary>
+So this is the artist's impression of the Roman Space Telescope. It's not as large as JWST. It's only 2.4 m across. But the the the but the power of Space Telescope is it has a very beautiful detectors. So each of them this is the we call it focal plane. You they have 18 detectors. Basically the same detector similar detector as you use it on a phone. Each of them is a 4K * 4K pixel. So combine all of these 18 chips together, you are actually got a 300 million pixel at once.
+</details>
+
+试想一下，如果它持续观测天空，每天产生的数字数据大约为1.4 TB，这大约是JWST产生数据量的20倍。别忘了，这些数据不是在地面产生的，而是在距离地球150万公里的L2拉格朗日点产生，你必须把数据从深空传输回地面。实际上它目前已经在采集测试数据了。这些是望远镜尚未调焦前的数据，大家看到的星像还是未对焦的状态，团队正在加紧调试望远镜的对焦，随后开始采集真实科学数据，确保望远镜正常工作。
+<details>
+<summary>Original English</summary>
+And the consider if it's keep observing the sky, the digital data it will produce is roughly 1.4 terabytes per day. And that's roughly 20 times of JWST JWST is producing data. And remember these data do not happen on the ground, they happen at L2 which is 1.5 million kilometer away. And you have to transfer the data from the deep space to the ground. It's actually already taking data right now. So these are data that before the telescope is focused. So the star I really image that you see here is a is a star but before the focus. So the the team is working very hard in focusing the telescope and then taking the real data. Make sure telescope works.
+</details>
+
+对于我们这些寻找宇宙第一缕光的研究人员来说，我们关心罗曼望远镜将如何观测宇宙的最早期状态。这里展示的是天文学家获得的数值模拟结果。背景图像都是当时的气体和氢分布。大家知道，星系就像地图上的城市，并非纯粹杂乱分布，而是构成特定结构。所有这些青色圆圈代表应该能被罗曼望远镜探测到的星系。
+<details>
+<summary>Original English</summary>
+As so for us who are searching for the first light of the universe, we care about how Roman is observing the the the universe at the very beginning. So here I'm so showing you a numerical simulation obtained by our astronomers. And all of the background image are the gas the hydrogen at at that time. And you know that the galaxy they are like cities on the on the map. They are not randomly they are randomly distributed but they form structures, right? And all of these these the the sign circles represent one galaxy that it should be detected by Roman.
+</details>
+
+试想一下，这是大家刚才看到的第一张深场图像，它只能观测非常微小的一片天区，而罗曼望远镜将能获得极大的视场。这展现了未来几年天文学中数据产生速率的膨胀趋势。
+<details>
+<summary>Original English</summary>
+And think about it. This is the first image of the GTC that you just saw. And the GTC can only observe such a very small patch of sky. But Roman will get to get a very large view of it. And basically, that's that shows how the how the data rate expansion in the in the astronomy is going on over the upcoming years.
+</details>
+
+天文学中另一个非常重要的基础设施是薇拉·鲁宾天文台（Vera C. Rubin Observatory），它正在执行名为“空间与时间时域遗产巡天”（LSST）的项目。这是一台位于智利山区的地面望远镜，并非发射到太空。它目前每晚都在进行巡天。
+<details>
+<summary>Original English</summary>
+Another very important infrastructure in astronomy is so-called the Vera Rubin Observatory, which is conducting a survey called Legacy Survey of a Space of Time. So, this is a telescope that is in in the mountain of Chile, and it's ground-based telescope not launching in space. Uh it's uh doing survey every every night right now.
+</details>
+
+这台望远镜的特殊之处在于它的相机是人类有史以来建造的最大的相机，达到32亿像素（3.2 gigapixels），比罗曼望远镜的规模大出10倍。它目前实际产生数据的速率是每天10到20 TB。望远镜主镜口径为8.4米，是地面上建造的最大口径望远镜之一。大家可以看到它的反射镜和相机有多么庞大，这是该相机与地面工程团队人员的对比。
+<details>
+<summary>Original English</summary>
+The special thing with this this telescope is the camera is the biggest camera that a human being ever built. So, this is a 3.2 gigapixels, which is 10 times more than than what they have Roman. So, it's a worth producing it is actually producing data right now at the rate of 10 or 20 terabytes per day. And the telescope is 8.4 m, so it's one of the largest telescope that they built on the on the ground. And you can see how the mirror of the telescope how how large is this camera. This is a camera compared with the engineering team on the on the ground.
+</details>
+
+该天文台一直在进行观测。这是去年采集的数据，也是该望远镜公开发布的首批图像。可以看到美丽的星系、星系团，每一处亮斑都是一个星系，每个星系都包含数十亿颗恒星，分布在不同距离上。鲁宾天文台采用的一种观测方式是在时域（time domain）中比较不同图像的变化。正如大家在这里看到的，有移动的天体穿过视野，我们称之为小行星。因此，天文学中的一个关键任务是识别天空中移动的天体，因为大部分天体在天球上是相对静止的。罗曼望远镜正是通过这种方式在首批数据集中识别小行星的。
+<details>
+<summary>Original English</summary>
+And the observatory has been observing. This was a data taken in last year. And this is the first image of the of the telescope release. You can see there is beautiful galaxies, clusters, and each of the each of the light you see is a galaxy. Each of galaxy have 1 billion stars there at different distance. Uh one way that Rubin is observing is observing we call it in time domain to compare the difference of image. As you can see here, there are moving star go across it. We call it asteroid. So, one key thing in astronomy is to identify things move in the sky because most of the thing they do not move in the sky. And that's how Roman is identifying asteroids within the the first data set.
+</details>
+
+### 天文数据洪流与AI介入
+
+>> [music]
+<details>
+<summary>Original English</summary>
+>> [music]
+</details>
+
+>> 鲁宾天文台目前每晚大约会产生100万次瞬变源警报（alerts）。当它开足全马力运转时，每晚将产生多达700万次警报。但想想看，整个地球上只有3万名天文学家。如果我们所有人每天晚上都去处理这些数据，每个人每天要回复200封关于警报的邮件，这显然是不可持续的。这里展示的是主要地面和空间望远镜的数据产出率随时间的变化曲线。进入2025年，由于罗曼和鲁宾天文台的投入，数据量将出现重大洪峰。而在2030年左右地面射电望远镜——平方公里阵列（SKA）建成时，它每天将产生大约2 GB（注：口误，实际海量数据级别），天文学家根本不可能凭借人力去分析所有数据。我想表达的是，我们整个领域正经历一场巨大的数据洪流，由于人类注意力已达极限，我们必须依赖AI。
+<details>
+<summary>Original English</summary>
+>> And the Rubin is actually producing uh roughly 1 million alerts, this kind of events, every night. And when Rubin is run at a full speed, it will go to produce 7 million alerts every night. But consider on the planet, there's only 30,000 astronomers. So if all of us should work on the data every night, we have to reply 200 emails. Uh about the the the the the the alerts. So it's it's a definitely not scalable. Um and I'm showing here how the data rate of different telescope uh from major and ground and space telescope as a function of time. Over 2025, there's a major data rate uh of flood uh because of a Roman because of Rubin. And if the square kilometer array, which is a radio telescope launched uh on the ground around the 2030, this data this telescope will produce roughly two gigabytes of data GB of data every day and basically no astronomer will will going to uh analyze all of data. So what I want to say is our field is undergoing a major data flood and we we have to rely on AI because we we are running out of our attention.
+</details>
+
+我想举几个例子，说明我们目前在天文学中是如何运用AI的。首先是引力透镜现象。大家在第一张星系图像中看到，中间的星系团把背景星系的光线弯曲成了美丽的弧形，就像这里展示的这样。大约十年前，一名博士生可能在数据中找出一两个这样的引力透镜系统，就能发表论文并拿到博士学位。但如今由于巨大的数据规模，你必须依赖机器学习方法来筛选以往采集的所有数据，并一次性发表400个左右的引力透镜系统。通过识别这些结构，我们可以测量星系距离，这对于理解宇宙如何随时间膨胀非常有效。
+<details>
+<summary>Original English</summary>
+Um and I want to give you a few cases why we are what what we are doing these days by using AI in our field. Uh so first thing is the gravitational lensing that you see the first image of the galaxy and this galaxy cluster is bending the light from the background galaxy into this beautiful arc like like a strong here. Um maybe 10 years ago one PhD student can identify one or two system like this in the data and then publish a paper or you publish two paper you get the PhD degree. But but the but these days you because of such kind of big data rate, you you you have to rely on machine learning method to go through all of data that people have been taking and publish a 400 issue looks sorry gravitational lens together. To identify these kind of things, uh you can measure the the the distance of galaxy and that was very powerful for understanding how the universe is expanding as a function of time.
+</details>
+
+就我个人而言，最近也是Codex和Claude等工具的重度用户。在我的研究中，我可以提取JWST在某种较冷门的观测模式下的数据，并将所有数据输入给AI，让AI帮我指出色散光线落在探测器的具体位置，协助我开发新的观测模式和使用JWST观测宇宙的新方法。
+<details>
+<summary>Original English</summary>
+Uh on my side, I'm also heavy user of Codex cloud cloud these days. So actually I'm this is one of my research. Actually, I can use the data from JWST in a underused observing mode and then feed all my data into all the data to to AI and AI tell me where are the spectrum that the dispersed light land on the detector and help me to get a new observing mode, new way to use the the James Webb Space Telescope to observe the universe.
+</details>
+
+大家也一直在使用AI来操纵望远镜运转。在过去400年里，这些工作基本都是由人类完成的：你挑选目标，然后把望远镜对准该目标；如果飘来一片云，你就得把望远镜转向其他天区或关闭圆顶；如果发现类似超新星爆发的突发天象，就把望远镜对准确切位置。整个决策链以往都是人工进行的。
+<details>
+<summary>Original English</summary>
+And people have been using the AI to run run the telescope. Basically, these these jobs were done by by human beings over the past 400 years. You you have to pick the target and then point your telescope to to to the third target. And then if there's a cloud going on, okay, you have to point your telescope other places or or close your your dome. Or if you find something that is going off like a supernova, you point the telescope to to the exact place. All of these decision chain was was by human being, but these
+</details>
+
+这是我在清华大学的朋友们的工作。他们开发了一种自监督模型：通常我们将望远镜对准某一特定天区观测恒星时，会将数据叠加起来，从而获得非常深的二维图像；但如果你去考察噪声的时域波动特性，实际上可以了解到整个噪声在如何起伏，从而获得比传统方法更深的数据。利用这种方法，他们能将数据极限深度提高约2.5倍。这意味着你使用6.5米口径的JWST，相当于获得了类似20米口径望远镜的效果，而20米口径的空间望远镜在目前是根本无法发射上天的。
+<details>
+<summary>Original English</summary>
+And this is from my friends at Tsinghua. They developed a self-supervised model that actually when we look at the star when we point our telescope in a certain piece of sky, we are we we stack the data together. So, you have the very deep 2D image of it. But if you look at the temporal the the the time domain of of the noise, actually, you can understand the whole noise is fluctuating. So, you are getting deeper data than what you are getting from the traditional method. And these people using this method, they can get the the data deeper by roughly a factor of 2.5. So, that means you are using JWST not only like a 6.5 m telescope, but something like 20 m telescope that there's no way to launch that into space right now.
+</details>
+
+过去两年左右，大语言模型对我们领域产生了巨大影响。最近有一篇论文指出，近期超过一半的天文学论文都是由大语言模型参与撰写的。摘要中有一句非常有趣的陈述：近期超过半数的论文表现出了大语言模型的生成痕迹，但在论文中明确声明使用了大语言模型的仅占0.8%。我并不是说天文学家如今在互相欺瞒，而是这个领域变化太快，以至于我们尚不清楚最合理的行事规范是什么。
+<details>
+<summary>Original English</summary>
+And our field is being heavily impacted by large language model over the last 2 years or so. And there's a recent paper saying that more than half of the recent astronomy paper are written by large language models. And the one interesting quote from the from the from the abstract is more than half of the recent paper are therefore show a large language model trace, but only 0.8% of them declare that in the paper. So, I'm not saying that astronomers are cheating with to each other at these days, but actually the field is changing so fast that we don't know what is the best way to proceed.
+</details>
+
+### 商业航天模式与新型望远镜构建
+
+另一个有趣的现象是，前面谈到了数据，而产生数据的源头正是望远镜。如今的天文学家开始像创办AI初创公司那样去建造望远镜，这非常有意思，我想和大家分享。在计算方面，计算机在过去60年里飞速演进。但在天文观测方面，以哈勃空间望远镜为例，该望远镜设计于20世纪70年代，发射于90年代，而我们现在依然在写提案申请它的观测时间并使用它，它预计要运行到至少2030年，NASA目前还在考虑拯救哈勃让它运行更长时间的任务。
+<details>
+<summary>Original English</summary>
+And another interesting thing is I'm talking about the data, but talking about the place that the generate data, which is telescope. These days astronomer are building start to build telescope like a AI startup, which is very interesting. I want to share to you. So, when astronomers are computing, you know that the computer evolved very fast over the last 60 years. But when you talk about the observing, let's say Hubble Space Telescope. This is telescope designed in 1970s and launched in the space in 1990s. We are still writing the telescope proposal to apply for the time and use it right now. And they just want to retire until 2030 at least. And the NASA is still thinking about a mission to save Hubble to make it run longer.
+</details>
+
+而现在，私人资本正在介入望远镜的建造。比如由谷歌前CEO埃里克·施密特（Eric Schmidt）资助的名为Lazuli的项目，这是第一台即将发射进入太空的私人空间天文台。他们与2011年诺贝尔奖得主索尔·珀尔马特（Saul Perlmutter）以及亚利桑那大学的科研人员合作建造整台望远镜，并计划在两到三年内发射。望远镜上几乎所有的部件都可以直接作为商业化产品采购，而在向公众发布望远镜构想之前，产品团队全员签署了保密协议。我们对这台望远镜所知甚少，它可能类似于OpenAI或Claude那种封闭运作模式。但我们相信它将为天体物理学研究带来巨大影响。
+<details>
+<summary>Original English</summary>
+And right now the private funder is kicking in for for building telescope. So, this is the this is a project funded by Eric Schmidt, the former Google CEO. It's called the Lazuli. This is the first private space observatory that will be launched to the space. They collaborate with people like so promoter who is a Nobel Prize laureate back in 2011 and also people at the University of Arizona to build all of the the telescope and they're going to launch it in two or three years. Nearly all of the things on the telescope they can buy as a commercial product and they all of the product team signed the NDA before releasing the telescope idea to the people. We know very little bit about this telescope. It's a probably some close close telescope like open AI or cloudy. But we believe this telescope will will bring huge impact to to the to the our research in natural physics.
+</details>
+
+另一个构想是亚利桑那大学教授提出的鹦鹉螺（Nautilus）空间天文台概念。设想一种星形结构：如果将10面各为6.5米口径的反射镜折叠成星形，发射进入太空后，每一面反射镜在太空中展开，基本上相当于一次性发射了10台类似詹姆斯·韦布的空间望远镜。通过建造10台望远镜，你可以进行更快的迭代。近年来人们开始建造类似50厘米口径的望远镜进行此类试验；如果以这种方式建造10台并一次性发射，大家可以想象，其平均成本将远低于单台建造的费用。
+<details>
+<summary>Original English</summary>
+And another way to look at this is this mission concept called the Nautilus space observatory, which is by professor at the University of Arizona. Think about the star shape. If you fold 10 mirror each of the size is a 6.5 m to the star shape. And when it get launched, each of the mirror they get they get expanded when they when they go to the space. And basically you will launch 10 telescope like like James Webb Space Telescope at the same time. And they And when you build with 10 telescope, you you can do faster iteration. Okay, these years we can people people start to build telescope like 50 cm. And they can do this kind of experiment. And when we build 10 telescope like in this way and launch in one shot, the the the price will be much cheaper than building the average price will be much cheaper than building just one as you can can imagine.
+</details>
+
+### 总结：开放科学与AI新机遇
+
+这是我的最后一页幻灯片。非常高兴能向大家汇报我们在天文学领域取得的一些最新进展，我也希望能与在座的AI研究员和领军者携手合作。首先，作为一名天文学家，我认为我们绝对需要AI来应对眼下的数据洪流。这种数据规模已经超出任何天文学团队的人力处理能力，无论是进行科学发现还是形成决策突破，我们都迫切需要这种能力。其次，关于天文数据一个有趣的特点是：我们的数据完全没有任何人工标注，因此是检验所有自监督算法的绝佳试验田。而且天文学家会毫无保留地将采集到的每一个光子数据向全社会公开发布，这是宇宙馈赠给我们的礼物。另一项极为重要的是，如果在所有学科中只挑出一个最纯粹的“开放科学”，那必定是天文学，因为天文学始终向外探寻，而非局限于地球上的事物。如果大家担心模型在递归生成的合成数据上训练会导致模型崩溃，那么天文学家每天都在采集来自地球之外各个方向的全新原始数据。天文学拥有超过400年的发展历史，我们收集海量数据并开始识别天体，而如今AI正在帮助我们看到超越想象的更深广宇宙。这就是我想要分享的全部内容，非常感谢大家。
+<details>
+<summary>Original English</summary>
+So, this is my final slides. I'm I'm very happy to report some of the recent progress that we made in the in the field of astronomy. And I would like to align with with with the AI researchers and leaders in this room. First of all, as a astronomer, I believe that we definitely need the AI to prepare for the ongoing data flood. And this is already at a scale that no no of the astronomical team can handle. And we definitely need that for the for the this discovery and also the breakthrough make power to make decision. And the other interesting thing with our data is our data come with no label at all. And so it's a very good test ground for all of the self-supervising algorithm. And astronomer release every photon that we collect to the public without any without any barriers. And the universe is giving us giving us this gift. And another thing very importantly is if there's only one open science in in among the whole discipline, then then that will be astronomy. Because astronomy is looking outward not not on anything in in on on the ground on this planet. And if you believe that model collapse when trained on recursively generated data, then I will tell you that the astronomers are collecting fresh data every every day and from nowhere from the planet. And astronomy is a more than astronomy me few that I have already get 400 years of history. We collect a lot of data and start to identify things. Right now AI is helping of helping us to see more than what we can imagine. And that's all I want to share. Thank you very much.
+</details>

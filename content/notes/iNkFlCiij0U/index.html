@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>构建有效基准测试的科学与艺术：Snorkel AI 的元评估经验</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">构建有效基准测试的科学与艺术：Snorkel AI 的元评估经验</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-06-04</span>
+    
+
+    <header class="article-header">
+      
+      <h1>构建有效基准测试的科学与艺术：Snorkel AI 的元评估经验</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/benchmark/">benchmark</a>
+      
+        <a class="tag-link" href="/tags/agent-evaluation/">agent-evaluation</a>
+      
+        <span class="tag-pill tag-pill--no-page">task-quality</span>
+      
+        <span class="tag-pill tag-pill--no-page">evaluation-methodology</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">Vincent 分享 Snorkel AI 在构建基准测试方面的经验：任务质量、分布多样性、难度与模型余量、稳健评估方法是“科学”；论点、路线图与研究者体验是“艺术”，并提出环境复杂度、自主时长、输出复杂度三个方向。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=iNkFlCiij0U" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-06-04T00:00:00.000Z">2026-06-04</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>16 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BC%80%E5%9C%BA%E4%B8%8E%E8%83%8C%E6%99%AF">开场与背景</a></li><li class="outline-h3"><a href="#%E8%AF%84%E4%BC%B0%E5%B7%AE%E8%B7%9D%E4%B8%8E%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95%E7%9A%84%E4%BD%9C%E7%94%A8">评估差距与基准测试的作用</a></li><li class="outline-h3"><a href="#open-benchmarks-%E8%B5%84%E5%8A%A9%E9%A1%B9%E7%9B%AE">Open Benchmarks 资助项目</a></li><li class="outline-h3"><a href="#%E7%A7%91%E5%AD%A6%E4%B8%80%E5%8D%95%E4%B8%AA%E4%BB%BB%E5%8A%A1%E7%9A%84%E8%B4%A8%E9%87%8F">科学一：单个任务的质量</a></li><li class="outline-h3"><a href="#%E7%A7%91%E5%AD%A6%E4%BA%8C%E5%88%86%E5%B8%83%E5%A4%9A%E6%A0%B7%E6%80%A7">科学二：分布多样性</a></li><li class="outline-h3"><a href="#%E7%A7%91%E5%AD%A6%E4%B8%89%E9%9A%BE%E5%BA%A6%E4%B8%8E%E6%A8%A1%E5%9E%8B%E4%BD%99%E9%87%8F">科学三：难度与模型余量</a></li><li class="outline-h3"><a href="#%E7%A7%91%E5%AD%A6%E5%9B%9B%E7%A8%B3%E5%81%A5%E7%9A%84%E8%AF%84%E4%BC%B0%E6%96%B9%E6%B3%95">科学四：稳健的评估方法</a></li><li class="outline-h3"><a href="#%E8%89%BA%E6%9C%AF%E4%B8%80%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95%E8%A6%81%E6%9C%89%E8%AE%BA%E7%82%B9">艺术一：基准测试要有论点</a></li><li class="outline-h3"><a href="#%E8%89%BA%E6%9C%AF%E4%BA%8C%E4%B8%BA%E9%A2%86%E5%9F%9F%E6%8F%90%E4%BE%9B%E8%B7%AF%E7%BA%BF%E5%9B%BE">艺术二：为领域提供路线图</a></li><li class="outline-h3"><a href="#%E8%89%BA%E6%9C%AF%E4%B8%89%E7%A0%94%E7%A9%B6%E8%80%85%E4%BD%93%E9%AA%8C">艺术三：研究者体验</a></li><li class="outline-h3"><a href="#%E6%A1%86%E6%9E%B6%E5%9B%9E%E9%A1%BE">框架回顾</a></li><li class="outline-h3"><a href="#%E4%B8%8B%E4%B8%80%E6%B3%A2%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95%E7%9A%84%E4%B8%89%E4%B8%AA%E6%96%B9%E5%90%91">下一波基准测试的三个方向</a></li><li class="outline-h3"><a href="#%E7%8E%AF%E5%A2%83%E5%A4%8D%E6%9D%82%E5%BA%A6">环境复杂度</a></li><li class="outline-h3"><a href="#%E8%87%AA%E4%B8%BB%E6%97%B6%E9%95%BF">自主时长</a></li><li class="outline-h3"><a href="#%E8%BE%93%E5%87%BA%E5%A4%8D%E6%9D%82%E5%BA%A6">输出复杂度</a></li><li class="outline-h3"><a href="#%E7%BB%93%E8%AF%AD">结语</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="开场与背景" data-reading-heading="">开场与背景</h3>
+<p>大家好，最近怎么样？很好。我很高兴来到这里，我来自旧金山，过来要走一小段路，但我非常期待今天演讲之后以及之后与大家交流。我叫 Vincent，是 Snorkel AI 的研究员（research fellow）和联合创始人。</p>
+<p>今天我要讲的是构建基准测试的一些元评估（meta evaluations）。也就是我们发现在构建有效基准测试时真正有用的艺术与科学。我在 Snorkel 有幸与我们的研究人员、学术界和产业界的优秀合作者，以及开源社区一起构建优秀的基准测试。我想分享过去几年里我们的一些心得：什么样的基准测试能够塑造这个领域并推动它前进。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Hey everybody.
+<p>How's it going?</p>
+<p>Lovely. Well, I'm very excited to be</p>
+<p>here hailing from San Francisco. It's a</p>
+<p>little bit of a trek over, but I'm super</p>
+<p>excited to to uh chat with you all um</p>
+<p>today after the talk uh and beyond. Uh</p>
+<p>my name is Vincent. I'm a research</p>
+<p>fellow and a co-founder at Snorkel AI.</p>
+<p>And uh you know, today I'm going to be</p>
+<p>talking about um some meta evaluations</p>
+<p>for building benchmarks. The art and</p>
+<p>science of what we found to be really</p>
+<p>useful when building effective</p>
+<p>benchmarks. I have the great privilege</p>
+<p>at Snorkel of working with both our</p>
+<p>researchers, uh great collaborators in</p>
+<p>academia, industry, uh and the open</p>
+<p>source community to build great</p>
+<p>benchmarks. And I wanted to share some</p>
+<p>of the learnings that we've had over</p>
+<p>the, you know, last few years on on what</p>
+<p>really makes for benchmarks that uh</p>
+<p>shape the field and and move it forward.</p>
+</details>
+<p>我们是一个前沿 AI 数据实验室（frontier AI data lab）。我们的联合创始人在斯坦福、华盛顿大学（U Dub）、威斯康星等学术环境中有实验室，我们还有一支内部的部署工程师和应用工程师团队。我提这一点，是因为我们既能接触学术前沿、与前沿实验室合作，也能接触在实践中部署的真实企业和公司。作为一家公司，我们的重点是构建最好的数据集和环境，来定义并推动未来的 AI 能力。我们很幸运地处在这样一个独特的交汇点：既处于学术前沿，又通过在企业中的部署接触现实。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, a little bit about us. Uh we're a frontier AI data lab. Uh we have, you know, labs both at uh at academic settings. You know, our our co-founders uh have have labs at Stanford, U Dub, Wisconsin. We have an internal team uh for deployed engineers, applied engineers. And uh I mention this because we get a lot of exposure to both, you know, the academic frontier, work with frontier labs, and also real enterprises and and companies who are deploying in practice. So, our focus as a company is on building the best data sets and environments to define and advance future AI capabilities. And we are in a fortunate spot where we get to play at this unique intersection of both, you know, the frontier academically, but also um uh uh to contact reality with our deployments um in enterprises.
+</details>
+<h3 id="评估差距与基准测试的作用" data-reading-heading="">评估差距与基准测试的作用</h3>
+<p>今天我想谈谈我们在真实部署中看到的一种不对称。如今人们对智能体（agents）确实很兴奋，我相信这个房间里的每个人都玩过这些智能体，我们也看到了真实的进展，表现为在模型卡（model cards）上不断爬坡（hill climbing）。感觉（vibes）在改善，尤其是在编程方面，确实在发生转变。但是当你问个人、企业或这些大型组织，是否完全准备好放手让这些智能体在高风险环境中部署，你会得到一些犹豫。这并不是说能力不在那里，而是我们在实践中衡量这些智能体的能力，落后于能力本身所处的位置。这是我认为该领域最重要的挑战和研究问题之一，也是我们在 Snorkel 非常感兴趣的问题之一。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, today I wanted to talk about an asymmetry that we see in our real-world deployments.
+<p>There's real excitement around agents today. You know, we see it at every person in this room, I'm sure has has played with these</p>
+<p>these these agents and we see a real</p>
+<p>progress marked by, you know, hill</p>
+<p>climbing on model cards. We see the</p>
+<p>vibes are improving, right? And truly</p>
+<p>shifting, especially in coding. But when</p>
+<p>you ask individuals and enterprises or</p>
+<p>these, you know, large-scale</p>
+<p>organizations if they're fully ready to</p>
+<p>let these agents loose and,</p>
+<p>you know, deploy them in high-stakes</p>
+<p>environments, you you get a little bit</p>
+<p>of hesitation. And that's not to say the</p>
+<p>capabilities aren't there, but our</p>
+<p>ability to actually measure these agents</p>
+<p>in practice that is falling behind of</p>
+<p>where the capabilities actually are.</p>
+<p>This is one of the challenges and</p>
+<p>research questions that I think are</p>
+<p>actually one of the most important in</p>
+<p>the field and one of the ones that we're</p>
+<p>very interested in here at Snorkel.</p>
+</details>
+<p>我们认为，弥合这个评估差距需要一套工具箱。正如我之前提到的，我们坚信现场部署（field deployments），也就是把工程师和研究人员实际派到团队中，去接触现实，与大家一起把这些模型部署到风险很高的真实生产环境中，比如金融、保险、医疗，这些场景中重要的不只是一个数字，而是真实的结果。我们也很喜欢其他评估工具，比如红队测试（red teaming）、私有的人工评估（private human evals）、众包标注（crowdsource labeling），也就是今天大家讨论的许多主题，很高兴看到这些。但我们最强烈地认为的一点是：基准测试，尤其是开放基准测试（open benchmarks），仍然是衡量工具箱中至关重要的一环。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, closing that gap, that evaluation
+<p>gap, we believe requires a toolkit,</p>
+<p>right? As I mentioned earlier,</p>
+<p>we're strong believers in field</p>
+<p>deployments, right? So, this is</p>
+<p>you know, actually deploying engineers,</p>
+<p>researchers on our teams to</p>
+<p>again contact reality and and and work</p>
+<p>with folks to deploy these models in</p>
+<p>real production settings where the</p>
+<p>stakes are high, right? These are</p>
+<p>finance settings, insurance,</p>
+<p>you know, healthcare settings where it's</p>
+<p>not just about a number, it's about real</p>
+<p>outcomes. And we're also big fans of</p>
+<p>other eval tools, right? This is red</p>
+<p>teaming, private human evals,</p>
+<p>crowdsource labeling, a lot of the the</p>
+<p>themes that we saw talked about today,</p>
+<p>which which has been awesome to see. But</p>
+<p>one of the things that we</p>
+<p>feel most strongly about is that</p>
+<p>benchmarks, open benchmarks in</p>
+<p>particular, remain a really critical</p>
+<p>piece of the measurement toolkit.</p>
+</details>
+<p>最好的开放基准测试不只是对过去的进展拍一张快照、回头看。它们实际上是在定义进展、塑造这个领域，并为能力需要走向何处设定目标。即使看最近几个月，像 Terminal Bench、METR 的长时程（Long Horizon）基准测试、ARC-AGI 这样的基准测试，都是令人兴奋且关键的路标，指明这个领域的走向。因此，通往安全、可信的智能体之路，在实践中将真正依赖更多这样的基准测试。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The best open benchmarks aren't just
+<p>about, you know, taking a snapshot of</p>
+<p>progress looking backwards. They're</p>
+<p>actually about defining progress and</p>
+<p>shaping the field and setting a goalpost</p>
+<p>about where capabilities need to go.</p>
+<p>And, you know, even looking at the last</p>
+<p>few months, right? Benchmarks like</p>
+<p>Terminal Bench, uh Meters Long Horizon</p>
+<p>benchmark, uh RKG I, these are really</p>
+<p>exciting and critical guideposts for</p>
+<p>where the field is going and and and as</p>
+<p>a result, the path to safe, trustworthy</p>
+<p>agents</p>
+<p>um will will really depend on more of</p>
+<p>these benchmarks in practice.</p>
+</details>
+<h3 id="open-benchmarks-资助项目" data-reading-heading="">Open Benchmarks 资助项目</h3>
+<p>那么我们在 Snorkel 做什么呢？我非常幸运能参与其中的一件事是“开放基准测试资助”（Open Benchmarks grants）。几周前、大约一个月前，我们投入了 300 万美元来支持开放基准测试。这是一份很有趣的工作，我能与最好的学术团队和构建者合作，加速并资助下一波基准测试，它们将真正引导这个领域的方向。目前反响非常热烈，我承认评审上还有点落后。但我们很高兴看到社区目前提出的各种想法。在这次演讲中，我们已经评审了我认为超过 120 份申请，涵盖学术界和产业界实验室。我们想分享过去几个月的一些看法和心得：第一，对于有用的基准测试，什么是最基本的门槛（table stakes）？也就是说，如何构建真正有用的、能衡量进展的优秀实证“量尺”（empirical measuring sticks）？第二，是什么真正把那些塑造前沿的基准测试区分出来？归根结底，构建真正高效、有效的基准测试的艺术与科学是什么？</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, what are we doing at Snorkel? One of
+<p>the things that again I'm I'm very</p>
+<p>fortunate to to be able to be a part of</p>
+<p>is uh the Open Benchmarks grants. We</p>
+<p>recently, a few weeks ago, a month ago,</p>
+<p>uh</p>
+<p>deployed $3 million to commit to Open</p>
+<p>Benchmarks. And this is a really fun</p>
+<p>job. I get to work with the best</p>
+<p>academic teams, you know, builders, uh</p>
+<p>to really accelerate and fund um the</p>
+<p>next wave of benchmarks that's going to</p>
+<p>really steer and and and guide where uh</p>
+<p>the field is going. We've had a wild</p>
+<p>reception so far. I'm a little</p>
+<p>admittedly behind on some some reviews.</p>
+<p>Uh but we've been really excited to see</p>
+<p>what the community has come up with so</p>
+<p>far. And in this talk in particular, you</p>
+<p>know, we've reviewed I think over 120</p>
+<p>applications so far spanning academia</p>
+<p>and industry labs. We wanted to share a</p>
+<p>few perspectives, a few learnings um</p>
+<p>over the fast past few months about what</p>
+<p>we view as one table stakes for for</p>
+<p>useful benchmarks, right? How do you</p>
+<p>actually build good empirical measuring</p>
+<p>sticks that are actually useful, you</p>
+<p>know, to to measuring progress? And two,</p>
+<p>what really separates, you know, those</p>
+<p>benchmarks that are shaping the</p>
+<p>frontier, right? What what is the art</p>
+<p>and and the the the science, if you</p>
+<p>will, of building really efficient</p>
+<p>effective benchmarks at the end of the</p>
+<p>day.</p>
+</details>
+<p>在讲的过程中，我会有一个有趣的机会，也许有点太美式了，学一下 Timothy Chalamet，向过去几年里塑造了这个领域的一些伟大基准测试致敬，并结合这些维度来谈。我希望这些主题能引起你们的共鸣，也能激发一些新的思考：我们如何把大家日常工作中正在追求的这些心得应用起来，去塑造这个领域并推动它前进。这里有两大主题。在“科学”一侧，我们如何构建有效的量尺？我们会谈任务质量、分布控制，以及总体上稳健的评估。在“艺术”一侧，也就是优秀基准测试的差异化因素：如何构建对领域走向有论点（thesis）、能启发新路线图的基准测试，并且关键是面向这样的受众来构建，即研究者受众、构建者受众，使得采用变得更加顺畅，并成为这些基准测试的一等公民（first-class citizen）。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, as I'm doing this, I'll have a fun
+<p>opportunity, maybe this is a little too</p>
+<p>American, but to pull a Timothy Chalamet</p>
+<p>and honor some of the greats, you know,</p>
+<p>some of the great benchmarks of the last</p>
+<p>few years</p>
+<p>that have really shaped the field in</p>
+<p>talking about some of these axes. And I</p>
+<p>hope that these, you know, themes</p>
+<p>resonate with you and also inspire a bit</p>
+<p>of,</p>
+<p>you know, kind of new thinking about,</p>
+<p>hey, how how can we actually deploy some</p>
+<p>of the learnings we're we're all kind of</p>
+<p>driving towards in our day-to-day work</p>
+<p>to, you know, shape the field and and</p>
+<p>move it forward. So, two themes here</p>
+<p>again on the science side, you know, how</p>
+<p>do we actually build effective measuring</p>
+<p>sticks? We'll talk about task quality,</p>
+<p>distributional control, robust evals in</p>
+<p>general. Um and on the on the art side,</p>
+<p>right, really the the differentiators</p>
+<p>for great benchmarks, um how do you</p>
+<p>build benchmarks with a thesis on where</p>
+<p>the field is going that inspire new road</p>
+<p>maps, um and that critically are are</p>
+<p>built for this audience, right, a</p>
+<p>researcher audience, a builder audience</p>
+<p>so that adoption is is something that is</p>
+<p>a way smoother um and and a first-class</p>
+<p>citizen uh for a bunch of these</p>
+<p>benchmarks.</p>
+</details>
+<h3 id="科学一单个任务的质量" data-reading-heading="">科学一：单个任务的质量</h3>
+<p>先从科学开始。这是我们在实践中，以及在产业界、学术界和前沿实验室的部署中看到的，什么造就了真正有效的量尺。</p>
+<p>第一件事是单个任务的质量。也就是说，单个任务需要经过极其严格的验证。它们需要代表真实世界的复杂性，需要有定义良好、结构良好的指令，需要有可验证的解答，并且最好已经由真实世界的领域专家实际验证过。这里的 GPQA 是我最喜欢的基准测试之一，不仅因为它是一个持久经久的基准测试，直到今天仍然捕捉研究生水平和专业水平的知识，你仍然能在模型卡上看到它，而且我最喜欢的贡献之一其实藏在附录里。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, let's start with the science. Uh
+<p>this is again what makes for really</p>
+<p>effective measuring sticks as we've seen</p>
+<p>them in in practice and in the</p>
+<p>the deployments that we see uh in</p>
+<p>industry and academia and with Frontier</p>
+<p>Labs.</p>
+<p>So, the first thing I want to talk about</p>
+<p>is individual task quality. Right, this</p>
+<p>is the idea that individual tasks need</p>
+<p>to be exceptionally, rigorously</p>
+<p>validated, right? They need to represent</p>
+<p>real-world complexity. They need uh</p>
+<p>well-posed, well-structured</p>
+<p>instructions. Um they need verifiable</p>
+<p>solutions uh that ideally have been um</p>
+<p>actually validated by real-world domain</p>
+<p>experts. Um one of the the benchmarks</p>
+<p>here, GPQA, is one of my favorites, um</p>
+<p>not just because it's been a very</p>
+<p>lasting and enduring benchmark that</p>
+<p>captures, you know, uh graduate-level</p>
+<p>and professional knowledge uh even to</p>
+<p>this day, right, you kind of still still</p>
+<p>see this on model cards. But, one of my</p>
+<p>favorite contributions is actually</p>
+<p>tucked away in the appendix.</p>
+</details>
+<p>GPQA 引入了一种新的对抗式质量控制机制。其想法是：这些任务不仅需要定义良好，还需要其他专家能够解决。所以他们有一个非常严格的多评审者协议：有原作者，还有评审者和裁决者参与其中，并有修订的机会。这些任务真正在推动知识的前沿，对任何单个专家来说，要判断“对，这确实是个好任务”或不是，并非易事。因此，开发这种严格的对抗式质量控制机制，是我在这里最兴奋的贡献之一。如果你读附录，还会看到他们引入了新的激励机制：报酬实际上取决于是否达成一定的一致。我来自学术界，这里有一些来自同行评审流程的灵感，尽管同行评审有缺陷。但这种关于如何获得真正严格的多专家质量控制的创新，带来了我们在单个任务质量方面看到的那类结果，我们认为这是任何重要基准测试的关键基础。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+GPQA uh introduced one new adversarial
+<p>uh quality control mechanism. So, the</p>
+<p>idea was that not only do these tasks</p>
+<p>need to be well-posed, um they need to</p>
+<p>be tractable for other experts to solve.</p>
+<p>So, they had a very very rigorous</p>
+<p>multi-reviewer protocol where there was</p>
+<p>an original author, you know, there were</p>
+<p>there were reviewers and adjudicators in</p>
+<p>the loop. There was opportunity for</p>
+<p>revision. Right, these were tasks that</p>
+<p>were really pushing the frontier of</p>
+<p>knowledge and it was non-trivial for any</p>
+<p>single expert to say, "Yeah, this is</p>
+<p>actually good task or not." And so,</p>
+<p>developing this sort of rigorous</p>
+<p>adversarial</p>
+<p>quality control mechanism was one of the</p>
+<p>contributions I was most excited about</p>
+<p>here. And if you read the appendix, you</p>
+<p>also see that they introduce new</p>
+<p>incentive mechanisms, right? Payouts are</p>
+<p>actually based on whether there was</p>
+<p>certain agreement and, you know, uh uh</p>
+<p>coming from academia, you know, there's</p>
+<p>there's uh some inspiration here from</p>
+<p>the peer review process as as flawed as</p>
+<p>that is, but, you know, this type of</p>
+<p>innovation around how you actually get</p>
+<p>really rigorous, you know, multi-expert</p>
+<p>quality control um leads to the type of</p>
+<p>outcomes that we see around individual</p>
+<p>task quality that um we we see as a a</p>
+<p>key foundation for any benchmark that</p>
+<p>matters at the end of the day.</p>
+</details>
+<h3 id="科学二分布多样性" data-reading-heading="">科学二：分布多样性</h3>
+<p>第二是分布多样性（distributional diversity）。其想法是，对于任何真正重要的基准测试，你要为该领域、为真实世界任务定义清晰的分类体系（taxonomy），并有意地分布这些任务。这可能意味着：我捕获了一段轨迹（trace）或一股真实世界的流量，记录我的智能体在真实世界中如何运行，我想真正代表这种分布。它也可能意味着：我特别去刻画并分类那些失败模式，它们看似矛盾地罕见，但在生产中却不成比例地重要。以经典的自动驾驶场景为例：黄灯、行人或摩托车骑手，出现的频率可能远低于其他类型的场景，但在这些场景中把它们做对却不成比例地重要。因此，定义这样的分类体系，并非常有意地在其中分布任务，我们认为是优秀基准测试的标志之一。MMLU 现在已有几年历史，构建了一个相当宏大的分类体系，涵盖 STEM、人文等 57 个学术和专业领域。它一直是理解研究生和专业水平知识的持久基准测试之一，我们同样认为，这在很大程度上是深思熟虑、有意为之的分类体系设计及朝此构建的结果。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Two is uh distributional diversity,
+<p>right? This is the idea that for any</p>
+<p>benchmark that really matters, you want</p>
+<p>to define a clear taxonomy for the</p>
+<p>domain, for real-world tasks, and</p>
+<p>distribute those tasks uh intentionally.</p>
+<p>So, this might be, "Hey, I I captured a</p>
+<p>a trace or or a kind of real-world</p>
+<p>stream of um traffic along um, you know,</p>
+<p>how my agent is operating in the real</p>
+<p>world, and I want to really represent</p>
+<p>that distribution." It could also mean,</p>
+<p>"Hey, I'm specifically characterizing</p>
+<p>and taxonomizing the failure modes that</p>
+<p>are, you know, paradoxically rare, but</p>
+<p>you know, disproportionately important</p>
+<p>in in production, right? If you take</p>
+<p>classic self-driving settings, right?</p>
+<p>Yellow lights or, you know, pedestrians</p>
+<p>or uh motorcyclists, right? Might</p>
+<p>actually show up way less than other</p>
+<p>other types of scenarios but are</p>
+<p>disproportionately important, you know,</p>
+<p>to get right in these settings. And so,</p>
+<p>defining that taxonomy, being really</p>
+<p>intentional about distributing tasks</p>
+<p>across it is one of the home hallmarks</p>
+<p>of uh great benchmarks in our view. Um</p>
+<p>MMLU, um few years old now, uh</p>
+<p>constructed a a quite ambitious taxonomy</p>
+<p>of, you know, 57 academic and and</p>
+<p>professional domains across STEM,</p>
+<p>humanities, et cetera. It's remained one</p>
+<p>of the lasting benchmarks for</p>
+<p>understanding graduate and professional</p>
+<p>level knowledge and again a lot of this</p>
+<p>was as as we we believe a result of</p>
+<p>really thoughtful and intentional</p>
+<p>taxonomy designed and and</p>
+<p>building towards that.</p>
+</details>
+<h3 id="科学三难度与模型余量" data-reading-heading="">科学三：难度与模型余量</h3>
+<p>第三个维度是单个任务的难度和模型余量（model headroom）。基准测试没有饱和非常重要，它要暴露能力中真实的薄弱点，并可靠地区分处于前沿的各个模型所处的位置。我最喜欢的图之一是右上角的这张，功劳完全归于 ARC Prize Foundation 团队。ARC AGI-2 在很长一段时间里，几个月甚至几年，都没有饱和。大约 18 到 24 个月前，当推理（reasoning）大力推进时，我们看到能力出现了巨大跃升，而这对应着模型能力的真实跃升。这个基准测试是有意设计来代表人类具备、而模型当时不具备的某种效率或能力，它很好地捕捉了：这里有大量的模型余量，人类能做到这一点，差距在哪里？而且果然，它与最近的 o1 式推理推进相关性很好，这种推进在过去 18 到 24 个月里主导了这个领域。就在几周前，ARC 团队刚刚发布了 ARC AGI-3，发布时前沿模型都低于 1%。每一项任务在某种程度上都是人类可解的。因此它仍然是该领域最有意义、最令人兴奋的基准测试之一，任何新模型出来，人们都在等着看它在 ARC 上表现如何。我认为他们做得很好，这里的模型余量真的非常令人兴奋。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The third axis here is around difficulty
+<p>of individual tasks and model headroom.</p>
+<p>Right, it's really important that the</p>
+<p>benchmark is unsaturated that it exposes</p>
+<p>real soft spots in capabilities and</p>
+<p>reliably separates where models sit at</p>
+<p>at the frontier. One of my favorite</p>
+<p>plots is is the one on the top right.</p>
+<p>This was you know all all credit to the</p>
+<p>ARC Prize Foundation team.</p>
+<p>ARC AGI-2 you know for a very long time</p>
+<p>was unsaturated right for for several</p>
+<p>months and years. And when there was the</p>
+<p>big reasoning push you know maybe 18-24</p>
+<p>months ago</p>
+<p>we saw a massive leap in capabilities</p>
+<p>that actually corresponded to a real</p>
+<p>leap in model capabilities. Right, this</p>
+<p>was a benchmark that was intentionally</p>
+<p>designed to represent a type of</p>
+<p>efficiency or capability that</p>
+<p>humans have but models didn't have and</p>
+<p>and they really kind of captured well</p>
+<p>hey there's a lot of model headroom</p>
+<p>here. Humans can do this.</p>
+<p>Where's that gap? And again low and</p>
+<p>behold it correlated quite well with the</p>
+<p>recent you know 01 style reasoning push</p>
+<p>that has really dominated the field in</p>
+<p>the in the past 18-24 months. Just a few</p>
+<p>weeks ago the ARC team just launched AGI</p>
+<p>ARC AGI-3 and again at launch they had</p>
+<p>frontier models under 1%. Every single</p>
+<p>task was a human solvable to some degree</p>
+<p>and so it remains one of the I think the</p>
+<p>the most</p>
+<p>meaningfully exciting benchmarks in the</p>
+<p>space where you know any new model you</p>
+<p>know people are kind of awaiting hey how</p>
+<p>does it do do on ARC? And and I think</p>
+<p>they did this quite well. Right, the the</p>
+<p>kind of model headroom here is is really</p>
+<p>really exciting.</p>
+</details>
+<h3 id="科学四稳健的评估方法" data-reading-heading="">科学四：稳健的评估方法</h3>
+<p>在实证测量方面，我想谈的最后一个维度是稳健的评估方法论。这一点可以讲得很深，我只捕捉一些高层想法：基准测试最好超越准确率，去捕捉真正重要的现实维度。这包括成本、延迟、推理轨迹的质量、一些中间步骤和工具使用。无论哪些维度对手头的能力真正重要，把它们作为奖励或监督信号捕捉下来都至关重要，而让基准测试衡量它声称要衡量的东西，在构建稳健、可复现的基准测试时，其实是一项不容易的工作。</p>
+<p>Tau Bench（转写为 “Towel Bench”）是我们非常喜欢的一个基准测试，这些年它有过多次演进。它被构建来评估这些多轮智能体的任务完成情况。他们构建了一个巧妙的用户模拟器，而且不只是看准确率和完成度，还看对策略约束的遵守情况。比如右手边论文中的一个例子：一个模型订对了航班，但违反了票价舱位规则，仍然算失败，最终仍然是不可行。所以这种有意识地选择我们真正关心哪些维度、真正想衡量什么，并严格地衡量，是构建这些前沿评估时重要的标志之一。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+This last axis here I want to talk about
+<p>on on the empirical measurement side is</p>
+<p>all about a robust eval methodologies.</p>
+<p>Now this goes really deep. So just kind</p>
+<p>of capturing some of the high-level</p>
+<p>ideas, benchmarks need to ideally go</p>
+<p>beyond accuracy to capture real-world</p>
+<p>dimensions that matter, right? This is</p>
+<p>everything from cost, latency, you know,</p>
+<p>the quality of the reasoning traces,</p>
+<p>uh uh some of the intermediate steps and</p>
+<p>and tool use. Whatever dimensions</p>
+<p>actually matter for the capability at</p>
+<p>hand, uh capturing those as reward or</p>
+<p>supervision signals is really critical</p>
+<p>and measuring what it what it claims to</p>
+<p>um is is actually a non-trivial uh feat</p>
+<p>uh in in uh you know, building robust</p>
+<p>and and reproducible benchmarks. So</p>
+<p>Towel Bench is a benchmark that we're</p>
+<p>we're a big fan of, you know, it's had</p>
+<p>multiple evolutions over the year, but</p>
+<p>over the years, but it would it was a</p>
+<p>benchmark that was built to evaluate</p>
+<p>both task completion of these multi-turn</p>
+<p>agents. They built a a clever, you know,</p>
+<p>kind of user simulator, um but also, you</p>
+<p>know, not just accuracy and completion,</p>
+<p>but adherence to policy constraints. So</p>
+<p>a model, for example, on the right-hand</p>
+<p>side, this was the one of the examples</p>
+<p>from the paper, a model that books the</p>
+<p>right flight, but violates fair class</p>
+<p>rules still fails, is still a kind of um</p>
+<p>no-go at the end of the day. So um this</p>
+<p>notion of hey, being intentional about</p>
+<p>what axes we actually care about, uh</p>
+<p>what do we actually want to measure and</p>
+<p>measuring that rigorously, uh is one of</p>
+<p>the hallmarks that uh matters when</p>
+<p>you're when you're building um these</p>
+<p>these frontier evals.</p>
+</details>
+<h3 id="艺术一基准测试要有论点" data-reading-heading="">艺术一：基准测试要有论点</h3>
+<p>现在我想转向差异化因素：是什么造就了推动前沿的基准测试。这并不是说我在前几页提到的那些没有推动前沿。这些只是我认为对那些真正的研究贡献至关重要的特殊特征，它们真正塑造着这个领域的走向：所有实验室接下来会往哪里爬坡？这就是艺术，是帮助我们前进的秘方。</p>
+<p>其中一个关键标志是，这些基准测试应该有一个论点（thesis）。它们应该有一个关于能力子空间、关于领域走向的研究问题。它应该重新审视先前的能力。而最有雄心的基准测试其实是对世界走向的一种声明。Terminal Bench 就是这样的赌注之一。它押注的是 CLI（命令行界面），不只是针对编程智能体，而是针对通用的计算机使用。在很多方面，我认为这已被证明是一个基本正确且影响深远的赌注。我们看到 Claude 和 Codex 的团队在这些基于编程和 CLI 的工具之上构建他们的通用企业能力，我们看到这个赌注得到了验证。Terminal Bench 仍然是最稳健、最重要的基准测试之一，在所有最近的模型卡上都有测量。所以，这是早期的一个赌注：我们认为 CLI 将作为核心界面、核心抽象和能力承载（affordance），对智能体以通用方式与真实世界交互非常重要。通过衡量这些能力，我认为它确实帮助加速了这个领域在这方面的运作。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So I want to shift a little bit now to
+<p>the differentiators, right? What</p>
+<p>actually leads to the benchmarks that</p>
+<p>push the frontier. That's not to say,</p>
+<p>you know, anything I mentioned on the</p>
+<p>last few slides have not pushed the</p>
+<p>frontier. These are just special</p>
+<p>characteristics that I view as you know,</p>
+<p>critical to to the benchmarks that are</p>
+<p>real research contributions that are</p>
+<p>really shaping where is the field going,</p>
+<p>where are the where are all the labs</p>
+<p>going to hill climb next? Um and uh this</p>
+<p>is this is the art, the special sauce</p>
+<p>that um helps push us forward.</p>
+<p>So one of the key hallmarks here is um</p>
+<p>these benchmarks should have a thesis,</p>
+<p>right? They should have a research</p>
+<p>question about a subspace of</p>
+<p>capabilities, about where the field is</p>
+<p>going. It should revisit previous</p>
+<p>capabilities. Um and the most ambitious</p>
+<p>benchmarks are really a statement about</p>
+<p>where the world is going. Terminal bench</p>
+<p>um is one of these bets, right? It was a</p>
+<p>bet on the CLI, not just for coding</p>
+<p>agents, but for general purpose computer</p>
+<p>use. And in many ways, I think this has</p>
+<p>turned out to be a largely correct and</p>
+<p>and consequential bet, right? As as</p>
+<p>we're seeing uh teams at at kind of</p>
+<p>Claude and and and Codex build their</p>
+<p>general purpose, you know, enterprise</p>
+<p>capabilities on top of these um coding</p>
+<p>and CLI-based tools, we're seeing this</p>
+<p>bet pan out. And again, Terminal bench</p>
+<p>remains one of the most robust and kind</p>
+<p>of uh most important benchmarks that are</p>
+<p>measured on on all the recent uh model</p>
+<p>cards. So, again, this was a bet early</p>
+<p>on to say, "Hey, we think the CLI is</p>
+<p>going to be really important um as a</p>
+<p>core interface, a core abstraction and</p>
+<p>affordance for agents to interact with</p>
+<p>the real world in general purpose way.</p>
+<p>And uh by measuring those capabilities,</p>
+<p>you know, I I'd argue that it actually</p>
+<p>um helped accelerate uh you know, how</p>
+<p>how the field is operating in this way.</p>
+</details>
+<h3 id="艺术二为领域提供路线图" data-reading-heading="">艺术二：为领域提供路线图</h3>
+<p>这里值得一提的第二点，是为这个领域绘制路线图的能力。一个真正塑造我们所有人走向的优秀基准测试，会产出新的路线图。它启发针对研究问题的新攻关方向，帮助大家构思，并想出关于基准测试和方法的新思考方式。我认为 SWE-bench 是这方面一个非常出色的例子。它是一个简单的想法，而最好的想法往往相当简单：你如何通过 PR（拉取请求）来利用现有的编程类能力？它催生了一整个新的基准测试家族，从 SWE-bench Lite、Verified、Pro、Multilingual、Multimodal 等等。它的演进在今天仍然非常有意义。它改变了我们思考编程智能体的方式，而看到 SWE-Bench 团队的工作之后涌现出多少新的研究方向和受其启发的基准测试，在编程领域里是很棒的事情。可以说，在此之上还有很多创新空间。新的编程方式是什么样的？这些类型的工作流如何适用于“vibe coding”，以及开发者正在应用的这种新的抽象层？看到 SWE-Bench 团队奠定的基础，以及它将如何塑造我们未来对编程智能体的思考，非常令人兴奋。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+The second piece here, I think, worth uh
+<p>mentioning is uh the ability to kind of</p>
+<p>roadmap for the field. Um a a great</p>
+<p>benchmark, you know, one that really</p>
+<p>shapes where where all of us are going</p>
+<p>is producing new roadmaps, right? It's</p>
+<p>inspiring new attacks against research</p>
+<p>problems. It's helping folks ideate and</p>
+<p>come up with new ways for thinking about</p>
+<p>uh benchmarks and methods in general.</p>
+<p>And I think Sweet bench is uh really</p>
+<p>phenomenal example of this, right? It</p>
+<p>was a simple ideas, often the best ones</p>
+<p>are quite simple, right? How do you um</p>
+<p>kind of leverage um you know, existing</p>
+<p>uh uh coding coding type capabilities</p>
+<p>via via PRs. Uh and it's spawned a new</p>
+<p>family of benchmarks, right? All the way</p>
+<p>from Sweet bench light, verified, pro,</p>
+<p>multilingual, multimodal, etc. And its</p>
+<p>evolution, I think, is is still very</p>
+<p>relevant today. It's evolved how we</p>
+<p>think about coding agents, and one of</p>
+<p>the things that's been awesome to see</p>
+<p>with uh the SWE-Bench team is how many</p>
+<p>um new research directions and kind of</p>
+<p>inspired benchmarks have come after it</p>
+<p>um in this coding space. And arguably,</p>
+<p>I'd say, you know, there's a lot more</p>
+<p>room um to kind of innovate on top of</p>
+<p>this as well. What are the new ways of</p>
+<p>um coding look like? How do these types</p>
+<p>of workflows apply to 5 coding and kind</p>
+<p>of this new layer of abstraction that</p>
+<p>that's offered developers are are</p>
+<p>applying? Um I think it's been really</p>
+<p>exciting to see the the foundation that</p>
+<p>the SWE-Bench team sets and how that's</p>
+<p>going to um shape, you know, how we</p>
+<p>think about coding agents moving</p>
+<p>forward.</p>
+</details>
+<h3 id="艺术三研究者体验" data-reading-heading="">艺术三：研究者体验</h3>
+<p>接下来这一点，我认为被严重低估，那就是研究者用户体验（researcher UX）。我认为最有远见的基准测试构建者，都致力于研究者和构建者的体验。也就是说，用你的基准测试来运行模型和智能体要非常简单，贡献新任务、进行扩展要非常简单，而且，把从基准测试得到的一些信号用于 RL 或训练后调优（post-training tuning）也要非常简单。我认为这被严重低估了。让你构建并推出的东西易于社区或核心用户使用，是一条经典的产品原则。在这里，基准测试有核心用户，也就是其他的构建者或研究者。因此，投入时间和精力去构建这些界面，对一些最重要的基准测试的采用至关重要。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, this team here, I think, is severely
+<p>underrated, and this is the notion of</p>
+<p>researcher UX. Right? I think the most</p>
+<p>prescient benchmark builders are</p>
+<p>committed to the researcher and builder</p>
+<p>experience. This is to say, it's really</p>
+<p>simple to run models and agents against</p>
+<p>uh your benchmark. It's really simple to</p>
+<p>contribute new tasks, to extend. And</p>
+<p>also, it's it's really simple to</p>
+<p>leverage some of the the signals that</p>
+<p>you're getting for the benchmark for RL</p>
+<p>or or kind of tuning um post talk. I</p>
+<p>think this is really underrated. Uh</p>
+<p>it's, you know, a classic product</p>
+<p>principle to make what you're building</p>
+<p>and putting out there easy to use by the</p>
+<p>community or by your core users. And in</p>
+<p>this case, benchmarks have core users,</p>
+<p>which are other builders or researchers.</p>
+<p>And so, really putting in time and</p>
+<p>attention to building those interfaces</p>
+<p>has been important for the adoption of</p>
+<p>some of the most important benchmarks.</p>
+</details>
+<p>值得一提的是，斯坦福 CRFM 的团队几年前构建了 HELM，我认为它开创了一个标准化、模块化的测试框架（harness），用于评估可复现的不同场景，以及针对一套标准模型测试台来评估模型。几个月前的 Terminal Bench 2.0 又随 Harbor 一起发布，在很多方面，Harbor 已成为构建智能体的团队事实上的测试框架和评估基础设施。所幸今天已有不少基于这一原则的开源软件。但在构建你的基准测试时，要考虑：它有多容易扩展？社区采用它并最终针对它爬坡有多容易？我认为这是决定这些前沿基准测试能否获得高采用率的一个被严重低估的因素。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Right? To call out, I think the the
+<p>Stanford team um at CRFM uh built HELM,</p>
+<p>you know, several years ago, which I I</p>
+<p>would argue kind of pioneered a</p>
+<p>standardized modular harness for</p>
+<p>evaluating reproducible, you know,</p>
+<p>different scenarios, as well as kind of</p>
+<p>models against a standard test bed of</p>
+<p>models. Um</p>
+<p>Terminal Bench 2.0, just a few months</p>
+<p>ago, again, shipped with Harbor, which</p>
+<p>has been, in many ways, the de facto uh</p>
+<p>harness and and kind of evaluation</p>
+<p>infrastructure for teams who are</p>
+<p>building agents um more broadly. And so,</p>
+<p>you know, thankfully we have a bunch of</p>
+<p>open source</p>
+<p>software out there today, you know,</p>
+<p>based on this principle. But as you're</p>
+<p>building your benchmarks, right, kind of</p>
+<p>considering, "Hey, how easy is this to</p>
+<p>extend? How easy is it for the community</p>
+<p>to adopt and eventually kind of hill</p>
+<p>climb against this?" I think is a</p>
+<p>severely underrated factor for for what</p>
+<p>makes for really high adoption of of</p>
+<p>these frontier benchmarks.</p>
+</details>
+<h3 id="框架回顾" data-reading-heading="">框架回顾</h3>
+<p>这就是完整的框架。我可以讲得更详细，欢迎会后来找我。真正在实证上有意义的量尺，靠的是任务质量，以及对分布控制和多样性的关注，靠的是难度和模型余量，当然还有稳健的评估方法论，衡量在实践中真正重要的具体维度，并对此有明确的意图。而在“艺术”一侧，这些优秀的基准测试对前沿走向有论点，为领域设定路线图，并且真正优先考虑研究者用户体验。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, this is the full framework. Again,
+<p>can go into more detail and and please</p>
+<p>find me afterwards. But again,</p>
+<p>what makes for really empirically</p>
+<p>meaningful uh measuring sticks, right,</p>
+<p>it's task quality and attention to</p>
+<p>distributional control and diversity, uh</p>
+<p>it's it's difficulty and model headroom,</p>
+<p>and of course a robust eval methodology</p>
+<p>that measures the concrete axes that</p>
+<p>actually matter and it matter in</p>
+<p>practice and is is intentional about it.</p>
+<p>And of course, on the off side, right,</p>
+<p>these these great benchmarks really have</p>
+<p>a thesis on where the frontier's going.</p>
+<p>Uh they set road maps for the field and</p>
+<p>they really prioritize researcher UX.</p>
+</details>
+<h3 id="下一波基准测试的三个方向" data-reading-heading="">下一波基准测试的三个方向</h3>
+<p>在结束之前，我想提出几个我们在 Snorkel 非常兴奋的维度，我们认为它们将涵盖下一波基准测试。我尽量在这里为创造力留出更多自由度，但我们认为这些是有很大空间去推进复杂度和现实感的领域。所以我想分享一点我们内部的路线图，以及关于这个领域走向、我们哪里需要更多基准测试和更多贡献的想法。</p>
+<p>这是我们的观点：我们认为下一批优秀基准测试的维度有三个。我稍后会更详细地说明。第一，环境复杂度（environment complexity）：这些基准测试所处的运行环境有多复杂、多真实、多动态？它们是否代表了专业人士、科学家，或使用这些工具的人真正可能用到的真实世界场景？第二，自主时长（autonomy horizon）：这些基准测试是否代表了这些智能体所面对的现实且处于前沿的时间跨度长度？它们是否捕捉了自主性滑块（autonomy slider）上的不同点，从而代表用户把它们用作副驾驶（co-pilots）与完全自主智能体之间的不同用法？这在基准测试中是不是有意的设计？第三，捕捉广泛的输出复杂度。我认为这在今天探索得很不够。很多是基于聊天或文档的输出，而在细致入微、差异化的奖励信号方面则少得多，也就是日常工作中真正出现的真实产物（artifacts）。关键是还有新的产物，也就是我们甚至还没想象过的新形态：智能体如何与人类交互，智能体之间如何相互交互。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Now, before I wrap up, um I want to
+<p>propose, you know, a few dimensions that</p>
+<p>uh we're really excited about at Snorkel</p>
+<p>uh that we think are really going to</p>
+<p>encapsulate, you know, the the next wave</p>
+<p>of of benchmarks. Um tried to leave some</p>
+<p>more degrees of freedom here for</p>
+<p>creativity, but these are areas where we</p>
+<p>think there's a lot of room to push</p>
+<p>complexity, to push, you know, realism</p>
+<p>in benchmarks. And so, I wanted to share</p>
+<p>a little bit of our internal road map</p>
+<p>and thinking around where the field is</p>
+<p>going and where we need more benchmarks</p>
+<p>and more contributions.</p>
+<p>So, this is our point of view. Um we</p>
+<p>think that uh the the axes for the next</p>
+<p>great benchmarks are threefold. Um and</p>
+<p>I'll go into a little bit more detail</p>
+<p>about what I mean here um in just a</p>
+<p>second. But one, it's environment</p>
+<p>complexity, right? how complex, how</p>
+<p>realistic, how dynamic is the operating</p>
+<p>environment that these benchmarks are</p>
+<p>working. Are they representative of</p>
+<p>real-world settings that a professional,</p>
+<p>that, you know, scientist, that someone</p>
+<p>using these tools could actually use?</p>
+<p>Two is autonomy horizon. Do these</p>
+<p>benchmarks represent realistic and</p>
+<p>frontier</p>
+<p>horizon lengths that these agents are</p>
+<p>operating against? Are they capturing</p>
+<p>different points on the autonomy slider</p>
+<p>that are again representative of how</p>
+<p>users are using them as co-pilots versus</p>
+<p>fully autonomous agents? Is this an</p>
+<p>intentional design in the benchmark? And</p>
+<p>three, capturing the wide range of</p>
+<p>output complexity. I think this is very</p>
+<p>under explored today. Right? Lots of</p>
+<p>chat-based or document-based outputs. Um</p>
+<p>not as much around nuanced uh kind of</p>
+<p>differentiated reward signals, right?</p>
+<p>Real artifacts that show up, um you</p>
+<p>know, in day-to-day work that we that we</p>
+<p>represent. And critically, um new</p>
+<p>artifacts, right? New types of form</p>
+<p>factors that we haven't even imagined</p>
+<p>about, you know, how agents interact</p>
+<p>with humans, how agents interact with</p>
+<p>each other.</p>
+</details>
+<h3 id="环境复杂度" data-reading-heading="">环境复杂度</h3>
+<p>下面分别说一说。第一个我不会讲得特别详细。环境复杂度，就是捕捉我们日常工作环境中的真实世界复杂性，而这个差距往往正是智能体今天失败的地方。以编程智能体为例：真实的代码库有组织特定的策略、大量的 Slack 上下文、截图、不稳定（flaky）的工具链、分布式的 CI、脑子里装着自己喜好与偏好知识的人类评审者，以及许多并行的贡献者。今天的基准测试只捕捉了这种复杂性的一部分，而且不只是在编程领域，在其他领域也是如此，提高复杂度水平并继续推动这些模型能做什么、以代表真实世界的使用，既令人兴奋，也是一个机会。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So, a little bit about each one. Um the
+<p>first one here, I won't go into all of</p>
+<p>these in in significant detail, right?</p>
+<p>Environment complexity is all about</p>
+<p>capturing the real-world</p>
+<p>complexity that that is uh in our in our</p>
+<p>day-to-day working environments, right?</p>
+<p>And this this gap is often where agents</p>
+<p>fail today. Consider coding agents,</p>
+<p>right? A real codebase has org-specific</p>
+<p>policies, you know, lots of Slack</p>
+<p>context, uh screenshots, flaky tool</p>
+<p>chains, you know, CI that's that's kind</p>
+<p>of distributed, um human reviewers with</p>
+<p>knowledge in their heads about what they</p>
+<p>like and what they prefer, um many</p>
+<p>contributors in parallel. Benchmarks</p>
+<p>today capture a fraction of this</p>
+<p>complexity and you know, not just in</p>
+<p>coding but other domains, there's a lot</p>
+<p>of excitement and an opportunity to up</p>
+<p>the level of complexity and continue to</p>
+<p>drive what these models um can do to to</p>
+<p>represent real-world uses.</p>
+</details>
+<h3 id="自主时长" data-reading-heading="">自主时长</h3>
+<p>第二，还是自主时长。这完全关乎一个智能体在可靠性崩溃之前能运行多久。以客户体验智能体为例，在很多情况下，这些智能体可能会丢失几周前传达的上下文；不同的集成或产品规格可能会改变某个特定模型的实际规格或需求；重组（reorgs）可能会在中途改变优先级。真实世界的场景实际上代表了更多的复杂性，这些复杂性体现在这类长期的持续学习（continual learning）式场景中，它们代表了状态和环境的变化。所以我们认为，在构建代表极长时程和自主智能体的新基准测试方面，有很大的贡献空间。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Two, again on autonomy horizon, right?
+<p>Uh this is all about how long an agent</p>
+<p>can operate before it reliably</p>
+<p>before reliability breaks down. Right?</p>
+<p>Let's take a customer experience agent,</p>
+<p>um</p>
+<p>you know, in in many cases, right? Uh</p>
+<p>these these agents may lose track, you</p>
+<p>know, of of context that was, you know,</p>
+<p>delivered a few weeks ago, different</p>
+<p>integrations or product specs might, um,</p>
+<p>you know, change uh the actual spec or</p>
+<p>requirements for for a particular model.</p>
+<p>Reorgs can kind of shift, you know,</p>
+<p>priorities midstream. Um, real-world</p>
+<p>settings actually represent a lot more</p>
+<p>complexity that again is represented in</p>
+<p>these kind of long-term continual</p>
+<p>learning type type settings that</p>
+<p>represent kind of changes in state and</p>
+<p>environment. Um, so we again think that</p>
+<p>there's a lot of room to contribute and</p>
+<p>and build out new benchmarks that</p>
+<p>represent very very long horizon and an</p>
+<p>autonomous agents.</p>
+</details>
+<h3 id="输出复杂度" data-reading-heading="">输出复杂度</h3>
+<p>最后，这个维度完全关乎产出更复杂、更有代表性的工作，以及可用于不仅是评估、也可用于训练期间奖励信号的细致信号。这同样必须是复杂的，而且这个差距也在扩大。再以软件为例，或者一份提出战略建议的复杂报告。要定义“一个好的建议、一个好的战略提案、总体上一个好的路线图有什么是可验证的”，既不简单，也带有主观性。这其中的细微之处需要被很好地捕捉，需要捕捉组织上下文和真正好的人类判断。明天的基准测试，我们对能够捕捉所有这些场景的信号感到兴奋。还有可信的输出：智能体真正捕捉自身不确定性的能力，并能说出“我其实对此不确定，我需要停下来或者请求更多信息”。不只是纯文本答案的不同类型的输出，也是我们非常期待的。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And lastly, this axis is all about
+<p>producing more complex work, more</p>
+<p>representative work, and also nuanced</p>
+<p>signals that can be used for not just</p>
+<p>evaluation, but reward signals during</p>
+<p>training. This also has to be complex</p>
+<p>and this gap is is growing as well,</p>
+<p>right? Let's take again a software</p>
+<p>example, right? Or or a complex report</p>
+<p>for making strategic recommendations.</p>
+<p>It's non-trivial and subjective, you</p>
+<p>know, to define, "Hey, what is</p>
+<p>verifiable about a good recommendation,</p>
+<p>a good strategic proposal, a good</p>
+<p>roadmap in general?" Um, the nuances of</p>
+<p>this need to be captured well. They need</p>
+<p>to capture organizational context,</p>
+<p>really good human judgment. Um, and</p>
+<p>tomorrow's benchmarks really, you know,</p>
+<p>we're we're excited about um signals</p>
+<p>that capture all of these settings.</p>
+<p>Trustworthy outputs, right? The ability</p>
+<p>for agents to actually capture their own</p>
+<p>uncertainty and uh define, "Hey, I'm</p>
+<p>actually not sure about this. I actually</p>
+<p>need to stop or kind of ask for more</p>
+<p>information." Again, different types of</p>
+<p>outputs that aren't just, you know, a a</p>
+<p>kind of plain text answer is something</p>
+<p>we're really excited about.</p>
+</details>
+<h3 id="结语" data-reading-heading="">结语</h3>
+<p>希望这能激发一些思考：我在做什么？我如何把它变成一个有意义的基准测试？我们仍在接受开放基准测试资助（open benchmarks grant）的基准测试申请，所以如果你感兴趣，请通过 benchmarks.snorkel.ai 联系我们，也欢迎直接联系我。我们很期待看到这个领域的走向，并再次用基准测试不只是衡量回顾性的进展，而是真正塑造未来前进的方向。感谢大家的时间，期待很快再聊。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So again, uh hopefully, you know, this
+<p>inspired a little bit of thinking</p>
+<p>around, "Hey, what am I working on? How</p>
+<p>can I turn this into a meaningful</p>
+<p>benchmark?" Um, we are still accepting,</p>
+<p>you know, benchmarks uh in in the open</p>
+<p>benchmarks grant. So if you're excited,</p>
+<p>uh please reach us at</p>
+<p>benchmarks.snorkel.ai.</p>
+<p>Feel free to reach me directly and uh</p>
+<p>we're really excited to see uh where the</p>
+<p>field is going and to again to use</p>
+<p>benchmarks to not just measure, you</p>
+<p>know, progress looking backwards, but</p>
+<p>really shape where where things are</p>
+<p>going moving forward. Thanks for your</p>
+<p>time and excited to catch up soon.</p>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/3b35fb42afd0abf126f6b9b683f14d8ece53d149f772516915e81efc047c6ffc.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/3b35fb42afd0abf126f6b9b683f14d8ece53d149f772516915e81efc047c6ffc.md" download="构建有效基准测试的科学与艺术：Snorkel AI 的元评估经验.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Snorkel AI" class="entity-link company-link">Snorkel AI</a>
+</p>
+      
+        
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

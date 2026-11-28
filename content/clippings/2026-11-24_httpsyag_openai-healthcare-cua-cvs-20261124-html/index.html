@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAI 把电脑操作代理送进医疗生产环境，但 CVS
+的开源代码在跑生产时关掉了大模型</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">OpenAI 把电脑操作代理送进医疗生产环境，但 CVS
+的开源代码在跑生产时关掉了大模型</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-24</span>
+    
+
+    <header class="article-header">
+      
+      <h1>OpenAI 把电脑操作代理送进医疗生产环境，但 CVS
+的开源代码在跑生产时关掉了大模型</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/ai-application/">ai-application</a>
+      
+        <a class="tag-link" href="/tags/software-development/">software-development</a>
+      
+        <a class="tag-link" href="/tags/deployment/">deployment</a>
+      
+        <a class="tag-link" href="/tags/testing/">testing</a>
+      
+        <a class="tag-link" href="/tags/ai-workflow/">ai-workflow</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">OpenAI 将电脑操作代理引入医疗生产环境，但 CVS 的开源代码在生产模式下将大模型设置为 None，通过在探索阶段使用大模型进行探路和后期的修补，将重复的生产活编译成不需要模型调用的确定性代码。CVS 的做法是按阶段分工：探索阶段让 AI 探路，编译阶段将成功操作固化成普通代码，生产执行阶段直接运行编译好的脚本以实现零模型运行，并保留审计记录。这种先探路、再固化的思路适用于高合规环境，核心判断标准是单步操作是否有不可逆的外部副作用和执行频率高低。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/openai-healthcare-cua-cvs-20261124.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-24T00:00:00.000Z">2026-11-24</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%9E%E5%A4%A7%E5%8E%82%E6%8E%A5%E4%BA%86%E5%AE%98%E6%96%B9%E6%8E%A5%E5%8F%A3%E8%BF%98%E6%98%AF%E5%BE%97%E8%AE%A9">为什么连大厂接了官方接口，还是得让</a></li><li class="outline-h2"><a href="#%E8%AF%84%E6%B5%8B%E6%8B%BF%E5%88%B0">评测拿到</a></li><li class="outline-h2"><a href="#cvs">CVS</a></li><li class="outline-h2"><a href="#%E8%BF%99%E5%A5%97%E5%88%86%E5%B7%A5%E8%83%BD%E6%90%AC%E5%9B%9E%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%A2%E9%98%9F%E5%90%97%E4%BB%A5%E5%8F%8A%E7%9B%AE%E5%89%8D%E8%BF%98%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E4%BA%8B">这套分工能搬回你自己的团队吗？以及目前还不知道的事</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>很多团队在过去一年里一直在思考一个问题：能不能把能理解屏幕、会点鼠标、敲键盘的
+AI 代理放进高合规、高流量的生产环境里面去？</p>
+<p>2026 年 11 月 16 日，OpenAI 在美国医疗行业大会 HLTH
+上正式向医疗行业开放了电脑操作代理，覆盖医疗企业版、美国持证医生免费版和开发者
+API，同日还推出了 20
+多个医疗插件。其中最引人注目的例子是美国医药零售巨头 CVS Health。根据 OpenAI
+的医疗专题介绍，CVS
+在一条生产流程中部署这种能力后，代理一个周末就清掉了积压数月的发单事务，另一套系统每天处理数以万计的会诊操作步骤。</p>
+<p>单看新闻标题，人们很容易以为多模态大模型终于可以在医院和保险公司的电脑屏幕上大规模替人干活了。但是
+CVS 在 GitHub 上开源了这套生产工具包 cua-agent-kit。翻开它的核心运行配置，能看到一个耐人寻味的设定：只有在探索阶段才指定大模型，切到常规生产执行模式时，模型字段直接设为
+None。在这套工具包的默认生产模式下，CVS
+并没有让大模型在屏幕上一步一步看图点击，而是用 AI
+做前期的探路和后期的修补，把真正重复的生产活编译成了不需要模型调用的确定性代码。</p>
+<h2 id="为什么连大厂接了官方接口还是得让" data-reading-heading="">为什么连大厂接了官方接口，还是得让</h2>
+<p>AI 去点屏幕</p>
+<p>要理解 OpenAI
+为什么要在医疗领域大力推广电脑操作代理，先看看美国医疗软件的日常处境。一家医院的电子病历系统、排班工具和各家保险公司的审核门户彼此独立。医生给病人开一张核磁共振检查单，病人的既往病历和理疗记录躺在电子病历系统里，要走医保报销，行政人员还得打开保险公司的独立网页，把病历里的关键信息一条条重新填进去，提交医保事前授权申请。</p>
+<p>很多老旧系统没有提供 API 接口，或者 API 的权限非常有限。就在 OpenAI
+发布前 6 天，Google Cloud 在 11 月 10 日推出了 Gemini
+for Healthcare，直接打通了 Epic 和 Oracle Health
+两大主流电子病历系统。但谷歌在新闻稿中明确指出，这些接口严格只读，不会往病历写入任何信息，以免破坏临床记录的完整性。</p>
+<p>OpenAI 自己也遇到过同一道墙。早在 2026 年 9 月 1 日，OpenAI
+就推出了对 Epic 电子病历的集成，其官方帮助文档同样明确指出这个插件只读不写。</p>
+<p>只读接口能让医生查资料、写摘要，却无法完成业务闭环。医疗初创公司
+Assort Health 遇到了典型的半闭环难题：他们通过电子病历厂商 Athenahealth
+的官方接口已经把转诊单挂进了病人的病历，但接口不支持最后一步关闭转诊并标记已排期，工作人员以前需要手工进入界面点击一下。OpenAI
+把电脑操作代理同步挂在了编程工作台 Codex 里，Assort Health
+接入后，代理直接打开界面点完了这最后一步，转诊单也顺利从人工跟进列表里消失。</p>
+<p>这也是 OpenAI 在 11 月 16 日双管齐下的原因。20
+多个医疗插件负责把能走标准接口的医疗数据与业务系统尽量接进来，电脑操作代理则专门用来补齐官方接口不覆盖或者不让写的最后一公里。它扮演的是接口缺口的补丁，并没有取代标准接口。</p>
+<h2 id="评测拿到" data-reading-heading="">评测拿到</h2>
+<p>94.3% 还有 99% 安全率，为什么还是不敢让模型直接裸跑</p>
+<p>既然电脑操作代理能补足接口缺口，顺理成章的下一个问题是：能不能直接把大模型挂在云端浏览器或虚拟机里，每天看屏幕点击几万次？OpenAI
+这次给出了两组亮眼的评测数字，但工程团队在生产环境里依然迈不出这一步，原因集中在三件事上：真实准确率、成本和越权风险。</p>
+<p>第一个坑是，评测中的 94.3%
+不能直接当做生产成功率。在斯坦福团队做的医疗行政基准 HealthAdminBench
+上，OpenAI 公布的旗舰模型 GPT-6 Astra 拿到了 94.3%，轻量模型 GPT-6 Luna
+拿到了
+91.8%，但这只是把流程拆碎后的步骤得分。医疗单据漏填一格或填错一个编码，整张单子就会退回，真正决定能不能上线的整单全对率，OpenAI
+这次并没有公布。参考斯坦福 2026 年 4
+月的原论文测试，当时最好的模型步骤得分已经拿到 82.8%，按整单全对算却只有
+36.3%。</p>
+<p>斯坦福基准中子任务得分与整单通过率的巨大落差对比</p>
+<p>第二个问题是成本。轻量模型 Luna 相比 Astra 成本降低 98%
+后，单次任务是 8.5 美分。倒推回去，旗舰模型 Astra
+在最高推理强度下跑完一次行政任务大约要花 4.25 美元。就算换成 8.5
+美分的轻量模型，面对每天数万单的流量，日均成本照样是一笔不小的长期开销，更不用说最关键的整单全对率至今没有公布。</p>
+<p>第三个问题是越权风险。OpenAI 内部做了一个医生收件箱评测，325 个任务中
+99% 获得医生评定的临床安全，93% 的评分认为非常有帮助。但在 Fierce
+Healthcare 的专访中，OpenAI 医疗 AI 负责人 Karan Singhal
+坦承，剩下的 1%
+里出现了模型越权、没有拿到签核就直接采取行动的情况。放到每天几万单的医疗系统里，1%
+的不安全率就意味着每天几百起潜在失误或越权操作，医院合规部门不可能放行。</p>
+<p>把这三件事连起来看，其实撞上了 AI
+落地中一个基本矛盾。过去一年里，大家用 AI
+生成代码或翻译长文时，越来越习惯只管终点、不管过程：不限制 AI
+每一步怎么干，只把最终验收标准写好，让它自己试错、看报错、反复修改直到通过。这种靠验收标准兜底的做法，叫做结果确定性，用来区分传统软件把每一步规则写死的过程确定性（我在今年
+1 月写过一篇讨论这两种确定性的文章）。翻译长文很适合前者，因为中间写错了、夹了错别字没有现实代价，大不了重写，一篇帖子多花几毛钱推理费也无所谓。但在电子病历和医保门户里，前提全都变了：整单全对率仍是未知数，每一次点击都可能触发真实的外部写入或越权提交，流程不能靠先点错再重来，每天几万单的高频流量也摊不平持续的推理账单。</p>
+<h2 id="cvs" data-reading-heading="">CVS</h2>
+<p>的真实做法：让 AI 探路和修补，把日常执行编译成零模型代码</p>
+<p>完全靠 AI 和完全靠人写脚本都行不通，CVS Health
+在开源仓库里给出的核心定位是：用 AI
+发现步骤，用代码重复执行。他们没有在过程确定性和结果确定性之间二选一，而是按阶段重新分了工：把探索和修复留在测试环境，靠结果确定性省掉手写和维护脚本的人力；把日常的、大流量的执行编译回普通代码，重新锁住过程确定性。这样，整个生产流程拆成了四个环节，各自吃两种做法的红利。</p>
+<p>第一步是探索。工程师不用一上来就去翻老软件的前端代码，只需要用自然语言把业务流程写进提示词，让
+OpenAI
+的电脑操作代理去跑。代理在测试环境里跑通几次后，系统会自动录下全程截图、操作步骤和底层控件信息。</p>
+<p>第二步是编译。收集几次成功的操作记录后，团队用仓库自带的 Codex
+转换指令把它们转成普通的自动化代码，网页端和 Windows
+桌面端各有对应的成熟脚本工具。生成的代码直接绑定按钮名称和表单标签，不靠容易失效的屏幕坐标，上线后也不再依赖任何大模型框架。</p>
+<p>第三步是生产执行。真正上线跑日常大流量时，系统直接运行编译出来的脚本。这时候不再调用任何大模型，也不需要配置
+API
+密钥，速度稳定、单次成本趋近于零，也不会出现模型突然发挥创意越权点击的问题。与此同时，脚本照常在每个关键节点截屏存证，把运行状态写进
+PostgreSQL 审计表，把完整证据包归档进 Azure
+对象存储，合规审计一条不落。</p>
+<p>第四步是自愈维护。医疗和医保系统隔三差五就会改版按钮位置或弹出新提示，以前传统机器人流程自动化公司最头疼的就是维护成本失控，脚本一坏就得养大批外包工程师逐个修。在
+CVS
+的闭环里，确定性脚本一旦报错，系统直接把失败现场的截图和运行轨迹丢回给
+Codex，由 AI
+诊断原因并改写脚本，工程师做完代码审阅和测试就能重新上线。</p>
+<p>CVS
+开源工具包的四步闭环：探索、编译、零模型执行与报错修复</p>
+<p>这种先探路、再固化成脚本的思路其实不止适用于医疗。我自己平时让 AI
+做网页端到端测试时，也踩过让模型上来就盲写脚本的坑，后来整理出一个开源工具
+playwright-test-skill：同样是先让代理一步步操作真实页面、看清每次点击后的页面状态，确认走通后再固化成确定性的
+Playwright 脚本。CVS 只是把这套思路推进到了高合规的医疗生产环境里。</p>
+<p>CVS
+的选型指南也很务实，没有把这套编译路线吹成万能药。文档专门划出了需要退回大模型实时操作的两种边界。一种是老旧系统通过远程桌面只传输画面图像，操作系统读不到底层的按钮控件，脚本无从下手，只能靠视觉模型看图点击。另一种是流程里夹杂着需要读懂非结构化病历再做判断的环节，这时就得采用混合模式：确定性脚本走完固定主干，只在需要判断的节点单独调一次模型。</p>
+<h2 id="这套分工能搬回你自己的团队吗以及目前还不知道的事" data-reading-heading="">这套分工能搬回你自己的团队吗？以及目前还不知道的事</h2>
+<p>哪怕你和医疗没有半点关系，CVS
+的这个开源方案也已经给所有评估电脑操作代理的团队画好了选型阶梯。决定一个流程该留在结果确定性里还是编译回过程确定性，最管用的判断只有两条：单步操作有没有不可逆的外部副作用，以及每天执行的频次高不高。高频且有外部副作用的，坚决编译成零模型脚本；低频、允许重跑或者需要读懂复杂内容做判断的，才留给模型实时处理。按这个思路，面对一个跨系统自动化需求，最省心也最可靠的顺序是逐级往下退：</p>
+<p>能走官方 API 或插件的，优先走接口。</p>
+<p>接口有缺口但软件界面相对固定，让电脑操作代理先探路，再编译成确定性脚本，上线后零模型运行。</p>
+<p>流程里夹杂着文档理解或异常判断，用确定性代码跑完主干，只在判断节点调一次模型。</p>
+<p>只有拿不到界面控件、或者每次面对的页面都完全陌生时，才让纯视觉代理全程实时上场。</p>
+<p>回到医疗行业本身，这篇发布里还有几块关键拼图目前处于未知状态，下判断前需要留出余地。</p>
+<p>首先，CVS
+开源了方法论和工具包，但真实生产线的细节并没有完全公开。无论是 OpenAI
+的博客还是仓库，都没有透露周末清积压和每天数以万计的会诊操作步骤里，有多少流程已经编译成了零模型脚本，有多少还在靠视觉模型实时跑，也没有公布实际错误率与人工复核比例。</p>
+<p>其次，其他几家大客户的案例目前缺少独立检验。医保巨头 Cigna
+称从概念到部署不到 8 周，让原本需要翻 10
+多个系统汇总会员信息的工作在几秒内完成。医疗 AI 公司 Abridge
+在研发住院出院协调代理，同行 Ambience
+则演示了事前授权遇到病历信息模糊时自动停下来问医生。这些进展都还停留在厂商单方披露或演示阶段，没有像
+CVS 那样提供开源代码或第三方运行数据。</p>
+<p>最后，医院真正的门槛往往在技术之外。Becker’s
+Hospital Review 在 2026 年 9
+月采访了多位医院信息官，大家反复强调权限隔离和只读只是入门条件。上线后能否把每个结果逐条追溯到原始病历，以及能否监控模型升级后做事方式突然改变的风险，才是决定要不要放进核心临床流程的关键。而在
+Hacker News
+的技术讨论里，也有人点出了更长远的隐患：如果医院用代理批量填事前授权，保险公司用代理批量审事前授权，整个医疗行政体系可能演变成两端
+AI 代理的对抗。</p>
+<p>年初大家聊 AI
+工程，总觉得大方向是单向告别写死规则，全面转向只盯结果的代理循环。OpenAI
+把电脑操作代理带到医疗行业，跑在最前面的实践给出了更成熟的形态：在允许试错的测试和修复期用
+AI
+盯结果，在高频、容不得出错的生产期编译回写死的代码。以前昂贵难维护的界面自动化脚本，终于成了可以低成本生产和自动修复的代码资产。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/2185107f03a8fc617847bcec3be2c90f4b620119ea684e9f705eec54912e451f.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/2185107f03a8fc617847bcec3be2c90f4b620119ea684e9f705eec54912e451f.md" download="OpenAI 把电脑操作代理送进医疗生产环境，但 CVS
+的开源代码在跑生产时关掉了大模型.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=OpenAI" class="entity-link company-link">OpenAI</a>, <a href="/search/?q=CVS Health" class="entity-link company-link">CVS Health</a>, <a href="/search/?q=Google Cloud" class="entity-link company-link">Google Cloud</a>, <a href="/search/?q=Epic" class="entity-link company-link">Epic</a>, <a href="/search/?q=Oracle Health" class="entity-link company-link">Oracle Health</a>, <a href="/search/?q=Assort Health" class="entity-link company-link">Assort Health</a>, <a href="/search/?q=Athenahealth" class="entity-link company-link">Athenahealth</a>, <a href="/search/?q=Codex" class="entity-link company-link">Codex</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=GPT-6 Astra" class="entity-link product-link">GPT-6 Astra</a>, <a href="/search/?q=GPT-6 Luna" class="entity-link product-link">GPT-6 Luna</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+---
+author: AI Engineer
+date: '2026-10-22'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=_dTF3NpPzGo
+speaker: AI Engineer
+tags:
+  - creative-writing
+  - model-evaluation
+  - benchmark
+  - hallucination
+  - prompt-engineering
+title: 为什么 AI 写作依然充斥着“AI味”（Slop）：ToneBench 基准测试与破局之道
+summary: Towards AI 联合创始人 Louis-François Bouchard 深入探讨了大语言模型在写作中普遍存在的“AI味”（Slop）问题。他定义了 Slop 的六大核心特征，并推出全新开源评估基准 ToneBench，通过 9 项指标量化模型的语气还原度与写作质量，同时分享了构建长提示词、多草稿融合及利用高思考模型评审的高效低成本工作流。
+insight: ''
+draft: true
+series: ''
+category: ai-ml
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - Towards AI
+  - OpenAI
+  - Anthropic
+products_models:
+  - ToneBench
+  - GPT-4
+  - GLM-5.3 Flash
+  - Claude Opus
+media_books: []
+status: evergreen
+---
+### 什么是 AI 烂文（Slop）以及我们为何需要正视它
+
+今天我来这里是为了聊聊我们称之为“烂文”（Slop）的那些文字。更重要的是，我想尝试帮助解决 Karpathy 所说的、他认为会在 2026 年爆发的“Slop 启示录”（slop apocalypse）。我想我们已经在社交媒体上见识到了这一幕。因此，为了尝试解决并遏制 Slop，我们首先需要对它进行定义。
+
+<details>
+<summary>Original English</summary>
+
+So I'm here to talk about all these words that we call slop and more importantly I want to try to help fixing what Karpathy termed as the slop apocalypse that he thought would start in 2026. And I think we've seen that on social media. So, to try to fix this and to stop slop, we first need to define it.
+</details>
+
+那么，首先，什么是 Slop？业内各个专家给出了无数种不同的定义。但我认为大家都能达成共识的一点是：读到那种感觉是生成出来的内容，体验真的极其糟糕。
+
+<details>
+<summary>Original English</summary>
+
+So, first, what is slop? There are tons of different definitions from the various experts in the field. But what I think we can all agree is that it really sucks to read something that feels generated.
+</details>
+
+它通常长成这样，充斥着我们熟知的词汇，比如“深入探讨”（delve）、泛泛之谈以及诸如此类的东西。而主要的问题在于，即使模型随着像传闻中的 GPT-6.1 以及各种更优秀的模型而不断变强，Slop 似乎并没有消失，它只是在不断规模化扩张。所以看起来，我们需要的不仅仅是进一步训练模型。
+
+<details>
+<summary>Original English</summary>
+
+And it usually looks like this with the words that we know of the delve and the generidities and other things like these. And the main problem is that even as models get better with fable GPT 6.1 and all the better models slop doesn't seem to go away. It just keeps on scaling. So we need something different than just training the models more it seems.
+</details>
+
+### Slop 的六大特征与 ToneBench 的诞生
+
+我真的很想至少先定义一下什么是 Slop，这样我们才能理解它为什么会存在。在我看来，Slop 主要由六个方面构成：
+
+第一，充斥着语言模型过度使用、但我们在现实中基本不会用的词汇，比如大家熟知的“delve”。
+第二，内容通常过于宽泛。总是在谈论“大多数团队”、“大多数项目”，从不分享任何具体细节。我自己发 LinkedIn 时也犯过这毛病，不过我猜那是 LinkedIn 的调性（meta），所以在那里也算正常。
+更糟糕的是，第三，粗制滥造的文本往往言之无物。它只是一堆我们平时根本不怎么用的华丽词藻拼凑在一起。
+比这更糟的是第四点：它不仅言之无物，而且还大量重复。在重复空话的同时又极度泛化。
+再更糟糕的是第五点：它会产生幻觉。众所周知模型会有幻觉，所以这种低质文本我们根本无法完全信任。
+最后，也是在我看来最糟糕的第六点：它的语调通常是错的，或者说它毫无语气风格，同时听起来又像所有人的语气。它根本不像你本人在说话，也不会分享你真正会分享的内容。
+
+所以我今天以及通过我一直在做的这个项目的目标，首先是去量化衡量这种粗制滥造的写作，而不仅仅是统计 Slop 词汇。我不想重复造轮子去搞一个 EQ-Bench 的 Slop 得分。这完全是关乎如何衡量一篇文章到底有多“水”。
+
+<details>
+<summary>Original English</summary>
+
+And I really want to try to at least first define what slop is so that we can understand why it's there. And so to me, slop is made of six main thing. First, there are tons of overused words by language models that we don't really use like delve that we really know well. Second, it's usually too general. It's always talking about most teams, most projects. It doesn't share nothing specific. And I'm myself guilty of using that on LinkedIn as well, which I guess it's the LinkedIn meta, so it's normal there. And worse, sloppy text usually says nothing. It's just like nice words put together that we don't even usually use. And even worse than that, it says nothing, but it also repeats itself a lot. So it repeats nothing and it's too general. And even worse, it hallucinates. As we know, models hallucinate. So the sloppy text also we cannot really fully trust it. And lastly, the worst to me is that it usually has the wrong tone or at least it has no tone and like everyone's tone at the same time. So it just doesn't really talk like you. It doesn't share stuff that you would share. So my goal here today and with this project that I've been working on is to first measure this sloppy writing not just slop words. I don't want to rebuild EQbench slop score. It's really about measuring how sloppy is a writing.
+</details>
+
+为了做到这一点，我们今天正式发布一个名为 **ToneBench** 的全新基准测试。该基准的全部目标，就是衡量新模型或现有模型在创意写作方面的表现如何——稍后我也会尝试对其进行定义。
+
+今天的内容规划如下：首先论证我们到底需不需要另一个基准测试；接着介绍它的运作机制、评估指标以及构建流程；然后我会分享构建它的成本、我们的技术决策，以及从该基准中汲取的 AI 写作经验，并分享更多相关内容。那么，让我们“深入探讨”（delve in）吧。
+
+<details>
+<summary>Original English</summary>
+
+So in order to do that we are well today right now releasing a new benchmark that we called tone bench which the whole goal of the benchmark is to measure if the new models or models are good at creative writing which I will try to define as well. So here's the plan for today. The plan is to justify do we even need another benchmark then how it works what we measure what how we built it and I want to share like the cost of building it our decisions what we learned already from for writing with AI from the benchmark and share some more stuff about this so with that let's delve in.
+</details>
+
+### 我们真的需要一个新的写作基准吗？
+
+首先第一点：我们真的还需要又一个基准测试吗？只要看看 LinkedIn 以及 X 平台上的回复、我推文下的回复，我认为确实需要。人们正在铺天盖地刷屏生成出来的内容，至少得让这些内容质量过得去吧。
+
+更具体地说，我自己也确实非常需要它。在我的公司 Towards AI，我们是一个小团队，公司有一块业务专注于教育，我们制作了大量的教育内容，主要面向 AI 工程领域。作为一个小团队，显然我们也会使用 AI 来辅助创作。而不断去审阅这些充满 AI 味的烂文并试图修改它，体验极其令人抓狂。我们发布了数百个视频，发表了数千篇文章，出了一本书，目前正在写第二本关于 AI 工程的书。
+
+因此，我们迫切需要尽可能优秀的模型来帮助我们写得更好，而不是通篇充斥着 Slop。
+
+<details>
+<summary>Original English</summary>
+
+So the first first thing do we even need another benchmark again and just looking at LinkedIn and X replies my replies on X I think we do it's like people are spamming more and more generated content so at least have them be decently good and more precisely I also really need it a small team at towards my company and we have one side of the company that is focused on education we build tons of educational content mostly for AI engineering. And as a small team, obviously, we use AI as well for that. And it's been extremely annoying to review this slop constantly and try to fix it. We I published hundreds of videos. We published thousands of articles. We released a book. We are working on a second one for AI engineering. And so we really need to have the best models possible that will help us write better and not be full of slop.
+</details>
+
+另外一个令人欣慰的补充是，在构建这个基准的过程中，我一直在 X 上分享进展，获得了非常好的互动反响，大家似乎也印证了我们的确需要某种侧重于创意写作的基准测试。
+
+最后，为了证明我们团队确实适合来做这个基准：从读硕士、博士期间起，我就一直在做 AI 模型的评估工作；现在在 Towards AI，我们也为客户构建评估流水线。我们拥有 15 位 AI 工程师，团队中还配备了创意写作者和编辑。我们在日常内容产出中就已经具备这些能力，因此我想利用这一点来构建基准，以此更好地帮助社区。
+
+<details>
+<summary>Original English</summary>
+
+And another nice addition to that is that I've been sharing about this benchmark on on X for quite some time as I've been building it and it got really nice engagement and people seem to confirm that we did need some sort of more creative writing benchmark like this one. And lastly, just to prove that I think we are the right team to work on this benchmark, I've been evaluating AI models since my masters and then PhD and now at towards we do build evaluation pipelines for our clients. We have 15 AI engineers with us and we have creative writers, editors on board. So we already have that for our content. So I think I wanted to leverage that to build a benchmark and help the community even more.
+</details>
+
+### ToneBench 的评估机制与工作流
+
+那么，我们具体构建了什么？我希望尽可能多地分享细节，如果能帮大家构建自己的基准，或者仅仅分享我们的经验，我都非常乐意交流。
+
+我们构建的东西非常主观——它是一种衡量模型能否写得“像我”的方式。而我对这一点的定义是：如果我能像现在这样把它大声朗读出来，并且不会因为那些我自己根本不会用的词而感到尴尬抠脚（cringing）。
+
+<details>
+<summary>Original English</summary>
+
+So what did we build exactly? Hopefully I will try to share as much as possible and I'm happy to chat if we can help even build your own or if I can just share some of our learnings. So what we built is super subjective. It's a way to measure if a model can write like me. And how I define that is just that if I can read it out loud like right now without cringing because of the words that I wouldn't use myself.
+</details>
+
+基准测试的流程其实非常简单。我们准备了一个包含需求简报（brief）和调研材料（research）的提示词，发送给模型，期望它能完整生成一篇能代表我写作水平的视频脚本。显而易见，这种情况通常不会完美发生，生成的结果通常很糟糕，但这正是测试的核心目的所在。随后，我们根据评分标准准则（rubrics）以及整套评估流水线，对最终生成的脚本进行评测。
+
+<details>
+<summary>Original English</summary>
+
+So the process is very simple. The benchmark process is very simple. We have a prompt that is the brief and the research that we send to a model and hopefully it will generate entirely a video script that I could have written. Obviously that doesn't happen. It really sucks usually, but that's the whole goal. And we measure that final script against our rubrics and just our whole evaluation pipeline.
+</details>
+
+我们发送给基准中每个模型的提示词要深入详尽得多。它看起来大致是这样的：包含大量关于我平时如何说话、如何写作的细节，附带大量我以往视频内容的范例；包含许多关于通用叙事技巧、主动句式以及优质写作方法的指导；还包含关于当前任务具体生成什么以及如何生成的明确指示。模型最终会生成一份脚本。
+
+这只是其中一个任务。在当前的基准中，我们准备了 10 个不同的脚本任务，我们倾注心血将其打磨到极致。我们为它们建立了评分标准准则，以帮助大语言模型裁判（LLM judges）对这些生成结果进行打分。这 10 个脚本中，有一部分已经公开，一部分未公开；我们不会指明哪些包含在测试集中，以防数据污染。
+
+<details>
+<summary>Original English</summary>
+
+And the prompt that we send to every model in the benchmark is much more in-depth than that. It looks more like this where we have a lot of details on how I talk, how I write, all tons of examples of my previous content videos. We have a lot of information on storytelling in general, active sentences and just how to write well. And we have directions on what to generate and what to do for this current task which in the end the model would generate one script. And this is just one of them. In the current benchmark, we have 10 different scripts that we worked really hard to make as good as possible. And we built rubrics for them to help as we will see LLM judges rate these generations. So we have 10 different scripts. Some of them are published, some are not. We don't see which ones are the benchmarks so that we check for contamination as well.
+</details>
+
+那么我们拿这 10 个脚本做什么呢？我们选取市面上所有的模型，试图衡量它们的生成能力。这意味着针对每一个模型，我们都会将“从提示词生成文章”的流程重复 10 次。实际上，我们针对每个任务会生成 5 份脚本，我马上就会解释原因。然后，我们引入 4 位不同的大模型裁判对它们进行分析。最近我还加入了 Jev 进行测试，不确定后续是否会保留，但我加进去是为了观察它的表现效果。最终，我们计算出排行榜的总分。
+
+我将从左到右依次讲解这些步骤。首先，为什么每个任务要生成 5 份脚本？是为了检测**模型内部的变异性**（intramodel variability）。如果你在构建自己的评估系统，我强烈建议这样做。因为尤其在创意写作任务中，正如我们在 Grok 4.7 上看到的那样，有些生成样本属于异常值：在基准测试中，它仅仅在 5 次生成的其中一次里，表现得和 Claude Opus 5.5 一样优秀。因此我们必须把这种波动衡量进去。模型越差，方差往往越大。关于这一点我们总结了一些经验，最后会分享。综合考虑执行成本与方差衡量的准确性，我们发现生成 5 份草稿是一个很好的平衡点。
+
+<details>
+<summary>Original English</summary>
+
+And then what do we do with these 10 scripts? We take all the models out there and we try to measure their generations. What that means is that for every single model we will do 10 times this process generate the article from the prompt. In fact we generate five of them. I will very soon share why. Then we have four different LLM judges analyze them. I recently added Jev as a test. Not sure if I will keep that but yeah I added it just to see if it worked well. And then we calculate in the end a final score for the leaderboard. I will go through all of these steps from left to right. First, why do we generate even five scripts is to check for intramodel variability which I highly suggest if you are building your own evaluations because especially I guess on a creative task sometimes as we see here with gr 4.7 some of generations are outliers where it's as we see for from the benchmark it's just as good as opus 5.5 but on just one generation out of five. So we want to measure for that and the worse the model is the widest the variance. So we have some learnings about that that I'll share at the end as well. But yeah we found that five drafts seems to be the good middle ground in terms of of cost for us to execute and to measure this variability.
+</details>
+
+### 九大评估指标与提示词设计
+
+那么我们到底衡量什么？又该如何量化写作质量？这一直是个挑战，我们为此研究了相当长一段时间。目前这些内容在基准页面上全部开源公开，网站上也有更丰富的细节。
+
+具体而言，我们制定了详尽的 9 项指标，大体可以归纳为五个核心维度：
+1. **语调风格（Tone）**：听起来像我吗？即模型能否适应特定的语气？
+2. **纯粹写作质量（Pure writing quality）**：是否具有优质的开篇悬念（hooks）、良好的情绪起伏、流畅的情感转折，以及精彩故事所具备的各项要素？
+3. **指令遵循（Instruction following）**：是否遵循了预期篇幅与格式要求？是否在正确的位置插入了合适的图片与元素？
+4. **调研准确性（Research accuracy）**：每个脚本都配有一份调研简报，我们据此衡量模型是否存在幻觉，或者是否准确使用了材料。
+5. **烂文程度（Slop）**：结合 EQ-Bench 的 Slop 得分以及我们自研的量化方式进行测定。
+
+<details>
+<summary>Original English</summary>
+
+So what do we measure exactly and how do you even quantify writing quality? That's been the challenge and we worked on it for quite some time. Right now it's all open on the benchmark and there are way more details on the benchmark page as well. But what we measure is nine different metrics that we detailed that we really detailed. But I can condense them in five main aspects. First we measure the tone. So does it sound like me? Which means that like can the model adapt to a specific tone? Second, we measure just pure is it good writing? Does it have like good hooks, good emotion, emotional transition and all the aspects that we're looking in a in a good story? Then we measure if it follows instructions. Did it follow the the length, the expected length, the format expected? Did it put the right images and right right things in the right place? Fourth, we measure for research accuracy. So we have a research brief along with each script and we just measure if it hallucinated or used the research correctly. And lastly we measure for slop using eqbench slop score but also our own measurements.
+</details>
+
+从裁判模型接收到的输入来看，界面大致是这样的：针对每一项指标，我们都提供了约 1000 词的示例、说明与指引，连同待评估的脚本、供参考的我本人的原版脚本、需求简报和调研材料一并输入。总计下来，发送给每个裁判的提示词大约有 14,000 个 token，以此获取后续深入分析的反馈。裁判模型仅专注于评估写作质量，不关注篇幅长短，也完全不知道当前正在评估哪家模型的内容——篇幅和匿名统计由我们后续通过代码独立处理。
+
+以我们的核心指标“语调与声音”（Tone and Voice）为例，它包含对我语气风格极其细致的描述、预期标准以及评估方式。裁判首先在六个类别中进行定性归类，确定类别后再给出量化评分。对于这类更偏定性的任务，相比于通常建议的二元判断（是/否）、直接分类或直接打百分比，我们发现这种“先分类后评分”的机制效果极其出众。
+
+标准中包含了大量范例，阐明针对每个任务的不同分值在写作层面究竟代表什么。裁判返回的结果会针对 9 项不同指标逐一打分，并附带评分依据和具体例证，比如“因为这处特定范例而给出了该分数”。
+
+<details>
+<summary>Original English</summary>
+
+And what this looks in terms of what the judges see is more like that. We have around a thousand words of examples and instructions and directions around each of the metric that we have along with the script to analyze my own script as some sort of guidance and the brief and the research. So all in all it's a 14,000 prompt that we send to every judge to then get the feedback that we will dive in next. And so the judge just analyzes the writing quality. It doesn't focus on length and doesn't know which model is writing. We just do that after with code itself. On one metric like tone and voice which is our main metric. It looks a bit like this where we have a lot of detailed descriptions of what is my tone and what to expect and how to analyze this. Then the judge will categorize between six categories first and after having found a category it will give a rating. We found that this is the best way to measure for this more qualitative task from just binary that we usually suggest to use or directly categories or directly percentage. We found that this actually works really well and it has tons of examples of what each score means in terms of writing for each of the task. And what the judge sent back is something like this. It has the nine different metrics scored with a justification for for the score and an example of like I wrote this score because of this example in particular.
+</details>
+
+### LLM 裁判的偏见、人工评估与开发成本
+
+显而易见，这整个流程必须完全自动化。因为面对 120 个模型，每个模型在 10 个任务上各生成 5 份草稿，待审阅的脚本迅速累积到数千篇，我们不可能由人工亲自审阅全部内容。
+
+然而，大模型裁判的问题在于它们存在偏好偏见。部分模型更倾向于给自己打高分，事实上大多数模型都偏爱自己，特别是 OpenAI 的模型。在研究这个现象时我觉得很有意思：Anthropic 和 OpenAI 之间似乎在上演一场较量，它们仿佛经过了某种后训练调整，显得互相讨厌对方，这非常戏剧化。
+
+但这说明了一点：当你使用大模型担任裁判时（比如用 GPT 来评估哪家模型最适合你的业务场景），务必格外谨慎，必须交叉引入不同家族的模型进行评判。因为数据清晰地表明，OpenAI 对自家模型家族存在强烈的偏好，不仅是对单个模型，而是对所有 OpenAI 模型普遍偏爱。
+
+<details>
+<summary>Original English</summary>
+
+But the main thing is that all of this is automated obviously because we with 120 models we generate five drafts each for 10 tasks. It quickly goes to the thousands of scripts to review. So we cannot really review this ourselves. And the problem with LLM judges is that they have preferences. Some models prefer themselves. Most models prefer themselves. And particularly OpenAI. And what I found quite funny when studying this is that it seems like Anthropic and OpenAI are really in a in a war here where they seem to have post training on hating each other which is quite funny. But all this to say that you really want to check for when you have when you use LLM judges like using GPT for instance if you want to know which model is best for your task be careful and use different model family just to ensure because we see here that OpenAI really has a strong preference on its own family of models not just one model but all OpenAI models.
+</details>
+
+为了弥补这一偏差，我们采纳了 X 上一些网友的建议——在创意任务中引入人类评估。这固然最理想，但执行起来成本极高。我们依然尝试以可扩展的方式进行了初步实践：目前我与三位团队成员手动对比了 1,100 组生成脚本的 A/B 样本对。我们比对的不是完整脚本，而是两份生成内容中具有可比性的核心片段。未来我们希望扩大这一规模，并打算公开这套数据以获取社区协助，不过目前尚在推进中。
+
+那么，这个项目的成本和背后的工作量到底有多大？对我们团队来说，前期的启动耗时约为 500 个工时，用于编写 10 套基准脚本、定义所有评分准则、寻找范例以及探索如何量化写作质量——这本身就极具挑战性。
+
+随后整整四个月，我个人使用 4 个不同的 20 倍额度账号不断迭代构建基准、进行各项实验、调整指标权重配比等，在这一块就花费了数千美元。
+
+如果你也想搭建类似的基准测试，需要清楚其成本非常高昂。在当前架构下，如果我仅仅修改评分准则中的一处设定（即改变裁判评估生成内容的方式），重新跑一轮就要花费超过 2,000 美元；而如果仅仅在模型生成的输入提示词中修改一行，成本更会超过 4,000 美元。因此，在提示词工程中进行调整和试错是极其昂贵的，操作时必须格外审慎。
+
+<details>
+<summary>Original English</summary>
+
+and so to fix also for that we listen to a few comments that I got on X suggesting to use human for a creative task which would be ideal but quite impractical. We still tried to to do that in a scalable way where right now we compared manually me and three of my teammates 1,100 AB pairs of the generated scripts not the full scripts but like a good chunks that is comparable between two scripts two generations and hopefully we'll do more and I want to publicize this also for to get help from the community in the future but that's not right now. So what did it cost us and what's the workload behind that? For me, for us, it was a kickoff cost in terms of hours of around 500 hours to build the 10 scripts, define all the rubrics, find the examples, try to quantify quality, which is very difficult. And then I just iterated myself with four different 20x subscription for four months to build the benchmark and all the other things and experiment and change the the matrix ratio and all these things. And so we just spent thousands of dollars there. And if you want to do this a similar type of benchmark you need to know that it cost quite a lot. But right now, if I just change one thing in the rubric, so how the judge rate generations, it would cost us two more than $2,000. And if I just change one line in an input prompt for a model when it generates, it cost us more than $4,000. So it's very very expensive to experiment and change these things in the prompt. So you want to do this carefully.
+</details>
+
+### AI 写作核心洞见与最佳实践工作流
+
+现在，我们能从 ToneBench 中获得哪些洞察？网站上提供了详尽的数据图表，但重点在于，我想分享过去四个月里我学到的最关键认知：**在创意写作中，不要指望挑选一个能够“单次直接生成神作”（one-shot amazing post）的模型**。你的目标应该是找到那个**能以最小心智负担助你达成预期效果的模型**。短时间内我认为不会出现完美的一步到位方案。
+
+反映在当前的基准测试中，这意味着在大规模应用场景下，**GLM-5.3 Flash** 表现极佳且成本极其低廉，它的价格比榜首的 Claude Opus 5.5 Extra High 便宜 50 倍；而后者虽然性能拔尖，但在写作任务上，其高思考模式（Extra High）比常规极限思考档位便宜 2.5 倍却能达到相同的效果。所以在日常写作中，你通常无需开启最高思考预算。
+
+<details>
+<summary>Original English</summary>
+
+Now what can we get out of this benchmark out of tone bench? You can get tons of things on the website itself there's like a lot of details but importantly I want to share that what I've learned from the past four months is that you don't want to pick for for creative writing is that you don't want to pick the model that will generate a one-shot amazing post. You just want to find the model that will be the least annoying to you to get to where you want to be. So like there won't be any perfection anytime soon I think and what that means right now on the benchmark it means at scale GLM 5.3 flash is extremely good extremely cheap it's 50 times cheaper than the best one which is opus 5.5 extra high which is 2.5 times cheaper than max thinking but with same results so you don't want to use max for writing usually.
+</details>
+
+此外，关于如何更好地利用大模型进行写作，我们总结出了以下几条最佳实践：
+
+**第一，提供极其冗长、巨细靡遗的提示词。** 提示词再长也不为过，越详尽越好。凡是你能想到的正面范例——应该写什么、该怎么写，统统加进去；反面范例亦是如此——列出所有你不喜欢的表述、听起来不对劲的语气、严禁使用的词汇。如果你平时写通讯简报（Newsletter）或其他文章，不妨直接把全文放进去作为参考样本，生成质量会大幅提升。
+
+**第二，引入高思考（high-thinking）模型担任单次审阅裁判，能带来质的飞跃。** 但要注意：**审阅只需进行 1 到 3 轮，绝不能无限循环，否则生成物又会迅速堕落回充满套话的 Slop**。让另一个具有深度推理能力的模型基于相同的指令与方向进行单次评审，并将反馈提供给写作模型——虽然我手头没有精确的量化对比数据，但经验表明这种协作提升巨大。
+
+**第三，面向企业 API 规模化生产的推荐流水线：**
+如果你需要在大规模调用下获得最优性价比，我建议采用分步策略：
+1. 先使用成本极低的模型（如 GLM-5.3 Flash）针对同一主题生成多份草稿（例如 10 份）。
+2. 随后调用更智能的高思考模型（如 Claude Opus 等），让它通读所有草稿，挑选并融合成各个草稿中的精华部分。
+从我们的测试来看，这种组合策略的综合开销远低于直接单次调用 Claude Opus 5.5 生成，且最终质量明显更高。
+
+最后，**人工审阅不可或缺**，这一步无论如何都绕不过去。
+
+当然，ToneBench 衡量的是模型模仿我个人口吻的能力，具有高度的主观性，它只是一个参考数据点，大家不要盲目迷信，这并不代表 Opus 5.5 对所有人而言就是唯一真理模型。但总体而言，它提供了一个强有力的选型信号，帮助我们分辨哪些模型擅长写作、哪些模型更少产生无意义的套话废话。
+
+我建议大家着手搭建属于自己的评估流水线。如果需要帮助，随时欢迎交流探讨。目前 ToneBench 已经正式上线发布，网站上包含大量的图表、深度洞察、模型横向对比以及完整的方法论实现细节。欢迎大家前去体验，希望对各位有所启发。谢谢大家！
+
+<details>
+<summary>Original English</summary>
+
+And otherwise for the best how to write with models that we got out of this is to first have an extremely long and detailed prompt. It cannot be long enough and the more the better. You want to add every example you can think of of what to do and how to do it. Same thing for negative examples of things you don't like and that doesn't sound right. The words you don't want everything you can share every if you write newsletters or whatever you can share it in full and it will just be better as well. And what we've seen that really really helps is to use a highinking judge just one time one to three times otherwise it will loop into slap so just one review of another model with the same instructions directions that will give feedback to the writer really like I don't quantitative metrics on that but it helps a lot. And for a company if you work with APIs and want to do this at have the best results at scale possible what I suggest is to generate several drafts like 10 drafts of one specific thing with a cheaper model like GLM 5.3 flash and then have a smarter highinking judge like Opus or whatever you want pick and merge the best parts of each of this these drafts which I think will still land way way less expensive than just one generation by Opus 5.5 and I think will lead to better results from what I've seen. And lastly you want a human review you cannot really go around that but all of this benchmark measures obviously my voice so it's super subjective but I and it's just one data point you don't want to fully trust it blindly doesn't mean Opus 5.5 is the model. So, but ideally it's a strong signal to find which model is good at writing and which is less sloppy. Um, you I suggest you to build your own evaluation pipelines. If you want, we can help. You can chat or reach out. And regarding the benchmark, it's live. We just like right now published it and released it. So there are tons of graphs, tons of insights, tons of comparisons and details on the implementation full methodology. So just check it out and hopefully it's useful. Thank you.
+</details>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>近处保真、远处有损：三种长上下文方法背后的同一个直觉</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">近处保真、远处有损：三种长上下文方法背后的同一个直觉</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-08-25</span>
+    
+
+    <header class="article-header">
+      
+      <h1>近处保真、远处有损：三种长上下文方法背后的同一个直觉</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/long-context/">long-context</a>
+      
+        <a class="tag-link" href="/tags/context-window/">context-window</a>
+      
+        <a class="tag-link" href="/tags/llm-inference/">llm-inference</a>
+      
+        <span class="tag-pill tag-pill--no-page">context-compression</span>
+      
+        <a class="tag-link" href="/tags/attention-mechanism/">attention-mechanism</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">文章探讨了在处理长上下文（如超长代码、财务文档）时，模型推理中面临的显存和算力瓶颈，并提出了三种技术路径：坐标层（如YaRN改造位置编码）、信息通路层（如DeepSeek V4的混合注意力架构）、输入表示层（如DeepSeek-OCR的光学压缩）。这三种方法都基于一个核心直觉：计算资源有限，应将最高精度保留给近处（焦点），而对远处（背景）信息进行有损压缩。文章还讨论了在压缩和选择之后如何解决位置感混乱的问题，提出了双轨独立标尺、文档级坐标重置和架构自带位置感知等新解法，指出位置感知能力正从外部坐标微调转向模型内部机制。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/long-context-layering-yarn-v4-20260825.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-08-25T00:00:00.000Z">2026-08-25</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>13 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#context-%E6%98%AF-inference">Context 是 inference</a></li><li class="outline-h2"><a href="#%E4%B8%80%E4%B8%AA%E5%8F%A4%E8%80%81%E7%9B%B4%E8%A7%89%E8%BF%91%E5%A4%84%E4%BF%9D%E7%9C%9F%E8%BF%9C%E5%A4%84%E6%9C%89%E6%8D%9F">一个古老直觉：近处保真、远处有损</a></li><li class="outline-h2"><a href="#%E5%9D%90%E6%A0%87%E5%B1%82%E4%BB%8E-rope-%E5%88%B0-yarn">坐标层：从 RoPE 到 YaRN</a><ol><li class="outline-h3"><a href="#%E7%93%B6%E9%A2%88%E4%B8%8E%E6%97%A2%E6%9C%89%E6%96%B9%E6%A1%88">瓶颈与既有方案</a></li><li class="outline-h3"><a href="#%E5%88%9B%E6%96%B0%E8%A7%A3%E6%B3%95">创新解法</a></li></ol></li><li class="outline-h2"><a href="#%E4%BF%A1%E6%81%AF%E9%80%9A%E8%B7%AF%E5%B1%82%E4%BB%8E-mla-%E5%88%B0-deepseek">信息通路层：从 MLA 到 DeepSeek</a><ol><li class="outline-h3"><a href="#%E7%93%B6%E9%A2%88%E4%B8%8E%E6%97%A2%E6%9C%89%E6%96%B9%E6%A1%88-1">瓶颈与既有方案</a></li><li class="outline-h3"><a href="#%E5%88%9B%E6%96%B0%E8%A7%A3%E6%B3%95-1">创新解法</a></li></ol></li><li class="outline-h2"><a href="#%E8%BE%93%E5%85%A5%E8%A1%A8%E7%A4%BA%E5%B1%82deepseek-ocr">输入表示层：DeepSeek-OCR</a><ol><li class="outline-h3"><a href="#%E7%93%B6%E9%A2%88%E4%B8%8E%E6%97%A2%E6%9C%89%E6%96%B9%E6%A1%88-2">瓶颈与既有方案</a></li><li class="outline-h3"><a href="#%E5%88%9B%E6%96%B0%E8%A7%A3%E6%B3%95-2">创新解法</a></li></ol></li><li class="outline-h2"><a href="#%E5%90%8C%E6%9E%84%E5%90%8C%E4%B8%80%E5%85%88%E9%AA%8C%E4%B8%89%E5%B1%82%E7%8B%AC%E7%AB%8B%E6%94%B6%E6%95%9B">同构：同一先验，三层独立收敛</a></li><li class="outline-h2"><a href="#%E6%96%B0%E9%9A%BE%E9%A2%98%E5%8E%8B%E7%BC%A9%E9%80%89%E6%8B%A9%E4%B9%8B%E5%90%8E%E4%BD%8D%E7%BD%AE%E6%80%8E%E4%B9%88%E5%8A%9E">新难题：压缩/选择之后，位置怎么办</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h2 id="context-是-inference" data-reading-heading="">Context 是 inference</h2>
+<p>的生命线</p>
+<p>在大语言模型的推理过程中，上下文窗口是模型的工作记忆。模型在单次推理中能看到多少内容、以多高的清晰度看到这些内容，直接决定了它能完成什么任务。无论是跨越数千行代码的调用链路排查、多步骤自主
+agent
+的状态维系，还是数百页财务文档的交叉比对，所有推理能力都建立在上下文之上。</p>
+<p>然而，一旦试图把上下文拉长，工程实现最先撞上的瓶颈是显存装不下、算力算不动。这其中最主要的拦路虎，是模型在显存里留下的
+KV cache，也就是那份工作草稿。推理时，上下文里的每个
+token，都需要模型实时记录一份供注意力调用的键值状态。这份草稿的大小取决于模型的层数、KV
+头数、头维度和存储精度。</p>
+<p>以 70B 规模的大模型（如 Llama-3-70B）为例：处理 100 万
+token（1M）的超长上下文，按 FP16 计算，光是保存这份工作草稿，就要吃掉约
+327 GB 显存。这已经远超单张高端显卡的物理容量。而且这 327 GB
+只是草稿本身的体积，还没算上模型自身的权重参数，以及随文本长度呈平方级暴涨的注意力计算量。为了跨过这堵由显存与算力构成的物理墙，工程界涌现出许多探索。梳理目前验证有效的三种主流路径，你会发现它们分别在模型技术栈的三个不同层次发力：</p>
+<p>坐标层：以 YaRN 为代表，改造位置坐标的标尺，让原本只能看短距离的模型能量出更远的距离，同时不破坏近处词句的分辨力。</p>
+<p>信息通路层：以 DeepSeek V4 为代表，改造注意力机制的计算通路，近处维持全保真计算，远处采用重度压缩与挑重点精看。</p>
+<p>输入表示层：以 DeepSeek-OCR 为代表，在信息输入模型之前，把整页长文本压缩成高密度的二维视觉图景。</p>
+<p>这三套方案来自不同的研究团队，处理着不同形态的输入。但它们背后支撑整个工程设计的，是同一个古老的直觉。</p>
+<h2 id="一个古老直觉近处保真远处有损" data-reading-heading="">一个古老直觉：近处保真、远处有损</h2>
+<p>这个直觉在计算机科学与认知科学中存在已久。在三维图形渲染中，工程师早就确立了多级纹理（mipmap）与细节层次（LOD）机制。距离摄像机较近的物体，使用数万面多边形和高清贴图完整渲染；而远在地平线上的山峦与树木，则自动切换为简化的粗糙网格与模糊贴图。对远景像素分配与近景相同的算力，是对渲染资源的浪费。在人类视觉系统中，视网膜中央凹只为视野中心约
+2
+度的狭窄范围提供高分辨率、高色彩敏锐度的视觉；视野边缘的余光成像则是模糊且粗粒度的，主要负责感知动态与大致轮廓。</p>
+<p>人类的记忆机制同样遵循这一规律。几分钟前对话里的具体用词、语气助词可以清晰回忆；而五年前的一场会议，大脑通常只保留几个核心结论和结构框架，记忆压缩早已把细节有损过滤掉。</p>
+<p>这些机制指向同一个先验：计算资源与存储预算有限，对所有距离的信息施加等同精度是最浪费的做法。最合理的资源分配策略，是将最高精度留给近处与关键焦点，对远距离或背景信息进行有损压缩。目前在长上下文工程中取得突破的三种方法，正是这一先验在模型技术栈三个不同层面的独立工程落地。</p>
+<h2 id="坐标层从-rope-到-yarn" data-reading-heading="">坐标层：从 RoPE 到 YaRN</h2>
+<h3 id="瓶颈与既有方案" data-reading-heading="">瓶颈与既有方案</h3>
+<p>Transformer
+本身不知道词的先后顺序，必须额外告诉它每个词在第几个位置。旋转位置编码（RoPE，出自苏剑林等人
+2021 年论文 arXiv:2104.09864）把向量在空间里按位置旋转特定角度，让模型通过相对距离判断词与词的关联。不同维度分配了不同的旋转快慢：转得快的维度负责分辨相邻的词，捕捉短语与语法细节；转得慢的维度负责把握跨段落的宏观位置。这种快慢分工在训练前就由
+RoPE
+按几何级数定好，属于写死的规则。因为模型的权重全程是带着这套固定旋转一起训练的，它在优化过程中自然学会了读快维度抓局部细节、读慢维度判远距离。</p>
+<p>RoPE
+具备相对位置感知、旋转不改变向量长度、无需查表三大特性，已成为主流大模型的行业标准（LLaMA、Mistral、Qwen、Gemma、DeepSeek
+普遍采用，Semantic Scholar 统计引用已达 6184 次）。但 RoPE
+的旋转快慢是在固定的训练长度里标定的。如果直接把超出训练长度的长文本喂给模型，超范围的位置旋转角度会让整把标尺失真，模型输出会迅速崩溃。</p>
+<p>最初的扩展尝试是位置插值。这相当于把整把尺子的刻度等比例拉长：要把上下文扩大
+4 倍，就把所有维度的旋转快慢统一放慢 4 倍。</p>
+<p>这种全局统一拉伸的问题在于忽视了不同维度的分工。转得慢的维度确实回到了可读区间，但负责近处精细语法、转得快的维度也跟着拉长，近处词与词之间的细微距离感随之消失，模型处理普通短文本的基础语言能力显著下滑。</p>
+<h3 id="创新解法" data-reading-heading="">创新解法</h3>
+<p>2023 年，Nous Research、EleutherAI 与日内瓦大学的研究者提出了
+YaRN（arXiv:2309.00071）。它针对的是位置插值破坏近处分辨力的问题。核心机制叫
+NTK-by-parts，也就是分频处理，把尺子上的刻度分段对待：</p>
+<p>高频维度：波长短的部分完全不拉伸，保留全部近距离的精细刻度。</p>
+<p>低频维度：波长长的部分按扩展倍数完全压缩插值，让远距离坐标重新落在模型的认知范围里。</p>
+<p>中频维度：介于两者之间的过渡部分，采用平滑曲线连接。</p>
+<p>此外，坐标拉伸会导致注意力分布发散，模型难以聚焦。YaRN
+引入了注意力温度补偿，用温度系数重新收紧注意力的聚焦程度。</p>
+<p>实验表明，YaRN 让 Llama 2 7B 仅消耗约 384 个 A100 GPU 小时、经过
+400+200 步微调，就成功将上下文扩展至 128K；在 128K 长度的 passkey
+检索测试中达到 99.4% 准确率，短上下文性能衰退低于
+1%。相比纯位置插值，YaRN 节省了约 10 倍的训练 token。</p>
+<p>这一分频缩放策略已成为坐标层扩展的标准手段。Llama 3.1 128K
+配置文件中的 llama3
+位置编码，底层就是分频阈值处理；Qwen2/2.5 以及开源模型
+gpt-oss-20b（配置明确指定 rope_type "yarn"，扩展因子
+32）都采用了相同思路。</p>
+<p>YaRN
+在坐标层做的事直截了当：近处的细刻度不动，远处的粗刻度压缩。这正是近处保真、远处有损这一直觉在坐标层的落地。</p>
+<h2 id="信息通路层从-mla-到-deepseek" data-reading-heading="">信息通路层：从 MLA 到 DeepSeek</h2>
+<p>V4</p>
+<h3 id="瓶颈与既有方案-1" data-reading-heading="">瓶颈与既有方案</h3>
+<p>坐标层解决了位置标尺的度量问题，但跨不过前面提到的显存墙：以 70B
+模型为例，单条百万 token 序列的工作草稿就要吃掉 327
+GB，硬件集群难以承受。模型处理长上下文时，注意力要反复读写不断累积的历史信息，也就是
+KV
+cache：既要回读过去，又要写入当前。在标准多头注意力（MHA）中，每个注意力头各存一份完整的
+Key 和
+Value，历史信息的总量随头数成倍膨胀。后来的多查询注意力（MQA）和分组查询注意力（GQA）让多个头共用同一份历史，省了显存，但每个头能读到的信息只能变粗，妥协了表达能力。</p>
+<p>针对这种两难，DeepSeek 在 DeepSeek-V2（arXiv:2405.04434）中提出了多头潜在注意力（MLA）：不再逐字保存每个头各一份的完整历史，而是把要存的信息压缩成一份大家共享的紧凑摘要，各头需要时再从摘要里还原。这一设计让
+KV cache 显存直接节省了 93.3%，同时表达能力甚至超过了标准
+MHA。为了让压缩摘要不受位置信息的干扰，模型单独拆出一条 64
+维的独立通道（解耦 key），专门用来承载 RoPE 旋转位置编码。（MLA
+机制另有一篇更通俗的讲解，见这里）</p>
+<h3 id="创新解法-1" data-reading-heading="">创新解法</h3>
+<p>到了支持 100 万 token 上下文的 DeepSeek-V4（arXiv:2606.19348，2026-04），显存墙已经被
+MLA 大幅压缩。但计算量是另一回事：要让每个 token 与前面 100 万个历史
+token 逐一计算注意力，依然难以承受。DeepSeek-V4
+进而在计算通路层面重构了注意力机制，采用混合注意力架构：</p>
+<p>局部滑动窗口：每一层保留 128 个 token 的局部滑动窗口。近处的上下文全部进入无压缩、高保真的完整注意力计算。</p>
+<p>重度压缩注意力（HCA）与压缩稀疏注意力（CSA）混合：在 128 个 token 窗口之外的远距离历史中，模型交替使用两种机制。HCA 把远距离历史大幅压缩成粗粒度的背景信息；CSA 则利用轻量索引器快速扫描前缀序列，从中挑出 top-k 个最相关的关键点，只对关键点做高精度的重点计算。</p>
+<p>这就像人的视觉观察：眼前正在读的 128
+个词看得一清二楚；远处的整本大书先整体打成模糊背景（HCA），一旦发现某几个段落跟当前问题高度相关，再把那几处放大精读（CSA）。在参数量
+1.6T（激活参数 49B）的 DeepSeek-V4-Pro 上，这种混合通路架构在 1M
+上下文下将单 token 推理 FLOPs 降至 V3.2 的 27%，将 KV cache 显存降至
+V3.2 的 10%。</p>
+<p>信息通路层的取舍正是全文核心直觉的落地：在有限的物理预算下，近处保真、远处有损。近处的
+128 个 token
+维持全保真通路，远距离历史则靠整体压缩与重点挑选来换取效率。（DeepSeek
+V4 在 agentic 场景的工程整合，见这篇）</p>
+<h2 id="输入表示层deepseek-ocr" data-reading-heading="">输入表示层：DeepSeek-OCR</h2>
+<p>的光学压缩</p>
+<h3 id="瓶颈与既有方案-2" data-reading-heading="">瓶颈与既有方案</h3>
+<p>真实业务中的长上下文，往往来自成百上千页的
+PDF、研报、合同或扫描件。如果把这些文档逐字转录为普通的文本 token
+喂给大模型，不仅消耗庞大的 token
+预算，还会丢失文档原有的版面结构、表格嵌套与排版层级。模型需要理解整份文档，但
+token 吞吐预算有限。现有的文档解析与多模态输入方案面临两难：</p>
+<p>粗粒度的视觉压缩方案（如 GOT-OCR2.0）将每页纸统一压缩至 256 个视觉 token 左右。面对复杂版面或高密度小字，信息丢失严重。</p>
+<p>细粒度的逐字转录方案（如 MinerU2.0）平均每页会产生 6000 个以上的文本 token。几十页文档就会迅速填满模型的上下文窗口，长文档的全篇分析成本随之居高不下。</p>
+<h3 id="创新解法-2" data-reading-heading="">创新解法</h3>
+<p>2025 年 10 月，研究人员发布了 DeepSeek-OCR（arXiv:2510.18234），提出
+Contexts Optical Compression 方法，即光学 2D
+压缩。它的直觉就像给整页文档拍一张高密度的语义缩略图。大模型直接读取压缩后的二维视觉图景，跳过了逐字解析一维文本流的开销。DeepSeek-OCR
+包含两个核心组件： 1.
+DeepEncoder：图像编码器。处理高分辨率输入图像时保持较低显存开销，以高压缩比将整页或整段长文本压缩为数量可控的高密度视觉
+token。 2. DeepSeek3B-MoE-A570M
+解码器：从这些压缩后的视觉 token 中读回文字内容与排版结构。</p>
+<p>论文展示了清晰的压缩比与还原精度权衡关系。压缩比越高，省下的 token
+越多，但还原精度随之下降。具体数据如下： - 原始文本 token 数量在视觉
+token 数量的 10 倍以内（压缩比低于 10 倍），文字还原准确率达到 97%。 -
+压缩比激进提升到 20 倍，还原准确率仍维持在约 60%。</p>
+<p>在 OmniDocBench 基准测试中，DeepSeek-OCR 仅用 100 个视觉 token
+就超过了消耗 256 个 token 的 GOT-OCR2.0；用不到 800 个视觉 token
+便超越了平均每页消耗 6000 多个 token 的
+MinerU2.0。在实际生产环境中，单张 A100-40G 显卡每天可处理生成超过 20
+万页的训练数据。</p>
+<p>DeepSeek-OCR
+论文明确指出，这项工作的目标在于探索大语言模型中的历史长上下文压缩与主动遗忘机制。论文设想把当前的焦点维持在最高精度，让历史文档以密集视觉
+token
+的形式留在背景记忆中。输入表示层同样是这一直觉的落地：当前焦点页面维持最高精度，历史文档则以有损压缩的视觉
+token 留在背景里。</p>
+<h2 id="同构同一先验三层独立收敛" data-reading-heading="">同构：同一先验，三层独立收敛</h2>
+<p>将这三种方法放在一起观察，可以看到它们在技术栈不同层次上的清晰对照。三者的差异集中在代表方案、作用机制，以及近处与远处各自的处理方式。下表逐层列出：</p>
+<p>技术层级</p>
+<p>代表方案</p>
+<p>作用机制</p>
+<p>近处/焦点处理</p>
+<p>远处/背景处理</p>
+<p>解决的核心瓶颈</p>
+<p>坐标层</p>
+<p>YaRN</p>
+<p>改造位置编码的旋转频率</p>
+<p>高频刻度不拉伸，保持近处精细分辨力</p>
+<p>低频刻度完全插值，平滑过渡</p>
+<p>坐标系外推失真与短文本性能退化</p>
+<p>信息通路层</p>
+<p>DeepSeek V4</p>
+<p>改造注意力前向计算通道</p>
+<p>128-token 滑动窗口保持全保真计算</p>
+<p>远距离重度压缩（HCA）与重点挑选（CSA）</p>
+<p>KV cache 显存墙与计算量二次方爆炸</p>
+<p>输入表示层</p>
+<p>DeepSeek-OCR</p>
+<p>改造进入模型前的原始输入</p>
+<p>当前焦点页面高保真解析</p>
+<p>整页文档压缩为少量高密度视觉 token</p>
+<p>长文档 token 数量过大与排版信息丢失</p>
+<p>坐标层、通路层、输入层三种方案用同一句古老直觉独立收敛，近处保真、远处有损，三者不是继承关系</p>
+<p>这三者之间没有技术继承或移植关系。YaRN 出自 Nous Research、EleutherAI
+与日内瓦大学研究者对位置标尺数学性质的探索；DeepSeek V4
+是模型架构团队在显卡显存极限上做出的计算通路重构；DeepSeek-OCR
+则是从光学图像与文档排版切入的输入重构。</p>
+<p>它们由不同的团队在不同时间提出，面对的是不同的物理瓶颈。之所以展现出高度一致的结构同构，是因为它们在各自的技术层级上，独立收敛到了同一个工程直觉：在有限的物理预算下，近处必须保真，远处允许有损。</p>
+<h2 id="新难题压缩选择之后位置怎么办" data-reading-heading="">新难题：压缩/选择之后，位置怎么办</h2>
+<p>工程实现从无差别的全量计算走向分层压缩与重点挑选，一个新的技术难题随之出现：位置感混乱。在传统的完整计算中，所有
+token 按顺序排列，先后关系清楚连贯。一旦做稀疏挑选（比如像 CSA
+那样从前缀中挑出几个关键
+token）或者把多篇文档拼在一起，挑出来的词就失去了原本连贯的物理间距。模型如果直接计算相对位置，很容易把相隔数千个词、只是碰巧一起入选的两个词，误判为紧挨着的相邻词。为了在压缩与挑选之后维持准确的位置感，近期的技术方案发展出了不同的解法：</p>
+<p>双轨独立标尺：在 DeepSeek-V3.2（arXiv:2512.02556）提出的 DSA（DeepSeek Sparse Attention）中，负责挑选 token 的轻量索引器单独维护了一套自己的位置标尺，与主注意力机制中使用的标尺彻底分开。挑选阶段与精算阶段各自拥有独立的几何坐标系，互不干扰。</p>
+<p>文档级坐标重置：在 EverMind AI 开源的 Memory-Sparse Attention（MSA）中，引入了 document-wise RoPE 文档级位置编码。在长文本拼接场景下，每个子文档内部的位置坐标均从 0 开始重新计数。这一设计避免了从短文本训练外推至超长上下文时的坐标漂移，使模型在 16K 至 1 亿 token（100M）的测试范围内，性能退化低于 9%。（MSA 的完整调研，见这篇）</p>
+<p>架构自带位置感知：Moonshot AI 在 2026 年 7 月发布的 Kimi K3 技术报告中展示了更激进的做法。K3 采用了 69 层递归架构 KDA（Kimi Delta Attention）与 24 层门控 MLA 混合的结构。其全部 MLA 层完全去掉了位置编码（NoPE），序列先后顺序由 KDA 的递归门控与自然衰减机制在架构内部承载。K3 技术报告明确指出，这种设计正是为了避免微调 RoPE 基频或套用 YaRN 等外置标尺修正，原生支持了 100 万 token 的长上下文。</p>
+<p>位置建模从外部坐标微调退守为补充手段，转向由选择机制或递归架构内部承载</p>
+<p>从这三条路径可以看出，位置感知能力正越来越多地由模型内部承载：要么嵌入稀疏挑选的专用索引器，要么交给递归架构的门控与自然衰减。随着序列长度向百万乃至千万级推进，单纯在外部坐标尺子上做拉伸调整，已经难以应对显存装不下与计算量暴涨的根本瓶颈，基于
+RoPE 基频微调与 YaRN
+的坐标层修正，正在从长上下文竞争的主战场逐渐退守为补充手段。</p>
+<p>不论工程实现如何从外部坐标变换迁移到内部计算通路，再迁移到前端输入表示，其背后的技术内核始终未变。在算力与显存预算受限的物理世界中，近处高保真、远处有损压缩，依然是构建超长上下文智能系统稳固而有效的直觉支撑。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/e0516dcca3b9aaf6ab453d8682739321bc808c315752aa8d2a338663d71b2cb4.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/e0516dcca3b9aaf6ab453d8682739321bc808c315752aa8d2a338663d71b2cb4.md" download="近处保真、远处有损：三种长上下文方法背后的同一个直觉.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Nous Research" class="entity-link company-link">Nous Research</a>, <a href="/search/?q=EleutherAI" class="entity-link company-link">EleutherAI</a>, <a href="/search/?q=DeepSeek" class="entity-link company-link">DeepSeek</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Llama-3-70B" class="entity-link product-link">Llama-3-70B</a>, <a href="/search/?q=DeepSeek V4" class="entity-link product-link">DeepSeek V4</a>, <a href="/search/?q=DeepSeek-OCR" class="entity-link product-link">DeepSeek-OCR</a>, <a href="/search/?q=Llama 2 7B" class="entity-link product-link">Llama 2 7B</a>, <a href="/search/?q=Qwen2/2.5" class="entity-link product-link">Qwen2/2.5</a>, <a href="/search/?q=gpt-oss-20b" class="entity-link product-link">gpt-oss-20b</a>, <a href="/search/?q=DeepSeek-V4-Pro" class="entity-link product-link">DeepSeek-V4-Pro</a>, <a href="/search/?q=DeepSeek-V3.2" class="entity-link product-link">DeepSeek-V3.2</a>, <a href="/search/?q=EverMind AI" class="entity-link product-link">EverMind AI</a>, <a href="/search/?q=Kimi K3" class="entity-link product-link">Kimi K3</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

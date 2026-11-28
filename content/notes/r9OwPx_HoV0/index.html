@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>分块并未死去：多尺度索引与检索融合</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">分块并未死去：多尺度索引与检索融合</span>
+      <span data-pagefind-meta="speaker" style="display:none;">AI Engineer</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>AI Engineer</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-09-16</span>
+    
+
+    <header class="article-header">
+      
+      <h1>分块并未死去：多尺度索引与检索融合</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <span class="tag-pill tag-pill--no-page">chunking</span>
+      
+        <span class="tag-pill tag-pill--no-page">retrieval</span>
+      
+        <a class="tag-link" href="/tags/rag/">rag</a>
+      
+        <span class="tag-pill tag-pill--no-page">multiscale-indexing</span>
+      
+        <span class="tag-pill tag-pill--no-page">rank-fusion</span>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">演讲者Yuval称分块并未过时，并称固定块大小没有普适最优值，取决于查询。其团队用多种块大小建索引并以RRF合并，称在多个数据集上匹配或超过最佳固定块大小，代价是额外内存。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/ai-engineer/">AI Engineer</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://www.youtube.com/watch?v=r9OwPx_HoV0" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-09-16T00:00:00.000Z">2026-09-16</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore><summary>12 节</summary><nav aria-label="本文章节"><ol><li class="outline-h3"><a href="#%E5%BC%80%E5%9C%BA%E5%88%86%E5%9D%97%E6%B2%A1%E6%9C%89%E6%AD%BB">开场：分块没有死</a></li><li class="outline-h3"><a href="#rag%E5%B7%B2%E6%AD%BB%E4%B8%8E%E8%A2%AB%E8%A6%81%E6%9D%80%E6%AD%BB%E7%9A%84%E4%B8%9C%E8%A5%BF">“RAG已死”与被要“杀死”的东西</a></li><li class="outline-h3"><a href="#%E4%B8%A4%E4%B8%AA%E9%98%B6%E6%AE%B5%E7%B4%A2%E5%BC%95%E4%B8%8E%E6%A3%80%E7%B4%A2">两个阶段：索引与检索</a></li><li class="outline-h3"><a href="#%E4%BB%A3%E7%90%86%E5%BC%8F%E6%90%9C%E7%B4%A2%E4%BB%8D%E7%84%B6%E4%B8%8D%E5%A4%9F%E6%95%B0%E6%8D%AE%E7%BB%84%E7%BB%87%E9%97%AE%E9%A2%98">代理式搜索仍然不够：数据组织问题</a></li><li class="outline-h3"><a href="#%E5%9B%BA%E5%AE%9A%E5%9D%97%E5%A4%A7%E5%B0%8F%E6%9C%89%E6%8D%9F%E5%8E%8B%E7%BC%A9%E6%B2%A1%E6%9C%89%E6%AD%A3%E7%A1%AE%E7%9A%84%E5%9D%97%E5%A4%A7%E5%B0%8F">固定块大小：有损压缩，没有正确的块大小</a></li><li class="outline-h3"><a href="#%E5%AE%9E%E9%AA%8C%E5%A4%9A%E7%A7%8D%E5%9D%97%E5%A4%A7%E5%B0%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E9%9B%86">实验：多种块大小与数据集</a></li><li class="outline-h3"><a href="#oracle%E5%AE%9E%E9%AA%8C%E6%BD%9C%E5%8A%9B%E6%9C%89%E5%A4%9A%E5%A4%A7">Oracle实验：潜力有多大</a></li><li class="outline-h3"><a href="#%E4%BF%A1%E6%81%AF%E9%97%AE%E9%A2%98%E4%B8%8E%E5%A4%9A%E5%B0%BA%E5%BA%A6%E7%B4%A2%E5%BC%95">信息问题与多尺度索引</a></li><li class="outline-h3"><a href="#%E7%94%A8%E5%80%92%E6%95%B0%E6%8E%92%E5%90%8D%E8%9E%8D%E5%90%88%E5%90%88%E5%B9%B6%E7%BB%93%E6%9E%9C">用倒数排名融合合并结果</a></li><li class="outline-h3"><a href="#%E7%BB%93%E6%9E%9C">结果</a></li><li class="outline-h3"><a href="#%E4%BB%A3%E4%BB%B7%E4%B8%8E%E6%9C%AA%E6%9D%A5%E5%B7%A5%E4%BD%9C">代价与未来工作</a></li><li class="outline-h3"><a href="#%E7%BB%93%E8%AF%AD">结语</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><h3 id="开场分块没有死" data-reading-heading="">开场：分块没有死</h3>
+<p>大家好，感谢今天来到这里。欢迎来听一场关于“nothing”的演讲——抱歉，是关于检索的演讲。我叫Yuval，在AI21工作，它本质上是一家AI研究实验室。今天我想谈一个大多数人不想谈的话题，也就是分块（chunking）。我希望最后能说服你们：分块没有死，它还有事可做。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+[music]
+<p>Hi everybody. Uh thank you for coming today. Uh welcome to a talk about nothing. Sorry, a talk about retrieval. Uh my name is Yuval. I work at AI21 which is essentially an AI research lab. And today I want to talk to you about something that most people don't want to talk about which is chunking. And I hope to convince you by the end that chunking isn't dead and there is something to do with that.</p>
+</details>
+<h3 id="rag已死与被要杀死的东西" data-reading-heading="">“RAG已死”与被要“杀死”的东西</h3>
+<p>如果你在X、LinkedIn或别的地方，大概见过“RAG已死”的说法。我想最近大家还“杀死”了MCP，然后RAG又死了一次。代理式检索、代理式搜索万岁。你不得不问自己，RAG到底能死多少次？即使有人说RAG没死，比如LlamaIndex的CEO Jerry，他们仍然得“杀”点什么，而这个东西显然就是分块：别投入，别做。人们说分块已死，是因为现在大家都在用代理式搜索，对吧？你有grep，有ls，有find。这些都很好，但如果你有大量数据、各种各样的查询，它们仍然不够。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And really if you are at Axe LinkedIn wherever you probably seen that rug is dead right I think people also killed MCP lately and Rag is dead again. Long live identic retrieval, identic search and there is come a time where you have to ask yourself how many times can Rag die right and even when someone says well ra isn't dead like Jerry the CEO of Llama index they still have to kill something and apparently this something is chunking like don't invest in it don't do it and this is the reason that People said that chunking is dead because everybody's using agentic search now, right? You have gs, you have ls, you have finds. All of these are great, but these are still not enough if you have a lot of data and you have various amount of queries.
+</details>
+<h3 id="两个阶段索引与检索" data-reading-heading="">两个阶段：索引与检索</h3>
+<p>稍等一下。好的。我认为很多人不爱谈分块的主要原因是，它不是有趣的部分。在每个RAG或文件系统中都有两个阶段。第一个阶段比较枯燥，在一开始做：你有大量数据，要预处理，要决定块大小，然后把所有东西存进向量数据库。另一个阶段是检索，也就是每次查询时发生的部分，这要容易得多，也容易优化得多。你可以用你所有的查询，去调max k——抱歉，是top k，也可以调混合搜索之类的。做检索调优有趣得多。所以我要说，如果非要杀死什么、如果有什么必须死，那大概是检索调优，而代理式搜索大概已经把它杀死了。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+Just the second. Okay. And I think that the main reason that a lot of people don't like to talk about chunking, it's because it's not the fun part, right? In every rag or files system we have two stages. The first stage is the like the boring one as you may the one you do in the beginning you have a lot of data you have to pre-process it you have to decide on the chunk size and then you have to store everything in a vector DB the other part is the retrieval part essentially the the one that happens per query this is something which is much easier to do right it's much easier to optimize you can use all your queries and then you can play with the max k uh top k sorry you can uh play with a hybrid search maybe those kind of things much more fun to do retrieval tuning right h so I will claim that if we have to kill something if something has to be dead then it's probably retrieval tuning and yes agentic search probably killed that
+</details>
+<h3 id="代理式搜索仍然不够数据组织问题" data-reading-heading="">代理式搜索仍然不够：数据组织问题</h3>
+<p>但即使我们接受代理式搜索杀死了检索调优这一点，在规模大、数据多的时候，它仍然不够好。它花费很多钱，这一点我想不用再多说了，token最大化是大家都在谈的事。而其底层的问题是：如果数据本身在你的文件夹、目录里没有以正确的方式组织，你得到的仍然是低效的结果。我们来想一个应景的例子：现在正值FIFA世界杯。假设我们有一个包含所有FIFA世界杯的数据集，每个目录是某一届，比如98年的、2002年的，等等。但如果你的查询问的是哪支球队赢得世界杯最多，你不能只去某一个文件夹问。你得去每个文件夹，看谁赢了，再把结果汇总起来，这非常低效。顺便说一句，答案是巴西。至少按这场对话发生的时间来看是这样。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+and but still agentic search even if we can accept the fact that it killed retrieval tuning it's still not good enough when you have a lot of right scale a lot of data it costs a lot of money I don't think I have to mention that anymore token maxing is like something that everybody's talking about and the thing underneath which is if the data itself is not ordered in a right way in your folders in your directories you still get something which is inefficient so let's try to think of a like a timely example right the FIFA World Cup is now. And let's imagine that we have a data set that contains of all the FIFA World Cup. So every directory is the let's say the 98 one, the 2002 one and so on and so on. But if your query asks
+<p>how which team won the most World Cups, you can't just go to a folder and ask that. You have to go to every folder, see who won, and then aggregate this together, which is very inefficient. The answer by the way is Brazil. I hope at least according to</p>
+<p>yeah according to the time that this uh conversation is happening.</p>
+</details>
+<h3 id="固定块大小有损压缩没有正确的块大小" data-reading-heading="">固定块大小：有损压缩，没有正确的块大小</h3>
+<p>所以检索并没有真的死。好吧，这场演讲里我们不杀任何东西。它只是变成了管道工程（plumbing）。我想做过RAG系统的人都懂这种感觉：第一天、第一周，如果你很细致的话也许第一个月，你挑一个块大小，比如512，可能还加一些重叠，比如10%到20%，把一切建好索引，然后就忘了它。我们常谈固定分块策略：如果块太大，你能得到全貌，这很好，但会丢失很多细节，所有块都得不到有意义的嵌入；如果块太小，大局就丢了，效率也不高。这告诉我们，分块本质上是一种有损压缩，无论怎么做，我们都会丢掉一些东西。我要说，不存在正确的块大小。很多做过数据的人会说：“不，我们有这个语料，有这个数据集，我们优化了系统，让它在这份数据上表现得非常好。”我们之前也这么想。我们在各种不同类型的代理、系统和工作流上有大量经验。你想想基准测试，模型多容易过拟合到某个基准，但RAG不会发生这种事，你无法按数据集去优化它。我要说，它取决于查询。我怎么能如此确定、怎么能这样断言？因为我们做了实验并测试过，现在我要给你们展示。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So retrieval didn't actually die. Okay, we're not killing anything in this lecture. It is got devoted into plumbing. And I think that everybody who worked on any rug system know the feeling. day one or week one or maybe even month one if you're very thorough. You're picking some sort of a chunk size. Let's say 512
+<p>and maybe you're probably putting some overlap right 10 20% so on indexing everything and forget all about it. And you can right we talk a lot about the fixed chunking strategies where if your chunk something which is too big right so you get the whole picture which is nice but you're losing a lot of the nuance and all the chunks will not get meaningful embeddings where if you will choose your chunks to be too small you're getting the big picture lost and really it won't be as efficient. So what this tells us is that chunking is essentially a lossy compression. No matter what we're doing, we're losing something. And I will I will claim that there is no right chunk size. And a lot of you who worked on data will say, "No, but we have this corpus. We have this data set and we really used and we optimized our system to work very very well on this data." And we thought so too. We had a lot of experience with it with a lot of different types of agents and systems and workflows that you can really and right you think about benchmarks how easy it is to overfit your model to a benchmark but not with rug it doesn't happen there and you cannot really optimize it per data set and I will claim that it is query dependent and how can I be so sure how can I claim such a thing because we ran experiments and we tested And now I'm going to present it to you.</p>
+</details>
+<h3 id="实验多种块大小与数据集" data-reading-heading="">实验：多种块大小与数据集</h3>
+<p>我们没有去问每份数据的最佳块大小是多少，而是做了这样的事：取一个数据集，把它复制多份，这里是六份，每一份的块大小不同。所以我们有块大小为200的数据库、块大小为1,000的数据库，等等。我们在多个数据集上做了这件事：QMSum，是会议记录数据集；NarrativeQA，是针对小说的问答；还有Seinfeld数据集，是关于“nothing”的问答——其实不是，是关于Seinfeld剧本的问答题。这是一个有点恶搞性质的数据集，我们在内部构建的，也已经发布了，如果有人想要，最后有链接。我们在所有这些数据集上测试，看会发生什么。首先，我们想看每个数据集上哪个块大小最好。这里展示的是Seinfeld数据集的一个例子：两个性质不同的查询，会因块大小而得到不同的结果。第一个问题是：Jerry最喜欢的教堂叫什么名字？你可以看到这是一个非常聚焦、非常具体的问题，答案很可能是很集中的，这种情况下较小的块大小表现最好。你可以看到在块大小固定为100个token时排名第一，而排名则低于50。而另一个问题是：Jerry把谁形容为他的宿敌和纯粹的邪恶？我甚至不算Seinfeld的大粉丝，但我知道是Newman，不过如果你看剧本，这并不是容易找到的内容。你可以看到情况确实变了，如果用小的块大小，你就得不到答案。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+So what we did instead of saying what is the best chunk size per data let's find out let's let's actually take a data set and duplicate this data set several times. In this case six times in every duplication in every instance the chunk size is different. So we have a database with a chunk size of 2,00 a database with a chunk size of 1,000 and so on and so on.
+<p>And we did it with several data sets. So QM sum which is a meeting transcript data set, narrative QA which is question answering on novels and Seinfeld data set which is a trivia about nothing. Not really. It's a trivia trivia questions about the transcripts of Seinfeld. It's a kind of a trolling data set that we built uh in-house. We also published it if anybody wants the link at the end. And we tested on all of them to see what happens. And first of all, we just wanted to see for every data set which chunk size is the best. And what we're seeing here is an example from the Seinfold data set where essentially two queries which are different by nature get different results uh based on the chunk size. So the first question what is the name for Jerry's favorite church? You can see this is a very focused question very specific question. The answer to it is probably very contained and this is something that a smaller chunk size will do best in. And you can see uh rank one versus rank below 50. uh between 100 tokens fixed at chunk size to 100 whereas a question like who does Jerry describe as his nemesis and pure evil which I'm not even that big of a Seinfeld fan and I know it's Newman but if you look at the transcript it's not something you can find that easily and you can see that it really changes right if you use small chunk size you will not get the answer</p>
+</details>
+<h3 id="oracle实验潜力有多大" data-reading-heading="">Oracle实验：潜力有多大</h3>
+<p>在跑完这些并注意到这一点之后，我们设想：如果有一个神谕（oracle），或者说精灵，能告诉我们每个查询用什么块大小做检索最好，会怎样？这本质上就是Oracle实验，我们想借此看到潜力。这不是在构建系统，因为我们已经有答案了，我们只是想看看这里有多大潜力。在这张图里，纵轴是召回率，越高越好；横轴是检索到的块的数量，所以是recall at K对K。所有蓝线可能难以区分，但每一条都是某个固定块大小的表现，而橙色线是oracle线：对每个查询，我们从这些中取最好的一个。你可以看到这在多个数据集上都出现了。在很多数据集中，你可以看到蓝线彼此相交，这意味着对很多数据集来说，确实没有哪个块大小占优。更有意思的是潜力很大：橙线与所有蓝线之间的差距很大，我说的大，大约是20%到40%，而这只是来自对分块做策略，而且我要补充，是非常简单的策略。这个差距就是选择512或1000或随便什么数字（这个数字只是任意的）所要付出的代价。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+and what we did to really after we ran all of these things and we've noticed that we said what if we had an oracle or a genie if you want that can tell us for every query what is the best chunk size to do retrieval for this essentially is the Oracle experiment this is what we wanted to know to see the potential this is not right we already have the answers so we're not actually building a system here we just want to see what is the potential that we have here and what you can see here. Okay, in this uh graph all the blue, first of all, the yaxis is the recall. Higher is better. The x-axis is the number of retrieved chunks. So, it's recall at K versus K. You can see all the blue lines probably indistinguishable, but each of them is the performance for a fixed chunk size, whereas the orange one is the oracle line. This is for every query, we took the best one out of these. And you can see it happens across several data sets. In a lot of them, you can actually see that the blue lines inter intersect with each other. Meaning that indeed for a lot of the data sets, no chunk size actually dominates. And what's more interesting is that there's a lot of potential. The gap which you can see between the orange line and all the blue lines is big. And when I say big, it's something like 20 to 40%
+<p>just from doing strategy on chunking and very simple strategy may I add. And this is like that this gap this is what the choice of 512 or a thousand or whatever right this number is just arbitrary. this is what it costs you.</p>
+</details>
+<h3 id="信息问题与多尺度索引" data-reading-heading="">信息问题与多尺度索引</h3>
+<p>我认为问题有点棘手，因为这有点像一个信息问题：我们在每个阶段都没有所需的信息。这是什么意思？在索引阶段，我能控制块大小，但不知道查询会是什么。我可以猜，也许可以估计，可以尝试，但我不知道查询会是什么，所以无法据此调整块大小。而在检索阶段，我有查询，却无法控制块大小，它已经固定了，而且我显然不会对每个查询从头重做整个流程。我们看了先前的工作，尤其是Anthropic的contextual retrieval，它们丰富每个块，还有其他试图改进每个块的潜在空间的工作。但这不是我们走的方向，它们都停留在“使用固定块大小”的模式里。而我们采取了不同的方法：既然可以承诺多个，为什么只承诺一个？我们称之为多尺度索引（multiscale indexing）。本质上就是我们之前看到的做法：把数据库复制，用多个块大小或窗口大小来分块，这就是索引阶段发生的事。然后在检索时，我们查询所有这些数据库。所以如果有n份数据库副本、n种窗口大小，我们现在每个查询要运行六次不同的检索调用——抱歉，六就是n。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And I think that the problem here is like it's a bit tricky because it's kind of like an information problem that we don't have the information that we need at every stage. And what do I mean by that? If I'm looking at the indexing part where I do have control over the chunk size, I don't know what the queries will be. I can guess, I can maybe estimate, I I can try but I don't know what the queries will be. So I cannot adjust my chunk size accordingly. And the retrieval part where I do have my queries, I cannot control the chunk size, right? It's already fixed and I obviously will not do the entire process per query from the beginning.
+<p>So we looked at prior works such as notably entropic contextual retrieval where they en enrich every chunk and others that essentially try to improve the latent space of every chunk. But this is not the direction that we went. All of them just stayed in the model of let's work with a fixed chunk size. Whereas we took a different approach and we said why commit to one where we can commit to several and we call it the multiscale indexing essentially we're just doing what we've seen before. So we're checking the database. We duplicate it and chunk it uh with several</p>
+<p>chunk chunk sizes or window sizes and then sorry um and then this is what happens at the indexing and then at retrieval time we are querying all of them. So if we had n</p>
+<p>duplicates of database n window sizes we now have to run six different retrieval calls per query. Sorry, six is n.</p>
+</details>
+<h3 id="用倒数排名融合合并结果" data-reading-heading="">用倒数排名融合合并结果</h3>
+<p>那我们如何合并它们？我们显然不能用oracle，oracle只是用来展示潜力的。现实中我们不知道答案。但我们可以找某种合并算法。你会问，这样看有什么问题？问题在于我们有n个排名，但这些排名针对的是块，而不同大小的块并不真正可比。所以我们选择了如今相当流行的做法，很多RAG系统其实就是这样：拿到一个块时，不只是检索这个块，而是检索整篇文档。随着上下文窗口增大，我们想给出越来越多的上下文。现在在这种情况下，我们有n个针对相同文档的排名，因为不再是块了，这样就可以比较。这时你可以把检索看作本质上就是投票。所以这不是纯粹的排序，我们不是先做一轮排序再重排，而是有n个相关文档的不同排名，想把它们聚合成一个。因此我们使用所谓的RRF，即倒数排名融合（reciprocal rank fusion），公式相当简单。我们试了几种方法，这个效果最好。如你所见，它不是一个模型，不是你必须专门去做的事，只是一个简单的脚本，几乎不花时间。这就是完整系统的样子：我们对索引建n次，然后从每个数据库查询每个查询，用RRF把它们全部合并。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And how do we combine them? We obviously cannot use the oracle, right? The oracle is something that we have just for potential. In real life, we don't know the answer. Uh but what we can do is to find some sort of merging algorithm. Now you would say when we look at it like this, what can be the issue? the fact that we have n ranking but the rankings are for chunks and chunks with different sizes are not really comparable right so instead we opted to do something which is pretty popular these days and a lot of the rug systems actually work like this that instead of just retrieving the chunk when we're getting a chunk we're retrieving the entire document right when context window grows we want to give more and more context and now in this case we have n right n uh rankings of the same documents because there are not chunks anymore and this we can compare and in this case you can think of retrieval as essentially just voting right so it's not pure ranking we don't have round ranking and then we're doing it rerank we're having n different ranks of the relevant documents and we want to aggregate them all into one
+<p>that's why we are using something called rf receive reciprocal rank fusion, okay, which is pretty much a simple formula. We tried several things. This worked the best. And as you can see, it's not a model. It's not something that you have to do specifically like especially this is just a simple script that takes really no time. And this is how the full uh how the full system looks like. So we have the indexing end times. Then uh we query each query from every database and we're using RRF to combine them all</p>
+</details>
+<h3 id="结果" data-reading-heading="">结果</h3>
+<p>结果你可以猜到是好的，否则我不会站在这里表现得过于自信。我们在多个数据集上测试了：QMSum、NarrativeQA、Seinfeld，还有FinanceBench，它匹配或超过了最佳的固定块大小。我们在图上看看，这里有点难看清，我慢慢讲。这里每一行是一个块大小，你可以看到50、100等等，最底下一行是我们的方法，也就是从所有块大小中检索再合并。每一列是某个召回率，即recall at 1、2、3，直到10。这里你能看到两点：首先，无论recall at几，我们的方法都胜出，你可能觉得这很容易，但必须把所有的合并起来并不是一件很平凡的事；其次，质量确实提高了，热力图变得绿得多。我只是想在这里放大展示，你可以看到全部四个数据集，我们取得了更好的结果，在很多情况下大约有20%、30%、40%。还有一些我没在这里展示的结果，是在MTB上的，你可以在我们的博客里看到，我稍后会放链接，同样有很多改进，大约在10%到40%之间，取决于数据集。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+and the results you can guess that they're good otherwise I would not uh standing here and uh being way too much uh
+<p>confident right but you can see we tested across several data sets QM sam narrative QA Seinfeld and also Finance Bench we took all of them and it matches the best or bits the best fixed size. Let's see it in a graph. It's a bit hard to see here, so I'll walk it slowly. Every row here is a chunk size. So you can see 50, 100, and so on. The bottom row is our method. This one, the one that you do from all of them and then combine. And the every column is recall at something. So recall at one two three up until 10. What you can see here is that two things right. First of all that across like recall at whatever h our method still wins which you can think is very easy but the fact that you have to combine all of them is not very it's not something which is very trivial and also you can see that the quality actually increases the heat map where you can see it become much greener and again this was just something that I wanted to show in large here you can see all four of the data sets where we do achieve better results results u really quite like 20 30 40% even in a lot of the things h also there are results that I did not show you here uh which are on MTB um you can see in our blog I will put the link later we're getting there also a lot of improvements somewhere between 10 to 40% depending on the data set</p>
+</details>
+<h3 id="代价与未来工作" data-reading-heading="">代价与未来工作</h3>
+<p>我并不天真，不会在这里声称这没有代价。显然有代价，天下没有免费的午餐，一切都要付出点什么。是的，这需要额外内存，大约是两倍到五倍，对吧，是O(1)，一个常数的额外内存，因为你得保留数据库的所有这些副本。不过从延迟角度看，它其实影响不大，因为你可以并行做所有检索，而且RRF部分也不花多少时间。我要说，这是我们做的一个很不错的研究项目，我们得到了非常酷的结果。还有事情可做，有可改进的地方，也有未来的工作。更确切地说，我们想弄清楚需要多少种块大小，以及是哪些。老实说，我们使用50、100、200等等是相当任意的，所以我们确实需要弄清楚如何计算这一点，以及如何知道到底需要多少份副本。另外还要超越RRF：我们使用RRF是因为在我们用过的方法里它效果最好，但这并不意味着没有更好的方法。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+now I'm I'm not naive I'm not going to claim here that this costs nothing obviously There is a cost, right? No free lunches. Everything has to come with something. And yes, this costs with extra memory. It costs something between two to five to all of one, right? A constant of additional memory where you have to keep all of those uh all those copies of the database. However, if you think about it latency wise, it doesn't really affect that because you can do all the retrieval partly
+<p>and also the RRF part doesn't really take a lot of time.</p>
+<p>I will say that this was a very nice research project that we did and we got really really cool results. There are things to do right there are places to improve. There are future work to do. More precisely, we want to understand how many chunk sizes do we want and and which right the fact that we worked with 50, 100, 200 and so on was pretty arbitrary to be honest. So, we do need to figure out how to compute this and how to know how many copies exactly do you need. Also go beyond RF, right? the fact that we're using RF is because it worked the best from the methods that we used, but it doesn't mean that there is no better method.</p>
+</details>
+<h3 id="结语" data-reading-heading="">结语</h3>
+<p>如果要留给你们一句话，我会说：代理没有杀死检索。没有任何东西死去，拜托。它只是基础设施。而不好的部分是，它是2022年的基础设施。用非常简单的方法，你可以拿你的RAG系统，或任何与存储数据有关的东西，然后在检索上提升20%到40%，同样不需要什么太复杂的东西。如果你想了解更多、多读一些，可以读我们的博客，那里也有示例代码和Seinfeld数据集。就这样，我是Yuval，非常感谢。</p>
+<details data-original="en" lang="en"><summary>英文原文</summary>
+And if I need to leave you with something, I would say that agents didn't kill retrieval.
+<p>Nothing died. Come on. It's just infrastructure. And the part the bad bad part is that it's infrastructure from 2022. And with really simple simple methods, you can take your rag system or anything that has to do with storing data and then retrieve it with 20 to 40% again without any</p>
+<p>something too sophisticated.</p>
+<p>So if you uh want to hear more about read more about it, you can read the blog. There is also an example code there and the Seinfeld data set. And that's it. I'm Yuval. Thank you so much. May here.</p>
+<p>[applause]</p>
+<blockquote>
+<blockquote>
+<p>[music]</p>
+</blockquote>
+</blockquote>
+</details></div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/a7e9b474962e709c08cb52ff082e175670ab81aa1052a696e2420df7ad4135ea.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/a7e9b474962e709c08cb52ff082e175670ab81aa1052a696e2420df7ad4135ea.md" download="分块并未死去：多尺度索引与检索融合.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        <button id="toggleAllDetailsBtn" data-label="英文原文" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v18h-6a3 3 0 0 0-3 0 3 3 0 0 0-3 0H3Z"/></svg>
+ <span class="btn-text">展开全部英文原文</span></button>
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

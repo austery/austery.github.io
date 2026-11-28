@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>写码提速 74%，交付只涨 14%：当人肉审代码和 AI
+审查插件双双见顶，团队该怎么破局</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+  
+  
+
+<div class="report-container">
+  
+  <aside id="toc-container" class="sidebar-toc" hidden data-pagefind-ignore>
+    <div class="toc-heading"><span>章节</span><span class="toc-count"></span></div>
+    <button class="toc-toggle" aria-expanded="false" aria-controls="chapter-panel"><span class="toc-current-number"></span><span class="toc-current-title"></span><span class="toc-count"></span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+</button>
+    <div class="toc-progress" aria-hidden="true"><span></span></div>
+    <nav id="chapter-panel" class="toc-panel" aria-label="章节"></nav>
+    <div class="toc-tools"><a href="#reader-tools">读者工具</a></div>
+  </aside>
+
+
+  <article id="content-body" class="main-content" lang="zh-CN" data-pagefind-body>
+    <div id="top"></div>
+    
+      <span data-pagefind-meta="title" style="display:none;">写码提速 74%，交付只涨 14%：当人肉审代码和 AI
+审查插件双双见顶，团队该怎么破局</span>
+      <span data-pagefind-meta="speaker" style="display:none;">yage.ai</span>
+      <span hidden data-pagefind-filter="speaker" data-pagefind-ignore>yage.ai</span>
+      
+      <span data-pagefind-meta="date" style="display:none;">2026-11-20</span>
+    
+
+    <header class="article-header">
+      
+      <h1>写码提速 74%，交付只涨 14%：当人肉审代码和 AI
+审查插件双双见顶，团队该怎么破局</h1>
+    
+    <div class="tags-section"><span class="visually-hidden">关键字</span>
+      
+        <a class="tag-link" href="/tags/code-review/">code-review</a>
+      
+        <a class="tag-link" href="/tags/ai-agent/">ai-agent</a>
+      
+        <span class="tag-pill tag-pill--no-page">e2e-testing</span>
+      
+        <span class="tag-pill tag-pill--no-page">testing-methodology</span>
+      
+        <a class="tag-link" href="/tags/software-development/">software-development</a>
+      
+    </div>
+
+      
+      <div class="metadata-block">
+        <section class="summary-section"><p class="metadata-label">摘要</p><div class="summary-content">研究表明，尽管使用编码智能体（如 Cursor Agent 和 Claude Code）能显著提升工程师写代码的速度，但最终业务交付的工单增幅有限，主要瓶颈在于代码审查环节。研究发现，过度依赖人工审查或AI辅助审查已触顶，因为人力资源分配和审查流程的瓶颈使得交付效率难以进一步提升。为突破瓶颈，团队将验证方法从代码内部路径转向系统边界，引入了端到端测试、性质测试和差分测试，以在提交前通过客观证据来验证代码，从而实现并行验证，并制定了严格的规则来防止AI偷改审查规则。</div></section>
+        
+        
+        <dl class="provenance">
+          <div><dt>来源</dt><dd><a class="speaker-link" href="/speakers/yage-ai/">yage.ai</a></dd></div>
+          
+          
+          <div><dt>原文</dt><dd><a href="https://yage.ai/share/ai-code-review-verification-20261120.html" target="_blank" rel="noopener noreferrer">查看 ↗</a></dd></div>
+          <div><dt>发布时间</dt><dd><time datetime="2026-11-20T00:00:00.000Z">2026-11-20</time></dd></div>
+        </dl>
+      </div>
+      <details class="article-outline" data-pagefind-ignore open><summary>4 节</summary><nav aria-label="本文章节"><ol><li class="outline-h2"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AE%A9%E5%A4%A7%E5%AE%B6%E5%A4%9A%E8%8A%B1%E6%97%B6%E9%97%B4%E5%AE%A1%E4%BB%A3%E7%A0%81%E5%B7%B2%E7%BB%8F%E8%B5%B0%E5%88%B0%E5%A4%B4%E4%BA%86">为什么让大家多花时间审代码已经走到头了？</a></li><li class="outline-h2"><a href="#%E6%97%A2%E7%84%B6%E4%BA%BA%E6%8C%AA%E4%B8%8D%E5%8A%A8%E4%BA%86%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%91%E5%85%AB%E6%88%90%E5%85%AC%E5%8F%B8%E8%A3%85%E4%BA%86">既然人挪不动了，为什么近八成公司装了</a></li><li class="outline-h2"><a href="#%E4%BB%8E%E7%9C%8B%E4%BB%A3%E7%A0%81%E5%88%B0%E8%B7%91%E7%A8%8B%E5%BA%8F%E4%B8%BA%E4%BB%80%E4%B9%88%E6%99%AE%E9%80%9A%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E4%B8%8D%E5%A4%9F%E8%A6%81%E6%8D%A2%E6%88%90%E7%B3%BB%E7%BB%9F%E8%BE%B9%E7%95%8C%E4%B8%8A%E7%9A%84%E4%B8%89%E7%B1%BB%E6%B5%8B%E8%AF%95">从看代码到跑程序：为什么普通单元测试不够，要换成系统边界上的三类测试？</a></li><li class="outline-h2"><a href="#%E6%8A%8A%E9%AA%8C%E8%AF%81%E4%BA%A4%E5%87%BA%E5%8E%BB%E4%B9%8B%E5%90%8E%E6%80%8E%E4%B9%88%E9%98%B2">把验证交出去之后，怎么防</a></li></ol></nav></details>
+
+    </header>
+    <div class="article-body"><p>过去两年里，使用编码智能体的团队普遍有一个拧巴的感受：每个工程师个人写代码和提改动的速度都明显加快了，但团队整体上线交付业务需求的节奏，似乎并没有快多少。</p>
+<p>哈佛商学院和经济系的两位博士生 Fiona Chen 和 James Stratton 在 2026
+年 11 月 14 日更新了一篇工作论文，用真实数据证实了这种落差。他们联合工程分析平台
+Jellyfish（经企业客户授权）和领英数据，追踪了 2021 年 1 月到 2026 年 8
+月间的 655 家企业、约 72 万名员工（其中近八成是软件工程师），一共整理了
+4.45
+亿条研发记录，把代码提交、拉取请求（PR）和最终上线的任务工单完整串联了起来。</p>
+<p>对比早晚采用这些工具的企业之后，他们看到了一个明显的剪刀差：早期的代码补全助手（如
+GitHub Copilot）对最终交付几乎没有拉动；而半自主的编码智能体（如 Cursor
+Agent 和 Claude Code）在引入 12 个月内，让工程师写代码的单小时效率提升了
+73.7%（据研究团队测算），代码提交量也涨了
+36.0%。可落到最终部署上线的已完成工单上，增幅只有
+13.7%，涨得非常有限，勉强算有点效果、差点和没涨差不多。研究团队用大模型评估了工单难度，排除了任务变大的解释，也检查了线上故障报告，发现软件质量并没有恶化。</p>
+<p>虽然团队写了更多代码，但最终交付的功能并没有按比例增加。问题的症结在于代码审查，而且大多数团队最直观的两种应对策略，在这项研究中都已经触顶。</p>
+<h2 id="为什么让大家多花时间审代码已经走到头了" data-reading-heading="">为什么让大家多花时间审代码已经走到头了？</h2>
+<p>面对堆积如山的
+PR，研发主管的第一反应通常是少写点代码、多抽些人手去审。哈佛团队的数据说明，这
+655 家公司其实早就这么干了，而且已经走到了极限。引入智能体 12
+个月内，企业把工程师花在写代码上的工时削减了两成多，往审查环节增配了四成多。算下来，审代码已经占到编码与审查总工时的
+49.2%。但抽人去审的同时，写代码的人手也在变少，一增一减之间，按照研究团队的测算，只要审查时间再多一点、超过
+49.4%，写和审两道工序就会刚好打平，再多挪人反而会让上游写出来的代码不够审。继续在团队内部挪时间，最终交付的工单增幅最多只能从
+13.7% 挪到 14.1%，腾挪空间已经榨干了。</p>
+<p>内部挪人之所以受限，是因为审核代码的人并不能随便互换。真实记录显示，82.8%
+的代码审查由以前改过这个仓库的熟手完成；如果按随机分配来算，熟手恰好审到熟悉仓库的比例只有
+17.2%。类似地，高级工程师编写的代码有 75.7% 由另一位高级工程师来审。</p>
+<p>现实往往还会往反方向加码。论文访谈中有一位工程师提到，团队在 AI
+提交的代码引发几次线上故障后，立了一条新规矩，要求所有 AI
+生成的代码都必须经过高级工程师审批。原本就稀缺的资深老手被进一步压垮，代码库越复杂的企业堵得越狠，在仓库数量最多的前三分之一企业里，PR
+合并时长直接暴增了 69.7%。</p>
+<p>从整体上看，编码智能体的加入让一条 PR 从提交到批准的总时长延长了
+56.1%，收到的修改评论增加了 38.6%，而每小时的审查效率反而下降了
+7.0%。线上故障率之所以没有恶化，背后是 PR
+审批周期拉长了将近六成、团队向审查端增配了四成多人力，把不少风险挡在了上线之前。代价则是前端多出的写码产能全都淤积在了审查队列里。</p>
+<p>哈佛研究显示的传导衰减漏斗：写码效率提升
+73.7%，经过 49.2% 已逼近 49.4% 上限的审查人力配比、82.8%
+的熟手壁垒与拉长 56.1% 的审批时长后，最终交付工单仅增长
+13.7%。</p>
+<h2 id="既然人挪不动了为什么近八成公司装了" data-reading-heading="">既然人挪不动了，为什么近八成公司装了</h2>
+<p>AI 审代码插件也没用？</p>
+<p>人手实在腾挪不动，行业的第二个本能反应就是用 AI 来审 AI，买一套
+CodeRabbit 或 Copilot Reviewer 之类的代码审查插件挂到仓库里。</p>
+<p>哈佛的论文还扫描了 GitHub 上 70 多种 AI
+机器人账号，发现了一个扎心的细节：到 2026 年 7 月为止，样本中已经有
+79.1% 的企业用上了 AI
+辅助审查工具，渗透率相当高。可等到真的合并代码时，所有审查评论中只有
+23.3% 来自 AI，全部 PR 中只有 10.8% 收到过至少一条 AI
+评论。大多数改动还是靠人眼把关。</p>
+<p>企业装了 AI
+辅助审查工具，为什么仍然不敢完全放手？因为审查的方式没有改变。不论是资深程序员盯着屏幕看代码差异，还是买
+AI
+插件扫描代码差异并留下评论，本质上都是静态阅读。静态阅读有两个弱点：一种情况是，一段代码在字面上可以写得滴水不漏，但在执行时却会破坏业务状态；另一种情况是，编写代码的模型和阅读代码的模型共享同一套盲区，模型在写代码时忽略的边界条件，AI
+在静态审查代码时也会一模一样地漏掉。</p>
+<p>这也是我为什么在 2026 年 10 月那篇讲代码审查还剩什么的文章里提到，单纯靠人肉通读或者用
+AI
+泛泛挑刺，救不了高吞吐的研发队列。哈佛论文的长期模拟也给出了同样的预警：如果审查和验证本身的效率停在原地，哪怕未来模型写代码的能力继续成倍狂奔，企业软件产出在撞上高级工程师比例上限后也会停滞。</p>
+<h2 id="从看代码到跑程序为什么普通单元测试不够要换成系统边界上的三类测试" data-reading-heading="">从看代码到跑程序：为什么普通单元测试不够，要换成系统边界上的三类测试？</h2>
+<p>就在哈佛那篇论文刷屏的同一周，Anthropic 旗下 Claude Code 团队的工程师
+Addy Osmani 在 2026 年 11 月 16 日公开分享了他所在团队的验证方法论。团队自报大约
+90% 的代码由 Claude 编写并审查。整个思路把问题向前推了一步：与其等 PR
+提交之后再让人或 AI
+去看一眼，不如在提交之前就逼着智能体提供程序运行的客观证据。团队认为，没有这种验证闭环，工程师一次只能盯着一两个
+Claude；有了闭环，才能并行跑起几十上百个。</p>
+<p>听到这，有人可能要问，这不就是让 AI
+自己写代码自己测，回归到传统的测试驱动开发（TDD），写满单元测试吗？我在《为什么
+TDD 反而不是 AI
+时代的答案》中解释过这个问题。传统单元测试着眼的是函数内部路径，一旦把测试变绿当成唯一考核目标，AI
+就会像应试刷分一样寻找绕过真实逻辑的捷径；同时写功能又写单元测试，也会让模型共享同一套思维盲区。</p>
+<p>真正能管住智能体的测试，需要把视角从代码内部路径拉回到系统边界，只盯着最终结果和不能碰的底线。Claude
+Code 团队重点投入的三类测试就落在这个边界上。</p>
+<p>第一类是端到端测试，并在仓库里配好实跑的操作说明书。单元测试全绿照样可能把核心功能改坏，端到端测试则很难糊弄过去，它会真的走一遍用户流程，要么整个功能跑通，要么报错并贴出页面截图和卡在哪一步。团队在贴近业务代码的目录下放了一个专门的
+verify
+技能文件，写清楚怎么启动手机模拟器、怎么调浏览器或本地服务。Claude
+提交前会按这份说明把改动真跑一遍。如果失败，它就在本地先修，连修 3
+轮还不行才停下叫人。这样最耗老手精力的首轮返工就被挡在了提交前的本地沙盒里。</p>
+<p>第二类是性质测试，用来打破 AI
+的同源偏见。普通测试靠的是人想好的几个例子，性质测试先定一条不能破的规矩，比如账户余额永远不能为负，或者数据压缩再解压必须还原原值，然后用
+Hypothesis 或 fast-check
+生成几千个随机对抗输入去轰炸代码。这些刁钻输入不是大模型自己想的，专治大模型写代码和写测试都会漏掉的死角。</p>
+<p>第三类是差分测试，适用于大规模重构和系统迁移。团队不让工程师一行一行核对新旧代码，而是直接把旧系统当成标准答案，把随机输入或线上真实流量抽样同时喂给新旧两套系统，去掉空格等无关格式差异后比对输出，一旦有差别就立刻报警。</p>
+<p>说到这，很多工程师的第一反应会是算一笔账：每次改代码都要搞端到端实跑、性质测试和差分测试，岂不是只有
+Anthropic 自己用无限 Token 才玩得起？其实 Addy Osmani
+在原文中已经算过这笔经济账。让智能体写测试、基准和规格说明是一次性的
+Token
+成本。这些测试一旦写成普通程序代码，往后每次提交前反复运行都是确定性的普通软件，几乎不再消耗额外
+Token。用一次性的大模型投入买断后续成百上千次审查的人力，普通团队也能算得平。</p>
+<p>传统静态审查与提交前边界验证对比：左侧依靠老手和 AI
+插件静态读代码差异，陷入高等待与同源盲区；右侧通过本地 verify
+实跑三轮自修、性质与差分测试，以及主干只读规则在提交前拦截问题。</p>
+<h2 id="把验证交出去之后怎么防" data-reading-heading="">把验证交出去之后，怎么防</h2>
+<p>AI 偷改规则、又把老手经验沉淀下来？</p>
+<p>把验证闭环交给智能体后，一个很现实的隐患立刻会出现。如果智能体在本地改了
+3
+轮还是跑不通测试，它会不会顺手把报错的测试删掉、加一段等待时间糊弄过去，或者干脆在这次改动里把审查规则改松？</p>
+<p>Claude Code
+团队针对这种耍滑头的心态，定了一条明确的规定：被审查的改动不能改评判它的规则。他们的审查系统永远只从主干分支读取审查规范
+REVIEW.md，不读当前 PR
+分支改动的版本。审查通过也只绑定具体的一次提交，审查期间只要作者又推送了新代码，旧的通过记录立刻作废。遇到偶发失败的测试，Claude
+不能跳过、靠加延迟等待蒙混过关，或者反复重试直到碰巧通过；实在查不出根因，宁可在提交记录里公开删掉这条测试并写明原因，留给人类事后复查，也不许留着假绿灯骗人。</p>
+<p>另一个挑战是如何克服哈佛论文中提到的 82.8%
+熟手壁垒。老手之所以难以替代，是因为他们脑子里装着过去几年踩过的各种坑。Claude
+Code 团队把历史上的踩坑经验沉淀为 39 条可靠性检查清单，但不每次都把这 39
+条全丢给模型。每条规则都明确了从代码差异中能读出来的触发条件，比如只有修改了会话存储或消息类型，才会触发检查旧会话记录能否安全加载。每次
+PR 通常只会触发 3 到 10
+条规则，一旦需要人类老手介入，检查程序也要写明触发原因，避免评审者在几百行代码里盲目猜测。</p>
+<p>为了避免规则越滚越多变成形式主义，团队对新增规则设了一个很高的门槛。从人工评论和线上回滚里提炼的新模式，必须至少在
+2 个 PR 里出现过、能从代码差异识别出来，还要先派 3
+个智能体去尝试反驳，反驳不倒再交给人类审批合入。</p>
+<p>在推进这些自动化门禁时，团队配了三项不拖慢开发节奏的配套做法。首先，每次提交都会记下验证方式，哪怕是未验证也会如实标明，方便事后追溯。其次，新门禁一开始只用观察模式记日志排查误报，等运行稳定了再切换到强制拦截。最后，即使在强制模式下，如果同一轮开发会话里连续被拦了
+2 次，第 3 次也会允许带着文字说明放行，避免把智能体彻底锁死。</p>
+<p>当然，在理解这两份资料时也要留出合理的边界。哈佛的论文目前是未经过同行评审的工作论文，数据来自商业平台
+Jellyfish 的企业客户，大多是成立近 20
+年、平均上千人的中大型成熟公司，初创小团队的协作阻力未必这么大。Claude
+Code 团队说的 90% 代码占比和 39
+条清单属于官方团队自报口径，没有第三方独立审计，其中差分测试也依赖现成的旧系统当标准答案，全新业务很难直接照搬。</p>
+<p>但无论如何，这两则来自不同视角的观察已经指向同一个趋势：一旦编码成本大幅降低，单纯压榨资深工程师做代码审查、购买
+AI
+插件做静态差异检查，或者回到函数级单元测试的旧路，都很难突破交付效率的天花板。接下来决定研发团队差距的关键，是能否把老手脑子里的业务底线沉淀成一套边界验证机制：它能在提交前自动实跑，往后不再持续烧
+Token，而且规则牢牢锁在主干里。</p>
+</div>
+    <footer id="reader-tools" class="reader-tools" data-pagefind-ignore>
+      <div class="reader-actions">
+        <button id="copy-md-button" data-markdown="/reader/ba3b910e12a4ab6b8fb7e04afbcc2dd0c420ab46e45c7c3beb600a96dd1d2f3d.md" hidden><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+ 复制全文</button>
+        <a href="/reader/ba3b910e12a4ab6b8fb7e04afbcc2dd0c420ab46e45c7c3beb600a96dd1d2f3d.md" download="写码提速 74%，交付只涨 14%：当人肉审代码和 AI
+审查插件双双见顶，团队该怎么破局.md"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+ 下载 Markdown</a>
+        
+      </div>
+      <p id="reader-status" role="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" hidden readonly aria-label="全文 Markdown，可手动复制"></textarea>
+    </footer>
+    
+    <div class="entity-section">
+      <details class="entity-details">
+        <summary><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文中提及的人物和组织</summary>
+        <div class="entity-content">
+      
+        <p><strong>人物:</strong> <a href="/search/?q=Fiona Chen" class="entity-link person-link">Fiona Chen</a>, <a href="/search/?q=James Stratton" class="entity-link person-link">James Stratton</a>, <a href="/search/?q=Addy Osmani" class="entity-link person-link">Addy Osmani</a>
+</p>
+      
+        <p><strong>公司/组织:</strong> <a href="/search/?q=Anthropic" class="entity-link company-link">Anthropic</a>
+</p>
+      
+        <p><strong>产品/模型:</strong> <a href="/search/?q=Cursor Agent" class="entity-link product-link">Cursor Agent</a>, <a href="/search/?q=Claude Code" class="entity-link product-link">Claude Code</a>, <a href="/search/?q=CodeRabbit" class="entity-link product-link">CodeRabbit</a>
+</p>
+      
+        
+      
+    </div></details></div>
+    
+    
+
+  </article>
+</div>
+<script src="/js/post.js"></script>
+<script src="/js/toggle-details.js"></script>
+
+  
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

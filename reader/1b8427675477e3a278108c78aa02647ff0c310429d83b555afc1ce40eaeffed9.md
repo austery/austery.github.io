@@ -1,0 +1,304 @@
+---
+author: AI Engineer
+date: '2026-10-16'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=BOWYujhIQuo
+speaker: AI Engineer
+tags:
+  - agentic-workflow
+  - portfolio-construction
+  - data-reconciliation
+  - financial-automation
+  - alternative-asset-management
+title: AI Agent如何将3天投资组合构建压缩至数分钟：阿波罗全球管理与Rowspace的实战拆解
+summary: 阿波罗全球管理旗下Reddington Ridge资本COO Jack McDonald与Rowspace联合创始人Michael Manapat深度对话，拆解AI Agent在500亿美元结构化信贷与CLO管理中的真实落地场景。重点探讨了私有信贷复杂数据治理、自动化投资组合构建、交易对账流程再造，以及通用大模型与领域专用数据平台的核心差异。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - Apollo Global Management
+  - Reddington Ridge Capital
+  - Rowspace
+products_models:
+  - Claude
+  - ChatGPT
+media_books: []
+status: evergreen
+---
+### 嘉宾与业务背景
+
+**迈克尔·马纳帕特 (Michael Manapat)**: 很高兴能来到这里。我是**迈克尔·马纳帕特**，**Rowspace** 的联合创始人。Rowspace 是一个企业级 AI 云平台，致力于利用**人工智能 (AI)** 帮助像**阿波罗全球管理 (Apollo Global Management)** 这样的金融服务合作伙伴处理混乱且碎片化的内部数据。我们本质上是通过 **AI Agent (智能体)** 来承担数据工程、定向信息提取以及跨多系统数据对账的工作，从而使投资组合经理、交易员等专业人员能够更迅速、更准确地做出业务决策。今天与我同台的是**杰克·麦克唐纳 (Jack McDonald)**，他是阿波罗旗下信贷业务部门之一 **Reddington Ridge Capital** 的首席运营官 (COO)。作为开场，杰克，非常希望能听你介绍一下你自己以及你们部门所从事的业务。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Manapat**: It's great to be here. I'm Michael Manapat. I'm a co-founder of Rowspace. And Rowspace is an AI cloud platform that uses AI to help financial services partners like Apollo deal with messy, fragmented internal data. We essentially use agents to do the work of data engineering, direct information, reconcile data from across a variety of systems so that portfolio managers, traders, and so forth can make decisions faster and more accurately. I'm joined here with Jack McDonald who is chief operating officer of Reddington Ridge, one of Apollo's credit units. And maybe to kick it off, Jack, I'd love to hear a little bit about you and what your business does.
+
+</details>
+
+**杰克·麦克唐纳 (Jack McDonald)**: 好的，谢谢迈克尔。我是**杰克·麦克唐纳**，阿波罗的董事总经理（Principal），同时也是 Reddington Ridge Capital 的首席运营官。Reddington Ridge 是阿波罗旗下的专属结构化信贷与**担保贷款凭证 (CLO)** 资产管理机构。我们是一家完全独立的运营实体子公司，管理着大约 **500亿美元资产 (AUM)**，业务全面覆盖结构化信贷生态体系，其中以 CLO 为核心。我从 2020 年加入阿波罗，在这段时期里先后在多个部门任职，包括金融机构业务组（FIG）、资产证券化业务组（Asset-Backed Group），目前则负责 Reddington 的运营。非常高兴今天能来到这里与大家交流。
+
+<details>
+<summary>Original English</summary>
+
+**Jack McDonald**: Yeah, thank you, Michael. I'm Jack McDonald. I am a principal at Apollo and COO of Reddington Ridge Capital, which is our structured credit and CLO manager that is captive to Apollo. We're a separate fully separate entity operating company that manages about $50 billion in assets, all across kind of the structured credit ecosystem, primarily CLOs. I have been at Apollo since 2020, wear various different hats throughout my time there across our financial institutions group, our asset-backed group, and now currently at Reddington. So, yeah, happy to be here.
+
+</details>
+
+### 金融AI的核心痛点
+
+**迈克尔·马纳帕特 (Michael Manapat)**: 太棒了。我们在与大量金融机构的深入交流中注意到一个现象：在金融业务中，“AI 是个锦上添花的玩具”与“AI 真正成为不可或缺的**关键业务引擎 (Mission Critical)**”之间，存在着巨大的鸿沟。而在阿波罗的实践中，我们确实看到 AI 正在从根本上重塑整个机构的运转模式。我很想听你分享一些实际案例：在你们所负责的业务板块中，过去的日常工作是怎样的？哪些环节充满了极高的复杂度？而引入 AI 之后，你们现在又看到了怎样的实质性改变？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Manapat**: Awesome. So, something that we've noticed in talking to a huge number of financial firms is that there's a pretty wide gap between when AI is nice to have and when AI can actually become mission critical to a business. And I think in Apollo's case, we're seeing that AI can really be transformative in how the firm operates. I'd love to hear some examples from you on the kinds of work your part of the business was doing, what made it complex, and what you're seeing now with AI.
+
+</details>
+
+**杰克·麦克唐纳 (Jack McDonald)**: 没问题。在阿波罗，特别是在 Reddington Ridge，我们管理着众多的基金实体和具体的投资项目。我们每天都要接收跨越所有投资组合的数以万计的数据点。我们日常管理的贷款资产池包含上千个底层借款人标的，并且持续评估和投资分布在各行各业的信贷标的。CLO 资产管理是一项高度活跃的业务，交易主要发生在**大额银团贷款市场 (Broadly Syndicated Loan Market)** 中。因此，能够随时将所有核心信息掌握在指尖是至关重要的。
+
+在阿波罗及 Reddington 的具体实践中，我们一直在努力强化并确保所有底层数据的质量：保证数据准确无误、前后一致，并且以随时可用的格式呈现，从而让我们在瞬息万变、节奏极快的高压市场环境中做出更加务实且深思熟虑的投资决策。这里的所有信息基本都是私募性质的非公开数据，完全不像公开股票或公开发行债券市场那样有统一且公开透明的信息流。相反，这些数据极度碎片化地散落在各类法律协议和报告文件中。
+
+因此，我们选择与像 Rowspace 这样的团队展开深度合作，让技术专家深入一线，与我们的业务团队坐在一起并肩工作，深入理解我们所依赖的实际计算逻辑和底层信息，厘清到底哪一个数据源才是唯一的**单一真实数据源 (Golden Source of Truth)**。随后在此基础上持续优化 AI 引擎，使其能够理解这一业务逻辑并实现稳定复现，最终为我们的整体运营带来极大的效率跃升。
+
+<details>
+<summary>Original English</summary>
+
+**Jack McDonald**: Yeah. Um so, at Apollo and specifically Redding Ridge, you know, we manage many different fund entities, investments. We're getting thousands and thousands of data points on a daily basis coming in across all of our investments. We manage probably, you know, thousand name loan pools and have credits across multiple different businesses that we're assessing on a daily basis and investing in. CLO management is very active and it's traded in the broadly syndicated loan market. So, having all that information at your fingertips is very, very important. So, at Apollo, what we're doing is and at Redding specifically is trying to enhance and ensure that all of our data and our data quality is accurate, consistent, and in a format that we can utilize and make us much more practical and thoughtful when we're making decisions in a much fast-paced environment. So, all of this information is privatized and is not very, what I'll say, widely in the marketplace like how public equities or public fixed income trades. It's very fragmented in various documents. So, we've looked to companies like Rowspace to partner with to come in and actually sit with our teams, work with us, and understand the actual calculations and information that we're looking to and what's actually the golden source of truth, and then continuing to enhance the AI engines to understand that and repeat that and just make us that much more efficient.
+
+</details>
+
+### 两大落地应用场景
+
+**迈克尔·马纳帕特 (Michael Manapat)**: 我想台下的听众里有很多工程技术专家，而平时你我也经常聊到公司里遭遇的各种业务“紧急演练（Fire Drills）”——过去往往需要一整个团队连续加班一周甚至更久才能完成。你能否用具体而形象的例子为我们梳理一下：过去有哪些流程极其痛苦、耗时费力且难以执行，而现在通过 Rowspace 与 AI 的结合，你们能够轻松高效地搞定？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Manapat**: I think we have a bunch of engineers in the audience, and we've spoken a lot just you and I on fire drills that the firm does. Like it used to take a team working a week if not more. Can you make it concrete for us and maybe walk us through an example of something that was painful, or time-consuming, hard to do before that now you can do more easily with Rowspace and AI?
+
+</details>
+
+**杰克·麦克唐纳 (Jack McDonald)**: 非常乐意。我想重点分享两个我最常引用的典型场景。
+
+第一个场景是在**投资组合构建 (Portfolio Construction)** 环节。CLO 这种金融产品对各类合规测试的要求极为严苛，是典型的**规则驱动型结构 (Rules-Based)**。它们有着非常复杂的现金流瀑布偿付机制（Waterfall）。这些合规要求与运算逻辑全部封存在厚达数百页的底层信贷合同（Indenture Documents）以及纷繁复杂的各类法律协议之中。从投资组合经理（PM）的角度来看，在构建投资组合时，他们必须逐一审阅这些复杂的合同文本，手动搭建极其繁琐的 Excel 模型，并且需要挑选 200 到 400 个单一信贷标的来组装模拟投资组合。在引入 Rowspace 之前，一位投资组合经理仅在一个手动 Excel 表格里完成这项工作，通常就需要耗费整整两到三天的时间。
+
+而今天，通过 AI 平台，我们能够直接实时接入最新、最全的市场与底层数据，过去需要一个人耗时数天的工作，现在只需短短数分钟就能完成组合构建。这让投资组合经理可以直接拿到一个完成度达到 80% 至 90% 的基准投资组合，然后将他们宝贵的专业判断力、行业洞察与商业思考，集中倾注在最后 10% 的精细化调整与优化上，打造出真正具有个人投资风格的组合。这是我们最为切身体会到的收益之一：AI 能够从海量的底层文档库、交易与合规系统、实时行情等各种异构来源中提取多样化数据并加以融合。
+
+第二个典型场景则是我们的**仓储贷款采购活动 (Warehouse Purchase Activity)**。在日常业务运作中，我们依赖大量的银行杠杆授信额度（Warehouse Facility），可以在固定收益市场上随时买入各类贷款资产。在过去，我们每周都要进行一次全面的交易对账（Trade Reconciliation）与头寸复盘，向团队发送每周的采购与出售交易活动汇总：本周买入了什么、卖出了什么。这在过去是一个极其耗费人力的手动过程：分析师必须逐一登录各大银行的真实网银账户，去核对每一份银行对账单，核查每一笔交易在后台的实际结算状态（Settlement）。过去专门需要一个小团队人工去完成核对与平账，然后起草一封结构化邮件发给管理层汇报全貌。
+
+而如今，我们把完全相同的报表模板与数据逻辑导入到 Rowspace 中，利用可视化模块进行配置。原本繁重的周报生成工作现在完全自动化，在短短一分钟之内即可完成，并且具备高度的可重复性。现在整个对账流程已经彻底实现自动化，对于我们团队而言，大家每天只需要承担质量复核（QA）的角色，检查各项数据指标是否正常。它从一个原本每周需要两到三名团队成员耗费大量小时去手动拼凑核对的高负荷环节，变成了一个极其流畅、标准化的日常例行机制。
+
+<details>
+<summary>Original English</summary>
+
+**Jack McDonald**: Yeah, happy to. And I'll give kind of two examples that I like to look to. The first being is just on the portfolio construction side. So CLOs are very test specific. They're very rules based. They have like a very specific waterfall of where money flows. So those all live in deep indenture documents and multiple different legal agreements. So sitting from like a portfolio manager's perspective in portfolio construction, they are reviewing those documents, building Excel based models, and building mock portfolios with call it anywhere from 200 to 400 single credit names to create a portfolio which would typically take a PM before kind of adopting Rowspace anywhere from two to three days in a manual Excel. Today, we're able to kind of get the latest and greatest information that's real time, create a portfolio that would take somebody days to now do it in the matter of minutes. And then that allows these PMs to kind of build something to call it 80 to 90% completion and then kind of use their judgment and their thought to further refine that portfolio that last 10% to make it theirs. That's one of the most tangible examples. It's kind of pulling in various forms of data and information from across multiple different things, whether it's in doc libraries, our trade and compliance systems, and real time pricing and stuff like that.
+
+The other one that I think I would look to is our kind of like warehouse purchase activity. So how our business operates with having a bunch of bank financing and we can go out and buy loans in the fixed income market at any given point. Historically, we would kind of do a trade wreck and trade activity on a weekly basis that would go around of here's your sale purchase activity from the week. Here's what we bought, here's what we sold, and it was very manual. We were going into various like literally going into bank accounts to understand statements, where things actually settled, and it was an individual team that was going and wrecking that out and then sending a reported email to the management team to say here's the recap. Today, what we're doing now is we've been able to take that exact same report, drop it into Rowspace from a visualization perspective. That report was then created and now repeatable in the span of a minute. And now all of that is automated and then from our team's perspective, we are just QAing that and checking it each day to make sure that that looks right. And now it's a much more rinse and routine type process which historically has taken many hours of the week for two to three individuals on our team to actually wreck that out.
+
+</details>
+
+### 通用模型与专用数据
+
+**迈克尔·马纳帕特 (Michael Manapat)**: 这两个例子总结得太精辟了。在你们的实际业务中，大家绝不仅仅是坐在屏幕前阅读 Chatbot 聊天机器人的回答来获取资讯那么简单，你们的团队所做的是真金白银的交易决策与投资组合管理决策，因此对数据的精确度和质量要求达到了极致。这里我想提一个由两部分组成的问题：很多人都会问我们，或者在心里嘀咕：“为什么不能直接把这些数据喂给 **Claude** 或者 **ChatGPT**，看看能得出什么结果？”而对于像你这样的业务主管，你们团队究竟是如何建立起对 Rowspace 或其他 AI 工具的信任度，敢于拍板说：“我们要依据这个系统的输出去做出商业决策、去执行真实交易、去构建实际的投资组合”？你们是如何跨越这一**信任门槛 (Level of Trust)** 的？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Manapat**: Yeah, I love those examples. So, you know, you aren't just reading the output of a chatbot to be informed. I think your team are making trading decisions, portfolio management decisions. So, accuracy and quality are high. This is a two-part question. I think a lot of people will ask us or ask generally, "Why can't you just plug this stuff into Claude and or ChatGPT and see what happens?" And for someone like you, how does your team get the confidence in a product like Rowspace or other AI tools to say, "We are going to make business decisions on this, make trades, build portfolios, all of that." How do you get to that level of trust?
+
+</details>
+
+**杰克·麦克唐纳 (Jack McDonald)**: 确实如此。我认为像 Claude、OpenAI 旗下的 ChatGPT 以及市面上各类基础**大语言模型 (LLM)**，本身都非常优秀且大有裨益。但问题在于，它们处理和依赖的全部是公共互联网上的通用公开信息，根本不包含任何专属于你们企业自身的真实私有数据。因此，这类通用模型在做泛化行业调研、激发新创意灵感，或是快速了解某类通用金融产品与投资知识时表现极佳。
+
+然而，Rowspace 的根本不同之处，以及我们在 Reddington 推进整个 AI 系统搭建的核心方法论，自始至终都在于**掌控我们自己的私有数据 (Owning Our Own Data)**，并在这些私有数据之上建立起一套我们完全确信其准确无误的平台架构与技术体系。与我们接触过的许多其他科技外包公司截然不同，Rowspace 团队采取的是真正的“**深入一线 (Boots on the Ground)**”模式：迈克尔和他的工程团队每天都坐在一线与我们的业务人员紧密共事，深入学习和剖析我们复杂的信息流。
+
+因为在金融业务中，同一个数据指标可能会从 20 个不同的渠道传来，而其中往往只有唯一一个是完全真实可信的。Rowspace 团队投入了大量心血，与我们的投资组合管理团队、财务核算团队坐在一起，深入推导每一个底层计算公式，厘清哪些数据是精准权威的、可以覆盖掉其他冗余混乱的数据源，并将其沉淀聚合为标准化的数据资产。正因如此，我们才能够对这套系统建立起完全的信赖，心里非常踏实——因为我们的业务团队已经深入介入并亲自校验确认了底层逻辑的绝对准确性。我们可以坚信，无论数据是来自于我们的交易订单管理系统（TOMS）、投资绩效系统，还是来自彭博终端（Bloomberg）及各类市场定价指数，拉取出来的信息都是完全精准无误的。
+
+反观即便在我们公司内部原有的许多其他传统系统中，数据也是极其割裂孤立的，以往不得不靠人工从这里搬运一截、再从那里摘抄一截拼凑在一起。而如今，Rowspace 已经将整套链路完全自动化串联了起来。
+
+<details>
+<summary>Original English</summary>
+
+**Jack McDonald**: Yeah, I would say Claude and the open AIs of the world and like the ChatGPTs, all the LLMs are very beneficial, but it's all general information that that's being worked off of and none of your own actual data. So, it's great for research or kind of building new ideas or getting up to speed on some type of product or investment quite quickly. Where Rowspace is different and what we've kind of taken our approach to the AI build-out at Redding has been around owning our own data and having some type of platform and technology that sits on top of that that we know is to be true. So, the Rowspace team which has been much different from what we've seen from other technology companies that we've worked with is they're boots on the ground. So, like Michael sits with our team on a daily basis learning and understanding our information flow cuz for one piece of data that might come from 20 different sources and there's only one that's actually right. So, the Rowspace team is spending the time with our portfolio management team, with our finance teams to understand the calculations, understand what data is actually correct and override other sources of information, and kind of aggregate that. So, to that end, we're able to kind of have trust in the system and appreciate that okay, we've had our team go in and validate that this information is correct and we can rely on it and it's coming from all of our whether it's our trade order management system, whether it's from our performance system, whether it's from Bloomberg or any pricing index that we're pulling in and know that it's accurate. Whereas in a lot of other call it systems throughout even our own company, it's very fragmented and we have to kind of lift one piece of information from over here and bring it back over here and kind of pull that together manually. Whereas Rowspace is now just automating that all for us.
+
+</details>
+
+### 阿波罗的AI原生文化
+
+**迈克尔·马纳帕特 (Michael Manapat)**: 听到这些反馈我们感到非常欣慰（笑）。让我们把视野拉升到更宏观的公司层面来探讨一下。在我看来，早在很久以前——甚至是在去年年初像 Claude Code 这类编码代理产品问世之前、在 Cursor 还处于简单的 Tab 键自动补全的早期阶段——阿波罗就已经是我们所接触过的机构中对 AI 最具深度拥抱意愿、最为“**All in AI (AI-pilled)**”的企业之一了。这种态度不仅体现在公司从投资视角如何捕捉 AI 时代的战略机遇，更体现在组织运营层面：早在我们最初接洽时，你们就明确坚定地提出必须以“**AI 原生 (AI Native)**”的方式彻底重塑公司运作模式，必须打造统一的基础平台而不是东拼西凑单点解决方案（Point Solutions）。我非常好奇，这种超前的意识究竟源自何处？阿波罗的企业文化中有何特质，使得你们能够在整个行业爆发之前就如此坚定地全面拥抱 AI？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Manapat**: Glad to hear that [laughter]. You know, talk about the firm at a higher level. It seemed to me for a long time even early last year before Claude Code became a thing when Cursor was still in the tab completion era that Apollo was among the most AI-pilled of the firms we spoke to. And that was everything from the firm's view on how to invest in an AI world, but operationally we've been talking to you a long time ago and you were in the we must rebuild the firm in an AI native way, must have a platform not point solutions. So, I'm just curious where did that come from and what is it about Apollo's culture that made you so AI-pilled even before things took off?
+
+</details>
+
+**杰克·麦克唐纳 (Jack McDonald)**: 是的。阿波罗一直以来都以作为另类资产管理行业乃至整个金融服务业的领头羊而自豪。我们始终把敢于创新、始终站在所有变革浪潮的最前沿作为团队的核心标签。因此，从最顶层的战略起点开始，我们的管理层在思考公司经营时，核心理念就是始终帮助团队实现技能进阶、全面强化人员的能力边界，并保持敏锐灵活的姿态，随时适应市场前进的方向。
+
+我们很早就清醒地认识到：AI 时代已经不可阻挡地降临了，我们必须主动去适应并全力拥抱它，而不是怀疑、抵触它或者将其束之高阁。因此，我们在接纳新兴技术并将其无缝嵌入到实际工作流中一直表现得极为积极和开放。我们始终在思考如何能让流程更高效，如何能释放人力去进行更多有价值的深度思考，并坚决替代低效的手工劳动。我认为在最根本的文化基因层面，我们一直是一家具有极强创新意愿的企业，拥有非常扁平化且高度开放包容的组织文化，随时拥抱各类颠覆性变革……顺便说一句，我好像把你刚才问题的第二部分给忘了，实在不好意思（笑）。
+
+<details>
+<summary>Original English</summary>
+
+**Jack McDonald**: Yeah. So, Apollo has always prided itself in being kind of the leader of the alternative asset management space and the financial services industry broadly. We pride ourselves in being very innovative and being at the forefront of all things change and what that looks like. So, I think from the onset and the way our management team approaches how we operate is always being up to skill and enhancing our team's capabilities and being able to be nimble and adapt to where the market's going. I think we appreciated that the AI world is here and we need to adapt and adopt it not discredit it or not utilize it. So, we've been very forward and open-minded about adopting new technologies and bring those into our workflows and how we can be more efficient and free up capacity for people to be more thoughtful and think and replace manual processes. So, I think at the core of its level we've always been a very innovative firm that's very flat and open culture to be open to those types of change. And then, I'm blanking on the second part of your question. Sorry.
+
+</details>
+
+**迈克尔·马纳帕特 (Michael Manapat)**: 呃，我想我自己也差不多忘了（笑）。
+
+<details>
+<summary>Original English</summary>
+
+**Michael Manapat**: Uh I guess so am I. Uh
+
+</details>
+
+**杰克·麦克唐纳 (Jack McDonald)**: （笑声）
+
+<details>
+<summary>Original English</summary>
+
+**Jack McDonald**: [laughter]
+
+</details>
+
+### 金融业的AI落地节奏
+
+**迈克尔·马纳帕特 (Michael Manapat)**: 哈哈，没关系，我们可以顺着这个思路继续深入。我认为我们一直在思考的一件事是：软件工程（Software Engineering）作为一个学科，其工作方式已经发生了彻底的颠覆。如果你是一家像我们这样的软件科技公司，现在的研发环境和过去相比已经完全不可同日而语；甚至可以说在法律和客户服务领域，这种颠覆也已经迫在眉睫。那么你认为整个金融行业目前处于什么阶段？AI 已经在这里产生了决定性的变革，还是说我们甚至连“第一局下半场”都还没有打到？顺便带上我的第二个追问（这次可要记住了）：如果我们现在尚处于极早期的初级阶段，那么要真正从形态上彻底重塑金融行业的运作模式，还需要哪些关键要素的成熟？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Manapat**: Well, maybe we can keep on going. So, I think one thing that we've been thinking about is software engineering that has completely changed as a discipline. Like, the world is completely different if you are a technology company like aerospace. Uh and maybe arguably law and customer service are almost there. Where do you think finance is on the spectrum of AI is here, it's made a difference, or we haven't even, you know, gotten to the bottom of the first inning. And what do you think is Two-part question again, so remember the second part. If we're early on, what's necessary to really change the shape of finance with AI?
+
+</details>
+
+**杰克·麦克唐纳 (Jack McDonald)**: 这是一个非常深刻的问题。从广义的金融行业来看，无论是大型投资银行还是综合性金融集团，体量都极其庞大。在它们的组织内部，沉淀着大量的所谓中后台（Middle and Back Office）支持体系。我认为在这些支持领域，依然存在着巨大的进化与增强空间。但正如你在与我们长期的深入合作中所深有体会的：我们的业务架构极度复杂，在我们所处理的每一个细节中都交织着无数的专业边界，它绝不是一个可以简单套用标准化方案的线性过程。
+
+因此我认为，放眼整个金融业，特别是在资产管理、投资银行以及大型金融机构业务领域，目前依然处于**极早期阶段 (Very Early Stage)**。坦白讲，现在利用一些通用 AI 工具来辅助搭建基础财务模型、或者帮助分析师快速了解一家新公司的背景、抓取并聚合研报数据，确实能产生一些价值；但至少以我们今天的眼光来看，这些环节的业务附加值是相对偏低的。当然，这种局面未来必然会演进。长远来看，在处理这些初级研究与信息搬运职能时，未来对初级分析师的人力需求确实可能会逐渐减少。
+
+但立足于当下现实，至少从我站在 Reddington 业务一线的视角来看，我们当前的重心是稳扎稳打地引入并吸收这项技术，优先将其应用于各种高频重复的常规业务流程中，使其达到极致的效率化。这样就能立即为团队释放出宝贵的人力带宽，去投入到更具战略价值的其他关键项目中。因为在像我们这样高速成长的机构里，永远有做不完的业务探索和永无止境的系统优化需求。而 AI 的落地，恰恰赋予了我们充足的弹性和自由度去拥抱更多可能。
+
+<details>
+<summary>Original English</summary>
+
+**Jack McDonald**: Yeah, I think that's a great question. So, I think finance broadly, these banks and large organizations are massive. They have a lot of back end, what I'll call middle back office support. And I think there's a lot of room to grow and enhance there. I think probably as you appreciate now if working with us that we are extremely complicated and have a lot of complexity in everything that we do. So, it's not really straightforward. I think in finance broadly, especially in call it the asset management investment banking, the bank institution institutional world, I still think it's very early. I think there's some value for some of the like, you know, model creation or getting up to speed on some company quite quickly and pulling and aggregating that type of research, but I think that's lower value add at least of where we stand today. And that's going to evolve. I think like, you know, there's probably a need where there's less junior support over time for certain functions like that, but I think from where we are today and what we see from from at least my perspective at Redding, I think we're just trying to adopt this technology and make it, you know, as efficient as possible for, you know, routine tasks that frees up capacity for, you know, other projects cuz we kind of have like endless things to do and enhance at our company. And that's just giving us a lot more flexibility to adopt that.
+
+</details>
+
+### AI构建长期竞争壁垒
+
+**迈克尔·马纳帕特 (Michael Manapat)**: 顺着这个话题，我非常好奇你的判断：未来的行业格局存在这样一种可能性，即 AI 最终沦为一种单纯的效率工具，仅仅帮企业加快了任务处理节奏、节省了一部分运营开支（OpEx）。这就好比今天没有任何一家机构会因为自己会用 Excel 而自夸拥有竞争壁垒，因为所有人都在用 Excel，它只是一项通用的通用生产力工具而已。
+
+但也存在另一种可能：AI 能够实质性地重构企业的核心能力，构建起强大的**长期竞争优势 (Competitive Advantage)**，甚至进一步巩固和扩大阿波罗在复杂交易结构设计、创意方案落地等关键领域的行业领军地位。对于 AI 究竟会变成一种平庸普及的通用大宗商品（Commodity），还是能够真正从组织架构与战略层面为企业构筑起持久坚固的竞争护城河，你有何独到见解？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Manapat**: Yeah, yeah. So, maybe to continue on that note, I'm curious, there's a world in which AI just becomes something that helps speed up tasks, saves you on opex, things like that. And maybe in the same way, no given firm now has an advantage because they use Excel. Cuz everyone uses Excel and it's just a productivity tool. And there's also a world in which AI actually materially makes a competitive advantage or helps reify Apollo's lead in structuring and creative deals and so forth. Do you have a take on whether AI is going to be just a useful but a general commodity or if it's going to be something that can actually structurally make a business more competitive in a durable way?
+
+</details>
+
+**杰克·麦克唐纳 (Jack McDonald)**: 我的观点非常明确：如果一家企业能够正确地吸收、适配并深度运用这项技术，它**绝对会为你打造出极其强大的竞争壁垒**。
+
+从本质逻辑来看，特别是在深耕活跃二级交易市场的资产管理与投资机构中，决定胜负的核心永远是两点：**你的运营流程机制 (Process)**，以及**你指尖所能掌握的信息颗粒度与速度 (Information at Your Fingertips)**。在瞬息万变的市场中，确信自己拥有一套极为严密高效的流程去随时出击执行交易，清晰洞悉自己账户中可调动的可用流动性，精确掌握各类信贷资产在任何特定时间点的真实定价与内含价值，这些要素直接构成了机构在市场中的立身之本与核心杀伤力。
+
+在传统标准化的公开交易市场中，这种能力已经相对成熟；但在庞大且非标准化的**私募信贷与非公开市场 (Private Markets)** 中，这一体系仍在艰难演进之中——而阿波罗庞大的管理体系一直走在推动私募市场数字化与智能化的最前沿。
+
+我认为，随着时间的推移，这种能力必将转化为巨大的竞争优势：那些能够更快、更准获取优质信息的先锋机构，其领先身位将会被急剧拉大。因为他们的投资与运营团队心底非常笃定：屏幕上的信息绝对精准可靠，没有任何错配或信息失真。在金融行业，我们最害怕的就是依据错误或失真的信息做出一项重大的投资决策，因为这种错误会沿着业务链条一路层层向下击穿，最终对整个管理平台以及背后的全球投资者利益造成不可挽回的巨大伤害。
+
+<details>
+<summary>Original English</summary>
+
+**Jack McDonald**: I think if it's adapted and utilized properly, it will make you more competitive. I think at its core, and especially around asset management and investing type companies that are in the actively traded markets, like it comes down to your process and the information at your fingertips. So, knowing that you have a strong process in place to go out and execute and knowing your available liquidity or, you know, where things are pricing and what the value is at any given point is crucial. So, that just gives you, you know, more competitive edge. And I think like that exists today in the, you know, actively traded markets, but in the private markets, it's evolving, which we've kind of been at the forefront of trying to to move on the broad Apollo machine. And I think having that will just turn into a competitive advantage over time where firms will be able to get further ahead as they're, you know, having access to better information. Their teams know that it's accurate and like stuff is not misaligned cuz the last thing we want to do is, you know, do something or make a decision that was misinformed or had misinformation and then that streamlines down the chain to both the enterprise and to the, you know, our investor base at the end of the day.
+
+</details>
+
+### 未来展望与团队进化
+
+**迈克尔·马纳帕特 (Michael Manapat)**: 确实如此。这完全说到了点子上。本来我想问你预测一下阿波罗在未来五年会发生什么样的剧变，但后来我觉得这个问题有点不公平——连我自己都无法预测下周我的工程师团队会不会又换上一套全新的 AI 辅助编码工具。所以我不想让你给出一个遥远的五年预测。
+
+但我非常关心你个人最真实的心声：放眼未来几个月到一两年内，在你的日常管理、团队运作以及阿波罗对 AI 的整体应用演进中，你个人最期待看到怎样的突破？这项技术若要在你们的业务中产生真正扎实的商业价值，必须满足哪些严苛的前提条件？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Manapat**: Yeah. Yeah, that makes sense. So, I wanted to ask you what your prediction was for what Apollo would be like when we're talking 5 years observing all the change. I think that's unfair. I can't even predict if my team's going to use Claude Code next week. So, I don't want to ask you about 5 years in the future. But, I'm curious for you personally, what are you hoping to see in terms of your job, team, how AI use in Apollo evolves, what conditions have to hold for the technology to actually be truly valuable. You know, how are you thinking about things over the next few months?
+
+</details>
+
+**杰克·麦克唐纳 (Jack McDonald)**: 好的。归根结底，这依然要回到我之前提到的几项核心基石。
+
+首先，是**对输出信息的绝对自信 (Full Confidence)**。在每个交易日或结算周期结束时，所有最终汇总流向我们出资人（LP）的信息，必须达到绝对的精准、合规与真实。我们绝不想再看到团队成员为了复核数据的正确性，还要被迫耗费数小时去纯人工手动勾稽对账。我们必须建立起坚不可摧的底层信心，确保对外输出的内容绝对零差错、零疏漏。要明白，我们面对的是一个极其庞大且多元化的全球资方群体，涵盖了全球超过 **400多家大型机构投资者**，对准确性的容错率是完全为零的。
+
+其次，是推动整个团队在组织心智上实现**技术赋能型思维 (Tech-Enabled Mindset)** 的彻底升级。客观地说，我们的业务团队过去绝不缺乏数字化思维，但在高压忙碌的业务节奏下，如何主动运用技术手段往往只能沦为事后的补救考量。我认为，随着我们不断开发并迭代这些强大的 AI 工具，把那些繁琐、单调、重复的常规业务流程推向极致的自动化，我们就能彻底解开束缚在员工身上的枷锁，让他们有充裕的脑力和时间去思考更高维度的命题：为什么现有的这一套业务流程会这样设计？它在今天到底是如何运转的？我们究竟应该如何对其进行更底层的改造，或者干脆彻底颠覆重构？我们是否应当引入一种全新的前沿技术来重新定义这项业务？
+
+在以往，这种思考往往只能退居次席；但我心中理想的组织图景是：未来我们的全体员工在走向工位、面对各种业务挑战与痛点时，首要反应就是调动技术与智能原生手段去思考求解。这对于我们在 Reddington Ridge 日常业务中的规模化扩张（Scaling），将是决定性的组织跃迁。
+
+<details>
+<summary>Original English</summary>
+
+**Jack McDonald**: Yeah, I think it comes back to some of the stuff I touched on before of just one having full confidence in any type of information that's flowing out at the end of the day to our investor base that's accurate, correct, and we don't have to spend hours manually checking that to make sure that that's validated and having the confidence that we're sharing, you know, no issues and or mistakes cuz we do have just a wide investor base, you know, over 400 global investors.
+
+I would also say being much more tech-enabled in mindset. I think our team has not lacked that to date, but it's kind of been an afterthought around the use of technology and I think the more that we can develop and enhance these tools that make routine tasks more efficient, it frees up capacity to add more thought or think more creatively around why does this process exist and how does it work today and how can we actually enhance that or should we change that or should we bring in a new type of technology and adopt that going forward. And our team has not lacked that today, but it's kind of been a secondary thought where I think ideally our workforce is positioned to think about that more on a go-forward basis and that's kind of their primary thought as they're tackling different problems specifically at Redding Ridge day to day and kind of scaling our organization.
+
+</details>
+
+### 给落地实践者的建议
+
+**迈克尔·马纳帕特 (Michael Manapat)**: 我们的时间差不多只够最后一个问题了。在与你们团队并肩作战的这段历程中，我个人最大的感悟与收获之一，就是深切体会到了金融业务背后超乎想象的复杂性与高度创造力。要让这些前沿技术在真实场景中真正跑通并发挥威力，需要人类专家与 AI 智能体双方倾注大量的心血与工程协同。今天现场在座的很多朋友，要么渴望在技术侧从事金融与 AI 的交叉研发，要么来自金融投资行业本身。从你的实战经历出发，对于那些想要将 AI 落地到像你们这样复杂业务场景中的人们，你有什么核心建议或心得想分享给大家？
+
+<details>
+<summary>Original English</summary>
+
+**Michael Manapat**: I think we have time for one more. I think one of my learnings from working with you has just been how unimaginably complex and creative the work is and how it takes a lot of effort both human and AI to get things to work. A lot of people in this room who either want to work on the technology side of AI and finance or perhaps finance side. Is there anything that you would mention to them from a here's something that you should know or keep in mind when trying to apply AI to domains like yours?
+
+</details>
+
+**杰克·麦克唐纳 (Jack McDonald)**: 好的。我认为核心中的核心，依然在于深刻认识到：**大型金融机构是极其复杂的有机体**。这里的业务运作绝非像表面看起来那么非黑即白、直截了当。很多时候，外部技术人员刚进场时，可能会觉得某些流程看起来很古怪、很别扭、甚至完全不合常理；但相信我，它们之所以以那种特定的架构存在，背后必然有着极其深沉的监管要求、历史成因或严谨的商业逻辑。
+
+我相信你们团队在深入阿波罗的过程中，已经极为深刻地体会到了我们的业务是多么的细致入微与错综复杂。因此，最关键的经验就是：**千万不要闭门造车，务必把靴子踩在泥土里，深入一线（Put Boots on the Ground）**，花足够多的时间真正去坐在那些前台投资专家与业务骨干的身边，坐在你要为之打造工具或赋能的用户工位旁。
+
+我认为，Rowspace 产品今天之所以能够在阿波罗取得如此显著的落地成果，并且推进速度大幅超出了我们最初制定的产品路线图与管理层预期，最根本的决定性原因就在于：迈克尔和他的工程师团队投入了极其充分的时间，几乎每一天都直接坐在一线，跟我们的投资与运营团队面对面并肩工作，真正摸清并吃透了我们的每一个工作流。这是技术能够真正落地的终极生命线。
+
+<details>
+<summary>Original English</summary>
+
+**Jack McDonald**: Yeah, I would say it comes down to we are extremely complex organizations and it's not as straightforward and typically things might look a little bit novel or strange and out of place, but it's probably actually there for a reason or structured in a specific way. I'm sure as you guys have come in you appreciate that we're super nuanced and complicated. So spending the time and really putting boots on the ground to sit with whatever team or front office professional that you're working to build a tool for or enhance is time well spent and I think the success and you know, where we are today with the Rowspace products and kind of being ahead of our road map and expectations has been due to the fact that Michael and the team has spent ample time sitting on the ground with our team like pretty much every single day and understanding our workflows which I think is crucial.
+
+</details>
+
+**迈克尔·马纳帕特 (Michael Manapat)**: 总结得太精彩了。最后容我插播一条硬核招聘广告：Rowspace 和阿波罗科技团队目前都在火热招聘中，大力吸纳渴望将最前沿 AI 技术应用于金融现实场景的优秀人才！如果你对此充满热情，欢迎随时联系我们当中的任何一位。杰克，非常感谢你今天的精彩分享，和你交流总是收获满满！谢谢大家！
+
+<details>
+<summary>Original English</summary>
+
+**Michael Manapat**: Awesome. Well, I guess the last thing I'll say is that shameless plug both Rowspace and Apollo technology are hiring people who want to apply AI to finance. So please reach out to either of us if you are interested. And then Jack thanks so much and great chatting. Thank you.
+
+</details>
+
+**杰克·麦克唐纳 (Jack McDonald)**: 这场对话非常棒，谢谢大家！
+
+<details>
+<summary>Original English</summary>
+
+**Jack McDonald**: This is great. Thank you guys.
+
+</details>
+
+*(现场掌声雷动)*
+
+<details>
+<summary>Original English</summary>
+
+*(Applause)*
+
+</details>

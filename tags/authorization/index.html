@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600&family=Noto+Serif+SC:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="/js/theme-toggle.js"></script>
+    <script src="/js/reading-anchors.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css" />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        
+        <a class="site-brand" href="/">
+          <span class="site-brand__glyph">◆</span>
+          <strong class="site-brand__en">The Learning Grove</strong>
+          <span class="site-brand__zh">林间拾穗</span>
+        </a>
+
+        
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/all-tags/">标签</a></li>
+            <li><a href="/all-speakers/">来源</a></li>
+            <li><a href="/x/">X 阅读</a></li>
+            <li><a href="/about/">关于</a></li>
+          </ul>
+        </nav>
+
+        
+        <div class="search-container">
+          <form id="search" class="header-search" action="/search/" role="search">
+            <input type="search" name="q" aria-label="搜索文章" placeholder="搜索文章…" required>
+            <button type="submit" aria-label="搜索"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
+          </form>
+          <button id="theme-toggle" class="theme-toggle" title="切换主题" aria-label="切换阅读主题">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z"/></svg>
+
+          </button>
+        </div>
+      </header>
+
+      <main class="site-content">
+        
+
+  
+  
+  
+  <div class="container" data-pagefind-ignore><div class="home-layout">
+    <h1>标签：authorization</h1>
+    
+    
+<ul>
+
+  <li>
+    <a href="/content/notes/V2UqEUA8NjM/">Wise：别让客户成为 AI Agent 的审批 API</a>
+    <span class="badge"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+</span>
+    <a href="/speakers/ai-engineer/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ AI Engineer</a> 
+    <time datetime="2026-11-05T00:00:00.000Z">2026-11-05</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ Wise 数据与 AI 产品负责人 Emil Chetty 探讨了如何在受监管的金融支付场景中赋予 AI Agent 自主权。针对传统交互中用户需频繁点击审批每一步骤（将人异化为 API）的痛点，Wise 提出了“意图转化为不可变协议”的架构：用户仅对完整任务目标及边界进行一次性不可变确认，Agent 自主规划与执行步骤，下游可靠服务体系负责强校验与执行，从而在保障合规与资金安全的前提下大幅降低用户复杂度。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/notes/JxNCuXkSWyQ/">有效凭据不等于合规意图：AI Agent 行为授权与控制平面</a>
+    <span class="badge"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+</span>
+    <a href="/speakers/ai-engineer/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ AI Engineer</a> 
+    <time datetime="2026-11-02T00:00:00.000Z">2026-11-02</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ Speakeasy 联合创始人 Sagar 结合真实案例阐述 AI Agent 治理风险：Agent 拥有基础设施有效凭据却误删生产数据库，核心漏洞在于缺乏制衡意图与 API 之间的控制层。他提出了涵盖连接、身份、决策和审计记录的四步治理框架，主张通过控制平面在关键路径上结合主体身份、意图评估与日志签名，实现对 Agent 行为的主动授权与风控。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/notes/58ulJViGFgU/">谁在发起请求？AI Agent 身份认证与授权基础</a>
+    <span class="badge"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+</span>
+    <a href="/speakers/ai-engineer/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ AI Engineer</a> 
+    <time datetime="2026-10-28T00:00:00.000Z">2026-10-28</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ Keycard 的 Kamil 剖析了 AI Agent 与 MCP 服务通信中的认证与授权挑战。由于 Agent 具备非确定性推理能力且易遭利用，传统静态 Token 和过度授权的 Service Account 存在失控与归因难题。演讲探讨了动态凭证、OAuth、SDK 的局限性以及基于网关隔离凭证的架构方案与权衡。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/notes/JvKO40CFq-s/">AI 代理身份与授权安全：从“伪装用户”到“独立主体”的范式转换</a>
+    <span class="badge"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+</span>
+    <a href="/speakers/ai-engineer/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ AI Engineer</a> 
+    <time datetime="2026-07-21T00:00:00.000Z">2026-07-21</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 本研讨会深入探讨了 AI 代理（Agent）时代的安全性挑战。主讲人指出，当前将个人凭证直接授予代理（即让代理“伪装”成用户）的做法存在极高安全隐患。研讨会详细介绍了新兴的“代理授权协议”（Agent Auth Protocol），通过为代理赋予独立的密码学身份与细粒度授权（Capabilities），实现代理行为的可审计性与可撤销性，推动 AI 代理安全从传统 OAuth 模式向“代理作为独立主体（Agent as a Principal）”的范式转换。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-06-02_httpsyag_ai-agent-permission-security-20260531-html/">AI Agent 不需要被攻破，被说服就够了</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-06-02T00:00:00.000Z">2026-06-02</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ 文章分析了AI Agent在权限设计中的结构性盲区：当身份验证边界从密码学层迁移至自然语言对话层时，安全边界坍缩。攻击者无需技术漏洞，仅需通过说服AI即可获取高权限。文章提出应将意图理解与鉴权责任分离，采取基础设施层独立鉴权、敏感操作跨信道确认等架构方案以修复安全盲区。</small>
+    
+    
+  </li>
+
+  <li>
+    <a href="/content/clippings/2026-05-01_httpsyag_agent-payments-trust-chain-20260501-html/">AI 替你付款前，支付系统要先补上这条信任链</a>
+    
+    <a href="/speakers/yage-ai/" class="speaker-inline"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/></svg>
+ yage.ai</a> 
+    <time datetime="2026-05-01T00:00:00.000Z">2026-05-01</time><br>
+    
+      <small class="summary-text"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+ AI 代理支付引发了信任与安全的新挑战。文章剖析了从人工辅助支付到完全自主交易的三层场景，指出自然语言意图、授权边界设定、付款凭证安全、商户接纳、风控审计及用户信任等关键难点。Stripe、Google、Visa 等公司正通过 SPT、AP2、Link 等协议和产品填补这些环节，但消费者信任和商户激励仍是主要障碍。短期内，人工介入支付和企业自动支出将是更现实的落地路径。</small>
+    
+    
+  </li>
+
+</ul>
+
+    
+  </div></div>
+
+
+
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Austery &nbsp;·&nbsp; All rights reserved.</p>
+      </footer>
+
+    </div>
+
+    <script>
+      const site_url = "/";
+    </script>
+  </body>
+</html>

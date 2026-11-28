@@ -1,0 +1,1264 @@
+---
+author: The Pragmatic Engineer
+date: '2026-11-25'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=9oNvKMd7xJo
+speaker: The Pragmatic Engineer
+tags:
+  - software-engineering
+  - rust-programming
+  - ai-agents
+  - coding-interviews
+title: Anthropic 内部软件工程变革：从 Python 到 Rust 的迁移与 AI 驱动的开发模式
+summary: Anthropic 的平台工程负责人 Caitlyn 分享了团队如何将 API 层从 Python 重写为 Rust 的经历。由于 AI 智能体（agents）生成代码的速度极快，公司取消了传统的算法编程面试，转而强调可验证的 API 层设计和由智能体驱动的开发流。此外，由于 CPU 短缺和 Rust 的内存安全特性，团队正转向更高效的语言，并利用内部 Claude 实例进行大规模的系统集成与入职培训。
+insight: ''
+draft: true
+series: ''
+category: software-development
+area: tech-engineering
+project: []
+people: []
+companies_orgs:
+  - Anthropic
+  - OpenAI
+  - Betterment
+  - Linear
+  - Ramp
+products_models:
+  - Claude
+  - Claude Code
+  - Claude Desktop
+  - Codex
+media_books:
+  - Project Hail Mary
+status: evergreen
+---
+<!-- chunk 1/3 -->
+
+于是我们就用 Rust 把整个东西重写了一遍。
+<details><summary>Original English</summary>
+So we just rebuilt the whole thing in Rust.
+</details>
+
+>> 也就是说，这整个 API 层。
+<details><summary>Original English</summary>
+>> So this whole API layer.
+</details>
+
+>> 这整个 API 层。只要你能真正把某件事提炼到某种可验证的程度，你就不需要去逐行查看正在编写的每一行 Rust 代码。如果你去问团队，他们大概会说，在由智能体（agents）发起的拉取请求（pull requests）中，大约有 80% 他们并没有深入通读所有写出来的代码。我们也已经取消了编程面试。而且实际上，我们在几乎所有的产品和平台团队中都这么做了。
+<details><summary>Original English</summary>
+>> This whole API layer. As long as you can really boil something down to like make it verifiable in some way, then you don't have to look at every single line of Rust code that's getting written. If you were to ask the team, they would probably say something like 80% of the pull requests that got opened by agents, they didn't deeply read through all of the code that had gotten written. We've phased out coding interviews as well. And we've done this actually across all of our product and platform [music] teams basically.
+</details>
+
+>> 巨大的变化。
+<details><summary>Original English</summary>
+>> A huge change.
+</details>
+
+>> 有些人可能通不过那场编程面试，但他们能轻松拿下其余所有的面试。这是因为他们不再一直手写代码了。
+<details><summary>Original English</summary>
+>> Someone might not pass that coding interview, but they would crush all the rest of the interviews. And it's because they're not writing code by hand all the time anymore.
+</details>
+
+>> 软件工程师正面临一种身份认同危机。
+<details><summary>Original English</summary>
+>> There is an identity crisis with software engineers.
+</details>
+
+>> 处境更艰难的是那些觉得“我过去的身份认同就是敲击键盘、编写代码，然后把事情做成”的人。人们常会说，哦，这有什么关系？反正智能体最终会做这些事的。但我认为关键在于
+<details><summary>Original English</summary>
+>> The people who are having a harder time are the people who are like my identity used to be that I click clacked on my keyboard and I wrote code and stuff got done. People will often say like, oh, why does this thing matter? Like agents will do it eventually. But I think the point is
+</details>
+
+>> 今天在 Anthropic 内部构建软件是什么样的？Caitlyn 是该公司的平台工程负责人。她的团队负责的 API 承接着来自 Claude 的每一个 token，并支撑着 Claude Code 和 Claude Desktop 背后的基础设施。今天我们将探讨一个小团队如何在 5 个月内将 Anthropic 的整个 API 层从 Python 重写为 Rust。为什么 Anthropic 停止了代码审查，以及是什么取代了它。Caitlyn 给那些因为不再手写代码而感到身份认同危机的工程师的建议，以及更多内容。如果你想难得地一窥 Anthropic 内部是如何构建软件的，以及软件工程这份工作发生了怎样的变化，这一期节目就是为你准备的。本期节目由 Turbo Buffer 呈献，这是一款构建在对象存储之上的、扩展性极强、速度快且价格低廉的混合搜索引擎，被包括 Anthropic、Linear、Ramp 等在内的前沿公司所使用。今天的节目将围绕 Anthropic 展开，你可能听说过他们重建了自己的版本控制系统，因为原有的系统无法承受来自 AI 智能体不断增长的负载。说到这里，我需要介绍一下我们的季度赞助商 Entire，他们正是解决了这个问题。Entire 由 GitHub 的上一任 CEO Thomas Dumke 创立，他从零开始为智能体时代重建了 Git 托管服务。Entire 刚刚推出了一个完整的 Git Forge。你现在可以直接在 Entire 上托管私有仓库，覆盖美国、欧洲、印度、澳大利亚、巴西和新加坡。而且这不仅仅是一个新的 Forge，Entire 还为智能体时代重新发明了拉取请求（pull request）。PR 的问题在于智能体写代码的速度比我们任何人审查的速度都要快。因此 Entire 用一种名为 Trails 的东西取而代之。一个 trail 将关于这项工作的所有内容集中在一个地方：意图、代码变更、智能体会话。一个 trail 可以跨越多个仓库，因此对后端和 Web 应用的变更只需审查一次。通过 trail，你可以配置自定义的评估（evals），如代码审查、安全审查、slot 审查等。它们看起来像飞机上的平视显示器，并在每次推送时为你的工作评分。你可以看到每个智能体如何运行或通过你用户定义的关卡（gates），并根据这些决定何时合并。重点在于由你来控制何时允许智能体合并代码，比如仅在人工审查后或所有关卡都通过后才合并。如果你想看看 AI 原生的 Git Forge 是什么样子的，请访问 entire.io/pragmatic 并查看 Trails。Caitlyn，很高兴你能来到播客。
+<details><summary>Original English</summary>
+>> What does building software look like inside of Entropik today? Caitlyn is the head of engineering for [clears throat] platform at the company. Her team owns the API that serves every single token coming from Cloud and powers the infrastructure behind Cloud Code and Cloud Desktop. Today we cover how a small team rewrote Entropik's whole API layer from Python to Rust in 5 months time. Why Entropik stopped doing code reviews and what has replaced them. [music] Caitlyn's advice to engineers who feel like they have an identity crisis because they no longer write code by hand and many more. If you want to get a rare inside look into how software is [music] built inside of Entropik and how the software engineering job has changed, this episode is for you. This episode is presented by Turbo Buffer, a ridiculously [music] scalable, fast and cheap hybrid search engine built on top of object storage used by cutting edge companies including Entropik, Linear Ramp, and many others. Today's episode will be about Entropik and you probably heard that they rebuilt their version control system because the existing one could not take the increased load from AI agents. This is where I need to talk about our season sponsor Entire who solved exactly this problem. Entire was founded by the GitHub's last CEO Thomas Dumke and he rebuilt GitHosting for the agent care from scratch. Entire has just launched a full-on Git Forge. You can now host private repos directly on Entire in the US, Europe, India, Australia, Brazil, and Singapore. And it's not just a new Forge, but Entire has just reinvented the pull request for the agent care. The problem with PRs is how agents write it faster than how any of us can review it. So Entire replaced it with something called Trails. A trail collects everything about the work in one place, the intent, the code changes, the agent sessions. A trail can be spread across multiple repos so the change to your backend and your web app gets reviewed once. With a trail, you can configure customized evals like code reviews, security reviews, slot reviews, and others. They look like a heads-up display in an airplane and score your work on every push. And you can see how each agent runs or passes your user-defined gates and decides when you merge based on these. The point is that you control when you allow agents to merge the code, like only merging after a human review or after all gates pass. If you want to see what an AI-native Git Forge looks like, head to entire.io/pragmatic and check out Trails. Caitlyn, it's so nice to have you on the podcast.
+</details>
+
+>> 谢谢邀请我。
+<details><summary>Original English</summary>
+>> for having me.
+</details>
+
+### 职业生涯与早期经历
+
+>> 在我们深入讨论你在 Anthropic 构建系统的所有具体细节之前，我想先回顾一下。你是怎么对计算机产生兴趣的？你是怎么进入科技行业的？
+<details><summary>Original English</summary>
+>> Before we get into all the nitty-gritty details with how you're building an Entropic, I want to go back. How did you get interested in computers? How did you get into tech?
+</details>
+
+>> 我上大学的时候，学的是工程——我学的是化学工程——但每个人在第一年都必须上计算机科学导论课。我上了一门计算机科学导论课，当时就觉得“这太棒了”，于是我就转了专业。我开始学习计算机科学。我只是觉得它非常有趣。
+<details><summary>Original English</summary>
+>> I was in college. I was studying engineering um I was studying chemical engineering um but everybody had to take introduction computer science classes uh in their first year and I took an introduction computer science class and I was like this is great and I I changed my major. I started studying computer science. I just thought it was a lot of fun.
+</details>
+
+>> 那你第一份正式拿薪水写软件的工作是什么时候？是在大学毕业后，还是在大学期间？
+<details><summary>Original English</summary>
+>> And then what was your first professional job when you were we were paid to like you know build software? Was it after college? Was it during college?
+</details>
+
+>> 是的，在大学期间，我在智能投顾金融科技公司 Betterment 实习过。这很有趣，因为当我第一次在那里实习时，Fintech（金融科技）还是个新词。那是一个相当新的类别，Betterment 很早就提出了这样一个想法：你可以关联银行账户、设定目标，然后像人类理财顾问那样为你投资。所以我从实习生做起，那段经历非常有趣。之后我又回去做了一次实习，毕业后就全职回去了。然后我在那里全职待了将近七年。所以我在那里待了很长一段时间。
+<details><summary>Original English</summary>
+>> Yeah, so while I was college, I interned at Betterment um robo-advisor Fintech, which was funny cuz at the time when I first interned there, Fintech was like a new word. [laughter] It was a a pretty new category and Betterment was pretty early to this idea that like you could link a bank account and set goals and have money invested for you the way a human financial advisor would. And so I started there as an intern, which was lot of fun. Went back for another internship and then went back full-time uh when I graduated. And then um spent almost seven years there full-time. So I was there for a while.
+</details>
+
+>> 然后你在那里从软件工程师走到了工程管理岗位，对吧？
+<details><summary>Original English</summary>
+>> And then you went from like software engineer into engineering leadership positions there, right?
+</details>
+
+>> 是的，比较早。我想这在一定程度上取决于我全职加入 Betterment 时所在的团队。那是一个组建新业务线的新团队，我们开始打造 401k 产品。当时那是一个很小的团队在做一件新事情，而我从一开始就在这个团队里。所以过了几年，当经理离职、出现一个可以让人开始管理团队的空缺时，当时顺理成章地就由我接任了这个角色。而且我对“我们在构建什么以及如何构建它”这类问题感到非常有趣——甚至可能比对具体繁琐的技术细节更感兴趣。所以做出这个转变是很自然的。
+<details><summary>Original English</summary>
+>> Yeah, relatively early. Um which I think was a bit of a function of the team that I joined when I started full-time at Betterment was It was a new team building out a new business line. We started building out a 401k offering. And I think at the time it was like a really small team doing something new and I had started on it from the beginning. And so a couple of years in when, you know, the manager was leaving and there was kind of room for somebody to start managing the team, um it like made sense at the time to to step into that role. And I was having a lot of fun with the like what are we building and how are we building it? Um and you know, a little bit more maybe than like nitty-gritty technical details. And so um it made sense to make that change.
+</details>
+
+>> 在只做了几年工程工作（比如通常在满五年之前）就进入管理层有一个挑战，传统的观点认为你可能没有足够的时间去深入代码，可能不够资深。你有过这种感觉吗？还是说你在那里担任经理的同时也能够继续亲自动手写代码？
+<details><summary>Original English</summary>
+>> One challenge when you get into management after like only a a few years of of engineering, like you know, typically before you have five years This was the traditional like view is that you might have not had as much time to like, you know, like get in in in depth of the code and you might not be as deep. Did you feel this or or were you also able to just be stay hands-on as you were a manager there?
+</details>
+
+>> 我刚开始当经理的时候还是相当亲力亲为的。我们是一家小公司，团队也很小，所以有段时间我仍然花很多时间在开发、审查代码，依然非常深入细节。所以是的，那确实算早，我也曾有过一点“这会不会太早了？我是不是应该再多花点时间做个人贡献者（IC）”的想法。但一旦我投入进去，我就觉得非常有趣。结果证明这没问题，尤其是因为那种工作性质让我可以在管理的同时，继续做一些更深入的技术工作。
+<details><summary>Original English</summary>
+>> I was pretty hands-on when I was first a manager. We were a small company with small teams and so I spent a lot of time still building, still reviewing code, still very much in the details for a while. Um and so yeah, it definitely was early and for you know, I had a little bit of like is this too early? Should I spend more time um as an individual contributor? But as soon as I got into it, I was having so much fun with it. And um it turned out to be okay, especially because of the nature of being able to do a little bit more deep technical work at the same time as managing.
+</details>
+
+>> 在那份工作之后，你去了 Stripe，对吧？
+<details><summary>Original English</summary>
+>> And then after this gig, you ended up at Stripe, right?
+</details>
+
+>> 是的。我后来去了 Stripe。其实我比实际加入的时间更早之前就考虑过加入 Stripe，一直是关注他们围绕支付边缘打造新金融产品的领域，而且他们当时主要在纽约做这件事。我那时正好在纽约。所以我最终跳槽到 Stripe，部分原因也是因为我在 Betterment 最喜欢的一位经理去了 Stripe。所以很高兴能加入他，一起做当时的 Stripe Capital，也就是 Stripe 的借贷业务。
+<details><summary>Original English</summary>
+>> Yes. Um I ended up at Stripe. Um I had considered actually joining Stripe earlier than I actually did end up joining Stripe always in this area of they were building out kind of new financial products around the edges of payments and they were doing that mostly in New York. I was based in New York at the time. And so when I did eventually move over to Stripe, it was in part because uh one of my favorite managers from Betterment had ended up at Stripe. Um and so it was great to join him and work on um Stripe Capital at the time, which is Stripe's uh lending business.
+</details>
+
+>> 是的，当时我记得 Stripe 的工程文化开始在外部变得相当出名，以极高的工程卓越标准著称，尤其是在金融科技领域。当时并没有多少——通常人们不会把一般的金融科技公司与极高标准的世界级工程联系在一起。
+<details><summary>Original English</summary>
+>> Yeah, and and you were at the time there were I remember Stripe's engineering culture started to become pretty kind of well known outside of Stripe as as a very high bar for engineering excellence, especially within fintech. There there weren't many you know the typical fintechs would be ones you wouldn't associate with like really high bar world class engineering.
+</details>
+
+>> 是的，没错。它以“能做非常棒的工程、行动迅速、极具野心”而闻名。所以我出于这个原因一直留意着找机会去那里，而它确实名副其实。Stripe 是一个非常酷的地方。我觉得那里有一种真正由工程主导的文化。那里有太多的创新，不断向新想法和新业务扩展，而且一切都发生得非常快。他们确实以这一点闻名。
+<details><summary>Original English</summary>
+>> Yeah, exactly. Um it was it was known for just being a place where you could do really awesome engineering, you could move fast, you could be really ambitious. Um and so I I kind of had had my eye on going there at some point for that reason and um it definitely lived up to that. Stripe is a really cool place. I think it's like a really engineering led culture. Um you know there's just so much innovation happening, so much expansion into new ideas and new businesses and uh it all happens really fast. They're definitely known for that.
+</details>
+
+### Claude 平台架构与后端
+
+>> 是的，通常来说，在工程挑战或卓越性方面很难有地方能超越像 Stripe 这样的公司，但现在你在 Anthropic 打造着非常有趣且了不起的东西。在我之前发表的一篇深度剖析文章（已附上链接）中，我也和你聊过后端和平台方面的挑战。所以现在你在 Claude 平台团队。作为一名工程师，你能从宏观上分享一下，我该如何想象 Claude 背后的后端是什么样的？有哪些组件、哪些层级，你是怎么看待它的？
+<details><summary>Original English</summary>
+>> Yeah, and usually it would be really hard to top a place like Stripe in terms of engineering challenges or excellence, but here you are at Anthropic building really it it interesting and awesome stuff. One of with one of the deep dives that uh I published earlier and it's linked, I also chatted with you about the challenges of of the back end and the platform side. So right now you're on Claude platform. Can you share at a high level for for as an engineer, how can I imagine what is the back end behind Claude? What kind of components, what kind of layers, how how do you think about it?
+</details>
+
+>> 好的，最底层就是运行在芯片上、也就是加速器层上的模型。那是推理（inference）团队，大致就在我们下面一层。
+<details><summary>Original English</summary>
+>> Yeah, so the the very bottom layer is just like models, you know running on chips, right on um the accelerator layer. That's the inference team that kind of sits right below us. Um
+</details>
+
+>> GPU、TPU，以及任何可能出现的新硬件芯片。
+<details><summary>Original English</summary>
+>> the GPUs, the TPs, the whatever new hardware chips might come out.
+</details>
+
+>> 没错。如果是我们的话，所有这些芯片我们都用，我们在这方面很出名。就在那一层之上就是平台。所以平台既是我们面向外部的 API 套件——它为 Anthropic 支撑了大量业务，对吧，人们在我们的 API 之上进行开发——然后它一直向下延伸到推理层之上。有趣的是，我们还为我们所有的应用提供各种基础服务和产品基础设施。我的意思是，从工程角度来看这是一件很棒的事，对吧？可以说你的应用是构建在外部客户使用的同一个 API 之上的。所以我们对此感到很自豪。这真的很棒。比如 Claude 服务的每一个 token 都通过 Messages API 运行，这很棒。但同时，我们也负责我们应用的认证（auth）、CPU、网络、沙盒（sandboxing）以及所有这类事情，这很有趣。所以我们除了拥有面向外部的 Claude 平台开发者工具之外，也是一个真正意义上的平台团队。
+<details><summary>Original English</summary>
+>> exactly. All of them if you're us, we're very known for that. And then right above that layer is the platform. Um and so what the platform is is it's both our externally facing API suite um which you know powers a lot of a lot of business for Anthropic, right people building on top of our APIs. And then it runs all the way down through just above that inference layer and what's interesting about it is we also power all of our kind of foundational services and product infrastructure for all of our apps as well. I mean it's it's a great thing in engineering terms, right? To say that your your applications are built on the same API that external customers build on top of. Um so we're proud of that. That's really great. Like every token that Claude serves runs through the Messages API, which is great. But then we also run, you know, auth and and our CPU and our networking and our sandboxing and all those sorts of things for our apps as well, which is fun. So we're very truly a platform team in addition to owning kind of the externally facing Claude platform developer tooling.
+</details>
+
+>> 那么从纯硬件设备的角度来看，我可以想象底层有 GPU、TPU 和那些机器。然后你的团队拥有 CPU 或者类似用来编排如何访问这些设备的机器、锁定数据的数据库等等，在脑海中大概可以怎么构建这个画面？
+<details><summary>Original English</summary>
+>> And then from a kind of hardware like just hardware boxes perspective, I can imagine that we have the GPU and and TPU and those boxes on the bottom. And then your team, you'll have CPUs or or or kind of like machines that will orchestrate how access happens to these things, databases that lock things like it is how how can I have a mental picture of like
+</details>
+
+>> 是的，当一个 API 请求进来时，我们做的第一件事就是访问我们的认证服务，进行身份验证（authentication）、授权（authorization）这类事情。然后你会进入核心 API 服务。你说得对，它就是一个 CPU 集群。它是多区域（multi-region）、多云（multi-cloud）运行的，所以根据你的请求来源，它会被路由到正确的地方。在那里我们进行分词（tokenization）、处理计费（billing）、运行安全检查（safety checks）以及所有这类事情，然后这些 token 才会下发到实际的 GPU，接着再通过同一个服务返回并输出。这很有趣，因为我刚加入时，提供这个 API 与在 Stripe 提供 API 相比，一个相对不同的地方在于，在这个系统上你可以让请求保持打开状态长达大约一个小时，这绝对是非常不同的。
+<details><summary>Original English</summary>
+>> Yeah, so an API request comes in and uh the first thing we do is we hit our auth services, authentication, authorization, these sorts of things. And then you kind of get into the core API service. Um and you're right, it's just a CPU cluster. Um it runs multi-region, multi-cloud, and so depending on where you're starting from, it it ends up in the right place. And in there is where we do tokenization, we handle billing, we, you know, run safety checks and all these sorts of things um before those tokens make their way down to the actual GPUs and then come back up through that same service and get served back out, which is interesting cuz when I first joined, one of the things that was relatively different about serving this API versus APIs at Stripe is you could hold requests open for up to like an hour on uh on this system, which is definitely different.
+</details>
+
+>> 你有一段来回进行的对话。
+<details><summary>Original English</summary>
+>> you have a chat going back and forth.
+</details>
+
+>> 是的，没错。所以我认为随着时间的推移，我们开始做更多的创新，比如如何拥有更高的弹性，或者如何减少在网络上来回传输的数据量，因为本质上这些都是无状态的对话（stateless chats），所以在整个模型轮次期间，你都在来回传递整个对话状态，这——所以我们做了一些工作，让它随着时间的推移变得更加健壮，但这绝对是 API 运行方式中一种相当独特的形态。
+<details><summary>Original English</summary>
+>> Yeah, exactly. So I think over time we've started to do a bit more innovating on, you know, how can you be in a place where you have a little bit more resilience or um maybe less data has to go over the wire back and forth because inherently these are stateless chats and so you're passing the whole conversation state back and forth the entire time you have a model turn, which is And so we've done some work to make that a little bit more robust over time, but it's definitely a an kind of unique shape of how the API runs.
+</details>
+
+### 从 Python 迁移到 Rust
+
+>> 那么具体来说，我们能不能选一个你们构建过的具有挑战性的项目，然后聊聊你们是怎么构建它的？因为我特别想了解更多关于“构建软件的方式正在如何改变”，而且像往常一样，结合一个具体的项目来聊总是更好的。
+<details><summary>Original English</summary>
+>> And then to to get into specifics, can we choose like a challenging project that that you built and then we can talk about how you built it because one of the things I'd like I'd love to learn more about is how building is is changing and I think it's as always better to like talk about a specific project.
+</details>
+
+>> 好的。我们刚刚用 Rust 把整个东西重写了一遍。
+<details><summary>Original English</summary>
+>> Yeah. So we just rebuilt the whole thing in Rust.
+</details>
+
+>> 所以这整个 API
+<details><summary>Original English</summary>
+>> So so so this whole API
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 层，它包括
+<details><summary>Original English</summary>
+>> layer which
+</details>
+
+>> API 层。
+<details><summary>Original English</summary>
+>> API layer.
+</details>
+
+>> 包括了授权、身份验证、分词、计费、
+<details><summary>Original English</summary>
+>> which which includes so authorization, authentication, tokenization, billing,
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 安全。
+<details><summary>Original English</summary>
+>> security.
+</details>
+
+>> 是的，安全防护（safeguards），是的。
+<details><summary>Original English</summary>
+>> Yeah, safeguards yeah.
+</details>
+
+>> 安全防护，那真是很多东西。我是说，如果这只是一个小服务，好吧，那可能很简单，但我们知道这涉及海量客户、庞大数据等等，规模非常巨大。
+<details><summary>Original English</summary>
+>> Safeguard that's that's a lot [laughter] I mean if if this was like some small service, okay, that might be simple, but we know this is a massive scale when we're talking about customers, the the sheer data and so on.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 那你们最初是用什么构建的？
+<details><summary>Original English</summary>
+>> So what did you build it in originally?
+</details>
+
+>> 呃，Python。它是一个 Python 单体应用（monolith），而且最初——其实这次重写的契机就是它是一个 Python 单体应用，并且运行在单个 GCP 区域（region）中。
+<details><summary>Original English</summary>
+>> Uh so Python. It was a Python monolith um and it was originally actually just kind of the impetus for this was it was a Python monolith and it was running in a single GCP region. Um and
+</details>
+
+>> 很久以前的事了。
+<details><summary>Original English</summary>
+>> way back in the day.
+</details>
+
+>> 是的，没错。不幸的是，其实也没那么久以前。然后这变得非常难以提供服务，仅仅是因为 CPU 的原因。能够高效运行，说实话，在我们运行的那个集群里拥有足够的 CPU 开始成为一个问题——这太疯狂了，而这正是请求量随着时间推移急剧飙升的结果。
+<details><summary>Original English</summary>
+>> Yeah, exactly. Not that unfortunately not that long ago. Um and uh this became really difficult to serve for um just like CPU purposes. Being able to run efficiently and and honestly just frankly having enough CPU in that cluster that we were running in was started to become problematic um which is crazy and that's just a result of request volume having spiked so high over time.
+</details>
+
+>> 我必须问你一个问题，因为很多工程师都在想：为什么是 Python？尤其是考虑到 Anthropic 一直招聘世界级的工程师，而工程师们对 Python 嗤之以鼻的一个常见原因就是“它性能不够好”。当时肯定有一些反对意见，我敢肯定你们知道它不会那么高性能。
+<details><summary>Original English</summary>
+>> One question I'll have to ask you because a lot of engineers are thinking why Python especially just knowing how Anthropic has always hired like world-class engineers and engineers often one reason they sniff at Python is like, well, it's not as performant. So what were the there must have been some counter arguments like I I'm sure you knew it's not going to be as performant.
+</details>
+
+>> 是的。这早在我加入 Anthropic 之前就发生了，但据我了解，这大约是在三年前，或者现在算来可能更久了。当时 Anthropic 是一家专注于模型的研究型公司，向公众提供模型服务并不是 Anthropic 一开始在做的事情。所以当他们最初决定“好吧，我们现在要做一个 API，还要做应用之类的东西”时，那是一个非常小的开发者团队，基本上是和研究团队交叉协作的。而研究界以及在这个领域工作的人，至少在当时，主要都在用 Python。所以这算是一种顺理成章的做法
+<details><summary>Original English</summary>
+>> Yeah. So this was well, this was long before I was at Anthropic, but my understanding is this was about three years ago, maybe more at this at this point where Anthropic had existed as a research company making models and serving those models to the public was not a thing that Anthropic was doing at first. Um, and so when they first decided, okay, we're going to build an API now and we'll build apps and and do these sorts of things, it was a really tiny team of developers who were basically like crossing over with research. Um, and so the research community and and folks who work in this space tend to, at least at the time, work mostly in Python. And so that's kind of just working from
+</details>
+
+>> TensorFlow。
+<details><summary>Original English</summary>
+>> TensorFlow.
+</details>
+
+>> 是的，没错。
+<details><summary>Original English</summary>
+>> Yeah, exactly.
+</details>
+
+>> 我可以理解为，这带来了一种非常无缝的工作方式，比如研究团队可以轻松地调整代码，或者把他们的原型直接转化为生产环境等等？
+<details><summary>Original English</summary>
+>> Do I understand this allowed like like really seamless way of working like research you could easily like you know like maybe tweak with the code or or or take their their prototypes and turn into production and so on.
+</details>
+
+>> 是的，没错。所以在研究团队、推理团队、基础设施团队以及当时只有几个刚起步的人的产品团队之间，那是最容易让大家协同工作的选择。
+<details><summary>Original English</summary>
+>> Yeah, exactly. Um, and so between the research team, the inference team, the infrastructure team, and and the product team that at the time was just a couple of people who were getting started, um, that was kind of the the choice that made it easiest for them to all work together.
+</details>
+
+>> 好的，听起来你们很快就发现了性能问题和 CPU 问题，你也写过关于 CPU 紧缺（CPU crunch）的文章。
+<details><summary>Original English</summary>
+>> Okay, so it sounds like you you discovered pretty quickly, all right, performance issues and and CPU and there's a CPU you wrote about the CPU crunch as well.
+</details>
+
+>> 我当时深有体会。
+<details><summary>Original English</summary>
+>> [laughter]
+I was feeling it directly.
+</details>
+
+>> 是的，我想这多少算是一点契机。
+<details><summary>Original English</summary>
+>> Yeah, so I guess this this this this was inspiring a little bit.
+</details>
+
+>> 是的，肯定是的。这是我们从去年年底进入今年以来一直在思考的事情，当时我们开始看到请求量真的、真的、真的在飙升。尤其是今年早些时候，对我们团队来说有一件很有意思的事：我们投放了一支超级碗（Super Bowl）广告。你知道，投放超级碗广告是一个经典的工程问题，你必须小心应对可能出现的流量激增。同样，因为我们所有的应用都运行在 Messages API 上，它就是那个承接所有可能激增流量的层。比如，超级碗广告可能不会让人当场打开笔记本电脑去写一个 API 集成，但你可能会选择下载我们的手机应用试一试，而所有这些请求仍然都要经过这个 API。所以我们开始看到请求量急剧上升，而在那段时间里，我们运行的那个 CPU 集群开始变得非常吃紧。这真的很有意思，因为在我的职业生涯中，我想对大多数人来说直到最近也是如此，CPU 都是那种你可以随心所欲自动扩缩容（auto scale）的资源。你得花钱，但只要你想要更多，就能拿到更多。而这是第一次我们开始——或者说我个人开始——感觉到，我们想从云厂商那里拿到更多资源，但这次的沟通比以往任何时候都要艰难。
+<details><summary>Original English</summary>
+>> Yes, for sure. This is something that we've been thinking about since I want to say like late last year coming into this year where we were starting to see request volume like really really really spike. And I think especially, um, earlier this year an interesting thing for our team, we we ran a Super Bowl commercial and you know you run a Super Bowl commercial and it's a a classic engineering problem where you got to be careful about you know what sort of spike might you see. And so again because all of our apps run on the Messages API, it's like very much this layer that's serving everything that might spike. Like you know a Super Bowl commercial probably doesn't lead someone to like crack open a laptop and build an API integration on the spot, but you might go choose to you know download our mobile app and give it a shot and that's all still running through the API. And so we started to see request volume just like really really go up and in that time, um, you know that CPU cluster that we were running started to get pretty crunched. And so it's really interesting because in you know in in my career and I think for most people up until recently, CPU was the sort of resource that, you know, you could auto scale to your heart's desire. You got to pay for it, but you can get more if you wanted more. And this is the first time when we were starting or I was starting to personally feel that, you know, we wanted more from the clouds and it was a harder conversation than at it had ever used to be.
+</details>
+
+>> 是的，因为我在想我们刚才聊到的关于 Python 的内容，它有这么多优势：无缝衔接、易于构建。而且据我了解，你们构建最初的 API——也就是 Messages API，对吧？——它是可以水平扩展的，意味着你总是可以增加更多 CPU，然后就能
+<details><summary>Original English</summary>
+>> Yeah, cuz I'm just I'm reflecting on, you know, what we said about Python and there's all these advantages. It's seamless. It's it's easy to build. Plus, I understand that you built your original API, which the message API is the is the API, right? It's it's interchangeable to be horizontal scalable, meaning you can always just add more CPU and you'll you'll
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 无限扩展。过去我们就是这么想的。以前的工程挑战在于，垂直扩展很蠢，因为你能拥有的机器上限就那么点，但水平扩展是无限的。
+<details><summary>Original English</summary>
+>> scale indefinitely. And this is how we used to think about it. Like I the the engineering challenge back in the day used to be that vertically scalable is stupid cuz there's only so much machines you can have, but horizontally is is infinite.
+</details>
+
+>> 对。
+<details><summary>Original English</summary>
+>> Right.
+</details>
+
+>> 而现在它未必是无限的了。
+<details><summary>Original English</summary>
+>> And now it's not necessarily infinite.
+</details>
+
+>> 没错。而且它是单线程的，不是一个高效的系统。我们团队一开始采取了一些经典做法，比如我们在另一个区域运行并路由流量，但当然，区域之间的网络带宽又变得很棘手。但不管怎样，在我们说“必须把整个东西重写”之前，我们采取了一些更显而易见的步骤。我们找到了一些小的优化点，也找到了基础设施层的优化点，但今年早些时候，有一些工程师开始说，如果我们继续看到请求量这样增长，我们就必须采取更彻底的措施。而且确实主要是其中一位工程师提出：我觉得我们得试试 Rust，我觉得我们得尝试一种完全不同的东西。
+<details><summary>Original English</summary>
+>> exactly. Um and you know, it's single threaded. It's like not an efficient system. Our team started by doing some of the classic, you know, we started running in another region, right? And and routing traffic, but then of course like network bandwidth becomes hard in between your regions. But regardless, right? We um took some of the the more obvious steps that you might take before you say we got to rebuild the whole thing. Um we found smaller efficiencies. We found infrastructure layer efficiencies, but earlier this year uh we had some engineers who started to say like we got to do something more drastic if we're going to continue to see this um growth and request volume. And it really was one engineer in particular who was like I think I think we got to try Rust. I think we got to try something that's very different.
+</details>
+
+>> 好吧，你们知道需要更快的东西，但你们本可以选择 Go、Java、Rust、C++、C。理论上我就不提汇编了，咱们别往那儿聊。我知道各自都有一堆缺点。你们是怎么最终敲定 Rust 的？我猜鉴于这个项目这么大，你们肯定研究过替代方案。你们这里的指导原则是什么？
+<details><summary>Original English</summary>
+>> Now like okay, you you knew you needed something faster, but you could have chosen Go, Java, Rust, C++, C. I'm not going to say assembly theoretically, but but let's not go there. I I know we have a bunch of downsides. How did you settle on Rust? I assume that you must have just looked given that the big project you you you might have must have looked at alternatives. Like what was your kind of guiding principle here?
+</details>
+
+>> 其实——说来好笑——我们已经开始用 Go 构建一些服务了。所以在我们运行的所有服务中，有一些 Python——好吧，现在其实没多少了，我们基本替换掉了。去年某个时候，我们开始用 Go 构建一些新服务，做那种经典的“我们有一个巨大的单体应用，让我们转向更面向服务的架构”的事情。在我们构建新服务时，我们希望这些服务是什么样的？这就是非常经典的工程辩论：你选择什么？当时选择了 Go，因为模型还没有达到“语言选择完全无关紧要”的地步，对吧？你仍然想要一种对开发者友好、便于他们进行开发的语言。所以选择 Go，是因为它在效率和开发者体验的光谱上处于一个更理想的位置。后来事情变得有趣了，因为 Anthropic 系统中那些最需要高性能的部分，大家开始觉得“我们应该走得更远才对”，而且模型也开始变得更好，团队里之前没有多少人做过大量 Rust 开发或许也没关系了。于是我们一路选到了 Rust，把它作为那种新时代的有趣语言：它非常高效，能给我们带来所有那些性能收益，而且房间里没有一大堆 Rust 开发者或许也没关系，因为模型已经足够强大，实现细节可以更多地交给模型来处理。
+<details><summary>Original English</summary>
+>> so um we actually and it's funny you say that, we have started building some services in Go. And so really the of all the services that we're running, we've got some Python. Well, now not really. We've mostly replaced it. We had started to build some new services in go as soon as um you know, sometime last year, we started to do the classic like we have a giant monolith. Let's do more service-oriented architecture. As we build out new services, what do we want those services to look like? Very classic engineering debates of what do you choose? And um go was chosen at the time because, you know, the models were not quite yet in a place where language choice like didn't matter at all, you know? You still wanted something that was friendly to developers to be able to develop with. And so go was chosen for being somewhere in a nicer spot on the spectrum of like efficiency as well as um you know, developer experience. And then it became interesting because some of the parts of all of Anthropic systems that needed to be the most performant, people were reaching for like we should just go even further, right? And models were starting to get better and it was maybe okay that we didn't have people in um the team who had done a lot of rust development previously. And we came all the way to rust as the like kind of new age interesting language that you could choose that would be really efficient and give us all of those wins, but maybe, you know, was okay that we didn't quite have uh tons of rust developers in the room because the models had gotten good enough that the implementation details could be more handled by the models.
+</details>
+
+>> 是的，如果我没理解错的话，请纠正我，关于 Rust 的性能——把汇编排除在外，因为那是特定于芯片的，每次都需要重写。但除此之外，C++ 能给你最高的效率，因为你几乎可以完全控制内存和分配方式。而据我所知，用 Rust 你可以达到与 C++ 相当的水平，同时还能保证内存安全。C++ 不是内存安全的，但作为回报，在 Rust 中你需要理解借用检查器（borrow checker）之类的东西，而且你不能做某些事情。在编译时语言会阻止你，但新工程师经常会感到困惑，因为这真的很令人沮丧。而其他所有语言至少都有一个小小的抽象层，这意味着它们的性能会略差一些，但开发效率会更高。是这样吗？
+<details><summary>Original English</summary>
+>> Yeah, and and I understand, correct me if I'm wrong, that that the thing with performance in rust is taking out assembly because that's chip specific and you would need to rewrite it every single time. But outside of that, C++ gives you the most efficiency because you can you can have pretty much full control over over the memory over how you allocate things that the how. And apparently with rust, you can have on par with it, but you can be memory safe. C++ is not memory safe, but in return you need to understand things like the borrow checker. And you cannot do certain things. There's and at compile time the language stops you, but new engineers often get confused because it's really frustrating thing. And then everything else, all the languages they have at least one small abstraction layer that will mean that their performance will be slightly worse, but it'll be more developer productive. Is is this like
+</details>
+
+>> 是的，没错。所以我认为这里面有一个非常好的权衡：我们追求的是尽可能高的效率，同时又不必承受某些代价——比如，我不知道如果我们当时说“我们现在要用 C++ 来做”，会有多少工程师辞职。但我认为 Rust 对很多人来说很有吸引力，因为它兼顾了这些权衡，而你刚才提到的那些可能非常令人沮丧的“坑”（foot guns），我们可以依靠模型来帮我们处理其中一部分。所以刚开始做这件事的时候肯定经历过阵痛，大家还不太清楚自己在做什么，而且战斗的一半是 Claude 帮你写代码，另一半则是 Claude 帮你学习正在写的是什么代码、到底发生了什么。所以在那种情况下，我觉得我们找到了一个感觉不错的权衡，而且我想我们团队里的很多人都会说，他们比自己预想的更快地适应了 Rust 以及用 Rust 进行开发。顺便说一句，Go 也发生过同样的事情。当我们刚开始用 Go 开发时，我们其实也没有太多以前用过 Go 的人。我们有几个，但大家对此非常紧张。他们会说，我以前是 Ruby 开发者，或者我是 Python 开发者之类的，这是一个新语言。甚至在一年前模型还没有现在这么好的时候，大家也觉得自己很快就适应了，能够学习这些范式并上手。我认为这就是这些模型的神奇之处之一：人们常说“哦，模型在写所有的代码，所以你理不理解所有细节其实无所谓”，但实际上如果你想理解细节，你是可以理解的，而且学起来更容易，因为模型在这方面也会帮你。
+<details><summary>Original English</summary>
+>> Yes, exactly. So, I think there was just like a really nice tradeoff in there between we were going for the most efficiency that we could possibly get without some of the like you know I I don't know how many engineers would have quit if we were like we're doing in C++ now, [laughter] you know. But uh I think Rust was interesting to a lot of people as something that accounted for some of these tradeoffs and those like foot guns that you kind of talked about that can be really frustrating are things that we could rely on models to deal with some of those things for us. And so there were definitely growing pains at first when we first started doing this and you know people didn't really know what they were doing yet and uh half the battle is Claude helps you write the code, the other half the battle is Claude helps you learn what code is being written and and what's even happening. And so in that world I think we we found what felt like a good tradeoff and I think a lot of people on our team would say that faster than they expected to they got really comfortable with Rust and with developing in Rust. The same thing happened with Go by the way. When we first started building in Go we didn't really have too many people who had done so in the past. We had a couple um but people were really nervous about this. They were like you know I was a Ruby developer or I was a Python developer or whatever it might be and this was a new language and um even then at the time a year ago when the models weren't quite as good people felt like really quickly they were able to get comfortable and kind of you know learn the paradigms and get started. And I think that's one of the you know magical things about these models is people are like oh the models are writing all the code and so it doesn't really matter if you understand all the details, but actually you can understand the details if you want to and it's easier to learn them because the models will help you do that part too.
+</details>
+
+>> 那是这样的吗——你说到和模型一起学习。具体到你的团队甚至你自己，我猜你以前没写过 Rust 吧？
+<details><summary>Original English</summary>
+>> Is it So So you said learning together with with with the models. So like specifically on on on your team or even yourself like I assume did you do Rust before?
+</details>
+
+>> 没有。
+<details><summary>Original English</summary>
+>> No.
+</details>
+
+>> 那你是怎么处理这件事的？是那种比较粗放的“好，你去实现这个和那个”，然后就不去看代码了吗？还是像你说的那样，你想去学习，至少想理解并验证，然后再去信任那些可以信任的部分？你的做法是什么？
+<details><summary>Original English</summary>
+>> And how did you approach this? Is it a more of a hand wavy like okay go ahead and implement this and this and then you're not going to look at the code or as you say you want to learn, you want to at least understand and then validate and then later trust the certain things that you can trust. What's your approach?
+</details>
+
+>> 是的，我觉得
+<details><summary>Original English</summary>
+>> Yeah, I think the
+</details>
+
+>> 任何工程师的自然倾向都是想稍微学一点。你希望在需要的时候能够看懂代码，对正在发生的事情大概有个概念。归根结底，如果你是一个以前在任何这类语言里手写过代码的人，看 Rust 代码并弄清楚发生了什么，并不是什么完全陌生、不可理喻的事情。所以我想在很大程度上——如果我必须给它一个百分比——我会说 75% 是“模型会去写代码，理解确切的语法也许并不重要”。但另外 25%，我会说就是工程师的自然倾向：“我有点想弄明白这里到底在发生什么。”于是你会发现自己在向模型提问，弄清楚它到底写了什么以及到底发生了什么。然后你就会达到这样一个程度：你比一个完全两眼一抹黑进来的人更游刃有余。你能看懂它，并且大致理解什么是重要的。
+<details><summary>Original English</summary>
+>> natural inclination for any engineer is you want to learn a little bit. You want to be able to look at the code if you have to and have somewhat of a sense for what's going on. I think at the end of the day, if you're if you're someone who used to write code by hand in any of these languages, it's not like the most foreign insane thing to look at Rust code and, you know, figure out what's going on. And so I think for the most part, the if if I had to like put a percentage on it, I would say 75% it's like the model is going to write the code and like understanding the exact syntax maybe doesn't matter. But then 25% I would say is just like an engineer's like, you know, natural inclination is I kind of want to understand what's going on here. And so you find yourself asking the model questions and figuring out a bit about what it's actually writing and what's actually happening. And then you get to a point where, you know, you're just more comfortable than somebody who's coming in totally blind. You like can see it and like generally understand what what matters.
+</details>
+
+>> 是的，我想你能看到高层次的结构。你可能会决定“我想学一下，我想理解这几行是干嘛的”，因为你会想弄明白。这有点像“信任但要验证”（trust but verify）的感觉吗？
+<details><summary>Original English</summary>
+>> Yeah, and I guess you see the high-level structure. You you you might decide I want to learn. I want to understand what these few lines do cuz then you're like you want to understand. Is it like a trust but verify thing ish?
+</details>
+
+>> 算是一半一半吧。不过我的意思是，如果我试图声称“你不需要理解每一个最后细节”不是大多数情况，那我就是在撒谎了，对吧？我觉得工程师多少有点想理解，你会花一点时间去接触它，稍微了解它一点。但我认为在很大程度上，实际的实现细节——比如代码究竟是如何写出来的那些繁琐语法——已经远远没有那么重要了，尤其是随着今年时间推移、模型在这一整年里变得越来越好。只要你非常清楚自己想让代码做什么的意图，你就可以更加信任模型会写出比你自己写得更好的代码。
+<details><summary>Original English</summary>
+>> kind of. Um but I mean I I would be lying if I tried to claim that it wasn't um mostly the case that you don't really need to understand every last detail, right? Like I think it's a an engineer kind of wants to and you spend a little time with it and you get to know it a little bit. Um but I think for the most part, it's like the actual implementation details, the like nitty-gritty syntax of how exactly the code gets written just doesn't matter nearly as much anymore, especially as this year has gone on and the models have gotten better throughout this year. Um you can trust much more that as long as you are really clear about the intent that you have with what you want code to do, that the model will write the code better than you probably would have yourself.
+</details>
+
+>> 开发者对 Rust 感到沮丧的一个原因，同时也是它非常强大的地方，在于它是编译时检查最多的语言。作为一名开发者，当我之前请来 Rust 团队的 Alice Real 时，她说到开发者经常是如何与借用检查器和 Rust 抗争的，因为他们的代码无法编译。你为此投入了大量精力，因为有所有这些反馈循环；但当你编译通过时，她说 Rust 之所以变得非常流行，是因为 Rust 中的 bug 更少，因为有大量的编译时检查，意味着只要你的代码能编译通过，一整类 bug 就几乎不可能出现，除非你使用了 `unsafe` 关键字——当然你不该用它，不用它就没事。你是否也认为这是 Rust 变得更流行的一个原因？是不是模型能够进行更多次迭代，或者直接给你产出实际上有一整套问题你根本不需要担心的东西——例如，你不再需要担心内存安全了？
+<details><summary>Original English</summary>
+>> What One reason developers were frustrated with Rust, but also it was a very powerful thing, it's the language that has the most compile-time checks. So as a dev, you would when I had Alice Alice Real here on here from the Rust team, she was, you know, saying how developers are really kind of often like fighting the borrow checker and fighting Rust because their code will not compile. You put a lot of effort into it because there's all these feedback loops, but when you compile, she said Rust is becoming very popular because there's fewer bugs in Rust because there's a lot more compile time checks, meaning if your code compiles, there's a whole category of bugs that is near impossible unless you use the unsafe keyword, which you should I mean don't use it and then you'll be fine. Do you do you see this as as as well that this being a reason for Rust to become more popular? Does do the models get to iterate more or just give you stuff that actually there's a whole host of things you don't need to work for example, you don't need to worry about memory safety anymore.
+</details>
+
+>> 是的，没错。我认为这正是你用模型和智能体所能完成的事情很大一部分的体现：在一个非确定性的世界里，你越能把事情变得可验证，只要你能让东西变得可验证，你就处于一个非常、非常有利的位置。而这正是它非常棒的地方之一：好的，当然，你有更多的编译时检查，如果你是手写代码并且经历一个非常缓慢的迭代循环才让代码编译通过，那会很烦人。但在一个你甚至不需要怎么操心、由模型和智能体来完成这件事的世界里，这就太棒了，因为一旦它搞定了、让东西跑起来了，你对最终得到的结果就有了更多的信任。
+<details><summary>Original English</summary>
+>> Yeah, exactly. And I think that's that's a lot of I don't know just like things that you accomplish with models and things that you accomplish with agents, the more you can get it to be like verifiable, you know, in a world of non-determinism, as long as you can get stuff to be verifiable, you're in a really really great spot and that's just one of the really nice things about this is like okay, great. Sure, you have more compile time checks and if you're writing code by hand and going through a really slow iteration loop to get your code to compile, that would be annoying. But in a world where you're not really even paying attention and the model is doing it, the agent is doing it, then that's great because you do have more trust in what you end up with once it gets there and it gets something working.
+</details>
+
+>> 那我们来聊聊信任。好的，API，我们要用 Rust 重写其中的一部分。你们是怎么切分它的，又是怎么信任它的？测试、验证、上线到生产环境。
+<details><summary>Original English</summary>
+>> So so let's go to the trust. So okay, API, we will write parts of it in in Rust. How did you slice and dice it and then how did you trust it? Testing, verification, rolling out to production.
+</details>
+
+>> 是的，最初的计划是把系统的各个部分切分出来，然后用 Rust 重写。在开始做这件事的过程中——显然那是一项相当缓慢的工作——在我做这件事做到一半的时候，我团队里新来了一位高级工程师，他进来后说：“听我说，如果一次性全换掉呢？”如果我们这么做——他把这叫做“大跃进式”（great leap style）。这背后的想法是：如果我们直接拉起一个代码库的分支（fork），然后用 Rust 把整个东西全做一遍呢？然后你可以有一个 Python 的前门（front door），对吧？当一个请求进来时，有一个非常薄的 Python 前门，它可以把请求路由到 Python 系统，同时在 Rust 系统里运行一个影子请求（shadow）。真正有趣的地方在于，最关键的是确保你得到的输出是一样的。
+<details><summary>Original English</summary>
+>> Yeah, so the original plan was going to be, you know, like splice off pieces of the system and and rewrite those in Rust. And then uh part of the way through getting started on doing that and obviously that was that was a pretty slow undertaking. Um part of the way through doing that um I had a new senior engineer join my team and he kind of came in and he was like hear me out. What if all at once? What if we do it and and he had kind of called it like great leap style? And the the idea behind that was what if we just stand up a basically like fork of the codebase and just like do that whole thing in Rust. Then you can kind of have this Python front door, right? Like a request comes in, there's like a really thin Python front door that can route a request through the Python system and then run a shadow through the Rust system. And then what's really interesting about that is that what really matters is making sure that the output you're getting is the same.
+</details>
+
+>> 一样的。
+<details><summary>Original English</summary>
+>> the same.
+</details>
+
+>> 没错。然后不断迭代，直到——让模型去统计在任何一天里，Rust 和 Python 之间有多少请求是不一样的，然后不断迭代。我们当时面临的两个大挑战——好吧，真正的一个大挑战是，我们不查看用户的提示词（problems），也不查看用户的补全结果（completions）。所以如果出现了差异，在我们实际上不能查看任何流经系统的数据的情况下，你怎么知道 Python 和 Rust 之间到底是哪里不一样，又怎么知道该如何修复呢？
+<details><summary>Original English</summary>
+>> Exactly. And then iterating until, you know, having the model say in any given day, how many of these requests were different between Rust and Python and and iterate. The two big challenges that we had with that, well, the real one big challenge is we don't look at people's problems, we don't look at people's completions. And so if you had a difference, how do you know what about it is different between Python and Rust and how do you know how to fix it if we can't actually look at any of the data that is flowing through the system?
+</details>
+
+>> 哦，我明白你的意思了。你是说因为数据隐私和敏感性以及它的工作方式，如果你发现了一个差异，你不能直接说“把原始数据给我，我来调试”。这在原则上是不可能的。好吧，好吧。
+<details><summary>Original English</summary>
+>> Oh, I see what you mean. So you're saying that because of data privacy and sensitivity and and the way it works, if you would get a difference, you you cannot just say like give me the raw data and I will debug. You just it's impossible by Okay. Okay.
+</details>
+
+>> 所以这真的很有趣，对吧？因为
+<details><summary>Original English</summary>
+>> So that's really interesting, right? Cuz like
+</details>
+
+>> 这让事情变得更具挑战性。
+<details><summary>Original English</summary>
+>> that makes it more challenging.
+</details>
+
+>> 对，对。因为我们当时想做的整个事情就是说：如果我们能达到 100% 的时间里把请求同时跑过 Python 系统和 Rust 系统并得到相同的输出，我们就能把这件事做得很干净。但我们实际上无法验证那些东西的细节。所以我们做的第一件事就是：就在某个东西即将下发到推理层之前的那一层，确保两边是一样的。然后我们做的第二件事是在返回出来的路上，只检查 token 数量。token 数量是一样的。是的，没错，那样你大概就知道它是一样的。但即便如此，你还是会遇到一些微小的差异，而在不能查看原始数据的情况下，这要难得多。因此团队必须思考，我们有哪些不同的方法可以找出这两个系统之间可能存在的差异。最终，我想这归结为很多类似“我们如何只看在某个东西下发到推理层之前的那一刻”的做法。而那才是这个系统真正的核心。所以在所有这些环节中，你能看到发生了什么，也就更容易找出可能出了什么问题。这就是它的运作方式，基本上就是日复一日地迭代，把 Python 和 Rust 之间的差异百分比不断压低、压低、再压低，直到一个接近完美的程度，对吧？然后你就说，好吧，太棒了，让我们开始上线 Rust 系统吧。我们当时做的是一段时间内仍然保留那个 Python 前门，因为如果出于任何原因我们在 Rust 系统里遇到了 bug，或者系统拒绝处理某个请求、无论什么原因抛出了错误，你总是可以回退到 Python 系统。那样可能会慢一点，但总比根本拿不到响应要好。这就是我们当时采用的方法，直到我们有足够的把握把这个前门拆掉。
+<details><summary>Original English</summary>
+>> Right. Right. Cuz the whole thing that we were trying to do was just say like we could get this really clean if we get all the way to a place where 100% of the time you run the request through the Python system and the Rust system and you get the same output. We can't actually verify the the details of those things. And so the first thing that we did was say like right up until the layer where something is like going down into inference, make sure that that is the same. And then the second thing that we did was on the way back out, just check token counts. The token counts are the same. Yeah, exactly. Then you kind of know um that it's the same. But then, you know, you still get into these places where you have these tiny differences and it's much much much harder when you can't look at the raw data. And so the team had to think about, you know, what are the all the different ways that we can figure out what might be different between these two systems. And ultimately, I think it just came down to a lot of uh you know, like how do we look at again just like right up until the the before something goes down into inference. And that's like really the meat of this system. And so in all of that, you know, you can see what's going on, and it's much easier to figure out what could be wrong. But that was how it worked, was basically just like iterating day over day on take the percentage of difference between Python and Rust and like drive it down, drive it down, drive it down until a place where it was um you know, like near perfect, right? And then you say, okay, great, let's start rolling out the Rust system. And what we did was for a while we still had that Python front door because if for whatever reason we ran into a bug with the Rust system or like, you know, we refused to the the system refused to process a request for whatever reason it threw an error, you could always just fall back to the Python system. And so it would be a little bit slower, but that's better than just not getting a response at all. Um and so that was kind of how we did it until we got comfortable enough to rip out that front door.
+</details>
+
+>> 而且你们并没有过多地去查看生成的代码，因为通常在迁移时，你往往会重写一部分、做一次代码审查，通常还会有一个测试层——比如单元测试或集成测试层——作为你的后盾。但显然你们仍然做了你所说的影子测试（shadowing），那才是最终的事实来源。但你们当时就能直接跳过这些，不会去想“哦，让我们看看我们是怎么移植这些业务逻辑的”？
+<details><summary>Original English</summary>
+>> And then you didn't look at the the code generate all that much, like cuz cuz usually with a migration you typically often be, you know, rewrite some part, you do a code review, you often have a testing layer, like a unit or integration testing layer that gives you a fallback. But obviously you still do what you say is is the the shadow, the shadowing, that is the ultimate source of truth. But you were just able to just like sleep through this like, oh, let's see how we ported the business logic.
+</details>
+
+>> 是的，没错，这听起来有点疯狂。但我认为这就是我们现在所处的世界：只要你能真正把某件事提炼到某种可验证的程度，你就不需要去查看正在编写的每一行 Rust 代码。不过我觉得在这个案例中，实际上由于这个系统的性质、它的核心地位以及把事情做对的重要性，比你想象的要更多一些，我们最终还是有工程师深入到了代码的细节中，去弄清楚可能需要修复的地方。如果你去问团队，他们大概会说，在由智能体发起的拉取请求（pull requests）中，大约有 80% 他们并没有深入通读所有写出来的代码。然后我会说大概有 20%，是在你遇到问题、试图把某件事做到完全正确时，他们必须深入细节并理解代码里到底发生了什么。
+<details><summary>Original English</summary>
+>> Yeah, exactly, which is kind of crazy. But I think that's the world that we live in now is as long as you can really boil something down to like make it verifiable in some way, then you don't have to look at every single line of Rust code that's getting written. And I think in this case actually, because of the nature of this system and how central it is and how important it was to get things right, I think more so than you might think, we ended up with engineers like getting into the details of the code and figuring out what might need to be fixed. If you were to ask the team, they would probably say something like 80% of the pull requests that got opened by agents, they didn't like deeply read through all of the code that had gotten written. And then I would say like 20% probably is where, you know, you were running into issues, you were trying to get something perfectly right and they kind of had to dig deep into the details and and understand what was going on with the code.
+</details>
+
+### 赞助商信息：Antisis 与 Turbobuffer
+
+>> Caitlyn 刚刚说到，只要你让某件事变得可验证，你就不必阅读智能体编写的每一行代码。不过，你确实需要一种可靠的方法来验证每一行代码。而这种验证正是我们的季度赞助商 Antisis 所做的。Antisis 刚刚推出了一款插件，能让你的编程智能体在发现和修复 bug 方面变得极其高效。例如，Antisis 团队在 Claude Code 中输入了这样一句话：测试 HashiCorp Raft 的 bug。智能体在 Raft 中发现了一个真正的 bug，找到了根本原因，并修复了它。成本大约是 50 美元的 Claude token。记住，Antisis 给你带来的不仅仅是代码审查，它远不止于此。Antisis 会在一个敌对模拟环境（hostile simulation）中运行你的整个系统。该模拟包括定向测试和模糊测试（fuzz testing）。通过运行这种模拟，它能在你的用户之前发现每一个 bug。而且由于这种模拟是完全确定性的，它不仅能发现 bug，还能为你提供每一个问题的完美复现，这使得修复问题变得容易得多。现在你的智能体可以为你驱动这一切。他们还推出了一个全新的自助团队版套餐，每月 2,999 美元。用信用卡即可注册，无需销售电话。作为《The Pragmatic Engineer》的听众，你可以使用优惠码 `pragmatic 50` 享受首月五折优惠。最棒的是，找到那个 Raft bug 大约只花了每月计算额度的 10%。请访问 antisis.com/pragmatic 安装插件并注册。我还想提一下我们的呈献赞助商 Turbobuffer，这是一款连 Anthropic 自己都是其客户的搜索引擎。过去一年里，有一点变得非常明显，那就是搜索是 AI 的核心基础设施。每个智能体都需要连接到 PB 级别的非结构化数据，无论是在公共网络上还是在私有数据集中。Turbobuffer 是一款允许任何智能（无论是人类还是智能体）搜索每一个字节数据的搜索服务。像 Anthropic、Cognition 和 Notion 这样的公司都在 Turbobuffer 上构建他们的搜索基础设施，因为它在 AI 规模的前沿领域具有极高的可靠性和性能。Turbobuffer 托管着数万亿份文档用于搜索，每秒处理数十万次搜索，并且对于一个在其规模下运行的数据库来说，有着无可挑剔的正常运行时间记录。如今构建软件的成本正趋近于零。因此，如果你想打造令人惊叹的产品，你需要在基础设施上下注，确保无论你的野心有多大或发布速度有多快，它都不会崩溃。Turbobuffer 已经证明自己有能力扩展以支持世界上最大的搜索工作负载，这就是为什么它正迅速成为企业和初创公司默认的智能体搜索引擎。请访问 turbobuffer.com/pragmatic 了解一下。你可以今天就注册并开始构建，或者如果你有一个庞大的工作负载想要讨论，他们拥有业内最好的支持团队之一。好了，让我们回到 Caitlyn，聊聊工程师如何了解由智能体编写的系统。
+<details><summary>Original English</summary>
+>> Caitlyn just said that as long as you make something verifiable, you don't have to read every line that the agents write. But you do need a reliable way to verify every line of code, though. And this kind of verification is what our season sponsor Antisis does. Antisis has just launched a plugin that makes your coding agent incredibly effective at finding and fixing bugs. For example, the Antisis team typed this into cloud code, test hash corp raft for bugs. The agent found a real bug in raft, found the root cause, and fixed it. The cost was about $50 in cloud tokens. And remember, what you get with Antisis is not code review. It's much more. Antisis runs your whole system in a hostile simulation. The simulation includes both targeted testing and fuzz testing. By running this simulation, it finds every bug before your users do. And because the simulation is fully deterministic, it doesn't only find bugs, it gives you a perfect reproduction of every issue, which makes it much easier to fix issues. Now your agent can drive all of this for you. There's also a new self-serve teams plan at $2,999 a month. You sign up with a credit card, no sales call needed. As a listener of The Pragmatic Engineer, you can use the code pragmatic 50 for a 50% off your first month. And the best part, finding that raft bug costs about 10% of a month's compute allowance. Install the plugin and sign up at antisis.com/pragmatic. I'd also like to mention our presenting sponsor Turbobuffer, the search engine that Entropic itself is a customer of. Something that has become so obvious to you in the last year is that search is the core infrastructure for AI. Every agent needs to connect to petabytes of unstructured data, both on the public web and in private data sets. Turbobuffer is a search that allows any intelligence, whether human or agent, to search every byte of data. Companies like Entropic, Cognition, and Notion build their search infra on Turbobuffer because it's insanely reliable and performant at the frontier of AI scale. Turbobuffer hosts trillions of documents for search, serves hundreds of thousands of searches per second, and has an impeccable track record of uptime for a database operating at their scale. The cost of building software today is approaching zero. And so if you want to build something amazing, you need to make bets in an infrastructure that won't break no matter how big your ambition or how fast you ship. Turbobuffer has proven it's capable of scaling to support the largest search workloads in the world, which is why it's fast becoming the default agentic search engine for enterprises and startups. Check it out at turbobuffer.com/pragmatic. You can sign up today and start building, or if you've got a big workload that you want to talk through, they have one of the best support teams in the business. And with this, let's get back to Caitlyn and how engineers get to know a system that agents wrote.
+</details>
+
+### 代码库文档、新人上手与 AI 时代的学习
+
+>> 现在我们有了新系统——以前用旧系统的时候，当代码是手写的，通常会有几位在那里待了很久的老工程师，他们对整个架构了如指掌。
+<details><summary>Original English</summary>
+>> And and now that we have the new system, like with the old system when you know it was written by hand, like it's typical that there are a few engineers who've been there for a long time who just understand the whole structure.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yep.
+</details>
+
+>> 有时候在管理得更好的地方，你们会有文档。我们知道文档会过时，但在更好的地方，尤其是对于关键系统，会有保持最新的文档。随着这个新系统的出现，这方面发生了怎样的变化？
+<details><summary>Original English</summary>
+>> Sometimes better places you will have documentation. We know it gets outdated, but but better place especially for for critical systems there's like up-to-date documentation. How has that changed with this with this new system?
+</details>
+
+>> 是的，这件事比较有趣的一点是，由于 Anthropic 的性质——再次提到，我们大约三年前才第一次有了 API，对吧？那是从一个非常小的团队开始的，而团队增长得如此之快，系统也如此迅速地开始承受巨大的负载。在那段时间里，我们并不算拥有关于那个 Python 系统的完美文档，我想这也是让整件事变得更具挑战性的原因之一。并不是说我们可以拿出一份文档，照着它去构建一个新系统。所以从这个角度来看，我想我们一直处于——并且继续处于——这样一个世界：在很大程度上，代码本身就是正在其上工作的智能体的文档。但我认为在系统设计以及所有这些组件如何组合在一起方面，看到新工程师加入时——他们会想，“好吧，我必须搞懂这个系统，准备好在上面工作”——这一部分的变化非常大。因为过去你得找个人和你一起站在白板前，画方框和箭头，了解正在发生什么，也许外面还有一些图表可供你研究和学习。但现在我们看到人们加入后，他们做的第一件事就是直接问 Claude：“告诉我这东西是怎么运作的。”通常你会得到一个类似交互式应用的东西，里面不仅有方框和箭头，而是真正对系统的渲染，你可以点击浏览，然后说：“好吧，原来系统的这一部分是这样和另一部分交互的。”每个人都可以用自己喜欢的方式去学习——如果他们想要一个可以深入点击浏览的交互式应用，或者如果他们只想看一段能教给他们东西的散文，或者如果他们想要视频风格或播客风格的讲解，你都可以让 Claude 为你制作任何一种形式来帮助你学习这个系统。大家各自用自己的方式去了解正在发生的事情，这成了非常酷的现象之一。
+<details><summary>Original English</summary>
+>> Yeah, one of the funny things about this is because of the nature of Anthropic, you know again, we only first had an API like three years ago or so, right? And that had started with a really small team and the team had grown so quickly and the system had started to take um tons of loads so so quickly. In that time, we didn't exactly have like perfect documentation of the Python system that we had, which is one of the things that I guess made this whole thing a little more challenging. It's not like we could say take this documentation and follow it and build a new system. And so from that perspective, I think we're we've always been and continue to be in a world where like the code itself for the most part is the documentation for the agents that are working on it. But I think something when it comes to the system design and how all these pieces fit together, it's been really cool to see how, you know, new engineers join and they're like, okay, I have to wrap my head around this system and be ready to work on it. That part has changed a lot because it used to be you'd like ask someone to get at a whiteboard with you, right? And kind of draw the boxes and arrows and learn what was going on and maybe there were diagrams that that were kind of out there that you could study and and learn about what was going on. But now we see people join and and thing they do is they just ask Claude like tell me how this thing works and often you'll get something that's like an interactive application with you know not just boxes and arrows but like really just like a rendering of the system where you can click through and say like okay here's kind of how this piece of the system interacts with this other piece of the system and anyone can learn the way that they want to learn right like if they want to have this interactive application that they can click through deeply or if they want to just have like pros that they can read through that will teach them things right or if they wanted to be like video style or podcast style right like you can have Claude make you any of those things in order to help you learn the system and that's been one of the really cool things about how people have all done their own thing to learn what's going on.
+</details>
+
+>> 是的，这有点疯狂，但我猜前提是你们把所有数据都连接起来了——当你说 Claude 时，它和我们在外部使用的 Claude 不太一样，你们拥有所有的数据源、代码库、可观测性（observability）、事后复盘（post mortems）等等，所有东西都在那里，然后它就可以去搜索、使用并做任何合理的事情。
+<details><summary>Original English</summary>
+>> Yeah this is kind of crazy but I guess the prerequisite is you have all the data connected like when you say Claude it's not the same Claude as we use externally but but you have all your data sources your code base your observability your post mortems whatever everything's there and then it can just search it use it do whatever it makes sense.
+</details>
+
+>> 是的，没错。我们与 Claude 合作的方式非常像是：我们所有的系统都有 MCP 服务器，我们有连接到这些东西的通道，当我们和 Claude 一起工作时，它可以搜索任何它需要的内容，为我们生成所需的正确信息。
+<details><summary>Original English</summary>
+>> Yeah, exactly so we are the way that we work with Claude is very much like we have all of our systems have MCP servers and we have connections to those things and you know Claude when we're working with it can just search through whatever it needs to to generate the right information that it needs for us.
+</details>
+
+>> 这对我来说仍然觉得很不可思议，因为我记得我在 Uber 的时候，有新人入职培训（onboarding），工程师负责讲授入职培训。有一次轮到我时，我重做了一些幻灯片，因为它们已经过时了，我想把这些系统如何运作的内容更新到最新。然后我心里想：“好吧，这不错。”我想我大概每隔一两个月就会教一次同样的入职培训课，一直用着同一套幻灯片，到了某个时候它们又有点过时了，但我当时就想：“算了，我懒得改了。”于是我就说：“嗯，它不完全是这样，但大致上是这样，这就够好了。”现在很难想象这已经成为现实：只要数据连接着，你就能拥有一个永远保持最新的系统，而且它还能以你喜欢的格式提供给你，比如交互式的东西——我以前在入职培训里从未听说过这种东西，因为以前做这个工作量太大了，通常收益太小。
+<details><summary>Original English</summary>
+>> This is still wild to me because I I remember when I was at Uber and you know there's onboarding and engineers teach onboarding and when one of them my turn I I read at some of the slides because they were outdated to like make it up to date on how these systems work and then I was thinking to myself like okay well like this is good like and I done I think I taught cuz every few every month or every two months we had new onboarding session and I kept teaching the same slides and at some point they were kind of outdated but I was like nah I can't be bothered to change it so I was like well it's not exactly like this but it's roughly like this that's good enough. This kind of strange to imagine well now this reality that you can have a system that will be always up to date as long as the data is connected and it can give you the formats that you like interactive thing like I've never heard of that with onboarding cuz it's too much work it's you know, for and for too little gain usually before.
+</details>
+
+>> 是的，现在完全不同了。而且老实说，其中大部分内容其实就来自代码库本身。
+<details><summary>Original English</summary>
+>> Yeah, it's totally different now. And most of it, honestly, it's just the codebase itself.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 是的，你可以像你刚才说的那样，从诸如事后复盘之类的地方拉取数据，但大部分情况下，它就是看代码库——Claude 做的就是查看代码库，然后生成任何你想要的东西。
+<details><summary>Original English</summary>
+>> Yes, you can pull in data from, like you said earlier, like postmortems and places like this, but for the most part, it's just like look at the codebase, Claude does, look at the codebase, and then generate whatever you want.
+</details>
+
+>> 所以你在 AI 出现之前，在你的其他公司也做过类似风格的重写。这次项目在时间安排、精力分配以及意想不到的事情上有多大不同？因为现在我们是在用 AI 以一种完全不同的方式进行重写。我敢肯定中途会遇到一些“地雷”，让你觉得“哦，我没想到会这样，好吧，我们需要修复这个，因为这是一种新事物”。
+<details><summary>Original English</summary>
+>> So you've done similar, I guess, style rewrites before AI at at at your other places. How different was this project both in terms of timing in terms where the where the effort was spent, unexpected things because now we're doing completely different way of rewriting with AI. I'm sure there's a little bit of like mines that you find midway where like, oh, I wouldn't expect this. Like, okay, we need to fix this just because it's something new.
+</details>
+
+>> 是的。其实在 Stripe 的时候，我们曾尝试在 Stripe 的 API 中构建一些 V2 抽象。当时有一件很有意思的事，围绕“如果我们要构建服务于 V2 抽象的新服务，是用 Ruby（Stripe 的大部分代码库都是 Ruby）来写，还是选择一种性能更高、速度更快的语言”有过一些非常深入的争论。当时我们在考虑 Java。有意思的是，作为启动这些新系统的一部分，我们实际上经历了一段用 Java 写了很多代码的时期。结果我们中途做出了一个决定，直接叫停并说：“这毫无意义。我们应该构建新服务，应该构建一个干净的系统，但我们应该直接用 Ruby 来做。用 Java 所能获得的效率提升，并不足以抵消写完所有这些代码真的需要花费我们好几年时间的事实。”所以我觉得在那个案例中，对语言的理解、围绕这些事情的选择、工程师把手放在键盘上用自己不熟悉的语言写代码——所有这些东西，现在你都可以一笔带过，觉得“嗯，我们不用在这上面想太多。我们都会没事的，因为模型懂，而且它会搞定的。”而在过去，那恰恰是最大的瓶颈，也是最耗时的部分之一：学习和实现。
+<details><summary>Original English</summary>
+>> Yeah. So at Stripe actually, we went through a we were trying to build some V2 abstractions in Stripe's API. And one of the interesting things about this was there were some like really deep debates on if we're going to build new services that are going to serve the V2 abstractions, do we write these in Ruby, which most of Stripe's codebase is Ruby, or do we choose a language that will, you know, have be higher performance and and better speed and these sorts of things? And at the time, it was Java that we were deciding between. And it's interesting because we actually went through a first period where a lot of code got written in Java as part of spinning up these new systems. And we ended up making a call part of the way through to just stop and say like, this doesn't make any sense. We should build new services. We should build a clean system, but we should just do it in Ruby. Like the efficiencies that we were going to gain from doing so in Java didn't outweigh the fact that it was going to take us like literally years to have all of this code get written. And so I think in that case it was the understanding the language, the choices around those things, the like engineers putting hands on keyboard and like writing code in a language they were unfamiliar with, all of that sort of stuff was just like the things that now you can just kind of like gloss over and be like, yep, we don't have to think too hard about that. We'll we'll all be okay because the model knows and and it'll be fine. Um, whereas in the past that was just like the biggest bottleneck and part of the thing that just took the longest is the learning and the implementation.
+</details>
+
+>> 是的，我想让每个人都去学——对吧，选择一种新语言过去意味着你要么需要培训大家。我之所以犹豫着说这句话，是因为我在 Uber 工作的头一两年里，我觉得培训有点像个诅咒，大家会想“为什么要培训？我们都是自己学的，直接上手，我们有动力”。但后来当我们——我想 Uber 也把语言标准化为 Java 和 Go——人们就开始问：“我们能不能上点 Java 培训，因为我就想知道怎么弄？”这需要很多小时的投入、大量的协调工作，让每个人都报名并获得支持，这也回到了那个问题：即使是在最优秀的工程师那里，在某个时刻你还是希望确保每个人都在同一个水平线上。
+<details><summary>Original English</summary>
+>> Yeah, and I I guess getting everyone to learn like right choosing a new language is used to be that you either needed to like train people. I I I say this hesitantly because one of my first two years when I worked at Uber like I think training was a bit of a curse where like why would you train like we all learned we just picked it up we had motivation. But then when we when we moved over I think also Uber standardized languages was Java and Go the people were asking like these engineers like could we just get some Java training cuz like I I just want to know how to do some hours a lot of coordination everyone being enrolled getting supported things and it just goes back to like even at the most you know like the best engineers like at some point like you want to make sure everyone's at the same level.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 听起来 AI 有点像给了我们一个“均衡器”：好吧，如果你需要培训，你随时有你的专属培训师，如果你需要的话。
+<details><summary>Original English</summary>
+>> Sounds like kind of like AI gives us a bit of this equalizer like well if you need training you have your trainer if if if you do.
+</details>
+
+>> 是的，没错。你直接跳过了整个那个部分。说来好笑，我在 Betterment 的时候，当时一切都是用 Java 写的，后来我们决定用 Ruby 来构建面向用户的应用层。当时我们也做过非常类似的事情——用的是 Ruby on Rails——我们也是去看所有那些 Michael Hartl 的教程之类的，工程师们花了好几个小时又好几个小时去学习这门语言。你必须自己做出判断：这是一项值得的投资，因为熬过那段时期后，每个人都知道自己在做什么，然后你就能把工作完成。但一开始，因为模型会帮忙写代码、帮忙学习等等，这件事变得更容易接受；而到了后来，你甚至会觉得：工程师能不能理解每一个最微小的语法细节，真的完全无关紧要了，所以你根本不需要去考虑前期在学习上必须投入的成本。
+<details><summary>Original English</summary>
+>> Yeah, exactly. And you just like skip that whole part. Um, funny enough actually when I was at Betterment we did a everything was Java and then we decided to build the like user facing application layer in Ruby. And at the time we did a very similar it was Ruby on Rails. We did the similar like you go through all the you know like Michael Hartl tutorials and all those sorts of things and you spend like hours and hours and hours with engineers learning the language and you decide for yourself like that's an investment worth making because you get to the other side of that everybody knows what they're doing and then you can get this work done but first it was like that is easier to stomach because the model will help write code and it'll help you learn and all those sorts of things but then you get all the way to the point where it's like it really truly doesn't matter if the engineers like can understand every last teeny piece of syntax and so you just don't have to think about the investment that you would have to make up front on learning.
+</details>
+
+>> 是不是可以公平地说，作为一名工程师，只要我掌握了概念，具体了解和理解每一种特定的语言其实已经不重要了？
+<details><summary>Original English</summary>
+>> Is it fair to say that the specific languages don't really matter as an engineer of me knowing and understanding each specific language I mean once I know the concepts?
+</details>
+
+>> 是的，到了现在这个阶段，它真的开始变得不重要了。
+<details><summary>Original English</summary>
+>> Yeah, at this point it's really starting to not matter.
+</details>
+
+>> 作为一名工程师，说出这句话难道不觉得有点心痛吗？我是说对你我来说，学习一门语言曾经是漫长的努力和时间投入，对吧？
+<details><summary>Original English</summary>
+>> Does it not hurt saying it as an engineer I mean both me and you like I it it was a long effort and time to like learn a language right?
+</details>
+
+>> 是的，但我觉得
+<details><summary>Original English</summary>
+>> Yeah, but I think
+</details>
+
+>> 这很有趣。我想在这方面每个人可能都有不同的感受。比如，我觉得当我们最初开始有 Tab 自动补全（tab complete）之类的工具时——对，没错——那感觉很棒，对吧？因为你会觉得“我不用自己敲最后这几个字符了”。所以从那个角度来看，这取决于你是不是那种因为关注所构建事物的最终结果而感到兴奋、只是热衷于创造和构建东西的工程师。如果是那样，你现在能做得快得多，也能更有野心，那感觉就很棒。如果你是那种真的非常享受语言本身的细枝末节之类的工程师，平心而论，我认为对于关心这类事情的人来说，仍然有大量的工作可做，比如深入研究下一代语言应该是什么样子，或者如何随着时间的推移让这些框架变得更高效。但我想对于普通工程师来说，如果你过去确实喜欢那些东西，你可能会感到有点失落；不过我想对很多人——那些当初能用上 Tab 自动补全就感到开心的人——来说，你可能不会太难过，因为你更关注自己现在能够创造出什么。
+<details><summary>Original English</summary>
+>> it's interesting. I think everyone everyone feels differently, probably, on this front. Like, I I think when we first started to have like tab complete, right? And and tools like that. Yeah, exactly. Like, and that felt great, right? Because you were like, I don't need to type these last few, you know? And so, I think from that perspective, it depends if you're the kind of engineer who cares about these things because of the end result of the thing that you're building and you're just excited to like create something and build. In that case, you can do it so much faster and you can be so much more ambitious, and then it feels great. If you're the kind of engineer who like really did deeply enjoy the like nitty-gritty of languages and these sorts of things, for what it's worth, I think there's still plenty of work for people who do care about that sort of thing, like deep work on evolving like what should the next languages be or how do we, you know, make these frameworks more efficient over time. But I think for the average engineer, you know, like you might feel sad if you did enjoy those sorts of things, but I think for a lot of people, the people who were happy when they got to start tab completing, you probably aren't like too sad because you're more focused on what you're able to create now.
+</details>
+
+>> 我也在想，对于那些真正投入于这项手艺、投入于“它是什么以及它如何运作”的工程师来说——我只是在想，也许我们以前从未进行过这样的对话：好吧，在业余项目或副业项目上，这很棒，对吧？我想会有这样的人，他们亲手写代码是因为喜欢写代码、喜欢去做这件事。但如果你是在一家企业里做开发，就有一个问题：“你为什么在这里？”我真不想这么说，但没有哪家企业雇佣工程师是为了让他们写出漂亮的代码，除非他们卖的就是关于漂亮代码的东西。这永远是为了达成一个目标。
+<details><summary>Original English</summary>
+>> I also wonder for the the engineers who are like really invested in the in the craft and in the what and the how it works. Again, I I just wonder if maybe we never had that conversation of like, all right, like on a hobby project or on your side project, like it's it's great, right? And I think there will be people who will write things by code because you enjoy it, because you do it. But if you're building at a business, there's a question of like, why are you here? I just hate to say, but no business writes engineers to write beautiful code unless they're selling some or or thing about beautiful code. But it's it's always for a goal.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+<!-- chunk 2/3 -->
+
+>> 而追求代码优美的原因通常是可维护性，为了更易于维护、获得更好的性能以及更好的非功能性需求。如果你能用另一种方式做到这一点，这有点像一种务实的做法，就是说，好吧，我的意思是，让我专注于大局，也就是用我能用的最好的工具来帮助实现这个目标。
+<details><summary>Original English</summary>
+>> And and the reason for beautiful code was typically maintainability for for easier for better performance, more better non-functional requirements. And if you can do that other way, like it's a bit of a pragmatic approach to say like, well, I mean, let me focus on the bigger picture, which is helping achieve this goal with what the best tools I can.
+</details>
+
+>> 是的，没错。所以，你知道，就你刚才提到的那点而言，我认为如果你从事语言本身的工作，那么对那些东西深切关注的人仍然有事可做，对吧？如果你在这些领域工作，而且你真的非常在乎那些东西，你大概就应该去做那样的工作，因为如果你在乎这些，有很多很酷、很有抱负的工作可以做。但如果你是在一家企业里工作，在那里语言和框架的选择都只是实现目标的手段——也就是创造出某种能够为企业赚钱或完成企业使命的东西——那么就很难让一个人把大量时间花在那些最终对实现目标和创造结果无关紧要的事情上。
+<details><summary>Original English</summary>
+>> Yeah, exactly. And so, you know, there to your point, I think there is still work for people who deeply care about those sorts of things if you work on languages themselves, right? And if you work in these areas and you should probably go do that, if you really do care deeply about that stuff, because there's a lot of cool ambitious work that you can do if you care about those things. But if you're working within a business where the language and framework choices are all like means to an end of creating something that's, you know, going to make a business money or accomplish a business's mission, then it would be hard to have somebody who is so deeply spending time on those sorts of things in a way that's not going to ultimately matter for accomplishing goals and creating outcomes.
+</details>
+
+### 迁移项目中的团队协作与节奏
+
+>> 那么，基于这一个项目，也就是这次重写，看起来 AI 承担了大量繁重的工作。它把一个说实话可能需要几年的项目——而且我们知道这种迁移有多复杂，甚至可能中途回滚——变成了直接把它做完。这大概花了多快的时间完成？
+<details><summary>Original English</summary>
+>> Now, based on this this one project, the rewrite, it it seems like AI did a lot of heavy lifting. It it turned a project that honestly would have probably taken years, and we we know how complex these migrations are, maybe even been been rolled back midway to just getting it done. How quickly was was this completed-ish?
+</details>
+
+>> 是的，我想说大概是五到六个月左右。而且这还要考虑到，前期有一段时间，比如有一两个人觉得，我们也许想做这件事，对吧？然后做了一点调研，之后我们才真正让人去做这个项目。但是的，我想说大概是五六个月，而且做这件事的核心团队相对较小。不过那个团队之后必须……
+<details><summary>Original English</summary>
+>> Yeah, so I want to say it was something on the order of like maybe five or six months. And that's that's kind of keeping in mind that there were there was some upfront time where like, you know, one or two people were like, we might want to do this, right? And like did a little investigation before we actually had people go and work on it. But yeah, I want to say it was something like five or six months, and like the core team was relatively small that was doing this. But that team had to then
+</details>
+
+>> 几个人。
+<details><summary>Original English</summary>
+>> a few people.
+</details>
+
+>> 是的，差不多那样。但之后我觉得那个团队必须去跟其他一大堆团队的人合作，对吧？那些团队各自负责系统的不同部分。我觉得当时发生的最复杂的事情之一是，所有其他团队都还在继续做开发，对吧？也就是说，在这整个过程中，我们并没有停止开发 Python 系统。所以一开始有点像是，好吧，行，我们只是试着把我们称之为“token hot path”（token 热路径）的最基本核心部分做完。而边缘那些正在开发的新东西，随它去吧，我们以后再回来处理。但后来我们至少遇到过一次这样的情况：在 Rust 团队毫无预期的情况下，Python 系统上的某个 beta 功能变成了 GA（全面可用），突然之间，影子流量系统（shadow traffic system）就显示出很多差异和很多错误。他们当时就想，这是怎么回事？哦，好吧，新功能变成 GA 了。从那以后，他们就加上了 linting 和静态分析之类的东西，这样一来，如果周围的任何其他团队正在开发新功能，他们就不能只构建 Python 部分了。他们还得同时完成 Rust 实现，因为在某个时间点上，我们已经足够接近（完成）了，对吧？你不能处在一个大家可以在 Python 那边随机开启新功能、而 Rust 团队只能拼命追赶的世界里。你必须达到这样一个状态：周围所有的团队都在两边同时构建。然后我们希望尽量缩短那段时间，并尽快达到可以关闭 Python 系统的状态，这样就不需要所有那些团队同时考虑两边了。
+<details><summary>Original English</summary>
+>> Yeah, something like that. But then I think that team had to go um and like work with people on a bunch of other teams, right? Who like owned the various parts of the system. And I think one of the things that was most complex that was happening was all those other teams were still doing work, right? Like we didn't stop developing the Python system when all of this was happening. And so at first it was kind of like, you know, okay, fine, we're just trying to get the like very basic core of like what we kind of call the like token hot path done. And these things around the edges that are new that are getting worked on, whatever, like we'll kind of come back to those later. But then we had at least one instance where like a beta kind of went to GA on the Python system when the rest team like wasn't expecting it, and all of a sudden, you know, that like shadow traffic system was showing a lot of differences, a lot of errors. They were like, what's going on? Oh, okay, new feature went GA. And from there they added, you know, just like linting and static analysis sort of thing, so that if any other team around them was working on a new feature, they couldn't just build the Python part. Um they like had to also do the Rust implementation because at a certain point we were close enough, right? Like you kind of have to be in a world where you can't just have people like randomly flipping on new features on the Python side and then the Rust team is like trying to catch up. You kind of get have to get to a place where all the teams around them were building in both. And then we wanted to minimize that period of time and as quickly as possible get to a place where we could shut down the Python systems so that you don't have all of those teams needing to think about both sides.
+</details>
+
+>> 我从中领会到的是，工程师们花费大部分时间的工作并不是写代码——因为你让 agent 去写了，你去协调它们并让它们进行测试——而是与其他团队协调：你们在做什么？我们要做这个，这会影响你们的工作吗？或者当事情没有按预期进行时去排查。
+<details><summary>Original English</summary>
+>> What I'm picking up is the bulk of the work that engineers spend their time was not like writing the code cuz you you had the agents do it and you you coordinated them and had had them tested, but it was coordinating with other teams, what are you working on? We're going to be doing this. Is it impacting your work? Or when something is investigating, when something is not going like that.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 所以听起来仍然涉及大量工作。你明白我的意思吗？即使很多繁重的工作已经由 Claude 完成了。
+<details><summary>Original English</summary>
+>> So it sounds like there's still a lot of work involved. You see what I mean? Even though there's a lot of heavy lifting has been done by by Cloud.
+</details>
+
+>> 我们……我的意思是，我们在做的每一件事上都会考虑这一点。我认为普通工程师把多得多的时间花在了那种协调工作上，而花在实际实现上的时间当然少得多。甚至像编排 agent 也是如此。我觉得某种程度上，你得去告诉你的 agent“帮我把某件事做完”，对吧？但即便如此，agent 往往也在编排其他 agent，人类并不一定在上面花大量时间。更多的是与其他团队、其他人打交道，比如我们如何确保所有这些部分能够整合到一起，确保大家达成共识，人们把多得多的时间花在了这类事情上，而不是花在真正把东西构建出来的工作上。
+<details><summary>Original English</summary>
+>> We I mean and we think about that with everything we do. I think the average engineer is spending so much more of their time on that type of coordination work and much of course much less on actual implementation. And even like, you know, orchestrating agents. I think some of this to some extent is like you've got to go tell your agents like get something done for me, right? But even from there agents are often, you know, orchestrating other agents and the humans not necessarily spending a ton of time on that. It's much more so the other teams, the other people and, you know, how do we make sure that all these pieces are going to come together, that people are on the same page, people are spending so much more of their time on that sort of thing than on, you know, the work of actually getting the thing built.
+</details>
+
+### 从零构建新项目：Claude Managed Agents
+
+>> 所以刚才聊的是一个迁移项目。但我们能聊聊一个从零开始的（greenfield）项目吗？就是你们构建了一个全新的东西。我想我们提到过 Claude Managed Agents，这也是一个非常有抱负的项目。那个项目是怎么构建起来的，尤其是当你把它与过去的方式相比时？
+<details><summary>Original English</summary>
+>> So this was a migration. But can can we talk about a Creamfield project where you built something brand new? I I think we talked about Cloud Cloud Managed Agents which is also a very ambitious project. How did building that happen especially when you compare it with how it would have happened in the past?
+</details>
+
+>> 是的。关于 Claude Managed Agents，先稍微梳理一下背景。一年多前我刚加入的时候，云平台（cloud platform）就只有 messages API，就是一个无状态的 API。后来模型在长时间运行方面变得越来越强，当然大家就说，好极了，我们要把 agent 迁移到主要在云端运行，让它们最终能更自主地运行。于是人们开始构建 harness（运行框架/底座），并把这些 harness 部署到云端。当你这么做的时候，每个人都会遇到一些相同类型的问题：比如从可靠性的角度来看，如果你把这些 agent 运行在沙盒（sandbox）里面，沙盒挂了，你的 agent 也就挂了，对吧？或者安全问题，对吧？比如你让 agent 在沙盒里运行，那凭证（credentials）也要放进沙盒里和 agent 在一起吗？对吧？当你思考这些基于云的 agent 及其架构时，会遇到很多问题。
+<details><summary>Original English</summary>
+>> Yeah. So Cloud Managed Agents just as you map for a second. So the the cloud platform, when I first started a year ago, a little over a year ago, was just the messages API, just this like stateless API. And then models were getting better and better at running for longer and you know, of course people said, okay, great, we're going to move agents to mostly run in the cloud and enable them to eventually run more autonomously. And so people were building harnesses and they were deploying those harnesses to the cloud. And everyone was running into some of the same types of issues when you do that, which is, you know, from like a reliability perspective, if you run these agents like inside of a sandbox and your sandbox dies and your agent dies, right? Or security, right? Like if you have your agent running in the sandbox and do the credentials go in the sandbox with the agent, right? There's like a lot of problems that you run into when you think about these cloud based agents and their architecture.
+</details>
+
+因此，我们最终在云平台内构建了一整套新的 API，它们属于更高阶的抽象，旨在支持定义一个 agent、然后启动一个会话（session）并运行该 agent。作为这项工作的一部分，这意味着我们要构建能够运行 harness、存储会话状态、按需处理启动沙盒等各种不同事情的服务。有意思的是，对于这一套服务，我们选择了 Go。部分原因在于，这首先是在我们做 Rust 迁移之前，当时我们仍处于这样一个阶段：我们想选择一种语言，既能让我们构建高效的服务之类，同时对于看代码的人类来说，还能保持相当不错的开发者体验。我认为在这个项目上，工作重心远远更多地放在定义 API 抽象、思考服务架构和服务架构图，以及解决可靠性、安全和延迟等问题上；而花在实现以及实际编写支撑每个独立服务的代码上的精力则少得多。所以从这个角度来看，这个项目也和过去完全不同——过去你会花大量时间规划，然后再花大量时间实现；而现在你把实现部分极大地压缩了，然后就能更快地进入验证阶段，在公开发布之前确保一切运行良好且质量过关。
+<details><summary>Original English</summary>
+And so we ended up building a a whole new suite of APIs within the cloud platform that were just kind of like higher order and meant for the ability to define an agent and then start a session and run that agent. And so as part of doing this, that meant we were building services that could run the harness, could store the session state, could handle like spawning sandboxes as needed and all of these sorts of different things. And it was interesting for for this set of services we chose go. And this was in part because this was first of all just before we had done the rust migration and we were still in that period where we wanted to pick a language that would allow us to build efficient services and these sorts of things, but still have like pretty good developer experience for the humans who were looking at the code. And I think for this, it was much much much more so all of the work on defining the API abstractions and thinking about the service architecture and the service diagrams and solving for some of these problems like reliability and security and latency and way less on implementation and and actually building, you know, like writing the code that would power each of these individual services. So from that perspective, that one too just so different than in the past where you'd spend a whole bunch of time planning and then a whole bunch of time implementing, you like really really really shrink the implementation part and then you get quicker to verification and making sure that everything works well and um is that high quality before you go and and launch it publicly.
+</details>
+
+>> 不过在这个 Cloud Managed Agent 项目中，有一个很有趣的细节是你们内部有一个试点，或者说一个试点团队……如果我没记错的话，是叫 Claude web 团队？
+<details><summary>Original English</summary>
+>> But with this cloud managed agent, one interesting detail was how you had a a pilot or a a pilot team inside of What was it? The cloud web team, I remember correctly.
+</details>
+
+>> 呃……
+<details><summary>Original English</summary>
+>> Uh
+</details>
+
+>> 是针对 managed agent 的。
+<details><summary>Original English</summary>
+>> For for for managed agent.
+</details>
+
+>> 哦，对对对。好，关于 managed agents，我们最初起步的时候，做的第一件事是：好，我们要构建这个用来运行云端 agent 的系统，我们希望它既能服务于我们的 API 客户，让他们能够构建 agent，同时也能服务于 Claude Code 团队，以支持网页端和移动端体验——这样你就不必只局限于（本地），因为 Claude Code CLI 只运行在你的笔记本电脑上，桌面端应用也运行在你的笔记本电脑上，而我们希望让用户能够启动在云端运行的 Claude Code 会话，然后你可以走开，过后再回来看。因为把这种 agent 架构做对非常复杂，我们觉得可以把这部分共享出来，对吧？就是我们构建这个架构，然后它能同时驱动两边。有意思的是，我们做的第一件事，也就是最显而易见的切入点是：太好了，一个 API 请求进来，你启动一个沙盒，在沙盒里启动 Claude Code，然后你就拥有了一个 agent。
+<details><summary>Original English</summary>
+>> Oh, yeah yeah yeah. So okay. So for managed agents, the the place we started, the first thing we did was we were like, okay, we're going to build this system that's going to run cloud agents and we wanted to do that both for our API customers to be able to build agents, but also for the cloud code team to be able to enable the web and mobile experiences so that you don't have to just, you know, cloud code the CLI just like runs on your laptop or the desktop app runs on your laptop, but we wanted to enable people to be able to fire off cloud code sessions that run in the cloud and you can walk away, right, and come back to it later. And so we because um getting this kind of agent architecture right was so complicated, we figured we would share that part, right? Like we would build this architecture and it would kind of power both. Um and so what was interesting about it was the first thing that we did, the obvious place to start was, great, an API request comes in, you spawn a sandbox and you boot up cloud code inside that sandbox and and then you've got an agent.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 我们遇到的问题，第一个就是我刚才提到的可靠性，比如沙盒挂了。
+<details><summary>Original English</summary>
+>> The problems that we ran into, the first one was was just reliability I mentioned earlier, like sandbox dies.
+</details>
+
+>> 那你就得从头开始了。
+<details><summary>Original English</summary>
+>> Then you're you have to start from scratch.
+</details>
+
+>> 是的。第二个是延迟。为了真正拿到返回的 token，你必须等沙盒启动，然后等 Claude Code 在沙盒里启动，之后才能去和模型对话并把 token 流式传回来。所以这是个问题。第三个是安全。我们非常不喜欢这种做法：如果你在沙盒里启动 Claude Code，那么每当你想去调用工具和外部服务时，你最终就得把凭证放在沙盒里面，和能够访问模型的 agent 待在一起，对吧？所以这很不好。最后，搞笑的是，CPU 也是个问题。我们为每一个这样的会话都启动并运行一个沙盒……
+<details><summary>Original English</summary>
+>> Yeah. The second was latency. Um in order to actually get any tokens back, you have to wait for the sandbox to boot and then you have to wait for cloud code to boot inside that sandbox and then you can go talk to the model and then stream those tokens back. So that was a problem. The third was security. We like really didn't like this idea that if you boot cloud code inside of the sandbox, then whenever you do want to go call tools and external services, you end up needing to have credentials inside that sandbox with the agents that has access to the model, right? And so that wasn't good. And then lastly, um hilariously, CPU was a thing. So we're booting and running a sandbox for every single one of these uh
+</details>
+
+>> 每一个都要占……
+<details><summary>Original English</summary>
+>> every one of these is at
+</details>
+
+>> 一个 CPU 或更多。
+<details><summary>Original English</summary>
+>> one CPU or more.
+</details>
+
+>> 对。所以我们面临这四个问题，而且我们其实最初先推出了 Claude Code 网页端体验的早期 beta 版，也推出了 API 的早期 beta 版。我们对这些问题中的任何一个都不满意，当时有点手忙脚乱地想把所有事情都做完，去逐个解决这些问题。但话说回来，谈到如今变得可能、而以前不太可能的事情，我们最终还是退回到了画板前，说：如果我们从第一性原理出发，重新设计和重构这个东西，而不是只做那种“能跑就行”的简单方案——也就是启动一个容器并在里面启动 Claude Code——会怎么样？如果我们从第一性原理出发来设计它呢？我们最终得出的方案是：把你的 harness 运行在一个持久化的服务器（durable server）上，只在需要执行工作时才启动沙盒。然后你有独立的会话存储。在那个世界里，你解决了可靠性问题，因为你的 harness 在持久化服务器上，即使任何一个沙盒挂了，你的 agent 也没事。你解决了延迟问题，因为请求直接进入那个持久化服务器，然后基本上直接穿透到 messages API，所以它只是在 messages API 之上增加了极微小的延迟。这太棒了。安全问题也解决了，因为我们最终采取的方式是：如果一个 agent 选择调用外部系统，去调用 MCP 服务器里的工具或者访问互联网，我们可以在旁边运行一个代理（proxy），把所有凭证单独保存在一个保险库（vault）里。然后当你真正去发起那个请求时，你可以在请求出口处（egress）实时注入凭证，这样凭证就永远不需要进入沙盒内部。然后 CPU 表现也很好，因为我们发现这个系统平均只占用原系统大约三分之一的 CPU。于是我们把整个旧东西都扔掉了，按这种方式重新构建了一遍。
+<details><summary>Original English</summary>
+>> Right. So we had these four problems, and we we first actually, we launched the CloudCode web experience in like an early beta, and we launched the API in early beta. And we we just like weren't happy with any of these problems, and we were kind of trying to scramble to do all the things to like individually solve each of these problems. But again, just speaking of things that are possible now that weren't super possible earlier, we ended up going back to the drawing board a bit and saying, what if we from first principles like redesigned and rearchitected this thing instead of just doing the like easy thing that works, which is, you know, boot a box and boot CloudCode inside of it? What if we designed this from first principles? And what we ended up with was you would run your your harness on a durable server, and you would only spawn sandboxes to execute work as needed. And then you'd have your separate session storage. And in that world, you solve for reliability because your harness is on a durable server, and if any of those sandboxes die, your agent is fine. You solve for latency because the request comes in to that durable server, and it goes basically straight through to the messages API, and so it's like the teeniest bit of latency on top of the messages API. So that was great. Security was solved because the way that we ended up doing this was if you have an agent choosing to call an external system to call a tool in an MCP server or, you know, go out over the internet, we can just kind of run a proxy along the side and keep all of our credentials separately in a vault. And then when you do go to make that request, you can inject the credential at egress just in time on the way out so that that credential never needs to be inside of the sandbox. And then CPU was great because we found ourselves running on average around a third of the CPU for this system as the original system. And so we threw the whole thing out and we rebuilt it before we went that way.
+</details>
+
+>> 我想，当你想到你们现在能做到这一点……就像在过去，如果在一个项目进行到一半的时候说“我们干脆从头再来吧”，那简直是疯了。
+<details><summary>Original English</summary>
+>> And I guess [clears throat] when when you think that we can that you can do as now, like it it would have been crazy to say midway through a project like let's just start from scratch.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 但现在规划和实现不再那么消耗资源，或者说不再那么耗时了。你可以这么做。如果你愿意，你甚至可以重来好几次。
+<details><summary>Original English</summary>
+>> But now planning and implementation is not all that I guess resource or more like times intensive. You can do it. You could do it multiple times if you want to.
+</details>
+
+>> 没错。所以我们确实这么做了，这在当时真的是一个很大的决定。我不想轻描淡写，决定推倒重来绝对是一个重大决定，但我认为我们深切地感受到，我们正处于这样一个节点：能够真正解决所有那些问题的价值，远远超过重新构建和重构架构所花费的时间，尤其是因为这比由人类来编写所有代码要快得多。
+<details><summary>Original English</summary>
+>> exactly. And so we did, which was which at the time it really was it was a big decision. I don't want to understate that deciding to rebuild the whole thing was definitely a big decision, but I think that we we felt deeply that we were at a point where the ability to actually solve for all of those problems was super worth the time that it would take to go and rebuild and and rearchitect this, especially because it was going to be so much faster than if humans were writing all of the code.
+</details>
+
+>> 然后这个项目，我记得从头到尾，从提出想法、经历这次重写，到最终真正推出，大概是五到六个月左右？
+<details><summary>Original English</summary>
+>> And then this project, I remember from end to end, from the idea through this rewrite to actually rolling it out was somewhere like five to six months ish?
+</details>
+
+>> 是的，差不多那样。是的。而且很有意思的是，这个想法其实由来已久，你知道，它之前就作为一个想法被提出过，但当时情况是这样的：我加入 Anthropic 的时候，我的团队是 API 团队，大概有 30 名工程师吧。我觉得我们当时几乎是勉强凑够资源，才能在新模型发布时把它们上线，并把我们的 API 分发到各个云平台上，对于一个相对较小的团队来说，这已经是很大的工作量了。所以像“哦，要是我们有面向云端 agent 的 API 会怎样”这种大想法，当时大家的反应都是“是啊，是啊，[笑声] 也许以后吧”，对吧？所以一旦团队规模扩大了，而且构建这些东西变得容易得多，大家就更容易接受说：好吧，太棒了，我们要抽出一组人来，让他们去构建这个新的云端 agent 架构。
+<details><summary>Original English</summary>
+>> Yeah, something like that. Yeah. And it's interesting because it's something that had been an idea dating even further back, you know, like it had kind of come up as an idea, but it was one of those things where if you like when I joined Anthropic, my team was the API team and it was maybe 30 engineers, I would say. And I think just like kind of by the skin of our teeth, we had enough resources to be able to launch new models when they were coming out and distribute our API on the clouds, which was, you know, like a lot of work for a relatively small team. And so big ideas like, oh, but what if we had APIs for cloud based agents were like, yeah, yeah, like [laughter] maybe in the future, you know? And so once the team had grown and once again, just like building these things became a lot easier, it became more palatable to say, okay, great, we're going to like carve out a group of people and say you're going to go and build this new cloud based agent architecture.
+</details>
+
+>> 对比这个从零开始构建的项目，与 AI 出现之前接手一个大型从零开始的项目——或者我该说是一个很有抱负的从零开始的项目——相比，你认为哪些事情并没有太大变化？又有哪些事情是完全不同的？
+<details><summary>Original English</summary>
+>> Comparing this this project, which is building from scratch, what are things that you think have not changed all that much compared to pre AI taking up a large greenfield project or ambitious greenfield project should I say and working from scratch? And then what are things that are just completely different?
+</details>
+
+>> 我想说，或许没变的地方在于，在“对齐”（alignment）这件事上仍然有大量的工作要做。比如前期的设计，以及就“真正的目标是什么”、“你要做的事情是否能解决这些目标”达成共识。然后还有与所有其他系统和所有其他团队的连接点。Anthropic 的平台团队有一个相对独特的地方，就是我们字面意义上处于一切正在发生的事情的正中间 [笑声]。推理（inference）、研究（research）和模型都在我们下面；我们与周围的安全团队紧密合作；然后我们的应用团队坐在我们上面。因此，对于我们做的任何事情，都需要做大量工作来确保很多人达成对齐，我觉得这一点和 AI 出现之前的日子相比并没有太大变化。但当然，非常不同的地方就是我们刚才聊到的关于实现本身的一切。你不需要花极多极多的时间（在实现上），对吧？正因为那部分快得多，它依然让像这样的大型项目变得可行——因为诚然你会在协调之类的事情上花很多时间，但总耗时可以比原本短得多。
+<details><summary>Original English</summary>
+>> I would say maybe the things that are the same is there's still so much work in just like alignment. Like there's the upfront design and getting on the same page that like what are the actual goals and like is the thing that you're going to do solving for those goals? Then there's the um know, the connection points with all of the other systems and all of the other teams. One of the things about the platform team at Anthropic that's relatively unique is we sit like literally right in the middle of everything [laughter] that is going on. So like inference and and research and models are all below us. We work closely with our our safety teams that are kind of around the edges and then our application teams that sit on top. And so for anything that we do, there's just a ton of work on making sure that a lot of people get aligned and I just don't think that that has changed very much from the days pre AI. But then of course the thing that is very different is is everything that we've kind of talked about with like the implementation itself. You don't have to spend tons and tons of time, right? And because that part is so much faster, it it still makes a big project like this palatable because uh sure you'll spend a lot of time on coordination and things like that, but um the overall time can be much shorter than it otherwise would have been.
+</details>
+
+### 团队结构与日常开发工作流
+
+>> 是的。你在 Anthropic 内部管理团队。如果我是一名来自 Anthropic 外部的工程师，以软件工程师的身份加入你的团队或 Anthropic 的某个团队，我会看到什么？我的第一周会是什么样的，我会如何工作？我会使用什么样的工具？我会如何与人互动？我加入的团队会是什么样子？
+<details><summary>Original English</summary>
+>> Yeah. So you you run teams inside of uh Anthropic. If I'm an engineer coming from outside of Anthropic and I would join one of your teams or one of the Anthropic teams as a software engineer, what would I see? What would my first week look like and how would I work? What kind of tools would I use? Uh how would I interact with people? What what does what does what does a team look like that I would join?
+</details>
+
+>> 是的，我想说团队本身和 AI 出现之前的日子并没有那么不同。目前为止，我们依然运作着大约“两个披萨”规模（two pizza teams）的团队。有些可能会稍微大一点，但是……
+<details><summary>Original English</summary>
+>> Yeah, so the team itself is not that different, I would say, from the pre AI days. As of now, we still run teams that are like approximately two pizza teams. Some are maybe a little bit bigger, but um
+</details>
+
+>> 五到十个人左右。
+<details><summary>Original English</summary>
+>> the five, 10 people-ish.
+</details>
+
+>> 没错。原因在于，这仍然是一个合适的规模，能够让团队有能力理解自己所运维的系统，对吧？比如如果你在值班（on call）时收到报警（paged），或者你必须构建新东西，或者你必须去跟某个想构建与你系统交互的功能的其他团队沟通，而此时恰好有两个人在休假、生病或值班之类的，对吧？你拥有合适数量的人手来维持团队运转。那个团队可能比过去更偏向资深工程师，因为不再像以前那样——比如由技术负责人（tech lead）设计系统，然后一群中级工程师去实现它——现在更像是团队里的任何人都可能在深入思考设计，或者深入思考与其他团队的协调，然后他们去编排 Claude 来完成构建。团队规模相似，肯定更偏资深一些。然后，你面前仿佛有一整套工具世界，以一种显然与前 AI 时代截然不同的方式来完成工作；不过话说回来，我觉得其实每家公司都在一定程度上创建了自己最顺手的工具，这很棒，也是在 Anthropic 做 API 工作的有趣之处之一……
+<details><summary>Original English</summary>
+>> exactly. Reason being that is that's still the right number of people to be able to like have the ability to understand the the system that you operate, right? And like if you're on call and you get paged or you know, you've got to build something new or you've got to talk to some other team that wants to build a thing that interacts with your system and then two people are on vacation or sick or on call or whatever, right? Like you have the right number of humans to operate the team. That team probably skews more senior than it did in the past because rather than say like tech lead designs a system and then a bunch of mid-level engineers, engineer engineers implement it, now it's more like anyone on the team is likely thinking deeply about design or thinking deeply about coordination with other teams and then they're, you know, orchestrating Claude's to go and build it. Similar size team, skews a bit more senior for sure. And then it's like you have kind of this world of tools in front of you to get work done in a way that's probably pretty different from obviously pre-AI, but even, you know, I think actually every company has done some amount of creating their own tools that work best for them, um which is great and one of the fun things about working on the API at Anthropic, like
+</details>
+
+>> 哦，你们看到很多这样的情况。
+<details><summary>Original English</summary>
+>> Oh, you see a lot of that.
+</details>
+
+>> 非常多。稍微跑个题，我觉得大家想到 API 的时候，想到的是基于 API 构建产品的人，对吧？比如 Cursor 之类的。但我们的很大一部分 API 流量来自那些自己构建了定制工具链、构建了自己内部运行 agent 的定制平台的公司。所以很酷的一点是，我们有很多时间和他们一起交流他们构建的这些平台。没错。所以我们也和他们一样，在任何时候都会自己构建我们认为最适合当前工作的各种工具版本。
+<details><summary>Original English</summary>
+>> A lot of that. Like side tangent, I think when people think of the API, they think of people who've built products on top of the API, right? Like you think of Cursor and and things like this. But a lot of our API traffic comes from companies that have built their own custom tooling, their own custom platforms for running agents internally. And so a cool thing is we get to spend a lot of time with them on these platforms that they built. Exactly, yeah. And so um the we are just like them and we've built our own versions of whatever the right tools are at any given time that we think will be best for the job.
+</details>
+
+>> 能举几个你们构建的工具类型的例子吗？显然 harness 是其中之一，对吧？比如有 Claude Code。你们用的是同一个 Claude Code 吗，还是你们有自己的版本？
+<details><summary>Original English</summary>
+>> Can we give some examples of the types of tools that you built? Obviously the harness is a given one, right? Like there's Claude code. Do you use the same Claude code or do you have your own?
+</details>
+
+>> 当人们处于“人在回路中”（human in the loop），想要构思和思考一个想法时，我们肯定会用 Claude Code。我们用 Claude Code，也用 Cowork（原文作 Code Work），我们在那方面使用很多相同的工具。但说到编排基于云的 agent，我们主要在一个类似于 Claude tag 的系统上运行，不过我们做了一些工作去……
+<details><summary>Original English</summary>
+>> We use Claude code for sure when people are, you know, I'm kind of like human in the loop wanting to ideate and and think about an idea. We use Claude code, we use Code Work, we use a lot of the same tools there. Um but when it comes to orchestrating cloud-based agents, we're mostly operating on kind of like similar to a system like Claude tag, but we've done some work to um kind of build
+</details>
+
+>> 把它变成你们自己的工具。
+<details><summary>Original English</summary>
+>> Make it your own.
+</details>
+
+>> 没错，对的。这样很好，因为你可以在所有这些共享的底层概念和系统之上做这些事情。但是的，我们在 Slack 上做很多工作。
+<details><summary>Original English</summary>
+>> stuff. Right, exactly. So which is nice cuz, you know, we can do those things on top of uh you know, all these these shared underlying concepts and and systems. But yeah, we do a lot of Slack-based work.
+</details>
+
+>> 所以你们会有很多基于 Slack 的工具，对吧？
+<details><summary>Original English</summary>
+>> And so you'll have a lot of Slack-based tools, right?
+</details>
+
+>> 是的，没错。不过在很大程度上，我觉得我们依然还是那种模式——怎么说呢，你基本上就是拥有“你的那一个 Claude”。我想人们可能会把 Anthropic 的 Slack 想象成里面全是大批各有各的身份、乱七八糟的疯狂 agent，对吧？其实我们的工作方式并不是那样。我们更像是……而且我们也是按照这个概念来设计 Claude tag 的：就是你有 Claude，你和 Claude 一起工作。它可能在不同的上下文里——比如在私信（DM）或频道（channel）里——拥有不同的权限，表现也有点不同，但总的来说，这个核心概念是不变的。所以最大的一点就是，你大部分时间都在 Slack 里，在你正在做的任何事情中，与人类同事一起和 Claude 互动。
+<details><summary>Original English</summary>
+>> Yeah, exactly. Um but for the most part, I think we do still do the like, you know, you've kind of got your your your one Claude, if that makes sense. I think people probably picture Anthropic Slack having like all these crazy agents that all have their own identities and all whatever, right? And it's not really quite how we work. We more so are very much like And we design Claude tag after this concept. It's like you've got Claude and you work with Claude. And it maybe has different permissions and and works a little bit differently in different contexts in a DM or a channel or whatever it might be, but for the most part this concept um kind of stays the same. And so that's really the biggest one is just you'll you're mostly in Slack and you're interacting with Claude alongside of humans in in anything that you're working on.
+</details>
+
+>> 那么一旦我入职了，作为一名工程师开始为构建产品做贡献——在 AI 出现之前，流程大概是这样的：我做一些规划，和团队里的某个人对齐，写代码，创建 pull request，走代码审查（code review），运行 CI/CD，获得批准（sign off），从队友那里得到反馈，修复问题，部署，然后有监控手段。如果是大型系统，我甚至可能会用特性开关（feature flag）。然后还有监控、告警，我要值班，如果发生事故（incident），我会做复盘（postmortem）。这就像是一个工程师在完全上手后的第一个月里会做的典型事情。现在这些发生了怎样的变化？因为我知道写代码本身已经变了——不再由我来写——但我们以前用的那些老派工具还剩下什么？哪些已经被 agent 接管了，或者内部的工作流发生了怎样的变化？
+<details><summary>Original English</summary>
+>> And so like once I'm onboarded or in the company as an engineer and I start to contribute to build stuff like back pre-AI the way it would have looked like is I do some sort of planning, I align with someone on my team, I write the code, I create a pull request, I do through code review, CICD runs, I get sign off, I I get feedback from my teammates, I fix them, I deploy, there's ways that I can monitor. I I I might actually even do a feature flag when it's a large system. And then there's monitoring, alerting, and I'm on call and you know, like if an incident happens I do a postmortem. Like that's kind of like a like a typical thing that an engineer will do in their like first month once they're they're fully there. How has this changed like cuz I know you even we know like writing code itself has changed. I no longer write it, but what is left of of the kind of old school tools that that we use and like what has just been taken over agents or how have the workflows changed inside?
+</details>
+
+>> 我想说，我们看待它的方式，重点不再是单个变更和单个 pull request 的生命周期，而更多是整体的项目，或者说你所思考的某个更高层级的工作单元。因为你在和 agent 一起工作，而且在某种程度上，这些 agent 是由你直接编排的，对吧？当然你也可以说“我要接手这个 Linear 任务，我要把这件精确的小事做完，它会带来一个 pull request，然后那个东西会被合并”。但更多时候，你是往上拉高了一个层级，思考“我想完成某件事，这需要端到端地构建所有这些不同的组件”，对吧？所以你可能会和 Claude 一起构思一下，来回讨论，规划并思考你想如何把某件事做成。然后你把 Claude 派出去做这项工作。
+<details><summary>Original English</summary>
+>> I so I would say the way that we kind of think about it's it's less on the life cycle of an individual change and individual pull request that you might think about and more just the overall like project or or just some like higher unit of work that you might be thinking about because you're working with agents and to some extent these agents are directly orchestrated by you, right? To say I'm going to pick up this linear task and I 'm going to like get this exact small thing done and that's going to lead to one pull request and and that thing is going to get merged. But much more so, you're kind of zooming up a layer and thinking about I want to, you know, accomplish something that requires end-to-end building all of these different components, right? And so you'll probably ideate a little bit with Claude, you know, and just kind of go back and forth and yeah, just plan and think about how you might want to get something done. Um and then, you know, you like send Claude off to go and do this work.
+</details>
+
+但我认为有趣的地方在于，在那种开发循环中，有很多环节你甚至都不再处于“回路中”了，而以前你是必须在里面的。一个很好的例子是，有些类型的 pull request 被打开后，甚至不需要你去看，也不需要别人去看。我们正在做大量工作，让自己越来越放心地让更多这类变更不需要“人在回路中”。因为你可以想象那些非常机械化的变更，对吧？比如一个很好的例子就是，每当我们有新的 API 版本或新模型时，我们都会发布新版 SDK。SDK 里的某些部分以及在 SDK 里做版本号升级（version bump）这件事，你真的不需要让一个人类在上面花大量时间，因为需要做的代码变更非常机械化，把它审查完并走完整个流程也很机械化。所以我们针对这类变更，尽一切可能做到：由 Claude 去打开 pull request，然后我们有一个 Claude 先行审查它，并判断“这是否真的属于我们知道怎么处理的机械化变更之一，还是一个应该由人类来审的风险较高的变更？”没错。要么需要人类来看，要么不需要。如果不需要，它就可以直接合并并部署，不需要人类介入。
+<details><summary>Original English</summary>
+But I think what's interesting about this is in that kind of development loop, there are a lot of aspects of this that maybe like you aren't really even in the loop on anymore that you would have been previously. So like a good example is there are certain types of pull requests that can get opened that um don't really even need really you to look at it or somebody else to look at it. And we're doing a lot of work on getting to a place where we get more and more and more comfortable with more of these types of changes not requiring to have a human in the loop because you can picture the types of changes that are maybe just like so mechanical, right? Like um a good example just being we release new versions of our SDKs whenever we have a new API version or a new model. There are aspects of our SDKs and like just doing the version bump in those SDKs that you don't really need a human to be spending tons of time on this sort of thing because the code change that needs to happen is very mechanical and getting that reviewed and all the way through is pretty mechanical. And so we've taken like, you know, um just changes like that and done everything that we can to say Claude will go and open the pull request. Then we've got a Claude that reviews it first and decides like is this actually fitting into one of these like mechanical changes we know how to do or is it a riskier change that should be human? Yeah, exactly. Exactly. And either a human does have to look at it or not. And if not, then it can kind of go and um get merged and get deployed without a human needing to be in the loop.
+</details>
+
+回到你最初的问题——我是一名新工程师，有这么一整个变更生命周期——其实要端到端做成一件事，有很多部分你根本不需要去操心。在所有促成某件事完成的 PR 中，你可能只与其中的一部分有过交互并参与其中，而还有一部分是 agent 在运行、在做它们的事，你并没有真正参与其中。我认为这就是大家正在看到的巨大转变：一种是“我是人类，我在笔记本电脑上直接和一个 agent 合作，或者在云端编排它”，另一种则是持久化运行的 agent，它们会主动采取行动，比如给变更分类、审查变更，或者比如我们有 agent 在运行——当 CI 变红时，比如一个不稳定的测试（flaky test）被合并进了 main 分支，以前肯定要有人去说“哦 CI 红了，我得去修那个测试”，但现在我们直接有 agent 在运行，它会替你去修好，根本不需要人去看，对吧？所以流程中有越来越多的环节现在是完全“人不在回路中”的，我想这正是大家需要去消化和理解的事情。
+<details><summary>Original English</summary>
+And I think going back to your original question on I'm a new engineer and there's this whole change lifecycle that happens. There's just a lot of pieces of getting something done and to end that you might not have to think about. There might be like of all the PRs that went into something getting done, you might have interacted with and been a part of some subset of them and then there's some of them that are like there's agents running and they're doing their thing and and you're not really a part of what's happening there. And I think that's the big shift that everybody is seeing, the difference between I'm a human and I'm working with an agent either directly on my laptop or I'm orchestrating it in the cloud or whatever versus agents that are persistent and taking actions like classifying a change and reviewing that change or like we have agents running that like when CI goes red, right? Like a flaky test was merged into main, then sure somebody can go and say oh CI's red, I got to fix that test, but now we just have agents running that will go and do that for you and nobody really has to look, right? So there's just more aspects of the process that are totally like human out of the loop now, which is I think just something for everybody to wrap their heads around.
+</details>
+
+>> 不过具体来说——因为我知道在你们内部这肯定很顺理成章，但从外部来看——好，我现在有一个想构建的项目或功能。我决定这是个好主意，或者我相信这是个好主意。我会和 Claude 聊天，制定一个计划。我可能会启动几个 agent 开始构建它，你知道，其中一个搭脚手架，另一个做核心构建，另一个做验证或者做另一个功能等等。它们出发去干活了，那接下来我会看到什么？当它们准备好接受审查时，会有个地方通知我吗？因为仍然有团队存在，我在一个团队里，我会决定把另一个人类同事拉进来问“你也能看看这个吗”？就是说，在 agent 把东西构建出来之后的某个节点，会发生什么？
+<details><summary>Original English</summary>
+>> So but but just just specifically because I know this will make so much sense when you're inside of from but from the outside like okay, so I I now have a project or a feature I want to build. I decide it's a good idea or I believe it's a good idea. I will chat with Claude, make a plan. I'll probably spin off a couple of agents to like start to build it. You know, one of them does scaffolding, the other one builds it, the other one does I don't know like validation or maybe maybe another feature etc. They they go off and then what do I see next? Is there a place where I'll be pinged when they're ready for like a a review? They're still a team, so I'm inside a team. Do I decide like do I pull another human in and say like can you look at this as as well? So like like what what happens after a point after this is built, the agents build that stuff?
+</details>
+
+>> 所以你的 agent 通常是……也许我主要想表达的是，你把最初的那些 agent 派出去，而那些 agent 在通往这个更大目标的路径上，很可能正在派生出其他你甚至不一定亲自选择去编排的任务，对吧？我们在 Slack 里和 agent 协作的方式是，它们非常健谈（chatty）。所以它们经常会回来汇报说：“好极了，我已经把这个 pull request 提上去了。接下来我要去做另一件事。”你可以选择去关注所有这些工作的全部细节。
+<details><summary>Original English</summary>
+>> So your agents are typically and maybe the main point that I'm making is like you're sending those first agents off and those agents are probably like spawning other tasks that you aren't necessarily even choosing to orchestrate yourself, right? On the path to this like bigger goal that's happening. The way that we work with our agents in Slack is um they're pretty chatty. And so they'll kind of very often come back and be like, okay, great. I've got this pull request up. And the next thing I'm going to do is go do this other thing. And you could choose to like pay attention to all of the details of all of that work.
+</details>
+
+>> 所以你的意思是，当 agent 出发去干活时——举个例子，我可能正在这个特定系统上构建一个功能，我告诉 agent：“好，这是我的目标，这是我想做的，这是我们要做的第一个子任务。”然后 agent 出发了，它可能会说：“哦，顺便说一下，我查看了一些分析数据，这里有个有趣的事情，我觉得我们应该做这件重要的事，我建议我们构建这个功能。”这就是你说的它们可能会回来“健谈”地汇报，然后你基本上就可以做决定或者引导它的方向，对吧？
+<details><summary>Original English</summary>
+>> So you're kind of saying like the agents are when they go off. So for example, like I might be building a feature on on you know this specific system and the agent I tell like all right, here's my goal. This is what I want to do. Here's the first sub that we're going to do. And then the agent goes off and it might say like, oh, by the way, I checked some analytics. And here's an interesting thing. Here's something important that I think we should do. I think you know, I'm suggesting we build this feature and then that's what you're saying that they might come back being chatty saying and then you can make a decision or steer it basically, right?
+</details>
+
+>> 对。它还可能说：“哦，你知道，另一个团队有这段有点相关的代码，也许他们正在做一些我们还不了解的事情，我们应该联系（ping）他们一下。要我帮你去联系他们吗？”对吧？
+<details><summary>Original English</summary>
+>> right. And it might say, oh, you know, this other team has this piece of code that's like kind of related and like maybe they're doing something that we don't understand yet and we should ping them. Do you want me to ping them for you, right? And
+</details>
+
+>> 我明白了，我明白了。所以基于你说的，它会非常具有交互性，你可以选择去关注它，也可以就让它自己去跑。
+<details><summary>Original English</summary>
+>> I get it. I get it. So it so it will be very interactive based on what you said is you can either pay attention to it or you can just kind of let it go like I go on.
+</details>
+
+>> 是的，没错。而且我觉得，如果它真的需要你的注意，否则就会卡住的话，它会提醒你的，对吧？但我认为我们努力在做的一大部分事情，就是让越来越多的环节不再需要你亲自介入——比如，如果你整天做的全部事情就是坐在那里盯着一个 Slack 线程，然后说“好”或“不”，或者“行吧，我去联系那个人”，那这工作也没什么意思，对吧？那样太无聊了。
+<details><summary>Original English</summary>
+>> Yeah, exactly. And you know, I think if it really needs your attention or else it's going to get stuck, it'll get your attention, right? But I think a lot of what we're trying to do is make more and more and more and more of this something that doesn't require you to have to get involved and be like, you know, it wouldn't be a great job if all he did was like sit there and watch a Slack thread and then like say yes or no or okay, fine. I'll go ping that person, right? Like that just wouldn't be interesting.
+</details>
+
+### 代码审查、监控与值班体系
+
+>> 我想问你关于代码审查的问题。因为在 AI 出现之前，像我以前工作过的 Stripe 这样的地方，我们总是要求必须由另一个人类、另一名工程师进行强制性的代码审查，原因有很多很多。其中很多甚至不完全是为了代码本身，但那是强制的。你们现在还有这种制度吗？还是说你们直接把信任和责任交给构建它的工程师，由他们自己决定“我需要拉人来看吗，还是因为我已经验证过了或者我知道这不是大事，看起来没问题就行”？
+<details><summary>Original English</summary>
+>> I wanted to ask you about code review in the sense that pre AI a place like Stripe that I also worked at you were like we always had mandatory code reviews from another human, another engineer for many many many reasons. You know, a lot of it was not even related to that, but they were mandatory. Do you have that or or do you just say I will give trust and accountability to the engineer who's building it and they will decide do I need to pull in someone or does this look good because of all the you know, I I verified it or or I or I know it's not a big deal.
+</details>
+
+>> 是的，我们有一个系统，我的意思是它是一个 Claude，但它本质上是一个分类器（classifier）[笑声]，你知道的。它会在每次变更时运行，并决定：这需要人类看一眼吗？如果需要，需要几个人类、需要哪些团队？或者这是某种无需人类查看就可以直接合并的东西？这就是我刚才提到的“非常机械化的变更”这个概念。我们正在尝试做一件事，就是去定义：哪些变更是端到端你根本不应该在上面花时间的？对吧？比如这些事我们已经做过一百万次了，它们看起来都一模一样。那我们能不能把这次变更分类为那些非常机械化的变更之一，比如发布一个新版本的 SDK？如果是这样，而且它符合那个模式，那就太好了。Claude 的工作就是确保：这个东西是否会带来原定变更所预期的结果？如果是，太好了，人类就不需要看它了。但如果它觉得“呃，这可能会有一些意外的副作用”，或者这是一个风险稍高一点的变更，或者它只是发生在一个我们还不放心完全零人类关注的系统里的变更，那么它就会通知人类来看一下。但我们有非常明确的目标，要让越来越多的变更由分类器最终决定“不，我完全不需要人类来看这个”。目前，我们已经有了一小部分这样的变更在这样运作，而且比例还在不断上升。不过对于高风险的变更，我们肯定还是会让人类来审查的。
+<details><summary>Original English</summary>
+>> Yeah, so we have a system that it's I mean it's a cloud, but it's a classifier, [laughter] you know. But it runs on every change, and it decides, does this need a human look? If so, how many humans and what teams does it need? Or is this something that can merge directly without a human looking at it? And this is where I kind of mentioned this idea of like a very mechanical change. We're trying to do this thing where you define like, what are the changes that end to end you shouldn't have to spend time on this, right? Like we've done these things a million times. They all look the same. So can we classify this change as one of those like very mechanical, you know, such something like get a new SDK version released? And if so, and it like fits that mold, then okay, great. The Claude's job is to make sure is this thing going to have the outcome that is intended by the original change? And if so, great. You know, a human doesn't have to look at it. But if it's like, eh, like this might have some unintended side effects or this is a little bit of a riskier change or it's just like a change happening in a system where we're not yet comfortable with zero humans paying any attention, then it will ping for a human to take a look. But we have like pretty strong goals on getting to like more and more and more and more of these changes where the classifier ends up deciding, no, I don't need a human to look at this at all. And right now, you know, we've got a a small number of these things that are happening and it's ratcheting up. But um for risky changes, we definitely still have humans looking at these.
+</details>
+
+>> 一旦它通过不同的变更关卡部署到生产环境，在生产监控和事故管理方面，你们是怎么做的？因为同样地，在 AI 出现之前，你会定义自己的监控面板（dashboard），手动配置告警规则。当然，在 Stripe 和 Uber 这样更先进的地方，甚至在 10 年前就已经有了机器学习系统来观察信号并标记“哦，出问题了，发个告警吧”。不管是什么时间，人类都会收到报警。那个人去排查，之后如果发现是误报，他们会试着去微调告警规则。对于高影响力的系统，值班（on-call）的负担通常也很重。而你们的系统——API——影响力可以说是最高级别的。只要它打个喷嚏，就有很多依赖它的人会立刻察觉。你们是如何进行这种监控和值班管理的，Claude 在这方面是如何提供帮助的？
+<details><summary>Original English</summary>
+>> Once it gets deployed through through different change change gates, in production monitoring and incident management, how do you do that? Because again, pre-AI, you would have your dashboards that you would define, you would manually put together alerts on how you do it. Or And of course, in more advanced places like Stripe and Uber, you would have a machine learning systems already. This is like even 10 10 years ago that would look at the signals and like flag, oh, something is wrong. Let's raise an alert. A human gets paged whenever that time is. That person looks into it and then later we go back. If it it was false, they would try to tweak the alert. The on-call part would be also very heavy typically on high impact systems as well. And of course, your your system, the APIs has as high impact as it goes. If if if it sneezes, a lot of people are relying on it to notice. How do you go about the this kind of like monitoring and on-call management, and how is Claude helping there?
+</details>
+
+>> 是的，其实很大一部分非常相似。我们依然有所有的监控器、检测器和触发的告警，而且就像任何其他工程团队一样，我们经常会收到噪音（noise），对吧？就是你收到一个告警，但其实并不是什么真问题。
+<details><summary>Original English</summary>
+>> Yeah. So a lot of it is really similar. A lot of it is, you know, we have all of our monitors and our detectors and our alerts that fire, and just like any other other engineering team, often we get noise, right? Like you get alerted about something that's not really an issue.
+</details>
+
+>> 本来就是这样。
+<details><summary>Original English</summary>
+>> That's just how it is.
+</details>
+
+>> 是的。所以我们在 API 值班轮值（on-call rotation）上开始采取的做法是——这是一个非常核心、承载重任的值班轮值——过去好几个月里，我们一直让一个 Claude 跟随（shadow）我们的值班人员。
+<details><summary>Original English</summary>
+>> Yeah. So what we've started to do with our API on-call rotation, which is like a very [clears throat] load-bearing on-call rotation, we've what we have had happening over the past like many months is we've had a Claude shadowing our on-call.
+</details>
+
+>> 哦，有意思。
+<details><summary>Original English</summary>
+>> Oh, interesting.
+</details>
+
+>> 是的。目标是达到这样一个阶段：当一个报警（page）进来时——我们刚刚开始这么做——当报警进来时，它会先发给那个 Claude。
+<details><summary>Original English</summary>
+>> Yeah. And the goal is to get to a point where when a page comes in and we're like just starting to do this, when a page comes in, it goes to that Claude first.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 那个 Claude 可以判断这是噪音还是真问题。这只是第一道关卡。第一道关卡就是：它是噪音还是真问题？如果是噪音，那么我们真正想做的就是避免人类被打扰或被吵醒之类的。所以我们已经开始这样做了，而且在原本要花去排查那些最终证明是噪音的问题上，我们节省了大量的人类时间。然后当它去排查并认定“好，这是真问题”时，它就会把报警升级给人类，人类就会介入开始查看。但在我们等待人类介入开始查看的那段时间里，Claude 也会开始排查，并弄清楚自己能做些什么来修复这个问题。通常等到人类——尤其是在半夜把人吵醒的情况下——走到笔记本电脑前时，Claude 已经诊断出了问题，给出了建议的修复方案，甚至可能已经开始采取一些修复行动了，人类只需要说“是的，谢谢，听起来不错”就行。当然，我们的目标是达到这样一个阶段：对于越来越多这类问题，根本不需要叫醒人类。即使是一个真问题，理想情况下 Claude 也能以一种我们可以信任的方式去处理它，你根本不用叫醒任何人。但我们还没完全到那一步。目前，我们主要还是在报警进来时做“是不是噪音”的判断，而这已经为我们节省了大量时间，非常棒。
+<details><summary>Original English</summary>
+>> And that Claude can decide is this noise or is this real? And that's just the first gate. The first gate is is it noise or is it real? And if it's noise, then really what we're trying to do is avoid a human getting interrupted or woken up or whatever it might be. And so we've started to do this and we've saved a lot in terms of human time that would have gone to looking into something that turned out to be noise. And then when it goes and does and says, okay, this is real, in which case it escalates the page to a human and and the human will come in and start to look. But in that time when we're waiting for a human to come in and start to look, the Claude will start to also look and figure out what might I be able to do to fix this problem. And often by the time a human, especially if it's the middle of the night and somebody's getting woken up, by the time they get to their laptop, Claude has diagnosed the issue and has a recommended fix and maybe it's even, you know, like started to take some action towards that fix that a human just needs to be like, yes, thank you, that sounds great. And of course, the goal is to get to a point where you for more and more and more of these types of issues don't need to wake up the human at all. Um even if it's a real issue, it's something that like Claude will hopefully just handle in a way that we can trust and you don't have to wake anybody up. But we're not quite there yet. For now, we mostly just have the like is it noise or is it not when a page comes in? Um and that has saved us a lot of time, which is great.
+</details>
+
+### 非工程师直接向生产环境发布代码与问责制
+
+>> 所以我现在心里很清楚工程师是如何向生产环境发布代码的，是的，变化非常大。你现在可以在 Slack 里对话，通过一个 agent 来引导它。看起来可以完成大量的工作。那么对于非工程师——产品人员、设计人员，就是那些按过往训练来说、在这份工作之前不会自己把代码推到生产环境的人——他们现在也会通过聊天、创建功能、微调来把代码推到生产环境吗？还是说，如果它属于核心产品内部（而不仅仅是营销团队拥有的那种独立小网站），责任通常仍然在工程师身上？他们现在已经能推到生产环境了吗？他们真的在推吗？
+<details><summary>Original English</summary>
+>> So it's very clear on how I think and it's now clear in my head how engineers like push to production, how like yeah, it's a lot a lot of difference. You can now talk in Slack and with an agent steer it. Like it seems like a lot of work can be done. For non-engineers, product folks, design folks, just just people who you know, by training like before this job they they they didn't push their code to production. Do they also push out code into production by chatting, by creating features, by tweaking there or is the accountability typically still with an engineer if if it's one of a system that is not just like a standalone like small website that marketing team owns, but inside a core of core product? Can they already push to production? Do they push to production?
+</details>
+
+>> 他们可以。
+<details><summary>Original English</summary>
+>> They can.
+</details>
+
+>> 他们可以。
+<details><summary>Original English</summary>
+>> They can.
+</details>
+
+>> 而且这很有意思，因为你刚才提到了“营销网站”，那或许是过去最典型的例子——在那个地方你会说，好吧，产品经理或设计师可以去推代码到生产环境，大家都觉得没问题，也会允许他们这么做。我只想说，“我们觉得没问题”这个类别的界限正在往外移动。一个非常好的例子是，我们有一个开发者控制台（developer console）。我们为在 API 上构建应用的开发者提供了一套用户体验，你在那里获取 API 密钥、做监控等等。我们最近在开发者控制台里发布了一个新功能，为你提供关于提示词缓存（prompt caching）的诊断信息。提示词缓存对我们的 API 来说非常非常重要——如果你能获得更高的缓存命中率，就能省很多钱，而且延迟表现也会好得多。我们正在开始构建更多功能，帮助工程师理解“我的缓存命中率高吗？如果不高，可能发生了什么，我能做些什么来改善？”。于是我们在 API 里构建了这个功能：如果你遇到了缓存未命中（cache miss），响应里就会告诉你原因。我们还在开发者控制台里构建了一个仪表盘，帮助你查看并理解你的命中率是多少以及可能发生了什么。而所有这些，都是由一位产品经理构建并推送到我们开发者控制台的生产环境中的。是的，也许我们还没到让产品经理或设计师直接去修改核心 API 的地步，但对于像这样能提供一个诊断仪表盘来帮你思考提示词缓存、给用户带来很棒体验的功能——负责这个项目的产品经理显然是一位技术能力相对较强的产品经理，但当时他就在想：“我真的需要为这个去麻烦工程师吗？我觉得不用。”当然，我们有工程师可以审查代码，可以参与进来确保它的质量过关之类的。但实际的实现过程，就是那位产品经理和他的 Claude 在 Slack 里来回沟通，把这个东西构建出来的，而且它是一个质量非常高的功能，完全是由一位产品经理构建的。
+<details><summary>Original English</summary>
+>> And so it's interesting because you kind of mentioned this like oh marketing site, you know, is is maybe the canonical example of the the place in the past where you would have said okay, a product manager or designer can go like push to production and everyone feels okay about that and and they let that happen. I would just say the line of what goes in that category of we feel okay about that is is shifting over. So a really good example is we have a developer console. We have like a a user experience for developers who are building on the APIs where you get your API keys and do your monitoring and all these sorts of things. Um we recently released a feature in the developer console that gives you diagnostics on your prompt caching. So prompt caching really really important with our APIs. Um you can save a lot of money and you can have a much better latency story if you're able to get more of a a higher cache hit rate. We're starting to build more features that help engineers understand like am I getting a high cache hit rate? And if not, what might be happening and what might I be able to do about it? And so we built that feature into the API. If you get a cache miss, then like the response will kind of tell you why. We also built um a dashboard into the developer console to help you see and understand like what your rates are and what might be happening. Um and all of that was built by a product manager and pushed to production within our developer console. Yeah, and so maybe you know, we're not quite at the place where a core change to the core API is something that we would have a product manager or designer, you know, doing directly or spending time on. But for something like this where it's like we can have a diagnostic dashboard that helps you think about your prompt caching and that's a great user experience for people. You know, the product manager who was working on this was obviously a relatively technical product manager, but um he was kind of like, do I really need to bother an engineer for this? Like I don't think so. And of course like we had engineers who could review the code and and who could be involved and make sure that it was going to be high quality and things like this. But the actual implementation was that product manager and and his Claude in Slack going back and forth and getting that thing built and um it's really high quality feature and it was totally built by a product manager.
+</details>
+
+>> 但能否说，最终把代码推向生产环境的人，就是承担责任的人？听起来如果出了什么差错或者某些数字看起来不对劲，这位产品经理绝对会负起全部责任去修复它、想办法解决它——因为我觉得这有点区别：产品经理在某种程度上一直都是对结果负责的人，他们只是以前没有写代码的工具。但最后我记得有很多故事是：我们做完项目，工程师构建好，我们想发布或者展示给产品经理看，产品经理说“等等，这跟我原本想的不太一样”。以前团队在产品经理和工程师之间一直是绑定在一起的，可以说是一种共同问责或共同承担责任的关系。
+<details><summary>Original English</summary>
+>> But is it safe to say that the people the person who pushes to production in in the end is the one accountable? Like sounds like this product manager if something would have gone wrong or like some numbers would have looked funny, like this person would have absolutely taken full accountability, fixed it, you know, figured out how to fix it is cuz cuz I I I think that's a bit of a differentiation of product managers to some extent have always been who are the ones owning the outcome. They just didn't have the tools to uh write the code. But but but in the end often I I remember so many of stories product manager like you know, we we do the project, engineers build it, we want to ship it or we show it to the product manager, product manager is like hang on, that's not exactly how I was thinking. And the team was always connected in terms of product manager and engineers like you know, it was shared accountability if you will or responsibility.
+</details>
+
+>> 是的，我觉得非常相似。我认为归根结底，拥有该系统的团队仍然是那个在系统出问题时收到报警的团队，他们会跳进去弄清楚到底发生了什么。就像过去，你总会遇到这样的情况：来自另一个团队的工程师为了完成某件事，可能会进入另一个团队拥有的代码库部分并做一些修改，对吧？如果那里出了问题，怎么处理呢？那就是这边这个团队拥有的系统出了故障，所以拥有它的这个团队会收到报警，对吧？然后他们可能会说：“哦，这个改动是最近另一个团队的这个人做的。我把他拉进来问问这件事的情况。”但归根结底，拥有该系统的团队有责任保持它的高质量。所以那边进来改代码的工程师，很可能从这个团队获得了代码审查，或者以某种形式与这个团队达成了一致，因为这个团队的工作就是保证该系统的高质量。我觉得所有这些都是一模一样的。所以，如果我们在开发者控制台里的缓存诊断体验出了问题，拥有开发者控制台的团队——也就是我们的开发者体验团队——就是会收到报警的团队，对吧？然后他们可能会说：“哦，这个缓存诊断功能里有点奇怪的情况，我们知道那边的这位产品经理参与了构建。所以我们去叫他过来，请他帮忙一起思考一下，因为他可能掌握着这个团队所没有的细节。”但从这个角度来看，你得把这一点进一步外推到这样一个地步：现在我们有了不一定由人类编排的 agent，对吧？比如去升级 SDK 版本，或者 CI 变红了就让一个 agent 直接捕捉到它、修复它并让它变绿，对吧？对于任何这些“没有人在回路中”的变更，问责制的问题就变得很有意思了。但我认为归根结底，是一个由特定团队拥有的系统出了问题。保持该系统的高质量是那个团队的目标。所以，即使做出某项变更的是一个完全没有人类参与的 agent，最终去处理它的还是那个团队——他们只是在做自己需要做的事情来保持系统的高质量。而且我也认为，这就是为什么我们要回到刚才说的：我们依然保持着这些“两个披萨”团队，对吧？因为你仍然需要一组理解这个系统并对这个系统负责的人类，因为变更可能以各种方式进来——可能来自产品经理，也可能来自一个后台运行的环境 agent（ambient agent），对吧？你仍然必须保证它的高质量。
+<details><summary>Original English</summary>
+>> Yeah. I think it's pretty similar. I think it's like the team that owns the system is still ultimately the team that's like getting paged when something goes wrong with that system and they're jumping in and they're figuring out what what went on. Like in the past you would always have times when an engineer from a different team might be trying to get something done and they'd kind of like come into a part of the codebase owned by another team and they'd make some changes, right? And like if something went wrong there, how does that get handled? It's like well like something in that system that's owned by the team over here broke and so the team over here that owns it gets paged, right? And then they might say like, oh, this change was made recently by this person on this other team. Let me page them in and ask them questions about the thing, right? But ultimately like the team that owns the system is responsible for keeping it high quality. And so the engineer over here that came in probably got code review from that team or got like alignment in some form from that team, right? Because like their job is make that system high quality. I think all of that is exactly the same. So if that experience around cache diagnostics in our developer console had an issue, the team that owns our developer console, which is our developer experience team, is a team that would get paged, right? And then they might say, oh, there's something funky going on in this cache diagnostics thing that, you know, we know this product manager over here was part of building. And so we'll go page him and and ask him for help thinking about this because he might have details that this team doesn't have. But from that perspective, you kind of have to extrapolate that out to a point where now we have agents that aren't necessarily being orchestrated by a human, right? Like the get the SDK version bumped or the CI went red and let's have an agent just catch that and and fix it and and make it go green, right? Any of these changes that don't have a human in the loop, the accountability question gets really funny. But I think ultimately it's the system that's that is owned by a specific team having an issue. It's that team's, you know, like goal to keep that system high quality. And so they're the ones who are going to be dealing with it even if it's an an agent with no human involved at all, right? That made some change. It's like they're doing what they need to do to keep their system high quality. And I also think that's why we go back to we still have these two pizza teams, right? Like you still have a set of humans who understand the system, they're accountable for the system because changes might come in in any number of ways. It might be a product manager, it might be an an ambient agent, right? Like and you still got to keep it high quality.
+</details>
+
+>> 听到你说团队拥有系统、这就是团队如何运作，这真的让我耳目一新。
+<details><summary>Original English</summary>
+>> I it is really refreshing to me for to hear that you're seeing saying your teams teams own systems.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 我觉得我们在这次对话中提到“团队”的次数比其他什么都多，但听起来你真的观察到或者相信，团队对于高质量的、或者长生命周期的产品和系统来说是如此关键。
+<details><summary>Original English</summary>
+>> Here's how a team operates. Like I think we mentioned teams more in this conversation than than others, but sounds like you're you're you're really observing or believing that like teams are kind of like so critical for like high quality products, systems or or long living ones maybe.
+</details>
+
+>> 是的，而且我觉得至少到目前为止，这一点还没有改变，对吧？也许随着时间的推移，你可以说那个团队可以稍微小一点之类的，因为他们有越来越多的 agent 在帮助他们，也许当出问题时，实际上是 agent 先收到报警（原文误作 paid，指 paged），而且大多数时候 agent 都知道发生了什么，对吧？我认为随着时间的推移，情况会有所改变，但我仍然认为，总会存在某个由一组人类构成的单元，他们对系统按预期运行、实现目标以及所有这类事情负责——无论这个单元是大是小，当出问题时，他们才是最终最关心的人，也是去解决问题的人。
+<details><summary>Original English</summary>
+>> Yeah, and I just don't think that that part has changed um at least yet, right? And maybe over time you could say that that team could be a little bit smaller or something, right? Because they have more and more agents that are helping them and maybe, you know, like the team that's getting paid when something goes wrong is actually like the agents get paid first and most of the time the agents know what's going on, right? And I think over time that will change, but I still think there's some units of a set of of humans who are accountable for a system operating the way that it's meant to and accomplishing its goals and doing all of those sorts of things that however bigger small that unit is, like that's ultimately who cares the most when something is going wrong and and they're the ones who are fixing it.
+</details>
+
+### “软件工厂”与内部工具链的演进
+
+>> 现在我们聊了这么多不同的系统和不同的云（注：指 Claude），还有持久化的 Claude 以及你们派生出来的那些。行业里正在流传一个词，你肯定听过很多次了，叫“软件工厂”（software factory）。你怎么看“软件工厂”这个名字，你认为你们正在做的事情或者 Anthropic 的运作方式可以这样形容吗？
+<details><summary>Original English</summary>
+>> Now we we talked so much about the different systems and different clouds and and there's a durable cloud clouds and the ones that you're spinning off. A term that is going around the industry, you've heard it so many times is software factory. Uh what do you think about the the name software factory and do you think what you're doing or how Entropic is running could be described as such?
+</details>
+
+>> 是的，很有意思。我在内部其实没怎么听我们用过这个词，但我确实认为它所谈论的精神非常符合我们在 Anthropic 所做的事情。
+<details><summary>Original English</summary>
+>> Yeah, it's really interesting. We I haven't really heard us use the term internally, but I do think that the spirit of what it's talking about is very much something that we are doing at Entropic. Um
+</details>
+
+>> 你们绝对是在这么做。
+<details><summary>Original English</summary>
+>> you're definitely doing it.
+</details>
+
+>> 是的，[笑声] 我们绝对是在这么做，但我们没有管它叫软件工厂，我也不太确定为什么，但是的，我们就是这样工作的。这非常像是你想要端到端地把一个变更推向生产环境，对吧？你有实际做出变更的 agent，你有验证变更的 agent，你有做第一轮代码审查——甚至可能做完整轮代码审查——的 agent，对吧？然后它们部署到生产环境；一旦东西进入生产环境，你就有监控，对吧？比如我们最近开始尝试使用 QA agent，它们就是……
+<details><summary>Original English</summary>
+>> Yeah, [laughter] we're definitely doing it, um but we we haven't called it software factory um for for I'm not sure why, but yeah, that that's how we're working. It's very much like you want to get a change end to end and to production, right? Um you've got the agents that are actually making the change, you've got agents that are verifying the change, you've got agents that are taking the first pass at code review, maybe they're doing the whole code review, right? And then they're deploying to production and then once something is in production, you have monitoring, right? Like we recently started experimenting with actually like QA agents that are just
+</details>
+
+>> 外部 QA agent，像是在尝试……
+<details><summary>Original English</summary>
+>> external QA agents like trying to
+</details>
+
+>> 对，它们就在后台持续运行，它们手里有一份人类写的“这个系统应该如何工作”的说明，对吧？然后它们就去不断地测试、敲打那个东西，确保它按预期的方式工作，如果有什么地方坏了，它们就会提 pull request，对吧？所有这些把变更推入生产环境、并在进入生产环境后保持系统高质量的不同环节，还有我们刚才聊到的值班（比如接手第一道报警），所有这些事情，我们都在尽最大努力让 agent 承担越来越多、越来越多的工作，这样人类就可以把时间花在为了把系统构建出来并高质量运行所需要的高质量工作上。
+<details><summary>Original English</summary>
+>> Yeah, they're just ambience and they have like a human written here's how the system is meant to work, right? And then they go and they're just constantly, you know, hammering on that thing and making sure that it works the way that it's meant to and then they're putting up pull requests if something is broken, right? And um all of those different parts of the like get a change into production and then keep a system high quality once it's in production and then we talked about it on call too, right? Like taking the first page. All of those things are things that as much as we can we're trying to have agents take on more and more and more of that work so that the humans can spend their time on the higher quality work that needs to happen in order to get systems built and and running at high quality.
+</details>
+
+>> 那么你刚才谈到的这些——你在云平台（cloud platform）团队，这是个很有意思的名字，因为从外部来看它作为产品平台很合理，但平台团队也可能是构建开发者工具或基础设施工具等的团队——这些反馈循环、对不同 pull request 的分类，是由一个平台团队统一做的，还是每个团队自己决定如何构建这些工具？
+<details><summary>Original English</summary>
+>> Now like what you're talking about is well you're on the cloud platform team which is a interesting name because externally it makes sense as a platform but platform teams are can also be the ones that have built developer tools or infra tools and so on. These feedback loops the categorizing of of different pull requests is this done by a platform team or or each is each team deciding how they will build the tools?
+</details>
+
+>> 这是个非常好的问题。我们有一个独立于我团队的中央基础设施组织（central infra org），那个团队负责横跨研究、推理、产品以及所有不同领域的基础设施；而在我们平台团队内部，我们也有一个专门专注于产品的基础设施团队，但他们与中央基础设施团队合作非常密切。因此，为了提高大家效率而开展的大量工作，都来自那个中央基础设施团队旗下的一个“开发者加速团队”（developer acceleration team）。比如他们构建了我们最近谈到过的 Scion，还有……
+<details><summary>Original English</summary>
+>> It's a really good question. So we have a central infra org that's separate from my team and that team does infra across research and inference and product and and all the different things and so we kind of have a version of an infra team within the platform team that specifically focus on product but they collaborate a lot with the centralized infra team. And so a lot of the work that's happened to try to make everybody more efficient has come from a developer acceleration team that sits within that central infra team. Um so they built um Scion that we talked about recently and yeah
+</details>
+
+>> 新的源码控制（source control）。
+<details><summary>Original English</summary>
+>> new source control.
+</details>
+
+>> 所以他们做了很多非常了不起的工作，去弄清楚我们如何度过这样一个时期——每个人都在试图做出海量的变更，同时还要保证这些东西的高质量。那个团队做了这类工作；在此之上，我们在平台内部其实还有一个叫“平台加速”（platform acceleration）的团队，它与整体的开发者加速团队合作很多，但他们的工作是专门思考平台本身、我们的团队、我们正在做的工作，以及为了让我们的团队快速前进，我们可能需要什么样的工具。举个例子，我刚才提到正在运行的 QA agent，就是平台加速团队构建的；还有我刚才简短提到的 CI，当 CI 变红时，我们有 agent 去修复测试，大多数时候人类不需要介入，这也是平台加速团队在开发者加速团队构建的众多工具之上搭建起来的。这就是其中一层。然后最后一个类别，我想说的是，每一位正在工作的工程师都被充分赋能，去思考所有他们能做的、能让自己和团队……
+<details><summary>Original English</summary>
+>> So they've done a lot of really really incredible work to figure out how we go through this period of like insane number of changes that everybody's trying to make and and make the these things at high quality. So that team has done that type of work um and then on top of this we actually have a team within platforms called platform acceleration that is collaborating a lot with the overall developer acceleration team, but their job is to just think specifically about platform and our team and the work that we're doing and the tools that we might want to have in order to make our teams move fast. And so, for example, I just mentioned that QA agent that's running like the platform acceleration team built that or you know, like I briefly mentioned CI. When CI goes red, um we have agents that go and fix the tests and and humans most of the time don't have to be in the loop. That's something the platform acceleration team uh built on top of a lot of the tools that were built by the developer acceleration team. And so, there's that. And then the last category I would just say is every engineer who's doing work is like totally empowered to think about all the things they could be doing that would make their lives better and their team.
+</details>
+
+>> 让生活更美好。
+<details><summary>Original English</summary>
+>> lives better.
+</details>
+
+>> 是的，没错，让事情更高效。所以，我们许多最棒的、帮助团队把工作做得更好的工具，其实就是某位工程师遇到了一个让他们觉得很烦的瓶颈，然后受到启发去做点什么来解决它。因此，我其实想说，总体而言，投入到周边工具链这类“元工作”（meta work）中去让工作变快的人类工时，随着越来越多的工作变得 agent 化（agentic），这个比例反而变高了——这也许有点反直觉，因为你会觉得既然现在有 agent 在做这么多工作，那人类就变快了，就可以只专注于实际工作本身。但我认为，正因为你可以用这些 agent 创造出这么一整个工具世界，去不断推动实现“把事情做成需要多少人类在回路中”这个目标，每个人都深受这个问题的启发，每个人都在花大量时间思考：我怎样才能把这个原本很蠢、我原本可能不需要花时间在上面的工作流，变得更自动化或者更 agent 化？所以，在所有这些层面上，我们都有人在这方面投入大量时间。
+<details><summary>Original English</summary>
+>> Yeah, exactly. Make make things more efficient. And so, a lot of our most amazing tools that have, you know, helped teams do better work is just like some engineer who ran into some bottleneck that they thought was annoying and they were kind of inspired to go do something to fix it. And so, I would actually say on the whole, the number of human hours that go into the kind of meta work of tooling around the edges to make the work go faster has gotten I would say the balance has shifted. It's gotten higher as more work has become agentic, which is maybe counterintuitive because it's like you've got agents now who are doing so much of the work. And so, that speeds people up. And so, they can just focus on the actual work itself. But I think because there's this whole world of tooling that you can create with these agents to like push harder and harder on this goal of how many humans you need in the loop to get things done, everybody's really inspired by that problem and everybody's spending a lot of time thinking about how can I, you know, take this workflow that was silly and I I spent time on something that I probably didn't need to and make that more automated or or make that more agentic. So, across all of those layers, we have people spending a lot of time on that.
+</details>
+
+<!-- chunk 3/3 -->
+
+>> 我理解得对吗，存在一个开发者——也就是加速团队，我喜欢这个叫法，因为过去这些团队可能会被称为面向 AI 的开发者平台，但我真的很喜欢“加速”这个部分——里面有一些人在平台加速或基础设施加速团队工作，他们的职责似乎很明确，就是他们的角色或目标是让软件工程师的工作更高效。但我也注意到，是不是还有很多软件工程师（比如在产品部门工作，负责产品的某个特定部分）是出于自己的选择，去寻找让自己的工作减少重复、实现自动化、更高效地使用工具的方法？显然他们正在运行多个智能体，我们说的是 5 个、10 个甚至更多，琢磨着怎么通过一些微调让它们更高效，所以这方面有很多实验和探索正在进行。
+<details><summary>Original English</summary>
+>> Do I understand correctly that there is a developer the there's a acceleration teams I like because in the past these would have been called developer platform for AI and and but I I really like the acceleration part, but there's people working inside of the platform acceleration or infra acceleration seems their job is to clearly their kind of state a role or goal is to make things more efficient for software engineers. But is it also true what I'm picking up is either kind of by choice a lot of software engineers who are working in let's say product like they're working on a specific part of of of the product, they're choosing to find ways to make their own work less repetitive, automated to the gentle loose more efficiently clearly they're running like multiple agents we're talking five 10 or or even more figuring out how they can make those more efficient like tweaks so there's a lot of experimentation playing going around there.
+</details>
+
+>> 是的，完全正确。而且大家基本上想做什么就可以做什么。几个月前有一个很酷的例子，我团队里有一个人——他不在平台加速团队，他的主要工作目标也不是做这类事情——他在想，我们有很多基于 Slack 的智能体，我们花了很多时间和它们打交道，那么在 Slack 里，什么样的形式才是让某人能够发起一个宏大得多的目标的合适方式呢？于是他提出了这样一个概念：专门建一个 Slack 频道，用来编排一个庞大的多智能体团队，朝着某个特定目标协作。这样你就会在那个 Slack 频道里有很多你的 Claude 实例，所有这些都通过一些工具来编排，帮助这个多智能体团队。这还是在多智能体变得越来越好之前——现在你其实不用花那么多时间去想多智能体系统到底要怎么自我编排了，对吧，让它自己去运行就好——但在当时，这完全是一个实验，探索如何在一个 Slack 频道里，让一个智能体团队协作，一次性完成一个非常非常宏大的目标。有趣的是，它最后演变成了一种更偏向于处理持续性问题、也就是你可能遇到的环境类问题的东西。比如，你让那个智能体团队去扫描代码库里的漏洞之类的，然后直接修复它们，对吧？所以这个概念随着时间推移发生了变化，但这一切的起点，只是某个工程师说“我们来实验一下这里的形式，实验一下怎么让一个多智能体团队做更宏大的工作”。你知道，这不是他的本职工作，但它能帮他做好本职工作，所以他就把时间花在了这上面。
+<details><summary>Original English</summary>
+>> Yeah, exactly. Um and people can just kind of build what they want to build. A really cool example some number of months ago we had someone on my team who not on platform acceleration like goal main job is not to do this type of work was thinking about we have all these slack based agents that we spend a lot of our time with what is maybe the right form factor within slack for somebody to be able to fire off a much much much more ambitious goal. Um and so he kind of came up with this concept of like a slack channel that's dedicated to orchestrating a big like multi-agent team in order to work towards like some specific goal and so you would have kind of a lot of instances of your clouds within that slack channel and like that was all like orchestrated with some tooling that helped the multi-agent team. This was before multi-agent had gotten better and better and to the point where you don't really have to spend so much time thinking about exactly how will the multi-agent system orchestrate itself right like let it do it on its own, but at the time it was all an experiment on how can we try to just like one shot some really really ambitious goal within a slack channel with a team of agents working on that thing right and it's interesting because it ended up being it it morphed into something that was more about um persistent problems like ambient problems that you might have. Like maybe you have that team of agents is just like scanning for vulnerabilities in a codebase or something and just like fixing them, right? Um and so the concept kind of changed over time, but it all started from just some engineer saying like let's experiment with the form factors here and let's experiment with how we can have a multi-agent team do more ambitious work and you know it wasn't his job, but it was it helped him do his job and so that's what he spent his time on.
+</details>
+
+### 招聘与编程面试的变化
+
+>> 说到工作本身，招聘方面发生了怎样的变化？你的同事 Felix Riesberg 写过，不确定是他的团队还是 Anthropic 决定编程面试（coding interview）提供不了太多有效信号，就拿你们负责云平台的组织来说，你们现在是怎么招聘的？发生了什么变化？你们在看重什么？怎么进行验证？因为你知道，招聘一直都很难，你只有在一个人真正开始做这份工作时，才知道他能不能胜任，但在此之前，我们需要用某种方式来筛选。
+<details><summary>Original English</summary>
+>> Speaking of of of of the job in in general, how is hiring changing? Felix Riesberg, your your colleague wrote about how either his team or I'm not sure if Entropic decided that the coding interview doesn't give much signal, just your org talking about the cloud platform, how are you hiring? How is it changing? On what you're looking for? How you're verifying? Cuz you know hiring has always been we know it's always been difficult and you you know when the person can do the job when they're doing the job, but beforehand you know there's a way we need to somehow filter.
+</details>
+
+>> 这是一个巨大的变化。
+<details><summary>Original English</summary>
+>> It's a huge change.
+</details>
+
+>> 这是一个很大的变化，而且很有意思，因为我用“逐步淘汰”（phased out）这个词其实是很具体的。当时发生的情况是，我们除了编程面试之外，当然还有考察技术设计的面试，对吧？或者考察你讲述过去参与过的大型技术项目的能力，对吧？就是除了动手敲键盘写代码之外的所有其他信号。我们发现自己越来越频繁地走到这样一个地步——我是说这听起来很明显——就是某人可能没通过编程面试，但他在其他所有面试中都表现得非常出色，而原因就是他们现在不再一直亲手写代码了，对吧？所以我们发现自己越来越频繁地几乎在说“啊，这没关系”，对吧？你知道，这在招聘中一直是个挑战，不是每一轮面试环节在所有方面都是完美的，你要决定怎么获取反向信号，以及最终怎么判断一个人会不会成功。所以在编程面试上，我们发现自己不再那么看重它了，因为我们总是在说，嗯，你知道，他们现在可能不再亲手写那么多代码了。所以我们采取的做法并不是直接把它删掉。我们开始尝试一系列不同的面试形式，基本上就是由编程智能体驱动的面试。比如，可能是评审智能体写的代码，或者评审智能体做的系统设计，或者是用编程智能体来构建某个系统或某个东西，对吧？我们正在实验很多这类形式，因为我们基本上就是想找到最好的方法，真正有效地评估一个人能否很好地使用这些工具来完成工作。所以具体来说，我们正试图用考察与智能体协作完成工作能力的环节，来替代过去考察手写代码的环节。但面试的其余部分保持不变，依然是考察技术设计、做过的项目以及其他所有方面。
+<details><summary>Original English</summary>
+>> It's a big change and it's interesting cuz I I'm I'm being pretty specific with the phrase phased out cuz what happened was we we're running a coding interview alongside of course like we have interviews that test for technical design, right? Or the ability to talk about a a large technical project you worked on in the past, right? Like all the other signal that you get beyond just putting hands on keyboard and writing code. We found ourselves getting more and more to a point I mean it sounds obvious, but you know someone might not pass that coding interview, but they would like crush all the rest of the interviews and it's cuz they're not writing code by hand all of the time anymore, right? And so we found ourselves more and more of the time almost like saying ah that's okay, right? You know and and this is this is always a challenge in hiring like not every interview loop is like perfect across the board and you know you decide how do you get counter signal and how do you decide ultimately that someone's going to be successful. And so on the coding interviews we were just finding that we weren't putting a ton of stock in them because we kept saying well you know they might not be writing a ton of code by hand anymore. And so what we have done is we didn't just delete it. Um, we've started to experiment with a bunch of different interviews that are basically just like coding agent driven interviews. So maybe it's like reviewing code that was written by an agent or reviewing like a system design that was made by an agent um or it's, you know, build some system or build something using a coding agent, right? We're experimenting with a lot of these because uh we're we're just basically trying to find like what is the best way to really truly get signal on whether someone can use these tools really well to get work done. So basically very specifically the part that used to test for coding we're trying to replace with something that tests for ability to like work with agents to get work done. But the rest of the interview has stayed the same on just thinking about technical design and and the projects that you've worked on and all of those other pieces.
+</details>
+
+>> 是的，因为作为招聘经理，你会注意到编程面试在各种规模较大的公司里之所以比较方便，有两个原因。一个是不太在乎题目是否在网上泄露——虽然大家知道题目提前准备不太好，那样你就拿不到任何有效信号，这是一个原因；另一个原因是，很容易培训一大批面试官来主持这种面试，并且能得到大致均等的信号，不管是初级候选人、没怎么面试过的人，还是面试经验丰富的人。但当我以前做招聘经理、参加面试评审会时，编程面试给出的信号总是有点——有时候有人编程面试挂了，但还是会被录用。所以我感觉它是区分度最弱的一个环节。它非零即一，本来就不够精确，因为我们知道即便在当时，数据结构与算法（DSA）面试考察的也不是我们日常工作中做的那种编程。
+<details><summary>Original English</summary>
+>> Yeah, cuz one thing with the coding interview you you will notice as a hiring manager the reason it was kind of convenient at every larger size company is two reasons. One is it didn't really matter if a question leaked online uh because it's not great when people know the question they can come prepared and you'll get zero signal. That's one and then the other thing it was pretty easy to train a large number of interviewers on how to conduct this interview and get roughly equal signal even if it's a early career or or like someone who hasn't had had many interviews and also and at or someone who has a lot of interviews. But also when when I was a hiring manager and sat on the panels like the signal from the coding interview was always a little bit like sometimes people will fail coding interviews and they will still get hired. So like there was there was I I feel it was the one that gave the least nuance. It was a zero or one that wasn't as precise anyway because we know that even back then the the data science and algorithm like in in the DSA interviews were not testing for the type of coding that we're doing day to day.
+</details>
+
+>> 对，完全正确。所以它们从来都不是完美的。但我认为你确实提出了一个很好的观点：你打算运行的一场面试、一种面试类型是否成功，不仅仅取决于我们试图获取的精确信号是什么、以及我们能不能获取到那个信号。其中一部分还在于你能不能信任它？一部分在于让你的团队准备好给这场面试打分有多难、有多繁琐，对吧？还有，要获取更无偏见的信号有多难，对吧？比如一个很容易遵循的评分标准。这就是为什么我们不只是把编程面试删掉，但也不是直接说“这就是我们要换上的确切方案”。这就是为什么我们在测试一系列不同的选项，看看怎么在所有这些不同的因素上都达到我们想要的标准。
+<details><summary>Original English</summary>
+>> Right. Exactly. So they were never perfect. Um but I think you do bring up a good point that whether an interview is successful like an interview a type of interview that you're going to run is successful is not just about what's the exact signal that we're trying to get and like can we get that signal? Some of it is can you trust it? Some of it is how hard is it to how onerous is it to have your team ready to grade that interview, right? And and to score that interview and how hard is it to get more, you know, like unbiased signal, right? Like a rubric that is pretty easy to stick to and so this is why we're not just, you know, deleting the coding interview, but we're also not just like here's the exact thing that we're going to swap in instead. It's the reason why we're testing a bunch of different options for how we kind of hit where we want to hit on all of those different factors.
+</details>
+
+### 职级、绩效评估与反馈机制
+
+>> 一旦有人拿到 offer 并加入 Anthropic，[清嗓] 你们怎么看待职级（leveling）、绩效评估、晋升这些事情？或者说你们会考虑这些吗？这方面有什么变化？因为回想一下 Stripe、Uber 和 Meta 这些公司，这曾是这些公司非常重要的一部分。一切都已经非常成熟。我觉得以前这个角色本身变化没那么大，所以我们有那么几年——5 年、10 年、15 年的稳定期，如果你愿意这么叫的话，那是其中很大一部分原因。你知道，大家会担心拿不到期望的头衔、期望的职级，甚至因此拒绝 offer 等等。你们内部是怎么看待这些的？
+<details><summary>Original English</summary>
+>> Once someone gets an offer and joins Entropic, [clears throat] how do you think about things like leveling, performance reviews, promotions? Or do you think about this? And how has it changed? Cuz again, thinking back to like Stripe and Uber and Meta and all these places, like this was such a big part of of those companies. It was all figured out. I think the role wasn't changing as much, so we had a few few like, you know, 5 10 15 years of like stability if if you will, and that was a huge part of it. You know, people were like worried when there are people were rejecting offers, when they didn't get the title that were hoping for, the level they were hoping for, and so on. How do you think of it inside of it?
+</details>
+
+>> 是的，我们仍然有职级，仍然有晋升，仍然有绩效评估，这些我们都做。最不同的两点是：第一，我们现在的人员结构明显更偏向资深（senior）。所以……
+<details><summary>Original English</summary>
+>> Yeah, so we we still do levels, we still do promotions, we still do performance reviews, we do all these things. Um the the two things that are most different are one, we've skewed much more senior. Um and so
+</details>
+
+>> 招聘上偏向资深，对吧？
+<details><summary>Original English</summary>
+>> hiring, right?
+</details>
+
+>> 对，没错。而且我觉得作为管理者，在初级职级上思考“成功是什么样的”总是更容易一些，我会说那里更统一。随着职级越来越高，你会发现每个人负责的问题域和系统完全不同，就更难界定在某个非常资深的职级上，什么样的表现才算好。但这就是我们目前所处的阶段。
+<details><summary>Original English</summary>
+>> Yeah, exactly. And I think it was always easier as a manager to think about what success looks like at more junior levels where it's um a little bit more uniform, I would say. As you get more senior, you find people owning totally different problem spaces and totally different systems and it's like a little bit harder to say like what does good performance look like at some like very senior level? But that's where we are right now.
+</details>
+
+>> 我觉得这种情况通常发生在 Staff 及以上职级。它就不再……对，不再统一了。
+<details><summary>Original English</summary>
+>> I I think this typically happened at the staff and above levels. It was no longer uh uh yeah, uniform.
+</details>
+
+>> 没错。而且我觉得，无论是在招聘时，还是在员工入职后我们评估他们的职级时，我们都开始面临一个问题：过去我们习惯使用一个替代指标——当然一切都关乎影响力（impact），对吧？就是“你产生了什么影响力”，完全正确。但有意思的是，过去我们习惯用“某项工作花费了一定的时间”来作为“这项工作有多复杂”的替代指标，对吧？比如你可能会说，一个处于某个资深职级的人——我们这里没有头衔（title），大家都是技术团队成员（member of technical staff），所以都是数字职级——一个处于相当高数字职级的人，在过去的公司或现在的公司做过一个花了两年时间的项目，对吧？然后你会说，这个人主导了一个长达两年的项目，这太复杂了。而现在的情况是，过去可能要花两年的事情——比如把 API 从 Python 迁移到 Rust——现在有人用五六个月就主导完成了，而这在过去我们可能会说“哦，这就像一个两年的大工程”。但与此同时，复杂度的标准也变了，对吧？很多事情都变了。所以我们一直在不断迭代，探索如何去衡量一个人所做工作的复杂度。但归根结底，[吸鼻子] 最终的兜底标准始终还是影响力，因为你可以看着像刚才那种迁移项目说：好的，太棒了，我们节省了这么多 CPU，延迟降低了这么多，还有各种其他指标，我们避免了故障等等，对吧？你也可以定性地去看一个人做的工作，说他必须协调所有这些团队，而且他协调得非常好，对吧？这些就是我们现在用来理解团队内部资深程度的衡量标准。这确实变得更难了，因为过去它要简单得多、确定得多，尤其是在较低职级上。但总而言之，职级、晋升和绩效评估这些主要机制和理念都保持不变，因为我们仍然在运营一个团队，这里的人都有自己的职业生涯，他们在成长，在做所有这些事情，对吧？对我们来说，确保这仍然是一个对大家有益的流程非常重要。
+<details><summary>Original English</summary>
+>> Exactly. And I think what we're starting to grapple with is both when we're hiring and then once we have people in seat and you think about their levels, we used to use the proxy. Everything's about impact, right? It's like what impact have you had? Exactly. But it's interesting because we used to use a proxy of, you know, like an effort that took a certain amount of time is maybe a proxy for how complex that effort might have been, right? Like you might say somebody who's like some senior level, right? Like we do the um we don't have titles. We're all member of technical staff and so it's all like numeric levels. But someone at a pretty high numeric level might have in their past company or in their current company worked on something that took, you know, two years, right? And then you say this person led this two-year-long effort. Like that's so complex. And And now it's like, well, the thing that could take two years like, you know, migrating the API from Python to Rust, someone leading that in a matter of five to six months is what we would have in the past said, oh, this is like a two-year effort. But then the complexity bar is different too, right? And so a lot of things have changed. And so we're kind of constantly iterating on how do we get a sense for the complexity of of the work that somebody does. But ultimately [snorts] the fallback is always just impact because you're able to look at something like that migration and say, okay, great, we saved this amount of CPU and our latency got this much better and and you know, all these different things and and we avoided incidents and and all of this, right? And you can kind of qualitatively look at the work somebody did and say they had to coordinate across all these teams and they did that really well, right? And these are the the measures that we now look at to be able to understand seniority within our team. And it's it's gotten, you know, just harder because it used to be much easier and more deterministic, especially at lower levels. But all to say those those main things, the idea of levels and promotions and and performance reviews have all stayed the same because we're still we're still operating a team that people who have careers and they're growing and and they're doing all these things, right? And um it's important to us to make sure that that is still a good process for people.
+</details>
+
+>> 关于绩效评估，有一点是它不一定只关乎绩效本身，大多数公司每六个月运行一次，它是人们获得反馈的地方，通常来自他们的经理，因为经理们现在被要求“好吧，你需要告诉员工建设性反馈、正面反馈等等”。在你们团队内部、团队之间或者个人之间，反馈是如何运作的？
+<details><summary>Original English</summary>
+>> One thing about performance reviews is that it's not just about performance necessarily, but it's often most companies runs every six months where it's the it's a place where people get feedback, typically from their manager, because managers are now forced to like okay, you you need to tell people like constructive feedback, positive feedback, and so on. How does feedback work inside of inside of teams or between teams or or or between individuals?
+</details>
+
+>> 是的。我会说跟以前没什么太大不同。我们仍然——我是说，我猜每个经理都有自己的理念。我的管理理念是，如果到了绩效评估的时候，我告诉你某件事、某条让你觉得非常惊讶的反馈，那我就搞砸了。
+<details><summary>Original English</summary>
+>> Yeah. I would say not that different than it ever used to work. We still do I mean, I guess every manager has their own philosophy. My manager philosophy is if I get to a performance review time and I tell you something, some bit of feedback that feels super surprising to you, then I messed up.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 你本来应该更实时地从我这里听到那些。所以我们依然坚持这样的理念。但说到从其他人那里收集反馈，比如，我觉得也真的很相似，你知道，如果有人来找我，说有对我团队里某个人的反馈，通常我会问：这是不是你可以直接跟他们谈的事情，对吧？这样我们就不用传话，大家可以进行坦诚的对话。但在绩效评估的时候，我们有一个流程，你可以向同事请求反馈，或者直接提交反馈。Anthropic 很好的一点是，我们的反馈大部分是透明的。是的，我以前待过一些地方，你给某人的反馈是发给他的经理的，本人永远看不到，对吧？我在 Stripe 的时候，我们在这些做法上也有过反复，但在 Anthropic，我们更倾向于透明，所以大家基本上能直接看到……
+<details><summary>Original English</summary>
+>> Like you should have heard that from me more in real time. And so we still hold philosophies like this, but then when it comes to collecting feedback from other people, for example, I think again really similar, you know, like if someone comes to me and has has got feedback for someone on my team, often it's like, is this something you can talk to them about directly, right? So we're not playing telephone and and people can have open conversations. But at performance review time, we have the process of you can request feedback from peers or you can just kind of submit feedback. One of the nice things about Anthropic is our feedback is mostly transparent. Um yeah, like I've been at places in the past where the feedback that you give about somebody goes to their manager and they never see it, right? And when I was at Stripe, we kind of went back and forth on how all those things worked, but at Anthropic we err much more on the side of transparency and so people kind of see directly what
+</details>
+
+>> 这样意外就会少很多。
+<details><summary>Original English</summary>
+>> There should be fewer surprises.
+</details>
+
+>> 对，没错。
+<details><summary>Original English</summary>
+>> Yeah, exactly.
+</details>
+
+### 软件工程师的身份危机与多智能体系统
+
+>> 是的。我们可以看到，而且我们刚才也触及了这一点，软件工程师正面临着一种身份危机。你最近也在文章里反思过这个问题，我稍微引用一下你的话。你写道：“这是写给那些感到身份危机的工程师们的，因为他们觉得自己的知识和技能将不再重要，但实际上，你的技能恰恰可能是这些复杂问题能否被攻克的关键。”然后你举了多智能体系统作为例子。你能分享一下你在身份危机方面看到了什么，以及你在隧道尽头看到了怎样的曙光吗？
+<details><summary>Original English</summary>
+>> Yeah. We can see that there is and we touched on this, but there's a there is an identity crisis with with software engineers. And you recently reflected on this in writing, and I'll quote you a a little bit for this. You wrote, this is for the engineers feeling an identity crisis because they think their knowledge and skills won't be important, even though your skills can be the difference in whether or not these complex problems will be tackled. And then you gave for example multi-agent systems as an example.
+>> Yeah.
+>> Can you share like what you're seeing in in terms of like the identity crisis and like where you see the light at the end of the tunnel?
+</details>
+
+>> 是的。我们之前也稍微聊过这个想法：在做这类工作时，你的乐趣到底来自哪里？我觉得特别是对于那些从“某个宏大问题被攻克”中获得巨大乐趣的人来说，对吧？对这些人而言，还有太多未解的问题需要去解决，花时间解决这些问题能带来无穷无尽的乐趣。我觉得现在感到更艰难的，是那些把自我认同建立在“我喜欢噼里啪啦敲键盘、我写代码然后把事情做成”这个角度上的人。我写那段话的想法，主要是想激发一些乐观情绪——我真的很兴奋，我非常乐观，因为有太多巨大的问题等着我们去解决，对吧？好吧，确实，你不再一行行地手写代码了，但我们希望 AI 能带我们达到的境界，是治愈疾病，对吧？还有，在机械工程和所有其他我们长期以来以为只存在于科幻小说里的领域，都能实现真正了不起的壮举，对吧？而我们可以去解决那些问题。我觉得大家需要思考和关注的是，人们经常会说“哦，这有什么意义？智能体迟早会做的”，或者“那有什么意义？智能体迟早会做的”。但我认为关键在于，为了让智能体能够解决那些问题，很快就会有一大堆工程问题必须先被解决。一个很大的例子就是这些多智能体系统，对吧？比如你可以让成千上万个智能体一起协作来解决一个问题。我们从一些客户那里听到了非常有趣的例子：如果你正在致力于治愈某种疾病，正在研发一种想推向市场的药物，你必须向 FDA 提交申报材料，说明为什么应该允许这种药物上市。在药物最终上市的每一个阶段，都需要投入极其惊人的时间、精力和努力。我们看到人们已经开始做的事情是，也许你会构建一个几乎像甘特图（Gantt chart）一样的系统，对吧？然后发生的事情是，持久化的智能体（persistent agents）会去认领工作的不同部分，并完成所有的不同部分，在其中的很多环节，你可能不需要人类一直介入。这些事情才刚刚开始发生。想想你现在正在解决的问题，以及你与智能体协作的方式，就像你在说“单个智能体，去把那个做好”，但现在试着把雄心壮志拔高很多很多倍，让一个智能体团队直接扑上去把那件事搞定。我希望人们能明白的是，如果我们不解决围绕安全、基础设施、身份认证、权限（auth）等所有这些不同的工程问题，那种愿景是不会实现的。如果你没有先正确地解决好这些底层的工程问题，你不能就这么放任一个庞大的智能体团队去乱闯，试图解决这些问题，因为那样我们永远也到不了那个境地。我们永远到不了“庞大的智能体团队解决好问题”的阶段，我们会先遇到各种问题，对吧？就是坏问题先发生了。所以我的想法是，是的，在通往那个目标的道路上，智能体现在就可以帮我们解决很多这类问题，但我们仍然需要在安全、权限、基础设施等所有这些不同领域拥有深厚专业知识的人类，来打造正确的底层系统，这样那些智能体团队才能去解决那些大问题。
+<details><summary>Original English</summary>
+>> Yeah. And we talked a little bit earlier about this idea of what do you get joy out of when you're doing this type of work? And I think especially for people who get a lot of joy out of you know, some ambitious problem is tackled, right? That those are the people who there's so much that is unsolved, that needs to get solved and there's just like an endless amount of joy that you can get out of spending the time on solving those problems. I think the people who are having a harder time are the people who are like my identity used to be that I like you know click clacked on my keyboard and I I wrote code and stuff got done from that perspective and the idea in writing that was mostly to try to spark some optimism of I'm really excited. I have a lot of optimism because there are huge problems that we want to tackle, right? Like yes, fine. It's the case that you no longer write individual lines of code, but what we want to have happen with AI is to get to a point where like diseases are getting cured, right? And you know, like really incredible feats can happen in in mechanical engineering and all of these other areas that we for a long time used to think were science fiction, right? But we can go and solve those problems. And I think what people kind of need to think about and focus on is people will often say like oh why why does this thing matter? Like agents will do it eventually or why does that thing matter? Like agents will do it eventually. But I think the point is in order to enable agents to be able to solve those problems, there's a lot of engineering problems that have to get tackled soon. And so big example being these multi-agent systems, right? Like you can have thousands of agents that are working together in order to solve a problem. We've heard from some customers really interesting examples like if you're working on curing a disease and you're working on maybe a drug that you want to make available in the market and you have to submit to the FDA your packet of here's why you should allow this drug to go in the market. An insane amount of time and energy and effort goes into each of those phases of getting all the way to a place where a drug is on the market. And what we've seen people starting to do is maybe you like build some system that's almost like it's almost like a Gantt chart, right? Like and and what happens is persistent agents are picking up the different pieces of the work and they're doing all the different pieces of the work and you might not have to have humans in the loop for a lot of the different parts of what's happening there. These things are only just starting to happen. Like think about the problems that you're solving and you're working with agents and like you're saying here individual agent go do that thing here you know, but now think about take the ambition level way way way up and have a team of agents just kind of go at it and get that thing done. What I'm hoping for people to understand is that's not going to happen if we don't solve engineering problems around security and engineering problems around infrastructure and identity and auth and all these different problems that you can't just let a huge team of agents go wild trying to solve these problems if you haven't solved some of these underlying engineering problems correctly first because we're never going to get there. We're never going to get to the place where the big team of agents solves the good problem. We're going to have problems first, right? Like bad problems having happened first and so idea being yes, agents can help us solve a lot of these problems now on the path to that, but we still need humans who have deep expertise in security and deep expertise in auth and infra and all these different pieces in order to create the right underlying systems so that those teams of agents can go and solve those big problems.
+</details>
+
+>> 你说的这些，对于在拥有庞大 AI 预算、运行大量智能体的地方工作的人，或者在前沿实验室之类机构工作的人来说，都很有道理。但我确实觉得，对于更多普通工程师来说——他们只有 Max 套餐（max plan），那就是他们能用的全部，他们不能申请额外额度等等——多智能体系统还是有点遥不可及。但即便对他们来说，Tarik 有一句非常棒的话，我也念一下。他说：“现在发生着一件很奇怪的事：技术人员很伤心，因为他们觉得自己的技能没用了；而其他人却迫切希望自己更懂技术，这样就能更好地使用智能体。”
+<details><summary>Original English</summary>
+>> What you're talking about makes sense for anyone who is either working inside a place where they do have large AI budgets and and running lots of agents or in a frontier lab or something close, but like I do think that multi-agent systems are pretty far-fetched for more people who are you know engineers who still have the they have the max plan and that's all they can use. They cannot request an extension and so on, but even for them to Tarik had a really good quote. I'll I'll also read him. He said it's a very weird thing happening right now. Technical people are sad because they're they think their skills are useless and people are desperately wishing they were more technical so they could use agents better.
+</details>
+
+>> 说得好。
+<details><summary>Original English</summary>
+>> Nice.
+</details>
+
+>> 我想你也见到过这种情况。
+<details><summary>Original English</summary>
+>> I think I think you've you've seen this as well.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 但还有一件事，当你谈到智能体能做的所有事情——治愈疾病之类的，我觉得那会非常了不起——但我有一个更迫切的需求，比如我马上要飞去伦敦，我在用英国航空（British Airways）的 App，它简直是航空类 App 里的垫底之作，烂到无法形容。我就是要公开点名他们，因为客观上就是……拜托修修吧，我真希望 BA 团队有人在听。市面上有很多糟糕的软件需要更新，也有很多还不错的软件可以变得卓越。一个很好的例子是 Shopify，他们现在正在重写代码。所以我感觉，即便在这些较小规模的雄心层面上——听到你在最高雄心层面上对工程抱有更大的期待固然很棒，但我觉得在较低层面上，也有多得多的雄心原本会因为“重写要花好几年”而放弃，或者像那些用户体验极差的报销 App——所有这些现在也许只需要几个月，而不是几年或几十年就能解决。
+<details><summary>Original English</summary>
+>> But there's there's this thing where when you talked about all the things that agents could do, cure diseases and all those things which I think would be amazing, but I have a more pressing need which is for example I'm going to be flying to London and I'm I'm using the British Airways app and it is the bottom of airline apps. It is so beyond terrible. I'm just calling them out because they're objectively just please fix I'm hoping that someone listens on on the BA team, but there's a lot of just bad software that could be updated and there's a lot of decent software that can be great. A good example is Shopify. They're now rewriting so I feel for for even at all at these kind of like smaller ambition levels like it's awesome to hear that even the highest ambition levels you have way more ambition for engineering, but I think the lower levels there's also so much more ambition that would have said like oh we're not going to do it because it'll take years to rewrite or there's the expensing apps that have terrible user experience like all of these can now maybe just tackle the next like month in in in a matter of months not years or or decades.
+</details>
+
+>> 是的，完全正确，我觉得这都是时间尺度的问题，对吧？世界上最难的问题，我们谈论的可能是几个月、几年之后的事，对吧？但即使在未来几周和几个月内，所有运营这些本可以好得多的系统、App 等等的人，你们真正需要做的就是提高自己的雄心水平。而且确实，你可能只有 Max 套餐，那就是你手头能用的东西，对吧？其实我们最近做了一件很酷的事，就是 Max 套餐现在附带 API 额度，所以你也可以开始在像云端托管智能体（cloud managed agents）之类的平台上构建这些持久化智能体，去攻克更难的问题。所以这很有意思，因为我觉得你说的完全对：无论你处于哪个问题空间，关键就在于不断提升雄心的高度。我最近在和我们的一位“AI 法律”客户合作，他们谈到，是的，今天的模型在审阅合同方面已经非常出色了，对吧？这算是用 AI 做的最主要的基础事情，但他们现在开始说，也许 AI 可以运行整个尽职调查流程（diligence process），对吧？这比你以前能想到的任何事情都要宏大得多得多，而之所以能做到这一点，是因为你可以构建更复杂的多智能体系统，可以进行更多的编排，最终完成更多的工作。对于那个 AI 法律产品的用户来说，如果他们的工作是完成整个尽职调查流程，以前可能是“我要让智能体自己去完成所有这些小步骤”，而现在你可以和它协作，直接在一开始就说“把这整件大事都做了”，用户的体验就会好得多。然后，那家 AI 法律公司的工程师们就需要思考，他们必须构建什么，才能让智能体去运行整个尽职调查流程，并确保它真的能顺利进行。所以我觉得这就是我的意思，对吧？在任何地方、任何规模下，如果你提高了雄心水平，工程师们仍然有工作要做，才能支撑起那种更高的雄心。我们还远远没有到达“人类什么都不用做，智能体自己就能搞定一切”的地步，因为如果只是完全指望智能体包办一切，而没有人类在底层搭建正确的系统、护栏和安全机制，事情很可能会出错。
+<details><summary>Original English</summary>
+>> Yeah, exactly and I think it's all time scale, right? Like the world's hardest problems we're maybe talking like months, years out, right? But even in the in the coming weeks and single digit months, right? All of these people who run these systems, these apps, whatever that could be so much better, all you need to really do is raise your ambition level and it's true that you might just have a max plan and and that what you're working with, right? Like one of the cool things we did recently actually is max plans come with API credits and so you can go start to build these persistent agents on like cloud managed agents or whatever it might be that can go tackle harder problems as well and so it's interesting because I think you're you're exactly right that it's just a matter of continuously raising the level of ambition in any problem space that you're in. I was recently working with one of our like you know AI for legal customers and they were talking about how yes you know like the models today are incredibly good at reviewing a contract, right? Like that's kind of the the main basic thing that you use AI for, but what they're starting to do is say maybe AI can run an entire diligence process, right? Like something like way way way way more ambitious than anything that you previously would have thought about and that's because you can build a more complex multi-agent system and you can have more orchestration happening and more work ultimately getting done. And that's the sort of thing where, you know, a user of that AI legal product is going to have a much better time if their job is to get a whole diligence process done and it used to be, you know, like I'm going to have the agents go do all these little pieces myself, but now you can kind of work with that thing and say like do the whole big ambitious thing all up front. And then, you know, the engineers at that AI legal company need to think about what they're going to have to build in order to enable the agents to go run a whole diligence process and make sure that it actually goes well. So I think that's what I mean, right? Is like in any place in at any scale, if you raise the ambition level, there's still work that engineers are going to have to do in order to enable that elevated ambition. And we're not yet anywhere close to a point where it's like the human doesn't have to do anything and the agents will just figure it out because it'll probably go wrong if that's like all you're doing is is leaving it fully to the expectation that agents will do it all without humans creating the right systems and guard rails and security and all the things underneath.
+</details>
+
+>> 我一直在思考或者试图建立一个心智模型：我们把软件工程叫做“工程”（engineering），而关于它和土木工程等相比是否算真正的工程，一直存在争论。但现在我们在谈论构建新的基础设施，比如让多智能体可以使用的基础设施，而且我们需要学习和构建它，这是一个巨大的挑战。你可能会想：“好吧，但一旦我们建好了呢？我们就大功告成了，以后就不需要软件工程了。”但我想到了土木工程，比如建造摩天大楼。你会想：“好吧，摩天大楼建好了。这是一项巨大的工程壮举，我真不知道我们是怎么用那些根本承受不了那么大荷载的砖块建起这个不可思议的建筑的。”你会以为一旦建好了，“好吧，我猜没有更多工作了，对吧？因为活干完了。”但接着你会意识到：“等一下，土木建筑师依然非常抢手，因为那座摩天大楼需要维护。”有时它们会被拆除并建起新的。而且一旦世界上第一座摩天大楼建起来，你猜怎么着？后面还会有更多。我在想，我们是否会与其他类型的工程有更多相似之处，因为现在我们有了不同的材料——AI 就是一种新材料。我们有确定性的代码，也有非确定性的 AI，我们需要把它们粘合在一起。一旦我们达到能够解决多智能体系统的阶段，你能提前预见到你和你的团队还会继续在哪些领域工作吗？
+<details><summary>Original English</summary>
+>> One thing that I've been a little bit thinking about or like trying to have a mental model is we call software engineering like engineering and there's a debate of what like whether it's real engineering compared to like civil engineering and so on. But now that we're talking about building let's say building new infrastructure that let's say multi-agents can use and and there's this big challenge that we need to learn and and build it, you would think like okay, but what happens once we build it? Like we're done and there will be no software engineering needed. But what I am thinking of is civil engineering like building like a skyscraper. Like you would think okay, the skyscraper is built. It's been a huge engineering feat. Like I don't know how we did it with like these bricks that cannot really take that low, but we built this incredible thing. And you would think like like once we built it, well, I guess there's no more jobs, right? Cuz the the the job is done. But then you realize like hang on like like civil architects are very much in demand cuz that needs that that skyscraper needs need maintenance. Sometimes they will be demolished and new ones built. And then once the first skyscraper is built in the world, like guess what? I guess there's there's so many more of these. I'm wondering if we'll have more parallels to other types of engineering where cuz now we have different materials like this AI is a is a new material. We have deterministic code. We have non-deterministic AI. We need to glue them together. Once we get to the point where we are solving multi-agent systems, like can can you think in advance of of where the work might be where you and your team will keep working on?
+</details>
+
+>> 是的，我完全同意这个观点。你完成了你的项目，对吧？然后你必须维护它，但同时你也要继续在它的基础上构建。你必须不断思考下一层次的东西是什么，更宏大的事情是什么。而且我觉得，我们特别希望让智能体在我们团队内部承担的，就是维护方面的工作——那可能是稍微没那么有趣的部分。
+<details><summary>Original English</summary>
+>> Yeah, and I completely agree with that. It's you you complete your project, right? And then it's you have to maintain it, but also you have to you should keep building on it. You should keep figuring out what is the next level of thing, what is the more ambitious thing. And I think something that we are hoping to have agents do, especially within our team, is the maintenance aspect, which is the part that is maybe a little less fun.
+</details>
+
+>> 我们从来都不喜欢做维护。
+<details><summary>Original English</summary>
+>> We never enjoyed it.
+</details>
+
+>> 对，让智能体越来越多地承担那部分工作。
+<details><summary>Original English</summary>
+>> Yeah, have agents do more and more and more of that.
+</details>
+
+>> 还有值班（on-call）和写文档。
+<details><summary>Original English</summary>
+>> call and document writing documentation.
+</details>
+
+>> 没错，对吧。所以能不能让智能体从人们手中接管更多这类工作，然后我们就可以说，太好了，我们要去思考有哪些更宏大的工作可以去做。而且我觉得，从“对问题抱有更大雄心”的角度来看，多智能体系统以及持续变得更加复杂的多智能体系统将会非常重要。我认为在这些模型周边的许多能力上，还会不断出现工程问题。比如一个很好的例子是，你仍然需要越来越好的工具，让智能体能够与某些外部系统交互。我团队里的几位工程师创建了 MCP，而且团队里也有一些 MCP 的核心维护者，继续演进这个标准，我认为非常重要。另外，我们合作的一组人员正在思考 MHS，即模型硬件标准（model hardware standard），它的理念是如何让智能体与实验室设备或机器人等物理世界的东西交互，对吧？我觉得这一切都还处于非常早期的阶段，对吧？所以如果你想想，随着 AI 从仅仅在软件领域解决伟大问题的独立系统，扩展到更多地进入硬件领域，进入更加复杂的系统，这些系统将需要针对更多问题的更多解决方案，对吧？所以我认为，我们距离“人类没有什么可思考的世界”还差得远呢。我觉得我们还需要很长时间，还有大量这类问题需要先得到解决。
+<details><summary>Original English</summary>
+>> Exactly, right. So can can agents take more of that type of work off of people's hands and then say, okay, great, we're going to go think about what is the more ambitious work that can go and get done. And I think from the perspective of just get more ambitious with problems, I think multi-agent systems and continuously more complex multi-agent systems are going to matter a lot. And I think there's a lot of capabilities around the edges of these models that will continue to have engineering problems. So like really good examples are you continue to need better and better tooling for an agent to be able to interact with some external systems. So a few of the engineers on on my team created MCP and and there's some of the core maintainers of MCP continuing to evolve that standard, I think is really important. But another um set of folks that we're working with are thinking about MHS, the model hardware standard, which is this idea of how can we have agents interacting with, you know, like lab equipment or robotics, right? And and stuff in the physical world. And I think that is all such early stages, right? And so if you think about as AI is going to expand from just self-contained systems that can solve really great problems in software, you're going to get more into hardware and you're going to get more into just even more complex systems that are going to need more solutions to more problems, right? And so I think we're we're just nowhere close to a world where there's not going to be anything left for the humans to think about. I think there's going to be a lot more a lot more time and a lot more of these problems that we'll need to get solved first.
+</details>
+
+>> 对于现在这份新的软件工程师工作——既然我们有了 AI 智能体、多智能体和所有这些工具——你的心智模型是什么？它与智能体出现之前的旧工作有什么不同？
+<details><summary>Original English</summary>
+>> What's your mental model about this, I guess, new software engineering job now that we have AI agents, we have multi-agent, we have all these tools versus the old job that existed until agents showed up?
+</details>
+
+>> 是的，我的意思是，我觉得其中很大一部分是协调（coordination）。是让团队和人达成共识，是让智能体达成共识并把事情做成。我觉得这真的是在拉远视角，去理解如何将某件事从想法变成现实的运作机制。你可以把需要发生的很多零碎工作交给智能体，但要把一个东西真正发布出去、而且高质量地发布出去，这背后必须有一张庞大的协调网络，这方面依然有太多东西要做。人们把时间花在那些重要的事情上，对吧？而且首先，想法本身对你来说也是重要的，对吧？所以我认为这些才是真正重要的东西。此外，我觉得尤其是在短期内，在安全或其他类似领域，深厚的专业知识将会变得非常重要——这些领域现在正因为技术的发展和正在发生的事情而面临一些挑战。我认为人们可以、也应该在一些比以前更重要的领域里钻研得比以往更深。所以我认为，还有很多东西要学，还有很多问题要解决，而且为了解决这些问题，还有很多协调工作要做。
+<details><summary>Original English</summary>
+>> Yeah, I mean, I think so much of it is it's coordination. It's getting teams and people on the same page. It's making agents get on the same page and get stuff done. I think it's really zooming out and understanding the mechanics of how you go from idea to reality on something and you can offload a lot of the pieces of stuff that needs to happen to agents, but the the like coordination web that has to happen to make something really get shipped and make something get shipped at high quality, there's just still so much there. There's so much that people are spending their time on that are important, right? And the ideas in the first place, right, are are important to you. And so I think that those are the things that are going to matter a lot. And then I think especially in the near term, there's going to be like really deep expertise that is really important in, you know, like whether it's security or or other fields like that that are right now feeling some challenges as a result of the technology and and the things that are happening where I think just people are are can and should go deeper than they maybe otherwise would have in some of these domains that are starting to matter more than they did previously. So I I there's still a lot to learn and there's still a lot of to solve, and I think there's still a lot of coordination to do in order to get those problems solved.
+</details>
+
+>> 听起来你的意思是，在你构建东西的时候，提高雄心水平几乎没有什么坏处，而且在你越来越多地构建和使用智能体的同时，要和它们一起学习、不断深入；特别是我们刚才提到的一些领域，安全显然是目前非常大的一个领域。一切都在变化，你可以相对较快地成为这个领域的人类专家。也许安全是其中之一，或者可靠性，或者就是你自己的领域，无论你在哪个领域工作，对吧？
+<details><summary>Original English</summary>
+>> It sounds like what you're saying is there's there's little to no downside of as you're building things like hey, raise your ambition levels, but as you're building and using agents more like learn with them, get deeper, and especially and we mentioned some of the areas security is obviously a huge one right now. Like everything is changing. You can become a human expert in this area relatively quickly. And maybe you shouldn't and that security might be one of reliability or or just your own domain, whatever your domain you're working in, right?
+</details>
+
+>> 是的，完全正确。而且也许这不仅仅是为了解决今天的问题，对吧？比如，也许不要为了解决眼前的一个具体问题而去成为安全专家，因为那可能不是对你时间最好的利用，毕竟智能体自己就能搞定它。但你可以做一些推演，看看我们现在开始遇到的一些问题，随着时间的推移会如何变得更加复杂，对吧？所以你会希望自己成为那种能够理清头绪、看到前方、预见拐角之后的事情，并在那些事情变得更棘手之前就抢先一步的人。再说一次，智能体肯定能在所有这些方面提供帮助，但我仍然认为，我们大家都会非常深度地依赖那些真正关心这些问题、并且拥有深厚专业知识的人类，去思考如何抢在问题之前做好准备。
+<details><summary>Original English</summary>
+>> Yeah, exactly. And maybe it's not just to solve today's problems, right? Like maybe don't go become a security expert in order to solve like one problem that's directly in front of you cuz maybe that's not the best use of your time because an agent can figure it out and do it. But you can kind of extrapolate and see how some of the problems we're starting to experience are going to get more complex over time, right? And so you're going to want to be someone who can wrap your head around these things and see ahead and see around those corners and get in front of those things before they become more problematic. And again, like agents can help with all of this for sure, but I still think that we're we're all going to be very deeply reliant on humans who care a lot about these things and have a lot of deep expertise to think about getting ahead of them.
+</details>
+
+### 书籍推荐与结语
+
+>> 谢谢。你有什么喜欢并愿意推荐的书吗？为什么推荐它？
+<details><summary>Original English</summary>
+>> Thank you. And what's a book that you would recommend that you enjoyed and why?
+</details>
+
+>> 我最近读过的一本非常喜欢的书是《挽救计划》（Project Hail Mary）。而且电影也拍得相当不错。但我觉得，就在当下，这是一个很有趣的时刻，可以让你从我们每天花时间处理的那些琐碎事务中抽离出来。你知道，一个让人感觉温暖的故事很不错，同时一个像这样能拓展你大脑的科幻故事也很棒。我觉得《挽救计划》在这样一个设定上做得非常出色：你有一个人类和一个外星人，他们不知道怎么跟彼此沟通，然后他们必须想办法弄明白。这是一个很酷的故事，但它也让人很有共鸣，因为这就像我们现在在 AI 上所面对的事情。
+<details><summary>Original English</summary>
+>> One book that I really enjoyed that I read recently was Project Hail Mary. And and the movie was pretty good too. But I think just like right now is is a fun moment to like get out of the weeds of of everything that we're spending our time on day to day. And you know, a feel good story is nice, but also a nice like science fiction expand your brain sort of story is nice. And I think Project Hail Mary, they did like an absolutely excellent job with the idea of you know, you've got a human and you've got an alien who don't know how to communicate with each other and they've got to figure it out. And it's a cool story, but it's also it feels relatable in the sense of what we're dealing with right now with AI.
+</details>
+
+>> 太棒了。Caitlyn，非常感谢你。
+<details><summary>Original English</summary>
+>> Awesome. Caitlyn, thanks so much.
+</details>
+
+>> 是的，谢谢你邀请我。
+<details><summary>Original English</summary>
+>> Yeah, thank you for having me.
+</details>
+
+>> 这次对话非常愉快，信息量也很大。
+<details><summary>Original English</summary>
+>> This this was very nice and informative.
+</details>
+
+>> 非常开心。
+<details><summary>Original English</summary>
+>> It was a lot of fun.
+</details>
+
+>> 我非常享受从 Caitlyn 那里了解到所有这些细节，非常感谢她的这次对话。如果你想更深入地了解 Anthropic 是如何运作的，[音乐] 可以查看下方节目笔记中的《Pragmatic Engineer》深度解析文章《How Building Software is Changing at Anthropic》。现在越来越成为一种趋势的是，听说 AI 实验室里的每个人都在把后端服务迁移到 Rust。Caitlyn 对原因的解释比我以前听过的都要好。Python [音乐] 太消耗 CPU 了，现在存在 CPU 短缺，而且模型现在已经非常擅长写 Rust 代码了。此外，Rust 能让服务达到尽可能高的性能，[音乐] 堪比将它们移植到 C++ 或 C，但 Rust 还能为你提供内存安全，以及一个面向智能体的验证 [清嗓] 反馈层。所以总体而言，它对智能体要友好得多。另一个有趣的部分是确认 Anthropic 现在已经完全取消了算法编程面试，这感觉是一个很大的里程碑，因为他们是第一家公开确认这样做的科技大公司。Caitlyn 说，他们看到越来越多的候选人 [音乐] 在其他所有面试中都表现很好，却在数据结构与算法面试上栽了跟头，因为他们不再亲手写代码了。尽管 Anthropic 取消了这项面试，但他们还没有完美的替代方案，他们正在尝试围绕编程智能体和智能体式编程（agentic coding）构建不同的面试形式。[音乐] 我的看法是，大多数公司最终都会取消编程面试，但作为代价，招聘流程会变得主观得多。面试流程在主观性上会变得非常类似于过去工程经理或产品经理的招聘流程。[音乐] 一个有点令人惊讶的收获是，Anthropic 的产品经理也曾把代码推送到生产环境。我一直在四处打听这件事，因为在大多数公司，工程师仍然掌握着发布生产代码的职责。诚然，Anthropic 的产品经理技术能力都很强，而且通常有工程背景，所以我确实很好奇，产品经理发布生产代码是否会像在 Anthropic 那样普遍。我对此有点怀疑，但这是一个值得注意的现象，[音乐] 看看 Anthropic 内部是如何运作的。另外，别忘了，为这些变更担任值班（on-call）的，依然是软件工程师。[音乐] 另一个有趣的部分是 Anthropic 内部的入职培训变化有多大。入职指南基本上就是 [音乐]“去问 Claude”。OpenAI 的 Tido 在谈到 OpenAI 使用 Codex 进行入职培训时也说过同样的话。一个非常重要的细节是，无论在 Anthropic 还是 OpenAI，他们都把几乎所有的内部系统接入到了自己的内部 Claude/Codex 实例中，[音乐] 因此这些 AI 智能体拥有的上下文，远远超过大多数其他公司内部的智能体。话又说回来，这也许是把你公司的内部系统连接到公司内部智能体的又一个理由。只要确保你没有把公司的知识产权泄露给 AI 供应商就行了。一定要查看下方的节目笔记，里面有关于工程文化和 AI 工程主题的相关深度文章。如果你喜欢这期播客，请在 [音乐] 你最喜欢的播客平台和 YouTube 上订阅。如果你能给节目评分，或者分享给你的同事和朋友，我将特别感谢。[音乐] 谢谢，我们下期再见。
+<details><summary>Original English</summary>
+>> I really enjoyed getting [music] all these details from Caitlyn, and thanks a lot to her for this conversation. If you'd like to get into more details about how Anthropic works, [music] check out the Pragmatic Engineer deep dive, How Building Software is Changing at Anthropic, in the show notes below. It's now becoming more of a trend to hear anyone and everyone moving to Rust inside of AI labs for their backend services. Caitlyn explained the reason better than I've heard before. Python [music] was too CPU intensive, there's now a CPU shortage, and the models have gotten really good at writing Rust code. Plus, Rust makes [music] services as performant as possible, on par if you ported them to C++ or C, but Rust gives you memory safety and a verification [clears throat] feedback layer for agents. So it's overall a lot more agent-friendly. Another interesting part was confirming that Anthropic has now fully dropped algorithmic coding interviews, and this feels like a big milestone because they are the first large company to publicly confirm that they've done so. Caitlyn said that they saw more candidates [music] doing well in every other interview, but bombing the data structures and algorithm once because they were no longer writing code by hand. Even though Anthropic dropped this interview, they don't have a perfect replacement, and they're trying out different interviews built around coding agents and agentic coding. [music] My take is that most companies will drop the coding interview eventually, but in return, the hiring process will become a lot more subjective. The interview loops will become a lot more similar in subjectivity to how engineering manager or product manager hiring loops have been in the past. [music] One somewhat surprising learning was that product managers in Anthropic have pushed code to production. I've been asking around about this because at most companies, engineers still own shipping production code. Granted, PMs at Anthropic are very technical and often come from engineering background, so I do wonder if PM shipping production code will be as commonplace as Anthropic. I'm a bit skeptical, but it's a good one to note how [music] it's happening inside of Anthropic. Also, don't forget that the people on call for these changes are still the software engineers. [music] Another interesting part is how much of the onboarding changes inside of Anthropic. The onboarding guide is pretty much just [music] ask Claude. Tido at OpenAI said the same thing we had OpenAI's onboarding with Codex. One very important detail is that both at Anthropic and OpenAI, they connect pretty much all their systems into their own internal Claude/Codex instances, [music] and so those AI agents will have far more context than most agents inside of other companies. Then again, this might be one more reason to connect [music] your internal systems to the company internal agent. Just make sure that you're not leaking company IP box to AI vendors. Do check out the show notes below for related deep dives on the topics engineering culture and on AI engineering topics. If you enjoyed this podcast, please do subscribe [music] on your favorite podcast platform and on YouTube. A special thank you if you leave a rating for the show or if you share it with your colleagues and friends. [music] Thanks and see you in the next one.
+</details>

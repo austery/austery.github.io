@@ -1,0 +1,353 @@
+---
+author: Adam's Axiom
+date: '2026-10-22'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=CvtCFRMN44o
+speaker: Adam's Axiom
+tags:
+  - ponzi-scheme
+  - financial-fraud
+  - investment-risk
+  - due-diligence
+  - capital-preservation
+title: 骗过聪明人的十大庞氏骗局：从邮政票券到华尔街神话
+summary: 本篇梳理了历史上十起极具迷惑性的经典庞氏骗局，从查尔斯·庞兹、卢·佩尔曼，到伯尼·麦道夫。它们往往以真实名誉、虚假凭证或切实到账的早期回款为幌子，本质全是用后来者的本金支付前人的利润，揭示了缺乏独立外部验证的投资陷阱。
+insight: ''
+draft: true
+series: ''
+category: investment-assets
+area: finance-wealth
+project: []
+people:
+  - Charles Ponzi
+  - Lou Pearlman
+  - Tom Petters
+  - Scott Rothstein
+  - Allen Stanford
+  - Paul Burks
+  - Jeff Carpoff
+  - Glenn Arcaro
+  - Bernie Madoff
+companies_orgs:
+  - DC Solar
+  - Woodbridge Group of Companies
+  - BitConnect
+  - Zeek Rewards
+products_models: []
+media_books: []
+status: evergreen
+---
+### 比承诺更有说服力的陷阱：他们真的付了钱
+
+这十起庞氏骗局不仅愚弄了普通储蓄者，连理财顾问和专业投资机构也纷纷中招。它们依赖的是一种远比空头承诺更有说服力的手段——那就是它们真的付了钱。新投资者的本金被用来支付早期投资者的所谓“利润”。打入你账户里的钱确确实实是真的，但背后的盈利机制却全属虚构。
+
+<details>
+<summary>Original English</summary>
+
+These 10 Ponzi schemes fooled savers, financial advisers, and professional investors with something more convincing than a promise. They paid. New investors' deposits funded older investors' supposed profits. The money arriving in your account was real. The profit behind it wasn't.
+</details>
+
+---
+
+### 一、查尔斯·庞兹（Charles Ponzi）：现代骗局的鼻祖
+
+第一位，查尔斯·庞兹。1920 年在波士顿，庞兹承诺在 45 天内提供 50% 的丰厚回报。你的资金在六个星期里赚取的利润，竟然比你辛辛苦苦干上一整年还要多。
+
+庞兹给出的解释与“国际回信券”（International Reply Coupons）有关。当有人寄信到国外时，可以在信封中附带一张回信券，以便收件人凭此兑换回信的邮资。庞兹声称，他能在海外廉价收购这些邮资券，再运到美国兑现以赚取差价。不同国家之间的价格差异让这个故事听起来天衣无味。然而，存在合理的价差，并不代表存在一门足以处理海量邮票、从而向成千上万投资者支付利润的实际生意。
+
+不妨设想一下：你交给他 100 美元。45 天后，你果然收到了 150 美元。你验证了这笔投资，你拿到了切实的成果。这时，即使你那位持怀疑态度的姐夫，也无法反驳眼前真实的现金。然而，多出来的这 50 美元纯粹来自另一位投资者。庞兹并没有证明他的邮资券套利生意可行，他证明的仅仅是在你之后有人入局了。正是这种混淆，让早期的兑付变得极其具有说服力。成功本身成了最好的广告，引来更多资金去搭起下一场成功的舞台。
+
+邮政调查人员最终发现，全球的邮票销售总量根本无法支撑他的这套说法。该骗局于 1920 年彻底破裂。文件上描绘的是一项庞大的跨国业务，而实际的商业操作不过是在办公桌前挪用现金。
+
+还记得那次成功的取款吗？等讲到麦道夫时，你会发现同样的手法依然在奏效，只不过换成了更高级考究的信笺文具。但在此之前，先来看一位凭借在某一领域的真实成就，成功兜售虚构投资的人物。
+
+<details>
+<summary>Original English</summary>
+
+Number one, Charles Ponzi. In Boston in 1920, Ponzi offered a 50% profit in 45 days. Your money could apparently get more done in 6 weeks than you had managed all year.
+
+His explanation involved international reply coupons. Someone sending a letter abroad could include one, so the recipient could obtain postage for the reply. Ponzi said he could buy these coupons cheaply overseas and profit from their higher value in America. Different prices in different countries made the story sound plausible, but a plausible price difference isn't the same as a business that can process enough coupons to pay thousands of people. Imagine giving him $100. 45 days later, you receive 150. You have tested the investment. You have held the result. Your skeptical brother-in-law now has to compete with cash. Except that extra 50 came from another investor. Ponzi hadn't proved that his coupon business worked. He had proved that somebody else had arrived after you. That distinction made the early payments especially persuasive. Success became the advertisement that brought in the money needed to stage the next success.
+
+Postal investigators found that worldwide coupon sales couldn't support his story. The scheme collapsed in 1920. The paperwork had described a vast international operation. The actual business was moving money across a desk. Remember that successful withdrawal? By the time we reach Madoff, it will still be convincing people with far more impressive stationery. But first, a man whose real success in one business helped sell a fictional one.
+</details>
+
+---
+
+### 二、卢·佩尔曼（Lou Pearlman）：用流行造星掩护虚假储蓄
+
+第二位，卢·佩尔曼。佩尔曼一手打造了后街男孩（Backstreet Boys）和超级男孩（NSYNC）。这部分的成就是货真价实的。然而，他还通过自己的商业帝国推出了一项“雇员投资储蓄账户”。
+
+这个名称听起来平淡无奇，甚至朴素得像是戴着工牌按部就班的产物。它的推销卖点是高于普通储蓄的回报，以及令人安心的保险承诺。投资者并不认为自己是激进的投机客，有些人仅仅是想为自己亏不起的积蓄找一个稳妥的安身之所。然而，“储蓄账户”这个标签并不会自动将一项投资变成受保险保护的银行存款。所谓的保险承诺全属谎言。
+
+佩尔曼一边用新资金给老投资者支付回报，一边将资金挪作他用。联邦破产法院指出，该储蓄计划非法吸收了超过 3 亿美元的资金。
+
+他在娱乐产业的真正成功，让整个庞大的商业帝国显得极为可信。这是一种极具威力的思维捷径：一个人既然能打造出享誉全球的男子组合，总该有人核查过他的账目吧？后街男孩是真实存在的，但宣传中所称的资金保障却子虚乌有。你可以放心地去买唱片，但对待投资合同仍需逐字审阅——这两件事最好不要混为一谈。
+
+佩尔曼和出资人之间还隔着另一层中介。销售代理人不断拉入投资者，其中包含许多老年人。在一场诉讼中，检方没有发现证据表明涉案的四名代理人明知该项目本身是一场诈骗，尽管他们承认了其他违规行为。一个销售人员即使并未核实产品的真伪，也能表现得无比真诚。佩尔曼最终被判处 25 年监禁。他的名气为他提供了进入市场的敲门砖，却从未提供过真正的资金安全。
+
+那么，或许答案应当是避开名人光环，转而投资某种朴实无华的事物？例如仓库里的实物货物——有什么比库存更让人觉得踏实无聊的呢？
+
+<details>
+<summary>Original English</summary>
+
+Number two, Lou Pearlman. Pearlman helped launch the Backstreet Boys and NSYNC. That part was real. He also offered an employee investment savings account through his business empire.
+
+That name sounds so dull it practically arrives wearing a lanyard. The pitch was better returns than ordinary savings with reassuring claims of insurance. Investors weren't necessarily imagining themselves as daring speculators. Some were looking for a comfortable place to keep money they couldn't afford to lose. But a savings account label does not turn an investment into an insured bank deposit. The insurance claims were false.
+
+New money paid earlier investors while Pearlman diverted funds elsewhere. A federal bankruptcy court described the savings program as raising more than $300 million dollars.
+
+His real entertainment success helped make the wider business empire look believable. That is a powerful shortcut. If the man can build a world-famous group, surely somebody has checked his accounts. The Backstreet Boys existed, the advertised financial protection did not. You could buy the album and still need to read the investment paperwork. Ideally, on separate occasions. There was another layer between Pearlman and the people supplying the money. Sales agents brought in investors, including older people. In one prosecution, the government found no evidence that four agents knew the program itself was fraudulent, even though they admitted other violations. A salesperson can sound sincere without having verified what they are selling. Pearlman received a 25-year prison sentence. His fame had supplied an introduction, not financial security. So perhaps the answer is to ignore celebrities and invest in something ordinary. Goods in a warehouse. What could be more reassuringly boring than inventory?
+</details>
+
+---
+
+### 三、汤姆·佩特斯（Tom Petters）：虚假采购订单与打印出来的库存
+
+第三位，汤姆·佩特斯。佩特斯向投资者提供了一种资助大宗商品采购的途径：这些商品随后将被转售给各大零售商以赚取利润。
+
+投资者的资金充当了采购货物到零售商结款之间的过桥资金。这听起来是一门通俗易懂的生意。你不需要相信世上有什么奇迹发明家，你只需要相信商场会卖电视机。然而，这套投资说辞背后的采购行为根本从未发生过。
+
+佩特斯和他的同伙伪造了采购订单，以支撑这些只存在于纸面上的交易。投资者的钱被用来向前期的投资者兑付、填补其他业务漏洞以及供其个人挥霍。你可以想象那个推销场面：这里是订单，这里是零售商，这里是你的投资回报。每个环节看起来都合情合理，直到有人走上前去追问：那些电视机究竟在哪儿？
+
+对于一个最高效的生产性资产竟是一台打印机的仓库而言，这座仓库在报表上的业绩简直斐然。该骗局涉及的金额高达数十亿美元。资金也通过各路投资基金涌入，在诈骗核心与部分资金受损的储蓄者之间建立起专业中介。一套精美的金融包装，足以让一张假采购订单流通到更远的地方。
+
+2008 年，一名内部人员向有关当局告发并录下了内部对话。佩特斯被定罪并被判处 50 年监禁。
+
+这里缺失的步骤是：在提供文件的利益圈层之外，对交易进行独立核查。向你借钱的人所提供的采购订单，绝不能充当该笔采购真实发生的独立佐证。这听起来很容易解决——直接去现场看设备不就行了吗？
+
+请记住这个想法。几分钟后，那家太阳能公司将会揭示：哪怕你亲眼看到了实物，也可能会查错了对象。
+
+不过首先，我们的纸面游戏将搬进一家律师事务所。在那里，如果随便提问题，会让人觉得非常不礼貌。
+
+<details>
+<summary>Original English</summary>
+
+Number three, Tom Petters. Petters offered investors a way to finance bulk purchases of merchandise, which would then be resold to retailers at a profit.
+
+The investors supplied the money between buying the goods and getting paid by the shops. That is an understandable business. You don't need to believe in a miraculous inventor. You need to believe that a shop will buy a television. The problem was the purchases behind the investment pitch. They weren't happening.
+
+Petters and his associates used false purchase orders to support transactions that existed on paper. Money from investors went towards earlier payments, other businesses, and personal spending. You can picture the sales pitch. Here is the order, here is the retailer, and here is your return. Every stage looks sensible until somebody asks where the televisions are. The warehouse was performing exceptionally well for a warehouse whose most productive asset was a printer. The scheme reached billions of dollars. Money also came through investment funds, putting professional intermediaries between the fraud and some of the people whose savings were exposed. A sophisticated wrapper could make the same false purchase order travel much further.
+
+In 2008, an insider went to the authorities and recorded conversations. Petters was convicted and sentenced to 50 years in prison. The missing step was checking the transaction outside the circle supplying the paperwork. A purchase order from the person asking for your money isn't independent confirmation that the purchase happened. That sounds like an easy fix. Go and look at the equipment. Remember that idea. In a few minutes, the solar company will show why even seeing something real can leave you checking the wrong thing. First, our paperwork is moving into a law firm. It will become much harder to ask questions without feeling rude.
+</details>
+
+---
+
+### 四、斯科特·罗斯坦（Scott Rothstein）：披着法律保密外衣的和解金陷阱
+
+第四位，斯科特·罗斯坦。一份法律和解协议可能会承诺在未来向某人分期支付赔偿金。然而，当事人可能更倾向于立刻拿到一笔较小数额的现款。此时投资者可以先行提供现金，随后再去收取协议中约定的更大金额的分期回款。
+
+这正是罗斯坦通过他在佛罗里达的律师事务所兜售的投资机会。它听起来就像是一笔围绕着严谨法律义务建立的金融交易：有白纸黑字的文件、银行往来信息，还有专业律师全程把关讲解。
+
+此外，这里还有所谓的保密条款。由于所谓的和解牵涉到隐私问题，保持低调听起来十分专业。然而遗憾的是，这也让被出售的投资底层资产变得极难审查。想象一下，有人向你兜售一张打折机票，转头却告诉你：核实这架飞机是否存在会侵犯乘客隐私。当保密条款被偷换成免于核验的挡箭牌时，情况大致就是如此。
+
+罗斯坦旗下的投资和解案根本就不存在，整套叙事全凭虚假协议和伪造的银行信息支撑。后来投资者的资金被用来向前面的投资者分红，而律所原有的声望，则让这些回款看上去宛如一个个胜诉案件的正常收益。
+
+法律行话使交易显得更加牢不可破。然而，这些术语并没有凭空增加一个委托人、一份和解书，也没有从任何被告那里争取来半毛钱，它们增加的主要是故弄玄虚的冗长词汇。罗斯坦承认通过欺诈手段筹集了约 12 亿美元，并于 2010 年被判处 50 年监禁。真正的办公室和光鲜的专业执照，沦为了包裹虚构投资的华丽外衣。
+
+请牢牢记住这种拿保密当借口的伎俩。等后面讲到量化交易机器人时，其托辞将从保护客户隐私换成保护商业机密公式。被刻意回避的核心问题在本质上毫无二致。不过，去律师事务所寻找财务安心感也许本就是找错了地方，银行理应有所不同吧？
+
+<details>
+<summary>Original English</summary>
+
+Number four, Scott Rothstein. A legal settlement may promise somebody money over time. That person might prefer a smaller amount immediately. An investor could provide the cash now, then collect the larger agreed payments later.
+
+That was the kind of opportunity Rothstein sold through his Florida law firm. It sounded like a financial arrangement built around a legal obligation. There were documents, bank information, and a lawyer explaining everything.
+
+There was also confidentiality. The supposed settlements involved private matters. Discretion sounded professional. Unfortunately, it also made the thing being sold harder to inspect. Imagine being offered a discounted ticket, then being told that checking whether the plane exists would breach passenger privacy. That is roughly the problem when confidentiality becomes a substitute for verification. Rothstein's investment settlements didn't exist. False agreements and false bank information supported the story. Later investors' money paid earlier investors, while the law firm's reputation helped make those payments look like the results of genuine cases.
+
+The legal vocabulary made the transactions seem more solid. It hadn't added a client, a settlement, or any money from a defendant. It had mostly added syllables. Rothstein admitted obtaining about $1.2 billion through bogus schemes and received a 50-year sentence in 2010. Real offices and professional qualifications had surrounded fictional investments.
+
+Keep that confidential explanation in mind. When we get to the trading robot, the excuse will change from protecting a client to protecting a secret formula. The question being avoided will be much the same, but perhaps a law firm was the wrong place to look for financial reassurance. Surely a bank would be different.
+</details>
+
+---
+
+### 五、艾伦·斯坦福（Allen Stanford）：键盘造就的离岸银行神话
+
+第五位，艾伦·斯坦福。总部设在安提瓜的斯坦福国际银行对外销售大额存单（CD）。你把钱存入银行一个约定期限，银行承诺支付固定的利息。这本来绝不该让人觉得是在加入什么神秘组织，它应当像正规文书流转一样理所当然。斯坦福的银行开出了显著高于美国本土主流银行的利率。该行宣称其资金投资于一个保守、广泛分散的资产组合，并持有高流动性资产，以便在储户需要取款时快速变现。然而，储户的大笔资金实际上通过未经披露的贷款，悄悄流入了斯坦福自己的私人企业，而那些企业当时正陷入巨额亏损。新涌入的存款被用来兑付那些赎回旧存单的储户。这家银行提供了一种佩尔曼的账户名称无法比拟的依托——它为这句诺言构筑了一整套实体金融机构的门面。
+
+2008 年挤兑压力上升时，斯坦福声称自己注资了数亿美元以强化银行资本。他的会计人员则通过大幅拔高银行原有土地的账面价值来迎合这一声明：一块最初耗资约 6300 万美元购得的土地，被凭空标榜为 31 亿美元。没有独立评估，也没有实质开发。显然，最强力的建筑设备竟然是那台敲定数字的电脑键盘。
+
+这种操作并没有创造出可供支付给储户的现金，它只是在账面上制造了一个更庞大的数字。当客户坚持要取走真金白银时，一张光鲜亮丽的资产负债表便显得毫无用处。庭审证据还揭露了针对外部审计师以及安提瓜金融监管机构负责人的贿赂行径。这已经超出了储户没能提出聪明问题的范畴——他们原本有理由信任的制度防线，早已被从根基上腐蚀了。斯坦福于 2012 年被定罪并被判处 110 年监禁。银行严谨专业的形象掩饰了其内在承诺的荒谬，更掩盖了资金的真实去向。
+
+如果资产负债表上的土地可以如此轻易地虚构，那么直接与具体地产绑定的贷款会不会更安全一些？接下来的这家公司，正是紧扣这种心理展开了营销。
+
+<details>
+<summary>Original English</summary>
+
+Number five, Allen Stanford. Stanford International Bank, based in Antigua, sold certificates of deposit. You leave money with a bank for an agreed period, and it promises interest. It is not supposed to feel like joining a secret society. It is supposed to feel like sensible paperwork. Stanford's bank offered rates above those commonly available from American banks. It claimed to invest in a conservative, widely spread portfolio with assets it could sell quickly when customers wanted their money back. But much of the depositors' money went into Stanford's own businesses through undisclosed loans. Those businesses were losing large amounts of money. Fresh deposits helped pay customers redeeming older certificates. The bank had supplied something Perlman's account name could only imitate, an entire institution around the promise.
+
+When pressure increased in 2008, Stanford claimed he was adding hundreds of millions of dollars to strengthen the bank. His accountants supported that claim by dramatically increasing the paper value of land the bank already owned. Land bought for about $63 million was marked up to 3.1 billion. No independent appraisal, no improvements. Apparently the most productive construction equipment was the keyboard. That did not create cash to pay depositors. It created a larger number in a record. An impressive balance sheet is less useful when the person requesting a withdrawal insists on money. Trial evidence also showed bribery of the auditor and the head of Antigua's financial regulator. This was more than customers failing to ask a clever question. Some of the safeguards they might reasonably expect were being corrupted. Stanford was convicted and sentenced to 110 years in 2012. The bank's presentation had made the promise look ordinary while hiding where the money went. If land on a balance sheet can be invented so easily, perhaps a loan tied directly to a property would be safer. The next company built its pitch around exactly that comfort.
+</details>
+
+---
+
+### 六、伍德布里奇（Woodbridge）：左口袋借给右口袋的房地产骗局
+
+第六位，伍德布里奇公司。伍德布里奇销售的是一套看似一目了然的商业安排：投资者出资用于房地产抵押贷款，借款人支付利息，而这笔利息则用来支付投资者的收益。
+
+其吸引力在于文件背后有着扎实的实物底座——不动产。比起跨国邮票套利，建筑物显然要具象得多。你无需费尽心思去科普邮政系统，只需用手一指就行。这些投资在对外推销时被冠以安全与稳健的美名。然而，那些名义上独立的房地产开发公司，大多是由伍德布里奇的老板罗伯特·夏皮罗（Robert Shapiro）一人所暗中控制。
+
+表面上看资金是在完全独立的商业实体之间流转，幕后操盘者却自始至终都是同一个人。想象一下，你把钱借给自己的左裤兜，然后转头要求右裤兜出具证明，担保这位借款人绝对可靠。即使根本没有任何营利，你也能做出看似繁忙万分的流水账。
+
+其中有些地产是真实存在的，但这并不能证明承诺的收入是真的。整个房地产资产组合产生的实际现金流，根本不足以覆盖许诺给投资者的利息，新投资者的资金被源源不断地拿来填补亏空；更有些款项所对应的房产甚至根本从未被收购过。这就把问题引向了另一个层面：亲眼看到一栋楼，仅能证明这栋建筑客观存在。它绝不会告诉你产权归谁所有、上面背负着何种债务，或者其经营收入是否真能支撑你的投资回报。
+
+在 2017 年申请破产崩盘前，伍德布里奇卷走了超过 10 亿美元。成千上万的人遭受了财产损失，其中不少人搭进去了毕生的退休储蓄。夏皮罗随后被判处 25 年监禁。“稳健保守”这四个字，修饰的只是他们的推销路演，而非资金的真实去向。
+
+到目前为止，我们提到的大多数骗局都是在兜售传统行业的虚假外衣。然而，互联网时代又带来了全新的诱惑——一个在屏幕上每天持续跳动上涨的诱人小数字。
+
+<details>
+<summary>Original English</summary>
+
+Number six, Woodbridge. Woodbridge sold an apparently straightforward arrangement. Investors supplied money for property lending. Borrowers would pay interest and that interest would fund the investors' returns.
+
+The appeal was something solid beneath the paperwork, property. Buildings tend to be easier to picture than international coupon trading. You can point at one without first explaining the postal system. The investments were marketed as safe and conservative. But the supposedly separate property businesses were often controlled by Robert Shapiro, Woodbridge's owner.
+
+Money appeared to be passing between independent businesses when the person behind them was the same man. Imagine lending money to your left pocket, then asking your right pocket to confirm that the borrower is reliable. You can produce a very busy set of accounts without earning anything.
+
+Some properties were real. That didn't make the promised income real. The property portfolio failed to generate enough cash for the payments being promised, new investors' money filled the gap, and some payments related to properties that hadn't even been acquired. That changes the question. Seeing a building tells you a building exists. It doesn't tell you who owns it, what debt is already attached to it, or whether it's income can support your return. Woodbridge brought in more than a billion dollars before collapsing into bankruptcy in 2017. Thousands of people suffered losses, including people who had committed retirement savings. Shapiro was later sentenced to 25 years. The word conservative had described the sales presentation, not what was happening to the money. So far, most of our schemes have sold the appearance of a reassuring old business. The internet offered something else, a reassuring little number that went up every day.
+</details>
+
+---
+
+### 七、Zeek Rewards：虚构的竞拍利润与跳动的数字面板
+
+第七位，Zeek Rewards。Zeek Rewards 依附于一家名为 Zeekler 的线上分分钱竞拍网站。其宣传声称竞拍业务利润丰厚，参与者可以通过 Zeek Rewards 分享这些红利。在分分钱竞拍中，人们通常需要付费购买出价的权利，而不仅仅是为可能拍下的商品掏钱。
+
+因此，一个竞拍网站能从海量竞拍者手中汇聚庞大资金的设想，听起来在商业上是具有合理性的。Zeek Rewards 顺水推舟地围绕这个概念构建了投资承诺：他们设立了官方网站，开展大规模宣传推广，并且每天公布一个利润百分比。你只需登录后台，就能亲眼看着名下所谓的投资逐日增长。
+
+这真叫人省心：既不用承担亲自经营企业的焦虑，又省去了核实下游客户真伪的麻烦。
+
+然而，负责操盘的主谋保罗·伯克斯（Paul Burks）根本不是依据正规的利润台账去核算每日数字，完全是信口捏造。仪表盘系统，别人怎么编程它就会显示什么。只要你不去按等于号，你的计算器也能在屏幕上把你算成百万富翁。
+
+法庭审判证据显示，流入该平台的资金中约有 98% 直接来自投资者自己。他们的本金被拿去垫付早期投资者的利润兑付。竞拍业务不过是利润来源的一套幌子，绝非绝大部分进账资金的真正源头。
+
+截至 2012 年 8 月，Zeek 声称其投资者的账户合并余额已接近 30 亿美元，然而账面上可供兑付的资金仅有大约 3.4 亿美元。屏幕上数字的增长速度，远远甩开了背后实际资产的积累。伯克斯最终被定罪，随后被判处 14 年以上有期徒刑。
+
+那些每日跳动的更新数据，成功地让纯粹的编造披上了精确计量的假象。经历过这种教训之后，你或许只想合上笔记本电脑，强烈要求投资一些摸得着、看得见的实体设备。
+
+非常好，我们现在来到了前面许诺过的太阳能发电机案例。
+
+<details>
+<summary>Original English</summary>
+
+Number seven, Zeek Rewards. Zeek Rewards was connected to an online penny auction business called Zeekler. The pitch was that the auctions generated large profits, and participants could share in them through Zeek Rewards. In a penny auction, people typically pay for the chance to bid, not just for the item they might win. So, the idea of an auction site collecting money from lots of participants can sound commercially plausible. Zeek Rewards wrapped its investment promise around that idea. There was a website, promotional activity, and a daily profit figure. You could log in and watch your supposed investment grow.
+
+Very convenient. The anxiety of running a business without the inconvenience of checking its customers. But, Paul Burks, the man running the operation, wasn't calculating those daily figures from proper profit records. He was making them up. A dashboard can display whatever somebody programs it to display. Your calculator can also make you a millionaire, provided you stop before pressing equals. Court evidence showed that approximately 98% of incoming funds came from investors. Their money financed payments to earlier investors. The auction business was the explanation for the profits, not the source of nearly all the cash coming in. By August 2012, Zeek was representing investors' combined balances as nearly $3 billion. It had about $340 million available to pay them. The number on the screen had been growing much faster than the money behind it. Burks was convicted and later sentenced to more than 14 years in prison. The daily updates had made invention look like measurement. After that, you might want to close the laptop and demand something you can physically inspect. Good. We have now reached the solar generators I promised you.
+</details>
+
+---
+
+### 八、DC Solar：可移动的发电机与掉包的资产标签
+
+第八位，DC Solar。DC Solar 生产安装在拖车上的移动式太阳能发电机。投资者可以出资购买这些设备，然后再将其回租给公司，租金据称来自于将发电机租赁给最终客户所赚得的收入。
+
+联邦税收抵免政策使这笔交易更具诱惑力。发电机是实打实存在的，确实有一款能够输出实用电力的真实产品。其投资者甚至包括了伯克希尔·哈撒韦（Berkshire Hathaway）这样的业界巨擘。这绝非普通人在应对垃圾推销短信，而是一个成功攻陷专业投资决策圈的骗局。然而，租赁收入完全是伪造的。新投资者的资金被作为所谓的租金收入回流循环。不仅如此，该公司还兜售了数以千计根本不存在的发电机。在其声称制造的大约 17,000 台机组中，至少有一半在现实世界中杳无踪影。
+
+还记得前面的仓库吗？当时我们建议亲自去实地检查设备。DC Solar 的同谋者们早已预料到了这一点。在投资者前来实地审查期间，他们给现有的发电机掉包更换了识别标签，全力蒙蔽来访的投资者。
+
+亲眼看到一台发电机，并不等于核实了眼前的这一台发电机就归属于你的名下，也不等于它确实已经租给客户，更不等于它正在产生报表上所显示的收入。这就好比你在街上看到一辆出租车，就顺理成章地全面采信整家出租车公司的财务报表。那辆车本身可能千真万确是真的，但就凭那个小小的后备箱空间，它根本不可能同时载着 800 位乘客到处跑。
+
+绿色清洁技术只是表演的布景，底层支付机制依然是我们在庞兹办公桌前见过的老一套：以延后进来的钱支撑前期的回报。该企业确实发现了一种“可再生资源”——那就是接盘的新投资者。只可惜，这种资源也终究会有枯竭的一天。
+
+杰夫·卡波夫（Jeff Carpoff）于 2021 年认罪并被判处 30 年监禁。一件能正常运转的实物产品，让一个编织得更大、漏洞百出的谎言变得更容易让人深信不疑。
+
+我们接下来的这起骗局，甚至无需应付关于拖车发电机这类令人头疼的实体盘问。它的吸金工具是软件，而软件本身是绝密的。
+
+<details>
+<summary>Original English</summary>
+
+Number eight, DC Solar. DC Solar manufactured mobile solar generators mounted on trailers. Investors could buy the equipment and lease it back with money supposedly earned by renting the generators to customers.
+
+Federal tax benefits made the offer more attractive. There were real generators. There was a real product that could provide useful power. Investors included Berkshire Hathaway. This was a scheme that reached professional investment decisions, not just people answering an unsolicited message. But the leasing income was being faked. New investor money was circulated back as supposed rental revenue. The company also sold thousands of generators that didn't exist. At least half of the roughly 17,000 units it claimed to have manufactured were missing from reality.
+
+Remember the warehouse? We said you could go and inspect the equipment. DC Solar's conspirators anticipated that. They swapped identification stickers on existing generators and tried to deceive investors during inspections. Seeing a generator was not the same as verifying that this particular generator belonged to your investment, was actually rented to a customer, and was producing the income you had been shown. It is like seeing one taxi and accepting the accounts for an entire taxi company. The car may be perfectly real. It cannot be driving 800 passengers simultaneously, not with that boot space.
+
+The green technology was the setting. The payment mechanism was the same one we saw at Ponzi's desk. Later money funding earlier returns. The business had discovered a renewable resource, new investors. Unfortunately, that resource also runs out. Jeff Carpoff pleaded guilty and received a 30-year prison sentence in 2021. A working product had made a much larger full story easier to believe. Our next scheme could avoid inconvenient questions about trailers. Its money-making equipment was software, and the software was secret.
+</details>
+
+---
+
+### 九、BitConnect：借加密货币狂热炒作的黑箱程序
+
+第九位，BitConnect。BitConnect 极力推销一款借贷项目，据称由一套能从加密货币价格剧烈波动中自动套利的交易机器人和专用算法驱动。投资者被告知，顶尖的专有技术能够带来巨额利润和保底收益。
+
+其诱惑力极易理解：加密货币的价格暴涨暴跌。如果有人真发明出一台懂得如何顺应这些波动套利的机器，那么这种动荡狂潮岂不是可以直接转化为源源不断的收益？
+
+请注意这项技术在销售推介中所起到的妙用：听众根本不需要搞懂其中的交易逻辑。你听不懂，反而恰恰证明了那台机器有多么高深复杂。对于任何主要技术手段就是诱导你点击网银转账的人来说，这套说辞堪称完美的商业模式。还记得罗斯坦所用的保密和解协议吗？在这里，令人安心的神秘感换上了一套科技的新装。“专有算法软件”为一个投资者无法轻易求证的黑箱流程，冠上了一个高大上的名字。
+
+根据针对核心推广人格伦·阿卡罗（Glenn Arcaro）的刑事指控，BitConnect 完全是用后入场者的本金支付先入场者的收益。高达 15% 的投资资金还被直接打入了专门用来肥水自流、犒赏项目发起人和核心推广者的资金池。该体系找到了一种从市场狂热中攫取暴利的绝招：那就是把狂热本身作为商品卖给下一个接盘侠。
+
+阿卡罗承认从该骗局中获利至少 2400 万美元，并于 2022 年被判处 38 个月监禁。加密货币这一新兴事物，成功地让古老的拆东墙补西墙把戏听起来像是一场全新的金融创新。
+
+看到这里，我们或许自以为已经掌握了一套理性的避坑法则：远离名人站台、要求独立核验、警惕保本暴利与神秘机器。然而，在我们的榜单上，名头最响亮的人物抛出的诱饵却丝毫不带这种戏剧化成分。他是一位德高望重的华尔街领袖，提供着看似无比稳健的业绩，并让你由衷地觉得：能把钱投进他的基金，本身就是一种莫大的特权。
+
+<details>
+<summary>Original English</summary>
+
+Number nine, BitConnect. BitConnect promoted a lending program supposedly powered by a trading bot and software that could profit from swings in cryptocurrency prices. Investors were told that special technology could generate substantial profits and guaranteed returns.
+
+The attraction was easy to follow. Cryptocurrency prices moved wildly. If somebody had built a machine that knew how to trade those movements, perhaps the chaos could become your income. Notice what the technology did for the sales pitch. The listener didn't have to understand the trading. Not understanding it could become evidence that the machine was very advanced. An excellent business model for anyone whose main technical skill is opening your bank transfer. Remember Rothstein's confidential settlements. Here, the reassuring mystery wore a different outfit. Proprietary software supplied an impressive name for a process investors couldn't readily verify. According to the criminal case against promoter Glenn Arcaro, BitConnect paid earlier investors with later investors money. Up to 15% of the invested money also went into a fund benefiting the owner and promoters. The system had found a way to profit from market excitement. It was selling the excitement to the next investor.
+
+Arcaro admitted earning at least $24 million from the scheme and was sentenced to 38 months in prison in 2022. The novelty of cryptocurrency had made an old payment trick sound like a new financial invention. By now, we might think we have a sensible filter. Avoid celebrities. Demand independent checks. Be suspicious of guaranteed riches and mysterious machines. But the biggest name on our list offered something less theatrical. A respected Wall Street figure, steady-looking results, and the feeling that getting into his fund was a privilege.
+</details>
+
+---
+
+### 十、伯尼·麦道夫（Bernie Madoff）：华尔街权贵与无法兑现的账面数字
+
+第十位，伯尼·麦道夫。麦道夫曾任纳斯达克证券交易所主席，经营着一家声名远播的证券公司。他的投资管理业务吸引了大量富豪、慈善基金，以及经由其他投资机构层层转投进来的巨资。有些人甚至在自身完全不知情的情况下，资金就已经辗转流入了他的手心。
+
+吸引人们的不仅是高额的回报，更是围绕在麦道夫身边的无上信誉。他的对账单呈现出令人艳羡的持续稳步增长。人们削尖脑袋想跻身其中。被麦道夫接纳为客户，其体验就像是通过了一场精英考核——这对于掏钱出资的客户来说，真是一种极为反常的心理定位。而在这些华丽对账单的背后，员工们纯粹是在凭空伪造交易记录。他们往往是在得知了哪种价格组合能算出发包方所期望的收益率之后，才倒推并填报交易流水。如果周二的操作决策可以留到周五去下，恐怕全天下绝大多数投资者都能交出一份无可挑剔的历史战绩。这一虚假投资顾问业务就依附在麦道夫真实运营的合法证券经纪业务身旁。
+
+正如佩尔曼的音乐事业和 DC Solar 的实物设备一样，一项货真价实的业务让另一项虚假的主张变得极具迷惑性。受人尊敬的实体部门的存在，并没有证实投资部门的真实性。更为关键的是，人们确实能够随时取款。
+
+还记得当年庞兹办公桌前的那笔返还款吗？几十年后，同样的安心感如出一辙地上演了。
+
+成功取款只能证明麦道夫的银行账户在当天有能力付给你这笔钱，它丝毫无法证明对账单上的那些交易曾经发生过。源源不断的新客户存款构成了应付支取的全部现金流。期间并非没有预警，金融分析师哈里·马科波洛斯（Harry Markopolos）曾屡次向监管层递交详细的欺诈质疑报告。美国证券交易委员会（SEC）自身的监察长后来也承认，该监管机构在调查麦道夫的过程中存在严重的渎职与失误，其中包括未能进行完全独立的交叉核验。这并非一种一旦有足够多的聪明人卷入就变得无法置疑的精密骗术，它之所以能够长期存活，仅仅是因为那些决定性的核心质询从未被真正落地彻查。
+
+2008 年，海啸般的挤兑赎回需求彻底压垮了账面仅存的现金流。麦道夫于 2009 年认罪，被判处 150 年监禁。
+
+那些曾被视作财富象征的对账单，最终被证实不过是一张张根本无力兑现的空头欠条。对于那些生计仰仗这笔资金的人们来说，灾难性的后果是无比沉痛且真切的：无数退休养老计划、慈善事业和家庭根基围绕着这些假象轰然倒塌。
+
+<details>
+<summary>Original English</summary>
+
+Number 10, Bernie Madoff. Madoff had been chairman of Nasdaq and ran a well-known securities firm. His investment operation attracted wealthy clients, charities, and money routed through other investment funds. Some people were exposed without even knowing that their money had reached him. The attraction wasn't just the return, it was the confidence surrounding the man. His statements showed steady-looking gains. People wanted access. Being accepted could feel like passing a test, which is a curious position to put the person handing over the money in. Behind those statements, employees fabricated records of investment trades. They could choose transactions after they knew which prices would produce the desired result. Most investors would also have an excellent record if Tuesday's decisions could be made on Friday. The fraudulent advisory operation sat alongside real securities businesses.
+
+As with Perlman's music and DC Solar's equipment, a genuine activity helped make a different claim seem believable. The existence of the respectable part did not verify the investment part. And people could withdraw money. Remember that payment at Ponzi's desk? Here is the same reassurance decades later.
+
+A withdrawal proved that Madoff's bank account could pay you that day. It did not prove that the trades on your statement had happened. Other clients' deposits supplied the cash. There were warnings. Financial analyst Harry Markopolos repeatedly raised concerns. The SEC's own inspector general later found serious failures in how the regulator investigated Madoff, including failures to verify information independently. This wasn't a trick that became impossible to question once enough clever people were involved. It was a trick that survived while decisive questions went unanswered.
+
+In 2008, withdrawal demands overwhelmed the available cash. Madoff pleaded guilty in 2009 and received a 150-year sentence. Account statements that had seemed to describe wealth turned out to describe promises that could not all be paid. For the people depending on that money, the consequences were real. Retirement plans, charities, and family finances had been built around it.
+</details>
+
+---
+
+### 穿透迷雾：从销售者内部证明到外部独立核验
+
+我们经历了从邮政票券到华尔街殿堂的百年回眸。伪造的文书变得越来越专业精致，但资金兑付的实质来源却几乎毫无改变。令人不安的是，我们刚刚见识了如此之多不同形式的所谓“定心丸”：一笔准时到账的回款、一位成名立万的企业家、一份采购订单、一名资深律师、一家持牌银行、一处不动产物业、一个每日上涨的账户面板、一台真实运转的发电机、一套量化交易软件，或是华尔街上一个德高望重的金字招牌。
+
+然而，上述所有事物本身，没有一件能回答那个至关重要的核心问题：究竟是哪项具体的经营活动，在真正赚取并产生支付给投资者的这些利润？
+
+有些受害者出于对专业人士的信任，有些受害者出于对熟人圈子的信赖，有些人则是亲眼目睹了回款如约而至。还有许多人甚至根本不知道中介机构早已将自己的本金暗中转入了这场骗局之中。将他们一概斥责为愚蠢，恰恰忽略了让这场诈骗变得极具说服力的精巧运作机制；而识破这些机制，也并不能保证任何一个人从此就能百毒不侵。一个看似自洽的故事，反而会为懂行的人提供更多的论据细节去替它解释、辩护和四处宣扬。
+
+贯穿这十个案例，最具实用价值的界线在于：严格区分“由销售方自行提供的证明材料”，与“来自销售方利益圈层之外的独立外部验证”。底层资产是否真的存在？声称的下游客户是否确有其人？那位客户是否真的在按期付款？究竟由谁独立托管或审计这些投资资产？
+
+这些实地尽调的问题，远不如听一段神秘量化交易机器人的故事来得心潮澎湃，也绝非一场充满鸡血的宣讲报告会所能轻易应付回答。
+
+庞兹当年的原始戏法之所以能在更先进技术演进了一个世纪后依然大行其道，是因为切切实实拿到回款的感觉，依然让人觉得那就是最坚实的铁证。钱能够按时到账，对账单可以装帧精美，兜售产品的人可以拥有无可挑剔的崇高声誉。但如果这笔投资的全部收益最终必须依赖下一个入局的人才能维持，那么这项投资就根本不是在为你创造价值。
+
+核心的关键在于……
+
+<details>
+<summary>Original English</summary>
+
+We have traveled from postage coupons to Wall Street. The paperwork became more impressive. The source of the payments barely changed. The unsettling part is how many different kinds of reassurance we have just seen. A real payment, a famous entrepreneur, a purchase order, a lawyer, a bank, a property, a daily dashboard, a working generator, a trading system, a respected name on Wall Street. None of those things by itself answered the question that mattered. What activity was actually producing the money paid to investors? Some victims trusted a professional. Some trusted people they knew. Some saw a payment arrive exactly when promised. Others had no idea an intermediary had placed their money in the scheme at all. Calling them foolish skips the machinery that made the fraud persuasive, and recognizing the machinery doesn't make anybody immune.
+
+A convincing story can give a knowledgeable person more details to explain, defend, and repeat. Across these 10 cases, the useful distinction is between evidence supplied by the seller and confirmation from outside the seller's circle. Does the asset exist? Does the claimed customer exist? Is that customer actually paying? Who independently holds or verifies the investments? Those questions are less exciting than a secret trading robot. They are also harder to answer with a motivational conference.
+
+Ponzi's original trick survived a century of better technology because a payment still feels like proof. The money can arrive. The statement can look beautiful. The person selling it can have an excellent reputation. But if the return depends on the next person joining, the investment isn't working for you. The key is
+</details>

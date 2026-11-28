@@ -1,0 +1,2028 @@
+---
+author: The Diary Of A CEO
+date: '2026-11-26'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=Uj81Qo15wBc
+speaker: The Diary Of A CEO
+tags:
+  - cyber-security
+  - privacy
+  - artificial-intelligence
+  - phishing
+title: 网络安全风险与人工智能时代的隐私挑战
+summary: 文章通过演示数据泄露、OSINT技术及智能家居设备的潜在安全漏洞，警示用户面临的隐私威胁。内容涵盖了Wi-Fi/蓝牙攻击工具、恶意篡改的智能插座、以及针对个人信息的钓鱼攻击。此外，还探讨了AI在发现系统漏洞方面的能力，并建议用户通过学习本地AI模型、提高对数字通信的警惕以及核查域名等手段来增强个人安全。
+insight: ''
+draft: true
+series: ''
+category: ai-application
+area: tech-engineering
+project: []
+people: []
+companies_orgs: []
+products_models: []
+media_books: []
+status: evergreen
+---
+<!-- chunk 1/3 -->
+
+如果我告诉你你的手机完全安全，那我就是在撒谎。但同时，人们也不知道自己正被陌生人监视着。比如，像这样的摄像头，或者你在亚马逊上买的一些便宜产品。别信任它们中的任何一个，因为一切都可以被黑客入侵。我们可以先给你看看我在20分钟内查到的关于你的信息。哦，[ __ ]，我真怕你会这么做。好吧。所以我只是搜索了我能够识别出的这个邮箱。嗯，我是从数据泄露事件中找到它的。这是你12年前去的健身房。然后这里是你的一些旧密码。
+<details><summary>Original English</summary>
+I'd be lying if I told you that your phone is completely safe. But also, people have no idea they're being watched by strangers. So, for example, a camera like this or some cheap product you bought on Amazon. Don't trust any of them because everything can be hacked. And we could start off by showing you what I found on you in 20 minutes. Oh, [ __ ] I was scared you might do this. All right. So, I just searched for this email that I was able to identify. Well, I was able to locate it from data breaches. And this is the gym you go to 12 years ago. And then here's some of your old passwords.
+</details>
+
+>> [ __ ]，见鬼。但这是你的，我找到了已被撤下的，而我知道所有这些东西是因为我9岁时加入了黑客论坛，没有什么是我没见过被黑的，现在我在儿童犯罪部门工作，打击人口贩运。这是一个黑暗的话题，我待会会谈到，但首先我带来了一些我觉得你会感兴趣的小玩意儿。好吧，那我们先看这些小玩意儿。首先，这个叫做“饼干”（the biscuit）。这东西能够进行Wi-Fi和蓝牙攻击。它还会让你的手机基本上无法使用。你演播室里的每个人现在都在收到那些通知。下一个。这些不是薄荷糖。这是一个能让摄像头、Ring门铃掉线的设备，然后这个可以黑掉无人机。还有，你能看出这不是一根普通的iPhone数据线吗？这个图表里面有一个微型计算机。而且，很重要的是我要告诉你，我研究过这些设备是如何与互联网通信的，几乎所有这些设备都与中国通信。比起他们监听我的电话，我更担心它们。
+<details><summary>Original English</summary>
+>> [ __ ] hell. But here's your and I found that was taken down and I know all of this stuff because when I was 9 years old I joined hacking forums and there's not much that I haven't seen get hacked and now I work in child crimes countering human trafficking. This is a dark topic which I'll get into but first I brought some gadgets I thought you'd be interested in. Okay, let's do the gadgets then. So first this is called the biscuit. That thing is capable of Wi-Fi and Bluetooth attacks. It also makes your phone essentially unusable. Everyone in your studio is getting those notifications right now. Next one. These aren't mints. This is a device that knocks cameras offline, ring doorbells, and then this can hack drones. And then, can you tell that that is not a normal iPhone cable? There's a mini computer inside of this chart. And also, it's important that I tell you that I have looked into how these devices communicate with the internet and they communicate with China, almost all of them. And I'm more concerned about them than I am them listening to my phone calls.
+</details>
+
+>> 那么，让我们的线上和线下安全变得更稳固的基本做法有哪些？我给你的第一条建议是，这也是我个人在自己家里做的。
+<details><summary>Original English</summary>
+>> So, what are like the basics of getting more secure with our online and offline security? The number one thing I would suggest for you is that's what I do in my house personally.
+</details>
+
+>> 你说有一些让人感到不适的事情你想和我谈谈。什么是764？
+<details><summary>Original English</summary>
+>> You said there were some uncomfortable things you wanted to talk to me about. What is 764?
+</details>
+
+>> 他们是一个虚无主义的撒旦邪教，专门致力于伤害他人。他们寻找在学校受欺凌、有自杀念头的孩子，他们有好几本长达数百页的手册，教人如何敲诈和诱导受害者。有时受害者是8、9、10、11岁的孩子，而且这在所有平台上都在发生。我想给你看看这种事是怎么发生在别人孩子身上的，因为我想让父母意识到这些人的危险。让我给你看一些这里的例子。
+<details><summary>Original English</summary>
+>> So they're annihilistic satanic cult and they're dedicated to just hurting people. They look for kids that are getting bullied in school that are having suicidal ideiations and they have multiple hundpage handbooks on how to extort and groom victims. Sometimes children 8 9 10 11 years old and it's happening on all platforms. And I want to show you how it can happen to people's kids cuz I want parents to be aware of the dangers of these people. Let me show you some of those examples here.
+</details>
+
+>> 哦，天哪，我受不了了。
+<details><summary>Original English</summary>
+>> Oh my god, I can't.
+</details>
+
+>> 这还不算什么。
+<details><summary>Original English</summary>
+>> This is nothing.
+</details>
+
+>> 不，求你了，我受不了了。
+<details><summary>Original English</summary>
+>> No, please. I can't.
+</details>
+
+### 20分钟内查到的信息：数字足迹与OSINT演示
+
+>> 在本期节目开始之前，我有个小小的请求。两个月前，观看本频道的人中有61%没有订阅。现在我们降到了58%，我的目标是50%。所以，如果你喜欢过我们在本频道制作的任何视频，如果你喜欢这个频道，能请你帮个小忙，点击订阅按钮吗？这对本频道的帮助比你想象的要大得多。频道变得越大，我们就能在嘉宾和制作上投入越多。谢谢，请欣赏本期节目。Ryan，我听说你告诉Tucker Carlson，在几分钟之内，你就能够使用相对简单的黑客技术找到他的社会安全号码、房产契约、驾驶证、我想还有他的签名。如果你自己加上几个像你一样技术高超的朋友，如果我给你一个小时，你觉得你们能在现在正在听这段对话的普通人身上查到些什么？
+<details><summary>Original English</summary>
+>> Before this episode starts, I have a small favor to ask you. 2 months ago, 61% of the people that watch this channel weren't subscribed. We're now down to 58%, my goal is 50%. So, if you've ever liked any of the videos we've made on this channel, if you like this channel, can you do me a small quick favor and hit the subscribe button? It helps this channel more than you know. And the bigger the channel gets, the more we can invest in the guests and the production. Thank you and enjoy this episode. Ryan, I heard you tell Tucker Carlson that within a matter of minutes you were able to find his social security number, his house deed, his driving license, his property deed, I think his signature using relatively simple hacking techniques. If you had yourself and a couple of your friends that are skilled in the ways that you are, and if I gave you an hour, what do you think you would be able to find on the average person that's listening right now to this conversation?
+</details>
+
+>> 很多。所以，我们可以先给你看看我在20分钟内查到的关于你的信息。
+<details><summary>Original English</summary>
+>> So, a lot. So, we could start off by showing you what I found on you in 20 minutes.
+</details>
+
+>> 哦，[ __ ]，请便吧。
+<details><summary>Original English</summary>
+>> Oh, [ __ ] Go ahead.
+</details>
+
+>> 那么，
+<details><summary>Original English</summary>
+>> So,
+</details>
+
+>> 我真怕你会这么做。
+<details><summary>Original English</summary>
+>> I was scared you might do this.
+</details>
+
+>> 我根据我得到的通信信息猜到了，所以我没有做任何太疯狂的事。别担心。这些都是非常公开的信息。只是给你看看外面有什么。还有，呃，你介意我把你的电脑拿过来吗？
+<details><summary>Original English</summary>
+>> I I figured that based on the communications I had, so I didn't I didn't do anything too crazy. Don't worry. This is all very public information. It's just showing you what's out there. And uh do you mind if I walk bring your computer over to you?
+</details>
+
+>> 是的，当然可以。
+<details><summary>Original English</summary>
+>> Yes, of course.
+</details>
+
+>> 好。
+<details><summary>Original English</summary>
+>> Y.
+</details>
+
+>> 所以，这是一个只供执法部门使用的工具。呃，我们创建的，叫做OSI Pilot，你必须是执法人员才能用。我们不会给你账号。我只是搜索了我能够识别出的这个邮箱。
+<details><summary>Original English</summary>
+>> So, this is a tool only for law enforcement. Um we that we created called OSI Pilot that you have to be law enforcement. We don't give you an account. I just searched for this email that I was able to identify.
+</details>
+
+>> 你怎么知道那是我的邮箱的？那是我很久很久以前的个人邮箱。
+<details><summary>Original English</summary>
+>> How did you even know that was my email? That's like my personal email from a long long time ago.
+</details>
+
+>> 是啊。嗯，我是从数据泄露事件中找到它的，意思是被黑客入侵的网站，然后它们的数据被泄露了。我们识别出了这个密码，它进而给出了一个生日，然后因为这是一个非常独特的密码，我们进行了反向密码搜索，接着因为那个密码很独特，我们又识别出了其他邮箱。
+<details><summary>Original English</summary>
+>> Yeah. Well, I was able to locate it from uh from data breaches, meaning sites that got hacked and then their data was breached. We were able to identify this password which then gave a birthday and then we did a reverse password search since it's a very unique password and then we were able to identify other emails because of that password being unique.
+</details>
+
+>> 我其实记不起那个密码了。
+<details><summary>Original English</summary>
+>> I actually can't remember that password.
+</details>
+
+>> 是啊。好吧。你记得另一个吗？我不想大声说出来。
+<details><summary>Original English</summary>
+>> Yeah. Okay. Do you remember the other one? I don't want to say that loud.
+</details>
+
+>> 是啊，是啊，是啊，是啊。嗯，就是那两个密码让我们得到了所有这些信息。
+<details><summary>Original English</summary>
+>> Yeah. Yeah. Yeah. Yeah. Well, those two were how we got all the information we got.
+</details>
+
+>> 是啊。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 这些是你与之关联的账号。
+<details><summary>Original English</summary>
+>> These are your accounts that are connected to that.
+</details>
+
+>> 所以你，这又给了我那部手机的一部分信息。
+<details><summary>Original English</summary>
+>> So you which then gives me a piece of that phone.
+</details>
+
+>> 是啊。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 呃，那是我的电话号码。是啊。然后这里是你的地图记录，显示了你至少12年前去的健身房。
+<details><summary>Original English</summary>
+>> Um and that's my phone number. Yeah. And then here's your maps with the the gym you go to 12 years ago at least.
+</details>
+
+>> [ __ ]，见鬼。
+<details><summary>Original English</summary>
+>> [ __ ] hell.
+</details>
+
+>> 是啊。还有，呃
+<details><summary>Original English</summary>
+>> Yeah. And uh
+</details>
+
+>> 我以前……哦，我的天哪。
+<details><summary>Original English</summary>
+>> I used to Oh my goodness.
+</details>
+
+>> 然后这里有一些照片，看起来像不同的人，但很明显这些都是你。呃，我们在Ocean Pilot里内置了反向人脸识别功能。然后你会得到一份摘要。而且我特意确保只去查你的旧资料。顺便说一下，这都是自动化的。所有这些，有40个工具是由我们的主公司Pentester开发的，Pentester用它们来识别人员并帮助他们清理数字足迹。这是为了识别你并展示，你知道，尽可能深挖。
+<details><summary>Original English</summary>
+>> And then here are some some photos that are different people, but these are obviously you. Um so we have reverse facial recognition built into Ocean Pilot. And then you get a summary. And I made sure to only go after your old stuff. This is automated by the way. All of this, there's 40 tools that are built by Pentester, our main company, that Pentester uses to identify people and help them clean up their digital footprint. This is to identify you and show, you know, dig in as deep as possible.
+</details>
+
+>> 通常，这会拉出像社会安全号码这样的信息。它可能会拉出你以前的MySpace个人资料，也许还有你在某个被泄露网站上的私信。这本来可以显示更多我没展示的内容，因为我知道你甚至连涉及到手机都有点吓坏了。所以，
+<details><summary>Original English</summary>
+>> Usually, this would pull like a social security number. It's going to pull maybe your old uh MySpace profile, maybe your, you know, private DMs on a website that got breached. And this could show a lot more that I'm not showing because I know you were a little freaked out about even having a phone involved. So,
+</details>
+
+>> 不，我不介意。我觉得这很迷人。
+<details><summary>Original English</summary>
+>> no, I don't I don't mind. I find it fascinating.
+</details>
+
+>> 我很感激。我不知道这是否是你的当前住址。这是自动化查出来的。
+<details><summary>Original English</summary>
+>> I appreciate that. I don't know if this is your current address or not. This is the automated.
+</details>
+
+>> 那是我在英国长大的房子。
+<details><summary>Original English</summary>
+>> That was the house that I grew up in in the UK.
+</details>
+
+>> 不错。好吧。它还告诉了我关于你的书。呃，这很棒。呃，我甚至不知道你写过书。
+<details><summary>Original English</summary>
+>> Nice. Okay. Tells me about your book. Um, which is which is awesome. Um, I didn't even know you had a book.
+</details>
+
+>> 那可能是最冒犯人的部分了。
+<details><summary>Original English</summary>
+>> That might be the most offensive part.
+</details>
+
+>> 嗯，我之前不知道。高调的……看这里。这是在夸你呢。软件在夸你。高调的英国企业家。呃，Stephen Bartlett。
+<details><summary>Original English</summary>
+>> Well, I didn't know. Highprofile. Here we go. It's compliment. Software is complimenting you. Highprofile UK entrepreneur. Um, Stephen Bartlett.
+</details>
+
+>> 好吧。是啊，
+<details><summary>Original English</summary>
+>> Okay. Yeah,
+</details>
+
+>> 但有件挺有意思的事是，你在英国，你们有所有这些隐私法律，比如GDPR之类的。呃，但因为你去美国旅行，有两个不同的州提取了你的信息并把它卖给了数据经纪商。呃，仅仅因为你在这里待过一段时间，我们就会帮你把那些数据删除。另一方面，呃，这就是我们帮助执法部门的地方，利用我们掌握的有限标识符来识别某人。有时那只是一个用户名。有时只是一个电话号码，你知道，有时我甚至完全没有名字。这个平台的全部意义就在于，无论付出什么代价，都要根据最微小的线索找到你。刚才那些是自动化的部分，然后非自动化的部分全在这里。所以，我们花了20分钟调查你，这就是我们能够找到的东西。
+<details><summary>Original English</summary>
+>> but something that's kind of uh interesting is that you being in the UK, you have all these privacy laws when it comes to like GDPR and all that. Uh the fact that you travel to the United States, there's two different states that that were that pulled your information and sold it to data brokers. Um just because you spend time here, we remove that data for you. On the other side of things, uh this is where we're helping law enforcement identify somebody with limited amount of identifiers that we have. Sometimes that's just a username. Sometimes it's just a phone number, you know, sometimes I don't have any name at all. The entire point of this platform is to find you no matter what it takes based on the the tiniest little breadcrumb. That was the automated stuff and then the nonautomated stuff was all here. So, we spent 20 minutes looking into you and that's this is what we were able to find.
+</details>
+
+>> 我找到了你那个已经被撤下的铁路卡请愿书。那是很久以前的事了
+<details><summary>Original English</summary>
+>> Your uh rail card petition I found that was taken down. that was a long time ago
+</details>
+
+>> 你可以在这里看到是你签名的，但呃，它被存档了，所以这个网站已经没了，你知道，所以找到它稍微困难一点。
+<details><summary>Original English</summary>
+>> which you can see is signed by you here but um it was uh it was archived so this site's gone you know so finding it's a little more difficult
+</details>
+
+>> 说实话，我完全忘了那件事，太久远了，但是
+<details><summary>Original English</summary>
+>> I totally forgotten about that to be honest it's so long ago but
+</details>
+
+>> 所以谷歌……我也想给你看看这个，因为对我们来说这有点好笑，谷歌最近开始提供一些……我的意思是，这显然是公开信息，但谷歌通常会说，不，我们不能帮你联系某人，我们不能帮你调查某人，或者对某人进行开源情报调查。但谷歌似乎在说，好吧，你在这个网站和那个网站上，
+<details><summary>Original English</summary>
+>> so Google I just wanted to show this too cuz it's kind of funny to us Google just started giving out some I mean obviously this is public information but Google usually they're saying like no we can't help you contact a person we can't help you look into a person or do an open source intelligence investigation on a But Google seems like, all right, you're on this website and that website,
+</details>
+
+>> 而这些都是数据经纪商，我们正在努力把你从上面删除，而谷歌却在它的AI概览（AI overview）里推广它，
+<details><summary>Original English</summary>
+>> which are data brokers, which we are fighting to remove you from, and Google's promoting it in their AI overview,
+</details>
+
+>> 我觉得这挺奇怪的。
+<details><summary>Original English</summary>
+>> which I thought was kind of strange.
+</details>
+
+>> 你不是罪犯。所以，你知道，我们并不是在寻找你的犯罪行为。所以，这更多只是为了验证你是谁，你的数字足迹是什么。那不是《CEO日记》（Diary of a CEO）。而且这是在构建一张庞大的地图，对吧，由许多相互关联的碎片组成，用来验证、提高确信度和确定性。
+<details><summary>Original English</summary>
+>> You're not a criminal. So, you know, we're not like looking for criminal behavior from you. So, it's more just validating who you are, what your digital footprint is. That's not diary of a CEO. And it's building a big sort of map, isn't it, of lots of connected pieces to validate increase conviction and certainty.
+</details>
+
+>> 没错。是啊。而且有时这些人，你知道，他们几乎所有人都只是躲在一个用户名后面。如果我们足够幸运能找到一张脸，举个例子，我们就可以从那张脸切入，希望他们有一张能识别出他们身份的照片，我也会给你看一个例子。但是，呃，那里有域名，然后还有用户名和别名，你知道，多年来的各种网站，你知道，就是一大堆东西。所以我可以……你明白我的意思了。我……
+<details><summary>Original English</summary>
+>> Exactly. Yeah. And and sometimes these guys, you know, almost all of them are just hiding behind a username. And if we get lucky enough to find a face, for example, we could kind of pivot from that face and hopefully they have a picture that identifies them, which I'll show you an example of as well. But uh domains there and then usernames and aliases, you know, over the years, websites, you know, so a bunch of stuff. So I can you you get the point. I'm
+</details>
+
+>> 好的。有意思。
+<details><summary>Original English</summary>
+>> okay. Interesting.
+</details>
+
+>> 而且你知道，假设在你自己的想法里，你没有任何数字足迹。你会想，我不用电脑。我永远不会碰电脑。比如我妈妈就是一个很好的例子。我妈妈这辈子从没用过电脑。真的，我一点没夸张。但我妈妈也有数字足迹，因为，你知道，她去，比如说CVS或者Walgreens，她在那里输入了她的电话号码，而那里可能关联了一个邮箱，或者她年轻时去过赌场，而美高梅（MGM）被黑客入侵了。所以她的数据就在那次数据泄露中，这泄露了她的名字、她的出生日期，还泄露了一个地址，而我妈妈，你知道，甚至不知道自己有数字足迹，然后数据经纪商出售那些数据，接着所有数据到处传播，现在任何人都能找到你住在哪里并找到你的信息。你认为普通人是不是都生活在一种“自己在互联网上是安全的”的错误假设之下？
+<details><summary>Original English</summary>
+>> And you know, let's say you had no digital footprint in your mind. You're like, I don't use a computer. I'm never going to touch a computer. Like my mom's a good example. My mom's never used a computer in her life. Literally, I'm not even exaggerating. But my mom has a digital footprint because, you know, she goes to, let's say, CVS or or Walgreens and she puts her phone number in there and and it might have had an email or she went to a casino when she was younger and MGM got got breached. So her data is in a data breach from that which gives her name and it gives her her date of birth and it gives an address and my mom, you know, not even knowing it has a digital footprint and then data brokers sell that data and then all that data spreads around and now anyone can find where you live and find your information. Do you think the average person lives under the false assumption that they are secure on the internet?
+</details>
+
+### 9岁接触黑客与青少年时期的成瘾挣扎
+
+>> 绝对是的。绝对是的。而且我认为这就是为什么我试图把这一点讲清楚。通常我这样做的方式是，我先解释捕食者（predator）的部分。我解释捕食者是如何隐藏的，然后我如何识别他们，接着我再讲，这就是你如何利用同样的技术来保护自己。但正是出于那个确切的原因——人们不认为自己有那么多信息暴露在外面。所以就像使用反向人脸识别，想想一个普通的爸爸，对吧？他有个孩子参加体育运动。你拍一张他脸的照片。他可能正坐在背景里，比如在孩子的足球赛或棒球赛之类的地方，然后你看，如果他不去搜索并发现自己曾在那里，他永远不会知道那张照片存在于互联网上。而那不仅可能识别出他，还可能识别出他的孩子、他的妻子、他们上哪所学校、他们住在哪个区域。然后从那以后，他可能会说：“哦，我不想让那张照片挂在上面，因为我不想有数字足迹。”你是怎么学会这些东西的，Ryan？
+<details><summary>Original English</summary>
+>> Absolutely. Absolutely. And I think that that is that's why that's why I'm trying to get this point across. And and usually the way that I I do this is I explain the predator part first. I explain how predators are hiding and then how I identify them and then I go into like this is how you can protect yourself using that same technology. But it's because of that exact reason. uh people don't think that they have much out there. So like using the reverse facial recognition, think of like your average dad, right? And he has a kid that plays sports. You take a picture of his face. He might be sitting in the background at like a kids football game or at a a baseball game or whatever it might be and uh and you see he he would have never known that photo existed on the internet unless he searched it and found that, you know, he was there. And that might might identify not only him, but it might identify his kids, his wife, what school they go to, what area they live in. And then from there, he could say, "Oh, I don't want that picture up there because I have I I don't want to have a digital footprint." How did you learn this stuff, Ryan?
+</details>
+
+>> 这是一个很长的故事，但它的起点是，你是指一般意义上接触电脑，还是指黑客技术？
+<details><summary>Original English</summary>
+>> So, that's that's a that's a long story, but the the starting point of it was like, are you talking about like get on a computer in general or you talking hacking?
+</details>
+
+>> 两者都是。
+<details><summary>Original English</summary>
+>> Both.
+</details>
+
+>> 我9岁的时候，我爷爷带回家一台电脑，我对它没有任何兴趣，因为我还是个孩子。我根本没把这当回事。但在那个时候，AOL，如果你还记得的话，AOL即时通讯（AOL Instant Messenger）和AOL美国在线（America Online），他们会寄送免费试用的软盘，就像我这里的这个纹身，软盘。他们寄这些带14天试用的东西，让你加入互联网，你知道，让你试用一下。我不知道那是什么意思，但我看到这东西的形状就在我爷爷带回家的电脑正面。那是塑料外壳上的一个小图标。所以我把它插了进去，心想：“哦，那个和那个配得上。”我记得那个AOL三角形从纸板跳到了屏幕上。我记得即使在那么小的年纪，看到某样东西从物理世界进入数字世界，我还是被它迷住了。我知道这是件很基本的事情，但那在当时作为一个孩子来说，简直让我大开眼界。从那一刻起，我就没有停下来。我想知道那台电脑里的一切是怎么运作的。然后我开始在太小的年纪就通过AOL即时通讯加入各种社区。但我看到其他人在做所有这些不同的攻击，我想学着怎么做，因为它们很酷。不仅其中一些有点危险，而且有些在视觉上看起来很酷，比如滚屏器（scroller）。你会看到文字在屏幕上向下滚动，看起来超级酷；或者踢人器（booter），把某人踢出聊天室；呃，或者punter。当时有很多这样的术语，我想知道怎么操作它们。而唯一能学到的方法就是认识一个拥有那些漏洞利用工具（exploits）并且愿意教你的人，于是所有这些开始结合在一起。但如果没有我的导师们和那些愿意花时间的人的帮助——如果他们知道自己是在和一个小男孩说话，我不认为他们会那么愿意和我交流那么多。而且
+<details><summary>Original English</summary>
+>> When I was 9 years old, my grandpa brought a computer home and I don't have any interest in it because I'm a kid. I didn't even think anything of it. But at that time, AOL, if you remember, AOL Instant Messenger and AOL America Online, they were sending free trial uh floppy discs, like my tattoo here, floppy disc. They were sending these with like 14 day trials to to join the internet for, you know, so you get a trial. I didn't know what that meant, but I saw that the shape of this thing was on the front of a computer that my grandpa brought home. It was a little icon on the physical plastic. So, I put it in there thinking, "Oh, that matches that." And I remember the the AOL triangle came from the the cardboard to the screen. And I remember even being that young, I remember seeing something come from the physical world into the digital world and being mesmerized by it. And I I know it's a a basic thing, but that is what just blew my mind as a kid. And from that point forward, I didn't stop. I wanted to know how everything in that computer worked. And uh and then I started joining communities uh through AOL Instant Messenger at way too young of an age. But I seen other guys where they were doing all these different attacks and I wanted to learn how to do them because they were cool. Like not only were they some of them were a little dangerous, some of them were visually cool looking like a scroller for example. You would see like text scrolling down the screen and it would look super cool or a booter knocking somebody out of a chat. Um or a punter. There was all these terms back then and I wanted to know how to do them. And the only way you could learn was know somebody that had those those exploits that was willing to teach you about them and it all started to combine together. But without the help of my mentors and the people that were willing to spend their time if they knew they were talking to a little boy, I don't think they would have been as willing to communicate with me as much. And
+</details>
+
+>> 你大概12、13岁。
+<details><summary>Original English</summary>
+>> you're 12 and 13 years old roughly.
+</details>
+
+>> 是啊。如果你看一些我那个年纪的照片，我看起来比一般的12或13岁孩子稍微成熟一点，因为我浑身都是纹身和穿孔，你知道，我就是有一段坎坷的过去。但你知道，如果你想聊那个故事，我们可以聊。但
+<details><summary>Original English</summary>
+>> Yeah. And if you look at some of the pictures of me at that age, I look I look a little bit older than than your average 12 or 13 year old cuz I'm covered in tattoos and piercings and you know I just had a troubled past. But you know that's a it's a story if you want to get into we can. But
+</details>
+
+>> 是啊，我的意思是，这很惊人，因为你大概在11、12岁就开始服用摇头丸（ecstasy）了。
+<details><summary>Original English</summary>
+>> yeah I mean it's remarkable because you start taking ecstasy at what 11 12 years old.
+</details>
+
+>> 是啊。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 然后从那以后，似乎就像滚雪球一样演变成了海洛因成瘾。
+<details><summary>Original English</summary>
+>> And from there it sort of snowballs it seems into a heroin addiction.
+</details>
+
+>> 并不是立刻就吸海洛因。是摇头丸。你是怎么在11岁拿到摇头丸的？
+<details><summary>Original English</summary>
+>> It wasn't immediately heroin. It was ecstasy. How did you get ecstasy at 11 years old?
+</details>
+
+>> 费城的锐舞派对（Raves）。如果你去查一个当时上过新闻的派对，它叫“上帝的地下室”（God's Basement）。那是我去过的一个非常公开的派对。我当时年纪超级小。他们，你知道，让我进了门，那是在费城一座教堂的地下室里，呃，我会去那里，那里有各种各样的毒品，氯胺酮（ketamine）、摇头丸。
+<details><summary>Original English</summary>
+>> Raves in Philadelphia. So, if you if you look into one that was that hit the news, it was called God's Basement. That was a very public one that I went to. I was super young. They, you know, they let me in the door and it was in the basement of a church in in Philadelphia and uh I would go there and there'd be all kinds of drugs, ketamine, ecstasy.
+</details>
+
+>> 但你当时才11、12岁啊。
+<details><summary>Original English</summary>
+>> But you're 11, 12 years old.
+</details>
+
+>> 是啊。但你看我的样子就知道了。所以，
+<details><summary>Original English</summary>
+>> Yeah. But you see what I look like. So,
+</details>
+
+>> 你看起来……你确实看起来有点……我意思是，我这里有你大概14岁时的照片。
+<details><summary>Original English</summary>
+>> you looked you do look a little bit. So, I mean, I've got photos of you here at like what 14 I think.
+</details>
+
+>> 是啊。13、14岁。是啊，那是我叔叔，George叔叔。那是张搞笑的照片。那是我当摄影师的朋友给我拍的。然后这是我最糟糕的时候。这是我
+<details><summary>Original English</summary>
+>> Yeah. 13, 14. Yeah, that's my uncle right there. Uncle George. That's a funny picture. That's my friend that was a photographer took a picture of me. And then this is me at my worst. This is me
+</details>
+
+>> 15岁。
+<details><summary>Original English</summary>
+>> 15 years old.
+</details>
+
+>> 看这张照片挺疯狂的，但没错，这就是我。是啊，大概15岁，因为海洛因、呃，苯二氮卓类药物（benzo）、安非他明（amphetamines），比如阿得拉（aderall）、Vyvanse（vivance）、Ritalin（rolin），简直是所有的药丸。我想如果你看过我在另一个播客上的谈话，呃，一位精神科医生同时给我开了所有这些药。显然不包括非法药物，但每天三片赞安诺（Xanax），也就是每天6毫克赞安诺，70多毫克的Vivance，30毫克的Adderall用来在下午Vivance药效消退时顶上，然后我们在某个时候又换成了某种剂量的Rol，我记不太清了，但是
+<details><summary>Original English</summary>
+>> It's crazy to look at this picture, but yeah, this is me. Yeah, 15 roughly from heroin, uh, benzo, amphetamines, like well, aderall, vivance, rolin, literally all the all the pills. That's just I think if you saw me talk on a different podcast, um a psychiatrist prescribed me to all of this stuff at the same time. Not obviously the illegal stuff, but uh three Xanax bars a day, which is 6 milligrams of Xanax a day, 70 something milligs of Vivance, 30 milligrams of Adderall to kick back in when the Vivance in the afternoon would wear off, and then we switched at some point to whatever dose of Rol, I can't remember correctly, but
+</details>
+
+>> 这件事的根源是什么？像这种行为、这种情绪失调的根本原因是什么？
+<details><summary>Original English</summary>
+>> what what was the root of the problem here? like what what was the root cause of this behavior, this dysfunction emotionally?
+</details>
+
+>> 可能是因为我与众不同。我长得和周围的每个人都不一样。和你的故事类似，我成长在一个有着不同种族、有着各种不同事情发生的地区。
+<details><summary>Original English</summary>
+>> Probably because I was different. I looked different than everyone around me. Similarly to your story, I grew up in an area with, you know, different races and uh and had different different things going on.
+</details>
+
+>> 你父母在身边吗？
+<details><summary>Original English</summary>
+>> Your parents were around.
+</details>
+
+>> 我妈妈肯定在身边。我爸爸……呃，在我生命中的大部分时间里都不太在。他现在仍在为自己的事情挣扎。呃
+<details><summary>Original English</summary>
+>> My mom was definitely around. My dad uh not not as much for a lot of my life. He's still struggling right now with with his own things. Um
+</details>
+
+>> 成瘾。
+<details><summary>Original English</summary>
+>> addiction.
+</details>
+
+>> 成瘾。是的。
+<details><summary>Original English</summary>
+>> Addiction. Yeah.
+</details>
+
+>> 而且他进进出出监狱好几次了。
+<details><summary>Original English</summary>
+>> And he's been in and out of jail.
+</details>
+
+>> 呃，是的。这并不是因为家里没有爸爸。也不是因为我妈妈……我妈妈做得非常出色。她尽了她所能做的一切。除了我自己之外，不是任何人的错。比如，我明白我当时是个孩子。我明白我的心智当时还没有完全发育成熟，但我是周围环境的产物。我因为与众不同而遭受了相当严重的欺凌，而且在任何方面、任何形式上都无法真正融入人群。我的意思是，如果我今天看起来像这些照片里那样，我相当确定我不会有那么大的麻烦。但在当时，我看起来就像剪刀手爱德华（Edward Scissor Hands）。我确实不是个普通的孩子。
+<details><summary>Original English</summary>
+>> Uh yes. This didn't come from not having a dad in the house. It didn't come from my my mom did an incredible job. She did everything she possibly could. It wasn't anybody but myself. Like, I understand I was a kid. I understand that my mind wasn't fully developed yet, but I was a product of my surroundings. I was bullied pretty hard for being different and um and not really fitting in with the people in any way, shape, or form. I mean, if I looked like this in these photos current day, I'm fairly confident I wouldn't have as much of a problem. But back then I look like Edward Scissor Hands. Like I did I was not the average kid.
+</details>
+
+>> 而你最终进了监狱。
+<details><summary>Original English</summary>
+>> And you ended up going to jail.
+</details>
+
+>> 是的，我最终进了监狱。但第一次是因为一些愚蠢的事情，比如大麻植物，那让我惹上了麻烦。我被判了缓刑。呃，那甚至不是我的植物。只是附近的人的。我因此被起诉了。我妈妈像她一贯那样友善，去了警察局。警察说：“我们就过来一下。我们把它们拿走。别担心。如果你们不让我们进来，我们就坐在外面拿搜查令再把它们拿走，但别担心。”然后他们就把它们从房子里拿走了。呃，我妈妈不知道它们在那里，但她显然知道了。植物被搬出了房子。整个街区都看到了。这让我妈妈很难堪。呃，如果她当时什么都没跟警察说就好了，但她也不懂。那样他们就不能进房子了。我本来可以把它们处理掉什么的。但那只是最终发生的无数件事之一，结果我被送进了寄宿学校、戒毒所、你知道，监狱，每一种可能的地方。我的意思是，如果你听过我的故事，你就知道在其中一所寄宿机构里，我不得不阻止一场教室枪击案。你听说过吗？
+<details><summary>Original English</summary>
+>> Yeah, I ended up going to jail. But the first time it was over stupid stuff like weed plants that that like I got in trouble. I had probation. Uh they weren't even my plants. They were just people in the neighborhood. I got charged with it. My mom being as friendly as she is went to the police station. Police said, "We're just going to come by. We're going to take them out. Don't worry about it. And if you don't let us come in, we'll just sit out and get a warrant and take them, but don't worry." And then they took them out of the house. Uh my mom didn't know they were there, but she obviously found out. Plants came outside the house. The whole neighborhood saw it. Embarrassed my mom. Uh if she would have just never said anything to the cops, but she didn't know any better. But they wouldn't have been able to come in the house. I would have been able to get rid of them and whatever. But that was just one of a million things that ended up happening and getting sent to residentials, rehabs, you know, jails, every every possibility. I mean, if you've heard my story, you know that like one of the residentials I had I had to stop a a a classroom from getting shot up. Did Did you ever see that?
+</details>
+
+>> 听说过。所以你当时在一家寄宿机构，那里的一个男孩告诉你他有一把枪。
+<details><summary>Original English</summary>
+>> Yeah. So, you were you were in a residential facil facility and a boy there told you that he he he had a gun.
+</details>
+
+>> 他没告诉我。我在后面无意中听到了他的话。呃，他有一把枪。我拿走了那把枪。呃，里面装满了子弹。他的计划是杀掉教室里的每一个人。劫持老师或管事的人——我不知道那是技术员还是什么职位——用他的武器抢走他们的钥匙，然后和另一个学员一起逃出寄宿机构。呃，我阻止了那件事的发生。他们出于害怕我因为采取了行动而遭到报复，把我送回了家。然后我又被送回法庭。我原以为他们可能会撤销对我的指控，因为我从来没有任何暴力行为，从来没有任何恶劣的指控。我所有的指控都是与毒品有关的。相反，他们把我送回了青少年拘留中心，那是一个比寄宿机构糟糕得多的地方。然后我又进了另一家戒毒所，那是他们大约第10次把我踢出那个系统的方式。这种事在我身上反反复复地发生。
+<details><summary>Original English</summary>
+>> He didn't tell me. I overheard him behind me. Um and he had a gun. Took the gun. Uh it was fully loaded. His plan was to kill everyone in the classroom. Take the teacher or whatever the person would, I don't know if it' be a tech or what it would be. take their keys with it with his weapon and escape the the residential facility with another one of the clients. Um, I stopped that from happening. They sent me home out of fear of retaliation that I that I did something about it. And then I get sent back to court. I thought they were just going to, you know, maybe drop my charges cuz I've never had any violent, never had any bad charges. All my charges been drugreated. They instead sent me back to the juvenile detention center, which is a way worse place to be than a residential facility. Then I ended up in another rehab and that was their way of getting me out of the system for like the 10th time. It happened over and over and over again to me.
+</details>
+
+>> 是什么改变了这一切？
+<details><summary>Original English</summary>
+>> What changed?
+</details>
+
+>> 改变这一切的是，当我最后一次因为毒品被捕时，他们判了我更长的刑期。我在牢房里待了很长时间。我一直到21岁才结束，尽管我在18岁以下时就被指控“持有并意图贩卖”，这属于毒贩罪名。这是个很严重的罪名。谢天谢地当时我未满18岁，但我一直假释到21岁。我在县监狱的牢房里度过了大量时间，在某些情况下，县监狱甚至比州立监狱的牢房还要艰苦。这就是发生的事情。这不仅仅是因为我害怕坐牢。而是因为远离了那些让我难以保持清醒的人、地点和事物。别误会，我会承担责任。我犯了错。我对那些毒品上了瘾。我无法控制自己。而且，你知道，但远离它们足够长的时间，给了我改变自己生活的能力。而且，呃
+<details><summary>Original English</summary>
+>> What changed was when I finally got arrested for the last time over drugs, they hit me with a longer sentence. I sat in a jail cell for a long time. I got up until I was 21 years old, even though I was charged, you know, under 18 uh with a possession with intent to deliver charge, which is a drug dealer charge. It's a bad charge to get. Thankfully, I was under 18 years old, but I was on parole up to 21. I spent a ton of time in a jail cell in a county jail cell, which is even harder than in some cases in a state prison cell. That is what happened. It It was not just I'm scared of jail. It was being away from the people, places, and things uh that were making it difficult for me to stay sober. Like, don't get me wrong, I'll take accountability. I made a mistake. I got addicted to these drugs. I couldn't stop myself. and uh and you know, but being away from them long enough gave me the ability to uh to change my life. And uh
+</details>
+
+>> 远离了那些基本上在纵容某些行为的人
+<details><summary>Original English</summary>
+>> being away from the people that were basically enabling certain
+</details>
+
+>> 是的。你熟悉费城的肯辛顿（Kensington Philadelphia）吗？
+<details><summary>Original English</summary>
+>> Yeah. Are you familiar with Kensington Philadelphia?
+</details>
+
+>> 不熟悉。
+<details><summary>Original English</summary>
+>> No.
+</details>
+
+>> 那里非常……就像僵尸之地。如果我现在上YouTube输入“Kensington Live”，我用我全部的身心向你保证，你会看到街角有人身体向一侧弯折，他们，你知道，他们现在就在刺骨的寒风中站着睡觉。这令人作呕，而我童年的大部分时间就是在那里度过的。但在那个时候还没有芬太尼，没有metatomdine，没有xyzine。所有这些东西都在吞噬你的血肉。比如那里有人胳膊上缠着绷带四处走动，因为他们的胳膊和腿正在被截肢，或者开始坏死。现在这个问题就是这么严重。
+<details><summary>Original English</summary>
+>> It's it's a very it's it's like zombie land. So if if I were to go on YouTube right now and type in Kensington Live, I guarantee you with every ounce of my being that you'll see people on the corner with their bodies bent over the side and they you know they're they're sleeping standing up uh right now in the freezing cold. It's it's sickening and that's where I spent most of my childhood. But at that time there weren't there wasn't fentanyl, there wasn't metatomdine, there wasn't xyzine. All these things that are eating away your flesh. Like there's people walking around with bandages on their arms and because their their arms and legs are getting amputated or or necrosis is starting. Like it's that bad of an issue right now.
+</details>
+
+>> 我简直不敢相信我看到的画面。我刚打开了费城肯辛顿的
+<details><summary>Original English</summary>
+>> I can't believe what I'm seeing. I just went on Kensington Philadelphia.
+</details>
+
+>> 嗯哼。
+<details><summary>Original English</summary>
+>> Mhm.
+</details>
+
+>> 直播。
+<details><summary>Original English</summary>
+>> Live stream.
+</details>
+
+>> 直播。
+<details><summary>Original English</summary>
+>> Live stream.
+</details>
+
+>> 那里有两个人
+<details><summary>Original English</summary>
+>> And there's two people that are
+</details>
+
+>> 弯着腰。
+<details><summary>Original English</summary>
+>> bent over.
+</details>
+
+>> 对折着弯腰。好的，明白了。
+<details><summary>Original English</summary>
+>> Doubled over. Okay, understood.
+</details>
+
+>> 就在我们进行这段对话的时候，他们弯腰对折着，看起来像睡着了一样。
+<details><summary>Original English</summary>
+>> As we're having this conversation, the doubled over do, they look like they're asleep.
+</details>
+
+>> 芬太尼杀死了几乎每一个和我一起长大的人，还有我一半的家人，包括我最好的朋友。我的意思是，我绝对不可能再去碰任何那种东西了，显然是出于害怕死于其中。但是，你知道，我的意思是，老实说，哥们，一开始我喜欢毒品。我觉得它们感觉很棒。但最终发生的事情和每个人身上发生的一样：你发现你醒来时躺在了一个怪物旁边，你知道，这就像是，“嗯，那个在这方面有问题的人，你知道，我肯定和他不一样，因为我可以一个星期不碰它，或者我可以做这个，或者我可以做那个。”但结果总是以同样的方式结束，你知道，他们让你……抱歉，你的耐受度变得越来越大，越来越大，变得越来越贵，然后你必须做疯狂的事情来弄到钱买那些毒品，然后要么你进监狱，要么你进精神病院，要么你死掉。
+<details><summary>Original English</summary>
+>> Fentanyl has killed like every single person that I grew up with and half of my family, including my best friend. I mean, it's I would never in a million years mess with any of that stuff again out of fear of obviously dying from it. But, uh, you know, it's I mean, I'll be completely honest with you, man. I at first I love drugs. I thought they felt great. But what ended up happening is what happens to everybody. you find out that you wake up next to a monster, you know, it's it's like, well, well, this guy that's having a problem with it, you know, he must be I must be different than him because I can go without it for a week or I can do this or I could do that. But then when it's it always ends the same way, you know, they get your I'm sorry, your tolerance gets bigger and bigger and bigger becomes more and more expensive and then you have to do crazy things to get the money to get access to those drugs and then either you go to jail, you go to an institution or you die.
+</details>
+
+### 转型与协助执法：打击764与数据泄露风险
+
+>> 所以那就是你的人生故事发生转折的时刻，在那之后的某个时间点，你决定用你的人生去做点别的事。
+<details><summary>Original English</summary>
+>> So that's the moment where your story changes and you decide to do something else with your life at some point thereafter.
+</details>
+
+>> 是啊，那并不是什么疯狂的事情，比如某个人对我说了什么，或者我读了什么书。那只是在牢房里待了那么长时间，远离了它，意识到没有那些药物我感觉有多好，然后在结束假释的那一秒，我离开了宾夕法尼亚州，而且再也没有回去过，你知道，我创办了药物滥用治疗机构/心理健康戒毒中心。当时我创办了三家。呃，它们规模相对较大，口碑很好。呃，我以前的商业伙伴现在还在做。他现在有很多家了。口碑依然很好。而我把它们卖掉了。
+<details><summary>Original English</summary>
+>> Yeah, it was it it wasn't some crazy thing that like some guy said to me like I didn't read some book. could it was just spending time in a cell for that long being away from it, realizing how good I felt without the substances and then the second that I got off parole. I uh I left Pennsylvania and and I never went back, you know, and I started substance abuse facilities uh/ mental health drug rehabs. At that time I started three of them. Um they're relatively large, had a great reputation. Uh my old business partner still does it. He has a bunch of them now. Still great reputation. and and I sold them.
+</details>
+
+>> 然后在某个时候，你开始与执法部门合作。
+<details><summary>Original English</summary>
+>> And at some point you start working with law enforcement.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yep.
+</details>
+
+>> 我觉得这很好奇。为什么执法部门会和你合作？他们对你说什么？他们需要什么帮助？你拥有什么是他们自己无法获取的？
+<details><summary>Original English</summary>
+>> I find that curious. So why why do law enforcement work with you? What is it they say to you? What is it they need help with? What is it that you have that they can't access themselves?
+</details>
+
+>> 他们接受培训所使用的很多工具和方法都有点过时了。
+<details><summary>Original English</summary>
+>> So a lot of the tooling and methodology that that they're trained on is a little bit old.
+</details>
+
+>> 好吧。
+<details><summary>Original English</summary>
+>> Okay.
+</details>
+
+>> 所以并不是说他们没有热情，因为他们有。呃，他们几乎所有人，尤其是在针对儿童的网络犯罪部门工作的人。缩写是IAC。他们可能正在使用一个效果很好的工具，但你知道，它无法访问我们拥有的数据点，或者举个例子，他们可能需要访问某台设备，或者他们可能需要，你知道，一种关于如何进行反向人脸识别的方法。也许他们没有预算每年花——我不想点名那家公司——每年花10万美元买一个搜脸的东西，或者也许他们想查一个用户名，你知道，有一百万种场景我可以帮着培训他们，但通常他们在联邦层面——除了地方机构之外，因为我主要指的就是这些——利用我来做的事情，是能够识别这些更难识别的群体，比如764以及与comm相关的子群体。你熟悉“虚无主义”（nihilism）这个词吗？
+<details><summary>Original English</summary>
+>> So it's not that they don't have the passion cuz they do. Uh almost all of them especially and they work in internet crimes against children. Uh IAC is is the acronym. So they they may be using a tool that works great but you know doesn't have access to the data points that that we have or for example they they might need access to a device or they might need you know a method on how to you know reverse facial recognition. Maybe they don't have the budget to pay I don't want to name their company but pay $100,000 a year for something to to search for a face or maybe they want to run you know a username. You know, there's a million scenarios where I can help train them, but uh usually what they're utilizing me for on the federal side, outside of the local agencies, cuz that's mostly what what I'm referring to, is uh is being able to identify these harder to identify groups like 764 and subgroups related in comm are you familiar with the term nihilism
+</details>
+
+>> 大致了解，是的。
+<details><summary>Original English</summary>
+>> broadly? Yeah.
+</details>
+
+>> 好吧。好吧。所以它基本上就是指你不在乎任何事情，这是对它的简短解释。所以，他们是一个由得克萨斯州的一个孩子创立的虚无主义撒旦邪教。NPD的东西，呃，国家公共数据泄露事件（National Public Data Breach），对美国公民来说尤其重要，需要了解。呃，有28亿条记录被暴露在了互联网上。大多数人不知道这件事，但你知道，美国有3亿人。所以，28亿条记录意味着几乎每个人都受到了影响，特别是根据我们的……这不是事实，但几乎可以肯定，如果你超过30岁，你住过的每一个地址、你的电话号码、你的完整社会安全号码都在外面了，而那潜在的危害是什么？
+<details><summary>Original English</summary>
+>> Okay. Okay. So it just basically means you don't care about anything and is the short explanation for it. So, they're a nihilistic satanic cult that was created by a kid in Texas. The NPD stuff, uh, National Public Data Breach is important for United States citizens to know in particular. Um, there were 2.8 billion records that were exposed to the internet. And most people don't don't know about this, but you know, there's 300 million Americans. So, 2.8 8 billion records means almost everybody's affected especially uh from what our this isn't this isn't a fact but almost guaranteed if you're over 30 years old your every address you've ever lived at your phone number your social security number in full is out there and and what's the potential harm of that
+</details>
+
+>> 嗯，他们可以用你的名字开信用卡，他们可以打电话给公司冒充你，可以窃取你的身份，有很多危害。所以，你可以做一件事来检查自己是否在其中，这是完全免费的，就是去npd pentester.com，输入你的名字、姓氏、出生年份，然后把你住过的所有州都试一遍。它会显示你是否受到了那次泄露的影响。知道自己是否受影响很重要，因为你需要做的是冻结你的信用。而信用，你知道，对我个人以及对大多数人来说都是件重要的事。冻结你的信用不会产生任何其他影响，只会阻止别人在你的名下开卡、贷款、办抵押贷款、买车或其他任何事情。
+<details><summary>Original English</summary>
+>> well they could open up credit cards in your name they could call a company and impersonate you could steal your identity there there's a lot so so something that you can do to check if you're in it it's completely free is go to npd pentester.com would put in your first name, your last name, your year of birth, and then try all the states you lived in. It'll show you if you were affected or not by that breach. It's important to know if you were because what you need to do is freeze your credit. And and credit is, you know, important thing uh to to me in particular and to and to most people. Freezing your credit, it doesn't do anything at all other than stop people from opening up cards or taking out loans or mortgages or cars or whatever it might be in your name.
+</details>
+
+### 手机安全与AI时代的威胁
+
+>> 我们都有这些设备。我们有iPhone、iPad、电脑。我们家里有这些设备。
+<details><summary>Original English</summary>
+>> We all have these devices. We have iPhones, iPads, computers. We have these at home devices.
+</details>
+
+>> 我想有一种隐含的假设，认为它们是安全的。
+<details><summary>Original English</summary>
+>> And I think there's a sort of an implicit assumption that they are secure.
+</details>
+
+>> 是啊。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 对吗？
+<details><summary>Original English</summary>
+>> Is that correct?
+</details>
+
+>> 我的意思是，在很大程度上，我会说是的。在我看来，它是安全的，你知道，比安卓更安全。我不认为安卓对任何人来说是个好主意，特别是因为你可以安装第三方应用程序，而这可能意味着远程访问木马（remote access Trojans）。你熟悉那是什么吗？
+<details><summary>Original English</summary>
+>> I mean, for the most part, I would say yes. I would say that it's secure, you know, more secure than an Android in my opinion. I don't I don't think that Android is a good idea for anyone, especially because you can install third party applications and and uh and and that could mean remote access Trojans. Are you familiar with what that is?
+</details>
+
+>> 不熟悉，但从名字上我大概能猜出来。
+<details><summary>Original English</summary>
+>> No, but it kind of I can figure it out from the name.
+</details>
+
+>> 是啊，这个名字基本就解释了。但就像，你知道，很多时候在……比如在电脑上有一行命令，我可以生成一个叫做APK的东西。那是安卓的应用程序。我可以生成那个文件，通过电子邮件发给你，打开——如果我能物理接触到你的手机，把它插进你的手机，安装它，允许那个应用获得所有权限，然后从远程位置，我就能完全控制你的手机，而你根本看不到我有任何访问权限。iPhone有点不同。那通常不是一种可能，除非你有那种零日漏洞（zeroday exploits），意思是从未被发现过的漏洞。还没有人知道它的存在。这就是为什么它被称为零日漏洞。有一家特定的公司一直在接连不断地发现它们，这使得这在iPhone上成为可能。而在以前，这并不是什么常见的事。苹果在加密数据和让数据极难恢复方面做得非常出色。比如当苹果收到传票时，你知道，他们可以提供一些信息，但他们无法提供加密在……你知道，只能在你手机上解密的东西。他们把这叫做安全隔区（secure enclave）之类的，我想这是苹果对此的术语。但是，呃，如果我告诉你你的手机完全安全，那我就是在撒谎，因为它并不安全。但我认为用iPhone被攻击的可能性比用安卓要小得多。
+<details><summary>Original English</summary>
+>> Yeah, the name kind of explains it. But like you know, a lot of times on a like there's a one on one line command on a computer where I can generate it's called an APK. It's an application for an Android. I could generate that that that file, send it to you in an email, open if I had physical access to your phone, plug it into your phone, install it, uh allow that application, all permissions, and then from a remote location, have complete control over your phone without you seeing that I have any access to it at all. iPhones are a little different. That isn't usually a possibility unless you have one of those zeroday exploits, meaning like an exploit that has never been discovered before. No one knows it exists yet. That's why it's called a zeroday exploit. This one particular company has been finding them back to back and that is making this possible for iPhones. Whereas before it wasn't as much of a thing. Apple does such a great job at uh encrypting data and making it really difficult to to recover. Like when Apple gets subpoenaed that you know they can give some information but they can't give things that are encrypted on you know only decrypted on your phone. They call it like a secure enclave, I think is the Apple terminology for it. But um I'd be lying if I told you that your phone is completely safe because it's not. But I think you're a lot less likely to be attacked with an iPhone than you are with an Android.
+</details>
+
+>> 一切都可以被黑客入侵。你知道，前几天我和一个人聊过，呃，他是个安全专家，他对我说，他说：“关于你的人身安全，我们可以做些事情，但当涉及到像高调人物之类的事情时，”他在这个播客上说，“如果权势人物想进入你的手机，他们就能进入你的手机。”
+<details><summary>Original English</summary>
+>> Everything can be hacked. You know, I spoke to someone the other day um he's a security expert and he was saying to me, he goes, "Your physical security we can do some things about, but when it relates to sort of like high-profile people and stuff, he was on this podcast. He said, "If powerful people want to get into your phone, they're going to get into your phone."
+</details>
+
+>> 这绝对是真的。所以，除了我刚才谈到的那个组织之外，还有一个非常公开的组织，叫做NSO集团，呃，在以色列。我想是在那里，他们……我的意思是，你听说过“飞马”（Pegasus）吗？我猜你听说过，现在它非常有名。我总是收到很多邮件，人们以为自己感染了飞马，但对于不知道的人来说，飞马就是你输入一个电话号码——至少据我所知是这样。你输入一个电话号码，按下回车。现在，任何拥有飞马访问权限的人——NSO必须签发使用它的权限。所以他们得为此付费。现在他们就拥有了你手机的完全访问权限，而且你不会有任何迹象表明这正在发生。换句话说，它会在后台运行。呃，他们可以通过你的摄像头看东西、阅读你的短信、下载你的照片、做任何他们想做的事、监控你的通话。这是一种非常危险且恶劣的攻击。它已经存在很多年了。我相信随着苹果修补漏洞之类的，他们也一直在迭代更新。但现在随着AI变得越来越先进，这些……像飞马是我很长一段时间里唯一熟悉的。而现在，就像在过去几周里，iOS上接二连三地发生攻击。所以我想这最终会平息下来，但现在随着所有这些人都能接触到这些强大的新AI模型，这算是个新情况。
+<details><summary>Original English</summary>
+>> That is absolutely true. So, outside of the group I was just talking about, there's one that's very public called the NSO group uh in in in Israel. I believe it's and they I mean, have you heard of Pegasus? I'm assuming you now it's a very popular one. I get a lot of emails all the time with people thinking they're infected with Pegasus, but like for those that don't know, Pegasus is you put in a phone number to my knowledge at least. You put in a phone number, you hit enter. Now, whoever has, you know, access to Pegasus, NSO has to issue the ability to use it. So they have to pay for that. Now they have full access to your phone like and you won't have any indication that that's happening. So it would be running behind the scenes for other words. Uh and they they could look through your camera, read your text, download your photos, do whatever they want, monitor your phone calls. It's a really dangerous and bad attack. And it's been around for for many years. And I believe they've iterated over, you know, as Apple has patched things or or whatever. But now that that AI is getting more advanced, these like Pegasus was the only one I was familiar with for a long time. And now it's like in the last couple weeks, there's just one attack after another happening on on iOS. So I think I think that will inevitably chill out, but right now it's kind of new with all these people getting access to these new powerful AI models.
+</details>
+
+>> Sam Alton（原文如此）刚刚——我想是上周——说了这话。他谈到AI如何意味着现在我们必须彻底重新思考在互联网上什么是安全。
+<details><summary>Original English</summary>
+>> Sam Alton just um I think last week said this. He's talking about how AI means that now we have to completely rethink what it is to be secure on the internet.
+</details>
+
+>> 当然，
+<details><summary>Original English</summary>
+>> Sure,
+</details>
+
+>> 我甚至不知道该用什么足够戏剧化的词，但向我们袭来的这个问题，我认为作为组织领导者、国家或个人，我们仍然没有认真对待。今年早些时候有过一个时刻，就像人们所说的“神话恐慌”（mythos freak out）之类的，我认为情况确实有所好转，比如人们肯定修补了一些漏洞，但这是另一个人们没有真正凭直觉理解指数级增长的例子。所以就像是：好吧，有这些模型，它们能找到一堆安全漏洞。那些大概就是所有存在的安全漏洞，或者模型永远能找到的所有安全漏洞了。我不认为大多数人会说：“好吧，模型会变得聪明得多。它们可能会找到像疯狂的漏洞那样的东西，你知道，超出我们认为黑客所能做到的正常威胁模型的漏洞，你知道，硬件层面的疯狂东西，诸如此类的。”于是人们修补了一些漏洞，你知道，安全专业人士仍在恐慌，首席信息安全官（CISO）仍在恐慌。但大体上，我认为大多数组织领导者已经有点翻篇了，而模型还在继续发展，我不再认为我们将能够仅仅修补所有漏洞了。我认为我们将不得不彻底改变防御模式，使用同样的技术来构建一种新型的防御盾牌。我认为这是一个巨大的安全和安保问题。
+<details><summary>Original English</summary>
+>> I don't even know what a dramatic enough word to use, but the problem coming towards us um I think is still something that we have not as organizational leaders or countries or individuals taken seriously. There was like a moment earlier this year where it was like the mythos freak out or whatever people called it and I think things did get somewhat better like people definitely patched some bugs but it was another one of these cases where people didn't really intuitit the exponential. So it's like okay there are these models they can find a bunch of security vulnerabilities. Those are probably all of the security vulnerabilities that exist or all the security vulnerabilities that models are ever going to find. And I don't think most people sort of said, "Okay, the models are going to get much smarter. They can probably find bugs like crazy bugs, you know, bugs that are outside of the normal threat model of what we think a hacker can do, you know, hardware level insane stuff, whatever." And so people fix some bugs and, you know, security professionals still freaking out, CISO still freaking out. But largely speaking, I think most organizational leaders have somewhat moved on and the models have kept going and I I no longer think we're going to be able to just patch all the bugs. I think we're going to have to completely switch the defense model to sort of using the same technology to for sort of a new kind of defense shield. And I think it's a huge safety and security issue.
+</details>
+
+>> 是啊，我完全同意这一点。而且是的，这些模型正在变得越来越聪明，越来越聪明。这里有一件人们需要知道的重要事情，就是“人工智能”（artificial intelligence）这个术语。我个人并不认为它是“人工智慧”的。它非常擅长把模式拼凑在一起。AI是基于已经存在的数据进行训练的。你身后有一堆书，你知道，互联网、整个谷歌、整个维基百科、所有平台的全部内容。你试图基于已经存在的东西来训练这些AI模型。然后你创建一个庞大的神经网络，里面的东西都相互通信，然后你说，嘿，我想谈谈，呃，你知道，我想谈谈这个盒子。所以如果你问一个问题：“我怎么打开这个盒子？”它会查看所有这些变量，建立起联系，然后根据我拥有的信息，给出打开这个盒子的最佳方式的示例。它无法“人工智能地”创造出它自己的打开盒子的方式。所以我们都在努力——所有这些公司，尤其是AI公司，都在试图寻找所谓的通用人工智能（artificial general intelligence，简称AGI）。呃，我相信那才是AI会比现在可怕得多的时候。它对我们的生活非常有用。但没有良知或没有感知能力，你怎么能拥有智慧呢？
+<details><summary>Original English</summary>
+>> Yeah, I I couldn't agree more that. And yeah, these models are getting smarter and smarter and smarter. And something that is important for people to know here uh is the term artificial intelligence. I don't personally agree that it's artificially intelligent. It's really good at putting together patterns. AI is trained based on data that's already exists. There's a bunch of books behind you, you know, the internet, the entirety of Google, the entirety of Wikipedia, the entirety of all platforms. You try to train these AI models based on stuff that exists. And then you you create a huge neural network things that all communicate with each other and you say hey I want to talk about uh you know I want to talk about this box. So if you ask a question how do I open this box it's going to look at all these variables can make its connections and then give its example of what's the best way to open this box based on the information that I have. It cannot artificially intelligently create its own way of opening the box. So we're working on all these companies or especially AI companies are trying to find what's called artificial general intelligence or AGI. Uh that's when AI I believe is going to be a lot scarier than it is right now. It's very useful for our life. But it's how could you have intelligence without a conscience or being sentient?
+</details>
+
+>> 你知道，关于你刚才给的那个盒子类比。我的大脑不就是那样工作的吗？我看着它，心想那是个盒子，然后我想，哦，那是一个把手的模式。我以前没见过那个把手，但我见过把手。
+<details><summary>Original English</summary>
+>> You know on that point around the box analogy you gave. Isn't that how my brain works? So I looked at that I thought that's a box and I thought oh that is a handle pattern. I've never seen that handle, but I've seen handles.
+</details>
+
+>> 所以我的大脑就想，拉那个。
+<details><summary>Original English</summary>
+>> So my brain goes, pull that.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yes.
+</details>
+
+>> 这正是大语言模型处理它的方式。它会说，大语言模型根本不需要见过这个特定的把手。
+<details><summary>Original English</summary>
+>> Which is exactly how the large language model would be processing it. It would say the large language model wouldn't have ever had to see this particular handle.
+</details>
+
+>> 不需要。
+<details><summary>Original English</summary>
+>> No.
+</details>
+
+>> 但它知道那是一个把手。
+<details><summary>Original English</summary>
+>> But to know that that's a handle.
+</details>
+
+>> 是啊。它会知道那是把手的形状。但如果它没有关于那个特定把手的信息，而你说“我怎么换掉那个把手？”，如果它不知道那个盒子，也不知道那个把手，它就可能会编出点什么，他们称之为“幻觉”（hallucinating）。所以，AI模型会产生幻觉，然后说：“嗯，打开盖子，看看下面有没有螺丝。”你知道，它会试图做出最佳猜测，但它不会知道这个盖子下面到底有什么。
+<details><summary>Original English</summary>
+>> Yeah. It would know it's the shape of a handle. But if it didn't have information about that particular handle, and you said, how do I switch out that handle? If it doesn't know about that box, it doesn't know about that handle, it's it could it could come up with something they call it hallucinating. So, the AI model would hallucinate and say, "Well, open up the lid and see if there's screws underneath." You know, it'll try to make a best guess, but it's not going to know what's underneath of this lid.
+</details>
+
+### 个人防护与黑客设备演示
+
+>> 桌上的这些东西都是什么？这个盒子里到底装了什么？
+<details><summary>Original English</summary>
+>> What are all these things on the desk? And what what actually is in this box?
+</details>
+
+>> 嗯，你想让我把背包里剩下的小玩意儿放进盒子里。这些是我做过笔记的，我觉得你会感兴趣。而且我不知道你想往哪个方向聊这个。呃，
+<details><summary>Original English</summary>
+>> Well, you wanted me to put the rest of my gadgets that I had in my backpack in the box. These are ones that I took some notes on that I thought you'd be interested in. And I don't know what direction you want to go with with this. Uh,
+</details>
+
+>> 是啊。对我来说，这真的关乎我认为普通大众对这个世界是什么样子带着某种认知。
+<details><summary>Original English</summary>
+>> yeah. For me, it's it's really about I think that the general public walk around with a certain perception of how the world is.
+</details>
+
+>> 是啊。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 以及他们有多安全，还有AI对他们的个人安全意味着什么等等。所以我只是想先揭开安全、网络安全、信息安全、呃，数据安全现实的盖子。我原以为我拥有的一切都是安全的。
+<details><summary>Original English</summary>
+>> And how secure they are and what AI means for their personal security and so on. So, I just first want to sort of lift the lid on the reality of security, online security, cyber security, um data security. I thought everything I had was secure.
+</details>
+
+>> 我原以为我放到互联网上的信息相对是安全的。呃，通过采访很多间谍和CIA的人，我逐渐了解到也许我并不安全。呃，随着AI的到来，你说你对此感到担忧。你现在个人采取了哪些两年前可能没有采取的预防措施？嗯，我必须采取和大多数人不同的预防措施，因为现在我在互联网上到处都是，而且我有大量的人，尤其是我们待会要谈到的那些群体，呃，他们正在针对我。所以，有人出现在我家门口。我有特警队（SWAT teams）出现在我家门口。我相信你熟悉“报假警骚扰”（swatting），你知道，USPS的箱子，因为它们是免费的，所以他们就寄，你知道，一个又一个箱子出现在我家门口，都是空的。那些只是装运箱，你知道，他们做一些故意惹人烦的事情。然后在另一方面，他们还做
+<details><summary>Original English</summary>
+>> I thought the information I put on the internet was was relatively secure. Um, and from interviewing a lot of spies and CIA people, I've come to learn that maybe I'm not. Um, as AI comes into shore, you said that, you know, you are concerned about it. What precautions are you taking personally now that maybe you weren't taking a couple of years ago? Well, I have to take different precautions than most because now that I've been all over the internet and all this stuff and I have a lot of people, especially these the these groups that we'll get into, um, they're targeting me. So, people are showing up at my house. I have SWAT teams showing up at my house. I'm sure you're familiar with swatting, you know, USPS boxes where cuz they're free, so they mail they just, you know, boxes after box after box show up at my house empty. They're just shipping boxes, you know, they they do things that are intentionally annoying. And then on the other side of things, they they do
+</details>
+
+>> 是谁在做这些事？
+<details><summary>Original English</summary>
+>> who's doing this?
+</details>
+
+>> 是comm或者764组织，或者这些组织的分支。那些人恨死我了。所以他们想尽一切办法找到我。因此我必须格外小心，而且这并不是出于偏执或焦虑。他们确实有证据表明，你知道，他们会进行公开刺杀、朝别人窗户扔砖头。举一个例子，他们朝一名女性或者说一个女孩——不是女性，是个女孩——他们把砖头扔穿了她汽车的后挡风玻璃。她心脏病发作。她死了。她当时还带着一个婴儿。所以那是一起双重谋杀案。这些人，你知道，他们是危险人物。所以我采取了额外的预防措施，尽量保护自己，尽可能从互联网上删除我能删除的数据。
+<details><summary>Original English</summary>
+>> This is uh the comm or the 764 group or or or offshoots of these groups. Those people really hate my guts. So, they're trying to to do whatever they can to find me. So, I have to be extra precautious uh and and not out of uh out of paranoia or anxiety. They they do they they have evidence of, you know, doing public stabbings, throwing bricks through people's windows. One one example, they threw a brick through a woman or a girl, not a woman, a girl. Uh they threw it through the back windshield of her car. She had a heart attack. She died. She had a baby. So, it's a double murder situation. These guys, you know, they're dangerous people. So I I take extra precaution in and trying to be as you know protective as I can with what data I can remove from the internet.
+</details>
+
+>> 他们为什么在意你？
+<details><summary>Original English</summary>
+>> Why do they care about you?
+</details>
+
+>> 因为我在曝光他们的……你知道，而且他们也想要名声（clout）。所以这可能不太关乎曝光他们的组织，而更多的是因为他们只想成为那个对Brian Montgomery或者对Steven Bartlett报假警（swatted）的人，或者做无论什么他们正在做的事的人。但他们所做的大多数事情真的毫无道理可言，你待会就会看到的。
+<details><summary>Original English</summary>
+>> Because I'm exposing their, you know, and and also they want clout. So it may be less about the exposure of their of their groups and more so about they just want to be the person that swatted Brian Montgomery or swatted Steven Bartlett or you know or you know done whatever they're doing. But they uh they really most of what they're doing has no sense to it, which you you'll see.
+</details>
+
+>> 如果可以的话，给我的观众介绍一下你在谈论的背景情况。
+<details><summary>Original English</summary>
+>> Give my audience context on what you're talking about. If you can
+</details>
+
+>> 是啊。嗯，如果不解释这是什么，很难给他们背景情况。你想让我现在就讲这个吗？因为这一上来就很黑暗。所以如果我们……我们可以先讲小玩意儿，或者先讲那个。它真的很黑暗。所以我不知道你是不是想用那个来结束这次对话。
+<details><summary>Original English</summary>
+>> Yeah. Well, it's it's hard to give them context without explaining what Do you want me to get into this? Because it's dark like right away. So, if if you we could do the gadgets or we could do that first. It's it's really dark. So, I don't know if you want to finish this conversation with that.
+</details>
+
+>> 这些小玩意儿和它有关联吗？
+<details><summary>Original English</summary>
+>> Are the gadgets linked to it?
+</details>
+
+>> 呃，没有。
+<details><summary>Original English</summary>
+>> Um, no.
+</details>
+
+>> 它们没有。
+<details><summary>Original English</summary>
+>> They're not.
+</details>
+
+>> 是啊，没有。完全由你决定，我只是知道那是一件你可能永远都不会忘记的事。所以很重要的是我提前告诉你，而我愿意来这里的主要原因就是我想让父母们意识到这些人和这些群体的危险，而且现在我们国家也更加严肃地对待这件事了。我的意思是，FBI的每一个外勤办事处都介入了。它现在被视为一个国内恐怖主义团体。特别是764组织以及与comm相连的做着同样事情的分支群体，但我一会再详细讲那是什么。
+<details><summary>Original English</summary>
+>> Yeah, they're not. It's It's completely up to I just I know that it's something it's you probably are never going to forget. So like it's important that you I tell you that in advance and that was the main reason I wanted to come on here was cuz I want parents to be aware of the dangers of these people and these groups and uh and that now our our country is taking it a lot more seriously. I mean every FBI field office has been has been engaged. It's it's now considered a domestic terrorist group. It's a it's, you know, specifically 764 group and the offshoot groups that they're doing the same thing connected to the comm, but it's a I'll get more into what that is in a second.
+</details>
+
+>> 好吧，那我们先看小玩意儿，然后最后再谈那个。这样挺合理的，以防我需要……
+<details><summary>Original English</summary>
+>> Okay, let's do the gadgets then and then we'll finish on this. That makes sense just in case I need to
+</details>
+
+>> 是啊，那会很艰难。但我之所以要给你看，而且我想让你知道，是因为这些孩子每天都暴露在其中。你知道，我说的这些9、10、11岁的孩子每天都暴露在我将要给你看的东西里，那会让你大吃一惊的，我虽然不太了解你，但我能看出你有颗善良的心，你会明白这有多荒谬。
+<details><summary>Original English</summary>
+>> Yeah, it's going to be tough. But the reason why I'm going to I'm going to show you and I I want you to know because these kids are exposed to it every day. You know, like these these I'm talking 9 10 11 year old kids that are exposed to what I'm going to be showing you and and that's going to blow your mind and I don't know you very well, but I I could tell you have a heart and you'll understand how it's ridiculous.
+</details>
+
+>> 我们这里有这些小玩意儿。它们是什么？它们能做什么？为什么它们跟我们有关？
+<details><summary>Original English</summary>
+>> We have these gadgets here. What are they? What do they do? Why are they relevant?
+</details>
+
+>> 好的，它们每一个都有各自的功能。其中一些在能力上有交叉。这个叫做“饼干”（the biscuit）。你可以摸一下，我的意思是，它就是一个3D打印的外壳。按钮掉了，不过那是我的错。这东西能够进行Wi-Fi和蓝牙攻击，还有其他一些功能。
+<details><summary>Original English</summary>
+>> Okay, so each one of them kind of does its own thing. Some of them have have a crossover in ability. This is called the biscuit. You can feel I mean it's just it's a 3D printed case. The button fell off, but that's my fault. That thing is capable of Wi-Fi and Bluetooth attacks and some other stuff.
+</details>
+
+>> 当你说Wi-Fi攻击和蓝牙攻击时，那是什么意思？
+<details><summary>Original English</summary>
+>> When you say Wi-Fi attacks and Bluetooth attacks, what does that mean?
+</details>
+
+>> 所以，我刚开启了它。我打开了开关。如果你看到那里，有一个小LED灯。
+<details><summary>Original English</summary>
+>> So, I just enabled it. I turned it on. There's a little LED there if you see that.
+</details>
+
+>> 看到了。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 它的作用是向外广播。而且他们有一个iOS应用，就是一个真正的iPhone应用
+<details><summary>Original English</summary>
+>> And what that does is it's going to broadcast out. And they have an iOS app, so an actual iPhone app
+</details>
+
+>> 我可以连接到它。哦，等一下。好了。我其实可以让你来操作。这就是我连接到了“饼干”，对吧？嗯哼。
+<details><summary>Original English</summary>
+>> that I can connect to. Oh, hold on. Here we go. So, I'll actually let you do it. So, this is me connected to the biscuit, right? Mhm.
+</details>
+
+>> 然后你就可以进行“战争驾驶”（war drive），也就是查看你周围所有的Wi-Fi网络和周围的蓝牙设备。你还可以通过这里的反监控按钮查看是否有人在追踪你。它会寻找你身后的设备，比如共享同一个MAC地址的设备，MAC地址就是设备上的一个标识符。
+<details><summary>Original English</summary>
+>> And then you can you have the ability to war drive, which is to see all the Wi-Fi networks around you, Bluetooth devices around you. You have the ability to see if someone's tracking you with an anti-surveillance button here. It's looking for devices that are behind you, like that are sharing the same MAC address, which is just an identifier on a device.
+</details>
+
+>> 所以这是一个防御设备，而不是攻击设备。
+<details><summary>Original English</summary>
+>> So, this is a defense device, not an attack device.
+</details>
+
+>> 两者都是。两者都是。所以在这个案例里，它有嗅探器（sniffers）、攻击器（attacks）、扫描器（scanners），而我现在专门在Wi-Fi界面里。所以在这个例子中，假设我们要扫描接入点并点击加号。于是我们会看到我们周围的一切。我们在这里看到了“flight stories”，对吧？所以我们点击“flight story”。既然我们已经选中了它，我就可以用它来识别真正的路由器——也就是目标——在哪里，它会根据信号强度告诉我它实际位于何处。然后我进入攻击界面，我可以进行所谓的取消认证攻击（deoff attack），如果我进行捕获握手（capture handshake），本质上这意味着一旦我启动这个，它会尝试连接网络，但会发生的事情是它会把设备踢下线。就像实际的手机或设备，而在它尝试重新连接的那一秒，它会产生一个所谓的握手，即四次握手（four-way handshake）。而那个握手，你可以保存在你的手机或任何设备上，之后把那个文件带回家并尝试破解密码。所以现在你不再需要处于Wi-Fi网络的近距离范围内了。只要你拥有了那个从网络掉线、设备重连中捕获的握手，并且那个四次握手被存储下来。我就可以使用所谓的密码字典（password list）。密码字典就是一个巨大文件里的一堆不同的单词和文本。比如，假设它有20GB，一个巨大的文本文件，对吧？假设你的密码是“password 1 2 3”，首字母P大写，末尾有个感叹号。规则集可能会把第一个字母大写，在末尾加上一个数字和一个符号，然后把每个符号都用一遍。于是它就把那个，比如说20GB的文件变成了一个200GB的文件或者TB级的文件。
+<details><summary>Original English</summary>
+>> It's both. It's both. So, so in this case, we're it has sniffers, attacks, scanners, and I'm specifically in Wi-Fi. So, in this example, let's say we're going to scan access points and hit plus. So we'll see everything around us. We see flight stories here, right? So we'll click flight story. Now that we have that selected, I could use this to identify where the actual router is, the the target, and that will tell me based on the signal strength where it's actually located. And then I go into attacks and I can do what's called a deoff attack, which if I do capture uh handshake, essentially what that means is once I start this, it's going to try to connect to the network, but what will happen is it will knock the device offline. like the actual phone or device and the second it tries to reconnect, it'll create what's called a handshake, a four-way handshake. And that handshake, you can save on your phone or on on whatever device, take that file home with you later and try to crack the password. So now you don't have to be within proximity of the Wi-Fi network anymore. As long as you have that handshake that was captured from the network coming offline, device reconnecting, and then that four-way handshake is stored. I can use it's called a password list. So, a password list is just a bunch of different words and text in a giant file. Could be, let's say it's 20 gigabytes, a huge text file, right? Let's say your password is password 1 2 3 with a capital P and an exclamation point at the end. A rule set might capitalize the first letter, add a number to the end and a symbol and then use every symbol. So, then it turns that, you know, let's say 20 GB file into a 200 GB file or terabyte file.
+</details>
+
+>> 它就是把每个密码都试一遍。
+<details><summary>Original English</summary>
+>> It just tries every password.
+</details>
+
+>> 用那个握手去试每一个密码。而且你不需要像那样去尝试连接Wi-Fi、试密码、再断开。到了那个时候，你是在以，比如说每秒20,000次尝试的速度去撞击它。所以你有更大的机会破解密码。
+<details><summary>Original English</summary>
+>> Tries every password against that handshake. And you don't, it's not like you have to try to connect to the Wi-Fi, try the password, disconnect. At that point, you're hitting it with, you know, let's say 20,000 attempts per second. So, you have a better shot at cracking the password.
+</details>
+
+>> 那么，怎样才能阻止这种事情发生呢？
+<details><summary>Original English</summary>
+>> And so, how could someone have stopped that happening?
+</details>
+
+>> 使用WPA3，这是一种更新的Wi-Fi技术，但几乎所有的路由器都处于一种叫做过渡模式（transient mode）的模式下，它会降级到WPA2，这就使得这种攻击能够发生。所以目前，你没有太多办法。我要拿起手机，然后把它调成飞行模式。然后按一下顶部的播放按钮。现在看你的iPad。上面弹出了你的iCloud转移电话号码。而且对于某些设备，这会彻底让手机死机。但我们现在正处于飞行模式。所以你看这里，这不应该发送任何东西。这里的每个人都在收到那些通知。你演播室里的每个人现在都在收到这些。手机处于飞行模式。开，关。如果你现在点击那个播放按钮，你的设备、我的设备，所有东西都会立刻弹出这些弹窗，让你的手机基本上无法使用。就像我可以从旁边走过，专门弹出那个窗口，或者做这个操作，让你无法使用你的设备。
+<details><summary>Original English</summary>
+>> Being on WPA3, which is a a newer a newer Wi-Fi uh technology, but almost all of the routers are in this mode called transient mode, which downgrade to WPA2, which allows for that to happen. So, right now, not much you can do. I'm going to take the phone and then I'm going to put it in airplane mode. Then just press the play button on the top there. So now look at your iPad. There's your iCloud transfer phone numbers popping up. And for some devices, this would completely crash the phone. But we're in airplane mode right now. So you see here, this shouldn't be sending anything. Everybody in here is getting those notifications. Everyone in your studio is getting these right now. Phones in in airplane mode. on, off. If you click that play button there now, immediately your devices, my device, everything is getting these these popups here and makes your phone essentially unusable. Like I could be walking by and specifically pop that up or do this so that you're unable to use your device.
+</details>
+
+>> 它是怎么做到的？所以，它在广播，就好像这些是正在靠近你的iPad或手机的苹果设备一样，而且它正试图设置它们，但它以如此高的频率发送那个信号，以至于设备只是一个接一个地弹出窗口。这很疯狂，但有趣的部分是，苹果并没有通过把手机调成飞行模式来禁用你的蓝牙。呃，所以你真正关闭它的方法是进入你的设置，然后从设置里进入蓝牙，在那里把它关掉。
+<details><summary>Original English</summary>
+>> How is it doing that? So, it's it's advertising like as if these were Apple devices getting close to your to your iPad or phone and uh and it's trying to set them up, but it's sending out that at such a high rate that the device is is just popping up thing after thing after thing. It's crazy, but it's the the interesting part is that Apple doesn't disable your Bluetooth by putting it in airplane mode. Um, so the way you actually do that is go into your settings and then go to Bluetooth from your settings and turn it off from there.
+</details>
+
+>> 好的。
+<details><summary>Original English</summary>
+>> Okay.
+</details>
+
+>> 从那里关掉，就能阻止别人用蓝牙连接到你的手机。因为这是一种无害的攻击。这是一种令人讨厌的攻击，我能预见到的唯一危害是，如果你正试图打电话或做某件事，而你被通知刷屏了，你就什么都做不了。如果你想阻止这种情况发生，你可以直接禁用你的蓝牙，那样就会停下来。而就是这个叫“饼干”的小东西导致了这一切。
+<details><summary>Original English</summary>
+>> From there, that would stop somebody from being able to connect to your phone with Bluetooth. Cuz this is a harmless attack. It's an annoying attack and the only harm I can foresee it ever causing is if you were trying to make a phone call or trying to do something and you're getting spammed with notifications, you can't do anything. If you want to stop that from happening, you can just disable your Bluetooth and that will stop. And this little biscuit thing is causing that.
+</details>
+
+>> 是的。所以，就是它导致了蓝牙垃圾信息攻击，而且它能做的远不止于此，但那只是我给你举的两个例子。
+<details><summary>Original English</summary>
+>> That's Yeah. So, that was causing the Bluetooth spam and and it can do a lot more than that, but that I was just giving you two examples of that.
+</details>
+
+>> 呃，趁我们站在这里，我还想快速给你展示关于“饼干”的另一件事，就是强制门户（captive portal）。我把它命名为“flight story”，然后我称之为“free”，开始攻击。所以我现在正在广播一个叫做“flight story free”的网络。你在这里看到了吗？所以，你刚刚创建了那个Wi-Fi网络。它看起来像是开放可以连接的。
+<details><summary>Original English</summary>
+>> Uh, another thing I want to show you real quick about the biscuit while we're while we're standing up here is the captive portal. I'll call it flight story and then I'll call it free start attack. So, I'm broadcasting a network called flight story free right now. You see that here? So, you've just made that Wi-Fi network. It looks like it's open to connect to.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yep.
+</details>
+
+>> 是啊。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 所以我连接到那个网络。
+<details><summary>Original English</summary>
+>> So, I connect to that.
+</details>
+
+>> 给看不见的人说一下，我点击了这个Wi-Fi网络，它弹出了一个谷歌登录界面。
+<details><summary>Original English</summary>
+>> So, for anyone that can't see it, I clicked on the Wi-Fi network and it's popped up with a Google sign in.
+</details>
+
+>> 然后在这里，你看它立刻就弹了出来，给了我你的“Stephen at AOL”，密码是“test”。我停止了这次攻击。那个网络就消失了，仿佛它从未存在过一样。所以，这就是一个
+<details><summary>Original English</summary>
+>> And then on here, you see that immediately just popped up and gave me your Stephen at AOL with a password test. And I stopped this attack. That network's gone as if it never existed. So, that's that's a
+</details>
+
+>> 走吧。
+<details><summary>Original English</summary>
+>> go.
+</details>
+
+>> 这是一个相当危险的攻击。你知道为什么它危险吗？因为它太简单了。
+<details><summary>Original English</summary>
+>> It's it's a pretty dangerous attack. Do you know why it's dangerous? Because it's so simple.
+</details>
+
+>> 它太简单了。但在我年轻的时候，这做起来还要稍微困难一点。现在你可以买到像这样的设备，你知道，这张桌子上的几乎每一个设备都能做完全一样的攻击。我决定给你展示“饼干”，但这张桌子上的几乎每一个设备都能做到。
+<details><summary>Original English</summary>
+>> It's so simple. But the that this used to be a little more difficult to do when I was younger. Now you can buy devices like like you know almost every device on this table can do that exact attack. I I decided to show you the biscuit but almost every device on this table can do that.
+</details>
+
+>> 就这一点而言，因为你知道我们都在世界各地到处跑，连接各种Wi-Fi网络。
+<details><summary>Original English</summary>
+>> Just on that point then because you know we all gallivant around the world connecting to Wi-Fi networks.
+</details>
+
+>> 是啊。但你刚才说，你知道，你刚刚向我展示了连接公共Wi-Fi网络是如何拉取我的密码并暴露我的邮箱或者其他任何我……
+<details><summary>Original English</summary>
+>> Yeah. But you've just said that, you know, you've just shown me how those connecting to a Wi-Fi network in the public can pull in my passwords and expose my email or whatever else I
+</details>
+
+>> 太多了。想想你的酒店房间。我的意思是，如果你去连接，如果你进了你的卧室，它说：“你的房间号是多少？”以及“给我你的信用卡号来验证，你知道，或者用来支付上网费。”仅仅通过那个强制门户，利用开放的Wi-Fi网络，你就能从别人那里套取太多东西了，这甚至还没谈到技术细节，一旦你和某人在同一个网络上，
+<details><summary>Original English</summary>
+>> so much. Think about your hotel room. I mean, if you were connect, if you get into your bedroom and it says, "What's your room number?" and uh give me the your credit card number to validate, you know, or or to pay for internet. There's so much you could get somebody with with with open Wi-Fi networks that just from what that captive portal alone, not even talking about the technical specifics, once you're on the same network as somebody,
+</details>
+
+>> 事情就会变得危险起来。
+<details><summary>Original English</summary>
+>> it can get dangerous.
+</details>
+
+>> 你那里有一个灯泡。
+<details><summary>Original English</summary>
+>> You have a light bulb there.
+</details>
+
+>> 是啊，我有一个。
+<details><summary>Original English</summary>
+>> Yeah, I do.
+</details>
+
+>> 我有一盏台灯。你为什么带一个灯泡？
+<details><summary>Original English</summary>
+>> And I have a lamp. Why do you have a light bulb?
+</details>
+
+>> 你听说过最近欧洲超市被黑客入侵的事件吗？
+<details><summary>Original English</summary>
+>> Are you familiar with the the European supermarkets that were hacked recently?
+</details>
+
+>> 没有。所以，呃，那里造成了数百万美元的损失和食物变质，因为他们的冰柜被黑客入侵了，因为他们的冰柜是面向互联网的。呃，这是很多人在他们的物联网设备（IoT devices）或智能家居设备上遇到的问题。你听说过那三家血库的事吗？
+<details><summary>Original English</summary>
+>> No. So, uh, there was multi-million dollars in damage to and spoiled food where their refrigerators were hacked because their their refrigerators were internetf facing. Um, that's a problem that a lot of people have with their their internet their IoT devices, internet of things devices or smart home devices. Did you hear about the three blood banks?
+</details>
+
+>> 好吧，在法国有三家血库被黑客入侵了。如果我没记错的话，我想里面装的是血浆。它们被暴露在了互联网上，那些保存血浆的冰柜，他们把温度改成了230华氏度，我不知道这在摄氏度是多少，但那非常热。呃，我想他们把冰柜设置成了122摄氏度。谢天谢地，根据我读到的消息，他们足够快地发现了这件事，保住了血液。但想想那是哪种人……是啊，你简直没有心肝，那是救命的血。你明白我的意思吗？怎么能做人低劣到那种程度。你从那里面什么也得不到。甚至在黑客社区里也有一些没有心肝的人。很多人没有意识到，也许像这样的摄像头，或者也许，你知道，你在亚马逊上买的一些便宜产品，甚至哪怕是昂贵的产品，都可能把自己暴露在互联网上让别人看到，而且很多时候它们使用的是默认凭据（default credentials）。呃，所以举个例子，这个设备，我会展示更多它能做的事情，但它的攻击之一是连上网络，寻找连接到该网络的每一个设备，然后用所有的默认凭据以及一些已经内置在里面的基本攻击去尝试攻击它们，然后其中很多最终都是摄像头，举个例子，它会给出一个URL，这样你就可以在手机上观看摄像头的实时画面，仅仅通过运行这个就行，而那就是
+<details><summary>Original English</summary>
+>> Okay, so in France there were three blood banks that got hacked. I think it was plasma if I remember correctly. They were being exposed to the internet and these refrigerators that were holding the plasma, they changed the temperature to 230° Fahrenheit, which I don't know what it is in Celsius, but it's very hot. Uh I think it's 122° C is what they set the refrigerators to. Thankfully, from what I read, they were able to determine this fast enough and save the blood. But think of like what kind of person Yeah. You have no heart to that's life-saving blood. You know what I mean? Like to to be that low of a person. You get nothing out of that. There's some people that have some no hearts even in the hacking communities. A lot of people don't realize that maybe a camera like this or maybe you know some cheap product you bought on Amazon or or even expensive for that matter might be exposing itself to the internet for others to see and a lot of times they're using default credentials. Um, so like for example this device, I'll show more more of what it can do, but one of his attacks is get on the network, look for every device that's connected to the network and then try all the default credentials against it and some basic attacks that uh that have been wired into this and then a lot of them end up being cameras for example and it will give a URL so you could go on your phone and watch the live feed of the camera just from this running and that's
+</details>
+
+>> 等等，所以它将会……它将会……所以假设我家门口有这样一个门铃，或者我家里有一个摄像头……那就能黑进那个摄像头，而且你就能在你的手机上看到它。
+<details><summary>Original English</summary>
+>> wait so it's gonna it's gonna so say that I have this like doorbell at the front of my house or I have a camera in my that's going to be able to hack the camera and you're going to be able to watch it from your phone.
+</details>
+
+<!-- chunk 2/3 -->
+
+>> 是的，绝对是。没错。而且如果它面向互联网，你也可以从远程位置观看。所以我就不必在现场。有很多设备都能做到这一点，但也有一些网站会索引这些信息。有这种情况，我不想点名，因为我不想让人们有能力去窥视别人家里之类的，但在明网上确实有这样的网站，人们可以找到，他们只需要输入一个城市名或州名，它就会向你展示一堆面向全世界的开放摄像头。而人们根本不知道自己正在被观看。被陌生人观看。
+<details><summary>Original English</summary>
+>> Yeah, absolutely. Yeah. And if it's facing the internet, you could watch it from a remote location, too. So, I wouldn't have to be on site. So, there's a ton of devices that can do that, but there are also websites that index that information. So, there's that, and I don't want to name them because I don't want to give people the ability to look into people's houses and all that, but there are websites that are on the clear web for people to find that uh that they can just put a city name in or a state, and it'll show you a bunch of open cameras that are just facing the world. And people have no idea they're being watched. It's by watched by strangers.
+</details>
+
+>> 很多人都有点偏执，担心自己设备上的摄像头会被黑客入侵。比如很多人甚至会遮住笔记本电脑上的摄像头。
+<details><summary>Original English</summary>
+>> A lot of people are paranoid that the the cameras on their devices can be hacked. Like people are a lot of people even like cover up the the camera on their laptop.
+</details>
+
+>> 是的，那很明智。遮住笔记本电脑很明智。
+<details><summary>Original English</summary>
+>> Yeah. That's smart. The laptop is smart.
+</details>
+
+>> 真的吗？
+<details><summary>Original English</summary>
+>> Really?
+</details>
+
+>> 是的，没错。我可以给你展示一下对攻击者来说另一面是什么样的，因为我可以通过你的网络摄像头看，通过你的麦克风听。你在电脑上输入的每一个按键，我都能看到你在打什么。无论是按退格键、你拼错了什么，还是你按了空格键。我能看到你输入的每一个按键。我可以读取你的整个文件系统。我可以让你看起来像是在删除某个东西，比如它可能会进到回收站，你把它删掉了，但实际上它还留着。我的意思是，当你在别人的机器上植入木马或病毒时，可能性是无穷无尽的。
+<details><summary>Original English</summary>
+>> Yeah. Yeah. So I could show you what the other side of that looks like for an attacker because I could look through your webcam, listen through your microphone. Um every keystroke that you type in to your computer, I can I can see what you're typing. Whether that's backspace and you misspelled something or you hit the space bar. I see every single key that you're typing in. I could read through your entire file system. I could uh you know I could I can make it appear like you're deleting something like it might go to the recycle bin. You erase it but it actually stays. I mean it the possibilities are endless when you have a Trojan on somebody's machine um or a virus.
+</details>
+
+>> 那把木马植入别人的机器有多容易？
+<details><summary>Original English</summary>
+>> And how easy is it to get a Trojan or onto someone's machine?
+</details>
+
+>> 这取决于具体情况。有些人会下载和木马捆绑在一起的软件。这种情况确实会发生。还有零日漏洞，我们之前谈到过，比如 iPhone 或 Android 可能会收到一条短信，或者收到一条 Signal 消息，有人发现了一个新漏洞，你在 Signal 里打开一个 PDF，然后你的手机就被 root 了，意思是完全被黑客控制了。你有
+<details><summary>Original English</summary>
+>> Depending on the scenario. So there's there's people that download software that is binded together with with a Trojan. So that happens. There's there's zero day exploits where we were talking about like an iPhone or an Android might get a text message or they might get a signal message which was a new vulnerability somebody has where you open a PDF in Signal and now your phone is is rooted like meaning fully hacked. You have
+</details>
+
+>> 别人只要给你发一个 PDF，你打开它，你的手机就完全被黑了。
+<details><summary>Original English</summary>
+>> someone can just send you a PDF. You open it and your phone is fully hacked.
+</details>
+
+### 智能家居设备与网络隔离
+
+>> 是的。我刚才提到的这个新团伙刚刚在 Signal 上演示了这个。这被称为“一键攻击”（one click），意思是只需要点击一次就能触发漏洞，但它能让人获得对 iPhone 的完全访问权限。非常可怕的东西，这让我觉得，你知道，我用 Signal，所以现在打开 PDF 会让我感到害怕。这太让我震惊了，不过我是个技术宅，所以情况有点不同。再看这个灯泡。是的。关于这个有两点。对于你家里的联网设备，我给你的首要建议是不要信任它们中的任何一个。我这么说并不是因为我是什么阴谋论者或戴锡纸帽的疯子。我不是。但我研究过这些设备是如何与互联网通信的，它们会与中国通信。几乎所有这些设备，你知道，都是在中国制造的。所以它们会与中国的云端服务器通信。当你说“嘿，比如我想让这个灯泡变成红色”时，在大多数情况下，指令并不是从你的手机直接发给灯泡让它变红。它是从你的手机发到中国，从中国发到你的路由器，从你的路由器发到灯泡，然后再返回，反之亦然。在这种情况下，假设中国决定讨厌我们，并且想要接管这些设备。现在他们就可以说，好吧，我们来给这些设备推送一个恶意的固件更新或软件更新，而且我们知道它们已经在你的家庭网络里了。所以我的建议是，你可以想象，如果他们现在在你家里的一个看起来运行完全正常的智能设备上植入了恶意固件，如果他们把它替换掉，在某些情况下，他们就可以从那个设备横向移动到你的电脑，也许是你的手机，也许是你的摄像头，无论什么设备，现在他们拥有的访问权限就远远超出了你原本的意图。这个问题的解决方案其实非常简单：如果你家里、朋友中有懂 IT 的人，或者你愿意雇一个，让他们创建一个叫做 VLAN 的东西，即虚拟局域网（virtual local area network）。它可以把一些设备放在网络的一个网段上，而把你的重要设备放在另一个不同的网段上。这样，如果真的有人这么做了，无论是像我接下来要向你展示的那样攻击灯泡的人，还是一家公司，或者是中国，或者是攻击中国某家公司的人，这些设备被黑客入侵的情况可能有很多种。它们会被困在网络上各自的沙盒里。明白吗？
+<details><summary>Original English</summary>
+>> The Yeah. This new group I was just talking about they just demonstrated a signal. It's called a one click, meaning the it requires one click for the exploit to happen, but gave full access to the to the iPhone. So very scary stuff that was very like, you know, I signal I use Signal, so it scares me to, you know, open PDFs at the moment. It's blowing my mind, but I'm the nerd, so it's a little different. So this light bulb here. Yeah. Yeah. Yeah. So there's two things about this. So internetf facing devices in your home, the number one thing I would suggest for you is don't trust any of them. And and the reason why I say that is not because I'm some conspiracy theorist tinfoil hat nut job. I'm not. Uh but I have looked into the how these devices communicate with the internet and they communicate with China. Almost all of them, you know, they're built in China. So they're communicating with a Chinese cloud server that when you say, "Hey, I want this bulb to be red, for example. It it usually in most cases is not going from your phone to the light bulb and turning it red. it's going from your phone to China, from China to your router, from your router to the light bulb and then back and you know vice versa. So in that case that gives let's say China decides to hate us uh and they want to take over devices. Now they could say well let's push out a firmware update or a software update for these devices that is malicious and we know they're already on your home network. So my suggestion for you and you can imagine if you if now they have malicious firmware on a smart device in your house that appears to be working perfectly fine um if they were to swap that out now they they could pivot from that device in in certain scenarios to your computer maybe your phone maybe your you know cameras whatever it may be and uh and now they have more access than you ever intended. The solution to this problem, which which is which is very simple, is if you have an IT guy in your family, a friend, or you are willing to hire one, have them create what's called a VLAN, a virtual uh local area network, a VLAN. And that puts some devices on one segment of the network and then your important devices on a different segment. So, if somebody does do that, whether it be a person that attacks the bulb like like what I'm going to show you or if it's a a company or if it's China or somebody that attacks a company that's in China, it can be many scenarios where these devices get hacked. They get stuck in their sandbox on the network. Okay?
+</details>
+
+>> 我自己家里就是这么做的。我来说说我会怎么做：假设我跟你说，Stephen，我得去趟洗手间，然后我起身去洗手间，我背包或包里带着这个东西，此时我就在你家里。我可以走进你的洗手间。我很有可能可以把这个灯泡拧到你洗手间的某个地方。我不知道你家洗手间是怎么布置的，但大多数人洗手间里至少某个地方会有这样一个灯泡。所以我在你的洗手间里，就像我现在这样把灯泡拿出来，这是一个从亚马逊买的灯泡。一样的东西。这些都可以用同样的方式被攻击。好了，现在灯泡装进去了。让我连上去。现在我连接到了一个叫 nightlight 的网络。这个灯泡正在发送一个 Wi-Fi SSID，也就是我连接上的这个 Wi-Fi 名称。现在我访问这个灯泡的 IP 地址。我们打开了这个黑客的 nightlight。如果我点击刷新，你会看到，看，这是这栋楼里所有的网络。
+<details><summary>Original English</summary>
+>> And and that's what I do in my house personally. So what I'll do is let's say you were I was like you know what Stephen I got to go to the bathroom you know and I got up go to the bathroom and I have this in you know in my backpack or my bag or whatever it is and I am in your house at this point I I could go in your bathroom. There's a good chance I could screw this bulb into your bathroom somewhere. I don't know how your bathroom set up but most people they got a bulb like this in their bathroom at least you know somewhere. So I would be in your bathroom. I would take out a bulb as I'm doing right now, which is one from Amazon. Same thing. These could, you know, could be attacked in the same way. All right. So now the bulb is in there. So let me connect in. Now I'm connected to a network called nightlight. This bulb is, you know, sending out a Wi-Fi SSID. It's called a Wi-Fi name that uh that I'm connected to. So now I'll go to the IP address of this bulb. We got the hacker's nightlight. And if I hit refresh, you'll see, look, here's all the networks in this in this building.
+</details>
+
+>> 然后从那里，我就有能力发起攻击，比如拒绝服务（denial of service）、握手（handshake）。我可以监听未加密的通信。所以，即使没有 Wi-Fi 密码，假设你办公室或家里有一套老旧的摄像头系统或便宜的摄像头系统，我也可以用那个灯泡来监听未加密的流量，并在甚至没有你 Wi-Fi 密码的情况下显示摄像头画面。仅仅因为那个灯泡存在于网络中。
+<details><summary>Original English</summary>
+>> And then from there, I have the ability to attack, type, denial a service, handshake. Um, I could monitor for unencrypted communication. So, even without the Wi-Fi password, let's say you have an old camera system or a cheap camera system in in your office or your house, I could use that light bulb to monitor the the unencrypted traffic and show a camera stream without even having your Wi-Fi password. um just because that bulb exists on the network.
+</details>
+
+>> 所以你理论上可以用一个灯泡黑进我的摄像头系统并监视我。
+<details><summary>Original English</summary>
+>> So you could using a light bulb you could theoretically hack into my camera system and watch me.
+</details>
+
+>> 是的。没错。所以有那种情况，还有就是用那个灯泡作为跳板进入你的网络。再说回颜色。假设那不是你洗手间的颜色，我可能想改变它的浓淡，或者调成暖色或冷色，然后让它匹配，比如也许这就是你洗手间的颜色。然后我离开。我把我的任何载荷（payload）——也就是攻击程序——挂在那里运行、等待，之后我再回来，我甚至不用进屋从你那里取回这个灯泡。我只需要站在你房子外面，连接到它的网络，取回我想要的数据，然后，就这样。你永远不会知道那个灯泡是恶意的。但也要记住，那家公司卖那个灯泡的时候并没有附带那种功能。那是被黑客改造过的。那个灯泡被黑了，就像另一个灯泡也可能被黑一样。
+<details><summary>Original English</summary>
+>> Yes. Yeah. So so there's that situation and then there's the using that bulb to pivot into your network. Um and going back to the color. So let's say that's not the color of your bathroom. I may want to change the boldness uh or like bold or warm cold and then you know have it match like maybe this maybe that's your bathroom's color right there. And then I leave. I have whatever payload I have, you know, meaning like attack, I have that running, pending, and then I come back and I don't have to go in and retrieve this bulb from you. I could just stand outside your house, connect to its network, retrieve the data that I want, and uh and then, you know, that's it. Now, you would never know that that bulb was was malicious ever. But also keep in mind that company didn't sell that bulb with that that potential. That was hacked. that bulb was was hacked the same way that the other bulb could be hacked.
+</details>
+
+>> 我们都认识这样的人，圣诞节很难给他们买礼物，因为他们好像什么都齐了。但我认为有一件事是任何人都永远不嫌多的，那就是放松的机会。虽然我们无法给别人一天增加更多小时，但我们可以给他们一个为自己留点时间的理由。这正是我的赞助商 Bon Charge 所做的。我和他们合作，根据我在这个播客中学到的很多东西，打造了一个叫做 Dyio 套装（Dyio bundle）的产品。里面有我最喜欢的两种放松方式。这是红光面罩，我还有红外线桑拿毯。它们让我更容易把一点放松和恢复融入到日常作息中。所以，如果你正在为我刚才描述的那种总是很难买礼物的朋友找礼物，这个 Dio 套装可能就是你的答案。在临近圣诞节的有限时间内，本节目的听众在 boncharge.com/doac 订购我的 Dire of Co 套装可享受 30% 的折扣。网址是 b o n c h a r g e.com/doac。你还可以享受免费送货和 12 个月的保修。当我们刚开始做 DEO 时，我想我们无法想象会有多少精彩的对话。我们一直想帮助你充分利用一路走来学到的一切。所以，如果你目前生活中有什么特别关心的事情，或者面临一个挑战、一个机会，或者正在创业，无论是什么，去这个目录——DEO 目录，搜索你感兴趣的话题，它会向你展示所有谈论过该话题的嘉宾。你可以点击进去观看那些剧集、观看片段，或者阅读完整文字稿。我投资了一家名为 Lovable 的公司，他们也是本播客的赞助商，他们帮助我最终能够自己为你们所有人建立这个信息库。我们在 Lovable 上所需要做的——这就像魔法一样——就是描述我们想要创建什么。然后 Lovable 为我们规划、设计、构建并迭代了整个东西。我们很快就从想法变成了上线产品。无论你是这个播客的新听众，还是从第一天起就一直关注我们，总会有一些你尚未发现的有价值的东西。你可以在 doac directory.lovable.app 查看这个目录。网址是 doac directory.loable.app。我听说世界上很多大公司都会花很多时间清查他们的办公室
+<details><summary>Original English</summary>
+>> We all know somebody who is tough to buy for at Christmas because they've kind of got everything they already need. But I think one thing no one can ever get enough of is an opportunity to relax. And whilst we can't give someone more hours in the day, we can give them a reason to take a bit of time for themselves. And this is exactly what my sponsor Bon Charge have done. And with them, I've teamed up to create, based on a lot of the things I've learned on this podcast, something called the Dyio bundle. Inside are two of my favorite ways to unwind. This is the red light face mask, and I also have the infrared sauna blanket. And they make it much easier to build a a little relaxation and recovery into my everyday routine. So, if you're looking for someone, that person who I've just described, who's always difficult to buy for, this Dio bundle might be the answer for you. And for a limited time as we head into Christmas, my listeners just on this show get 30% off my Dire of Co bundle when you order from boncharge.com/doac. That's b o n c h a r ge.com/doac. You'll also get free shipping and a 12month warranty. When we first started the DEO, I don't think we could have imagined just how many incredible conversations would go on to have. And we've always wanted to help you make the most of everything you've learned along the way. So, if there's something particular in your life that you're concerned about at the moment or a challenge or an opportunity or starting a business, whatever it might be, go to this directory, the DEO directory, search the topic you're interested in, and it will show you all of our guests that have talked about that. You can click through and watch those episodes, click and watch the clips, or read the full transcripts. And there's a company I invested in called Lovable, who are also a sponsor of this podcast, who've helped me finally be able to make this repository of information for all of you ourselves. All we had to do on Lovable, which is it's like magic, is describe what we wanted to create. And Lovable planned, designed, built, and iterated on the whole thing with us. We went from an idea to a live product in no time at all. Whether you're a brand new to this podcast or if you've been with us since day one, there's always going to be something valuable you haven't yet discovered. And you can check out this directory at doac directory.lovable.app. That's doac directory.loable.app. I hear a lot of the the biggest companies in the world spend a lot of time sweeping their offices
+</details>
+
+>> 排查类似那样的东西，因为他们担心可能会有员工、清洁工或者其他什么人
+<details><summary>Original English</summary>
+>> for things like that because there there's a fear that they might have some employees or a cleaner or whoever it might be
+</details>
+
+>> 在他们办公室周围安插那样的设备。我想就在上个月，OpenAI 发现他们办公室里被一名团队成员安插了一些设备，
+<details><summary>Original English</summary>
+>> who is planting gadgets like that around their offices and I think in the last month OpenAI discovered some devices that had been planted in their office by a team member okay
+</details>
+
+>> 他们认为这名成员与外国敌对势力有关。
+<details><summary>Original English</summary>
+>> who they believe is associated with a foreign adversary.
+</details>
+
+>> 是的，对此我毫不意外。
+<details><summary>Original English</summary>
+>> Yeah. Not surprised on that.
+</details>
+
+>> 你看到那个新闻了吗？我不知道，我没看到那个新闻，但我能理解，而且人可以变得相当狡猾。我的意思是，这不是薄荷糖。这是一个能让摄像头和 Ring 门铃掉线的设备，这是我很多年前做的。而且直到今天它还能用。所以它是一个 Wi-Fi 取消认证器（deauthor），一旦你插上它，它就会创建一个界面，我只要按一个按钮，就能让所有这些设备掉线。我不想在这里演示，因为这可能会让你的团队掉线，但我的意思是，如果我不告诉你，我想你不会知道这是什么
+<details><summary>Original English</summary>
+>> Did you see that story? I didn't know I didn't see the story, but I can I can understand it and and you can get pretty crafty. I mean, this these aren't mints. I mean, this is a this is a device that knocks cameras offline, ring doorbells, and and I made this many years ago. Um, and it still works current day. So, it's a it's a Wi-Fi deauthor that as soon as you plug it in, it creates an interface where I can just hit a button and it knocks all these all devices. I don't want to demonstrate it here because it might knock your your team offline, but uh I I mean, if I didn't tell you that, I don't think you'd know what
+</details>
+
+>> 不知道，我还纳闷你为什么带了薄荷糖来。
+<details><summary>Original English</summary>
+>> No, I wondered why you brought mints.
+</details>
+
+>> 对，就是这样。你看，这类东西可以做得很巧妙。还有另一件我想给你看的东西，这里有一个智能插座。它本身没什么特别的。这两个都不是黑客设备。它们只是你在亚马逊上买的、以为很安全的智能家居设备。这些设备可以被改装，可以被黑客入侵，它们能以你意想不到的方式获取你的网络访问权限。我想展示一个真实的例子，而不只是空谈，给所有正在看节目的人看看。这是一个智能插座，我只是把它插到电源插座上。它不会亮灯什么的。
+<details><summary>Original English</summary>
+>> Yeah, exactly. You know, so yeah, you can get crafty with this type of stuff. Um, another thing I want to show you, too, is a smart plug here. So, there's nothing special about this. This is not Both of those are not hacking devices. They're just smart home devices that you would buy on Amazon thinking they're safe. These devices can be modified. They can be hacked. and they can gain access to your network in ways that you weren't intending. And I want to show a real example of it, not just talk about it, you know, for anyone that's watching. It's a it's a smart plug and I'm just going to plug it into an outlet. You know, it doesn't light up or anything.
+</details>
+
+>> 所以你把一个看起来很普通的插头插进了那里的插座，然后它就在你的手机上提供了一个 Wi-Fi 网络。
+<details><summary>Original English</summary>
+>> So, you've plugged in a normal looking plug into a outlet there and that's giving you a Wi-Fi network on your phone.
+</details>
+
+>> 完全正确。
+<details><summary>Original English</summary>
+>> Exactly.
+</details>
+
+>> 那是什么？那个 Wi-Fi 网络是做什么用的？在这个案例中，这个设备实际上会检查你网络上设备的行为。摄像头、报警系统、手机、音响设备，几乎所有东西。这就是你如何通过这里的这些 MAC 地址来识别它们的方式。
+<details><summary>Original English</summary>
+>> And what's that? What does that Wi-Fi network do? So in this case, this one is going to actually be checking the behavior of the devices on your network. Cameras, alarm systems, phones, sound devices, literally everything. But this is how you're able to identify it from these MAC addresses here.
+</details>
+
+>> 嗯。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 这些 MAC 地址有一个前缀，也就是它们开头的部分，是分配给它们的。类似于域名，它们会被分配一个前缀。通过这些数据库，它们会告诉你这是由哪家特定公司拥有的。这个设备可以做那个灯泡能做的一切，比如破解 Wi-Fi 和做所有那些事，但它的主要重点是 Wi-Fi 侦察，能够确定网络的行为，以及窃取密码之类的。这些它都能做到。不过我想传达的主要观点是：对你买的东西要非常小心。不管是贵还是便宜。我觉得越便宜风险可能越高，但我不认为你应该把它们放在你的主网络上。你应该为这类设备建立一个单独的网络。听起来你的意思是，几乎任何连接到互联网的东西都是可以被黑客入侵的。
+<details><summary>Original English</summary>
+>> Those MAC addresses have a prefix, the the beginning of them that's assigned to them. Similar to a domain name, they they're assigned a prefix. And with these databases, they tell you that's owned by this specific company. This device, it can do everything the bulb can do with hacking Wi-Fi and doing all the things, but its main focus is Wi-Fi recon and being able to determine the behavior of the network as well as stealing the passwords and me. You can do all of that. My main point I'm trying to get across though is be very careful with what you buy. Doesn't matter if it's expensive or cheap. The cheaper you go, the more I think risky it may be, but uh but I don't think that uh that you should have them on your main network. You should make a separate network for these type of devices. It it sounds like you're saying that pretty much anything that connects to the internet is hackable.
+</details>
+
+### 汽车报警系统漏洞与车辆盗窃
+
+>> 是的，我完全同意。我这辈子没见过多少东西是没被黑过的。我一辈子都在用电脑。似乎所有东西至少都在某个时候被攻击过。哦，这个对你来说很值得了解。你熟悉 KAR 这个汽车报警系统吗？
+<details><summary>Original English</summary>
+>> Yeah, I I totally agree with that. I mean, I there's not much that I haven't seen get hacked in my life, you know? I mean, I've been on a computer my entire life. Like, everything's been attacked at least at some point. Oh, this is a good one for you to know. Uh, are you familiar with K A R the the car alarm system?
+</details>
+
+>> 不熟悉。
+<details><summary>Original English</summary>
+>> No.
+</details>
+
+>> 好吧。在我看来，这是一个疯狂的情况。KAR 是一个安装在汽车里的大型报警系统。当你去汽车经销商那里买车时，他们会向你推销这个报警系统套餐。很多人在办理贷款时会说：“不，我不要那个。没关系，没什么大不了的。”但汽车经销商其实已经在他们的车里装好了这个东西。所以他们把车开走了，根本没把这当回事。几年过去了，研究人员在这个控制报警系统的应用程序中发现了这个攻击漏洞。即使你从未安装过它，你甚至不知道它就在你的车里，你也没有为此付费，但它在你车里存在的这个事实，就给了攻击者完全的控制权，可以解锁你的车、锁死你的车（immobilizing）、更改各种诊断信息、按喇叭、打开后备箱，几乎所有事情。完全控制你的车。事情的经过是，这家公司在他们的一个旧版应用程序中犯了一个大错。他们把一个主密钥（master key）留在了应用里，基本上就是明文形式，虽然隐藏着但就在应用里，等着别人去发现。在美国有 220 万辆汽车受此影响。这只是大约的数字，可能更多。我只要在设备上打开这个 hailhound，寻找受 KAR 汽车漏洞影响的车辆，假设我想锁死它们，我只需要按下锁死按钮，砰，这辆车就再也开不动了，除非他们找人来逆转这个操作。由于这些设备是通过蓝牙而不是互联网运行的，唯一的修补办法就是知道你的车上装有那个报警系统——你可以去应用商店下载他们的应用看看你的车有没有，或者直接在前挡风玻璃上找他们的标志——然后你可以把固件更新到最新版本。这样就能消除攻击者锁死你的车、解锁车门、锁上车门或做任何事情的可能性。所以我想提一下这个，因为这是一个重要的问题，它影响了数百万人，而大多数人甚至根本不知道。
+<details><summary>Original English</summary>
+>> Okay. So, this is a crazy situation in my opinion. So car is a big alarm system that gets installed into cars. And when you went to go buy a car at a car dealership, you would get offered this alarm system package. And you know, a lot of people in the finance would say, "No, I don't want that. It's okay. No big deal." But the car dealership already installed thing in in their car. So they drive away with their car, they don't think anything about it. Years go by and uh researchers find this attack with the application uh that to control the alarm system. Even if you've never installed it, you don't even know it's in your car. You're not paying for it. The fact that it exists in your car gives an attacker full control over unlocking your car, immobilizing your car, changing all kinds of diagnostic information, honking your horn, open your trunk, literally everything. Have full control over your car. What happened though, this company made a big mistake in one of their old apps. They left a a master key that that was in essentially in plain text just sitting in the app hidden but in the app for someone to find and um and 2.2 million cars are affected in the United States. That's the approximate number but it might be more where I could just turn this hailhound on the device look for cars affected by the car K A R car exploit and um and and let's say I wanted to immobilize them. I would just press the immobilize button and boom, the car is never not going to be able to drive again unless they they get somebody to reverse that action. And the only patch for this since since these devices operate over Bluetooth, not internet, is knowing that your car has that alarm system equipped in it, which you can you can figure that out by going to the app store, downloading their their app and seeing if your car has it or just look for their logo on your on your front windshield, and you can patch it to the latest firmware. And that removes the possibility for attackers to, you know, immobilize your car or unlock your doors, lock your doors, do whatever it is. So, I wanted to bring that up because that's an important one that it affects millions of people and most people don't even know about it.
+</details>
+
+>> 我在洛杉矶的一位好朋友——他其实也上过这个播客——几个月前给我发了一段大概凌晨两点的视频，画面里他的揽胜（Range Rover）停在他家外面。一个家伙开着车停在他的揽胜旁边，拿着一台笔记本电脑，
+<details><summary>Original English</summary>
+>> My my good friend in Los Angeles, um, who's actually been on this podcast, he sent me a video a couple of months ago from 2:00 a.m. in the morning, I think it was, and all it was was his Range Rover was parked outside his house. A guy pulls up in a car next to his Range Rover on a laptop,
+</details>
+
+>> 在那里坐了大概三四分钟，然后你就看到揽胜启动了。那个家伙从自己的车里出来，穿过马路，坐进揽胜，把车开走了。哇。
+<details><summary>Original English</summary>
+>> sits there for about 3 or 4 minutes, and then you just see the Range Rover turn on. He the guy gets out of his car, walks across the road, gets in the Range Rover, drives it off. Wow.
+</details>
+
+>> 他们至今还没找到那辆车，但这种事很常见。我听说这非常普遍，尤其是揽胜。
+<details><summary>Original English</summary>
+>> They still haven't found the car, but this is common. I hear this is pretty common, especially with Range Rovers.
+</details>
+
+>> 是的。这取决于车型。我不是专业的偷车贼，但我确实知道，很有可能存在某种连接到服务器的远程启动功能。也可能与汽车经销商有关，这个攻击者手里也许有汽车经销商那里某人的登录凭证，或者这是汽车本身的一个独立漏洞。我不确定，
+<details><summary>Original English</summary>
+>> Yeah. I mean, it depends on on the car. I'm not a professional car thief, but I do know, you know, there's a very strong chance that there is some remote start feature that connects to a server. There there could be a connection with a car dealer where this attacker had maybe credentials for somebody at the car dealer or maybe it's an exploit with the car independently. I don't know for sure,
+</details>
+
+>> 但攻击汽车的方法有很多种，我在新闻和社交媒体上展示过其中一些。但目前很流行的一种方法是，有人能够——这最初起源于一群俄罗斯人，他们出售这种可以窃取遥控钥匙（key fob）的定制固件。无论你按锁车键、解锁键、寻车报警键还是后备箱键，按哪个键都无所谓。只要按一次按钮，它就能克隆那个遥控钥匙，并且能与滚动码系统（rolling code system）对齐，而这才是困难的部分。关于滚动码系统，对于年纪大一点的观众来说，他们会记得以前车库门遥控器背面有拨码开关（dip switches），那被认为是静态码。那个数字永远不会变。只要你获取了一次那个静态码，它就总能用同一个数字打开。而在滚动码系统中，每次你按下按钮，数字都会改变，而系统或门锁系统知道序列中的下一个数字会是什么。所以这种针对汽车的攻击会与遥控钥匙对齐，然后完全克隆这个遥控器。再看这个，这是一个 nonbox。它可以黑掉无人机。它能识别执法人员——不仅通过他们的执法记录仪，还能通过警车上的警灯或无线电。它能告诉你警察在哪里，离你有多远。这个东西能瘫痪摄像头，能做大量的 Wi-Fi 攻击、大量的蓝牙攻击。但在我看来，这个设备最酷的功能之一是，比如你有一架大疆（DJI）无人机——一个非常受欢迎的品牌——我可以用这个设备让无人机断电，从中获取它原本连接的 Wi-Fi 密码。我可以关闭避障功能。我可以控制无人机能飞多远，比如让它从操作者身边飞走。而他们没有任何迹象表明这一切正在发生。所以，当然，你可以迫使无人机坠毁，或者你可以找到那个人的个人信息，因为所有无人机在——我想是 2022 年之后，这方面你得核实一下——都被要求启用远程识别（remote ID）。远程识别就是显示无人机在空中的位置、它的 GPS 坐标、你拿着遥控器站在哪里，而且美国要求你注册无人机。所以现在你可以通过序列号识别天上的无人机是谁的、他们站在哪里，并且通过序列号你可以查询他们的执照并获取他们的姓名。所以飞无人机相当危险，不仅在被攻击方面，在隐私方面也是如此。所以如果你的计划是飞一架无人机——至少飞到我家上空——并想保持隐私，我会比你想象的更了解你。另一个我会给你展示的酷东西是，这上面的 Flock 探测器（flock detector）好得令人难以置信。
+<details><summary>Original English</summary>
+>> but there there's a ton of ways to attack a car, and I've shown some of them on on the news and and on social media, but uh you know, one one way that is pretty popular right now is somebody was able to it be it originally started with like a group of Russians that were selling this custom firmware that could steal a key fob. It doesn't matter if you press the lock button, the unlock button, the panic button, the trunk, but didn't matter what button you pressed. It would clone that key fob from just one button press and it would align it with a rolling code system which is that's the hard part. A rolling code system instead of like for the older people that are that are watching they'll remember like for their garage there was like dip switches and in the back of it and that's considered a static code. The number never changes. If you get that static code once it's going to always open with that same number. a rolling code system. Every time you press the button, the number changes and the system or lock system knows what the next number in that sequence is going to be. So this attack for cars align with the key fob and then clones the remote completely. So this is a nonbox. This can hack drones. It can identify law enforcement uh not only from their body cameras but from their light bars in their cars or radios. It can tell you where cops are at, how far they are away from you. This thing can disable cameras that like like it it can do a ton of ton of Wi-Fi attacks, ton of Bluetooth attacks. But one of the coolest things in my opinion with this device is if a if you have a DJI drone, for example, like a very popular brand, I can have this device power the device down, take the Wi-Fi password that it was originally connected to from it. I can turn off obstacle avoidance. I can control how far the drone can go away, like, you know, fly away from the person. And they have no indication that that's happening. So, you know, a drone, you know, you could force the drone to crash, of course, or you could find personal info on the person because all drones pass, I think it was 2022, you'd have to fact check me on this, but they re required you to enable remote ID. And remote ID is uh it's it's just showing the where the drone's at in the sky, GPS coordinates of it, where you're standing with the controller, and then the United States requires you to register your drones. So now you can identify whose drone's in the sky with the serial number, where they're standing, and now with the serial number, you can look up their license and get their name. So pretty pretty dangerous to fly a drone, not only on the attack side of things, but also on the privacy side of things. So if your plan was to fly a drone, at least over my house, and be private about it, I'm going to know more about you than you thought. Another cool thing I'll show you is the flock detector on this thing is unbelievably good.
+</details>
+
+>> 什么是 Flock 探测器？
+<details><summary>Original English</summary>
+>> What's a flock detector?
+</details>
+
+>> 你熟悉 Flock 摄像头吗？
+<details><summary>Original English</summary>
+>> Are you familiar with flock cameras?
+</details>
+
+>> 不熟悉。好吧，Flock 摄像头，在美国，很多人对 Flock 非常愤怒。Flock 是一家私营公司，在公共场所安装了摄像头。你们英国人肯定习惯了这些公共摄像头。但在美国，我们没有那个。所以这家私营公司有面向街道的摄像头，可以显示车牌以及各种其他正在传输的数据。但正在发生的事情是，执法部门从一家私营公司购买这些数据，这规避了宪法，他们能够通过这些 Flock 摄像头确定人们的位置。所以人们——我不是在鼓励任何这种行为——但这个设备可以识别它们在哪里，某种程度上能精确定位到它们的具体位置。有些人用钢锯把它们锯断，把它们扯下来，用东西射击它们，场面变得相当狂野。我不纵容任何那种行为，但大规模监控（master balance）这类事情现在是一个热门话题。
+<details><summary>Original English</summary>
+>> No. Okay, so Flock cameras, people in the United States, a lot of people have been really pissed off about Flock. Flock is a company that's privately owned that has cameras that are in the public. And you guys and UK definitely uh are used to these public cameras. But in the United States, we don't have that. So this private company has cameras that are facing the street that are showing um you know, license plates and and and all kinds of other data that that's being transferred. But what what's happening is law enforcement is buying the data from a private company which circumvents the you know the constitution and they're able to to identify where people are at uh with these flock cameras. So people are uh you know I'm not encouraging any of this but this device could identify where they're at kind of locate them down to you know exactly where they're positioned. Um and you know some people are are cutting them down with hacksaws and and ripping them you know shooting them with stuff and you know getting pretty wild. I don't I don't condone any of that behavior but you know the master balance type of thing is a is a huge topic right now.
+</details>
+
+### 离网通信、法拉第袋与位置追踪
+
+>> 你认为中国——我听你说过一句相当令人不寒而栗的话。你说你认为中国正在寻找潜入美国技术的隐蔽途径，这让你对谁在监听你的通话感到偏执。
+<details><summary>Original English</summary>
+>> Do you think um China are I heard you say a quote which was quite chilling. You said you said you think China is looking for hidden ways into US technology and it has made him paranoid you paranoid about who is listening to your calls.
+</details>
+
+>> 呃，是的，中国相当强大。我现在更担心他们向我们发射 EMP，而不是担心他们监听我的电话。
+<details><summary>Original English</summary>
+>> Uh yeah I mean people China China is pretty powerful. I'm more concerned about them sending over an EMP to us right now than I am them listening to my phone calls.
+</details>
+
+>> 什么是 EMP？
+<details><summary>Original English</summary>
+>> What's an EMP?
+</details>
+
+>> 电磁脉冲（electromagnetic pulse）。它会摧毁我们所有的技术、所有的电子设备。这将是一种严重的侵略行为。假设那就是他们的做法。不用向我们发射核弹，我们就可能失去互联网，这意味着我们失去银行账户，失去蜂窝网络连接，失去一切。
+<details><summary>Original English</summary>
+>> An electromagnetic pulse. It would knock out all of our all technology, all electronics. It would be a a serious act of aggression. Let's just say that was their approach. Instead of sending a nuke over, we could we could lose the internet, which means we lose our bank accounts, we lose our cellular connections, we lose everything.
+</details>
+
+>> 交通管制可能也会受影响。
+<details><summary>Original English</summary>
+>> Traffic control probably.
+</details>
+
+>> 是的，一切。换句话说，任何里面有芯片的东西。这实际上让我想到了另一件事，你熟悉 meshtastic 吗？
+<details><summary>Original English</summary>
+>> Yeah. Everything. Anything with a chip inside of it, for other words. And that actually brings me to something uh that that are you familiar with meshtastic?
+</details>
+
+>> 不熟悉。我不是那种末日准备者或阴谋论者，我知道我听起来可能有点像，但拥有像这样的设备，比如如果你想看看的话，它本质上就像一个对讲机（walkie-talkie），对吧？你知道对讲机是怎么用的，你按下按钮，另一边的人就会回答。它的工作方式是你发送一条短信，比如你从手机连接到它。有些像黑莓手机（Blackberries）。你记得老式黑莓手机吗？
+<details><summary>Original English</summary>
+>> No. So, I'm not like a doomsday prepper or conspiracy guy, and I know it probably sounds a little bit like I am, but having devices like this, for example, if you want to check it out, it's it's essentially like a walkie-talkie, right? So, the way you know how a walkie-talkie, you press the button, the other person answers that, the way it works is you send a text message, which you connect to it from your phone, for example. Some of them are like Blackberries. You remember the old Blackberries?
+</details>
+
+>> 呃，你可以在上面打字，屏幕上会显示社区里的对话。所以在我们现在录制的地方，当地所有使用这个的人——比你想象的要多——我们可以看到他们彼此之间的对话，因为它们是公开的。如果电网瘫痪了，电力网、蜂窝网络一切都断了，你可以用 meshtastic，它是开源的，免费的。它不是一家赚钱的公司，不是营利性公司。所以，本质上如果我现在想给你发一条私密消息，它是完全端到端加密的。政府无法读取它。如果它被删除了，没有任何办法可以恢复它。我可以用这个设备把它发到你那边，假设你现在离我有 75 英里远。这根天线无法覆盖 75 英里。但你我之间的那些设备，信号会在它们之间跳跃传递。
+<details><summary>Original English</summary>
+>> Uh, you can type on them and the screens on there. It shows the conversations of the community. So, where we're at right now recording, we could have all the people in the local area that are using this, which more than you'd expect. We could see their conversations with each other because they're public. Uh, if the grid was to go down, the power grid, the cellular grid, everything, you could use a a meshtastic open source. It's free. Like, it's not a company that's making money. It's not a for-profit company. So, essentially, if I wanted to send you a private message right now, it's fully encrypted, end to end. Government can't read it. nothing can be done to to recover it if it got deleted. I could use this device, send it to your side, and let's say you were, you know, 75 miles away from me right now. This antenna is not making the 75 miles. But the devices in between you and I, it bounces off of them.
+</details>
+
+>> 哦，就像一个网络
+<details><summary>Original English</summary>
+>> Oh, like a network of
+</details>
+
+>> 就像一个网络，就像一个网状网络（mesh），就像 meshtastic。但是，当我给你发送这条加密消息时，如果他们查看的话，他们可以看到有一条消息通过了他们的设备，但他们看不到消息里包含什么内容。
+<details><summary>Original English</summary>
+>> like a network like it's like a mesh like a meshtastic. So, but the people that I'm sending this encrypted message to you, they they can see that a message traveled through their device if they if they look, but they can't see what the message contained.
+</details>
+
+>> 明白吗？
+<details><summary>Original English</summary>
+>> Okay?
+</details>
+
+>> 所以拥有它们的人越多，这个网络就变得越好、越强大。因此，在电网瘫痪、或者我们失去蜂窝网络、或者失去某种通信方式的时候，拥有这样的设备是件好事。如果你想要格外保险、格外谨慎，甚至像极度担心阴谋那样，可以把它们放进法拉第袋（Faraday bag）里，我想你片场就有一个。是的。像这样的东西，它的作用是针对那些试图阻止通信进入或发出的人。所以如果这个设备在里面，然后我把它折起来，或者按这个袋子的设计方式合上，那个设备就不可能——没有信号能进到这里面，也没有信号能从那个设备发出去。就是这样
+<details><summary>Original English</summary>
+>> So, the more people that have them, the better and stronger the network becomes. So, for these times where, you know, let's say the power grids go down or we lose cellular or we lose something, a way to communicate, devices like these are good to have. And if you want to be extra sure and extra paranoid, like an extra conspiracy fears, put them in a Faraday bag, which I think you have one on set. Yeah. So something like this, the point of something like this is for somebody that is trying to stop communication from going in or coming out. So if this device is in here and and I fold that over or however this one works, that device cannot be like there's no signal making it in here and there's no signal from that device making it out. That's
+</details>
+
+>> 为什么，那是什么材料做的？
+<details><summary>Original English</summary>
+>> why what what is that made out of?
+</details>
+
+>> 我不知道确切的材料，但我猜是某种铝，因为铝能起作用，比如严格来说你可以用锡纸。
+<details><summary>Original English</summary>
+>> Uh I don't know the exact material, but I'd imagine some sort of aluminum cuz aluminum works for like you could technically use tin foil.
+</details>
+
+>> 人们也会对手机之类的东西这么做吗？
+<details><summary>Original English</summary>
+>> Do people do that with their phones and stuff as well?
+</details>
+
+>> 是的，当我和某些联邦机构对话时，我会把我的手机和他们的手机都放进法拉第袋里。那是必须的要求。这几乎是不言而喻的。
+<details><summary>Original English</summary>
+>> Yeah, so when I have conversations with certain federal agencies, I I put my phone as well as theirs in Faraday bags. That's that's like a requirement. That's just kind of goes without being said.
+</details>
+
+>> 你们为什么要这么做？
+<details><summary>Original English</summary>
+>> Why'd you do that?
+</details>
+
+>> 这部分我不太能谈论。除了那个显而易见的原因，也就是有人可能会定位到设备在哪里，知道我们彼此在一起，知道具体是谁和谁在一起。
+<details><summary>Original English</summary>
+>> I can't really talk about that part. like other than you know the obvious that somebody could potentially locate where the devices are that we're with each other you know who specifically is with who.
+</details>
+
+>> 嗯，这与其说是为了防止别人真的听到对话，不如说是为了位置数据。
+<details><summary>Original English</summary>
+>> Um it's less about actually listening to the conversation and more about the location data.
+</details>
+
+>> 哦，好吧，明白了。
+<details><summary>Original English</summary>
+>> Oh, okay fine.
+</details>
+
+>> 是的。好。
+<details><summary>Original English</summary>
+>> Yeah. Okay.
+</details>
+
+>> 不过这实际上引出了我想告诉你的另一件事。
+<details><summary>Original English</summary>
+>> But that actually leads me into something else I wanted to tell you about.
+</details>
+
+>> 移动广告 ID（Mobile advertising IDs）。你听说过 MAID 或 ad ID 吗？
+<details><summary>Original English</summary>
+>> Mobile advertising IDs. Have you ever heard of MA ID or ad ID?
+</details>
+
+>> 没有。移动广告 ID 的作用是——你肯定见过当你打开一个应用时，它会弹出“允许此应用跟踪，是或否”。
+<details><summary>Original English</summary>
+>> No. So mobile ad ids what they do is like have you ever seen when you open an app it says allow this app to track yes or no.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 好的。当你打开应用时，它发出的信息之一就是这个。有程序在读取这个广告 ID，然后这个广告 ID 会表明这部手机在那个时间位于这个地点，接着这些信息会被卖给数据经纪商（data broker）。数据经纪商再把这些信息卖给第三方，在某些情况下可能是执法部门，也可能是公众。而且市面上存在一种地图软件，可以说：嗯，Stephen 每周的这一天、这个时间都会去这家商店，这里就是根据你的移动广告 ID 绘制的热点图。这是另一种不使用政府技术来监视人的方式。它是公开的、私营的，而且他们付费购买这些数据。所以避开这种情况的方法是在你所有的应用上关闭跟踪，这样你就不必太担心这成为一个问题，但这种可能性依然存在。另一件事是那些小玩意里的 OMG 数据线。我还没来得及给你看那根恶意充电线，我想
+<details><summary>Original English</summary>
+>> Okay. So you're that's one of the things that it's advertising when you open the app. Things are reading this advertising ID and then that advertising ID is saying this is where this phone was at that time and that's getting sold to a data broker. The data broker is then selling that information to third parties whether it be law enforcement in certain cases the public. And then there's mapping software that exists out there to say, well, Stephen goes to this store at this time at on this day, every week, and here's the hotspots based on your mobile advertising ID, which is another way to surveil people without using government technology. It's public, private, and they're paying for that that data. Um, so the way around that is to turn tracking off on all your apps, so you don't have to worry about that being a thing as much, but still a possibility. And then the other thing was the OMG cable for the the gadgets. I didn't get to show you the malicious charging cable, which I think is
+</details>
+
+### 恶意充电线与 RFID 门禁卡克隆
+
+>> 它就在这里。所以，
+<details><summary>Original English</summary>
+>> it's in here. So,
+</details>
+
+>> 这是一根普通的 iPhone 数据线。
+<details><summary>Original English</summary>
+>> this is a this is a normal iPhone cable.
+</details>
+
+>> 不是，我在上面做了一个橙色标记，提醒自己别和我真正的充电器混在一起。当它插到你的手机上时——我等下会演示——你可以以每秒 300 个字符的速度自动输入按键。等我给你展示的时候，你就会看到它有多快了。
+<details><summary>Original English</summary>
+>> No, I have a orange marker on there to let me know. Don't mix it up with my actual charger. When that gets plugged into your phone, um, which I'll demonstrate, you could automate keystrokes at 300 characters per second. So, like you'll see how quick it is once I show it to you.
+</details>
+
+>> 你可以自动输入按键。这是什么意思？意思就是，比如我想发送“hello”，然后按回车键，然后我想回到主屏幕，或者在手机里到处跳转，我可以用那根数据线来模拟一个键盘。
+<details><summary>Original English</summary>
+>> You can automate keystrokes. What does that mean? meaning in like if I if I want to send you know hello and then hit the enter button and then I want to you know go to the home screen or you know jump around the phone I can emulate a keyboard with that with that cable.
+</details>
+
+>> 那么，你能做到这一点，如果我用这个充电器，这在潜在的不良后果方面意味着什么？
+<details><summary>Original English</summary>
+>> So what does that mean in terms of what's the adverse potential outcome of you being able to do that if if I use this charger?
+</details>
+
+>> 如果你的设备处于解锁状态，而且我能够——它有地理围栏（geo fencing）功能。所以，如果你在某个特定区域或者发生了什么情况，它可能会在插着电的时候自己自动触发载荷。假设目标是导出你手机里的所有联系人，它可以在你的 iPhone 上创建一个叫做“快捷指令”（shortcut）的东西，导出你所有的联系人，把它们通过电子邮件发送到某个服务器、某个邮箱或某个随机地点，然后把自己从设备上完全删除，之后它就像一个普通的充电器一样工作，你永远不会知道它曾经存在过。让我演示一下它的工作过程，这样你就能明白我在说什么了。最酷的部分是这个充电头里面有一台微型电脑。它显然看起来像一个普通的充电器，但这里面有一台电脑。好的，你看到它建立了一个叫做 om.g 的网络。
+<details><summary>Original English</summary>
+>> So if you had your device unlocked and and I was able to it has geo fencing. So, if you're in like a specific area or whatever happens, it might automatically go off that like the payload might automatically just pop off on its own while that's plugged in and let's say the goal would be to export all of your contacts or out of your phone, it could create what's called a shortcut on your on your iPhone, export all your contacts, email them to some server or or some email or some random spot and then completely remove itself from the device and then it just behaves like a normal charger and you'd never know it existed in the first place. So, let me demonstrate it working so you get an idea of what I'm talking about. The cool part is there's a mini computer inside of this charger. So, like obviously it looks like a regular charger, but there's a computer inside of here. Okay. So, you see it made a network called om.g.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 现在从这里看，这是我的手机。这是受害者的手机。这没有插到任何电源上，但它现在正从这部手机取电，发出一个我可以用我的手机连接上的网络，
+<details><summary>Original English</summary>
+>> So, now from that, this is my phone. This is a victim's phone. This isn't plugged into anything, but it's now taking the power from this phone, sending out a network that I can connect to from my phone,
+</details>
+
+>> 即使它没有插在电源上。即使它没有插在电源上，因为手机给了它足够的电力来运行我刚才告诉你的插头里的那台微型电脑。
+<details><summary>Original English</summary>
+>> even though it's not plugged in. even though it's not plugged in because the phone is giving it enough power to run that mini computer I was telling you about in the in the plug.
+</details>
+
+>> 所以，我要连接到这根数据线，然后我只做一个非恶意的操作。好的。你看，你把这个插上，它在运行，你在用手机，然后屏幕上出现了“zero day was here. Thanks for watching, DAC.”。所以你基本上只要插上那根线，就能黑进别人的手机
+<details><summary>Original English</summary>
+>> So, uh I'm going to connect to this cable and then I will do just just to make something non-malicious here. Okay. So, you know, you got this plugged in, it's running, you're on your phone, and then zero day was here. Thanks for watching, DAC. So you can basically if that cable's plugged in, you can essentially hack their phone
+</details>
+
+>> 基本上是的。只要他们的手机是解锁的，或者你可以把载荷设为在他们离开某个范围或进入某个区域时自动触发。这叫地理围栏。但在这个例子里，我只是展示它打字有多快。如果我再运行一次，你看它打字有多快。
+<details><summary>Original English</summary>
+>> essentially. Yeah. As long as their their phone's unlocked or you can automate the payload to go off at a time where they go out of a certain range or they go into a certain area. It's called geo fencing. But in this case, I'm just showing how fast it can type. I mean, if I run that again, watch how quickly that types that out.
+</details>
+
+>> 是的，每秒 300 个字符。所以，
+<details><summary>Original English</summary>
+>> Yeah. I mean, it's 300 characters per second. So,
+</details>
+
+>> 而且同样，这里的风险在于它可以访问其他东西、下载其他东西并发送出去——它可能会黑进她的照片并把它们发给别人。
+<details><summary>Original English</summary>
+>> and again, the the risk there is that it could access other things and download other things and send those it could hack her photos and send them to someone else.
+</details>
+
+>> 是的，实现这一点的最简单方法就是创建一个快捷指令，然后设定：下载所有照片，按下允许访问所有照片的按钮，把它发送到服务器、发送到邮箱、通过短信发送，随便你想怎么发，根本不需要在手机上安装病毒之类的东西。而且，这根数据线也可以充当键盘记录器（key logger）。比如你的键盘是 USB-C 转 USB-A，而不是 C 转 C，我就可以在中间接一根这样的数据线，同样可以捕获你在那个键盘上敲击的所有按键。
+<details><summary>Original English</summary>
+>> Yeah, the easiest way to make that happen is create a shortcut uh and then say, yeah, download all photos, press the allow access to all photos button, send it to a server, send it to an email, send it to a tech through text, whatever you want it to be, not installing a virus on the phone or something like that. You can, you know, like this cable also works as a key logger. So, if I let's say your keyboard is USBC to USBA instead of C to C, I could use one of these cables in between and capture the keystrokes that are typed on that that keyboard as well.
+</details>
+
+>> 我想象你能够接触到并展示的这些东西是一个层面的，而 CIA 和政府之类的机构拥有的是另一个层面的设备和软件。
+<details><summary>Original English</summary>
+>> I'm imagining that the stuff that you've been able to get access to and that you can show is one level of things and that the CIA and governments and such have a different level of equipment and software.
+</details>
+
+>> 嗯。这个说法很恰当，有些事情你可以谈论，也值得公开出来，因为人们有办法管理风险，通过意识到这些攻击的存在；而有些事情最好不要说出来，因为你不想让坏人利用这些方法。
+<details><summary>Original English</summary>
+>> Mhm. That's a good way to put it that there's certain things you can talk about and that are worth putting out there because you know there's there's ways that people can manage the risk and then you know and like by being aware that these attacks exist and then there's certain things that are better left unsaid because they're they're you know you find some bad people using these methodologies.
+</details>
+
+>> 所以有些事情是你不能谈论的。
+<details><summary>Original English</summary>
+>> So there's things that you can't talk about.
+</details>
+
+>> 是的，而且有些事情不仅是我不能谈论，谈论它们也不明智，因为你不想让攻击者变得更聪明。我还有最后一件东西，最后一个小玩意。这里有几张我决定带来的酒店房卡。放一张在这里，还有另一张。所以我们有几张酒店房卡。然后这个叫做 Chameleon Ultra。它就是一个 RFID NFC 读写器。意思是用于门禁感应扣（access control fobs）的。比如你要进社区的游泳池，或者进这栋大楼。他们可能会给你一个感应扣。这个设备可以读取那个感应扣，复制它，要么直接用这个设备模拟它，要么把它写入另一张卡里，这样那张卡——我就能走进大楼，让系统以为我是 Steven Bartlett。抱歉，是让设备以为我是 Steven Bartlett。你这里有一个防 RFID 屏蔽器。那里有个道具。是一个钱包。
+<details><summary>Original English</summary>
+>> Yeah. and and some things not only that I can't talk about but it wouldn't be smart to talk about because you don't because you don't want the you know you don't want the attackers getting smarter. Got one more thing one more gadget. Here's some hotel keys that I decided to bring with me. Put one here and then here's a another one. So we got a couple hotel keys. Um and then this is called a Chameleon Ultra. It's just an RFID NFC reader writer. So that means like access control fobs for your doors. Like let's say you got to get into a pool in in a community or you or maybe access to this building. There might be a fob they could have given you. This could read that fob, duplicate it, either emulate it from this device or write it onto another card so that that card, you know, I could enter the building thinking I'm Steven Bartlett. I'm sorry. The device would think that I'm Steven Bartlett. And you have an RFID blocker. There was a prop for it. There's a wallet.
+</details>
+
+>> 是的，就在这儿。所以我一会儿也会展示为什么这很重要。我们也拿出几张信用卡吧。我也可以隔着钱包读取，但我先拿出来。好了，我现在要连接到这个设备。它就在我的钥匙链上。通过蓝牙连接。现在，它提示把卡贴近——这是我做的一个小程序，专门用来给你演示的。这不是市面上公开的东西，但我想给你举个例子。这会告诉你密钥的类型。比如这张卡，它显示 my favorite，这是一种非常常见的密钥。这是一张 Visa 卡，另一张酒店卡，昨晚的另一张酒店卡。
+<details><summary>Original English</summary>
+>> Yeah, there we go. So, I'll show why that's important in a second, too. So, well, let's just bring out a couple credit cards, too. And I can do it through the wallet, too, but I'll just bring them out for now. All right. So, I'm going to connect to this device right here. It's on my keychain. Connecting over Bluetooth. And now, it's saying to tap a card against This is a little program I made to just demo it for you. Um, this is not something that's publicly out there, but I wanted to give you an example. So, this will tell you the type of key. So, for example, this card, it says my favorite, which is a very common key. Here's a Visa card, another hotel, another hotel from last night.
+</details>
+
+>> 所以你基本上就是把所有这些凭证都保存到了你的笔记本电脑上。
+<details><summary>Original English</summary>
+>> So, you were just saving all of those credentials onto your laptop essentially.
+</details>
+
+>> 基本上是这样，不过是的，基本上就是把它们保存在那里。其中有一些需要所谓的“破解”（crack）。所以你必须破解其中一部分，但只要有合适的电脑，你可以非常快地完成。
+<details><summary>Original English</summary>
+>> Essentially, hide beast, but yeah, essentially saving them on there. Uh, and and some of them would require it's it's called a a crack. So you would have to crack some of the them, but with the right computer, you could do that very quickly.
+</details>
+
+>> 那是不是意味着如果你——如果你只是碰到了我的——如果我走过你身边，你碰到了我的酒店房卡，理论上你就能进我的酒店房间。
+<details><summary>Original English</summary>
+>> And does that mean that if you did if you just touched my So if you walked past me, you touched my hotel key card, you could theoretically get into my hotel room.
+</details>
+
+>> 是的，绝对可以。绝对可以。尤其是酒店房卡。然后隔着钱包的话，比如我只要像这样。看，它隔着我的钱包读取到了一张万事达卡（Mastercard）。不过更好的例子是，假设我在背包里放一根大天线，整个背包里都绕着铜线圈。然后我走过拥挤的地铁或火车，我就能顺手抓取那些更可能被克隆和复制的感应扣——相比信用卡而言。信用卡这个更多只是一个酷炫的功能，而不是说能复制它去刷卡消费。但酒店房卡和门禁感应扣的威胁要大得多
+<details><summary>Original English</summary>
+>> Yeah, definitely. Definitely. Especially hotel keys. And then through a wallet, for example, if I just go like this. So there's a master card right there that it read through my wallet. And the better example of this though would be let's say I put a big antenna in a backpack and I had the entire backpack with a copper coil. Okay. Uh and then I'm walking down through a a packed subway um or train and then I'm just grabbing, you know, key fobs which are more likely to be cloned and duplicated than a credit card. The credit card thing is more of just like a cool feature rather than being able to like copy it and tap to pay. But the the hotel key fobs and the access control fobs are way more of a a threat that
+</details>
+
+>> 因为别人可以进你家。
+<details><summary>Original English</summary>
+>> because people can get in your house.
+</details>
+
+>> 是的。进你家或者你的办公室之类的地方，而且看起来就像是你本人真的在尝试进你家一样。
+<details><summary>Original English</summary>
+>> Yeah. Get in your house or your office or whatever and and it appears like it's you actually trying to get into your house, you know.
+</details>
+
+>> 你是说我手里的这个东西能防范那种情况。
+<details><summary>Original English</summary>
+>> And you're saying that this thing I have in my hand helps that.
+</details>
+
+>> 它会阻止那种情况的发生。所以如果你把这个给我，我把一张刚才还能读取的信用卡放进去。哦，这个……它没有屏蔽掉。不知为什么，你的防 RFID 屏蔽钱包没有屏蔽掉。
+<details><summary>Original English</summary>
+>> That will stop it from from being a possibility. So if you give me that, I'll put a credit card in there that was just readable. Oh, this is it's not blocking it. It's not your RFID blocking. Well, there's not blocking it for some reason.
+</details>
+
+>> 也许它不是一个真正的防 RFID 钱包。
+<details><summary>Original English</summary>
+>> Maybe it's not a real RFD.
+</details>
+
+>> 是的，它可能只是个假货之类的。这个
+<details><summary>Original English</summary>
+>> Yeah, it might just be like a fake one or something. This
+</details>
+
+>> 好吧，那我们就假设它是个假货。但核心观点依然成立，你可以买到能阻止这种情况发生的防 RFID 钱包。
+<details><summary>Original English</summary>
+>> Okay, let's just assume it's a fake one then. But the meth the the point still stands that you can get RFD wallets that will stop this happening.
+</details>
+
+>> 是的，而且大多数确实有效。我不推荐这个牌子，管它是什么牌子。
+<details><summary>Original English</summary>
+>> Yeah. And and most of them work for real. I wouldn't recommend this brand. Whatever.
+</details>
+
+>> 是的，我不知道这是什么牌子，但我不会推荐它。我喜欢我们的赞助商与我们的价值观一致，我们在 Progressive 的合作伙伴就是一个完美的例子。我喜欢 Progressive 的地方在于，他们认同我们所说的“首位相信者心态”（first believer mindset）。每个人都需要有人相信他们，在没有其他人支持时依然力挺他们。我就曾有人相信我。我在曼彻斯特大学辍学时，有一个叫 Alistister 的人相信我。当时我有一个叫 Wallpark 的想法，给他发了一封冷邮件。他见了我，说即使他不知道我的想法是什么，他也会支持我，因为他说了这些我永远不会忘记的话，他说：“我知道你总有一天会做出一番好事业。”改变我生活的不是 Alistister 给我的 10,000 英镑，而是有人相信我。我认为那个故事证明了信任可以帮助一个人看到可能性。90 年来，Progressive 一直支持人们，为他们创造以前不存在的机会。他们的“Keys to Progress”计划就是一个例子。自 2013 年以来，该计划已向退伍军人捐赠了超过 1,200 辆汽车，因为 Progressive 明白，当有人相信人们能成为什么样的人时，他们会走得更远。这就是我喜欢 Progressive 的原因。要了解 Progressive 如何帮助人们前进，请访问 progressive.com/purpose。我喜欢这个品牌。招待他人可能是最被低估的健康习惯之一。Simon Synynic 曾坐在这里跟我说，有一种生物黑客（bio hack）比我们尝试的所有其他方法都要好，他说那就是友谊。所以，随着圣诞节临近，所有你爱的人可能会来你家做客，也许现在正是开始创造更多这种时刻的时候。我比任何人都更清楚这一点，因为我现在住在美国。所以我不得不为了 8 月的生日彻底翻新我的房子，然后现在为了圣诞节所有朋友都会来，还有我们的第一个感恩节，我这里有一些照片。帮我翻新房子的 Wafer 现在是本播客的赞助商。凭借他们的定制照片和评论，你可以放心地打造一个你热爱并想与他人分享的家。在这个假期季翻新你的家时，Wayfair 正好能提供你所需要的一切。访问 wayfairer.com 选购你家里的所有物品。网址是 w a yf a iir.com。说到个人安全，对于那些正在收听并且心想“好吧，Ryan，我能做什么？在我们的线上和线下安全方面，有哪些基础的、基本的措施可以让我们更安全？”的听众来说，就是那些我们可以做的简单便宜的事情。
+<details><summary>Original English</summary>
+>> Yeah. I don't know what brand this is, but I wouldn't recommend it. I love it when our sponsors line up with our values and our partners at Progressive are a perfect example of this. What I love about Progressive is they share what we call the first believer mindset. Everyone needs someone to believe in them and to back them even when no one else will. I had someone believe in me. I had a guy called Alistister believe in me when I dropped out of university in Manchester. I had this idea called Wallpark. Sent him a cold email. He met me, said he would back me even though he didn't know what my idea was cuz he said these words that I'll never forget to me. He says, "I know you're going to do something good one day." It wasn't Alistister giving me £10,000 that changed my life. It was that someone believed in me. And I think that story is proof that belief can help someone see what's possible. For 90 years, Progressive has backed people and created opportunities for them that didn't exist before. Their Keys to Progress initiative is an example of this. It has gifted more than 1,200 vehicles to veterans since 2013 because Progressive understands people go further when someone believes in what they can become. That is why I love Progressive. To see how Progressive is helping people move forward, head to progressive.com/purpose. I love this brand. Hosting others might be one of the most underrated health habits there is. Simon Synynic actually sat here with me and said that there's one bio hack that's better than all the other things we're trying, and he said that was friendship. So, with Christmas coming and all of the people that you love probably popping around your house, maybe this is the time to start making more of those moments. And I know this more than anybody because I now live in America. So I've had to completely renovate my house for my birthday in August and then now for Christmas with all of my friends coming around and also our first Thanksgiving which I have some photos of here. And now Wafer, who helped me renovate my house, are a sponsor of this podcast. And with their custom photos and reviews, you can feel confident creating a home you love and you want to share with others. When refreshing your home this holiday season, Wayfair delivers exactly what you need. Head to wayfairer.com to shop all of the things for your home. That's w a yf a iir.com. In terms of personal security, then for those that are listening and they're thinking, "Okay, so what can I do, Ryan? What are like the basics, the foundations of getting more secure um with our with our online and offline security?" it just the simple cheap things we can do.
+</details>
+
+### 个人安全基础措施
+
+>> 你可以做的简单便宜的事情是弄一个 VPN，也就是虚拟专用网络，它可以在互联网上掩盖你的 IP 地址，因为它能阻止你的互联网服务提供商（ISP）跟踪你在做什么、出售你的数据，以及阻止某些其他网站根据你 IP 地址的浏览记录把你的信息关联起来。当你使用公共网络或共享网络时，它还增加了一层隐私保护。如果电脑上还没有安装的话，我建议使用某种杀毒软件
+<details><summary>Original English</summary>
+>> The simple cheap things that you can do is is get a VPN uh you know a virtual private network that masks your IP address from the internet because it stops your internet service provider from tracking what you're doing selling your data um as well as certain other websites that are connecting you together based on your your browsing from your IP address. Um it also adds a layer of privacy uh when you're on public networks or shared networks. I would recommend using some sort of antivirus on your computer if there's not one installed
+</details>
+
+>> 即使你用的是 Mac。
+<details><summary>Original English</summary>
+>> even if you're on Mac.
+</details>
+
+>> 是的，即使用 Mac 也是如此，因为仍然有办法远程访问 Mac 电脑或安装恶意软件。我知道 Mac 只是攻击面不同而已。并不意味着别人说它无法被黑，Mac 就真的无法被黑。它只是有不同于 Windows 的被攻击方式。
+<details><summary>Original English</summary>
+>> Uh yeah, even if you're on Mac because, you know, there are still ways to remotely access a Mac computer or install malicious software. Uh I know there's there's Mac is just a different attack surface. Doesn't mean just because they say it's unhackable, Mac is not unhackable. It just has a different way of being attacked than Windows.
+</details>
+
+>> 你还会做哪些普通人不会做的事情？你用普通手机吗？你开启了锁定模式（lockdown mode）吗？
+<details><summary>Original English</summary>
+>> What other things do you do that the average person doesn't do? Do you have like a normal phone? Do you have it in lockdown mode?
+</details>
+
+>> 是的。我把我的手机设为高级数据保护模式，也就是 ADP 模式。我所有的社交媒体账号也都处于锁定模式，需要自拍验证，还需要实体硬件密钥。你熟悉 YubiKey（UB keys）吗？
+<details><summary>Original English</summary>
+>> Yes. Yeah, I have my phone in uh advanced advanced data protection mode or ADP mode. Um I have all of my social media profiles in, you know, lock down mode as well where you need a selfie, you need a physical hardware key. Are you familiar with UB keys?
+</details>
+
+>> 所以只要允许我使用 YubiKey 的地方，我都会用。我在家里安装了大量的监控和安全设备，甚至包括一些我不想谈论的专有技术，但简单来说，它们对于识别出现在我家的陌生人非常有用。我经营着一家安全公司，所以我必须确保自己所做的事情是安全的，而且谢天谢地，我们的平台没有被黑过。过去四年里，自从我开始变得更公众化以来，发生在我身上最糟糕的事情就是有人对我和我爱的人进行“人肉搜索”（doxing）。我无法控制这一点。我可以从公开的数据经纪商那里删除我的数据，但我无法消除数据泄露。你无法把数据从黑客的硬盘里删掉。
+<details><summary>Original English</summary>
+>> So I have a UB key for anything that allows me to use one. I uh I you know I have a ton of surveillance and security at my house down to like some some proprietary stuff that that I don't want to talk about but but is really useful to identify new people showing up at my house for simpler terms. I you know I run a security company so I got to be safe with what I'm doing and uh and our knock on wood uh our platform has not been hacked. The worst that's happened to me in the last four years since I started getting a little more public is uh is people doxing me and and my my loved ones. And I can't control that. Uh I can I can remove it from public data brokers, my my data from public data brokers. I can remove that, but I can't I can't remove breaches. You can't take data off a hacker's hard drive.
+</details>
+
+### 极端网络组织 764 与针对青少年的诱骗
+
+>> 跟我说说这个。你说有一些让人不太舒服的事情你想跟我谈谈。
+<details><summary>Original English</summary>
+>> So tell me about this. Um you said there was some uncomfortable things you wanted to talk to me about.
+</details>
+
+>> 是的。这又要用到我的笔记本电脑了，关于 764。764 及其分支组织，记住这一点很重要，因为 764 是这个组织最初的名字。人们现在还在用它。他们会说自己是 764 的成员，但也有其他人使用衍生品牌或组织名称，我不想点名。我不想说出任何组织名称或任何用户的名字。而且我认为，当我开始深入这些材料，向你展示这些人有多么令人作呕时，我们不说出他们的任何名字或组织名称是很重要的，因为这正是他们想要的。他们会看这个视频，无论我们把他们说得多么不堪，这正是他们在寻找的。他们只是想要恶名，他们想要可信度，他们之所以想要这些，是因为他们的全部目的就是诱骗脆弱的孩子，不仅让他们发送自己的裸照——这本身就已经很可怕了——他们还想让那个孩子残害自己、杀死他们的宠物、谋杀某人，不惜一切代价，只为不让那张照片被分享给他们的家人、朋友或学校。他们让这些孩子对自己做出最可怕的事情，包括自杀。有很多自杀案例都与这些组织及其分支有关，近两年来，这几乎成了我关注的焦点。FBI 也是如此，我想所有 58 个外勤办事处都已动员起来。目前有 500 多个目标正在接受调查。至少这是公开信息。我想向你展示这个过程是如何运作的，以及它是如何发生在人们的孩子身上的。这是真实发生的事情。
+<details><summary>Original English</summary>
+>> Yes. So that's going to require my laptop again, but 764. So 764 uh and subgroups and that's an important thing to remember because 764 was the original name of the group. People still you use it. They'll they'll say that they're a member of 764 but they you know there's other people that are using offshoot brands uh or or group names uh that I don't want to name. I don't want to name any group names or any users. And and I think it's important when I start to get into the material and show you how disgusting these people these people are that we don't say any of their names or their group names because that's exactly what they want. They are going to be watching this this video and they're it doesn't matter how badly we talk about them. That's what they're looking for. They just want notoriety. They want credibility and they want it because what their entire purpose is to trick a vulnerable child into not only sending nude photos of themselves with it, which is horrible within itself. They want that child to, you know, mutilate themselves, kill their animal, murder somebody, uh do whatever it takes so that that photo is not shared with their family, friends, or school. And and they're having these kids do the most terrible things to themselves, including suicide. There's been many cases of suicide related to these groups and subgroups um that it has become the center of my attention for almost well almost two years now. But um and same with the FBI all all I think it's 58 um field offices have been mobilized. There's 500 plus targets under investigation right now. That's at least public information. And um you know I want to show you some of how this process works and how it can happen to people's kids. It's a real thing.
+</details>
+
+>> 天哪。
+<details><summary>Original English</summary>
+>> Jeez.
+</details>
+
+>> 是的，这会很难受。我在这里先给你做个免责声明。我这么做不是为了博眼球的网络流量。我告诉你是因为这些东西确实让人非常难以观看、阅读和直视。但请记住，孩子们每天都在接触这些东西。而且有些孩子整天都在接触这些。他们看到的比这还要糟糕。如果你挖得足够深，你就能找到这些东西——我展示的不是任何调查内容，不是任何会搞砸案件的私密信息。这些东西严格来说已经存在于外网了，所以你不会接到联邦机构打来的电话说“嘿，我们需要那个”。但请记住，孩子们正在看我接下来要给你展示的东西。
+<details><summary>Original English</summary>
+>> Yeah. So, it's it's going to be rough. And I'm giving you a little disclaimer here. I'm not just doing this for clickbait internet stuff. I'm I'm telling you because it's genuinely stuff that's really tough to watch uh and and read and look at. But but keep in mind here that children uh are being exposed to this every day. And some of these kids are being exposed to it all day long. Like they're seeing worse than this. This stuff is, you know, what if you dug around deep enough, you could find it if you I'm not showing anything that any investigations, anything private, uh, that would, you know, mess a case up. This is stuff that technically already exists out there, so you're not going to be getting any calls from a federal agency saying, "Hey, we need that." Um, but keep in mind, kids are kids are seeing what I'm about to show you.
+</details>
+
+>> 我正在看 FBI 的网站，FBI 网站上有这篇文章，警告称存在一个针对网上儿童和弱势群体的虚无主义暴力极端组织。没错。
+<details><summary>Original English</summary>
+>> I'm on the FBI website, and it says it's this article on the FBI website, warning of a nihilistic, violent, extremist group targeting children and vulnerable people online. Yep.
+</details>
+
+>> 叫做 764。
+<details><summary>Original English</summary>
+>> Called 764.
+</details>
+
+>> 是的。而且这是一个严重的问题。这不是那种只发生在某一个地区的孤立问题。这是一个严重的问题，不仅发生在 Roblox、Minecraft 和所有其他平台上。它发生在所有平台上。我先从诱骗阶段说起，也就是他们从哪里诱骗孩子。无论是从电子游戏还是从聊天网站。很多时候，他们寻找那些本就脆弱、有心理健康问题、在学校受欺凌、有自杀念头的孩子，他们会发布广告，让孩子加入他们的“门诊健康中心”或加入他们的“心理健康支持小组”。让我给你看几个这样的例子。这个写着：如果你符合以下任何一项，请加入：有精神疾病、没有父亲、有恋父情结（daddy issues）、精神分裂、边缘型人格障碍，或者女性。这个写着，
+<details><summary>Original English</summary>
+>> Yeah. And it's a significant problem. This is not like a this is this is not just a a oneoff it only happens in this area problem. This is a significant problem that's happening on not just Roblox and Minecraft and all the other platform. It's happening on everything. And and and where I'll start with that is in the luring stage where they lure the kids from. Whether it be from a video game or or from a a chat site. A lot of times they look for kids that are already vulnerable, that are having mental health issues, that that are getting bullied in school, that are having suicidal ideiations and um they'll put out ads to say to join their their outpatient wellness center or or to join their mental health support group. Let me show you some of those examples here. So this one is saying join if you're one of the following mentally ill, fatherless, daddy issues, schizo, borderline personality disorder, or female. This one says,
+</details>
+
+>> 这些是什么广告？
+<details><summary>Original English</summary>
+>> "What are what are these adverts?"
+</details>
+
+>> 这些是 764 及其分支组织成员在不同平台上发布的广告，用来诱骗有心理健康问题的儿童加入他们。
+<details><summary>Original English</summary>
+>> These are advertisements on different platforms luring children that have mental health issues to join them by 764 and subgroup members.
+</details>
+
+>> 所以他们是在邀请你加入 764。
+<details><summary>Original English</summary>
+>> So, they're asking you to join 764.
+</details>
+
+>> 嗯，不，在这个阶段他们是在邀请你——他们利用孩子有心理健康问题的事实，试图诱骗（groom）他们成为自己的男朋友或女朋友，直到他们发来自己的裸照。在他们发来裸照之后，他们就会让孩子试图伤害自己、自残，或者做更过分的事情，去伤害其他人或宠物。这其中有太多内容了，但我今天只给你展示一些表层的东西。而且这非常非常令人不安。这些只是我建了一个文件夹保存的诱骗照片，很多事情都是从这里开始的。它可能发生在动漫群里，也可能发生在黑金属血腥网站上，比如有一个孩子，就是一个特别典型的例子，她就是从那里来的。她喜欢血腥暴力的东西，她就像一个有点叛逆前卫的青少年，有点像我以前那样。我以前不喜欢那种东西，但我喜欢摇滚乐之类的。所以我完全能想象自己很容易就加入了一个群，却不明白“嘿，这些人不是想帮我，他们是想诱骗我，让我真的去自杀”。但我们现在就讲到诱骗（grooming）阶段，他们甚至有专门的书，这些只是书里的截图。但如果你把这些大声读出来，
+<details><summary>Original English</summary>
+>> Well, no, they're asking you at this point. They're taking advantage of the fact that that the child has a has a mental health issue and they're they're going to try to groom them into being their boyfriend or girlfriend until they send a nude photo of themselves. And then after they send that nude photo, they're going to get them to try to hurt themselves uh and self mutilate or do or do even more than that and hurt others or pets as well. I mean, there's so much to this, but I'm going to show you some surface level stuff today. And it's very, very disturbing. Um, so these are just luring photos that I made a folder for of where a lot of this starts at. It can happen from, you know, an anime group. It could happen from a black metal gore site like let's say a kid which is one in particular. That's exactly where she came from. She was into like gory bloody stuff and she was just like, you know, an edgy teen kind of like myself. I wasn't into that, but I was into, you know, different stuff, rock music and all that. So, I could have seen myself easily joining a group not understanding like, hey, these people are not trying to help me. They're trying to groom me and and you know, have me kill myself for real. But we'll get to that stage right now where grooming they have literal books and and these are just screenshots from the from the books. But if you read these out loud,
+</details>
+
+>> 这是谁在说，又是说给谁听的？
+<details><summary>Original English</summary>
+>> who's saying this and who they saying it to?
+</details>
+
+<!-- chunk 3/3 -->
+
+### 764 组织的诱拐与勒索手册
+
+>> 这些都是群组成员，他们在分享这些长达数百页的关于如何勒索和诱拐受害者的手册。就像这是他们经常做的事情一样。这就是他们整个人生所做的，他们全身心地投入到伤害别人这件事上。这很难想象，但等你们看到这些就知道了。你们看到这些东西后就会相信的。诱拐是一种非常常用且容易获得控制权的方法。通常，当你诱拐了你的受害者后，无论发生什么，她都会完全听你的话。你必须让你的受害者认为你是她的神，你拥有她，而且永远拥有她。你可以在 Roblox 这样的游戏里，或者在 X（以前叫 Twitter）、Reddit 和 Instagram 这样的社交媒体平台上找到受害者。一旦你找到了受害者，你就必须把大量时间花在她身上。让她觉得你们在很多事情上很有共鸣，并和她一起玩游戏。当你和她聊了一小会儿后，用可爱的昵称叫她，比如公主、亲爱的、宝贝等等。这会让她对你更依恋，因为女性喜欢别人用昵称叫她们。聊了一段时间后，你要向她表白做你女朋友，她很可能会答应。第二，现在她已经在你的控制之下了，你可以开始向她索要裸照、个人信息之类的东西。如果她还没有自残行为，那你就必须勒索你的受害者；但如果她有，当你做完所有这些后，她几乎肯定会为了满足你肮脏的需求而自残。所以，这是一个关于诱拐的例子。有一堆这样的截图，具体来说在这个文件夹里，我只有关于诱拐的内容，以及你知道的他们彼此之间是怎么说话的。这上面写着，一份指南指导成员诱拐受害者为 764 制作内容，并建议成员瞄准特别脆弱的受害者，例如患有抑郁症或精神疾病的人。然后你可以看到墙上到处都是用血写的这些人的用户名，以及撒旦教的文字，不管他们是不是真正的撒旦教徒，这很难确定，但他们喜欢那种前卫感。他们会让他们画倒十字架和五角星，你知道的，这就是他们的风格。你可以在这里看到，这个家伙在勒索她之前，他说，受害者的名字，我真的很抱歉。我非常爱你。你是世界上最美丽、最可爱、最甜美、最讨人喜欢的女孩，但唯一的问题是你还不是（全大写）我的女孩，我希望你是。我知道我对事情有些所谓的“要求很高”。我对此很抱歉，我会改掉我的这个毛病。他一直说个不停，你知道的，让那个女孩感到舒服，并且表现得像“我想和你在一起”以及所有上述这些。这些家伙，那不是他们的目标。他们的目标是进入下一个阶段，这里我将直接进入勒索部分。这来自同一本性勒索手册，它有好几百页，但这只是其中的一张截图。“勒索。首先，为了能够勒索，你还必须具备诱拐的能力。没有诱拐，你就得不到任何信息或任何裸照。而如果你诱拐了你的受害者，你基本上就控制了她。为了正确地勒索一名女性，你必须拥有以下个人信息：地址、姓名、电话号码和裸照。一旦你有了这些东西，你就可以开始威胁你的受害者，例如把她的裸照发给她的父母、报假警（swatting）和泄露个人信息等等。如果她不按你说的做，比如做个血印、做个割痕印、杀了她的猫、自杀。最后，如果你每一步都做对了，你就应该已经得到了你想要的东西。记住，永远不要说‘内容就是内容’，因为没人想看那些 [ __ ] 抓痕，意思是只是划破表皮。他们想要的是深到留疤的伤口，上面带着用户名和群组名，在这些孩子身上，你知道的，有时候只有 8、9、10、11 岁。”还有几件事我想给你们看。显然你们可以自己选择想看什么，但这很重要。呃，这个女孩……他们中没有一个真的在伤害自己，除了最近有一个。呃，这个女孩被强迫剪掉她的头发，这听起来好像没那么残忍，但结合他们的计划，你们会听到他们说什么。大家，你知道的，做好准备。
+<details><summary>Original English</summary>
+>> These are group members that are uh that are sharing this documentation whereas multiple hundred page handbooks on how to extort and groom victims. Like this is a this is something that they do on the regular. This is this is what their entire life they're dedicated to just hurting people. It's hard to imagine, but wait till you see this. It's you'll believe it after you see this stuff. Grooming is a very commonly used and easy way to get control. Usually, when you have groomed your victim, she'll do exactly as you say, no matter what. You have to make your victim think that you are her god and that you own her and forever will. You can find victims on games like Roblox or on social media platforms like X, formerly known as Twitter, Reddit, and Instagram. Once you have found your victim, you have to spend a lot of your time on her. Make her think you can relate to a lot of stuff and play games with her. Call her cute nicknames when you have talked to her for a little like princess, darling, honey, etc. This will make her more attached to you because females love being called nicknames. Once you have talked for a while, you're going to ask her to be your girlfriend, which she most likely is going to say yes. Two, now that she is under your control, you may start asking her for stuff like nudes, personal information, etc. If she doesn't do self harm already, then you must extort your victim, but if she does, she will almost guaranteed cut for your dirty needs when you have done all of this. So, this is a grooming one. There's there's a bunch of these screenshots that are specifically like in this folder, I have just grooming and you know how they talk to each other. And this is says, you know, a guide instructed uh members on grooming victims into producing content for 764 and advised members to target particularly vulnerable victims such as individuals with depression or mental illness. And then you can see that there's blood writing all over the wall with usernames of these people uh and and satanic writings where they they you know whether they're actual Satanists or not. It's hard to to know for sure, but they like that edgginess. And they they they'll get them to do upside down crosses and pentagrams and you know just that's just kind of their style. It's you can see in here this guy prior to him extorting her, he's he's saying you know victim's name, I'm really sorry. I love you a lot. You're the most beautiful, cutest, sweetest, most adorable girl in the world, but the only problem is you're not all caps my girl and I want you to be. I know I'm somewhat quote unquote demanding of things. I'm sorry for that and I'll work on that issue of mine. And he goes on and on, you know, making the girl feel comfortable and like I want to be with you and all all of the above. These guys, that's not their goal. Their goal is to get to this next stage here where I I'll go straight into the extortion part. This is from the same sextorion handbook, which is multiple hundreds of pages, but this is just a, you know, screenshot from it. Extortion. To start off, for you to be able to extort, you must also have the ability to groom. Without grooming, you won't get any information or any nudes. And if you groomed your victim, you pretty much have control of her. To extort a female properly, you must have the following personal information: Addresses, name, phone numbers, and nudes. Once you have this stuff, you may start threatening your victim with, for example, sending her nudes to her parents, swatting and leaking personal information, etc. If she doesn't do as you say, example, make a blood sign, make a cut sign, kill their cat, kill themselves. At the end, if you have done everything correctly, you should have gotten exactly what you want to. Remember, never say content is content because no one wants to see some [ __ ] scratches, meaning like just cutting the top of your skin. and they want deep scarring cuts with usernames and group names in these children that you know sometimes 8 9 10 11 years old and uh there's a couple things I want to show you. Obviously you choose what you want but this is important. Um this girl is none of them are actually hurting themselves except this the there's one recent one. Uh this girl is is being forced to cut her hair, which you know doesn't sound like that that brutal, but with their plans where you'll hear them what they'll say. Everybody just, you know, be prepared.
+</details>
+
+>> 该死的剪刀。
+<details><summary>Original English</summary>
+>> The damn scissor.
+</details>
+
+>> 好了，拿起你的头发。到剪的时间了。
+<details><summary>Original English</summary>
+>> Okay, get your hair. It's chop it time.
+</details>
+
+>> 这是真的吗？
+<details><summary>Original English</summary>
+>> Is this real?
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 剪多少？好吧。如果我剪了
+<details><summary>Original English</summary>
+>> How much? Okay. If I do
+</details>
+
+>> 而你们不发任何东西，
+<details><summary>Original English</summary>
+>> and you don't send anything,
+</details>
+
+>> 现在就把你的马尾辫全都剪掉。
+<details><summary>Original English</summary>
+>> put all of your ponytail off right now.
+</details>
+
+>> 不要。
+<details><summary>Original English</summary>
+>> No.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yeah.
+</details>
+
+>> 好吧。还有别的事情我可以做吗？比如粉丝牌（fan sign）之类的？
+<details><summary>Original English</summary>
+>> Okay. Is there anything else I could do? Like a fan sign or something?
+</details>
+
+>> 粉丝牌就是在他们身体某个地方用用户名割出的印记
+<details><summary>Original English</summary>
+>> Fan sign is a cut sign with their somewhere on their body with a username
+</details>
+
+>> 需要做。
+<details><summary>Original English</summary>
+>> need to do.
+</details>
+
+>> 你有 30 秒。
+<details><summary>Original English</summary>
+>> You have 30 seconds.
+</details>
+
+>> 他说如果你不在 30 秒内做，我们就要把裸照发出去。
+<details><summary>Original English</summary>
+>> He's saying if you don't do it in 30 seconds, we're sending the nudes out.
+</details>
+
+>> 我是说，我想你不用看完视频也明白意思了。我的意思是，这只是第一步。
+<details><summary>Original English</summary>
+>> I mean, you you get the point, I think, without having to finish the video. I mean this is just step one.
+</details>
+
+>> 所以他说这只是第一步。
+<details><summary>Original English</summary>
+>> So he's saying this is just step one.
+</details>
+
+>> 那个视频是怎么公开流传出去的？
+<details><summary>Original English</summary>
+>> How did that video get on get get public?
+</details>
+
+>> 这些人在论坛上分享。所以你既可以在 Telegram 群组里，也可以在 Discord（一个聊天应用）里。而在这个具体案例中，它是在一个论坛上分享的。
+<details><summary>Original English</summary>
+>> These people share uh on forums. So you could either be in a telegram group, you can be in Discord, which is a chat application. And then in this specific uh case, it was shared on a forum.
+</details>
+
+>> 那你是怎么拿到这个视频的？你从论坛上拿到的。
+<details><summary>Original English</summary>
+>> So how did you get the video? You got it from a forum.
+</details>
+
+>> 从论坛上。
+<details><summary>Original English</summary>
+>> From a forum.
+</details>
+
+>> 那我们征得她的同意了吗？
+<details><summary>Original English</summary>
+>> And did have we got her permission?
+</details>
+
+>> 我是说，它已经在其他地方公开流传了，但显然我不想暴露任何受害者的身份。这与我的目标完全相反。这一个，呃，她把睫毛膏涂在额头上，呃，然后被剪掉了。我不完全清楚具体发生了什么，但重要的是，父亲在这场对峙中间介入了。等着看这里发生了什么吧。
+<details><summary>Original English</summary>
+>> I mean it's it's publicly out there already on other other places, but I wouldn't want to identify any victims obviously. It's the opposite of my goal. This one, uh, she puts mascara on on her forehead, uh, and it's cut. I don't know exactly what happens, but what the important part of this is the father gets involved in the middle of this confrontation. And wait, do you see what happens here?
+</details>
+
+>> 你可以让这件事发生。这真的很简单。
+<details><summary>Original English</summary>
+>> You can make that happen. It's really simple.
+</details>
+
+>> 求你了，不要。
+<details><summary>Original English</summary>
+>> Just please, no.
+</details>
+
+>> 好吧。那听我们说，宝贝。快点。我们在试着帮你。我只是想一个人静一静，离开另一个
+<details><summary>Original English</summary>
+>> Okay. Well, listen to us, babe. Come on. We're trying to help you out. I just I just want to be left alone and leave the other
+</details>
+
+>> 理解。但事情没那么简单。
+<details><summary>Original English</summary>
+>> understand. But it's not that simple.
+</details>
+
+>> 我能就这么做吗？
+<details><summary>Original English</summary>
+>> Can I please just do that?
+</details>
+
+>> 你想离开服务器？那 [ __ ] 是什么？你是有阅读障碍还是怎么的？天呐 [ __ ]
+<details><summary>Original English</summary>
+>> You want to leave the server? The [ __ ] is that? Are you like dyslexic or something? Holy [ __ ]
+</details>
+
+>> 我正看着摄像头做呢。
+<details><summary>Original English</summary>
+>> I'm looking in the camera to do it.
+</details>
+
+>> 你真蠢。你能听见我们说话吗？喂？
+<details><summary>Original English</summary>
+>> You're stupid. Can you hear us? Hello?
+</details>
+
+>> 是的，我能听见。
+<details><summary>Original English</summary>
+>> Yeah, I can hear you.
+</details>
+
+>> 嘿，怎么了？对。顺便说一句，我 27 岁了，我想让你女儿为我做些事。
+<details><summary>Original English</summary>
+>> Hey, what's up? Yeah. I'm 27 years old, by the way, and I want your daughter to do stuff for me.
+</details>
+
+>> 好，没关系。我会报警的。
+<details><summary>Original English</summary>
+>> Okay, that's fine. I'll report you to the police.
+</details>
+
+>> 哦，我肯定你会的，胖子。不过你能离开房间吗？
+<details><summary>Original English</summary>
+>> Oh, I'm sure you will, Fatty. Can you leave the room, though?
+</details>
+
+>> 我正忙着和你女儿说话呢。我刚看到她的胸部。她大概 16 岁。我 27 岁。让她把衬衫掀起来。
+<details><summary>Original English</summary>
+>> I'm busy talking with your daughter. I just saw her tits. She's like 16. I'm 27. Make her lift up her shirt.
+</details>
+
+>> 我会报警的。不，你不会的。
+<details><summary>Original English</summary>
+>> I will be reporting you to the police. No, you won't be fit.
+</details>
+
+>> 好，通话断开了，对吧？我不知道他们会不会有狗。
+<details><summary>Original English</summary>
+>> Okay, so call disconnects, right? I don't know if they're going to have dogs.
+</details>
+
+>> 你想死吗？你今晚想死吗？
+<details><summary>Original English</summary>
+>> You want to die? Do you want to die tonight?
+</details>
+
+### 受害者遭遇、平台与“犯罪证明”
+
+>> 所以，那个父亲刚刚亲眼目睹了发生的事情之后，那个女孩仍然被允许和这些家伙聊天。我的意思是，很明显她处于危险的境地。而在我看来，你会觉得一个父亲应该比那样更聪明才对。这就是为什么我想稍微展示一下这个例子。你知道，我不会给你看孩子自残的视频，你知道的，呃，但这是最近的一个，我觉得是最触目惊心的，一个 13 岁的男孩，在似乎是浴室的地方上吊，然后他结束了自己的生命，你看着他在聊天室里的人面前死去。那是一个 13 岁的孩子，他被说服相信只要发了裸照，他的整个人生就完了，所以他在现场观众面前自杀了——根据我在经验中看到的证据，在他死的时候人们还在嘲笑他。呃，我记得我第二次上 Shawn Ryan 节目之后，一个女孩在停车场用电线自缢，而直播聊天室里的人说，如果她上吊的时候是裸体的，他们会觉得更性感，然后她就死了。他们……我不知道该用什么词来形容他们。他们是邪恶的。他们是恶魔。然后，你知道，这一个是有人砍下了自己仓鼠的头。我肯定你不需要看那个也能明白。勒索步骤、指南，被勒索的女孩。同样的情况。割痕印。这是类似的情况。墙上的血字。比如这个，上面写着类似“你的神现在在哪里？”的话，你知道，这是在嘲弄神，而且这些都是未成年的，这就是他们所谓的猫抓痕。
+<details><summary>Original English</summary>
+>> So, the girl is still allowed to be chatting with these guys after the dad just saw what happened. I mean, it was very clear that she's, you know, in a dangerous situation. And a dad, you would think a dad would be smarter than that in my opinion. That's why I wanted to showcase that one a little bit. You know, I I'm not going to be showing you videos of kids cutting themselves, you know, and um but this is a recent one that's the most graphic, I think, of a of a kid, a 13-year-old uh boy that is hanging in appears to be a bathroom and uh and he ends his life and and you see him die with people in the chat room. That's that's a 13-year-old kid that was convinced that by sending his nude photos, his entire life was going to be over so that he he killed himself with a live audience based on the evidence I've seen in in my experience, people laughing at him as he's dying. Uh, and I remember right after I did the Shawn Ryan show the second time, a girl was in a parking lot hanging herself with an electrical cable and the live chat was saying they would think it would be hotter if she was naked while she was hanging herself and she died. They're I don't know what word to call them. They're they're evil. They're demons. And then, you know, this one is someone cutting their hamster's head off. I'm sure you don't need to see that to understand it. Extortion steps, guidelines, girl being extorted. Same same type of situation. Cut signs. This is a similar situation. Blood writing on the walls. So like you know this one it says something like where is your god now? Like you know it's making fun of god and and this is you know all underage that that's what they consider cat scratches.
+</details>
+
+>> 我想我看够了。
+<details><summary>Original English</summary>
+>> I think I've seen enough.
+</details>
+
+>> 这还不算什么。我是说
+<details><summary>Original English</summary>
+>> This is nothing. I mean
+</details>
+
+>> 我知道，只是
+<details><summary>Original English</summary>
+>> I know it's just
+</details>
+
+>> 这些小孩子整天都在看这些东西。你知道，当他们被拉进这些群组时，这就是他们脑子里被灌输的东西。他们还被迫观看这种事发生在其他受害者身上。
+<details><summary>Original English</summary>
+>> these little kids uh are saying this all day long. You know, this is what they're being consumed with when they get pulled into these groups. They are being forced to watch this happen to other victims as well.
+</details>
+
+>> 这件事发生在哪些平台上？比如
+<details><summary>Original English</summary>
+>> What What platforms does this happen on? Like
+</details>
+
+>> 所有平台。比如最初创办 764 的那个孩子，我相信他当时是在 Minecraft 上找人，后来又转到了 Roblox。他们的全部目标就是寻找脆弱的孩子，把他们带到一个平台上，说服他们发送裸照，然后利用这个把柄，就像尼日利亚骗子那样——你知道很多骗局都在尼日利亚。他们会编故事，假装自己是名人或者假装成别的什么人，然后和你聊天直到对方发来裸照，照片一发过来他们就要钱，然后你知道，他们通常不会拿照片怎么样，但他们还是会出于恐惧而对那个人进行性勒索。而在这个案例中，他们不想要钱。他们只想让你伤害自己、伤害别人、或者伤害动物，或者做一些疯狂的事。还有另一面我想让你明白，那就是想加入这个群组的人。他们必须做所谓的“犯罪证明”。犯罪证明的意思是展示：“这是我的受害者。这是我在现实生活中伤害别人的画面。这是我纵火，比如点燃某样东西，或者做一些造成重大破坏的事情”，以此证明你是一个投入的人——至少在他们看来是这样——才能加入这些平台。你会看到这一个例子，绝对残忍，但那是两个成年人，一个男的在和某人通话
+<details><summary>Original English</summary>
+>> all of them. So like when the original kid that started 764, he was looking for people, I believe, on Minecraft. Uh and then it ended up Roblox. Their entire goal was to look for vulnerable children, bring them into a platform, convince them to send naked photos, use that leverage the same way that like a Nigerian scammer that's doing a that you know they're a lot of a lot of the scams are in Nigeria. They will story. They'll pretend to be like a celebrity or they'll pretend to be something and they'll have you know a conversation till they send naked photos and the second the photos get sent they want money and then you know they they usually never do anything with that but they're still sexing the person out of fear. In this case, they don't want money. They just want you to hurt yourself, hurt somebody else, or hurt an animal or do something crazy. And then there's a different side to this that I want you to understand is people that want to join this group. So, they have to do what's called proof of crime. Proof of crime means to show here's my victims. Here's me hurting somebody in real life. here's me arson like lighting something on fire or you know doing something that's causing substantial damage proving that you want to like that you're a dedicated person uh for in their eyes at least um to join these platforms you'll see in this one example that is absolutely brutal but it's two adults uh where a guy is on a call with somebody
+</details>
+
+>> 天呐，我受不了，这……我受不了
+<details><summary>Original English</summary>
+>> oh my god I can't this is nothing I can't
+</details>
+
+>> 所以在第二部分，他把她的整个喉咙割开了，而且他是在 Discord 上这么做的。就在这个群组成员看着他为了加入其中一个群组而这样做的时候，他刚刚谋杀了这个人，而我有多个像这样的视频
+<details><summary>Original English</summary>
+>> so the second part of this he cuts her entire throat open and he does this on Discord. So while this group member is watching for him to join one of these groups, he just murdered this person and I have multiple videos just like this of
+</details>
+
+>> 然后这个人被找到了吗。
+<details><summary>Original English</summary>
+>> and this person was found.
+</details>
+
+>> 其中一些被找到了，有一些没有，但有些仍然是公开的，你知道，他们会被抓住的。这正是我全部关注的焦点。但我知道这很难看下去。我知道这就是人们每天都在面对的东西。我是说，这些孩子，他们对此没有任何控制权。你知道，他们觉得自己的人生已经毁了。
+<details><summary>Original English</summary>
+>> Some of these were found, some of them were not, but some it's still public, you know, and they will be caught. That's that's entirely what I'm focusing on. But I know it's tough to watch. I know this is what people are are looking at every single day. I mean, these children, they don't have any control over this. You know, they feel like their life is over.
+</details>
+
+>> 这些群组有多大？
+<details><summary>Original English</summary>
+>> How big are these groups?
+</details>
+
+>> 这些群组里有成千上万名成员。呃，FBI 公开谈论的目标有 500 多个。如果出于某种原因，你能够进入其中一个群组——就像我说的，你需要犯罪证明才能加入一些私密频道，但在公开频道里你可以看到成千上万名成员。而且，我已经围绕这个问题转了有一阵子了，但我觉得这个问题没有、也不可能有答案。我本来想多次问你，比如他们从中得到了什么、他们正在得到什么、他们过去从中得到了什么，但似乎并没有答案。
+<details><summary>Original English</summary>
+>> There's thousands of members in these groups. Um 500 plus targets that the FBI publicly is talking about. If you were to, for whatever reason, join one of these groups if you're able to get into one because like I said, you need proof of crime to join some of the private channels, but the public channels you can see thousands of members. And yeah, I've been like circling this question for a while, but I but I feel like there is and can be no answer. I I was going to ask you multiple times like what do they get what are they getting what did they get out of this but it doesn't seem that there is an answer.
+</details>
+
+>> 我真希望我能告诉你。我真心希望能给你一个答案，但他们除了从群组本身获得声望（clout）之外，什么也得不到。不过当他们逮捕这些人时，因为我在司法部的网站上看到，上面写着全球暴力极端主义网络 764 的头目对共谋罪表示认罪。
+<details><summary>Original English</summary>
+>> I wish that I could tell you. I genuinely wish that I could give you an answer but they don't get anything out of it other than the clout from the group themselves. When they arrest these people though, cuz I was reading on the um Justice Department's website, it says leader of global violent extremist network 764 pleads guilty to conspiracy.
+</details>
+
+>> 真够离谱的，对吧？
+<details><summary>Original English</summary>
+>> That's trippy, right?
+</details>
+
+>> 是啊。酷。真离谱。
+<details><summary>Original English</summary>
+>> Yeah. Cool. Trippy.
+</details>
+
+>> 对。
+<details><summary>Original English</summary>
+>> Yep.
+</details>
+
+>> 这是上个月的事。当他们对这些人进行分析时，他们之间有什么共同点？他们是有精神疾病吗，我的意思是这有点
+<details><summary>Original English</summary>
+>> This was last month. When they do an analysis of these people, what what are the similarities in them? Is there are they mentally ill that I mean kind of goes
+</details>
+
+>> 我会说我们不需要成为医生也能弄明白这一点。你说得对。是的。这是
+<details><summary>Original English</summary>
+>> I would say we don't have to be doctors to figure that out. You're right. Yeah. It's
+</details>
+
+>> 那这到底是什么？
+<details><summary>Original English</summary>
+>> like what what is what is it?
+</details>
+
+>> 我认为他们就是邪恶。我的解释是，你还能怎么称呼它呢？你会怎么说？一个能把无辜的孩子抓来，让他们伤害自己、伤害别人并毁掉自己的人生，仅仅是为了在网上的朋友那里获得声望的人。你会给这种人诊断成什么病？
+<details><summary>Original English</summary>
+>> I think they're just evil. My my explanation is is being like what else do you would you call it? What what would you say? Somebody that could take an innocent child and have them hurt themselves, hurt somebody else and their lives just so they could get clout with their friends on the internet. What is what would you diagnose that person with?
+</details>
+
+>> 就是，对。邪恶似乎是唯一的词了。我想现在正在观看的家长们，但可能远不止家长们，呃，都会在想，我该怎么办？
+<details><summary>Original English</summary>
+>> Just Yeah. Evil seems to be the only word. I think the parents watching right right now, but probably a lot more than just parents, um will be thinking, what do I do about it?
+</details>
+
+### 家长如何预防与保护孩子
+
+>> 是的，这确实是一个很好的问题。呃，我可以关掉这个吗，还是……好的。
+<details><summary>Original English</summary>
+>> Yes, that's exactly a a great thing to ask. Um, can I close this or All right.
+</details>
+
+>> 别坑我啊（Keys don't [ __ ] me）。
+<details><summary>Original English</summary>
+>> Keys don't [ __ ] me.
+</details>
+
+>> 我确定。是的。我跟你不想看一样不想展示这些，但我每天都在做这个。这就是我的工作。我一半的人生都花在这上面了。而且，你知道，仅仅看到一个人被捕固然很好，但家长们，你知道，我以前回答过这个问题，比如我最大的成就是什么？我最大的成就是从一开始就建立预防。你可以逮捕一千个捕食者（predators）。你可以逮捕一千个群组成员，但这并不能消除他们的存在。如果你从一开始就阻止了一个受害者成为受害者，我相信你做的事情比逮捕某人更好。听着，我支持尽可能逮捕每一个能抓到的人。但如果你从一开始就阻止了一个孩子成为受害者，在我看来这就是胜利。所以当家长们问“我能做什么？”时，有几件事可以做。作为家长，你要选择最适合你孩子的方法。你知道，我自己不是家长，我不能告诉你你的孩子会有什么反应，但如果孩子年纪很小，我首先会在他们的设备上安装一些监控软件。如果你想知道，我可以点出几个名字，市面上有一些公司在做这个。Bark 是一个很好的应用。我不是他们赞助的，我只是喜欢他们这家公司，他们不仅监控捕食行为，还监控霸凌，以及你作为家长想自己设置的触发词。各种好功能。他们是一家很棒的公司。强烈推荐用它来做监控。但我认为最重要的是你一开始就与孩子建立的关系。你和我年龄差不多。当你还是个孩子，当我还是个孩子的时候，如果我妈对我说：“嘿，把手机给我。”我会说：“好吧，给你，拿去吧。”你知道，我不在乎。这对我来说没什么大不了的，因为我当时在外面玩滑板、骑 BMX 小轮车。我的生活不是围绕着互联网转的。而且我还是个电脑迷。所以对我来说，说我一半甚至一半以上的人生没有涉及电脑，这是一回事。而且我和我妈关系超级亲密。我觉得我可以告诉她任何事，即使她不想听。这包括毒品、我交往的女朋友、干坏事的坏人、犯罪。她总是会叫我停下来，你知道，甚至会让她哭，但不管怎样，我对妈妈非常坦诚。我很高兴我那样做了，这样她就了解情况，她总是知道我在哪里，比如如果我失踪了或者身处险境，即使她想把我从那里弄出来，无论什么情况她都知道去哪里接我。但回到最初的观点，如果她把我的手机拿走，我根本不会在乎，那不是什么大事。而现在的孩子，当你面对这些非常年幼、被允许使用 iPad 和 iPhone 的孩子时——我个人并不同意这样做，但假设你还是给了——他们非常害怕你把他们的设备拿走，因为那是他们与世界的连接。那就像是他们的附肢，就像从他们身上拿走他们的手一样。如果你看到一群孩子聚在一起玩，他们通常都坐在那里刷社交媒体、给内容点赞，他们聚在一起的整个时间都在使用设备。所以，如果你拿走他们的设备、游戏机或电脑之类的东西，他们就不会再信任你了，他们会用朋友的设备去做下一件坏事。因此，我认为与孩子保持开放的关系非常重要。你要让他们知道坏事的存在，知道外面存在像我刚才给你看的那些专门针对脆弱儿童的群组。他们也针对那些只是在游戏应用上玩耍的孩子。Roblox 是现存最大的儿童游戏。他们到处都在寻找孩子。而且不仅是邪教成员和这些群组，还有真正的捕食者本人。我是说，如果你看过我的任何播客，你就会看到在几秒钟内，我就能找到一个正在寻找小男孩或小女孩的捕食者。我刚做了一次行动，我们抓获了 30、31 名正式被捕的人——全部都在寻找 14 岁以下的孩子，而且全都在佛罗里达州中部一个非常小的县里。其中一个是以前的米老鼠扮演者，他以前在迪士尼穿米老鼠的服装。然后他带着大约 100 条尿布来到那所房子，想让爸爸和孩子都打扮成婴儿。所以他在恋童癖之外还有尿布癖。因此，互联网可能非常危险，非常重要的一点是，你的孩子要告诉你正在发生的事情的真相，而不是因为害怕报复而试图隐瞒
+<details><summary>Original English</summary>
+>> I'm sure. Yeah. I don't want to show it just as much as you don't want to see it, but it it's I do this every day. This is what I do. Half of my life I spend on this. And um, you know, just seeing one person get arrested is great and all, but but parents, you know, have what I've answered this question before is like what's my most what's my uh my biggest achievement? My biggest achievement is creating prevention in the first place. You can arrest thousand predators. You can arrest a thousand uh you know group members, but it doesn't take away that they exist. If you stop a victim from becoming a victim in the first place, I believe you did something better than than arresting someone. I'm look, I'm for arresting whoever we possibly can. But if you stop a kid from being a victim in the first place, that's a win in my eyes. So when I when parents say, "What can I do?" There there's a few things. As a parent, you're going to choose how what works best for your child. You know, I I'm not a parent myself. I can't tell you how your kid reacts, but the first thing I would do is install some monitoring software on their devices if they're at a super young age. I can name some if you want, but they're they're, you know, there's companies out there that do it. Bark is a good app. I don't I don't I'm not sponsored by them. I just like them as a company, and they they monitor for not only predatory behavior, but bullying, uh, you know, trigger words that you want to set yourself as a parent. All all kinds of good stuff. They're a great company. Highly recommend that for monitoring. But I think the most important thing is your relationship with your child in the first place. So you're roughly the same age that I am. When you were a kid, when I was a kid, if my mom said to me, "Hey, give me your phone." And be like, "Okay, here. Take my phone." You know, I don't care. Wouldn't be as much of a thing to me because I went I you know, I was out there I was out riding skateboards, riding BMX bikes. I was like, you know, I had a life that wasn't revolving around the internet. That total and I'm a computer nerd. So for me to say half my life or more than half my life didn't didn't involve a computer is one thing. So my mom was super close with me. I felt like I could tell her anything even if she didn't want to hear it. that included drugs, like whatever girlfriends I was around, bad people doing, committing crimes. And she always would tell me like to to stop, you know, and make her cry, like, you know, I I was very open with my mom, though. And and I'm glad that I was so that she was aware and she always knew where I was, like if I ever disappeared or if I was ever in a bad spot, even if she wanted to get me out of there, she knew where to where to pick me up at no matter what the situation was. But going back to the original point, if she were to take my phone from me, I wouldn't have cared. it wouldn't have been a big deal. The kids nowadays when you're dealing with these these, you know, very young children that are given access to iPads and iPhones, which I don't personally agree with, but let's say you do it anyway, they're terrified of you taking their devices from them because that's their connection to the world. That's that's their like an append. It's like taking their hand from them. If you see a group of kids hanging out with each other, they're usually all sitting there scrolling on social media liking content and and their entire time hanging out is just using their devices. So, you take away their device or their gaming console or their computer or whatever it may be, they're not going to trust you anymore, and they're going to use their friend's device to do the next bad thing. So, I I think it's very important that you have an open relationship with your child. You let them know what bad things exist, that groups like like that I was just showing you exist out there that they're targeting vulnerable children specifically. They are also targeting kids that are just hanging out on gaming apps. Roblox being the largest children's game that exists. They're targeting kids everywhere. And not only, you know, cult members and and these groups, but actual predators themselves. I mean, if you've watched any of my podcasts, you've seen within seconds, I can I can find a predator looking for a little boy or a little girl. I just did an operation where we caught 30 31 uh official arrests um all looking for kids under 14 years old, all in a very small county in in in Central Florida. One of them being a previous Mickey Mouse that he used to dress up as Mickey Mouse for Disney. And then he showed up at the house with a hundred or roughly about a 100 diapers and wanted the dad and the kid to uh to be dressed up in as a baby. So like he had a diaper fetish on top of a pedophilia situation. So the internet can be very dangerous and it's very important that your kid tells you the truth of what's happening and and doesn't try to hide it because they're scared of the retaliation
+</details>
+
+>> 或者是……不，抱歉。因为他们害怕
+<details><summary>Original English</summary>
+>> or the No, I'm sorry. Because they're scared of the
+</details>
+
+>> 后果。后果。对，对。
+<details><summary>Original English</summary>
+>> repercussions. The repercussions. Yeah. Yeah.
+</details>
+
+### 硬件密钥、会话劫持与 AI 时代的安全
+
+>> Ryan，有什么是我们还没谈到、但本该谈到的最重要的事情吗？
+<details><summary>Original English</summary>
+>> What is the most important thing we haven't talked about that we should have talked about, Ryan?
+</details>
+
+>> 还有什么遗漏的吗？
+<details><summary>Original English</summary>
+>> Is there anything left?
+</details>
+
+>> 呃，
+<details><summary>Original English</summary>
+>> Um,
+</details>
+
+>> 你之前提到你使用这些 Yubby keys。
+<details><summary>Original English</summary>
+>> you mentioned um you use these Yubby keys earlier.
+</details>
+
+>> 对，Yubi keys。
+<details><summary>Original English</summary>
+>> Yeah, Yubi keys.
+</details>
+
+>> Yubi keys，是的。
+<details><summary>Original English</summary>
+>> Yubi keys. Yeah.
+</details>
+
+>> 是的，如果你愿意我可以给你看一个。基本上，每次你按下这个按钮，它都会生成一个唯一的密钥。
+<details><summary>Original English</summary>
+>> Yeah, I can show you one if you want. Basically, every single time you press this button, it generates a a unique key.
+</details>
+
+>> 所以，在苹果设备的后台，如果你深入到安全设置里，如果你想要设备获得真正的安全，它会建议你买一个这个。
+<details><summary>Original English</summary>
+>> So, I in the back end of Apple, if you go deep into the security settings, it suggests getting one of these if you want real security on your devices.
+</details>
+
+>> 是的，因为你需要这个实体设备来解锁，不管它是什么。所以，
+<details><summary>Original English</summary>
+>> Yeah. because you need this physical device to unlock, you know, whatever it may be. So,
+</details>
+
+>> 它会做类似指纹扫描吗？
+<details><summary>Original English</summary>
+>> and it does like a is it a fingerprint finger scanner?
+</details>
+
+>> 这不是指纹……它是指纹感应器。就是你把它插到手机或电脑上，用手指轻触它，它就会生成那个数字。呃，而且每次你按下按钮，那个数字都会改变。这有时会与短信验证、密码结合使用，再加上这个。所以你需要全部三种认证方式才能进入。因此我认为拥有它是件好事，而且还要了解外面存在哪些凭证，因为除了密码之外还有更多东西。比如，你熟悉会话（sessions）和 cookie 吗？好吧。对于不熟悉的人来说，当一台电脑被感染或一个数据库被攻破时，里面不仅仅只有你的密码，有时它们是用加密哈希过的，而有时它只是会话 cookie——意思是普通人保持登录 Facebook 的方式，比如你退出浏览器、关掉 Facebook，然后再重新打开 Chrome，点开 Facebook 发现你依然处于登录状态，那就是因为 cookie。这就是 cookie 的作用，这就是会话的工作方式。而在数据泄露中，或者如果某人的电脑被感染了，那些泄露的信息可能包含这些会话。所以如果我用你的会话替换掉我自己的已登录会话，然后刷新页面，在某些情况下，我根本不需要密码就能以你的身份登录。这绕过了 UB key，绕过了双因素认证，绕过了一切。某些平台可能会说：“哦，这看起来像是一个不同的 IP 地址。”但如果你的机器上已经有了恶意软件，因为你拥有那个会话，现在你就可以假装成他们了。
+<details><summary>Original English</summary>
+>> This isn't a fing it's finger sensor. So, like you would plug it into your phone or computer and you would tap it with your finger and it would generate that number. Uh, and that number is going to change every single time you press the button. And that is in con conjunction with sometimes a text message verification, a password, and then this. So, you need all three forms of authentication to get in. So I I think it's a good thing to have and then to know what credentials are out there because there's more than just passwords that exist out there. So like are you familiar with sessions and cookies? Okay. So for the person that is not when a computer gets infected or a database gets breached there's not just only your passwords in there sometimes they're hashed with like a encryption and then sometimes it's just session cookies which means like the way that you stay logged into Facebook for example for the average person if you exit out of your you know exit out of your your uh web browser and you close Facebook and then you open Chrome back up and then you hit Facebook and you see you're still logged in that's because of cookies. That's how that's what cookies do. That's how sessions work. And in the data breaches or if somebody's computer was infected, those breaches could include those those sessions. So if I replace my session for my logged in session with yours and then I refresh the page, in certain cases, I'll be logged in as you with no password at all. And that avoids a UB key. That avoids two factor that avoids everything. Certain platforms might say, "Oh, well this looks like a different IP address." But if you already have malware on the machine because you had that session, now you can pretend to be them.
+</details>
+
+>> 然后如果它来自数据泄露，你就会去试着看网站是否真的能识别出来。但我们可以用 pentester 看到这一点。我是说，我不是想一直连续推销它，但用 pentester 你可以看到那些窃密日志（stealer logs）是否存在。我已经了解得足够多了。有很多东西需要思考。很多东西需要思考。是的，我认为未来也会与过去大不相同。你知道，随着 AI 领域正在发生的一切，我认为我们描述的很多事情可能会加剧，而且呃，也许会变得更容易。呃，显然防御措施有望在一定程度上跟上它们，但我只是觉得，各种形式的隐私观念可能越来越会成为一个神话。此外，AI 带来的其他可能性意味着深度伪造（deep fakes），你知道，你能够模拟我的声音并给我的家人打电话让他们做某事，所有这类事情只会变得更糟。所以我想知道，对于观众来说，这里面有没有一个总体的结论性理念，比如……
+<details><summary>Original English</summary>
+>> And then if it came from a data breach, you would just, you know, try to see if the site actually identifies it or not. But we you can see that with with pentester. I mean, I'm not trying to keep plugging it back to back, but with pentester, you could see if those stealer logs exist. I am sufficiently informed. Have lots to think about. Lots to think about. Yeah, the future's um going to be quite different from the past as well, I think. So, you know, with everything that's going on with AI, I think a lot of these things we've described are probably going to get uh exacerbated and um maybe easier. Um obviously the defenses will hopefully keep up with them to some degree, but I just think that this idea of privacy is probably increasingly going to be a myth in all of its forms. And then also the the other sort of possibilities with AI means that deep fakes and you know you being able to simulate my voice and call a family member of mine and get them to do something and all these kinds of things is just going to get worse. So I wonder what like the overarching conclusive philosophy here is for the viewers like is there um
+</details>
+
+>> 系好安全带（做好准备）。
+<details><summary>Original English</summary>
+>> strap in
+</details>
+
+>> 做好准备。
+<details><summary>Original English</summary>
+>> strap in.
+</details>
+
+>> 是的。而且有一些平台和事情你可以做，让自己处境更好。我是说，随着 AI 的进步，我建议你像其他人一样开始加入 AI 的浪潮。学习本地 AI 模型，学习使用第三方工具，比如 clawed code、grock build、codeex。呃，学习人们如何构建应用程序、用它们保护自己的服务、用 AI 检查自己家里的漏洞。我的意思是，你不需要成为电脑天才，只需要掌握常见术语就能使用这些平台或这类工具。而且我想这里有一点是关于对收到的数字通信保持更多怀疑。这也是我一直……是的，当我收到一封电子邮件，甚至是一条 WhatsApp 消息时，我都会试着更加怀疑。我的第一反应是质疑它是不是真的。
+<details><summary>Original English</summary>
+>> Yeah. And there are platforms there are things you can do to make things better for yourself. I mean with with AI advancing I would recommend you start jumping on the AI bandwagon with everybody else. Learn about local AI models, learn about using uh even thirdparty like like clawed code, grock build, codeex. Um learn how people are building applications, securing their their services with them, checking their house for vulnerabilities with AI. I mean, you don't need to be a computer genius for for common terminology to use these platforms or use these tooling uh types of tooling. And I guess there's there's a point here about being more skeptical about things, digital communications you receive as well. And that's something that I've Yeah. I've tried to be a lot more skeptical when I receive an email or even if it's a WhatsApp message. My first sort of inclination is to question whether it's real.
+</details>
+
+>> 是的。
+<details><summary>Original English</summary>
+>> Yes.
+</details>
+
+>> 并且尽量不要去点击东西。
+<details><summary>Original English</summary>
+>> And to try not to click things.
+</details>
+
+>> 是的。嗯，这种事一直都在发生。发生在我身上，你知道，我的商业伙伴和我的朋友们身上。在某些情况下，他们试图通过短信进行网络钓鱼（phishing），也会通过电子邮件，比如问“你能顺路去银行拿一下这个吗”，或者“你能去买这些礼品卡发给这个人吗”？我的意思是，那就像是老式的钓鱼攻击，但新式的做法是，你可以发一条语音消息。你可以把我的视频在 WhatsApp 上发给我的一个同事说“嘿……”以前在老式钓鱼中，我的一家公司就因为这个原因损失了 20 万美元。但我们甚至在这家公司里也有团队成员，在 Dario 早期的时候收到一封邮件，以为是我发的，那是他们入职的第一周，他们离开办公室，走到商店买了一张礼品卡。
+<details><summary>Original English</summary>
+>> Yeah. Well, it happens all the time. It happens to to me, you know, my business partners and my friends. they're trying to fish via text uh in certain cases and also through email that'll say like can you stop at the bank and grab this or can you grab these gift cards and send them to this person? I mean that was like the old school of like these fishing attacks, but the new school is like you could send a voice note. You can send a video of of me um to my to on WhatsApp to one of my colleagues saying, "Hey, before in the old school of like fishing, one of my companies lost $200,000 or $200,000 for this very reason." But we've had team members even in this company that have in the early days of Dario got got an email, thought it was me, it was their first week on the job, they left the office, went down to the shops, bought a gift card.
+</details>
+
+>> 哦，天呐。花了 1000 英镑买了一张礼品卡，然后发给了一个他们以为是我的人
+<details><summary>Original English</summary>
+>> Oh man. and spent £1,000 on a gift card and then sent it to someone who they thought was me
+</details>
+
+>> 然后钱就丢了。所以，
+<details><summary>Original English</summary>
+>> and lost the money. So,
+</details>
+
+>> 我认为现在正是一个需要更加……
+<details><summary>Original English</summary>
+>> I think this is just it's an important time to just be more
+</details>
+
+>> 警惕的时刻。
+<details><summary>Original English</summary>
+>> vigilant.
+</details>
+
+>> 警惕。
+<details><summary>Original English</summary>
+>> Vigilant.
+</details>
+
+>> 是的，是的。我同意你的看法。而且你知道，我们可以讲讲钓鱼攻击的基础知识，但我希望大多数观看的人都知道要检查域名。确保那是正确的域名。比如如果上面写着 example.com，确保 example 里没有两个 L 或者两个 E。或者如果是一个名字，确保拼写正确。如果是一个电话号码，确保是正确的电话号码。
+<details><summary>Original English</summary>
+>> Yes. Yes. I agree with you. And and you know, we could go over like the basics of fishing, but I would hope that most of the people watching would know check a domain. Make sure that it's the domain name. Like if it says example.com, make sure there's not two L's in example or two E's in example. Or if it's a name, make sure it's spelled correctly. If it's a phone number, make sure it's the right phone number.
+</details>
+
+>> 还有，当你收到东西不确定是不是真的时，截个图，放进其中一个 AI 里问它。
+<details><summary>Original English</summary>
+>> And also just when you get things and you're not sure if they're real, screenshot them, put them in one of the AIs and ask it.
+</details>
+
+>> 是的，这是个好主意。对，你也可以那样做。
+<details><summary>Original English</summary>
+>> Yeah, that's a good point. Yeah, you can do that as well.
+</details>
+
+>> 这就是我告诉我的家人和朋友去做的：如果你有任何怀疑，截个图，放进 chatb 之类的工具里问：“这是真的吗？我该怎么办？”
+<details><summary>Original English</summary>
+>> That's what I I tell my family and stuff to do is if you have any suspicion at all, screenshot it, put it in chatb or whatever and say, "Is this real? What should I do?"
+</details>
+
+>> 是的。还有，别误会我之前的谈话，我仍然热爱 AI。我认为 AI 非常令人印象深刻。它正在基于已有的数据发现新的东西。但我希望我的观点正确地传达给了你。我不是说 AI 没有能力。我是说它能做到那样，而且它正在发现成百上千个人类无法以接近那么快的速度发现的漏洞
+<details><summary>Original English</summary>
+>> Yeah. And also, don't get me wrong from my earlier conversation, I still love AI. I think AI is extremely impressive. It is finding new things based on data that it already has. But I I hope that my point came across correctly to you. And I wasn't saying AI is not capable. I was saying that it's that and it's finding hundreds of vulnerabilities, you know, that humans wouldn't be able to find as quick nearly as quickly
+</details>
+
+### 尾声：什么是美好的生活
+
+>> 还有更多，多得多。它正在解决各种医疗问题。它做了很多事，但都是基于我们已经拥有的数据，我不是说这不令人印象深刻。我只是想让你知道，我们现在拥有的东西和我们未来潜在可能拥有的东西之间是有区别的，而那将会很可怕。Ran，我们有一个结束传统，上一位嘉宾会给下一位留一个问题，而他们并不知道自己是在留给谁。留给你的问题是：“美好的生活对你来说意味着什么？”
+<details><summary>Original English</summary>
+>> and more and much more. It's solving all kinds of medical stuff. I It's doing a lot, but based on data that we already have, which is not I'm not saying it's not impressive. I just want you to know there is a difference between what we have now and what we potentially might have in the future, which is going to be scary. Ran, we have a closing tradition where they'll ask us leaves a question for the next not knowing who they're leaving it for. And the question left for you is, "What does a good life mean to you?"
+</details>
+
+>> 美好的生活对我来说意味着拥有一个家庭、亲近上帝、呃、取得成功、能够养活我的家人，以及尽可能地帮助更多的人。
+<details><summary>Original English</summary>
+>> Good life means to me to have a family, to be close to God, to uh to be successful, to be able to provide for my family, and um and to help as many people as I possibly can.
+</details>
+
+>> 阿门。我们结束了。
+<details><summary>Original English</summary>
+>> Amen. We're done.
+</details>
+
+>> 谢谢。就这样。
+<details><summary>Original English</summary>
+>> Thank you. That's it.
+</details>
+
+>> 非常感谢。就这样。非常感谢。YouTube 有一个疯狂的新算法，它根据 AI 和你所有的观看行为，精确地知道你接下来想看什么视频。算法说这个视频就是为你量身定做的完美视频。对现在正在观看的每个人来说都不一样。看看这个视频，我敢打赌你会喜欢的。
+<details><summary>Original English</summary>
+>> Thank you so much. That's it. Thank you so much. YouTube have this new crazy algorithm where they know exactly what video you would like to watch next based on AI and all of your viewing behavior. And the algorithm says that this video is the perfect video for you. It's different for everybody looking right now. Check this video out and I bet you you might love it.
+</details>

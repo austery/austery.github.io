@@ -1,0 +1,1589 @@
+---
+author: New York Times Podcasts
+date: '2026-11-25'
+guest: ''
+layout: post.njk
+source: https://www.youtube.com/watch?v=fNXDBkBci0o
+speaker: New York Times Podcasts
+tags:
+  - election
+  - politics
+  - artificial-intelligence
+  - coalition
+title: 纽约时报 Dealbook Summit 讨论 2026 年中期选举与 2028 年政治展望
+summary: 多位政治专家与评论员在纽约市参与小组讨论，探讨 2024 年后 MAGA 联盟的现状、年轻选民对 AI 的担忧以及 2026 年及 2028 年的潜在竞选格局。讨论涵盖了经济民粹主义、AI 监管政策以及民主党与共和党在未来选举中的竞争态势。
+insight: ''
+draft: true
+series: ''
+category: politics-society
+area: society-thinking
+project: []
+people:
+  - Dan Senor
+  - Morris Katz
+  - David Urban
+  - David Axelrod
+  - Alyssa Farah Griffin
+  - Stacy Abrams
+  - JD Vance
+  - Kamala Harris
+companies_orgs:
+  - New York Times
+  - Elliot Investment Management
+  - CNN
+  - ABC
+  - Fight Agency
+  - BGR Group
+products_models: []
+media_books:
+  - Call Me Back
+  - 'The Genius of Israel: The Surprising Resilience of a Divided Nation in a Turbulent World'
+  - 'Startup Nation: The Story of Israel''s Economic Miracle'
+  - The View
+status: evergreen
+---
+<!-- chunk 1/2 -->
+
+## 开场与嘉宾介绍
+
+[音乐] 我是《纽约时报》的 Andrew Osorin。您即将收听的是 11 月 18 日在纽约市录制的年度 Dealbook Summit 的几场精彩分组讨论。[音乐] 您将听到专家、利益相关方和领袖们探讨正在塑造商界乃至整个世界的重要议题。那么，我们现在就在 Dealbook Summit 现场，参加一场关于 2026 年中期选举并展望 2028 年的小组讨论。我是《纽约时报》白宫记者 Jonathan Swan，这位是我的同事 Maggie Haberman，同样是《纽约时报》白宫记者。今天我们邀请到了一支非常出色的讨论嘉宾阵容：Dan Senor。Dan 主持着热门播客《Call Me Back》，并与人合著了《The Genius of Israel: The Surprising Resilience of a Divided Nation in a Turbulent World》和《Startup Nation: The Story of Israel's Economic Miracle》。Seenor 是 Elliot Investment Management 的合伙人，在乔治·W·布什政府时期曾担任高级职务。我们还有 Morris Katz。他在民主党政治中已经成为一位略带传奇色彩的人物。年轻人，你是 27 岁吗？
+
+<details><summary>Original English</summary>
+
+[music] This is Andrew Osorin with the New York Times. You're about to listen to some fascinating breakout conversations from [music] our annual Dealbook Summit recorded on November 18th in New York City. You're going to hear from experts, stakeholders, and leaders discussing vital topics that are shaping the business [music] world and the world at large. So, we're here at the Dealbook Summit for a panel on the 2026 midterm elections and a look toward 2028. I'm Jonathan Swan, White House reporter at the New York Times, and this is my colleague Maggie Haberman, also a White House reporter at the New York Times. We have a fantastic panel here today, Dan Senor. Dan hosts the popular podcast Call Me Back and co-authored the books The Genius of Israel: The Surprising Resilience of a Divided Nation in a Turbulent World and Startup Nation: The Story of Israel's Economic Miracle. Seenor is a partner at Elliot Investment Management and during the George W. Bush administration, he served in senior roles. We also have Morris Katz. He's become a bit of a legendary figure in Democratic politics. young man is it 27
+
+</details>
+
+>> 27 岁，没错。他是 Fight Agency 的合伙人，也是 Mayor Zoram Mandani 的高级政治策略师，你们中有些人可能听说过他。在今年的大选中，他参与了许多不同的选战，我们今天会谈到其中一些。在我旁边的是 David Urban，共和党策略师，CNN 高级政治撰稿人。David 是说客、律师、战略顾问、政治策略师、董事会成员、BGR Group 董事总经理，还有许多其他头衔我就不一一列举了，但他确实曾担任 2016 年特朗普总统竞选团队的高级顾问。他追随唐纳德·特朗普已有很长时间，我们期待他今天的见解。
+
+<details><summary>Original English</summary>
+
+>> 27 there you go he's a partner at it's called fight agency and senior political strategist for Mayor Zoram Mandani some of you might have heard of him uh and in the general election this year he had a lot of different races we'll talk about some of them today next to me we have David Urban Republican strategist senior political contributor at CNN David is a lobbyist lawyer strategic consultant political strategist board member, managing director at BGR Group, many other things that I'm not going to uh inflict upon you, but he did serve as senior adviser to the 2016 Trump presidential campaign. He's been with Donald Trump for a long time, and we're looking forward to his insights today.
+
+</details>
+
+>> 在我们右手边，有一位大家可能听说过的策略师，不过我不确定，David Axelrod。一位不太出名的……
+
+<details><summary>Original English</summary>
+
+>> To our right, uh, we have a strategist some of you might have heard of, but I'm I'm not sure, David Axelrod. um little known uh
+
+</details>
+
+>> 算是年轻的传奇吧，[笑声]
+
+<details><summary>Original English</summary>
+
+>> to be a young legend, [laughter]
+
+</details>
+
+>> 芝加哥大学政治研究所创始主任，CNN 首席政治分析师。他曾参与多场总统竞选，在奥巴马总统 2008 年和 2012 年的竞选中发挥了关键作用。他在一场知名度较低但对纽约市很重要的竞选中也发挥了关键作用，那就是 2001 年的 Fernando Ferrer 市长竞选，我就是在那次竞选中第一次见到他的。接下来是——不好意思，我刚才就是忍不住要提一句——接下来是 Alyssa Farah Griffin，ABC《The View》的联合主持人，也是 CNN 政治撰稿人。她此前曾在第一届特朗普政府中担任白宫通讯联络主任，还曾担任副总统迈克·彭斯的新闻秘书以及美国国防部新闻秘书。她是唯一一位在同一届政府中先后担任总统、副总统和国防部长最高发言人的人。在此之前，她是国会山的高级幕僚，为共和党国会议员工作。我想大多数人对她的履历也都很熟悉。最后但绝对同样重要的一位是 Stacy Abrams，她是一位作家、企业家和政治领袖。她曾担任佐治亚州众议院少数党领袖。她是美国历史上首位成为主要政党州长提名人的黑人女性，那是在佐治亚州。Abrams 将她的职业生涯奉献给了民主保护、投票权和有效的公共政策。她还联合创办了多家公司，包括一家金融服务公司、一家能源和基础设施咨询公司、媒体公司 Sage Works Productions, Inc.，而且她也很早就看到了佐治亚州就算没有完全变蓝、也有可能转向偏蓝的趋势。那么我们开始吧？Jonathan 来开个头。
+
+<details><summary>Original English</summary>
+
+>> founding director of the University of Chicago Institute of Politics, CNN chief political analyst. Um has worked on a number of presidential campaigns, was instrumental in President Obama's 2008 and 2012 races. Uh also instrumental in a lesserk known race, but important to New York City, which was the Fernando Ferrer campaign of 2001, the mayoral race where I first met him. Next we have I just had to put that out there. Sorry. Next, we have Alyssa Farah Griffin, co-host of ABC's The View, and she's a CNN political contributor. Uh, she previously served as White House communications director in the first Trump administration, as well as press secretary to vice president Mike Pence, press secretary for the United States Department of Defense. Uh, she is the only person to have served as the top spokesperson for the president, vice president, and secretary of defense in one administration. Prior to that, she was a senior aid on Capitol Hill, working for Republican members of Congress. And I think most people are also familiar with her curriculum in Visha. And finally, not uh last but definitely not least, we have Stacy Abrams uh who uh is an author, entrepreneur, and political leader. Uh she served as minority leader in the Georgia House of Representatives. She was the first black woman to become gubernatorial nominee for a major party in United States history that was in Georgia. Abrams has devoted her career to democracy protection, voting rights, and effective public policy. She has also co-founded multiple companies including a financial services firm, an energy and infrastructure consulting firm, media company Sage Works Productions, Inc. and also was fairly early on seeing the possibility of Georgia turning uh bluish if not blue entirely. So why don't we get started? Jonathan's going to kick us off.
+
+</details>
+
+## 2026 年中期选举复盘：MAGA 联盟与选民转向
+
+So David Urban，2024 年之后的热门观点是特朗普组建了这个新联盟，然后在 2026 年，所有那些选民就去投了民主党。那么这个 MAGA 联盟只是愚人金吗？
+
+<details><summary>Original English</summary>
+
+So David Urban, the hot take after 2024 was that Trump had assembled this new coalition And then in 2026, all those voters just went and voted Democrat. So was this MAGA coalition just fool's gold?
+
+</details>
+
+>> 不。你看，我认为他确实组建了一个很棒的联盟。他只是不再关心这个联盟了，对吧？他通过向这个联盟的成员竞选和喊话而当选，走出去在北费城的理发店和布朗克斯的小杂货店里与年轻的非裔美国人交谈，传递出 Morris 可能会觉得有共鸣的信息，对吧？就是那种经济民粹主义的信息，而且他在竞选时把这套信息传达得非常好。然后他进了白宫，似乎就忘了自己是怎么走到那一步的。而且我认为，因为他不能再竞选连任了——你知道，他过去总是向前看的。所以当我在 16 年、20 年和 24 年为他工作时，他心里想的是他一直在竞选，对吧？他总是在去宾夕法尼亚州的路上，总是在阐述自己的主张。而现在他进了白宫，有点忘了是谁把他带到那里的，是谁带他来的。结果证明，当你向人们承诺经济繁荣和没有海外战争，却做出完全相反的事情时，他们不会喜欢。我认为这就是结果。这就是你所看到的——政党分裂了。结果证明，收银机和加油站做到了 1 月 6 日没能做到的事，
+
+<details><summary>Original English</summary>
+
+>> No. Look, I think he did he did assemble a great coalition. He just stopped caring about the coalition, right? So he gets elected um campaigning and speaking to those members of the coalition, going out and talking to young African-Americans in barber shops in North Philadelphia and bodeas in the Bronx and you know, bringing a message that Morris may find kind of resonant, right? that same po economic populist message and and campaign on it really well. Then he gets into office and he seemingly forgot how he got there and and you know I submit that he's not you know not being able to run for another term. You know he was always looking forward. So when I when I was working for him in 20 in 16 and 20 and 24 he was thinking he was always running right he's always traveling to Pennsylvania. He's always making the case. So now he gets in the White House and he kind of forgot who brought him there, who who brought him to the dance and and you know, turns out that when you promise people, you know, economic prosperity and no foreign wars and you do the exact opposite, they don't like it. And and I think that was the result. That's what you saw. That that the party splintered. Turns out, you know, the cash register and the gas pump did what January 6 couldn't do,
+
+</details>
+
+>> 对吧？它分裂了 MAGA 联盟。Morris，具体到年轻男性选民，你怎么看？
+
+<details><summary>Original English</summary>
+
+>> right? It it it splintered the MAGA coalition. Morris, how do you see it specifically when it comes to young men?
+
+</details>
+
+>> 我非常同意刚才的很多分析。你不能一边承诺结束无休止的战争，一边又开启一场新的无休止的战争。你不能一边承诺降低生活成本，一边又发动关税战。而且我认为，到目前为止，第二任期里的腐败也是公然的。因此在违背承诺之外，大家看到总统似乎更关注宴会厅，而不是美国人民。我想年轻男性对此感到沮丧，于是摇摆向一边，又摇摆向另一边。我认为现在对民主党来说，重要的是要明白，我不认为我们在上周二获得了什么授权，
+
+<details><summary>Original English</summary>
+
+>> I think that I agree with a lot of that assessment. You know, I think you can't promise to end forever wars and start a new forever war. You can't promise to bring down costs and then impose a tariff battle. And I also think the corruption uh was blatant so far in the second term. And so on top of breaking his promises, you see what seems to be the president more focused on a ballroom than on the American people. And young men, I think, were frustrated by that. swung in one way, swung the other way. And I think, you know, the important thing for Democrats now is to understand that I don't think we received a mandate
+
+</details>
+
+>> 我认为共和党收到的是彻底的否定。但你也看到很多以前从未投过票的年轻人站了出来。我认为我们纽约的市长在一年前就已经证明，当你开展一场针对年轻人的竞选、去到他们所在的地方与他们沟通时，他们是会现身投票的。特别是在南方各地，你看到南卡罗来纳州和密西西比州等地的人们相信并看到了竞争激烈的选举，看到自己的选票能够发挥作用，并抓住了那个时刻。
+
+<details><summary>Original English</summary>
+
+>> on last Tuesday. I think we receive, you know, Republicans received an ultimate rejection. But you also saw a lot of young people come out who have not voted before. And I think our mayor here in New York showed, you know, a year ago now that it's possible when you run a campaign targeting young people where you meet them where they are, they can show up. And particularly across the South, you saw folks in places like South Carolina and Mississippi believe and see a competitive election, see that their votes could matter and meet that moment.
+
+</details>
+
+>> Alyssa，你一直在警告——我是说，你在选前就一直在警告这件事。显然好像没人听你的，但对共和党来说，最大的教训是什么？
+
+<details><summary>Original English</summary>
+
+>> Alyssa, you you've been warning, I mean, you were warning about this before the election. I don't think anyone listened to you apparently, but what's the big lesson for Republicans?
+
+</details>
+
+>> 我妈可能听进去了。嗯，听着，这次选举是对唐纳德·特朗普总统任期及其政策的全面否定。在政治层面上，我们可以谈到他背书了糟糕的候选人，插手了本不需要插手的选战——Tillis 和 Joanie Ernst 退休，得克萨斯州的 Ken Paxton，南卡罗来纳州的 Darlene Graham。但在政策层面上，有三项主要政策在我看来非常突出。关税——我们在特朗普第一任期并没有实施大范围关税。这是你看到美国腹地、看到红色美国变蓝的重要原因之一。它给农民、农业部门和制造业带来了极其沉重的成本。然后你再看 ICE 和边境执法，过度激进的 ICE 执法彻底抵消了唐纳德·特朗普在拉丁裔选民中取得的进展，全面如此。我认为这也伤害了他在年轻选民中的支持。还有伊朗战争。他承诺过没有新战争，结果那导致油价飙升。我在美国中部待过很多时间。如果你在得克萨斯州，柴油贵到那个程度，你连上下班都去不了。所以这是一次政策失败，但我也认为他有点脱离了自己当年竞选时的主张和承诺。他似乎完全沉浸在自己的副业、翻修工程、加密货币计划之类的事情里。他真的失去了重心。我还想强调一下你一开始问 Urban 的问题：他在 2024 年当选时，我当时退后一步心想，哇，我错了，这个国家想要唐纳德·特朗普。他建立了一个足以与奥巴马联盟相媲美的联盟。但在短短两年时间里，他把所有这些成果全都输光了，甚至输得更多。
+
+<details><summary>Original English</summary>
+
+>> My mom might have listened. Um, listen, this election was a wholesale repudiation of Donald Trump Trump's presidency, but also his policies. And so on the political side, we could get into he endorsed bad candidates. He meddled in races he didn't need to. Tillis and Joanie Ernst retiring. Ken Paxton in Texas, Darlene Graham in South Carolina. But on policy, three main major policies stand out to me. Tariffs, we did not do widespread tariffs in the first Trump term. That is the one of the large reasons that you saw the American heartland. You saw red America turning blue. It posed um just extraordinary costs to farmers, to the agricultural sector, to the manufacturing sector. But then you look at ICE, border enforcement, great overly aggressive ICE enforcement undid the gains that Donald Trump made with Latino voters just across the board. I also think hurt with young voters. And then the war in Iran. Um he promised no new wars and then that skyrocketed gas prices. I've spent a lot of time in the middle of the country. If you're in Texas and diesel cost what it was costing, you can't get to and from work. So, it was a policy failure, but I also think he just kind of lost touch with what he had run on and what he promised. He seems completely caught up in his side projects, his renovations, um, you know, crypto schemes, whatever it may be. And he lost he he really lost focus. And I just want to highlight where you started with Urban. He was elected in 2024. Like, I took a step back and was like, whoa, I was wrong. The country wants Donald Trump. He created a coalition that rivaled the Obama coalition. He lost all of those gains and more in the span of just two years.
+
+</details>
+
+>> 那么 David Oxro，顺着这个话题，我是说，这对民主党来说是惊人顺利的一年。是的，正如 Morris 所说，有一批年轻选民，民主党不仅翻转了共和党选民，还把倾向共和党的独立选民拉向了自己。
+
+<details><summary>Original English</summary>
+
+>> So, David Oxro, to pick up from that, I mean, this this was an astonishingly good year for Democrats. Uh, yes, a number of young voters as Morris said, Democrats flipped, not just Republicans, but, you know, Republican leaning independents toward them.
+
+</details>
+
+>> 密西西比州也翻蓝了。民主党如何避免重蹈你所看到的特朗普和共和党的覆辙，不去立刻惹恼这些选民？另外顺便问第二个问题，结合 Alyssa 刚才说的，两党在看待各自联盟的持久性方面，是否存在着一种误判？
+
+<details><summary>Original English</summary>
+
+>> Uh, Mississippi flipped. Uh, how do Democrats avoid making the same mistakes that you saw Trump and Republicans make by not immediately pissing off these voters? And just to do a two-part here in terms of what Alyssa just said, is there a mistake that is being made in un in how each party is viewing their coalition in terms of durability versus
+
+</details>
+
+>> 嗯，听着，我经历过 2008 年以及 2008 年之后的那段时期，当时人们谈论所谓“崛起中的联盟”，认为民主党将在一代人的时间里占据主导地位等等。而那是错的。选民是动态变化的，他们在观察，不要理所当然地假设任何事。我认为民主党在 2024 年的问题之一，就是他们对西语裔选民做了一些预设，对非裔美国选民做了一些预设，坦白说对工人阶级选民也做了一些预设，但我认为这个教训已经吸取了。我不太确定特朗普是否真的建立了这个伟大的联盟。我认为那同样是一次否定性投票。2024 年的那次投票是对拜登政府的愤怒。我认为这些西语裔选民之所以那样投，是因为他们主要是工人阶级，是小企业主，他们在经济上受到了惩罚，而他们以为唐纳德·特朗普会给他们更好的机会，因为他告诉他们他会的，而且他早先的任期也留下了一些印象等等。所以他们觉得自己被背叛了。民主党需要以谦逊的态度看待这次的结果。他们获得了一个机会。他们并没有获得这些选民的长期租约。如果他们不兑现自己做出的一些承诺，这些选民同样会轻易离开他们。
+
+<details><summary>Original English</summary>
+
+>> Well, listen, I lived through a a period in 2008 and after 2008 when people talked about the coalition of the ascendant, that Democrats were going to be dominant for a generation and so on. And uh that was wrong. that was the you know you voters are dynamic and they are watching and don't assume anything and I think one of the reasons one of the problems for Democrats in 2024 was that they assume certain things about Hispanic voters they assume certain things about African-American voters uh and they they assume frankly some things about workingclass voters but um I think that lesson was learned. I'm not so sure that Trump built this great coalition. I think that was a rejection as well. That vote in 2024 was an anger at the Biden administration. Uh I think these Hispanic voters went where they went because they are working class in the mo in the main. They are small business people. they were getting punished in the economy and they thought Donald Trump would give them a better shot because he told them that he would and he had had a you know there was some residue from his earlier administration and so on. Um and so they felt uh betrayed. Democrats need to approach this result with humility. They've gotten an opportunity. They haven't gotten a lease, a long-term lease on these voters. And I think these voters will, you know, just as easily leave them if they don't follow through on some of the commitments uh that they've made.
+
+</details>
+
+>> 我也想问 Stacy Abrams 同样的问题。你花了很多时间思考民主党如何在南方各州、特别是南方各州取得进展。这个新联盟，特别是在南方各州，特别是在佐治亚州，向前看有多持久？你认为民主党需要避免哪些错误？
+
+<details><summary>Original English</summary>
+
+>> Ask Stacy Abrams the same question. You've spent a lot of time thinking about how Democrats can make inroads in southern states in particular. Is this new coalition, particularly in southern states, particularly in Georgia, how durable is this going forward? And what are the mistakes that you think Democrats need to avoid?
+
+</details>
+
+>> 我们只是“借用”选民。我觉得这就像 David 说的租约一样。我们借用选民，而选民并不关心我们的政治，他们关心的是自己的生活。
+
+<details><summary>Original English</summary>
+
+>> We borrow voters. I think it's what David said about leasing. We borrow voters and voters do not care about our politics. They care about their lives.
+
+</details>
+
+>> 因此，如果我们围绕自己在“大锅”里熬制的一套政治叙事来制定政策和开展选举，他们就会告诉我们他们喜不喜欢。问题的一部分在于，我们总是试图预测人们想要什么，而不是去问他们需要什么。如果你想让民主成功，人们就必须相信自己有能动性，相信自己的行动会转化为实际结果。我们在佐治亚州、在密西西比州以及在整个南方所做的很多工作，都是为了帮助人们理解政府的运作机制，因为当人们知道是谁的错时，他们就更愿意采取行动去改变。把 David Urban、Axelrod 还有 Alyssa 刚才说的话联系起来，人们终于看清了民主是如何运作的，因为它被如此激进地破坏了。是的，关税破坏了人们参与经济的机会。你看到戴着面罩、全副武装的准军事人员在我们社区的街道上游荡，名叫 ICE，绑架民众。你看到美国人被杀害。如果你是有色人种，看到 Cala 案的裁决，你会发现不只是总统，连本该保护你的法院也在剥夺你的权利。因此在方方面面，人们不再只是对政府有一种模糊的厌恶，而是终于能指出一组非常具体的政策。我认为认定存在单一原因是一件危险的事。这不仅仅是物价问题，
+
+<details><summary>Original English</summary>
+
+>> And so to the extent we build policy and elections around a set of political narratives that we cook up in, you know, a cauldron, they're going to tell us whether they like it or not. Part of the challenge is that we try to predict what people want instead of asking them what they need. And if you want democracy to succeed, people have to believe that they have agency and that their actions will translate into, you know, actual results. A lot of the work that we do in Georgia, that we did in Mississippi, that we've been doing across the South, has been about helping people understand the mechanics of government because when people know whose fault it is, they're more willing to do something about it. And I would say tying together what David Urban said and what Axelrod said and and certainly Alyssa, people finally saw the mechanics of how democracy worked because it was broken so aggressively. Uh yes, there were tariffs that broke access to the economy. You had masked armed paramilitary roaming the streets of our communities called ICE, kidnapping people. You had Americans murdered. You were watching if you were a person of color with the Cala decision. It wasn't just the president. It was also the courts that were supposed to protect you eviscerating your rights. And so across the board, people finally could put a name to instead of the sort of enco distaste with government, there was a very specific set of policies. And I think it is a it is a dangerous thing to decide that there was a m a single cause. It wasn't just pricing
+
+</details>
+
+>> 因为在南方，我们早就穷了很久了。
+
+<details><summary>Original English</summary>
+
+>> because in the south, we've been broke for a while.
+
+</details>
+
+>> 所以，尤其是成群结队出来投票的有色人种社区，问题并不仅仅是物价。而是他们被告知，他们的声音将不再被允许被听见。而其中一种误判，就是认为参与一次选举就能消除此前存在的歧视。因此我认为对共和党来说，觉得因为更多有色人种出来投票我们就已经解决了种族问题，这种想法极其危险。我认为对民主党来说，危险在于以为驱动行动的愤怒和恐惧就足以让人们在两年后继续出来投票——因为如果他们的生活没有改善，他们就会回到“是谁搞砸了、是谁的错”的追问中。如果我们不能给出一个更好的“反派”或更好的解决方案，我们就会失去那些出来投票的选民，而且我认为我们还会引发另一轮钟摆式摇摆。因此，我们真正的机会是向人们展示能够做成什么。这就是为什么我认为很多注意力必须从国会转向州和地方政治。
+
+<details><summary>Original English</summary>
+
+>> And so, and particularly communities of color that showed up in droves, it was not simply the pricing. It was the fact that they were being told their voices were no longer going to be allowed to be heard. And this misreading, one of the misreadings is this notion that participation in an election eliminates the discrimination that preceded it. And so I think for Republicans, this idea that we've now solved race because more people of color turned out is deeply dangerous. I think for Democrats, the danger is presuming that the outrage and the fear that drove action is going to be enough to keep people coming out for two years because if their lives do not improve, they return to the promise of who broke it and whose fault is it. And if we do not give either a better villain or a better solution, we lose those voters who showed up, but we also instigate, I think, another round of pendulum swings. And so our real opportunity is to show people what can be done. And that's why I think a lot of the focus has to shift from Congress to state and local politics.
+
+</details>
+
+>> 听你们各位发言很有意思。我想我们大概能找出五六条主线：关税、伊朗战争、选区重划、压制投票、腐败、宴会厅。
+
+<details><summary>Original English</summary>
+
+>> It's interesting listening to all of you. I think we could probably identify five or six threads that we've, you know, tariffs, um, the Iran war, um, gerrymandering, uh, suppression of votes, corruption, the ballroom.
+
+</details>
+
+>> 不过我也很快补充一点，我认为共和党照搬了一套旧剧本。他们在 26 年照搬了 24 年的剧本，以为“觉醒议程”仍然有效，对吧？你看到所有这些——你看到了文化战争，你看到了副总统，你看到了对 Taler Rico 等人的攻击，但它们并没有像 24 年那样奏效。24 年大家还记得那则著名的广告，大概是在几场橄榄球赛期间播出的，“她支持他们（they/them），我们支持你”，那是则很轰动的广告。他们这次又试了一次，但没粘住，完全没有粘性。
+
+<details><summary>Original English</summary>
+
+>> But also, real quickly, too, I think, you know, Republicans ran a playbook. They ran the 24 playbook in 26 thinking that you know the woke agenda was still relevant right you saw all these you saw the yeah you saw the culture war you saw the vice president you saw the attacks on Taler Rico and others and they didn't land like they did in 24 in 24 people remember that the ad that ran famously maybe on on a couple of football games you know she's for they them we're for you that was a big ad they tried that again this time didn't stick there was no stickiness to it
+
+</details>
+
+## 以色列议题与民主党内部张力
+
+我只想问 Dan 一个问题，因为听完这些很有意思。副总统在选后分析选举时，把原因归结为一个问题，他说就是伊朗，是伊朗战争，那是一场灾难。我很好奇你对那个分析怎么看，以及我们看到的这种趋势——以色列在两党看来似乎都越来越成为一种政治负资产。
+
+<details><summary>Original English</summary>
+
+>> I just want to ask Dan something because it's interesting hearing all of this the vice president boiled it down really to one issue when he had analyzed the election after the election he said it's Iran it was the Iran war it was a catastrophe um and I'm just curious what you made of that analysis um and also just the trends that we're seeing with Israel becoming more and more of a political liability or seen as one anyway on both sides
+
+</details>
+
+>> 是的，首先我认为，显然我们应该解读发生了什么，但如果你看看特朗普总统第一任期之前的连续三届总统任期，那是连续三届两任期的总统。所以我们其实经历过一段稳定期。而我们现在处于相当于连续三届一任期的总统时期，对吧？特朗普、拜登、特朗普。所以也可能只是我们正处于这样一个极度动荡的时期，无论谁上台执政，无论是在白宫还是在国会，都会被赶下台。因此，
+
+<details><summary>Original English</summary>
+
+>> yeah first of all I would I just I think it's important to obviously we should interpret what happened we've also if you look at the three presidencies before uh President Trump's first term. Those were three back-to back two-term presidencies. So, we actually live through a period of stability. We are now in the equivalent of three back-to-back one-term presidencies, right? Trump, Biden, Trump. So, it could just be that we are in this period of incredible volatility and whoever gets in and gets to govern gets thrown out whether they're in the White House or in Congress. So, so
+
+</details>
+
+>> 显然有一些政策趋势需要分析，但我认为退一步看到我们正如我所说正处于非常动荡的时代，这一点也很重要。根据你们报纸今天的报道，特朗普总统本人似乎并不认同仅仅是伊朗问题这一分析，而且有趣的是，特朗普总统说过，如果再次面临这种两难境地，他还是会这么做。我认为整个以色列问题不是一个普通的外交政策问题。它在国内具有巨大的文化影响，远远超出了单纯的地缘政治分析。我们现在看到的是，民主党即将以这些非同寻常的多数、巨大的缓冲优势接管众议院和参议院，
+
+<details><summary>Original English</summary>
+
+>> obviously there are policy trends to analyze, but I think it's also important to take a step back that we are living through, like I said, some very volatile times. I think the um President Trump himself seems to according to the reporting in your in your paper today disagree with the analysis that uh that it was uh Iran Iran alone and interesting President Trump interestingly President Trump has said he would he would do it again if presented um with this dilemma. I think the entire issue of Israel is not a normal foreign policy issue. It has huge cultural implications inside this country that go beyond just sort of geopolitical analysis. And what we are seeing right now and I think what is you know the Democrats are about to take over in the House and the Senate with these extraordinary uh majorities huge cushions
+
+</details>
+
+>> 而其中相当一部分民主党人当选时所秉持的议程，不仅是要打破美以关系，还要推进一些我认为会让这个国家大片犹太社区——而且不只是犹太社区——感到不安、紧张的政策。我的意思是，你看到一个又一个民主党人竞选成功，即将进入众议院甚至参议院，在 10 月 7 日之后，你本以为他们会对哈马斯屠杀犹太人感到厌恶。而他们在 10 月 7 日当天、在 10 月 7 日之后的日子里、甚至在今年秋天实际表达的，是对犹太人反对被屠杀的厌恶。现在，他们就是靠这个议程竞选的。他们现在要进入一个由 Hakee Jeff 和多数党领袖 Schumer 领导的党团。走向 2028 年，我们所有人都会关注一个真正的问题：民主党看起来更像巴拉克·奥巴马的政党，还是更像 Hassan 的政党？Hassan 是过去这个周期中民主党初选里最具影响力的单一背书人。他是一股不可忽视的力量。我不想夸大 per 的重要性，但作为衡量众议院和参议院领导层在管理各自党团时将要面对的局面的尺度或风向标，他是不可忽视的。
+
+<details><summary>Original English</summary>
+
+>> and a number of these Democrats were elected on an agenda not only to break the USIsrael relationship but to advance policies that I think make huge swats of the Jewish community in this country not only the Jewish community uncomfortable nervous. I mean, the fact that you have Democrat after Democrat that ran that's going to show up at in the House and even in the Senate who after October 7th, you would think they would have been disgusted with Hamas's massacre of Jews. And what they actually expressed on October 7th, in the days of October 7th, and even in the fall of this year, is disgust with Jews for objecting to being massacred. Now, they ran on that agenda. They are now going to have to be in a caucus where they're going to be led by Hakee Jeff and and uh and Majority Leader Schumer. And there will be a real question that all of us will be watching heading into 2028. Does the Democratic party look more like the party of of Barack Obama or the party of Hassan Hassan was the singular most influential endorser in Democratic primaries in this past cycle. He's a force of nature. Now, I don't want to overstate the significance of of per, but he cannot be ignored as a measure or proxy of what the leadership in the House and the Senate are going to have to deal with in managing their respective caucuses.
+
+</details>
+
+>> Mars，作为赢下许多这类民主党初选的人，我认为驱动力不是 Hassan。驱动力是——而且我们在共和党身上也看到了同样的事情，我认为这在这个周期伤害了共和党——总统说过他要把美国放在第一位。我认为普通选民并不把向另一场海外战争、而且是一场相当一边倒的战争提供无条件援助，解读为把美国放在第一位。我认为从民主党初选选民到保守州的摇摆选民，问题的核心在于一种感觉：以色列可以按一套与其他国家不同的规则行事，以及对 Apac 及其在美国选举政治中影响力的不满。我认为促成那个联盟的、以及那些当选民主党人所相信的是：我们应该让内塔尼亚胡承担责任，我们应该让这届以色列政府承担责任，美国纳税人的钱不应该用来资助侵犯人权的行为，而美国选民对此表示赞同。我也认为你不能低估——我们谈到了伊朗战争，谈到了关税——特朗普政府一开始并没有与拜登政府的政策做出某种决裂，这看起来是什么样子。很多人指责 Kamla 没有与那套政策拉开足够距离，认为这导致了她的败选。而总统在这方面也没有做出任何改变。我认为这让人们付出了代价，而且我认为民主党绝对应该接过这面旗帜，表明我们是一个不会被 APAC 和特殊利益集团霸凌的政党，我们是一个不会花钱为另一个国家买炸弹的政党，我们是一个要把这些钱用于国内的政党。
+
+<details><summary>Original English</summary>
+
+>> Mars, as someone who won a lot of these Democratic primaries, I think the driving force was not Hassan The driving force was, and I think we saw the same thing. I think it's hurt Republicans this cycle. The president said he was going to put America first. And I think the average voter does not interpret unconditional aid going to funding another foreign war. uh and pretty lopsided one at that as putting America first. And I think across from Democratic primary voters to swing voters in conservative states at the heart of the issue is a feeling that Israel is getting to play by a different set of rules than other countries and a frustration with Apac and the influence of Apac in American electoral politics. I think what led to that coalition, what those candidates believe across elected Democrats is we should hold Netanyahu accountable. We should hold this Israeli government accountable. US taxpayer dollars should not fund human rights violations and the American voters agreed. And I also think you can't underell, we talked about the Iran war, we talked about tariffs, what it looked like at the start of the Trump administration when there did not was not a kind of break from what the Biden administration's policies had been. A lot of people blamed Kamla for not distancing herself more from that, for that contributing to her loss. The president made no difference on that. And I think that costs people and I think the Democratic party should absolutely seize the mantle of saying we're the party that's not going to be bullied by APAC and special interest. We're the party that's going to not pay for bombs for another country. We're the party that's going to put those dollars to use here at home.
+
+</details>
+
+>> 不过我能插一句吗？因为我的问题是，退一步实际看看开票结果，我仍然认为排名前五的议题是经济、社区安全、关税、战争，而以色列-加沙问题很大程度上只是第三梯队的议题。作为一个花了很多时间研究我们的对手如何试图影响我们的政治话语、试图放大那些分裂我们国家的事物的人，我并不认为中间选民出来投票是因为以色列或加沙。甚至今天我们在众议院也看到，Hakee Jeff 在闭门会议上相当轻松地当选为即将上任的众议长 Hakeem Jeff。左翼对 Hakeem Jeff 唯一真正的反对意见，就是他此前一直支持以色列。在我看来，这像是民主党内部的一场争斗，坦白说在 2028 年之前可能会真的伤害你们。但就选民实际出来投票所关心的事情而言，这也让人觉得被夸大了。这并不是说它不是一个能动员人的议题，它当然是。但我确实认为算法在其中产生了过大的影响，它被提起的频率与实际情况脱节。
+
+<details><summary>Original English</summary>
+
+>> Can I chime in on that though? Because I guess my question stepping back and actually looking at the votes as they came in. I still think the top five issues are economy, safety and communities, tariffs, the war, but Israel Gaza very much is like a third tier issue. And as somebody who's spent a lot of time studying how our adversaries try to influence our political discourse and try to amplify things that divide us as a nation, I am not convinced that the median voter turned out because Israel or Gaza. And even today we saw in the House Hakee Jeff was, you know, won pretty handily as um uh soon to be speaker Hakeem Jeff in the closed door conference. The only real objection to Hakeem Jeff on the left was that he's previously been a supporter of Israel. It seems to me as sort of this this fight within the Democratic party that could really hurt you guys ahead of 2028, just candidly. Um, but it also feels overstated in terms of what voters actually turned out to care about. It's not to say that it's not an animating issue. It certainly is. But I do think that there is an outsized influence with the algorithm and how much it's getting brought up that is detached.
+
+</details>
+
+>> 不过，Dan，我对你关于所发生事情的描述有点困惑，因为当你看看当选众议员的庞大群体以及当选参议员的人时，这在他们的竞选中无论如何都不是核心议题。所以，你看，我是犹太人，我理解人们的焦虑，也有人向我表达过这些焦虑。我属于那种认为你可以对 10 月 7 日感到震惊、同时仍然为加沙的儿童流泪的人。我认为大多数犹太人其实都是这么想的。但这些初选中的大多数人都是中左翼。以色列甚至都不是他们讨论的一部分。我确实想说，正如 Morris 所说，在经历了 20 年的战争之后，国内有一种情绪，我们不想把钱投在外面，我们想投资在国内，因此这影响了对以色列援助的看法——不仅仅是以色列在加沙开展战争的方式，还有一种感觉，认为这笔钱我们本应该花在国内。
+
+<details><summary>Original English</summary>
+
+>> I'm just I'm just a little bit confused though about your depiction, Dan, of what happened because um when you look at the the huge number of people who were elected to the House and the people who were elected to the Senate, this wasn't central to their campaigns in any way. So, I understand, look, I'm Jewish, right? I understand the anxieties that people have expressed those anxieties to me. I'm one who believes that you can could have been horrified about October 7th and still weep for the children of Gaza. I think most Jews actually feel that way. But most of these people in these primaries uh are center left. They weren't Israel was not even part of their uh discussion. I will say that there is a sentiment in the country as Morris said to you know and this follows 20 years of war that we don't want to invest in we want to invest at home and so that has affected uh views of the a Israel not just how Israel prosecuted the war in Gaza but the sense that this is money that we could we should be spending at home.
+
+</details>
+
+>> 如果我们是像你和 Morris 现在这样讨论这些问题，虽然我不同意你们两位的观点，但我们会有一场很好的讨论，会是一场很好的辩论。但我说的那些候选人并不是这样讨论这些问题的。在科罗拉多州有一位候选人 Curos，她直接说 10 月 7 日和 9/11 是不可避免的。她把暴力合理化。她把矛头指向、指责受害者，而不是指责恐怖分子。还有 Abdul Aliad，也是如此，把袭击密歇根州西布卢姆菲尔德以色列圣殿的恐怖袭击合理化——“受过伤的人会伤害别人”。我可以给你举出一个又一个例子。所以如果你们——等一下，让我说完——如果你们想讨论是否应该有对外援助、对外援助项目以及对美以军事合作的支持，那是个很有意思的讨论。但我们得实事求是，那并不是民主党初选里正在进行的对话。我认为参众两院民主党党团的领导层都必须想清楚……
+
+<details><summary>Original English</summary>
+
+>> If we were talking about these issues the way you and Morris are talking about it right now, I would disagree with both of you, but we would have a good discussion. It would be a good debate. That is not the way the candidates I'm talking about. We're talking about these issues. You had a candidate in Colorado, uh, Curos, who literally said October 7th and 9/11 were inevitable. She rationalized the violence. She targeted blame the victims rather than blaming the terrorists in, you know, in I mean Abdul Aliad, same thing. rationalized the terrorist attack that hit the temple Israel in West Bloomfield, Michigan. Hurt people, hurt people. I mean, I give you example after example. So, if you guys hold on, let me if you guys want to have a conversation about whether or not there should be foreign aid and foreign assistance programs and support for, you know, military cooperation between the US and Israel. That that's an interesting discussion. But let's let's I mean, that is not the conversation happening in Democratic primaries. And I think the leadership of both caucuses, the Senate and the House Democratic caucuses, are going to have to figure out
+
+</details>
+
+>> 我想对你说的是，那并不是绝大多数民主党初选里的对话。所以把那描绘成核心主题，我认为……
+
+<details><summary>Original English</summary>
+
+>> What I'm saying to you that is that that wasn't the conversation in the vast majority of Democratic uh of Democratic primaries and you know so to depict that as the central theme I think
+
+</details>
+
+>> 我认为那是党内能量所在。
+
+<details><summary>Original English</summary>
+
+>> it's where the energy is in the party
+
+</details>
+
+>> 我认为在政治话语中，有一种倾向是把可能具有多重维度的复杂问题极度简化。我觉得 Alyssa 刚才说的有一点非常重要，你提到了安全。安全对人们来说确实是个问题。我们是根据价值观投票的。人们希望知道自己选出的人能反映他们的价值观。而在种族灭绝中，或者当某人对儿童的死亡保持沉默时，其中蕴含着一种价值观——这无关你是否支持犹太社区的问题。这是一个问题：作为一个正在寻求选票的人，你是否愿意发声？你是否愿意表达你的价值观？而人们正在倾听这些价值观。Alyssa，我同意你的看法，大多数人去投票时并没有把以色列作为一个具体议题来考虑。但我想说的是，他们在初选中考虑的是——
+
+<details><summary>Original English</summary>
+
+>> I think there is a tendency in political speak to be extraordinarily reductive of complicated issues that can have multiple dimensions and something that Alyssa said I think is incredibly important you referenced safety And you know safety was an issue for people. We vote on values. People want to know that the people they are electing reflect their values. And there is a value that is embedded in genocide or when someone is silent about the deaths of children which is not about the question of whether you support the Jewish community. It is a question of are you willing to call out as someone who is asking for a vote. Are you willing to express your values? And people were listening to values. I I agree with you, Alyssa, that most people did not go to the polls thinking about Israel as a specific issue. What I will say they thought about was in the primaries,
+
+</details>
+
+>> 请让我说完。我刚才没有打断你。当人们在初选和大选中投票时，他们在问这样一个问题：谁所表达的一套价值观，能与我感受到的恐惧产生共鸣——因为我知道我的邻居在这里、在美国就可能被绑架。当美国最高法院通过 Brett Kavanaaugh 表示你的种族、语言和口音可以成为你被 ICE 带走的依据时，这背后就附带着一种价值观。当这届国会通过法律剥夺人们获得医疗保健和食物的机会时——所以人们——我认为挑出一两个议题就说这代表了整个民主党党团，是极度简化的做法。作为民主党人和美国人，我们内部会有很多争论，但我认为随着我们进入下一个过渡期，非常重要的是我们要讨论究竟是什么样的价值观得到了表达。我并不是在跟你争论某一个人说了什么或没说什么，但我确实认为，如果我们要对这个国家正在发生的事情进行一场正当的对话，我们就不能把人简化成一句媒体金句。你刚才引用的 Abdul sayed 参议员的那句话，并不是他当时说的原话。他当时说的话是在一个更大的语境里的，但被断章取义地摘出来并被曲解利用，这削弱并破坏了我们本应围绕外交政策展开的正当辩论，我们做任何其他事都是危险的。
+
+<details><summary>Original English</summary>
+
+>> please let me let me finish. I did not interrupt you. When people were voting in primaries and in general, they were asking the question, who is expressing a set of values that resonate with the fear that I feel because I know that my neighbor could be kidnapped here in the United States. When the Supreme Court of the United States through Brett Kavanaaugh said that your race and your language and your accent could be a predicate for your being taken by ICE, that has a value attached to it. When this Congress passed a law to strip people of their access to health care and to food, so people I think it it is incredibly reductive to take one or two issues and say that this is now speaking to the whole of the Democratic caucus. We will have lots of fights as Democrats and as Americans, but I think it's incredibly important as we head into this ne this next interregnum that we have conversations about what values were being expressed. I'm not disagreeing with you about what any one person said or didn't say, but I do think it's incredibly important if we're going to have a legitimate conversation about what happens in this country that we not reduce people to a sound bite. The one that you just used from Senator Abdul sayed, that is not what he said. He said what he said was in a larger context but it has been pulled out and misappropriated and it undermines and undercuts what should be a legitimate set of debates that we have about foreign policy and it is dangerous for us to do anything else. Can
+
+</details>
+
+>> 首先，我绝无意替 Abdul Aliad 辩护，但他自己也说过他不该说他说的那些话，所以那并不是断章取义。不可能既是断章取义——在像你这样的人把它断章取义并围绕它大做文章之后——他又表示希望自己当时用了不同的措辞、以不同的方式回应。
+
+<details><summary>Original English</summary>
+
+>> first of all be it for me to defend Abdul Aliad but he himself said he shouldn't have said what he said so it wasn't taken out of context. can't be true that it's taken out of context and that then after people like you take it out of context and make a whole discourse around it. He wishes he used different words and addressed something differently.
+
+</details>
+
+>> 他说的是那是一个受到伤害的人，他受过伤，因此心理受了创伤。
+
+<details><summary>Original English</summary>
+
+>> He he said that this was a damaged person and he was hurt and therefore damaged.
+
+</details>
+
+>> 让我问你一个问题。我们不该在这里陷得太深，我也不想占用太多时间，但我只想追问一件事，因为他是在同一份声明中说这句话的，而在那份声明中他……
+
+<details><summary>Original English</summary>
+
+>> Just let me ask you a question. We should get deep in the hole here and I don't want to take but I just I just want to follow up on one thing here because what he he said it in the same statement in which he
+
+</details>
+
+>> 用非常强烈的措辞谴责了那里发生的事情。他并没有站出来为发生的事情辩护。他谴责了发生的事情。这一点在关于他言论的报道中被省略了。我同意在人们正感到悲痛和震惊的那个时刻，把这两个想法放在一起是不恰当的，他自己也这么说了。但这就是我们在政治中做的事，对吧？我们从更长的声明中截取简短的片段，以便服务于本质上是负面竞选广告的论点。但这不是严肃的讨论，严肃的讨论是让我们看看完整的语境并据此做出判断。
+
+<details><summary>Original English</summary>
+
+>> condemned in very strong terms what happened there. He did not stand up and justify what happened. He condemned what happened. That has been omitted from the accounts of what he said. I agree that the that and he said that it was inappropriate in that moment to join those two thoughts uh at a time when people were were grieving and shaken by what happened. But this is what we do in politics, right? We take short bites out of longer statements in order to facilitate what what what essentially is uh you know a negative ad argument. Uh but that's not a serious the serious argument is let's look at the whole context uh and and judge that.
+
+</details>
+
+>> 那么 Moore 说以色列有一个内塔尼亚胡问题，而国会民主党人回应对以色列的这个内塔尼亚胡问题及其对美以关系的影响是恰当的。这很公平。问题在于，如果你听 Abdul Alied 的话，他并不是说以色列有一个内塔尼亚胡问题。他说的是以色列有一个“以色列问题”。我并没有断章取义。我并没有……
+
+<details><summary>Original English</summary>
+
+>> So um Moore said that uh Israel has a Netanyahu problem and that it is appropriate for congressional Democrats to respond to Israel's Netanyahu problem and the implications it's having for the USIsrael relationship. That's fair. The problem is if you listen to Abdul Alied, he doesn't say Israel has a Netanyahu problem. He says Israel has an Israel problem. I'm not taking anything out of context. I'm I'm I'm not
+
+</details>
+
+>> 这倒是真的。但我也想说，人们经常问为什么我们要花这么多时间谈论以色列，而我们现在在这个会议上已经连续谈论以色列大概 30 分钟了。我想美国民众听到这个会想：哇，政治阶层才有一个以色列问题，而且这表现为——到底怎么回事？为什么人们不能更快地从近代政治史上最大的历史性中期选举摇摆中继续往前看，而要花更多时间谈论 Abdul 在一场关于以色列的记者会上说了什么或没说什么？这会让选民反感，显得脱离实际。我认为有些美国人认为围绕以色列的问题在于内塔尼亚胡，有些美国人认为一国方案是答案，或者两国方案是答案。我觉得 Stacy 说得非常好，她说这关乎价值观。我认为意识形态光谱上的很多人都可以发表以价值观为导向的声明，民主党内对此是有空间的。我认为我们看到的广泛否定，是对以色列政府当前行动的否定，是对我所认为的正在那里发生的种族隔离以及允许这一切发生的政治体制腐败的否定。所以听到你指责犹太人把以色列变成首要议题，有点令人不安——我不是说你不能……犹太人也可以那样做。我只是说你基本上是在说，是犹太人的错才让这成为如此重要的议题。你和我一样清楚，10 月 7 日之后，以色列问题在这个国家成了一个爆炸性议题，这绝对不仅仅是因为犹太人感到处于……
+
+<details><summary>Original English</summary>
+
+>> That's true. But can I also say that pe people often say why do we spend so much time talking about Israel and we're now on like minute 30 of talking about Israel in this conference. And I think the American people hear that and think wow the political class has an Israel problem and then that manifested and like what is going on? Why can why can't why can people move on faster from the biggest historic midterm swing in recent political history to let's spend more time on talking about what Abdul said or didn't say at a presser about Israel. that rubs voters the wrong way and seems out of touch. And I think there are Americans who think that the problem around Israel is Netanyahu. There are Americans who think a one-state solution is the answer or two-state solution is the answer. I think you know Stacy put it incredibly well by saying it is about values. And I think when people a lot of people across the ideological spectrum can make valuesoriented statements that there is room for in the Democratic party. I think what we saw rejection of was the current action a broad widescale rejection of was the current actions of the Israeli government was what I would say is the apartheid taking place there and the corruption in the political system that allows it to take place. So it's a little unnerving to hear you blame the Jews for making Israel a top. I'm not you can you can Jews can do that too. I'm just saying you're you're basically saying it's the Jews fault for making this such a primary. You know as well as I do that after October 7th, the Israel issue became an explosive issue in this country and it certainly wasn't just because Jews were feeling under.
+
+</details>
+
+>> 我曾为两位不同的高知名度穆斯林当选官员工作过，如果你认为 Abdul 和 Zoran Madani 早上醒来会想“我迫不及待想被问 30 个关于以色列的问题”，那你简直不在这个星球上。
+
+<details><summary>Original English</summary>
+
+>> I think I have I have worked for two different high-profile Muslim- elected officials and the number If you think Abdul and Zoran Madani wake up in the morning thinking I can't wait to get asked 30 questions about Israel, then you're not on the planet.
+
+</details>
+
+>> 我们往下推进吧。
+
+<details><summary>Original English</summary>
+
+>> Let's move.
+
+</details>
+
+>> 但我能说完最后一个想法吗？
+
+<details><summary>Original English</summary>
+
+>> But can I just finish one thought?
+
+</details>
+
+>> 可以，然后我们需要……好。
+
+<details><summary>Original English</summary>
+
+>> Yes. And then we'll need All right.
+
+</details>
+
+>> 好的。犹太人大约占这个国家人口的 2%。好吧，他们却占了仇恨犯罪的 60% 以上。对吧？现在这个环境中有某种东西，使得针对犹太人的言辞变得充满毒素。就拿 2025 年春天的一个 7 周时期来说：宾夕法尼亚州州长 Shapiro 的房子被烧毁；科罗拉多州博尔德发生袭击事件，当地犹太社区成员当时正在为人质抗议，遭到燃烧瓶袭击；一位老妇人在华盛顿特区国会博物馆被杀害；那两名年轻的犹太人在……让我说完这个想法，我会说完这个想法的——在所有这些事件中，袭击的实施者都指责以色列和犹太人是种族灭绝的共谋。所以我想说，这个环境中的言辞已经变得相当……
+
+<details><summary>Original English</summary>
+
+>> Yeah. Jews represent about 2% of this population. Okay. They represent somewhere north of 60% of the hate crimes. All right? There's something in this environment right now where the language has gotten toxic for Jews. So just take a 7-week period in spring of 2025. Governor Shapiro in Pennsylvania, his house is burnt down. Uh the attack against in Boulder Colorado where the where the Jews were local members of the Jewish community were protesting on behalf of the hostages. Molotov cocktail attack. El el el el el el el el el el el el el el el el el el el el elderly woman gets killed in in Washington DC at the capital museum. Those two young Jews were gunned down in let me just finish the thought I will finish the thought and in every one of those situations the the perpetrators of those attacks were blaming Israel and Jews for complicity and uh in genocide. And so I'm saying the language in this environment has gotten pretty
+
+</details>
+
+>> 我只想说一句，而且我知道我同意 Morris 的看法，我认为我们已经严重偏离了这次选举到底发生了什么的主线叙事，但我只想说这一句：我是大屠杀难民的儿子。我父亲从小踩着尸体长大。他的家被炸毁，他们逃了出来，来到了美国，我无比感恩。我是你能想象到的最感恩的美国人，感恩这个国家对他们意味着什么。但作为一个感恩的美国人，哪怕再感恩，我也绝不会说“我的国家永远是对的”。作为一个犹太人，我也绝不会说“以色列永远是对的”。我们必须摆脱的是把反犹太复国主义与反犹太主义混为一谈的做法——这在左翼发生过，但当我们看密歇根州时，这也是最后一点我想说的：当时有一则广告，甚至都没播出，只是发布了出来，那则广告极其反犹太且令人反感。我当时就这么说过，而且对此非常不安。与此同时，还有数百万美元的广告针对 El Say 播出，基本上称他为恐怖分子，说他在推行伊斯兰教法，说他是圣战分子。那同样充满了仇恨。我只想对你们说，我们都应该退一步说，当仇恨大行其道时，这对任何人都没有好处，尤其是对少数群体。所以，我就想说这一点。
+
+<details><summary>Original English</summary>
+
+>> I just want to just say this and I know I agree with Morris. I think we're way off on uh we've missed the main narrative here of what happened in this election, but I just want to say this. Uh I am the son of a refugee from the pilgrims. My father grew up stepping over dead bodies. His home was blown up and they fled and they came to America and I'm so grateful. I'm the greatest most grateful American you can imagine for what this country has meant to them. But as a grateful, even as a grateful American, I never say my country right or wrong. And as a Jew, I never say Israel right or wrong. And one of the things we have to get away from is the conflation of uh uh you know, anti-ionism and and with anti-semitism that's happened on the left, but it also is fanned by this when we look at Michigan and this is the last point I'll make. There was an ad run that was it wasn't even run. it was released that was deeply anti-semitic and offensive. And I said so then and I was very disturbed by it. There were millions of dollars of ads run against El Say calling him essentially a terrorist, saying he was uh promoting Sharia law, that he was a jihadist. That was hateful, too. And I would just say to you, we ought to all step back and say when hate's on the march, that's not good for anyone and particularly for minorities. So, um, that I just want to make that point.
+
+</details>
+
+>> 我们马上回来。[音乐]
+
+<details><summary>Original English</summary>
+
+>> We'll be right back. [music]
+
+</details>
+
+## 人工智能与数据中心的政治博弈
+
+>> David Urban，这将是一个相当大的话题转换。AI 行业在这个周期花费了数千万美元，
+
+<details><summary>Original English</summary>
+
+>> David Urban, the And this will be quite a pivot. The AI industry spent tens,
+
+</details>
+
+>> 谢天谢地，对我来说真是解脱，[笑声]
+
+<details><summary>Original English</summary>
+
+>> thank goodness for me, [laughter]
+
+</details>
+
+>> 在这个周期花费了数千万美元。但对 AI 和数据中心的支持却成了巨大的政治负资产。你会听到特朗普政府说这更多是信息传达的问题，而不是现实问题。这个问题留给你来回答，但在 2028 年的初选以及大选前夕，AI 政治将会如何演变？
+
+<details><summary>Original English</summary>
+
+>> spent tens of millions this cycle. Uh, but support for AI and data centers became a massive political liability. You will hear the Trump administration say it was more messaging issue than a reality issue. I will leave that to you to answer, but how will the politics of AI play out [snorts] in 2028 in in both primaries and in the leadup to the
+
+</details>
+
+>> 是的，你看，我确实认为这有点像水力压裂法，对吧？如果你看看我的家乡宾夕法尼亚州，那里也有同样的问题。在他们把井钻下去之前，没有一个人花一分钱去谈论水力压裂法，然后等他们……那时候早就过了推销它的最佳时机。你得在动土之前就花钱，四处奔走，试着向人们说明它的好处、经济效益。参议员 McCormack 和其他人在宾夕法尼亚州举办了这场 AI 峰会，在宣传这对宾夕法尼亚州将带来的繁荣方面做了一点前期推销，但他们没有回答一个现实问题：这对人们的公用事业费率或用水量意味着什么。没有人真正深入到这些细节中去。于是这变成了一个巨大的“邻避”问题，对吧？我不想在自家后院看到一个嗡嗡作响的巨大工厂，不管是福特工厂还是 AI 数据[清嗓]工厂。我认为很多人……所以这是其中一部分。然后第二部分是对“科技兄弟”的反感，对吧？这有点像是“爱泼斯坦阶层”，对吧？存在两种政府：一种是为有产乡绅阶层服务的政府，另一种是不为我服务的政府。这也是特朗普政府问题的一部分。他们承诺政府会为我长大的宾夕法尼亚州西部的民众服务，然后却没有兑现。接着民众看到要建一个大型数据中心，不知怎么还要由他们来买单提供税收减免，而且这会吸干他们的资源，他们的电费会上涨，他们的供水会受影响，却没有任何人解释清楚，对吧？所以现在你已经掉进坑里了，正试图从这个坑里往外爬，这需要做大量的解释工作。我的意思是，归根结底，你最近看到的一些事情，不管是网络攻击还是非网络攻击，你可以指出我们缺乏总统喜欢称之为“超级智能”的东西，然后说，我们落后了。我们落后了，这就是正在发生的事情，是中国人或伊朗人在展示他们做这件事的能力，我们最好唤醒人们搭上这趟列车，并在解释方面做得更好一些，因为现在在很多地方这都很难推销，在宾夕法尼亚州非常难推销。你必须真正向人们解释这对他们有什么经济利益，否则他们不会投票支持给某个外地的富有公司提供税收减免。
+
+<details><summary>Original English</summary>
+
+>> Yeah, look, I do I do think it's a terri, you know, this I I liken this a little bit to fracking, right? This is if you look in my home state of Pennsylvania um you have the same issue. You you didn't nobody spend a nickel um talking about fracking until they had sunk wells and they were you know then you had you know it was it was long past the time to sell it. You know you spend money before you put a shovel in the ground. You go around you try to convince people of the benefits the economic benefits. Um you know Senator McCormack and others had this summit for AI in Pennsylvania. did a little bit of it on the sales pitch on on the front end of the boom it's going to be for Pennsylvania, but but they didn't answer the fact about, you know, what what's going to mean for people's utility rates or or or the water usage. Nobody really gotten into the into the granularity of it. And and so it it became a big nimi issue, right? We not I don't want a giant humming factory in my backyard, whether it's a Ford factory or whether it's an AI data [clears throat] factory. And and I think a lot of people back, you know, so that was one part of it. And then the second part of it is kind of the the the repulsion against the tech bros, right? A little bit of this is the Epstein class, right? There's there's two sets of government. There's a government that works for the the kind of the landed gentry and there's a government that doesn't work for me. And this is part of the the problem of the Trump administration. They promised the government works for the folks in Western Pennsylvania where I grew up. And then they didn't deliver upon that. And then they see there's going to be a big data center built that they're somehow paying for tax breaks and it's going to leech their their power is going to go up and their water supply is going to go and nobody explained it, right? And so now you're you're you trying to dig out of this hole you're already in and it's going to it's going to take a lot of explaining. I mean, I think at the end of the day, um, some of the things you're seeing most recently with, you know, whether they're cyber attacks or not cyber attacks, you could point to the the lack of super intelligence, as the president likes to call it, and say, you know, we're behind. We're behind, and this is what's happening, and this the Chinese or it's the Iranians flexing their ability to do this and and we better wake up people to get on this train and do a little bit better of explaining because right now it's it's a tough cell in in a lot in Pennsylvania. It's a very tough sell. You're going to have to really explain to people how it's an economic benefit to them or they're not going to vote for a tax break for some rich company someplace else.
+
+</details>
+
+>> 等一下，我只想先问一下 Morris，然后再插进来。但是……
+
+<details><summary>Original English</summary>
+
+>> One one sec. I just want to ask Morris and then jump in. But
+
+</details>
+
+>> Morris，说到这里，我的意思是，David 描述的是共和党在这里面临的挑战。你认为民主党在面对这个问题时，需要点出这里的“敌人”吗？
+
+<details><summary>Original English</summary>
+
+>> Morris, to that end, I mean, David is describing the Republicans challenge here. Do you think Democrats as they are facing this need to name the enemy here?
+
+</details>
+
+>> 我认为这是政治上最容易赢的牌，我希望我们能抓住这个时刻。而且我觉得，没错，共和党和支持 AI 的人确实没能很好地解释这件事。但另一方面，当你不得不去解释的时候，你就已经输了。我认为你们会很难解释清楚，为什么……
+
+<details><summary>Original English</summary>
+
+>> I think it's it's a the easiest political winner possible and I hope we seize the moment on this. And like I think you know it's right that Republicans and pro AAI folks did not do a great job explaining it. But also when you're explaining you're losing. And I think you're going to have a really hard time explaining why
+
+</details>
+
+>> 我们现在正在往外爬……
+
+<details><summary>Original English</summary>
+
+>> we're digging out now
+
+</details>
+
+>> Elon Musk 和 Sam Alman 在当前经济中应该拥有更多权力。而且正如你所说，人们本来就不喜欢普通的亿万富翁。现在我们选出了这个星球上最不讨喜的亿万富翁，属于你能想象到的最不讨喜的那类政治群体之一。他们到处说着任何人所能说出的最蠢的话，比如：“是的，你们以后不会有工作了。是的，我们不认为你们的生活重要。”然后你还有民选官员说着类似……
+
+<details><summary>Original English</summary>
+
+>> Elon Musk and Sam Alman should have more power in the current economy. And you haven't to your point like people don't like normal billionaires. Now we have taken the least likable billionaires on the planet of one of the least likable kind of political groups that you could possibly have. They're going around saying the dumbest things anyone could possibly say, being like, "Yes, you are not going to have a job. Yes, you don't think we don't think your lives matter." And then you have elected officials saying like,
+
+</details>
+
+>> “我们欢迎你们的数据中心进驻我们的……”我认为数据中心尤其成了所有对 AI 焦虑情绪的一种实体体现，但我们都应该看到这一点，并说这只是我们未来走向的开始。我向上帝祈祷共和党决定成为 AI 之党。他们可以成为欢迎 AI 进入他们社区的人，而我们可以成为站出来保护我们的社区并予以反击的人。
+
+<details><summary>Original English</summary>
+
+>> "We welcome your data centers into our I think the data center is particularly a kind of physical manifestation of all of the AI anxieties, but we should all look at that and say this is just the start of where we're going." I pray to God that the Republican party decides to be the party of AI. they can be the ones welcoming AI into their communities and we can be the ones who stand up, protect our communities and fight back.
+
+</details>
+
+>> 我只是想说——也是顺着你刚才的话说，Morris——我确实认为数据中心问题是一个更大问题的替代品，那就是人们感到对自己的生活失去了控制。他们觉得这些数据中心是强加给他们的。AI 圈那些科技兄弟有一种傲慢，仿佛在宣布这就是未来、你们自己看着办吧。但我认为这关乎很多事情，这种失控感不仅仅是关于实体建筑的体现，它还关乎这将如何影响他们的孩子，如何影响他们的工作。所以这不仅仅是那些家伙需要被稍微约束一下的任务，这也是领导者们的任务，也是领导者们需要去解释的任务。你刚才作为政治顾问谈到了这个议题的威力，但事实是 AI 已经来了，AI 一定会发生，问题在于我们是驾驭它的力量并限制它可能造成的损害，还是我们干脆就只是像水上的浮木一样……
+
+<details><summary>Original English</summary>
+
+>> I just I just I just wanted to say uh and just to feed a little bit off of what you said Morris, I do think that the data center issue is a surrogate for a larger issue which is people feel loss of control in their lives. Uh they feel that these data centers were imposed on them. uh there has been an arrogance about the AI uh the tech bros in in in sort of this uh declaring that this is the future and you know live with it and uh but I think it's about a lot of things and this loss of control issue it's not just about the the the physical manifestation it's about how it it's going to affect their kids how it's going to affect their jobs uh so this isn't just a task for those guys have to be reigned in some but this isn't just a task for them it's for leaders as well and also for leaders to explain you're talking about it as a political consultant and the power of that issue the fact is AI is here AI is going to happen and the question is do we do we harness the power of it and limit the damage that it can do uh or do we simply are are we simply like flatsoms on the
+
+</details>
+
+>> 顺便说一句，Stacy，你刚才结尾的话正好就是我想说的点。因为听着，共和党彻底搞砸了。总统基本上发推文说，大致意思是“如果你不喜欢数据中心，那你就是想变穷”。这就是他信息传达的全部内容。他没有谈到数据中心能降低房产税，没有谈到它们现在已经存在于许多社区中，没有谈到它们可以说能够带来美国的再工业化，并为年轻人创造下一代就业机会。他根本没有试着去推销它们。但我们现在正处于一个相当虚伪的时刻——虽然你刚才表达得很好——但民主党人使用 AI 的程度和共和党人一样多。我们确实必须能够为那些 AI 提供电力支持。现在把反数据中心当作一个政治靶子当然很好用。但走向下一次选举时，我认为讨论会变得更深入一些。它将关乎约束这种下一代前沿模型——那些让所有人都感到恐惧的模型，那些我们被警告可能在 10 年内毁灭人类的模型。谁将在这方面发挥领导作用？因为我认为此时牙膏已经挤出管外了，它已经深深融入了我们所有人的生活。你可以妖魔化那些科技兄弟，但我看过一条推文，我可能会引述得不太准确，大意是到了 2032 年，AOC 将会在一个脆弱社区里恳求建设数据中心，并说该社区没有得到充分代表。现实就是，每一个行业都将需要背后的算力支撑。所以你必须找到那些狭窄的通道，但在不损害它所驱动的经济利益的前提下，约束 AI 应该是什么样的？而这正是共和党应该站出来的地方。
+
+<details><summary>Original English</summary>
+
+>> way and then Stacy your ending was kind of the point I wanted to be uh Because listen, Republicans totally dropped the ball. The president basically tweeted more or less, "If you don't like data centers, you want to be poor." That was the extent of his messaging. He didn't talk about it lowering property taxes, the fact that they exist in many communities right now. The fact that they could arguably be the re-industrialization of America and lead to next generation jobs for young people. He didn't try to sell them. But there's this disingenuous moment that we're in, and I you articulated this very well, but Democrats use AI just as much as Republicans do. We do have to be able to power that AI. It's such a good sort of bogey man to have right now to be anti-data center. But heading into the next election, I think that the conversation becomes something a little more advanced. It's about reigning in this sort of next generation frontier models, the ones that everyone's terrified over, the ones that we're being warned about could wipe out humanity in a span of 10 years. Who's going to take the leadership on that? Because I think that the the you know, toothpaste is out of the tube at this point that it's ingrained in all of our lives. And um you know, you could demonize the tech bros, but I saw a tweet that I'm going to misstate, but it's like in 2032, AOC is going to be begging for a data center in a vulnerable community and saying that it's underrepresented. Like it is a reality that every single industry is going to need the powering behind. So you have to find those narrow lanes, but what does reigning in AI look like without hurting the economic benefits that it drives? And that's where Republicans should be.
+
+</details>
+
+>> 不过更大的问题是，谁来为此买单。这相当……我认为这就是这个问题的核心。
+
+<details><summary>Original English</summary>
+
+>> Well, the bigger question is who pays for it, though, too. That's quite I think that's a the number of this
+
+</details>
+
+>> 而我认为这正是民主党有机会的地方。我认为这不仅仅是反数据中心。而是要着眼于如何做到国会拒绝去做的事情。我认为民主党在未来两年必须承认，国会的行动虽然重要，但往往会受到总统的阻挠，因为他打算否决任何看起来可能对民主党有利的法案。但在州和地方层面，你们翻转了这么多议会，你们拥有完全执政优势，这是一个做两件事的机会。第一，正如 David 所说，把对土地、水和能源做出决策时的那种能动性和主人翁意识还给民众——我对两位 David 都说过这个；但第二，这也是一个谈论接下来意味着什么的能力。所以我正在参与几个项目，我们在低收入社区培训人们了解 AI 是如何运作的。
+
+<details><summary>Original English</summary>
+
+>> and I think that's part of where Democrats have an opportunity. I think it's not just being anti-data center. It is looking at how do you do what Congress is refusing to do. And I think Democrats in the next two years have to acknowledge that congressional action while important will often be thwarted by a president who intends to veto anything that it looks like it might benefit Democrats. But at the state and local level where you flipped so many chambers where you have trifectas, this is the opportunity to do two things. One, it is to return to the people, as David said, the sense of agency and ownership over the decisions being made about their land, their water, their energy, and I've said that to both Davids, but it's also the ability to talk about what it means next. So, I work with a couple of programs where we're training lowincome communities on how AI works.
+
+</details>
+
+>> 现在数据中心之所以让人害怕，是因为没人知道它意味着什么。他们不知道什么是算力。我写了一本叫《Code of Justice》的小说，因为我希望人们理解 AI 为什么存在、它能做什么、不能做什么。是的，让 AI 拥有“上帝情结”，并且显然有能力穿越我们的宇宙和我们的冰箱把我们都杀掉，这是一件危险的事。那是有问题的。但我们也可以选出愿意对此进行监管的官员。我认为这对民主党来说是一个真正的机会，因为这不仅仅是反 AI。而是谁来掌管，以及我们在问什么问题。当民主党真正把自己定位为愿意提出人们需要问的问题的人，真正解决谁来买单的问题，但同时——正如 Alyssa 所说——不低估那些想要获得这种力量的社区的智慧。他们只是想知道代价是什么、谁在控制它，以及我能从中得到什么。如果民主党理解这三点，我认为我们不仅在 28 年有机会展开对话，在 32 年也有机会。
+
+<details><summary>Original English</summary>
+
+>> Right now, data centers are scary because nobody knows what it means. They don't know what compute power is. I I wrote a novel called Code of Justice because I want people to understand why AI exists, what it can do, what it can't do. And yes, it's a dangerous thing to have, you know, AI with a god complex and apparently the ability to travel through, you know, our universe and our refrigerators and kill us all. That's problematic. But we also can elect officials who are willing to regulate this. And I think that's a real opportunity for Democrats because it's not just anti-AII. It is who's in charge and which questions are we asking? And when Democrats really assert ourselves as the people who are willing to ask the questions that people need asked, actually solve the problems of who's paying for it, but not underestimate, I think, as Alyssa said, the intelligence of communities that want access to this power. They just want to know what it costs, who controls it, and what can I get from it. If Democrats understand that trifecta, I think we have a real opportunity to not only have a conversation in 28, but 32.
+
+</details>
+
+我也认为，当总统会见所有行业领袖并被问及“你们打算怎么做来缓解 AI 的下行风险”时，他说“我们要依靠经营这个行业的人的道德感”[笑声]，这对美国人民来说并不让人放心。所以，我认为这也是一个因素——它在某种程度上凸显了贯穿这次竞选的腐败问题。
+
+<details><summary>Original English</summary>
+
+I also think that when the president meets with uh all the leaders of the industry and is asked what are you going what are you going to do to ameliate the sort of downside risks of AIS we're going to rely on the moral sense of the [laughter] people who run the industry that is not reassuring to the American people so uh you know that I think that was a factor in you know was it it underscored in some ways the corruption issue that I coursed through a lot of the this campaign,
+
+</details>
+
+>> 但这也是我刚才谈到的那种情况的症状——就是那种动荡，我的意思是，这与我们政治的动荡完全同步。2024 年初，全国各地冒出了 40 个这样的数据中心反对团体。今天，已经有超过 800 个了，对吧？等我们一眨眼，到民主党进入 2028 年总统初选时，可能会有 8,000 个。所以问题是，我同意 Morris 的看法，在刚刚过去的中期选举中，这对民主党来说是一个很有吸引力的政治靶子，但现在他们要扮演执政者的角色了。当我问国会民主党人，“好吧，我明白数据中心曾经是个很有吸引力的靶子，那你们现在打算怎么做？”
+
+<details><summary>Original English</summary>
+
+>> but it's symptomatic of what of what I was talking about earlier, just the volatility of I mean, it's all in sync with the volatility of our politics. In early 2024, there were 40 of these data center groups that had popped up around the country. Today, there are over 800, right? This is and if we're going to blink and there's going to be like 8,000 of them when the Democrats are going through the presidential primaries as we head into 2028. So the question is I agree with Morris that it's a juicy political target for Democrats this past midterms, but now they're going to be in a governing role. When I ask congressional Democrats, okay, so I get that the data centers were this juicy target. What do you do now?
+
+</details>
+
+>> 你们现在掌握了缰绳，而我从他们任何一个人嘴里都得不到答案。
+
+<details><summary>Original English</summary>
+
+>> You now have the reigns and I can't get I can't get an answer out of any of them.
+
+</details>
+
+>> 我能很快说一件事吗？嗯，从 2024 年到 2026 年，一个很大的摇摆选民群体显然是未受过大学教育的年轻白人男性选民以及年轻选民群体，他们从 24 年的共和党、特朗普转向了 26 年的民主党。年轻人尤其对 AI 感到恐惧——甚至像我这一代人，我已经不算那么年轻了——都有这种恐惧：你所学的东西将会过时，这些工作正在消失。无论谁能够面向未来的劳动力群体沟通，描绘未来是什么样子，并让人觉得他们在提前规划、走在前头，我认为这都是非常实在的优势，因为这部分选票在两党之间是非常开放、随时可能被争取过去的。Morris。
+
+<details><summary>Original English</summary>
+
+>> Can I say one thing quickly? Um the a big swing vote um obviously this from 2024 to 2026 was young white male non-oled educated voters and young voters in particular from Republicans Trump 24 26 uh to Democrats young people in particular are terrified of AI even people of my generation I'm not that young anymore there is this fear what you studied is going to be obsolete these jobs are going away and whoever can speak to and communicate to the future workforce and what it looks like and feel like they're planning ahead and getting ahead of that I think that's incredibly palpable because that that vote is very much up for grabs between the two parties. Morris.
+
+</details>
+
+>> 是的，我很好奇——这张桌子上有很多聪明人，但我未必听到了一个关于这个问题的像样答案，我自己也不知道答案是什么——但每个人都在说“它已经来了，它正在到来，我们需要想办法引导它进入”。而我就像你们两位刚才说的那样，我担心 AI 的上帝情结，我也担心控制它的亿万富翁们的上帝情结。
+
+<details><summary>Original English</summary>
+
+>> Yeah. I mean, I am curious and like there a lot of smart people at this table and I haven't necessarily heard a good answer on this and I don't know what it is, but everyone says the like the some version of it's here, it's coming. We need to, you know, figure out how to usher it in. And I'm like to both of your points, I'm worried about the god complex of AI and I'm worried about the god complex of the billionaires who control it.
+
+</details>
+
+>> 绝对如此。而且为什么我们不能直接说“就让它停在现在这个位置”呢？我们谈论这件事的方式，搞得好像我们从来没有过政府一样——难道说“嘿，有危险的事情正在发生，我们要喊停”不正是政府的职责吗？
+
+<details><summary>Original English</summary>
+
+>> Absolutely. And like why do we need to not just say let's stop it where it is now? And like we talk about it in this way as if we've never had a government like isn't that government's job to say hey there's a dangerous thing happening. We're going to say no more like not
+
+</details>
+
+>> 理由是我们的对手也会这么做，但你提出了一个很好的观点，所以参议员 Clolobachar 和 Ted Cruz……
+
+<details><summary>Original English</summary>
+
+>> is that our adversaries are going to do it but you make a great point which so Senator Clolobachar and Ted Cruz
+
+</details>
+
+>> 我想反驳一下那种说法，每个人提到中国时都这么说。我还没听过有人能说清楚为什么中国人……你去和美国情报界的人聊聊，他们会说其实中国人对我们领先前沿技术还有点乐见其成，因为他们自己对这些东西也有顾虑。他们有一套需要更加高压的政府的体制，那不是自由体制。
+
+<details><summary>Original English</summary>
+
+>> just to challenge that everyone says that about China. I haven't heard someone articulate why the Chinese and you talk to people in the US intelligence community and they'll say actually the Chinese are kind of okay with us leading the frontier because they've got their own concerns about this stuff. They've got a system they've got a system that needs a much more repressive government. It's not free.
+
+</details>
+
+>> 他们并不真的希望这些模型完全失控。所以关于那个目的，我不太确定。
+
+<details><summary>Original English</summary>
+
+>> They don't really want these models going totally wild. Um so I don't know about that purpose.
+
+</details>
+
+>> 嗯，其实我非常同意这一点，因为通常的论点是对手和盟友都会继续向前推进，所以我们可以停在这里，但如果他们还在做呢？关于中国的那一点很有意思，因为再说一遍，那不是一个由习放任所有人竞争、让亿万富翁疯狂发展并抹去一切的自由市场。那里对 AI 发展有更多的监管措施。但很快说一下在跛脚鸭会期可以完成的事情：Ted Cruz 和 Amy Clolobachar 有一项法案，专门限制这些前沿模型，这些类似自我学习的——我用的技术术语不对——但就是那些看起来风险最高的最先进 AI 模型。在我看来，这简直是不言而喻的。在我看来，这应该能获得足以推翻总统否决的绝对多数票。我不知道最终会不会通过，但像 Ted Cruz 这样的人，绝不是一个会试图扼杀国家安全进步的人。
+
+<details><summary>Original English</summary>
+
+>> Well, so I actually very much agree with that because the argument generally is adversaries and allies alike are going to be moving forward. So we could stop here, but if they're doing it, it's an interesting point on China because again, this is not a free market where Xi just lets everyone compete and lets the billionaires go crazy and like erase. There are a lot more regulations in place on AI development. But quickly on things that could get done in a lame duck, Ted Cruz and Amy Clolobachar have a bill that simply limits this front these frontier models, these like self-learning, I'm using the wrong techn uh terminology, um but the most advanced AI models that seem like the riskiest. That to me seems like a no-brainer. That to me seems like something that should get a veto proof majority. I don't know that it will, but like Ted Cruz is hardly somebody who's trying to stifle, you know, national security advancements.
+
+</details>
+
+>> 不过针对 Morris 的观点，我只是觉得，你的假设是，如果我们美国说“我们到此为止了”，世界其他地方就不会去开发它，而在其他地方开发出来的东西将会波及所有人。这不仅仅是我们自己的事。我的意思是，我认为美国可以在为这项技术如何向前发展制定一些指导方针方面发挥领导作用，但我认为你所反感的，是一群人正从这个行业中赚得盆满钵满，并把它强加给我们。而且……
+
+<details><summary>Original English</summary>
+
+>> To Morris's point though, I just uh your assumption is that if we in America say we're going to we're just going to say no more that the rest of the world is not going to develop that and and the things that are developed elsewhere will envelop everyone. It's not just us. I mean, I think America could be a leader in laying down some guidelines as to how this thing moves forward, but I think what you're reacting to is a bunch of people are getting very very rich off of this industry and imposing us opposing it on us. And
+
+</details>
+
+>> 当我说“它已经来了”时，我的意思是它将会被开发出来，它正在自我发展。问题是，我们该对此做些什么？Daisy，你认为我们在下一个选举周期会彻底揭竿而起吗？
+
+<details><summary>Original English</summary>
+
+>> uh the when I say it's here, I mean it's going to be developed. It's going it's developing itself. And the question is how do we do what do we do about that? Daisy, do you think we're going full pitchforks in this next election cycle?
+
+</details>
+
+>> 我不这么认为，但如果我们不理解它，这就有可能发生。关于 AI 有一个经济层面的论点，那就是亿万富翁们正在窃取我们的信息。比如我就参与了 Anthropic 的和解案。他们欠我八本书的钱，因为他们用这些书来构建一个大语言模型，而这个模型在某个时候可能会、也可能不会让我受益。
+
+<details><summary>Original English</summary>
+
+>> I I don't I think it could happen if we don't understand it. And so there's an economic argument about AI, which is the billionaires who are stealing our information. Like I'm in the anthropic settlement. I have eight books that they owe me some money for because they they used it to build an LLM that, you know, may or may not benefit me at some point.
+
+</details>
+
+>> 那是个问题。所以既有 AI 的经济学，也有 AI 的科学。我认为正是在科学这一点上，直接喊停是危险的，因为法国还有 Mstral。并不是所有构建前沿模型的人都生活在美国或中国。挑战在于，我们没有一个能够阻止技术进步的国际政府机构。因此我认为我们的责任之一是：是的，美国可以出台并推广规定说“不要这样做”，这绝对是必要的；第二，我们不能干等国会真正启动这套监管体系——我很高兴 Amy Clolverar 现在成了明尼苏达州州长，他们现在就可以阻止它；但接下来的另一部分是，AI 确实有它的用处，它能帮助解决问题，尤其是对低收入社区、对有色人种社区而言。我不想因为我们感到恐惧，就扼杀一个终于能够充分参与其中的机会。因此，我们防止大家揭竿而起的方法之一，就是确保最有可能受到它伤害的人真正理解它。因为 AI 带来最大益处的地方，以及前沿模型带来益处的地方，它们正是利用我们的无知来吓唬我们，而我们的责任就是用知识去填补这个真空。
+
+<details><summary>Original English</summary>
+
+>> That's a problem. And so there's the economics of AI, but there's also the science of AI. And I think that's the place where it's dangerous to say just stop because you got Mstral in France. Not everyone building frontier models lives in the US or China. And the challenge is that we do not have we do not have an international governmental agency that can stop advancement. And so I think part of our responsibility is yes we've the US can put in place and promot to say do not do this. That is absolutely necessary. Number two, we have to not wait for Congress to actually start this regulatory scheme. I'm glad that Amy Clolverar is now the governor of Minnesota. They can now stop it. But then the the next piece of it is AI actually serves purposes. It can help solve problems and particularly for low-income communities, for communities of color. I do not want to choke off an opportunity to finally be able to fully participate because we are afraid. And so one of the ways we stop it from being pitchforks is making certain that the people who are the most likely to be harmed by it actually understand it. Because where AI benefits the greatest and where the frontier models benefit, they scare us with our ignorance and our responsibility is to fill that vacuum with knowledge.
+
+</details>
+
+<!-- chunk 2/2 -->
+
+>> 爸爸，其实在这个问题上我有个问题想问你。我的意思是，现在 Nvidia——我不知道你们中是否有人知道它最近有点上新闻——呃，Nvidia 显然占据了很大很大一部分芯片份额，并且基本上因此在这里形成了一种扼喉之势。你认为，把所有其他问题放在一边，特朗普政府没有尝试扶持其他芯片制造商以创造市场竞争，而是几乎孤注一掷，这是否是一个错误？
+
+<details><summary>Original English</summary>
+
+>> Dad, I have a question for you actually on that on that issue. I mean, so right now Nvidia, which I don't know if any of you know is in the news a bit, um, Nvidia obviously holds a significant significant uh portion of chips and basically has a has a a a strangle hold uh on development here because of that. Do you think that putting aside all other questions, but was it a mistake for the Trump administration not to try to build up other chip makers to try to create market competition as opposed to just sort of going all in?
+
+</details>
+
+>> 我的意思是，这件事正在实时报道中。所以，显然，我并不确切知道发生了什么，但我
+
+<details><summary>Original English</summary>
+
+>> I mean, this this thing is being reported out in real time. So, obviously, I don't know exactly what happened, but I
+
+</details>
+
+>> 这甚至不重要。不，不，但是 Nvidia 真正起飞基本上是在过去三年，当时这些前沿模型开始起飞。所以这一切都发展得很快。我是说，Nvidia 火箭般的飙升完全是与 OpenAI 同步的，而这些公司在三四年前还在筹集早期的私人风投轮次，现在它们已经成为、或将成为世界历史上规模最大的 IPO。所以，认为 Nvidia 对加速这场 AI 革命如此重要，而政府本应想清楚“嘿，我们得建立一些冗余，我们得随着时间推移建立一些替代的算力来源”，这固然没错，但要我因为过去 36 个月里发生的事情去责怪任何一届政府吗？我只是觉得这事很难。
+
+<details><summary>Original English</summary>
+
+>> it doesn't even matter. No, no, but but but the where Nvidia really took off was basically in the last three years when when these frontier models these like took off. So this is all fast moving. So that I mean Nvidia's like rocket like surge was totally you know in line with open AI and which is these are these these companies were raising raising early rounds of private venture capital three and four years ago and now they are like the largest going to be the largest IPOs in the history of the world. So the idea that you know that Nvidia is is so important to turbocharging this a AI revolution and the government should have thought through hey we gota we got to build in some redundancy we got to build in some alternative uh sources of power over time sure but do I do I do I like fault any government for like it's happened in the last 36 months I just think it's a hard thing
+
+</details>
+
+>> 你说得太快了
+
+<details><summary>Original English</summary>
+
+>> you're saying too fast
+
+</details>
+
+>> 是的，回到 Jonathan 关于中国的观点，我认为你说得对，中国共产党绝不会容忍在中国出现一种类似自由意志主义的
+
+<details><summary>Original English</summary>
+
+>> yeah and to Jonathan's point about about China I think you're right that the Chinese the communist party would never tolerate sort of a libertarian like
+
+</details>
+
+>> 模式，让他们的数据、他们的基础模型、他们的前沿模型被自由获取。但正如我们从中国了解到的——TikTok 就是一个很好的案例——他们非常乐意建立自己的模型，并让它们在世界各地传播，包括美国。所以，中国领导层说“我们不喜欢对自己的公民采取这种全速放开的模式”，这并没有让我感到多安心，因为这从未阻止过他们利用这些技术来扩大地缘政治影响力。我认为这才是最大的风险。而且回到 Stacy 早些时候的观点，我的意思是，你想想医学研究，以及 AI 在未来医学研究、国家安全以及我们抵御某些极具创意的攻击的能力中所扮演的角色，在这些攻击中对手将会使用人工智能。认为我们可以只说“只要它不先把我们全杀了就行”，
+
+<details><summary>Original English</summary>
+
+>> model in China for access to their data and their and their uh their foundation models, their frontier models. But as we know from China and Tik Tok is a very good case study, they're more than happy to build up their models and have them proliferate around the world, including the United States. So I I think, you know, I'm not very reassured by the fact that the Chinese leadership say, you know, we don't like this kind of going full freight for our own pe own citizens because that has never stopped them in using these technologies for geopolitical reach. And I think that is the big risk. And to to Stacy's point earlier, I mean, you just think about medical research and the role that AI is going to have in the future of medical research, national security and our own ability to defend ourselves from some very creative attacks where adversaries will be using artificial intelligence. The idea that we can just say just so long as it doesn't kill us all first,
+
+</details>
+
+>> 对吧？但认为我们可以只说停下来并冻结它，我的意思是，我们必须想出比这更细致一点的办法。我刚才想说，回到 Maggie 你关于没有鼓励其他“Nvidia”的观点，你知道，你看到 Palmer Luckey 在上面演讲，一切之所以如此成功，正是因为政府正在那样做。他们在国防部领域资助颠覆性技术，对吧？他们不再只找那些传统大军工企业。他们说不要再找 Lockheed，不要再找 RTX 了。我们想要迭代更快的新面孔。他们正在鼓励那种发展。所以为什么不在芯片领域也这样做呢？我认为这是个很恰当的问题。
+
+<details><summary>Original English</summary>
+
+>> right? But the idea that we can just say stop and freeze it. I mean, I we've got to come up with something a little more nuanced than that. I was just going to say to your point, Maggie, about not encouraging other Nvidious um you know you saw Palmer Murl Lucky um uh t talking up there and all is so successful because the government's doing exactly that. So they're they're they're being they're they're funding disruptive technologies in the DoD space, right? They're not going with the primes. They're saying no more lockies, no more RTX. We want new people who iterate faster. They're encouraging that kind of development. So why not in the chip space, I think, is the is the appropriate question to ask.
+
+</details>
+
+## 未来两年的国会监督与调查
+
+>> 所以我想问一下，因为我们时间不多了。我们展望接下来的两年周期
+
+<details><summary>Original English</summary>
+
+>> So I think I want to ask because we don't have that much time. We're looking ahead to the this next 2-year period
+
+</details>
+
+>> 而调查将是其中很大一部分。Morris，一些新进入国会的新任民主党人一直在说类似这样的话，原话是：“我们要像撒狂欢节珠子一样撒出传票。”[笑声] 我想说，过去民主党对 Donald Trump 进行调查的那些时期或阶段，并没有取得响亮的政治成功，这应该是公允的评价。我认为这相当符合经验事实。你对他们有什么建议？你知道，他们现在都因为刚刚胜选而情绪高涨。我们斗志昂扬。狂欢节珠子、糖果、传票、请好律师吧。
+
+<details><summary>Original English</summary>
+
+>> and investigations is going to be a big part of it. Morris. Some of the new Democrats coming in uh to Congress have been saying things like, quote, "We're going to toss out subpoenas like Marty Gra beads." [laughter] Um I think it's fair to say that past episodes or, you know, periods of Democratic um investigations of Donald Trump have not been a resounding political success. Um I think that's pretty empirical. What would your advice be to this? You know, they're all high on we're just one. We're fired up. Marty GR beads candy subpoenas lawyer up.
+
+</details>
+
+>> 你知道，每个人都在非常猛烈地出击。
+
+<details><summary>Original English</summary>
+
+>> You know, everyone's hitting the Everyone's hitting the very hard.
+
+</details>
+
+>> 呃，我认为监督是一项宪法赋予的责任，而我们面对的是最腐败的政府之一。
+
+<details><summary>Original English</summary>
+
+>> Um, what I think is that there is a constitutional responsibility for oversight and we are looking at one of the most corrupt administration.
+
+</details>
+
+>> 你觉得喊着“撒狂欢节珠子”的人，是在真正致力于冷静地履行其宪法责任吗？
+
+<details><summary>Original English</summary>
+
+>> You think the Martyra beads is someone who's really devoted to a constit soberly considering their constitutional responsibilities?
+
+</details>
+
+>> 谁知道呢，你知道，我有时也喜欢用点生动的语言。我认为重要的是，回到 David 的观点，腐败贯穿了所有这些问题。而且我认为人们有一种本能的理解：无论是战争、拨款失败，还是生活成本，腐败都是让一切感觉变得如此糟糕的核心原因。而且我认为我们应该想想，我们所知道的 Trump 政府腐败情况有多疯狂。其中一半还是从那些给你们发短信的人那里传出来的。现在我们有了传票权。我们不用短信了。
+
+<details><summary>Original English</summary>
+
+>> I who knows how, you know, I like flavorful language sometimes, too. What I think is important is that to David's point, corruption coursed through all of these issues. And I think people have a innate understanding that whether it be war, whether it be the failures of appropriations, whether it be costs, corruption is at the heart of like what is making everything feel so much worse. And I think we should think about how crazy it is how much corruption we know about from the Trump administration. And like half of it's from people who text one of you guys. And now we have subpoena power. We don't use text messages.
+
+</details>
+
+>> 是的，Signal。呃，现在我们有了传票权去查明真相。而且我认为，我们有责任采取监督行动的地方，在于清楚地展示：腐败是如何导致物价上涨的，腐败是如何导致生活质量危机的，以及腐败是如何成为这场尚未结束的可怕战争的重要组成部分的。我不认为我们应该花两年时间去竞选对抗一个不会出现在选票上的 Donald Trump。Urban，你可能会知道一些。
+
+<details><summary>Original English</summary>
+
+>> Yeah. Signal. Um, uh, now we have subpoena power to find out. And I think the where we have a responsibility to act on oversight is I think to show clearly the ways in which corruption is contributing to higher costs, the ways in which corruption is contributing to a crisis and quality of life, the ways in which corruption is a big part of this horrible war that isn't ending. I don't think we should spend two years running against Donald Trump who's not going to be on the ballot. Urban, you might know a few.
+
+</details>
+
+>> 我正想说，这就是关键所在，对吧？你能做到吗？你能让人们相信，对 Eric、Donald 和 Witkoffs 的调查正是推高加油站油价的原因吗？这就是你必须建立的联系。
+
+<details><summary>Original English</summary>
+
+>> I was gonna say that's that's the party trick, right? Can you do that? Can you make people believe that the investigations into Eric and Donald and Wickoffs is what driving up the price of the pump? That that's that's the the connection you have to make.
+
+</details>
+
+>> Dan，我很好奇你从你的朋友或熟人那里听到了什么——去年商界有些人可能有点全押 MAGA 了，现在他们也许在想，可能需要稍微调整一下站位。你怎么看这事会如何发展？
+
+<details><summary>Original English</summary>
+
+>> I'm curious, Dan, what you're hearing from maybe friends of yours, maybe acquaintances who might have gone a little all in on MAGA in the corporate world last year and now maybe they're thinking maybe need to reposition a little bit. How how do you see that playing out?
+
+</details>
+
+>> 呃，我的朋友们并没有坐在那里思考他们的对冲策略——就像你基本在说的他们如何对冲——但现实是，商界很大一部分人的看法是：谁掌权就和谁打交道。
+
+<details><summary>Original English</summary>
+
+>> Um, so friends of mine are not sitting there uh thinking about their hedges as you're basically saying how they're hedging, but it is the the reality is they the the much of the corporate world's view is you deal with who's in power.
+
+</details>
+
+>> 当时 Donald Trump 掌握行政分支，共和党拥有国会多数，所以他们就和他们打交道。我确信他们也会开始和国会多数党、和民主党打交道。我只是想说
+
+<details><summary>Original English</summary>
+
+>> And Donald Trump had the executive the Trump administration had the executive branch and Republican majorities and they were dealing with them. And I'm sure they will start dealing with the congressional majorities with the Democrats. I'm I'm just saying
+
+</details>
+
+>> 我只是想说，他们和他打交道的方式，我会说并不寻常。对吧。
+
+<details><summary>Original English</summary>
+
+>> I'm just saying like the way they dealt with him was not typical I would say. Right.
+
+</details>
+
+>> 难道没有人为自己当初带着黄金贡品走进椭圆形办公室、为宴会厅捐款 2500 万而感到后悔吗？我不认为
+
+<details><summary>Original English</summary>
+
+>> Are there people who are now regretting you know coming to the Oval Office with a golden tribute and giving 25 million to the ballroom? I I don't think
+
+</details>
+
+>> 我认为对国会民主党人来说，真正的问题将是——说真的
+
+<details><summary>Original English</summary>
+
+>> I I think the the real question for the congressional Democrats will be no really
+
+</details>
+
+>> 回答你的问题——将是他们能否查明这些捐款是在哪里进行的，以及是否真的有“回报”——给了什么作为回报，乘飞机到处飞的交易是什么——不，我的意思是，但这并不适用于他们要发传票的每一个人。
+
+<details><summary>Original English</summary>
+
+>> to answer your question will be can they identify where these donations were made and there was actual like what what was given in return what was what was the transaction flying around on a plane no I'm saying so so but but that's but my point is that that doesn't apply to everyone they're gonna throw out
+
+</details>
+
+>> Mod，不过我想问你这个问题，因为你在竞选资金法与现在大不相同的时代非常深入地参与过竞选活动。
+
+<details><summary>Original English</summary>
+
+>> mod I want to ask you this though because you were very involved in campaigns when campaign finance laws were very different than they are now.
+
+</details>
+
+>> 呃，现在的国会民主党人甚至还有可能追查到捐款来自哪里吗？考虑到现在每个人都有一个 501(c)(4) 组织。我的意思是，给我们讲讲你对此的看法。
+
+<details><summary>Original English</summary>
+
+>> Um, are they ever are Democrats even going to be even congressional Democrats right now? Are they even going to be able to trace where donations are coming from given that everybody has a C4? I mean, what just walk us through what you think this
+
+</details>
+
+>> 是的。嗯，我的意思是，你看，我认为那是其中一部分，但我认为有些事情你甚至不需要——它们甚至跟竞选捐款没有任何关系。当阿联酋的间谍头子买下他们——Trump 家族——加密公司 49% 的股份，而紧接着我们就把原本因为担心最终流入中国而一直扣留不发的敏感芯片转让给了阿联酋，这就需要被调查了。Nvidia 这件事是怎么发生的
+
+<details><summary>Original English</summary>
+
+>> Yeah. Well, I mean, look, I think that's part of it, but I think there are certain things that you don't have to uh that that don't even have anything to do with campaign donations. when the uh when the spy chic of the UAE buys 49% of their crypto company, the Trump family, and shortly thereafter we transfer sensitive chips to UAE that had been uh kept from them because of concerns that they would end up in China. That that needs that that that needs to be looked at. This the how this Nvidia thing went down
+
+</details>
+
+>> 需要被调查。我的意思是，这简直是在大声呼唤调查。挑战在于，我认为有一些非常正当的事情需要调查，而且也有责任去调查。
+
+<details><summary>Original English</summary>
+
+>> needs to be looked at. I mean, it just cries out for that. Here's the challenge. I don't think there's there are very legitimate things to look at um and and a responsibility to do it.
+
+</details>
+
+>> 你不能让它压倒你正在做的、真正解决民众日常关切的其他事情。而且，如果说 Donald Trump 败选的原因之一是他承诺专注于经济，结果我们得到的却是虚荣工程和复仇，那么如果民主党人犯同样的错误，被视为走上了复仇之路而排除了其他这些事情，那就会变成另一个 Donald Trump。然后我有个问题。
+
+<details><summary>Original English</summary>
+
+>> You can't let that overwhelm the other things that you're doing that actually address the day-to-day concerns of people. And if you know, one of the reasons Donald Trump lost was because he promised to focus on the economy and instead we got vanity projects and vengeance. And if Democrats make the mistake by going down seen as going down the vengeance lane to the exclusion of these other things that would be then it would be the same Donald Trump and then I have a question.
+
+</details>
+
+>> 我在 Obama 政府时期做过一些监督工作——听着，监督固然是一项宪法职责，但它也应该与影响美国公众的事情独特地联系在一起。我不赞成去追查他的家人，尽管 Eric、Don Jr. 那里存在公然的腐败，你也可以去查 Jared 的事——我认为他在这届政府中扮演的角色稍微正当一点。但看看 DOGE 的削减。看看当国会授权的资金被削减时，那可能导致了什么，结果是什么。我想看看 HHS 的削减，你知道，国会拨款的资金，以及这对公共卫生和研究产生了什么影响。呃，我会说围绕伊朗战争以及我们如何打这场战争，也有很多监督要做。还有 Nvidia 其实是个大问题。我的意思是，我们坐在这里现在并不知道商务部是否批准了这些芯片流向中国或流向第三方国家。这些才是影响我们的事情。如果民主党人能够把监督集中在这些地方，同时又有一套积极主动的议程，我认为这就行得通。但有一个预警：这届白宫已经在释放信号，他们不会配合国会传票，或者他们要求所有传票都必须经过白宫。如果这些机构、这些内阁部长、这些白宫官员干脆拒绝遵守国会传票，我们可能会遇到一个真正的宪法问题。我的意思是，现在在白宫的 Peter Navarro，以前就因为那样做而实打实地坐过牢。所以我们可能会进入相当艰难的境地。就像你要调查的一切——每个人都有自己最想查的，你知道，我们得查 HHS，我们得打击——每个人都有各自的目标。顺便说一句，这可能反映了即将上任的这些国会委员会主席之间的对话，他们将拥有传票权，他们将掌握法槌，然后他们会说“我有我最想查的事，我们应该追查这个，这就是令人愤慨的地方”。顺便说一句，我不是说这些事情中哪一个比另一个更正当或更不正当，但如果什么都查，最后就会什么都查不成。
+
+<details><summary>Original English</summary>
+
+>> Having done some oversight during the Obama administration um listen oversight can be yes a constitutional duty but it also it should be uniquely tied to things that impact the American public. I am not a fan of going after the family, even though there is blatant corruption with Eric, with Don Jr., you could look into stuff with Jared. I think he has a little bit more of a legitimate role in this administration. But look at the Doge cuts. Look what that may have led to when congressionally authorized funds were then cut and what the results were. I want to look at HHS cuts, um, you know, congressionally appropriated funds, impacts that that had on public health and on research. Um, I would say a lot of, uh, oversight around the Iran war and how we're conducting it. And then Nvidia is actually huge. I mean, we don't know sitting here right now if the commerce department signed off on these chips going to China or going to a third party country. Those are things that impact us. And if that's where Democrats are able to focus an oversight while also having a proactive agenda, I think that works. But one kind of prediction for warning this White House is already telegraphing that they're not going to comply with congressional subpoenas or they want them all to run through the White House. We could run into a real sort of constitutional question that comes up. um if in fact these agencies, these cabinet secretaries, these White House officials just purely declined to abide by congressional subpoenas. I mean, Peter Navaro, who's in the White House now, literally went to jail for doing that in a previous time. So, we might be heading into some fairly rocky territory goes. like everything you're going to invest like everyone has their favorite you know we got to do HHS we got to hit everyone's got every so and I by the way this is probably reflective of the conversation among many incoming chair chairs of these congressional committees that are going to have subpoena power they are going to have the gavl and they're I have my favorite thing we should go after this and this is the outrage by the way I'm not saying any of these are more legitimate or less legitimate than the other but if it's about everything it's going to be about nothing
+
+</details>
+
+>> 唯一的保留意见是，他的家人发财虽然令人作呕、让我感到不舒服，也让人们非常愤怒，但在我看来，那并不一定像其他一些丑闻那样直接影响美国民众。
+
+<details><summary>Original English</summary>
+
+>> the one just the one caveat is his family getting wealthy while gross and makes me uncomfortable and I pisses people off. That doesn't necessarily directly impact the American people the way that some of these other scandals do. In my opinion,
+
+</details>
+
+>> Hunter Biden 对此会有话要说的。
+
+<details><summary>Original English</summary>
+
+>> Hunter Biden would have the word to say about that.
+
+</details>
+
+>> 顺便说一句，我当时也觉得共和党人那样做很荒谬。Stacy Abrams，因为我确实想谈到这一点，因为这实际上与我们现在关于“什么能做成、什么做不成”的对话有关。所以，在至少边缘问题上找到办法与 Donald Trump 合作的人之一，是 Mayor Mamdani（原音为 Mayor Mane）。呃，Morris 的候选人兼市长——我们所有人的纽约市长——但 Morris 帮助选出了他。如果实现某些优先事项的代价——特别是在一个 Stephen Miller 不是幕僚长的世界里，我先把它放在一边，或者假设他在移民改革问题上不是 Trump 耳边最后说话的人
+
+<details><summary>Original English</summary>
+
+>> And by the way, I thought that was ridiculous for Republicans. Stacy Abrams, because I I do want to get to this because this actually relates to the conversation we're having right now about what gets done and what doesn't. So, one of the people who has found a way to work at least on the margins with Donald Trump is Mayor Mane. um Morris's uh candidate uh slash mayor uh all of our mayor in the city um but Morris uh Morris helped elect him is is the if the cost of achieving certain priorities particularly in in a world where Steven Miller isn't chief of staff so just I'm putting that aside or uh you know assuming that he isn't the last word in in Trump's ear on immigration reform
+
+</details>
+
+>> 总统反复回到诸如全面移民改革之类的领域，他会说全面移民改革，然后又抽身离开。我不知道他自己说这话时是否真的知道自己在说什么，但无论如何，如果有机会做成某件事，或者至少让总统在边缘上改变某项政策，就像我们看到 Mayor Mamdani 在某些方面所做的那样，那么对民主党人来说，像 Abdul El-Sayed 所说的那样，说“我们管它叫什么都行，我们管它叫 Trump 什么的、Trump 医保，或者我们重新命名补贴”——我忘了他具体怎么说的了——做类似这样的事情（不是往椭圆形办公室送黄金贡品，而是更像“Trump X”或“Trump 卡”之类的东西），这值得付出这个代价吗？我认为这是个错误的问题，我知道对 Maggie Haberman 这样说很危险，[笑声] 但我想说的是：人们想要自己的生活变得更好，这意味着他们想要对破坏他们生活的事情追究责任。他们想知道是谁造成了伤害。虽然我理解 Dan 对调查范围的担忧，但不同的人生活中不同的部分受到了伤害。而且他们也不是一天 24 小时、每周 7 天都在看 C-SPAN。
+
+<details><summary>Original English</summary>
+
+>> the president repeatedly comes back to something like areas of he'll say comprehensive immigration reform then he walks off of it. I don't know that he necessarily knows what he means when he says it, but regardless, if there is a window for getting something done or at least getting the president to change a certain policy on the margins as we have seen Mayor Mani do in certain respects, is it worth the cost for Democrats of saying, you know, as as uh Abdullah sayed said, you know, we'll call it whatever. We'll call it Trump or whatever whatever healthcare we'll rename subsidies or I forget what the precision was but of what he said but is there is it worth doing something like that which is not the gold tributes into the oval office but it is something more like Trump X or Trump cards. I I think it's the wrong question which I know is a dangerous thing to say to Maggie Haberman [laughter] but what I would say is this. People want their lives to be better and that means they want accountability for what broke their lives. They want to know who caused harm. And while I appreciate Dan's concern about the sort of, you know, scope of investigation, different people had different parts of their lives harmed by it. And they're not watching CN C-SPAN
+
+</details>
+
+>> 他们想知道是谁破坏了这个正在伤害我家庭的东西。
+
+<details><summary>Original English</summary>
+
+>> 24/7. They want to know who broke this thing that is hurting my family.
+
+</details>
+
+>> 如果解决方案包括对那个伤害我的人的设计师——或者至少是化身——客气一点，并且这能创造出解决方案，那么民主党人的工作不是对他成为其中一部分感到愤怒，而是确保他不会因此揽走功劳。而这可以在你拿到你需要的东西后的第二天就做。他们在这方面一直非常擅长。他一直非常非常擅长且非常有效地把与他无关的事情的功劳揽到自己头上。所以我们的责任是拿到人们需要的东西，然后确保功劳归于我们是如何做成这件事的。呃，当我担任少数党领袖时，我会告诉人们，你知道，他们给你“领袖”这个头衔是为了让你感觉良好，他们在前面加上“少数党”是为了让你永远不要忘记自己的位置。但工作永远是想办法为民众交付成果。美国人正处于痛苦之中，如果有机会让目前坐在白宫里的那个人撤销对 SNAP 食品券福利的削减，确保 2000 万人的医疗保险得以恢复，他们绝对会希望那发生。如果民主党人说“我们把你们的钱拿回来了”，哪怕我们让他暂时揽一下功劳，我认为每个人都会记住是谁为他们争取到的，而不是上面写着谁的名字。因为他们不会认可的。
+
+<details><summary>Original English</summary>
+
+>> If the solution set includes being nice to the architect or at least the avatar for what harmed me and it creates a solution, Democrat's job is not to be angry that he's the part of it. is to make sure that he doesn't get credit for it. And that can happen the day after you get what you need. They've been very good at that. He's been very very good and very effective at taking credit for things he had nothing to do with. And so our responsibility is to get what people need and then make certain that we get credit for how it got done. Uh when I was minority leader, I would tell people, you know, they give you leader to make you feel good. They put minority in front of it so you never forget your place. But the job was always to find ways to deliver for people. Americans are in pain and the opportunity to get the current person who occupies the White House to roll back the cuts to SNAP benefits to make certain that healthc care for 20 million people gets restored. They will absolutely want that to happen. And if Democrats say we got your money back and we let him for a moment take credit for it, I think everyone will remember who got it for them, not whose name was on it. cuz they're not going to rec.
+
+</details>
+
+>> 让我接着追问一个问题，然后请 David Axelrod 谈谈：如果这意味着要搁置对其家族的调查——比如 Donald Trump Jr. 由一位俄罗斯寡头出资举办的婚礼派对——那也值得吗？
+
+<details><summary>Original English</summary>
+
+>> Let me let me ask you just a follow-up to that and then and then and then David Axelrod if that meant putting aside investigations into the family for instance or you know Donald Trump Jr.'s wedding party paid for by a Russian oligarch. Would that be worth it?
+
+</details>
+
+>> 不值得。因为当我们听到刚才提到过去那两次弹劾——我并不是在建议弹劾——但我想把大家带回到内战后。呃，Ava DuVernay 有一部非凡的纪录片将于 12 月 4 日上映，第十四修正案面临的挑战之一就是从来没有追究责任。当时直接跳到了和解。我们想把事情修好，却从未分配责任。而当缺乏问责时，就会形成一种允许再次这样做的许可结构。不应该允许任何人窃取美国、窃取美国人民的利益，并用我们的未来去为他们的利润作抵押。所以我不认为美国人民没有聪明到能理解我们可以两件事同时做。如果我们必须出卖现在才能换取未来，我想大多数美国人会说“不要、不要拿我当人质”。他们会说：“让我们想办法把事情做成，我们有两年的时间来实现它。”
+
+<details><summary>Original English</summary>
+
+>> No. Because when I mean we we heard the reference to the last two sets of impeachments and and I'm not suggesting impeachment but I want to take us back to post civil war. Um Ava Duivere has a remarkable documentary that comes out on December 4th and one of the challenges of the 14th was that there was never responsibility. There was a jump to reconciliation. We wanted things to be fixed and we never assigned responsibility. And when there is a lack of accountability, then there is a permission structure to do it again. There should be no permission for anyone to steal from America and to steal from the American people and to ransom our future for their profitability. And so I don't think that the American people aren't smart enough to understand that we can do both. And if we have to sell our current to get our future, I think most Americans would say do not do not ransom me. What they will say is, "Let's figure out how to get it done, and we've got a 2-year period of time to make that happen."
+
+</details>
+
+>> David Axelrod，
+
+<details><summary>Original English</summary>
+
+>> David Oxero,
+
+</details>
+
+>> 你问的这个问题，其实我当时就在丹佛参加那个多数党民主党人会议。那是参议员 Talarico（原音为 Senator Torico/Tarico），他说：“我们不能等两年才取得进展，我们必须与 Trump 总统打交道，我们应该努力让他最后两年成为最有成效的两年。”当时房间里有一半人倒吸一口凉气，另一半人鼓掌，因为这让人困惑。但我认为大多数美国人希望事情能做成
+
+<details><summary>Original English</summary>
+
+>> this question that you asked actually was I was out in Denver for that majority Democrats conference. This was uh you know, Senator Torico, Senator Tarico said, you know, we we can't wait two years for progress. and if uh you know we we have to deal with President Trump and uh you know if we we should try and make his last two years the most productive there is. And there were a lot of people half the people in the room gasped half clapped because it was confusing. But I think most Americans want stuff to get done
+
+</details>
+
+>> 他们投票是为了自己的生活。如果你有机会做成某件事，我认为很多共和党人最大的恐惧在于，Donald Trump 其实并不特别讲究哲学或意识形态。如果出现一个能让他看起来很棒的交易——我总说他不是民粹主义者（populist），他是“讨好大众主义者”（popularist）——如果出现一个他能签署的交易，[清嗓子] 他可能就会签。所以我认为，如果民主党人放过一个做成实事的机会，他们会受到惩罚。当他在《60 分钟》上说，他们可能在移民问题上太严厉了，我们应该达成一项全面移民改革时，我的看法是：好啊，我们在 90% 的事情上可能意见不合，但如果你对那件事是认真的，我们就通过一项法案。我们干吧。我认为这就是人们对这届新民主党国会的期待。
+
+<details><summary>Original English</summary>
+
+>> and they're they're they're voting their about their lives. And if you have an opportunity to get something done, I think the great fear of a lot of Republicans is that Donald Trump really isn't particularly philosophical or or ideological. And if a deal comes along that will make him look good, I always say he's not a populist, he's a popularist. If a deal comes along that he can sign that he would uh that [clears throat] he may just do that. So I I think we I think Democrats would be punished if they passed on an opportunity to get something done. When he said in on 60 Minutes that uh you know that they were maybe too harsh on immigration and we ought to come to a comprehensive immigration reform, my thing is fine, we may disagree on 90% of stuff, but if you're serious about that, we'll pass a bill. Let's do it. And I think that's what people are looking for from this new Democratic Congress.
+
+</details>
+
+>> 我很快说一句。所以再说一次，我们谈了很多事情，而 Dan 说如果你什么都支持，你就什么都不是。所以归根结底，这又回到了往人们口袋里塞点零花钱，对吧？说到底，就是人们把手伸进口袋，掏出一张 20 美元钞票。过去爸爸或妈妈下班回家，能加点油，给孩子买个披萨。现在他们做不到了，除非我们把那 20 块钱重新变得经花——谁能让那 20 块钱更经花，谁就会得到功劳。所以我一直问我的民主党同僚们：HR1 是什么？HR2 是什么？你们最先拿出来通过、向选民发出“嘿，我们懂你们”信号的法案会是什么？因为我觉得这真的很重要。你们的时间很短。你知道，一旦陷进这些调查里，你就会失去重点。民众会想看到你们如何立刻往我口袋里多塞点钱。
+
+<details><summary>Original English</summary>
+
+>> I just say this real quickly. So again, there there's this there's this broad we talk about a lot of things and Dan says if you're for everything, you're nothing. So again, this comes back to putting some jingle in people's pockets, right? At the end of the day, it's about what what people can, you know, you put that your pocket in, you pull that $20 bill out. Your mom used to, you know, the dad or the mom going home, you put some gas in their tank, get their kid a pizza. They can't do that anymore until we stretch that 20 bucks back out or whoever stretches that 20 is going to get credit. So, I keep asking my Democratic colleagues, what's HR1? What's HR2? What are going to be the things you put up first that pass that signal to the voters, hey, we get it, right? Because I think that's really important. You have a short period of time. You know, people don't, you know, you get in these investigations, you kind of lose the lead. People are going to want to see how are you going to put more jingle in my pocket right away.
+
+</details>
+
+>> 这不仅仅是钱的问题。我认为我们必须认识到，这并不是一场单一议题的选举。对很多人来说，这不仅仅是钱。这也关乎他们是否能够成为这个国家的完整参与者，关乎他们是否会成为本应保护他们的人的受害者。这无关你口袋里的钱，这关乎你的生活质量。所以，我并非不同意我们必须进行那样的对话。但我们必须能够同时做多件事，因为这是一个拥有 3.3 亿人口的国家。
+
+<details><summary>Original English</summary>
+
+>> That's not just the money. And I think it's important for us to recognize that this was not a single cause election. wasn't just money for a lot of people. It was also whether or not they were able to be full participants in this country, whether they were going to be victims of the very people who should be protecting them. And that is not about the money in your pocket. It's about the quality of your life. And so, I don't disagree with you that we have to have that conversation. But we've got to be able to do multiple things because this is a nation of 330 million people.
+
+</details>
+
+>> 好吧，Stacy，那 HR1 是什么呢？嗯，顺便说一句，就实际操作而言——我跟国会议员谈话时也一直这么说——你们有监督委员会，你们有司法委员会。让那些委员会去处理调查。如果你在拨款委员会或国土安全委员会，就去处理那些议题。我可以这样说，我们很了解 Donald Trump，你们可能比我更了解他，他并不是一个有深厚意识形态的人。有几件事他确实非常、非常深切地在乎，但他会被房间里最有说服力的声音所左右。我确实认为 Mamdani（原音为 Mani）在这方面与他周旋得非常高明。当不跟他在一起时，他坚决反对他；但他会找到那个可以与他合作的狭窄领域。当当选参议员 Abdul El-Sayed 上《The View》节目时，我在节目外跟他说过：想好你的诉求是什么，告诉他如果他签字就把他雕上拉什莫尔山，说不定你真能把那件事推进通过。
+
+<details><summary>Original English</summary>
+
+>> Okay, Stace, what what's HR1 then? Well, and by the way, just as a practical matter, and I keep saying this when I talk to members of Congress, you've got an oversight committee, you've got a judiciary committee. Let those deal with investigations. If you're on the appropriations or the Homeland Security Committee, deal with those issues. And I can just say like, we know Donald Trump well, he is not, you guys know him probably even better, he is not deeply ideological. There's a few things he really, really deeply cares about, but he can be swayed by the most persuasive voice in the room. And I do think Mani has worked this masterfully with him. He opposes him adamantly when he's not with him, but he will find that one narrow area that he can work with him. I said it to Senator elect Abdul Seed when he was on the view. I said it off air, but come up with what the ask is. Tell him you'll put him on Mount Rushmore if he signs it and you might actually get that through.
+
+</details>
+
+>> 但你别忘了还有幕僚长 Stephen Miller，他将是房间里最后发声、声音也最大的人。
+
+<details><summary>Original English</summary>
+
+>> You still have Steven Miller's chief of staff at the biggest who will be the last and loudest voice in the room.
+
+</details>
+
+>> 这倒是真的。
+
+<details><summary>Original English</summary>
+
+>> That is true.
+
+</details>
+
+## 行政权力边界、法治与常规之争
+
+>> 我们待会儿要谈谈 2028 年，
+
+<details><summary>Original English</summary>
+
+>> We are going to talk about 2028
+
+</details>
+
+>> 谈得比现在多。[笑声] 但在那之前，我确实想问一个问题。Morris，我觉得你嘴里已经有点尝到血腥味了。你知道，你们几乎要重新掌权了，各位。过去两年，Trump 极大地扩张了行政权力。那么一个问题是：当一位民主党人上台时，Trump 已经打开了一个缺口。你知道，自水门事件以来，我们一直有一个独立的司法部，总统不会下令让他们去调查点名的个人。那里曾有一道墙。Trump 推倒了那道墙。Trump 利用政府权力去挤压意识形态上的敌人，无论是他不喜欢的律师事务所、大学，还是企业。我觉得这对左翼人士来说可能相当有吸引力。你认为 Trump 做过的某些事——比如如果你在为“AOC 总统”出谋划策，你会主张利用其中一些权力来实现左翼的优先事项吗，哪怕综合考虑，大多数人可能会认为这是在夺取其他分支的特权？我认为 Trump 总统在他的两次竞选中做对的一件事是：美国人民没有兴趣听一个竞选公职的人告诉他们所有“为了让他们生活更好而不能做的事”，他拥有动用一切可用工具的授权。现在我认为他以大规模的方式滥用了这些工具。我有兴趣看到一位民主党总统利用他曾拥有的工具去追究亿万富翁阶层的责任，追究企业的责任，结束海外战争，通过新的医疗保健项目，重新投资社会安全网。特别是，我们应该迎来一个反托拉斯的黄金时代，并用新方式拆分垄断企业。而且我认为，我们长期以来被灌输的——在我看来成了一个谎言——是“美国人民不喜欢大政府”。所以如果 AOC 总统指示她的司法部长去起诉 Jeff Bezos，你不会觉得别扭吗？
+
+<details><summary>Original English</summary>
+
+>> more than we have. [laughter] But before we get there, I do want to ask a question. Morris, um I think you've got the taste of blood in your mouth a little bit. You know, you're almost you're back in power, you guys. And Trump has expanded executive power dramatically in the last two years. And one question is when a Democrat gets into power, Trump has opened an aperture. He has, you know, since Watergate, we had an independent DOJ where they, the president did not order to them to investigate named individuals. There was a wall. Trump has knocked down that wall. Trump has used government power to squeeze ideological enemies, whether it be law firms, he doesn't like, universities, um, corporations. That see that could be quite appealing to a leftist, I would think. Do you think that there should be certain things that Trump has done? Like would you advocate if you were advising President AOC to use some of these powers for leftist priorities even if you know all things considered um most people might think they were you know taking other branches prerogatives. I I think one of the things President Trump got right in both of his campaigns was that the American people are not interested in someone running for office telling them all the things they can't do to make their life better and that it was he had a mandate to use every tool at his disposal. Now I think he has misused those tools in massive ways. I am interested in seeing a Democratic president use the tools that he has had to hold the billionaire class to account, to hold corporations account, to end foreign wars, to pass new health care programs, to reinvest in a social safety net. And particularly we should usher in a golden age of trust busting and with new breakup monopolies. And I think that the like we were told to kind of what I believe became a lie for a long time that the American people don't like big government. So you wouldn't get squeamish if President AOC directed her attorney general to prosecute Jeff Bezos or
+
+</details>
+
+>> 我认为如果 Jeff Bezos 违法了，Jeff Bezos 就应该被起诉。而且我们看到政府一直未能做到——长久以来，我们一直有一个服务于 1% 人群的大政府。他们得到了一个愿意介入以帮他们摆脱法律麻烦的政府。他们得到了一个愿意介入以给他们发补贴的政府。我认为我们应该拥有大政府，而且我们不应该为此感到愧疚。是的，你在这里把几件事混在一起了。问题是：我们是否应该有法治？
+
+<details><summary>Original English</summary>
+
+>> I think if Jeff if Jeff Bezos broke the law, Jeff Bezos should be prosecuted. And we've seen government fail to like we have had big government for the 1% for a long time. They have gotten a government that was willing to intervene to keep them out of legal trouble. They've gotten a government that's willing to intervene to give them handouts. And I think we should have big government and we should not be apologetic. Yeah, this you're you're you're melding a few things here. The question is, should we have the rule of law?
+
+</details>
+
+>> 是的，我们应该有法治
+
+<details><summary>Original English</summary>
+
+>> Yes, we should have the rule of law
+
+</details>
+
+>> 因为那一直被
+
+<details><summary>Original English</summary>
+
+>> because that has been
+
+</details>
+
+>> 是的。[笑声] 那刚才让我脊背一凉
+
+<details><summary>Original English</summary>
+
+>> Yes. [laughter] That just sent a chill down my
+
+</details>
+
+>> 我当时就想，我知道你问了，但我也想问——我其实觉得这次选举就像水门事件后的 1974 年选举，而总统选举——我给你做个过渡——将会像 1976 年选举。呃，我确实认为其中一部分是为了清洗，一部分是他们想给华盛顿做一次血管成形术，而其中一部分就是恢复法治。我的意思是，作为一个曾在白宫任职的人，我对司法部被滥用的程度感到震惊，其方式实际上连 Richard Nixon 都会脸红。呃，我不认为我们应该从中得出结论：“好吧，这是一个我们可以用来把我们的事情做成的新工具。”而且我也不认为你刚才的意思是那样。
+
+<details><summary>Original English</summary>
+
+>> I was like I know you asked but I was ask I actually think that this election was like the 74 election post Watergate and and the presidential election I'm giving you a segue will be like the the 76 election. Uh, I do think part of it is to a cleansing, part of it is they want to give Washington an angoplasty and part of that is restoring the rule of law. I mean, I'm like stunned as someone who served in the White House at the abuse of the the Justice Department in ways that uh actually would have made Richard Nixon blush. Uh, and I don't think that we should take from that. Well, here's a new tool we can use to get our stuff done. And I don't think that's what you meant either.
+
+</details>
+
+>> 不，我的意思是——而且其实我也很好奇，我知道我们得继续往下走了，但我总是喜欢向 David 请教。
+
+<details><summary>Original English</summary>
+
+>> No, I mean like and I'm curious actually I know we have to get on, but I always like I always like to pick David's brain on.
+
+</details>
+
+>> 不，但在你继续之前，我想知道你刚才到底是什么意思
+
+<details><summary>Original English</summary>
+
+>> No, but I would like to know what you meant before you
+
+</details>
+
+>> 是的，我也想知道。嗯，我的意思是，你看到民主党人掌权后，感觉我们做的第一件事就是翻开一本 2000 页的规则手册，一页一页地翻。然后等我们读完它，我们也许才会着手去通过某种谁也看不懂的法案，而在第 1100 页某个地方，才有一条将在 7 年后让人们生活变得更好的条款。Donald Trump 说“我要解决政府浪费”，然后在第四天，DOGE 就开始清空人们的办公室。当然，那件事的执行方式
+
+<details><summary>Original English</summary>
+
+>> Yeah. So would I Well, what I meant is that you see Democrats take power and it feels like the first thing we do is we open a 2,000page rule book and we flip through it. Then once we're done reading it, we maybe get to work on passing some kind of piece of legislation no one can comprehend. where on page 1100 there's something that will make people's lives better in 7 years. Donald Trump says I'm going to take on the government waste and on like day four do emptying people's offices. Now the execution of that
+
+</details>
+
+>> 那是怎么运作的？
+
+<details><summary>Original English</summary>
+
+>> how does that work?
+
+</details>
+
+>> 是的。不，那件事的执行方式非常糟糕。但我认为，如果把那种果断和对政府力量的信念，转而应用到重新充实各机构人员、扩大 HHS、在第一天就说“看看数据中心暂停令”——我希望一位民主党总统能在第一天就签署数据中心暂停令，而不是像华盛顿一贯的运作方式那样，搞年复一年的研究和委员会，最后什么也没做成。让我快速追问一个问题，因为我们在剩下的时间里确实需要继续推进了。
+
+<details><summary>Original English</summary>
+
+>> Yes. No, that the execution of that was awful. But I think what does it look like if that kind of aggressiveness and belief in the force of government is applied to instead restaffing out agencies to expanding HHS to saying on day one, you know, like look at a data center mortorium. I would hope that a Democratic president would sign a data center moratorium on day one and there wouldn't be the way Washington tends to work where you have years and years and years of studies and committee and nothing actually. Let me just ask a quick followup because we do need to move on in in our remaining time here.
+
+</details>
+
+>> 不过我得说，这已经是最能把问题说清楚的一次对话之一了
+
+<details><summary>Original English</summary>
+
+>> Although I will say this has been one of the most clarifying
+
+</details>
+
+>> 嗯，让我再问一个问题——我想就这个方向再问一个澄清性的问题：Biden 总统虽然有很多批评者——其中也有很多合理的批评——但他确实尝试恢复常规，其中之一就是司法部的独立性。你认为下一位民主党总统应该遵循那条道路，还是
+
+<details><summary>Original English</summary>
+
+>> it's well let me I'm going to ask yes and I'm going to ask another clarifying question to that front is that President Biden for all of the criticisms of his presidency and there are there are many valid ones but he did try reverting to norms one of which was DOJ independence. Do you think that the next Democratic president should follow that path or be
+
+</details>
+
+>> 我认为司法部应该是独立的。
+
+<details><summary>Original English</summary>
+
+>> I believe DOJ should be an independent.
+
+</details>
+
+>> 嗯，但如果回到你刚才关于 Bezos 的说法，如果 Bezos——这中间是否有区别：一个是“如果 Bezos 违法了，他应该被起诉”，另一个是“AOC 总统（这是你的例子）说去调查 Bezos，看看他有没有违法”。
+
+<details><summary>Original English</summary>
+
+>> Well, but then if the if just to go back to what you said about Bezos, if Bezos there's a is there a distinction between if Bezos broke the law, he should be prosecuted and President AOC was your example saying go investigate Bezos and see if he broke any.
+
+</details>
+
+>> 我认为这就是区别，那就是法治。所以，你会反对类似那样的做法
+
+<details><summary>Original English</summary>
+
+>> I think that's the difference is the rule of law. So, so you would object to something like that of a
+
+</details>
+
+>> 但这中间存在矛盾，因为你本质上是在说，这本规则手册——这本把我们束缚住的繁琐老规则手册、所有这些旧法律——你知道 Trump 是怎么做的：他先行动，然后整个体制不得不手忙脚乱地去应对。他不在乎是否合法，他就是直接把事情做了，而
+
+<details><summary>Original English</summary>
+
+>> but there's a contradiction because what you're essentially saying is this rule book you know which this fussy old rule book which holds us back all these old laws you know what Trump does is he acts and then the system has to scramble to keep he doesn't give a he doesn't care about whether it's legal or not he just does the thing and
+
+</details>
+
+>> 我发现你在两者之间摇摆，有时你听起来像
+
+<details><summary>Original English</summary>
+
+>> finding you're floating between one and the other sometimes you sound like
+
+</details>
+
+>> 嗯，我认为我摇摆于其间的——当然，这一切都取决于旁观者的视角——我相信当政府把它的力量用于作恶时，那是坏事。
+
+<details><summary>Original English</summary>
+
+>> well I think what I'm think what I'm floating between I believe is I And sure, all this is in the eye of the beholder. I believe when government is using its forces for evil, that is bad.
+
+</details>
+
+>> 当它是
+
+<details><summary>Original English</summary>
+
+>> When it is
+
+</details>
+
+>> 党派偏私、当它违反法治时，我认为那与“相信联邦政府有权力大胆行动”之间是有区别的，而且我们不应该——我认为其中一部分是“体面礼仪”（decorum）和“法律”之间的区别。我认为我们应该遵守法律，但我们应该摒弃 Biden 式的体面礼仪
+
+<details><summary>Original English</summary>
+
+>> partisansship, when it's violating the rule of law, I think there's a difference between that and believing that the federal government has the authority to act boldly and that we should not, some of this, I think, is a difference between kind of decorum and law. And I think we should follow the laws, but we should reject the decorum of I would say the Biden
+
+</details>
+
+>> 而我——你刚才自己说出来了。惯例（practice）和规则（rules）之间是有区别的。规则规定了你能做什么、不能做什么。而惯例变成了“我们不打算这么做，因为我们不一定知道自己能做什么”。我认为 Morris 所指的是，民主党这边出现了一种僵化，因为我们以前没见过，就觉得自己不能做。我们可以采取一种具有进取心的方法，这种方法应该始终尊重法治，但不应该仅仅因为它不是“常规”就被划入禁区。因为问题在于，我们所拥有的那些常规，正是它们掏空了政府，使其容易受到威权主义崛起的影响。利用民主制度来实现这种威权和专制式的权力运用，这正是问题所在。所以，并非 Donald Trump 所做的每一件卑劣的事都是非法的。我们必须理解其中的区别。这意味着，Jonathan，回到你的问题，我们必须评估哪些事是违法做的，哪些事是违反体面礼仪做的。但如果你现在理解了它所暴露的问题，你该如何利用它来造福他人？这绝不应该违背合宪性、合法性和道德性，但具有进取心绝对是下一位民主党总统必须具备的特质。
+
+<details><summary>Original English</summary>
+
+>> and I, you just said it. There's a difference between practice and rules. The rules say here's what you can and cannot do. The practice has become we're not going to do it because we don't necessarily know what we can do. And I think what Morris is alluding to is that there is a u there's a calcification that has happened on the democratic side that because we haven't seen it before, we don't think we can. There's an entrepreneurial approach that we can take that should always respect the rule of law but should not be cordined off because it's not norm. Because the problem is the norms we have that that's what hollowed out government and made it susceptible to the rise of authoritarianism. The use of democratic institutions to achieve this authoritarian and autocratic use of power is exactly the problem. And so not everything that Donald Trump has done that is, you know, vile is illegal. And we have to understand the difference. And that means, I think, Jonathan, to your your question, we have to assess what which things were done that were in violation of the law and which things were done that were in violation of decorum. But if you understand now what it exposed, how do you leverage it for the benefit of others? that should never run a foul of actually being constitutional, being legal, and being moral, but being entrepreneurial is absolutely the thing that the next Democratic president has to be.
+
+</details>
+
+## 展望 2028 年大选
+
+>> 让我顺着“体面礼仪与否”这个问题过渡到 2028 年：你认为 Chuck Schumer 应该被替换掉领袖的位置吗？
+
+<details><summary>Original English</summary>
+
+>> Let me ask you a segue to 2028 to that question of of decorum versus not, do you think that Chuck Schumer should be replaced as leader?
+
+</details>
+
+>> 作为曾经担任过民主党领袖的人，我会这样说：我对 Chuck Schumer 怀有最深切的敬意。我曾帮他在佐治亚州招募人才，我们一起取得了很大成功。我对 Chris Van Hollen 也怀有极大的好感和敬意，他曾是我播客的嘉宾，他愿意站出来反对种族灭绝并推动问责，这很重要。但作为曾在立法机构任职的人，我尊重必须由立法者自己来决定他们想追随谁。所以我不认为这是一个恰当的问题。
+
+<details><summary>Original English</summary>
+
+>> Having served as a Democratic leader, I will say it this way. I have the deepest respect for Chuck Schumer. I helped him recruit folks in Georgia and we had a lot of success together. I have a great deal of affection for and respect for Chris Van Holland. He was a guest on my podcast and his willingness to speak up against genocide and to push for accountability matters. But as someone who was in the legislative body, I respect the legislators who have to decide who they want to follow. And so I do not think that that's the right question.
+
+</details>
+
+>> 你还保留着以前的肌肉记忆，对吧？
+
+<details><summary>Original English</summary>
+
+>> You still have the old muscle memory, don't you?
+
+</details>
+
+>> 我知道。他太厉害了 [笑声]。
+
+<details><summary>Original English</summary>
+
+>> I know. He's so [laughter] good.
+
+</details>
+
+>> David Axelrod。是的。呃，我想在这里问一个关于 28 年的问题。你曾著名地谈到“真实感”（authenticity）是候选人最重要的特质之一。你谈到要“自在做自己”。当你审视共和党和民主党这边可能的候选人时，谁在这方面最强，谁不及格？
+
+<details><summary>Original English</summary>
+
+>> David David Axelrod. Yes. Um I want to do a bit of a 28 uh question here. You you famously have talked about authenticity as one of the most important features in a candidate. You talk about being comfortable in their own skin. When you survey the likely candidates on the Republican side and the Democratic side, who is strongest on that score and who flunks?
+
+</details>
+
+>> 哦，天哪，这真是个难题。现在我需要我的老肌肉记忆来帮我回避它了。[笑声] 呃
+
+<details><summary>Original English</summary>
+
+>> Oh man, that's a tough question. And now I need my old muscle memory to have evaded it. [laughter] Uh
+
+</details>
+
+>> 来吧，我敢打赌你能答上来。不管怎样，我确实认为，由于我们媒体环境的本质，真实感现在比过去任何时候都更重要。你必须能够以真实且多种不同的方式进行沟通。我们见过有些人能发表精彩的演讲，但你不能只演奏古典音乐，你也必须会演奏爵士乐。你必须知道如何在你想表达的曲调中即兴发挥。我想看到一场竞选。我想看看这些人如何走出去接受检验。但我说过更重要的一点是，我们从不选择代表，我们选择的是“解药”。我认为问题是：人们最想弥补或纠正的 Donald Trump 的特质是什么？我认为其中很大一部分都可以归入一个范畴，那就是品格和体面。比如谦逊、共情、正直，你知道，有很多这样的品质；而在这些品质上得分特别高的人，以及那些对“要建设什么”而不仅仅是“要恢复什么”有愿景的人，将在这次选举中表现最好。我只是想看到他们走出去。我还没有看到足够多关于他们的表现，所以没法说“这个不错”。Morris，你来帮我多说点？
+
+<details><summary>Original English</summary>
+
+>> come on. I bet you can do it. Either way, I do think I think authenticity is more important now even than it has been in the past because of the nature of our media environment. You have to be able to communicate authentically and in many different ways. We've seen people be able to make great speeches, but uh you have to not just do the classical music, you have to do jazz as well. You have to know how to improvise within the tune of uh of what you're trying to express. I want to see a campaign. I want to see how these people get out there and get tested. But the bigger thing that I said was that we never choose the rep. We we choose the remedy. And I think the question is what are the qualities of Donald Trump that people most want to me uh uh remedy. I think a lot almost a lot of them fit under one rubric which is sort of character and decency. So, humility, empathy, integrity, you know, there's a a number of those qu and people who overindex on those qualities uh as well as people who have a vision of what to build and not just what to restore uh are going to do best in this. I just want to see them out there. I haven't seen enough of them to say this one's all right. Mars, you going to help me more?
+
+</details>
+
+>> 我会的。另外我只想说，看看我们现在谈论作为摇摆州的一些州的格局——德克萨斯、南卡罗来纳以及我们在南部赢下的其他州——而且因为我早些时候就想说：浪潮不会偶然发生，它们是多年努力的结果，而且我认为没有 Stacy Abrams，我们不可能翻转任何一个那些州，所以我确实想
+
+<details><summary>Original English</summary>
+
+>> I I will. I also I just want to say looking at some of it look at the landscape of some of the states that we're talking about as swing states now Texas South Carolina other states that we run across the south and just before because I would wanted to say it earlier waves don't happen by accident they happen with a lot of years of work and I don't think we flip any of those states without Stacy Abrams so I do want a
+
+</details>
+
+>> 因为我们在审视这些竞争者时，面对的是另一张选举地图。我认为在共和党这边，Rubio 是一个更有才华的政治家，而且他比上次参选时进步了很多。我前几天看了一些他的演讲，他像是把自己的肌肉练得更好了一点。JD Vance 有一个极其引人入胜的故事。而且当他在参议院时，我认为他展现过更有趣的政策开放性，本可以更有意思。但我认为作为副总统，他简直是一场灾难，看起来他背负了 Donald Trump 所有的包袱，却没有他的任何魅力，而且显得很笨拙，我不认为他能经受住一场严酷的总统竞选。在民主党这边，我们正在观察他。我认为这是最有趣的事情，我不记得我们是否聊过这个，David，但我觉得我们刚刚经历了我们自己的“2010 年茶党时刻”版本，如果你看 2012 年，当时的提名人选还没跟上变化。所以 Mitt Romney 获得了提名，他并没有体现出新的共和党。当我看到很多被反复提及的名字时，他们感觉不像我们刚刚选出的这一批令人惊叹的阵容，我在想我们是不是存在滞后。我认为 Jon Ossoff、AOC、JB Pritzker 或许是最
+
+<details><summary>Original English</summary>
+
+>> because that we're looking at a different electoral map when we're looking at these contenders I think on the Republican side Rubio is a more talented politician and he's gotten a lot better than he was last time he ran. And I watched some of his speeches the other day. He's like, he's worked his muscle a little bit. JD Vance has an incredibly compelling story. And when he was in the Senate, I think flashed more interesting policy kind of openness that could have been more interesting. I think he has been such a disaster as vice president and looks like he has all the baggage of Donald Trump with none of the charisma and is awkward and I don't think could withstand a rigorous presidential campaign. On the Democratic side, we're looking at him. I think it's the most interesting thing and I can't remember if we've talked about this David but I feel like we just had a version of our Tea Party 2010 moment and if you look at in 2012 the like nominees hadn't caught up yet. So Mitt Romney was nominated he didn't embody the new Republican party and when I look at a lot of the names being recycled they don't feel like the people who this incredible slate that we just elected and I wonder if we're on a lag. I think John Oaf AOC JB Pritsker POP is maybe the most
+
+</details>
+
+>> 契合当下这一时刻的人选，但我很高兴我们有竞选。
+
+<details><summary>Original English</summary>
+
+>> kind of meeting this moment, but I'm happy we have a campaign.
+
+</details>
+
+>> 你刚才在摇头。
+
+<details><summary>Original English</summary>
+
+>> You were shaking your head.
+
+</details>
+
+>> 是的，听着，我随便提几个共和党人。我在我家招待过 Marco Rubio，对吧？我个人认识他们中的大多数人。我同意你的看法。我曾告诉副总统，要多展现《乡下人的悲歌》（Hillbilly Elegy）那一面，而不是“金融哥”（Finance Bro）那一面，对吧？他以前非常真实。[笑声] 他有他的故事。
+
+<details><summary>Original English</summary>
+
+>> Yeah, listen, I'll just throw out this a couple of Republicans. So, I've done, you know, I've hosted Marco Rubio, my house, right? I I I know most of these folks individually personally. I I agree with you. I I've told the vice president, you know, channel Hillbilly Elegy more than Finance Bro, right? He was very authentic. He's got [laughter] he's got he's his story.
+
+</details>
+
+>> 今天倒真希望他多展现一点金融哥那一面。是啊。嗯，
+
+<details><summary>Original English</summary>
+
+>> Would have liked him to channel a little more finance bro today. Yeah. Well,
+
+</details>
+
+>> 但记住，在 Charlie Kirk 遇刺后，Spencer Cox 走上了舞台，人们认为他非常耳目一新。按照 David 的标准，他很真实，他能把人们团结在一起，他有共情心，他是个体面的人。所以，会不会出现那样一个人，让人们说：“这就是我们想领导我们党的人”？
+
+<details><summary>Original English</summary>
+
+>> but remember remember after Charlie Kirk got assassinated, Spencer Cox came onto the scene and and people thought this, you know, he he he's very refreshing. He's he to David. He's authentic. He brings people together. He's empathy. He's a decent person. And so does somebody like that emerge where people say, "This is who we want to lead our party."
+
+</details>
+
+>> 是这样的——我知道我们时间快到了，让我只说一句。
+
+<details><summary>Original English</summary>
+
+>> Here's here. Let me just I know we we're running out of time here.
+
+</details>
+
+>> 我会押注其他所有人赢过 Vance。如果我给 JD Vance 当顾问，我会说：首先，你应该去和 Kamala Harris 聊聊，在一位不受欢迎的总统之后紧接着参选，当这样一位总统的副总统是什么滋味。其次，过去 150 年里，我们只选出过两位接替自己总统的副总统：George H.W. Bush，以及 Martin Van Buren。[笑声] 就连我当时都还没出生呢。所以
+
+<details><summary>Original English</summary>
+
+>> I would bet the field against Vance. And I I if I were advis if I were advising JD Vance, I'd say first of all, you should talk to Kla Harris about what it's like to be the vice president of an unpopular president running right after that president. Secondly, we've only elected two in the last 150 years vice president succeeding their president. George HW Bush and then Martin Van Burren. [laughter] And even I wasn't around for that. So
+
+</details>
+
+>> 我怀疑会有一场激烈的初选。共和党这边——其实我不认为会。我认为共和党初选会很无聊，对此我很感激，因为我认为所有的好戏都会在民主党那边上演。
+
+<details><summary>Original English</summary>
+
+>> I suspect that there'll be a robust primary. The Republican I actually don't think there will be. I think the Republican primary will be boring and I'm grateful because I think all the action is going to be on the Democratic side.
+
+</details>
+
+>> 嗯，我来告诉你为什么。因为与即将在民主党初选中涌现的人物相比——无论是 26 年这一周期当选、可能会参选或最终成为竞选搭档的候选人，还是 Morris 提到的过去几个周期的候选人——我只是觉得每个人都会参选。民主党提名将会非常值钱。所以我认为你可能会看到 15 或 16 位候选人。
+
+<details><summary>Original English</summary>
+
+>> Well, I'm going to tell you why. I'm going to tell you because compared to the characters that are going to emerge in the Democratic primary, both both candidates who got elected this cycle in 26 who may run or can be wind up becoming a running mate or candidates that Morris mentioned from the last couple cycles. I just think you're everyone's going to run. The Democratic nomination is going to be worth a lot. So, so I think you could get like 15 or 16 candidates. Are
+
+</details>
+
+>> 你是说 Vance 会成为提名人吗？那是
+
+<details><summary>Original English</summary>
+
+>> you saying Vance is going to be the candidate? That's
+
+</details>
+
+>> 不，不，不。我是说——你是说就……而言它更传统——我认为你可能会有 15 或 16 位民主党人竞选总统，其中一些是新面孔
+
+<details><summary>Original English</summary>
+
+>> No, no, no. I'm saying you're saying it's more conventional in terms of I think you could have 15 or 16 Democrats running for president. Some of them are new characters on the
+
+</details>
+
+>> 是的，是的。在经历多次 Donald 参与的选举之后，共和党阵营也会同样宽广。会有来自“前时代”——前 Trump 时代——的人，有“Trump 时代”的人，还有那些根本毫无关联的人。我会很感兴趣看 Brian Kemp 会不会参选，Glenn Youngkin 会不会，你的朋友 Dave McCormick 会不会？会有一些人，这将成为一场讨论：Trump 和 MAGA 是未来，还是另有他途？我认为我们会有一个拥挤的竞争阵营，
+
+<details><summary>Original English</summary>
+
+>> Yeah. Yeah. The Republican field after multiple elections with Donald a wide Republican field as well. There's going to be from the before times, the pre-Trump times, the Trump times, and then those who are just not related. I'd be interested if a Brian Kemp gets in, does a Glenn Yncan, does your friend Dave McCormack? There are some pe it's going to be this discussion. Is Trump in MAGA the future or is it something different? I think we'll have a crowded field,
+
+</details>
+
+>> 这是我们甚至还没来得及讨论的事情。我们必须在这里停下来了。不过我确实想说，Morris 关于 2010 年的观点，以及这是一场“2010 年式选举”的事实，是我们一直在大量讨论的话题。Jonathan，我们还没结束，我们还会继续
+
+<details><summary>Original English</summary>
+
+>> something we didn't even discuss. We have to stop here. Although I do want to say that Morris's point about 2010 is and the fact that this was a 2010 election is something that we have been talking about a lot. Jonathan, we're not done and we are going to continue
+
+</details>
+
+>> 因为我只是很好奇。我想问大家最后一个问题。好吧。但只能用一个词。不准解释。不准解释。
+
+<details><summary>Original English</summary>
+
+>> because I'm just curious. I want to ask one more question for everyone. Okay. But it's only a one. It's it's like no explanation. No explanation.
+
+</details>
+
+>> 现在是 10 月 28 日，选举日前一个月。两党提名人是谁？
+
+<details><summary>Original English</summary>
+
+>> It's October 28th, month before election day. Who are the nominees?
+
+</details>
+
+>> 不，这问题问得好
+
+<details><summary>Original English</summary>
+
+>> No, that's a good
+
+</details>
+
+>> 我完全不知道。
+
+<details><summary>Original English</summary>
+
+>> I have no idea.
+
+</details>
+
+>> 来吧，随便说几个。
+
+<details><summary>Original English</summary>
+
+>> Come on, throw them out.
+
+</details>
+
+>> 不说。
+
+<details><summary>Original English</summary>
+
+>> No.
+
+</details>
+
+>> 不行啊，Alyssa。
+
+<details><summary>Original English</summary>
+
+>> Not Alyssa.
+
+</details>
+
+>> Rubio。
+
+<details><summary>Original English</summary>
+
+>> Rubio.
+
+</details>
+
+>> 哇。你想猜吗？问吧。
+
+<details><summary>Original English</summary>
+
+>> Wow. You want to do it? Ask.
+
+</details>
+
+>> 不，我想听听。
+
+<details><summary>Original English</summary>
+
+>> No. I want to see that.
+
+</details>
+
+>> 玩得开心。呃，我猜 Newsom 和 Rubio
+
+<details><summary>Original English</summary>
+
+>> Have fun. Um, so I I Newsome and uh I Rubio
+
+</details>
+
+>> Morris。
+
+<details><summary>Original English</summary>
+
+>> Morris.
+
+</details>
+
+>> 我要罕见地克制一次，不作回答。
+
+<details><summary>Original English</summary>
+
+>> I'm going to have a rare moment of discipline and not answer.
+
+</details>
+
+>> 哇。
+
+<details><summary>Original English</summary>
+
+>> Wow.
+
+</details>
+
+>> 哇。
+
+<details><summary>Original English</summary>
+
+>> Wow.
+
+</details>
+
+>> 非常 [笑声] 令人失望。太遗憾了。好吧。
+
+<details><summary>Original English</summary>
+
+>> Very [laughter] disappointing. That's too bad. Okay.
+
+</details>
+
+>> 共和党这边我不知道。民主党这边，可能是 Abdul El-Sayed。
+
+<details><summary>Original English</summary>
+
+>> I don't know on the Republican side. On the Democratic side, probably Abdul Aliad.
+
+</details>
+
+>> 哦，
+
+<details><summary>Original English</summary>
+
+>> Oh,
+
+</details>
+
+>> 他太嫩了。
+
+<details><summary>Original English</summary>
+
+>> he's too green.
+
+</details>
+
+>> 好吧，行。Obama。我希望我们在那场选举之后能再次聚首。记住，2010 年是一个重要的提醒：在我们现在讨论的这个时代之前，其实曾有过一个“前时代”，而在它之后也还会有新的时代。我们要感谢在座的每一位。我们知道这占用了很长一段时间，但这真是一个很酷的剧场，我们很感激，而且
+
+<details><summary>Original English</summary>
+
+>> All right. Okay. Obama. I hope we reconvene after that election. Remember 2010 is an important reminder that actually there has been a before time than the one we discussed now and there will be afterwards. We want to thank all of you for being here. We know this was a huge block of time but a pretty cool theater to be in and um we appreciate it and
+
+</details>
+
+>> 而且，你知道，我们俩都是平面媒体记者，所以我们不擅长这个，谢谢你们的耐心。
+
+<details><summary>Original English</summary>
+
+>> and also you know we're both print reporters so we're not good at this so thanks for being patient.
+
+</details>
+
+>> 是的，没错。
+
+<details><summary>Original English</summary>
+
+>> Yes. Exactly.
+
+</details>
+
+>> 特别感谢观众。谢谢。[笑声] 是的，没错。
+
+<details><summary>Original English</summary>
+
+>> Especially thank the audience. Thank you. [laughter] Yes, exactly.
+
+</details>
+
+>> 你们能听到欢呼声震耳欲聋。是的。说到克制。是的，很好。
+
+<details><summary>Original English</summary>
+
+>> You can hear the cheers overwhelming. Yes. Speaking of discipline. Yes. Good.
+
+</details>
+
+>> 非常感谢。谢谢大家。阿门。非常感谢。[音乐]
+
+<details><summary>Original English</summary>
+
+>> Thank you very much. Thank you guys. Amen. Thank you very much. [music]
+
+</details>
+
+>> Dealbook Summit 是《纽约时报》的制作节目。本期节目由 Evan Roberts 制作。混音 [音乐] 由 Katie McMurin 负责。原创音乐由 Daniel Powell 创作。Dealbook 活动团队的其他成员包括 Julie Zhan、[音乐] Shantal Renier、Melissa Tripoli、Dana Prescowski、[音乐] Matt Kaiser、Ezra Lee、Marissa Fina、Jesse Bratengyire、Nico [音乐] Gallagley，特别鸣谢 Sam Dolnik、Nina Lassom、Abe Seder 和 Maddie [音乐] Masiello。
+
+<details><summary>Original English</summary>
+
+>> Dealbook Summit is a production of the New York Times. This episode was produced by Evan Roberts. Mixing [music] by Katie McMurin. Original music by Daniel Powell. The rest of the Dealbook events team includes Julie Zhan, [music] Shantal Renier, Melissa Tripoli, Dana Prescowski, [music] Matt Kaiser, Ezra Lee, Marissa Fina, Jesse Bratengyire, Nico [music] Gallagley, and special thanks to Sam Dolnik, Nina Lassom, Abe Seder, and Maddie [music] Masiello.
+
+</details>
